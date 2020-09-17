@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsPvRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsPvRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPvRequest instance
      */
-    IWorkbookFunctionsPvRequest buildRequest();
+    IWorkbookFunctionsPvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsPvRequest with specific options instead of the existing options

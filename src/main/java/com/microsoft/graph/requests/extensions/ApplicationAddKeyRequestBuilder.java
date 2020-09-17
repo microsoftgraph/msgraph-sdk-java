@@ -39,10 +39,11 @@ public class ApplicationAddKeyRequestBuilder extends BaseActionRequestBuilder im
     /**
      * Creates the IApplicationAddKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IApplicationAddKeyRequest instance
      */
-    public IApplicationAddKeyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApplicationAddKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

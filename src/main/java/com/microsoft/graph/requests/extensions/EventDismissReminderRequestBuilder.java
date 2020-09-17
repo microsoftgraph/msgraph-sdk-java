@@ -32,10 +32,11 @@ public class EventDismissReminderRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IEventDismissReminderRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventDismissReminderRequest instance
      */
-    public IEventDismissReminderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventDismissReminderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

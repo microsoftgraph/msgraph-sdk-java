@@ -34,10 +34,11 @@ public class WorkbookFunctionsLenRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsLenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLenRequest instance
      */
-    public IWorkbookFunctionsLenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsLenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

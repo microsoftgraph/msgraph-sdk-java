@@ -36,10 +36,11 @@ public class RoleAssignmentRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRoleAssignmentRequest instance
      */
-    public IRoleAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRoleAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

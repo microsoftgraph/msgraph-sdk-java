@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsLenbRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsLenbRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLenbRequest instance
      */
-    IWorkbookFunctionsLenbRequest buildRequest();
+    IWorkbookFunctionsLenbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsLenbRequest with specific options instead of the existing options

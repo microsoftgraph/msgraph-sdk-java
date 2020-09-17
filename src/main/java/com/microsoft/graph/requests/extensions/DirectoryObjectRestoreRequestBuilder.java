@@ -32,10 +32,11 @@ public class DirectoryObjectRestoreRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IDirectoryObjectRestoreRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDirectoryObjectRestoreRequest instance
      */
-    public IDirectoryObjectRestoreRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryObjectRestoreRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

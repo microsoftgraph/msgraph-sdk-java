@@ -34,10 +34,11 @@ public class ManagedDeviceCleanWindowsDeviceRequestBuilder extends BaseActionReq
     /**
      * Creates the IManagedDeviceCleanWindowsDeviceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceCleanWindowsDeviceRequest instance
      */
-    public IManagedDeviceCleanWindowsDeviceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceCleanWindowsDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

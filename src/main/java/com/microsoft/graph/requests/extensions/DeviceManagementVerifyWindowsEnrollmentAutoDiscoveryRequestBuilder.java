@@ -34,10 +34,11 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder 
     /**
      * Creates the IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest instance
      */
-    public IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

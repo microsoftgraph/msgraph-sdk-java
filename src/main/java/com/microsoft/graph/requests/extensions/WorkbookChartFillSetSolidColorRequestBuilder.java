@@ -34,10 +34,11 @@ public class WorkbookChartFillSetSolidColorRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookChartFillSetSolidColorRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartFillSetSolidColorRequest instance
      */
-    public IWorkbookChartFillSetSolidColorRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartFillSetSolidColorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

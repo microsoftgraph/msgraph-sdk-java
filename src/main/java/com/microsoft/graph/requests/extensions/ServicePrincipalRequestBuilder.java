@@ -68,10 +68,11 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IServicePrincipalRequest instance
      */
-    public IServicePrincipalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IServicePrincipalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

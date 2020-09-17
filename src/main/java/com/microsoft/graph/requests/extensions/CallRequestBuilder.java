@@ -57,10 +57,11 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICallRequest instance
      */
-    public ICallRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

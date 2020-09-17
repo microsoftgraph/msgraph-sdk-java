@@ -51,10 +51,11 @@ public class UserFindMeetingTimesRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IUserFindMeetingTimesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserFindMeetingTimesRequest instance
      */
-    public IUserFindMeetingTimesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserFindMeetingTimesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

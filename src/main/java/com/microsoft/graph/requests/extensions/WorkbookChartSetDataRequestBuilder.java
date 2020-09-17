@@ -36,10 +36,11 @@ public class WorkbookChartSetDataRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookChartSetDataRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartSetDataRequest instance
      */
-    public IWorkbookChartSetDataRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartSetDataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

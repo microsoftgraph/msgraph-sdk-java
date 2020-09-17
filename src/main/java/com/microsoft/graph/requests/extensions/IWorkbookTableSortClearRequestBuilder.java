@@ -17,9 +17,10 @@ public interface IWorkbookTableSortClearRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookTableSortClearRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableSortClearRequest instance
      */
-    IWorkbookTableSortClearRequest buildRequest();
+    IWorkbookTableSortClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableSortClearRequest with specific options instead of the existing options

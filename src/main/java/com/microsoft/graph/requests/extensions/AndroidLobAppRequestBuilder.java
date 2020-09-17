@@ -34,10 +34,11 @@ public class AndroidLobAppRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidLobAppRequest instance
      */
-    public IAndroidLobAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidLobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

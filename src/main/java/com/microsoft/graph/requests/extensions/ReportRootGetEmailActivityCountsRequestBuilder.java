@@ -34,10 +34,11 @@ public class ReportRootGetEmailActivityCountsRequestBuilder extends BaseFunction
     /**
      * Creates the IReportRootGetEmailActivityCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetEmailActivityCountsRequest instance
      */
-    public IReportRootGetEmailActivityCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetEmailActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

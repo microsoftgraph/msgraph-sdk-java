@@ -17,9 +17,10 @@ public interface ICallKeepAliveRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ICallKeepAliveRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallKeepAliveRequest instance
      */
-    ICallKeepAliveRequest buildRequest();
+    ICallKeepAliveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICallKeepAliveRequest with specific options instead of the existing options

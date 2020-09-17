@@ -32,10 +32,11 @@ public class WorkbookChartSeriesCountRequestBuilder extends BaseFunctionRequestB
     /**
      * Creates the IWorkbookChartSeriesCountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartSeriesCountRequest instance
      */
-    public IWorkbookChartSeriesCountRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartSeriesCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

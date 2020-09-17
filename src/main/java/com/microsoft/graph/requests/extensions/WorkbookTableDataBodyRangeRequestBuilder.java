@@ -32,10 +32,11 @@ public class WorkbookTableDataBodyRangeRequestBuilder extends BaseFunctionReques
     /**
      * Creates the IWorkbookTableDataBodyRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableDataBodyRangeRequest instance
      */
-    public IWorkbookTableDataBodyRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableDataBodyRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -56,5 +57,32 @@ public class WorkbookTableDataBodyRangeRequestBuilder extends BaseFunctionReques
       }
 
         return request;
+    }
+
+    /**
+     * Gets the request builder for WorkbookRangeFormat
+     *
+     * @return the IWorkbookRangeFormatRequestBuilder instance
+     */
+    public IWorkbookRangeFormatRequestBuilder format() {
+        return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for WorkbookRangeSort
+     *
+     * @return the IWorkbookRangeSortRequestBuilder instance
+     */
+    public IWorkbookRangeSortRequestBuilder sort() {
+        return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for WorkbookWorksheet
+     *
+     * @return the IWorkbookWorksheetRequestBuilder instance
+     */
+    public IWorkbookWorksheetRequestBuilder worksheet() {
+        return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

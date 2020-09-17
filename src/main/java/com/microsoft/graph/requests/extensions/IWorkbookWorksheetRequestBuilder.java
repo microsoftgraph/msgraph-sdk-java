@@ -30,9 +30,10 @@ public interface IWorkbookWorksheetRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookWorksheetRequest instance
      */
-    IWorkbookWorksheetRequest buildRequest();
+    IWorkbookWorksheetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -66,9 +67,9 @@ public interface IWorkbookWorksheetRequestBuilder extends IRequestBuilder {
 
     IWorkbookTableRequestBuilder tables(final String id);
     IWorkbookWorksheetCellRequestBuilder cell(final Integer row, final Integer column);
-    IWorkbookWorksheetRangeRequestBuilder range();
-    IWorkbookWorksheetRangeRequestBuilder range(final String address);
     IWorkbookWorksheetUsedRangeRequestBuilder usedRange();
     IWorkbookWorksheetUsedRangeRequestBuilder usedRange(final Boolean valuesOnly);
+    IWorkbookWorksheetRangeRequestBuilder range();
+    IWorkbookWorksheetRangeRequestBuilder range(final String address);
 
 }

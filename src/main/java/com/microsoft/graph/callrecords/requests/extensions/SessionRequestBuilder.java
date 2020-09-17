@@ -38,10 +38,11 @@ public class SessionRequestBuilder extends BaseRequestBuilder implements ISessio
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISessionRequest instance
      */
-    public ISessionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

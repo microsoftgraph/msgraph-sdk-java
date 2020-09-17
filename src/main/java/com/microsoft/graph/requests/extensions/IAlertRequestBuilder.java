@@ -20,9 +20,10 @@ public interface IAlertRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAlertRequest instance
      */
-    IAlertRequest buildRequest();
+    IAlertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

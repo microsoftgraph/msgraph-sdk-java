@@ -36,10 +36,11 @@ public class WorkbookFunctionsT_InvRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsT_InvRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsT_InvRequest instance
      */
-    public IWorkbookFunctionsT_InvRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsT_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

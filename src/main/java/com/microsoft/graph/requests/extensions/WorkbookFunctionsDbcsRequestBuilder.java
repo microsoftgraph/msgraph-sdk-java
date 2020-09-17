@@ -34,10 +34,11 @@ public class WorkbookFunctionsDbcsRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsDbcsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDbcsRequest instance
      */
-    public IWorkbookFunctionsDbcsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDbcsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

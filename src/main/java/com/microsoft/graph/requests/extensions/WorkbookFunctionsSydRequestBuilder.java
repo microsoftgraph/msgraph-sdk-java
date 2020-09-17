@@ -40,10 +40,11 @@ public class WorkbookFunctionsSydRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsSydRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSydRequest instance
      */
-    public IWorkbookFunctionsSydRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSydRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

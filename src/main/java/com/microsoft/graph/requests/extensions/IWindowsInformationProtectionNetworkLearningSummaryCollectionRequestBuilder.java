@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IWindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder extends IRequestBuilder {
 
-    IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWindowsInformationProtectionNetworkLearningSummaryRequestBuilder byId(final String id);

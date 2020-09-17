@@ -47,10 +47,11 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder ex
     /**
      * Creates the IReportRootGetSkypeForBusinessDeviceUsageUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSkypeForBusinessDeviceUsageUserDetailRequest instance
      */
-    public IReportRootGetSkypeForBusinessDeviceUsageUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetSkypeForBusinessDeviceUsageUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

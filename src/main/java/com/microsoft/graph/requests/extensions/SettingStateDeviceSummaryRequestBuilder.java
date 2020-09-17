@@ -34,10 +34,11 @@ public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISettingStateDeviceSummaryRequest instance
      */
-    public ISettingStateDeviceSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISettingStateDeviceSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

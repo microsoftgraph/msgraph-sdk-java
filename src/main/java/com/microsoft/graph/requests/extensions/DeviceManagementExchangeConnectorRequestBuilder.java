@@ -35,10 +35,11 @@ public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementExchangeConnectorRequest instance
      */
-    public IDeviceManagementExchangeConnectorRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementExchangeConnectorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

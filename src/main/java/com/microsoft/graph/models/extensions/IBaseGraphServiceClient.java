@@ -43,6 +43,8 @@ import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionR
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IServicePrincipalRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscribedSkuCollectionRequestBuilder;
@@ -363,6 +365,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the request builder for the Organization object
      */
     IOrganizationRequestBuilder organization(final String id);
+
+    /**
+     * Gets the collection of ScopedRoleMemberships objects
+     *
+     * @return the request builder for the collection of ScopedRoleMemberships objects
+     */
+    IScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberships();
+
+    /**
+     * Gets a single ScopedRoleMemberships
+     *
+     * @param id the id of the ScopedRoleMemberships to retrieve
+     * @return the request builder for the ScopedRoleMemberships object
+     */
+    IScopedRoleMembershipRequestBuilder scopedRoleMemberships(final String id);
 
     /**
      * Gets the collection of ServicePrincipals objects

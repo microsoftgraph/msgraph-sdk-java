@@ -36,10 +36,11 @@ public class WorkbookFunctionsChiSq_Inv_RTRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsChiSq_Inv_RTRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsChiSq_Inv_RTRequest instance
      */
-    public IWorkbookFunctionsChiSq_Inv_RTRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsChiSq_Inv_RTRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

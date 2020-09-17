@@ -17,9 +17,10 @@ public interface IManagedDeviceRequestRemoteAssistanceRequestBuilder extends IRe
     /**
      * Creates the IManagedDeviceRequestRemoteAssistanceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRequestRemoteAssistanceRequest instance
      */
-    IManagedDeviceRequestRemoteAssistanceRequest buildRequest();
+    IManagedDeviceRequestRemoteAssistanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceRequestRemoteAssistanceRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class WorkbookWorksheetProtectionProtectRequestBuilder extends BaseAction
     /**
      * Creates the IWorkbookWorksheetProtectionProtectRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookWorksheetProtectionProtectRequest instance
      */
-    public IWorkbookWorksheetProtectionProtectRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookWorksheetProtectionProtectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

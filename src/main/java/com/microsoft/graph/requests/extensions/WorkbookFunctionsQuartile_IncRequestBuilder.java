@@ -36,10 +36,11 @@ public class WorkbookFunctionsQuartile_IncRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsQuartile_IncRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsQuartile_IncRequest instance
      */
-    public IWorkbookFunctionsQuartile_IncRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsQuartile_IncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

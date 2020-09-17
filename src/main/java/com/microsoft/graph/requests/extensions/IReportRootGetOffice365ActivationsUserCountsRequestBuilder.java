@@ -17,9 +17,10 @@ public interface IReportRootGetOffice365ActivationsUserCountsRequestBuilder exte
     /**
      * Creates the IReportRootGetOffice365ActivationsUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365ActivationsUserCountsRequest instance
      */
-    IReportRootGetOffice365ActivationsUserCountsRequest buildRequest();
+    IReportRootGetOffice365ActivationsUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetOffice365ActivationsUserCountsRequest with specific options instead of the existing options

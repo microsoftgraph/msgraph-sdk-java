@@ -40,10 +40,11 @@ public class WorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsWorkDay_IntlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsWorkDay_IntlRequest instance
      */
-    public IWorkbookFunctionsWorkDay_IntlRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsWorkDay_IntlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

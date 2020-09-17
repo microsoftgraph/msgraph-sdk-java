@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsLogNorm_InvRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsLogNorm_InvRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLogNorm_InvRequest instance
      */
-    IWorkbookFunctionsLogNorm_InvRequest buildRequest();
+    IWorkbookFunctionsLogNorm_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsLogNorm_InvRequest with specific options instead of the existing options

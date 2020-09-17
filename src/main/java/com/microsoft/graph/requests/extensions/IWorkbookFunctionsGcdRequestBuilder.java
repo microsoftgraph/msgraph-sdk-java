@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsGcdRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsGcdRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGcdRequest instance
      */
-    IWorkbookFunctionsGcdRequest buildRequest();
+    IWorkbookFunctionsGcdRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsGcdRequest with specific options instead of the existing options

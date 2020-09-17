@@ -36,10 +36,22 @@ public class SchedulingGroupCollectionRequestBuilder extends BaseRequestBuilder 
         super(requestUrl, client, requestOptions);
     }
 
-    public ISchedulingGroupCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ISchedulingGroupCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ISchedulingGroupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SchedulingGroupCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

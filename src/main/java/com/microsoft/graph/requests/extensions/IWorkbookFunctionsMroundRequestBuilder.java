@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsMroundRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsMroundRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMroundRequest instance
      */
-    IWorkbookFunctionsMroundRequest buildRequest();
+    IWorkbookFunctionsMroundRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsMroundRequest with specific options instead of the existing options

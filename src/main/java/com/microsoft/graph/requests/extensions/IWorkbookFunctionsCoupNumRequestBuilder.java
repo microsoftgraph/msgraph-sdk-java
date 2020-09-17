@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsCoupNumRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsCoupNumRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCoupNumRequest instance
      */
-    IWorkbookFunctionsCoupNumRequest buildRequest();
+    IWorkbookFunctionsCoupNumRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsCoupNumRequest with specific options instead of the existing options

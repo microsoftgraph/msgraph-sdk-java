@@ -34,10 +34,11 @@ public class ManagedAndroidStoreAppRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedAndroidStoreAppRequest instance
      */
-    public IManagedAndroidStoreAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedAndroidStoreAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

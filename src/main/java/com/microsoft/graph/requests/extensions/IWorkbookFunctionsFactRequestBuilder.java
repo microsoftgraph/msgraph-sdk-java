@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsFactRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsFactRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFactRequest instance
      */
-    IWorkbookFunctionsFactRequest buildRequest();
+    IWorkbookFunctionsFactRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsFactRequest with specific options instead of the existing options

@@ -36,10 +36,11 @@ public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookChartLegendRequest instance
      */
-    public IWorkbookChartLegendRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartLegendRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

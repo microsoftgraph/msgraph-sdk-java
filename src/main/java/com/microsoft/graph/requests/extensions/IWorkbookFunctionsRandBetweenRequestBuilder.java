@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsRandBetweenRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsRandBetweenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRandBetweenRequest instance
      */
-    IWorkbookFunctionsRandBetweenRequest buildRequest();
+    IWorkbookFunctionsRandBetweenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsRandBetweenRequest with specific options instead of the existing options

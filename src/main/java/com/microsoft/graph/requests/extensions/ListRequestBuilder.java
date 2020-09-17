@@ -52,10 +52,11 @@ public class ListRequestBuilder extends BaseRequestBuilder implements IListReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IListRequest instance
      */
-    public IListRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

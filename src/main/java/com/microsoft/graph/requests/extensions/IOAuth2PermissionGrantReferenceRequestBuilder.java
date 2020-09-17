@@ -23,9 +23,10 @@ public interface IOAuth2PermissionGrantReferenceRequestBuilder extends IRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOAuth2PermissionGrantReferenceRequest instance
      */
-    IOAuth2PermissionGrantReferenceRequest buildRequest();
+    IOAuth2PermissionGrantReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -38,10 +38,11 @@ public class WorkbookFunctionsDsumRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsDsumRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDsumRequest instance
      */
-    public IWorkbookFunctionsDsumRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDsumRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

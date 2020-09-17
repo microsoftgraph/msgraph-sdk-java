@@ -34,10 +34,11 @@ public class WorkbookFunctionsStDevPARequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsStDevPARequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsStDevPARequest instance
      */
-    public IWorkbookFunctionsStDevPARequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsStDevPARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

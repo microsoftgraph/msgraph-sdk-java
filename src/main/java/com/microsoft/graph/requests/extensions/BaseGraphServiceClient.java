@@ -79,6 +79,10 @@ import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IOrganizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IServicePrincipalRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
@@ -534,6 +538,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IOrganizationRequestBuilder organization(final String id) {
         return new OrganizationRequestBuilder(getServiceRoot() + "/organization/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of ScopedRoleMemberships objects
+     *
+     * @return the request builder for the collection of ScopedRoleMemberships objects
+     */
+    public IScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberships() {
+        return new ScopedRoleMembershipCollectionRequestBuilder(getServiceRoot() + "/scopedRoleMemberships", this, null);
+    }
+
+    /**
+     * Gets a single ScopedRoleMemberships
+     *
+     * @param id the id of the ScopedRoleMemberships to retrieve
+     * @return the request builder for the ScopedRoleMemberships object
+     */
+    public IScopedRoleMembershipRequestBuilder scopedRoleMemberships(final String id) {
+        return new ScopedRoleMembershipRequestBuilder(getServiceRoot() + "/scopedRoleMemberships/" + id, this, null);
     }
 
     /**

@@ -46,10 +46,11 @@ public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IOnlineMeetingCreateOrGetRequest
      *
+     * @param requestOptions the options for the request
      * @return the IOnlineMeetingCreateOrGetRequest instance
      */
-    public IOnlineMeetingCreateOrGetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnlineMeetingCreateOrGetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

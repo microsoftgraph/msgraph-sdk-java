@@ -38,10 +38,11 @@ public class OrgContactRequestBuilder extends BaseRequestBuilder implements IOrg
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOrgContactRequest instance
      */
-    public IOrgContactRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOrgContactRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

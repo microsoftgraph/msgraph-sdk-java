@@ -32,10 +32,11 @@ public class ReportRootDeviceConfigurationUserActivityRequestBuilder extends Bas
     /**
      * Creates the IReportRootDeviceConfigurationUserActivityRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootDeviceConfigurationUserActivityRequest instance
      */
-    public IReportRootDeviceConfigurationUserActivityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootDeviceConfigurationUserActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

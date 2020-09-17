@@ -37,10 +37,11 @@ public class WorkbookNamedItemRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookNamedItemRequest instance
      */
-    public IWorkbookNamedItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookNamedItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

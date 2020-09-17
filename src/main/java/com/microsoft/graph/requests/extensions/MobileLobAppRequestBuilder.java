@@ -38,10 +38,11 @@ public class MobileLobAppRequestBuilder extends BaseRequestBuilder implements IM
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileLobAppRequest instance
      */
-    public IMobileLobAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileLobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class WorkbookFunctionsF_Inv_RTRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsF_Inv_RTRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsF_Inv_RTRequest instance
      */
-    public IWorkbookFunctionsF_Inv_RTRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsF_Inv_RTRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

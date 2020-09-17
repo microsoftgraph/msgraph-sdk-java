@@ -34,10 +34,11 @@ public class DeviceEnrollmentConfigurationSetPriorityRequestBuilder extends Base
     /**
      * Creates the IDeviceEnrollmentConfigurationSetPriorityRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceEnrollmentConfigurationSetPriorityRequest instance
      */
-    public IDeviceEnrollmentConfigurationSetPriorityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceEnrollmentConfigurationSetPriorityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

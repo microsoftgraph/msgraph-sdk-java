@@ -40,10 +40,22 @@ public class WorkbookChartCollectionRequestBuilder extends BaseRequestBuilder im
         super(requestUrl, client, requestOptions);
     }
 
-    public IWorkbookChartCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IWorkbookChartCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IWorkbookChartCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookChartCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

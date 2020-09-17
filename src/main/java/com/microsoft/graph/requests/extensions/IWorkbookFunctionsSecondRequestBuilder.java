@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsSecondRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsSecondRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSecondRequest instance
      */
-    IWorkbookFunctionsSecondRequest buildRequest();
+    IWorkbookFunctionsSecondRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsSecondRequest with specific options instead of the existing options

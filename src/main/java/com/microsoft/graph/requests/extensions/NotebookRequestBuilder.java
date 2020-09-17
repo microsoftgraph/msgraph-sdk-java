@@ -45,10 +45,11 @@ public class NotebookRequestBuilder extends BaseRequestBuilder implements INoteb
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the INotebookRequest instance
      */
-    public INotebookRequest buildRequest() {
-        return buildRequest(getOptions());
+    public INotebookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

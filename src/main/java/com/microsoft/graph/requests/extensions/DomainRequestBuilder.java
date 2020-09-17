@@ -42,10 +42,11 @@ public class DomainRequestBuilder extends BaseRequestBuilder implements IDomainR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDomainRequest instance
      */
-    public IDomainRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDomainRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

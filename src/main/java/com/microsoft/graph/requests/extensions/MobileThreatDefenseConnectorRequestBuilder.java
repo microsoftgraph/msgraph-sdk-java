@@ -34,10 +34,11 @@ public class MobileThreatDefenseConnectorRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileThreatDefenseConnectorRequest instance
      */
-    public IMobileThreatDefenseConnectorRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileThreatDefenseConnectorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

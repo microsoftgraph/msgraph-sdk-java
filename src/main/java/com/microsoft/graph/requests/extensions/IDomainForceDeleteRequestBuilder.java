@@ -17,9 +17,10 @@ public interface IDomainForceDeleteRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IDomainForceDeleteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDomainForceDeleteRequest instance
      */
-    IDomainForceDeleteRequest buildRequest();
+    IDomainForceDeleteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDomainForceDeleteRequest with specific options instead of the existing options

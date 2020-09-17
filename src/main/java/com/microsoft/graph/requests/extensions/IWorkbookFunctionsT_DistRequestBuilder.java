@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsT_DistRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsT_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsT_DistRequest instance
      */
-    IWorkbookFunctionsT_DistRequest buildRequest();
+    IWorkbookFunctionsT_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsT_DistRequest with specific options instead of the existing options

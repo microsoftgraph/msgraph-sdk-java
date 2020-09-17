@@ -40,10 +40,11 @@ public class WorkbookFunctionsVlookupRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsVlookupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsVlookupRequest instance
      */
-    public IWorkbookFunctionsVlookupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsVlookupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

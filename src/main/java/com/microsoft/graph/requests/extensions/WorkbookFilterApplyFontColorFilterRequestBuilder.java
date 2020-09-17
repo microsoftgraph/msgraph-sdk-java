@@ -34,10 +34,11 @@ public class WorkbookFilterApplyFontColorFilterRequestBuilder extends BaseAction
     /**
      * Creates the IWorkbookFilterApplyFontColorFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyFontColorFilterRequest instance
      */
-    public IWorkbookFilterApplyFontColorFilterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFilterApplyFontColorFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class WindowsPhone81GeneralConfigurationRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81GeneralConfigurationRequest instance
      */
-    public IWindowsPhone81GeneralConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsPhone81GeneralConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

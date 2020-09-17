@@ -32,10 +32,11 @@ public class WorkbookFunctionsFalseRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsFalseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFalseRequest instance
      */
-    public IWorkbookFunctionsFalseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsFalseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

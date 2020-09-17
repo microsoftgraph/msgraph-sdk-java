@@ -34,10 +34,11 @@ public class Windows10SecureAssessmentConfigurationRequestBuilder extends BaseRe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10SecureAssessmentConfigurationRequest instance
      */
-    public IWindows10SecureAssessmentConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10SecureAssessmentConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

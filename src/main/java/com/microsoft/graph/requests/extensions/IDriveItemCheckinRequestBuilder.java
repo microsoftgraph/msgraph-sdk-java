@@ -17,9 +17,10 @@ public interface IDriveItemCheckinRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IDriveItemCheckinRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemCheckinRequest instance
      */
-    IDriveItemCheckinRequest buildRequest();
+    IDriveItemCheckinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDriveItemCheckinRequest with specific options instead of the existing options

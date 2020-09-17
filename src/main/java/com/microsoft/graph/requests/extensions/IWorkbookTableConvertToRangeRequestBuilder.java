@@ -17,9 +17,10 @@ public interface IWorkbookTableConvertToRangeRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookTableConvertToRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableConvertToRangeRequest instance
      */
-    IWorkbookTableConvertToRangeRequest buildRequest();
+    IWorkbookTableConvertToRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableConvertToRangeRequest with specific options instead of the existing options

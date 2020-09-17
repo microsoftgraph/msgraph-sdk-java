@@ -20,6 +20,10 @@ import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollecti
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;

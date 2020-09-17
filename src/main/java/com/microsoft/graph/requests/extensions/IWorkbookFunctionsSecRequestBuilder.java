@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsSecRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsSecRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSecRequest instance
      */
-    IWorkbookFunctionsSecRequest buildRequest();
+    IWorkbookFunctionsSecRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsSecRequest with specific options instead of the existing options

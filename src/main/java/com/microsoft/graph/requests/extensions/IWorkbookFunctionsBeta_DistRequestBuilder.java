@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsBeta_DistRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsBeta_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBeta_DistRequest instance
      */
-    IWorkbookFunctionsBeta_DistRequest buildRequest();
+    IWorkbookFunctionsBeta_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsBeta_DistRequest with specific options instead of the existing options

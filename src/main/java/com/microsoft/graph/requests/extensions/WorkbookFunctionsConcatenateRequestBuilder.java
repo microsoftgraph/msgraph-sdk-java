@@ -34,10 +34,11 @@ public class WorkbookFunctionsConcatenateRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsConcatenateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsConcatenateRequest instance
      */
-    public IWorkbookFunctionsConcatenateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsConcatenateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

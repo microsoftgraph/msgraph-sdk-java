@@ -46,10 +46,11 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICloudCommunicationsRequest instance
      */
-    public ICloudCommunicationsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICloudCommunicationsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

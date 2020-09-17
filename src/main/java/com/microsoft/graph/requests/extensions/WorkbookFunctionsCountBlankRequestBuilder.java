@@ -34,10 +34,11 @@ public class WorkbookFunctionsCountBlankRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsCountBlankRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCountBlankRequest instance
      */
-    public IWorkbookFunctionsCountBlankRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCountBlankRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

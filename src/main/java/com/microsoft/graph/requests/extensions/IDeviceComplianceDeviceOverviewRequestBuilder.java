@@ -20,9 +20,10 @@ public interface IDeviceComplianceDeviceOverviewRequestBuilder extends IRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceComplianceDeviceOverviewRequest instance
      */
-    IDeviceComplianceDeviceOverviewRequest buildRequest();
+    IDeviceComplianceDeviceOverviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

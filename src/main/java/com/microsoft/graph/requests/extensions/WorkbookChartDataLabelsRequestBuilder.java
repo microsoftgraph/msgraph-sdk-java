@@ -36,10 +36,11 @@ public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookChartDataLabelsRequest instance
      */
-    public IWorkbookChartDataLabelsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartDataLabelsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

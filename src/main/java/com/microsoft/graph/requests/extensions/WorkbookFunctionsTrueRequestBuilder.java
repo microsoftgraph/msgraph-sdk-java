@@ -32,10 +32,11 @@ public class WorkbookFunctionsTrueRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsTrueRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTrueRequest instance
      */
-    public IWorkbookFunctionsTrueRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsTrueRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

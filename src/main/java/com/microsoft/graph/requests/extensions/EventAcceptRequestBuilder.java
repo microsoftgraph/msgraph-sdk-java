@@ -36,10 +36,11 @@ public class EventAcceptRequestBuilder extends BaseActionRequestBuilder implemen
     /**
      * Creates the IEventAcceptRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventAcceptRequest instance
      */
-    public IEventAcceptRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

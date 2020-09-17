@@ -33,10 +33,22 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequestBui
         super(requestUrl, client, requestOptions);
     }
 
-    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CertificateBasedAuthConfigurationCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }

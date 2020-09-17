@@ -34,10 +34,11 @@ public class WorkbookFunctionsMultiNomialRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsMultiNomialRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMultiNomialRequest instance
      */
-    public IWorkbookFunctionsMultiNomialRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsMultiNomialRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

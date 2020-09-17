@@ -34,10 +34,11 @@ public class WorkbookFunctionsFactRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsFactRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFactRequest instance
      */
-    public IWorkbookFunctionsFactRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsFactRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

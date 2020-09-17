@@ -34,10 +34,11 @@ public class DeviceManagementTroubleshootingEventRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementTroubleshootingEventRequest instance
      */
-    public IDeviceManagementTroubleshootingEventRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementTroubleshootingEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

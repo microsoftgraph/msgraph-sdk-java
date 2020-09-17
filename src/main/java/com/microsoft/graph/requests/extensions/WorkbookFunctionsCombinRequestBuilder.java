@@ -36,10 +36,11 @@ public class WorkbookFunctionsCombinRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsCombinRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCombinRequest instance
      */
-    public IWorkbookFunctionsCombinRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCombinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

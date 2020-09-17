@@ -47,10 +47,11 @@ public class ReportRootGetSharePointSiteUsageDetailRequestBuilder extends BaseFu
     /**
      * Creates the IReportRootGetSharePointSiteUsageDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointSiteUsageDetailRequest instance
      */
-    public IReportRootGetSharePointSiteUsageDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetSharePointSiteUsageDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

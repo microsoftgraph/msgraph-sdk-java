@@ -17,9 +17,10 @@ public interface IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsReq
     /**
      * Creates the IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest instance
      */
-    IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest buildRequest();
+    IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class ThumbnailRequestBuilder extends BaseRequestBuilder implements IThum
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IThumbnailRequest instance
      */
-    public IThumbnailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IThumbnailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

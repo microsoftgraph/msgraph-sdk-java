@@ -44,11 +44,23 @@ public class PermissionGrantCollectionRequestBuilder extends BaseActionRequestBu
 			bodyParams.put("recipients", recipients);
 		}
       }
-
-    public IPermissionGrantCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPermissionGrantCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPermissionGrantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PermissionGrantCollectionRequest request = new PermissionGrantCollectionRequest(
                 getRequestUrl(),

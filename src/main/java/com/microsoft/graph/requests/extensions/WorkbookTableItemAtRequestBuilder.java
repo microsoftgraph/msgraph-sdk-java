@@ -34,10 +34,11 @@ public class WorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBuilde
     /**
      * Creates the IWorkbookTableItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableItemAtRequest instance
      */
-    public IWorkbookTableItemAtRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -58,5 +59,37 @@ public class WorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBuilde
       }
 
         return request;
+    }
+    public IWorkbookTableColumnCollectionRequestBuilder columns() {
+        return new WorkbookTableColumnCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
+    }
+
+    public IWorkbookTableColumnRequestBuilder columns(final String id) {
+        return new WorkbookTableColumnRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
+    }
+    public IWorkbookTableRowCollectionRequestBuilder rows() {
+        return new WorkbookTableRowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
+    }
+
+    public IWorkbookTableRowRequestBuilder rows(final String id) {
+        return new WorkbookTableRowRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for WorkbookTableSort
+     *
+     * @return the IWorkbookTableSortRequestBuilder instance
+     */
+    public IWorkbookTableSortRequestBuilder sort() {
+        return new WorkbookTableSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for WorkbookWorksheet
+     *
+     * @return the IWorkbookWorksheetRequestBuilder instance
+     */
+    public IWorkbookWorksheetRequestBuilder worksheet() {
+        return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

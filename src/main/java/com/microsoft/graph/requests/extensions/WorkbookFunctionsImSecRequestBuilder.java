@@ -34,10 +34,11 @@ public class WorkbookFunctionsImSecRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsImSecRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImSecRequest instance
      */
-    public IWorkbookFunctionsImSecRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImSecRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsAcothRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsAcothRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAcothRequest instance
      */
-    IWorkbookFunctionsAcothRequest buildRequest();
+    IWorkbookFunctionsAcothRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsAcothRequest with specific options instead of the existing options

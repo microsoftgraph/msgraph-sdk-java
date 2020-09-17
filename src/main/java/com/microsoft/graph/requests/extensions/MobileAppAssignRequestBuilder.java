@@ -34,10 +34,11 @@ public class MobileAppAssignRequestBuilder extends BaseActionRequestBuilder impl
     /**
      * Creates the IMobileAppAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMobileAppAssignRequest instance
      */
-    public IMobileAppAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

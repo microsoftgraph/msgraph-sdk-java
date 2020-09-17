@@ -46,10 +46,11 @@ public class WorkbookFunctionsAmorLincRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsAmorLincRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAmorLincRequest instance
      */
-    public IWorkbookFunctionsAmorLincRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsAmorLincRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

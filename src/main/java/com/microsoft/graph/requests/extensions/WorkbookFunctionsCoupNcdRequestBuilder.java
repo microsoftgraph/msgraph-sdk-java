@@ -40,10 +40,11 @@ public class WorkbookFunctionsCoupNcdRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsCoupNcdRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCoupNcdRequest instance
      */
-    public IWorkbookFunctionsCoupNcdRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCoupNcdRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

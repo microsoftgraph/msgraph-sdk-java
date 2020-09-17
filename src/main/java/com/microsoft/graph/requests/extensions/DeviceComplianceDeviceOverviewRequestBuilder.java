@@ -34,10 +34,11 @@ public class DeviceComplianceDeviceOverviewRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceComplianceDeviceOverviewRequest instance
      */
-    public IDeviceComplianceDeviceOverviewRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceComplianceDeviceOverviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

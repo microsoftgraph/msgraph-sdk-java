@@ -32,10 +32,11 @@ public class CallKeepAliveRequestBuilder extends BaseActionRequestBuilder implem
     /**
      * Creates the ICallKeepAliveRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallKeepAliveRequest instance
      */
-    public ICallKeepAliveRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallKeepAliveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

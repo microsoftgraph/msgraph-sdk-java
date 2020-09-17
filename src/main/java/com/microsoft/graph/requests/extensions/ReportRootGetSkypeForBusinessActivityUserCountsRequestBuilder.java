@@ -34,10 +34,11 @@ public class ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder exten
     /**
      * Creates the IReportRootGetSkypeForBusinessActivityUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSkypeForBusinessActivityUserCountsRequest instance
      */
-    public IReportRootGetSkypeForBusinessActivityUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetSkypeForBusinessActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

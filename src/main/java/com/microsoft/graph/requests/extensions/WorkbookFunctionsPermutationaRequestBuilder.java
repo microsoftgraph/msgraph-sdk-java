@@ -36,10 +36,11 @@ public class WorkbookFunctionsPermutationaRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsPermutationaRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPermutationaRequest instance
      */
-    public IWorkbookFunctionsPermutationaRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsPermutationaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

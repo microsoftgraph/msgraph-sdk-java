@@ -34,10 +34,11 @@ public class IosUpdateConfigurationRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosUpdateConfigurationRequest instance
      */
-    public IIosUpdateConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosUpdateConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

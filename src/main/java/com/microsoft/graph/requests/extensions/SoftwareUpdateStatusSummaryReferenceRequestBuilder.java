@@ -36,10 +36,11 @@ public class SoftwareUpdateStatusSummaryReferenceRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The ISoftwareUpdateStatusSummaryReferenceRequest instance
      */
-    public ISoftwareUpdateStatusSummaryReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISoftwareUpdateStatusSummaryReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

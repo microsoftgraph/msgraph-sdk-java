@@ -34,10 +34,11 @@ public class UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder extends Ba
     /**
      * Creates the IUserWipeManagedAppRegistrationsByDeviceTagRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserWipeManagedAppRegistrationsByDeviceTagRequest instance
      */
-    public IUserWipeManagedAppRegistrationsByDeviceTagRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserWipeManagedAppRegistrationsByDeviceTagRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

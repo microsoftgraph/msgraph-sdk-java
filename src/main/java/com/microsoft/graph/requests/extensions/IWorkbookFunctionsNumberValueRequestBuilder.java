@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsNumberValueRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsNumberValueRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNumberValueRequest instance
      */
-    IWorkbookFunctionsNumberValueRequest buildRequest();
+    IWorkbookFunctionsNumberValueRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsNumberValueRequest with specific options instead of the existing options

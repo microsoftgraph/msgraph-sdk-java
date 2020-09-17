@@ -36,10 +36,11 @@ public class WorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookChartGridlinesRequest instance
      */
-    public IWorkbookChartGridlinesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartGridlinesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

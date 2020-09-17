@@ -24,9 +24,10 @@ public interface ITermsAndConditionsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITermsAndConditionsRequest instance
      */
-    ITermsAndConditionsRequest buildRequest();
+    ITermsAndConditionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

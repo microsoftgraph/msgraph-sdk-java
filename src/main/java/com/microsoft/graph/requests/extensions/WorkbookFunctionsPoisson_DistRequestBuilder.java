@@ -38,10 +38,11 @@ public class WorkbookFunctionsPoisson_DistRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsPoisson_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPoisson_DistRequest instance
      */
-    public IWorkbookFunctionsPoisson_DistRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsPoisson_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

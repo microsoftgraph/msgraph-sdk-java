@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsCleanRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsCleanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCleanRequest instance
      */
-    IWorkbookFunctionsCleanRequest buildRequest();
+    IWorkbookFunctionsCleanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsCleanRequest with specific options instead of the existing options

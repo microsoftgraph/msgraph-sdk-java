@@ -34,10 +34,11 @@ public class SegmentRequestBuilder extends BaseRequestBuilder implements ISegmen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISegmentRequest instance
      */
-    public ISegmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISegmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

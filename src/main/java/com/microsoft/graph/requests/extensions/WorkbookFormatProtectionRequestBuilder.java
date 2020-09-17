@@ -34,10 +34,11 @@ public class WorkbookFormatProtectionRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookFormatProtectionRequest instance
      */
-    public IWorkbookFormatProtectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFormatProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

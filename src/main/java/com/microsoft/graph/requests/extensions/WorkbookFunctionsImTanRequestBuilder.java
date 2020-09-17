@@ -34,10 +34,11 @@ public class WorkbookFunctionsImTanRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsImTanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImTanRequest instance
      */
-    public IWorkbookFunctionsImTanRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImTanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

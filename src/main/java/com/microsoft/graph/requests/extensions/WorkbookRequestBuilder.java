@@ -59,10 +59,11 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder implements IWorkb
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookRequest instance
      */
-    public IWorkbookRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

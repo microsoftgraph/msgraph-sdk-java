@@ -34,10 +34,11 @@ public class WorkbookFunctionsGaussRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsGaussRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGaussRequest instance
      */
-    public IWorkbookFunctionsGaussRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsGaussRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

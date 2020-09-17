@@ -34,10 +34,11 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder ext
     /**
      * Creates the IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest instance
      */
-    public IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -32,10 +32,11 @@ public class ManagedDeviceBypassActivationLockRequestBuilder extends BaseActionR
     /**
      * Creates the IManagedDeviceBypassActivationLockRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceBypassActivationLockRequest instance
      */
-    public IManagedDeviceBypassActivationLockRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceBypassActivationLockRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

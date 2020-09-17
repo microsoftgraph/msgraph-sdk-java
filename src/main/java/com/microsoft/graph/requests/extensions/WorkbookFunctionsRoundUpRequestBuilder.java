@@ -36,10 +36,11 @@ public class WorkbookFunctionsRoundUpRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsRoundUpRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRoundUpRequest instance
      */
-    public IWorkbookFunctionsRoundUpRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRoundUpRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class ReportRootGetSharePointSiteUsageFileCountsRequestBuilder extends Ba
     /**
      * Creates the IReportRootGetSharePointSiteUsageFileCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointSiteUsageFileCountsRequest instance
      */
-    public IReportRootGetSharePointSiteUsageFileCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetSharePointSiteUsageFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

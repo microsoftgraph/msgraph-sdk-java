@@ -27,9 +27,10 @@ public interface IManagedAppRegistrationReferenceRequestBuilder extends IRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedAppRegistrationReferenceRequest instance
      */
-    IManagedAppRegistrationReferenceRequest buildRequest();
+    IManagedAppRegistrationReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

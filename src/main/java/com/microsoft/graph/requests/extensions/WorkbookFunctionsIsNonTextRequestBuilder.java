@@ -34,10 +34,11 @@ public class WorkbookFunctionsIsNonTextRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsIsNonTextRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsNonTextRequest instance
      */
-    public IWorkbookFunctionsIsNonTextRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsIsNonTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

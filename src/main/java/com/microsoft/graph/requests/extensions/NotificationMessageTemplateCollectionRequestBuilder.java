@@ -36,10 +36,22 @@ public class NotificationMessageTemplateCollectionRequestBuilder extends BaseReq
         super(requestUrl, client, requestOptions);
     }
 
-    public INotificationMessageTemplateCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public INotificationMessageTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public INotificationMessageTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new NotificationMessageTemplateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

@@ -35,10 +35,22 @@ public class TeamsTemplateCollectionRequestBuilder extends BaseRequestBuilder im
         super(requestUrl, client, requestOptions);
     }
 
-    public ITeamsTemplateCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ITeamsTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ITeamsTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsTemplateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

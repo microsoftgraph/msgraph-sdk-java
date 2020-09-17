@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsCeiling_PreciseRequestBuilder extends IReques
     /**
      * Creates the IWorkbookFunctionsCeiling_PreciseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCeiling_PreciseRequest instance
      */
-    IWorkbookFunctionsCeiling_PreciseRequest buildRequest();
+    IWorkbookFunctionsCeiling_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsCeiling_PreciseRequest with specific options instead of the existing options

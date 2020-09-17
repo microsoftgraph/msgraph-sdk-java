@@ -34,10 +34,11 @@ public class WorkbookFunctionsHarMeanRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsHarMeanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHarMeanRequest instance
      */
-    public IWorkbookFunctionsHarMeanRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsHarMeanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class ManagedAppPolicyDeploymentSummaryRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedAppPolicyDeploymentSummaryRequest instance
      */
-    public IManagedAppPolicyDeploymentSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedAppPolicyDeploymentSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

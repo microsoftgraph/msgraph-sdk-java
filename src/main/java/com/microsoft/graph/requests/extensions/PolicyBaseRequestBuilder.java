@@ -34,10 +34,11 @@ public class PolicyBaseRequestBuilder extends BaseRequestBuilder implements IPol
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPolicyBaseRequest instance
      */
-    public IPolicyBaseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPolicyBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder exten
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationDeviceStatusRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

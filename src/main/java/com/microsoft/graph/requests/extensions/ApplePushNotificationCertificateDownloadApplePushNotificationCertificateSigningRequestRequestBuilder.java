@@ -32,10 +32,11 @@ public class ApplePushNotificationCertificateDownloadApplePushNotificationCertif
     /**
      * Creates the IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest
      *
+     * @param requestOptions the options for the request
      * @return the IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest instance
      */
-    public IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IGroupSubscribeByMailRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IGroupSubscribeByMailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupSubscribeByMailRequest instance
      */
-    IGroupSubscribeByMailRequest buildRequest();
+    IGroupSubscribeByMailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupSubscribeByMailRequest with specific options instead of the existing options

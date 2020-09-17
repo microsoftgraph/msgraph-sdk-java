@@ -39,10 +39,11 @@ public class ItemActivityStatWithReferenceRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemActivityStatWithReferenceRequest instance
      */
-    public IItemActivityStatWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemActivityStatWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

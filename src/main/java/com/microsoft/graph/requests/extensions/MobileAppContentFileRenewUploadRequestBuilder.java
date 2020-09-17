@@ -32,10 +32,11 @@ public class MobileAppContentFileRenewUploadRequestBuilder extends BaseActionReq
     /**
      * Creates the IMobileAppContentFileRenewUploadRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMobileAppContentFileRenewUploadRequest instance
      */
-    public IMobileAppContentFileRenewUploadRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppContentFileRenewUploadRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

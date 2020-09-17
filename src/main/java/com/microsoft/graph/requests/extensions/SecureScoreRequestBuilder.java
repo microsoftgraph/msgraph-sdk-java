@@ -34,10 +34,11 @@ public class SecureScoreRequestBuilder extends BaseRequestBuilder implements ISe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISecureScoreRequest instance
      */
-    public ISecureScoreRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISecureScoreRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

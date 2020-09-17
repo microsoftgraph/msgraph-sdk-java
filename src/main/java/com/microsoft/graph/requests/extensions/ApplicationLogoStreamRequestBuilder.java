@@ -34,10 +34,11 @@ public class ApplicationLogoStreamRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IApplicationLogoStreamRequest instance
      */
-    public IApplicationLogoStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApplicationLogoStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

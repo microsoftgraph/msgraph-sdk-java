@@ -34,10 +34,11 @@ public class DomainDnsCnameRecordRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDomainDnsCnameRecordRequest instance
      */
-    public IDomainDnsCnameRecordRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDomainDnsCnameRecordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

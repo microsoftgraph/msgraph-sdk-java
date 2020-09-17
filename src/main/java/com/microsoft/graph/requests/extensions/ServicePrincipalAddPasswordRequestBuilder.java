@@ -34,10 +34,11 @@ public class ServicePrincipalAddPasswordRequestBuilder extends BaseActionRequest
     /**
      * Creates the IServicePrincipalAddPasswordRequest
      *
+     * @param requestOptions the options for the request
      * @return the IServicePrincipalAddPasswordRequest instance
      */
-    public IServicePrincipalAddPasswordRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IServicePrincipalAddPasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

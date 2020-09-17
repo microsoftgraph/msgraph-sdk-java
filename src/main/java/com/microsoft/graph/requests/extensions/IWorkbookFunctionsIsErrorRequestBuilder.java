@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsIsErrorRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsIsErrorRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsErrorRequest instance
      */
-    IWorkbookFunctionsIsErrorRequest buildRequest();
+    IWorkbookFunctionsIsErrorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsIsErrorRequest with specific options instead of the existing options

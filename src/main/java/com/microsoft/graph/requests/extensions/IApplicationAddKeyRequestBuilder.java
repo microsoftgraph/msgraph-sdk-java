@@ -17,9 +17,10 @@ public interface IApplicationAddKeyRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IApplicationAddKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IApplicationAddKeyRequest instance
      */
-    IApplicationAddKeyRequest buildRequest();
+    IApplicationAddKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IApplicationAddKeyRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRemoteAssistancePartnerRequest instance
      */
-    public IRemoteAssistancePartnerRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRemoteAssistancePartnerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

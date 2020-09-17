@@ -36,10 +36,11 @@ public class WorkbookFunctionsBesselKRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsBesselKRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBesselKRequest instance
      */
-    public IWorkbookFunctionsBesselKRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsBesselKRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

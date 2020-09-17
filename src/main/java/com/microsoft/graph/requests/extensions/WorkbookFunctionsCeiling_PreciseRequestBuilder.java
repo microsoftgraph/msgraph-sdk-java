@@ -36,10 +36,11 @@ public class WorkbookFunctionsCeiling_PreciseRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsCeiling_PreciseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCeiling_PreciseRequest instance
      */
-    public IWorkbookFunctionsCeiling_PreciseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCeiling_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

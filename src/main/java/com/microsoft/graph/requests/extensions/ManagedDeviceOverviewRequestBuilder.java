@@ -34,10 +34,11 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedDeviceOverviewRequest instance
      */
-    public IManagedDeviceOverviewRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceOverviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

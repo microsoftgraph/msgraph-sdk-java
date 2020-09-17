@@ -37,10 +37,22 @@ public class PostCollectionRequestBuilder extends BaseRequestBuilder implements 
         super(requestUrl, client, requestOptions);
     }
 
-    public IPostCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPostCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPostCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PostCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

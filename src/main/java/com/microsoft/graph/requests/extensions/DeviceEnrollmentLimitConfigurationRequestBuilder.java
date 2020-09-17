@@ -34,10 +34,11 @@ public class DeviceEnrollmentLimitConfigurationRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceEnrollmentLimitConfigurationRequest instance
      */
-    public IDeviceEnrollmentLimitConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceEnrollmentLimitConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

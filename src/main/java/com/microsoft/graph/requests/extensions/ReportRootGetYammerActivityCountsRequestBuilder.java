@@ -34,10 +34,11 @@ public class ReportRootGetYammerActivityCountsRequestBuilder extends BaseFunctio
     /**
      * Creates the IReportRootGetYammerActivityCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetYammerActivityCountsRequest instance
      */
-    public IReportRootGetYammerActivityCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetYammerActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

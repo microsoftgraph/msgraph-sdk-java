@@ -36,10 +36,22 @@ public class PlannerPlanCollectionRequestBuilder extends BaseRequestBuilder impl
         super(requestUrl, client, requestOptions);
     }
 
-    public IPlannerPlanCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPlannerPlanCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPlannerPlanCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlannerPlanCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

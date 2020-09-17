@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsNorm_S_InvRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsNorm_S_InvRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNorm_S_InvRequest instance
      */
-    IWorkbookFunctionsNorm_S_InvRequest buildRequest();
+    IWorkbookFunctionsNorm_S_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsNorm_S_InvRequest with specific options instead of the existing options

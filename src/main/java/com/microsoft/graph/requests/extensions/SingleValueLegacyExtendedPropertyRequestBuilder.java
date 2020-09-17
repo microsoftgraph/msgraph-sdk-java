@@ -34,10 +34,11 @@ public class SingleValueLegacyExtendedPropertyRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISingleValueLegacyExtendedPropertyRequest instance
      */
-    public ISingleValueLegacyExtendedPropertyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISingleValueLegacyExtendedPropertyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

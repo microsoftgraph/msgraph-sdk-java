@@ -35,10 +35,11 @@ public class WorkbookRangeSortRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookRangeSortRequest instance
      */
-    public IWorkbookRangeSortRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeSortRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

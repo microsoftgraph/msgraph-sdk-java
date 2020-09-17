@@ -34,10 +34,11 @@ public class MessageRuleRequestBuilder extends BaseRequestBuilder implements IMe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMessageRuleRequest instance
      */
-    public IMessageRuleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMessageRuleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

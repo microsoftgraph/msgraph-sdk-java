@@ -38,10 +38,11 @@ public class WorkbookChartAxisFormatRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookChartAxisFormatRequest instance
      */
-    public IWorkbookChartAxisFormatRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartAxisFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

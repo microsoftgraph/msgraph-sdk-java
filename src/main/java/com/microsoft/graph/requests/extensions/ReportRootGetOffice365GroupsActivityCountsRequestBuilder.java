@@ -34,10 +34,11 @@ public class ReportRootGetOffice365GroupsActivityCountsRequestBuilder extends Ba
     /**
      * Creates the IReportRootGetOffice365GroupsActivityCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365GroupsActivityCountsRequest instance
      */
-    public IReportRootGetOffice365GroupsActivityCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetOffice365GroupsActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

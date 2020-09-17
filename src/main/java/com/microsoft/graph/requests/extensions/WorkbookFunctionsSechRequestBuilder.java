@@ -34,10 +34,11 @@ public class WorkbookFunctionsSechRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsSechRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSechRequest instance
      */
-    public IWorkbookFunctionsSechRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSechRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

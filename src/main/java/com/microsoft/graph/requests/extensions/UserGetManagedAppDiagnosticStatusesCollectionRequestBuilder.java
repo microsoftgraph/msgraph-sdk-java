@@ -35,11 +35,23 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends
     public UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
-
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IUserGetManagedAppDiagnosticStatusesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IUserGetManagedAppDiagnosticStatusesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserGetManagedAppDiagnosticStatusesCollectionRequest request = new UserGetManagedAppDiagnosticStatusesCollectionRequest(
                 getRequestUrl(),

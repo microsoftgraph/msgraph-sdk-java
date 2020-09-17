@@ -34,10 +34,11 @@ public class WorkbookFunctionsAsinRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsAsinRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAsinRequest instance
      */
-    public IWorkbookFunctionsAsinRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsAsinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

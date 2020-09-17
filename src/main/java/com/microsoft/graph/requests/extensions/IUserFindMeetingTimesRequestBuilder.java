@@ -17,9 +17,10 @@ public interface IUserFindMeetingTimesRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IUserFindMeetingTimesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserFindMeetingTimesRequest instance
      */
-    IUserFindMeetingTimesRequest buildRequest();
+    IUserFindMeetingTimesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IUserFindMeetingTimesRequest with specific options instead of the existing options

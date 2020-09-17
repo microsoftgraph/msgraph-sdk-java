@@ -34,10 +34,11 @@ public class EBookInstallSummaryRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEBookInstallSummaryRequest instance
      */
-    public IEBookInstallSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEBookInstallSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

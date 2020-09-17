@@ -34,10 +34,11 @@ public class ManagedAppPolicyTargetAppsRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IManagedAppPolicyTargetAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedAppPolicyTargetAppsRequest instance
      */
-    public IManagedAppPolicyTargetAppsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedAppPolicyTargetAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

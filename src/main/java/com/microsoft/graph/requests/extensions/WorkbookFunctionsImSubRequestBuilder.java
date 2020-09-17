@@ -36,10 +36,11 @@ public class WorkbookFunctionsImSubRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsImSubRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImSubRequest instance
      */
-    public IWorkbookFunctionsImSubRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImSubRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

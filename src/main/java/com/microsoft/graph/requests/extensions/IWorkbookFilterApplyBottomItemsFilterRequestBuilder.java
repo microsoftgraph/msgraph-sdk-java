@@ -17,9 +17,10 @@ public interface IWorkbookFilterApplyBottomItemsFilterRequestBuilder extends IRe
     /**
      * Creates the IWorkbookFilterApplyBottomItemsFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyBottomItemsFilterRequest instance
      */
-    IWorkbookFilterApplyBottomItemsFilterRequest buildRequest();
+    IWorkbookFilterApplyBottomItemsFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFilterApplyBottomItemsFilterRequest with specific options instead of the existing options

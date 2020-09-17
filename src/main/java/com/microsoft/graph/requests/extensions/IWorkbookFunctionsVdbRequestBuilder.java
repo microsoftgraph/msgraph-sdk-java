@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsVdbRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsVdbRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsVdbRequest instance
      */
-    IWorkbookFunctionsVdbRequest buildRequest();
+    IWorkbookFunctionsVdbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsVdbRequest with specific options instead of the existing options

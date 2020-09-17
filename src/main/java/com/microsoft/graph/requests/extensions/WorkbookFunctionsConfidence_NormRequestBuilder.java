@@ -38,10 +38,11 @@ public class WorkbookFunctionsConfidence_NormRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsConfidence_NormRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsConfidence_NormRequest instance
      */
-    public IWorkbookFunctionsConfidence_NormRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsConfidence_NormRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

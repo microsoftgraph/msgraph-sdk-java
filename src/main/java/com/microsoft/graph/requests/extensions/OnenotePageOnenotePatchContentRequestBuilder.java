@@ -34,10 +34,11 @@ public class OnenotePageOnenotePatchContentRequestBuilder extends BaseActionRequ
     /**
      * Creates the IOnenotePageOnenotePatchContentRequest
      *
+     * @param requestOptions the options for the request
      * @return the IOnenotePageOnenotePatchContentRequest instance
      */
-    public IOnenotePageOnenotePatchContentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnenotePageOnenotePatchContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,11 @@ public class WorkbookFunctionsPercentile_IncRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookFunctionsPercentile_IncRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPercentile_IncRequest instance
      */
-    public IWorkbookFunctionsPercentile_IncRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsPercentile_IncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

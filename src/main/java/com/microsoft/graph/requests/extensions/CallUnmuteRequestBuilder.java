@@ -34,10 +34,11 @@ public class CallUnmuteRequestBuilder extends BaseActionRequestBuilder implement
     /**
      * Creates the ICallUnmuteRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallUnmuteRequest instance
      */
-    public ICallUnmuteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallUnmuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IGroupRenewRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IGroupRenewRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupRenewRequest instance
      */
-    IGroupRenewRequest buildRequest();
+    IGroupRenewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupRenewRequest with specific options instead of the existing options

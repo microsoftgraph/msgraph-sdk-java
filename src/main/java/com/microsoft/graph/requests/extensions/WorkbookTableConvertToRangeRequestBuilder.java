@@ -32,10 +32,11 @@ public class WorkbookTableConvertToRangeRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookTableConvertToRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableConvertToRangeRequest instance
      */
-    public IWorkbookTableConvertToRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableConvertToRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

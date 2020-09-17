@@ -34,10 +34,11 @@ public class PersonRequestBuilder extends BaseRequestBuilder implements IPersonR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPersonRequest instance
      */
-    public IPersonRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPersonRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

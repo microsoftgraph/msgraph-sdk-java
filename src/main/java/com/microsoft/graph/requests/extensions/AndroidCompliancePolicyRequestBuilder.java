@@ -34,10 +34,11 @@ public class AndroidCompliancePolicyRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidCompliancePolicyRequest instance
      */
-    public IAndroidCompliancePolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidCompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

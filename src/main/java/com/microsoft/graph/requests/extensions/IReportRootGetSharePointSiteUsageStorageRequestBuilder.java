@@ -17,9 +17,10 @@ public interface IReportRootGetSharePointSiteUsageStorageRequestBuilder extends 
     /**
      * Creates the IReportRootGetSharePointSiteUsageStorageRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointSiteUsageStorageRequest instance
      */
-    IReportRootGetSharePointSiteUsageStorageRequest buildRequest();
+    IReportRootGetSharePointSiteUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetSharePointSiteUsageStorageRequest with specific options instead of the existing options

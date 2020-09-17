@@ -43,10 +43,11 @@ public class TermsAndConditionsWithReferenceRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITermsAndConditionsWithReferenceRequest instance
      */
-    public ITermsAndConditionsWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITermsAndConditionsWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

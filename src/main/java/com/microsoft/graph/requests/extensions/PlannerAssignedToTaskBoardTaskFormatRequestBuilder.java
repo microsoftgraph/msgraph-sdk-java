@@ -34,10 +34,11 @@ public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPlannerAssignedToTaskBoardTaskFormatRequest instance
      */
-    public IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

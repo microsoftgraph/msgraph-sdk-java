@@ -38,10 +38,22 @@ public class EventCollectionRequestBuilder extends BaseRequestBuilder implements
         super(requestUrl, client, requestOptions);
     }
 
-    public IEventCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IEventCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IEventCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EventCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

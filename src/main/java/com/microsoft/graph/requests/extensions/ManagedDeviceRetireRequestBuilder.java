@@ -32,10 +32,11 @@ public class ManagedDeviceRetireRequestBuilder extends BaseActionRequestBuilder 
     /**
      * Creates the IManagedDeviceRetireRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRetireRequest instance
      */
-    public IManagedDeviceRetireRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceRetireRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

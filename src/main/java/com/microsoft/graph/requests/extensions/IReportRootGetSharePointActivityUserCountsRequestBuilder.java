@@ -17,9 +17,10 @@ public interface IReportRootGetSharePointActivityUserCountsRequestBuilder extend
     /**
      * Creates the IReportRootGetSharePointActivityUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointActivityUserCountsRequest instance
      */
-    IReportRootGetSharePointActivityUserCountsRequest buildRequest();
+    IReportRootGetSharePointActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetSharePointActivityUserCountsRequest with specific options instead of the existing options

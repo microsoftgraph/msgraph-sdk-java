@@ -34,10 +34,11 @@ public class VppTokenRequestBuilder extends BaseRequestBuilder implements IVppTo
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IVppTokenRequest instance
      */
-    public IVppTokenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IVppTokenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

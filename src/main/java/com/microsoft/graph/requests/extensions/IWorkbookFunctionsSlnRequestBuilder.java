@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsSlnRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsSlnRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSlnRequest instance
      */
-    IWorkbookFunctionsSlnRequest buildRequest();
+    IWorkbookFunctionsSlnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsSlnRequest with specific options instead of the existing options

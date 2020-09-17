@@ -25,8 +25,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IEventCollectionRequestBuilder extends IRequestBuilder {
 
-    IEventCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IEventCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IEventCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IEventRequestBuilder byId(final String id);

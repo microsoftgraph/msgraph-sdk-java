@@ -34,10 +34,11 @@ public class WorkbookRangeInsertRequestBuilder extends BaseActionRequestBuilder 
     /**
      * Creates the IWorkbookRangeInsertRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeInsertRequest instance
      */
-    public IWorkbookRangeInsertRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeInsertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

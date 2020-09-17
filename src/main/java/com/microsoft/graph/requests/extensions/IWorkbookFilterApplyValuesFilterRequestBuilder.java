@@ -17,9 +17,10 @@ public interface IWorkbookFilterApplyValuesFilterRequestBuilder extends IRequest
     /**
      * Creates the IWorkbookFilterApplyValuesFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyValuesFilterRequest instance
      */
-    IWorkbookFilterApplyValuesFilterRequest buildRequest();
+    IWorkbookFilterApplyValuesFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFilterApplyValuesFilterRequest with specific options instead of the existing options

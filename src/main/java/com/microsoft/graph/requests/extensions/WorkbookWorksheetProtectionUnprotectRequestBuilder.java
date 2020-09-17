@@ -32,10 +32,11 @@ public class WorkbookWorksheetProtectionUnprotectRequestBuilder extends BaseActi
     /**
      * Creates the IWorkbookWorksheetProtectionUnprotectRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookWorksheetProtectionUnprotectRequest instance
      */
-    public IWorkbookWorksheetProtectionUnprotectRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookWorksheetProtectionUnprotectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

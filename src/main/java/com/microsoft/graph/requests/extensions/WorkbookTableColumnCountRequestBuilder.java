@@ -32,10 +32,11 @@ public class WorkbookTableColumnCountRequestBuilder extends BaseFunctionRequestB
     /**
      * Creates the IWorkbookTableColumnCountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableColumnCountRequest instance
      */
-    public IWorkbookTableColumnCountRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableColumnCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsOct2BinRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsOct2BinRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsOct2BinRequest instance
      */
-    IWorkbookFunctionsOct2BinRequest buildRequest();
+    IWorkbookFunctionsOct2BinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsOct2BinRequest with specific options instead of the existing options

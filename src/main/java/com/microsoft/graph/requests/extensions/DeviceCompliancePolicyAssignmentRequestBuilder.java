@@ -34,10 +34,11 @@ public class DeviceCompliancePolicyAssignmentRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceCompliancePolicyAssignmentRequest instance
      */
-    public IDeviceCompliancePolicyAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceCompliancePolicyAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

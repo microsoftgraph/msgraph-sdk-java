@@ -17,9 +17,10 @@ public interface IApplicationRemovePasswordRequestBuilder extends IRequestBuilde
     /**
      * Creates the IApplicationRemovePasswordRequest
      *
+     * @param requestOptions the options for the request
      * @return the IApplicationRemovePasswordRequest instance
      */
-    IApplicationRemovePasswordRequest buildRequest();
+    IApplicationRemovePasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IApplicationRemovePasswordRequest with specific options instead of the existing options

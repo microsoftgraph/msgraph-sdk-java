@@ -34,10 +34,11 @@ public class PlaceRequestBuilder extends BaseRequestBuilder implements IPlaceReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPlaceRequest instance
      */
-    public IPlaceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPlaceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

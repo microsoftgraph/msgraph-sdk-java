@@ -35,10 +35,11 @@ public class AttachmentCreateUploadSessionRequestBuilder extends BaseActionReque
     /**
      * Creates the IAttachmentCreateUploadSessionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAttachmentCreateUploadSessionRequest instance
      */
-    public IAttachmentCreateUploadSessionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAttachmentCreateUploadSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsDegreesRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsDegreesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDegreesRequest instance
      */
-    IWorkbookFunctionsDegreesRequest buildRequest();
+    IWorkbookFunctionsDegreesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsDegreesRequest with specific options instead of the existing options

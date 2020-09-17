@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IMailFolderDeltaCollectionRequest
  */
 public interface IMailFolderDeltaCollectionRequestBuilder extends IRequestBuilder {
 
-    IMailFolderDeltaCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IMailFolderDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IMailFolderDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsStDev_SRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsStDev_SRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsStDev_SRequest instance
      */
-    IWorkbookFunctionsStDev_SRequest buildRequest();
+    IWorkbookFunctionsStDev_SRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsStDev_SRequest with specific options instead of the existing options

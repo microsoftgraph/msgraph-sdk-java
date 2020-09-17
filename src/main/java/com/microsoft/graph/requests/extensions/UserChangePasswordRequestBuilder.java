@@ -36,10 +36,11 @@ public class UserChangePasswordRequestBuilder extends BaseActionRequestBuilder i
     /**
      * Creates the IUserChangePasswordRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserChangePasswordRequest instance
      */
-    public IUserChangePasswordRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserChangePasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

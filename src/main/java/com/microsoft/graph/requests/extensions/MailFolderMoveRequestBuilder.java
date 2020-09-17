@@ -34,10 +34,11 @@ public class MailFolderMoveRequestBuilder extends BaseActionRequestBuilder imple
     /**
      * Creates the IMailFolderMoveRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMailFolderMoveRequest instance
      */
-    public IMailFolderMoveRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMailFolderMoveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

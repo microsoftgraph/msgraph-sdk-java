@@ -20,9 +20,10 @@ public interface IDeviceConfigurationStateRequestBuilder extends IRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceConfigurationStateRequest instance
      */
-    IDeviceConfigurationStateRequest buildRequest();
+    IDeviceConfigurationStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

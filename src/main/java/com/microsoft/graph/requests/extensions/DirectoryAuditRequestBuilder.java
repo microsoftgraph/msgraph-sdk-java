@@ -34,10 +34,11 @@ public class DirectoryAuditRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDirectoryAuditRequest instance
      */
-    public IDirectoryAuditRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryAuditRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

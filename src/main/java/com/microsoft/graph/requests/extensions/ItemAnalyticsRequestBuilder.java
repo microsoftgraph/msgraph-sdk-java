@@ -38,10 +38,11 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemAnalyticsRequest instance
      */
-    public IItemAnalyticsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemAnalyticsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

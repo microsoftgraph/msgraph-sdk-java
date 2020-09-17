@@ -34,10 +34,11 @@ public class WorkbookFunctionsIsLogicalRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsIsLogicalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsLogicalRequest instance
      */
-    public IWorkbookFunctionsIsLogicalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsIsLogicalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

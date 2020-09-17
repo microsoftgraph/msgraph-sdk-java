@@ -34,10 +34,11 @@ public class AppRoleAssignmentRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAppRoleAssignmentRequest instance
      */
-    public IAppRoleAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAppRoleAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

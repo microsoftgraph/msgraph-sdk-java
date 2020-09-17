@@ -34,10 +34,11 @@ public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookChartLineFormatRequest instance
      */
-    public IWorkbookChartLineFormatRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartLineFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

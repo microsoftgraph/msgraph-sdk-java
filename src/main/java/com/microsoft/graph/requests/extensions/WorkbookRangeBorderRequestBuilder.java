@@ -34,10 +34,11 @@ public class WorkbookRangeBorderRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookRangeBorderRequest instance
      */
-    public IWorkbookRangeBorderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeBorderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

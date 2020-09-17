@@ -46,10 +46,11 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISharedDriveItemRequest instance
      */
-    public ISharedDriveItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISharedDriveItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsIntRateRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsIntRateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIntRateRequest instance
      */
-    IWorkbookFunctionsIntRateRequest buildRequest();
+    IWorkbookFunctionsIntRateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsIntRateRequest with specific options instead of the existing options

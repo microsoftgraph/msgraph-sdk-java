@@ -47,10 +47,11 @@ public class ManagedDeviceReferenceRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IManagedDeviceReferenceRequest instance
      */
-    public IManagedDeviceReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

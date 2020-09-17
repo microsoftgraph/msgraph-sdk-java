@@ -17,9 +17,10 @@ public interface IWorkbookPivotTableRefreshRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookPivotTableRefreshRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookPivotTableRefreshRequest instance
      */
-    IWorkbookPivotTableRefreshRequest buildRequest();
+    IWorkbookPivotTableRefreshRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookPivotTableRefreshRequest with specific options instead of the existing options

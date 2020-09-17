@@ -36,10 +36,11 @@ public class WorkbookFunctionsRomanRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsRomanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRomanRequest instance
      */
-    public IWorkbookFunctionsRomanRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRomanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

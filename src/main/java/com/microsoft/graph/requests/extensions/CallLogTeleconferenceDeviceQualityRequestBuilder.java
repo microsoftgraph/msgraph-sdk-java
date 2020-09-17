@@ -34,10 +34,11 @@ public class CallLogTeleconferenceDeviceQualityRequestBuilder extends BaseAction
     /**
      * Creates the ICallLogTeleconferenceDeviceQualityRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallLogTeleconferenceDeviceQualityRequest instance
      */
-    public ICallLogTeleconferenceDeviceQualityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallLogTeleconferenceDeviceQualityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,11 @@ public class WorkbookFunctionsExactRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsExactRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsExactRequest instance
      */
-    public IWorkbookFunctionsExactRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsExactRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

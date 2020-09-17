@@ -17,9 +17,10 @@ public interface ICallRedirectRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ICallRedirectRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallRedirectRequest instance
      */
-    ICallRedirectRequest buildRequest();
+    ICallRedirectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICallRedirectRequest with specific options instead of the existing options

@@ -20,9 +20,10 @@ public interface IWindows10CompliancePolicyRequestBuilder extends IRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10CompliancePolicyRequest instance
      */
-    IWindows10CompliancePolicyRequest buildRequest();
+    IWindows10CompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

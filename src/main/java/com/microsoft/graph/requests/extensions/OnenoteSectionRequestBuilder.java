@@ -43,10 +43,11 @@ public class OnenoteSectionRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOnenoteSectionRequest instance
      */
-    public IOnenoteSectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnenoteSectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

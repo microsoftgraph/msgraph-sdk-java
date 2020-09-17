@@ -34,10 +34,11 @@ public class LocalizedNotificationMessageRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ILocalizedNotificationMessageRequest instance
      */
-    public ILocalizedNotificationMessageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ILocalizedNotificationMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

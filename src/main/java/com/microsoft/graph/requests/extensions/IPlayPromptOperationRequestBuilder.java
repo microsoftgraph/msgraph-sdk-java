@@ -20,9 +20,10 @@ public interface IPlayPromptOperationRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPlayPromptOperationRequest instance
      */
-    IPlayPromptOperationRequest buildRequest();
+    IPlayPromptOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

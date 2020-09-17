@@ -34,10 +34,11 @@ public class ContractRequestBuilder extends BaseRequestBuilder implements IContr
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IContractRequest instance
      */
-    public IContractRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IContractRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

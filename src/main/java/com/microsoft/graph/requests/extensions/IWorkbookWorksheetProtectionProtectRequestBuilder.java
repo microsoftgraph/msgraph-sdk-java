@@ -17,9 +17,10 @@ public interface IWorkbookWorksheetProtectionProtectRequestBuilder extends IRequ
     /**
      * Creates the IWorkbookWorksheetProtectionProtectRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookWorksheetProtectionProtectRequest instance
      */
-    IWorkbookWorksheetProtectionProtectRequest buildRequest();
+    IWorkbookWorksheetProtectionProtectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookWorksheetProtectionProtectRequest with specific options instead of the existing options

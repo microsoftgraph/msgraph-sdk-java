@@ -32,10 +32,11 @@ public class ListItemVersionRestoreVersionRequestBuilder extends BaseActionReque
     /**
      * Creates the IListItemVersionRestoreVersionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IListItemVersionRestoreVersionRequest instance
      */
-    public IListItemVersionRestoreVersionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IListItemVersionRestoreVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

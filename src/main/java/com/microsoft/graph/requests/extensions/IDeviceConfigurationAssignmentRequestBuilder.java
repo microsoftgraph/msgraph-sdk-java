@@ -20,9 +20,10 @@ public interface IDeviceConfigurationAssignmentRequestBuilder extends IRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceConfigurationAssignmentRequest instance
      */
-    IDeviceConfigurationAssignmentRequest buildRequest();
+    IDeviceConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

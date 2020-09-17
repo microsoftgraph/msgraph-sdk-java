@@ -34,10 +34,11 @@ public class SecureScoreControlProfileRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISecureScoreControlProfileRequest instance
      */
-    public ISecureScoreControlProfileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISecureScoreControlProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

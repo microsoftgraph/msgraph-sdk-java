@@ -38,10 +38,11 @@ public class WorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsBinom_InvRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBinom_InvRequest instance
      */
-    public IWorkbookFunctionsBinom_InvRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsBinom_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

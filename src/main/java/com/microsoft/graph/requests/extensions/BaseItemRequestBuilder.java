@@ -36,10 +36,11 @@ public class BaseItemRequestBuilder extends BaseRequestBuilder implements IBaseI
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IBaseItemRequest instance
      */
-    public IBaseItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBaseItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

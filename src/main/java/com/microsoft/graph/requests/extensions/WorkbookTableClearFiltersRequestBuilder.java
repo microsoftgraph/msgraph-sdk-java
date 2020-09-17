@@ -32,10 +32,11 @@ public class WorkbookTableClearFiltersRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookTableClearFiltersRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableClearFiltersRequest instance
      */
-    public IWorkbookTableClearFiltersRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableClearFiltersRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

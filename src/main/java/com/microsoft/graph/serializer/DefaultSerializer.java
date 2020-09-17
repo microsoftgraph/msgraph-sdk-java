@@ -207,9 +207,10 @@ public class DefaultSerializer implements ISerializer {
                 if(outJson.has(field.getName())) {
                     final Type[] interfaces = field.getType().getGenericInterfaces();
                     for(Type interfaceType : interfaces) {
-                        if(interfaceType == IJsonBackedObject.class) {
+                        if(interfaceType == IJsonBackedObject.class && outJson.get(field.getName()).isJsonObject()) {
                             try {
-                                outJsonTree = getDataFromAdditionalDataManager(outJsonTree, field.get(serializableObject));
+                                final JsonElement outdatedValue = outJson.remove(field.getName());
+                                outJson.add(field.getName(), getDataFromAdditionalDataManager(outdatedValue.getAsJsonObject(), field.get(serializableObject)));
                             } catch (IllegalAccessException ex ) {
                                 logger.logDebug("Couldn't access prop" + field.getName());
                             }

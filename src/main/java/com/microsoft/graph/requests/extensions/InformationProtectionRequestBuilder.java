@@ -38,10 +38,11 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IInformationProtectionRequest instance
      */
-    public IInformationProtectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IInformationProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class DirectoryRoleTemplateRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDirectoryRoleTemplateRequest instance
      */
-    public IDirectoryRoleTemplateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryRoleTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class ReportRootGetOffice365ServicesUserCountsRequestBuilder extends Base
     /**
      * Creates the IReportRootGetOffice365ServicesUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365ServicesUserCountsRequest instance
      */
-    public IReportRootGetOffice365ServicesUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetOffice365ServicesUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

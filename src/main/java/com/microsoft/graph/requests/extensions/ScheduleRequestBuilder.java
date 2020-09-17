@@ -70,10 +70,11 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder implements ISched
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IScheduleRequest instance
      */
-    public IScheduleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IScheduleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

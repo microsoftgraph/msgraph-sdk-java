@@ -38,10 +38,11 @@ public class WorkbookFunctionsDateRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsDateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDateRequest instance
      */
-    public IWorkbookFunctionsDateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

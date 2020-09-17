@@ -34,10 +34,11 @@ public class ReportRootGetSharePointSiteUsageStorageRequestBuilder extends BaseF
     /**
      * Creates the IReportRootGetSharePointSiteUsageStorageRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointSiteUsageStorageRequest instance
      */
-    public IReportRootGetSharePointSiteUsageStorageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetSharePointSiteUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

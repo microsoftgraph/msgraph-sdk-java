@@ -34,10 +34,11 @@ public class ReportRootGetTeamsUserActivityCountsRequestBuilder extends BaseFunc
     /**
      * Creates the IReportRootGetTeamsUserActivityCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetTeamsUserActivityCountsRequest instance
      */
-    public IReportRootGetTeamsUserActivityCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetTeamsUserActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,22 @@ public class SingleValueLegacyExtendedPropertyCollectionRequestBuilder extends B
         super(requestUrl, client, requestOptions);
     }
 
-    public ISingleValueLegacyExtendedPropertyCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ISingleValueLegacyExtendedPropertyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ISingleValueLegacyExtendedPropertyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SingleValueLegacyExtendedPropertyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

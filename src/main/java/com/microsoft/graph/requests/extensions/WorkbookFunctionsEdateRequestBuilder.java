@@ -36,10 +36,11 @@ public class WorkbookFunctionsEdateRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsEdateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsEdateRequest instance
      */
-    public IWorkbookFunctionsEdateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsEdateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -44,10 +44,11 @@ public class WorkbookFunctionsPriceMatRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsPriceMatRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPriceMatRequest instance
      */
-    public IWorkbookFunctionsPriceMatRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsPriceMatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
