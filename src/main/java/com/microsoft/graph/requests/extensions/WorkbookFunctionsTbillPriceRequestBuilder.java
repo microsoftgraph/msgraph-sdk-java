@@ -38,10 +38,11 @@ public class WorkbookFunctionsTbillPriceRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsTbillPriceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTbillPriceRequest instance
      */
-    public IWorkbookFunctionsTbillPriceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsTbillPriceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

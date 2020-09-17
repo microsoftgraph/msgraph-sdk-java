@@ -40,10 +40,11 @@ public class WorkbookFunctionsHlookupRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsHlookupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHlookupRequest instance
      */
-    public IWorkbookFunctionsHlookupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsHlookupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IManagedDeviceRetireRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IManagedDeviceRetireRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRetireRequest instance
      */
-    IManagedDeviceRetireRequest buildRequest();
+    IManagedDeviceRetireRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceRetireRequest with specific options instead of the existing options

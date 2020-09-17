@@ -32,10 +32,11 @@ public class DriveItemFollowRequestBuilder extends BaseActionRequestBuilder impl
     /**
      * Creates the IDriveItemFollowRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemFollowRequest instance
      */
-    public IDriveItemFollowRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveItemFollowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

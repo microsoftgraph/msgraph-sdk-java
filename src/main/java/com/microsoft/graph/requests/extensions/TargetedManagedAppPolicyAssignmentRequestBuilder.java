@@ -34,10 +34,11 @@ public class TargetedManagedAppPolicyAssignmentRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITargetedManagedAppPolicyAssignmentRequest instance
      */
-    public ITargetedManagedAppPolicyAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITargetedManagedAppPolicyAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

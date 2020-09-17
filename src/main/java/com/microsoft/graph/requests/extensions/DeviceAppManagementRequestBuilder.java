@@ -90,10 +90,11 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceAppManagementRequest instance
      */
-    public IDeviceAppManagementRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceAppManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class WorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsCeiling_MathRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCeiling_MathRequest instance
      */
-    public IWorkbookFunctionsCeiling_MathRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCeiling_MathRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

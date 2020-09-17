@@ -34,10 +34,11 @@ public class WorkbookFunctionsSecRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsSecRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSecRequest instance
      */
-    public IWorkbookFunctionsSecRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSecRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

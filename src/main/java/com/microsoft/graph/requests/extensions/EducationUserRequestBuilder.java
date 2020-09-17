@@ -44,10 +44,11 @@ public class EducationUserRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationUserRequest instance
      */
-    public IEducationUserRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

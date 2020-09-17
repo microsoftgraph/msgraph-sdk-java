@@ -34,10 +34,11 @@ public class DirectoryObjectPartnerReferenceRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDirectoryObjectPartnerReferenceRequest instance
      */
-    public IDirectoryObjectPartnerReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryObjectPartnerReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

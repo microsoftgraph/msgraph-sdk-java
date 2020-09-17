@@ -34,10 +34,11 @@ public class OpenShiftRequestBuilder extends BaseRequestBuilder implements IOpen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOpenShiftRequest instance
      */
-    public IOpenShiftRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOpenShiftRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

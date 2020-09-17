@@ -32,10 +32,11 @@ public class WorkbookChartPointCountRequestBuilder extends BaseFunctionRequestBu
     /**
      * Creates the IWorkbookChartPointCountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartPointCountRequest instance
      */
-    public IWorkbookChartPointCountRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartPointCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

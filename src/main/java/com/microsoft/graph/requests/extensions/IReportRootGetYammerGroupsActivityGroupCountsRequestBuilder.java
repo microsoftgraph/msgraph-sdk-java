@@ -17,9 +17,10 @@ public interface IReportRootGetYammerGroupsActivityGroupCountsRequestBuilder ext
     /**
      * Creates the IReportRootGetYammerGroupsActivityGroupCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetYammerGroupsActivityGroupCountsRequest instance
      */
-    IReportRootGetYammerGroupsActivityGroupCountsRequest buildRequest();
+    IReportRootGetYammerGroupsActivityGroupCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetYammerGroupsActivityGroupCountsRequest with specific options instead of the existing options

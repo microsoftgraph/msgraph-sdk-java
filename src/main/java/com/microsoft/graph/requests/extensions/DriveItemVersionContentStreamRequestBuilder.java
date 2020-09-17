@@ -34,10 +34,11 @@ public class DriveItemVersionContentStreamRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDriveItemVersionContentStreamRequest instance
      */
-    public IDriveItemVersionContentStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveItemVersionContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

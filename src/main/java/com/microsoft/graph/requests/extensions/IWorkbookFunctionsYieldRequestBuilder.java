@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsYieldRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsYieldRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsYieldRequest instance
      */
-    IWorkbookFunctionsYieldRequest buildRequest();
+    IWorkbookFunctionsYieldRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsYieldRequest with specific options instead of the existing options

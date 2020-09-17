@@ -17,9 +17,10 @@ public interface IDeviceCompliancePolicyScheduleActionsForRulesRequestBuilder ex
     /**
      * Creates the IDeviceCompliancePolicyScheduleActionsForRulesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceCompliancePolicyScheduleActionsForRulesRequest instance
      */
-    IDeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest();
+    IDeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceCompliancePolicyScheduleActionsForRulesRequest with specific options instead of the existing options

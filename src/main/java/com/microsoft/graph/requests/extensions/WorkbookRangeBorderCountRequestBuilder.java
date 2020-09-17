@@ -32,10 +32,11 @@ public class WorkbookRangeBorderCountRequestBuilder extends BaseFunctionRequestB
     /**
      * Creates the IWorkbookRangeBorderCountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeBorderCountRequest instance
      */
-    public IWorkbookRangeBorderCountRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeBorderCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

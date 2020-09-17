@@ -34,10 +34,11 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IApplePushNotificationCertificateRequest instance
      */
-    public IApplePushNotificationCertificateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApplePushNotificationCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

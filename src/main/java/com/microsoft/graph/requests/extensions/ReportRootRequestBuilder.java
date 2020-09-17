@@ -35,10 +35,11 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IReportRootRequest instance
      */
-    public IReportRootRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITeamsAppInstallationRequest instance
      */
-    public ITeamsAppInstallationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamsAppInstallationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

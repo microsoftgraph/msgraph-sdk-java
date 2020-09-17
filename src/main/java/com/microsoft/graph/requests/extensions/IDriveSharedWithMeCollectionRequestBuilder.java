@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IDriveSharedWithMeCollectionReque
  */
 public interface IDriveSharedWithMeCollectionRequestBuilder extends IRequestBuilder {
 
-    IDriveSharedWithMeCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IDriveSharedWithMeCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IDriveSharedWithMeCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

@@ -34,10 +34,11 @@ public class EventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder 
     /**
      * Creates the IEventSnoozeReminderRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventSnoozeReminderRequest instance
      */
-    public IEventSnoozeReminderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventSnoozeReminderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

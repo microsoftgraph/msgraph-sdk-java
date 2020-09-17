@@ -44,10 +44,11 @@ public class WorkbookFunctionsCumIPmtRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsCumIPmtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCumIPmtRequest instance
      */
-    public IWorkbookFunctionsCumIPmtRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCumIPmtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

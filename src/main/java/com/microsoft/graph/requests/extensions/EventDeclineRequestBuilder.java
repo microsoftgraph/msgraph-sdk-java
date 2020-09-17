@@ -36,10 +36,11 @@ public class EventDeclineRequestBuilder extends BaseActionRequestBuilder impleme
     /**
      * Creates the IEventDeclineRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventDeclineRequest instance
      */
-    public IEventDeclineRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventDeclineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

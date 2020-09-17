@@ -34,10 +34,11 @@ public class WorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFilterApplyTopItemsFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyTopItemsFilterRequest instance
      */
-    public IWorkbookFilterApplyTopItemsFilterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFilterApplyTopItemsFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

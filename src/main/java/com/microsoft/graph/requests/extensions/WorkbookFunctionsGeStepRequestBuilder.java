@@ -36,10 +36,11 @@ public class WorkbookFunctionsGeStepRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsGeStepRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGeStepRequest instance
      */
-    public IWorkbookFunctionsGeStepRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsGeStepRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class IosMobileAppConfigurationRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosMobileAppConfigurationRequest instance
      */
-    public IIosMobileAppConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosMobileAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

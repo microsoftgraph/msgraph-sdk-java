@@ -34,10 +34,11 @@ public class TeamArchiveRequestBuilder extends BaseActionRequestBuilder implemen
     /**
      * Creates the ITeamArchiveRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITeamArchiveRequest instance
      */
-    public ITeamArchiveRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamArchiveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

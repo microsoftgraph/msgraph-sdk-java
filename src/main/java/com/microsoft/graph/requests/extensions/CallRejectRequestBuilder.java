@@ -36,10 +36,11 @@ public class CallRejectRequestBuilder extends BaseActionRequestBuilder implement
     /**
      * Creates the ICallRejectRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallRejectRequest instance
      */
-    public ICallRejectRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallRejectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

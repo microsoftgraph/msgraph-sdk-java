@@ -38,10 +38,11 @@ public class WorkbookNamedItemAddRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookNamedItemAddRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookNamedItemAddRequest instance
      */
-    public IWorkbookNamedItemAddRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookNamedItemAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

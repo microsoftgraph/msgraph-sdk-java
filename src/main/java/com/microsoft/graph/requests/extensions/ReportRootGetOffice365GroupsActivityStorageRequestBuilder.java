@@ -34,10 +34,11 @@ public class ReportRootGetOffice365GroupsActivityStorageRequestBuilder extends B
     /**
      * Creates the IReportRootGetOffice365GroupsActivityStorageRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365GroupsActivityStorageRequest instance
      */
-    public IReportRootGetOffice365GroupsActivityStorageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetOffice365GroupsActivityStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

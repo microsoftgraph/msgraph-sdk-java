@@ -34,10 +34,11 @@ public class WorkbookChartSeriesItemAtRequestBuilder extends BaseFunctionRequest
     /**
      * Creates the IWorkbookChartSeriesItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartSeriesItemAtRequest instance
      */
-    public IWorkbookChartSeriesItemAtRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartSeriesItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -58,5 +59,21 @@ public class WorkbookChartSeriesItemAtRequestBuilder extends BaseFunctionRequest
       }
 
         return request;
+    }
+
+    /**
+     * Gets the request builder for WorkbookChartSeriesFormat
+     *
+     * @return the IWorkbookChartSeriesFormatRequestBuilder instance
+     */
+    public IWorkbookChartSeriesFormatRequestBuilder format() {
+        return new WorkbookChartSeriesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
+    }
+    public IWorkbookChartPointCollectionRequestBuilder points() {
+        return new WorkbookChartPointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("points"), getClient(), null);
+    }
+
+    public IWorkbookChartPointRequestBuilder points(final String id) {
+        return new WorkbookChartPointRequestBuilder(getRequestUrlWithAdditionalSegment("points") + "/" + id, getClient(), null);
     }
 }

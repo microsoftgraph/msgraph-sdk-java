@@ -34,10 +34,11 @@ public class IosCustomConfigurationRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosCustomConfigurationRequest instance
      */
-    public IIosCustomConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosCustomConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

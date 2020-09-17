@@ -38,10 +38,11 @@ public class WorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsGamma_InvRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGamma_InvRequest instance
      */
-    public IWorkbookFunctionsGamma_InvRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsGamma_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

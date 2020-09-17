@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsEcma_CeilingRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsEcma_CeilingRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsEcma_CeilingRequest instance
      */
-    IWorkbookFunctionsEcma_CeilingRequest buildRequest();
+    IWorkbookFunctionsEcma_CeilingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsEcma_CeilingRequest with specific options instead of the existing options

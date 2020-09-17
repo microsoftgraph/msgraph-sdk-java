@@ -9,8 +9,11 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.ScopedRoleMembership;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionResponse;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -57,6 +60,14 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
      * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
      */
     public DirectoryObjectCollectionPage members;
+
+    /**
+     * The Scoped Members.
+     * 
+     */
+    @SerializedName("scopedMembers")
+    @Expose
+    public ScopedRoleMembershipCollectionPage scopedMembers;
 
 
     /**
@@ -112,6 +123,22 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
             }
             response.value = Arrays.asList(array);
             members = new DirectoryObjectCollectionPage(response, null);
+        }
+
+        if (json.has("scopedMembers")) {
+            final ScopedRoleMembershipCollectionResponse response = new ScopedRoleMembershipCollectionResponse();
+            if (json.has("scopedMembers@odata.nextLink")) {
+                response.nextLink = json.get("scopedMembers@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("scopedMembers").toString(), JsonObject[].class);
+            final ScopedRoleMembership[] array = new ScopedRoleMembership[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ScopedRoleMembership.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            scopedMembers = new ScopedRoleMembershipCollectionPage(response, null);
         }
     }
 }

@@ -17,9 +17,10 @@ public interface IManagedDeviceResetPasscodeRequestBuilder extends IRequestBuild
     /**
      * Creates the IManagedDeviceResetPasscodeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceResetPasscodeRequest instance
      */
-    IManagedDeviceResetPasscodeRequest buildRequest();
+    IManagedDeviceResetPasscodeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceResetPasscodeRequest with specific options instead of the existing options

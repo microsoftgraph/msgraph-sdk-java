@@ -35,10 +35,11 @@ public class DriveItemCreateUploadSessionRequestBuilder extends BaseActionReques
     /**
      * Creates the IDriveItemCreateUploadSessionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemCreateUploadSessionRequest instance
      */
-    public IDriveItemCreateUploadSessionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveItemCreateUploadSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

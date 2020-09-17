@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsAverageARequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsAverageARequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAverageARequest instance
      */
-    IWorkbookFunctionsAverageARequest buildRequest();
+    IWorkbookFunctionsAverageARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsAverageARequest with specific options instead of the existing options

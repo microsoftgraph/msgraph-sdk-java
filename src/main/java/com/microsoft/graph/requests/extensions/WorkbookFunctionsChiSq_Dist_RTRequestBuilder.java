@@ -36,10 +36,11 @@ public class WorkbookFunctionsChiSq_Dist_RTRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsChiSq_Dist_RTRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsChiSq_Dist_RTRequest instance
      */
-    public IWorkbookFunctionsChiSq_Dist_RTRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsChiSq_Dist_RTRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

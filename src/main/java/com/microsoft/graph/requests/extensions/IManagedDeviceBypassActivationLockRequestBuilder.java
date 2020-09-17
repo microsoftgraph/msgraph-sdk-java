@@ -17,9 +17,10 @@ public interface IManagedDeviceBypassActivationLockRequestBuilder extends IReque
     /**
      * Creates the IManagedDeviceBypassActivationLockRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceBypassActivationLockRequest instance
      */
-    IManagedDeviceBypassActivationLockRequest buildRequest();
+    IManagedDeviceBypassActivationLockRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceBypassActivationLockRequest with specific options instead of the existing options

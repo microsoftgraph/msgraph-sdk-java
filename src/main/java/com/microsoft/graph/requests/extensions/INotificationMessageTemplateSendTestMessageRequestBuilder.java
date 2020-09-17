@@ -17,9 +17,10 @@ public interface INotificationMessageTemplateSendTestMessageRequestBuilder exten
     /**
      * Creates the INotificationMessageTemplateSendTestMessageRequest
      *
+     * @param requestOptions the options for the request
      * @return the INotificationMessageTemplateSendTestMessageRequest instance
      */
-    INotificationMessageTemplateSendTestMessageRequest buildRequest();
+    INotificationMessageTemplateSendTestMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the INotificationMessageTemplateSendTestMessageRequest with specific options instead of the existing options

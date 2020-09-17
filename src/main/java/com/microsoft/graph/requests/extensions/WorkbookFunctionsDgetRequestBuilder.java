@@ -38,10 +38,11 @@ public class WorkbookFunctionsDgetRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsDgetRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDgetRequest instance
      */
-    public IWorkbookFunctionsDgetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDgetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

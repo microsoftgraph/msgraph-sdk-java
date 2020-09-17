@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsAtanRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsAtanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAtanRequest instance
      */
-    IWorkbookFunctionsAtanRequest buildRequest();
+    IWorkbookFunctionsAtanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsAtanRequest with specific options instead of the existing options

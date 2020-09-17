@@ -34,10 +34,11 @@ public class MacOSOfficeSuiteAppRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSOfficeSuiteAppRequest instance
      */
-    public IMacOSOfficeSuiteAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSOfficeSuiteAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

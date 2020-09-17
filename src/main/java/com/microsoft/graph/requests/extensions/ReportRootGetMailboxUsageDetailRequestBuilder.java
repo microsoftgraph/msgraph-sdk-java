@@ -34,10 +34,11 @@ public class ReportRootGetMailboxUsageDetailRequestBuilder extends BaseFunctionR
     /**
      * Creates the IReportRootGetMailboxUsageDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetMailboxUsageDetailRequest instance
      */
-    public IReportRootGetMailboxUsageDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetMailboxUsageDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

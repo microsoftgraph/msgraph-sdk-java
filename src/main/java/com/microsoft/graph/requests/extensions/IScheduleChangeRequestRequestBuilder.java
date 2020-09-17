@@ -20,9 +20,10 @@ public interface IScheduleChangeRequestRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IScheduleChangeRequestRequest instance
      */
-    IScheduleChangeRequestRequest buildRequest();
+    IScheduleChangeRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -32,7 +33,7 @@ public interface IScheduleChangeRequestRequestBuilder extends IRequestBuilder {
      */
     IScheduleChangeRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
-    IScheduleChangeRequestApproveRequestBuilder approve(final String message);
     IScheduleChangeRequestDeclineRequestBuilder decline(final String message);
+    IScheduleChangeRequestApproveRequestBuilder approve(final String message);
 
 }

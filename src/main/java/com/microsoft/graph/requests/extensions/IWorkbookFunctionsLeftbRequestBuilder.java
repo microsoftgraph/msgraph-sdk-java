@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsLeftbRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsLeftbRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLeftbRequest instance
      */
-    IWorkbookFunctionsLeftbRequest buildRequest();
+    IWorkbookFunctionsLeftbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsLeftbRequest with specific options instead of the existing options

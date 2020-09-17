@@ -17,9 +17,10 @@ public interface IDriveItemCreateLinkRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IDriveItemCreateLinkRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemCreateLinkRequest instance
      */
-    IDriveItemCreateLinkRequest buildRequest();
+    IDriveItemCreateLinkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDriveItemCreateLinkRequest with specific options instead of the existing options

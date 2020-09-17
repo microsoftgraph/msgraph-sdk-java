@@ -20,9 +20,10 @@ public interface IWindows10TeamGeneralConfigurationRequestBuilder extends IReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10TeamGeneralConfigurationRequest instance
      */
-    IWindows10TeamGeneralConfigurationRequest buildRequest();
+    IWindows10TeamGeneralConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsMirrRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsMirrRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMirrRequest instance
      */
-    IWorkbookFunctionsMirrRequest buildRequest();
+    IWorkbookFunctionsMirrRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsMirrRequest with specific options instead of the existing options

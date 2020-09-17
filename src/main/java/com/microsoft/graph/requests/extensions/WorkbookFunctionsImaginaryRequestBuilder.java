@@ -34,10 +34,11 @@ public class WorkbookFunctionsImaginaryRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsImaginaryRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImaginaryRequest instance
      */
-    public IWorkbookFunctionsImaginaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImaginaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

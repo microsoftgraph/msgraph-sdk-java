@@ -34,10 +34,11 @@ public class ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder extends BaseA
     /**
      * Creates the IManagedDeviceUpdateWindowsDeviceAccountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceUpdateWindowsDeviceAccountRequest instance
      */
-    public IManagedDeviceUpdateWindowsDeviceAccountRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceUpdateWindowsDeviceAccountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

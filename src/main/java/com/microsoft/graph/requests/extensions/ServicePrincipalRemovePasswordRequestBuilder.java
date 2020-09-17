@@ -34,10 +34,11 @@ public class ServicePrincipalRemovePasswordRequestBuilder extends BaseActionRequ
     /**
      * Creates the IServicePrincipalRemovePasswordRequest
      *
+     * @param requestOptions the options for the request
      * @return the IServicePrincipalRemovePasswordRequest instance
      */
-    public IServicePrincipalRemovePasswordRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IServicePrincipalRemovePasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

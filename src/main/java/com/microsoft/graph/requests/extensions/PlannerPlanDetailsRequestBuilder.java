@@ -34,10 +34,11 @@ public class PlannerPlanDetailsRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPlannerPlanDetailsRequest instance
      */
-    public IPlannerPlanDetailsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPlannerPlanDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

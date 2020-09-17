@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsDevSqRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsDevSqRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDevSqRequest instance
      */
-    IWorkbookFunctionsDevSqRequest buildRequest();
+    IWorkbookFunctionsDevSqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsDevSqRequest with specific options instead of the existing options

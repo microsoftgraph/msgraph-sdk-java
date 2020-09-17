@@ -32,10 +32,11 @@ public class WorkbookRefreshSessionRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookRefreshSessionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRefreshSessionRequest instance
      */
-    public IWorkbookRefreshSessionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRefreshSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

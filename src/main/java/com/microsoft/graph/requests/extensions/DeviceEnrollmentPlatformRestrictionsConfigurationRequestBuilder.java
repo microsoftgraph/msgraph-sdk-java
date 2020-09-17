@@ -34,10 +34,11 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder ext
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceEnrollmentPlatformRestrictionsConfigurationRequest instance
      */
-    public IDeviceEnrollmentPlatformRestrictionsConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceEnrollmentPlatformRestrictionsConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

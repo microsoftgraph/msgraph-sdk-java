@@ -34,10 +34,11 @@ public class ManagedIOSStoreAppRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedIOSStoreAppRequest instance
      */
-    public IManagedIOSStoreAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedIOSStoreAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

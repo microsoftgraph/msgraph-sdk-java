@@ -17,9 +17,10 @@ public interface IScheduleChangeRequestApproveRequestBuilder extends IRequestBui
     /**
      * Creates the IScheduleChangeRequestApproveRequest
      *
+     * @param requestOptions the options for the request
      * @return the IScheduleChangeRequestApproveRequest instance
      */
-    IScheduleChangeRequestApproveRequest buildRequest();
+    IScheduleChangeRequestApproveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IScheduleChangeRequestApproveRequest with specific options instead of the existing options

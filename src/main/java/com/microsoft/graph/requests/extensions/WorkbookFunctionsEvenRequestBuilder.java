@@ -34,10 +34,11 @@ public class WorkbookFunctionsEvenRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsEvenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsEvenRequest instance
      */
-    public IWorkbookFunctionsEvenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsEvenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

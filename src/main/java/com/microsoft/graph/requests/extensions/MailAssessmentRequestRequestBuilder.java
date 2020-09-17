@@ -34,10 +34,11 @@ public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMailAssessmentRequestRequest instance
      */
-    public IMailAssessmentRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMailAssessmentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class ExtensionRequestBuilder extends BaseRequestBuilder implements IExte
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IExtensionRequest instance
      */
-    public IExtensionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IExtensionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

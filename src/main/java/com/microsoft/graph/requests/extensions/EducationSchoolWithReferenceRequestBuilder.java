@@ -43,10 +43,11 @@ public class EducationSchoolWithReferenceRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationSchoolWithReferenceRequest instance
      */
-    public IEducationSchoolWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationSchoolWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

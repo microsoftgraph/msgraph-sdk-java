@@ -32,10 +32,11 @@ public class GroupAddFavoriteRequestBuilder extends BaseActionRequestBuilder imp
     /**
      * Creates the IGroupAddFavoriteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupAddFavoriteRequest instance
      */
-    public IGroupAddFavoriteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupAddFavoriteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,11 @@ public class WorkbookFunctionsFloor_PreciseRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsFloor_PreciseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFloor_PreciseRequest instance
      */
-    public IWorkbookFunctionsFloor_PreciseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsFloor_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

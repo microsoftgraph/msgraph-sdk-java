@@ -38,10 +38,11 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder implements ICo
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IContentTypeRequest instance
      */
-    public IContentTypeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IContentTypeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

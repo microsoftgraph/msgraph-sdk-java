@@ -34,10 +34,11 @@ public class UserExportPersonalDataRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IUserExportPersonalDataRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserExportPersonalDataRequest instance
      */
-    public IUserExportPersonalDataRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserExportPersonalDataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

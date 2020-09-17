@@ -37,10 +37,11 @@ public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder i
     /**
      * Creates the IGroupAssignLicenseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupAssignLicenseRequest instance
      */
-    public IGroupAssignLicenseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupAssignLicenseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

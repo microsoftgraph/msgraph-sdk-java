@@ -32,10 +32,11 @@ public class TeamsAppInstallationUpgradeRequestBuilder extends BaseActionRequest
     /**
      * Creates the ITeamsAppInstallationUpgradeRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITeamsAppInstallationUpgradeRequest instance
      */
-    public ITeamsAppInstallationUpgradeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamsAppInstallationUpgradeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

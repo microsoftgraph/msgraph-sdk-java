@@ -39,11 +39,23 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunc
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("includePersonalNotebooks", includePersonalNotebooks));
 		}
       }
-
-    public INotebookGetRecentNotebooksCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public INotebookGetRecentNotebooksCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public INotebookGetRecentNotebooksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         NotebookGetRecentNotebooksCollectionRequest request = new NotebookGetRecentNotebooksCollectionRequest(
                 getRequestUrl(),

@@ -36,10 +36,11 @@ public class WorkbookFunctionsPermutRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsPermutRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPermutRequest instance
      */
-    public IWorkbookFunctionsPermutRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsPermutRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

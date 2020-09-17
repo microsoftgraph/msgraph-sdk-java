@@ -34,10 +34,11 @@ public class WorkbookFunctionsVar_SRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsVar_SRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsVar_SRequest instance
      */
-    public IWorkbookFunctionsVar_SRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsVar_SRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

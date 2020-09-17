@@ -39,10 +39,11 @@ public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITargetedManagedAppProtectionRequest instance
      */
-    public ITargetedManagedAppProtectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITargetedManagedAppProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -40,10 +40,11 @@ public class WorkbookFunctionsBinom_DistRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsBinom_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBinom_DistRequest instance
      */
-    public IWorkbookFunctionsBinom_DistRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsBinom_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

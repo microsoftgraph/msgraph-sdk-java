@@ -34,10 +34,11 @@ public class MailFolderCopyRequestBuilder extends BaseActionRequestBuilder imple
     /**
      * Creates the IMailFolderCopyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMailFolderCopyRequest instance
      */
-    public IMailFolderCopyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMailFolderCopyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

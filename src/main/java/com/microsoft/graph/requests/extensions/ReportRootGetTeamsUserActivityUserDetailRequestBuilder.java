@@ -47,10 +47,11 @@ public class ReportRootGetTeamsUserActivityUserDetailRequestBuilder extends Base
     /**
      * Creates the IReportRootGetTeamsUserActivityUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetTeamsUserActivityUserDetailRequest instance
      */
-    public IReportRootGetTeamsUserActivityUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetTeamsUserActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

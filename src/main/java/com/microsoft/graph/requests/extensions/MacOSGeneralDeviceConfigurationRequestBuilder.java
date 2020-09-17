@@ -34,10 +34,11 @@ public class MacOSGeneralDeviceConfigurationRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSGeneralDeviceConfigurationRequest instance
      */
-    public IMacOSGeneralDeviceConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSGeneralDeviceConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

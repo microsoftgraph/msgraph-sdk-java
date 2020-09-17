@@ -34,10 +34,11 @@ public class ClaimsMappingPolicyRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IClaimsMappingPolicyRequest instance
      */
-    public IClaimsMappingPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IClaimsMappingPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -53,10 +53,11 @@ public class CalendarRequestBuilder extends BaseRequestBuilder implements ICalen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICalendarRequest instance
      */
-    public ICalendarRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICalendarRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

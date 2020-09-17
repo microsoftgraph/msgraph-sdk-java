@@ -40,10 +40,11 @@ public class WorkbookFunctionsIspmtRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsIspmtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIspmtRequest instance
      */
-    public IWorkbookFunctionsIspmtRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsIspmtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -63,10 +63,11 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISiteRequest instance
      */
-    public ISiteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISiteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

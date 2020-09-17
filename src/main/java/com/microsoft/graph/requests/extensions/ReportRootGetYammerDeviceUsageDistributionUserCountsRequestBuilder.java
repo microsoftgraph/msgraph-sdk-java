@@ -34,10 +34,11 @@ public class ReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder 
     /**
      * Creates the IReportRootGetYammerDeviceUsageDistributionUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetYammerDeviceUsageDistributionUserCountsRequest instance
      */
-    public IReportRootGetYammerDeviceUsageDistributionUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetYammerDeviceUsageDistributionUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,11 @@ public class WorkbookFunctionsPowerRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsPowerRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPowerRequest instance
      */
-    public IWorkbookFunctionsPowerRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsPowerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

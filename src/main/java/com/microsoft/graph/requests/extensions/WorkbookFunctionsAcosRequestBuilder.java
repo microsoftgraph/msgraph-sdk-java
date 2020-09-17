@@ -34,10 +34,11 @@ public class WorkbookFunctionsAcosRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsAcosRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAcosRequest instance
      */
-    public IWorkbookFunctionsAcosRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsAcosRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

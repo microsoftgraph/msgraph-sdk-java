@@ -43,10 +43,11 @@ public class WindowsInformationProtectionRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionRequest instance
      */
-    public IWindowsInformationProtectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsInformationProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

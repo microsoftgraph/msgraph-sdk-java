@@ -38,10 +38,11 @@ public class ConversationRequestBuilder extends BaseRequestBuilder implements IC
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IConversationRequest instance
      */
-    public IConversationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IConversationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface ICallMuteRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ICallMuteRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallMuteRequest instance
      */
-    ICallMuteRequest buildRequest();
+    ICallMuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICallMuteRequest with specific options instead of the existing options

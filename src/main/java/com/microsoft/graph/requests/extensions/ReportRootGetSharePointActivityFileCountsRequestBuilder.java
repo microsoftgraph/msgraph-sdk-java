@@ -34,10 +34,11 @@ public class ReportRootGetSharePointActivityFileCountsRequestBuilder extends Bas
     /**
      * Creates the IReportRootGetSharePointActivityFileCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointActivityFileCountsRequest instance
      */
-    public IReportRootGetSharePointActivityFileCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetSharePointActivityFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

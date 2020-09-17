@@ -17,9 +17,10 @@ public interface IGroupRemoveFavoriteRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IGroupRemoveFavoriteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupRemoveFavoriteRequest instance
      */
-    IGroupRemoveFavoriteRequest buildRequest();
+    IGroupRemoveFavoriteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupRemoveFavoriteRequest with specific options instead of the existing options

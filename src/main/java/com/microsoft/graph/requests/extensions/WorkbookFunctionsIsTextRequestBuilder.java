@@ -34,10 +34,11 @@ public class WorkbookFunctionsIsTextRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsIsTextRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsTextRequest instance
      */
-    public IWorkbookFunctionsIsTextRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsIsTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

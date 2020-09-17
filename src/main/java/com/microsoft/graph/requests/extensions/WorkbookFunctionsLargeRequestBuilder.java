@@ -36,10 +36,11 @@ public class WorkbookFunctionsLargeRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsLargeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLargeRequest instance
      */
-    public IWorkbookFunctionsLargeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsLargeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -39,11 +39,23 @@ public class DriveItemSearchCollectionRequestBuilder extends BaseFunctionRequest
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("q", q));
 		}
       }
-
-    public IDriveItemSearchCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDriveItemSearchCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDriveItemSearchCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemSearchCollectionRequest request = new DriveItemSearchCollectionRequest(
                 getRequestUrl(),

@@ -32,10 +32,11 @@ public class GroupSubscribeByMailRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IGroupSubscribeByMailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupSubscribeByMailRequest instance
      */
-    public IGroupSubscribeByMailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupSubscribeByMailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

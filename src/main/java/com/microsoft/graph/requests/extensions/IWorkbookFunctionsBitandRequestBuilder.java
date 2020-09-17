@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsBitandRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsBitandRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBitandRequest instance
      */
-    IWorkbookFunctionsBitandRequest buildRequest();
+    IWorkbookFunctionsBitandRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsBitandRequest with specific options instead of the existing options

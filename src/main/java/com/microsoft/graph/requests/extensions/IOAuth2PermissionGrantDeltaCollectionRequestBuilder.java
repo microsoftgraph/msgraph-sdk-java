@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantDeltaCollec
  */
 public interface IOAuth2PermissionGrantDeltaCollectionRequestBuilder extends IRequestBuilder {
 
-    IOAuth2PermissionGrantDeltaCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IOAuth2PermissionGrantDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IOAuth2PermissionGrantDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

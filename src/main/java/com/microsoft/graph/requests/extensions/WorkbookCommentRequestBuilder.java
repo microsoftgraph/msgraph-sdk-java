@@ -38,10 +38,11 @@ public class WorkbookCommentRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookCommentRequest instance
      */
-    public IWorkbookCommentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookCommentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

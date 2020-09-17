@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsCountIfsRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsCountIfsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCountIfsRequest instance
      */
-    IWorkbookFunctionsCountIfsRequest buildRequest();
+    IWorkbookFunctionsCountIfsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsCountIfsRequest with specific options instead of the existing options

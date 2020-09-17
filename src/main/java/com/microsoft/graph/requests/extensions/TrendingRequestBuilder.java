@@ -36,10 +36,11 @@ public class TrendingRequestBuilder extends BaseRequestBuilder implements ITrend
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITrendingRequest instance
      */
-    public ITrendingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITrendingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

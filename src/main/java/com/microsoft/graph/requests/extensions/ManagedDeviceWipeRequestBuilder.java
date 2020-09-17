@@ -38,10 +38,11 @@ public class ManagedDeviceWipeRequestBuilder extends BaseActionRequestBuilder im
     /**
      * Creates the IManagedDeviceWipeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceWipeRequest instance
      */
-    public IManagedDeviceWipeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceWipeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

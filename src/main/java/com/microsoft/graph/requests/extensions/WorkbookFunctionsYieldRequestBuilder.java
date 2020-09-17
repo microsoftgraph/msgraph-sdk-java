@@ -46,10 +46,11 @@ public class WorkbookFunctionsYieldRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsYieldRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsYieldRequest instance
      */
-    public IWorkbookFunctionsYieldRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsYieldRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

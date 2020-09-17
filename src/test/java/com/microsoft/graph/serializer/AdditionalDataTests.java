@@ -3,14 +3,19 @@ package com.microsoft.graph.serializer;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import okhttp3.Request;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
+import com.microsoft.graph.functional.TestBase;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionBody;
@@ -66,7 +71,7 @@ public class AdditionalDataTests {
 		final DriveItemCreateUploadSessionBody body = new DriveItemCreateUploadSessionBody();
 		body.item = upProps;
 		String serializedObject = serializer.serializeObject(body);
-		assertEquals("{\"item\":{\"name\":\"vacation.gif\"},\"@microsoft.graph.conflictBehavior\":\"rename\"}", serializedObject);
+		assertEquals("{\"item\":{\"name\":\"vacation.gif\",\"@microsoft.graph.conflictBehavior\":\"rename\"}}", serializedObject);
 	}
 	
 	@Test

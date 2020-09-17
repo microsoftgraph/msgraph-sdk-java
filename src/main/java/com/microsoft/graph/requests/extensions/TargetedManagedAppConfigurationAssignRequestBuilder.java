@@ -34,10 +34,11 @@ public class TargetedManagedAppConfigurationAssignRequestBuilder extends BaseAct
     /**
      * Creates the ITargetedManagedAppConfigurationAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITargetedManagedAppConfigurationAssignRequest instance
      */
-    public ITargetedManagedAppConfigurationAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITargetedManagedAppConfigurationAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

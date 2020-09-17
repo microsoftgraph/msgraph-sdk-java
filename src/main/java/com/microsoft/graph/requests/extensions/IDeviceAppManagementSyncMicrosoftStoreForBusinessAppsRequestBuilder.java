@@ -17,9 +17,10 @@ public interface IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBui
     /**
      * Creates the IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest instance
      */
-    IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest buildRequest();
+    IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest with specific options instead of the existing options

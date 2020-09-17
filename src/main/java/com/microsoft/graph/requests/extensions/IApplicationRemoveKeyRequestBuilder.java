@@ -17,9 +17,10 @@ public interface IApplicationRemoveKeyRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IApplicationRemoveKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IApplicationRemoveKeyRequest instance
      */
-    IApplicationRemoveKeyRequest buildRequest();
+    IApplicationRemoveKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IApplicationRemoveKeyRequest with specific options instead of the existing options

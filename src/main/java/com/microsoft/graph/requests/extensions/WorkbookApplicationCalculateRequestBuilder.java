@@ -34,10 +34,11 @@ public class WorkbookApplicationCalculateRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookApplicationCalculateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookApplicationCalculateRequest instance
      */
-    public IWorkbookApplicationCalculateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookApplicationCalculateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

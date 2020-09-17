@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsConfidence_TRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsConfidence_TRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsConfidence_TRequest instance
      */
-    IWorkbookFunctionsConfidence_TRequest buildRequest();
+    IWorkbookFunctionsConfidence_TRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsConfidence_TRequest with specific options instead of the existing options

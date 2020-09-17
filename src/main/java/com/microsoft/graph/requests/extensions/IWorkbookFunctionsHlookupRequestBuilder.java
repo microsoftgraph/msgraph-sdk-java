@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsHlookupRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsHlookupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHlookupRequest instance
      */
-    IWorkbookFunctionsHlookupRequest buildRequest();
+    IWorkbookFunctionsHlookupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsHlookupRequest with specific options instead of the existing options

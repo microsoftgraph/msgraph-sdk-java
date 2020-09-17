@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsDcountRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsDcountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDcountRequest instance
      */
-    IWorkbookFunctionsDcountRequest buildRequest();
+    IWorkbookFunctionsDcountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsDcountRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsVlookupRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsVlookupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsVlookupRequest instance
      */
-    IWorkbookFunctionsVlookupRequest buildRequest();
+    IWorkbookFunctionsVlookupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsVlookupRequest with specific options instead of the existing options

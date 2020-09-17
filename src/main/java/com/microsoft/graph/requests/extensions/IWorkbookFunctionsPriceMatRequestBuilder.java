@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsPriceMatRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsPriceMatRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPriceMatRequest instance
      */
-    IWorkbookFunctionsPriceMatRequest buildRequest();
+    IWorkbookFunctionsPriceMatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsPriceMatRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class WorkbookFilterApplyBottomPercentFilterRequestBuilder extends BaseAc
     /**
      * Creates the IWorkbookFilterApplyBottomPercentFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyBottomPercentFilterRequest instance
      */
-    public IWorkbookFilterApplyBottomPercentFilterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFilterApplyBottomPercentFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

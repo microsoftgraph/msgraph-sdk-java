@@ -40,10 +40,11 @@ public class TeamsAppReferenceRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The ITeamsAppReferenceRequest instance
      */
-    public ITeamsAppReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamsAppReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder implements ITeams
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITeamsAppRequest instance
      */
-    public ITeamsAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamsAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

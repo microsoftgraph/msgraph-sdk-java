@@ -20,9 +20,10 @@ public interface IDeviceComplianceUserStatusRequestBuilder extends IRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceComplianceUserStatusRequest instance
      */
-    IDeviceComplianceUserStatusRequest buildRequest();
+    IDeviceComplianceUserStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

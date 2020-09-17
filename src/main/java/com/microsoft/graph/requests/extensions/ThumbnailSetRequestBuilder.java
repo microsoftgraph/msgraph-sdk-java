@@ -34,10 +34,11 @@ public class ThumbnailSetRequestBuilder extends BaseRequestBuilder implements IT
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IThumbnailSetRequest instance
      */
-    public IThumbnailSetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IThumbnailSetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

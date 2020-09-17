@@ -17,9 +17,10 @@ public interface IDirectoryObjectValidatePropertiesRequestBuilder extends IReque
     /**
      * Creates the IDirectoryObjectValidatePropertiesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDirectoryObjectValidatePropertiesRequest instance
      */
-    IDirectoryObjectValidatePropertiesRequest buildRequest();
+    IDirectoryObjectValidatePropertiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDirectoryObjectValidatePropertiesRequest with specific options instead of the existing options

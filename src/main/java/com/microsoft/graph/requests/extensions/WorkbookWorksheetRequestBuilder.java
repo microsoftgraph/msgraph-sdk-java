@@ -53,10 +53,11 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookWorksheetRequest instance
      */
-    public IWorkbookWorksheetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookWorksheetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -112,19 +113,19 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookWorksheetCellRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cell"), getClient(), null, row, column);
     }
 
-    public IWorkbookWorksheetRangeRequestBuilder range() {
-        return new WorkbookWorksheetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
-    }
-
-    public IWorkbookWorksheetRangeRequestBuilder range(final String address) {
-        return new WorkbookWorksheetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null, address);
-    }
-
     public IWorkbookWorksheetUsedRangeRequestBuilder usedRange() {
         return new WorkbookWorksheetUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null);
     }
 
     public IWorkbookWorksheetUsedRangeRequestBuilder usedRange(final Boolean valuesOnly) {
         return new WorkbookWorksheetUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null, valuesOnly);
+    }
+
+    public IWorkbookWorksheetRangeRequestBuilder range() {
+        return new WorkbookWorksheetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
+    }
+
+    public IWorkbookWorksheetRangeRequestBuilder range(final String address) {
+        return new WorkbookWorksheetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null, address);
     }
 }

@@ -32,10 +32,11 @@ public class OnenotePagePreviewRequestBuilder extends BaseFunctionRequestBuilder
     /**
      * Creates the IOnenotePagePreviewRequest
      *
+     * @param requestOptions the options for the request
      * @return the IOnenotePagePreviewRequest instance
      */
-    public IOnenotePagePreviewRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnenotePagePreviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

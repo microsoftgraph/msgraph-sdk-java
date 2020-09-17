@@ -38,10 +38,11 @@ public class WorkbookFunctionsExpon_DistRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsExpon_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsExpon_DistRequest instance
      */
-    public IWorkbookFunctionsExpon_DistRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsExpon_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

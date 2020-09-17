@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsMinuteRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsMinuteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMinuteRequest instance
      */
-    IWorkbookFunctionsMinuteRequest buildRequest();
+    IWorkbookFunctionsMinuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsMinuteRequest with specific options instead of the existing options

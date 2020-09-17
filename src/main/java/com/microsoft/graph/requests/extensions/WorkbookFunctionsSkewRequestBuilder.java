@@ -34,10 +34,11 @@ public class WorkbookFunctionsSkewRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsSkewRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSkewRequest instance
      */
-    public IWorkbookFunctionsSkewRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSkewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

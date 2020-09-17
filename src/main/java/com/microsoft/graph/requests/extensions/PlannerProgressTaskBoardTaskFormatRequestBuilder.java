@@ -34,10 +34,11 @@ public class PlannerProgressTaskBoardTaskFormatRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPlannerProgressTaskBoardTaskFormatRequest instance
      */
-    public IPlannerProgressTaskBoardTaskFormatRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPlannerProgressTaskBoardTaskFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

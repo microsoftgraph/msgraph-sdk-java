@@ -34,10 +34,11 @@ public class CallTransferRequestBuilder extends BaseActionRequestBuilder impleme
     /**
      * Creates the ICallTransferRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallTransferRequest instance
      */
-    public ICallTransferRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallTransferRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

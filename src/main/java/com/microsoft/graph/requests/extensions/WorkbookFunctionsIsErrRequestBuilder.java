@@ -34,10 +34,11 @@ public class WorkbookFunctionsIsErrRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsIsErrRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsErrRequest instance
      */
-    public IWorkbookFunctionsIsErrRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsIsErrRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

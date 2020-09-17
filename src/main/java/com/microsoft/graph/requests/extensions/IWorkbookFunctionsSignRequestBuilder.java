@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsSignRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsSignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSignRequest instance
      */
-    IWorkbookFunctionsSignRequest buildRequest();
+    IWorkbookFunctionsSignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsSignRequest with specific options instead of the existing options

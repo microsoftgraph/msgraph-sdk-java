@@ -42,10 +42,11 @@ public class DeviceRequestBuilder extends BaseRequestBuilder implements IDeviceR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceRequest instance
      */
-    public IDeviceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

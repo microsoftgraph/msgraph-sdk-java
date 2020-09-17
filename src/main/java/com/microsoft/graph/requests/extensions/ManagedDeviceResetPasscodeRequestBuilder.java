@@ -32,10 +32,11 @@ public class ManagedDeviceResetPasscodeRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IManagedDeviceResetPasscodeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceResetPasscodeRequest instance
      */
-    public IManagedDeviceResetPasscodeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceResetPasscodeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class WorkbookFunctionsDcountARequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsDcountARequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDcountARequest instance
      */
-    public IWorkbookFunctionsDcountARequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDcountARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

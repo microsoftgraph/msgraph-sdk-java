@@ -34,10 +34,11 @@ public class CommsOperationRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICommsOperationRequest instance
      */
-    public ICommsOperationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICommsOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -44,10 +44,11 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder implements IPl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPlannerPlanRequest instance
      */
-    public IPlannerPlanRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPlannerPlanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

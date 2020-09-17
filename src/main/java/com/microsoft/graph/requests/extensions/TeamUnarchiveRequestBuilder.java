@@ -32,10 +32,11 @@ public class TeamUnarchiveRequestBuilder extends BaseActionRequestBuilder implem
     /**
      * Creates the ITeamUnarchiveRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITeamUnarchiveRequest instance
      */
-    public ITeamUnarchiveRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamUnarchiveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

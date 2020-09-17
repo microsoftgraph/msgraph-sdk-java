@@ -34,10 +34,11 @@ public class FileAttachmentStreamRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IFileAttachmentStreamRequest instance
      */
-    public IFileAttachmentStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IFileAttachmentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

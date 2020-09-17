@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsAmorDegrcRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsAmorDegrcRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAmorDegrcRequest instance
      */
-    IWorkbookFunctionsAmorDegrcRequest buildRequest();
+    IWorkbookFunctionsAmorDegrcRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsAmorDegrcRequest with specific options instead of the existing options

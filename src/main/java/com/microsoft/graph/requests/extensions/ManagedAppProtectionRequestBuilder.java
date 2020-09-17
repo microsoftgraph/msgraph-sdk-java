@@ -35,10 +35,11 @@ public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedAppProtectionRequest instance
      */
-    public IManagedAppProtectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedAppProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

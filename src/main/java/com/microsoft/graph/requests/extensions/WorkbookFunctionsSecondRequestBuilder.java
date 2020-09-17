@@ -34,10 +34,11 @@ public class WorkbookFunctionsSecondRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsSecondRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSecondRequest instance
      */
-    public IWorkbookFunctionsSecondRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSecondRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

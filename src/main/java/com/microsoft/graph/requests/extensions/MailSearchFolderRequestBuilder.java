@@ -34,10 +34,11 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMailSearchFolderRequest instance
      */
-    public IMailSearchFolderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMailSearchFolderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

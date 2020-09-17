@@ -49,10 +49,11 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedEBookRequest instance
      */
-    public IManagedEBookRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedEBookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

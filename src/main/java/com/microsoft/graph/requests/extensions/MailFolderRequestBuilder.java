@@ -54,10 +54,11 @@ public class MailFolderRequestBuilder extends BaseRequestBuilder implements IMai
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMailFolderRequest instance
      */
-    public IMailFolderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMailFolderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

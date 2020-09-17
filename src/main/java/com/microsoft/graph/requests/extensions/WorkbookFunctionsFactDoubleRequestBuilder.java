@@ -34,10 +34,11 @@ public class WorkbookFunctionsFactDoubleRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsFactDoubleRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFactDoubleRequest instance
      */
-    public IWorkbookFunctionsFactDoubleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsFactDoubleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

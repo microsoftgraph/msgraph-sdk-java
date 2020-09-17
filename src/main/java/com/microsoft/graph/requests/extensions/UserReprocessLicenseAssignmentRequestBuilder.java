@@ -32,10 +32,11 @@ public class UserReprocessLicenseAssignmentRequestBuilder extends BaseActionRequ
     /**
      * Creates the IUserReprocessLicenseAssignmentRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserReprocessLicenseAssignmentRequest instance
      */
-    public IUserReprocessLicenseAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserReprocessLicenseAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

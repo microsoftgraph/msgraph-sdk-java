@@ -34,10 +34,11 @@ public class CallSubscribeToToneRequestBuilder extends BaseActionRequestBuilder 
     /**
      * Creates the ICallSubscribeToToneRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallSubscribeToToneRequest instance
      */
-    public ICallSubscribeToToneRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallSubscribeToToneRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

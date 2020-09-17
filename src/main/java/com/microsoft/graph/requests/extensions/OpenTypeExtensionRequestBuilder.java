@@ -34,10 +34,11 @@ public class OpenTypeExtensionRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOpenTypeExtensionRequest instance
      */
-    public IOpenTypeExtensionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOpenTypeExtensionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -32,10 +32,11 @@ public class WorkbookCloseSessionRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookCloseSessionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookCloseSessionRequest instance
      */
-    public IWorkbookCloseSessionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookCloseSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

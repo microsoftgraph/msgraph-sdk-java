@@ -34,10 +34,11 @@ public class WorkbookRangeFontRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookRangeFontRequest instance
      */
-    public IWorkbookRangeFontRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeFontRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

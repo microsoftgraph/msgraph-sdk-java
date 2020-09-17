@@ -24,9 +24,10 @@ public interface IDriveRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDriveRequest instance
      */
-    IDriveRequest buildRequest();
+    IDriveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -77,9 +78,9 @@ public interface IDriveRequestBuilder extends IRequestBuilder {
 
     IDriveItemRequestBuilder special(final String id);
 
-    IDriveRecentCollectionRequestBuilder recent();
-
     IDriveSearchCollectionRequestBuilder search(final String q);
+
+    IDriveRecentCollectionRequestBuilder recent();
 
     IDriveSharedWithMeCollectionRequestBuilder sharedWithMe();
 

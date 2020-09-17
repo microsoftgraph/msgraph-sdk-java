@@ -17,9 +17,10 @@ public interface IWorkbookTableColumnAddRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookTableColumnAddRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableColumnAddRequest instance
      */
-    IWorkbookTableColumnAddRequest buildRequest();
+    IWorkbookTableColumnAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableColumnAddRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsBin2HexRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsBin2HexRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBin2HexRequest instance
      */
-    IWorkbookFunctionsBin2HexRequest buildRequest();
+    IWorkbookFunctionsBin2HexRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsBin2HexRequest with specific options instead of the existing options

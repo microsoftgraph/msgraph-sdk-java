@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsImCschRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsImCschRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImCschRequest instance
      */
-    IWorkbookFunctionsImCschRequest buildRequest();
+    IWorkbookFunctionsImCschRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsImCschRequest with specific options instead of the existing options

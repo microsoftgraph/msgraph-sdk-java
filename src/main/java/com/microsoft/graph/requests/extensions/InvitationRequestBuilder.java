@@ -36,10 +36,11 @@ public class InvitationRequestBuilder extends BaseRequestBuilder implements IInv
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IInvitationRequest instance
      */
-    public IInvitationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IInvitationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

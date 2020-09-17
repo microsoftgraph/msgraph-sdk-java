@@ -34,10 +34,11 @@ public class AlertRequestBuilder extends BaseRequestBuilder implements IAlertReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAlertRequest instance
      */
-    public IAlertRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAlertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

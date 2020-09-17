@@ -34,10 +34,11 @@ public class ManagedIOSLobAppRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedIOSLobAppRequest instance
      */
-    public IManagedIOSLobAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedIOSLobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

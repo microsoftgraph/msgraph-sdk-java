@@ -36,10 +36,11 @@ public class ListItemVersionRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IListItemVersionRequest instance
      */
-    public IListItemVersionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IListItemVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

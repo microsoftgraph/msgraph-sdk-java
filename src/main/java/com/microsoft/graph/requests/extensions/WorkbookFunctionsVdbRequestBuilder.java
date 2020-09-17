@@ -46,10 +46,11 @@ public class WorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsVdbRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsVdbRequest instance
      */
-    public IWorkbookFunctionsVdbRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsVdbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

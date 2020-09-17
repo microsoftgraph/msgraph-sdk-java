@@ -38,10 +38,11 @@ public class WorkbookFunctionsTbillEqRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsTbillEqRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTbillEqRequest instance
      */
-    public IWorkbookFunctionsTbillEqRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsTbillEqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

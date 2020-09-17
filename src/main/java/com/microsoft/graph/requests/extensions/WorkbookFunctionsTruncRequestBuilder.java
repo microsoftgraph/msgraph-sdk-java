@@ -36,10 +36,11 @@ public class WorkbookFunctionsTruncRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsTruncRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTruncRequest instance
      */
-    public IWorkbookFunctionsTruncRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsTruncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

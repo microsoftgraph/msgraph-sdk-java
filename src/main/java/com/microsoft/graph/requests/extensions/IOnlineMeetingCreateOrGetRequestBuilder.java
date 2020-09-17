@@ -17,9 +17,10 @@ public interface IOnlineMeetingCreateOrGetRequestBuilder extends IRequestBuilder
     /**
      * Creates the IOnlineMeetingCreateOrGetRequest
      *
+     * @param requestOptions the options for the request
      * @return the IOnlineMeetingCreateOrGetRequest instance
      */
-    IOnlineMeetingCreateOrGetRequest buildRequest();
+    IOnlineMeetingCreateOrGetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IOnlineMeetingCreateOrGetRequest with specific options instead of the existing options

@@ -20,9 +20,10 @@ public interface ITimeOffRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITimeOffRequest instance
      */
-    ITimeOffRequest buildRequest();
+    ITimeOffRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class ShiftRequestBuilder extends BaseRequestBuilder implements IShiftReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IShiftRequest instance
      */
-    public IShiftRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IShiftRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

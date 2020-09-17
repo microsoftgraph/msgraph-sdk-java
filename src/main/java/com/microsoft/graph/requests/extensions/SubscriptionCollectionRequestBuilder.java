@@ -35,10 +35,22 @@ public class SubscriptionCollectionRequestBuilder extends BaseRequestBuilder imp
         super(requestUrl, client, requestOptions);
     }
 
-    public ISubscriptionCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ISubscriptionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ISubscriptionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SubscriptionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

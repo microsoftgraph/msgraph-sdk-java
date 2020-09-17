@@ -34,10 +34,11 @@ public class WorkbookFunctionsMedianRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsMedianRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMedianRequest instance
      */
-    public IWorkbookFunctionsMedianRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsMedianRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

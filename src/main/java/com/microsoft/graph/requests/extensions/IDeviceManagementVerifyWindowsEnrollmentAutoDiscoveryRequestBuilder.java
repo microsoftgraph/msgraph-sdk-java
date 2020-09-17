@@ -17,9 +17,10 @@ public interface IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBui
     /**
      * Creates the IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest instance
      */
-    IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest buildRequest();
+    IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest with specific options instead of the existing options

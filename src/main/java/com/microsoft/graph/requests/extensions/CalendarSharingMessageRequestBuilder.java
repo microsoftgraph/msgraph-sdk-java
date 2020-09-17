@@ -35,10 +35,11 @@ public class CalendarSharingMessageRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICalendarSharingMessageRequest instance
      */
-    public ICalendarSharingMessageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICalendarSharingMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

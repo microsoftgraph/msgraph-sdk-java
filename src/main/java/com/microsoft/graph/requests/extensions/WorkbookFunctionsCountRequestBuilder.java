@@ -34,10 +34,11 @@ public class WorkbookFunctionsCountRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsCountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCountRequest instance
      */
-    public IWorkbookFunctionsCountRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

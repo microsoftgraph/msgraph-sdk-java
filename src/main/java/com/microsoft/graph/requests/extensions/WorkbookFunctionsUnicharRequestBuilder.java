@@ -34,10 +34,11 @@ public class WorkbookFunctionsUnicharRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsUnicharRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsUnicharRequest instance
      */
-    public IWorkbookFunctionsUnicharRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsUnicharRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

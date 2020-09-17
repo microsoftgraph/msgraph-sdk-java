@@ -32,10 +32,11 @@ public class DriveItemCheckoutRequestBuilder extends BaseActionRequestBuilder im
     /**
      * Creates the IDriveItemCheckoutRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemCheckoutRequest instance
      */
-    public IDriveItemCheckoutRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveItemCheckoutRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

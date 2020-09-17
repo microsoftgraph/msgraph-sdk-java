@@ -34,10 +34,11 @@ public class ColumnLinkRequestBuilder extends BaseRequestBuilder implements ICol
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IColumnLinkRequest instance
      */
-    public IColumnLinkRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IColumnLinkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

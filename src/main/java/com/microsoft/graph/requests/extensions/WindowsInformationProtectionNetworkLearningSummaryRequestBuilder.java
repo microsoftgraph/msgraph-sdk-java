@@ -34,10 +34,11 @@ public class WindowsInformationProtectionNetworkLearningSummaryRequestBuilder ex
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionNetworkLearningSummaryRequest instance
      */
-    public IWindowsInformationProtectionNetworkLearningSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsInformationProtectionNetworkLearningSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

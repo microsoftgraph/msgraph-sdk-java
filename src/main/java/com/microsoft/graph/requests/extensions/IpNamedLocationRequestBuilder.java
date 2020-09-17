@@ -34,10 +34,11 @@ public class IpNamedLocationRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIpNamedLocationRequest instance
      */
-    public IIpNamedLocationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIpNamedLocationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

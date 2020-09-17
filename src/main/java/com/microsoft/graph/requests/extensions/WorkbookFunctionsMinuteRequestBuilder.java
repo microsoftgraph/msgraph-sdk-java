@@ -34,10 +34,11 @@ public class WorkbookFunctionsMinuteRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsMinuteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMinuteRequest instance
      */
-    public IWorkbookFunctionsMinuteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsMinuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

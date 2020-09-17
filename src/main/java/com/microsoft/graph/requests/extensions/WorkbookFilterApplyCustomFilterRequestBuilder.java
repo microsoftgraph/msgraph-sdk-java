@@ -38,10 +38,11 @@ public class WorkbookFilterApplyCustomFilterRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookFilterApplyCustomFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyCustomFilterRequest instance
      */
-    public IWorkbookFilterApplyCustomFilterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFilterApplyCustomFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

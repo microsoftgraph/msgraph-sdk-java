@@ -34,10 +34,11 @@ public class NamedLocationRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the INamedLocationRequest instance
      */
-    public INamedLocationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public INamedLocationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

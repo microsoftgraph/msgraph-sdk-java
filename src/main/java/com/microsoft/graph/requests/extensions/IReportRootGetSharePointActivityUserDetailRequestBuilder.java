@@ -17,9 +17,10 @@ public interface IReportRootGetSharePointActivityUserDetailRequestBuilder extend
     /**
      * Creates the IReportRootGetSharePointActivityUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointActivityUserDetailRequest instance
      */
-    IReportRootGetSharePointActivityUserDetailRequest buildRequest();
+    IReportRootGetSharePointActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetSharePointActivityUserDetailRequest with specific options instead of the existing options

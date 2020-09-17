@@ -34,10 +34,11 @@ public class CallMuteRequestBuilder extends BaseActionRequestBuilder implements 
     /**
      * Creates the ICallMuteRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallMuteRequest instance
      */
-    public ICallMuteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallMuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -40,10 +40,11 @@ public class RoleDefinitionReferenceRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IRoleDefinitionReferenceRequest instance
      */
-    public IRoleDefinitionReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRoleDefinitionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

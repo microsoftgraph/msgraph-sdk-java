@@ -38,10 +38,11 @@ public class WorkbookFunctionsRank_AvgRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsRank_AvgRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRank_AvgRequest instance
      */
-    public IWorkbookFunctionsRank_AvgRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRank_AvgRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

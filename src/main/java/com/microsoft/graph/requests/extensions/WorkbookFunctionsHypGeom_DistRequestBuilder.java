@@ -42,10 +42,11 @@ public class WorkbookFunctionsHypGeom_DistRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsHypGeom_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHypGeom_DistRequest instance
      */
-    public IWorkbookFunctionsHypGeom_DistRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsHypGeom_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

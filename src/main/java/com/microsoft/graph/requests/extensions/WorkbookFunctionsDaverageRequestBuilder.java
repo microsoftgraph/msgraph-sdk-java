@@ -38,10 +38,11 @@ public class WorkbookFunctionsDaverageRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsDaverageRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDaverageRequest instance
      */
-    public IWorkbookFunctionsDaverageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDaverageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsAveDevRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsAveDevRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAveDevRequest instance
      */
-    IWorkbookFunctionsAveDevRequest buildRequest();
+    IWorkbookFunctionsAveDevRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsAveDevRequest with specific options instead of the existing options

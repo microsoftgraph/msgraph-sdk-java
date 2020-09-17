@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectGetAvailableExten
  */
 public interface IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder extends IRequestBuilder {
 
-    IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

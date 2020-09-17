@@ -38,10 +38,11 @@ public class WorkbookFunctionsStandardizeRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsStandardizeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsStandardizeRequest instance
      */
-    public IWorkbookFunctionsStandardizeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsStandardizeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

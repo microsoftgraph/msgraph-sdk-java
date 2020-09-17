@@ -34,10 +34,11 @@ public class OnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOnenoteEntityHierarchyModelRequest instance
      */
-    public IOnenoteEntityHierarchyModelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnenoteEntityHierarchyModelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

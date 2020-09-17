@@ -36,10 +36,11 @@ public class WorkbookFunctionsQuotientRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsQuotientRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsQuotientRequest instance
      */
-    public IWorkbookFunctionsQuotientRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsQuotientRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

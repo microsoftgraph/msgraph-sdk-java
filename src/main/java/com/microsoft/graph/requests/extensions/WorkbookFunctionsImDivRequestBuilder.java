@@ -36,10 +36,11 @@ public class WorkbookFunctionsImDivRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsImDivRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImDivRequest instance
      */
-    public IWorkbookFunctionsImDivRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImDivRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

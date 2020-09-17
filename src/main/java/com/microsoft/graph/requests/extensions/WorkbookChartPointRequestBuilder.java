@@ -36,10 +36,11 @@ public class WorkbookChartPointRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookChartPointRequest instance
      */
-    public IWorkbookChartPointRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartPointRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class WorkbookFunctionsFisherRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsFisherRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFisherRequest instance
      */
-    public IWorkbookFunctionsFisherRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsFisherRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

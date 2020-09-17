@@ -30,6 +30,8 @@ import com.microsoft.graph.requests.extensions.ILicenseDetailsCollectionRequestB
 import com.microsoft.graph.requests.extensions.ILicenseDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
@@ -86,9 +88,10 @@ public interface IUserWithReferenceRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserWithReferenceRequest instance
      */
-    IUserWithReferenceRequest buildRequest();
+    IUserWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

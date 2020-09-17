@@ -40,10 +40,11 @@ public class WorkbookFunctionsSubstituteRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsSubstituteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSubstituteRequest instance
      */
-    public IWorkbookFunctionsSubstituteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSubstituteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,11 @@ public class UserSendMailRequestBuilder extends BaseActionRequestBuilder impleme
     /**
      * Creates the IUserSendMailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserSendMailRequest instance
      */
-    public IUserSendMailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserSendMailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceCompliancePolicyDeviceStateSummaryRequest instance
      */
-    public IDeviceCompliancePolicyDeviceStateSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceCompliancePolicyDeviceStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

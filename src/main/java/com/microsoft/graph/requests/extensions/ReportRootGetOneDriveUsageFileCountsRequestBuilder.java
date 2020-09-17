@@ -34,10 +34,11 @@ public class ReportRootGetOneDriveUsageFileCountsRequestBuilder extends BaseFunc
     /**
      * Creates the IReportRootGetOneDriveUsageFileCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOneDriveUsageFileCountsRequest instance
      */
-    public IReportRootGetOneDriveUsageFileCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetOneDriveUsageFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

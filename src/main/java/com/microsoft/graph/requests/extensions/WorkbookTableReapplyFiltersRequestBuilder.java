@@ -32,10 +32,11 @@ public class WorkbookTableReapplyFiltersRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookTableReapplyFiltersRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableReapplyFiltersRequest instance
      */
-    public IWorkbookTableReapplyFiltersRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableReapplyFiltersRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

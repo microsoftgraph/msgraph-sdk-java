@@ -34,10 +34,11 @@ public class ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequestB
     /**
      * Creates the IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest instance
      */
-    public IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

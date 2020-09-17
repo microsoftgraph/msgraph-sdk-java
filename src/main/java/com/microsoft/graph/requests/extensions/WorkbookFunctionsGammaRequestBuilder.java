@@ -34,10 +34,11 @@ public class WorkbookFunctionsGammaRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsGammaRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGammaRequest instance
      */
-    public IWorkbookFunctionsGammaRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsGammaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -26,8 +26,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IOnenotePageCollectionRequestBuilder extends IRequestBuilder {
 
-    IOnenotePageCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IOnenotePageCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IOnenotePageCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IOnenotePageRequestBuilder byId(final String id);

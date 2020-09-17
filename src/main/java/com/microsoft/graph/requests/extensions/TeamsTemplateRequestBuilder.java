@@ -34,10 +34,11 @@ public class TeamsTemplateRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITeamsTemplateRequest instance
      */
-    public ITeamsTemplateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamsTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

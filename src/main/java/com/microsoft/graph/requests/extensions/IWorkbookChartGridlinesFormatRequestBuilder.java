@@ -21,9 +21,10 @@ public interface IWorkbookChartGridlinesFormatRequestBuilder extends IRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookChartGridlinesFormatRequest instance
      */
-    IWorkbookChartGridlinesFormatRequest buildRequest();
+    IWorkbookChartGridlinesFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

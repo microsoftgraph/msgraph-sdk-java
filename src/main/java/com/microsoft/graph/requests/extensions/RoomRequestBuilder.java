@@ -34,10 +34,11 @@ public class RoomRequestBuilder extends BaseRequestBuilder implements IRoomReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRoomRequest instance
      */
-    public IRoomRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRoomRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

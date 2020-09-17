@@ -38,10 +38,11 @@ public class WorkbookFunctionsAverageIfRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsAverageIfRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAverageIfRequest instance
      */
-    public IWorkbookFunctionsAverageIfRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsAverageIfRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -135,10 +135,11 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceManagementRequest instance
      */
-    public IDeviceManagementRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

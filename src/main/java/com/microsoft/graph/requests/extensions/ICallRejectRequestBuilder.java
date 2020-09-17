@@ -17,9 +17,10 @@ public interface ICallRejectRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ICallRejectRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallRejectRequest instance
      */
-    ICallRejectRequest buildRequest();
+    ICallRejectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICallRejectRequest with specific options instead of the existing options

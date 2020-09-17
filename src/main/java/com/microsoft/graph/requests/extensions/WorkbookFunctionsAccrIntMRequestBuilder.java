@@ -42,10 +42,11 @@ public class WorkbookFunctionsAccrIntMRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsAccrIntMRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAccrIntMRequest instance
      */
-    public IWorkbookFunctionsAccrIntMRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsAccrIntMRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

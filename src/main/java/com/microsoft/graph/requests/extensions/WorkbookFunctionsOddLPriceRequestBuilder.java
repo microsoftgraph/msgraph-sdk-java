@@ -48,10 +48,11 @@ public class WorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsOddLPriceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsOddLPriceRequest instance
      */
-    public IWorkbookFunctionsOddLPriceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsOddLPriceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

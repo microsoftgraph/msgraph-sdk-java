@@ -34,10 +34,11 @@ public class WorkbookFunctionsErf_PreciseRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsErf_PreciseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsErf_PreciseRequest instance
      */
-    public IWorkbookFunctionsErf_PreciseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsErf_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

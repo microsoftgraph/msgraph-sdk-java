@@ -34,10 +34,11 @@ public class MessageCopyRequestBuilder extends BaseActionRequestBuilder implemen
     /**
      * Creates the IMessageCopyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMessageCopyRequest instance
      */
-    public IMessageCopyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMessageCopyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

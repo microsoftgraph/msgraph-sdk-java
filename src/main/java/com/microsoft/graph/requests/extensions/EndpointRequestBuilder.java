@@ -34,10 +34,11 @@ public class EndpointRequestBuilder extends BaseRequestBuilder implements IEndpo
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEndpointRequest instance
      */
-    public IEndpointRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEndpointRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

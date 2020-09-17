@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsFisherRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsFisherRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFisherRequest instance
      */
-    IWorkbookFunctionsFisherRequest buildRequest();
+    IWorkbookFunctionsFisherRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsFisherRequest with specific options instead of the existing options

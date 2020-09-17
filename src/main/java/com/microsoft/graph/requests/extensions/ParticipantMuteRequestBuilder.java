@@ -34,10 +34,11 @@ public class ParticipantMuteRequestBuilder extends BaseActionRequestBuilder impl
     /**
      * Creates the IParticipantMuteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IParticipantMuteRequest instance
      */
-    public IParticipantMuteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IParticipantMuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder extends
     /**
      * Creates the IDeviceCompliancePolicyScheduleActionsForRulesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceCompliancePolicyScheduleActionsForRulesRequest instance
      */
-    public IDeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

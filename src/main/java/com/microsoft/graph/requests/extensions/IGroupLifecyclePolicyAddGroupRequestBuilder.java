@@ -17,9 +17,10 @@ public interface IGroupLifecyclePolicyAddGroupRequestBuilder extends IRequestBui
     /**
      * Creates the IGroupLifecyclePolicyAddGroupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupLifecyclePolicyAddGroupRequest instance
      */
-    IGroupLifecyclePolicyAddGroupRequest buildRequest();
+    IGroupLifecyclePolicyAddGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupLifecyclePolicyAddGroupRequest with specific options instead of the existing options

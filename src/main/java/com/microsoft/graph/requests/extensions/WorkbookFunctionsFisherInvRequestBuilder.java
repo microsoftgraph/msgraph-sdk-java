@@ -34,10 +34,11 @@ public class WorkbookFunctionsFisherInvRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsFisherInvRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFisherInvRequest instance
      */
-    public IWorkbookFunctionsFisherInvRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsFisherInvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

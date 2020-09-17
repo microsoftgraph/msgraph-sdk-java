@@ -36,10 +36,11 @@ public class ItemActivityRequestBuilder extends BaseRequestBuilder implements II
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemActivityRequest instance
      */
-    public IItemActivityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsFvscheduleRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsFvscheduleRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFvscheduleRequest instance
      */
-    IWorkbookFunctionsFvscheduleRequest buildRequest();
+    IWorkbookFunctionsFvscheduleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsFvscheduleRequest with specific options instead of the existing options

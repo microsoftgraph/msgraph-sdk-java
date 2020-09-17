@@ -17,9 +17,10 @@ public interface IWorkbookTableReapplyFiltersRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookTableReapplyFiltersRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableReapplyFiltersRequest instance
      */
-    IWorkbookTableReapplyFiltersRequest buildRequest();
+    IWorkbookTableReapplyFiltersRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableReapplyFiltersRequest with specific options instead of the existing options

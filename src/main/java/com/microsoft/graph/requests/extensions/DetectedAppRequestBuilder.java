@@ -38,10 +38,11 @@ public class DetectedAppRequestBuilder extends BaseRequestBuilder implements IDe
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDetectedAppRequest instance
      */
-    public IDetectedAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDetectedAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class WorkbookFunctionsDproductRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsDproductRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDproductRequest instance
      */
-    public IWorkbookFunctionsDproductRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDproductRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

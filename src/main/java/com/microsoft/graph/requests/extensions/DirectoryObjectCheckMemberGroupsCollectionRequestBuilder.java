@@ -39,11 +39,23 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends Ba
 			bodyParams.put("groupIds", groupIds);
 		}
       }
-
-    public IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectCheckMemberGroupsCollectionRequest request = new DirectoryObjectCheckMemberGroupsCollectionRequest(
                 getRequestUrl(),

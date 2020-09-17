@@ -34,10 +34,11 @@ public class CallCancelMediaProcessingRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the ICallCancelMediaProcessingRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallCancelMediaProcessingRequest instance
      */
-    public ICallCancelMediaProcessingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallCancelMediaProcessingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

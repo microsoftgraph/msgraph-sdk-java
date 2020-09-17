@@ -47,10 +47,11 @@ public class ReportRootGetYammerActivityUserDetailRequestBuilder extends BaseFun
     /**
      * Creates the IReportRootGetYammerActivityUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetYammerActivityUserDetailRequest instance
      */
-    public IReportRootGetYammerActivityUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetYammerActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class WorkbookFunctionsConvertRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsConvertRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsConvertRequest instance
      */
-    public IWorkbookFunctionsConvertRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsConvertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

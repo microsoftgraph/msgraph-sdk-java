@@ -36,10 +36,11 @@ public class WorkbookFunctionsRightbRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsRightbRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRightbRequest instance
      */
-    public IWorkbookFunctionsRightbRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRightbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

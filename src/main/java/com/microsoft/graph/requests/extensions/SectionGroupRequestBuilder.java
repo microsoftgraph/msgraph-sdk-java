@@ -44,10 +44,11 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder implements IS
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISectionGroupRequest instance
      */
-    public ISectionGroupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISectionGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

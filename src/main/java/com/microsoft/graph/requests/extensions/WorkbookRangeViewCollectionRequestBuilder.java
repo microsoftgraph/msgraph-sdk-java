@@ -37,10 +37,22 @@ public class WorkbookRangeViewCollectionRequestBuilder extends BaseRequestBuilde
         super(requestUrl, client, requestOptions);
     }
 
-    public IWorkbookRangeViewCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IWorkbookRangeViewCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IWorkbookRangeViewCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookRangeViewCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

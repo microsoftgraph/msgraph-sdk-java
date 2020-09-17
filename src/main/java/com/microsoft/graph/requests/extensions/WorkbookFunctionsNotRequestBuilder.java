@@ -34,10 +34,11 @@ public class WorkbookFunctionsNotRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsNotRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNotRequest instance
      */
-    public IWorkbookFunctionsNotRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsNotRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class IdentityProviderRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIdentityProviderRequest instance
      */
-    public IIdentityProviderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIdentityProviderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

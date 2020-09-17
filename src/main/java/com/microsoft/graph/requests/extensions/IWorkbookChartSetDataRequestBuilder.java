@@ -17,9 +17,10 @@ public interface IWorkbookChartSetDataRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookChartSetDataRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartSetDataRequest instance
      */
-    IWorkbookChartSetDataRequest buildRequest();
+    IWorkbookChartSetDataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookChartSetDataRequest with specific options instead of the existing options

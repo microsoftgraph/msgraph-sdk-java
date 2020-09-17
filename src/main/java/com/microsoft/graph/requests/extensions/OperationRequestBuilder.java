@@ -34,10 +34,11 @@ public class OperationRequestBuilder extends BaseRequestBuilder implements IOper
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOperationRequest instance
      */
-    public IOperationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

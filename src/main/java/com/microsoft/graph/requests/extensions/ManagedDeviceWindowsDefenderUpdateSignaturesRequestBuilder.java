@@ -32,10 +32,11 @@ public class ManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder extends 
     /**
      * Creates the IManagedDeviceWindowsDefenderUpdateSignaturesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceWindowsDefenderUpdateSignaturesRequest instance
      */
-    public IManagedDeviceWindowsDefenderUpdateSignaturesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceWindowsDefenderUpdateSignaturesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

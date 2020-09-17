@@ -36,10 +36,11 @@ public class WorkbookFunctionsEoMonthRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsEoMonthRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsEoMonthRequest instance
      */
-    public IWorkbookFunctionsEoMonthRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsEoMonthRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

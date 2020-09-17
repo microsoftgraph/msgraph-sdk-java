@@ -36,10 +36,11 @@ public class WorkbookFunctionsLeftbRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsLeftbRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLeftbRequest instance
      */
-    public IWorkbookFunctionsLeftbRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsLeftbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

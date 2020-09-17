@@ -17,9 +17,10 @@ public interface IServicePrincipalAddPasswordRequestBuilder extends IRequestBuil
     /**
      * Creates the IServicePrincipalAddPasswordRequest
      *
+     * @param requestOptions the options for the request
      * @return the IServicePrincipalAddPasswordRequest instance
      */
-    IServicePrincipalAddPasswordRequest buildRequest();
+    IServicePrincipalAddPasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IServicePrincipalAddPasswordRequest with specific options instead of the existing options

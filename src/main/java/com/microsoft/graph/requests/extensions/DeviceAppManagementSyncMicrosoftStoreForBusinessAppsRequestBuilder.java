@@ -32,10 +32,11 @@ public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder 
     /**
      * Creates the IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest instance
      */
-    public IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

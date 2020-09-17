@@ -34,10 +34,11 @@ public class WorkbookCreateSessionRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookCreateSessionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookCreateSessionRequest instance
      */
-    public IWorkbookCreateSessionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookCreateSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

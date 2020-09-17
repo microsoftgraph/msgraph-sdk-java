@@ -36,10 +36,11 @@ public class WorkbookFunctionsAtan2RequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsAtan2Request
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAtan2Request instance
      */
-    public IWorkbookFunctionsAtan2Request buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsAtan2Request buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

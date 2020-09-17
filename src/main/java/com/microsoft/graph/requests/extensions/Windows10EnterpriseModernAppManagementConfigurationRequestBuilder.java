@@ -34,10 +34,11 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequestBuilder e
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10EnterpriseModernAppManagementConfigurationRequest instance
      */
-    public IWindows10EnterpriseModernAppManagementConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10EnterpriseModernAppManagementConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,11 @@ public class WorkbookFunctionsImPowerRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsImPowerRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImPowerRequest instance
      */
-    public IWorkbookFunctionsImPowerRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImPowerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

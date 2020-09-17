@@ -32,10 +32,11 @@ public class WorkbookTableSortClearRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookTableSortClearRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableSortClearRequest instance
      */
-    public IWorkbookTableSortClearRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableSortClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

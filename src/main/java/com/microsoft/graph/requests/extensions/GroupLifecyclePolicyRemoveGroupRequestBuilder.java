@@ -34,10 +34,11 @@ public class GroupLifecyclePolicyRemoveGroupRequestBuilder extends BaseActionReq
     /**
      * Creates the IGroupLifecyclePolicyRemoveGroupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupLifecyclePolicyRemoveGroupRequest instance
      */
-    public IGroupLifecyclePolicyRemoveGroupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupLifecyclePolicyRemoveGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

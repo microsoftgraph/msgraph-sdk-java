@@ -34,10 +34,11 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10CompliancePolicyRequest instance
      */
-    public IWindows10CompliancePolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10CompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

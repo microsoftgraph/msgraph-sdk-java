@@ -17,9 +17,10 @@ public interface IServicePrincipalRemoveKeyRequestBuilder extends IRequestBuilde
     /**
      * Creates the IServicePrincipalRemoveKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IServicePrincipalRemoveKeyRequest instance
      */
-    IServicePrincipalRemoveKeyRequest buildRequest();
+    IServicePrincipalRemoveKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IServicePrincipalRemoveKeyRequest with specific options instead of the existing options

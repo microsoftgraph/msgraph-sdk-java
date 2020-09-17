@@ -36,10 +36,22 @@ public class ColumnDefinitionCollectionRequestBuilder extends BaseRequestBuilder
         super(requestUrl, client, requestOptions);
     }
 
-    public IColumnDefinitionCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IColumnDefinitionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IColumnDefinitionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ColumnDefinitionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

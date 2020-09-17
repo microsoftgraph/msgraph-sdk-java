@@ -34,10 +34,11 @@ public class AndroidManagedAppRegistrationRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidManagedAppRegistrationRequest instance
      */
-    public IAndroidManagedAppRegistrationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidManagedAppRegistrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

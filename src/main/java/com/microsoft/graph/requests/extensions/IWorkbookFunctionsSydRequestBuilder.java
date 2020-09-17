@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsSydRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsSydRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSydRequest instance
      */
-    IWorkbookFunctionsSydRequest buildRequest();
+    IWorkbookFunctionsSydRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsSydRequest with specific options instead of the existing options

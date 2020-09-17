@@ -36,10 +36,11 @@ public class WorkbookFunctionsBitandRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsBitandRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBitandRequest instance
      */
-    public IWorkbookFunctionsBitandRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsBitandRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

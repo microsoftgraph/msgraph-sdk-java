@@ -34,10 +34,11 @@ public class EventMessageRequestRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEventMessageRequestRequest instance
      */
-    public IEventMessageRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventMessageRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

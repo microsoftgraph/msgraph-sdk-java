@@ -57,10 +57,11 @@ public class EventRequestBuilder extends BaseRequestBuilder implements IEventReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEventRequest instance
      */
-    public IEventRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

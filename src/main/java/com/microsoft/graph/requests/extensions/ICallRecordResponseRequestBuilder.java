@@ -17,9 +17,10 @@ public interface ICallRecordResponseRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ICallRecordResponseRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallRecordResponseRequest instance
      */
-    ICallRecordResponseRequest buildRequest();
+    ICallRecordResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICallRecordResponseRequest with specific options instead of the existing options

@@ -37,10 +37,11 @@ public class ParticipantRequestBuilder extends BaseRequestBuilder implements IPa
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IParticipantRequest instance
      */
-    public IParticipantRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IParticipantRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

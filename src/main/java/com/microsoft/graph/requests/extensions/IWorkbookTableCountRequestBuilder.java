@@ -17,9 +17,10 @@ public interface IWorkbookTableCountRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookTableCountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableCountRequest instance
      */
-    IWorkbookTableCountRequest buildRequest();
+    IWorkbookTableCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableCountRequest with specific options instead of the existing options

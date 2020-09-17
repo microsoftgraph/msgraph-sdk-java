@@ -34,10 +34,11 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder implements IIo
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosVppEBookRequest instance
      */
-    public IIosVppEBookRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosVppEBookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

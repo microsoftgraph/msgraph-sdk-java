@@ -40,10 +40,11 @@ public class WorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsLogNorm_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLogNorm_DistRequest instance
      */
-    public IWorkbookFunctionsLogNorm_DistRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsLogNorm_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,11 @@ public class OAuth2PermissionGrantReferenceRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IOAuth2PermissionGrantReferenceRequest instance
      */
-    public IOAuth2PermissionGrantReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOAuth2PermissionGrantReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

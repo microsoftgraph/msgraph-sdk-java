@@ -17,9 +17,10 @@ public interface IPostForwardRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IPostForwardRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPostForwardRequest instance
      */
-    IPostForwardRequest buildRequest();
+    IPostForwardRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IPostForwardRequest with specific options instead of the existing options

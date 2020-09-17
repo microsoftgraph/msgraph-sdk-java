@@ -35,10 +35,11 @@ public class ClaimsMappingPolicyWithReferenceRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IClaimsMappingPolicyWithReferenceRequest instance
      */
-    public IClaimsMappingPolicyWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IClaimsMappingPolicyWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

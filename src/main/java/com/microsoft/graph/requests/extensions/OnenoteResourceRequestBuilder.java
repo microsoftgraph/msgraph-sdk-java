@@ -34,10 +34,11 @@ public class OnenoteResourceRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOnenoteResourceRequest instance
      */
-    public IOnenoteResourceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnenoteResourceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

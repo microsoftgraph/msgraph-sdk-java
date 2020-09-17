@@ -32,10 +32,11 @@ public class WorkbookFunctionsRandRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsRandRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRandRequest instance
      */
-    public IWorkbookFunctionsRandRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRandRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

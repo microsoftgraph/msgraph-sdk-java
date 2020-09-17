@@ -37,10 +37,11 @@ public class ParticipantInviteRequestBuilder extends BaseActionRequestBuilder im
     /**
      * Creates the IParticipantInviteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IParticipantInviteRequest instance
      */
-    public IParticipantInviteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IParticipantInviteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

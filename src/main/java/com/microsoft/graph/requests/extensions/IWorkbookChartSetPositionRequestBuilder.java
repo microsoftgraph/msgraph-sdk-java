@@ -17,9 +17,10 @@ public interface IWorkbookChartSetPositionRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookChartSetPositionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartSetPositionRequest instance
      */
-    IWorkbookChartSetPositionRequest buildRequest();
+    IWorkbookChartSetPositionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookChartSetPositionRequest with specific options instead of the existing options

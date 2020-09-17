@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsMaxARequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsMaxARequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMaxARequest instance
      */
-    IWorkbookFunctionsMaxARequest buildRequest();
+    IWorkbookFunctionsMaxARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsMaxARequest with specific options instead of the existing options

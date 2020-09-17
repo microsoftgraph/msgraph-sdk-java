@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsNowRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsNowRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNowRequest instance
      */
-    IWorkbookFunctionsNowRequest buildRequest();
+    IWorkbookFunctionsNowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsNowRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class CountryNamedLocationRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICountryNamedLocationRequest instance
      */
-    public ICountryNamedLocationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICountryNamedLocationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

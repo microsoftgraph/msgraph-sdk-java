@@ -42,10 +42,11 @@ public class WorkbookFunctionsDdbRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsDdbRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDdbRequest instance
      */
-    public IWorkbookFunctionsDdbRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDdbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
