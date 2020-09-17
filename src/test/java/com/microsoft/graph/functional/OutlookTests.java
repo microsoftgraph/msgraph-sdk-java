@@ -6,9 +6,12 @@ import static org.junit.Assert.assertNotNull;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
@@ -17,6 +20,10 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.microsoft.graph.concurrency.ChunkedUploadProvider;
+import com.microsoft.graph.concurrency.IProgressCallback;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.models.extensions.AttachmentItem;
 import com.microsoft.graph.models.extensions.Attendee;
 import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.Contact;
@@ -29,7 +36,9 @@ import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.models.generated.AttachmentType;
 import com.microsoft.graph.models.generated.BodyType;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
@@ -94,8 +103,20 @@ public class OutlookTests {
     	
     	//Attempt to identify the sent message via randomly generated subject
     	String draftSubject = "Draft Test Message " + Double.toString(Math.random()*1000);
+    	Message newMessage = createDraftMessage(testBase, draftSubject);
+        
+    	//Send the drafted message
+    	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
     	
-        User me = testBase.graphClient.me().buildRequest().get();
+    	java.util.List<QueryOption> options = new ArrayList<QueryOption>();
+    	QueryOption o = new QueryOption("$filter", "subject eq '" + draftSubject + "'");
+    	options.add(o);
+    	//Check that the sent message exists on the server
+    	IMessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest(options).get();
+    	assertFalse(mcp.getCurrentPage().isEmpty());
+    }
+    private Message createDraftMessage(TestBase testBase, String draftSubject) {
+		User me = testBase.graphClient.me().buildRequest().get();
         Recipient r = new Recipient();
         EmailAddress address = new EmailAddress();
         address.address = me.mail;
@@ -108,18 +129,8 @@ public class OutlookTests {
         message.isDraft = true;
         
         //Save the message as a draft
-        Message newMessage = testBase.graphClient.me().messages().buildRequest().post(message);
-    	//Send the drafted message
-    	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
-    	
-    	java.util.List<QueryOption> options = new ArrayList<QueryOption>();
-    	QueryOption o = new QueryOption("$filter", "subject eq '" + draftSubject + "'");
-    	options.add(o);
-    	//Check that the sent message exists on the server
-    	IMessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest(options).get();
-    	assertFalse(mcp.getCurrentPage().isEmpty());
-    }
-    
+        return testBase.graphClient.me().messages().buildRequest().post(message);
+	}
     @Test
     public void sendEmailWithAttachment() throws Exception{
     	TestBase testBase = new TestBase();
@@ -249,4 +260,58 @@ public class OutlookTests {
 		}
 		return null;
 	}
+
+	IProgressCallback<AttachmentItem> callback = new IProgressCallback<AttachmentItem> () {
+		@Override
+		public void progress(final long current, final long max) {
+			//Check progress
+		}
+		@Override
+		public void success(final AttachmentItem result) {
+			//Handle the successful response
+			Assert.assertNotNull(result);
+		}
+		
+		@Override
+		public void failure(final ClientException ex) {
+			//Handle the failed upload
+			Assert.fail("Upload session failed");
+		}
+	};
+	@Test
+    public void testSendDraftWithLargeAttachements() throws FileNotFoundException, IOException {
+    	TestBase testBase = new TestBase();
+    	
+    	//Attempt to identify the sent message via randomly generated subject
+    	String draftSubject = "Draft Test Message " + Double.toString(Math.random()*1000);
+    	Message newMessage = createDraftMessage(testBase, draftSubject);
+
+		File file = new File("src/test/resources/largefile10M.blob");
+
+		AttachmentItem attachmentItem = new AttachmentItem();
+		attachmentItem.attachmentType = AttachmentType.FILE;
+		attachmentItem.name = file.getName();
+		attachmentItem.size = file.length();
+		attachmentItem.contentType = "application/octet-stream";
+
+		InputStream fileStream = OutlookTests.class.getClassLoader().getResourceAsStream("largefile10M.blob");
+
+		long streamSize = attachmentItem.size;
+
+		UploadSession uploadSession = testBase.graphClient.me()
+									.messages(newMessage.id)
+									.attachments()
+									.createUploadSession(attachmentItem)
+									.buildRequest()
+									.post();
+
+		ChunkedUploadProvider<AttachmentItem> chunkedUploadProvider = new ChunkedUploadProvider<>(uploadSession, testBase.graphClient, fileStream,
+				streamSize, AttachmentItem.class);
+		
+		// Do the upload
+		chunkedUploadProvider.upload(callback);
+
+    	//Send the drafted message
+    	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
+    }
 }
