@@ -31,6 +31,7 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -58,6 +59,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import okhttp3.Headers;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
+import okhttp3.Protocol;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
@@ -356,21 +358,24 @@ public class CoreHttpProvider implements IHttpProvider {
 					throws ClientException {
 
 		try {
+			if(this.connectionConfig == null) {
+				this.connectionConfig = new DefaultConnectionConfig();
+			}
 			if(this.corehttpClient == null) {
-				OkHttpClient.Builder okBuilder = HttpClients.createDefault(new ICoreAuthenticationProvider() {
+				final ICoreAuthenticationProvider authProvider = new ICoreAuthenticationProvider() {
 					@Override
 					public Request authenticateRequest(Request request) {
 						return request;
 					}
-				}).newBuilder();
-				if(this.connectionConfig == null) {
-					this.connectionConfig = new DefaultConnectionConfig();
-				}
-				okBuilder.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS);
-				okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
-				okBuilder.followRedirects(false);
-				okBuilder.retryOnConnectionFailure(false);
-				this.corehttpClient = okBuilder.build();
+				};
+				this.corehttpClient = HttpClients
+									.createDefault(authProvider)
+									.newBuilder()
+									.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS)
+									.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS)
+									.followRedirects(false)
+									.protocols(Arrays.asList(Protocol.HTTP_1_1)) //https://stackoverflow.com/questions/62031298/sockettimeout-on-java-11-but-not-on-java-8
+									.build();
 			}
 			if (authenticationProvider != null) {
 				authenticationProvider.authenticateRequest(request);
