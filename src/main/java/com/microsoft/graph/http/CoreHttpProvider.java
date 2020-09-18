@@ -362,18 +362,20 @@ public class CoreHttpProvider implements IHttpProvider {
 				this.connectionConfig = new DefaultConnectionConfig();
 			}
 			if(this.corehttpClient == null) {
+				final ICoreAuthenticationProvider authProvider = new ICoreAuthenticationProvider() {
+					@Override
+					public Request authenticateRequest(Request request) {
+						return request;
+					}
+				};
 				this.corehttpClient = HttpClients
-										.createDefault(new ICoreAuthenticationProvider() {
-															@Override
-															public Request authenticateRequest(Request request) {
-																return request;
-															}
-														}).newBuilder()
-										.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS)
-										.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS)
-										.followRedirects(false)
-										.protocols(Arrays.asList(Protocol.HTTP_1_1)) //https://stackoverflow.com/questions/62031298/sockettimeout-on-java-11-but-not-on-java-8
-										.build();
+									.createDefault(authProvider)
+									.newBuilder()
+									.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS)
+									.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS)
+									.followRedirects(false)
+									.protocols(Arrays.asList(Protocol.HTTP_1_1)) //https://stackoverflow.com/questions/62031298/sockettimeout-on-java-11-but-not-on-java-8
+									.build();
 			}
 			if (authenticationProvider != null) {
 				authenticationProvider.authenticateRequest(request);
