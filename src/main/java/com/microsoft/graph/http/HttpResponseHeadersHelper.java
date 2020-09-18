@@ -22,7 +22,7 @@ public class HttpResponseHeadersHelper {
 		while (index < responseHeaders.size()) {
 			final String headerName = responseHeaders.name(index);
 			final String headerValue = responseHeaders.value(index);
-			if (headerName == null && headerValue == null) {
+			if (headerName == null || headerValue == null) {
 				break;
 			}
 			headers.put(headerName, headerValue);
