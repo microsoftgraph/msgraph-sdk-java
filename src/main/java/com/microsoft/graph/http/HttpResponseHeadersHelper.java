@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import okhttp3.Headers;
 import okhttp3.Response;
@@ -16,7 +17,7 @@ public class HttpResponseHeadersHelper {
 	 * @return           the set of headers names and value
 	 */
 	public Map<String, String> getResponseHeadersAsMapStringString(final Response response) {
-		final Map<String, String> headers = new HashMap<>();
+		final Map<String, String> headers = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
 		int index = 0;
 		Headers responseHeaders = response.headers();
 		while (index < responseHeaders.size()) {
