@@ -1,6 +1,8 @@
 package com.microsoft.graph.serializer;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -11,11 +13,13 @@ import org.junit.Test;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.logger.MockLogger;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.Attendee;
 import com.microsoft.graph.models.extensions.Contact;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.EmailAddress;
 import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.FileAttachment;
@@ -23,7 +27,7 @@ import com.microsoft.graph.models.extensions.ItemAttachment;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 
-public class AttachmentCollectionPageSerializerTests {
+public class CollectionPageSerializerTests {
 	private MockLogger logger;
 	@Before
 	public void setUp() {
@@ -36,7 +40,7 @@ public class AttachmentCollectionPageSerializerTests {
         AttachmentCollectionResponse response = new AttachmentCollectionResponse();
         response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
         AttachmentCollectionPage attachmentCollectionPage = new AttachmentCollectionPage(response, null);
-        JsonElement serializedJson = AttachmentCollectionPageSerializer.serialize(attachmentCollectionPage, logger);
+        JsonElement serializedJson = CollectionPageSerializer.serialize(attachmentCollectionPage, logger);
         logger.logDebug(serializedJson.toString());
         assertEquals(expectedString,serializedJson.toString());
     }
@@ -45,7 +49,7 @@ public class AttachmentCollectionPageSerializerTests {
     public void testAttachmentCollectionPageDeserialization() throws Exception {
 		String jsonString = "[{\"contentBytes\":\"ZGF0YQ==\",\"name\":\"document.pdf\",\"@odata.type\":\"#microsoft.graph.fileAttachment\",\"id\":\"54321\"},{\"@odata.type\":\"#microsoft.graph.itemAttachment\",\"name\":\"Holiday event\",\"id\":null,\"isInline\":null,\"size\":null,\"item\":{\"subject\":\"Test Event Subject\",\"start\":{\"dateTime\":\"2018-10-16T06:15:26.544Z\",\"timeZone\":\"UTC\"},\"end\":{\"dateTime\":\"2018-11-18T07:30:26.544Z\",\"timeZone\":\"UTC\"},\"@odata.type\":\"microsoft.graph.event\",\"id\":\"1234\"}},{\"@odata.type\":\"#microsoft.graph.itemAttachment\",\"name\":\"Attachment name\",\"id\":null,\"isInline\":null,\"size\":null,\"item\":{\"displayName\":\"displayname\",\"mobilePhone\":\"123456890\",\"@odata.type\":\"microsoft.graph.contact\"}}]";
 		JsonElement jsonElement = JsonParser.parseString(jsonString);
-		AttachmentCollectionPage attachmentCollectionPage = AttachmentCollectionPageSerializer.deserialize(jsonElement, logger);
+		BaseCollectionPage<Attachment,?> attachmentCollectionPage = CollectionPageSerializer.deserialize(jsonElement, AttachmentCollectionPage.class, logger);
 		for(Attachment attachment: attachmentCollectionPage.getCurrentPage()) {
 			if(attachment instanceof FileAttachment) {
 				FileAttachment fileAttachment = (FileAttachment)attachment;
@@ -67,6 +71,16 @@ public class AttachmentCollectionPageSerializerTests {
 				}
 			}
 		}
+	}
+
+	@Test
+	public void testEntityWithCollectionOnDefaultDeserializer() throws Exception {
+		final String jsonString = "{\"createdBy\":{\"application\":{\"displayName\":\"UmtPlus\",\"id\":\"4458250c\"},\"user\":{\"id\":\"c1fba35378bf924c\"}},\"createdDateTime\":\"2020-09-16T14:53:53.61Z\",\"cTag\":\"aYzpDMUZCQTM1Mzc4QkY5MjRDITIzNDkyNS4yNTc\",\"eTag\":\"aQzFGQkEzNTM3OEJGOTI0QyEyMzQ5MjUuMTE\",\"id\":\"C1FBA35378BF924C!234925\",\"lastModifiedBy\":{\"application\":{\"displayName\":\"UmtPlus\",\"id\":\"4458250c\"},\"user\":{\"id\":\"c1fba35378bf924c\"}},\"lastModifiedDateTime\":\"2020-09-16T17:42:17.847Z\",\"name\":\"Change Flat Tire.sco\",\"parentReference\":{\"driveId\":\"c1fba35378bf924c\",\"driveType\":\"personal\",\"id\":\"C1FBA35378BF924C!234867\",\"name\":\"UmtPlus\",\"path\":\"/drive/root:/UmtPlus\"},\"size\":59228,\"webUrl\":\"https://1drv.ms/u/s!AEySv3hTo_vBjqst\",\"items\":[],\"file\":{\"hashes\":{\"quickXorHash\":\"RjqF6zG7yzMKxLlRmXkKr0tK7oQ=\",\"sha1Hash\":\"A7A1DB7C7355A372E6097C5BD7DF6CF702AFA897\",\"sha256Hash\":\"97EF73D523368EE939D084F87DE22E28BD9236CC55D6A67EE69183FFC456CA08\"},\"mimeType\":\"application/octet-stream\"},\"fileSystemInfo\":{\"createdDateTime\":\"2020-09-16T14:53:53.61Z\",\"lastModifiedDateTime\":\"2020-09-16T17:42:17.846Z\"},\"reactions\":{\"commentCount\":0},\"tags\":[],\"lenses\":[],\"thumbnails\":[{\"id\":\"0\",\"large\":{\"height\":800,\"url\":\"https://oxo45g.bl.files.1drv.com/y4pi3j1XhJr0-LmucbMAY7erAc5yeeX8yXaxUqk7p5O1mYVUMnRmzIeFC8LgpZLXCNFkFfVzt_PlChpIBL2VwTp9bdXVToVWsHRKC5MmEiO4Zv3eR9_JCc2ih4jstMbx6AusvkIpCW7FEpWWSeyFQEJR0jbaNNZSs_n6Ryrio2xYl9LhINf19-xYBxVCR4kV188?width=800&height=800&cropmode=none\",\"width\":800},\"medium\":{\"height\":176,\"url\":\"https://oxo45g.bl.files.1drv.com/y4pi3j1XhJr0-LmucbMAY7erAc5yeeX8yXaxUqk7p5O1mYVUMnRmzIeFC8LgpZLXCNFkFfVzt_PlChpIBL2VwTp9bdXVToVWsHRKC5MmEiO4Zv3eR9_JCc2ih4jstMbx6AusvkIpCW7FEpWWSeyFQEJR0jbaNNZSs_n6Ryrio2xYl9LhINf19-xYBxVCR4kV188?width=176&height=176&cropmode=none\",\"width\":176},\"small\":{\"height\":96,\"url\":\"https://oxo45g.bl.files.1drv.com/y4pi3j1XhJr0-LmucbMAY7erAc5yeeX8yXaxUqk7p5O1mYVUMnRmzIeFC8LgpZLXCNFkFfVzt_PlChpIBL2VwTp9bdXVToVWsHRKC5MmEiO4Zv3eR9_JCc2ih4jstMbx6AusvkIpCW7FEpWWSeyFQEJR0jbaNNZSs_n6Ryrio2xYl9LhINf19-xYBxVCR4kV188?width=96&height=96&cropmode=none\",\"width\":96}}]}";
+		final DefaultSerializer defaultSerializer = new DefaultSerializer(logger);
+		final DriveItem driveItem = defaultSerializer.deserializeObject(jsonString, DriveItem.class);
+		assertNotNull(driveItem);
+		assertNotNull(driveItem.thumbnails);
+		assertTrue(driveItem.thumbnails.getCurrentPage().size() > 0);
 	}
 
 	private FileAttachment getFileAttachment() throws Exception{
