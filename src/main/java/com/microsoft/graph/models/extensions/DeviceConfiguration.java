@@ -26,7 +26,6 @@ import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusColl
 
 
 import com.google.gson.JsonObject;
-import com.google.gson.JsonElement;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 
