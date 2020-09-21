@@ -45,6 +45,7 @@ import static okhttp3.internal.Util.closeQuietly;
  * An exception from the Graph service
  */
 public class GraphServiceException extends ClientException {
+    private final static HttpResponseHeadersHelper  responseHeadersHelper = new HttpResponseHeadersHelper();
 
     private static final long serialVersionUID = -7416427229421064119L;
 
@@ -453,7 +454,7 @@ public class GraphServiceException extends ClientException {
 
         final int responseCode = response.code();
         final List<String> responseHeaders = new LinkedList<>();
-        final Map<String, String> headers = CoreHttpProvider.getResponseHeadersAsMapStringString(response);
+        final Map<String, String> headers = responseHeadersHelper.getResponseHeadersAsMapStringString(response);
         for (final String key : headers.keySet()) {
             final String fieldPrefix;
             if (key == null) {
@@ -475,7 +476,7 @@ public class GraphServiceException extends ClientException {
         }
         GraphErrorResponse error;
         try {
-            error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response));
+            error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, responseHeadersHelper.getResponseHeadersAsMapOfStringList(response));
         } catch (final Exception ex) {
             error = new GraphErrorResponse();
             error.error = new GraphError();

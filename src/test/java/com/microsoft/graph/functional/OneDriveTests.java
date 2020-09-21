@@ -24,12 +24,12 @@ import com.microsoft.graph.models.extensions.UploadSession;
 
 @Ignore
 public class OneDriveTests {
-    private TestBase testBase;
+	private TestBase testBase;
 
-    @Before
-    public void setUp() {
-       testBase = new TestBase();
-    }
+	@Before
+	public void setUp() {
+	   testBase = new TestBase();
+	}
 	
 	IProgressCallback<DriveItem> callback = new IProgressCallback<DriveItem> () {
 		@Override
@@ -49,39 +49,37 @@ public class OneDriveTests {
 			Assert.fail("Upload session failed");
 		}
 	};
-    /**
-     * Test large file upload. 
-     * https://github.com/OneDrive/onedrive-sdk-csharp/blob/master/docs/chunked-uploads.md
-     * 
-     * @throws IOException if the input file is not found
-     * @throws InterruptedException if the chunked upload fails
-     */
-    @Test
+	/**
+	 * Test large file upload. 
+	 * https://github.com/OneDrive/onedrive-sdk-csharp/blob/master/docs/chunked-uploads.md
+	 * 
+	 * @throws IOException if the input file is not found
+	 * @throws InterruptedException if the chunked upload fails
+	 */
+	@Test
 	public void testLargeFileUpload() throws IOException, InterruptedException {
-    	String itemId = "01BQHXQL5GQVAGCFJLYRH3EAG2YHGERMQA"; //Test upload folder
-    	
-    	//Get resource file from file system
-    	InputStream uploadFile = OneDriveTests.class.getClassLoader().getResourceAsStream("hamilton.jpg");
-    	long fileSize = (long) uploadFile.available();
-    	
-    	UploadSession uploadSession = testBase
-    			.graphClient
-    			.me()
-    			.drive()
-    			.items(itemId)
-    			.itemWithPath("_hamilton.jpg")
-    			.createUploadSession(new DriveItemUploadableProperties())
-    			.buildRequest()
-    			.post();
-    	ChunkedUploadProvider<DriveItem> chunkedUploadProvider = new ChunkedUploadProvider<DriveItem>(
-    			uploadSession, 
-    			testBase.graphClient, 
-    			uploadFile, 
-    			fileSize, 
-    			DriveItem.class);
+		//Get resource file from file system
+		InputStream uploadFile = OneDriveTests.class.getClassLoader().getResourceAsStream("largefile10M.blob");
+		long fileSize = (long) uploadFile.available();
 		
-    	chunkedUploadProvider.upload(callback);
-    }
+		UploadSession uploadSession = testBase
+				.graphClient
+				.me()
+				.drive()
+				.root()
+				.itemWithPath("largefile10M.blob")
+				.createUploadSession(new DriveItemUploadableProperties())
+				.buildRequest()
+				.post();
+		ChunkedUploadProvider<DriveItem> chunkedUploadProvider = new ChunkedUploadProvider<DriveItem>(
+				uploadSession, 
+				testBase.graphClient, 
+				uploadFile, 
+				fileSize, 
+				DriveItem.class);
+		
+		chunkedUploadProvider.upload(callback);
+	}
 	@Test
 	public void testDownloadWithCustomRequest() throws IOException {
 		final String testDownloadFileId = "01RWFXFJG3UYRHE75RZVFYWKNUEBB53H7A";
@@ -97,7 +95,7 @@ public class OneDriveTests {
 
 		final InputStream uploadFile = new ByteArrayInputStream("{\"hehe\":\"haha\"}".getBytes(StandardCharsets.UTF_8));
 
-    	final long fileSize = (long) uploadFile.available();
+		final long fileSize = (long) uploadFile.available();
 
 		final UploadSession session = testBase.graphClient.me()
 			.drive()
@@ -108,11 +106,11 @@ public class OneDriveTests {
 			.post();
 
 		ChunkedUploadProvider<DriveItem> chunkedUploadProvider = new ChunkedUploadProvider<DriveItem>(
-    			session, 
-    			testBase.graphClient, 
-    			uploadFile, 
-    			fileSize, 
-    			DriveItem.class);
+				session, 
+				testBase.graphClient, 
+				uploadFile, 
+				fileSize, 
+				DriveItem.class);
 		
 		chunkedUploadProvider.upload(callback);
 		

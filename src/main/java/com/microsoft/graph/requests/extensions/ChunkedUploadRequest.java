@@ -98,32 +98,21 @@ public class ChunkedUploadRequest {
     @SuppressWarnings("unchecked")
     public <UploadType> ChunkedUploadResult<UploadType> upload(
             final ChunkedUploadResponseHandler<UploadType> responseHandler) {
-        while (this.retryCount < this.maxRetry) {
-            try {
-                Thread.sleep(RETRY_DELAY * this.retryCount * this.retryCount);
-            } catch (final InterruptedException e) {
-                throw new ClientException("Exception while waiting to retry file upload.", e);
-            }
+        ChunkedUploadResult<UploadType> result = null;
 
-            ChunkedUploadResult<UploadType> result = null;
-
-            try {
-                result = this.baseRequest
-                        .getClient()
-                        .getHttpProvider()
-                        .send(baseRequest, (Class<ChunkedUploadResult<UploadType>>)(Class<?>) ChunkedUploadResult.class, this.data, responseHandler);
-            } catch (final ClientException e) {
-                throw new ClientException("Request failed with error, retry if necessary.", e);
-            }
-
-            if (result != null && result.chunkCompleted()) {
-                return result;
-            }
-
-            this.retryCount++;
+        try {
+            result = this.baseRequest
+                    .getClient()
+                    .getHttpProvider()
+                    .send(baseRequest, (Class<ChunkedUploadResult<UploadType>>)(Class<?>) ChunkedUploadResult.class, this.data, responseHandler);
+        } catch (final ClientException e) {
+            throw new ClientException("Request failed with error, retry if necessary.", e);
         }
 
-        return new ChunkedUploadResult<UploadType>(
-                new ClientException("Upload session failed too many times.", null));
+        if (result != null && result.chunkCompleted()) {
+            return result;
+        } else 
+            return new ChunkedUploadResult<UploadType>(
+                new ClientException("Upload session failed.", null));
     }
 }
