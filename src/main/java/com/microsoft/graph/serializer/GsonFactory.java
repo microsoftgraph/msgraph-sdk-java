@@ -31,9 +31,9 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.models.extensions.DateOnly;
-import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 
 import com.microsoft.graph.models.extensions.TimeOfDay;
 import java.lang.reflect.Type;
@@ -212,21 +212,21 @@ final class GsonFactory {
             }
         };
         
-        final JsonSerializer<AttachmentCollectionPage> attachmentCollectionPageSerializer = new JsonSerializer<AttachmentCollectionPage>() {
+        final JsonSerializer<BaseCollectionPage<?,?>> collectionPageSerializer = new JsonSerializer<BaseCollectionPage<?,?>>() {
             @Override
-            public JsonElement serialize(final AttachmentCollectionPage src,
+            public JsonElement serialize(final BaseCollectionPage<?,?> src,
                                          final Type typeOfSrc,
                                          final JsonSerializationContext context) {
-            	return AttachmentCollectionPageSerializer.serialize(src, logger);
+            	return CollectionPageSerializer.serialize(src, logger);
             }
         };
 
-        final JsonDeserializer<AttachmentCollectionPage> attachmentCollectionPageDeserializer = new JsonDeserializer<AttachmentCollectionPage>() {
+        final JsonDeserializer<BaseCollectionPage<?,?>> collectionPageDeserializer = new JsonDeserializer<BaseCollectionPage<?,?>>() {
             @Override
-            public AttachmentCollectionPage deserialize(final JsonElement json,
+            public BaseCollectionPage<?,?> deserialize(final JsonElement json,
                                         final Type typeOfT,
                                         final JsonDeserializationContext context) throws JsonParseException {
-                return AttachmentCollectionPageSerializer.deserialize(json, logger);
+                return CollectionPageSerializer.deserialize(json, typeOfT, logger);
             }
         };
         
@@ -257,8 +257,8 @@ final class GsonFactory {
                 .registerTypeAdapter(EnumSet.class, enumSetJsonDeserializer)
                 .registerTypeAdapter(Duration.class, durationJsonSerializer)
                 .registerTypeAdapter(Duration.class, durationJsonDeserializer)
-                .registerTypeAdapter(AttachmentCollectionPage.class, attachmentCollectionPageSerializer)
-                .registerTypeAdapter(AttachmentCollectionPage.class, attachmentCollectionPageDeserializer)
+                .registerTypeHierarchyAdapter(BaseCollectionPage.class, collectionPageSerializer)
+                .registerTypeHierarchyAdapter(BaseCollectionPage.class, collectionPageDeserializer)
                 .registerTypeAdapter(TimeOfDay.class, timeOfDayJsonDeserializer)
                 .registerTypeAdapterFactory(new FallbackTypeAdapterFactory(logger))
                 .create();

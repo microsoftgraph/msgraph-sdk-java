@@ -327,14 +327,18 @@ public class DefaultSerializer implements ISerializer {
      * @param parentClass the parent class the derived class should inherit from
      * @return            the derived class if found, or null if not applicable
      */
-    private Class<?> getDerivedClass(JsonObject jsonObject, Class<?> parentClass) {
-    	//Identify the odata.type information if provided
-        if (jsonObject.get("@odata.type") != null) {
-        	String odataType = jsonObject.get("@odata.type").getAsString();
-        	String derivedType = odataType.substring(odataType.lastIndexOf('.') + 1); //Remove microsoft.graph prefix
-        	derivedType = CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_CAMEL, derivedType);
-        	derivedType = "com.microsoft.graph.models.extensions." + derivedType; //Add full package path
-        	
+    private final static String ODATA_TYPE_KEY = "@odata.type";
+    public Class<?> getDerivedClass(JsonObject jsonObject, Class<?> parentClass) {
+        //Identify the odata.type information if provided
+        if (jsonObject.get(ODATA_TYPE_KEY) != null) {
+			/** #microsoft.graph.user or #microsoft.graph.callrecords.callrecord */
+			final String odataType = jsonObject.get(ODATA_TYPE_KEY).getAsString();
+			final Integer lastDotIndex = odataType.lastIndexOf(".");
+			final String derivedType = (odataType.substring(0, lastDotIndex) + 
+											".models.extensions." + 
+											CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_CAMEL, 
+																		odataType.substring(lastDotIndex + 1)))
+										.replace("#", "com.");
         	try {
         		Class<?> derivedClass = Class.forName(derivedType);
         		//Check that the derived class inherits from the given parent class
