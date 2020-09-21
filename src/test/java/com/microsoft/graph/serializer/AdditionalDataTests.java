@@ -142,11 +142,12 @@ public class AdditionalDataTests {
 
 	@Test 
 	public void testHashMapProperties() {
-		final String source = "{\"description\": \"Task details properties:\nchecklist:Sub items\nreferences:Related links\",\"previewType\": \"automatic\",\"references\": {\"https%3A//developer%2Emicrosoft%2Ecom/en-us/graph/graph-explorer\": {\"@odata.type\": \"#microsoft.graph.plannerExternalReference\",\"alias\": \"Graph Explorer\",\"type\": \"Other\",\"previewPriority\": \"0009005706180391122\",\"lastModifiedBy\": {\"user\": {\"id\": \"fbab97d0-4932-4511-b675-204639209557\"}},\"lastModifiedDateTime\": \"2017-04-24T22:52:29.814Z\"}},\"checklist\": {\"d280ed1a-9f6b-4f9c-a962-fb4d00dc50ff\": {\"@odata.type\": \"#microsoft.graph.plannerChecklistItem\",\"isChecked\": false,\"title\": \"Try reading task details\",\"orderHint\": \"8587094707721254251P]\",\"lastModifiedBy\": {\"user\": {\"id\": \"e396de0e-4812-4fcb-9f9e-0358744df343\"}},\"lastModifiedDateTime\": \"2017-04-14T02:16:14.866Z\"}},\"id\": \"gcrYAaAkgU2EQUvpkNNXLGQAGTtu\"}";
+		final String source = "{\"description\": \"Task details properties:\nchecklist:Sub items\nreferences:Related links\",\"previewType\": \"automatic\",\"references\": {\"https%3A//developer%2Emicrosoft%2Ecom/en-us/graph/graph-explorer\": {\"@odata.type\": \"#microsoft.graph.plannerExternalReference\",\"alias\": \"Graph Explorer\",\"type\": \"Other\",\"previewPriority\": \"0009005706180391122\",\"lastModifiedBy\": {\"user\": {\"id\": \"fbab97d0-4932-4511-b675-204639209557\"}},\"lastModifiedDateTime\": \"2017-04-24T22:52:29.814Z\"}},\"checklist\": {\"d280ed1a-9f6b-4f9c-a962-fb4d00dc50ff\": {\"@odata.type\": \"#microsoft.graph.plannerChecklistItem\",\"isChecked\": false,\"title\": \"Try reading task details\",\"orderHint\": \"8587094707721254251P]\",\"lastModifiedBy\": {\"user\": {\"id\": \"e396de0e-4812-4fcb-9f9e-0358744df343\", \"customProp\": \"somestring\"}},\"lastModifiedDateTime\": \"2017-04-14T02:16:14.866Z\"}},\"id\": \"gcrYAaAkgU2EQUvpkNNXLGQAGTtu\"}";
 		final PlannerTaskDetails taskDetails = serializer.deserializeObject(source, PlannerTaskDetails.class);
 		assertNotNull(taskDetails);
 		assertNotNull(taskDetails.checklist);
 		assertFalse(taskDetails.checklist.isEmpty());
 		assertTrue(taskDetails.checklist.get("d280ed1a-9f6b-4f9c-a962-fb4d00dc50ff").title.equals("Try reading task details"));
+		assertTrue(taskDetails.checklist.get("d280ed1a-9f6b-4f9c-a962-fb4d00dc50ff").lastModifiedBy.user.additionalDataManager().get("customProp").getAsString().equals("somestring"));
 	}
 }
