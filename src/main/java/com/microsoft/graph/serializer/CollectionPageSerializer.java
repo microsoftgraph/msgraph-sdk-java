@@ -110,12 +110,15 @@ public class CollectionPageSerializer {
 		/** eg: com.microsoft.graph.requests.extensions.AttachmentCollectionPage */
 		final String collectionPageClassCanonicalName = typeOfT.getTypeName();
 		/** eg: com.microsoft.graph.models.extensions.Attachment */
-		final String entityClassCanonicalName = collectionPageClassCanonicalName
+		final String baseEntityClassCanonicalName = collectionPageClassCanonicalName
 					.substring(0, collectionPageClassCanonicalName.length() - pageLength - collectionLength)
 					.replace("requests", "models");
 		try {
-			final Class<?> entityClass = Class.forName(entityClassCanonicalName);
+			final Class<?> baseEntityClass = Class.forName(baseEntityClassCanonicalName);
 			for (JsonObject sourceObject : sourceArray) {
+				Class<?> entityClass = serializer.getDerivedClass(sourceObject, baseEntityClass);
+				if(entityClass == null)
+					entityClass = baseEntityClass;
 				final T1 targetObject = (T1)serializer.deserializeObject(sourceObject.toString(), entityClass);
 				((IJsonBackedObject)targetObject).setRawObject(serializer, sourceObject);
 				list.add(targetObject);

@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -19,11 +20,15 @@ import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.Attendee;
 import com.microsoft.graph.models.extensions.Contact;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.EmailAddress;
 import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.FileAttachment;
+import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.ItemAttachment;
+import com.microsoft.graph.models.extensions.ServicePrincipal;
+import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 
@@ -81,6 +86,19 @@ public class CollectionPageSerializerTests {
 		assertNotNull(driveItem);
 		assertNotNull(driveItem.thumbnails);
 		assertTrue(driveItem.thumbnails.getCurrentPage().size() > 0);
+	}
+
+	@Test
+	public void testEntityWithCollectionOfMultipleTypes() throws Exception {
+		final String jsonString = "{\"@odata.context\": \"https://graph.microsoft.com/v1.0/$metadata#groups/$entity\",\"id\": \"01b4b70e-2ea6-432f-a3d7-eefd826c2a8e\",\"deletedDateTime\": null,\"classification\": null,\"createdDateTime\": \"2019-11-23T15:48:33Z\",\"creationOptions\": [],\"description\": \"wovinewovinewvoinwev\",\"displayName\": \"Toronto Basketball Raptors\",\"expirationDateTime\": null,\"groupTypes\": [\"Unified\"],\"isAssignableToRole\": null,\"mail\": \"TBR@contoso.onmicrosoft.com\",\"mailEnabled\": true,\"mailNickname\": \"TBR\",\"membershipRule\": null,\"membershipRuleProcessingState\": null,\"onPremisesDomainName\": null,\"onPremisesLastSyncDateTime\": null,\"onPremisesNetBiosName\": null,\"onPremisesSamAccountName\": null,\"onPremisesSecurityIdentifier\": null,\"onPremisesSyncEnabled\": null,\"preferredDataLocation\": null,\"preferredLanguage\": null,\"proxyAddresses\": [\"SPO:SPO_c0b1d860-d3d3-444c-98ee-c34365caa414@SPO_bd4c6c31-c49c-4ab6-a0aa-742e07c20232\",\"SMTP:TBR@contoso.onmicrosoft.com\"],\"renewedDateTime\": \"2019-11-23T15:48:33Z\",\"resourceBehaviorOptions\": [],\"resourceProvisioningOptions\": [\"Team\"],\"securityEnabled\": false,\"securityIdentifier\": \"S-1-12-1-28620558-1127165606-4260288419-2385144962\",\"theme\": null,\"visibility\": \"Private\",\"onPremisesProvisioningErrors\": [],\"members\": [{\"@odata.type\": \"#microsoft.graph.user\",\"id\": \"c2e8df37-c6a7-4d88-89b1-feb4f1fda7c5\",\"businessPhones\": [\"4388888888\"],\"displayName\": \"Vincent Biret\",\"givenName\": \"Vincent\",\"jobTitle\": null,\"mail\": \"vincent@contoso.onmicrosoft.com\",\"mobilePhone\": \"+1 4388888888\",\"officeLocation\": \"Quebec\",\"preferredLanguage\": \"en-US\",\"surname\": \"Biret\",\"userPrincipalName\": \"vincent@contoso.onmicrosoft.com\"},{\"@odata.type\": \"#microsoft.graph.servicePrincipal\",\"id\": \"004ea702-a572-4f1b-8bb0-74598985e0c0\",\"deletedDateTime\": null,\"accountEnabled\": true,\"alternativeNames\": [],\"appDisplayName\": \"OCPS Checkin Service\",\"appDescription\": null,\"appId\": \"23c898c1-f7e8-41da-9501-f16571f8d097\",\"applicationTemplateId\": null,\"appOwnerOrganizationId\": \"f8cdef31-a31e-4b4a-93e4-5f571e91255a\",\"appRoleAssignmentRequired\": false,\"createdDateTime\": \"2018-11-13T02:28:32Z\",\"description\": null,\"displayName\": \"OCPS Checkin Service\",\"homepage\": null,\"loginUrl\": null,\"logoutUrl\": null,\"notes\": null,\"notificationEmailAddresses\": [],\"preferredSingleSignOnMode\": null,\"preferredTokenSigningKeyThumbprint\": null,\"replyUrls\": [\"https://ocps.manage.microsoft.com\"],\"resourceSpecificApplicationPermissions\": [],\"samlSingleSignOnSettings\": null,\"servicePrincipalNames\": [\"23c898c1-f7e8-41da-9501-f16571f8d097\",\"https://ocps.manage.microsoft.com\"],\"servicePrincipalType\": \"Application\",\"tags\": [],\"tokenEncryptionKeyId\": null,\"verifiedPublisher\": {\"displayName\": null,\"verifiedPublisherId\": null,\"addedDateTime\": null},\"addIns\": [],\"appRoles\": [],\"info\": {\"logoUrl\": null,\"marketingUrl\": null,\"privacyStatementUrl\": null,\"supportUrl\": null,\"termsOfServiceUrl\": null},\"keyCredentials\": [],\"oauth2PermissionScopes\": [],\"passwordCredentials\": []}]}";
+		final DefaultSerializer defaultSerializer = new DefaultSerializer(logger);
+		final Group group = defaultSerializer.deserializeObject(jsonString, Group.class);
+		assertNotNull(group);
+		assertNotNull(group.members);
+		final List<DirectoryObject> page = group.members.getCurrentPage();
+		assertTrue(page.size() == 2);
+		assertTrue(page.get(0) instanceof User);
+		assertTrue(page.get(1) instanceof ServicePrincipal);
 	}
 
 	private FileAttachment getFileAttachment() throws Exception{
