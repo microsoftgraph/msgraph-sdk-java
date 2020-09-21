@@ -68,6 +68,7 @@ public class BatchTests {
         assertEquals(200, batchResponse.code());
 
         final MSBatchResponseContent responseContent = new MSBatchResponseContent(batchResponse);
+        batchResponse.close();
 
         assertEquals(400, responseContent.getResponseById(userPostId).code()); //400:we're not providing enough properties for the call to go through
         assertEquals(200, responseContent.getResponseById(meGetId).code());
