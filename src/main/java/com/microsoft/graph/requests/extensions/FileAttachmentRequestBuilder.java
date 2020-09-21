@@ -34,10 +34,11 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IFileAttachmentRequest instance
      */
-    public IFileAttachmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IFileAttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

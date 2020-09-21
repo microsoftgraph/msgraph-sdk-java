@@ -79,6 +79,10 @@ import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IOrganizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IServicePrincipalRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;

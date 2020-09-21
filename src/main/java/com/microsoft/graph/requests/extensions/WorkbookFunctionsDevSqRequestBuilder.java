@@ -34,10 +34,11 @@ public class WorkbookFunctionsDevSqRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsDevSqRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDevSqRequest instance
      */
-    public IWorkbookFunctionsDevSqRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDevSqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

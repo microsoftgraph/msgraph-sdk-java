@@ -36,10 +36,11 @@ public class WorkbookFilterRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookFilterRequest instance
      */
-    public IWorkbookFilterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -9,9 +9,9 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.ItemReference;
-import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.UploadSession;
+import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.ItemPreviewInfo;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
@@ -29,8 +29,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IDriveItemCollectionRequestBuilder extends IRequestBuilder {
 
-    IDriveItemCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IDriveItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IDriveItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IDriveItemRequestBuilder byId(final String id);

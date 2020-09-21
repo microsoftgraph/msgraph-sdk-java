@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsRank_AvgRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsRank_AvgRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRank_AvgRequest instance
      */
-    IWorkbookFunctionsRank_AvgRequest buildRequest();
+    IWorkbookFunctionsRank_AvgRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsRank_AvgRequest with specific options instead of the existing options

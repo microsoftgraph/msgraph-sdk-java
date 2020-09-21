@@ -34,10 +34,11 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IHomeRealmDiscoveryPolicyRequest instance
      */
-    public IHomeRealmDiscoveryPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IHomeRealmDiscoveryPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRoleDefinitionRequest instance
      */
-    public IRoleDefinitionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRoleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

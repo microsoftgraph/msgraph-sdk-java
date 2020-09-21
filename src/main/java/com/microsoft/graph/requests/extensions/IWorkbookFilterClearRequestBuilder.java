@@ -17,9 +17,10 @@ public interface IWorkbookFilterClearRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFilterClearRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterClearRequest instance
      */
-    IWorkbookFilterClearRequest buildRequest();
+    IWorkbookFilterClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFilterClearRequest with specific options instead of the existing options

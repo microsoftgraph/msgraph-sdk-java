@@ -36,10 +36,11 @@ public class WorkbookFunctionsRandBetweenRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsRandBetweenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRandBetweenRequest instance
      */
-    public IWorkbookFunctionsRandBetweenRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRandBetweenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IContactDeltaCollectionRequest;
  */
 public interface IContactDeltaCollectionRequestBuilder extends IRequestBuilder {
 
-    IContactDeltaCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IContactDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IContactDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

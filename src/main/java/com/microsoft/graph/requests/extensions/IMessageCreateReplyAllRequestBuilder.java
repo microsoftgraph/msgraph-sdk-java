@@ -17,9 +17,10 @@ public interface IMessageCreateReplyAllRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMessageCreateReplyAllRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMessageCreateReplyAllRequest instance
      */
-    IMessageCreateReplyAllRequest buildRequest();
+    IMessageCreateReplyAllRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IMessageCreateReplyAllRequest with specific options instead of the existing options

@@ -36,10 +36,11 @@ public class DriveItemPreviewRequestBuilder extends BaseActionRequestBuilder imp
     /**
      * Creates the IDriveItemPreviewRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemPreviewRequest instance
      */
-    public IDriveItemPreviewRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveItemPreviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

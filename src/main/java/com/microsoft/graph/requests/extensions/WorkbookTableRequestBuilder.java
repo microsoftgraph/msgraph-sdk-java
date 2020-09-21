@@ -47,10 +47,11 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookTableRequest instance
      */
-    public IWorkbookTableRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

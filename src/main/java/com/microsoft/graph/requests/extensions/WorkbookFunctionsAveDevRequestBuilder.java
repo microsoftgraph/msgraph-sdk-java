@@ -34,10 +34,11 @@ public class WorkbookFunctionsAveDevRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsAveDevRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAveDevRequest instance
      */
-    public IWorkbookFunctionsAveDevRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsAveDevRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

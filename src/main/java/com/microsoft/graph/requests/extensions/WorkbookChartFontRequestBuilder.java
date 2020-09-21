@@ -34,10 +34,11 @@ public class WorkbookChartFontRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookChartFontRequest instance
      */
-    public IWorkbookChartFontRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartFontRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

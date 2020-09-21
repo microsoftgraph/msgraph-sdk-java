@@ -34,10 +34,11 @@ public class ReportRootGetEmailAppUsageAppsUserCountsRequestBuilder extends Base
     /**
      * Creates the IReportRootGetEmailAppUsageAppsUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetEmailAppUsageAppsUserCountsRequest instance
      */
-    public IReportRootGetEmailAppUsageAppsUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetEmailAppUsageAppsUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

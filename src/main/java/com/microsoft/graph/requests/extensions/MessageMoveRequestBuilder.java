@@ -34,10 +34,11 @@ public class MessageMoveRequestBuilder extends BaseActionRequestBuilder implemen
     /**
      * Creates the IMessageMoveRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMessageMoveRequest instance
      */
-    public IMessageMoveRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMessageMoveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

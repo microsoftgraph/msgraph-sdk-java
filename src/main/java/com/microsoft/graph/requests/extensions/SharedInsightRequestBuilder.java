@@ -36,10 +36,11 @@ public class SharedInsightRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISharedInsightRequest instance
      */
-    public ISharedInsightRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISharedInsightRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

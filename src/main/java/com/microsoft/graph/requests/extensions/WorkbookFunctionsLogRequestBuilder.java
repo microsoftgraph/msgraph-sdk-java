@@ -36,10 +36,11 @@ public class WorkbookFunctionsLogRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsLogRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLogRequest instance
      */
-    public IWorkbookFunctionsLogRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsLogRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

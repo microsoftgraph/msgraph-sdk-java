@@ -36,10 +36,11 @@ public class WorkbookFunctionsMroundRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsMroundRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMroundRequest instance
      */
-    public IWorkbookFunctionsMroundRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsMroundRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

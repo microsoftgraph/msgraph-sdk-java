@@ -40,10 +40,11 @@ public class WorkbookFunctionsWeibull_DistRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsWeibull_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsWeibull_DistRequest instance
      */
-    public IWorkbookFunctionsWeibull_DistRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsWeibull_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

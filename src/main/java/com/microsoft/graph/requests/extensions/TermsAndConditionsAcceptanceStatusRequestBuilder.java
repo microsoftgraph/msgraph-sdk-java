@@ -36,10 +36,11 @@ public class TermsAndConditionsAcceptanceStatusRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITermsAndConditionsAcceptanceStatusRequest instance
      */
-    public ITermsAndConditionsAcceptanceStatusRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITermsAndConditionsAcceptanceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class WorkbookFunctionsSinhRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsSinhRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSinhRequest instance
      */
-    public IWorkbookFunctionsSinhRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSinhRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

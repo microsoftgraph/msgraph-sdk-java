@@ -43,10 +43,11 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder implements IMobi
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileAppRequest instance
      */
-    public IMobileAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilde
     /**
      * Creates the IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest instance
      */
-    IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest buildRequest();
+    IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest with specific options instead of the existing options

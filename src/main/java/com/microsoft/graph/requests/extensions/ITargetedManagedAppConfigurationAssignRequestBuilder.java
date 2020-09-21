@@ -17,9 +17,10 @@ public interface ITargetedManagedAppConfigurationAssignRequestBuilder extends IR
     /**
      * Creates the ITargetedManagedAppConfigurationAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITargetedManagedAppConfigurationAssignRequest instance
      */
-    ITargetedManagedAppConfigurationAssignRequest buildRequest();
+    ITargetedManagedAppConfigurationAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ITargetedManagedAppConfigurationAssignRequest with specific options instead of the existing options

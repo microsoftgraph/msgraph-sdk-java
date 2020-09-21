@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsPriceDiscRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsPriceDiscRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPriceDiscRequest instance
      */
-    IWorkbookFunctionsPriceDiscRequest buildRequest();
+    IWorkbookFunctionsPriceDiscRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsPriceDiscRequest with specific options instead of the existing options

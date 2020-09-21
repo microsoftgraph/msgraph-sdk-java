@@ -17,9 +17,10 @@ public interface IMessageSendRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMessageSendRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMessageSendRequest instance
      */
-    IMessageSendRequest buildRequest();
+    IMessageSendRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IMessageSendRequest with specific options instead of the existing options

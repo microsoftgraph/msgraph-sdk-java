@@ -17,9 +17,10 @@ public interface IManagedDeviceShutDownRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IManagedDeviceShutDownRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceShutDownRequest instance
      */
-    IManagedDeviceShutDownRequest buildRequest();
+    IManagedDeviceShutDownRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceShutDownRequest with specific options instead of the existing options

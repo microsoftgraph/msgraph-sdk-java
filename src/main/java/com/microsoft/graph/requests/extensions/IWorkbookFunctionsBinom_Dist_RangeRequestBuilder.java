@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsBinom_Dist_RangeRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFunctionsBinom_Dist_RangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBinom_Dist_RangeRequest instance
      */
-    IWorkbookFunctionsBinom_Dist_RangeRequest buildRequest();
+    IWorkbookFunctionsBinom_Dist_RangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsBinom_Dist_RangeRequest with specific options instead of the existing options

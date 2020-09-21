@@ -17,9 +17,10 @@ public interface ICallAnswerRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ICallAnswerRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallAnswerRequest instance
      */
-    ICallAnswerRequest buildRequest();
+    ICallAnswerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICallAnswerRequest with specific options instead of the existing options

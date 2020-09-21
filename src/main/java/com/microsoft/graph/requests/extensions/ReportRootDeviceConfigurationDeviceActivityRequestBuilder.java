@@ -32,10 +32,11 @@ public class ReportRootDeviceConfigurationDeviceActivityRequestBuilder extends B
     /**
      * Creates the IReportRootDeviceConfigurationDeviceActivityRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootDeviceConfigurationDeviceActivityRequest instance
      */
-    public IReportRootDeviceConfigurationDeviceActivityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootDeviceConfigurationDeviceActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

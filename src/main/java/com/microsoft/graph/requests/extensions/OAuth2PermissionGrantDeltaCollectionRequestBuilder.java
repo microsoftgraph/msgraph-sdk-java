@@ -35,11 +35,23 @@ public class OAuth2PermissionGrantDeltaCollectionRequestBuilder extends BaseFunc
     public OAuth2PermissionGrantDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
-
-    public IOAuth2PermissionGrantDeltaCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IOAuth2PermissionGrantDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IOAuth2PermissionGrantDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         OAuth2PermissionGrantDeltaCollectionRequest request = new OAuth2PermissionGrantDeltaCollectionRequest(
                 getRequestUrl(),

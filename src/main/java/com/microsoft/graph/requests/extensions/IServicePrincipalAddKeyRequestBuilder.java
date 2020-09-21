@@ -17,9 +17,10 @@ public interface IServicePrincipalAddKeyRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IServicePrincipalAddKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IServicePrincipalAddKeyRequest instance
      */
-    IServicePrincipalAddKeyRequest buildRequest();
+    IServicePrincipalAddKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IServicePrincipalAddKeyRequest with specific options instead of the existing options

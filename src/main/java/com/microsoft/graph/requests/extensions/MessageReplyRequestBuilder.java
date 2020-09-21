@@ -36,10 +36,11 @@ public class MessageReplyRequestBuilder extends BaseActionRequestBuilder impleme
     /**
      * Creates the IMessageReplyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMessageReplyRequest instance
      */
-    public IMessageReplyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMessageReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

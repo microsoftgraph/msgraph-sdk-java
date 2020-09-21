@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsSumSqRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsSumSqRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSumSqRequest instance
      */
-    IWorkbookFunctionsSumSqRequest buildRequest();
+    IWorkbookFunctionsSumSqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsSumSqRequest with specific options instead of the existing options

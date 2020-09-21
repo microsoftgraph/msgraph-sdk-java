@@ -36,10 +36,11 @@ public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAadUserConversationMemberRequest instance
      */
-    public IAadUserConversationMemberRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAadUserConversationMemberRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

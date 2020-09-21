@@ -34,10 +34,11 @@ public class ReportRootGetSharePointSiteUsagePagesRequestBuilder extends BaseFun
     /**
      * Creates the IReportRootGetSharePointSiteUsagePagesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointSiteUsagePagesRequest instance
      */
-    public IReportRootGetSharePointSiteUsagePagesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetSharePointSiteUsagePagesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

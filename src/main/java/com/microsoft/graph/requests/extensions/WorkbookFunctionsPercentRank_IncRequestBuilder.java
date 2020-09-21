@@ -38,10 +38,11 @@ public class WorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsPercentRank_IncRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPercentRank_IncRequest instance
      */
-    public IWorkbookFunctionsPercentRank_IncRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsPercentRank_IncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

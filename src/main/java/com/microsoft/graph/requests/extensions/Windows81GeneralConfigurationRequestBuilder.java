@@ -34,10 +34,11 @@ public class Windows81GeneralConfigurationRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows81GeneralConfigurationRequest instance
      */
-    public IWindows81GeneralConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows81GeneralConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

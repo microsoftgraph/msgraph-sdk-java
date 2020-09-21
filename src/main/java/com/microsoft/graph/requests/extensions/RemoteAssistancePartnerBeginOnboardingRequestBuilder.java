@@ -32,10 +32,11 @@ public class RemoteAssistancePartnerBeginOnboardingRequestBuilder extends BaseAc
     /**
      * Creates the IRemoteAssistancePartnerBeginOnboardingRequest
      *
+     * @param requestOptions the options for the request
      * @return the IRemoteAssistancePartnerBeginOnboardingRequest instance
      */
-    public IRemoteAssistancePartnerBeginOnboardingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRemoteAssistancePartnerBeginOnboardingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

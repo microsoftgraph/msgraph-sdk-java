@@ -64,10 +64,11 @@ public class SiteWithReferenceRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISiteWithReferenceRequest instance
      */
-    public ISiteWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISiteWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -37,10 +37,11 @@ public class UserAssignLicenseRequestBuilder extends BaseActionRequestBuilder im
     /**
      * Creates the IUserAssignLicenseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserAssignLicenseRequest instance
      */
-    public IUserAssignLicenseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserAssignLicenseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

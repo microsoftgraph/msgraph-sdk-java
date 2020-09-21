@@ -34,10 +34,11 @@ public class WorkbookFunctionsSumRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsSumRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSumRequest instance
      */
-    public IWorkbookFunctionsSumRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSumRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -57,11 +57,23 @@ public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFun
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("interval", interval));
 		}
       }
-
-    public ISiteGetActivitiesByIntervalCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ISiteGetActivitiesByIntervalCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ISiteGetActivitiesByIntervalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SiteGetActivitiesByIntervalCollectionRequest request = new SiteGetActivitiesByIntervalCollectionRequest(
                 getRequestUrl(),

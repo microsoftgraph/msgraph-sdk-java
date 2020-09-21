@@ -38,10 +38,11 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder implements IP
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPlannerGroupRequest instance
      */
-    public IPlannerGroupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPlannerGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

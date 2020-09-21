@@ -34,10 +34,11 @@ public class WorkbookFunctionsGcdRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsGcdRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGcdRequest instance
      */
-    public IWorkbookFunctionsGcdRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsGcdRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

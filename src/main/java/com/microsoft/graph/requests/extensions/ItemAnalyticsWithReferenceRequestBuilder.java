@@ -39,10 +39,11 @@ public class ItemAnalyticsWithReferenceRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IItemAnalyticsWithReferenceRequest instance
      */
-    public IItemAnalyticsWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IItemAnalyticsWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -32,10 +32,11 @@ public class WorkbookPivotTableRefreshRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookPivotTableRefreshRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookPivotTableRefreshRequest instance
      */
-    public IWorkbookPivotTableRefreshRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookPivotTableRefreshRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

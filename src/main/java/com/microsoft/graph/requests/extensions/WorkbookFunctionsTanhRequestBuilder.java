@@ -34,10 +34,11 @@ public class WorkbookFunctionsTanhRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsTanhRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTanhRequest instance
      */
-    public IWorkbookFunctionsTanhRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsTanhRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

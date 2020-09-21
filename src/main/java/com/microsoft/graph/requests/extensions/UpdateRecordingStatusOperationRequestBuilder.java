@@ -34,10 +34,11 @@ public class UpdateRecordingStatusOperationRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUpdateRecordingStatusOperationRequest instance
      */
-    public IUpdateRecordingStatusOperationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUpdateRecordingStatusOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

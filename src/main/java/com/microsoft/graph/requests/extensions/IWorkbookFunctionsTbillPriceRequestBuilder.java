@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsTbillPriceRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsTbillPriceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTbillPriceRequest instance
      */
-    IWorkbookFunctionsTbillPriceRequest buildRequest();
+    IWorkbookFunctionsTbillPriceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsTbillPriceRequest with specific options instead of the existing options

@@ -36,10 +36,11 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOnlineMeetingRequest instance
      */
-    public IOnlineMeetingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnlineMeetingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class IosLobAppRequestBuilder extends BaseRequestBuilder implements IIosL
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosLobAppRequest instance
      */
-    public IIosLobAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosLobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IChatMessageHostedContentRequest instance
      */
-    public IChatMessageHostedContentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IChatMessageHostedContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

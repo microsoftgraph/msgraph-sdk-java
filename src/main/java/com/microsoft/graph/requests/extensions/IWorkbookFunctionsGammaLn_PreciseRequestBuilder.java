@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsGammaLn_PreciseRequestBuilder extends IReques
     /**
      * Creates the IWorkbookFunctionsGammaLn_PreciseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGammaLn_PreciseRequest instance
      */
-    IWorkbookFunctionsGammaLn_PreciseRequest buildRequest();
+    IWorkbookFunctionsGammaLn_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsGammaLn_PreciseRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsYearFracRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsYearFracRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsYearFracRequest instance
      */
-    IWorkbookFunctionsYearFracRequest buildRequest();
+    IWorkbookFunctionsYearFracRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsYearFracRequest with specific options instead of the existing options

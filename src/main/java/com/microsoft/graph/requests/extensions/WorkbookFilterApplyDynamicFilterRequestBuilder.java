@@ -34,10 +34,11 @@ public class WorkbookFilterApplyDynamicFilterRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFilterApplyDynamicFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyDynamicFilterRequest instance
      */
-    public IWorkbookFilterApplyDynamicFilterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFilterApplyDynamicFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

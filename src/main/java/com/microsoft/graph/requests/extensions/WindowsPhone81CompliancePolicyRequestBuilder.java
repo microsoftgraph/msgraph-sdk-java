@@ -34,10 +34,11 @@ public class WindowsPhone81CompliancePolicyRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81CompliancePolicyRequest instance
      */
-    public IWindowsPhone81CompliancePolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsPhone81CompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class SharedPCConfigurationRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISharedPCConfigurationRequest instance
      */
-    public ISharedPCConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISharedPCConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

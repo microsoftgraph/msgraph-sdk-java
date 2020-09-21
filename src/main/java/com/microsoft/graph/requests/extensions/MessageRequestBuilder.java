@@ -51,10 +51,11 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMessageRequest instance
      */
-    public IMessageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -101,6 +102,10 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
         return new MessageCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
     }
 
+    public IMessageMoveRequestBuilder move(final String destinationId) {
+        return new MessageMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
+    }
+
     public IMessageCreateForwardRequestBuilder createForward(final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
         return new MessageCreateForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createForward"), getClient(), null, toRecipients, message, comment);
     }
@@ -115,10 +120,6 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
 
     public IMessageForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
         return new MessageForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, toRecipients, message, comment);
-    }
-
-    public IMessageMoveRequestBuilder move(final String destinationId) {
-        return new MessageMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
     }
 
     public IMessageReplyRequestBuilder reply(final Message message, final String comment) {

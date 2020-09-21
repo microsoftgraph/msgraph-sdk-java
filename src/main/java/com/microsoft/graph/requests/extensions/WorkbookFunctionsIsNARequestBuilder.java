@@ -34,10 +34,11 @@ public class WorkbookFunctionsIsNARequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsIsNARequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsNARequest instance
      */
-    public IWorkbookFunctionsIsNARequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsIsNARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

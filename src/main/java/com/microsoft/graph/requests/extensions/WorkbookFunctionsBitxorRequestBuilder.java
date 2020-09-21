@@ -36,10 +36,11 @@ public class WorkbookFunctionsBitxorRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsBitxorRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBitxorRequest instance
      */
-    public IWorkbookFunctionsBitxorRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsBitxorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -21,8 +21,20 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder extends IRequestBuilder {
 
-    IOAuth2PermissionGrantCollectionWithReferencesRequest buildRequest();
-
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IOAuth2PermissionGrantCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IOAuth2PermissionGrantCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IOAuth2PermissionGrantWithReferenceRequestBuilder byId(final String id);

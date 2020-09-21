@@ -24,9 +24,10 @@ public interface IDomainRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDomainRequest instance
      */
-    IDomainRequest buildRequest();
+    IDomainRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

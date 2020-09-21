@@ -17,9 +17,10 @@ public interface IParticipantInviteRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IParticipantInviteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IParticipantInviteRequest instance
      */
-    IParticipantInviteRequest buildRequest();
+    IParticipantInviteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IParticipantInviteRequest with specific options instead of the existing options

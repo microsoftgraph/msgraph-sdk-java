@@ -19,7 +19,19 @@ import java.util.EnumSet;
  */
 public interface IOAuth2PermissionGrantCollectionReferenceRequestBuilder extends IRequestBuilder {
 
-    IOAuth2PermissionGrantCollectionReferenceRequest buildRequest();
-
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IOAuth2PermissionGrantCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IOAuth2PermissionGrantCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

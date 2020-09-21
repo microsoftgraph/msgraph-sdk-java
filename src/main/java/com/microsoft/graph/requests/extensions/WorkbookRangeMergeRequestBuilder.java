@@ -34,10 +34,11 @@ public class WorkbookRangeMergeRequestBuilder extends BaseActionRequestBuilder i
     /**
      * Creates the IWorkbookRangeMergeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeMergeRequest instance
      */
-    public IWorkbookRangeMergeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeMergeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

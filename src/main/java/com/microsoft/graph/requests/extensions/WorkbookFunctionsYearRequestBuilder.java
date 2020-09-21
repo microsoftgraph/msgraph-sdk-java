@@ -34,10 +34,11 @@ public class WorkbookFunctionsYearRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsYearRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsYearRequest instance
      */
-    public IWorkbookFunctionsYearRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsYearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

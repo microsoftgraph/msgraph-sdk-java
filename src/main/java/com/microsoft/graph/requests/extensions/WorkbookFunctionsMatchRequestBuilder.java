@@ -38,10 +38,11 @@ public class WorkbookFunctionsMatchRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsMatchRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMatchRequest instance
      */
-    public IWorkbookFunctionsMatchRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsMatchRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

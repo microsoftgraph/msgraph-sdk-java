@@ -17,9 +17,10 @@ public interface IDriveItemCheckoutRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IDriveItemCheckoutRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemCheckoutRequest instance
      */
-    IDriveItemCheckoutRequest buildRequest();
+    IDriveItemCheckoutRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDriveItemCheckoutRequest with specific options instead of the existing options

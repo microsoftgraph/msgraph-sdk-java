@@ -36,10 +36,11 @@ public class PostForwardRequestBuilder extends BaseActionRequestBuilder implemen
     /**
      * Creates the IPostForwardRequest
      *
+     * @param requestOptions the options for the request
      * @return the IPostForwardRequest instance
      */
-    public IPostForwardRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPostForwardRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

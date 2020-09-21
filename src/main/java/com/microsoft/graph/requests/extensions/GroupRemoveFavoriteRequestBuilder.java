@@ -32,10 +32,11 @@ public class GroupRemoveFavoriteRequestBuilder extends BaseActionRequestBuilder 
     /**
      * Creates the IGroupRemoveFavoriteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupRemoveFavoriteRequest instance
      */
-    public IGroupRemoveFavoriteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupRemoveFavoriteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

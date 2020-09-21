@@ -17,9 +17,10 @@ public interface ITeamUnarchiveRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ITeamUnarchiveRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITeamUnarchiveRequest instance
      */
-    ITeamUnarchiveRequest buildRequest();
+    ITeamUnarchiveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ITeamUnarchiveRequest with specific options instead of the existing options

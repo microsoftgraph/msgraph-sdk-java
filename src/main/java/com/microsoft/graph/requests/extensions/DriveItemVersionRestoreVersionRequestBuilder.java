@@ -32,10 +32,11 @@ public class DriveItemVersionRestoreVersionRequestBuilder extends BaseActionRequ
     /**
      * Creates the IDriveItemVersionRestoreVersionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemVersionRestoreVersionRequest instance
      */
-    public IDriveItemVersionRestoreVersionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveItemVersionRestoreVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

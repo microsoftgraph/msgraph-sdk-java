@@ -34,10 +34,11 @@ public class WorkbookFunctionsRowsRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsRowsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRowsRequest instance
      */
-    public IWorkbookFunctionsRowsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRowsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

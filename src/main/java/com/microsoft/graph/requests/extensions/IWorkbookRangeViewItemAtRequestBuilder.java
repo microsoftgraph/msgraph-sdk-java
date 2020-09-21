@@ -17,9 +17,10 @@ public interface IWorkbookRangeViewItemAtRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookRangeViewItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeViewItemAtRequest instance
      */
-    IWorkbookRangeViewItemAtRequest buildRequest();
+    IWorkbookRangeViewItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeViewItemAtRequest with specific options instead of the existing options
@@ -28,4 +29,8 @@ public interface IWorkbookRangeViewItemAtRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookRangeViewItemAtRequest instance
      */
     IWorkbookRangeViewItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
+    IWorkbookRangeViewCollectionRequestBuilder rows();
+
+    IWorkbookRangeViewRequestBuilder rows(final String id);
 }

@@ -31,9 +31,10 @@ public interface ICalendarRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICalendarRequest instance
      */
-    ICalendarRequest buildRequest();
+    ICalendarRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

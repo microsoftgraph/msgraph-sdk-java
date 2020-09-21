@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsAsinRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsAsinRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAsinRequest instance
      */
-    IWorkbookFunctionsAsinRequest buildRequest();
+    IWorkbookFunctionsAsinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsAsinRequest with specific options instead of the existing options

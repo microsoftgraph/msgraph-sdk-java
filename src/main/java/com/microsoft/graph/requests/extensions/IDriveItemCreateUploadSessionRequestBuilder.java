@@ -17,9 +17,10 @@ public interface IDriveItemCreateUploadSessionRequestBuilder extends IRequestBui
     /**
      * Creates the IDriveItemCreateUploadSessionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemCreateUploadSessionRequest instance
      */
-    IDriveItemCreateUploadSessionRequest buildRequest();
+    IDriveItemCreateUploadSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDriveItemCreateUploadSessionRequest with specific options instead of the existing options

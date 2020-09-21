@@ -31,6 +31,7 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -58,6 +59,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import okhttp3.Headers;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
+import okhttp3.Protocol;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
@@ -67,6 +69,7 @@ import okio.BufferedSink;
  * HTTP provider based off of OkHttp and msgraph-sdk-java-core library
  */
 public class CoreHttpProvider implements IHttpProvider {
+	private final HttpResponseHeadersHelper responseHeadersHelper = new HttpResponseHeadersHelper();
 
 	/**
 	 * The serializer
@@ -278,7 +281,9 @@ public class CoreHttpProvider implements IHttpProvider {
 			// This ensures that the Content-Length header is properly set
 			if (request.getHttpMethod() == HttpMethod.POST) {
 				bytesToWrite = new byte[0];
-				contenttype = Constants.BINARY_CONTENT_TYPE;
+				if(contenttype == null) {
+					contenttype = Constants.BINARY_CONTENT_TYPE;
+				}
 			}
 			else {
 				bytesToWrite = null;
@@ -372,21 +377,24 @@ public class CoreHttpProvider implements IHttpProvider {
 					throws ClientException {
 
 		try {
+			if(this.connectionConfig == null) {
+				this.connectionConfig = new DefaultConnectionConfig();
+			}
 			if(this.corehttpClient == null) {
-				OkHttpClient.Builder okBuilder = HttpClients.createDefault(new ICoreAuthenticationProvider() {
+				final ICoreAuthenticationProvider authProvider = new ICoreAuthenticationProvider() {
 					@Override
 					public Request authenticateRequest(Request request) {
 						return request;
 					}
-				}).newBuilder();
-				if(this.connectionConfig == null) {
-					this.connectionConfig = new DefaultConnectionConfig();
-				}
-				okBuilder.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS);
-				okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
-				okBuilder.followRedirects(false);
-				okBuilder.retryOnConnectionFailure(false);
-				this.corehttpClient = okBuilder.build();
+				};
+				this.corehttpClient = HttpClients
+									.createDefault(authProvider)
+									.newBuilder()
+									.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS)
+									.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS)
+									.followRedirects(false)
+									.protocols(Arrays.asList(Protocol.HTTP_1_1)) //https://stackoverflow.com/questions/62031298/sockettimeout-on-java-11-but-not-on-java-8
+									.build();
 			}
 			if (authenticationProvider != null) {
 				authenticationProvider.authenticateRequest(request);
@@ -423,32 +431,32 @@ public class CoreHttpProvider implements IHttpProvider {
 				if (response.code() == HttpResponseCode.HTTP_NOBODY
 						|| response.code() == HttpResponseCode.HTTP_NOT_MODIFIED) {
 					logger.logDebug("Handling response with no body");                  
-					return handleEmptyResponse(CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
+					return handleEmptyResponse(responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
 				}
 
 				if (response.code() == HttpResponseCode.HTTP_ACCEPTED) {
 					logger.logDebug("Handling accepted response");
-					return handleEmptyResponse(CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
+					return handleEmptyResponse(responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
 				}
 
 				in = new BufferedInputStream(response.body().byteStream());
 
-				final Map<String, String> headers = CoreHttpProvider.getResponseHeadersAsMapStringString(response);
+				final Map<String, String> headers = responseHeadersHelper.getResponseHeadersAsMapStringString(response);
+
+				if(response.body() == null || response.body().contentLength() == 0)
+					return (Result) null;
 
 				final String contentType = headers.get(Constants.CONTENT_TYPE_HEADER_NAME);
-				if (contentType != null && contentType.contains(Constants.JSON_CONTENT_TYPE)) {
+				if (contentType != null && resultClass != InputStream.class && 
+							contentType.contains(Constants.JSON_CONTENT_TYPE)) {
 					logger.logDebug("Response json");
-					return handleJsonResponse(in, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
-				} else {
+					return handleJsonResponse(in, responseHeadersHelper.getResponseHeadersAsMapOfStringList(response), resultClass);
+				} else if (resultClass == InputStream.class) {
 					logger.logDebug("Response binary");
 					isBinaryStreamInput = true;
-					if (resultClass == InputStream.class) {
-						return (Result) handleBinaryStream(in);
-					} else if(response.body() != null && response.body().contentLength() > 0) { // some services reply in text/plain with a JSON representation...
-						return handleJsonResponse(in, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
-					} else {
-						return (Result) null;
-					}
+					return (Result) handleBinaryStream(in);
+				} else {
+					return (Result) null;
 				}
 			} finally {
 				if (!isBinaryStreamInput) {
@@ -470,37 +478,6 @@ public class CoreHttpProvider implements IHttpProvider {
 			logger.logError("Error during http request", clientException);
 			throw clientException;
 		}
-	}
-
-	/**
-	 * Gets the response headers from OkHttp Response
-	 *
-	 * @param response the OkHttp response
-	 * @return           the set of headers names and value
-	 */
-	static Map<String, String> getResponseHeadersAsMapStringString(final Response response) {
-		final Map<String, String> headers = new HashMap<>();
-		int index = 0;
-		Headers responseHeaders = response.headers();
-		while (index < responseHeaders.size()) {
-			final String headerName = responseHeaders.name(index);
-			final String headerValue = responseHeaders.value(index);
-			if (headerName == null && headerValue == null) {
-				break;
-			}
-			headers.put(headerName, headerValue);
-			index++;
-		}
-		return headers;
-	}
-
-	static Map<String, List<String>> getResponseHeadersAsMapOfStringList(Response response) {
-		Map<String, List<String>> headerFields = response.headers().toMultimap();
-		// Add the response code
-		List<String> list = new ArrayList<>();
-		list.add(String.format("%d", response.code()));
-		headerFields.put("responseCode", list);
-		return headerFields;
 	}
 
 	private Request convertIHttpRequestToOkHttpRequest(IHttpRequest request) {

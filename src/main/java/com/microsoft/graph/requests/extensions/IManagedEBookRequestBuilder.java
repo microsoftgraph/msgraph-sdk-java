@@ -28,9 +28,10 @@ public interface IManagedEBookRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedEBookRequest instance
      */
-    IManagedEBookRequest buildRequest();
+    IManagedEBookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

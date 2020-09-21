@@ -36,10 +36,11 @@ public class WorkbookFunctionsCombinaRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsCombinaRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCombinaRequest instance
      */
-    public IWorkbookFunctionsCombinaRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCombinaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

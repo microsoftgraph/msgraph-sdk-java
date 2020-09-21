@@ -49,10 +49,11 @@ public class CallRecordResponseRequestBuilder extends BaseActionRequestBuilder i
     /**
      * Creates the ICallRecordResponseRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallRecordResponseRequest instance
      */
-    public ICallRecordResponseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallRecordResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

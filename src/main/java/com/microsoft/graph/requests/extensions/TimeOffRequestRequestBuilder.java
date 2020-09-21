@@ -34,10 +34,11 @@ public class TimeOffRequestRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITimeOffRequestRequest instance
      */
-    public ITimeOffRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITimeOffRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

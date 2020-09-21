@@ -34,10 +34,11 @@ public class UrlAssessmentRequestRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUrlAssessmentRequestRequest instance
      */
-    public IUrlAssessmentRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUrlAssessmentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

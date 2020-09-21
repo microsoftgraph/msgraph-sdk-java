@@ -38,10 +38,11 @@ public class WorkbookChartAddRequestBuilder extends BaseActionRequestBuilder imp
     /**
      * Creates the IWorkbookChartAddRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartAddRequest instance
      */
-    public IWorkbookChartAddRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

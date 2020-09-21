@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsAcosRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsAcosRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAcosRequest instance
      */
-    IWorkbookFunctionsAcosRequest buildRequest();
+    IWorkbookFunctionsAcosRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsAcosRequest with specific options instead of the existing options

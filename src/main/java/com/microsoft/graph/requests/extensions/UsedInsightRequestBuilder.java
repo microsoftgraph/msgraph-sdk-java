@@ -36,10 +36,11 @@ public class UsedInsightRequestBuilder extends BaseRequestBuilder implements IUs
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUsedInsightRequest instance
      */
-    public IUsedInsightRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUsedInsightRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

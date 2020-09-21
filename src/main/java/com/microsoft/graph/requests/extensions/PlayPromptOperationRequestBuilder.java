@@ -34,10 +34,11 @@ public class PlayPromptOperationRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPlayPromptOperationRequest instance
      */
-    public IPlayPromptOperationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPlayPromptOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

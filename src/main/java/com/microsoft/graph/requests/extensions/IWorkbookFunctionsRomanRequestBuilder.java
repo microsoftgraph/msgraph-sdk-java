@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsRomanRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsRomanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRomanRequest instance
      */
-    IWorkbookFunctionsRomanRequest buildRequest();
+    IWorkbookFunctionsRomanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsRomanRequest with specific options instead of the existing options

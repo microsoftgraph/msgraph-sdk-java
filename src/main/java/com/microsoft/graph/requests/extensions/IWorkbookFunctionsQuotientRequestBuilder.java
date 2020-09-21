@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsQuotientRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsQuotientRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsQuotientRequest instance
      */
-    IWorkbookFunctionsQuotientRequest buildRequest();
+    IWorkbookFunctionsQuotientRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsQuotientRequest with specific options instead of the existing options

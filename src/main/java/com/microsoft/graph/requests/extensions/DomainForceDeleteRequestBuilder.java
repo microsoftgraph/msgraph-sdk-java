@@ -34,10 +34,11 @@ public class DomainForceDeleteRequestBuilder extends BaseActionRequestBuilder im
     /**
      * Creates the IDomainForceDeleteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDomainForceDeleteRequest instance
      */
-    public IDomainForceDeleteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDomainForceDeleteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

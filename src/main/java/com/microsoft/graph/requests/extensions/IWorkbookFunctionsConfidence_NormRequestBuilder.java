@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsConfidence_NormRequestBuilder extends IReques
     /**
      * Creates the IWorkbookFunctionsConfidence_NormRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsConfidence_NormRequest instance
      */
-    IWorkbookFunctionsConfidence_NormRequest buildRequest();
+    IWorkbookFunctionsConfidence_NormRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsConfidence_NormRequest with specific options instead of the existing options

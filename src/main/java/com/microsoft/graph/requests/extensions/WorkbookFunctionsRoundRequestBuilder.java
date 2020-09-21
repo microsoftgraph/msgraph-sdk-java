@@ -36,10 +36,11 @@ public class WorkbookFunctionsRoundRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsRoundRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRoundRequest instance
      */
-    public IWorkbookFunctionsRoundRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRoundRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

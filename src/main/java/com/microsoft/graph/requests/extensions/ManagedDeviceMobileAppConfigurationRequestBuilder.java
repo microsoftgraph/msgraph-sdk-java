@@ -51,10 +51,11 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceMobileAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IManagedEBookAssignRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IManagedEBookAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedEBookAssignRequest instance
      */
-    IManagedEBookAssignRequest buildRequest();
+    IManagedEBookAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedEBookAssignRequest with specific options instead of the existing options

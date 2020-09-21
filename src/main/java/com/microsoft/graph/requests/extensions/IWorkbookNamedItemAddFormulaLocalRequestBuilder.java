@@ -17,9 +17,10 @@ public interface IWorkbookNamedItemAddFormulaLocalRequestBuilder extends IReques
     /**
      * Creates the IWorkbookNamedItemAddFormulaLocalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookNamedItemAddFormulaLocalRequest instance
      */
-    IWorkbookNamedItemAddFormulaLocalRequest buildRequest();
+    IWorkbookNamedItemAddFormulaLocalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookNamedItemAddFormulaLocalRequest with specific options instead of the existing options

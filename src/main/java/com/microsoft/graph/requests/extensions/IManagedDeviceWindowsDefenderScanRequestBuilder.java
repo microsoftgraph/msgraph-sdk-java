@@ -17,9 +17,10 @@ public interface IManagedDeviceWindowsDefenderScanRequestBuilder extends IReques
     /**
      * Creates the IManagedDeviceWindowsDefenderScanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceWindowsDefenderScanRequest instance
      */
-    IManagedDeviceWindowsDefenderScanRequest buildRequest();
+    IManagedDeviceWindowsDefenderScanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceWindowsDefenderScanRequest with specific options instead of the existing options

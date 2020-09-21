@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsPercentRank_IncRequestBuilder extends IReques
     /**
      * Creates the IWorkbookFunctionsPercentRank_IncRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPercentRank_IncRequest instance
      */
-    IWorkbookFunctionsPercentRank_IncRequest buildRequest();
+    IWorkbookFunctionsPercentRank_IncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsPercentRank_IncRequest with specific options instead of the existing options

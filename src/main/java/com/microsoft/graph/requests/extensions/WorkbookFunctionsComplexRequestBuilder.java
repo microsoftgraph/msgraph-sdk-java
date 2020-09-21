@@ -38,10 +38,11 @@ public class WorkbookFunctionsComplexRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsComplexRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsComplexRequest instance
      */
-    public IWorkbookFunctionsComplexRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsComplexRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

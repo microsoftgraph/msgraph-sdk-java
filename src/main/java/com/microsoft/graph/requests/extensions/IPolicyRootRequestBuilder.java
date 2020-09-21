@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionReq
 import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
@@ -33,9 +35,10 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPolicyRootRequest instance
      */
-    IPolicyRootRequest buildRequest();
+    IPolicyRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -57,6 +60,10 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
     IHomeRealmDiscoveryPolicyCollectionRequestBuilder homeRealmDiscoveryPolicies();
 
     IHomeRealmDiscoveryPolicyRequestBuilder homeRealmDiscoveryPolicies(final String id);
+
+    IPermissionGrantPolicyCollectionRequestBuilder permissionGrantPolicies();
+
+    IPermissionGrantPolicyRequestBuilder permissionGrantPolicies(final String id);
 
     ITokenIssuancePolicyCollectionRequestBuilder tokenIssuancePolicies();
 

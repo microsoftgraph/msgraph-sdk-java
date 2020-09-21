@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsTbillEqRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsTbillEqRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTbillEqRequest instance
      */
-    IWorkbookFunctionsTbillEqRequest buildRequest();
+    IWorkbookFunctionsTbillEqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsTbillEqRequest with specific options instead of the existing options

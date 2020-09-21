@@ -34,10 +34,11 @@ public class WorkbookFunctionsXorRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsXorRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsXorRequest instance
      */
-    public IWorkbookFunctionsXorRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsXorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

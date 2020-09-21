@@ -34,10 +34,11 @@ public class WorkbookFunctionsMaxRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsMaxRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMaxRequest instance
      */
-    public IWorkbookFunctionsMaxRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsMaxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -46,10 +46,11 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder implements IA
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAuditLogRootRequest instance
      */
-    public IAuditLogRootRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAuditLogRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

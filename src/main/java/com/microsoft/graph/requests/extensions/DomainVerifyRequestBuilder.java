@@ -32,10 +32,11 @@ public class DomainVerifyRequestBuilder extends BaseActionRequestBuilder impleme
     /**
      * Creates the IDomainVerifyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDomainVerifyRequest instance
      */
-    public IDomainVerifyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDomainVerifyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

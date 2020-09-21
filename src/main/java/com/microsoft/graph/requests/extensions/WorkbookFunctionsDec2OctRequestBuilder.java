@@ -36,10 +36,11 @@ public class WorkbookFunctionsDec2OctRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsDec2OctRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDec2OctRequest instance
      */
-    public IWorkbookFunctionsDec2OctRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDec2OctRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

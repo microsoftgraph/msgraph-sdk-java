@@ -34,10 +34,11 @@ public class ChangeTrackedEntityRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IChangeTrackedEntityRequest instance
      */
-    public IChangeTrackedEntityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IChangeTrackedEntityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

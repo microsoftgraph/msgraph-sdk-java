@@ -8,6 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -20,9 +26,10 @@ public interface IAdministrativeUnitRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAdministrativeUnitRequest instance
      */
-    IAdministrativeUnitRequest buildRequest();
+    IAdministrativeUnitRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options
@@ -32,5 +39,17 @@ public interface IAdministrativeUnitRequestBuilder extends IRequestBuilder {
      */
     IAdministrativeUnitRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    IDirectoryObjectCollectionWithReferencesRequestBuilder members();
+
+    IDirectoryObjectWithReferenceRequestBuilder members(final String id);
+
+    IScopedRoleMembershipCollectionRequestBuilder scopedRoleMembers();
+
+    IScopedRoleMembershipRequestBuilder scopedRoleMembers(final String id);
+
+    IExtensionCollectionRequestBuilder extensions();
+
+    IExtensionRequestBuilder extensions(final String id);
 
 }

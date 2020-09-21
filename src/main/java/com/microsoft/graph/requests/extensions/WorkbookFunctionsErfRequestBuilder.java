@@ -36,10 +36,11 @@ public class WorkbookFunctionsErfRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsErfRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsErfRequest instance
      */
-    public IWorkbookFunctionsErfRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsErfRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

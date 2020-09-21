@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsBahtTextRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsBahtTextRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBahtTextRequest instance
      */
-    IWorkbookFunctionsBahtTextRequest buildRequest();
+    IWorkbookFunctionsBahtTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsBahtTextRequest with specific options instead of the existing options

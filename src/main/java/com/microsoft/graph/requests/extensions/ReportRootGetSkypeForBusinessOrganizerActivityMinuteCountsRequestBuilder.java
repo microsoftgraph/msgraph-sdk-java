@@ -34,10 +34,11 @@ public class ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequestBu
     /**
      * Creates the IReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequest instance
      */
-    public IReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

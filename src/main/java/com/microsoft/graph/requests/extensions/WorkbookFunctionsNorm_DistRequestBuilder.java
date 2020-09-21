@@ -40,10 +40,11 @@ public class WorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsNorm_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNorm_DistRequest instance
      */
-    public IWorkbookFunctionsNorm_DistRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsNorm_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

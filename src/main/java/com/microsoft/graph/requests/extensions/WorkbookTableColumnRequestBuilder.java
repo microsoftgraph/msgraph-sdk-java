@@ -37,10 +37,11 @@ public class WorkbookTableColumnRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookTableColumnRequest instance
      */
-    public IWorkbookTableColumnRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableColumnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

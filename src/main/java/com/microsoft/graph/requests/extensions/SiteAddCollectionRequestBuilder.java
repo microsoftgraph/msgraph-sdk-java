@@ -39,11 +39,23 @@ public class SiteAddCollectionRequestBuilder extends BaseActionRequestBuilder im
 			bodyParams.put("value", value);
 		}
       }
-
-    public ISiteAddCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ISiteAddCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ISiteAddCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SiteAddCollectionRequest request = new SiteAddCollectionRequest(
                 getRequestUrl(),

@@ -37,10 +37,11 @@ public class DriveItemCopyRequestBuilder extends BaseActionRequestBuilder implem
     /**
      * Creates the IDriveItemCopyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemCopyRequest instance
      */
-    public IDriveItemCopyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveItemCopyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

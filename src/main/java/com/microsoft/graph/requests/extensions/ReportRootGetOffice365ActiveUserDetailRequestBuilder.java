@@ -47,10 +47,11 @@ public class ReportRootGetOffice365ActiveUserDetailRequestBuilder extends BaseFu
     /**
      * Creates the IReportRootGetOffice365ActiveUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365ActiveUserDetailRequest instance
      */
-    public IReportRootGetOffice365ActiveUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetOffice365ActiveUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,6 +38,10 @@ import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionR
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequestBuilder;
@@ -149,10 +153,11 @@ public class UserWithReferenceRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserWithReferenceRequest instance
      */
-    public IUserWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class ApplicationRemovePasswordRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IApplicationRemovePasswordRequest
      *
+     * @param requestOptions the options for the request
      * @return the IApplicationRemovePasswordRequest instance
      */
-    public IApplicationRemovePasswordRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApplicationRemovePasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

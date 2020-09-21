@@ -42,10 +42,11 @@ public class DriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder 
     /**
      * Creates the IDriveItemCreateLinkRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemCreateLinkRequest instance
      */
-    public IDriveItemCreateLinkRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveItemCreateLinkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

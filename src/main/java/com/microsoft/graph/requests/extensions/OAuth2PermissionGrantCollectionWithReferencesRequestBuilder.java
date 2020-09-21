@@ -33,10 +33,22 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequestBuilder extends
         super(requestUrl, client, requestOptions);
     }
 
-    public IOAuth2PermissionGrantCollectionWithReferencesRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IOAuth2PermissionGrantCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IOAuth2PermissionGrantCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OAuth2PermissionGrantCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }

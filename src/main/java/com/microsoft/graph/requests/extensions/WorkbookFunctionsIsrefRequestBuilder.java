@@ -34,10 +34,11 @@ public class WorkbookFunctionsIsrefRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsIsrefRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsrefRequest instance
      */
-    public IWorkbookFunctionsIsrefRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsIsrefRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

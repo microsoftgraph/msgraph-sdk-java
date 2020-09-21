@@ -34,10 +34,11 @@ public class ReportRootGetTeamsDeviceUsageUserCountsRequestBuilder extends BaseF
     /**
      * Creates the IReportRootGetTeamsDeviceUsageUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetTeamsDeviceUsageUserCountsRequest instance
      */
-    public IReportRootGetTeamsDeviceUsageUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetTeamsDeviceUsageUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationAssignmentRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

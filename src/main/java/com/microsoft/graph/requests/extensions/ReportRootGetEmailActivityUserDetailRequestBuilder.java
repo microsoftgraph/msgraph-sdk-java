@@ -47,10 +47,11 @@ public class ReportRootGetEmailActivityUserDetailRequestBuilder extends BaseFunc
     /**
      * Creates the IReportRootGetEmailActivityUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetEmailActivityUserDetailRequest instance
      */
-    public IReportRootGetEmailActivityUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetEmailActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

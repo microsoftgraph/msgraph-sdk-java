@@ -34,10 +34,11 @@ public class WorkbookFunctionsIsOddRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsIsOddRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsOddRequest instance
      */
-    public IWorkbookFunctionsIsOddRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsIsOddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

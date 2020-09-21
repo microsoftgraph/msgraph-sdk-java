@@ -17,9 +17,10 @@ public interface IUserAssignLicenseRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IUserAssignLicenseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserAssignLicenseRequest instance
      */
-    IUserAssignLicenseRequest buildRequest();
+    IUserAssignLicenseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IUserAssignLicenseRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class DeviceComplianceDeviceStatusRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceComplianceDeviceStatusRequest instance
      */
-    public IDeviceComplianceDeviceStatusRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceComplianceDeviceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

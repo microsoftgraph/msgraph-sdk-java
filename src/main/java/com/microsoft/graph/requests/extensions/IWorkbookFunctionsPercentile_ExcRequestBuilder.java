@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsPercentile_ExcRequestBuilder extends IRequest
     /**
      * Creates the IWorkbookFunctionsPercentile_ExcRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPercentile_ExcRequest instance
      */
-    IWorkbookFunctionsPercentile_ExcRequest buildRequest();
+    IWorkbookFunctionsPercentile_ExcRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsPercentile_ExcRequest with specific options instead of the existing options

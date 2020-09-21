@@ -59,10 +59,11 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITeamRequest instance
      */
-    public ITeamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

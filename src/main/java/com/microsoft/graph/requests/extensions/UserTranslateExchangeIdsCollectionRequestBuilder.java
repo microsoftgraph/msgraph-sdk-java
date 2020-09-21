@@ -48,11 +48,23 @@ public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseAction
 			bodyParams.put("sourceIdType", sourceIdType);
 		}
       }
-
-    public IUserTranslateExchangeIdsCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IUserTranslateExchangeIdsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IUserTranslateExchangeIdsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserTranslateExchangeIdsCollectionRequest request = new UserTranslateExchangeIdsCollectionRequest(
                 getRequestUrl(),

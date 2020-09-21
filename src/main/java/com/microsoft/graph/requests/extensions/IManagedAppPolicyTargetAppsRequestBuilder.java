@@ -17,9 +17,10 @@ public interface IManagedAppPolicyTargetAppsRequestBuilder extends IRequestBuild
     /**
      * Creates the IManagedAppPolicyTargetAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedAppPolicyTargetAppsRequest instance
      */
-    IManagedAppPolicyTargetAppsRequest buildRequest();
+    IManagedAppPolicyTargetAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedAppPolicyTargetAppsRequest with specific options instead of the existing options

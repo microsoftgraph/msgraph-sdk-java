@@ -38,10 +38,11 @@ public class WorkbookFunctionsYearFracRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsYearFracRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsYearFracRequest instance
      */
-    public IWorkbookFunctionsYearFracRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsYearFracRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

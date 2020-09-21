@@ -35,10 +35,22 @@ public class PlaceCollectionRequestBuilder extends BaseRequestBuilder implements
         super(requestUrl, client, requestOptions);
     }
 
-    public IPlaceCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IPlaceCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IPlaceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlaceCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

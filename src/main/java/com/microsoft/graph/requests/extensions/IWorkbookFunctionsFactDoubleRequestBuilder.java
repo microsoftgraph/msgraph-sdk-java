@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsFactDoubleRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsFactDoubleRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFactDoubleRequest instance
      */
-    IWorkbookFunctionsFactDoubleRequest buildRequest();
+    IWorkbookFunctionsFactDoubleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsFactDoubleRequest with specific options instead of the existing options

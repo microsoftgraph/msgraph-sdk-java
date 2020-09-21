@@ -34,10 +34,11 @@ public class DeviceInstallStateRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceInstallStateRequest instance
      */
-    public IDeviceInstallStateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceInstallStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

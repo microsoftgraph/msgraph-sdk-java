@@ -56,10 +56,11 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IApplicationRequest instance
      */
-    public IApplicationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApplicationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

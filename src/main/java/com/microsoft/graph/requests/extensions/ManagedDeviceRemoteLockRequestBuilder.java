@@ -32,10 +32,11 @@ public class ManagedDeviceRemoteLockRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IManagedDeviceRemoteLockRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRemoteLockRequest instance
      */
-    public IManagedDeviceRemoteLockRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceRemoteLockRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

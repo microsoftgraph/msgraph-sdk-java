@@ -36,10 +36,11 @@ public class WorkbookFunctionsSubtotalRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsSubtotalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSubtotalRequest instance
      */
-    public IWorkbookFunctionsSubtotalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSubtotalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

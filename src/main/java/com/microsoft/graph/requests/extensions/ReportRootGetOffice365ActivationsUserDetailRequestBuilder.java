@@ -32,10 +32,11 @@ public class ReportRootGetOffice365ActivationsUserDetailRequestBuilder extends B
     /**
      * Creates the IReportRootGetOffice365ActivationsUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365ActivationsUserDetailRequest instance
      */
-    public IReportRootGetOffice365ActivationsUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetOffice365ActivationsUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class WorkbookFunctionsDminRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsDminRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDminRequest instance
      */
-    public IWorkbookFunctionsDminRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDminRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

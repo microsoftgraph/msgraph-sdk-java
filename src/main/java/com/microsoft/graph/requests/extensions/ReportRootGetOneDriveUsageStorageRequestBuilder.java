@@ -34,10 +34,11 @@ public class ReportRootGetOneDriveUsageStorageRequestBuilder extends BaseFunctio
     /**
      * Creates the IReportRootGetOneDriveUsageStorageRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOneDriveUsageStorageRequest instance
      */
-    public IReportRootGetOneDriveUsageStorageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetOneDriveUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

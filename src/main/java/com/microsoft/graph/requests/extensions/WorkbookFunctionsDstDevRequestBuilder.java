@@ -38,10 +38,11 @@ public class WorkbookFunctionsDstDevRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsDstDevRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDstDevRequest instance
      */
-    public IWorkbookFunctionsDstDevRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDstDevRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

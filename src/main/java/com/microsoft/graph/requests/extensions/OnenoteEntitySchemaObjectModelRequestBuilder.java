@@ -34,10 +34,11 @@ public class OnenoteEntitySchemaObjectModelRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOnenoteEntitySchemaObjectModelRequest instance
      */
-    public IOnenoteEntitySchemaObjectModelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnenoteEntitySchemaObjectModelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

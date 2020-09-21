@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsDecimalRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsDecimalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDecimalRequest instance
      */
-    IWorkbookFunctionsDecimalRequest buildRequest();
+    IWorkbookFunctionsDecimalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsDecimalRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsIsFormulaRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsIsFormulaRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsFormulaRequest instance
      */
-    IWorkbookFunctionsIsFormulaRequest buildRequest();
+    IWorkbookFunctionsIsFormulaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsIsFormulaRequest with specific options instead of the existing options

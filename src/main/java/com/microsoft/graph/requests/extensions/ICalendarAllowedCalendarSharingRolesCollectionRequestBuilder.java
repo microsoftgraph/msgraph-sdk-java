@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.ICalendarAllowedCalendarSharingRo
  */
 public interface ICalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends IRequestBuilder {
 
-    ICalendarAllowedCalendarSharingRolesCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    ICalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     ICalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

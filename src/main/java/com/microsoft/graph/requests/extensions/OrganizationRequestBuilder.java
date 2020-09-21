@@ -42,10 +42,11 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder implements IO
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOrganizationRequest instance
      */
-    public IOrganizationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOrganizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

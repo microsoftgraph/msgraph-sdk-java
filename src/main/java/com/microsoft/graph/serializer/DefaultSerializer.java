@@ -118,59 +118,73 @@ public class DefaultSerializer implements ISerializer {
      * @param serializedObject   the parent object whose children will be iterated to set additional data
      * @param rawJson            the raw json
      */
-    @SuppressWarnings("unchecked")
-    private void setChildAdditionalData(IJsonBackedObject serializedObject, JsonObject rawJson) {
+    private void setChildAdditionalData(final IJsonBackedObject serializedObject, final JsonObject rawJson) {
         // Use reflection to iterate through fields for eligible Graph children
-        for (java.lang.reflect.Field field : serializedObject.getClass().getFields()) {
-            try {
-                Object fieldObject = field.get(serializedObject);
+        if(rawJson != null) {
+            for (java.lang.reflect.Field field : serializedObject.getClass().getFields()) {
+                try {
+                    if(field != null) {
+                        final Object fieldObject = field.get(serializedObject);
+                        if (fieldObject instanceof HashMap) {
+                            // If the object is a HashMap, iterate through its children
+                            @SuppressWarnings("unchecked")
+                            final HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
+                            final Iterator<Entry<String, Object>> it = serializableChildren.entrySet().iterator();
 
-                // If the object is a HashMap, iterate through its children
-                if (fieldObject instanceof HashMap) {
-                    HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
-                    Iterator<Entry<String, Object>> it = serializableChildren.entrySet().iterator();
+                            while (it.hasNext()) {
+                                final Map.Entry<String, Object> pair = (Map.Entry<String, Object>)it.next();
+                                final Object child = pair.getValue();
 
-                    while (it.hasNext()) {
-                        Map.Entry<String, Object> pair = (Map.Entry<String, Object>)it.next();
-                        Object child = pair.getValue();
-
-                        // If the item is a valid Graph object, set its additional data
-                        if (child instanceof IJsonBackedObject) {
-                            AdditionalDataManager childAdditionalDataManager = ((IJsonBackedObject) child).additionalDataManager();
-                            if(rawJson != null && field != null && rawJson.get(field.getName()) != null && rawJson.get(field.getName()).isJsonObject() 
-                            		&& rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).isJsonObject()) {
-                            	childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).getAsJsonObject());
-                            	setChildAdditionalData((IJsonBackedObject) child,rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).getAsJsonObject());
+                                // If the item is a valid Graph object, set its additional data
+                                if (child instanceof IJsonBackedObject) {
+                                    final AdditionalDataManager childAdditionalDataManager = ((IJsonBackedObject) child).additionalDataManager();
+                                    final JsonElement fieldElement = rawJson.get(field.getName());
+                                    if(fieldElement != null && fieldElement.isJsonObject() 
+                                            && fieldElement.getAsJsonObject().get(pair.getKey()) != null
+                                            && fieldElement.getAsJsonObject().get(pair.getKey()).isJsonObject()) {
+                                        childAdditionalDataManager.setAdditionalData(fieldElement.getAsJsonObject().get(pair.getKey()).getAsJsonObject());
+                                        setChildAdditionalData((IJsonBackedObject) child,fieldElement.getAsJsonObject().get(pair.getKey()).getAsJsonObject());
+                                    }
+                                }
+                            }
+                        }
+                        // If the object is a list of Graph objects, iterate through elements
+                        else if (fieldObject instanceof List) {
+                            final JsonElement collectionJson = rawJson.get(field.getName());
+                            final List<?> fieldObjectList = (List<?>) fieldObject;
+                            if (collectionJson != null && collectionJson.isJsonArray()) {
+                                final JsonArray rawJsonArray = (JsonArray) collectionJson;
+                                final Integer fieldObjectListSize = fieldObjectList.size();
+                                final Integer rawJsonArraySize = rawJsonArray.size();
+                                for (int i = 0; i < fieldObjectListSize && i < rawJsonArraySize; i++) {
+                                    final Object element = fieldObjectList.get(i);
+                                    if (element instanceof IJsonBackedObject) {
+                                        final JsonElement elementRawJson = rawJsonArray.get(i);
+                                        if(elementRawJson != null) {
+                                            setChildAdditionalData((IJsonBackedObject) element, elementRawJson.getAsJsonObject());
+                                        }
+                                    }
+                                }
+                                if (rawJsonArraySize != fieldObjectListSize) 
+                                    logger.logDebug("rawJsonArray has a size of " + rawJsonArraySize + " and fieldObjectList of " + fieldObjectListSize);
+                            }
+                        }
+                        // If the object is a valid Graph object, set its additional data
+                        else if (fieldObject instanceof IJsonBackedObject) {
+                            final IJsonBackedObject serializedChild = (IJsonBackedObject) fieldObject;
+                            final AdditionalDataManager childAdditionalDataManager = serializedChild.additionalDataManager();
+                            final JsonElement fieldElement = rawJson.get(field.getName());
+                            if(fieldElement != null && fieldElement.isJsonObject()) {
+                                childAdditionalDataManager.setAdditionalData(fieldElement.getAsJsonObject());
+                                setChildAdditionalData((IJsonBackedObject) fieldObject,fieldElement.getAsJsonObject());
                             }
                         }
                     }
+                } catch (IllegalArgumentException | IllegalAccessException e) {
+                    //Not throwing the IllegalArgumentException as the Serialized Object would still be usable even if the additional data is not set.
+                    logger.logError("Unable to set child fields of " + serializedObject.getClass().getSimpleName(), e);
+                    logger.logDebug(rawJson.getAsString());
                 }
-                // If the object is a list of Graph objects, iterate through elements
-                else if (fieldObject instanceof List && rawJson != null) {
-                    final JsonElement collectionJson = rawJson.get(field.getName());
-                    final List<?> fieldObjectList = (List<?>) fieldObject;
-                    if (collectionJson.isJsonArray() && ((JsonArray)collectionJson).size() == fieldObjectList.size()) {
-                        final JsonArray rawJsonArray = (JsonArray) collectionJson;
-                        for (int i = 0; i < fieldObjectList.size(); i++) {
-                            final Object element = fieldObjectList.get(i);
-                            if (element instanceof IJsonBackedObject) {
-                                final JsonElement elementRawJson = rawJsonArray.get(i);
-                                setChildAdditionalData((IJsonBackedObject) element, elementRawJson.getAsJsonObject());
-                            }
-                        }
-                    }
-                }
-                // If the object is a valid Graph object, set its additional data
-                else if (fieldObject != null && fieldObject instanceof IJsonBackedObject) {
-                    IJsonBackedObject serializedChild = (IJsonBackedObject) fieldObject;
-                    AdditionalDataManager childAdditionalDataManager = serializedChild.additionalDataManager();
-                    if(rawJson != null && field != null && rawJson.get(field.getName()) != null && rawJson.get(field.getName()).isJsonObject()) {
-                    	childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject());
-                    	setChildAdditionalData((IJsonBackedObject) fieldObject,rawJson.get(field.getName()).getAsJsonObject());
-                    }
-                }
-            } catch (IllegalArgumentException | IllegalAccessException e) {
-                logger.logError("Unable to access child fields of " + serializedObject.getClass().getSimpleName(), e);
             }
         }
     }
@@ -196,9 +210,10 @@ public class DefaultSerializer implements ISerializer {
                 if(outJson.has(field.getName())) {
                     final Type[] interfaces = field.getType().getGenericInterfaces();
                     for(Type interfaceType : interfaces) {
-                        if(interfaceType == IJsonBackedObject.class) {
+                        if(interfaceType == IJsonBackedObject.class && outJson.get(field.getName()).isJsonObject()) {
                             try {
-                                outJsonTree = getDataFromAdditionalDataManager(outJsonTree, field.get(serializableObject));
+                                final JsonElement outdatedValue = outJson.remove(field.getName());
+                                outJson.add(field.getName(), getDataFromAdditionalDataManager(outdatedValue.getAsJsonObject(), field.get(serializableObject)));
                             } catch (IllegalAccessException ex ) {
                                 logger.logDebug("Couldn't access prop" + field.getName());
                             }
@@ -312,14 +327,18 @@ public class DefaultSerializer implements ISerializer {
      * @param parentClass the parent class the derived class should inherit from
      * @return            the derived class if found, or null if not applicable
      */
-    private Class<?> getDerivedClass(JsonObject jsonObject, Class<?> parentClass) {
-    	//Identify the odata.type information if provided
-        if (jsonObject.get("@odata.type") != null) {
-        	String odataType = jsonObject.get("@odata.type").getAsString();
-        	String derivedType = odataType.substring(odataType.lastIndexOf('.') + 1); //Remove microsoft.graph prefix
-        	derivedType = CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_CAMEL, derivedType);
-        	derivedType = "com.microsoft.graph.models.extensions." + derivedType; //Add full package path
-        	
+    private final static String ODATA_TYPE_KEY = "@odata.type";
+    public Class<?> getDerivedClass(JsonObject jsonObject, Class<?> parentClass) {
+        //Identify the odata.type information if provided
+        if (jsonObject.get(ODATA_TYPE_KEY) != null) {
+			/** #microsoft.graph.user or #microsoft.graph.callrecords.callrecord */
+			final String odataType = jsonObject.get(ODATA_TYPE_KEY).getAsString();
+			final Integer lastDotIndex = odataType.lastIndexOf(".");
+			final String derivedType = (odataType.substring(0, lastDotIndex) + 
+											".models.extensions." + 
+											CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_CAMEL, 
+																		odataType.substring(lastDotIndex + 1)))
+										.replace("#", "com.");
         	try {
         		Class<?> derivedClass = Class.forName(derivedType);
         		//Check that the derived class inherits from the given parent class

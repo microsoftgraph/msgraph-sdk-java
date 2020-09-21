@@ -34,10 +34,11 @@ public class WindowsInformationProtectionAssignRequestBuilder extends BaseAction
     /**
      * Creates the IWindowsInformationProtectionAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWindowsInformationProtectionAssignRequest instance
      */
-    public IWindowsInformationProtectionAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsInformationProtectionAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

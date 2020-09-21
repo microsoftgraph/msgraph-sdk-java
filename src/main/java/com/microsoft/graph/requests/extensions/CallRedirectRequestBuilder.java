@@ -38,10 +38,11 @@ public class CallRedirectRequestBuilder extends BaseActionRequestBuilder impleme
     /**
      * Creates the ICallRedirectRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallRedirectRequest instance
      */
-    public ICallRedirectRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallRedirectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

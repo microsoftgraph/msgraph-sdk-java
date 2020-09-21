@@ -38,10 +38,11 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileAppContentRequest instance
      */
-    public IMobileAppContentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

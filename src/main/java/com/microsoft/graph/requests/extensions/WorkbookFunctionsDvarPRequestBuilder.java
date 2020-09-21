@@ -38,10 +38,11 @@ public class WorkbookFunctionsDvarPRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsDvarPRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDvarPRequest instance
      */
-    public IWorkbookFunctionsDvarPRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDvarPRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

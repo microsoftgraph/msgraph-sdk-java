@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsGammaRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsGammaRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGammaRequest instance
      */
-    IWorkbookFunctionsGammaRequest buildRequest();
+    IWorkbookFunctionsGammaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsGammaRequest with specific options instead of the existing options

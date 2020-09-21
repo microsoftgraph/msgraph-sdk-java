@@ -34,10 +34,11 @@ public class BaseItemVersionRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IBaseItemVersionRequest instance
      */
-    public IBaseItemVersionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IBaseItemVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

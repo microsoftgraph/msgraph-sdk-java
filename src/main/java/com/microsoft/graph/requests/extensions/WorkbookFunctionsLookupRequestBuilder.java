@@ -38,10 +38,11 @@ public class WorkbookFunctionsLookupRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsLookupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLookupRequest instance
      */
-    public IWorkbookFunctionsLookupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsLookupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder implements ITeamw
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITeamworkRequest instance
      */
-    public ITeamworkRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamworkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

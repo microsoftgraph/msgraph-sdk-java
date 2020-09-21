@@ -35,10 +35,11 @@ public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileAppContentFileRequest instance
      */
-    public IMobileAppContentFileRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppContentFileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

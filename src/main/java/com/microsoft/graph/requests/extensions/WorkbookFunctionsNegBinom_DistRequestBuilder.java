@@ -40,10 +40,11 @@ public class WorkbookFunctionsNegBinom_DistRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsNegBinom_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNegBinom_DistRequest instance
      */
-    public IWorkbookFunctionsNegBinom_DistRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsNegBinom_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

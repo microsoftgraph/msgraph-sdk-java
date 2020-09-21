@@ -34,10 +34,11 @@ public class IosGeneralDeviceConfigurationRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosGeneralDeviceConfigurationRequest instance
      */
-    public IIosGeneralDeviceConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosGeneralDeviceConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

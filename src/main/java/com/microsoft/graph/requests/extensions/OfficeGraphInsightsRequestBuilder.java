@@ -46,10 +46,11 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOfficeGraphInsightsRequest instance
      */
-    public IOfficeGraphInsightsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOfficeGraphInsightsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

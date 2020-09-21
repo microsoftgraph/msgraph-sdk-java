@@ -40,10 +40,11 @@ public class WorkbookFunctionsCoupDaysNcRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsCoupDaysNcRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCoupDaysNcRequest instance
      */
-    public IWorkbookFunctionsCoupDaysNcRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCoupDaysNcRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

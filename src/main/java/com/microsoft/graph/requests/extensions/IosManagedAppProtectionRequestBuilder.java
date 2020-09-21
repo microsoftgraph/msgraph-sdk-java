@@ -40,10 +40,11 @@ public class IosManagedAppProtectionRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosManagedAppProtectionRequest instance
      */
-    public IIosManagedAppProtectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosManagedAppProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

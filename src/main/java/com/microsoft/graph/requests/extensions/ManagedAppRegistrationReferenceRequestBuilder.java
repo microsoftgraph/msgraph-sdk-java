@@ -44,10 +44,11 @@ public class ManagedAppRegistrationReferenceRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IManagedAppRegistrationReferenceRequest instance
      */
-    public IManagedAppRegistrationReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedAppRegistrationReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

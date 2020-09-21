@@ -42,10 +42,11 @@ public class WorkbookFunctionsIntRateRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsIntRateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIntRateRequest instance
      */
-    public IWorkbookFunctionsIntRateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsIntRateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

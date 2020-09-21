@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsUsdollarRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsUsdollarRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsUsdollarRequest instance
      */
-    IWorkbookFunctionsUsdollarRequest buildRequest();
+    IWorkbookFunctionsUsdollarRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsUsdollarRequest with specific options instead of the existing options

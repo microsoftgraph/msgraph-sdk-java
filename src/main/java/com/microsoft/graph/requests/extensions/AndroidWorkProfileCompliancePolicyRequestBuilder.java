@@ -34,10 +34,11 @@ public class AndroidWorkProfileCompliancePolicyRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileCompliancePolicyRequest instance
      */
-    public IAndroidWorkProfileCompliancePolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidWorkProfileCompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

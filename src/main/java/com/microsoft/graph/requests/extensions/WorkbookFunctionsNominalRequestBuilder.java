@@ -36,10 +36,11 @@ public class WorkbookFunctionsNominalRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsNominalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNominalRequest instance
      */
-    public IWorkbookFunctionsNominalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsNominalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

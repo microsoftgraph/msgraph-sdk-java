@@ -22,9 +22,10 @@ public interface IApplicationLogoStreamRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IApplicationLogoStreamRequest instance
      */
-    IApplicationLogoStreamRequest buildRequest();
+    IApplicationLogoStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

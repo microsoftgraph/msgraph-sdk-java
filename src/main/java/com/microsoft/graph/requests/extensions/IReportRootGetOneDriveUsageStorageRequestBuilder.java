@@ -17,9 +17,10 @@ public interface IReportRootGetOneDriveUsageStorageRequestBuilder extends IReque
     /**
      * Creates the IReportRootGetOneDriveUsageStorageRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOneDriveUsageStorageRequest instance
      */
-    IReportRootGetOneDriveUsageStorageRequest buildRequest();
+    IReportRootGetOneDriveUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetOneDriveUsageStorageRequest with specific options instead of the existing options

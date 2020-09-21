@@ -34,10 +34,22 @@ public class DirectoryObjectCollectionReferenceRequestBuilder extends BaseReques
         super(requestUrl, client, requestOptions);
     }
 
-    public IDirectoryObjectCollectionReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDirectoryObjectCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDirectoryObjectCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryObjectCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }

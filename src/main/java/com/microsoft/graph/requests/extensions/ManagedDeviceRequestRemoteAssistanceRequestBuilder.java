@@ -32,10 +32,11 @@ public class ManagedDeviceRequestRemoteAssistanceRequestBuilder extends BaseActi
     /**
      * Creates the IManagedDeviceRequestRemoteAssistanceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRequestRemoteAssistanceRequest instance
      */
-    public IManagedDeviceRequestRemoteAssistanceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceRequestRemoteAssistanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceAndAppManagementRoleDefinitionRequest instance
      */
-    public IDeviceAndAppManagementRoleDefinitionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceAndAppManagementRoleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

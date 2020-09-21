@@ -17,9 +17,10 @@ public interface IDomainVerifyRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IDomainVerifyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDomainVerifyRequest instance
      */
-    IDomainVerifyRequest buildRequest();
+    IDomainVerifyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDomainVerifyRequest with specific options instead of the existing options

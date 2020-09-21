@@ -38,10 +38,11 @@ public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookNamedItemAddFormulaLocalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookNamedItemAddFormulaLocalRequest instance
      */
-    public IWorkbookNamedItemAddFormulaLocalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookNamedItemAddFormulaLocalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

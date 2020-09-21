@@ -35,10 +35,11 @@ public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedAppPolicyRequest instance
      */
-    public IManagedAppPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedAppPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

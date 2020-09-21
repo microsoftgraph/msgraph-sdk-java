@@ -32,10 +32,11 @@ public class ManagedDeviceRebootNowRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IManagedDeviceRebootNowRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRebootNowRequest instance
      */
-    public IManagedDeviceRebootNowRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceRebootNowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

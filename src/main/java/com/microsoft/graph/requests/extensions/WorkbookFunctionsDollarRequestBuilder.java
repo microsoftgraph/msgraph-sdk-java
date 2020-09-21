@@ -36,10 +36,11 @@ public class WorkbookFunctionsDollarRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsDollarRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDollarRequest instance
      */
-    public IWorkbookFunctionsDollarRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDollarRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

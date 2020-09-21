@@ -17,9 +17,10 @@ public interface ICallTransferRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ICallTransferRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallTransferRequest instance
      */
-    ICallTransferRequest buildRequest();
+    ICallTransferRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICallTransferRequest with specific options instead of the existing options

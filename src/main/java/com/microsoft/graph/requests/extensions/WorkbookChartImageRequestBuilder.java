@@ -74,10 +74,11 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
     /**
      * Creates the IWorkbookChartImageRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartImageRequest instance
      */
-    public IWorkbookChartImageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartImageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

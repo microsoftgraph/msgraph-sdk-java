@@ -42,10 +42,11 @@ public class WorkbookFunctionsPmtRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsPmtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPmtRequest instance
      */
-    public IWorkbookFunctionsPmtRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsPmtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

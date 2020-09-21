@@ -34,10 +34,11 @@ public class WorkbookRangeClearRequestBuilder extends BaseActionRequestBuilder i
     /**
      * Creates the IWorkbookRangeClearRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeClearRequest instance
      */
-    public IWorkbookRangeClearRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

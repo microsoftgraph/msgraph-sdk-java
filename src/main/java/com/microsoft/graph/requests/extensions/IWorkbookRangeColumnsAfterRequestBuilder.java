@@ -17,9 +17,10 @@ public interface IWorkbookRangeColumnsAfterRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookRangeColumnsAfterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeColumnsAfterRequest instance
      */
-    IWorkbookRangeColumnsAfterRequest buildRequest();
+    IWorkbookRangeColumnsAfterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeColumnsAfterRequest with specific options instead of the existing options
@@ -28,4 +29,25 @@ public interface IWorkbookRangeColumnsAfterRequestBuilder extends IRequestBuilde
      * @return the IWorkbookRangeColumnsAfterRequest instance
      */
     IWorkbookRangeColumnsAfterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
+    /**
+     * Gets the request builder for WorkbookRangeFormat
+     *
+     * @return the IWorkbookRangeFormatRequestBuilder instance
+     */
+    IWorkbookRangeFormatRequestBuilder format();
+
+    /**
+     * Gets the request builder for WorkbookRangeSort
+     *
+     * @return the IWorkbookRangeSortRequestBuilder instance
+     */
+    IWorkbookRangeSortRequestBuilder sort();
+
+    /**
+     * Gets the request builder for WorkbookWorksheet
+     *
+     * @return the IWorkbookWorksheetRequestBuilder instance
+     */
+    IWorkbookWorksheetRequestBuilder worksheet();
 }

@@ -34,10 +34,11 @@ public class Windows10CustomConfigurationRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10CustomConfigurationRequest instance
      */
-    public IWindows10CustomConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10CustomConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

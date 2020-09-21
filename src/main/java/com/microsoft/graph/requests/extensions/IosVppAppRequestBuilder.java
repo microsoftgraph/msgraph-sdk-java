@@ -34,10 +34,11 @@ public class IosVppAppRequestBuilder extends BaseRequestBuilder implements IIosV
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosVppAppRequest instance
      */
-    public IIosVppAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosVppAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

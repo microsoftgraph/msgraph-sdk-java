@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsNetworkDays_IntlRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFunctionsNetworkDays_IntlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNetworkDays_IntlRequest instance
      */
-    IWorkbookFunctionsNetworkDays_IntlRequest buildRequest();
+    IWorkbookFunctionsNetworkDays_IntlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsNetworkDays_IntlRequest with specific options instead of the existing options

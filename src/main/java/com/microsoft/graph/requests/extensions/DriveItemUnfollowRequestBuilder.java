@@ -32,10 +32,11 @@ public class DriveItemUnfollowRequestBuilder extends BaseActionRequestBuilder im
     /**
      * Creates the IDriveItemUnfollowRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemUnfollowRequest instance
      */
-    public IDriveItemUnfollowRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveItemUnfollowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

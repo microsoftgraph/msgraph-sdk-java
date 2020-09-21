@@ -17,9 +17,10 @@ public interface IDriveItemUnfollowRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IDriveItemUnfollowRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemUnfollowRequest instance
      */
-    IDriveItemUnfollowRequest buildRequest();
+    IDriveItemUnfollowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDriveItemUnfollowRequest with specific options instead of the existing options

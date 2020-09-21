@@ -38,10 +38,11 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder implements IU
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserActivityRequest instance
      */
-    public IUserActivityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

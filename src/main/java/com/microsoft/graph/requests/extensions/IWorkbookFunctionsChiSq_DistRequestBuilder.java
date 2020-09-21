@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsChiSq_DistRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsChiSq_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsChiSq_DistRequest instance
      */
-    IWorkbookFunctionsChiSq_DistRequest buildRequest();
+    IWorkbookFunctionsChiSq_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsChiSq_DistRequest with specific options instead of the existing options

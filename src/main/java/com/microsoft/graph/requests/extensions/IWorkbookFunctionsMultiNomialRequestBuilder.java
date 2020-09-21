@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsMultiNomialRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsMultiNomialRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMultiNomialRequest instance
      */
-    IWorkbookFunctionsMultiNomialRequest buildRequest();
+    IWorkbookFunctionsMultiNomialRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsMultiNomialRequest with specific options instead of the existing options

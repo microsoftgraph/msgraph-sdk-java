@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsChiSq_InvRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsChiSq_InvRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsChiSq_InvRequest instance
      */
-    IWorkbookFunctionsChiSq_InvRequest buildRequest();
+    IWorkbookFunctionsChiSq_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsChiSq_InvRequest with specific options instead of the existing options

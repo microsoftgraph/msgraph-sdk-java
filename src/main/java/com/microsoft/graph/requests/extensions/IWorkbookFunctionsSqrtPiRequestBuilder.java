@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsSqrtPiRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsSqrtPiRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSqrtPiRequest instance
      */
-    IWorkbookFunctionsSqrtPiRequest buildRequest();
+    IWorkbookFunctionsSqrtPiRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsSqrtPiRequest with specific options instead of the existing options

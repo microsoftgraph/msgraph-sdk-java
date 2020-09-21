@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsOct2DecRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsOct2DecRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsOct2DecRequest instance
      */
-    IWorkbookFunctionsOct2DecRequest buildRequest();
+    IWorkbookFunctionsOct2DecRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsOct2DecRequest with specific options instead of the existing options

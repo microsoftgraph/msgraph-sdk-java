@@ -44,10 +44,11 @@ public class WorkbookFunctionsYieldMatRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsYieldMatRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsYieldMatRequest instance
      */
-    public IWorkbookFunctionsYieldMatRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsYieldMatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

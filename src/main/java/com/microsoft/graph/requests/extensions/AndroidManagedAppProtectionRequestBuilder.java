@@ -40,10 +40,11 @@ public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidManagedAppProtectionRequest instance
      */
-    public IAndroidManagedAppProtectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidManagedAppProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

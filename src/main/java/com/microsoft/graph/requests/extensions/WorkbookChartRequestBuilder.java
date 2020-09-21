@@ -50,10 +50,11 @@ public class WorkbookChartRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookChartRequest instance
      */
-    public IWorkbookChartRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

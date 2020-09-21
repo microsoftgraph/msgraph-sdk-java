@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsXnpvRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsXnpvRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsXnpvRequest instance
      */
-    IWorkbookFunctionsXnpvRequest buildRequest();
+    IWorkbookFunctionsXnpvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsXnpvRequest with specific options instead of the existing options

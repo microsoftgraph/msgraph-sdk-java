@@ -17,9 +17,10 @@ public interface IWorkbookFilterApplyIconFilterRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFilterApplyIconFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyIconFilterRequest instance
      */
-    IWorkbookFilterApplyIconFilterRequest buildRequest();
+    IWorkbookFilterApplyIconFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFilterApplyIconFilterRequest with specific options instead of the existing options

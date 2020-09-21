@@ -20,9 +20,10 @@ public interface IIosGeneralDeviceConfigurationRequestBuilder extends IRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosGeneralDeviceConfigurationRequest instance
      */
-    IIosGeneralDeviceConfigurationRequest buildRequest();
+    IIosGeneralDeviceConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

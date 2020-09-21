@@ -34,10 +34,11 @@ public class CalendarPermissionRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICalendarPermissionRequest instance
      */
-    public ICalendarPermissionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICalendarPermissionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -32,10 +32,11 @@ public class WorkbookChartLineFormatClearRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookChartLineFormatClearRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartLineFormatClearRequest instance
      */
-    public IWorkbookChartLineFormatClearRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartLineFormatClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

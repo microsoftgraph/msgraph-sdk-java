@@ -34,10 +34,11 @@ public class Windows81CompliancePolicyRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows81CompliancePolicyRequest instance
      */
-    public IWindows81CompliancePolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows81CompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

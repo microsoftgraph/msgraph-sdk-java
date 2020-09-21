@@ -34,10 +34,11 @@ public class WorkbookFunctionsColumnsRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsColumnsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsColumnsRequest instance
      */
-    public IWorkbookFunctionsColumnsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsColumnsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

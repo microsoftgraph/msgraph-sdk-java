@@ -36,10 +36,11 @@ public class WorkbookChartSetPositionRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookChartSetPositionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartSetPositionRequest instance
      */
-    public IWorkbookChartSetPositionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartSetPositionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

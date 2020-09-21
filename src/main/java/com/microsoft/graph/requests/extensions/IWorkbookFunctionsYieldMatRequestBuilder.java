@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsYieldMatRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsYieldMatRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsYieldMatRequest instance
      */
-    IWorkbookFunctionsYieldMatRequest buildRequest();
+    IWorkbookFunctionsYieldMatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsYieldMatRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class MacOSCompliancePolicyRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMacOSCompliancePolicyRequest instance
      */
-    public IMacOSCompliancePolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMacOSCompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

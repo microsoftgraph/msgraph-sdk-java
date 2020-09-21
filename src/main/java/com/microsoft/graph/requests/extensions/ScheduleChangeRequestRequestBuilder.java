@@ -34,10 +34,11 @@ public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IScheduleChangeRequestRequest instance
      */
-    public IScheduleChangeRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IScheduleChangeRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -52,11 +53,11 @@ public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder impl
 
 
 
-    public IScheduleChangeRequestApproveRequestBuilder approve(final String message) {
-        return new ScheduleChangeRequestApproveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.approve"), getClient(), null, message);
-    }
-
     public IScheduleChangeRequestDeclineRequestBuilder decline(final String message) {
         return new ScheduleChangeRequestDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, message);
+    }
+
+    public IScheduleChangeRequestApproveRequestBuilder approve(final String message) {
+        return new ScheduleChangeRequestApproveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.approve"), getClient(), null, message);
     }
 }

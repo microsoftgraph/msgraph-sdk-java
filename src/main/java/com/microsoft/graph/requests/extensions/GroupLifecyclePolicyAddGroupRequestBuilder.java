@@ -34,10 +34,11 @@ public class GroupLifecyclePolicyAddGroupRequestBuilder extends BaseActionReques
     /**
      * Creates the IGroupLifecyclePolicyAddGroupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupLifecyclePolicyAddGroupRequest instance
      */
-    public IGroupLifecyclePolicyAddGroupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupLifecyclePolicyAddGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

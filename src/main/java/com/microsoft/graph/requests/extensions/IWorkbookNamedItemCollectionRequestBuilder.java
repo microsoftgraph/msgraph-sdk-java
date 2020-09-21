@@ -26,8 +26,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IWorkbookNamedItemCollectionRequestBuilder extends IRequestBuilder {
 
-    IWorkbookNamedItemCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IWorkbookNamedItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IWorkbookNamedItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookNamedItemRequestBuilder byId(final String id);

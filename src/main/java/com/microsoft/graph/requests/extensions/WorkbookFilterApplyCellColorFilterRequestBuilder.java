@@ -34,10 +34,11 @@ public class WorkbookFilterApplyCellColorFilterRequestBuilder extends BaseAction
     /**
      * Creates the IWorkbookFilterApplyCellColorFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyCellColorFilterRequest instance
      */
-    public IWorkbookFilterApplyCellColorFilterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFilterApplyCellColorFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

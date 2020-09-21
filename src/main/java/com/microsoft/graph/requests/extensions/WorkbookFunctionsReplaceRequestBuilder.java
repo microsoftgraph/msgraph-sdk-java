@@ -40,10 +40,11 @@ public class WorkbookFunctionsReplaceRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsReplaceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsReplaceRequest instance
      */
-    public IWorkbookFunctionsReplaceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsReplaceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

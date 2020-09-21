@@ -34,10 +34,11 @@ public class ReportRootGetMailboxUsageMailboxCountsRequestBuilder extends BaseFu
     /**
      * Creates the IReportRootGetMailboxUsageMailboxCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetMailboxUsageMailboxCountsRequest instance
      */
-    public IReportRootGetMailboxUsageMailboxCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetMailboxUsageMailboxCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

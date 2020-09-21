@@ -17,9 +17,10 @@ public interface IReportRootGetOffice365GroupsActivityStorageRequestBuilder exte
     /**
      * Creates the IReportRootGetOffice365GroupsActivityStorageRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365GroupsActivityStorageRequest instance
      */
-    IReportRootGetOffice365GroupsActivityStorageRequest buildRequest();
+    IReportRootGetOffice365GroupsActivityStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetOffice365GroupsActivityStorageRequest with specific options instead of the existing options

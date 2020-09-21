@@ -34,10 +34,11 @@ public class WorkbookFunctionsImSinhRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsImSinhRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImSinhRequest instance
      */
-    public IWorkbookFunctionsImSinhRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImSinhRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

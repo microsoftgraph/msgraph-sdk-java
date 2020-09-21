@@ -40,10 +40,11 @@ public class OnenotePageCopyToSectionRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IOnenotePageCopyToSectionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IOnenotePageCopyToSectionRequest instance
      */
-    public IOnenotePageCopyToSectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnenotePageCopyToSectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

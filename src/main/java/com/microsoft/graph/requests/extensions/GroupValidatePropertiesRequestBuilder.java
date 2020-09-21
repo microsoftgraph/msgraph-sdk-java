@@ -38,10 +38,11 @@ public class GroupValidatePropertiesRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IGroupValidatePropertiesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupValidatePropertiesRequest instance
      */
-    public IGroupValidatePropertiesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupValidatePropertiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

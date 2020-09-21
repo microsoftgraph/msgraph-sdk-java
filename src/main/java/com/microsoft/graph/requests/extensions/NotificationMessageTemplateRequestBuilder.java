@@ -38,10 +38,11 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the INotificationMessageTemplateRequest instance
      */
-    public INotificationMessageTemplateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public INotificationMessageTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

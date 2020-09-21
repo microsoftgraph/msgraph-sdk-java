@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsImLog2RequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsImLog2Request
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImLog2Request instance
      */
-    IWorkbookFunctionsImLog2Request buildRequest();
+    IWorkbookFunctionsImLog2Request buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsImLog2Request with specific options instead of the existing options

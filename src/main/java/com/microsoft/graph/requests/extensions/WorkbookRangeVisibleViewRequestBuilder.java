@@ -32,10 +32,11 @@ public class WorkbookRangeVisibleViewRequestBuilder extends BaseFunctionRequestB
     /**
      * Creates the IWorkbookRangeVisibleViewRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeVisibleViewRequest instance
      */
-    public IWorkbookRangeVisibleViewRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeVisibleViewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
@@ -56,5 +57,12 @@ public class WorkbookRangeVisibleViewRequestBuilder extends BaseFunctionRequestB
       }
 
         return request;
+    }
+    public IWorkbookRangeViewCollectionRequestBuilder rows() {
+        return new WorkbookRangeViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
+    }
+
+    public IWorkbookRangeViewRequestBuilder rows(final String id) {
+        return new WorkbookRangeViewRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
     }
 }

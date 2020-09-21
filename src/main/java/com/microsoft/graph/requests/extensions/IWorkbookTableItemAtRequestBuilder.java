@@ -17,9 +17,10 @@ public interface IWorkbookTableItemAtRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookTableItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableItemAtRequest instance
      */
-    IWorkbookTableItemAtRequest buildRequest();
+    IWorkbookTableItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableItemAtRequest with specific options instead of the existing options
@@ -28,4 +29,26 @@ public interface IWorkbookTableItemAtRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookTableItemAtRequest instance
      */
     IWorkbookTableItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
+    IWorkbookTableColumnCollectionRequestBuilder columns();
+
+    IWorkbookTableColumnRequestBuilder columns(final String id);
+
+    IWorkbookTableRowCollectionRequestBuilder rows();
+
+    IWorkbookTableRowRequestBuilder rows(final String id);
+
+    /**
+     * Gets the request builder for WorkbookTableSort
+     *
+     * @return the IWorkbookTableSortRequestBuilder instance
+     */
+    IWorkbookTableSortRequestBuilder sort();
+
+    /**
+     * Gets the request builder for WorkbookWorksheet
+     *
+     * @return the IWorkbookWorksheetRequestBuilder instance
+     */
+    IWorkbookWorksheetRequestBuilder worksheet();
 }

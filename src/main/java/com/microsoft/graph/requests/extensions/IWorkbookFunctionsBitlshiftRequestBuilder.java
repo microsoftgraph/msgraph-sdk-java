@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsBitlshiftRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsBitlshiftRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBitlshiftRequest instance
      */
-    IWorkbookFunctionsBitlshiftRequest buildRequest();
+    IWorkbookFunctionsBitlshiftRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsBitlshiftRequest with specific options instead of the existing options

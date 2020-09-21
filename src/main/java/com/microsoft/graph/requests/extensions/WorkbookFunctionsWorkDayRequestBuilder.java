@@ -38,10 +38,11 @@ public class WorkbookFunctionsWorkDayRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsWorkDayRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsWorkDayRequest instance
      */
-    public IWorkbookFunctionsWorkDayRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsWorkDayRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

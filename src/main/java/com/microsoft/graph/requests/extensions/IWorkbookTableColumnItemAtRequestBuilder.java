@@ -17,9 +17,10 @@ public interface IWorkbookTableColumnItemAtRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookTableColumnItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableColumnItemAtRequest instance
      */
-    IWorkbookTableColumnItemAtRequest buildRequest();
+    IWorkbookTableColumnItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableColumnItemAtRequest with specific options instead of the existing options
@@ -28,4 +29,11 @@ public interface IWorkbookTableColumnItemAtRequestBuilder extends IRequestBuilde
      * @return the IWorkbookTableColumnItemAtRequest instance
      */
     IWorkbookTableColumnItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
+    /**
+     * Gets the request builder for WorkbookFilter
+     *
+     * @return the IWorkbookFilterRequestBuilder instance
+     */
+    IWorkbookFilterRequestBuilder filter();
 }

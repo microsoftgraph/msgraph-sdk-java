@@ -17,9 +17,10 @@ public interface IReportRootGetTeamsDeviceUsageUserCountsRequestBuilder extends 
     /**
      * Creates the IReportRootGetTeamsDeviceUsageUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetTeamsDeviceUsageUserCountsRequest instance
      */
-    IReportRootGetTeamsDeviceUsageUserCountsRequest buildRequest();
+    IReportRootGetTeamsDeviceUsageUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetTeamsDeviceUsageUserCountsRequest with specific options instead of the existing options

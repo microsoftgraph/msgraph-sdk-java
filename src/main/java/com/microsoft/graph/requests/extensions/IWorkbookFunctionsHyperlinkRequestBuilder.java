@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsHyperlinkRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsHyperlinkRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHyperlinkRequest instance
      */
-    IWorkbookFunctionsHyperlinkRequest buildRequest();
+    IWorkbookFunctionsHyperlinkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsHyperlinkRequest with specific options instead of the existing options

@@ -38,10 +38,11 @@ public class WorkbookFunctionsNumberValueRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsNumberValueRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNumberValueRequest instance
      */
-    public IWorkbookFunctionsNumberValueRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsNumberValueRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class WorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsGammaLn_PreciseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGammaLn_PreciseRequest instance
      */
-    public IWorkbookFunctionsGammaLn_PreciseRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsGammaLn_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

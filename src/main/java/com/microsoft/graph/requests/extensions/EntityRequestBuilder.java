@@ -34,10 +34,11 @@ public class EntityRequestBuilder extends BaseRequestBuilder implements IEntityR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEntityRequest instance
      */
-    public IEntityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEntityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -42,10 +42,11 @@ public class WorkbookFunctionsDiscRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsDiscRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDiscRequest instance
      */
-    public IWorkbookFunctionsDiscRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDiscRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,11 @@ public class TeamsTabRequestBuilder extends BaseRequestBuilder implements ITeams
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITeamsTabRequest instance
      */
-    public ITeamsTabRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamsTabRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

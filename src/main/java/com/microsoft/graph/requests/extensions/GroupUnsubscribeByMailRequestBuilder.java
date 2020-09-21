@@ -32,10 +32,11 @@ public class GroupUnsubscribeByMailRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IGroupUnsubscribeByMailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupUnsubscribeByMailRequest instance
      */
-    public IGroupUnsubscribeByMailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupUnsubscribeByMailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

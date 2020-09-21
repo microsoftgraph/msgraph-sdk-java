@@ -17,9 +17,10 @@ public interface IWorkbookChartSeriesItemAtRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookChartSeriesItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartSeriesItemAtRequest instance
      */
-    IWorkbookChartSeriesItemAtRequest buildRequest();
+    IWorkbookChartSeriesItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookChartSeriesItemAtRequest with specific options instead of the existing options
@@ -28,4 +29,15 @@ public interface IWorkbookChartSeriesItemAtRequestBuilder extends IRequestBuilde
      * @return the IWorkbookChartSeriesItemAtRequest instance
      */
     IWorkbookChartSeriesItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
+    /**
+     * Gets the request builder for WorkbookChartSeriesFormat
+     *
+     * @return the IWorkbookChartSeriesFormatRequestBuilder instance
+     */
+    IWorkbookChartSeriesFormatRequestBuilder format();
+
+    IWorkbookChartPointCollectionRequestBuilder points();
+
+    IWorkbookChartPointRequestBuilder points(final String id);
 }

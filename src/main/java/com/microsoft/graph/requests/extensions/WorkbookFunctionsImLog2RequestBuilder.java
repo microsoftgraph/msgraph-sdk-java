@@ -34,10 +34,11 @@ public class WorkbookFunctionsImLog2RequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsImLog2Request
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImLog2Request instance
      */
-    public IWorkbookFunctionsImLog2Request buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImLog2Request buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

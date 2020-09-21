@@ -17,9 +17,10 @@ public interface IReportRootGetSharePointActivityFileCountsRequestBuilder extend
     /**
      * Creates the IReportRootGetSharePointActivityFileCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointActivityFileCountsRequest instance
      */
-    IReportRootGetSharePointActivityFileCountsRequest buildRequest();
+    IReportRootGetSharePointActivityFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetSharePointActivityFileCountsRequest with specific options instead of the existing options

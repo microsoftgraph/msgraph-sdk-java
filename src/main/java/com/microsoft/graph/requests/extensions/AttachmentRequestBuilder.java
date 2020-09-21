@@ -36,10 +36,11 @@ public class AttachmentRequestBuilder extends BaseRequestBuilder implements IAtt
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAttachmentRequest instance
      */
-    public IAttachmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

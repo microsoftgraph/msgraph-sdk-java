@@ -34,10 +34,11 @@ public class IosUpdateDeviceStatusRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosUpdateDeviceStatusRequest instance
      */
-    public IIosUpdateDeviceStatusRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosUpdateDeviceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

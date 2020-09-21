@@ -44,10 +44,11 @@ public class WorkbookFunctionsRateRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsRateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRateRequest instance
      */
-    public IWorkbookFunctionsRateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

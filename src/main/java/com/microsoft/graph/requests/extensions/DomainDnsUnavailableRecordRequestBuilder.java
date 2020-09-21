@@ -34,10 +34,11 @@ public class DomainDnsUnavailableRecordRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDomainDnsUnavailableRecordRequest instance
      */
-    public IDomainDnsUnavailableRecordRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDomainDnsUnavailableRecordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

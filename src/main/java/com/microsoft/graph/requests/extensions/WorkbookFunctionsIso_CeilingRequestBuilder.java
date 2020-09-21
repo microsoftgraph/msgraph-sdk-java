@@ -36,10 +36,11 @@ public class WorkbookFunctionsIso_CeilingRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsIso_CeilingRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIso_CeilingRequest instance
      */
-    public IWorkbookFunctionsIso_CeilingRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsIso_CeilingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

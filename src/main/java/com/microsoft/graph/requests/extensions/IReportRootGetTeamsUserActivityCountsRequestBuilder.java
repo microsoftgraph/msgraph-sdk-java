@@ -17,9 +17,10 @@ public interface IReportRootGetTeamsUserActivityCountsRequestBuilder extends IRe
     /**
      * Creates the IReportRootGetTeamsUserActivityCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetTeamsUserActivityCountsRequest instance
      */
-    IReportRootGetTeamsUserActivityCountsRequest buildRequest();
+    IReportRootGetTeamsUserActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetTeamsUserActivityCountsRequest with specific options instead of the existing options

@@ -36,10 +36,11 @@ public class WorkbookChartTitleRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookChartTitleRequest instance
      */
-    public IWorkbookChartTitleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartTitleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

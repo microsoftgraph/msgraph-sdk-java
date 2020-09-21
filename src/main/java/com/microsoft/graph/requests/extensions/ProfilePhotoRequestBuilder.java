@@ -34,10 +34,11 @@ public class ProfilePhotoRequestBuilder extends BaseRequestBuilder implements IP
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IProfilePhotoRequest instance
      */
-    public IProfilePhotoRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IProfilePhotoRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
