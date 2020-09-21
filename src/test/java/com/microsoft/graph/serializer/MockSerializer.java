@@ -50,6 +50,7 @@ public class MockSerializer implements ISerializer {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public <T> T deserializeObject(final String inputString, final Class<T> clazz) {
         //noinspection unchecked
         return (T) mDeserializeReturn;
@@ -61,8 +62,8 @@ public class MockSerializer implements ISerializer {
     }
 
 	@Override
+    @SuppressWarnings("unchecked")
 	public <T> T deserializeObject(String inputString, Class<T> clazz, Map<String, List<String>> responseHeaders) {
-		// TODO Auto-generated method stub
 		return (T) mDeserializeReturn;
 	}
 }
