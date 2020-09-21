@@ -318,12 +318,12 @@ public class DefaultSerializer implements ISerializer {
         //Identify the odata.type information if provided
         if (jsonObject.get(ODATA_TYPE_KEY) != null) {
 			/** #microsoft.graph.user or #microsoft.graph.callrecords.callrecord */
-            final String odataType = jsonObject.get(ODATA_TYPE_KEY).getAsString();
+			final String odataType = jsonObject.get(ODATA_TYPE_KEY).getAsString();
 			final Integer lastDotIndex = odataType.lastIndexOf(".");
-            final String derivedType = (odataType.substring(0, lastDotIndex) + 
-                                            ".models.extensions." + 
-                                            CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_CAMEL, 
-                                                                        odataType.substring(lastDotIndex + 1)))
+			final String derivedType = (odataType.substring(0, lastDotIndex) + 
+											".models.extensions." + 
+											CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_CAMEL, 
+																		odataType.substring(lastDotIndex + 1)))
 										.replace("#", "com.");
         	try {
         		Class<?> derivedClass = Class.forName(derivedType);
