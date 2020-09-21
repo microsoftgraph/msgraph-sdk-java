@@ -48,6 +48,11 @@ public final class  HttpResponseCode {
     public static final int HTTP_NOBODY = 204;
 
     /**
+     * HTTP response code for multiple choices
+     */
+    public static final int HTTP_MULTIPLE_CHOICES = 300;
+
+    /**
      * HTTP response code for see other
      */
     public static final int HTTP_SEE_OTHER = 303;
