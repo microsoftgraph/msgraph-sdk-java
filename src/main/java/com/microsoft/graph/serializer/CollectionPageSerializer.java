@@ -38,7 +38,10 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.logger.ILogger;
 
-// those imports are useless but build will fail if code-gen conventions change, keep it
+// keep these imports: even though they are not used, it's a good way to call
+// for maintainer's attention en the event code generation naming conventions
+// change. If the name change, these import will build at build time rather than
+// reflection building at run time.
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
@@ -104,7 +107,9 @@ public class CollectionPageSerializer {
 		serializer = new DefaultSerializer(logger);
 		final JsonObject[] sourceArray = serializer.deserializeObject(json.toString(), JsonObject[].class);
 		final ArrayList<T1> list = new ArrayList<T1>(sourceArray.length);
+		/** eg: com.microsoft.graph.requests.extensions.AttachmentCollectionPage */
 		final String collectionPageClassCanonicalName = typeOfT.getTypeName();
+		/** eg: com.microsoft.graph.models.extensions.Attachment */
 		final String entityClassCanonicalName = collectionPageClassCanonicalName
 					.substring(0, collectionPageClassCanonicalName.length() - pageLength - collectionLength)
 					.replace("requests", "models");
@@ -115,12 +120,14 @@ public class CollectionPageSerializer {
 				((IJsonBackedObject)targetObject).setRawObject(serializer, sourceObject);
 				list.add(targetObject);
 			}
+			/** eg: com.microsoft.graph.requests.extensions.AttachmentCollectionResponse */
 			final String responseClassCanonicalName = collectionPageClassCanonicalName
 						.substring(0, collectionPageClassCanonicalName.length() - pageLength) + "Response";
 			final Class<?> responseClass = Class.forName(responseClassCanonicalName);
 			final Object response = responseClass.getConstructor().newInstance();
 			responseClass.getField("value").set(response, list);
 			final Class<?> collectionPageClass = Class.forName(collectionPageClassCanonicalName);
+			/** eg: com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder */
 			final String responseBuilderInterfaceCanonicalName = responseClassCanonicalName
 						.substring(0, responseClassCanonicalName.length() - responseLength)
 						.replace(extensionsPath, extensionsPath + "I") + "RequestBuilder";
