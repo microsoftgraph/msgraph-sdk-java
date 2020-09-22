@@ -94,8 +94,16 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     public ChatMessageImportance importance;
 
     /**
+     * The Last Edited Date Time.
+     * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Microsoft Teams UI. If no edits are made the value is null.
+     */
+    @SerializedName("lastEditedDateTime")
+    @Expose
+    public java.util.Calendar lastEditedDateTime;
+
+    /**
      * The Last Modified Date Time.
-     * Read only. Timestamp of when the chat message is created or edited, including when a reply is made (if it's a root chat message in a channel) or a reaction is added or removed.
+     * Read only. Timestamp when the chat message is created (initial setting) or edited, including when a reaction is added or removed.
      */
     @SerializedName("lastModifiedDateTime")
     @Expose

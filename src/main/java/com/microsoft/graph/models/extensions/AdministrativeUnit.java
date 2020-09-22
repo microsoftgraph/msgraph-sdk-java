@@ -33,7 +33,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Description.
-     * 
+     * An optional description for the administrative unit.
      */
     @SerializedName("description")
     @Expose
@@ -41,7 +41,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * 
+     * Display name for the administrative unit.
      */
     @SerializedName("displayName")
     @Expose
@@ -49,7 +49,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Visibility.
-     * 
+     * Controls whether the adminstrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the adminstrative unit.
      */
     @SerializedName("visibility")
     @Expose
@@ -57,13 +57,13 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Members.
-     * 
+     * Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
      */
     public DirectoryObjectCollectionPage members;
 
     /**
      * The Scoped Role Members.
-     * 
+     * Scoped-role members of this Administrative Unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
      */
     @SerializedName("scopedRoleMembers")
     @Expose

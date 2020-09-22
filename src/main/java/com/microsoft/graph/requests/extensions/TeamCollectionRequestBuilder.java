@@ -11,12 +11,14 @@ import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamCollectionRequest;
+import com.microsoft.graph.requests.extensions.ITeamGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -63,4 +65,8 @@ public class TeamCollectionRequestBuilder extends BaseRequestBuilder implements 
     }
 
 
+
+    public ITeamGetAllMessagesCollectionRequestBuilder getAllMessages() {
+        return new TeamGetAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllMessages"), getClient(), null);
+    }
 }

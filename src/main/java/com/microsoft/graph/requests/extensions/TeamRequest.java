@@ -11,6 +11,7 @@ import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
