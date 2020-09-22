@@ -36,6 +36,6 @@ public class UserGetMailTipsCollectionPage extends BaseCollectionPage<MailTips, 
      * @param builder The request builder for the next collection page
      */
     public UserGetMailTipsCollectionPage(final UserGetMailTipsCollectionResponse response, final IUserGetMailTipsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

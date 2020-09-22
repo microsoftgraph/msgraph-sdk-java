@@ -35,6 +35,6 @@ public class ClaimsMappingPolicyCollectionWithReferencesPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public ClaimsMappingPolicyCollectionWithReferencesPage(final ClaimsMappingPolicyCollectionResponse response, final IClaimsMappingPolicyCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class NamedLocationCollectionPage extends BaseCollectionPage<NamedLocatio
      * @param builder  the request builder for the next collection page
      */
     public NamedLocationCollectionPage(final NamedLocationCollectionResponse response, final INamedLocationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

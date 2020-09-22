@@ -34,6 +34,6 @@ public class DriveSearchCollectionPage extends BaseCollectionPage<DriveItem, IDr
      * @param builder The request builder for the next collection page
      */
     public DriveSearchCollectionPage(final DriveSearchCollectionResponse response, final IDriveSearchCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

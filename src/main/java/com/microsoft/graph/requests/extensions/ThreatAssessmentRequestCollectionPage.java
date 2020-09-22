@@ -23,6 +23,6 @@ public class ThreatAssessmentRequestCollectionPage extends BaseCollectionPage<Th
      * @param builder  the request builder for the next collection page
      */
     public ThreatAssessmentRequestCollectionPage(final ThreatAssessmentRequestCollectionResponse response, final IThreatAssessmentRequestCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

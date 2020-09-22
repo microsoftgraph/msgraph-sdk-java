@@ -23,6 +23,6 @@ public class AdministrativeUnitCollectionPage extends BaseCollectionPage<Adminis
      * @param builder  the request builder for the next collection page
      */
     public AdministrativeUnitCollectionPage(final AdministrativeUnitCollectionResponse response, final IAdministrativeUnitCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

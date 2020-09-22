@@ -23,6 +23,6 @@ public class ScopedRoleMembershipCollectionPage extends BaseCollectionPage<Scope
      * @param builder  the request builder for the next collection page
      */
     public ScopedRoleMembershipCollectionPage(final ScopedRoleMembershipCollectionResponse response, final IScopedRoleMembershipCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

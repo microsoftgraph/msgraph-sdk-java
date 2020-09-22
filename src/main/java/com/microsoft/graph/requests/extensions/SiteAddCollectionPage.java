@@ -34,6 +34,6 @@ public class SiteAddCollectionPage extends BaseCollectionPage<Site, ISiteAddColl
      * @param builder The request builder for the next collection page
      */
     public SiteAddCollectionPage(final SiteAddCollectionResponse response, final ISiteAddCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

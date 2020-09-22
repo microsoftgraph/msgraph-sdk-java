@@ -23,6 +23,6 @@ public class EventCollectionPage extends BaseCollectionPage<Event, IEventCollect
      * @param builder  the request builder for the next collection page
      */
     public EventCollectionPage(final EventCollectionResponse response, final IEventCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

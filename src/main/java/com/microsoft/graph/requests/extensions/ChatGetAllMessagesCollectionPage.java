@@ -34,6 +34,6 @@ public class ChatGetAllMessagesCollectionPage extends BaseCollectionPage<ChatMes
      * @param builder The request builder for the next collection page
      */
     public ChatGetAllMessagesCollectionPage(final ChatGetAllMessagesCollectionResponse response, final IChatGetAllMessagesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

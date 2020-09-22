@@ -23,6 +23,6 @@ public class TeamsAppInstallationCollectionPage extends BaseCollectionPage<Teams
      * @param builder  the request builder for the next collection page
      */
     public TeamsAppInstallationCollectionPage(final TeamsAppInstallationCollectionResponse response, final ITeamsAppInstallationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

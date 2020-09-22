@@ -23,6 +23,6 @@ public class DataPolicyOperationCollectionPage extends BaseCollectionPage<DataPo
      * @param builder  the request builder for the next collection page
      */
     public DataPolicyOperationCollectionPage(final DataPolicyOperationCollectionResponse response, final IDataPolicyOperationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

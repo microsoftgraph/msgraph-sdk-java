@@ -23,6 +23,6 @@ public class DetectedAppCollectionPage extends BaseCollectionPage<DetectedApp, I
      * @param builder  the request builder for the next collection page
      */
     public DetectedAppCollectionPage(final DetectedAppCollectionResponse response, final IDetectedAppCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

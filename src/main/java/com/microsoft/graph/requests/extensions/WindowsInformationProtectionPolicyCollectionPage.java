@@ -23,6 +23,6 @@ public class WindowsInformationProtectionPolicyCollectionPage extends BaseCollec
      * @param builder  the request builder for the next collection page
      */
     public WindowsInformationProtectionPolicyCollectionPage(final WindowsInformationProtectionPolicyCollectionResponse response, final IWindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

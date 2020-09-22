@@ -23,6 +23,6 @@ public class ChannelCollectionPage extends BaseCollectionPage<Channel, IChannelC
      * @param builder  the request builder for the next collection page
      */
     public ChannelCollectionPage(final ChannelCollectionResponse response, final IChannelCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

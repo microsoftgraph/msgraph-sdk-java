@@ -23,6 +23,6 @@ public class LocalizedNotificationMessageCollectionPage extends BaseCollectionPa
      * @param builder  the request builder for the next collection page
      */
     public LocalizedNotificationMessageCollectionPage(final LocalizedNotificationMessageCollectionResponse response, final ILocalizedNotificationMessageCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class TokenIssuancePolicyCollectionPage extends BaseCollectionPage<TokenI
      * @param builder  the request builder for the next collection page
      */
     public TokenIssuancePolicyCollectionPage(final TokenIssuancePolicyCollectionResponse response, final ITokenIssuancePolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

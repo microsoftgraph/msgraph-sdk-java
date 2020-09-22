@@ -23,6 +23,6 @@ public class ConversationThreadCollectionPage extends BaseCollectionPage<Convers
      * @param builder  the request builder for the next collection page
      */
     public ConversationThreadCollectionPage(final ConversationThreadCollectionResponse response, final IConversationThreadCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

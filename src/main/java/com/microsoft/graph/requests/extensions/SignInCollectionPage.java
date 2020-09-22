@@ -23,6 +23,6 @@ public class SignInCollectionPage extends BaseCollectionPage<SignIn, ISignInColl
      * @param builder  the request builder for the next collection page
      */
     public SignInCollectionPage(final SignInCollectionResponse response, final ISignInCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

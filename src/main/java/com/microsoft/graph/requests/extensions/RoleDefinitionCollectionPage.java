@@ -23,6 +23,6 @@ public class RoleDefinitionCollectionPage extends BaseCollectionPage<RoleDefinit
      * @param builder  the request builder for the next collection page
      */
     public RoleDefinitionCollectionPage(final RoleDefinitionCollectionResponse response, final IRoleDefinitionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

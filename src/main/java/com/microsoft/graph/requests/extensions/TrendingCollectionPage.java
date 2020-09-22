@@ -23,6 +23,6 @@ public class TrendingCollectionPage extends BaseCollectionPage<Trending, ITrendi
      * @param builder  the request builder for the next collection page
      */
     public TrendingCollectionPage(final TrendingCollectionResponse response, final ITrendingCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

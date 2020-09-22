@@ -23,6 +23,6 @@ public class ListItemCollectionPage extends BaseCollectionPage<ListItem, IListIt
      * @param builder  the request builder for the next collection page
      */
     public ListItemCollectionPage(final ListItemCollectionResponse response, final IListItemCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

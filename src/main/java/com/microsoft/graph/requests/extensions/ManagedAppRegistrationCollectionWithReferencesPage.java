@@ -35,6 +35,6 @@ public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseColl
      * @param builder  the request builder for the next collection page
      */
     public ManagedAppRegistrationCollectionWithReferencesPage(final ManagedAppRegistrationCollectionResponse response, final IManagedAppRegistrationCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

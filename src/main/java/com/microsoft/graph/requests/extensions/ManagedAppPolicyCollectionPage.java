@@ -23,6 +23,6 @@ public class ManagedAppPolicyCollectionPage extends BaseCollectionPage<ManagedAp
      * @param builder  the request builder for the next collection page
      */
     public ManagedAppPolicyCollectionPage(final ManagedAppPolicyCollectionResponse response, final IManagedAppPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

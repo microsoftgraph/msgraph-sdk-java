@@ -23,6 +23,6 @@ public class DirectoryRoleCollectionPage extends BaseCollectionPage<DirectoryRol
      * @param builder  the request builder for the next collection page
      */
     public DirectoryRoleCollectionPage(final DirectoryRoleCollectionResponse response, final IDirectoryRoleCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

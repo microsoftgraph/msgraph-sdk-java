@@ -23,6 +23,6 @@ public class OAuth2PermissionGrantCollectionPage extends BaseCollectionPage<OAut
      * @param builder  the request builder for the next collection page
      */
     public OAuth2PermissionGrantCollectionPage(final OAuth2PermissionGrantCollectionResponse response, final IOAuth2PermissionGrantCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

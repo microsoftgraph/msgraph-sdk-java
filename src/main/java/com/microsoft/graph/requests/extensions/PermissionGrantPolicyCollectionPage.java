@@ -23,6 +23,6 @@ public class PermissionGrantPolicyCollectionPage extends BaseCollectionPage<Perm
      * @param builder  the request builder for the next collection page
      */
     public PermissionGrantPolicyCollectionPage(final PermissionGrantPolicyCollectionResponse response, final IPermissionGrantPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

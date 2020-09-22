@@ -23,6 +23,6 @@ public class ItemActivityStatCollectionPage extends BaseCollectionPage<ItemActiv
      * @param builder  the request builder for the next collection page
      */
     public ItemActivityStatCollectionPage(final ItemActivityStatCollectionResponse response, final IItemActivityStatCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

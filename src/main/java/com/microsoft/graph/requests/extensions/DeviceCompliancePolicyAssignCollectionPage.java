@@ -34,6 +34,6 @@ public class DeviceCompliancePolicyAssignCollectionPage extends BaseCollectionPa
      * @param builder The request builder for the next collection page
      */
     public DeviceCompliancePolicyAssignCollectionPage(final DeviceCompliancePolicyAssignCollectionResponse response, final IDeviceCompliancePolicyAssignCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

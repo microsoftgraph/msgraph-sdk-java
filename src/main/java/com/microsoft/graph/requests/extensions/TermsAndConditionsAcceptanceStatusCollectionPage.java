@@ -23,6 +23,6 @@ public class TermsAndConditionsAcceptanceStatusCollectionPage extends BaseCollec
      * @param builder  the request builder for the next collection page
      */
     public TermsAndConditionsAcceptanceStatusCollectionPage(final TermsAndConditionsAcceptanceStatusCollectionResponse response, final ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

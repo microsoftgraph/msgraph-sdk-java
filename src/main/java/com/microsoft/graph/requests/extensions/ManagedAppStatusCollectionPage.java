@@ -23,6 +23,6 @@ public class ManagedAppStatusCollectionPage extends BaseCollectionPage<ManagedAp
      * @param builder  the request builder for the next collection page
      */
     public ManagedAppStatusCollectionPage(final ManagedAppStatusCollectionResponse response, final IManagedAppStatusCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

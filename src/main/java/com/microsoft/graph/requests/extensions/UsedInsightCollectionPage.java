@@ -23,6 +23,6 @@ public class UsedInsightCollectionPage extends BaseCollectionPage<UsedInsight, I
      * @param builder  the request builder for the next collection page
      */
     public UsedInsightCollectionPage(final UsedInsightCollectionResponse response, final IUsedInsightCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

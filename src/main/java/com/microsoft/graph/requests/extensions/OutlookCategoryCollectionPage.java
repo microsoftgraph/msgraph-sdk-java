@@ -23,6 +23,6 @@ public class OutlookCategoryCollectionPage extends BaseCollectionPage<OutlookCat
      * @param builder  the request builder for the next collection page
      */
     public OutlookCategoryCollectionPage(final OutlookCategoryCollectionResponse response, final IOutlookCategoryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

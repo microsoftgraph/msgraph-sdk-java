@@ -23,6 +23,6 @@ public class HomeRealmDiscoveryPolicyCollectionPage extends BaseCollectionPage<H
      * @param builder  the request builder for the next collection page
      */
     public HomeRealmDiscoveryPolicyCollectionPage(final HomeRealmDiscoveryPolicyCollectionResponse response, final IHomeRealmDiscoveryPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

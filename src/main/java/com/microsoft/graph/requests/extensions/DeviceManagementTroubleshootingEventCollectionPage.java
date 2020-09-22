@@ -23,6 +23,6 @@ public class DeviceManagementTroubleshootingEventCollectionPage extends BaseColl
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementTroubleshootingEventCollectionPage(final DeviceManagementTroubleshootingEventCollectionResponse response, final IDeviceManagementTroubleshootingEventCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

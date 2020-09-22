@@ -23,6 +23,6 @@ public class MailFolderCollectionPage extends BaseCollectionPage<MailFolder, IMa
      * @param builder  the request builder for the next collection page
      */
     public MailFolderCollectionPage(final MailFolderCollectionResponse response, final IMailFolderCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

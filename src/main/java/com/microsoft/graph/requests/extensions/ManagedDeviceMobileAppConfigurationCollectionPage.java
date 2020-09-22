@@ -23,6 +23,6 @@ public class ManagedDeviceMobileAppConfigurationCollectionPage extends BaseColle
      * @param builder  the request builder for the next collection page
      */
     public ManagedDeviceMobileAppConfigurationCollectionPage(final ManagedDeviceMobileAppConfigurationCollectionResponse response, final IManagedDeviceMobileAppConfigurationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

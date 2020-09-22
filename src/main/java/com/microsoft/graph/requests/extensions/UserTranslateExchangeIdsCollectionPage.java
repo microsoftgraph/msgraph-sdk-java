@@ -35,6 +35,6 @@ public class UserTranslateExchangeIdsCollectionPage extends BaseCollectionPage<C
      * @param builder The request builder for the next collection page
      */
     public UserTranslateExchangeIdsCollectionPage(final UserTranslateExchangeIdsCollectionResponse response, final IUserTranslateExchangeIdsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -34,6 +34,6 @@ public class SiteGetActivitiesByIntervalCollectionPage extends BaseCollectionPag
      * @param builder The request builder for the next collection page
      */
     public SiteGetActivitiesByIntervalCollectionPage(final SiteGetActivitiesByIntervalCollectionResponse response, final ISiteGetActivitiesByIntervalCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

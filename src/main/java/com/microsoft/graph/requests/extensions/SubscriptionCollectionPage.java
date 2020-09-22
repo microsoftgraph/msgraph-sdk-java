@@ -23,6 +23,6 @@ public class SubscriptionCollectionPage extends BaseCollectionPage<Subscription,
      * @param builder  the request builder for the next collection page
      */
     public SubscriptionCollectionPage(final SubscriptionCollectionResponse response, final ISubscriptionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

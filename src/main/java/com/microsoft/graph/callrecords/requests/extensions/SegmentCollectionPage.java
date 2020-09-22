@@ -23,6 +23,6 @@ public class SegmentCollectionPage extends BaseCollectionPage<Segment, ISegmentC
      * @param builder  the request builder for the next collection page
      */
     public SegmentCollectionPage(final SegmentCollectionResponse response, final ISegmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

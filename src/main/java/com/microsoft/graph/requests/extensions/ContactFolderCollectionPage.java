@@ -23,6 +23,6 @@ public class ContactFolderCollectionPage extends BaseCollectionPage<ContactFolde
      * @param builder  the request builder for the next collection page
      */
     public ContactFolderCollectionPage(final ContactFolderCollectionResponse response, final IContactFolderCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

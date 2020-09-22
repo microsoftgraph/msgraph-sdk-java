@@ -23,6 +23,6 @@ public class MessageRuleCollectionPage extends BaseCollectionPage<MessageRule, I
      * @param builder  the request builder for the next collection page
      */
     public MessageRuleCollectionPage(final MessageRuleCollectionResponse response, final IMessageRuleCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

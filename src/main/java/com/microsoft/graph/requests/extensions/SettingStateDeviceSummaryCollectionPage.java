@@ -23,6 +23,6 @@ public class SettingStateDeviceSummaryCollectionPage extends BaseCollectionPage<
      * @param builder  the request builder for the next collection page
      */
     public SettingStateDeviceSummaryCollectionPage(final SettingStateDeviceSummaryCollectionResponse response, final ISettingStateDeviceSummaryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

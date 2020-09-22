@@ -23,6 +23,6 @@ public class GroupSettingCollectionPage extends BaseCollectionPage<GroupSetting,
      * @param builder  the request builder for the next collection page
      */
     public GroupSettingCollectionPage(final GroupSettingCollectionResponse response, final IGroupSettingCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

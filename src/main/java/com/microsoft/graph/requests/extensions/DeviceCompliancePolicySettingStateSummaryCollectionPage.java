@@ -23,6 +23,6 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionPage extends Bas
      * @param builder  the request builder for the next collection page
      */
     public DeviceCompliancePolicySettingStateSummaryCollectionPage(final DeviceCompliancePolicySettingStateSummaryCollectionResponse response, final IDeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

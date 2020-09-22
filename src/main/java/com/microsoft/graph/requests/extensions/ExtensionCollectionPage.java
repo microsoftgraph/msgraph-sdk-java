@@ -23,6 +23,6 @@ public class ExtensionCollectionPage extends BaseCollectionPage<Extension, IExte
      * @param builder  the request builder for the next collection page
      */
     public ExtensionCollectionPage(final ExtensionCollectionResponse response, final IExtensionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

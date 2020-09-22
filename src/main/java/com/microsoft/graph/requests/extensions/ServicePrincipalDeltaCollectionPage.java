@@ -40,7 +40,7 @@ public class ServicePrincipalDeltaCollectionPage extends BaseCollectionPage<Serv
      * @param builder The request builder for the next collection page
      */
     public ServicePrincipalDeltaCollectionPage(final ServicePrincipalDeltaCollectionResponse response, final IServicePrincipalDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

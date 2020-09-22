@@ -23,6 +23,6 @@ public class ClaimsMappingPolicyCollectionPage extends BaseCollectionPage<Claims
      * @param builder  the request builder for the next collection page
      */
     public ClaimsMappingPolicyCollectionPage(final ClaimsMappingPolicyCollectionResponse response, final IClaimsMappingPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

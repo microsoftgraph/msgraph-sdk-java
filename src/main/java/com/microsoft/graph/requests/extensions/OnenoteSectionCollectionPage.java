@@ -23,6 +23,6 @@ public class OnenoteSectionCollectionPage extends BaseCollectionPage<OnenoteSect
      * @param builder  the request builder for the next collection page
      */
     public OnenoteSectionCollectionPage(final OnenoteSectionCollectionResponse response, final IOnenoteSectionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

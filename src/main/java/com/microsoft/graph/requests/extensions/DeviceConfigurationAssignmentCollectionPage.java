@@ -23,6 +23,6 @@ public class DeviceConfigurationAssignmentCollectionPage extends BaseCollectionP
      * @param builder  the request builder for the next collection page
      */
     public DeviceConfigurationAssignmentCollectionPage(final DeviceConfigurationAssignmentCollectionResponse response, final IDeviceConfigurationAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

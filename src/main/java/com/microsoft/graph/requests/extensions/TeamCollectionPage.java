@@ -23,6 +23,6 @@ public class TeamCollectionPage extends BaseCollectionPage<Team, ITeamCollection
      * @param builder  the request builder for the next collection page
      */
     public TeamCollectionPage(final TeamCollectionResponse response, final ITeamCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

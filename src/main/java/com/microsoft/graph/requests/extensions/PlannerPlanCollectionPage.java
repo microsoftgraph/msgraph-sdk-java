@@ -23,6 +23,6 @@ public class PlannerPlanCollectionPage extends BaseCollectionPage<PlannerPlan, I
      * @param builder  the request builder for the next collection page
      */
     public PlannerPlanCollectionPage(final PlannerPlanCollectionResponse response, final IPlannerPlanCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

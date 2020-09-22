@@ -34,6 +34,6 @@ public class SiteRemoveCollectionPage extends BaseCollectionPage<Site, ISiteRemo
      * @param builder The request builder for the next collection page
      */
     public SiteRemoveCollectionPage(final SiteRemoveCollectionResponse response, final ISiteRemoveCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

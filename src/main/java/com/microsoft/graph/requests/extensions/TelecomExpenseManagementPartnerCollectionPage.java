@@ -23,6 +23,6 @@ public class TelecomExpenseManagementPartnerCollectionPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public TelecomExpenseManagementPartnerCollectionPage(final TelecomExpenseManagementPartnerCollectionResponse response, final ITelecomExpenseManagementPartnerCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

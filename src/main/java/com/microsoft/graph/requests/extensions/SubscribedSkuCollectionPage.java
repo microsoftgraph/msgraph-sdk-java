@@ -23,6 +23,6 @@ public class SubscribedSkuCollectionPage extends BaseCollectionPage<SubscribedSk
      * @param builder  the request builder for the next collection page
      */
     public SubscribedSkuCollectionPage(final SubscribedSkuCollectionResponse response, final ISubscribedSkuCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

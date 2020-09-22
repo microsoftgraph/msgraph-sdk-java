@@ -23,6 +23,6 @@ public class ChatMessageHostedContentCollectionPage extends BaseCollectionPage<C
      * @param builder  the request builder for the next collection page
      */
     public ChatMessageHostedContentCollectionPage(final ChatMessageHostedContentCollectionResponse response, final IChatMessageHostedContentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

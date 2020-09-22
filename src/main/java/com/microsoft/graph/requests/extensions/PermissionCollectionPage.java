@@ -23,6 +23,6 @@ public class PermissionCollectionPage extends BaseCollectionPage<Permission, IPe
      * @param builder  the request builder for the next collection page
      */
     public PermissionCollectionPage(final PermissionCollectionResponse response, final IPermissionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

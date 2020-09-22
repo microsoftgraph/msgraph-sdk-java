@@ -23,6 +23,6 @@ public class OrganizationCollectionPage extends BaseCollectionPage<Organization,
      * @param builder  the request builder for the next collection page
      */
     public OrganizationCollectionPage(final OrganizationCollectionResponse response, final IOrganizationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

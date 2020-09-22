@@ -34,6 +34,6 @@ public class DriveSharedWithMeCollectionPage extends BaseCollectionPage<DriveIte
      * @param builder The request builder for the next collection page
      */
     public DriveSharedWithMeCollectionPage(final DriveSharedWithMeCollectionResponse response, final IDriveSharedWithMeCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

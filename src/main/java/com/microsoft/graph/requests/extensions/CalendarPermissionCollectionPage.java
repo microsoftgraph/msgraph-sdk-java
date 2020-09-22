@@ -23,6 +23,6 @@ public class CalendarPermissionCollectionPage extends BaseCollectionPage<Calenda
      * @param builder  the request builder for the next collection page
      */
     public CalendarPermissionCollectionPage(final CalendarPermissionCollectionResponse response, final ICalendarPermissionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

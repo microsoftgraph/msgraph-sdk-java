@@ -34,6 +34,6 @@ public class DirectoryObjectGetByIdsCollectionPage extends BaseCollectionPage<Di
      * @param builder The request builder for the next collection page
      */
     public DirectoryObjectGetByIdsCollectionPage(final DirectoryObjectGetByIdsCollectionResponse response, final IDirectoryObjectGetByIdsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }
