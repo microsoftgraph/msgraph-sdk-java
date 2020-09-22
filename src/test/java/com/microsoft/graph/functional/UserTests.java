@@ -76,6 +76,7 @@ public class UserTests {
 		//GET users('<<key>>')
 		IUserCollectionPage userCollectionPage = graphServiceClient.users().buildRequest().get();
 		assertNotNull(userCollectionPage);
+		assertNotNull(userCollectionPage.additionalDataManager().get("graphResponseHeaders"));
 		List<User> list = userCollectionPage.getCurrentPage();
 		if(list.size() > 0) {
 			User user = graphServiceClient.users(list.get(0).id).buildRequest().get();
