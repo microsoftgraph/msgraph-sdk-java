@@ -67,6 +67,8 @@ import com.microsoft.graph.requests.extensions.IDataPolicyOperationCollectionReq
 import com.microsoft.graph.requests.extensions.IDataPolicyOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequestBuilder;

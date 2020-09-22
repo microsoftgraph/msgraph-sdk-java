@@ -127,6 +127,10 @@ import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBui
 import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamCollectionRequestBuilder;
@@ -766,6 +770,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public ISubscriptionRequestBuilder subscriptions(final String id) {
         return new SubscriptionRequestBuilder(getServiceRoot() + "/subscriptions/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of Chats objects
+     *
+     * @return the request builder for the collection of Chats objects
+     */
+    public IChatCollectionRequestBuilder chats() {
+        return new ChatCollectionRequestBuilder(getServiceRoot() + "/chats", this, null);
+    }
+
+    /**
+     * Gets a single Chats
+     *
+     * @param id the id of the Chats to retrieve
+     * @return the request builder for the Chats object
+     */
+    public IChatRequestBuilder chats(final String id) {
+        return new ChatRequestBuilder(getServiceRoot() + "/chats/" + id, this, null);
     }
 
     /**
