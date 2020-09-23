@@ -95,7 +95,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @param callback     the callback when this request complements. The caller needs to close the stream
      */
     @SuppressWarnings("unchecked")
-    protected void send(final byte[] fileContents, final ICallback<T> callback) {
+    protected void send(final byte[] fileContents, final ICallback<? super T> callback) {
         baseRequest.setHttpMethod(HttpMethod.PUT);
         baseRequest.getClient().getHttpProvider().send(this, callback, (Class<T>) baseRequest.getResponseType(), fileContents);
     }

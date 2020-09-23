@@ -157,7 +157,7 @@ public class DefaultHttpProvider implements IHttpProvider {
      */
     @Override
     public <Result, Body> void send(final IHttpRequest request,
-                                    final ICallback<Result> callback,
+                                    final ICallback<? super Result> callback,
                                     final Class<Result> resultClass,
                                     final Body serializable) {
         final IProgressCallback<Result> progressCallback;
