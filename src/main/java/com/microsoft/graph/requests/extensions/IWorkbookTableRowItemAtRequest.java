@@ -27,7 +27,7 @@ public interface IWorkbookTableRowItemAtRequest extends IHttpRequest {
      * @param srcWorkbookTableRow the WorkbookTableRow with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    void patch(WorkbookTableRow srcWorkbookTableRow, final ICallback<WorkbookTableRow> callback);
+    void patch(WorkbookTableRow srcWorkbookTableRow, final ICallback<? super WorkbookTableRow> callback);
 
     /**
      * Patches the WorkbookTableRowItemAt
@@ -44,7 +44,7 @@ public interface IWorkbookTableRowItemAtRequest extends IHttpRequest {
      * @param srcWorkbookTableRow the WorkbookTableRow to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(WorkbookTableRow srcWorkbookTableRow, final ICallback<WorkbookTableRow> callback);
+    void put(WorkbookTableRow srcWorkbookTableRow, final ICallback<? super WorkbookTableRow> callback);
 
     /**
      * Puts the WorkbookTableRowItemAt
@@ -59,7 +59,7 @@ public interface IWorkbookTableRowItemAtRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookTableRow> callback);
+    void get(final ICallback<? super WorkbookTableRow> callback);
 
     /**
      * Gets the WorkbookTableRow

@@ -41,7 +41,7 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
         super(requestUrl, client, requestOptions, ListItemCollectionResponse.class, IListItemCollectionPage.class);
     }
 
-    public void get(final ICallback<IListItemCollectionPage> callback) {
+    public void get(final ICallback<? super IListItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
         return buildFromResponse(response);
     }
 
-    public void post(final ListItem newListItem, final ICallback<ListItem> callback) {
+    public void post(final ListItem newListItem, final ICallback<? super ListItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ListItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

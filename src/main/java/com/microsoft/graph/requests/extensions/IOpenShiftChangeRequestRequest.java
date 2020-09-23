@@ -21,7 +21,7 @@ public interface IOpenShiftChangeRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OpenShiftChangeRequest> callback);
+    void get(final ICallback<? super OpenShiftChangeRequest> callback);
 
     /**
      * Gets the OpenShiftChangeRequest from the service
@@ -36,7 +36,7 @@ public interface IOpenShiftChangeRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OpenShiftChangeRequest> callback);
+    void delete(final ICallback<? super OpenShiftChangeRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOpenShiftChangeRequestRequest extends IHttpRequest {
      * @param sourceOpenShiftChangeRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OpenShiftChangeRequest sourceOpenShiftChangeRequest, final ICallback<OpenShiftChangeRequest> callback);
+    void patch(final OpenShiftChangeRequest sourceOpenShiftChangeRequest, final ICallback<? super OpenShiftChangeRequest> callback);
 
     /**
      * Patches this OpenShiftChangeRequest with a source
@@ -68,7 +68,7 @@ public interface IOpenShiftChangeRequestRequest extends IHttpRequest {
      * @param newOpenShiftChangeRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<OpenShiftChangeRequest> callback);
+    void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<? super OpenShiftChangeRequest> callback);
 
     /**
      * Posts a OpenShiftChangeRequest with a new object
@@ -85,7 +85,7 @@ public interface IOpenShiftChangeRequestRequest extends IHttpRequest {
      * @param newOpenShiftChangeRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<OpenShiftChangeRequest> callback);
+    void put(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<? super OpenShiftChangeRequest> callback);
 
     /**
      * Posts a OpenShiftChangeRequest with a new object

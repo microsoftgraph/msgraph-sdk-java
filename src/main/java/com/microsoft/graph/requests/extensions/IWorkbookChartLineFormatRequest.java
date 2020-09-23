@@ -21,7 +21,7 @@ public interface IWorkbookChartLineFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartLineFormat> callback);
+    void get(final ICallback<? super WorkbookChartLineFormat> callback);
 
     /**
      * Gets the WorkbookChartLineFormat from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartLineFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartLineFormat> callback);
+    void delete(final ICallback<? super WorkbookChartLineFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartLineFormatRequest extends IHttpRequest {
      * @param sourceWorkbookChartLineFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartLineFormat sourceWorkbookChartLineFormat, final ICallback<WorkbookChartLineFormat> callback);
+    void patch(final WorkbookChartLineFormat sourceWorkbookChartLineFormat, final ICallback<? super WorkbookChartLineFormat> callback);
 
     /**
      * Patches this WorkbookChartLineFormat with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartLineFormatRequest extends IHttpRequest {
      * @param newWorkbookChartLineFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartLineFormat newWorkbookChartLineFormat, final ICallback<WorkbookChartLineFormat> callback);
+    void post(final WorkbookChartLineFormat newWorkbookChartLineFormat, final ICallback<? super WorkbookChartLineFormat> callback);
 
     /**
      * Posts a WorkbookChartLineFormat with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartLineFormatRequest extends IHttpRequest {
      * @param newWorkbookChartLineFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartLineFormat newWorkbookChartLineFormat, final ICallback<WorkbookChartLineFormat> callback);
+    void put(final WorkbookChartLineFormat newWorkbookChartLineFormat, final ICallback<? super WorkbookChartLineFormat> callback);
 
     /**
      * Posts a WorkbookChartLineFormat with a new object

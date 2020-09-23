@@ -21,7 +21,7 @@ public interface IWorkbookChartAxisFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartAxisFormat> callback);
+    void get(final ICallback<? super WorkbookChartAxisFormat> callback);
 
     /**
      * Gets the WorkbookChartAxisFormat from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartAxisFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartAxisFormat> callback);
+    void delete(final ICallback<? super WorkbookChartAxisFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartAxisFormatRequest extends IHttpRequest {
      * @param sourceWorkbookChartAxisFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat, final ICallback<WorkbookChartAxisFormat> callback);
+    void patch(final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat, final ICallback<? super WorkbookChartAxisFormat> callback);
 
     /**
      * Patches this WorkbookChartAxisFormat with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartAxisFormatRequest extends IHttpRequest {
      * @param newWorkbookChartAxisFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<WorkbookChartAxisFormat> callback);
+    void post(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<? super WorkbookChartAxisFormat> callback);
 
     /**
      * Posts a WorkbookChartAxisFormat with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartAxisFormatRequest extends IHttpRequest {
      * @param newWorkbookChartAxisFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<WorkbookChartAxisFormat> callback);
+    void put(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<? super WorkbookChartAxisFormat> callback);
 
     /**
      * Posts a WorkbookChartAxisFormat with a new object

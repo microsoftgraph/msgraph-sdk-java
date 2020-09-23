@@ -37,7 +37,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest implements ITokenLif
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TokenLifetimePolicy> callback) {
+    public void get(final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest implements ITokenLif
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TokenLifetimePolicy> callback) {
+    public void delete(final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest implements ITokenLif
      * @param sourceTokenLifetimePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TokenLifetimePolicy sourceTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback) {
+    public void patch(final TokenLifetimePolicy sourceTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceTokenLifetimePolicy);
     }
 
@@ -96,7 +96,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest implements ITokenLif
      * @param newTokenLifetimePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback) {
+    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.POST, callback, newTokenLifetimePolicy);
     }
 
@@ -117,7 +117,7 @@ public class TokenLifetimePolicyRequest extends BaseRequest implements ITokenLif
      * @param newTokenLifetimePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback) {
+    public void put(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.PUT, callback, newTokenLifetimePolicy);
     }
 

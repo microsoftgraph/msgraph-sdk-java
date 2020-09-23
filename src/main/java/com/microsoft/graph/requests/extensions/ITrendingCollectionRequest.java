@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITrendingCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITrendingCollectionPage> callback);
+    void get(final ICallback<? super ITrendingCollectionPage> callback);
 
     ITrendingCollectionPage get() throws ClientException;
 
-    void post(final Trending newTrending, final ICallback<Trending> callback);
+    void post(final Trending newTrending, final ICallback<? super Trending> callback);
 
     Trending post(final Trending newTrending) throws ClientException;
 

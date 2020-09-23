@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDeviceManagementGetEffectivePermissionsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementGetEffectivePermissionsCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementGetEffectivePermissionsCollectionPage> callback);
 
     IDeviceManagementGetEffectivePermissionsCollectionPage get() throws ClientException;
 

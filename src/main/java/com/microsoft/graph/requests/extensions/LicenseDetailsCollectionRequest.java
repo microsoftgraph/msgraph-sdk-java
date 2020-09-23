@@ -40,7 +40,7 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
         super(requestUrl, client, requestOptions, LicenseDetailsCollectionResponse.class, ILicenseDetailsCollectionPage.class);
     }
 
-    public void get(final ICallback<ILicenseDetailsCollectionPage> callback) {
+    public void get(final ICallback<? super ILicenseDetailsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
         return buildFromResponse(response);
     }
 
-    public void post(final LicenseDetails newLicenseDetails, final ICallback<LicenseDetails> callback) {
+    public void post(final LicenseDetails newLicenseDetails, final ICallback<? super LicenseDetails> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LicenseDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

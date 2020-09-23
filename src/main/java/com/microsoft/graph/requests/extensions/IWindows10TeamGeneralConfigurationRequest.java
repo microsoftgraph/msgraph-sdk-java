@@ -21,7 +21,7 @@ public interface IWindows10TeamGeneralConfigurationRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10TeamGeneralConfiguration> callback);
+    void get(final ICallback<? super Windows10TeamGeneralConfiguration> callback);
 
     /**
      * Gets the Windows10TeamGeneralConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows10TeamGeneralConfigurationRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10TeamGeneralConfiguration> callback);
+    void delete(final ICallback<? super Windows10TeamGeneralConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10TeamGeneralConfigurationRequest extends IHttpRequest 
      * @param sourceWindows10TeamGeneralConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10TeamGeneralConfiguration sourceWindows10TeamGeneralConfiguration, final ICallback<Windows10TeamGeneralConfiguration> callback);
+    void patch(final Windows10TeamGeneralConfiguration sourceWindows10TeamGeneralConfiguration, final ICallback<? super Windows10TeamGeneralConfiguration> callback);
 
     /**
      * Patches this Windows10TeamGeneralConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows10TeamGeneralConfigurationRequest extends IHttpRequest 
      * @param newWindows10TeamGeneralConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, final ICallback<Windows10TeamGeneralConfiguration> callback);
+    void post(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, final ICallback<? super Windows10TeamGeneralConfiguration> callback);
 
     /**
      * Posts a Windows10TeamGeneralConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows10TeamGeneralConfigurationRequest extends IHttpRequest 
      * @param newWindows10TeamGeneralConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, final ICallback<Windows10TeamGeneralConfiguration> callback);
+    void put(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, final ICallback<? super Windows10TeamGeneralConfiguration> callback);
 
     /**
      * Posts a Windows10TeamGeneralConfiguration with a new object

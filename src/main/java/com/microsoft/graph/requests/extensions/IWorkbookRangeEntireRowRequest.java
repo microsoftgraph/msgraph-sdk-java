@@ -27,7 +27,7 @@ public interface IWorkbookRangeEntireRowRequest extends IHttpRequest {
      * @param srcWorkbookRange the WorkbookRange with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    void patch(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback);
+    void patch(WorkbookRange srcWorkbookRange, final ICallback<? super WorkbookRange> callback);
 
     /**
      * Patches the WorkbookRangeEntireRow
@@ -44,7 +44,7 @@ public interface IWorkbookRangeEntireRowRequest extends IHttpRequest {
      * @param srcWorkbookRange the WorkbookRange to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback);
+    void put(WorkbookRange srcWorkbookRange, final ICallback<? super WorkbookRange> callback);
 
     /**
      * Puts the WorkbookRangeEntireRow
@@ -59,7 +59,7 @@ public interface IWorkbookRangeEntireRowRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookRange> callback);
+    void get(final ICallback<? super WorkbookRange> callback);
 
     /**
      * Gets the WorkbookRange

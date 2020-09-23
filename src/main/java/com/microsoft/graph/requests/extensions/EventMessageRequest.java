@@ -54,7 +54,7 @@ public class EventMessageRequest extends BaseRequest implements IEventMessageReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EventMessage> callback) {
+    public void get(final ICallback<? super EventMessage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -73,7 +73,7 @@ public class EventMessageRequest extends BaseRequest implements IEventMessageReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EventMessage> callback) {
+    public void delete(final ICallback<? super EventMessage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +92,7 @@ public class EventMessageRequest extends BaseRequest implements IEventMessageReq
      * @param sourceEventMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EventMessage sourceEventMessage, final ICallback<EventMessage> callback) {
+    public void patch(final EventMessage sourceEventMessage, final ICallback<? super EventMessage> callback) {
         send(HttpMethod.PATCH, callback, sourceEventMessage);
     }
 
@@ -113,7 +113,7 @@ public class EventMessageRequest extends BaseRequest implements IEventMessageReq
      * @param newEventMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EventMessage newEventMessage, final ICallback<EventMessage> callback) {
+    public void post(final EventMessage newEventMessage, final ICallback<? super EventMessage> callback) {
         send(HttpMethod.POST, callback, newEventMessage);
     }
 
@@ -134,7 +134,7 @@ public class EventMessageRequest extends BaseRequest implements IEventMessageReq
      * @param newEventMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EventMessage newEventMessage, final ICallback<EventMessage> callback) {
+    public void put(final EventMessage newEventMessage, final ICallback<? super EventMessage> callback) {
         send(HttpMethod.PUT, callback, newEventMessage);
     }
 

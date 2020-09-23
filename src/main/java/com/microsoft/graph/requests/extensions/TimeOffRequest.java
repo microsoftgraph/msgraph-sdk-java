@@ -37,7 +37,7 @@ public class TimeOffRequest extends BaseRequest implements ITimeOffRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TimeOff> callback) {
+    public void get(final ICallback<? super TimeOff> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TimeOffRequest extends BaseRequest implements ITimeOffRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TimeOff> callback) {
+    public void delete(final ICallback<? super TimeOff> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TimeOffRequest extends BaseRequest implements ITimeOffRequest {
      * @param sourceTimeOff the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TimeOff sourceTimeOff, final ICallback<TimeOff> callback) {
+    public void patch(final TimeOff sourceTimeOff, final ICallback<? super TimeOff> callback) {
         send(HttpMethod.PATCH, callback, sourceTimeOff);
     }
 
@@ -96,7 +96,7 @@ public class TimeOffRequest extends BaseRequest implements ITimeOffRequest {
      * @param newTimeOff the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TimeOff newTimeOff, final ICallback<TimeOff> callback) {
+    public void post(final TimeOff newTimeOff, final ICallback<? super TimeOff> callback) {
         send(HttpMethod.POST, callback, newTimeOff);
     }
 
@@ -117,7 +117,7 @@ public class TimeOffRequest extends BaseRequest implements ITimeOffRequest {
      * @param newTimeOff the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TimeOff newTimeOff, final ICallback<TimeOff> callback) {
+    public void put(final TimeOff newTimeOff, final ICallback<? super TimeOff> callback) {
         send(HttpMethod.PUT, callback, newTimeOff);
     }
 

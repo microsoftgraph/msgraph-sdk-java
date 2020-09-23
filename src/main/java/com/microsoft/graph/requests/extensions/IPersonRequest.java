@@ -21,7 +21,7 @@ public interface IPersonRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Person> callback);
+    void get(final ICallback<? super Person> callback);
 
     /**
      * Gets the Person from the service
@@ -36,7 +36,7 @@ public interface IPersonRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Person> callback);
+    void delete(final ICallback<? super Person> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPersonRequest extends IHttpRequest {
      * @param sourcePerson the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Person sourcePerson, final ICallback<Person> callback);
+    void patch(final Person sourcePerson, final ICallback<? super Person> callback);
 
     /**
      * Patches this Person with a source
@@ -68,7 +68,7 @@ public interface IPersonRequest extends IHttpRequest {
      * @param newPerson the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Person newPerson, final ICallback<Person> callback);
+    void post(final Person newPerson, final ICallback<? super Person> callback);
 
     /**
      * Posts a Person with a new object
@@ -85,7 +85,7 @@ public interface IPersonRequest extends IHttpRequest {
      * @param newPerson the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Person newPerson, final ICallback<Person> callback);
+    void put(final Person newPerson, final ICallback<? super Person> callback);
 
     /**
      * Posts a Person with a new object

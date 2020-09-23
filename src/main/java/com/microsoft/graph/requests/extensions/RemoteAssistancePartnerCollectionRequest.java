@@ -40,7 +40,7 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, RemoteAssistancePartnerCollectionResponse.class, IRemoteAssistancePartnerCollectionPage.class);
     }
 
-    public void get(final ICallback<IRemoteAssistancePartnerCollectionPage> callback) {
+    public void get(final ICallback<? super IRemoteAssistancePartnerCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback) {
+    public void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RemoteAssistancePartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

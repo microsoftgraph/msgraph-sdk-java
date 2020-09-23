@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedEBookCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedEBookCollectionPage> callback);
+    void get(final ICallback<? super IManagedEBookCollectionPage> callback);
 
     IManagedEBookCollectionPage get() throws ClientException;
 
-    void post(final ManagedEBook newManagedEBook, final ICallback<ManagedEBook> callback);
+    void post(final ManagedEBook newManagedEBook, final ICallback<? super ManagedEBook> callback);
 
     ManagedEBook post(final ManagedEBook newManagedEBook) throws ClientException;
 

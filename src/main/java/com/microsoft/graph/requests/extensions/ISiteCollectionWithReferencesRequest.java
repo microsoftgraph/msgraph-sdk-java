@@ -22,7 +22,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISiteCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<ISiteCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super ISiteCollectionWithReferencesPage> callback);
 
     ISiteCollectionWithReferencesPage get() throws ClientException;
 

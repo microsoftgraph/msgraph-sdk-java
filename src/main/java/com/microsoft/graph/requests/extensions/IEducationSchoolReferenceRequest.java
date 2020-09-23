@@ -26,7 +26,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IEducationSchoolReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<EducationSchool> callback);
+    void delete(final ICallback<? super EducationSchool> callback);
 
     EducationSchool delete() throws ClientException;
 
@@ -52,7 +52,7 @@ public interface IEducationSchoolReferenceRequest extends IHttpRequest {
      * @param srcEducationSchool the EducationSchool to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(EducationSchool srcEducationSchool, final ICallback<EducationSchool> callback);
+    void put(EducationSchool srcEducationSchool, final ICallback<? super EducationSchool> callback);
 
     /**
      * Puts the EducationSchool

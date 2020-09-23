@@ -21,7 +21,7 @@ public interface ITokenIssuancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TokenIssuancePolicy> callback);
+    void get(final ICallback<? super TokenIssuancePolicy> callback);
 
     /**
      * Gets the TokenIssuancePolicy from the service
@@ -36,7 +36,7 @@ public interface ITokenIssuancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TokenIssuancePolicy> callback);
+    void delete(final ICallback<? super TokenIssuancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITokenIssuancePolicyRequest extends IHttpRequest {
      * @param sourceTokenIssuancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TokenIssuancePolicy sourceTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback);
+    void patch(final TokenIssuancePolicy sourceTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback);
 
     /**
      * Patches this TokenIssuancePolicy with a source
@@ -68,7 +68,7 @@ public interface ITokenIssuancePolicyRequest extends IHttpRequest {
      * @param newTokenIssuancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback);
+    void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback);
 
     /**
      * Posts a TokenIssuancePolicy with a new object
@@ -85,7 +85,7 @@ public interface ITokenIssuancePolicyRequest extends IHttpRequest {
      * @param newTokenIssuancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback);
+    void put(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback);
 
     /**
      * Posts a TokenIssuancePolicy with a new object

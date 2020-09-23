@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAppRoleAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAppRoleAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IAppRoleAssignmentCollectionPage> callback);
 
     IAppRoleAssignmentCollectionPage get() throws ClientException;
 
-    void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<AppRoleAssignment> callback);
+    void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback);
 
     AppRoleAssignment post(final AppRoleAssignment newAppRoleAssignment) throws ClientException;
 

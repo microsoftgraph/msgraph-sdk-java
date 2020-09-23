@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRoomCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IRoomCollectionPage> callback);
+    void get(final ICallback<? super IRoomCollectionPage> callback);
 
     IRoomCollectionPage get() throws ClientException;
 
-    void post(final Room newRoom, final ICallback<Room> callback);
+    void post(final Room newRoom, final ICallback<? super Room> callback);
 
     Room post(final Room newRoom) throws ClientException;
 

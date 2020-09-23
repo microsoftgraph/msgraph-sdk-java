@@ -21,7 +21,7 @@ public interface IThumbnailRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Thumbnail> callback);
+    void get(final ICallback<? super Thumbnail> callback);
 
     /**
      * Gets the Thumbnail from the service
@@ -36,7 +36,7 @@ public interface IThumbnailRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Thumbnail> callback);
+    void delete(final ICallback<? super Thumbnail> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IThumbnailRequest extends IHttpRequest {
      * @param sourceThumbnail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Thumbnail sourceThumbnail, final ICallback<Thumbnail> callback);
+    void patch(final Thumbnail sourceThumbnail, final ICallback<? super Thumbnail> callback);
 
     /**
      * Patches this Thumbnail with a source
@@ -68,7 +68,7 @@ public interface IThumbnailRequest extends IHttpRequest {
      * @param newThumbnail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Thumbnail newThumbnail, final ICallback<Thumbnail> callback);
+    void post(final Thumbnail newThumbnail, final ICallback<? super Thumbnail> callback);
 
     /**
      * Posts a Thumbnail with a new object
@@ -85,7 +85,7 @@ public interface IThumbnailRequest extends IHttpRequest {
      * @param newThumbnail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Thumbnail newThumbnail, final ICallback<Thumbnail> callback);
+    void put(final Thumbnail newThumbnail, final ICallback<? super Thumbnail> callback);
 
     /**
      * Posts a Thumbnail with a new object

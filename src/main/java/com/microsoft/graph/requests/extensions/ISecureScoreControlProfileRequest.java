@@ -21,7 +21,7 @@ public interface ISecureScoreControlProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SecureScoreControlProfile> callback);
+    void get(final ICallback<? super SecureScoreControlProfile> callback);
 
     /**
      * Gets the SecureScoreControlProfile from the service
@@ -36,7 +36,7 @@ public interface ISecureScoreControlProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SecureScoreControlProfile> callback);
+    void delete(final ICallback<? super SecureScoreControlProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecureScoreControlProfileRequest extends IHttpRequest {
      * @param sourceSecureScoreControlProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SecureScoreControlProfile sourceSecureScoreControlProfile, final ICallback<SecureScoreControlProfile> callback);
+    void patch(final SecureScoreControlProfile sourceSecureScoreControlProfile, final ICallback<? super SecureScoreControlProfile> callback);
 
     /**
      * Patches this SecureScoreControlProfile with a source
@@ -68,7 +68,7 @@ public interface ISecureScoreControlProfileRequest extends IHttpRequest {
      * @param newSecureScoreControlProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<SecureScoreControlProfile> callback);
+    void post(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<? super SecureScoreControlProfile> callback);
 
     /**
      * Posts a SecureScoreControlProfile with a new object
@@ -85,7 +85,7 @@ public interface ISecureScoreControlProfileRequest extends IHttpRequest {
      * @param newSecureScoreControlProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<SecureScoreControlProfile> callback);
+    void put(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<? super SecureScoreControlProfile> callback);
 
     /**
      * Posts a SecureScoreControlProfile with a new object

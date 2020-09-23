@@ -37,7 +37,7 @@ public class WorkbookFunctionsImCschRequest extends BaseRequest implements IWork
         body = new WorkbookFunctionsImCschBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

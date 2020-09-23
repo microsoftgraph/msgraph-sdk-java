@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceComplianceScheduledActionForRuleCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceComplianceScheduledActionForRuleCollectionPage> callback);
+    void get(final ICallback<? super IDeviceComplianceScheduledActionForRuleCollectionPage> callback);
 
     IDeviceComplianceScheduledActionForRuleCollectionPage get() throws ClientException;
 
-    void post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<DeviceComplianceScheduledActionForRule> callback);
+    void post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<? super DeviceComplianceScheduledActionForRule> callback);
 
     DeviceComplianceScheduledActionForRule post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) throws ClientException;
 

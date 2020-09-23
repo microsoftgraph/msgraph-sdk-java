@@ -52,7 +52,7 @@ public class OutlookItemRequest extends BaseRequest implements IOutlookItemReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OutlookItem> callback) {
+    public void get(final ICallback<? super OutlookItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class OutlookItemRequest extends BaseRequest implements IOutlookItemReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OutlookItem> callback) {
+    public void delete(final ICallback<? super OutlookItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class OutlookItemRequest extends BaseRequest implements IOutlookItemReque
      * @param sourceOutlookItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OutlookItem sourceOutlookItem, final ICallback<OutlookItem> callback) {
+    public void patch(final OutlookItem sourceOutlookItem, final ICallback<? super OutlookItem> callback) {
         send(HttpMethod.PATCH, callback, sourceOutlookItem);
     }
 
@@ -111,7 +111,7 @@ public class OutlookItemRequest extends BaseRequest implements IOutlookItemReque
      * @param newOutlookItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OutlookItem newOutlookItem, final ICallback<OutlookItem> callback) {
+    public void post(final OutlookItem newOutlookItem, final ICallback<? super OutlookItem> callback) {
         send(HttpMethod.POST, callback, newOutlookItem);
     }
 
@@ -132,7 +132,7 @@ public class OutlookItemRequest extends BaseRequest implements IOutlookItemReque
      * @param newOutlookItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OutlookItem newOutlookItem, final ICallback<OutlookItem> callback) {
+    public void put(final OutlookItem newOutlookItem, final ICallback<? super OutlookItem> callback) {
         send(HttpMethod.PUT, callback, newOutlookItem);
     }
 

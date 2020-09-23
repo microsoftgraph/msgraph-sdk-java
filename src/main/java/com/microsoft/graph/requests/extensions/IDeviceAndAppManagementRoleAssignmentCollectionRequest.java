@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceAndAppManagementRoleAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceAndAppManagementRoleAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IDeviceAndAppManagementRoleAssignmentCollectionPage> callback);
 
     IDeviceAndAppManagementRoleAssignmentCollectionPage get() throws ClientException;
 
-    void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<DeviceAndAppManagementRoleAssignment> callback);
+    void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback);
 
     DeviceAndAppManagementRoleAssignment post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) throws ClientException;
 

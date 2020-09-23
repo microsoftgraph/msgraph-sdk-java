@@ -37,7 +37,7 @@ public class PlannerProgressTaskBoardTaskFormatRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PlannerProgressTaskBoardTaskFormat> callback) {
+    public void get(final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PlannerProgressTaskBoardTaskFormatRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PlannerProgressTaskBoardTaskFormat> callback) {
+    public void delete(final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PlannerProgressTaskBoardTaskFormatRequest extends BaseRequest imple
      * @param sourcePlannerProgressTaskBoardTaskFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerProgressTaskBoardTaskFormat sourcePlannerProgressTaskBoardTaskFormat, final ICallback<PlannerProgressTaskBoardTaskFormat> callback) {
+    public void patch(final PlannerProgressTaskBoardTaskFormat sourcePlannerProgressTaskBoardTaskFormat, final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerProgressTaskBoardTaskFormat);
     }
 
@@ -96,7 +96,7 @@ public class PlannerProgressTaskBoardTaskFormatRequest extends BaseRequest imple
      * @param newPlannerProgressTaskBoardTaskFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, final ICallback<PlannerProgressTaskBoardTaskFormat> callback) {
+    public void post(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback) {
         send(HttpMethod.POST, callback, newPlannerProgressTaskBoardTaskFormat);
     }
 
@@ -117,7 +117,7 @@ public class PlannerProgressTaskBoardTaskFormatRequest extends BaseRequest imple
      * @param newPlannerProgressTaskBoardTaskFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, final ICallback<PlannerProgressTaskBoardTaskFormat> callback) {
+    public void put(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback) {
         send(HttpMethod.PUT, callback, newPlannerProgressTaskBoardTaskFormat);
     }
 

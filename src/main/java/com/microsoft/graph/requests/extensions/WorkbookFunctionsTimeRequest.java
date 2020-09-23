@@ -37,7 +37,7 @@ public class WorkbookFunctionsTimeRequest extends BaseRequest implements IWorkbo
         body = new WorkbookFunctionsTimeBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

@@ -37,7 +37,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceAndAppManagementRoleDefinition> callback) {
+    public void get(final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceAndAppManagementRoleDefinition> callback) {
+    public void delete(final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest imp
      * @param sourceDeviceAndAppManagementRoleDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceAndAppManagementRoleDefinition sourceDeviceAndAppManagementRoleDefinition, final ICallback<DeviceAndAppManagementRoleDefinition> callback) {
+    public void patch(final DeviceAndAppManagementRoleDefinition sourceDeviceAndAppManagementRoleDefinition, final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceAndAppManagementRoleDefinition);
     }
 
@@ -96,7 +96,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest imp
      * @param newDeviceAndAppManagementRoleDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, final ICallback<DeviceAndAppManagementRoleDefinition> callback) {
+    public void post(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
         send(HttpMethod.POST, callback, newDeviceAndAppManagementRoleDefinition);
     }
 
@@ -117,7 +117,7 @@ public class DeviceAndAppManagementRoleDefinitionRequest extends BaseRequest imp
      * @param newDeviceAndAppManagementRoleDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, final ICallback<DeviceAndAppManagementRoleDefinition> callback) {
+    public void put(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, final ICallback<? super DeviceAndAppManagementRoleDefinition> callback) {
         send(HttpMethod.PUT, callback, newDeviceAndAppManagementRoleDefinition);
     }
 

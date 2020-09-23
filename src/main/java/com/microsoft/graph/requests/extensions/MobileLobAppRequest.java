@@ -56,7 +56,7 @@ public class MobileLobAppRequest extends BaseRequest implements IMobileLobAppReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileLobApp> callback) {
+    public void get(final ICallback<? super MobileLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MobileLobAppRequest extends BaseRequest implements IMobileLobAppReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileLobApp> callback) {
+    public void delete(final ICallback<? super MobileLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +94,7 @@ public class MobileLobAppRequest extends BaseRequest implements IMobileLobAppReq
      * @param sourceMobileLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileLobApp sourceMobileLobApp, final ICallback<MobileLobApp> callback) {
+    public void patch(final MobileLobApp sourceMobileLobApp, final ICallback<? super MobileLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileLobApp);
     }
 
@@ -115,7 +115,7 @@ public class MobileLobAppRequest extends BaseRequest implements IMobileLobAppReq
      * @param newMobileLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileLobApp newMobileLobApp, final ICallback<MobileLobApp> callback) {
+    public void post(final MobileLobApp newMobileLobApp, final ICallback<? super MobileLobApp> callback) {
         send(HttpMethod.POST, callback, newMobileLobApp);
     }
 
@@ -136,7 +136,7 @@ public class MobileLobAppRequest extends BaseRequest implements IMobileLobAppReq
      * @param newMobileLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileLobApp newMobileLobApp, final ICallback<MobileLobApp> callback) {
+    public void put(final MobileLobApp newMobileLobApp, final ICallback<? super MobileLobApp> callback) {
         send(HttpMethod.PUT, callback, newMobileLobApp);
     }
 

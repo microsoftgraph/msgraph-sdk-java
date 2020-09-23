@@ -21,7 +21,7 @@ public interface IOfferShiftRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OfferShiftRequest> callback);
+    void get(final ICallback<? super OfferShiftRequest> callback);
 
     /**
      * Gets the OfferShiftRequest from the service
@@ -36,7 +36,7 @@ public interface IOfferShiftRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OfferShiftRequest> callback);
+    void delete(final ICallback<? super OfferShiftRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOfferShiftRequestRequest extends IHttpRequest {
      * @param sourceOfferShiftRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OfferShiftRequest sourceOfferShiftRequest, final ICallback<OfferShiftRequest> callback);
+    void patch(final OfferShiftRequest sourceOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback);
 
     /**
      * Patches this OfferShiftRequest with a source
@@ -68,7 +68,7 @@ public interface IOfferShiftRequestRequest extends IHttpRequest {
      * @param newOfferShiftRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<OfferShiftRequest> callback);
+    void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback);
 
     /**
      * Posts a OfferShiftRequest with a new object
@@ -85,7 +85,7 @@ public interface IOfferShiftRequestRequest extends IHttpRequest {
      * @param newOfferShiftRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OfferShiftRequest newOfferShiftRequest, final ICallback<OfferShiftRequest> callback);
+    void put(final OfferShiftRequest newOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback);
 
     /**
      * Posts a OfferShiftRequest with a new object

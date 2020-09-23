@@ -21,7 +21,7 @@ public interface IConditionalAccessRootRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ConditionalAccessRoot> callback);
+    void get(final ICallback<? super ConditionalAccessRoot> callback);
 
     /**
      * Gets the ConditionalAccessRoot from the service
@@ -36,7 +36,7 @@ public interface IConditionalAccessRootRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ConditionalAccessRoot> callback);
+    void delete(final ICallback<? super ConditionalAccessRoot> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IConditionalAccessRootRequest extends IHttpRequest {
      * @param sourceConditionalAccessRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ConditionalAccessRoot sourceConditionalAccessRoot, final ICallback<ConditionalAccessRoot> callback);
+    void patch(final ConditionalAccessRoot sourceConditionalAccessRoot, final ICallback<? super ConditionalAccessRoot> callback);
 
     /**
      * Patches this ConditionalAccessRoot with a source
@@ -68,7 +68,7 @@ public interface IConditionalAccessRootRequest extends IHttpRequest {
      * @param newConditionalAccessRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ConditionalAccessRoot newConditionalAccessRoot, final ICallback<ConditionalAccessRoot> callback);
+    void post(final ConditionalAccessRoot newConditionalAccessRoot, final ICallback<? super ConditionalAccessRoot> callback);
 
     /**
      * Posts a ConditionalAccessRoot with a new object
@@ -85,7 +85,7 @@ public interface IConditionalAccessRootRequest extends IHttpRequest {
      * @param newConditionalAccessRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ConditionalAccessRoot newConditionalAccessRoot, final ICallback<ConditionalAccessRoot> callback);
+    void put(final ConditionalAccessRoot newConditionalAccessRoot, final ICallback<? super ConditionalAccessRoot> callback);
 
     /**
      * Posts a ConditionalAccessRoot with a new object

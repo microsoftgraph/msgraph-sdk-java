@@ -40,7 +40,7 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, IClaimsMappingPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IClaimsMappingPolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IClaimsMappingPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback) {
+    public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ClaimsMappingPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

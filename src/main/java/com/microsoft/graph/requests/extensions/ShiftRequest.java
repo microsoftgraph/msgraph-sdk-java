@@ -37,7 +37,7 @@ public class ShiftRequest extends BaseRequest implements IShiftRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Shift> callback) {
+    public void get(final ICallback<? super Shift> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ShiftRequest extends BaseRequest implements IShiftRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Shift> callback) {
+    public void delete(final ICallback<? super Shift> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ShiftRequest extends BaseRequest implements IShiftRequest {
      * @param sourceShift the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Shift sourceShift, final ICallback<Shift> callback) {
+    public void patch(final Shift sourceShift, final ICallback<? super Shift> callback) {
         send(HttpMethod.PATCH, callback, sourceShift);
     }
 
@@ -96,7 +96,7 @@ public class ShiftRequest extends BaseRequest implements IShiftRequest {
      * @param newShift the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Shift newShift, final ICallback<Shift> callback) {
+    public void post(final Shift newShift, final ICallback<? super Shift> callback) {
         send(HttpMethod.POST, callback, newShift);
     }
 
@@ -117,7 +117,7 @@ public class ShiftRequest extends BaseRequest implements IShiftRequest {
      * @param newShift the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Shift newShift, final ICallback<Shift> callback) {
+    public void put(final Shift newShift, final ICallback<? super Shift> callback) {
         send(HttpMethod.PUT, callback, newShift);
     }
 

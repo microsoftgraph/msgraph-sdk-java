@@ -39,7 +39,7 @@ public class TeamsTabRequest extends BaseRequest implements ITeamsTabRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TeamsTab> callback) {
+    public void get(final ICallback<? super TeamsTab> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class TeamsTabRequest extends BaseRequest implements ITeamsTabRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TeamsTab> callback) {
+    public void delete(final ICallback<? super TeamsTab> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class TeamsTabRequest extends BaseRequest implements ITeamsTabRequest {
      * @param sourceTeamsTab the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsTab sourceTeamsTab, final ICallback<TeamsTab> callback) {
+    public void patch(final TeamsTab sourceTeamsTab, final ICallback<? super TeamsTab> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsTab);
     }
 
@@ -98,7 +98,7 @@ public class TeamsTabRequest extends BaseRequest implements ITeamsTabRequest {
      * @param newTeamsTab the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsTab newTeamsTab, final ICallback<TeamsTab> callback) {
+    public void post(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback) {
         send(HttpMethod.POST, callback, newTeamsTab);
     }
 
@@ -119,7 +119,7 @@ public class TeamsTabRequest extends BaseRequest implements ITeamsTabRequest {
      * @param newTeamsTab the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsTab newTeamsTab, final ICallback<TeamsTab> callback) {
+    public void put(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback) {
         send(HttpMethod.PUT, callback, newTeamsTab);
     }
 

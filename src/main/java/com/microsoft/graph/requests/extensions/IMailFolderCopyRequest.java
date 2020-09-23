@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMailFolderCopyRequest extends IHttpRequest {
 
-    void post(final ICallback<MailFolder> callback);
+    void post(final ICallback<? super MailFolder> callback);
 
     MailFolder post() throws ClientException;
 

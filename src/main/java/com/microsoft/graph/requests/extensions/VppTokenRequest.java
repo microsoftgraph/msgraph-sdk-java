@@ -37,7 +37,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<VppToken> callback) {
+    public void get(final ICallback<? super VppToken> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<VppToken> callback) {
+    public void delete(final ICallback<? super VppToken> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @param sourceVppToken the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final VppToken sourceVppToken, final ICallback<VppToken> callback) {
+    public void patch(final VppToken sourceVppToken, final ICallback<? super VppToken> callback) {
         send(HttpMethod.PATCH, callback, sourceVppToken);
     }
 
@@ -96,7 +96,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @param newVppToken the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final VppToken newVppToken, final ICallback<VppToken> callback) {
+    public void post(final VppToken newVppToken, final ICallback<? super VppToken> callback) {
         send(HttpMethod.POST, callback, newVppToken);
     }
 
@@ -117,7 +117,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @param newVppToken the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final VppToken newVppToken, final ICallback<VppToken> callback) {
+    public void put(final VppToken newVppToken, final ICallback<? super VppToken> callback) {
         send(HttpMethod.PUT, callback, newVppToken);
     }
 

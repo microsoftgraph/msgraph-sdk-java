@@ -37,7 +37,7 @@ public class WorkbookChartFillRequest extends BaseRequest implements IWorkbookCh
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChartFill> callback) {
+    public void get(final ICallback<? super WorkbookChartFill> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WorkbookChartFillRequest extends BaseRequest implements IWorkbookCh
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookChartFill> callback) {
+    public void delete(final ICallback<? super WorkbookChartFill> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WorkbookChartFillRequest extends BaseRequest implements IWorkbookCh
      * @param sourceWorkbookChartFill the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartFill sourceWorkbookChartFill, final ICallback<WorkbookChartFill> callback) {
+    public void patch(final WorkbookChartFill sourceWorkbookChartFill, final ICallback<? super WorkbookChartFill> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartFill);
     }
 
@@ -96,7 +96,7 @@ public class WorkbookChartFillRequest extends BaseRequest implements IWorkbookCh
      * @param newWorkbookChartFill the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartFill newWorkbookChartFill, final ICallback<WorkbookChartFill> callback) {
+    public void post(final WorkbookChartFill newWorkbookChartFill, final ICallback<? super WorkbookChartFill> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartFill);
     }
 
@@ -117,7 +117,7 @@ public class WorkbookChartFillRequest extends BaseRequest implements IWorkbookCh
      * @param newWorkbookChartFill the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartFill newWorkbookChartFill, final ICallback<WorkbookChartFill> callback) {
+    public void put(final WorkbookChartFill newWorkbookChartFill, final ICallback<? super WorkbookChartFill> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartFill);
     }
 

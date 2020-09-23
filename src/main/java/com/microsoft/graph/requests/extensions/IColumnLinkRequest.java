@@ -21,7 +21,7 @@ public interface IColumnLinkRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ColumnLink> callback);
+    void get(final ICallback<? super ColumnLink> callback);
 
     /**
      * Gets the ColumnLink from the service
@@ -36,7 +36,7 @@ public interface IColumnLinkRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ColumnLink> callback);
+    void delete(final ICallback<? super ColumnLink> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IColumnLinkRequest extends IHttpRequest {
      * @param sourceColumnLink the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ColumnLink sourceColumnLink, final ICallback<ColumnLink> callback);
+    void patch(final ColumnLink sourceColumnLink, final ICallback<? super ColumnLink> callback);
 
     /**
      * Patches this ColumnLink with a source
@@ -68,7 +68,7 @@ public interface IColumnLinkRequest extends IHttpRequest {
      * @param newColumnLink the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ColumnLink newColumnLink, final ICallback<ColumnLink> callback);
+    void post(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback);
 
     /**
      * Posts a ColumnLink with a new object
@@ -85,7 +85,7 @@ public interface IColumnLinkRequest extends IHttpRequest {
      * @param newColumnLink the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ColumnLink newColumnLink, final ICallback<ColumnLink> callback);
+    void put(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback);
 
     /**
      * Posts a ColumnLink with a new object

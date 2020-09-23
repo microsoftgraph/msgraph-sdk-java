@@ -21,7 +21,7 @@ public interface ITrendingRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Trending> callback);
+    void get(final ICallback<? super Trending> callback);
 
     /**
      * Gets the Trending from the service
@@ -36,7 +36,7 @@ public interface ITrendingRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Trending> callback);
+    void delete(final ICallback<? super Trending> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITrendingRequest extends IHttpRequest {
      * @param sourceTrending the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Trending sourceTrending, final ICallback<Trending> callback);
+    void patch(final Trending sourceTrending, final ICallback<? super Trending> callback);
 
     /**
      * Patches this Trending with a source
@@ -68,7 +68,7 @@ public interface ITrendingRequest extends IHttpRequest {
      * @param newTrending the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Trending newTrending, final ICallback<Trending> callback);
+    void post(final Trending newTrending, final ICallback<? super Trending> callback);
 
     /**
      * Posts a Trending with a new object
@@ -85,7 +85,7 @@ public interface ITrendingRequest extends IHttpRequest {
      * @param newTrending the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Trending newTrending, final ICallback<Trending> callback);
+    void put(final Trending newTrending, final ICallback<? super Trending> callback);
 
     /**
      * Posts a Trending with a new object

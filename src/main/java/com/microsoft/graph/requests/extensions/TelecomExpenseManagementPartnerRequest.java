@@ -37,7 +37,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TelecomExpenseManagementPartner> callback) {
+    public void get(final ICallback<? super TelecomExpenseManagementPartner> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TelecomExpenseManagementPartner> callback) {
+    public void delete(final ICallback<? super TelecomExpenseManagementPartner> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest implemen
      * @param sourceTelecomExpenseManagementPartner the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback) {
+    public void patch(final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback) {
         send(HttpMethod.PATCH, callback, sourceTelecomExpenseManagementPartner);
     }
 
@@ -96,7 +96,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest implemen
      * @param newTelecomExpenseManagementPartner the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback) {
+    public void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback) {
         send(HttpMethod.POST, callback, newTelecomExpenseManagementPartner);
     }
 
@@ -117,7 +117,7 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest implemen
      * @param newTelecomExpenseManagementPartner the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback) {
+    public void put(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback) {
         send(HttpMethod.PUT, callback, newTelecomExpenseManagementPartner);
     }
 

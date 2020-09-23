@@ -37,7 +37,7 @@ public class WorkbookFunctionsSkew_pRequest extends BaseRequest implements IWork
         body = new WorkbookFunctionsSkew_pBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

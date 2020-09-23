@@ -37,7 +37,7 @@ public class ThumbnailRequest extends BaseRequest implements IThumbnailRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Thumbnail> callback) {
+    public void get(final ICallback<? super Thumbnail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ThumbnailRequest extends BaseRequest implements IThumbnailRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Thumbnail> callback) {
+    public void delete(final ICallback<? super Thumbnail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ThumbnailRequest extends BaseRequest implements IThumbnailRequest {
      * @param sourceThumbnail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Thumbnail sourceThumbnail, final ICallback<Thumbnail> callback) {
+    public void patch(final Thumbnail sourceThumbnail, final ICallback<? super Thumbnail> callback) {
         send(HttpMethod.PATCH, callback, sourceThumbnail);
     }
 
@@ -96,7 +96,7 @@ public class ThumbnailRequest extends BaseRequest implements IThumbnailRequest {
      * @param newThumbnail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Thumbnail newThumbnail, final ICallback<Thumbnail> callback) {
+    public void post(final Thumbnail newThumbnail, final ICallback<? super Thumbnail> callback) {
         send(HttpMethod.POST, callback, newThumbnail);
     }
 
@@ -117,7 +117,7 @@ public class ThumbnailRequest extends BaseRequest implements IThumbnailRequest {
      * @param newThumbnail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Thumbnail newThumbnail, final ICallback<Thumbnail> callback) {
+    public void put(final Thumbnail newThumbnail, final ICallback<? super Thumbnail> callback) {
         send(HttpMethod.PUT, callback, newThumbnail);
     }
 

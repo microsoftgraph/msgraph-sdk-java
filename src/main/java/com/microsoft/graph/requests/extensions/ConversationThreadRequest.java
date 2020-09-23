@@ -42,7 +42,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ConversationThread> callback) {
+    public void get(final ICallback<? super ConversationThread> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -61,7 +61,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ConversationThread> callback) {
+    public void delete(final ICallback<? super ConversationThread> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +80,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @param sourceConversationThread the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConversationThread sourceConversationThread, final ICallback<ConversationThread> callback) {
+    public void patch(final ConversationThread sourceConversationThread, final ICallback<? super ConversationThread> callback) {
         send(HttpMethod.PATCH, callback, sourceConversationThread);
     }
 
@@ -101,7 +101,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @param newConversationThread the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConversationThread newConversationThread, final ICallback<ConversationThread> callback) {
+    public void post(final ConversationThread newConversationThread, final ICallback<? super ConversationThread> callback) {
         send(HttpMethod.POST, callback, newConversationThread);
     }
 
@@ -122,7 +122,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @param newConversationThread the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConversationThread newConversationThread, final ICallback<ConversationThread> callback) {
+    public void put(final ConversationThread newConversationThread, final ICallback<? super ConversationThread> callback) {
         send(HttpMethod.PUT, callback, newConversationThread);
     }
 

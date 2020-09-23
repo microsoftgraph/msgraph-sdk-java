@@ -37,7 +37,7 @@ public class WorkbookFunctionsImLog2Request extends BaseRequest implements IWork
         body = new WorkbookFunctionsImLog2Body();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

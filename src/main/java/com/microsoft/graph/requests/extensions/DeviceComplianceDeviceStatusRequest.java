@@ -37,7 +37,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceComplianceDeviceStatus> callback) {
+    public void get(final ICallback<? super DeviceComplianceDeviceStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceComplianceDeviceStatus> callback) {
+    public void delete(final ICallback<? super DeviceComplianceDeviceStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest implements 
      * @param sourceDeviceComplianceDeviceStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceComplianceDeviceStatus sourceDeviceComplianceDeviceStatus, final ICallback<DeviceComplianceDeviceStatus> callback) {
+    public void patch(final DeviceComplianceDeviceStatus sourceDeviceComplianceDeviceStatus, final ICallback<? super DeviceComplianceDeviceStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceComplianceDeviceStatus);
     }
 
@@ -96,7 +96,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest implements 
      * @param newDeviceComplianceDeviceStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus, final ICallback<DeviceComplianceDeviceStatus> callback) {
+    public void post(final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus, final ICallback<? super DeviceComplianceDeviceStatus> callback) {
         send(HttpMethod.POST, callback, newDeviceComplianceDeviceStatus);
     }
 
@@ -117,7 +117,7 @@ public class DeviceComplianceDeviceStatusRequest extends BaseRequest implements 
      * @param newDeviceComplianceDeviceStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus, final ICallback<DeviceComplianceDeviceStatus> callback) {
+    public void put(final DeviceComplianceDeviceStatus newDeviceComplianceDeviceStatus, final ICallback<? super DeviceComplianceDeviceStatus> callback) {
         send(HttpMethod.PUT, callback, newDeviceComplianceDeviceStatus);
     }
 

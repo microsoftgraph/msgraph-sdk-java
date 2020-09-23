@@ -36,7 +36,7 @@ public class WorkbookApplicationCalculateRequest extends BaseRequest implements 
         body = new WorkbookApplicationCalculateBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

@@ -37,7 +37,7 @@ public class ApplicationAddPasswordRequest extends BaseRequest implements IAppli
         body = new ApplicationAddPasswordBody();
     }
 
-    public void post(final ICallback<PasswordCredential> callback) {
+    public void post(final ICallback<? super PasswordCredential> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

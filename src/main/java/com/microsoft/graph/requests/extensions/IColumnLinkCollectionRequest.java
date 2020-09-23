@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IColumnLinkCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IColumnLinkCollectionPage> callback);
+    void get(final ICallback<? super IColumnLinkCollectionPage> callback);
 
     IColumnLinkCollectionPage get() throws ClientException;
 
-    void post(final ColumnLink newColumnLink, final ICallback<ColumnLink> callback);
+    void post(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback);
 
     ColumnLink post(final ColumnLink newColumnLink) throws ClientException;
 

@@ -37,7 +37,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DirectoryObjectPartnerReference> callback) {
+    public void get(final ICallback<? super DirectoryObjectPartnerReference> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DirectoryObjectPartnerReference> callback) {
+    public void delete(final ICallback<? super DirectoryObjectPartnerReference> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest implemen
      * @param sourceDirectoryObjectPartnerReference the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference, final ICallback<DirectoryObjectPartnerReference> callback) {
+    public void patch(final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference, final ICallback<? super DirectoryObjectPartnerReference> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryObjectPartnerReference);
     }
 
@@ -96,7 +96,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest implemen
      * @param newDirectoryObjectPartnerReference the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, final ICallback<DirectoryObjectPartnerReference> callback) {
+    public void post(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, final ICallback<? super DirectoryObjectPartnerReference> callback) {
         send(HttpMethod.POST, callback, newDirectoryObjectPartnerReference);
     }
 
@@ -117,7 +117,7 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest implemen
      * @param newDirectoryObjectPartnerReference the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, final ICallback<DirectoryObjectPartnerReference> callback) {
+    public void put(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, final ICallback<? super DirectoryObjectPartnerReference> callback) {
         send(HttpMethod.PUT, callback, newDirectoryObjectPartnerReference);
     }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRestrictedSignInCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IRestrictedSignInCollectionPage> callback);
+    void get(final ICallback<? super IRestrictedSignInCollectionPage> callback);
 
     IRestrictedSignInCollectionPage get() throws ClientException;
 
-    void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<RestrictedSignIn> callback);
+    void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback);
 
     RestrictedSignIn post(final RestrictedSignIn newRestrictedSignIn) throws ClientException;
 

@@ -37,7 +37,7 @@ public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest implements IW
         body = new WorkbookFunctionsChiSq_InvBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

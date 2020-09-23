@@ -24,7 +24,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IOutlookUserSupportedTimeZonesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOutlookUserSupportedTimeZonesCollectionPage> callback);
+    void get(final ICallback<? super IOutlookUserSupportedTimeZonesCollectionPage> callback);
 
     IOutlookUserSupportedTimeZonesCollectionPage get() throws ClientException;
 

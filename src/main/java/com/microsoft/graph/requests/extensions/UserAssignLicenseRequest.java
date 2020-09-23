@@ -37,7 +37,7 @@ public class UserAssignLicenseRequest extends BaseRequest implements IUserAssign
         body = new UserAssignLicenseBody();
     }
 
-    public void post(final ICallback<User> callback) {
+    public void post(final ICallback<? super User> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

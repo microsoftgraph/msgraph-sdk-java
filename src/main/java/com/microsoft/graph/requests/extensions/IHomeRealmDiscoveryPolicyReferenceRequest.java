@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IHomeRealmDiscoveryPolicyReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void delete(final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     HomeRealmDiscoveryPolicy delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IHomeRealmDiscoveryPolicyReferenceRequest extends IHttpRequest 
      * @param srcHomeRealmDiscoveryPolicy the HomeRealmDiscoveryPolicy to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void put(HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     /**
      * Puts the HomeRealmDiscoveryPolicy

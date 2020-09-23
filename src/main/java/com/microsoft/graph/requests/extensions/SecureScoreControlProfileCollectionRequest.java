@@ -40,7 +40,7 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, SecureScoreControlProfileCollectionResponse.class, ISecureScoreControlProfileCollectionPage.class);
     }
 
-    public void get(final ICallback<ISecureScoreControlProfileCollectionPage> callback) {
+    public void get(final ICallback<? super ISecureScoreControlProfileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
         return buildFromResponse(response);
     }
 
-    public void post(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<SecureScoreControlProfile> callback) {
+    public void post(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<? super SecureScoreControlProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecureScoreControlProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

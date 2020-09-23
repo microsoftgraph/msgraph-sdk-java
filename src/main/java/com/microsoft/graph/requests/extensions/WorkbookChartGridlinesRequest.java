@@ -39,7 +39,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChartGridlines> callback) {
+    public void get(final ICallback<? super WorkbookChartGridlines> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookChartGridlines> callback) {
+    public void delete(final ICallback<? super WorkbookChartGridlines> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @param sourceWorkbookChartGridlines the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartGridlines sourceWorkbookChartGridlines, final ICallback<WorkbookChartGridlines> callback) {
+    public void patch(final WorkbookChartGridlines sourceWorkbookChartGridlines, final ICallback<? super WorkbookChartGridlines> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartGridlines);
     }
 
@@ -98,7 +98,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @param newWorkbookChartGridlines the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<WorkbookChartGridlines> callback) {
+    public void post(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<? super WorkbookChartGridlines> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartGridlines);
     }
 
@@ -119,7 +119,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @param newWorkbookChartGridlines the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<WorkbookChartGridlines> callback) {
+    public void put(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<? super WorkbookChartGridlines> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartGridlines);
     }
 

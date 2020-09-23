@@ -21,7 +21,7 @@ public interface IWin32LobAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Win32LobApp> callback);
+    void get(final ICallback<? super Win32LobApp> callback);
 
     /**
      * Gets the Win32LobApp from the service
@@ -36,7 +36,7 @@ public interface IWin32LobAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Win32LobApp> callback);
+    void delete(final ICallback<? super Win32LobApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWin32LobAppRequest extends IHttpRequest {
      * @param sourceWin32LobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Win32LobApp sourceWin32LobApp, final ICallback<Win32LobApp> callback);
+    void patch(final Win32LobApp sourceWin32LobApp, final ICallback<? super Win32LobApp> callback);
 
     /**
      * Patches this Win32LobApp with a source
@@ -68,7 +68,7 @@ public interface IWin32LobAppRequest extends IHttpRequest {
      * @param newWin32LobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Win32LobApp newWin32LobApp, final ICallback<Win32LobApp> callback);
+    void post(final Win32LobApp newWin32LobApp, final ICallback<? super Win32LobApp> callback);
 
     /**
      * Posts a Win32LobApp with a new object
@@ -85,7 +85,7 @@ public interface IWin32LobAppRequest extends IHttpRequest {
      * @param newWin32LobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Win32LobApp newWin32LobApp, final ICallback<Win32LobApp> callback);
+    void put(final Win32LobApp newWin32LobApp, final ICallback<? super Win32LobApp> callback);
 
     /**
      * Posts a Win32LobApp with a new object

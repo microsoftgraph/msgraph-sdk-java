@@ -37,7 +37,7 @@ public class WorkbookFunctionsBinom_Dist_RangeRequest extends BaseRequest implem
         body = new WorkbookFunctionsBinom_Dist_RangeBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

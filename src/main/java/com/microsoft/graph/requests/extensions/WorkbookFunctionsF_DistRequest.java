@@ -37,7 +37,7 @@ public class WorkbookFunctionsF_DistRequest extends BaseRequest implements IWork
         body = new WorkbookFunctionsF_DistBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

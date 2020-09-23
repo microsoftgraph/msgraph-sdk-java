@@ -37,7 +37,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
+    public void get(final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
+    public void delete(final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @param sourceManagedDeviceMobileAppConfigurationDeviceStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedDeviceMobileAppConfigurationDeviceStatus sourceManagedDeviceMobileAppConfigurationDeviceStatus, final ICallback<ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
+    public void patch(final ManagedDeviceMobileAppConfigurationDeviceStatus sourceManagedDeviceMobileAppConfigurationDeviceStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 
@@ -96,7 +96,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @param newManagedDeviceMobileAppConfigurationDeviceStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus, final ICallback<ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
+    public void post(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         send(HttpMethod.POST, callback, newManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 
@@ -117,7 +117,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @param newManagedDeviceMobileAppConfigurationDeviceStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus, final ICallback<ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
+    public void put(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 

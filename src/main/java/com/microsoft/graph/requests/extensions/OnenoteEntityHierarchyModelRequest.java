@@ -52,7 +52,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OnenoteEntityHierarchyModel> callback) {
+    public void get(final ICallback<? super OnenoteEntityHierarchyModel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OnenoteEntityHierarchyModel> callback) {
+    public void delete(final ICallback<? super OnenoteEntityHierarchyModel> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param sourceOnenoteEntityHierarchyModel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel, final ICallback<OnenoteEntityHierarchyModel> callback) {
+    public void patch(final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel, final ICallback<? super OnenoteEntityHierarchyModel> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteEntityHierarchyModel);
     }
 
@@ -111,7 +111,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param newOnenoteEntityHierarchyModel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<OnenoteEntityHierarchyModel> callback) {
+    public void post(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<? super OnenoteEntityHierarchyModel> callback) {
         send(HttpMethod.POST, callback, newOnenoteEntityHierarchyModel);
     }
 
@@ -132,7 +132,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param newOnenoteEntityHierarchyModel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<OnenoteEntityHierarchyModel> callback) {
+    public void put(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<? super OnenoteEntityHierarchyModel> callback) {
         send(HttpMethod.PUT, callback, newOnenoteEntityHierarchyModel);
     }
 

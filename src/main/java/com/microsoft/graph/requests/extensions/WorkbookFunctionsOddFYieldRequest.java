@@ -37,7 +37,7 @@ public class WorkbookFunctionsOddFYieldRequest extends BaseRequest implements IW
         body = new WorkbookFunctionsOddFYieldBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

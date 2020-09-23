@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITokenLifetimePolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITokenLifetimePolicyCollectionPage> callback);
+    void get(final ICallback<? super ITokenLifetimePolicyCollectionPage> callback);
 
     ITokenLifetimePolicyCollectionPage get() throws ClientException;
 
-    void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback);
+    void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback);
 
     TokenLifetimePolicy post(final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException;
 

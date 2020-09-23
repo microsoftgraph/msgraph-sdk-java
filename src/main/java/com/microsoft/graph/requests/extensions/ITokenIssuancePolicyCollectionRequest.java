@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITokenIssuancePolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITokenIssuancePolicyCollectionPage> callback);
+    void get(final ICallback<? super ITokenIssuancePolicyCollectionPage> callback);
 
     ITokenIssuancePolicyCollectionPage get() throws ClientException;
 
-    void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback);
+    void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback);
 
     TokenIssuancePolicy post(final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException;
 

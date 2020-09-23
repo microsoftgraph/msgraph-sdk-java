@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IListItemVersionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IListItemVersionCollectionPage> callback);
+    void get(final ICallback<? super IListItemVersionCollectionPage> callback);
 
     IListItemVersionCollectionPage get() throws ClientException;
 
-    void post(final ListItemVersion newListItemVersion, final ICallback<ListItemVersion> callback);
+    void post(final ListItemVersion newListItemVersion, final ICallback<? super ListItemVersion> callback);
 
     ListItemVersion post(final ListItemVersion newListItemVersion) throws ClientException;
 

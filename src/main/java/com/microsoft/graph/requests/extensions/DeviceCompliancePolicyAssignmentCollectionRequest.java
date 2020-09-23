@@ -40,7 +40,7 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignmentCollectionResponse.class, IDeviceCompliancePolicyAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceCompliancePolicyAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceCompliancePolicyAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<DeviceCompliancePolicyAssignment> callback) {
+    public void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

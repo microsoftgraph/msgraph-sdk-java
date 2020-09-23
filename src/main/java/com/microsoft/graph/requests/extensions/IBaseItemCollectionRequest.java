@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IBaseItemCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IBaseItemCollectionPage> callback);
+    void get(final ICallback<? super IBaseItemCollectionPage> callback);
 
     IBaseItemCollectionPage get() throws ClientException;
 
-    void post(final BaseItem newBaseItem, final ICallback<BaseItem> callback);
+    void post(final BaseItem newBaseItem, final ICallback<? super BaseItem> callback);
 
     BaseItem post(final BaseItem newBaseItem) throws ClientException;
 

@@ -39,7 +39,7 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
         super(requestUrl, client, requestOptions, DirectoryRoleCollectionResponse.class, IDirectoryRoleCollectionPage.class);
     }
 
-    public void get(final ICallback<IDirectoryRoleCollectionPage> callback) {
+    public void get(final ICallback<? super IDirectoryRoleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class DirectoryRoleCollectionRequest extends BaseCollectionRequest<Direct
         return buildFromResponse(response);
     }
 
-    public void post(final DirectoryRole newDirectoryRole, final ICallback<DirectoryRole> callback) {
+    public void post(final DirectoryRole newDirectoryRole, final ICallback<? super DirectoryRole> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryRoleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

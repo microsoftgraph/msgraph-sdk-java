@@ -37,7 +37,7 @@ public class WorkbookFunctionsAccrIntMRequest extends BaseRequest implements IWo
         body = new WorkbookFunctionsAccrIntMBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

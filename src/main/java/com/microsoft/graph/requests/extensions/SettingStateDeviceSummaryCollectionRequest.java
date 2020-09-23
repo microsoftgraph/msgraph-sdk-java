@@ -40,7 +40,7 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
         super(requestUrl, client, requestOptions, SettingStateDeviceSummaryCollectionResponse.class, ISettingStateDeviceSummaryCollectionPage.class);
     }
 
-    public void get(final ICallback<ISettingStateDeviceSummaryCollectionPage> callback) {
+    public void get(final ICallback<? super ISettingStateDeviceSummaryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
         return buildFromResponse(response);
     }
 
-    public void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<SettingStateDeviceSummary> callback) {
+    public void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<? super SettingStateDeviceSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SettingStateDeviceSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

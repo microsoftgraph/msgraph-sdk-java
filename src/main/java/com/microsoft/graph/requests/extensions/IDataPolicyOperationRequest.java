@@ -21,7 +21,7 @@ public interface IDataPolicyOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DataPolicyOperation> callback);
+    void get(final ICallback<? super DataPolicyOperation> callback);
 
     /**
      * Gets the DataPolicyOperation from the service
@@ -36,7 +36,7 @@ public interface IDataPolicyOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DataPolicyOperation> callback);
+    void delete(final ICallback<? super DataPolicyOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDataPolicyOperationRequest extends IHttpRequest {
      * @param sourceDataPolicyOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DataPolicyOperation sourceDataPolicyOperation, final ICallback<DataPolicyOperation> callback);
+    void patch(final DataPolicyOperation sourceDataPolicyOperation, final ICallback<? super DataPolicyOperation> callback);
 
     /**
      * Patches this DataPolicyOperation with a source
@@ -68,7 +68,7 @@ public interface IDataPolicyOperationRequest extends IHttpRequest {
      * @param newDataPolicyOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DataPolicyOperation newDataPolicyOperation, final ICallback<DataPolicyOperation> callback);
+    void post(final DataPolicyOperation newDataPolicyOperation, final ICallback<? super DataPolicyOperation> callback);
 
     /**
      * Posts a DataPolicyOperation with a new object
@@ -85,7 +85,7 @@ public interface IDataPolicyOperationRequest extends IHttpRequest {
      * @param newDataPolicyOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DataPolicyOperation newDataPolicyOperation, final ICallback<DataPolicyOperation> callback);
+    void put(final DataPolicyOperation newDataPolicyOperation, final ICallback<? super DataPolicyOperation> callback);
 
     /**
      * Posts a DataPolicyOperation with a new object

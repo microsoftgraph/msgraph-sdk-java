@@ -34,7 +34,7 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest implem
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicy.class);
     }
 
-    public void delete(final ICallback<HomeRealmDiscoveryPolicy> callback) {
+    public void delete(final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest implem
      * @param srcHomeRealmDiscoveryPolicy the HomeRealmDiscoveryPolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback) {
+    public void put(HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.PUT, callback, srcHomeRealmDiscoveryPolicy);
     }
 

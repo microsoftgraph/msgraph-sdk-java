@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICallPlayPromptRequest extends IHttpRequest {
 
-    void post(final ICallback<PlayPromptOperation> callback);
+    void post(final ICallback<? super PlayPromptOperation> callback);
 
     PlayPromptOperation post() throws ClientException;
 

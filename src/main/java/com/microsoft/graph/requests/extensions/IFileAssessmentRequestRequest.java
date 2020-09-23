@@ -21,7 +21,7 @@ public interface IFileAssessmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<FileAssessmentRequest> callback);
+    void get(final ICallback<? super FileAssessmentRequest> callback);
 
     /**
      * Gets the FileAssessmentRequest from the service
@@ -36,7 +36,7 @@ public interface IFileAssessmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<FileAssessmentRequest> callback);
+    void delete(final ICallback<? super FileAssessmentRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IFileAssessmentRequestRequest extends IHttpRequest {
      * @param sourceFileAssessmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final FileAssessmentRequest sourceFileAssessmentRequest, final ICallback<FileAssessmentRequest> callback);
+    void patch(final FileAssessmentRequest sourceFileAssessmentRequest, final ICallback<? super FileAssessmentRequest> callback);
 
     /**
      * Patches this FileAssessmentRequest with a source
@@ -68,7 +68,7 @@ public interface IFileAssessmentRequestRequest extends IHttpRequest {
      * @param newFileAssessmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<FileAssessmentRequest> callback);
+    void post(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<? super FileAssessmentRequest> callback);
 
     /**
      * Posts a FileAssessmentRequest with a new object
@@ -85,7 +85,7 @@ public interface IFileAssessmentRequestRequest extends IHttpRequest {
      * @param newFileAssessmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<FileAssessmentRequest> callback);
+    void put(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<? super FileAssessmentRequest> callback);
 
     /**
      * Posts a FileAssessmentRequest with a new object

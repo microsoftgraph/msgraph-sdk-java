@@ -39,7 +39,7 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
         super(requestUrl, client, requestOptions, IdentityProviderCollectionResponse.class, IIdentityProviderCollectionPage.class);
     }
 
-    public void get(final ICallback<IIdentityProviderCollectionPage> callback) {
+    public void get(final ICallback<? super IIdentityProviderCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
         return buildFromResponse(response);
     }
 
-    public void post(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback) {
+    public void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

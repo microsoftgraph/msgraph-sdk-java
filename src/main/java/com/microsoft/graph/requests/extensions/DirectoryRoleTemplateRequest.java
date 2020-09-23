@@ -37,7 +37,7 @@ public class DirectoryRoleTemplateRequest extends BaseRequest implements IDirect
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DirectoryRoleTemplate> callback) {
+    public void get(final ICallback<? super DirectoryRoleTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DirectoryRoleTemplateRequest extends BaseRequest implements IDirect
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DirectoryRoleTemplate> callback) {
+    public void delete(final ICallback<? super DirectoryRoleTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DirectoryRoleTemplateRequest extends BaseRequest implements IDirect
      * @param sourceDirectoryRoleTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryRoleTemplate sourceDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback) {
+    public void patch(final DirectoryRoleTemplate sourceDirectoryRoleTemplate, final ICallback<? super DirectoryRoleTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryRoleTemplate);
     }
 
@@ -96,7 +96,7 @@ public class DirectoryRoleTemplateRequest extends BaseRequest implements IDirect
      * @param newDirectoryRoleTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback) {
+    public void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<? super DirectoryRoleTemplate> callback) {
         send(HttpMethod.POST, callback, newDirectoryRoleTemplate);
     }
 
@@ -117,7 +117,7 @@ public class DirectoryRoleTemplateRequest extends BaseRequest implements IDirect
      * @param newDirectoryRoleTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback) {
+    public void put(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<? super DirectoryRoleTemplate> callback) {
         send(HttpMethod.PUT, callback, newDirectoryRoleTemplate);
     }
 

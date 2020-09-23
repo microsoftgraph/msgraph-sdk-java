@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDirectoryObjectGetMemberGroupsCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IDirectoryObjectGetMemberGroupsCollectionPage> callback);
+    void post(final ICallback<? super IDirectoryObjectGetMemberGroupsCollectionPage> callback);
 
     IDirectoryObjectGetMemberGroupsCollectionPage post() throws ClientException;
 

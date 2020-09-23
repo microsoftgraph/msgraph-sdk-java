@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITeamsAppWithReferenceRequest extends IHttpRequest {
 
-    void post(final TeamsApp newTeamsApp, final IJsonBackedObject payload, final ICallback<TeamsApp> callback);
+    void post(final TeamsApp newTeamsApp, final IJsonBackedObject payload, final ICallback<? super TeamsApp> callback);
 
     TeamsApp post(final TeamsApp newTeamsApp, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<TeamsApp> callback);
+    void get(final ICallback<? super TeamsApp> callback);
 
     TeamsApp get() throws ClientException;
 
-	void delete(final ICallback<TeamsApp> callback);
+	void delete(final ICallback<? super TeamsApp> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final TeamsApp sourceTeamsApp, final ICallback<TeamsApp> callback);
+	void patch(final TeamsApp sourceTeamsApp, final ICallback<? super TeamsApp> callback);
 
 	TeamsApp patch(final TeamsApp sourceTeamsApp) throws ClientException;
 

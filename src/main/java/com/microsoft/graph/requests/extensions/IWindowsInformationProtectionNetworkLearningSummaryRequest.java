@@ -21,7 +21,7 @@ public interface IWindowsInformationProtectionNetworkLearningSummaryRequest exte
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsInformationProtectionNetworkLearningSummary> callback);
+    void get(final ICallback<? super WindowsInformationProtectionNetworkLearningSummary> callback);
 
     /**
      * Gets the WindowsInformationProtectionNetworkLearningSummary from the service
@@ -36,7 +36,7 @@ public interface IWindowsInformationProtectionNetworkLearningSummaryRequest exte
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsInformationProtectionNetworkLearningSummary> callback);
+    void delete(final ICallback<? super WindowsInformationProtectionNetworkLearningSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsInformationProtectionNetworkLearningSummaryRequest exte
      * @param sourceWindowsInformationProtectionNetworkLearningSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsInformationProtectionNetworkLearningSummary sourceWindowsInformationProtectionNetworkLearningSummary, final ICallback<WindowsInformationProtectionNetworkLearningSummary> callback);
+    void patch(final WindowsInformationProtectionNetworkLearningSummary sourceWindowsInformationProtectionNetworkLearningSummary, final ICallback<? super WindowsInformationProtectionNetworkLearningSummary> callback);
 
     /**
      * Patches this WindowsInformationProtectionNetworkLearningSummary with a source
@@ -68,7 +68,7 @@ public interface IWindowsInformationProtectionNetworkLearningSummaryRequest exte
      * @param newWindowsInformationProtectionNetworkLearningSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary, final ICallback<WindowsInformationProtectionNetworkLearningSummary> callback);
+    void post(final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary, final ICallback<? super WindowsInformationProtectionNetworkLearningSummary> callback);
 
     /**
      * Posts a WindowsInformationProtectionNetworkLearningSummary with a new object
@@ -85,7 +85,7 @@ public interface IWindowsInformationProtectionNetworkLearningSummaryRequest exte
      * @param newWindowsInformationProtectionNetworkLearningSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary, final ICallback<WindowsInformationProtectionNetworkLearningSummary> callback);
+    void put(final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary, final ICallback<? super WindowsInformationProtectionNetworkLearningSummary> callback);
 
     /**
      * Posts a WindowsInformationProtectionNetworkLearningSummary with a new object

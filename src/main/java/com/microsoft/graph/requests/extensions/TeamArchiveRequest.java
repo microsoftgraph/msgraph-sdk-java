@@ -36,7 +36,7 @@ public class TeamArchiveRequest extends BaseRequest implements ITeamArchiveReque
         body = new TeamArchiveBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

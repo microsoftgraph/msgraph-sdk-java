@@ -21,7 +21,7 @@ public interface IStsPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<StsPolicy> callback);
+    void get(final ICallback<? super StsPolicy> callback);
 
     /**
      * Gets the StsPolicy from the service
@@ -36,7 +36,7 @@ public interface IStsPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<StsPolicy> callback);
+    void delete(final ICallback<? super StsPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IStsPolicyRequest extends IHttpRequest {
      * @param sourceStsPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final StsPolicy sourceStsPolicy, final ICallback<StsPolicy> callback);
+    void patch(final StsPolicy sourceStsPolicy, final ICallback<? super StsPolicy> callback);
 
     /**
      * Patches this StsPolicy with a source
@@ -68,7 +68,7 @@ public interface IStsPolicyRequest extends IHttpRequest {
      * @param newStsPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final StsPolicy newStsPolicy, final ICallback<StsPolicy> callback);
+    void post(final StsPolicy newStsPolicy, final ICallback<? super StsPolicy> callback);
 
     /**
      * Posts a StsPolicy with a new object
@@ -85,7 +85,7 @@ public interface IStsPolicyRequest extends IHttpRequest {
      * @param newStsPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final StsPolicy newStsPolicy, final ICallback<StsPolicy> callback);
+    void put(final StsPolicy newStsPolicy, final ICallback<? super StsPolicy> callback);
 
     /**
      * Posts a StsPolicy with a new object

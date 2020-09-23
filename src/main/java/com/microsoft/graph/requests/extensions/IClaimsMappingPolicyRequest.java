@@ -21,7 +21,7 @@ public interface IClaimsMappingPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ClaimsMappingPolicy> callback);
+    void get(final ICallback<? super ClaimsMappingPolicy> callback);
 
     /**
      * Gets the ClaimsMappingPolicy from the service
@@ -36,7 +36,7 @@ public interface IClaimsMappingPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ClaimsMappingPolicy> callback);
+    void delete(final ICallback<? super ClaimsMappingPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IClaimsMappingPolicyRequest extends IHttpRequest {
      * @param sourceClaimsMappingPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ClaimsMappingPolicy sourceClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback);
+    void patch(final ClaimsMappingPolicy sourceClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback);
 
     /**
      * Patches this ClaimsMappingPolicy with a source
@@ -68,7 +68,7 @@ public interface IClaimsMappingPolicyRequest extends IHttpRequest {
      * @param newClaimsMappingPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback);
+    void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback);
 
     /**
      * Posts a ClaimsMappingPolicy with a new object
@@ -85,7 +85,7 @@ public interface IClaimsMappingPolicyRequest extends IHttpRequest {
      * @param newClaimsMappingPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback);
+    void put(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback);
 
     /**
      * Posts a ClaimsMappingPolicy with a new object

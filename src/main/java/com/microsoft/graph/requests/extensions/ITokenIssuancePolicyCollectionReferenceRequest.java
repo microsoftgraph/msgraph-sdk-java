@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
  */
 public interface ITokenIssuancePolicyCollectionReferenceRequest {
 
-    void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback);
+    void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback);
 
     TokenIssuancePolicy post(final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException;
 

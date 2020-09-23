@@ -21,7 +21,7 @@ public interface ISchedulingGroupRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SchedulingGroup> callback);
+    void get(final ICallback<? super SchedulingGroup> callback);
 
     /**
      * Gets the SchedulingGroup from the service
@@ -36,7 +36,7 @@ public interface ISchedulingGroupRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SchedulingGroup> callback);
+    void delete(final ICallback<? super SchedulingGroup> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISchedulingGroupRequest extends IHttpRequest {
      * @param sourceSchedulingGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SchedulingGroup sourceSchedulingGroup, final ICallback<SchedulingGroup> callback);
+    void patch(final SchedulingGroup sourceSchedulingGroup, final ICallback<? super SchedulingGroup> callback);
 
     /**
      * Patches this SchedulingGroup with a source
@@ -68,7 +68,7 @@ public interface ISchedulingGroupRequest extends IHttpRequest {
      * @param newSchedulingGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SchedulingGroup newSchedulingGroup, final ICallback<SchedulingGroup> callback);
+    void post(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback);
 
     /**
      * Posts a SchedulingGroup with a new object
@@ -85,7 +85,7 @@ public interface ISchedulingGroupRequest extends IHttpRequest {
      * @param newSchedulingGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SchedulingGroup newSchedulingGroup, final ICallback<SchedulingGroup> callback);
+    void put(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback);
 
     /**
      * Posts a SchedulingGroup with a new object

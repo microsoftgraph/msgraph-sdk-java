@@ -21,7 +21,7 @@ public interface IMailAssessmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MailAssessmentRequest> callback);
+    void get(final ICallback<? super MailAssessmentRequest> callback);
 
     /**
      * Gets the MailAssessmentRequest from the service
@@ -36,7 +36,7 @@ public interface IMailAssessmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MailAssessmentRequest> callback);
+    void delete(final ICallback<? super MailAssessmentRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMailAssessmentRequestRequest extends IHttpRequest {
      * @param sourceMailAssessmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MailAssessmentRequest sourceMailAssessmentRequest, final ICallback<MailAssessmentRequest> callback);
+    void patch(final MailAssessmentRequest sourceMailAssessmentRequest, final ICallback<? super MailAssessmentRequest> callback);
 
     /**
      * Patches this MailAssessmentRequest with a source
@@ -68,7 +68,7 @@ public interface IMailAssessmentRequestRequest extends IHttpRequest {
      * @param newMailAssessmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MailAssessmentRequest newMailAssessmentRequest, final ICallback<MailAssessmentRequest> callback);
+    void post(final MailAssessmentRequest newMailAssessmentRequest, final ICallback<? super MailAssessmentRequest> callback);
 
     /**
      * Posts a MailAssessmentRequest with a new object
@@ -85,7 +85,7 @@ public interface IMailAssessmentRequestRequest extends IHttpRequest {
      * @param newMailAssessmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MailAssessmentRequest newMailAssessmentRequest, final ICallback<MailAssessmentRequest> callback);
+    void put(final MailAssessmentRequest newMailAssessmentRequest, final ICallback<? super MailAssessmentRequest> callback);
 
     /**
      * Posts a MailAssessmentRequest with a new object

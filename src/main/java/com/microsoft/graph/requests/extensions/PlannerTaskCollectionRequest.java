@@ -40,7 +40,7 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
         super(requestUrl, client, requestOptions, PlannerTaskCollectionResponse.class, IPlannerTaskCollectionPage.class);
     }
 
-    public void get(final ICallback<IPlannerTaskCollectionPage> callback) {
+    public void get(final ICallback<? super IPlannerTaskCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
         return buildFromResponse(response);
     }
 
-    public void post(final PlannerTask newPlannerTask, final ICallback<PlannerTask> callback) {
+    public void post(final PlannerTask newPlannerTask, final ICallback<? super PlannerTask> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PlannerTaskRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

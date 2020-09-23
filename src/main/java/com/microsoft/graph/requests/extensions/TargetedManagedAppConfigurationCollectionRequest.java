@@ -42,7 +42,7 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, TargetedManagedAppConfigurationCollectionResponse.class, ITargetedManagedAppConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<ITargetedManagedAppConfigurationCollectionPage> callback) {
+    public void get(final ICallback<? super ITargetedManagedAppConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,7 +61,7 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<TargetedManagedAppConfiguration> callback) {
+    public void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TargetedManagedAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

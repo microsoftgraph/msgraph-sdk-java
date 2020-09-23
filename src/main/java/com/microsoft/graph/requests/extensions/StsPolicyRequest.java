@@ -56,7 +56,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<StsPolicy> callback) {
+    public void get(final ICallback<? super StsPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<StsPolicy> callback) {
+    public void delete(final ICallback<? super StsPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +94,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param sourceStsPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final StsPolicy sourceStsPolicy, final ICallback<StsPolicy> callback) {
+    public void patch(final StsPolicy sourceStsPolicy, final ICallback<? super StsPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceStsPolicy);
     }
 
@@ -115,7 +115,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param newStsPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final StsPolicy newStsPolicy, final ICallback<StsPolicy> callback) {
+    public void post(final StsPolicy newStsPolicy, final ICallback<? super StsPolicy> callback) {
         send(HttpMethod.POST, callback, newStsPolicy);
     }
 
@@ -136,7 +136,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param newStsPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final StsPolicy newStsPolicy, final ICallback<StsPolicy> callback) {
+    public void put(final StsPolicy newStsPolicy, final ICallback<? super StsPolicy> callback) {
         send(HttpMethod.PUT, callback, newStsPolicy);
     }
 

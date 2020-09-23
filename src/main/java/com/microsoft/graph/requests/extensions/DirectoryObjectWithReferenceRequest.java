@@ -36,7 +36,7 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest implements 
         super(requestUrl, client, requestOptions, DirectoryObject.class);
     }
 
-    public void post(final DirectoryObject newDirectoryObject, final IJsonBackedObject payload, final ICallback<DirectoryObject> callback) {
+    public void post(final DirectoryObject newDirectoryObject, final IJsonBackedObject payload, final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -48,7 +48,7 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest implements 
         return null;
     }
 
-    public void get(final ICallback<DirectoryObject> callback) {
+    public void get(final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest implements 
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<DirectoryObject> callback) {
+	public void delete(final ICallback<? super DirectoryObject> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -64,7 +64,7 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest implements 
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final DirectoryObject sourceDirectoryObject, final ICallback<DirectoryObject> callback) {
+	public void patch(final DirectoryObject sourceDirectoryObject, final ICallback<? super DirectoryObject> callback) {
 		send(HttpMethod.PATCH, callback, sourceDirectoryObject);
 	}
 

@@ -36,7 +36,7 @@ public class WindowsInformationProtectionAssignRequest extends BaseRequest imple
         body = new WindowsInformationProtectionAssignBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

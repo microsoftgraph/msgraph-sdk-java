@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMobileThreatDefenseConnectorCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMobileThreatDefenseConnectorCollectionPage> callback);
+    void get(final ICallback<? super IMobileThreatDefenseConnectorCollectionPage> callback);
 
     IMobileThreatDefenseConnectorCollectionPage get() throws ClientException;
 
-    void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback);
+    void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback);
 
     MobileThreatDefenseConnector post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector) throws ClientException;
 

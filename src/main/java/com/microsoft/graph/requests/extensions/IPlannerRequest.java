@@ -21,7 +21,7 @@ public interface IPlannerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Planner> callback);
+    void get(final ICallback<? super Planner> callback);
 
     /**
      * Gets the Planner from the service
@@ -36,7 +36,7 @@ public interface IPlannerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Planner> callback);
+    void delete(final ICallback<? super Planner> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlannerRequest extends IHttpRequest {
      * @param sourcePlanner the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Planner sourcePlanner, final ICallback<Planner> callback);
+    void patch(final Planner sourcePlanner, final ICallback<? super Planner> callback);
 
     /**
      * Patches this Planner with a source
@@ -68,7 +68,7 @@ public interface IPlannerRequest extends IHttpRequest {
      * @param newPlanner the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Planner newPlanner, final ICallback<Planner> callback);
+    void post(final Planner newPlanner, final ICallback<? super Planner> callback);
 
     /**
      * Posts a Planner with a new object
@@ -85,7 +85,7 @@ public interface IPlannerRequest extends IHttpRequest {
      * @param newPlanner the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Planner newPlanner, final ICallback<Planner> callback);
+    void put(final Planner newPlanner, final ICallback<? super Planner> callback);
 
     /**
      * Posts a Planner with a new object

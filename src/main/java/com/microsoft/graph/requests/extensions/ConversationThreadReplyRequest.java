@@ -36,7 +36,7 @@ public class ConversationThreadReplyRequest extends BaseRequest implements IConv
         body = new ConversationThreadReplyBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

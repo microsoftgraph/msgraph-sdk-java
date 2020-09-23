@@ -37,7 +37,7 @@ public class WorkbookFunctionsTrimMeanRequest extends BaseRequest implements IWo
         body = new WorkbookFunctionsTrimMeanBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

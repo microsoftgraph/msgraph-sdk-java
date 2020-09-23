@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDriveCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDriveCollectionPage> callback);
+    void get(final ICallback<? super IDriveCollectionPage> callback);
 
     IDriveCollectionPage get() throws ClientException;
 
-    void post(final Drive newDrive, final ICallback<Drive> callback);
+    void post(final Drive newDrive, final ICallback<? super Drive> callback);
 
     Drive post(final Drive newDrive) throws ClientException;
 

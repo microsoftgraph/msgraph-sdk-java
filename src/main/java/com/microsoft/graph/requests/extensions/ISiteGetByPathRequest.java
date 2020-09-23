@@ -27,7 +27,7 @@ public interface ISiteGetByPathRequest extends IHttpRequest {
      * @param srcSite the Site with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    void patch(Site srcSite, final ICallback<Site> callback);
+    void patch(Site srcSite, final ICallback<? super Site> callback);
 
     /**
      * Patches the SiteGetByPath
@@ -44,7 +44,7 @@ public interface ISiteGetByPathRequest extends IHttpRequest {
      * @param srcSite the Site to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Site srcSite, final ICallback<Site> callback);
+    void put(Site srcSite, final ICallback<? super Site> callback);
 
     /**
      * Puts the SiteGetByPath
@@ -59,7 +59,7 @@ public interface ISiteGetByPathRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Site> callback);
+    void get(final ICallback<? super Site> callback);
 
     /**
      * Gets the Site

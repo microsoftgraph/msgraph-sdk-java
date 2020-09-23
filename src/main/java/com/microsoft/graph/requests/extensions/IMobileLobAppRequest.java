@@ -21,7 +21,7 @@ public interface IMobileLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileLobApp> callback);
+    void get(final ICallback<? super MobileLobApp> callback);
 
     /**
      * Gets the MobileLobApp from the service
@@ -36,7 +36,7 @@ public interface IMobileLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileLobApp> callback);
+    void delete(final ICallback<? super MobileLobApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileLobAppRequest extends IHttpRequest {
      * @param sourceMobileLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileLobApp sourceMobileLobApp, final ICallback<MobileLobApp> callback);
+    void patch(final MobileLobApp sourceMobileLobApp, final ICallback<? super MobileLobApp> callback);
 
     /**
      * Patches this MobileLobApp with a source
@@ -68,7 +68,7 @@ public interface IMobileLobAppRequest extends IHttpRequest {
      * @param newMobileLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileLobApp newMobileLobApp, final ICallback<MobileLobApp> callback);
+    void post(final MobileLobApp newMobileLobApp, final ICallback<? super MobileLobApp> callback);
 
     /**
      * Posts a MobileLobApp with a new object
@@ -85,7 +85,7 @@ public interface IMobileLobAppRequest extends IHttpRequest {
      * @param newMobileLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileLobApp newMobileLobApp, final ICallback<MobileLobApp> callback);
+    void put(final MobileLobApp newMobileLobApp, final ICallback<? super MobileLobApp> callback);
 
     /**
      * Posts a MobileLobApp with a new object

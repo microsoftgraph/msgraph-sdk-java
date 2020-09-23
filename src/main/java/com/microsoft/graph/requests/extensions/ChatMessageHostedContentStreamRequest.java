@@ -58,7 +58,7 @@ public class ChatMessageHostedContentStreamRequest extends BaseStreamRequest<Cha
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<ChatMessageHostedContent> callback) {
+    public void put(final byte[] fileContents, final ICallback<? super ChatMessageHostedContent> callback) {
         send(fileContents, callback);
     }
 

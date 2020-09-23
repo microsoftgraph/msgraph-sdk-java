@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookPivotTableCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWorkbookPivotTableCollectionPage> callback);
+    void get(final ICallback<? super IWorkbookPivotTableCollectionPage> callback);
 
     IWorkbookPivotTableCollectionPage get() throws ClientException;
 
-    void post(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<WorkbookPivotTable> callback);
+    void post(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<? super WorkbookPivotTable> callback);
 
     WorkbookPivotTable post(final WorkbookPivotTable newWorkbookPivotTable) throws ClientException;
 

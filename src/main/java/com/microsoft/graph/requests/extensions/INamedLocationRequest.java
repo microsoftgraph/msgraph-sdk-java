@@ -21,7 +21,7 @@ public interface INamedLocationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<NamedLocation> callback);
+    void get(final ICallback<? super NamedLocation> callback);
 
     /**
      * Gets the NamedLocation from the service
@@ -36,7 +36,7 @@ public interface INamedLocationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<NamedLocation> callback);
+    void delete(final ICallback<? super NamedLocation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface INamedLocationRequest extends IHttpRequest {
      * @param sourceNamedLocation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final NamedLocation sourceNamedLocation, final ICallback<NamedLocation> callback);
+    void patch(final NamedLocation sourceNamedLocation, final ICallback<? super NamedLocation> callback);
 
     /**
      * Patches this NamedLocation with a source
@@ -68,7 +68,7 @@ public interface INamedLocationRequest extends IHttpRequest {
      * @param newNamedLocation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final NamedLocation newNamedLocation, final ICallback<NamedLocation> callback);
+    void post(final NamedLocation newNamedLocation, final ICallback<? super NamedLocation> callback);
 
     /**
      * Posts a NamedLocation with a new object
@@ -85,7 +85,7 @@ public interface INamedLocationRequest extends IHttpRequest {
      * @param newNamedLocation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final NamedLocation newNamedLocation, final ICallback<NamedLocation> callback);
+    void put(final NamedLocation newNamedLocation, final ICallback<? super NamedLocation> callback);
 
     /**
      * Posts a NamedLocation with a new object

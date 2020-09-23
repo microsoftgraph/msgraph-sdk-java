@@ -34,7 +34,7 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
         super(requestUrl, client, requestOptions, TokenIssuancePolicy.class);
     }
 
-    public void delete(final ICallback<TokenIssuancePolicy> callback) {
+    public void delete(final ICallback<? super TokenIssuancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
      * @param srcTokenIssuancePolicy the TokenIssuancePolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TokenIssuancePolicy srcTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback) {
+    public void put(TokenIssuancePolicy srcTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
         send(HttpMethod.PUT, callback, srcTokenIssuancePolicy);
     }
 

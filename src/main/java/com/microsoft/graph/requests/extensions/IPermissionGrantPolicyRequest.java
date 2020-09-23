@@ -21,7 +21,7 @@ public interface IPermissionGrantPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PermissionGrantPolicy> callback);
+    void get(final ICallback<? super PermissionGrantPolicy> callback);
 
     /**
      * Gets the PermissionGrantPolicy from the service
@@ -36,7 +36,7 @@ public interface IPermissionGrantPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PermissionGrantPolicy> callback);
+    void delete(final ICallback<? super PermissionGrantPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPermissionGrantPolicyRequest extends IHttpRequest {
      * @param sourcePermissionGrantPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PermissionGrantPolicy sourcePermissionGrantPolicy, final ICallback<PermissionGrantPolicy> callback);
+    void patch(final PermissionGrantPolicy sourcePermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback);
 
     /**
      * Patches this PermissionGrantPolicy with a source
@@ -68,7 +68,7 @@ public interface IPermissionGrantPolicyRequest extends IHttpRequest {
      * @param newPermissionGrantPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<PermissionGrantPolicy> callback);
+    void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback);
 
     /**
      * Posts a PermissionGrantPolicy with a new object
@@ -85,7 +85,7 @@ public interface IPermissionGrantPolicyRequest extends IHttpRequest {
      * @param newPermissionGrantPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<PermissionGrantPolicy> callback);
+    void put(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback);
 
     /**
      * Posts a PermissionGrantPolicy with a new object

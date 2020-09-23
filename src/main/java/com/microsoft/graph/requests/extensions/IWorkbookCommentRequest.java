@@ -21,7 +21,7 @@ public interface IWorkbookCommentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookComment> callback);
+    void get(final ICallback<? super WorkbookComment> callback);
 
     /**
      * Gets the WorkbookComment from the service
@@ -36,7 +36,7 @@ public interface IWorkbookCommentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookComment> callback);
+    void delete(final ICallback<? super WorkbookComment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookCommentRequest extends IHttpRequest {
      * @param sourceWorkbookComment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookComment sourceWorkbookComment, final ICallback<WorkbookComment> callback);
+    void patch(final WorkbookComment sourceWorkbookComment, final ICallback<? super WorkbookComment> callback);
 
     /**
      * Patches this WorkbookComment with a source
@@ -68,7 +68,7 @@ public interface IWorkbookCommentRequest extends IHttpRequest {
      * @param newWorkbookComment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookComment newWorkbookComment, final ICallback<WorkbookComment> callback);
+    void post(final WorkbookComment newWorkbookComment, final ICallback<? super WorkbookComment> callback);
 
     /**
      * Posts a WorkbookComment with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookCommentRequest extends IHttpRequest {
      * @param newWorkbookComment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookComment newWorkbookComment, final ICallback<WorkbookComment> callback);
+    void put(final WorkbookComment newWorkbookComment, final ICallback<? super WorkbookComment> callback);
 
     /**
      * Posts a WorkbookComment with a new object

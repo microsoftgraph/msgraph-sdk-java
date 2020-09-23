@@ -21,7 +21,7 @@ public interface IAdministrativeUnitRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AdministrativeUnit> callback);
+    void get(final ICallback<? super AdministrativeUnit> callback);
 
     /**
      * Gets the AdministrativeUnit from the service
@@ -36,7 +36,7 @@ public interface IAdministrativeUnitRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AdministrativeUnit> callback);
+    void delete(final ICallback<? super AdministrativeUnit> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAdministrativeUnitRequest extends IHttpRequest {
      * @param sourceAdministrativeUnit the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AdministrativeUnit sourceAdministrativeUnit, final ICallback<AdministrativeUnit> callback);
+    void patch(final AdministrativeUnit sourceAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback);
 
     /**
      * Patches this AdministrativeUnit with a source
@@ -68,7 +68,7 @@ public interface IAdministrativeUnitRequest extends IHttpRequest {
      * @param newAdministrativeUnit the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<AdministrativeUnit> callback);
+    void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback);
 
     /**
      * Posts a AdministrativeUnit with a new object
@@ -85,7 +85,7 @@ public interface IAdministrativeUnitRequest extends IHttpRequest {
      * @param newAdministrativeUnit the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AdministrativeUnit newAdministrativeUnit, final ICallback<AdministrativeUnit> callback);
+    void put(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback);
 
     /**
      * Posts a AdministrativeUnit with a new object

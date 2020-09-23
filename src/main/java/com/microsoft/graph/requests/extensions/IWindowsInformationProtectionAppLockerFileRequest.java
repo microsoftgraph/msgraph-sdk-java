@@ -21,7 +21,7 @@ public interface IWindowsInformationProtectionAppLockerFileRequest extends IHttp
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsInformationProtectionAppLockerFile> callback);
+    void get(final ICallback<? super WindowsInformationProtectionAppLockerFile> callback);
 
     /**
      * Gets the WindowsInformationProtectionAppLockerFile from the service
@@ -36,7 +36,7 @@ public interface IWindowsInformationProtectionAppLockerFileRequest extends IHttp
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsInformationProtectionAppLockerFile> callback);
+    void delete(final ICallback<? super WindowsInformationProtectionAppLockerFile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsInformationProtectionAppLockerFileRequest extends IHttp
      * @param sourceWindowsInformationProtectionAppLockerFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsInformationProtectionAppLockerFile sourceWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback);
+    void patch(final WindowsInformationProtectionAppLockerFile sourceWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback);
 
     /**
      * Patches this WindowsInformationProtectionAppLockerFile with a source
@@ -68,7 +68,7 @@ public interface IWindowsInformationProtectionAppLockerFileRequest extends IHttp
      * @param newWindowsInformationProtectionAppLockerFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback);
+    void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback);
 
     /**
      * Posts a WindowsInformationProtectionAppLockerFile with a new object
@@ -85,7 +85,7 @@ public interface IWindowsInformationProtectionAppLockerFileRequest extends IHttp
      * @param newWindowsInformationProtectionAppLockerFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback);
+    void put(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback);
 
     /**
      * Posts a WindowsInformationProtectionAppLockerFile with a new object

@@ -21,7 +21,7 @@ public interface IManagedDeviceMobileAppConfigurationAssignmentRequest extends I
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback);
+    void get(final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback);
 
     /**
      * Gets the ManagedDeviceMobileAppConfigurationAssignment from the service
@@ -36,7 +36,7 @@ public interface IManagedDeviceMobileAppConfigurationAssignmentRequest extends I
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback);
+    void delete(final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedDeviceMobileAppConfigurationAssignmentRequest extends I
      * @param sourceManagedDeviceMobileAppConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedDeviceMobileAppConfigurationAssignment sourceManagedDeviceMobileAppConfigurationAssignment, final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback);
+    void patch(final ManagedDeviceMobileAppConfigurationAssignment sourceManagedDeviceMobileAppConfigurationAssignment, final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback);
 
     /**
      * Patches this ManagedDeviceMobileAppConfigurationAssignment with a source
@@ -68,7 +68,7 @@ public interface IManagedDeviceMobileAppConfigurationAssignmentRequest extends I
      * @param newManagedDeviceMobileAppConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback);
+    void post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback);
 
     /**
      * Posts a ManagedDeviceMobileAppConfigurationAssignment with a new object
@@ -85,7 +85,7 @@ public interface IManagedDeviceMobileAppConfigurationAssignmentRequest extends I
      * @param newManagedDeviceMobileAppConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback);
+    void put(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback);
 
     /**
      * Posts a ManagedDeviceMobileAppConfigurationAssignment with a new object

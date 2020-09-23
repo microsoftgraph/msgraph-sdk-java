@@ -21,7 +21,7 @@ public interface IIosVppAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosVppApp> callback);
+    void get(final ICallback<? super IosVppApp> callback);
 
     /**
      * Gets the IosVppApp from the service
@@ -36,7 +36,7 @@ public interface IIosVppAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosVppApp> callback);
+    void delete(final ICallback<? super IosVppApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosVppAppRequest extends IHttpRequest {
      * @param sourceIosVppApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosVppApp sourceIosVppApp, final ICallback<IosVppApp> callback);
+    void patch(final IosVppApp sourceIosVppApp, final ICallback<? super IosVppApp> callback);
 
     /**
      * Patches this IosVppApp with a source
@@ -68,7 +68,7 @@ public interface IIosVppAppRequest extends IHttpRequest {
      * @param newIosVppApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosVppApp newIosVppApp, final ICallback<IosVppApp> callback);
+    void post(final IosVppApp newIosVppApp, final ICallback<? super IosVppApp> callback);
 
     /**
      * Posts a IosVppApp with a new object
@@ -85,7 +85,7 @@ public interface IIosVppAppRequest extends IHttpRequest {
      * @param newIosVppApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosVppApp newIosVppApp, final ICallback<IosVppApp> callback);
+    void put(final IosVppApp newIosVppApp, final ICallback<? super IosVppApp> callback);
 
     /**
      * Posts a IosVppApp with a new object

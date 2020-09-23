@@ -37,7 +37,7 @@ public class SchemaExtensionRequest extends BaseRequest implements ISchemaExtens
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SchemaExtension> callback) {
+    public void get(final ICallback<? super SchemaExtension> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SchemaExtensionRequest extends BaseRequest implements ISchemaExtens
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SchemaExtension> callback) {
+    public void delete(final ICallback<? super SchemaExtension> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SchemaExtensionRequest extends BaseRequest implements ISchemaExtens
      * @param sourceSchemaExtension the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SchemaExtension sourceSchemaExtension, final ICallback<SchemaExtension> callback) {
+    public void patch(final SchemaExtension sourceSchemaExtension, final ICallback<? super SchemaExtension> callback) {
         send(HttpMethod.PATCH, callback, sourceSchemaExtension);
     }
 
@@ -96,7 +96,7 @@ public class SchemaExtensionRequest extends BaseRequest implements ISchemaExtens
      * @param newSchemaExtension the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SchemaExtension newSchemaExtension, final ICallback<SchemaExtension> callback) {
+    public void post(final SchemaExtension newSchemaExtension, final ICallback<? super SchemaExtension> callback) {
         send(HttpMethod.POST, callback, newSchemaExtension);
     }
 
@@ -117,7 +117,7 @@ public class SchemaExtensionRequest extends BaseRequest implements ISchemaExtens
      * @param newSchemaExtension the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SchemaExtension newSchemaExtension, final ICallback<SchemaExtension> callback) {
+    public void put(final SchemaExtension newSchemaExtension, final ICallback<? super SchemaExtension> callback) {
         send(HttpMethod.PUT, callback, newSchemaExtension);
     }
 

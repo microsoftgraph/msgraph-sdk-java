@@ -37,7 +37,7 @@ public class WorkbookFunctionsGaussRequest extends BaseRequest implements IWorkb
         body = new WorkbookFunctionsGaussBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

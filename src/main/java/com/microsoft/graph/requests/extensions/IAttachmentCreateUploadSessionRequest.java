@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAttachmentCreateUploadSessionRequest extends IHttpRequest {
 
-    void post(final ICallback<UploadSession> callback);
+    void post(final ICallback<? super UploadSession> callback);
 
     UploadSession post() throws ClientException;
 

@@ -36,7 +36,7 @@ public class UserChangePasswordRequest extends BaseRequest implements IUserChang
         body = new UserChangePasswordBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

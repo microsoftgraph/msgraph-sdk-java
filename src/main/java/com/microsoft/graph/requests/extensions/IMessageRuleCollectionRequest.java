@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMessageRuleCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMessageRuleCollectionPage> callback);
+    void get(final ICallback<? super IMessageRuleCollectionPage> callback);
 
     IMessageRuleCollectionPage get() throws ClientException;
 
-    void post(final MessageRule newMessageRule, final ICallback<MessageRule> callback);
+    void post(final MessageRule newMessageRule, final ICallback<? super MessageRule> callback);
 
     MessageRule post(final MessageRule newMessageRule) throws ClientException;
 

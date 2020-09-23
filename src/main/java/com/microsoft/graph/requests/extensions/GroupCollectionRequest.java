@@ -40,7 +40,7 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
         super(requestUrl, client, requestOptions, GroupCollectionResponse.class, IGroupCollectionPage.class);
     }
 
-    public void get(final ICallback<IGroupCollectionPage> callback) {
+    public void get(final ICallback<? super IGroupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final Group newGroup, final ICallback<Group> callback) {
+    public void post(final Group newGroup, final ICallback<? super Group> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

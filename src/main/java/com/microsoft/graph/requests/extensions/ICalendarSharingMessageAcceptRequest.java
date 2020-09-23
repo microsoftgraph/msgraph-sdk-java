@@ -26,7 +26,7 @@ public interface ICalendarSharingMessageAcceptRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<Calendar> callback);
+    void post(final ICallback<? super Calendar> callback);
 
     /**
      * Creates the CalendarSharingMessageAccept

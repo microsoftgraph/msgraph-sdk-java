@@ -37,7 +37,7 @@ public class MessageMoveRequest extends BaseRequest implements IMessageMoveReque
         body = new MessageMoveBody();
     }
 
-    public void post(final ICallback<Message> callback) {
+    public void post(final ICallback<? super Message> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

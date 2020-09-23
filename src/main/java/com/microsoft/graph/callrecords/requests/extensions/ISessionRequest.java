@@ -21,7 +21,7 @@ public interface ISessionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Session> callback);
+    void get(final ICallback<? super Session> callback);
 
     /**
      * Gets the Session from the service
@@ -36,7 +36,7 @@ public interface ISessionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Session> callback);
+    void delete(final ICallback<? super Session> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISessionRequest extends IHttpRequest {
      * @param sourceSession the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Session sourceSession, final ICallback<Session> callback);
+    void patch(final Session sourceSession, final ICallback<? super Session> callback);
 
     /**
      * Patches this Session with a source
@@ -68,7 +68,7 @@ public interface ISessionRequest extends IHttpRequest {
      * @param newSession the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Session newSession, final ICallback<Session> callback);
+    void post(final Session newSession, final ICallback<? super Session> callback);
 
     /**
      * Posts a Session with a new object
@@ -85,7 +85,7 @@ public interface ISessionRequest extends IHttpRequest {
      * @param newSession the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Session newSession, final ICallback<Session> callback);
+    void put(final Session newSession, final ICallback<? super Session> callback);
 
     /**
      * Posts a Session with a new object

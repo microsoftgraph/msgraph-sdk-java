@@ -37,7 +37,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<CalendarPermission> callback) {
+    public void get(final ICallback<? super CalendarPermission> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<CalendarPermission> callback) {
+    public void delete(final ICallback<? super CalendarPermission> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @param sourceCalendarPermission the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CalendarPermission sourceCalendarPermission, final ICallback<CalendarPermission> callback) {
+    public void patch(final CalendarPermission sourceCalendarPermission, final ICallback<? super CalendarPermission> callback) {
         send(HttpMethod.PATCH, callback, sourceCalendarPermission);
     }
 
@@ -96,7 +96,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @param newCalendarPermission the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CalendarPermission newCalendarPermission, final ICallback<CalendarPermission> callback) {
+    public void post(final CalendarPermission newCalendarPermission, final ICallback<? super CalendarPermission> callback) {
         send(HttpMethod.POST, callback, newCalendarPermission);
     }
 
@@ -117,7 +117,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @param newCalendarPermission the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CalendarPermission newCalendarPermission, final ICallback<CalendarPermission> callback) {
+    public void put(final CalendarPermission newCalendarPermission, final ICallback<? super CalendarPermission> callback) {
         send(HttpMethod.PUT, callback, newCalendarPermission);
     }
 

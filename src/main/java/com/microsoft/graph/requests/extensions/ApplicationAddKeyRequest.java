@@ -37,7 +37,7 @@ public class ApplicationAddKeyRequest extends BaseRequest implements IApplicatio
         body = new ApplicationAddKeyBody();
     }
 
-    public void post(final ICallback<KeyCredential> callback) {
+    public void post(final ICallback<? super KeyCredential> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

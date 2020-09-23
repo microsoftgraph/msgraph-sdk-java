@@ -35,7 +35,7 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest
         super(requestUrl, client, requestOptions, SoftwareUpdateStatusSummary.class);
     }
 
-    public void post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final IJsonBackedObject payload, final ICallback<SoftwareUpdateStatusSummary> callback) {
+    public void post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final IJsonBackedObject payload, final ICallback<? super SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest
         return null;
     }
 
-    public void get(final ICallback<SoftwareUpdateStatusSummary> callback) {
+    public void get(final ICallback<? super SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<SoftwareUpdateStatusSummary> callback) {
+	public void delete(final ICallback<? super SoftwareUpdateStatusSummary> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback) {
+	public void patch(final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback) {
 		send(HttpMethod.PATCH, callback, sourceSoftwareUpdateStatusSummary);
 	}
 

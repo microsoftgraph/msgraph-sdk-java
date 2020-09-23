@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ICertificateBasedAuthConfigurationWithReferenceRequest extends IHttpRequest {
 
-    void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final IJsonBackedObject payload, final ICallback<CertificateBasedAuthConfiguration> callback);
+    void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final IJsonBackedObject payload, final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
     CertificateBasedAuthConfiguration post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<CertificateBasedAuthConfiguration> callback);
+    void get(final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
     CertificateBasedAuthConfiguration get() throws ClientException;
 
-	void delete(final ICallback<CertificateBasedAuthConfiguration> callback);
+	void delete(final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback);
+	void patch(final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
 	CertificateBasedAuthConfiguration patch(final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration) throws ClientException;
 

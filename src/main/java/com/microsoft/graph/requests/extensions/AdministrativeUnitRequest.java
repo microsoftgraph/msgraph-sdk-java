@@ -49,7 +49,7 @@ public class AdministrativeUnitRequest extends BaseRequest implements IAdministr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AdministrativeUnit> callback) {
+    public void get(final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class AdministrativeUnitRequest extends BaseRequest implements IAdministr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AdministrativeUnit> callback) {
+    public void delete(final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class AdministrativeUnitRequest extends BaseRequest implements IAdministr
      * @param sourceAdministrativeUnit the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AdministrativeUnit sourceAdministrativeUnit, final ICallback<AdministrativeUnit> callback) {
+    public void patch(final AdministrativeUnit sourceAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.PATCH, callback, sourceAdministrativeUnit);
     }
 
@@ -108,7 +108,7 @@ public class AdministrativeUnitRequest extends BaseRequest implements IAdministr
      * @param newAdministrativeUnit the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<AdministrativeUnit> callback) {
+    public void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.POST, callback, newAdministrativeUnit);
     }
 
@@ -129,7 +129,7 @@ public class AdministrativeUnitRequest extends BaseRequest implements IAdministr
      * @param newAdministrativeUnit the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AdministrativeUnit newAdministrativeUnit, final ICallback<AdministrativeUnit> callback) {
+    public void put(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback) {
         send(HttpMethod.PUT, callback, newAdministrativeUnit);
     }
 

@@ -34,7 +34,7 @@ public class TeamsTemplateReferenceRequest extends BaseRequest implements ITeams
         super(requestUrl, client, requestOptions, TeamsTemplate.class);
     }
 
-    public void delete(final ICallback<TeamsTemplate> callback) {
+    public void delete(final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class TeamsTemplateReferenceRequest extends BaseRequest implements ITeams
      * @param srcTeamsTemplate the TeamsTemplate reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TeamsTemplate srcTeamsTemplate, final ICallback<TeamsTemplate> callback) {
+    public void put(TeamsTemplate srcTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.PUT, callback, srcTeamsTemplate);
     }
 

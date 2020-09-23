@@ -40,7 +40,7 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
         super(requestUrl, client, requestOptions, ContentTypeCollectionResponse.class, IContentTypeCollectionPage.class);
     }
 
-    public void get(final ICallback<IContentTypeCollectionPage> callback) {
+    public void get(final ICallback<? super IContentTypeCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
         return buildFromResponse(response);
     }
 
-    public void post(final ContentType newContentType, final ICallback<ContentType> callback) {
+    public void post(final ContentType newContentType, final ICallback<? super ContentType> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContentTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

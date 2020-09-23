@@ -37,7 +37,7 @@ public class WorkbookFunctionsT_Dist_RTRequest extends BaseRequest implements IW
         body = new WorkbookFunctionsT_Dist_RTBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

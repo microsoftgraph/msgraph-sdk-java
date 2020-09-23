@@ -40,7 +40,7 @@ public class ManagedAppRegistrationCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, IManagedAppRegistrationCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedAppRegistrationCollectionPage> callback) {
+    public void get(final ICallback<? super IManagedAppRegistrationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ManagedAppRegistrationCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<ManagedAppRegistration> callback) {
+    public void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppRegistrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

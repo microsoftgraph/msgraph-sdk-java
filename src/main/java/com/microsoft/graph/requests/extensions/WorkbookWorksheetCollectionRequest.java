@@ -41,7 +41,7 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
         super(requestUrl, client, requestOptions, WorkbookWorksheetCollectionResponse.class, IWorkbookWorksheetCollectionPage.class);
     }
 
-    public void get(final ICallback<IWorkbookWorksheetCollectionPage> callback) {
+    public void get(final ICallback<? super IWorkbookWorksheetCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class WorkbookWorksheetCollectionRequest extends BaseCollectionRequest<Wo
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<WorkbookWorksheet> callback) {
+    public void post(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookWorksheetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

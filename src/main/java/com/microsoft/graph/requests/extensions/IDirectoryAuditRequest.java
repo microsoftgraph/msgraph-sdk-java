@@ -21,7 +21,7 @@ public interface IDirectoryAuditRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DirectoryAudit> callback);
+    void get(final ICallback<? super DirectoryAudit> callback);
 
     /**
      * Gets the DirectoryAudit from the service
@@ -36,7 +36,7 @@ public interface IDirectoryAuditRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DirectoryAudit> callback);
+    void delete(final ICallback<? super DirectoryAudit> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDirectoryAuditRequest extends IHttpRequest {
      * @param sourceDirectoryAudit the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DirectoryAudit sourceDirectoryAudit, final ICallback<DirectoryAudit> callback);
+    void patch(final DirectoryAudit sourceDirectoryAudit, final ICallback<? super DirectoryAudit> callback);
 
     /**
      * Patches this DirectoryAudit with a source
@@ -68,7 +68,7 @@ public interface IDirectoryAuditRequest extends IHttpRequest {
      * @param newDirectoryAudit the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DirectoryAudit newDirectoryAudit, final ICallback<DirectoryAudit> callback);
+    void post(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback);
 
     /**
      * Posts a DirectoryAudit with a new object
@@ -85,7 +85,7 @@ public interface IDirectoryAuditRequest extends IHttpRequest {
      * @param newDirectoryAudit the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DirectoryAudit newDirectoryAudit, final ICallback<DirectoryAudit> callback);
+    void put(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback);
 
     /**
      * Posts a DirectoryAudit with a new object

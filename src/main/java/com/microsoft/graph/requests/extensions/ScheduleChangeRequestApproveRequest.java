@@ -36,7 +36,7 @@ public class ScheduleChangeRequestApproveRequest extends BaseRequest implements 
         body = new ScheduleChangeRequestApproveBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

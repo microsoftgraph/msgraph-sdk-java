@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMessageCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMessageCollectionPage> callback);
+    void get(final ICallback<? super IMessageCollectionPage> callback);
 
     IMessageCollectionPage get() throws ClientException;
 
-    void post(final Message newMessage, final ICallback<Message> callback);
+    void post(final Message newMessage, final ICallback<? super Message> callback);
 
     Message post(final Message newMessage) throws ClientException;
 

@@ -36,7 +36,7 @@ public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest impl
         body = new DeviceEnrollmentConfigurationAssignBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

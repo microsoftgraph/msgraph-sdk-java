@@ -40,7 +40,7 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
         super(requestUrl, client, requestOptions, TermsAndConditionsCollectionResponse.class, ITermsAndConditionsCollectionPage.class);
     }
 
-    public void get(final ICallback<ITermsAndConditionsCollectionPage> callback) {
+    public void get(final ICallback<? super ITermsAndConditionsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
         return buildFromResponse(response);
     }
 
-    public void post(final TermsAndConditions newTermsAndConditions, final ICallback<TermsAndConditions> callback) {
+    public void post(final TermsAndConditions newTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

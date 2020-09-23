@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookRangeBorderCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWorkbookRangeBorderCollectionPage> callback);
+    void get(final ICallback<? super IWorkbookRangeBorderCollectionPage> callback);
 
     IWorkbookRangeBorderCollectionPage get() throws ClientException;
 
-    void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback);
+    void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback);
 
     WorkbookRangeBorder post(final WorkbookRangeBorder newWorkbookRangeBorder) throws ClientException;
 

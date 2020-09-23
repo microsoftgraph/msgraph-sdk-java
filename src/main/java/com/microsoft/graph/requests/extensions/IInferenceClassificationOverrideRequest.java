@@ -21,7 +21,7 @@ public interface IInferenceClassificationOverrideRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<InferenceClassificationOverride> callback);
+    void get(final ICallback<? super InferenceClassificationOverride> callback);
 
     /**
      * Gets the InferenceClassificationOverride from the service
@@ -36,7 +36,7 @@ public interface IInferenceClassificationOverrideRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<InferenceClassificationOverride> callback);
+    void delete(final ICallback<? super InferenceClassificationOverride> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IInferenceClassificationOverrideRequest extends IHttpRequest {
      * @param sourceInferenceClassificationOverride the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final InferenceClassificationOverride sourceInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback);
+    void patch(final InferenceClassificationOverride sourceInferenceClassificationOverride, final ICallback<? super InferenceClassificationOverride> callback);
 
     /**
      * Patches this InferenceClassificationOverride with a source
@@ -68,7 +68,7 @@ public interface IInferenceClassificationOverrideRequest extends IHttpRequest {
      * @param newInferenceClassificationOverride the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback);
+    void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<? super InferenceClassificationOverride> callback);
 
     /**
      * Posts a InferenceClassificationOverride with a new object
@@ -85,7 +85,7 @@ public interface IInferenceClassificationOverrideRequest extends IHttpRequest {
      * @param newInferenceClassificationOverride the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback);
+    void put(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<? super InferenceClassificationOverride> callback);
 
     /**
      * Posts a InferenceClassificationOverride with a new object

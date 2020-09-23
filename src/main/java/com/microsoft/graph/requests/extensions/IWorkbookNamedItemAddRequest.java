@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookNamedItemAddRequest extends IHttpRequest {
 
-    void post(final ICallback<WorkbookNamedItem> callback);
+    void post(final ICallback<? super WorkbookNamedItem> callback);
 
     WorkbookNamedItem post() throws ClientException;
 

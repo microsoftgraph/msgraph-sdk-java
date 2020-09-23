@@ -40,7 +40,7 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
         super(requestUrl, client, requestOptions, MessageRuleCollectionResponse.class, IMessageRuleCollectionPage.class);
     }
 
-    public void get(final ICallback<IMessageRuleCollectionPage> callback) {
+    public void get(final ICallback<? super IMessageRuleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
         return buildFromResponse(response);
     }
 
-    public void post(final MessageRule newMessageRule, final ICallback<MessageRule> callback) {
+    public void post(final MessageRule newMessageRule, final ICallback<? super MessageRule> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MessageRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

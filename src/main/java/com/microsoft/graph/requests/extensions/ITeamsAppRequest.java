@@ -21,7 +21,7 @@ public interface ITeamsAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TeamsApp> callback);
+    void get(final ICallback<? super TeamsApp> callback);
 
     /**
      * Gets the TeamsApp from the service
@@ -36,7 +36,7 @@ public interface ITeamsAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TeamsApp> callback);
+    void delete(final ICallback<? super TeamsApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamsAppRequest extends IHttpRequest {
      * @param sourceTeamsApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TeamsApp sourceTeamsApp, final ICallback<TeamsApp> callback);
+    void patch(final TeamsApp sourceTeamsApp, final ICallback<? super TeamsApp> callback);
 
     /**
      * Patches this TeamsApp with a source
@@ -68,7 +68,7 @@ public interface ITeamsAppRequest extends IHttpRequest {
      * @param newTeamsApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TeamsApp newTeamsApp, final ICallback<TeamsApp> callback);
+    void post(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback);
 
     /**
      * Posts a TeamsApp with a new object
@@ -85,7 +85,7 @@ public interface ITeamsAppRequest extends IHttpRequest {
      * @param newTeamsApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TeamsApp newTeamsApp, final ICallback<TeamsApp> callback);
+    void put(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback);
 
     /**
      * Posts a TeamsApp with a new object

@@ -21,7 +21,7 @@ public interface IRecordOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RecordOperation> callback);
+    void get(final ICallback<? super RecordOperation> callback);
 
     /**
      * Gets the RecordOperation from the service
@@ -36,7 +36,7 @@ public interface IRecordOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RecordOperation> callback);
+    void delete(final ICallback<? super RecordOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRecordOperationRequest extends IHttpRequest {
      * @param sourceRecordOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RecordOperation sourceRecordOperation, final ICallback<RecordOperation> callback);
+    void patch(final RecordOperation sourceRecordOperation, final ICallback<? super RecordOperation> callback);
 
     /**
      * Patches this RecordOperation with a source
@@ -68,7 +68,7 @@ public interface IRecordOperationRequest extends IHttpRequest {
      * @param newRecordOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RecordOperation newRecordOperation, final ICallback<RecordOperation> callback);
+    void post(final RecordOperation newRecordOperation, final ICallback<? super RecordOperation> callback);
 
     /**
      * Posts a RecordOperation with a new object
@@ -85,7 +85,7 @@ public interface IRecordOperationRequest extends IHttpRequest {
      * @param newRecordOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RecordOperation newRecordOperation, final ICallback<RecordOperation> callback);
+    void put(final RecordOperation newRecordOperation, final ICallback<? super RecordOperation> callback);
 
     /**
      * Posts a RecordOperation with a new object

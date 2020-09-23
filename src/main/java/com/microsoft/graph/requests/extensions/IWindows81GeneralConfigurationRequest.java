@@ -21,7 +21,7 @@ public interface IWindows81GeneralConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows81GeneralConfiguration> callback);
+    void get(final ICallback<? super Windows81GeneralConfiguration> callback);
 
     /**
      * Gets the Windows81GeneralConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows81GeneralConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows81GeneralConfiguration> callback);
+    void delete(final ICallback<? super Windows81GeneralConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows81GeneralConfigurationRequest extends IHttpRequest {
      * @param sourceWindows81GeneralConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows81GeneralConfiguration sourceWindows81GeneralConfiguration, final ICallback<Windows81GeneralConfiguration> callback);
+    void patch(final Windows81GeneralConfiguration sourceWindows81GeneralConfiguration, final ICallback<? super Windows81GeneralConfiguration> callback);
 
     /**
      * Patches this Windows81GeneralConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows81GeneralConfigurationRequest extends IHttpRequest {
      * @param newWindows81GeneralConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows81GeneralConfiguration newWindows81GeneralConfiguration, final ICallback<Windows81GeneralConfiguration> callback);
+    void post(final Windows81GeneralConfiguration newWindows81GeneralConfiguration, final ICallback<? super Windows81GeneralConfiguration> callback);
 
     /**
      * Posts a Windows81GeneralConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows81GeneralConfigurationRequest extends IHttpRequest {
      * @param newWindows81GeneralConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows81GeneralConfiguration newWindows81GeneralConfiguration, final ICallback<Windows81GeneralConfiguration> callback);
+    void put(final Windows81GeneralConfiguration newWindows81GeneralConfiguration, final ICallback<? super Windows81GeneralConfiguration> callback);
 
     /**
      * Posts a Windows81GeneralConfiguration with a new object

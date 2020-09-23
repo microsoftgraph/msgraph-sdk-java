@@ -27,19 +27,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITermsAndConditionsWithReferenceRequest extends IHttpRequest {
 
-    void post(final TermsAndConditions newTermsAndConditions, final IJsonBackedObject payload, final ICallback<TermsAndConditions> callback);
+    void post(final TermsAndConditions newTermsAndConditions, final IJsonBackedObject payload, final ICallback<? super TermsAndConditions> callback);
 
     TermsAndConditions post(final TermsAndConditions newTermsAndConditions, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<TermsAndConditions> callback);
+    void get(final ICallback<? super TermsAndConditions> callback);
 
     TermsAndConditions get() throws ClientException;
 
-	void delete(final ICallback<TermsAndConditions> callback);
+	void delete(final ICallback<? super TermsAndConditions> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final TermsAndConditions sourceTermsAndConditions, final ICallback<TermsAndConditions> callback);
+	void patch(final TermsAndConditions sourceTermsAndConditions, final ICallback<? super TermsAndConditions> callback);
 
 	TermsAndConditions patch(final TermsAndConditions sourceTermsAndConditions) throws ClientException;
 

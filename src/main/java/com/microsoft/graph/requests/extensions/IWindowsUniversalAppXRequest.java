@@ -21,7 +21,7 @@ public interface IWindowsUniversalAppXRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsUniversalAppX> callback);
+    void get(final ICallback<? super WindowsUniversalAppX> callback);
 
     /**
      * Gets the WindowsUniversalAppX from the service
@@ -36,7 +36,7 @@ public interface IWindowsUniversalAppXRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsUniversalAppX> callback);
+    void delete(final ICallback<? super WindowsUniversalAppX> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsUniversalAppXRequest extends IHttpRequest {
      * @param sourceWindowsUniversalAppX the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsUniversalAppX sourceWindowsUniversalAppX, final ICallback<WindowsUniversalAppX> callback);
+    void patch(final WindowsUniversalAppX sourceWindowsUniversalAppX, final ICallback<? super WindowsUniversalAppX> callback);
 
     /**
      * Patches this WindowsUniversalAppX with a source
@@ -68,7 +68,7 @@ public interface IWindowsUniversalAppXRequest extends IHttpRequest {
      * @param newWindowsUniversalAppX the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsUniversalAppX newWindowsUniversalAppX, final ICallback<WindowsUniversalAppX> callback);
+    void post(final WindowsUniversalAppX newWindowsUniversalAppX, final ICallback<? super WindowsUniversalAppX> callback);
 
     /**
      * Posts a WindowsUniversalAppX with a new object
@@ -85,7 +85,7 @@ public interface IWindowsUniversalAppXRequest extends IHttpRequest {
      * @param newWindowsUniversalAppX the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsUniversalAppX newWindowsUniversalAppX, final ICallback<WindowsUniversalAppX> callback);
+    void put(final WindowsUniversalAppX newWindowsUniversalAppX, final ICallback<? super WindowsUniversalAppX> callback);
 
     /**
      * Posts a WindowsUniversalAppX with a new object

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceCategoryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceCategoryCollectionPage> callback);
+    void get(final ICallback<? super IDeviceCategoryCollectionPage> callback);
 
     IDeviceCategoryCollectionPage get() throws ClientException;
 
-    void post(final DeviceCategory newDeviceCategory, final ICallback<DeviceCategory> callback);
+    void post(final DeviceCategory newDeviceCategory, final ICallback<? super DeviceCategory> callback);
 
     DeviceCategory post(final DeviceCategory newDeviceCategory) throws ClientException;
 

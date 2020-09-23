@@ -44,7 +44,7 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRe
     }
 
 
-    public void post(final ICallback<IDeviceConfigurationAssignCollectionPage> callback) {
+    public void post(final ICallback<? super IDeviceConfigurationAssignCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

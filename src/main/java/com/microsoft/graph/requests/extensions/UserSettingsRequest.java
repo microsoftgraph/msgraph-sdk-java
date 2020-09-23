@@ -39,7 +39,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserSettings> callback) {
+    public void get(final ICallback<? super UserSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserSettings> callback) {
+    public void delete(final ICallback<? super UserSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @param sourceUserSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserSettings sourceUserSettings, final ICallback<UserSettings> callback) {
+    public void patch(final UserSettings sourceUserSettings, final ICallback<? super UserSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceUserSettings);
     }
 
@@ -98,7 +98,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @param newUserSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserSettings newUserSettings, final ICallback<UserSettings> callback) {
+    public void post(final UserSettings newUserSettings, final ICallback<? super UserSettings> callback) {
         send(HttpMethod.POST, callback, newUserSettings);
     }
 
@@ -119,7 +119,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @param newUserSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserSettings newUserSettings, final ICallback<UserSettings> callback) {
+    public void put(final UserSettings newUserSettings, final ICallback<? super UserSettings> callback) {
         send(HttpMethod.PUT, callback, newUserSettings);
     }
 

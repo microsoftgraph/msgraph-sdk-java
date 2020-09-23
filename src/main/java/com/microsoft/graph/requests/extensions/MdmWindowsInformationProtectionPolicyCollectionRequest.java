@@ -40,7 +40,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
         super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicyCollectionResponse.class, IMdmWindowsInformationProtectionPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IMdmWindowsInformationProtectionPolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IMdmWindowsInformationProtectionPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
         return buildFromResponse(response);
     }
 
-    public void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<MdmWindowsInformationProtectionPolicy> callback) {
+    public void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MdmWindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

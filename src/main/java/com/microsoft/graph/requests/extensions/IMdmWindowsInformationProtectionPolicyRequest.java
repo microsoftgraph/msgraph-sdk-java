@@ -21,7 +21,7 @@ public interface IMdmWindowsInformationProtectionPolicyRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MdmWindowsInformationProtectionPolicy> callback);
+    void get(final ICallback<? super MdmWindowsInformationProtectionPolicy> callback);
 
     /**
      * Gets the MdmWindowsInformationProtectionPolicy from the service
@@ -36,7 +36,7 @@ public interface IMdmWindowsInformationProtectionPolicyRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MdmWindowsInformationProtectionPolicy> callback);
+    void delete(final ICallback<? super MdmWindowsInformationProtectionPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMdmWindowsInformationProtectionPolicyRequest extends IHttpRequ
      * @param sourceMdmWindowsInformationProtectionPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy, final ICallback<MdmWindowsInformationProtectionPolicy> callback);
+    void patch(final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback);
 
     /**
      * Patches this MdmWindowsInformationProtectionPolicy with a source
@@ -68,7 +68,7 @@ public interface IMdmWindowsInformationProtectionPolicyRequest extends IHttpRequ
      * @param newMdmWindowsInformationProtectionPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<MdmWindowsInformationProtectionPolicy> callback);
+    void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback);
 
     /**
      * Posts a MdmWindowsInformationProtectionPolicy with a new object
@@ -85,7 +85,7 @@ public interface IMdmWindowsInformationProtectionPolicyRequest extends IHttpRequ
      * @param newMdmWindowsInformationProtectionPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<MdmWindowsInformationProtectionPolicy> callback);
+    void put(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback);
 
     /**
      * Posts a MdmWindowsInformationProtectionPolicy with a new object

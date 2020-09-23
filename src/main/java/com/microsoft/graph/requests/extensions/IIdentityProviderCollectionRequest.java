@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IIdentityProviderCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IIdentityProviderCollectionPage> callback);
+    void get(final ICallback<? super IIdentityProviderCollectionPage> callback);
 
     IIdentityProviderCollectionPage get() throws ClientException;
 
-    void post(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback);
+    void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback);
 
     IdentityProvider post(final IdentityProvider newIdentityProvider) throws ClientException;
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISwapShiftsChangeRequestCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISwapShiftsChangeRequestCollectionPage> callback);
+    void get(final ICallback<? super ISwapShiftsChangeRequestCollectionPage> callback);
 
     ISwapShiftsChangeRequestCollectionPage get() throws ClientException;
 
-    void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback);
+    void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback);
 
     SwapShiftsChangeRequest post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest) throws ClientException;
 

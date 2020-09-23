@@ -21,7 +21,7 @@ public interface ICalendarRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Calendar> callback);
+    void get(final ICallback<? super Calendar> callback);
 
     /**
      * Gets the Calendar from the service
@@ -36,7 +36,7 @@ public interface ICalendarRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Calendar> callback);
+    void delete(final ICallback<? super Calendar> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICalendarRequest extends IHttpRequest {
      * @param sourceCalendar the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Calendar sourceCalendar, final ICallback<Calendar> callback);
+    void patch(final Calendar sourceCalendar, final ICallback<? super Calendar> callback);
 
     /**
      * Patches this Calendar with a source
@@ -68,7 +68,7 @@ public interface ICalendarRequest extends IHttpRequest {
      * @param newCalendar the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Calendar newCalendar, final ICallback<Calendar> callback);
+    void post(final Calendar newCalendar, final ICallback<? super Calendar> callback);
 
     /**
      * Posts a Calendar with a new object
@@ -85,7 +85,7 @@ public interface ICalendarRequest extends IHttpRequest {
      * @param newCalendar the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Calendar newCalendar, final ICallback<Calendar> callback);
+    void put(final Calendar newCalendar, final ICallback<? super Calendar> callback);
 
     /**
      * Posts a Calendar with a new object

@@ -40,7 +40,7 @@ public class ChannelCollectionRequest extends BaseCollectionRequest<ChannelColle
         super(requestUrl, client, requestOptions, ChannelCollectionResponse.class, IChannelCollectionPage.class);
     }
 
-    public void get(final ICallback<IChannelCollectionPage> callback) {
+    public void get(final ICallback<? super IChannelCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ChannelCollectionRequest extends BaseCollectionRequest<ChannelColle
         return buildFromResponse(response);
     }
 
-    public void post(final Channel newChannel, final ICallback<Channel> callback) {
+    public void post(final Channel newChannel, final ICallback<? super Channel> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChannelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

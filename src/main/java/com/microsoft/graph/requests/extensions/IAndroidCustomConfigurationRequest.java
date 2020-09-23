@@ -21,7 +21,7 @@ public interface IAndroidCustomConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidCustomConfiguration> callback);
+    void get(final ICallback<? super AndroidCustomConfiguration> callback);
 
     /**
      * Gets the AndroidCustomConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidCustomConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidCustomConfiguration> callback);
+    void delete(final ICallback<? super AndroidCustomConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidCustomConfigurationRequest extends IHttpRequest {
      * @param sourceAndroidCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidCustomConfiguration sourceAndroidCustomConfiguration, final ICallback<AndroidCustomConfiguration> callback);
+    void patch(final AndroidCustomConfiguration sourceAndroidCustomConfiguration, final ICallback<? super AndroidCustomConfiguration> callback);
 
     /**
      * Patches this AndroidCustomConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidCustomConfigurationRequest extends IHttpRequest {
      * @param newAndroidCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<AndroidCustomConfiguration> callback);
+    void post(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<? super AndroidCustomConfiguration> callback);
 
     /**
      * Posts a AndroidCustomConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidCustomConfigurationRequest extends IHttpRequest {
      * @param newAndroidCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<AndroidCustomConfiguration> callback);
+    void put(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<? super AndroidCustomConfiguration> callback);
 
     /**
      * Posts a AndroidCustomConfiguration with a new object

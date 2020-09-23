@@ -42,7 +42,7 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyCollectionResponse.class, IDeviceCompliancePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceCompliancePolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceCompliancePolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,7 +61,7 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback) {
+    public void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

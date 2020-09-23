@@ -21,7 +21,7 @@ public interface IDeviceCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceCategory> callback);
+    void get(final ICallback<? super DeviceCategory> callback);
 
     /**
      * Gets the DeviceCategory from the service
@@ -36,7 +36,7 @@ public interface IDeviceCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceCategory> callback);
+    void delete(final ICallback<? super DeviceCategory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceCategoryRequest extends IHttpRequest {
      * @param sourceDeviceCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceCategory sourceDeviceCategory, final ICallback<DeviceCategory> callback);
+    void patch(final DeviceCategory sourceDeviceCategory, final ICallback<? super DeviceCategory> callback);
 
     /**
      * Patches this DeviceCategory with a source
@@ -68,7 +68,7 @@ public interface IDeviceCategoryRequest extends IHttpRequest {
      * @param newDeviceCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceCategory newDeviceCategory, final ICallback<DeviceCategory> callback);
+    void post(final DeviceCategory newDeviceCategory, final ICallback<? super DeviceCategory> callback);
 
     /**
      * Posts a DeviceCategory with a new object
@@ -85,7 +85,7 @@ public interface IDeviceCategoryRequest extends IHttpRequest {
      * @param newDeviceCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceCategory newDeviceCategory, final ICallback<DeviceCategory> callback);
+    void put(final DeviceCategory newDeviceCategory, final ICallback<? super DeviceCategory> callback);
 
     /**
      * Posts a DeviceCategory with a new object

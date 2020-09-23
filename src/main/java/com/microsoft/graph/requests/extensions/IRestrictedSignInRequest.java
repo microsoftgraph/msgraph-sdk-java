@@ -21,7 +21,7 @@ public interface IRestrictedSignInRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RestrictedSignIn> callback);
+    void get(final ICallback<? super RestrictedSignIn> callback);
 
     /**
      * Gets the RestrictedSignIn from the service
@@ -36,7 +36,7 @@ public interface IRestrictedSignInRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RestrictedSignIn> callback);
+    void delete(final ICallback<? super RestrictedSignIn> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRestrictedSignInRequest extends IHttpRequest {
      * @param sourceRestrictedSignIn the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RestrictedSignIn sourceRestrictedSignIn, final ICallback<RestrictedSignIn> callback);
+    void patch(final RestrictedSignIn sourceRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback);
 
     /**
      * Patches this RestrictedSignIn with a source
@@ -68,7 +68,7 @@ public interface IRestrictedSignInRequest extends IHttpRequest {
      * @param newRestrictedSignIn the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<RestrictedSignIn> callback);
+    void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback);
 
     /**
      * Posts a RestrictedSignIn with a new object
@@ -85,7 +85,7 @@ public interface IRestrictedSignInRequest extends IHttpRequest {
      * @param newRestrictedSignIn the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RestrictedSignIn newRestrictedSignIn, final ICallback<RestrictedSignIn> callback);
+    void put(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback);
 
     /**
      * Posts a RestrictedSignIn with a new object

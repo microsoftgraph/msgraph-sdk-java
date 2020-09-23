@@ -37,7 +37,7 @@ public class ScopedRoleMembershipRequest extends BaseRequest implements IScopedR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ScopedRoleMembership> callback) {
+    public void get(final ICallback<? super ScopedRoleMembership> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ScopedRoleMembershipRequest extends BaseRequest implements IScopedR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ScopedRoleMembership> callback) {
+    public void delete(final ICallback<? super ScopedRoleMembership> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ScopedRoleMembershipRequest extends BaseRequest implements IScopedR
      * @param sourceScopedRoleMembership the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ScopedRoleMembership sourceScopedRoleMembership, final ICallback<ScopedRoleMembership> callback) {
+    public void patch(final ScopedRoleMembership sourceScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback) {
         send(HttpMethod.PATCH, callback, sourceScopedRoleMembership);
     }
 
@@ -96,7 +96,7 @@ public class ScopedRoleMembershipRequest extends BaseRequest implements IScopedR
      * @param newScopedRoleMembership the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<ScopedRoleMembership> callback) {
+    public void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback) {
         send(HttpMethod.POST, callback, newScopedRoleMembership);
     }
 
@@ -117,7 +117,7 @@ public class ScopedRoleMembershipRequest extends BaseRequest implements IScopedR
      * @param newScopedRoleMembership the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ScopedRoleMembership newScopedRoleMembership, final ICallback<ScopedRoleMembership> callback) {
+    public void put(final ScopedRoleMembership newScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback) {
         send(HttpMethod.PUT, callback, newScopedRoleMembership);
     }
 

@@ -37,7 +37,7 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileThreatDefenseConnector> callback) {
+    public void get(final ICallback<? super MobileThreatDefenseConnector> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileThreatDefenseConnector> callback) {
+    public void delete(final ICallback<? super MobileThreatDefenseConnector> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest implements 
      * @param sourceMobileThreatDefenseConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileThreatDefenseConnector sourceMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback) {
+    public void patch(final MobileThreatDefenseConnector sourceMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileThreatDefenseConnector);
     }
 
@@ -96,7 +96,7 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest implements 
      * @param newMobileThreatDefenseConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback) {
+    public void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback) {
         send(HttpMethod.POST, callback, newMobileThreatDefenseConnector);
     }
 
@@ -117,7 +117,7 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest implements 
      * @param newMobileThreatDefenseConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback) {
+    public void put(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback) {
         send(HttpMethod.PUT, callback, newMobileThreatDefenseConnector);
     }
 

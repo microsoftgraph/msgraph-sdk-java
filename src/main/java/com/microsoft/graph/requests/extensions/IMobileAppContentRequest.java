@@ -21,7 +21,7 @@ public interface IMobileAppContentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppContent> callback);
+    void get(final ICallback<? super MobileAppContent> callback);
 
     /**
      * Gets the MobileAppContent from the service
@@ -36,7 +36,7 @@ public interface IMobileAppContentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppContent> callback);
+    void delete(final ICallback<? super MobileAppContent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppContentRequest extends IHttpRequest {
      * @param sourceMobileAppContent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppContent sourceMobileAppContent, final ICallback<MobileAppContent> callback);
+    void patch(final MobileAppContent sourceMobileAppContent, final ICallback<? super MobileAppContent> callback);
 
     /**
      * Patches this MobileAppContent with a source
@@ -68,7 +68,7 @@ public interface IMobileAppContentRequest extends IHttpRequest {
      * @param newMobileAppContent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppContent newMobileAppContent, final ICallback<MobileAppContent> callback);
+    void post(final MobileAppContent newMobileAppContent, final ICallback<? super MobileAppContent> callback);
 
     /**
      * Posts a MobileAppContent with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppContentRequest extends IHttpRequest {
      * @param newMobileAppContent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppContent newMobileAppContent, final ICallback<MobileAppContent> callback);
+    void put(final MobileAppContent newMobileAppContent, final ICallback<? super MobileAppContent> callback);
 
     /**
      * Posts a MobileAppContent with a new object

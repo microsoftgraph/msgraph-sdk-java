@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
  */
 public interface ITokenLifetimePolicyCollectionReferenceRequest {
 
-    void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback);
+    void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback);
 
     TokenLifetimePolicy post(final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException;
 

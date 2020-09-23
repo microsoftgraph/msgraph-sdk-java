@@ -45,7 +45,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PlannerTask> callback) {
+    public void get(final ICallback<? super PlannerTask> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PlannerTask> callback) {
+    public void delete(final ICallback<? super PlannerTask> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @param sourcePlannerTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerTask sourcePlannerTask, final ICallback<PlannerTask> callback) {
+    public void patch(final PlannerTask sourcePlannerTask, final ICallback<? super PlannerTask> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerTask);
     }
 
@@ -104,7 +104,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @param newPlannerTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerTask newPlannerTask, final ICallback<PlannerTask> callback) {
+    public void post(final PlannerTask newPlannerTask, final ICallback<? super PlannerTask> callback) {
         send(HttpMethod.POST, callback, newPlannerTask);
     }
 
@@ -125,7 +125,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @param newPlannerTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerTask newPlannerTask, final ICallback<PlannerTask> callback) {
+    public void put(final PlannerTask newPlannerTask, final ICallback<? super PlannerTask> callback) {
         send(HttpMethod.PUT, callback, newPlannerTask);
     }
 

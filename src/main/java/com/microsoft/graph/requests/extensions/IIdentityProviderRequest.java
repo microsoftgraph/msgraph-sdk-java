@@ -21,7 +21,7 @@ public interface IIdentityProviderRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IdentityProvider> callback);
+    void get(final ICallback<? super IdentityProvider> callback);
 
     /**
      * Gets the IdentityProvider from the service
@@ -36,7 +36,7 @@ public interface IIdentityProviderRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IdentityProvider> callback);
+    void delete(final ICallback<? super IdentityProvider> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIdentityProviderRequest extends IHttpRequest {
      * @param sourceIdentityProvider the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IdentityProvider sourceIdentityProvider, final ICallback<IdentityProvider> callback);
+    void patch(final IdentityProvider sourceIdentityProvider, final ICallback<? super IdentityProvider> callback);
 
     /**
      * Patches this IdentityProvider with a source
@@ -68,7 +68,7 @@ public interface IIdentityProviderRequest extends IHttpRequest {
      * @param newIdentityProvider the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback);
+    void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback);
 
     /**
      * Posts a IdentityProvider with a new object
@@ -85,7 +85,7 @@ public interface IIdentityProviderRequest extends IHttpRequest {
      * @param newIdentityProvider the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback);
+    void put(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback);
 
     /**
      * Posts a IdentityProvider with a new object

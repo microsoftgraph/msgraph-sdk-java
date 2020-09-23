@@ -60,7 +60,7 @@ public class CallRequest extends BaseRequest implements ICallRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Call> callback) {
+    public void get(final ICallback<? super Call> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class CallRequest extends BaseRequest implements ICallRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Call> callback) {
+    public void delete(final ICallback<? super Call> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -98,7 +98,7 @@ public class CallRequest extends BaseRequest implements ICallRequest {
      * @param sourceCall the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Call sourceCall, final ICallback<Call> callback) {
+    public void patch(final Call sourceCall, final ICallback<? super Call> callback) {
         send(HttpMethod.PATCH, callback, sourceCall);
     }
 
@@ -119,7 +119,7 @@ public class CallRequest extends BaseRequest implements ICallRequest {
      * @param newCall the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Call newCall, final ICallback<Call> callback) {
+    public void post(final Call newCall, final ICallback<? super Call> callback) {
         send(HttpMethod.POST, callback, newCall);
     }
 
@@ -140,7 +140,7 @@ public class CallRequest extends BaseRequest implements ICallRequest {
      * @param newCall the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Call newCall, final ICallback<Call> callback) {
+    public void put(final Call newCall, final ICallback<? super Call> callback) {
         send(HttpMethod.PUT, callback, newCall);
     }
 

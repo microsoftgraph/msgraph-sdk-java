@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IMobileAppCategoryReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<MobileAppCategory> callback);
+    void delete(final ICallback<? super MobileAppCategory> callback);
 
     MobileAppCategory delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IMobileAppCategoryReferenceRequest extends IHttpRequest {
      * @param srcMobileAppCategory the MobileAppCategory to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(MobileAppCategory srcMobileAppCategory, final ICallback<MobileAppCategory> callback);
+    void put(MobileAppCategory srcMobileAppCategory, final ICallback<? super MobileAppCategory> callback);
 
     /**
      * Puts the MobileAppCategory

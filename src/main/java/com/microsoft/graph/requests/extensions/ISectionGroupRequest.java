@@ -21,7 +21,7 @@ public interface ISectionGroupRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SectionGroup> callback);
+    void get(final ICallback<? super SectionGroup> callback);
 
     /**
      * Gets the SectionGroup from the service
@@ -36,7 +36,7 @@ public interface ISectionGroupRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SectionGroup> callback);
+    void delete(final ICallback<? super SectionGroup> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISectionGroupRequest extends IHttpRequest {
      * @param sourceSectionGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SectionGroup sourceSectionGroup, final ICallback<SectionGroup> callback);
+    void patch(final SectionGroup sourceSectionGroup, final ICallback<? super SectionGroup> callback);
 
     /**
      * Patches this SectionGroup with a source
@@ -68,7 +68,7 @@ public interface ISectionGroupRequest extends IHttpRequest {
      * @param newSectionGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SectionGroup newSectionGroup, final ICallback<SectionGroup> callback);
+    void post(final SectionGroup newSectionGroup, final ICallback<? super SectionGroup> callback);
 
     /**
      * Posts a SectionGroup with a new object
@@ -85,7 +85,7 @@ public interface ISectionGroupRequest extends IHttpRequest {
      * @param newSectionGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SectionGroup newSectionGroup, final ICallback<SectionGroup> callback);
+    void put(final SectionGroup newSectionGroup, final ICallback<? super SectionGroup> callback);
 
     /**
      * Posts a SectionGroup with a new object

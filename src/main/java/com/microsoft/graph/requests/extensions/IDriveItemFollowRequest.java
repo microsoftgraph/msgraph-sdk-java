@@ -26,7 +26,7 @@ public interface IDriveItemFollowRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<DriveItem> callback);
+    void post(final ICallback<? super DriveItem> callback);
 
     /**
      * Creates the DriveItemFollow

@@ -40,7 +40,7 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, UserInstallStateSummaryCollectionResponse.class, IUserInstallStateSummaryCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserInstallStateSummaryCollectionPage> callback) {
+    public void get(final ICallback<? super IUserInstallStateSummaryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<UserInstallStateSummary> callback) {
+    public void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserInstallStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -21,7 +21,7 @@ public interface IPermissionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Permission> callback);
+    void get(final ICallback<? super Permission> callback);
 
     /**
      * Gets the Permission from the service
@@ -36,7 +36,7 @@ public interface IPermissionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Permission> callback);
+    void delete(final ICallback<? super Permission> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPermissionRequest extends IHttpRequest {
      * @param sourcePermission the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Permission sourcePermission, final ICallback<Permission> callback);
+    void patch(final Permission sourcePermission, final ICallback<? super Permission> callback);
 
     /**
      * Patches this Permission with a source
@@ -68,7 +68,7 @@ public interface IPermissionRequest extends IHttpRequest {
      * @param newPermission the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Permission newPermission, final ICallback<Permission> callback);
+    void post(final Permission newPermission, final ICallback<? super Permission> callback);
 
     /**
      * Posts a Permission with a new object
@@ -85,7 +85,7 @@ public interface IPermissionRequest extends IHttpRequest {
      * @param newPermission the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Permission newPermission, final ICallback<Permission> callback);
+    void put(final Permission newPermission, final ICallback<? super Permission> callback);
 
     /**
      * Posts a Permission with a new object

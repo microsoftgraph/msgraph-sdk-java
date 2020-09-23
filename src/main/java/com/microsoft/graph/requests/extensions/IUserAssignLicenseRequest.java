@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserAssignLicenseRequest extends IHttpRequest {
 
-    void post(final ICallback<User> callback);
+    void post(final ICallback<? super User> callback);
 
     User post() throws ClientException;
 

@@ -37,7 +37,7 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<User> callback) {
+    public void post(final ICallback<? super User> callback) {
         send(HttpMethod.POST, callback, null);
     }
 

@@ -37,7 +37,7 @@ public class DriveItemFollowRequest extends BaseRequest implements IDriveItemFol
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<DriveItem> callback) {
+    public void post(final ICallback<? super DriveItem> callback) {
         send(HttpMethod.POST, callback, null);
     }
 

@@ -37,7 +37,7 @@ public class WorkbookFunctionsLnRequest extends BaseRequest implements IWorkbook
         body = new WorkbookFunctionsLnBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

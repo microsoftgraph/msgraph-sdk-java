@@ -21,7 +21,7 @@ public interface IWindows10MobileCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10MobileCompliancePolicy> callback);
+    void get(final ICallback<? super Windows10MobileCompliancePolicy> callback);
 
     /**
      * Gets the Windows10MobileCompliancePolicy from the service
@@ -36,7 +36,7 @@ public interface IWindows10MobileCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10MobileCompliancePolicy> callback);
+    void delete(final ICallback<? super Windows10MobileCompliancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10MobileCompliancePolicyRequest extends IHttpRequest {
      * @param sourceWindows10MobileCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10MobileCompliancePolicy sourceWindows10MobileCompliancePolicy, final ICallback<Windows10MobileCompliancePolicy> callback);
+    void patch(final Windows10MobileCompliancePolicy sourceWindows10MobileCompliancePolicy, final ICallback<? super Windows10MobileCompliancePolicy> callback);
 
     /**
      * Patches this Windows10MobileCompliancePolicy with a source
@@ -68,7 +68,7 @@ public interface IWindows10MobileCompliancePolicyRequest extends IHttpRequest {
      * @param newWindows10MobileCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<Windows10MobileCompliancePolicy> callback);
+    void post(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<? super Windows10MobileCompliancePolicy> callback);
 
     /**
      * Posts a Windows10MobileCompliancePolicy with a new object
@@ -85,7 +85,7 @@ public interface IWindows10MobileCompliancePolicyRequest extends IHttpRequest {
      * @param newWindows10MobileCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<Windows10MobileCompliancePolicy> callback);
+    void put(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<? super Windows10MobileCompliancePolicy> callback);
 
     /**
      * Posts a Windows10MobileCompliancePolicy with a new object

@@ -37,7 +37,7 @@ public class WorkbookFunctionsLenbRequest extends BaseRequest implements IWorkbo
         body = new WorkbookFunctionsLenbBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

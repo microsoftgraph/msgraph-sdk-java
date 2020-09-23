@@ -35,7 +35,7 @@ public class MobileAppCategoryWithReferenceRequest extends BaseRequest implement
         super(requestUrl, client, requestOptions, MobileAppCategory.class);
     }
 
-    public void post(final MobileAppCategory newMobileAppCategory, final IJsonBackedObject payload, final ICallback<MobileAppCategory> callback) {
+    public void post(final MobileAppCategory newMobileAppCategory, final IJsonBackedObject payload, final ICallback<? super MobileAppCategory> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class MobileAppCategoryWithReferenceRequest extends BaseRequest implement
         return null;
     }
 
-    public void get(final ICallback<MobileAppCategory> callback) {
+    public void get(final ICallback<? super MobileAppCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class MobileAppCategoryWithReferenceRequest extends BaseRequest implement
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<MobileAppCategory> callback) {
+	public void delete(final ICallback<? super MobileAppCategory> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class MobileAppCategoryWithReferenceRequest extends BaseRequest implement
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final MobileAppCategory sourceMobileAppCategory, final ICallback<MobileAppCategory> callback) {
+	public void patch(final MobileAppCategory sourceMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
 		send(HttpMethod.PATCH, callback, sourceMobileAppCategory);
 	}
 

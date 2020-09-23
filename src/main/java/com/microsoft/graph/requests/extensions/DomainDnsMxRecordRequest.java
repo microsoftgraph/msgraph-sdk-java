@@ -37,7 +37,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest implements IDomainDnsM
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DomainDnsMxRecord> callback) {
+    public void get(final ICallback<? super DomainDnsMxRecord> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest implements IDomainDnsM
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DomainDnsMxRecord> callback) {
+    public void delete(final ICallback<? super DomainDnsMxRecord> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest implements IDomainDnsM
      * @param sourceDomainDnsMxRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DomainDnsMxRecord sourceDomainDnsMxRecord, final ICallback<DomainDnsMxRecord> callback) {
+    public void patch(final DomainDnsMxRecord sourceDomainDnsMxRecord, final ICallback<? super DomainDnsMxRecord> callback) {
         send(HttpMethod.PATCH, callback, sourceDomainDnsMxRecord);
     }
 
@@ -96,7 +96,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest implements IDomainDnsM
      * @param newDomainDnsMxRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<DomainDnsMxRecord> callback) {
+    public void post(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<? super DomainDnsMxRecord> callback) {
         send(HttpMethod.POST, callback, newDomainDnsMxRecord);
     }
 
@@ -117,7 +117,7 @@ public class DomainDnsMxRecordRequest extends BaseRequest implements IDomainDnsM
      * @param newDomainDnsMxRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<DomainDnsMxRecord> callback) {
+    public void put(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<? super DomainDnsMxRecord> callback) {
         send(HttpMethod.PUT, callback, newDomainDnsMxRecord);
     }
 

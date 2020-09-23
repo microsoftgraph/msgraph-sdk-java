@@ -21,7 +21,7 @@ public interface IColumnDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ColumnDefinition> callback);
+    void get(final ICallback<? super ColumnDefinition> callback);
 
     /**
      * Gets the ColumnDefinition from the service
@@ -36,7 +36,7 @@ public interface IColumnDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ColumnDefinition> callback);
+    void delete(final ICallback<? super ColumnDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IColumnDefinitionRequest extends IHttpRequest {
      * @param sourceColumnDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ColumnDefinition sourceColumnDefinition, final ICallback<ColumnDefinition> callback);
+    void patch(final ColumnDefinition sourceColumnDefinition, final ICallback<? super ColumnDefinition> callback);
 
     /**
      * Patches this ColumnDefinition with a source
@@ -68,7 +68,7 @@ public interface IColumnDefinitionRequest extends IHttpRequest {
      * @param newColumnDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ColumnDefinition newColumnDefinition, final ICallback<ColumnDefinition> callback);
+    void post(final ColumnDefinition newColumnDefinition, final ICallback<? super ColumnDefinition> callback);
 
     /**
      * Posts a ColumnDefinition with a new object
@@ -85,7 +85,7 @@ public interface IColumnDefinitionRequest extends IHttpRequest {
      * @param newColumnDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ColumnDefinition newColumnDefinition, final ICallback<ColumnDefinition> callback);
+    void put(final ColumnDefinition newColumnDefinition, final ICallback<? super ColumnDefinition> callback);
 
     /**
      * Posts a ColumnDefinition with a new object

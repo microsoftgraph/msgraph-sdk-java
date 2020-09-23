@@ -37,7 +37,7 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback) {
+    public void get(final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback) {
+    public void delete(final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest imp
      * @param sourcePlannerAssignedToTaskBoardTaskFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerAssignedToTaskBoardTaskFormat sourcePlannerAssignedToTaskBoardTaskFormat, final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback) {
+    public void patch(final PlannerAssignedToTaskBoardTaskFormat sourcePlannerAssignedToTaskBoardTaskFormat, final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerAssignedToTaskBoardTaskFormat);
     }
 
@@ -96,7 +96,7 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest imp
      * @param newPlannerAssignedToTaskBoardTaskFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat, final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback) {
+    public void post(final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat, final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback) {
         send(HttpMethod.POST, callback, newPlannerAssignedToTaskBoardTaskFormat);
     }
 
@@ -117,7 +117,7 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest imp
      * @param newPlannerAssignedToTaskBoardTaskFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat, final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback) {
+    public void put(final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat, final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback) {
         send(HttpMethod.PUT, callback, newPlannerAssignedToTaskBoardTaskFormat);
     }
 

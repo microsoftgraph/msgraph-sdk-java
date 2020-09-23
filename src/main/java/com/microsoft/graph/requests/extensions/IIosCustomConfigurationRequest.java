@@ -21,7 +21,7 @@ public interface IIosCustomConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosCustomConfiguration> callback);
+    void get(final ICallback<? super IosCustomConfiguration> callback);
 
     /**
      * Gets the IosCustomConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosCustomConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosCustomConfiguration> callback);
+    void delete(final ICallback<? super IosCustomConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosCustomConfigurationRequest extends IHttpRequest {
      * @param sourceIosCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosCustomConfiguration sourceIosCustomConfiguration, final ICallback<IosCustomConfiguration> callback);
+    void patch(final IosCustomConfiguration sourceIosCustomConfiguration, final ICallback<? super IosCustomConfiguration> callback);
 
     /**
      * Patches this IosCustomConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosCustomConfigurationRequest extends IHttpRequest {
      * @param newIosCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosCustomConfiguration newIosCustomConfiguration, final ICallback<IosCustomConfiguration> callback);
+    void post(final IosCustomConfiguration newIosCustomConfiguration, final ICallback<? super IosCustomConfiguration> callback);
 
     /**
      * Posts a IosCustomConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosCustomConfigurationRequest extends IHttpRequest {
      * @param newIosCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosCustomConfiguration newIosCustomConfiguration, final ICallback<IosCustomConfiguration> callback);
+    void put(final IosCustomConfiguration newIosCustomConfiguration, final ICallback<? super IosCustomConfiguration> callback);
 
     /**
      * Posts a IosCustomConfiguration with a new object

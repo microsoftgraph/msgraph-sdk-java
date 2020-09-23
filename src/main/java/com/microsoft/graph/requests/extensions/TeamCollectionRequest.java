@@ -43,7 +43,7 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
         super(requestUrl, client, requestOptions, TeamCollectionResponse.class, ITeamCollectionPage.class);
     }
 
-    public void get(final ICallback<ITeamCollectionPage> callback) {
+    public void get(final ICallback<? super ITeamCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -62,7 +62,7 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final Team newTeam, final ICallback<Team> callback) {
+    public void post(final Team newTeam, final ICallback<? super Team> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

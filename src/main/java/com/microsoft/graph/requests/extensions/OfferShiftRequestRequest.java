@@ -52,7 +52,7 @@ public class OfferShiftRequestRequest extends BaseRequest implements IOfferShift
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OfferShiftRequest> callback) {
+    public void get(final ICallback<? super OfferShiftRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class OfferShiftRequestRequest extends BaseRequest implements IOfferShift
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OfferShiftRequest> callback) {
+    public void delete(final ICallback<? super OfferShiftRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class OfferShiftRequestRequest extends BaseRequest implements IOfferShift
      * @param sourceOfferShiftRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OfferShiftRequest sourceOfferShiftRequest, final ICallback<OfferShiftRequest> callback) {
+    public void patch(final OfferShiftRequest sourceOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceOfferShiftRequest);
     }
 
@@ -111,7 +111,7 @@ public class OfferShiftRequestRequest extends BaseRequest implements IOfferShift
      * @param newOfferShiftRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<OfferShiftRequest> callback) {
+    public void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback) {
         send(HttpMethod.POST, callback, newOfferShiftRequest);
     }
 
@@ -132,7 +132,7 @@ public class OfferShiftRequestRequest extends BaseRequest implements IOfferShift
      * @param newOfferShiftRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OfferShiftRequest newOfferShiftRequest, final ICallback<OfferShiftRequest> callback) {
+    public void put(final OfferShiftRequest newOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback) {
         send(HttpMethod.PUT, callback, newOfferShiftRequest);
     }
 

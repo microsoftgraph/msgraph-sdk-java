@@ -26,7 +26,7 @@ public interface IReportRootManagedDeviceEnrollmentTopFailuresRequest extends IH
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Report> callback);
+    void get(final ICallback<? super Report> callback);
 
     /**
      * Gets the Report

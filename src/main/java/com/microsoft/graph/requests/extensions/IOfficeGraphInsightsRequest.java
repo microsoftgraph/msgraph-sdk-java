@@ -21,7 +21,7 @@ public interface IOfficeGraphInsightsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OfficeGraphInsights> callback);
+    void get(final ICallback<? super OfficeGraphInsights> callback);
 
     /**
      * Gets the OfficeGraphInsights from the service
@@ -36,7 +36,7 @@ public interface IOfficeGraphInsightsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OfficeGraphInsights> callback);
+    void delete(final ICallback<? super OfficeGraphInsights> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOfficeGraphInsightsRequest extends IHttpRequest {
      * @param sourceOfficeGraphInsights the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OfficeGraphInsights sourceOfficeGraphInsights, final ICallback<OfficeGraphInsights> callback);
+    void patch(final OfficeGraphInsights sourceOfficeGraphInsights, final ICallback<? super OfficeGraphInsights> callback);
 
     /**
      * Patches this OfficeGraphInsights with a source
@@ -68,7 +68,7 @@ public interface IOfficeGraphInsightsRequest extends IHttpRequest {
      * @param newOfficeGraphInsights the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OfficeGraphInsights newOfficeGraphInsights, final ICallback<OfficeGraphInsights> callback);
+    void post(final OfficeGraphInsights newOfficeGraphInsights, final ICallback<? super OfficeGraphInsights> callback);
 
     /**
      * Posts a OfficeGraphInsights with a new object
@@ -85,7 +85,7 @@ public interface IOfficeGraphInsightsRequest extends IHttpRequest {
      * @param newOfficeGraphInsights the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OfficeGraphInsights newOfficeGraphInsights, final ICallback<OfficeGraphInsights> callback);
+    void put(final OfficeGraphInsights newOfficeGraphInsights, final ICallback<? super OfficeGraphInsights> callback);
 
     /**
      * Posts a OfficeGraphInsights with a new object

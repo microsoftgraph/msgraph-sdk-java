@@ -35,7 +35,7 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
         super(requestUrl, client, requestOptions, DirectoryObject.class);
     }
 
-    public void delete(final ICallback<DirectoryObject> callback) {
+    public void delete(final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +80,7 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
      * @param srcDirectoryObject the DirectoryObject reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(DirectoryObject srcDirectoryObject, final ICallback<DirectoryObject> callback) {
+    public void put(DirectoryObject srcDirectoryObject, final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.PUT, callback, srcDirectoryObject);
     }
 

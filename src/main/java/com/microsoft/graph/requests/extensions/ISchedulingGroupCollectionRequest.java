@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISchedulingGroupCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISchedulingGroupCollectionPage> callback);
+    void get(final ICallback<? super ISchedulingGroupCollectionPage> callback);
 
     ISchedulingGroupCollectionPage get() throws ClientException;
 
-    void post(final SchedulingGroup newSchedulingGroup, final ICallback<SchedulingGroup> callback);
+    void post(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback);
 
     SchedulingGroup post(final SchedulingGroup newSchedulingGroup) throws ClientException;
 

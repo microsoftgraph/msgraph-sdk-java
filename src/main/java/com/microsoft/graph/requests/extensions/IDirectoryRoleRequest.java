@@ -21,7 +21,7 @@ public interface IDirectoryRoleRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DirectoryRole> callback);
+    void get(final ICallback<? super DirectoryRole> callback);
 
     /**
      * Gets the DirectoryRole from the service
@@ -36,7 +36,7 @@ public interface IDirectoryRoleRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DirectoryRole> callback);
+    void delete(final ICallback<? super DirectoryRole> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDirectoryRoleRequest extends IHttpRequest {
      * @param sourceDirectoryRole the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DirectoryRole sourceDirectoryRole, final ICallback<DirectoryRole> callback);
+    void patch(final DirectoryRole sourceDirectoryRole, final ICallback<? super DirectoryRole> callback);
 
     /**
      * Patches this DirectoryRole with a source
@@ -68,7 +68,7 @@ public interface IDirectoryRoleRequest extends IHttpRequest {
      * @param newDirectoryRole the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DirectoryRole newDirectoryRole, final ICallback<DirectoryRole> callback);
+    void post(final DirectoryRole newDirectoryRole, final ICallback<? super DirectoryRole> callback);
 
     /**
      * Posts a DirectoryRole with a new object
@@ -85,7 +85,7 @@ public interface IDirectoryRoleRequest extends IHttpRequest {
      * @param newDirectoryRole the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DirectoryRole newDirectoryRole, final ICallback<DirectoryRole> callback);
+    void put(final DirectoryRole newDirectoryRole, final ICallback<? super DirectoryRole> callback);
 
     /**
      * Posts a DirectoryRole with a new object

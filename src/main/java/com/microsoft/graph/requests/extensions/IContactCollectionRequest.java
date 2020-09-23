@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IContactCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IContactCollectionPage> callback);
+    void get(final ICallback<? super IContactCollectionPage> callback);
 
     IContactCollectionPage get() throws ClientException;
 
-    void post(final Contact newContact, final ICallback<Contact> callback);
+    void post(final Contact newContact, final ICallback<? super Contact> callback);
 
     Contact post(final Contact newContact) throws ClientException;
 

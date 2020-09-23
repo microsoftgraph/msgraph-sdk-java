@@ -37,7 +37,7 @@ public class WorkbookFunctionsTbillPriceRequest extends BaseRequest implements I
         body = new WorkbookFunctionsTbillPriceBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

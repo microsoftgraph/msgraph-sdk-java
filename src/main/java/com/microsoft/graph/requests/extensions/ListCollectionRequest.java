@@ -40,7 +40,7 @@ public class ListCollectionRequest extends BaseCollectionRequest<ListCollectionR
         super(requestUrl, client, requestOptions, ListCollectionResponse.class, IListCollectionPage.class);
     }
 
-    public void get(final ICallback<IListCollectionPage> callback) {
+    public void get(final ICallback<? super IListCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ListCollectionRequest extends BaseCollectionRequest<ListCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final List newList, final ICallback<List> callback) {
+    public void post(final List newList, final ICallback<? super List> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ListRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

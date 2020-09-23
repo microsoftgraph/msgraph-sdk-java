@@ -59,7 +59,7 @@ public class ApplicationRequest extends BaseRequest implements IApplicationReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Application> callback) {
+    public void get(final ICallback<? super Application> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -78,7 +78,7 @@ public class ApplicationRequest extends BaseRequest implements IApplicationReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Application> callback) {
+    public void delete(final ICallback<? super Application> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -97,7 +97,7 @@ public class ApplicationRequest extends BaseRequest implements IApplicationReque
      * @param sourceApplication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Application sourceApplication, final ICallback<Application> callback) {
+    public void patch(final Application sourceApplication, final ICallback<? super Application> callback) {
         send(HttpMethod.PATCH, callback, sourceApplication);
     }
 
@@ -118,7 +118,7 @@ public class ApplicationRequest extends BaseRequest implements IApplicationReque
      * @param newApplication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Application newApplication, final ICallback<Application> callback) {
+    public void post(final Application newApplication, final ICallback<? super Application> callback) {
         send(HttpMethod.POST, callback, newApplication);
     }
 
@@ -139,7 +139,7 @@ public class ApplicationRequest extends BaseRequest implements IApplicationReque
      * @param newApplication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Application newApplication, final ICallback<Application> callback) {
+    public void put(final Application newApplication, final ICallback<? super Application> callback) {
         send(HttpMethod.PUT, callback, newApplication);
     }
 

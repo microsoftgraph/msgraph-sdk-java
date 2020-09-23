@@ -36,7 +36,7 @@ public class ManagedEBookAssignRequest extends BaseRequest implements IManagedEB
         body = new ManagedEBookAssignBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

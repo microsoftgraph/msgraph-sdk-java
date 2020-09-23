@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IConversationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IConversationCollectionPage> callback);
+    void get(final ICallback<? super IConversationCollectionPage> callback);
 
     IConversationCollectionPage get() throws ClientException;
 
-    void post(final Conversation newConversation, final ICallback<Conversation> callback);
+    void post(final Conversation newConversation, final ICallback<? super Conversation> callback);
 
     Conversation post(final Conversation newConversation) throws ClientException;
 

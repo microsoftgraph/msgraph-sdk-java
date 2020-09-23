@@ -40,7 +40,7 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
         super(requestUrl, client, requestOptions, ResourceOperationCollectionResponse.class, IResourceOperationCollectionPage.class);
     }
 
-    public void get(final ICallback<IResourceOperationCollectionPage> callback) {
+    public void get(final ICallback<? super IResourceOperationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
         return buildFromResponse(response);
     }
 
-    public void post(final ResourceOperation newResourceOperation, final ICallback<ResourceOperation> callback) {
+    public void post(final ResourceOperation newResourceOperation, final ICallback<? super ResourceOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ResourceOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

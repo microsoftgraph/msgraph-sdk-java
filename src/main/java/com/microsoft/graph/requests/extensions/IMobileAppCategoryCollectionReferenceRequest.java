@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.MobileAppCategory;
  */
 public interface IMobileAppCategoryCollectionReferenceRequest {
 
-    void post(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback);
+    void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback);
 
     MobileAppCategory post(final MobileAppCategory newMobileAppCategory) throws ClientException;
 

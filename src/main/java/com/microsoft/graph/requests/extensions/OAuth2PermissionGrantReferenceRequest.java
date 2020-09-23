@@ -34,7 +34,7 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest implement
         super(requestUrl, client, requestOptions, OAuth2PermissionGrant.class);
     }
 
-    public void delete(final ICallback<OAuth2PermissionGrant> callback) {
+    public void delete(final ICallback<? super OAuth2PermissionGrant> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest implement
      * @param srcOAuth2PermissionGrant the OAuth2PermissionGrant reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(OAuth2PermissionGrant srcOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback) {
+    public void put(OAuth2PermissionGrant srcOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
         send(HttpMethod.PUT, callback, srcOAuth2PermissionGrant);
     }
 

@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITimeOffRequestCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITimeOffRequestCollectionPage> callback);
+    void get(final ICallback<? super ITimeOffRequestCollectionPage> callback);
 
     ITimeOffRequestCollectionPage get() throws ClientException;
 
-    void post(final TimeOffRequest newTimeOffRequest, final ICallback<TimeOffRequest> callback);
+    void post(final TimeOffRequest newTimeOffRequest, final ICallback<? super TimeOffRequest> callback);
 
     TimeOffRequest post(final TimeOffRequest newTimeOffRequest) throws ClientException;
 

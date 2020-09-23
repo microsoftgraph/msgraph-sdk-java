@@ -21,7 +21,7 @@ public interface IWorkbookTableRowRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookTableRow> callback);
+    void get(final ICallback<? super WorkbookTableRow> callback);
 
     /**
      * Gets the WorkbookTableRow from the service
@@ -36,7 +36,7 @@ public interface IWorkbookTableRowRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookTableRow> callback);
+    void delete(final ICallback<? super WorkbookTableRow> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookTableRowRequest extends IHttpRequest {
      * @param sourceWorkbookTableRow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookTableRow sourceWorkbookTableRow, final ICallback<WorkbookTableRow> callback);
+    void patch(final WorkbookTableRow sourceWorkbookTableRow, final ICallback<? super WorkbookTableRow> callback);
 
     /**
      * Patches this WorkbookTableRow with a source
@@ -68,7 +68,7 @@ public interface IWorkbookTableRowRequest extends IHttpRequest {
      * @param newWorkbookTableRow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookTableRow newWorkbookTableRow, final ICallback<WorkbookTableRow> callback);
+    void post(final WorkbookTableRow newWorkbookTableRow, final ICallback<? super WorkbookTableRow> callback);
 
     /**
      * Posts a WorkbookTableRow with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookTableRowRequest extends IHttpRequest {
      * @param newWorkbookTableRow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookTableRow newWorkbookTableRow, final ICallback<WorkbookTableRow> callback);
+    void put(final WorkbookTableRow newWorkbookTableRow, final ICallback<? super WorkbookTableRow> callback);
 
     /**
      * Posts a WorkbookTableRow with a new object

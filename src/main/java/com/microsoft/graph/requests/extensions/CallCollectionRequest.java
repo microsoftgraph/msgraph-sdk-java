@@ -55,7 +55,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<CallCollectionR
         super(requestUrl, client, requestOptions, CallCollectionResponse.class, ICallCollectionPage.class);
     }
 
-    public void get(final ICallback<ICallCollectionPage> callback) {
+    public void get(final ICallback<? super ICallCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -74,7 +74,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<CallCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final Call newCall, final ICallback<Call> callback) {
+    public void post(final Call newCall, final ICallback<? super Call> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CallRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

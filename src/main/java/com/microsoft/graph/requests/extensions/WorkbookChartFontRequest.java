@@ -37,7 +37,7 @@ public class WorkbookChartFontRequest extends BaseRequest implements IWorkbookCh
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChartFont> callback) {
+    public void get(final ICallback<? super WorkbookChartFont> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WorkbookChartFontRequest extends BaseRequest implements IWorkbookCh
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookChartFont> callback) {
+    public void delete(final ICallback<? super WorkbookChartFont> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WorkbookChartFontRequest extends BaseRequest implements IWorkbookCh
      * @param sourceWorkbookChartFont the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartFont sourceWorkbookChartFont, final ICallback<WorkbookChartFont> callback) {
+    public void patch(final WorkbookChartFont sourceWorkbookChartFont, final ICallback<? super WorkbookChartFont> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartFont);
     }
 
@@ -96,7 +96,7 @@ public class WorkbookChartFontRequest extends BaseRequest implements IWorkbookCh
      * @param newWorkbookChartFont the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartFont newWorkbookChartFont, final ICallback<WorkbookChartFont> callback) {
+    public void post(final WorkbookChartFont newWorkbookChartFont, final ICallback<? super WorkbookChartFont> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartFont);
     }
 
@@ -117,7 +117,7 @@ public class WorkbookChartFontRequest extends BaseRequest implements IWorkbookCh
      * @param newWorkbookChartFont the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartFont newWorkbookChartFont, final ICallback<WorkbookChartFont> callback) {
+    public void put(final WorkbookChartFont newWorkbookChartFont, final ICallback<? super WorkbookChartFont> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartFont);
     }
 

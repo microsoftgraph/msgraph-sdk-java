@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface INotebookCopyNotebookRequest extends IHttpRequest {
 
-    void post(final ICallback<OnenoteOperation> callback);
+    void post(final ICallback<? super OnenoteOperation> callback);
 
     OnenoteOperation post() throws ClientException;
 

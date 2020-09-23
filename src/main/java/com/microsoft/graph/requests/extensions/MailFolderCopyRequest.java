@@ -37,7 +37,7 @@ public class MailFolderCopyRequest extends BaseRequest implements IMailFolderCop
         body = new MailFolderCopyBody();
     }
 
-    public void post(final ICallback<MailFolder> callback) {
+    public void post(final ICallback<? super MailFolder> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

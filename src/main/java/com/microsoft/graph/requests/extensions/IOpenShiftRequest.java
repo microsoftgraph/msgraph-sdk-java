@@ -21,7 +21,7 @@ public interface IOpenShiftRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OpenShift> callback);
+    void get(final ICallback<? super OpenShift> callback);
 
     /**
      * Gets the OpenShift from the service
@@ -36,7 +36,7 @@ public interface IOpenShiftRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OpenShift> callback);
+    void delete(final ICallback<? super OpenShift> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOpenShiftRequest extends IHttpRequest {
      * @param sourceOpenShift the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OpenShift sourceOpenShift, final ICallback<OpenShift> callback);
+    void patch(final OpenShift sourceOpenShift, final ICallback<? super OpenShift> callback);
 
     /**
      * Patches this OpenShift with a source
@@ -68,7 +68,7 @@ public interface IOpenShiftRequest extends IHttpRequest {
      * @param newOpenShift the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OpenShift newOpenShift, final ICallback<OpenShift> callback);
+    void post(final OpenShift newOpenShift, final ICallback<? super OpenShift> callback);
 
     /**
      * Posts a OpenShift with a new object
@@ -85,7 +85,7 @@ public interface IOpenShiftRequest extends IHttpRequest {
      * @param newOpenShift the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OpenShift newOpenShift, final ICallback<OpenShift> callback);
+    void put(final OpenShift newOpenShift, final ICallback<? super OpenShift> callback);
 
     /**
      * Posts a OpenShift with a new object

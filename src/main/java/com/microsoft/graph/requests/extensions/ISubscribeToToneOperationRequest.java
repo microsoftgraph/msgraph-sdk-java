@@ -21,7 +21,7 @@ public interface ISubscribeToToneOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SubscribeToToneOperation> callback);
+    void get(final ICallback<? super SubscribeToToneOperation> callback);
 
     /**
      * Gets the SubscribeToToneOperation from the service
@@ -36,7 +36,7 @@ public interface ISubscribeToToneOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SubscribeToToneOperation> callback);
+    void delete(final ICallback<? super SubscribeToToneOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISubscribeToToneOperationRequest extends IHttpRequest {
      * @param sourceSubscribeToToneOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SubscribeToToneOperation sourceSubscribeToToneOperation, final ICallback<SubscribeToToneOperation> callback);
+    void patch(final SubscribeToToneOperation sourceSubscribeToToneOperation, final ICallback<? super SubscribeToToneOperation> callback);
 
     /**
      * Patches this SubscribeToToneOperation with a source
@@ -68,7 +68,7 @@ public interface ISubscribeToToneOperationRequest extends IHttpRequest {
      * @param newSubscribeToToneOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SubscribeToToneOperation newSubscribeToToneOperation, final ICallback<SubscribeToToneOperation> callback);
+    void post(final SubscribeToToneOperation newSubscribeToToneOperation, final ICallback<? super SubscribeToToneOperation> callback);
 
     /**
      * Posts a SubscribeToToneOperation with a new object
@@ -85,7 +85,7 @@ public interface ISubscribeToToneOperationRequest extends IHttpRequest {
      * @param newSubscribeToToneOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SubscribeToToneOperation newSubscribeToToneOperation, final ICallback<SubscribeToToneOperation> callback);
+    void put(final SubscribeToToneOperation newSubscribeToToneOperation, final ICallback<? super SubscribeToToneOperation> callback);
 
     /**
      * Posts a SubscribeToToneOperation with a new object

@@ -21,7 +21,7 @@ public interface IRemoteAssistancePartnerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RemoteAssistancePartner> callback);
+    void get(final ICallback<? super RemoteAssistancePartner> callback);
 
     /**
      * Gets the RemoteAssistancePartner from the service
@@ -36,7 +36,7 @@ public interface IRemoteAssistancePartnerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RemoteAssistancePartner> callback);
+    void delete(final ICallback<? super RemoteAssistancePartner> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRemoteAssistancePartnerRequest extends IHttpRequest {
      * @param sourceRemoteAssistancePartner the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RemoteAssistancePartner sourceRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback);
+    void patch(final RemoteAssistancePartner sourceRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback);
 
     /**
      * Patches this RemoteAssistancePartner with a source
@@ -68,7 +68,7 @@ public interface IRemoteAssistancePartnerRequest extends IHttpRequest {
      * @param newRemoteAssistancePartner the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback);
+    void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback);
 
     /**
      * Posts a RemoteAssistancePartner with a new object
@@ -85,7 +85,7 @@ public interface IRemoteAssistancePartnerRequest extends IHttpRequest {
      * @param newRemoteAssistancePartner the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback);
+    void put(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback);
 
     /**
      * Posts a RemoteAssistancePartner with a new object

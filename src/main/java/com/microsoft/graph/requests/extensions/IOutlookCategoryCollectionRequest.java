@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOutlookCategoryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOutlookCategoryCollectionPage> callback);
+    void get(final ICallback<? super IOutlookCategoryCollectionPage> callback);
 
     IOutlookCategoryCollectionPage get() throws ClientException;
 
-    void post(final OutlookCategory newOutlookCategory, final ICallback<OutlookCategory> callback);
+    void post(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback);
 
     OutlookCategory post(final OutlookCategory newOutlookCategory) throws ClientException;
 

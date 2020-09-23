@@ -37,7 +37,7 @@ public class MuteParticipantOperationRequest extends BaseRequest implements IMut
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MuteParticipantOperation> callback) {
+    public void get(final ICallback<? super MuteParticipantOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MuteParticipantOperationRequest extends BaseRequest implements IMut
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MuteParticipantOperation> callback) {
+    public void delete(final ICallback<? super MuteParticipantOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MuteParticipantOperationRequest extends BaseRequest implements IMut
      * @param sourceMuteParticipantOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MuteParticipantOperation sourceMuteParticipantOperation, final ICallback<MuteParticipantOperation> callback) {
+    public void patch(final MuteParticipantOperation sourceMuteParticipantOperation, final ICallback<? super MuteParticipantOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceMuteParticipantOperation);
     }
 
@@ -96,7 +96,7 @@ public class MuteParticipantOperationRequest extends BaseRequest implements IMut
      * @param newMuteParticipantOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MuteParticipantOperation newMuteParticipantOperation, final ICallback<MuteParticipantOperation> callback) {
+    public void post(final MuteParticipantOperation newMuteParticipantOperation, final ICallback<? super MuteParticipantOperation> callback) {
         send(HttpMethod.POST, callback, newMuteParticipantOperation);
     }
 
@@ -117,7 +117,7 @@ public class MuteParticipantOperationRequest extends BaseRequest implements IMut
      * @param newMuteParticipantOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MuteParticipantOperation newMuteParticipantOperation, final ICallback<MuteParticipantOperation> callback) {
+    public void put(final MuteParticipantOperation newMuteParticipantOperation, final ICallback<? super MuteParticipantOperation> callback) {
         send(HttpMethod.PUT, callback, newMuteParticipantOperation);
     }
 

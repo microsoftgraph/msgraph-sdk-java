@@ -40,7 +40,7 @@ public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseCollecti
     }
 
 
-    public void get(final ICallback<IOutlookUserSupportedTimeZonesCollectionPage> callback) {
+    public void get(final ICallback<? super IOutlookUserSupportedTimeZonesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

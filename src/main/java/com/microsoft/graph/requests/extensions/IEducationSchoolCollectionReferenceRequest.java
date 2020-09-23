@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.EducationSchool;
  */
 public interface IEducationSchoolCollectionReferenceRequest {
 
-    void post(final EducationSchool newEducationSchool, final ICallback<EducationSchool> callback);
+    void post(final EducationSchool newEducationSchool, final ICallback<? super EducationSchool> callback);
 
     EducationSchool post(final EducationSchool newEducationSchool) throws ClientException;
 

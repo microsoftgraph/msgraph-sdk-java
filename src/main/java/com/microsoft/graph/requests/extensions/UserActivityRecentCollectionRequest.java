@@ -39,7 +39,7 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
     }
 
 
-    public void get(final ICallback<IUserActivityRecentCollectionPage> callback) {
+    public void get(final ICallback<? super IUserActivityRecentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

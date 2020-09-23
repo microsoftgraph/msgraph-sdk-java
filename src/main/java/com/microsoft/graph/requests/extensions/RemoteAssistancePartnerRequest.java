@@ -37,7 +37,7 @@ public class RemoteAssistancePartnerRequest extends BaseRequest implements IRemo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<RemoteAssistancePartner> callback) {
+    public void get(final ICallback<? super RemoteAssistancePartner> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class RemoteAssistancePartnerRequest extends BaseRequest implements IRemo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<RemoteAssistancePartner> callback) {
+    public void delete(final ICallback<? super RemoteAssistancePartner> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class RemoteAssistancePartnerRequest extends BaseRequest implements IRemo
      * @param sourceRemoteAssistancePartner the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RemoteAssistancePartner sourceRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback) {
+    public void patch(final RemoteAssistancePartner sourceRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback) {
         send(HttpMethod.PATCH, callback, sourceRemoteAssistancePartner);
     }
 
@@ -96,7 +96,7 @@ public class RemoteAssistancePartnerRequest extends BaseRequest implements IRemo
      * @param newRemoteAssistancePartner the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback) {
+    public void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback) {
         send(HttpMethod.POST, callback, newRemoteAssistancePartner);
     }
 
@@ -117,7 +117,7 @@ public class RemoteAssistancePartnerRequest extends BaseRequest implements IRemo
      * @param newRemoteAssistancePartner the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback) {
+    public void put(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback) {
         send(HttpMethod.PUT, callback, newRemoteAssistancePartner);
     }
 

@@ -27,7 +27,7 @@ public interface IWorkbookChartPointItemAtRequest extends IHttpRequest {
      * @param srcWorkbookChartPoint the WorkbookChartPoint with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    void patch(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
+    void patch(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback);
 
     /**
      * Patches the WorkbookChartPointItemAt
@@ -44,7 +44,7 @@ public interface IWorkbookChartPointItemAtRequest extends IHttpRequest {
      * @param srcWorkbookChartPoint the WorkbookChartPoint to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
+    void put(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback);
 
     /**
      * Puts the WorkbookChartPointItemAt
@@ -59,7 +59,7 @@ public interface IWorkbookChartPointItemAtRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartPoint> callback);
+    void get(final ICallback<? super WorkbookChartPoint> callback);
 
     /**
      * Gets the WorkbookChartPoint

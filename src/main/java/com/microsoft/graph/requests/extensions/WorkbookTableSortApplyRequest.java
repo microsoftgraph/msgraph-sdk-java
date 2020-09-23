@@ -36,7 +36,7 @@ public class WorkbookTableSortApplyRequest extends BaseRequest implements IWorkb
         body = new WorkbookTableSortApplyBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

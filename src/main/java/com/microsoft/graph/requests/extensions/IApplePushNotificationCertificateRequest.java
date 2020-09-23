@@ -21,7 +21,7 @@ public interface IApplePushNotificationCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ApplePushNotificationCertificate> callback);
+    void get(final ICallback<? super ApplePushNotificationCertificate> callback);
 
     /**
      * Gets the ApplePushNotificationCertificate from the service
@@ -36,7 +36,7 @@ public interface IApplePushNotificationCertificateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ApplePushNotificationCertificate> callback);
+    void delete(final ICallback<? super ApplePushNotificationCertificate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IApplePushNotificationCertificateRequest extends IHttpRequest {
      * @param sourceApplePushNotificationCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ApplePushNotificationCertificate sourceApplePushNotificationCertificate, final ICallback<ApplePushNotificationCertificate> callback);
+    void patch(final ApplePushNotificationCertificate sourceApplePushNotificationCertificate, final ICallback<? super ApplePushNotificationCertificate> callback);
 
     /**
      * Patches this ApplePushNotificationCertificate with a source
@@ -68,7 +68,7 @@ public interface IApplePushNotificationCertificateRequest extends IHttpRequest {
      * @param newApplePushNotificationCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ApplePushNotificationCertificate newApplePushNotificationCertificate, final ICallback<ApplePushNotificationCertificate> callback);
+    void post(final ApplePushNotificationCertificate newApplePushNotificationCertificate, final ICallback<? super ApplePushNotificationCertificate> callback);
 
     /**
      * Posts a ApplePushNotificationCertificate with a new object
@@ -85,7 +85,7 @@ public interface IApplePushNotificationCertificateRequest extends IHttpRequest {
      * @param newApplePushNotificationCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ApplePushNotificationCertificate newApplePushNotificationCertificate, final ICallback<ApplePushNotificationCertificate> callback);
+    void put(final ApplePushNotificationCertificate newApplePushNotificationCertificate, final ICallback<? super ApplePushNotificationCertificate> callback);
 
     /**
      * Posts a ApplePushNotificationCertificate with a new object

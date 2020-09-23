@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserFindMeetingTimesRequest extends IHttpRequest {
 
-    void post(final ICallback<MeetingTimeSuggestionsResult> callback);
+    void post(final ICallback<? super MeetingTimeSuggestionsResult> callback);
 
     MeetingTimeSuggestionsResult post() throws ClientException;
 

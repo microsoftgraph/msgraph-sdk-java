@@ -41,7 +41,7 @@ public class AppCatalogsRequest extends BaseRequest implements IAppCatalogsReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AppCatalogs> callback) {
+    public void get(final ICallback<? super AppCatalogs> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class AppCatalogsRequest extends BaseRequest implements IAppCatalogsReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AppCatalogs> callback) {
+    public void delete(final ICallback<? super AppCatalogs> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class AppCatalogsRequest extends BaseRequest implements IAppCatalogsReque
      * @param sourceAppCatalogs the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppCatalogs sourceAppCatalogs, final ICallback<AppCatalogs> callback) {
+    public void patch(final AppCatalogs sourceAppCatalogs, final ICallback<? super AppCatalogs> callback) {
         send(HttpMethod.PATCH, callback, sourceAppCatalogs);
     }
 
@@ -100,7 +100,7 @@ public class AppCatalogsRequest extends BaseRequest implements IAppCatalogsReque
      * @param newAppCatalogs the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppCatalogs newAppCatalogs, final ICallback<AppCatalogs> callback) {
+    public void post(final AppCatalogs newAppCatalogs, final ICallback<? super AppCatalogs> callback) {
         send(HttpMethod.POST, callback, newAppCatalogs);
     }
 
@@ -121,7 +121,7 @@ public class AppCatalogsRequest extends BaseRequest implements IAppCatalogsReque
      * @param newAppCatalogs the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppCatalogs newAppCatalogs, final ICallback<AppCatalogs> callback) {
+    public void put(final AppCatalogs newAppCatalogs, final ICallback<? super AppCatalogs> callback) {
         send(HttpMethod.PUT, callback, newAppCatalogs);
     }
 

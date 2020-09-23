@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ILocalizedNotificationMessageCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ILocalizedNotificationMessageCollectionPage> callback);
+    void get(final ICallback<? super ILocalizedNotificationMessageCollectionPage> callback);
 
     ILocalizedNotificationMessageCollectionPage get() throws ClientException;
 
-    void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback);
+    void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback);
 
     LocalizedNotificationMessage post(final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException;
 

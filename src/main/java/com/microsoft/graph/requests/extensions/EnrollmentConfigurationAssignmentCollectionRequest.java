@@ -40,7 +40,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignmentCollectionResponse.class, IEnrollmentConfigurationAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IEnrollmentConfigurationAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IEnrollmentConfigurationAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
         return buildFromResponse(response);
     }
 
-    public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback) {
+    public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

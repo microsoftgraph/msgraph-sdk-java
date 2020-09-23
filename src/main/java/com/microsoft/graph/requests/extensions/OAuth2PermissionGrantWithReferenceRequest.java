@@ -35,7 +35,7 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest imple
         super(requestUrl, client, requestOptions, OAuth2PermissionGrant.class);
     }
 
-    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final IJsonBackedObject payload, final ICallback<OAuth2PermissionGrant> callback) {
+    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final IJsonBackedObject payload, final ICallback<? super OAuth2PermissionGrant> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest imple
         return null;
     }
 
-    public void get(final ICallback<OAuth2PermissionGrant> callback) {
+    public void get(final ICallback<? super OAuth2PermissionGrant> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest imple
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<OAuth2PermissionGrant> callback) {
+	public void delete(final ICallback<? super OAuth2PermissionGrant> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest imple
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final OAuth2PermissionGrant sourceOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback) {
+	public void patch(final OAuth2PermissionGrant sourceOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
 		send(HttpMethod.PATCH, callback, sourceOAuth2PermissionGrant);
 	}
 

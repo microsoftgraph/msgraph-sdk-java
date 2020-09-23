@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDriveItemCreateLinkRequest extends IHttpRequest {
 
-    void post(final ICallback<Permission> callback);
+    void post(final ICallback<? super Permission> callback);
 
     Permission post() throws ClientException;
 

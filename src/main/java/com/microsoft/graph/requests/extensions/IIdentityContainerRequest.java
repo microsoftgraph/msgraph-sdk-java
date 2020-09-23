@@ -21,7 +21,7 @@ public interface IIdentityContainerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IdentityContainer> callback);
+    void get(final ICallback<? super IdentityContainer> callback);
 
     /**
      * Gets the IdentityContainer from the service
@@ -36,7 +36,7 @@ public interface IIdentityContainerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IdentityContainer> callback);
+    void delete(final ICallback<? super IdentityContainer> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIdentityContainerRequest extends IHttpRequest {
      * @param sourceIdentityContainer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IdentityContainer sourceIdentityContainer, final ICallback<IdentityContainer> callback);
+    void patch(final IdentityContainer sourceIdentityContainer, final ICallback<? super IdentityContainer> callback);
 
     /**
      * Patches this IdentityContainer with a source
@@ -68,7 +68,7 @@ public interface IIdentityContainerRequest extends IHttpRequest {
      * @param newIdentityContainer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IdentityContainer newIdentityContainer, final ICallback<IdentityContainer> callback);
+    void post(final IdentityContainer newIdentityContainer, final ICallback<? super IdentityContainer> callback);
 
     /**
      * Posts a IdentityContainer with a new object
@@ -85,7 +85,7 @@ public interface IIdentityContainerRequest extends IHttpRequest {
      * @param newIdentityContainer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IdentityContainer newIdentityContainer, final ICallback<IdentityContainer> callback);
+    void put(final IdentityContainer newIdentityContainer, final ICallback<? super IdentityContainer> callback);
 
     /**
      * Posts a IdentityContainer with a new object

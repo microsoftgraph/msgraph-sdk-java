@@ -38,7 +38,7 @@ public class RoleDefinitionReferenceRequest extends BaseRequest implements IRole
         super(requestUrl, client, requestOptions, RoleDefinition.class);
     }
 
-    public void delete(final ICallback<RoleDefinition> callback) {
+    public void delete(final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class RoleDefinitionReferenceRequest extends BaseRequest implements IRole
      * @param srcRoleDefinition the RoleDefinition reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(RoleDefinition srcRoleDefinition, final ICallback<RoleDefinition> callback) {
+    public void put(RoleDefinition srcRoleDefinition, final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.PUT, callback, srcRoleDefinition);
     }
 

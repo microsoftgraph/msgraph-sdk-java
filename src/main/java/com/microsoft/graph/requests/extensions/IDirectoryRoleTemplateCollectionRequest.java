@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDirectoryRoleTemplateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDirectoryRoleTemplateCollectionPage> callback);
+    void get(final ICallback<? super IDirectoryRoleTemplateCollectionPage> callback);
 
     IDirectoryRoleTemplateCollectionPage get() throws ClientException;
 
-    void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback);
+    void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<? super DirectoryRoleTemplate> callback);
 
     DirectoryRoleTemplate post(final DirectoryRoleTemplate newDirectoryRoleTemplate) throws ClientException;
 

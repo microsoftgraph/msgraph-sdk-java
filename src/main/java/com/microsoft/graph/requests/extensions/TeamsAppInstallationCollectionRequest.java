@@ -40,7 +40,7 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, TeamsAppInstallationCollectionResponse.class, ITeamsAppInstallationCollectionPage.class);
     }
 
-    public void get(final ICallback<ITeamsAppInstallationCollectionPage> callback) {
+    public void get(final ICallback<? super ITeamsAppInstallationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<TeamsAppInstallation> callback) {
+    public void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -36,7 +36,7 @@ public class WorkbookFilterApplyValuesFilterRequest extends BaseRequest implemen
         body = new WorkbookFilterApplyValuesFilterBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

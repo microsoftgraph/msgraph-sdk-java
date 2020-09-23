@@ -37,7 +37,7 @@ public class WorkbookFunctionsPhiRequest extends BaseRequest implements IWorkboo
         body = new WorkbookFunctionsPhiBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

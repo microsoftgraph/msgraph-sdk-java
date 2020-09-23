@@ -37,7 +37,7 @@ public class OnenotePagePreviewRequest extends BaseRequest implements IOnenotePa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OnenotePagePreview> callback) {
+    public void get(final ICallback<? super OnenotePagePreview> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

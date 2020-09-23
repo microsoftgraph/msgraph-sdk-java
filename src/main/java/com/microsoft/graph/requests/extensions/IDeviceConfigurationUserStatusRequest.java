@@ -21,7 +21,7 @@ public interface IDeviceConfigurationUserStatusRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceConfigurationUserStatus> callback);
+    void get(final ICallback<? super DeviceConfigurationUserStatus> callback);
 
     /**
      * Gets the DeviceConfigurationUserStatus from the service
@@ -36,7 +36,7 @@ public interface IDeviceConfigurationUserStatusRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceConfigurationUserStatus> callback);
+    void delete(final ICallback<? super DeviceConfigurationUserStatus> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceConfigurationUserStatusRequest extends IHttpRequest {
      * @param sourceDeviceConfigurationUserStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceConfigurationUserStatus sourceDeviceConfigurationUserStatus, final ICallback<DeviceConfigurationUserStatus> callback);
+    void patch(final DeviceConfigurationUserStatus sourceDeviceConfigurationUserStatus, final ICallback<? super DeviceConfigurationUserStatus> callback);
 
     /**
      * Patches this DeviceConfigurationUserStatus with a source
@@ -68,7 +68,7 @@ public interface IDeviceConfigurationUserStatusRequest extends IHttpRequest {
      * @param newDeviceConfigurationUserStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus, final ICallback<DeviceConfigurationUserStatus> callback);
+    void post(final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus, final ICallback<? super DeviceConfigurationUserStatus> callback);
 
     /**
      * Posts a DeviceConfigurationUserStatus with a new object
@@ -85,7 +85,7 @@ public interface IDeviceConfigurationUserStatusRequest extends IHttpRequest {
      * @param newDeviceConfigurationUserStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus, final ICallback<DeviceConfigurationUserStatus> callback);
+    void put(final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus, final ICallback<? super DeviceConfigurationUserStatus> callback);
 
     /**
      * Posts a DeviceConfigurationUserStatus with a new object

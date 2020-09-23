@@ -21,7 +21,7 @@ public interface IGroupSettingTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupSettingTemplate> callback);
+    void get(final ICallback<? super GroupSettingTemplate> callback);
 
     /**
      * Gets the GroupSettingTemplate from the service
@@ -36,7 +36,7 @@ public interface IGroupSettingTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupSettingTemplate> callback);
+    void delete(final ICallback<? super GroupSettingTemplate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupSettingTemplateRequest extends IHttpRequest {
      * @param sourceGroupSettingTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupSettingTemplate sourceGroupSettingTemplate, final ICallback<GroupSettingTemplate> callback);
+    void patch(final GroupSettingTemplate sourceGroupSettingTemplate, final ICallback<? super GroupSettingTemplate> callback);
 
     /**
      * Patches this GroupSettingTemplate with a source
@@ -68,7 +68,7 @@ public interface IGroupSettingTemplateRequest extends IHttpRequest {
      * @param newGroupSettingTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<GroupSettingTemplate> callback);
+    void post(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<? super GroupSettingTemplate> callback);
 
     /**
      * Posts a GroupSettingTemplate with a new object
@@ -85,7 +85,7 @@ public interface IGroupSettingTemplateRequest extends IHttpRequest {
      * @param newGroupSettingTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<GroupSettingTemplate> callback);
+    void put(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<? super GroupSettingTemplate> callback);
 
     /**
      * Posts a GroupSettingTemplate with a new object

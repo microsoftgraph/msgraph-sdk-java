@@ -34,7 +34,7 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements I
         super(requestUrl, client, requestOptions, TeamsAppDefinition.class);
     }
 
-    public void delete(final ICallback<TeamsAppDefinition> callback) {
+    public void delete(final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements I
      * @param srcTeamsAppDefinition the TeamsAppDefinition reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TeamsAppDefinition srcTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback) {
+    public void put(TeamsAppDefinition srcTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.PUT, callback, srcTeamsAppDefinition);
     }
 

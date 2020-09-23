@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookTableColumnAddRequest extends IHttpRequest {
 
-    void post(final ICallback<WorkbookTableColumn> callback);
+    void post(final ICallback<? super WorkbookTableColumn> callback);
 
     WorkbookTableColumn post() throws ClientException;
 

@@ -41,7 +41,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, IManagedDeviceCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedDeviceCollectionPage> callback) {
+    public void get(final ICallback<? super IManagedDeviceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedDevice newManagedDevice, final ICallback<ManagedDevice> callback) {
+    public void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -41,7 +41,7 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
         super(requestUrl, client, requestOptions, PermissionCollectionResponse.class, IPermissionCollectionPage.class);
     }
 
-    public void get(final ICallback<IPermissionCollectionPage> callback) {
+    public void get(final ICallback<? super IPermissionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
         return buildFromResponse(response);
     }
 
-    public void post(final Permission newPermission, final ICallback<Permission> callback) {
+    public void post(final Permission newPermission, final ICallback<? super Permission> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

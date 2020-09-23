@@ -37,7 +37,7 @@ public class IosCertificateProfileRequest extends BaseRequest implements IIosCer
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosCertificateProfile> callback) {
+    public void get(final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosCertificateProfileRequest extends BaseRequest implements IIosCer
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosCertificateProfile> callback) {
+    public void delete(final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosCertificateProfileRequest extends BaseRequest implements IIosCer
      * @param sourceIosCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosCertificateProfile sourceIosCertificateProfile, final ICallback<IosCertificateProfile> callback) {
+    public void patch(final IosCertificateProfile sourceIosCertificateProfile, final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceIosCertificateProfile);
     }
 
@@ -96,7 +96,7 @@ public class IosCertificateProfileRequest extends BaseRequest implements IIosCer
      * @param newIosCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosCertificateProfile newIosCertificateProfile, final ICallback<IosCertificateProfile> callback) {
+    public void post(final IosCertificateProfile newIosCertificateProfile, final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newIosCertificateProfile);
     }
 
@@ -117,7 +117,7 @@ public class IosCertificateProfileRequest extends BaseRequest implements IIosCer
      * @param newIosCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosCertificateProfile newIosCertificateProfile, final ICallback<IosCertificateProfile> callback) {
+    public void put(final IosCertificateProfile newIosCertificateProfile, final ICallback<? super IosCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newIosCertificateProfile);
     }
 

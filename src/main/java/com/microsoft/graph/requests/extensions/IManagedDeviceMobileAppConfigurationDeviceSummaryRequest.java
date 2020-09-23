@@ -21,7 +21,7 @@ public interface IManagedDeviceMobileAppConfigurationDeviceSummaryRequest extend
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedDeviceMobileAppConfigurationDeviceSummary> callback);
+    void get(final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback);
 
     /**
      * Gets the ManagedDeviceMobileAppConfigurationDeviceSummary from the service
@@ -36,7 +36,7 @@ public interface IManagedDeviceMobileAppConfigurationDeviceSummaryRequest extend
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedDeviceMobileAppConfigurationDeviceSummary> callback);
+    void delete(final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedDeviceMobileAppConfigurationDeviceSummaryRequest extend
      * @param sourceManagedDeviceMobileAppConfigurationDeviceSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedDeviceMobileAppConfigurationDeviceSummary sourceManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<ManagedDeviceMobileAppConfigurationDeviceSummary> callback);
+    void patch(final ManagedDeviceMobileAppConfigurationDeviceSummary sourceManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback);
 
     /**
      * Patches this ManagedDeviceMobileAppConfigurationDeviceSummary with a source
@@ -68,7 +68,7 @@ public interface IManagedDeviceMobileAppConfigurationDeviceSummaryRequest extend
      * @param newManagedDeviceMobileAppConfigurationDeviceSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<ManagedDeviceMobileAppConfigurationDeviceSummary> callback);
+    void post(final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback);
 
     /**
      * Posts a ManagedDeviceMobileAppConfigurationDeviceSummary with a new object
@@ -85,7 +85,7 @@ public interface IManagedDeviceMobileAppConfigurationDeviceSummaryRequest extend
      * @param newManagedDeviceMobileAppConfigurationDeviceSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<ManagedDeviceMobileAppConfigurationDeviceSummary> callback);
+    void put(final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback);
 
     /**
      * Posts a ManagedDeviceMobileAppConfigurationDeviceSummary with a new object

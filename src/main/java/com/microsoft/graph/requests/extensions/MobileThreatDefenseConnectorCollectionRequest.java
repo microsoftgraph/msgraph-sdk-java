@@ -40,7 +40,7 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, MobileThreatDefenseConnectorCollectionResponse.class, IMobileThreatDefenseConnectorCollectionPage.class);
     }
 
-    public void get(final ICallback<IMobileThreatDefenseConnectorCollectionPage> callback) {
+    public void get(final ICallback<? super IMobileThreatDefenseConnectorCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback) {
+    public void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileThreatDefenseConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

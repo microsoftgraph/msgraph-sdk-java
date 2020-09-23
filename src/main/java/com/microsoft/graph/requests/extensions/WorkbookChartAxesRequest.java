@@ -39,7 +39,7 @@ public class WorkbookChartAxesRequest extends BaseRequest implements IWorkbookCh
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChartAxes> callback) {
+    public void get(final ICallback<? super WorkbookChartAxes> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookChartAxesRequest extends BaseRequest implements IWorkbookCh
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookChartAxes> callback) {
+    public void delete(final ICallback<? super WorkbookChartAxes> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookChartAxesRequest extends BaseRequest implements IWorkbookCh
      * @param sourceWorkbookChartAxes the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartAxes sourceWorkbookChartAxes, final ICallback<WorkbookChartAxes> callback) {
+    public void patch(final WorkbookChartAxes sourceWorkbookChartAxes, final ICallback<? super WorkbookChartAxes> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartAxes);
     }
 
@@ -98,7 +98,7 @@ public class WorkbookChartAxesRequest extends BaseRequest implements IWorkbookCh
      * @param newWorkbookChartAxes the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartAxes newWorkbookChartAxes, final ICallback<WorkbookChartAxes> callback) {
+    public void post(final WorkbookChartAxes newWorkbookChartAxes, final ICallback<? super WorkbookChartAxes> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartAxes);
     }
 
@@ -119,7 +119,7 @@ public class WorkbookChartAxesRequest extends BaseRequest implements IWorkbookCh
      * @param newWorkbookChartAxes the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartAxes newWorkbookChartAxes, final ICallback<WorkbookChartAxes> callback) {
+    public void put(final WorkbookChartAxes newWorkbookChartAxes, final ICallback<? super WorkbookChartAxes> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartAxes);
     }
 

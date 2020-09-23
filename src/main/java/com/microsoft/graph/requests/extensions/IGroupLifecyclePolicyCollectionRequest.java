@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupLifecyclePolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IGroupLifecyclePolicyCollectionPage> callback);
+    void get(final ICallback<? super IGroupLifecyclePolicyCollectionPage> callback);
 
     IGroupLifecyclePolicyCollectionPage get() throws ClientException;
 
-    void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback);
+    void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback);
 
     GroupLifecyclePolicy post(final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException;
 

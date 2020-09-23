@@ -36,7 +36,7 @@ public class ManagedDeviceUpdateWindowsDeviceAccountRequest extends BaseRequest 
         body = new ManagedDeviceUpdateWindowsDeviceAccountBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

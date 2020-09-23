@@ -37,7 +37,7 @@ public class CallUpdateRecordingStatusRequest extends BaseRequest implements ICa
         body = new CallUpdateRecordingStatusBody();
     }
 
-    public void post(final ICallback<UpdateRecordingStatusOperation> callback) {
+    public void post(final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

@@ -41,7 +41,7 @@ public class UserActivityRequest extends BaseRequest implements IUserActivityReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UserActivity> callback) {
+    public void get(final ICallback<? super UserActivity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class UserActivityRequest extends BaseRequest implements IUserActivityReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UserActivity> callback) {
+    public void delete(final ICallback<? super UserActivity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class UserActivityRequest extends BaseRequest implements IUserActivityReq
      * @param sourceUserActivity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserActivity sourceUserActivity, final ICallback<UserActivity> callback) {
+    public void patch(final UserActivity sourceUserActivity, final ICallback<? super UserActivity> callback) {
         send(HttpMethod.PATCH, callback, sourceUserActivity);
     }
 
@@ -100,7 +100,7 @@ public class UserActivityRequest extends BaseRequest implements IUserActivityReq
      * @param newUserActivity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserActivity newUserActivity, final ICallback<UserActivity> callback) {
+    public void post(final UserActivity newUserActivity, final ICallback<? super UserActivity> callback) {
         send(HttpMethod.POST, callback, newUserActivity);
     }
 
@@ -121,7 +121,7 @@ public class UserActivityRequest extends BaseRequest implements IUserActivityReq
      * @param newUserActivity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserActivity newUserActivity, final ICallback<UserActivity> callback) {
+    public void put(final UserActivity newUserActivity, final ICallback<? super UserActivity> callback) {
         send(HttpMethod.PUT, callback, newUserActivity);
     }
 

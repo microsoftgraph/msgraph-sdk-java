@@ -54,7 +54,7 @@ public class BaseItemRequest extends BaseRequest implements IBaseItemRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<BaseItem> callback) {
+    public void get(final ICallback<? super BaseItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -73,7 +73,7 @@ public class BaseItemRequest extends BaseRequest implements IBaseItemRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<BaseItem> callback) {
+    public void delete(final ICallback<? super BaseItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +92,7 @@ public class BaseItemRequest extends BaseRequest implements IBaseItemRequest {
      * @param sourceBaseItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BaseItem sourceBaseItem, final ICallback<BaseItem> callback) {
+    public void patch(final BaseItem sourceBaseItem, final ICallback<? super BaseItem> callback) {
         send(HttpMethod.PATCH, callback, sourceBaseItem);
     }
 
@@ -113,7 +113,7 @@ public class BaseItemRequest extends BaseRequest implements IBaseItemRequest {
      * @param newBaseItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BaseItem newBaseItem, final ICallback<BaseItem> callback) {
+    public void post(final BaseItem newBaseItem, final ICallback<? super BaseItem> callback) {
         send(HttpMethod.POST, callback, newBaseItem);
     }
 
@@ -134,7 +134,7 @@ public class BaseItemRequest extends BaseRequest implements IBaseItemRequest {
      * @param newBaseItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BaseItem newBaseItem, final ICallback<BaseItem> callback) {
+    public void put(final BaseItem newBaseItem, final ICallback<? super BaseItem> callback) {
         send(HttpMethod.PUT, callback, newBaseItem);
     }
 

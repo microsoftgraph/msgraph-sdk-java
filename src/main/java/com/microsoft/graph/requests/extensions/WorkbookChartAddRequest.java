@@ -37,7 +37,7 @@ public class WorkbookChartAddRequest extends BaseRequest implements IWorkbookCha
         body = new WorkbookChartAddBody();
     }
 
-    public void post(final ICallback<WorkbookChart> callback) {
+    public void post(final ICallback<? super WorkbookChart> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

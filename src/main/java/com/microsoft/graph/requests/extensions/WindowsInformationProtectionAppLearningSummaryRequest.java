@@ -37,7 +37,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsInformationProtectionAppLearningSummary> callback) {
+    public void get(final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsInformationProtectionAppLearningSummary> callback) {
+    public void delete(final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @param sourceWindowsInformationProtectionAppLearningSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsInformationProtectionAppLearningSummary sourceWindowsInformationProtectionAppLearningSummary, final ICallback<WindowsInformationProtectionAppLearningSummary> callback) {
+    public void patch(final WindowsInformationProtectionAppLearningSummary sourceWindowsInformationProtectionAppLearningSummary, final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsInformationProtectionAppLearningSummary);
     }
 
@@ -96,7 +96,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @param newWindowsInformationProtectionAppLearningSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<WindowsInformationProtectionAppLearningSummary> callback) {
+    public void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
         send(HttpMethod.POST, callback, newWindowsInformationProtectionAppLearningSummary);
     }
 
@@ -117,7 +117,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
      * @param newWindowsInformationProtectionAppLearningSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<WindowsInformationProtectionAppLearningSummary> callback) {
+    public void put(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
         send(HttpMethod.PUT, callback, newWindowsInformationProtectionAppLearningSummary);
     }
 

@@ -21,7 +21,7 @@ public interface ITeamsTabRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TeamsTab> callback);
+    void get(final ICallback<? super TeamsTab> callback);
 
     /**
      * Gets the TeamsTab from the service
@@ -36,7 +36,7 @@ public interface ITeamsTabRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TeamsTab> callback);
+    void delete(final ICallback<? super TeamsTab> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamsTabRequest extends IHttpRequest {
      * @param sourceTeamsTab the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TeamsTab sourceTeamsTab, final ICallback<TeamsTab> callback);
+    void patch(final TeamsTab sourceTeamsTab, final ICallback<? super TeamsTab> callback);
 
     /**
      * Patches this TeamsTab with a source
@@ -68,7 +68,7 @@ public interface ITeamsTabRequest extends IHttpRequest {
      * @param newTeamsTab the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TeamsTab newTeamsTab, final ICallback<TeamsTab> callback);
+    void post(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback);
 
     /**
      * Posts a TeamsTab with a new object
@@ -85,7 +85,7 @@ public interface ITeamsTabRequest extends IHttpRequest {
      * @param newTeamsTab the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TeamsTab newTeamsTab, final ICallback<TeamsTab> callback);
+    void put(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback);
 
     /**
      * Posts a TeamsTab with a new object

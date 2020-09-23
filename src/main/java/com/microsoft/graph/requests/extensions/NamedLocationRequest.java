@@ -52,7 +52,7 @@ public class NamedLocationRequest extends BaseRequest implements INamedLocationR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<NamedLocation> callback) {
+    public void get(final ICallback<? super NamedLocation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class NamedLocationRequest extends BaseRequest implements INamedLocationR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<NamedLocation> callback) {
+    public void delete(final ICallback<? super NamedLocation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class NamedLocationRequest extends BaseRequest implements INamedLocationR
      * @param sourceNamedLocation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final NamedLocation sourceNamedLocation, final ICallback<NamedLocation> callback) {
+    public void patch(final NamedLocation sourceNamedLocation, final ICallback<? super NamedLocation> callback) {
         send(HttpMethod.PATCH, callback, sourceNamedLocation);
     }
 
@@ -111,7 +111,7 @@ public class NamedLocationRequest extends BaseRequest implements INamedLocationR
      * @param newNamedLocation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final NamedLocation newNamedLocation, final ICallback<NamedLocation> callback) {
+    public void post(final NamedLocation newNamedLocation, final ICallback<? super NamedLocation> callback) {
         send(HttpMethod.POST, callback, newNamedLocation);
     }
 
@@ -132,7 +132,7 @@ public class NamedLocationRequest extends BaseRequest implements INamedLocationR
      * @param newNamedLocation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final NamedLocation newNamedLocation, final ICallback<NamedLocation> callback) {
+    public void put(final NamedLocation newNamedLocation, final ICallback<? super NamedLocation> callback) {
         send(HttpMethod.PUT, callback, newNamedLocation);
     }
 

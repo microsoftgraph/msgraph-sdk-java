@@ -21,7 +21,7 @@ public interface IAuditLogRootRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AuditLogRoot> callback);
+    void get(final ICallback<? super AuditLogRoot> callback);
 
     /**
      * Gets the AuditLogRoot from the service
@@ -36,7 +36,7 @@ public interface IAuditLogRootRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AuditLogRoot> callback);
+    void delete(final ICallback<? super AuditLogRoot> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAuditLogRootRequest extends IHttpRequest {
      * @param sourceAuditLogRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AuditLogRoot sourceAuditLogRoot, final ICallback<AuditLogRoot> callback);
+    void patch(final AuditLogRoot sourceAuditLogRoot, final ICallback<? super AuditLogRoot> callback);
 
     /**
      * Patches this AuditLogRoot with a source
@@ -68,7 +68,7 @@ public interface IAuditLogRootRequest extends IHttpRequest {
      * @param newAuditLogRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AuditLogRoot newAuditLogRoot, final ICallback<AuditLogRoot> callback);
+    void post(final AuditLogRoot newAuditLogRoot, final ICallback<? super AuditLogRoot> callback);
 
     /**
      * Posts a AuditLogRoot with a new object
@@ -85,7 +85,7 @@ public interface IAuditLogRootRequest extends IHttpRequest {
      * @param newAuditLogRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AuditLogRoot newAuditLogRoot, final ICallback<AuditLogRoot> callback);
+    void put(final AuditLogRoot newAuditLogRoot, final ICallback<? super AuditLogRoot> callback);
 
     /**
      * Posts a AuditLogRoot with a new object

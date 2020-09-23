@@ -40,7 +40,7 @@ public class EducationSchoolCollectionRequest extends BaseCollectionRequest<Educ
         super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, IEducationSchoolCollectionPage.class);
     }
 
-    public void get(final ICallback<IEducationSchoolCollectionPage> callback) {
+    public void get(final ICallback<? super IEducationSchoolCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EducationSchoolCollectionRequest extends BaseCollectionRequest<Educ
         return buildFromResponse(response);
     }
 
-    public void post(final EducationSchool newEducationSchool, final ICallback<EducationSchool> callback) {
+    public void post(final EducationSchool newEducationSchool, final ICallback<? super EducationSchool> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationSchoolRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

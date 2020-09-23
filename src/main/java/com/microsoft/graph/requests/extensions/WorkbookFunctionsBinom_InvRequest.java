@@ -37,7 +37,7 @@ public class WorkbookFunctionsBinom_InvRequest extends BaseRequest implements IW
         body = new WorkbookFunctionsBinom_InvBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

@@ -37,7 +37,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IdentitySecurityDefaultsEnforcementPolicy> callback) {
+    public void get(final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IdentitySecurityDefaultsEnforcementPolicy> callback) {
+    public void delete(final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * @param sourceIdentitySecurityDefaultsEnforcementPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentitySecurityDefaultsEnforcementPolicy sourceIdentitySecurityDefaultsEnforcementPolicy, final ICallback<IdentitySecurityDefaultsEnforcementPolicy> callback) {
+    public void patch(final IdentitySecurityDefaultsEnforcementPolicy sourceIdentitySecurityDefaultsEnforcementPolicy, final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentitySecurityDefaultsEnforcementPolicy);
     }
 
@@ -96,7 +96,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * @param newIdentitySecurityDefaultsEnforcementPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy, final ICallback<IdentitySecurityDefaultsEnforcementPolicy> callback) {
+    public void post(final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy, final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback) {
         send(HttpMethod.POST, callback, newIdentitySecurityDefaultsEnforcementPolicy);
     }
 
@@ -117,7 +117,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * @param newIdentitySecurityDefaultsEnforcementPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy, final ICallback<IdentitySecurityDefaultsEnforcementPolicy> callback) {
+    public void put(final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy, final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback) {
         send(HttpMethod.PUT, callback, newIdentitySecurityDefaultsEnforcementPolicy);
     }
 

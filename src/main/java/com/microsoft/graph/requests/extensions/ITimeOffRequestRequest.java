@@ -21,7 +21,7 @@ public interface ITimeOffRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TimeOffRequest> callback);
+    void get(final ICallback<? super TimeOffRequest> callback);
 
     /**
      * Gets the TimeOffRequest from the service
@@ -36,7 +36,7 @@ public interface ITimeOffRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TimeOffRequest> callback);
+    void delete(final ICallback<? super TimeOffRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITimeOffRequestRequest extends IHttpRequest {
      * @param sourceTimeOffRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TimeOffRequest sourceTimeOffRequest, final ICallback<TimeOffRequest> callback);
+    void patch(final TimeOffRequest sourceTimeOffRequest, final ICallback<? super TimeOffRequest> callback);
 
     /**
      * Patches this TimeOffRequest with a source
@@ -68,7 +68,7 @@ public interface ITimeOffRequestRequest extends IHttpRequest {
      * @param newTimeOffRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TimeOffRequest newTimeOffRequest, final ICallback<TimeOffRequest> callback);
+    void post(final TimeOffRequest newTimeOffRequest, final ICallback<? super TimeOffRequest> callback);
 
     /**
      * Posts a TimeOffRequest with a new object
@@ -85,7 +85,7 @@ public interface ITimeOffRequestRequest extends IHttpRequest {
      * @param newTimeOffRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TimeOffRequest newTimeOffRequest, final ICallback<TimeOffRequest> callback);
+    void put(final TimeOffRequest newTimeOffRequest, final ICallback<? super TimeOffRequest> callback);
 
     /**
      * Posts a TimeOffRequest with a new object

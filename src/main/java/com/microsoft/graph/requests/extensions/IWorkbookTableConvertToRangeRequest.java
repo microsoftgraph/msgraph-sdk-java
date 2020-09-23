@@ -26,7 +26,7 @@ public interface IWorkbookTableConvertToRangeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<WorkbookRange> callback);
+    void post(final ICallback<? super WorkbookRange> callback);
 
     /**
      * Creates the WorkbookTableConvertToRange

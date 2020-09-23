@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPlannerPlanCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPlannerPlanCollectionPage> callback);
+    void get(final ICallback<? super IPlannerPlanCollectionPage> callback);
 
     IPlannerPlanCollectionPage get() throws ClientException;
 
-    void post(final PlannerPlan newPlannerPlan, final ICallback<PlannerPlan> callback);
+    void post(final PlannerPlan newPlannerPlan, final ICallback<? super PlannerPlan> callback);
 
     PlannerPlan post(final PlannerPlan newPlannerPlan) throws ClientException;
 

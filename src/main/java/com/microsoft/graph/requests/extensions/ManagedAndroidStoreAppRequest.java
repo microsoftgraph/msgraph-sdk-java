@@ -37,7 +37,7 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest implements IManag
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedAndroidStoreApp> callback) {
+    public void get(final ICallback<? super ManagedAndroidStoreApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest implements IManag
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedAndroidStoreApp> callback) {
+    public void delete(final ICallback<? super ManagedAndroidStoreApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest implements IManag
      * @param sourceManagedAndroidStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAndroidStoreApp sourceManagedAndroidStoreApp, final ICallback<ManagedAndroidStoreApp> callback) {
+    public void patch(final ManagedAndroidStoreApp sourceManagedAndroidStoreApp, final ICallback<? super ManagedAndroidStoreApp> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAndroidStoreApp);
     }
 
@@ -96,7 +96,7 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest implements IManag
      * @param newManagedAndroidStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAndroidStoreApp newManagedAndroidStoreApp, final ICallback<ManagedAndroidStoreApp> callback) {
+    public void post(final ManagedAndroidStoreApp newManagedAndroidStoreApp, final ICallback<? super ManagedAndroidStoreApp> callback) {
         send(HttpMethod.POST, callback, newManagedAndroidStoreApp);
     }
 
@@ -117,7 +117,7 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest implements IManag
      * @param newManagedAndroidStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAndroidStoreApp newManagedAndroidStoreApp, final ICallback<ManagedAndroidStoreApp> callback) {
+    public void put(final ManagedAndroidStoreApp newManagedAndroidStoreApp, final ICallback<? super ManagedAndroidStoreApp> callback) {
         send(HttpMethod.PUT, callback, newManagedAndroidStoreApp);
     }
 

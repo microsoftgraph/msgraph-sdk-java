@@ -27,7 +27,7 @@ public interface IReportRootDeviceConfigurationUserActivityRequest extends IHttp
      * @param srcReport the Report with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    void patch(Report srcReport, final ICallback<Report> callback);
+    void patch(Report srcReport, final ICallback<? super Report> callback);
 
     /**
      * Patches the ReportRootDeviceConfigurationUserActivity
@@ -44,7 +44,7 @@ public interface IReportRootDeviceConfigurationUserActivityRequest extends IHttp
      * @param srcReport the Report to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Report srcReport, final ICallback<Report> callback);
+    void put(Report srcReport, final ICallback<? super Report> callback);
 
     /**
      * Puts the ReportRootDeviceConfigurationUserActivity
@@ -59,7 +59,7 @@ public interface IReportRootDeviceConfigurationUserActivityRequest extends IHttp
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Report> callback);
+    void get(final ICallback<? super Report> callback);
 
     /**
      * Gets the Report

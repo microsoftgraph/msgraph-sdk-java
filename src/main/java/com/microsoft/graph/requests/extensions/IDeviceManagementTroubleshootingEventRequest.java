@@ -21,7 +21,7 @@ public interface IDeviceManagementTroubleshootingEventRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementTroubleshootingEvent> callback);
+    void get(final ICallback<? super DeviceManagementTroubleshootingEvent> callback);
 
     /**
      * Gets the DeviceManagementTroubleshootingEvent from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementTroubleshootingEventRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementTroubleshootingEvent> callback);
+    void delete(final ICallback<? super DeviceManagementTroubleshootingEvent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementTroubleshootingEventRequest extends IHttpReque
      * @param sourceDeviceManagementTroubleshootingEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementTroubleshootingEvent sourceDeviceManagementTroubleshootingEvent, final ICallback<DeviceManagementTroubleshootingEvent> callback);
+    void patch(final DeviceManagementTroubleshootingEvent sourceDeviceManagementTroubleshootingEvent, final ICallback<? super DeviceManagementTroubleshootingEvent> callback);
 
     /**
      * Patches this DeviceManagementTroubleshootingEvent with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementTroubleshootingEventRequest extends IHttpReque
      * @param newDeviceManagementTroubleshootingEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<DeviceManagementTroubleshootingEvent> callback);
+    void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<? super DeviceManagementTroubleshootingEvent> callback);
 
     /**
      * Posts a DeviceManagementTroubleshootingEvent with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementTroubleshootingEventRequest extends IHttpReque
      * @param newDeviceManagementTroubleshootingEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<DeviceManagementTroubleshootingEvent> callback);
+    void put(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<? super DeviceManagementTroubleshootingEvent> callback);
 
     /**
      * Posts a DeviceManagementTroubleshootingEvent with a new object

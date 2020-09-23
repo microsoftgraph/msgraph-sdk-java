@@ -21,7 +21,7 @@ public interface IDomainDnsSrvRecordRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DomainDnsSrvRecord> callback);
+    void get(final ICallback<? super DomainDnsSrvRecord> callback);
 
     /**
      * Gets the DomainDnsSrvRecord from the service
@@ -36,7 +36,7 @@ public interface IDomainDnsSrvRecordRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DomainDnsSrvRecord> callback);
+    void delete(final ICallback<? super DomainDnsSrvRecord> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDomainDnsSrvRecordRequest extends IHttpRequest {
      * @param sourceDomainDnsSrvRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DomainDnsSrvRecord sourceDomainDnsSrvRecord, final ICallback<DomainDnsSrvRecord> callback);
+    void patch(final DomainDnsSrvRecord sourceDomainDnsSrvRecord, final ICallback<? super DomainDnsSrvRecord> callback);
 
     /**
      * Patches this DomainDnsSrvRecord with a source
@@ -68,7 +68,7 @@ public interface IDomainDnsSrvRecordRequest extends IHttpRequest {
      * @param newDomainDnsSrvRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DomainDnsSrvRecord newDomainDnsSrvRecord, final ICallback<DomainDnsSrvRecord> callback);
+    void post(final DomainDnsSrvRecord newDomainDnsSrvRecord, final ICallback<? super DomainDnsSrvRecord> callback);
 
     /**
      * Posts a DomainDnsSrvRecord with a new object
@@ -85,7 +85,7 @@ public interface IDomainDnsSrvRecordRequest extends IHttpRequest {
      * @param newDomainDnsSrvRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DomainDnsSrvRecord newDomainDnsSrvRecord, final ICallback<DomainDnsSrvRecord> callback);
+    void put(final DomainDnsSrvRecord newDomainDnsSrvRecord, final ICallback<? super DomainDnsSrvRecord> callback);
 
     /**
      * Posts a DomainDnsSrvRecord with a new object

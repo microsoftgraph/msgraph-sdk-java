@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IUserActivityReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<UserActivity> callback);
+    void delete(final ICallback<? super UserActivity> callback);
 
     UserActivity delete() throws ClientException;
 
@@ -50,7 +50,7 @@ public interface IUserActivityReferenceRequest extends IHttpRequest {
      * @param srcUserActivity the UserActivity to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(UserActivity srcUserActivity, final ICallback<UserActivity> callback);
+    void put(UserActivity srcUserActivity, final ICallback<? super UserActivity> callback);
 
     /**
      * Puts the UserActivity

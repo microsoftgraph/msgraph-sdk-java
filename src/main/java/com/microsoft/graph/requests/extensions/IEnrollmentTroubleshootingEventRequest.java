@@ -21,7 +21,7 @@ public interface IEnrollmentTroubleshootingEventRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EnrollmentTroubleshootingEvent> callback);
+    void get(final ICallback<? super EnrollmentTroubleshootingEvent> callback);
 
     /**
      * Gets the EnrollmentTroubleshootingEvent from the service
@@ -36,7 +36,7 @@ public interface IEnrollmentTroubleshootingEventRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EnrollmentTroubleshootingEvent> callback);
+    void delete(final ICallback<? super EnrollmentTroubleshootingEvent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEnrollmentTroubleshootingEventRequest extends IHttpRequest {
      * @param sourceEnrollmentTroubleshootingEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent, final ICallback<EnrollmentTroubleshootingEvent> callback);
+    void patch(final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent, final ICallback<? super EnrollmentTroubleshootingEvent> callback);
 
     /**
      * Patches this EnrollmentTroubleshootingEvent with a source
@@ -68,7 +68,7 @@ public interface IEnrollmentTroubleshootingEventRequest extends IHttpRequest {
      * @param newEnrollmentTroubleshootingEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<EnrollmentTroubleshootingEvent> callback);
+    void post(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<? super EnrollmentTroubleshootingEvent> callback);
 
     /**
      * Posts a EnrollmentTroubleshootingEvent with a new object
@@ -85,7 +85,7 @@ public interface IEnrollmentTroubleshootingEventRequest extends IHttpRequest {
      * @param newEnrollmentTroubleshootingEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<EnrollmentTroubleshootingEvent> callback);
+    void put(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<? super EnrollmentTroubleshootingEvent> callback);
 
     /**
      * Posts a EnrollmentTroubleshootingEvent with a new object

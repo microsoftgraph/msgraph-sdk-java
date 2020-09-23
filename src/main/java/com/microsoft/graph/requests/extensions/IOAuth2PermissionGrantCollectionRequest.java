@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOAuth2PermissionGrantCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOAuth2PermissionGrantCollectionPage> callback);
+    void get(final ICallback<? super IOAuth2PermissionGrantCollectionPage> callback);
 
     IOAuth2PermissionGrantCollectionPage get() throws ClientException;
 
-    void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback);
+    void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback);
 
     OAuth2PermissionGrant post(final OAuth2PermissionGrant newOAuth2PermissionGrant) throws ClientException;
 

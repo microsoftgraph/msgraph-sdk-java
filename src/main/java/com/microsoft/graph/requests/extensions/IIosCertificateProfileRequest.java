@@ -21,7 +21,7 @@ public interface IIosCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosCertificateProfile> callback);
+    void get(final ICallback<? super IosCertificateProfile> callback);
 
     /**
      * Gets the IosCertificateProfile from the service
@@ -36,7 +36,7 @@ public interface IIosCertificateProfileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosCertificateProfile> callback);
+    void delete(final ICallback<? super IosCertificateProfile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosCertificateProfileRequest extends IHttpRequest {
      * @param sourceIosCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosCertificateProfile sourceIosCertificateProfile, final ICallback<IosCertificateProfile> callback);
+    void patch(final IosCertificateProfile sourceIosCertificateProfile, final ICallback<? super IosCertificateProfile> callback);
 
     /**
      * Patches this IosCertificateProfile with a source
@@ -68,7 +68,7 @@ public interface IIosCertificateProfileRequest extends IHttpRequest {
      * @param newIosCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosCertificateProfile newIosCertificateProfile, final ICallback<IosCertificateProfile> callback);
+    void post(final IosCertificateProfile newIosCertificateProfile, final ICallback<? super IosCertificateProfile> callback);
 
     /**
      * Posts a IosCertificateProfile with a new object
@@ -85,7 +85,7 @@ public interface IIosCertificateProfileRequest extends IHttpRequest {
      * @param newIosCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosCertificateProfile newIosCertificateProfile, final ICallback<IosCertificateProfile> callback);
+    void put(final IosCertificateProfile newIosCertificateProfile, final ICallback<? super IosCertificateProfile> callback);
 
     /**
      * Posts a IosCertificateProfile with a new object

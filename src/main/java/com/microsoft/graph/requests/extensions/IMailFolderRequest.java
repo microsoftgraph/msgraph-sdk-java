@@ -21,7 +21,7 @@ public interface IMailFolderRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MailFolder> callback);
+    void get(final ICallback<? super MailFolder> callback);
 
     /**
      * Gets the MailFolder from the service
@@ -36,7 +36,7 @@ public interface IMailFolderRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MailFolder> callback);
+    void delete(final ICallback<? super MailFolder> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMailFolderRequest extends IHttpRequest {
      * @param sourceMailFolder the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MailFolder sourceMailFolder, final ICallback<MailFolder> callback);
+    void patch(final MailFolder sourceMailFolder, final ICallback<? super MailFolder> callback);
 
     /**
      * Patches this MailFolder with a source
@@ -68,7 +68,7 @@ public interface IMailFolderRequest extends IHttpRequest {
      * @param newMailFolder the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MailFolder newMailFolder, final ICallback<MailFolder> callback);
+    void post(final MailFolder newMailFolder, final ICallback<? super MailFolder> callback);
 
     /**
      * Posts a MailFolder with a new object
@@ -85,7 +85,7 @@ public interface IMailFolderRequest extends IHttpRequest {
      * @param newMailFolder the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MailFolder newMailFolder, final ICallback<MailFolder> callback);
+    void put(final MailFolder newMailFolder, final ICallback<? super MailFolder> callback);
 
     /**
      * Posts a MailFolder with a new object

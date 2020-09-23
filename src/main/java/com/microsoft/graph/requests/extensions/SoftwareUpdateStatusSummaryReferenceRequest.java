@@ -34,7 +34,7 @@ public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest imp
         super(requestUrl, client, requestOptions, SoftwareUpdateStatusSummary.class);
     }
 
-    public void delete(final ICallback<SoftwareUpdateStatusSummary> callback) {
+    public void delete(final ICallback<? super SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest imp
      * @param srcSoftwareUpdateStatusSummary the SoftwareUpdateStatusSummary reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(SoftwareUpdateStatusSummary srcSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback) {
+    public void put(SoftwareUpdateStatusSummary srcSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.PUT, callback, srcSoftwareUpdateStatusSummary);
     }
 

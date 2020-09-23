@@ -21,7 +21,7 @@ public interface IWorkbookFormatProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookFormatProtection> callback);
+    void get(final ICallback<? super WorkbookFormatProtection> callback);
 
     /**
      * Gets the WorkbookFormatProtection from the service
@@ -36,7 +36,7 @@ public interface IWorkbookFormatProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookFormatProtection> callback);
+    void delete(final ICallback<? super WorkbookFormatProtection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookFormatProtectionRequest extends IHttpRequest {
      * @param sourceWorkbookFormatProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookFormatProtection sourceWorkbookFormatProtection, final ICallback<WorkbookFormatProtection> callback);
+    void patch(final WorkbookFormatProtection sourceWorkbookFormatProtection, final ICallback<? super WorkbookFormatProtection> callback);
 
     /**
      * Patches this WorkbookFormatProtection with a source
@@ -68,7 +68,7 @@ public interface IWorkbookFormatProtectionRequest extends IHttpRequest {
      * @param newWorkbookFormatProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookFormatProtection newWorkbookFormatProtection, final ICallback<WorkbookFormatProtection> callback);
+    void post(final WorkbookFormatProtection newWorkbookFormatProtection, final ICallback<? super WorkbookFormatProtection> callback);
 
     /**
      * Posts a WorkbookFormatProtection with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookFormatProtectionRequest extends IHttpRequest {
      * @param newWorkbookFormatProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookFormatProtection newWorkbookFormatProtection, final ICallback<WorkbookFormatProtection> callback);
+    void put(final WorkbookFormatProtection newWorkbookFormatProtection, final ICallback<? super WorkbookFormatProtection> callback);
 
     /**
      * Posts a WorkbookFormatProtection with a new object

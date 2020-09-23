@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOnlineMeetingCreateOrGetRequest extends IHttpRequest {
 
-    void post(final ICallback<OnlineMeeting> callback);
+    void post(final ICallback<? super OnlineMeeting> callback);
 
     OnlineMeeting post() throws ClientException;
 

@@ -40,7 +40,7 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
         super(requestUrl, client, requestOptions, WorkbookPivotTableCollectionResponse.class, IWorkbookPivotTableCollectionPage.class);
     }
 
-    public void get(final ICallback<IWorkbookPivotTableCollectionPage> callback) {
+    public void get(final ICallback<? super IWorkbookPivotTableCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<WorkbookPivotTable> callback) {
+    public void post(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<? super WorkbookPivotTable> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookPivotTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

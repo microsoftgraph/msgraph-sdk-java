@@ -36,7 +36,7 @@ public class CallRejectRequest extends BaseRequest implements ICallRejectRequest
         body = new CallRejectBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

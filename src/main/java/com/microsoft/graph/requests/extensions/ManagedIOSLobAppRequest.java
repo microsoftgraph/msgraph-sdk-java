@@ -37,7 +37,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedIOSLobApp> callback) {
+    public void get(final ICallback<? super ManagedIOSLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedIOSLobApp> callback) {
+    public void delete(final ICallback<? super ManagedIOSLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @param sourceManagedIOSLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedIOSLobApp sourceManagedIOSLobApp, final ICallback<ManagedIOSLobApp> callback) {
+    public void patch(final ManagedIOSLobApp sourceManagedIOSLobApp, final ICallback<? super ManagedIOSLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedIOSLobApp);
     }
 
@@ -96,7 +96,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @param newManagedIOSLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedIOSLobApp newManagedIOSLobApp, final ICallback<ManagedIOSLobApp> callback) {
+    public void post(final ManagedIOSLobApp newManagedIOSLobApp, final ICallback<? super ManagedIOSLobApp> callback) {
         send(HttpMethod.POST, callback, newManagedIOSLobApp);
     }
 
@@ -117,7 +117,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @param newManagedIOSLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedIOSLobApp newManagedIOSLobApp, final ICallback<ManagedIOSLobApp> callback) {
+    public void put(final ManagedIOSLobApp newManagedIOSLobApp, final ICallback<? super ManagedIOSLobApp> callback) {
         send(HttpMethod.PUT, callback, newManagedIOSLobApp);
     }
 

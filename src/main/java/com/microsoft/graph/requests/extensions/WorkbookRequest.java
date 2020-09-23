@@ -62,7 +62,7 @@ public class WorkbookRequest extends BaseRequest implements IWorkbookRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Workbook> callback) {
+    public void get(final ICallback<? super Workbook> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class WorkbookRequest extends BaseRequest implements IWorkbookRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Workbook> callback) {
+    public void delete(final ICallback<? super Workbook> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -100,7 +100,7 @@ public class WorkbookRequest extends BaseRequest implements IWorkbookRequest {
      * @param sourceWorkbook the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Workbook sourceWorkbook, final ICallback<Workbook> callback) {
+    public void patch(final Workbook sourceWorkbook, final ICallback<? super Workbook> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbook);
     }
 
@@ -121,7 +121,7 @@ public class WorkbookRequest extends BaseRequest implements IWorkbookRequest {
      * @param newWorkbook the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Workbook newWorkbook, final ICallback<Workbook> callback) {
+    public void post(final Workbook newWorkbook, final ICallback<? super Workbook> callback) {
         send(HttpMethod.POST, callback, newWorkbook);
     }
 
@@ -142,7 +142,7 @@ public class WorkbookRequest extends BaseRequest implements IWorkbookRequest {
      * @param newWorkbook the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Workbook newWorkbook, final ICallback<Workbook> callback) {
+    public void put(final Workbook newWorkbook, final ICallback<? super Workbook> callback) {
         send(HttpMethod.PUT, callback, newWorkbook);
     }
 

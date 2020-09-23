@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupAssignLicenseRequest extends IHttpRequest {
 
-    void post(final ICallback<Group> callback);
+    void post(final ICallback<? super Group> callback);
 
     Group post() throws ClientException;
 

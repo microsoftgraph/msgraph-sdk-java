@@ -21,7 +21,7 @@ public interface IWorkbookRangeViewRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookRangeView> callback);
+    void get(final ICallback<? super WorkbookRangeView> callback);
 
     /**
      * Gets the WorkbookRangeView from the service
@@ -36,7 +36,7 @@ public interface IWorkbookRangeViewRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookRangeView> callback);
+    void delete(final ICallback<? super WorkbookRangeView> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookRangeViewRequest extends IHttpRequest {
      * @param sourceWorkbookRangeView the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookRangeView sourceWorkbookRangeView, final ICallback<WorkbookRangeView> callback);
+    void patch(final WorkbookRangeView sourceWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback);
 
     /**
      * Patches this WorkbookRangeView with a source
@@ -68,7 +68,7 @@ public interface IWorkbookRangeViewRequest extends IHttpRequest {
      * @param newWorkbookRangeView the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<WorkbookRangeView> callback);
+    void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback);
 
     /**
      * Posts a WorkbookRangeView with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookRangeViewRequest extends IHttpRequest {
      * @param newWorkbookRangeView the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookRangeView newWorkbookRangeView, final ICallback<WorkbookRangeView> callback);
+    void put(final WorkbookRangeView newWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback);
 
     /**
      * Posts a WorkbookRangeView with a new object

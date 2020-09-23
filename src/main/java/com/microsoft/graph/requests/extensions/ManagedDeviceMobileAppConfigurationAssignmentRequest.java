@@ -37,7 +37,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback) {
+    public void get(final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback) {
+    public void delete(final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
      * @param sourceManagedDeviceMobileAppConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedDeviceMobileAppConfigurationAssignment sourceManagedDeviceMobileAppConfigurationAssignment, final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback) {
+    public void patch(final ManagedDeviceMobileAppConfigurationAssignment sourceManagedDeviceMobileAppConfigurationAssignment, final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedDeviceMobileAppConfigurationAssignment);
     }
 
@@ -96,7 +96,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
      * @param newManagedDeviceMobileAppConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback) {
+    public void post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback) {
         send(HttpMethod.POST, callback, newManagedDeviceMobileAppConfigurationAssignment);
     }
 
@@ -117,7 +117,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
      * @param newManagedDeviceMobileAppConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback) {
+    public void put(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback) {
         send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfigurationAssignment);
     }
 

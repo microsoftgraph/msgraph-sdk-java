@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IUserGetManagedAppPoliciesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserGetManagedAppPoliciesCollectionPage> callback);
+    void get(final ICallback<? super IUserGetManagedAppPoliciesCollectionPage> callback);
 
     IUserGetManagedAppPoliciesCollectionPage get() throws ClientException;
 

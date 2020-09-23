@@ -36,7 +36,7 @@ public class WorkbookFilterApplyTopItemsFilterRequest extends BaseRequest implem
         body = new WorkbookFilterApplyTopItemsFilterBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

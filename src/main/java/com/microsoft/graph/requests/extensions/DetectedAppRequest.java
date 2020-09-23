@@ -41,7 +41,7 @@ public class DetectedAppRequest extends BaseRequest implements IDetectedAppReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DetectedApp> callback) {
+    public void get(final ICallback<? super DetectedApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class DetectedAppRequest extends BaseRequest implements IDetectedAppReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DetectedApp> callback) {
+    public void delete(final ICallback<? super DetectedApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class DetectedAppRequest extends BaseRequest implements IDetectedAppReque
      * @param sourceDetectedApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DetectedApp sourceDetectedApp, final ICallback<DetectedApp> callback) {
+    public void patch(final DetectedApp sourceDetectedApp, final ICallback<? super DetectedApp> callback) {
         send(HttpMethod.PATCH, callback, sourceDetectedApp);
     }
 
@@ -100,7 +100,7 @@ public class DetectedAppRequest extends BaseRequest implements IDetectedAppReque
      * @param newDetectedApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DetectedApp newDetectedApp, final ICallback<DetectedApp> callback) {
+    public void post(final DetectedApp newDetectedApp, final ICallback<? super DetectedApp> callback) {
         send(HttpMethod.POST, callback, newDetectedApp);
     }
 
@@ -121,7 +121,7 @@ public class DetectedAppRequest extends BaseRequest implements IDetectedAppReque
      * @param newDetectedApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DetectedApp newDetectedApp, final ICallback<DetectedApp> callback) {
+    public void put(final DetectedApp newDetectedApp, final ICallback<? super DetectedApp> callback) {
         send(HttpMethod.PUT, callback, newDetectedApp);
     }
 

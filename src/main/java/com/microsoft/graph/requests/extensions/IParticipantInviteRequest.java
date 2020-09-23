@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IParticipantInviteRequest extends IHttpRequest {
 
-    void post(final ICallback<InviteParticipantsOperation> callback);
+    void post(final ICallback<? super InviteParticipantsOperation> callback);
 
     InviteParticipantsOperation post() throws ClientException;
 

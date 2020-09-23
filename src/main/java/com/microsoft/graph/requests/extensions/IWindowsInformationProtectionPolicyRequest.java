@@ -21,7 +21,7 @@ public interface IWindowsInformationProtectionPolicyRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsInformationProtectionPolicy> callback);
+    void get(final ICallback<? super WindowsInformationProtectionPolicy> callback);
 
     /**
      * Gets the WindowsInformationProtectionPolicy from the service
@@ -36,7 +36,7 @@ public interface IWindowsInformationProtectionPolicyRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsInformationProtectionPolicy> callback);
+    void delete(final ICallback<? super WindowsInformationProtectionPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsInformationProtectionPolicyRequest extends IHttpRequest
      * @param sourceWindowsInformationProtectionPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsInformationProtectionPolicy sourceWindowsInformationProtectionPolicy, final ICallback<WindowsInformationProtectionPolicy> callback);
+    void patch(final WindowsInformationProtectionPolicy sourceWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback);
 
     /**
      * Patches this WindowsInformationProtectionPolicy with a source
@@ -68,7 +68,7 @@ public interface IWindowsInformationProtectionPolicyRequest extends IHttpRequest
      * @param newWindowsInformationProtectionPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<WindowsInformationProtectionPolicy> callback);
+    void post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback);
 
     /**
      * Posts a WindowsInformationProtectionPolicy with a new object
@@ -85,7 +85,7 @@ public interface IWindowsInformationProtectionPolicyRequest extends IHttpRequest
      * @param newWindowsInformationProtectionPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<WindowsInformationProtectionPolicy> callback);
+    void put(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback);
 
     /**
      * Posts a WindowsInformationProtectionPolicy with a new object

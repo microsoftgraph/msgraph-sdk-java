@@ -21,7 +21,7 @@ public interface IRoomRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Room> callback);
+    void get(final ICallback<? super Room> callback);
 
     /**
      * Gets the Room from the service
@@ -36,7 +36,7 @@ public interface IRoomRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Room> callback);
+    void delete(final ICallback<? super Room> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRoomRequest extends IHttpRequest {
      * @param sourceRoom the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Room sourceRoom, final ICallback<Room> callback);
+    void patch(final Room sourceRoom, final ICallback<? super Room> callback);
 
     /**
      * Patches this Room with a source
@@ -68,7 +68,7 @@ public interface IRoomRequest extends IHttpRequest {
      * @param newRoom the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Room newRoom, final ICallback<Room> callback);
+    void post(final Room newRoom, final ICallback<? super Room> callback);
 
     /**
      * Posts a Room with a new object
@@ -85,7 +85,7 @@ public interface IRoomRequest extends IHttpRequest {
      * @param newRoom the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Room newRoom, final ICallback<Room> callback);
+    void put(final Room newRoom, final ICallback<? super Room> callback);
 
     /**
      * Posts a Room with a new object

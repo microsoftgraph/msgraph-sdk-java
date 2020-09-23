@@ -40,7 +40,7 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, MobileAppAssignmentCollectionResponse.class, IMobileAppAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IMobileAppAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IMobileAppAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<MobileAppAssignment> callback) {
+    public void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

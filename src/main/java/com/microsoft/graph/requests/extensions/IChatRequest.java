@@ -21,7 +21,7 @@ public interface IChatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Chat> callback);
+    void get(final ICallback<? super Chat> callback);
 
     /**
      * Gets the Chat from the service
@@ -36,7 +36,7 @@ public interface IChatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Chat> callback);
+    void delete(final ICallback<? super Chat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IChatRequest extends IHttpRequest {
      * @param sourceChat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Chat sourceChat, final ICallback<Chat> callback);
+    void patch(final Chat sourceChat, final ICallback<? super Chat> callback);
 
     /**
      * Patches this Chat with a source
@@ -68,7 +68,7 @@ public interface IChatRequest extends IHttpRequest {
      * @param newChat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Chat newChat, final ICallback<Chat> callback);
+    void post(final Chat newChat, final ICallback<? super Chat> callback);
 
     /**
      * Posts a Chat with a new object
@@ -85,7 +85,7 @@ public interface IChatRequest extends IHttpRequest {
      * @param newChat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Chat newChat, final ICallback<Chat> callback);
+    void put(final Chat newChat, final ICallback<? super Chat> callback);
 
     /**
      * Posts a Chat with a new object

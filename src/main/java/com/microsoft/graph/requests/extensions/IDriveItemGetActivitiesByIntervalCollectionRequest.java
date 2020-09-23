@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDriveItemGetActivitiesByIntervalCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDriveItemGetActivitiesByIntervalCollectionPage> callback);
+    void get(final ICallback<? super IDriveItemGetActivitiesByIntervalCollectionPage> callback);
 
     IDriveItemGetActivitiesByIntervalCollectionPage get() throws ClientException;
 

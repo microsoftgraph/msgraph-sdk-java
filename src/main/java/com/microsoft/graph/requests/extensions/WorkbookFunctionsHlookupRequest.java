@@ -37,7 +37,7 @@ public class WorkbookFunctionsHlookupRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsHlookupBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

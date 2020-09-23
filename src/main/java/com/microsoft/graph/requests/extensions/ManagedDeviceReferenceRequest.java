@@ -45,7 +45,7 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
         super(requestUrl, client, requestOptions, ManagedDevice.class);
     }
 
-    public void delete(final ICallback<ManagedDevice> callback) {
+    public void delete(final ICallback<? super ManagedDevice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
      * @param srcManagedDevice the ManagedDevice reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ManagedDevice srcManagedDevice, final ICallback<ManagedDevice> callback) {
+    public void put(ManagedDevice srcManagedDevice, final ICallback<? super ManagedDevice> callback) {
         send(HttpMethod.PUT, callback, srcManagedDevice);
     }
 

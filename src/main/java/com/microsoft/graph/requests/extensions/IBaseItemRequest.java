@@ -21,7 +21,7 @@ public interface IBaseItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<BaseItem> callback);
+    void get(final ICallback<? super BaseItem> callback);
 
     /**
      * Gets the BaseItem from the service
@@ -36,7 +36,7 @@ public interface IBaseItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<BaseItem> callback);
+    void delete(final ICallback<? super BaseItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IBaseItemRequest extends IHttpRequest {
      * @param sourceBaseItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final BaseItem sourceBaseItem, final ICallback<BaseItem> callback);
+    void patch(final BaseItem sourceBaseItem, final ICallback<? super BaseItem> callback);
 
     /**
      * Patches this BaseItem with a source
@@ -68,7 +68,7 @@ public interface IBaseItemRequest extends IHttpRequest {
      * @param newBaseItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final BaseItem newBaseItem, final ICallback<BaseItem> callback);
+    void post(final BaseItem newBaseItem, final ICallback<? super BaseItem> callback);
 
     /**
      * Posts a BaseItem with a new object
@@ -85,7 +85,7 @@ public interface IBaseItemRequest extends IHttpRequest {
      * @param newBaseItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final BaseItem newBaseItem, final ICallback<BaseItem> callback);
+    void put(final BaseItem newBaseItem, final ICallback<? super BaseItem> callback);
 
     /**
      * Posts a BaseItem with a new object

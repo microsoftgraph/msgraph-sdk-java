@@ -26,7 +26,7 @@ public interface IDomainVerifyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<Domain> callback);
+    void post(final ICallback<? super Domain> callback);
 
     /**
      * Creates the DomainVerify

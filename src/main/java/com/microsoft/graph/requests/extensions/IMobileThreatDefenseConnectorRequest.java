@@ -21,7 +21,7 @@ public interface IMobileThreatDefenseConnectorRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileThreatDefenseConnector> callback);
+    void get(final ICallback<? super MobileThreatDefenseConnector> callback);
 
     /**
      * Gets the MobileThreatDefenseConnector from the service
@@ -36,7 +36,7 @@ public interface IMobileThreatDefenseConnectorRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileThreatDefenseConnector> callback);
+    void delete(final ICallback<? super MobileThreatDefenseConnector> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileThreatDefenseConnectorRequest extends IHttpRequest {
      * @param sourceMobileThreatDefenseConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileThreatDefenseConnector sourceMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback);
+    void patch(final MobileThreatDefenseConnector sourceMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback);
 
     /**
      * Patches this MobileThreatDefenseConnector with a source
@@ -68,7 +68,7 @@ public interface IMobileThreatDefenseConnectorRequest extends IHttpRequest {
      * @param newMobileThreatDefenseConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback);
+    void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback);
 
     /**
      * Posts a MobileThreatDefenseConnector with a new object
@@ -85,7 +85,7 @@ public interface IMobileThreatDefenseConnectorRequest extends IHttpRequest {
      * @param newMobileThreatDefenseConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback);
+    void put(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<? super MobileThreatDefenseConnector> callback);
 
     /**
      * Posts a MobileThreatDefenseConnector with a new object

@@ -40,7 +40,7 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
         super(requestUrl, client, requestOptions, WorkbookCommentCollectionResponse.class, IWorkbookCommentCollectionPage.class);
     }
 
-    public void get(final ICallback<IWorkbookCommentCollectionPage> callback) {
+    public void get(final ICallback<? super IWorkbookCommentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookComment newWorkbookComment, final ICallback<WorkbookComment> callback) {
+    public void post(final WorkbookComment newWorkbookComment, final ICallback<? super WorkbookComment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

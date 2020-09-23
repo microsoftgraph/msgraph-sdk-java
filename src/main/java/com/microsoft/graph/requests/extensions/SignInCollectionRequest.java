@@ -40,7 +40,7 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
         super(requestUrl, client, requestOptions, SignInCollectionResponse.class, ISignInCollectionPage.class);
     }
 
-    public void get(final ICallback<ISignInCollectionPage> callback) {
+    public void get(final ICallback<? super ISignInCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
         return buildFromResponse(response);
     }
 
-    public void post(final SignIn newSignIn, final ICallback<SignIn> callback) {
+    public void post(final SignIn newSignIn, final ICallback<? super SignIn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

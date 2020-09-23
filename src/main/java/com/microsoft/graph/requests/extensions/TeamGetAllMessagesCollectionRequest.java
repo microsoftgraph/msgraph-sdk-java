@@ -39,7 +39,7 @@ public class TeamGetAllMessagesCollectionRequest extends BaseCollectionRequest<T
     }
 
 
-    public void get(final ICallback<ITeamGetAllMessagesCollectionPage> callback) {
+    public void get(final ICallback<? super ITeamGetAllMessagesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

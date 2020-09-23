@@ -37,7 +37,7 @@ public class DomainDnsCnameRecordRequest extends BaseRequest implements IDomainD
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DomainDnsCnameRecord> callback) {
+    public void get(final ICallback<? super DomainDnsCnameRecord> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DomainDnsCnameRecordRequest extends BaseRequest implements IDomainD
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DomainDnsCnameRecord> callback) {
+    public void delete(final ICallback<? super DomainDnsCnameRecord> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DomainDnsCnameRecordRequest extends BaseRequest implements IDomainD
      * @param sourceDomainDnsCnameRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DomainDnsCnameRecord sourceDomainDnsCnameRecord, final ICallback<DomainDnsCnameRecord> callback) {
+    public void patch(final DomainDnsCnameRecord sourceDomainDnsCnameRecord, final ICallback<? super DomainDnsCnameRecord> callback) {
         send(HttpMethod.PATCH, callback, sourceDomainDnsCnameRecord);
     }
 
@@ -96,7 +96,7 @@ public class DomainDnsCnameRecordRequest extends BaseRequest implements IDomainD
      * @param newDomainDnsCnameRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DomainDnsCnameRecord newDomainDnsCnameRecord, final ICallback<DomainDnsCnameRecord> callback) {
+    public void post(final DomainDnsCnameRecord newDomainDnsCnameRecord, final ICallback<? super DomainDnsCnameRecord> callback) {
         send(HttpMethod.POST, callback, newDomainDnsCnameRecord);
     }
 
@@ -117,7 +117,7 @@ public class DomainDnsCnameRecordRequest extends BaseRequest implements IDomainD
      * @param newDomainDnsCnameRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DomainDnsCnameRecord newDomainDnsCnameRecord, final ICallback<DomainDnsCnameRecord> callback) {
+    public void put(final DomainDnsCnameRecord newDomainDnsCnameRecord, final ICallback<? super DomainDnsCnameRecord> callback) {
         send(HttpMethod.PUT, callback, newDomainDnsCnameRecord);
     }
 

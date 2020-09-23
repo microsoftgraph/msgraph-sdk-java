@@ -21,7 +21,7 @@ public interface IUpdateRecordingStatusOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UpdateRecordingStatusOperation> callback);
+    void get(final ICallback<? super UpdateRecordingStatusOperation> callback);
 
     /**
      * Gets the UpdateRecordingStatusOperation from the service
@@ -36,7 +36,7 @@ public interface IUpdateRecordingStatusOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UpdateRecordingStatusOperation> callback);
+    void delete(final ICallback<? super UpdateRecordingStatusOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUpdateRecordingStatusOperationRequest extends IHttpRequest {
      * @param sourceUpdateRecordingStatusOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UpdateRecordingStatusOperation sourceUpdateRecordingStatusOperation, final ICallback<UpdateRecordingStatusOperation> callback);
+    void patch(final UpdateRecordingStatusOperation sourceUpdateRecordingStatusOperation, final ICallback<? super UpdateRecordingStatusOperation> callback);
 
     /**
      * Patches this UpdateRecordingStatusOperation with a source
@@ -68,7 +68,7 @@ public interface IUpdateRecordingStatusOperationRequest extends IHttpRequest {
      * @param newUpdateRecordingStatusOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, final ICallback<UpdateRecordingStatusOperation> callback);
+    void post(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, final ICallback<? super UpdateRecordingStatusOperation> callback);
 
     /**
      * Posts a UpdateRecordingStatusOperation with a new object
@@ -85,7 +85,7 @@ public interface IUpdateRecordingStatusOperationRequest extends IHttpRequest {
      * @param newUpdateRecordingStatusOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, final ICallback<UpdateRecordingStatusOperation> callback);
+    void put(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, final ICallback<? super UpdateRecordingStatusOperation> callback);
 
     /**
      * Posts a UpdateRecordingStatusOperation with a new object

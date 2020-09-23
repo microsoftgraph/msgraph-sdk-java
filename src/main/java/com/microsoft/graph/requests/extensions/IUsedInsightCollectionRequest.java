@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUsedInsightCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUsedInsightCollectionPage> callback);
+    void get(final ICallback<? super IUsedInsightCollectionPage> callback);
 
     IUsedInsightCollectionPage get() throws ClientException;
 
-    void post(final UsedInsight newUsedInsight, final ICallback<UsedInsight> callback);
+    void post(final UsedInsight newUsedInsight, final ICallback<? super UsedInsight> callback);
 
     UsedInsight post(final UsedInsight newUsedInsight) throws ClientException;
 

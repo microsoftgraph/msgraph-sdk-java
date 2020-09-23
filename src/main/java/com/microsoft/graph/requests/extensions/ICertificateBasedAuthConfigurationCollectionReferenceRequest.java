@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
  */
 public interface ICertificateBasedAuthConfigurationCollectionReferenceRequest {
 
-    void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback);
+    void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
     CertificateBasedAuthConfiguration post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) throws ClientException;
 

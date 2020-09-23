@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IUserGetManagedAppDiagnosticStatusesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserGetManagedAppDiagnosticStatusesCollectionPage> callback);
+    void get(final ICallback<? super IUserGetManagedAppDiagnosticStatusesCollectionPage> callback);
 
     IUserGetManagedAppDiagnosticStatusesCollectionPage get() throws ClientException;
 

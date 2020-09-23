@@ -37,7 +37,7 @@ public class WorkbookFunctionResultRequest extends BaseRequest implements IWorkb
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookFunctionResult> callback) {
+    public void get(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WorkbookFunctionResultRequest extends BaseRequest implements IWorkb
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookFunctionResult> callback) {
+    public void delete(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WorkbookFunctionResultRequest extends BaseRequest implements IWorkb
      * @param sourceWorkbookFunctionResult the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookFunctionResult sourceWorkbookFunctionResult, final ICallback<WorkbookFunctionResult> callback) {
+    public void patch(final WorkbookFunctionResult sourceWorkbookFunctionResult, final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookFunctionResult);
     }
 
@@ -96,7 +96,7 @@ public class WorkbookFunctionResultRequest extends BaseRequest implements IWorkb
      * @param newWorkbookFunctionResult the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookFunctionResult newWorkbookFunctionResult, final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final WorkbookFunctionResult newWorkbookFunctionResult, final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, newWorkbookFunctionResult);
     }
 
@@ -117,7 +117,7 @@ public class WorkbookFunctionResultRequest extends BaseRequest implements IWorkb
      * @param newWorkbookFunctionResult the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookFunctionResult newWorkbookFunctionResult, final ICallback<WorkbookFunctionResult> callback) {
+    public void put(final WorkbookFunctionResult newWorkbookFunctionResult, final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.PUT, callback, newWorkbookFunctionResult);
     }
 

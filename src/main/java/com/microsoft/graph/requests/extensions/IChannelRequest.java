@@ -21,7 +21,7 @@ public interface IChannelRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Channel> callback);
+    void get(final ICallback<? super Channel> callback);
 
     /**
      * Gets the Channel from the service
@@ -36,7 +36,7 @@ public interface IChannelRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Channel> callback);
+    void delete(final ICallback<? super Channel> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IChannelRequest extends IHttpRequest {
      * @param sourceChannel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Channel sourceChannel, final ICallback<Channel> callback);
+    void patch(final Channel sourceChannel, final ICallback<? super Channel> callback);
 
     /**
      * Patches this Channel with a source
@@ -68,7 +68,7 @@ public interface IChannelRequest extends IHttpRequest {
      * @param newChannel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Channel newChannel, final ICallback<Channel> callback);
+    void post(final Channel newChannel, final ICallback<? super Channel> callback);
 
     /**
      * Posts a Channel with a new object
@@ -85,7 +85,7 @@ public interface IChannelRequest extends IHttpRequest {
      * @param newChannel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Channel newChannel, final ICallback<Channel> callback);
+    void put(final Channel newChannel, final ICallback<? super Channel> callback);
 
     /**
      * Posts a Channel with a new object

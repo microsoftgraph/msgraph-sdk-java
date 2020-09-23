@@ -45,7 +45,7 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
     }
 
 
-    public void post(final ICallback<IDriveItemInviteCollectionPage> callback) {
+    public void post(final ICallback<? super IDriveItemInviteCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISingleValueLegacyExtendedPropertyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISingleValueLegacyExtendedPropertyCollectionPage> callback);
+    void get(final ICallback<? super ISingleValueLegacyExtendedPropertyCollectionPage> callback);
 
     ISingleValueLegacyExtendedPropertyCollectionPage get() throws ClientException;
 
-    void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback);
+    void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback);
 
     SingleValueLegacyExtendedProperty post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IWindows10CompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10CompliancePolicy> callback);
+    void get(final ICallback<? super Windows10CompliancePolicy> callback);
 
     /**
      * Gets the Windows10CompliancePolicy from the service
@@ -36,7 +36,7 @@ public interface IWindows10CompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10CompliancePolicy> callback);
+    void delete(final ICallback<? super Windows10CompliancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10CompliancePolicyRequest extends IHttpRequest {
      * @param sourceWindows10CompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10CompliancePolicy sourceWindows10CompliancePolicy, final ICallback<Windows10CompliancePolicy> callback);
+    void patch(final Windows10CompliancePolicy sourceWindows10CompliancePolicy, final ICallback<? super Windows10CompliancePolicy> callback);
 
     /**
      * Patches this Windows10CompliancePolicy with a source
@@ -68,7 +68,7 @@ public interface IWindows10CompliancePolicyRequest extends IHttpRequest {
      * @param newWindows10CompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10CompliancePolicy newWindows10CompliancePolicy, final ICallback<Windows10CompliancePolicy> callback);
+    void post(final Windows10CompliancePolicy newWindows10CompliancePolicy, final ICallback<? super Windows10CompliancePolicy> callback);
 
     /**
      * Posts a Windows10CompliancePolicy with a new object
@@ -85,7 +85,7 @@ public interface IWindows10CompliancePolicyRequest extends IHttpRequest {
      * @param newWindows10CompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10CompliancePolicy newWindows10CompliancePolicy, final ICallback<Windows10CompliancePolicy> callback);
+    void put(final Windows10CompliancePolicy newWindows10CompliancePolicy, final ICallback<? super Windows10CompliancePolicy> callback);
 
     /**
      * Posts a Windows10CompliancePolicy with a new object

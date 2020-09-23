@@ -35,7 +35,7 @@ public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest imple
         super(requestUrl, client, requestOptions, ManagedDeviceOverview.class);
     }
 
-    public void post(final ManagedDeviceOverview newManagedDeviceOverview, final IJsonBackedObject payload, final ICallback<ManagedDeviceOverview> callback) {
+    public void post(final ManagedDeviceOverview newManagedDeviceOverview, final IJsonBackedObject payload, final ICallback<? super ManagedDeviceOverview> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest imple
         return null;
     }
 
-    public void get(final ICallback<ManagedDeviceOverview> callback) {
+    public void get(final ICallback<? super ManagedDeviceOverview> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest imple
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<ManagedDeviceOverview> callback) {
+	public void delete(final ICallback<? super ManagedDeviceOverview> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest imple
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ManagedDeviceOverview sourceManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback) {
+	public void patch(final ManagedDeviceOverview sourceManagedDeviceOverview, final ICallback<? super ManagedDeviceOverview> callback) {
 		send(HttpMethod.PATCH, callback, sourceManagedDeviceOverview);
 	}
 

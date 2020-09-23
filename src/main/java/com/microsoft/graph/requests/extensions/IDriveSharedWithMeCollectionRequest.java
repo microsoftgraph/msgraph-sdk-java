@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDriveSharedWithMeCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDriveSharedWithMeCollectionPage> callback);
+    void get(final ICallback<? super IDriveSharedWithMeCollectionPage> callback);
 
     IDriveSharedWithMeCollectionPage get() throws ClientException;
 

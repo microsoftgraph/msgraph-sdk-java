@@ -39,7 +39,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
     }
 
 
-    public void get(final ICallback<IDeviceManagementGetEffectivePermissionsCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementGetEffectivePermissionsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

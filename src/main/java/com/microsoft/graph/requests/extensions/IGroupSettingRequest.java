@@ -21,7 +21,7 @@ public interface IGroupSettingRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupSetting> callback);
+    void get(final ICallback<? super GroupSetting> callback);
 
     /**
      * Gets the GroupSetting from the service
@@ -36,7 +36,7 @@ public interface IGroupSettingRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupSetting> callback);
+    void delete(final ICallback<? super GroupSetting> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupSettingRequest extends IHttpRequest {
      * @param sourceGroupSetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupSetting sourceGroupSetting, final ICallback<GroupSetting> callback);
+    void patch(final GroupSetting sourceGroupSetting, final ICallback<? super GroupSetting> callback);
 
     /**
      * Patches this GroupSetting with a source
@@ -68,7 +68,7 @@ public interface IGroupSettingRequest extends IHttpRequest {
      * @param newGroupSetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupSetting newGroupSetting, final ICallback<GroupSetting> callback);
+    void post(final GroupSetting newGroupSetting, final ICallback<? super GroupSetting> callback);
 
     /**
      * Posts a GroupSetting with a new object
@@ -85,7 +85,7 @@ public interface IGroupSettingRequest extends IHttpRequest {
      * @param newGroupSetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupSetting newGroupSetting, final ICallback<GroupSetting> callback);
+    void put(final GroupSetting newGroupSetting, final ICallback<? super GroupSetting> callback);
 
     /**
      * Posts a GroupSetting with a new object

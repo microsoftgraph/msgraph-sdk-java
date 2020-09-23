@@ -37,7 +37,7 @@ public class SecureScoreRequest extends BaseRequest implements ISecureScoreReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SecureScore> callback) {
+    public void get(final ICallback<? super SecureScore> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SecureScoreRequest extends BaseRequest implements ISecureScoreReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SecureScore> callback) {
+    public void delete(final ICallback<? super SecureScore> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SecureScoreRequest extends BaseRequest implements ISecureScoreReque
      * @param sourceSecureScore the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SecureScore sourceSecureScore, final ICallback<SecureScore> callback) {
+    public void patch(final SecureScore sourceSecureScore, final ICallback<? super SecureScore> callback) {
         send(HttpMethod.PATCH, callback, sourceSecureScore);
     }
 
@@ -96,7 +96,7 @@ public class SecureScoreRequest extends BaseRequest implements ISecureScoreReque
      * @param newSecureScore the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SecureScore newSecureScore, final ICallback<SecureScore> callback) {
+    public void post(final SecureScore newSecureScore, final ICallback<? super SecureScore> callback) {
         send(HttpMethod.POST, callback, newSecureScore);
     }
 
@@ -117,7 +117,7 @@ public class SecureScoreRequest extends BaseRequest implements ISecureScoreReque
      * @param newSecureScore the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SecureScore newSecureScore, final ICallback<SecureScore> callback) {
+    public void put(final SecureScore newSecureScore, final ICallback<? super SecureScore> callback) {
         send(HttpMethod.PUT, callback, newSecureScore);
     }
 

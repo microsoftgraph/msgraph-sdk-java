@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IThreatAssessmentResultCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IThreatAssessmentResultCollectionPage> callback);
+    void get(final ICallback<? super IThreatAssessmentResultCollectionPage> callback);
 
     IThreatAssessmentResultCollectionPage get() throws ClientException;
 
-    void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<ThreatAssessmentResult> callback);
+    void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback);
 
     ThreatAssessmentResult post(final ThreatAssessmentResult newThreatAssessmentResult) throws ClientException;
 

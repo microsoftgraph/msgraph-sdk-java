@@ -52,7 +52,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Operation> callback) {
+    public void get(final ICallback<? super Operation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Operation> callback) {
+    public void delete(final ICallback<? super Operation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @param sourceOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Operation sourceOperation, final ICallback<Operation> callback) {
+    public void patch(final Operation sourceOperation, final ICallback<? super Operation> callback) {
         send(HttpMethod.PATCH, callback, sourceOperation);
     }
 
@@ -111,7 +111,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @param newOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Operation newOperation, final ICallback<Operation> callback) {
+    public void post(final Operation newOperation, final ICallback<? super Operation> callback) {
         send(HttpMethod.POST, callback, newOperation);
     }
 
@@ -132,7 +132,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @param newOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Operation newOperation, final ICallback<Operation> callback) {
+    public void put(final Operation newOperation, final ICallback<? super Operation> callback) {
         send(HttpMethod.PUT, callback, newOperation);
     }
 

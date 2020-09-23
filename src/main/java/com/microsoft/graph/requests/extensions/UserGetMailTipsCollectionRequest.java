@@ -46,7 +46,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
     }
 
 
-    public void post(final ICallback<IUserGetMailTipsCollectionPage> callback) {
+    public void post(final ICallback<? super IUserGetMailTipsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

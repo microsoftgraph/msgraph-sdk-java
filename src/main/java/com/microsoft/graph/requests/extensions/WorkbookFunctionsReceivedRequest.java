@@ -37,7 +37,7 @@ public class WorkbookFunctionsReceivedRequest extends BaseRequest implements IWo
         body = new WorkbookFunctionsReceivedBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

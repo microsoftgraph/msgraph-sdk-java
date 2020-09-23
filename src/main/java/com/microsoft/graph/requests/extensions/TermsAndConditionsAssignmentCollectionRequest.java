@@ -40,7 +40,7 @@ public class TermsAndConditionsAssignmentCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, TermsAndConditionsAssignmentCollectionResponse.class, ITermsAndConditionsAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<ITermsAndConditionsAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super ITermsAndConditionsAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TermsAndConditionsAssignmentCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<TermsAndConditionsAssignment> callback) {
+    public void post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<? super TermsAndConditionsAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -21,7 +21,7 @@ public interface IOnPremisesConditionalAccessSettingsRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnPremisesConditionalAccessSettings> callback);
+    void get(final ICallback<? super OnPremisesConditionalAccessSettings> callback);
 
     /**
      * Gets the OnPremisesConditionalAccessSettings from the service
@@ -36,7 +36,7 @@ public interface IOnPremisesConditionalAccessSettingsRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnPremisesConditionalAccessSettings> callback);
+    void delete(final ICallback<? super OnPremisesConditionalAccessSettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnPremisesConditionalAccessSettingsRequest extends IHttpReques
      * @param sourceOnPremisesConditionalAccessSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnPremisesConditionalAccessSettings sourceOnPremisesConditionalAccessSettings, final ICallback<OnPremisesConditionalAccessSettings> callback);
+    void patch(final OnPremisesConditionalAccessSettings sourceOnPremisesConditionalAccessSettings, final ICallback<? super OnPremisesConditionalAccessSettings> callback);
 
     /**
      * Patches this OnPremisesConditionalAccessSettings with a source
@@ -68,7 +68,7 @@ public interface IOnPremisesConditionalAccessSettingsRequest extends IHttpReques
      * @param newOnPremisesConditionalAccessSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings, final ICallback<OnPremisesConditionalAccessSettings> callback);
+    void post(final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings, final ICallback<? super OnPremisesConditionalAccessSettings> callback);
 
     /**
      * Posts a OnPremisesConditionalAccessSettings with a new object
@@ -85,7 +85,7 @@ public interface IOnPremisesConditionalAccessSettingsRequest extends IHttpReques
      * @param newOnPremisesConditionalAccessSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings, final ICallback<OnPremisesConditionalAccessSettings> callback);
+    void put(final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings, final ICallback<? super OnPremisesConditionalAccessSettings> callback);
 
     /**
      * Posts a OnPremisesConditionalAccessSettings with a new object

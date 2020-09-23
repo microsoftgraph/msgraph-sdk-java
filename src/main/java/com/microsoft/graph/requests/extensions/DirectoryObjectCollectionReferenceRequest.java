@@ -37,7 +37,7 @@ public class DirectoryObjectCollectionReferenceRequest extends BaseCollectionReq
         super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, IDirectoryObjectCollectionPage.class);
     }
 
-    public void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {
+    public void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/directoryObjects/" + newDirectoryObject.id);
         new DirectoryObjectWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

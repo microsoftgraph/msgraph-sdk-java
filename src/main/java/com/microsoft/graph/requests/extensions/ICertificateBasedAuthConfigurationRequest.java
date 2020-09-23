@@ -21,7 +21,7 @@ public interface ICertificateBasedAuthConfigurationRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CertificateBasedAuthConfiguration> callback);
+    void get(final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
     /**
      * Gets the CertificateBasedAuthConfiguration from the service
@@ -36,7 +36,7 @@ public interface ICertificateBasedAuthConfigurationRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CertificateBasedAuthConfiguration> callback);
+    void delete(final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICertificateBasedAuthConfigurationRequest extends IHttpRequest 
      * @param sourceCertificateBasedAuthConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback);
+    void patch(final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
     /**
      * Patches this CertificateBasedAuthConfiguration with a source
@@ -68,7 +68,7 @@ public interface ICertificateBasedAuthConfigurationRequest extends IHttpRequest 
      * @param newCertificateBasedAuthConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback);
+    void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
     /**
      * Posts a CertificateBasedAuthConfiguration with a new object
@@ -85,7 +85,7 @@ public interface ICertificateBasedAuthConfigurationRequest extends IHttpRequest 
      * @param newCertificateBasedAuthConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback);
+    void put(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
     /**
      * Posts a CertificateBasedAuthConfiguration with a new object

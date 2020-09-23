@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IManagedDeviceOverviewReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<ManagedDeviceOverview> callback);
+    void delete(final ICallback<? super ManagedDeviceOverview> callback);
 
     ManagedDeviceOverview delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IManagedDeviceOverviewReferenceRequest extends IHttpRequest {
      * @param srcManagedDeviceOverview the ManagedDeviceOverview to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(ManagedDeviceOverview srcManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback);
+    void put(ManagedDeviceOverview srcManagedDeviceOverview, final ICallback<? super ManagedDeviceOverview> callback);
 
     /**
      * Puts the ManagedDeviceOverview

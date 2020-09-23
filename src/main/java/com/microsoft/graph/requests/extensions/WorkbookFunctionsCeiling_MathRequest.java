@@ -37,7 +37,7 @@ public class WorkbookFunctionsCeiling_MathRequest extends BaseRequest implements
         body = new WorkbookFunctionsCeiling_MathBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

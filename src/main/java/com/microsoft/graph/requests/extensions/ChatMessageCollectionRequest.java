@@ -39,7 +39,7 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
         super(requestUrl, client, requestOptions, ChatMessageCollectionResponse.class, IChatMessageCollectionPage.class);
     }
 
-    public void get(final ICallback<IChatMessageCollectionPage> callback) {
+    public void get(final ICallback<? super IChatMessageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
         return buildFromResponse(response);
     }
 
-    public void post(final ChatMessage newChatMessage, final ICallback<ChatMessage> callback) {
+    public void post(final ChatMessage newChatMessage, final ICallback<? super ChatMessage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

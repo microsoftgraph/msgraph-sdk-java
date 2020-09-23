@@ -21,7 +21,7 @@ public interface IManagedMobileLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedMobileLobApp> callback);
+    void get(final ICallback<? super ManagedMobileLobApp> callback);
 
     /**
      * Gets the ManagedMobileLobApp from the service
@@ -36,7 +36,7 @@ public interface IManagedMobileLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedMobileLobApp> callback);
+    void delete(final ICallback<? super ManagedMobileLobApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedMobileLobAppRequest extends IHttpRequest {
      * @param sourceManagedMobileLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedMobileLobApp sourceManagedMobileLobApp, final ICallback<ManagedMobileLobApp> callback);
+    void patch(final ManagedMobileLobApp sourceManagedMobileLobApp, final ICallback<? super ManagedMobileLobApp> callback);
 
     /**
      * Patches this ManagedMobileLobApp with a source
@@ -68,7 +68,7 @@ public interface IManagedMobileLobAppRequest extends IHttpRequest {
      * @param newManagedMobileLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedMobileLobApp newManagedMobileLobApp, final ICallback<ManagedMobileLobApp> callback);
+    void post(final ManagedMobileLobApp newManagedMobileLobApp, final ICallback<? super ManagedMobileLobApp> callback);
 
     /**
      * Posts a ManagedMobileLobApp with a new object
@@ -85,7 +85,7 @@ public interface IManagedMobileLobAppRequest extends IHttpRequest {
      * @param newManagedMobileLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedMobileLobApp newManagedMobileLobApp, final ICallback<ManagedMobileLobApp> callback);
+    void put(final ManagedMobileLobApp newManagedMobileLobApp, final ICallback<? super ManagedMobileLobApp> callback);
 
     /**
      * Posts a ManagedMobileLobApp with a new object

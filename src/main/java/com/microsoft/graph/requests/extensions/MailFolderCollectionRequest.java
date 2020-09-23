@@ -39,7 +39,7 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
         super(requestUrl, client, requestOptions, MailFolderCollectionResponse.class, IMailFolderCollectionPage.class);
     }
 
-    public void get(final ICallback<IMailFolderCollectionPage> callback) {
+    public void get(final ICallback<? super IMailFolderCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
         return buildFromResponse(response);
     }
 
-    public void post(final MailFolder newMailFolder, final ICallback<MailFolder> callback) {
+    public void post(final MailFolder newMailFolder, final ICallback<? super MailFolder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MailFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

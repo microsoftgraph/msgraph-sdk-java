@@ -38,7 +38,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ReportRoot> callback) {
+    public void get(final ICallback<? super ReportRoot> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ReportRoot> callback) {
+    public void delete(final ICallback<? super ReportRoot> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @param sourceReportRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ReportRoot sourceReportRoot, final ICallback<ReportRoot> callback) {
+    public void patch(final ReportRoot sourceReportRoot, final ICallback<? super ReportRoot> callback) {
         send(HttpMethod.PATCH, callback, sourceReportRoot);
     }
 
@@ -97,7 +97,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @param newReportRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ReportRoot newReportRoot, final ICallback<ReportRoot> callback) {
+    public void post(final ReportRoot newReportRoot, final ICallback<? super ReportRoot> callback) {
         send(HttpMethod.POST, callback, newReportRoot);
     }
 
@@ -118,7 +118,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @param newReportRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ReportRoot newReportRoot, final ICallback<ReportRoot> callback) {
+    public void put(final ReportRoot newReportRoot, final ICallback<? super ReportRoot> callback) {
         send(HttpMethod.PUT, callback, newReportRoot);
     }
 

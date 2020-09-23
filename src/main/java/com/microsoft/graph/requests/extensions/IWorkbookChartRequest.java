@@ -21,7 +21,7 @@ public interface IWorkbookChartRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChart> callback);
+    void get(final ICallback<? super WorkbookChart> callback);
 
     /**
      * Gets the WorkbookChart from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChart> callback);
+    void delete(final ICallback<? super WorkbookChart> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartRequest extends IHttpRequest {
      * @param sourceWorkbookChart the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChart sourceWorkbookChart, final ICallback<WorkbookChart> callback);
+    void patch(final WorkbookChart sourceWorkbookChart, final ICallback<? super WorkbookChart> callback);
 
     /**
      * Patches this WorkbookChart with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartRequest extends IHttpRequest {
      * @param newWorkbookChart the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChart newWorkbookChart, final ICallback<WorkbookChart> callback);
+    void post(final WorkbookChart newWorkbookChart, final ICallback<? super WorkbookChart> callback);
 
     /**
      * Posts a WorkbookChart with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartRequest extends IHttpRequest {
      * @param newWorkbookChart the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChart newWorkbookChart, final ICallback<WorkbookChart> callback);
+    void put(final WorkbookChart newWorkbookChart, final ICallback<? super WorkbookChart> callback);
 
     /**
      * Posts a WorkbookChart with a new object

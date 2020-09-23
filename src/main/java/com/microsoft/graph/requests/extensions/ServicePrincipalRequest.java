@@ -71,7 +71,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ServicePrincipal> callback) {
+    public void get(final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ServicePrincipal> callback) {
+    public void delete(final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -109,7 +109,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @param sourceServicePrincipal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ServicePrincipal sourceServicePrincipal, final ICallback<ServicePrincipal> callback) {
+    public void patch(final ServicePrincipal sourceServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.PATCH, callback, sourceServicePrincipal);
     }
 
@@ -130,7 +130,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @param newServicePrincipal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ServicePrincipal newServicePrincipal, final ICallback<ServicePrincipal> callback) {
+    public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.POST, callback, newServicePrincipal);
     }
 
@@ -151,7 +151,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @param newServicePrincipal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ServicePrincipal newServicePrincipal, final ICallback<ServicePrincipal> callback) {
+    public void put(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.PUT, callback, newServicePrincipal);
     }
 

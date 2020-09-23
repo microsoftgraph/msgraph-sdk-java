@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEducationUserCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEducationUserCollectionPage> callback);
+    void get(final ICallback<? super IEducationUserCollectionPage> callback);
 
     IEducationUserCollectionPage get() throws ClientException;
 
-    void post(final EducationUser newEducationUser, final ICallback<EducationUser> callback);
+    void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback);
 
     EducationUser post(final EducationUser newEducationUser) throws ClientException;
 

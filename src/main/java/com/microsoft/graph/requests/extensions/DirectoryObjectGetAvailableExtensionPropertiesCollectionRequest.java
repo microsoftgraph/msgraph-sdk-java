@@ -44,7 +44,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
     }
 
 
-    public void post(final ICallback<IDirectoryObjectGetAvailableExtensionPropertiesCollectionPage> callback) {
+    public void post(final ICallback<? super IDirectoryObjectGetAvailableExtensionPropertiesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

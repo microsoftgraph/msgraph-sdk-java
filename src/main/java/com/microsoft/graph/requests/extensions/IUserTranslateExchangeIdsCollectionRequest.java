@@ -24,7 +24,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IUserTranslateExchangeIdsCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IUserTranslateExchangeIdsCollectionPage> callback);
+    void post(final ICallback<? super IUserTranslateExchangeIdsCollectionPage> callback);
 
     IUserTranslateExchangeIdsCollectionPage post() throws ClientException;
 

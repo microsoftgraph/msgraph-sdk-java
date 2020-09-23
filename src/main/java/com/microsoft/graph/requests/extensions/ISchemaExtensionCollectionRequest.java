@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISchemaExtensionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISchemaExtensionCollectionPage> callback);
+    void get(final ICallback<? super ISchemaExtensionCollectionPage> callback);
 
     ISchemaExtensionCollectionPage get() throws ClientException;
 
-    void post(final SchemaExtension newSchemaExtension, final ICallback<SchemaExtension> callback);
+    void post(final SchemaExtension newSchemaExtension, final ICallback<? super SchemaExtension> callback);
 
     SchemaExtension post(final SchemaExtension newSchemaExtension) throws ClientException;
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISessionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISessionCollectionPage> callback);
+    void get(final ICallback<? super ISessionCollectionPage> callback);
 
     ISessionCollectionPage get() throws ClientException;
 
-    void post(final Session newSession, final ICallback<Session> callback);
+    void post(final Session newSession, final ICallback<? super Session> callback);
 
     Session post(final Session newSession) throws ClientException;
 

@@ -36,7 +36,7 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<Integer> callback) {
+    public void post(final ICallback<? super Integer> callback) {
         send(HttpMethod.POST, callback, null);
     }
 

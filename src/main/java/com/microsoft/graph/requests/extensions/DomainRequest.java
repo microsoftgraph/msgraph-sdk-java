@@ -45,7 +45,7 @@ public class DomainRequest extends BaseRequest implements IDomainRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Domain> callback) {
+    public void get(final ICallback<? super Domain> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class DomainRequest extends BaseRequest implements IDomainRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Domain> callback) {
+    public void delete(final ICallback<? super Domain> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class DomainRequest extends BaseRequest implements IDomainRequest {
      * @param sourceDomain the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Domain sourceDomain, final ICallback<Domain> callback) {
+    public void patch(final Domain sourceDomain, final ICallback<? super Domain> callback) {
         send(HttpMethod.PATCH, callback, sourceDomain);
     }
 
@@ -104,7 +104,7 @@ public class DomainRequest extends BaseRequest implements IDomainRequest {
      * @param newDomain the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Domain newDomain, final ICallback<Domain> callback) {
+    public void post(final Domain newDomain, final ICallback<? super Domain> callback) {
         send(HttpMethod.POST, callback, newDomain);
     }
 
@@ -125,7 +125,7 @@ public class DomainRequest extends BaseRequest implements IDomainRequest {
      * @param newDomain the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Domain newDomain, final ICallback<Domain> callback) {
+    public void put(final Domain newDomain, final ICallback<? super Domain> callback) {
         send(HttpMethod.PUT, callback, newDomain);
     }
 

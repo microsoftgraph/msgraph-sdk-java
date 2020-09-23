@@ -21,7 +21,7 @@ public interface IWorkbookWorksheetProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookWorksheetProtection> callback);
+    void get(final ICallback<? super WorkbookWorksheetProtection> callback);
 
     /**
      * Gets the WorkbookWorksheetProtection from the service
@@ -36,7 +36,7 @@ public interface IWorkbookWorksheetProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookWorksheetProtection> callback);
+    void delete(final ICallback<? super WorkbookWorksheetProtection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookWorksheetProtectionRequest extends IHttpRequest {
      * @param sourceWorkbookWorksheetProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookWorksheetProtection sourceWorkbookWorksheetProtection, final ICallback<WorkbookWorksheetProtection> callback);
+    void patch(final WorkbookWorksheetProtection sourceWorkbookWorksheetProtection, final ICallback<? super WorkbookWorksheetProtection> callback);
 
     /**
      * Patches this WorkbookWorksheetProtection with a source
@@ -68,7 +68,7 @@ public interface IWorkbookWorksheetProtectionRequest extends IHttpRequest {
      * @param newWorkbookWorksheetProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookWorksheetProtection newWorkbookWorksheetProtection, final ICallback<WorkbookWorksheetProtection> callback);
+    void post(final WorkbookWorksheetProtection newWorkbookWorksheetProtection, final ICallback<? super WorkbookWorksheetProtection> callback);
 
     /**
      * Posts a WorkbookWorksheetProtection with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookWorksheetProtectionRequest extends IHttpRequest {
      * @param newWorkbookWorksheetProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookWorksheetProtection newWorkbookWorksheetProtection, final ICallback<WorkbookWorksheetProtection> callback);
+    void put(final WorkbookWorksheetProtection newWorkbookWorksheetProtection, final ICallback<? super WorkbookWorksheetProtection> callback);
 
     /**
      * Posts a WorkbookWorksheetProtection with a new object

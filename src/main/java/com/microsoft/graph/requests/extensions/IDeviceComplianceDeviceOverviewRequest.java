@@ -21,7 +21,7 @@ public interface IDeviceComplianceDeviceOverviewRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceComplianceDeviceOverview> callback);
+    void get(final ICallback<? super DeviceComplianceDeviceOverview> callback);
 
     /**
      * Gets the DeviceComplianceDeviceOverview from the service
@@ -36,7 +36,7 @@ public interface IDeviceComplianceDeviceOverviewRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceComplianceDeviceOverview> callback);
+    void delete(final ICallback<? super DeviceComplianceDeviceOverview> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceComplianceDeviceOverviewRequest extends IHttpRequest {
      * @param sourceDeviceComplianceDeviceOverview the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceComplianceDeviceOverview sourceDeviceComplianceDeviceOverview, final ICallback<DeviceComplianceDeviceOverview> callback);
+    void patch(final DeviceComplianceDeviceOverview sourceDeviceComplianceDeviceOverview, final ICallback<? super DeviceComplianceDeviceOverview> callback);
 
     /**
      * Patches this DeviceComplianceDeviceOverview with a source
@@ -68,7 +68,7 @@ public interface IDeviceComplianceDeviceOverviewRequest extends IHttpRequest {
      * @param newDeviceComplianceDeviceOverview the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview, final ICallback<DeviceComplianceDeviceOverview> callback);
+    void post(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview, final ICallback<? super DeviceComplianceDeviceOverview> callback);
 
     /**
      * Posts a DeviceComplianceDeviceOverview with a new object
@@ -85,7 +85,7 @@ public interface IDeviceComplianceDeviceOverviewRequest extends IHttpRequest {
      * @param newDeviceComplianceDeviceOverview the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview, final ICallback<DeviceComplianceDeviceOverview> callback);
+    void put(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview, final ICallback<? super DeviceComplianceDeviceOverview> callback);
 
     /**
      * Posts a DeviceComplianceDeviceOverview with a new object

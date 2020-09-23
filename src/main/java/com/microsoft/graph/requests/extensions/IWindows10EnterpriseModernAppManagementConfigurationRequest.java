@@ -21,7 +21,7 @@ public interface IWindows10EnterpriseModernAppManagementConfigurationRequest ext
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10EnterpriseModernAppManagementConfiguration> callback);
+    void get(final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback);
 
     /**
      * Gets the Windows10EnterpriseModernAppManagementConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows10EnterpriseModernAppManagementConfigurationRequest ext
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10EnterpriseModernAppManagementConfiguration> callback);
+    void delete(final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10EnterpriseModernAppManagementConfigurationRequest ext
      * @param sourceWindows10EnterpriseModernAppManagementConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10EnterpriseModernAppManagementConfiguration sourceWindows10EnterpriseModernAppManagementConfiguration, final ICallback<Windows10EnterpriseModernAppManagementConfiguration> callback);
+    void patch(final Windows10EnterpriseModernAppManagementConfiguration sourceWindows10EnterpriseModernAppManagementConfiguration, final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback);
 
     /**
      * Patches this Windows10EnterpriseModernAppManagementConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows10EnterpriseModernAppManagementConfigurationRequest ext
      * @param newWindows10EnterpriseModernAppManagementConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, final ICallback<Windows10EnterpriseModernAppManagementConfiguration> callback);
+    void post(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback);
 
     /**
      * Posts a Windows10EnterpriseModernAppManagementConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows10EnterpriseModernAppManagementConfigurationRequest ext
      * @param newWindows10EnterpriseModernAppManagementConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, final ICallback<Windows10EnterpriseModernAppManagementConfiguration> callback);
+    void put(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback);
 
     /**
      * Posts a Windows10EnterpriseModernAppManagementConfiguration with a new object

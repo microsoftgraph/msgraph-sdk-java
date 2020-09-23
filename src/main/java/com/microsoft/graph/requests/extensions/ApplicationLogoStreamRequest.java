@@ -58,7 +58,7 @@ public class ApplicationLogoStreamRequest extends BaseStreamRequest<Application>
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<Application> callback) {
+    public void put(final byte[] fileContents, final ICallback<? super Application> callback) {
         send(fileContents, callback);
     }
 

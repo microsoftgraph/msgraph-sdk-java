@@ -34,7 +34,7 @@ public class EntityReferenceRequest extends BaseRequest implements IEntityRefere
         super(requestUrl, client, requestOptions, Entity.class);
     }
 
-    public void delete(final ICallback<Entity> callback) {
+    public void delete(final ICallback<? super Entity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class EntityReferenceRequest extends BaseRequest implements IEntityRefere
      * @param srcEntity the Entity reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Entity srcEntity, final ICallback<Entity> callback) {
+    public void put(Entity srcEntity, final ICallback<? super Entity> callback) {
         send(HttpMethod.PUT, callback, srcEntity);
     }
 

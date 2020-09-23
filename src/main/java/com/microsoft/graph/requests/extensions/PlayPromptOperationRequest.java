@@ -37,7 +37,7 @@ public class PlayPromptOperationRequest extends BaseRequest implements IPlayProm
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PlayPromptOperation> callback) {
+    public void get(final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PlayPromptOperationRequest extends BaseRequest implements IPlayProm
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PlayPromptOperation> callback) {
+    public void delete(final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PlayPromptOperationRequest extends BaseRequest implements IPlayProm
      * @param sourcePlayPromptOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlayPromptOperation sourcePlayPromptOperation, final ICallback<PlayPromptOperation> callback) {
+    public void patch(final PlayPromptOperation sourcePlayPromptOperation, final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.PATCH, callback, sourcePlayPromptOperation);
     }
 
@@ -96,7 +96,7 @@ public class PlayPromptOperationRequest extends BaseRequest implements IPlayProm
      * @param newPlayPromptOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlayPromptOperation newPlayPromptOperation, final ICallback<PlayPromptOperation> callback) {
+    public void post(final PlayPromptOperation newPlayPromptOperation, final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.POST, callback, newPlayPromptOperation);
     }
 
@@ -117,7 +117,7 @@ public class PlayPromptOperationRequest extends BaseRequest implements IPlayProm
      * @param newPlayPromptOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlayPromptOperation newPlayPromptOperation, final ICallback<PlayPromptOperation> callback) {
+    public void put(final PlayPromptOperation newPlayPromptOperation, final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.PUT, callback, newPlayPromptOperation);
     }
 

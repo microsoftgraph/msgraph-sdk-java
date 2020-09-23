@@ -37,7 +37,7 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresRequest extends BaseReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Report> callback) {
+    public void get(final ICallback<? super Report> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

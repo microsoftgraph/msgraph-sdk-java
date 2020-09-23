@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.EducationUser;
  */
 public interface IEducationUserCollectionReferenceRequest {
 
-    void post(final EducationUser newEducationUser, final ICallback<EducationUser> callback);
+    void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback);
 
     EducationUser post(final EducationUser newEducationUser) throws ClientException;
 

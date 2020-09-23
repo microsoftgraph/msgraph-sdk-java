@@ -38,7 +38,7 @@ public class ChatRequest extends BaseRequest implements IChatRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Chat> callback) {
+    public void get(final ICallback<? super Chat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class ChatRequest extends BaseRequest implements IChatRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Chat> callback) {
+    public void delete(final ICallback<? super Chat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class ChatRequest extends BaseRequest implements IChatRequest {
      * @param sourceChat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Chat sourceChat, final ICallback<Chat> callback) {
+    public void patch(final Chat sourceChat, final ICallback<? super Chat> callback) {
         send(HttpMethod.PATCH, callback, sourceChat);
     }
 
@@ -97,7 +97,7 @@ public class ChatRequest extends BaseRequest implements IChatRequest {
      * @param newChat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Chat newChat, final ICallback<Chat> callback) {
+    public void post(final Chat newChat, final ICallback<? super Chat> callback) {
         send(HttpMethod.POST, callback, newChat);
     }
 
@@ -118,7 +118,7 @@ public class ChatRequest extends BaseRequest implements IChatRequest {
      * @param newChat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Chat newChat, final ICallback<Chat> callback) {
+    public void put(final Chat newChat, final ICallback<? super Chat> callback) {
         send(HttpMethod.PUT, callback, newChat);
     }
 

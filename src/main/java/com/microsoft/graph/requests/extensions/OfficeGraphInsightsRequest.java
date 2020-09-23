@@ -49,7 +49,7 @@ public class OfficeGraphInsightsRequest extends BaseRequest implements IOfficeGr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OfficeGraphInsights> callback) {
+    public void get(final ICallback<? super OfficeGraphInsights> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class OfficeGraphInsightsRequest extends BaseRequest implements IOfficeGr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OfficeGraphInsights> callback) {
+    public void delete(final ICallback<? super OfficeGraphInsights> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class OfficeGraphInsightsRequest extends BaseRequest implements IOfficeGr
      * @param sourceOfficeGraphInsights the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OfficeGraphInsights sourceOfficeGraphInsights, final ICallback<OfficeGraphInsights> callback) {
+    public void patch(final OfficeGraphInsights sourceOfficeGraphInsights, final ICallback<? super OfficeGraphInsights> callback) {
         send(HttpMethod.PATCH, callback, sourceOfficeGraphInsights);
     }
 
@@ -108,7 +108,7 @@ public class OfficeGraphInsightsRequest extends BaseRequest implements IOfficeGr
      * @param newOfficeGraphInsights the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OfficeGraphInsights newOfficeGraphInsights, final ICallback<OfficeGraphInsights> callback) {
+    public void post(final OfficeGraphInsights newOfficeGraphInsights, final ICallback<? super OfficeGraphInsights> callback) {
         send(HttpMethod.POST, callback, newOfficeGraphInsights);
     }
 
@@ -129,7 +129,7 @@ public class OfficeGraphInsightsRequest extends BaseRequest implements IOfficeGr
      * @param newOfficeGraphInsights the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OfficeGraphInsights newOfficeGraphInsights, final ICallback<OfficeGraphInsights> callback) {
+    public void put(final OfficeGraphInsights newOfficeGraphInsights, final ICallback<? super OfficeGraphInsights> callback) {
         send(HttpMethod.PUT, callback, newOfficeGraphInsights);
     }
 

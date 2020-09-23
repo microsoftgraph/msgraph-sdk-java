@@ -37,7 +37,7 @@ public class ProfilePhotoRequest extends BaseRequest implements IProfilePhotoReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ProfilePhoto> callback) {
+    public void get(final ICallback<? super ProfilePhoto> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ProfilePhotoRequest extends BaseRequest implements IProfilePhotoReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ProfilePhoto> callback) {
+    public void delete(final ICallback<? super ProfilePhoto> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ProfilePhotoRequest extends BaseRequest implements IProfilePhotoReq
      * @param sourceProfilePhoto the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ProfilePhoto sourceProfilePhoto, final ICallback<ProfilePhoto> callback) {
+    public void patch(final ProfilePhoto sourceProfilePhoto, final ICallback<? super ProfilePhoto> callback) {
         send(HttpMethod.PATCH, callback, sourceProfilePhoto);
     }
 
@@ -96,7 +96,7 @@ public class ProfilePhotoRequest extends BaseRequest implements IProfilePhotoReq
      * @param newProfilePhoto the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ProfilePhoto newProfilePhoto, final ICallback<ProfilePhoto> callback) {
+    public void post(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback) {
         send(HttpMethod.POST, callback, newProfilePhoto);
     }
 
@@ -117,7 +117,7 @@ public class ProfilePhotoRequest extends BaseRequest implements IProfilePhotoReq
      * @param newProfilePhoto the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ProfilePhoto newProfilePhoto, final ICallback<ProfilePhoto> callback) {
+    public void put(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback) {
         send(HttpMethod.PUT, callback, newProfilePhoto);
     }
 

@@ -37,7 +37,7 @@ public class Windows81CompliancePolicyRequest extends BaseRequest implements IWi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Windows81CompliancePolicy> callback) {
+    public void get(final ICallback<? super Windows81CompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows81CompliancePolicyRequest extends BaseRequest implements IWi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Windows81CompliancePolicy> callback) {
+    public void delete(final ICallback<? super Windows81CompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows81CompliancePolicyRequest extends BaseRequest implements IWi
      * @param sourceWindows81CompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows81CompliancePolicy sourceWindows81CompliancePolicy, final ICallback<Windows81CompliancePolicy> callback) {
+    public void patch(final Windows81CompliancePolicy sourceWindows81CompliancePolicy, final ICallback<? super Windows81CompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows81CompliancePolicy);
     }
 
@@ -96,7 +96,7 @@ public class Windows81CompliancePolicyRequest extends BaseRequest implements IWi
      * @param newWindows81CompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows81CompliancePolicy newWindows81CompliancePolicy, final ICallback<Windows81CompliancePolicy> callback) {
+    public void post(final Windows81CompliancePolicy newWindows81CompliancePolicy, final ICallback<? super Windows81CompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newWindows81CompliancePolicy);
     }
 
@@ -117,7 +117,7 @@ public class Windows81CompliancePolicyRequest extends BaseRequest implements IWi
      * @param newWindows81CompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows81CompliancePolicy newWindows81CompliancePolicy, final ICallback<Windows81CompliancePolicy> callback) {
+    public void put(final Windows81CompliancePolicy newWindows81CompliancePolicy, final ICallback<? super Windows81CompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newWindows81CompliancePolicy);
     }
 

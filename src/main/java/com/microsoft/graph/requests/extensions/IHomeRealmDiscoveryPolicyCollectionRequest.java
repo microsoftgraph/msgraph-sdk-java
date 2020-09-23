@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IHomeRealmDiscoveryPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IHomeRealmDiscoveryPolicyCollectionPage> callback);
+    void get(final ICallback<? super IHomeRealmDiscoveryPolicyCollectionPage> callback);
 
     IHomeRealmDiscoveryPolicyCollectionPage get() throws ClientException;
 
-    void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException;
 

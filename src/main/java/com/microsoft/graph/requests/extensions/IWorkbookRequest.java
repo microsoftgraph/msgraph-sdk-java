@@ -21,7 +21,7 @@ public interface IWorkbookRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Workbook> callback);
+    void get(final ICallback<? super Workbook> callback);
 
     /**
      * Gets the Workbook from the service
@@ -36,7 +36,7 @@ public interface IWorkbookRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Workbook> callback);
+    void delete(final ICallback<? super Workbook> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookRequest extends IHttpRequest {
      * @param sourceWorkbook the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Workbook sourceWorkbook, final ICallback<Workbook> callback);
+    void patch(final Workbook sourceWorkbook, final ICallback<? super Workbook> callback);
 
     /**
      * Patches this Workbook with a source
@@ -68,7 +68,7 @@ public interface IWorkbookRequest extends IHttpRequest {
      * @param newWorkbook the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Workbook newWorkbook, final ICallback<Workbook> callback);
+    void post(final Workbook newWorkbook, final ICallback<? super Workbook> callback);
 
     /**
      * Posts a Workbook with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookRequest extends IHttpRequest {
      * @param newWorkbook the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Workbook newWorkbook, final ICallback<Workbook> callback);
+    void put(final Workbook newWorkbook, final ICallback<? super Workbook> callback);
 
     /**
      * Posts a Workbook with a new object

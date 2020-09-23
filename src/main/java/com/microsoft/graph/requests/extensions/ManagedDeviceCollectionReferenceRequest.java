@@ -37,7 +37,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, IManagedDeviceCollectionPage.class);
     }
 
-    public void post(final ManagedDevice newManagedDevice, final ICallback<ManagedDevice> callback) {
+    public void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
         new ManagedDeviceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

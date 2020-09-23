@@ -21,7 +21,7 @@ public interface IOnenoteSectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnenoteSection> callback);
+    void get(final ICallback<? super OnenoteSection> callback);
 
     /**
      * Gets the OnenoteSection from the service
@@ -36,7 +36,7 @@ public interface IOnenoteSectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnenoteSection> callback);
+    void delete(final ICallback<? super OnenoteSection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnenoteSectionRequest extends IHttpRequest {
      * @param sourceOnenoteSection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnenoteSection sourceOnenoteSection, final ICallback<OnenoteSection> callback);
+    void patch(final OnenoteSection sourceOnenoteSection, final ICallback<? super OnenoteSection> callback);
 
     /**
      * Patches this OnenoteSection with a source
@@ -68,7 +68,7 @@ public interface IOnenoteSectionRequest extends IHttpRequest {
      * @param newOnenoteSection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OnenoteSection newOnenoteSection, final ICallback<OnenoteSection> callback);
+    void post(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback);
 
     /**
      * Posts a OnenoteSection with a new object
@@ -85,7 +85,7 @@ public interface IOnenoteSectionRequest extends IHttpRequest {
      * @param newOnenoteSection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnenoteSection newOnenoteSection, final ICallback<OnenoteSection> callback);
+    void put(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback);
 
     /**
      * Posts a OnenoteSection with a new object

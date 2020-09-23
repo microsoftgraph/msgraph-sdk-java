@@ -40,7 +40,7 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
         super(requestUrl, client, requestOptions, NamedLocationCollectionResponse.class, INamedLocationCollectionPage.class);
     }
 
-    public void get(final ICallback<INamedLocationCollectionPage> callback) {
+    public void get(final ICallback<? super INamedLocationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
         return buildFromResponse(response);
     }
 
-    public void post(final NamedLocation newNamedLocation, final ICallback<NamedLocation> callback) {
+    public void post(final NamedLocation newNamedLocation, final ICallback<? super NamedLocation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NamedLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IThumbnailSetCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IThumbnailSetCollectionPage> callback);
+    void get(final ICallback<? super IThumbnailSetCollectionPage> callback);
 
     IThumbnailSetCollectionPage get() throws ClientException;
 
-    void post(final ThumbnailSet newThumbnailSet, final ICallback<ThumbnailSet> callback);
+    void post(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback);
 
     ThumbnailSet post(final ThumbnailSet newThumbnailSet) throws ClientException;
 

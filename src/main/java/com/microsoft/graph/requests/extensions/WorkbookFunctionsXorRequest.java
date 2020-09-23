@@ -37,7 +37,7 @@ public class WorkbookFunctionsXorRequest extends BaseRequest implements IWorkboo
         body = new WorkbookFunctionsXorBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

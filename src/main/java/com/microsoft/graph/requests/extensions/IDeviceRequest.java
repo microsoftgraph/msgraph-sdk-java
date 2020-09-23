@@ -21,7 +21,7 @@ public interface IDeviceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Device> callback);
+    void get(final ICallback<? super Device> callback);
 
     /**
      * Gets the Device from the service
@@ -36,7 +36,7 @@ public interface IDeviceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Device> callback);
+    void delete(final ICallback<? super Device> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceRequest extends IHttpRequest {
      * @param sourceDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Device sourceDevice, final ICallback<Device> callback);
+    void patch(final Device sourceDevice, final ICallback<? super Device> callback);
 
     /**
      * Patches this Device with a source
@@ -68,7 +68,7 @@ public interface IDeviceRequest extends IHttpRequest {
      * @param newDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Device newDevice, final ICallback<Device> callback);
+    void post(final Device newDevice, final ICallback<? super Device> callback);
 
     /**
      * Posts a Device with a new object
@@ -85,7 +85,7 @@ public interface IDeviceRequest extends IHttpRequest {
      * @param newDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Device newDevice, final ICallback<Device> callback);
+    void put(final Device newDevice, final ICallback<? super Device> callback);
 
     /**
      * Posts a Device with a new object

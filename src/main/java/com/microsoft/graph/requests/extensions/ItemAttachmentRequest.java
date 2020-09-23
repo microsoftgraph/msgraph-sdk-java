@@ -39,7 +39,7 @@ public class ItemAttachmentRequest extends BaseRequest implements IItemAttachmen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ItemAttachment> callback) {
+    public void get(final ICallback<? super ItemAttachment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class ItemAttachmentRequest extends BaseRequest implements IItemAttachmen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ItemAttachment> callback) {
+    public void delete(final ICallback<? super ItemAttachment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class ItemAttachmentRequest extends BaseRequest implements IItemAttachmen
      * @param sourceItemAttachment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemAttachment sourceItemAttachment, final ICallback<ItemAttachment> callback) {
+    public void patch(final ItemAttachment sourceItemAttachment, final ICallback<? super ItemAttachment> callback) {
         send(HttpMethod.PATCH, callback, sourceItemAttachment);
     }
 
@@ -98,7 +98,7 @@ public class ItemAttachmentRequest extends BaseRequest implements IItemAttachmen
      * @param newItemAttachment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemAttachment newItemAttachment, final ICallback<ItemAttachment> callback) {
+    public void post(final ItemAttachment newItemAttachment, final ICallback<? super ItemAttachment> callback) {
         send(HttpMethod.POST, callback, newItemAttachment);
     }
 
@@ -119,7 +119,7 @@ public class ItemAttachmentRequest extends BaseRequest implements IItemAttachmen
      * @param newItemAttachment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemAttachment newItemAttachment, final ICallback<ItemAttachment> callback) {
+    public void put(final ItemAttachment newItemAttachment, final ICallback<? super ItemAttachment> callback) {
         send(HttpMethod.PUT, callback, newItemAttachment);
     }
 

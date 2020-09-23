@@ -21,7 +21,7 @@ public interface IMicrosoftStoreForBusinessAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MicrosoftStoreForBusinessApp> callback);
+    void get(final ICallback<? super MicrosoftStoreForBusinessApp> callback);
 
     /**
      * Gets the MicrosoftStoreForBusinessApp from the service
@@ -36,7 +36,7 @@ public interface IMicrosoftStoreForBusinessAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MicrosoftStoreForBusinessApp> callback);
+    void delete(final ICallback<? super MicrosoftStoreForBusinessApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMicrosoftStoreForBusinessAppRequest extends IHttpRequest {
      * @param sourceMicrosoftStoreForBusinessApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MicrosoftStoreForBusinessApp sourceMicrosoftStoreForBusinessApp, final ICallback<MicrosoftStoreForBusinessApp> callback);
+    void patch(final MicrosoftStoreForBusinessApp sourceMicrosoftStoreForBusinessApp, final ICallback<? super MicrosoftStoreForBusinessApp> callback);
 
     /**
      * Patches this MicrosoftStoreForBusinessApp with a source
@@ -68,7 +68,7 @@ public interface IMicrosoftStoreForBusinessAppRequest extends IHttpRequest {
      * @param newMicrosoftStoreForBusinessApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp, final ICallback<MicrosoftStoreForBusinessApp> callback);
+    void post(final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp, final ICallback<? super MicrosoftStoreForBusinessApp> callback);
 
     /**
      * Posts a MicrosoftStoreForBusinessApp with a new object
@@ -85,7 +85,7 @@ public interface IMicrosoftStoreForBusinessAppRequest extends IHttpRequest {
      * @param newMicrosoftStoreForBusinessApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp, final ICallback<MicrosoftStoreForBusinessApp> callback);
+    void put(final MicrosoftStoreForBusinessApp newMicrosoftStoreForBusinessApp, final ICallback<? super MicrosoftStoreForBusinessApp> callback);
 
     /**
      * Posts a MicrosoftStoreForBusinessApp with a new object

@@ -37,7 +37,7 @@ public class OpenShiftChangeRequestRequest extends BaseRequest implements IOpenS
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OpenShiftChangeRequest> callback) {
+    public void get(final ICallback<? super OpenShiftChangeRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OpenShiftChangeRequestRequest extends BaseRequest implements IOpenS
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OpenShiftChangeRequest> callback) {
+    public void delete(final ICallback<? super OpenShiftChangeRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OpenShiftChangeRequestRequest extends BaseRequest implements IOpenS
      * @param sourceOpenShiftChangeRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OpenShiftChangeRequest sourceOpenShiftChangeRequest, final ICallback<OpenShiftChangeRequest> callback) {
+    public void patch(final OpenShiftChangeRequest sourceOpenShiftChangeRequest, final ICallback<? super OpenShiftChangeRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceOpenShiftChangeRequest);
     }
 
@@ -96,7 +96,7 @@ public class OpenShiftChangeRequestRequest extends BaseRequest implements IOpenS
      * @param newOpenShiftChangeRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<OpenShiftChangeRequest> callback) {
+    public void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<? super OpenShiftChangeRequest> callback) {
         send(HttpMethod.POST, callback, newOpenShiftChangeRequest);
     }
 
@@ -117,7 +117,7 @@ public class OpenShiftChangeRequestRequest extends BaseRequest implements IOpenS
      * @param newOpenShiftChangeRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<OpenShiftChangeRequest> callback) {
+    public void put(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<? super OpenShiftChangeRequest> callback) {
         send(HttpMethod.PUT, callback, newOpenShiftChangeRequest);
     }
 

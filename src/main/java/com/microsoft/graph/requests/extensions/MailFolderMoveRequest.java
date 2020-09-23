@@ -37,7 +37,7 @@ public class MailFolderMoveRequest extends BaseRequest implements IMailFolderMov
         body = new MailFolderMoveBody();
     }
 
-    public void post(final ICallback<MailFolder> callback) {
+    public void post(final ICallback<? super MailFolder> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

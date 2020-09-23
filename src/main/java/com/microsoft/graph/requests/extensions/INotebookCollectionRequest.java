@@ -25,11 +25,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface INotebookCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<INotebookCollectionPage> callback);
+    void get(final ICallback<? super INotebookCollectionPage> callback);
 
     INotebookCollectionPage get() throws ClientException;
 
-    void post(final Notebook newNotebook, final ICallback<Notebook> callback);
+    void post(final Notebook newNotebook, final ICallback<? super Notebook> callback);
 
     Notebook post(final Notebook newNotebook) throws ClientException;
 

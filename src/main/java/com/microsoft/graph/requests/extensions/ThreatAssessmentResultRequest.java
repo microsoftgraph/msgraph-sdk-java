@@ -37,7 +37,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ThreatAssessmentResult> callback) {
+    public void get(final ICallback<? super ThreatAssessmentResult> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ThreatAssessmentResult> callback) {
+    public void delete(final ICallback<? super ThreatAssessmentResult> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @param sourceThreatAssessmentResult the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ThreatAssessmentResult sourceThreatAssessmentResult, final ICallback<ThreatAssessmentResult> callback) {
+    public void patch(final ThreatAssessmentResult sourceThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback) {
         send(HttpMethod.PATCH, callback, sourceThreatAssessmentResult);
     }
 
@@ -96,7 +96,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @param newThreatAssessmentResult the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<ThreatAssessmentResult> callback) {
+    public void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback) {
         send(HttpMethod.POST, callback, newThreatAssessmentResult);
     }
 
@@ -117,7 +117,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @param newThreatAssessmentResult the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<ThreatAssessmentResult> callback) {
+    public void put(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback) {
         send(HttpMethod.PUT, callback, newThreatAssessmentResult);
     }
 

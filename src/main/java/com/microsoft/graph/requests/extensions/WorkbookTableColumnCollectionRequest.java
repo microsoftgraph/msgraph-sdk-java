@@ -41,7 +41,7 @@ public class WorkbookTableColumnCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, WorkbookTableColumnCollectionResponse.class, IWorkbookTableColumnCollectionPage.class);
     }
 
-    public void get(final ICallback<IWorkbookTableColumnCollectionPage> callback) {
+    public void get(final ICallback<? super IWorkbookTableColumnCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class WorkbookTableColumnCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
+    public void post(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookTableColumnRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

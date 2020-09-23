@@ -21,7 +21,7 @@ public interface INotebookRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Notebook> callback);
+    void get(final ICallback<? super Notebook> callback);
 
     /**
      * Gets the Notebook from the service
@@ -36,7 +36,7 @@ public interface INotebookRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Notebook> callback);
+    void delete(final ICallback<? super Notebook> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface INotebookRequest extends IHttpRequest {
      * @param sourceNotebook the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Notebook sourceNotebook, final ICallback<Notebook> callback);
+    void patch(final Notebook sourceNotebook, final ICallback<? super Notebook> callback);
 
     /**
      * Patches this Notebook with a source
@@ -68,7 +68,7 @@ public interface INotebookRequest extends IHttpRequest {
      * @param newNotebook the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Notebook newNotebook, final ICallback<Notebook> callback);
+    void post(final Notebook newNotebook, final ICallback<? super Notebook> callback);
 
     /**
      * Posts a Notebook with a new object
@@ -85,7 +85,7 @@ public interface INotebookRequest extends IHttpRequest {
      * @param newNotebook the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Notebook newNotebook, final ICallback<Notebook> callback);
+    void put(final Notebook newNotebook, final ICallback<? super Notebook> callback);
 
     /**
      * Posts a Notebook with a new object

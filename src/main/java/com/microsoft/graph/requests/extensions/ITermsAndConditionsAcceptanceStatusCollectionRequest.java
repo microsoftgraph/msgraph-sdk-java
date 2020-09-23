@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITermsAndConditionsAcceptanceStatusCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITermsAndConditionsAcceptanceStatusCollectionPage> callback);
+    void get(final ICallback<? super ITermsAndConditionsAcceptanceStatusCollectionPage> callback);
 
     ITermsAndConditionsAcceptanceStatusCollectionPage get() throws ClientException;
 
-    void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<TermsAndConditionsAcceptanceStatus> callback);
+    void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<? super TermsAndConditionsAcceptanceStatus> callback);
 
     TermsAndConditionsAcceptanceStatus post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) throws ClientException;
 

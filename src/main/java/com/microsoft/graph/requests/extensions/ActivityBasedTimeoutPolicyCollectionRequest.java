@@ -40,7 +40,7 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, ActivityBasedTimeoutPolicyCollectionResponse.class, IActivityBasedTimeoutPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IActivityBasedTimeoutPolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IActivityBasedTimeoutPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback) {
+    public void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ActivityBasedTimeoutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

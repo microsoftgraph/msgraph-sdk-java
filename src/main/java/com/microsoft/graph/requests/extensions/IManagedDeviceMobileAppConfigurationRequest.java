@@ -21,7 +21,7 @@ public interface IManagedDeviceMobileAppConfigurationRequest extends IHttpReques
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedDeviceMobileAppConfiguration> callback);
+    void get(final ICallback<? super ManagedDeviceMobileAppConfiguration> callback);
 
     /**
      * Gets the ManagedDeviceMobileAppConfiguration from the service
@@ -36,7 +36,7 @@ public interface IManagedDeviceMobileAppConfigurationRequest extends IHttpReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedDeviceMobileAppConfiguration> callback);
+    void delete(final ICallback<? super ManagedDeviceMobileAppConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedDeviceMobileAppConfigurationRequest extends IHttpReques
      * @param sourceManagedDeviceMobileAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedDeviceMobileAppConfiguration sourceManagedDeviceMobileAppConfiguration, final ICallback<ManagedDeviceMobileAppConfiguration> callback);
+    void patch(final ManagedDeviceMobileAppConfiguration sourceManagedDeviceMobileAppConfiguration, final ICallback<? super ManagedDeviceMobileAppConfiguration> callback);
 
     /**
      * Patches this ManagedDeviceMobileAppConfiguration with a source
@@ -68,7 +68,7 @@ public interface IManagedDeviceMobileAppConfigurationRequest extends IHttpReques
      * @param newManagedDeviceMobileAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<ManagedDeviceMobileAppConfiguration> callback);
+    void post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<? super ManagedDeviceMobileAppConfiguration> callback);
 
     /**
      * Posts a ManagedDeviceMobileAppConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IManagedDeviceMobileAppConfigurationRequest extends IHttpReques
      * @param newManagedDeviceMobileAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<ManagedDeviceMobileAppConfiguration> callback);
+    void put(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<? super ManagedDeviceMobileAppConfiguration> callback);
 
     /**
      * Posts a ManagedDeviceMobileAppConfiguration with a new object

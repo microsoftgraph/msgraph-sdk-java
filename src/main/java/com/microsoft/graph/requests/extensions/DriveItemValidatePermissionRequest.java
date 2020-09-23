@@ -36,7 +36,7 @@ public class DriveItemValidatePermissionRequest extends BaseRequest implements I
         body = new DriveItemValidatePermissionBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

@@ -39,7 +39,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UsedInsight> callback) {
+    public void get(final ICallback<? super UsedInsight> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UsedInsight> callback) {
+    public void delete(final ICallback<? super UsedInsight> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @param sourceUsedInsight the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UsedInsight sourceUsedInsight, final ICallback<UsedInsight> callback) {
+    public void patch(final UsedInsight sourceUsedInsight, final ICallback<? super UsedInsight> callback) {
         send(HttpMethod.PATCH, callback, sourceUsedInsight);
     }
 
@@ -98,7 +98,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @param newUsedInsight the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UsedInsight newUsedInsight, final ICallback<UsedInsight> callback) {
+    public void post(final UsedInsight newUsedInsight, final ICallback<? super UsedInsight> callback) {
         send(HttpMethod.POST, callback, newUsedInsight);
     }
 
@@ -119,7 +119,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @param newUsedInsight the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UsedInsight newUsedInsight, final ICallback<UsedInsight> callback) {
+    public void put(final UsedInsight newUsedInsight, final ICallback<? super UsedInsight> callback) {
         send(HttpMethod.PUT, callback, newUsedInsight);
     }
 

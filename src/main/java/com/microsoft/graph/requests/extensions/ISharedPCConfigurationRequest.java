@@ -21,7 +21,7 @@ public interface ISharedPCConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SharedPCConfiguration> callback);
+    void get(final ICallback<? super SharedPCConfiguration> callback);
 
     /**
      * Gets the SharedPCConfiguration from the service
@@ -36,7 +36,7 @@ public interface ISharedPCConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SharedPCConfiguration> callback);
+    void delete(final ICallback<? super SharedPCConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISharedPCConfigurationRequest extends IHttpRequest {
      * @param sourceSharedPCConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SharedPCConfiguration sourceSharedPCConfiguration, final ICallback<SharedPCConfiguration> callback);
+    void patch(final SharedPCConfiguration sourceSharedPCConfiguration, final ICallback<? super SharedPCConfiguration> callback);
 
     /**
      * Patches this SharedPCConfiguration with a source
@@ -68,7 +68,7 @@ public interface ISharedPCConfigurationRequest extends IHttpRequest {
      * @param newSharedPCConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SharedPCConfiguration newSharedPCConfiguration, final ICallback<SharedPCConfiguration> callback);
+    void post(final SharedPCConfiguration newSharedPCConfiguration, final ICallback<? super SharedPCConfiguration> callback);
 
     /**
      * Posts a SharedPCConfiguration with a new object
@@ -85,7 +85,7 @@ public interface ISharedPCConfigurationRequest extends IHttpRequest {
      * @param newSharedPCConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SharedPCConfiguration newSharedPCConfiguration, final ICallback<SharedPCConfiguration> callback);
+    void put(final SharedPCConfiguration newSharedPCConfiguration, final ICallback<? super SharedPCConfiguration> callback);
 
     /**
      * Posts a SharedPCConfiguration with a new object

@@ -37,7 +37,7 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceEnrollmentLimitConfiguration> callback) {
+    public void get(final ICallback<? super DeviceEnrollmentLimitConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceEnrollmentLimitConfiguration> callback) {
+    public void delete(final ICallback<? super DeviceEnrollmentLimitConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest imple
      * @param sourceDeviceEnrollmentLimitConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceEnrollmentLimitConfiguration sourceDeviceEnrollmentLimitConfiguration, final ICallback<DeviceEnrollmentLimitConfiguration> callback) {
+    public void patch(final DeviceEnrollmentLimitConfiguration sourceDeviceEnrollmentLimitConfiguration, final ICallback<? super DeviceEnrollmentLimitConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceEnrollmentLimitConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest imple
      * @param newDeviceEnrollmentLimitConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration, final ICallback<DeviceEnrollmentLimitConfiguration> callback) {
+    public void post(final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration, final ICallback<? super DeviceEnrollmentLimitConfiguration> callback) {
         send(HttpMethod.POST, callback, newDeviceEnrollmentLimitConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest imple
      * @param newDeviceEnrollmentLimitConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration, final ICallback<DeviceEnrollmentLimitConfiguration> callback) {
+    public void put(final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration, final ICallback<? super DeviceEnrollmentLimitConfiguration> callback) {
         send(HttpMethod.PUT, callback, newDeviceEnrollmentLimitConfiguration);
     }
 

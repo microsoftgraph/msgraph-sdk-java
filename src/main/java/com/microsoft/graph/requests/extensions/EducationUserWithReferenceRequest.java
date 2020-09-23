@@ -45,7 +45,7 @@ public class EducationUserWithReferenceRequest extends BaseRequest implements IE
         super(requestUrl, client, requestOptions, EducationUser.class);
     }
 
-    public void post(final EducationUser newEducationUser, final IJsonBackedObject payload, final ICallback<EducationUser> callback) {
+    public void post(final EducationUser newEducationUser, final IJsonBackedObject payload, final ICallback<? super EducationUser> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -57,7 +57,7 @@ public class EducationUserWithReferenceRequest extends BaseRequest implements IE
         return null;
     }
 
-    public void get(final ICallback<EducationUser> callback) {
+    public void get(final ICallback<? super EducationUser> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class EducationUserWithReferenceRequest extends BaseRequest implements IE
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<EducationUser> callback) {
+	public void delete(final ICallback<? super EducationUser> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -73,7 +73,7 @@ public class EducationUserWithReferenceRequest extends BaseRequest implements IE
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final EducationUser sourceEducationUser, final ICallback<EducationUser> callback) {
+	public void patch(final EducationUser sourceEducationUser, final ICallback<? super EducationUser> callback) {
 		send(HttpMethod.PATCH, callback, sourceEducationUser);
 	}
 

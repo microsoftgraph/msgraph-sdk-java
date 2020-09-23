@@ -36,7 +36,7 @@ public class WorkbookChartPointCountRequest extends BaseRequest implements IWork
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Integer> callback) {
+    public void get(final ICallback<? super Integer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

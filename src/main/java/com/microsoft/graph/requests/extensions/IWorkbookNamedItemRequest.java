@@ -21,7 +21,7 @@ public interface IWorkbookNamedItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookNamedItem> callback);
+    void get(final ICallback<? super WorkbookNamedItem> callback);
 
     /**
      * Gets the WorkbookNamedItem from the service
@@ -36,7 +36,7 @@ public interface IWorkbookNamedItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookNamedItem> callback);
+    void delete(final ICallback<? super WorkbookNamedItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookNamedItemRequest extends IHttpRequest {
      * @param sourceWorkbookNamedItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookNamedItem sourceWorkbookNamedItem, final ICallback<WorkbookNamedItem> callback);
+    void patch(final WorkbookNamedItem sourceWorkbookNamedItem, final ICallback<? super WorkbookNamedItem> callback);
 
     /**
      * Patches this WorkbookNamedItem with a source
@@ -68,7 +68,7 @@ public interface IWorkbookNamedItemRequest extends IHttpRequest {
      * @param newWorkbookNamedItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<WorkbookNamedItem> callback);
+    void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<? super WorkbookNamedItem> callback);
 
     /**
      * Posts a WorkbookNamedItem with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookNamedItemRequest extends IHttpRequest {
      * @param newWorkbookNamedItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<WorkbookNamedItem> callback);
+    void put(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<? super WorkbookNamedItem> callback);
 
     /**
      * Posts a WorkbookNamedItem with a new object

@@ -40,7 +40,7 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
         super(requestUrl, client, requestOptions, AlertCollectionResponse.class, IAlertCollectionPage.class);
     }
 
-    public void get(final ICallback<IAlertCollectionPage> callback) {
+    public void get(final ICallback<? super IAlertCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final Alert newAlert, final ICallback<Alert> callback) {
+    public void post(final Alert newAlert, final ICallback<? super Alert> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

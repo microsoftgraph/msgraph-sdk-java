@@ -21,7 +21,7 @@ public interface IWindowsPhone81CustomConfigurationRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPhone81CustomConfiguration> callback);
+    void get(final ICallback<? super WindowsPhone81CustomConfiguration> callback);
 
     /**
      * Gets the WindowsPhone81CustomConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsPhone81CustomConfigurationRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPhone81CustomConfiguration> callback);
+    void delete(final ICallback<? super WindowsPhone81CustomConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPhone81CustomConfigurationRequest extends IHttpRequest 
      * @param sourceWindowsPhone81CustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPhone81CustomConfiguration sourceWindowsPhone81CustomConfiguration, final ICallback<WindowsPhone81CustomConfiguration> callback);
+    void patch(final WindowsPhone81CustomConfiguration sourceWindowsPhone81CustomConfiguration, final ICallback<? super WindowsPhone81CustomConfiguration> callback);
 
     /**
      * Patches this WindowsPhone81CustomConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsPhone81CustomConfigurationRequest extends IHttpRequest 
      * @param newWindowsPhone81CustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<WindowsPhone81CustomConfiguration> callback);
+    void post(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<? super WindowsPhone81CustomConfiguration> callback);
 
     /**
      * Posts a WindowsPhone81CustomConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPhone81CustomConfigurationRequest extends IHttpRequest 
      * @param newWindowsPhone81CustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<WindowsPhone81CustomConfiguration> callback);
+    void put(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<? super WindowsPhone81CustomConfiguration> callback);
 
     /**
      * Posts a WindowsPhone81CustomConfiguration with a new object

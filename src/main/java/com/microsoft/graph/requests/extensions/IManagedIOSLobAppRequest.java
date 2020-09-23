@@ -21,7 +21,7 @@ public interface IManagedIOSLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedIOSLobApp> callback);
+    void get(final ICallback<? super ManagedIOSLobApp> callback);
 
     /**
      * Gets the ManagedIOSLobApp from the service
@@ -36,7 +36,7 @@ public interface IManagedIOSLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedIOSLobApp> callback);
+    void delete(final ICallback<? super ManagedIOSLobApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedIOSLobAppRequest extends IHttpRequest {
      * @param sourceManagedIOSLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedIOSLobApp sourceManagedIOSLobApp, final ICallback<ManagedIOSLobApp> callback);
+    void patch(final ManagedIOSLobApp sourceManagedIOSLobApp, final ICallback<? super ManagedIOSLobApp> callback);
 
     /**
      * Patches this ManagedIOSLobApp with a source
@@ -68,7 +68,7 @@ public interface IManagedIOSLobAppRequest extends IHttpRequest {
      * @param newManagedIOSLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedIOSLobApp newManagedIOSLobApp, final ICallback<ManagedIOSLobApp> callback);
+    void post(final ManagedIOSLobApp newManagedIOSLobApp, final ICallback<? super ManagedIOSLobApp> callback);
 
     /**
      * Posts a ManagedIOSLobApp with a new object
@@ -85,7 +85,7 @@ public interface IManagedIOSLobAppRequest extends IHttpRequest {
      * @param newManagedIOSLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedIOSLobApp newManagedIOSLobApp, final ICallback<ManagedIOSLobApp> callback);
+    void put(final ManagedIOSLobApp newManagedIOSLobApp, final ICallback<? super ManagedIOSLobApp> callback);
 
     /**
      * Posts a ManagedIOSLobApp with a new object

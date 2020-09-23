@@ -21,7 +21,7 @@ public interface ICalendarGroupRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CalendarGroup> callback);
+    void get(final ICallback<? super CalendarGroup> callback);
 
     /**
      * Gets the CalendarGroup from the service
@@ -36,7 +36,7 @@ public interface ICalendarGroupRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CalendarGroup> callback);
+    void delete(final ICallback<? super CalendarGroup> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICalendarGroupRequest extends IHttpRequest {
      * @param sourceCalendarGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CalendarGroup sourceCalendarGroup, final ICallback<CalendarGroup> callback);
+    void patch(final CalendarGroup sourceCalendarGroup, final ICallback<? super CalendarGroup> callback);
 
     /**
      * Patches this CalendarGroup with a source
@@ -68,7 +68,7 @@ public interface ICalendarGroupRequest extends IHttpRequest {
      * @param newCalendarGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CalendarGroup newCalendarGroup, final ICallback<CalendarGroup> callback);
+    void post(final CalendarGroup newCalendarGroup, final ICallback<? super CalendarGroup> callback);
 
     /**
      * Posts a CalendarGroup with a new object
@@ -85,7 +85,7 @@ public interface ICalendarGroupRequest extends IHttpRequest {
      * @param newCalendarGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CalendarGroup newCalendarGroup, final ICallback<CalendarGroup> callback);
+    void put(final CalendarGroup newCalendarGroup, final ICallback<? super CalendarGroup> callback);
 
     /**
      * Posts a CalendarGroup with a new object

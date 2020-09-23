@@ -21,7 +21,7 @@ public interface IDetectedAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DetectedApp> callback);
+    void get(final ICallback<? super DetectedApp> callback);
 
     /**
      * Gets the DetectedApp from the service
@@ -36,7 +36,7 @@ public interface IDetectedAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DetectedApp> callback);
+    void delete(final ICallback<? super DetectedApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDetectedAppRequest extends IHttpRequest {
      * @param sourceDetectedApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DetectedApp sourceDetectedApp, final ICallback<DetectedApp> callback);
+    void patch(final DetectedApp sourceDetectedApp, final ICallback<? super DetectedApp> callback);
 
     /**
      * Patches this DetectedApp with a source
@@ -68,7 +68,7 @@ public interface IDetectedAppRequest extends IHttpRequest {
      * @param newDetectedApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DetectedApp newDetectedApp, final ICallback<DetectedApp> callback);
+    void post(final DetectedApp newDetectedApp, final ICallback<? super DetectedApp> callback);
 
     /**
      * Posts a DetectedApp with a new object
@@ -85,7 +85,7 @@ public interface IDetectedAppRequest extends IHttpRequest {
      * @param newDetectedApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DetectedApp newDetectedApp, final ICallback<DetectedApp> callback);
+    void put(final DetectedApp newDetectedApp, final ICallback<? super DetectedApp> callback);
 
     /**
      * Posts a DetectedApp with a new object

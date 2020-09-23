@@ -40,7 +40,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest exte
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse.class, IManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedDeviceMobileAppConfigurationUserStatusCollectionPage> callback) {
+    public void get(final ICallback<? super IManagedDeviceMobileAppConfigurationUserStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest exte
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus, final ICallback<ManagedDeviceMobileAppConfigurationUserStatus> callback) {
+    public void post(final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationUserStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

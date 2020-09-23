@@ -41,7 +41,7 @@ public class PostCollectionRequest extends BaseCollectionRequest<PostCollectionR
         super(requestUrl, client, requestOptions, PostCollectionResponse.class, IPostCollectionPage.class);
     }
 
-    public void get(final ICallback<IPostCollectionPage> callback) {
+    public void get(final ICallback<? super IPostCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class PostCollectionRequest extends BaseCollectionRequest<PostCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final Post newPost, final ICallback<Post> callback) {
+    public void post(final Post newPost, final ICallback<? super Post> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PostRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

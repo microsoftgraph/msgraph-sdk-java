@@ -39,7 +39,7 @@ public class ContactDeltaCollectionRequest extends BaseCollectionRequest<Contact
     }
 
 
-    public void get(final ICallback<IContactDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super IContactDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

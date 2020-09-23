@@ -37,7 +37,7 @@ public class MobileAppCategoryRequest extends BaseRequest implements IMobileAppC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileAppCategory> callback) {
+    public void get(final ICallback<? super MobileAppCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MobileAppCategoryRequest extends BaseRequest implements IMobileAppC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileAppCategory> callback) {
+    public void delete(final ICallback<? super MobileAppCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MobileAppCategoryRequest extends BaseRequest implements IMobileAppC
      * @param sourceMobileAppCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppCategory sourceMobileAppCategory, final ICallback<MobileAppCategory> callback) {
+    public void patch(final MobileAppCategory sourceMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppCategory);
     }
 
@@ -96,7 +96,7 @@ public class MobileAppCategoryRequest extends BaseRequest implements IMobileAppC
      * @param newMobileAppCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback) {
+    public void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
         send(HttpMethod.POST, callback, newMobileAppCategory);
     }
 
@@ -117,7 +117,7 @@ public class MobileAppCategoryRequest extends BaseRequest implements IMobileAppC
      * @param newMobileAppCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback) {
+    public void put(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
         send(HttpMethod.PUT, callback, newMobileAppCategory);
     }
 

@@ -21,7 +21,7 @@ public interface IScheduleChangeRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ScheduleChangeRequest> callback);
+    void get(final ICallback<? super ScheduleChangeRequest> callback);
 
     /**
      * Gets the ScheduleChangeRequest from the service
@@ -36,7 +36,7 @@ public interface IScheduleChangeRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ScheduleChangeRequest> callback);
+    void delete(final ICallback<? super ScheduleChangeRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IScheduleChangeRequestRequest extends IHttpRequest {
      * @param sourceScheduleChangeRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ScheduleChangeRequest sourceScheduleChangeRequest, final ICallback<ScheduleChangeRequest> callback);
+    void patch(final ScheduleChangeRequest sourceScheduleChangeRequest, final ICallback<? super ScheduleChangeRequest> callback);
 
     /**
      * Patches this ScheduleChangeRequest with a source
@@ -68,7 +68,7 @@ public interface IScheduleChangeRequestRequest extends IHttpRequest {
      * @param newScheduleChangeRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ScheduleChangeRequest newScheduleChangeRequest, final ICallback<ScheduleChangeRequest> callback);
+    void post(final ScheduleChangeRequest newScheduleChangeRequest, final ICallback<? super ScheduleChangeRequest> callback);
 
     /**
      * Posts a ScheduleChangeRequest with a new object
@@ -85,7 +85,7 @@ public interface IScheduleChangeRequestRequest extends IHttpRequest {
      * @param newScheduleChangeRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ScheduleChangeRequest newScheduleChangeRequest, final ICallback<ScheduleChangeRequest> callback);
+    void put(final ScheduleChangeRequest newScheduleChangeRequest, final ICallback<? super ScheduleChangeRequest> callback);
 
     /**
      * Posts a ScheduleChangeRequest with a new object

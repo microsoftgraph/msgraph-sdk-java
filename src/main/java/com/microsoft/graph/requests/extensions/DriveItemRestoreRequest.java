@@ -37,7 +37,7 @@ public class DriveItemRestoreRequest extends BaseRequest implements IDriveItemRe
         body = new DriveItemRestoreBody();
     }
 
-    public void post(final ICallback<DriveItem> callback) {
+    public void post(final ICallback<? super DriveItem> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

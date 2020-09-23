@@ -39,7 +39,7 @@ public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaC
     }
 
 
-    public void get(final ICallback<IUserDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super IUserDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

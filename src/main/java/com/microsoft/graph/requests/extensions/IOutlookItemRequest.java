@@ -21,7 +21,7 @@ public interface IOutlookItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OutlookItem> callback);
+    void get(final ICallback<? super OutlookItem> callback);
 
     /**
      * Gets the OutlookItem from the service
@@ -36,7 +36,7 @@ public interface IOutlookItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OutlookItem> callback);
+    void delete(final ICallback<? super OutlookItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOutlookItemRequest extends IHttpRequest {
      * @param sourceOutlookItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OutlookItem sourceOutlookItem, final ICallback<OutlookItem> callback);
+    void patch(final OutlookItem sourceOutlookItem, final ICallback<? super OutlookItem> callback);
 
     /**
      * Patches this OutlookItem with a source
@@ -68,7 +68,7 @@ public interface IOutlookItemRequest extends IHttpRequest {
      * @param newOutlookItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OutlookItem newOutlookItem, final ICallback<OutlookItem> callback);
+    void post(final OutlookItem newOutlookItem, final ICallback<? super OutlookItem> callback);
 
     /**
      * Posts a OutlookItem with a new object
@@ -85,7 +85,7 @@ public interface IOutlookItemRequest extends IHttpRequest {
      * @param newOutlookItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OutlookItem newOutlookItem, final ICallback<OutlookItem> callback);
+    void put(final OutlookItem newOutlookItem, final ICallback<? super OutlookItem> callback);
 
     /**
      * Posts a OutlookItem with a new object

@@ -21,7 +21,7 @@ public interface IPermissionGrantConditionSetRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PermissionGrantConditionSet> callback);
+    void get(final ICallback<? super PermissionGrantConditionSet> callback);
 
     /**
      * Gets the PermissionGrantConditionSet from the service
@@ -36,7 +36,7 @@ public interface IPermissionGrantConditionSetRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PermissionGrantConditionSet> callback);
+    void delete(final ICallback<? super PermissionGrantConditionSet> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPermissionGrantConditionSetRequest extends IHttpRequest {
      * @param sourcePermissionGrantConditionSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PermissionGrantConditionSet sourcePermissionGrantConditionSet, final ICallback<PermissionGrantConditionSet> callback);
+    void patch(final PermissionGrantConditionSet sourcePermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback);
 
     /**
      * Patches this PermissionGrantConditionSet with a source
@@ -68,7 +68,7 @@ public interface IPermissionGrantConditionSetRequest extends IHttpRequest {
      * @param newPermissionGrantConditionSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<PermissionGrantConditionSet> callback);
+    void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback);
 
     /**
      * Posts a PermissionGrantConditionSet with a new object
@@ -85,7 +85,7 @@ public interface IPermissionGrantConditionSetRequest extends IHttpRequest {
      * @param newPermissionGrantConditionSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<PermissionGrantConditionSet> callback);
+    void put(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback);
 
     /**
      * Posts a PermissionGrantConditionSet with a new object

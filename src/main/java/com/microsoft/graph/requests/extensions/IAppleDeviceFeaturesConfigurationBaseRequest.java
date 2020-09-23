@@ -21,7 +21,7 @@ public interface IAppleDeviceFeaturesConfigurationBaseRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AppleDeviceFeaturesConfigurationBase> callback);
+    void get(final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback);
 
     /**
      * Gets the AppleDeviceFeaturesConfigurationBase from the service
@@ -36,7 +36,7 @@ public interface IAppleDeviceFeaturesConfigurationBaseRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AppleDeviceFeaturesConfigurationBase> callback);
+    void delete(final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAppleDeviceFeaturesConfigurationBaseRequest extends IHttpReque
      * @param sourceAppleDeviceFeaturesConfigurationBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AppleDeviceFeaturesConfigurationBase sourceAppleDeviceFeaturesConfigurationBase, final ICallback<AppleDeviceFeaturesConfigurationBase> callback);
+    void patch(final AppleDeviceFeaturesConfigurationBase sourceAppleDeviceFeaturesConfigurationBase, final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback);
 
     /**
      * Patches this AppleDeviceFeaturesConfigurationBase with a source
@@ -68,7 +68,7 @@ public interface IAppleDeviceFeaturesConfigurationBaseRequest extends IHttpReque
      * @param newAppleDeviceFeaturesConfigurationBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase, final ICallback<AppleDeviceFeaturesConfigurationBase> callback);
+    void post(final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase, final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback);
 
     /**
      * Posts a AppleDeviceFeaturesConfigurationBase with a new object
@@ -85,7 +85,7 @@ public interface IAppleDeviceFeaturesConfigurationBaseRequest extends IHttpReque
      * @param newAppleDeviceFeaturesConfigurationBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase, final ICallback<AppleDeviceFeaturesConfigurationBase> callback);
+    void put(final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase, final ICallback<? super AppleDeviceFeaturesConfigurationBase> callback);
 
     /**
      * Posts a AppleDeviceFeaturesConfigurationBase with a new object

@@ -21,7 +21,7 @@ public interface ISubscribedSkuRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SubscribedSku> callback);
+    void get(final ICallback<? super SubscribedSku> callback);
 
     /**
      * Gets the SubscribedSku from the service
@@ -36,7 +36,7 @@ public interface ISubscribedSkuRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SubscribedSku> callback);
+    void delete(final ICallback<? super SubscribedSku> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISubscribedSkuRequest extends IHttpRequest {
      * @param sourceSubscribedSku the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SubscribedSku sourceSubscribedSku, final ICallback<SubscribedSku> callback);
+    void patch(final SubscribedSku sourceSubscribedSku, final ICallback<? super SubscribedSku> callback);
 
     /**
      * Patches this SubscribedSku with a source
@@ -68,7 +68,7 @@ public interface ISubscribedSkuRequest extends IHttpRequest {
      * @param newSubscribedSku the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SubscribedSku newSubscribedSku, final ICallback<SubscribedSku> callback);
+    void post(final SubscribedSku newSubscribedSku, final ICallback<? super SubscribedSku> callback);
 
     /**
      * Posts a SubscribedSku with a new object
@@ -85,7 +85,7 @@ public interface ISubscribedSkuRequest extends IHttpRequest {
      * @param newSubscribedSku the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SubscribedSku newSubscribedSku, final ICallback<SubscribedSku> callback);
+    void put(final SubscribedSku newSubscribedSku, final ICallback<? super SubscribedSku> callback);
 
     /**
      * Posts a SubscribedSku with a new object

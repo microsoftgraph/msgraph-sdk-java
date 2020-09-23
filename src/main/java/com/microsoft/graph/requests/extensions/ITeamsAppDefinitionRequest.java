@@ -21,7 +21,7 @@ public interface ITeamsAppDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TeamsAppDefinition> callback);
+    void get(final ICallback<? super TeamsAppDefinition> callback);
 
     /**
      * Gets the TeamsAppDefinition from the service
@@ -36,7 +36,7 @@ public interface ITeamsAppDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TeamsAppDefinition> callback);
+    void delete(final ICallback<? super TeamsAppDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamsAppDefinitionRequest extends IHttpRequest {
      * @param sourceTeamsAppDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TeamsAppDefinition sourceTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback);
+    void patch(final TeamsAppDefinition sourceTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback);
 
     /**
      * Patches this TeamsAppDefinition with a source
@@ -68,7 +68,7 @@ public interface ITeamsAppDefinitionRequest extends IHttpRequest {
      * @param newTeamsAppDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback);
+    void post(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback);
 
     /**
      * Posts a TeamsAppDefinition with a new object
@@ -85,7 +85,7 @@ public interface ITeamsAppDefinitionRequest extends IHttpRequest {
      * @param newTeamsAppDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback);
+    void put(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback);
 
     /**
      * Posts a TeamsAppDefinition with a new object

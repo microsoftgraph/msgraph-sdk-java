@@ -21,7 +21,7 @@ public interface IManagedEBookAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedEBookAssignment> callback);
+    void get(final ICallback<? super ManagedEBookAssignment> callback);
 
     /**
      * Gets the ManagedEBookAssignment from the service
@@ -36,7 +36,7 @@ public interface IManagedEBookAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedEBookAssignment> callback);
+    void delete(final ICallback<? super ManagedEBookAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedEBookAssignmentRequest extends IHttpRequest {
      * @param sourceManagedEBookAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedEBookAssignment sourceManagedEBookAssignment, final ICallback<ManagedEBookAssignment> callback);
+    void patch(final ManagedEBookAssignment sourceManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback);
 
     /**
      * Patches this ManagedEBookAssignment with a source
@@ -68,7 +68,7 @@ public interface IManagedEBookAssignmentRequest extends IHttpRequest {
      * @param newManagedEBookAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<ManagedEBookAssignment> callback);
+    void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback);
 
     /**
      * Posts a ManagedEBookAssignment with a new object
@@ -85,7 +85,7 @@ public interface IManagedEBookAssignmentRequest extends IHttpRequest {
      * @param newManagedEBookAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<ManagedEBookAssignment> callback);
+    void put(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback);
 
     /**
      * Posts a ManagedEBookAssignment with a new object

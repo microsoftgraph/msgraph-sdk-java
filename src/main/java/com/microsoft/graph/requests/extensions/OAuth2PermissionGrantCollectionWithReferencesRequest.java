@@ -35,7 +35,7 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, IOAuth2PermissionGrantCollectionPage.class);
     }
 
-    public void get(final ICallback<IOAuth2PermissionGrantCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IOAuth2PermissionGrantCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

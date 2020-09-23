@@ -21,7 +21,7 @@ public interface IWorkbookChartPointFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartPointFormat> callback);
+    void get(final ICallback<? super WorkbookChartPointFormat> callback);
 
     /**
      * Gets the WorkbookChartPointFormat from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartPointFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartPointFormat> callback);
+    void delete(final ICallback<? super WorkbookChartPointFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartPointFormatRequest extends IHttpRequest {
      * @param sourceWorkbookChartPointFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartPointFormat sourceWorkbookChartPointFormat, final ICallback<WorkbookChartPointFormat> callback);
+    void patch(final WorkbookChartPointFormat sourceWorkbookChartPointFormat, final ICallback<? super WorkbookChartPointFormat> callback);
 
     /**
      * Patches this WorkbookChartPointFormat with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartPointFormatRequest extends IHttpRequest {
      * @param newWorkbookChartPointFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartPointFormat newWorkbookChartPointFormat, final ICallback<WorkbookChartPointFormat> callback);
+    void post(final WorkbookChartPointFormat newWorkbookChartPointFormat, final ICallback<? super WorkbookChartPointFormat> callback);
 
     /**
      * Posts a WorkbookChartPointFormat with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartPointFormatRequest extends IHttpRequest {
      * @param newWorkbookChartPointFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartPointFormat newWorkbookChartPointFormat, final ICallback<WorkbookChartPointFormat> callback);
+    void put(final WorkbookChartPointFormat newWorkbookChartPointFormat, final ICallback<? super WorkbookChartPointFormat> callback);
 
     /**
      * Posts a WorkbookChartPointFormat with a new object

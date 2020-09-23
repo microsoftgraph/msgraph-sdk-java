@@ -37,7 +37,7 @@ public class IosVppEBookRequest extends BaseRequest implements IIosVppEBookReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosVppEBook> callback) {
+    public void get(final ICallback<? super IosVppEBook> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosVppEBookRequest extends BaseRequest implements IIosVppEBookReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosVppEBook> callback) {
+    public void delete(final ICallback<? super IosVppEBook> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosVppEBookRequest extends BaseRequest implements IIosVppEBookReque
      * @param sourceIosVppEBook the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosVppEBook sourceIosVppEBook, final ICallback<IosVppEBook> callback) {
+    public void patch(final IosVppEBook sourceIosVppEBook, final ICallback<? super IosVppEBook> callback) {
         send(HttpMethod.PATCH, callback, sourceIosVppEBook);
     }
 
@@ -96,7 +96,7 @@ public class IosVppEBookRequest extends BaseRequest implements IIosVppEBookReque
      * @param newIosVppEBook the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosVppEBook newIosVppEBook, final ICallback<IosVppEBook> callback) {
+    public void post(final IosVppEBook newIosVppEBook, final ICallback<? super IosVppEBook> callback) {
         send(HttpMethod.POST, callback, newIosVppEBook);
     }
 
@@ -117,7 +117,7 @@ public class IosVppEBookRequest extends BaseRequest implements IIosVppEBookReque
      * @param newIosVppEBook the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosVppEBook newIosVppEBook, final ICallback<IosVppEBook> callback) {
+    public void put(final IosVppEBook newIosVppEBook, final ICallback<? super IosVppEBook> callback) {
         send(HttpMethod.PUT, callback, newIosVppEBook);
     }
 

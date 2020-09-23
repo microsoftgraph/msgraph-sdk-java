@@ -37,7 +37,7 @@ public class CallRecordResponseRequest extends BaseRequest implements ICallRecor
         body = new CallRecordResponseBody();
     }
 
-    public void post(final ICallback<RecordOperation> callback) {
+    public void post(final ICallback<? super RecordOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

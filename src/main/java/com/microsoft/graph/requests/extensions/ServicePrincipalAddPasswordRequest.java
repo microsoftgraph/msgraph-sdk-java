@@ -37,7 +37,7 @@ public class ServicePrincipalAddPasswordRequest extends BaseRequest implements I
         body = new ServicePrincipalAddPasswordBody();
     }
 
-    public void post(final ICallback<PasswordCredential> callback) {
+    public void post(final ICallback<? super PasswordCredential> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

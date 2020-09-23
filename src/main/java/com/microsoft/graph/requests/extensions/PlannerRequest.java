@@ -49,7 +49,7 @@ public class PlannerRequest extends BaseRequest implements IPlannerRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Planner> callback) {
+    public void get(final ICallback<? super Planner> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class PlannerRequest extends BaseRequest implements IPlannerRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Planner> callback) {
+    public void delete(final ICallback<? super Planner> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class PlannerRequest extends BaseRequest implements IPlannerRequest {
      * @param sourcePlanner the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Planner sourcePlanner, final ICallback<Planner> callback) {
+    public void patch(final Planner sourcePlanner, final ICallback<? super Planner> callback) {
         send(HttpMethod.PATCH, callback, sourcePlanner);
     }
 
@@ -108,7 +108,7 @@ public class PlannerRequest extends BaseRequest implements IPlannerRequest {
      * @param newPlanner the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Planner newPlanner, final ICallback<Planner> callback) {
+    public void post(final Planner newPlanner, final ICallback<? super Planner> callback) {
         send(HttpMethod.POST, callback, newPlanner);
     }
 
@@ -129,7 +129,7 @@ public class PlannerRequest extends BaseRequest implements IPlannerRequest {
      * @param newPlanner the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Planner newPlanner, final ICallback<Planner> callback) {
+    public void put(final Planner newPlanner, final ICallback<? super Planner> callback) {
         send(HttpMethod.PUT, callback, newPlanner);
     }
 

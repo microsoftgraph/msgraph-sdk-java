@@ -37,7 +37,7 @@ public class CallSubscribeToToneRequest extends BaseRequest implements ICallSubs
         body = new CallSubscribeToToneBody();
     }
 
-    public void post(final ICallback<SubscribeToToneOperation> callback) {
+    public void post(final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

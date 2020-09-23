@@ -21,7 +21,7 @@ public interface IApplicationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Application> callback);
+    void get(final ICallback<? super Application> callback);
 
     /**
      * Gets the Application from the service
@@ -36,7 +36,7 @@ public interface IApplicationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Application> callback);
+    void delete(final ICallback<? super Application> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IApplicationRequest extends IHttpRequest {
      * @param sourceApplication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Application sourceApplication, final ICallback<Application> callback);
+    void patch(final Application sourceApplication, final ICallback<? super Application> callback);
 
     /**
      * Patches this Application with a source
@@ -68,7 +68,7 @@ public interface IApplicationRequest extends IHttpRequest {
      * @param newApplication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Application newApplication, final ICallback<Application> callback);
+    void post(final Application newApplication, final ICallback<? super Application> callback);
 
     /**
      * Posts a Application with a new object
@@ -85,7 +85,7 @@ public interface IApplicationRequest extends IHttpRequest {
      * @param newApplication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Application newApplication, final ICallback<Application> callback);
+    void put(final Application newApplication, final ICallback<? super Application> callback);
 
     /**
      * Posts a Application with a new object

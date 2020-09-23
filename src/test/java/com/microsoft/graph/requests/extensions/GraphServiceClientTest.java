@@ -176,7 +176,7 @@ public class GraphServiceClientTest {
             }
 
             @Override
-            public <Result, BodyType> void send(IHttpRequest request, ICallback<Result> callback,
+            public <Result, BodyType> void send(IHttpRequest request, ICallback<? super Result> callback,
                     Class<Result> resultClass, BodyType serializable) {
                 // do nothing
             }

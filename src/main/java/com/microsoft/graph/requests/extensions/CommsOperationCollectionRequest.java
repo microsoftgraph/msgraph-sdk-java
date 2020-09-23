@@ -40,7 +40,7 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
         super(requestUrl, client, requestOptions, CommsOperationCollectionResponse.class, ICommsOperationCollectionPage.class);
     }
 
-    public void get(final ICallback<ICommsOperationCollectionPage> callback) {
+    public void get(final ICallback<? super ICommsOperationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
         return buildFromResponse(response);
     }
 
-    public void post(final CommsOperation newCommsOperation, final ICallback<CommsOperation> callback) {
+    public void post(final CommsOperation newCommsOperation, final ICallback<? super CommsOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -36,7 +36,7 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
         super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, IManagedAppRegistrationCollectionPage.class);
     }
 
-    public void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<ManagedAppRegistration> callback) {
+    public void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/managedAppRegistrations/" + newManagedAppRegistration.id);
         new ManagedAppRegistrationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

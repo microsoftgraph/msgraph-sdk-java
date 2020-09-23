@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceEnrollmentConfigurationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceEnrollmentConfigurationCollectionPage> callback);
+    void get(final ICallback<? super IDeviceEnrollmentConfigurationCollectionPage> callback);
 
     IDeviceEnrollmentConfigurationCollectionPage get() throws ClientException;
 
-    void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback);
+    void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback);
 
     DeviceEnrollmentConfiguration post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException;
 

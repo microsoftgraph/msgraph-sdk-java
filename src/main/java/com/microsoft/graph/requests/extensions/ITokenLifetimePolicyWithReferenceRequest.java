@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITokenLifetimePolicyWithReferenceRequest extends IHttpRequest {
 
-    void post(final TokenLifetimePolicy newTokenLifetimePolicy, final IJsonBackedObject payload, final ICallback<TokenLifetimePolicy> callback);
+    void post(final TokenLifetimePolicy newTokenLifetimePolicy, final IJsonBackedObject payload, final ICallback<? super TokenLifetimePolicy> callback);
 
     TokenLifetimePolicy post(final TokenLifetimePolicy newTokenLifetimePolicy, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<TokenLifetimePolicy> callback);
+    void get(final ICallback<? super TokenLifetimePolicy> callback);
 
     TokenLifetimePolicy get() throws ClientException;
 
-	void delete(final ICallback<TokenLifetimePolicy> callback);
+	void delete(final ICallback<? super TokenLifetimePolicy> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final TokenLifetimePolicy sourceTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback);
+	void patch(final TokenLifetimePolicy sourceTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback);
 
 	TokenLifetimePolicy patch(final TokenLifetimePolicy sourceTokenLifetimePolicy) throws ClientException;
 

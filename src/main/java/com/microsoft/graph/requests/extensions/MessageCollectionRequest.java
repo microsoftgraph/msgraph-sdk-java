@@ -41,7 +41,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
         super(requestUrl, client, requestOptions, MessageCollectionResponse.class, IMessageCollectionPage.class);
     }
 
-    public void get(final ICallback<IMessageCollectionPage> callback) {
+    public void get(final ICallback<? super IMessageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
         return buildFromResponse(response);
     }
 
-    public void post(final Message newMessage, final ICallback<Message> callback) {
+    public void post(final Message newMessage, final ICallback<? super Message> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

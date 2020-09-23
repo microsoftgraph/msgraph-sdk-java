@@ -40,7 +40,7 @@ public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, ManagedAppOperationCollectionResponse.class, IManagedAppOperationCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedAppOperationCollectionPage> callback) {
+    public void get(final ICallback<? super IManagedAppOperationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedAppOperation newManagedAppOperation, final ICallback<ManagedAppOperation> callback) {
+    public void post(final ManagedAppOperation newManagedAppOperation, final ICallback<? super ManagedAppOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

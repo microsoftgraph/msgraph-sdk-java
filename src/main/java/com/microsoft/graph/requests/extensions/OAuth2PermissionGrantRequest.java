@@ -37,7 +37,7 @@ public class OAuth2PermissionGrantRequest extends BaseRequest implements IOAuth2
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OAuth2PermissionGrant> callback) {
+    public void get(final ICallback<? super OAuth2PermissionGrant> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OAuth2PermissionGrantRequest extends BaseRequest implements IOAuth2
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OAuth2PermissionGrant> callback) {
+    public void delete(final ICallback<? super OAuth2PermissionGrant> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OAuth2PermissionGrantRequest extends BaseRequest implements IOAuth2
      * @param sourceOAuth2PermissionGrant the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OAuth2PermissionGrant sourceOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback) {
+    public void patch(final OAuth2PermissionGrant sourceOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
         send(HttpMethod.PATCH, callback, sourceOAuth2PermissionGrant);
     }
 
@@ -96,7 +96,7 @@ public class OAuth2PermissionGrantRequest extends BaseRequest implements IOAuth2
      * @param newOAuth2PermissionGrant the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback) {
+    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
         send(HttpMethod.POST, callback, newOAuth2PermissionGrant);
     }
 
@@ -117,7 +117,7 @@ public class OAuth2PermissionGrantRequest extends BaseRequest implements IOAuth2
      * @param newOAuth2PermissionGrant the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback) {
+    public void put(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
         send(HttpMethod.PUT, callback, newOAuth2PermissionGrant);
     }
 

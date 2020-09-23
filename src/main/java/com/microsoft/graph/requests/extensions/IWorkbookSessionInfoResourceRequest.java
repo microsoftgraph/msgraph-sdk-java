@@ -26,7 +26,7 @@ public interface IWorkbookSessionInfoResourceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookSessionInfo> callback);
+    void get(final ICallback<? super WorkbookSessionInfo> callback);
 
     /**
      * Gets the WorkbookSessionInfo

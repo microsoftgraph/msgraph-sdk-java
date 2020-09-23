@@ -37,7 +37,7 @@ public class TeamsAsyncOperationRequest extends BaseRequest implements ITeamsAsy
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TeamsAsyncOperation> callback) {
+    public void get(final ICallback<? super TeamsAsyncOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TeamsAsyncOperationRequest extends BaseRequest implements ITeamsAsy
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TeamsAsyncOperation> callback) {
+    public void delete(final ICallback<? super TeamsAsyncOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TeamsAsyncOperationRequest extends BaseRequest implements ITeamsAsy
      * @param sourceTeamsAsyncOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsAsyncOperation sourceTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback) {
+    public void patch(final TeamsAsyncOperation sourceTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsAsyncOperation);
     }
 
@@ -96,7 +96,7 @@ public class TeamsAsyncOperationRequest extends BaseRequest implements ITeamsAsy
      * @param newTeamsAsyncOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback) {
+    public void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback) {
         send(HttpMethod.POST, callback, newTeamsAsyncOperation);
     }
 
@@ -117,7 +117,7 @@ public class TeamsAsyncOperationRequest extends BaseRequest implements ITeamsAsy
      * @param newTeamsAsyncOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback) {
+    public void put(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback) {
         send(HttpMethod.PUT, callback, newTeamsAsyncOperation);
     }
 

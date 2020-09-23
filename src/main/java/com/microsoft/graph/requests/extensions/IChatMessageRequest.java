@@ -21,7 +21,7 @@ public interface IChatMessageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ChatMessage> callback);
+    void get(final ICallback<? super ChatMessage> callback);
 
     /**
      * Gets the ChatMessage from the service
@@ -36,7 +36,7 @@ public interface IChatMessageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ChatMessage> callback);
+    void delete(final ICallback<? super ChatMessage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IChatMessageRequest extends IHttpRequest {
      * @param sourceChatMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ChatMessage sourceChatMessage, final ICallback<ChatMessage> callback);
+    void patch(final ChatMessage sourceChatMessage, final ICallback<? super ChatMessage> callback);
 
     /**
      * Patches this ChatMessage with a source
@@ -68,7 +68,7 @@ public interface IChatMessageRequest extends IHttpRequest {
      * @param newChatMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ChatMessage newChatMessage, final ICallback<ChatMessage> callback);
+    void post(final ChatMessage newChatMessage, final ICallback<? super ChatMessage> callback);
 
     /**
      * Posts a ChatMessage with a new object
@@ -85,7 +85,7 @@ public interface IChatMessageRequest extends IHttpRequest {
      * @param newChatMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ChatMessage newChatMessage, final ICallback<ChatMessage> callback);
+    void put(final ChatMessage newChatMessage, final ICallback<? super ChatMessage> callback);
 
     /**
      * Posts a ChatMessage with a new object

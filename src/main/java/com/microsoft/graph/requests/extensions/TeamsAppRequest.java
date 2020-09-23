@@ -41,7 +41,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TeamsApp> callback) {
+    public void get(final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TeamsApp> callback) {
+    public void delete(final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @param sourceTeamsApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsApp sourceTeamsApp, final ICallback<TeamsApp> callback) {
+    public void patch(final TeamsApp sourceTeamsApp, final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsApp);
     }
 
@@ -100,7 +100,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @param newTeamsApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsApp newTeamsApp, final ICallback<TeamsApp> callback) {
+    public void post(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.POST, callback, newTeamsApp);
     }
 
@@ -121,7 +121,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @param newTeamsApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsApp newTeamsApp, final ICallback<TeamsApp> callback) {
+    public void put(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.PUT, callback, newTeamsApp);
     }
 

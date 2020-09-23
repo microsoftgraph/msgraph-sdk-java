@@ -21,7 +21,7 @@ public interface IUserActivityRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserActivity> callback);
+    void get(final ICallback<? super UserActivity> callback);
 
     /**
      * Gets the UserActivity from the service
@@ -36,7 +36,7 @@ public interface IUserActivityRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserActivity> callback);
+    void delete(final ICallback<? super UserActivity> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserActivityRequest extends IHttpRequest {
      * @param sourceUserActivity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserActivity sourceUserActivity, final ICallback<UserActivity> callback);
+    void patch(final UserActivity sourceUserActivity, final ICallback<? super UserActivity> callback);
 
     /**
      * Patches this UserActivity with a source
@@ -68,7 +68,7 @@ public interface IUserActivityRequest extends IHttpRequest {
      * @param newUserActivity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserActivity newUserActivity, final ICallback<UserActivity> callback);
+    void post(final UserActivity newUserActivity, final ICallback<? super UserActivity> callback);
 
     /**
      * Posts a UserActivity with a new object
@@ -85,7 +85,7 @@ public interface IUserActivityRequest extends IHttpRequest {
      * @param newUserActivity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserActivity newUserActivity, final ICallback<UserActivity> callback);
+    void put(final UserActivity newUserActivity, final ICallback<? super UserActivity> callback);
 
     /**
      * Posts a UserActivity with a new object

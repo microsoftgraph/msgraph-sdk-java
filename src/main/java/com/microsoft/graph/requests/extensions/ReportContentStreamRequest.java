@@ -58,7 +58,7 @@ public class ReportContentStreamRequest extends BaseStreamRequest<Report> implem
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<Report> callback) {
+    public void put(final byte[] fileContents, final ICallback<? super Report> callback) {
         send(fileContents, callback);
     }
 

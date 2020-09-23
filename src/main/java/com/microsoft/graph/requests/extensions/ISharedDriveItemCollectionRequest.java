@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISharedDriveItemCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISharedDriveItemCollectionPage> callback);
+    void get(final ICallback<? super ISharedDriveItemCollectionPage> callback);
 
     ISharedDriveItemCollectionPage get() throws ClientException;
 
-    void post(final SharedDriveItem newSharedDriveItem, final ICallback<SharedDriveItem> callback);
+    void post(final SharedDriveItem newSharedDriveItem, final ICallback<? super SharedDriveItem> callback);
 
     SharedDriveItem post(final SharedDriveItem newSharedDriveItem) throws ClientException;
 

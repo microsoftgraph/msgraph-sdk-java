@@ -21,7 +21,7 @@ public interface IUserRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<User> callback);
+    void get(final ICallback<? super User> callback);
 
     /**
      * Gets the User from the service
@@ -36,7 +36,7 @@ public interface IUserRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<User> callback);
+    void delete(final ICallback<? super User> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserRequest extends IHttpRequest {
      * @param sourceUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final User sourceUser, final ICallback<User> callback);
+    void patch(final User sourceUser, final ICallback<? super User> callback);
 
     /**
      * Patches this User with a source
@@ -68,7 +68,7 @@ public interface IUserRequest extends IHttpRequest {
      * @param newUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final User newUser, final ICallback<User> callback);
+    void post(final User newUser, final ICallback<? super User> callback);
 
     /**
      * Posts a User with a new object
@@ -85,7 +85,7 @@ public interface IUserRequest extends IHttpRequest {
      * @param newUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final User newUser, final ICallback<User> callback);
+    void put(final User newUser, final ICallback<? super User> callback);
 
     /**
      * Posts a User with a new object

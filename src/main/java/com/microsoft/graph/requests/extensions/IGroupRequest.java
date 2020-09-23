@@ -21,7 +21,7 @@ public interface IGroupRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Group> callback);
+    void get(final ICallback<? super Group> callback);
 
     /**
      * Gets the Group from the service
@@ -36,7 +36,7 @@ public interface IGroupRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Group> callback);
+    void delete(final ICallback<? super Group> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupRequest extends IHttpRequest {
      * @param sourceGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Group sourceGroup, final ICallback<Group> callback);
+    void patch(final Group sourceGroup, final ICallback<? super Group> callback);
 
     /**
      * Patches this Group with a source
@@ -68,7 +68,7 @@ public interface IGroupRequest extends IHttpRequest {
      * @param newGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Group newGroup, final ICallback<Group> callback);
+    void post(final Group newGroup, final ICallback<? super Group> callback);
 
     /**
      * Posts a Group with a new object
@@ -85,7 +85,7 @@ public interface IGroupRequest extends IHttpRequest {
      * @param newGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Group newGroup, final ICallback<Group> callback);
+    void put(final Group newGroup, final ICallback<? super Group> callback);
 
     /**
      * Posts a Group with a new object

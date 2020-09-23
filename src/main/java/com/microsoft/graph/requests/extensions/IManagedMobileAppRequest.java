@@ -21,7 +21,7 @@ public interface IManagedMobileAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedMobileApp> callback);
+    void get(final ICallback<? super ManagedMobileApp> callback);
 
     /**
      * Gets the ManagedMobileApp from the service
@@ -36,7 +36,7 @@ public interface IManagedMobileAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedMobileApp> callback);
+    void delete(final ICallback<? super ManagedMobileApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedMobileAppRequest extends IHttpRequest {
      * @param sourceManagedMobileApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedMobileApp sourceManagedMobileApp, final ICallback<ManagedMobileApp> callback);
+    void patch(final ManagedMobileApp sourceManagedMobileApp, final ICallback<? super ManagedMobileApp> callback);
 
     /**
      * Patches this ManagedMobileApp with a source
@@ -68,7 +68,7 @@ public interface IManagedMobileAppRequest extends IHttpRequest {
      * @param newManagedMobileApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedMobileApp newManagedMobileApp, final ICallback<ManagedMobileApp> callback);
+    void post(final ManagedMobileApp newManagedMobileApp, final ICallback<? super ManagedMobileApp> callback);
 
     /**
      * Posts a ManagedMobileApp with a new object
@@ -85,7 +85,7 @@ public interface IManagedMobileAppRequest extends IHttpRequest {
      * @param newManagedMobileApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedMobileApp newManagedMobileApp, final ICallback<ManagedMobileApp> callback);
+    void put(final ManagedMobileApp newManagedMobileApp, final ICallback<? super ManagedMobileApp> callback);
 
     /**
      * Posts a ManagedMobileApp with a new object

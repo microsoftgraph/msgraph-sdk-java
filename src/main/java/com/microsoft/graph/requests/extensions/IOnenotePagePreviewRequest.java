@@ -26,7 +26,7 @@ public interface IOnenotePagePreviewRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnenotePagePreview> callback);
+    void get(final ICallback<? super OnenotePagePreview> callback);
 
     /**
      * Gets the OnenotePagePreview

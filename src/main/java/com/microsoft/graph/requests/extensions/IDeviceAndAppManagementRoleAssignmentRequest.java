@@ -21,7 +21,7 @@ public interface IDeviceAndAppManagementRoleAssignmentRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceAndAppManagementRoleAssignment> callback);
+    void get(final ICallback<? super DeviceAndAppManagementRoleAssignment> callback);
 
     /**
      * Gets the DeviceAndAppManagementRoleAssignment from the service
@@ -36,7 +36,7 @@ public interface IDeviceAndAppManagementRoleAssignmentRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceAndAppManagementRoleAssignment> callback);
+    void delete(final ICallback<? super DeviceAndAppManagementRoleAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceAndAppManagementRoleAssignmentRequest extends IHttpReque
      * @param sourceDeviceAndAppManagementRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceAndAppManagementRoleAssignment sourceDeviceAndAppManagementRoleAssignment, final ICallback<DeviceAndAppManagementRoleAssignment> callback);
+    void patch(final DeviceAndAppManagementRoleAssignment sourceDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback);
 
     /**
      * Patches this DeviceAndAppManagementRoleAssignment with a source
@@ -68,7 +68,7 @@ public interface IDeviceAndAppManagementRoleAssignmentRequest extends IHttpReque
      * @param newDeviceAndAppManagementRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<DeviceAndAppManagementRoleAssignment> callback);
+    void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback);
 
     /**
      * Posts a DeviceAndAppManagementRoleAssignment with a new object
@@ -85,7 +85,7 @@ public interface IDeviceAndAppManagementRoleAssignmentRequest extends IHttpReque
      * @param newDeviceAndAppManagementRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<DeviceAndAppManagementRoleAssignment> callback);
+    void put(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback);
 
     /**
      * Posts a DeviceAndAppManagementRoleAssignment with a new object

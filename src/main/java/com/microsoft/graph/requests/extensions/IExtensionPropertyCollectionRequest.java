@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IExtensionPropertyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IExtensionPropertyCollectionPage> callback);
+    void get(final ICallback<? super IExtensionPropertyCollectionPage> callback);
 
     IExtensionPropertyCollectionPage get() throws ClientException;
 
-    void post(final ExtensionProperty newExtensionProperty, final ICallback<ExtensionProperty> callback);
+    void post(final ExtensionProperty newExtensionProperty, final ICallback<? super ExtensionProperty> callback);
 
     ExtensionProperty post(final ExtensionProperty newExtensionProperty) throws ClientException;
 

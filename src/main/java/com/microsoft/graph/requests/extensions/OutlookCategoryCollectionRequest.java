@@ -40,7 +40,7 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
         super(requestUrl, client, requestOptions, OutlookCategoryCollectionResponse.class, IOutlookCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<IOutlookCategoryCollectionPage> callback) {
+    public void get(final ICallback<? super IOutlookCategoryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
         return buildFromResponse(response);
     }
 
-    public void post(final OutlookCategory newOutlookCategory, final ICallback<OutlookCategory> callback) {
+    public void post(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

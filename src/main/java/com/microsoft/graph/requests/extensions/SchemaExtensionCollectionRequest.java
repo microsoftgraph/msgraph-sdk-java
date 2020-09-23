@@ -39,7 +39,7 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
         super(requestUrl, client, requestOptions, SchemaExtensionCollectionResponse.class, ISchemaExtensionCollectionPage.class);
     }
 
-    public void get(final ICallback<ISchemaExtensionCollectionPage> callback) {
+    public void get(final ICallback<? super ISchemaExtensionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
         return buildFromResponse(response);
     }
 
-    public void post(final SchemaExtension newSchemaExtension, final ICallback<SchemaExtension> callback) {
+    public void post(final SchemaExtension newSchemaExtension, final ICallback<? super SchemaExtension> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

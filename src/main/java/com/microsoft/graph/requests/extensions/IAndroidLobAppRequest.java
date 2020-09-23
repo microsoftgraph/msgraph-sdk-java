@@ -21,7 +21,7 @@ public interface IAndroidLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidLobApp> callback);
+    void get(final ICallback<? super AndroidLobApp> callback);
 
     /**
      * Gets the AndroidLobApp from the service
@@ -36,7 +36,7 @@ public interface IAndroidLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidLobApp> callback);
+    void delete(final ICallback<? super AndroidLobApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidLobAppRequest extends IHttpRequest {
      * @param sourceAndroidLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidLobApp sourceAndroidLobApp, final ICallback<AndroidLobApp> callback);
+    void patch(final AndroidLobApp sourceAndroidLobApp, final ICallback<? super AndroidLobApp> callback);
 
     /**
      * Patches this AndroidLobApp with a source
@@ -68,7 +68,7 @@ public interface IAndroidLobAppRequest extends IHttpRequest {
      * @param newAndroidLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidLobApp newAndroidLobApp, final ICallback<AndroidLobApp> callback);
+    void post(final AndroidLobApp newAndroidLobApp, final ICallback<? super AndroidLobApp> callback);
 
     /**
      * Posts a AndroidLobApp with a new object
@@ -85,7 +85,7 @@ public interface IAndroidLobAppRequest extends IHttpRequest {
      * @param newAndroidLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidLobApp newAndroidLobApp, final ICallback<AndroidLobApp> callback);
+    void put(final AndroidLobApp newAndroidLobApp, final ICallback<? super AndroidLobApp> callback);
 
     /**
      * Posts a AndroidLobApp with a new object

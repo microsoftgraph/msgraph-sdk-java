@@ -21,7 +21,7 @@ public interface IWorkbookChartGridlinesFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartGridlinesFormat> callback);
+    void get(final ICallback<? super WorkbookChartGridlinesFormat> callback);
 
     /**
      * Gets the WorkbookChartGridlinesFormat from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartGridlinesFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartGridlinesFormat> callback);
+    void delete(final ICallback<? super WorkbookChartGridlinesFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartGridlinesFormatRequest extends IHttpRequest {
      * @param sourceWorkbookChartGridlinesFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat, final ICallback<WorkbookChartGridlinesFormat> callback);
+    void patch(final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat, final ICallback<? super WorkbookChartGridlinesFormat> callback);
 
     /**
      * Patches this WorkbookChartGridlinesFormat with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartGridlinesFormatRequest extends IHttpRequest {
      * @param newWorkbookChartGridlinesFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, final ICallback<WorkbookChartGridlinesFormat> callback);
+    void post(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, final ICallback<? super WorkbookChartGridlinesFormat> callback);
 
     /**
      * Posts a WorkbookChartGridlinesFormat with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartGridlinesFormatRequest extends IHttpRequest {
      * @param newWorkbookChartGridlinesFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, final ICallback<WorkbookChartGridlinesFormat> callback);
+    void put(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, final ICallback<? super WorkbookChartGridlinesFormat> callback);
 
     /**
      * Posts a WorkbookChartGridlinesFormat with a new object

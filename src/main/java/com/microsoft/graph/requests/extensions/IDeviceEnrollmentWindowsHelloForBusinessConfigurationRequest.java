@@ -21,7 +21,7 @@ public interface IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest ex
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback);
+    void get(final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback);
 
     /**
      * Gets the DeviceEnrollmentWindowsHelloForBusinessConfiguration from the service
@@ -36,7 +36,7 @@ public interface IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest ex
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback);
+    void delete(final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest ex
      * @param sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback);
+    void patch(final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback);
 
     /**
      * Patches this DeviceEnrollmentWindowsHelloForBusinessConfiguration with a source
@@ -68,7 +68,7 @@ public interface IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest ex
      * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback);
+    void post(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback);
 
     /**
      * Posts a DeviceEnrollmentWindowsHelloForBusinessConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest ex
      * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback);
+    void put(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback);
 
     /**
      * Posts a DeviceEnrollmentWindowsHelloForBusinessConfiguration with a new object

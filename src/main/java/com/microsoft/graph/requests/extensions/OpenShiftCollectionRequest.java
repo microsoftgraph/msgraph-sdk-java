@@ -40,7 +40,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShiftC
         super(requestUrl, client, requestOptions, OpenShiftCollectionResponse.class, IOpenShiftCollectionPage.class);
     }
 
-    public void get(final ICallback<IOpenShiftCollectionPage> callback) {
+    public void get(final ICallback<? super IOpenShiftCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShiftC
         return buildFromResponse(response);
     }
 
-    public void post(final OpenShift newOpenShift, final ICallback<OpenShift> callback) {
+    public void post(final OpenShift newOpenShift, final ICallback<? super OpenShift> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OpenShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

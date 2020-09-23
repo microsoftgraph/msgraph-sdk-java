@@ -24,7 +24,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDriveItemInviteCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IDriveItemInviteCollectionPage> callback);
+    void post(final ICallback<? super IDriveItemInviteCollectionPage> callback);
 
     IDriveItemInviteCollectionPage post() throws ClientException;
 
