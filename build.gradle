@@ -55,11 +55,13 @@ def pomConfig = {
 //Bintray Snapshot: publishSnapshotPublicationToMaven3Repository
 
 task sourceJar(type: Jar) {
+    outputs.cacheIf { true }
     from sourceSets.main.allJava
     archiveClassifier = 'sources'
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
+    outputs.cacheIf { true }
     from javadoc.destinationDir
     archiveClassifier = 'javadoc'
 }
