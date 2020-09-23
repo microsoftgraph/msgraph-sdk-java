@@ -35,6 +35,6 @@ public class OutlookUserSupportedTimeZonesCollectionPage extends BaseCollectionP
      * @param builder The request builder for the next collection page
      */
     public OutlookUserSupportedTimeZonesCollectionPage(final OutlookUserSupportedTimeZonesCollectionResponse response, final IOutlookUserSupportedTimeZonesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

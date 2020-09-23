@@ -23,6 +23,6 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionPage extends
      * @param builder  the request builder for the next collection page
      */
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response, final IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

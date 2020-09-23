@@ -23,6 +23,6 @@ public class IosUpdateDeviceStatusCollectionPage extends BaseCollectionPage<IosU
      * @param builder  the request builder for the next collection page
      */
     public IosUpdateDeviceStatusCollectionPage(final IosUpdateDeviceStatusCollectionResponse response, final IIosUpdateDeviceStatusCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

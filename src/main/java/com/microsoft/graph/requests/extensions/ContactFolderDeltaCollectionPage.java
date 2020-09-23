@@ -40,7 +40,7 @@ public class ContactFolderDeltaCollectionPage extends BaseCollectionPage<Contact
      * @param builder The request builder for the next collection page
      */
     public ContactFolderDeltaCollectionPage(final ContactFolderDeltaCollectionResponse response, final IContactFolderDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

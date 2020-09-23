@@ -23,6 +23,6 @@ public class DefaultManagedAppProtectionCollectionPage extends BaseCollectionPag
      * @param builder  the request builder for the next collection page
      */
     public DefaultManagedAppProtectionCollectionPage(final DefaultManagedAppProtectionCollectionResponse response, final IDefaultManagedAppProtectionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

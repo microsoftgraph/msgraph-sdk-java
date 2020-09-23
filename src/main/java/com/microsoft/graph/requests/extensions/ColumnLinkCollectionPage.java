@@ -23,6 +23,6 @@ public class ColumnLinkCollectionPage extends BaseCollectionPage<ColumnLink, ICo
      * @param builder  the request builder for the next collection page
      */
     public ColumnLinkCollectionPage(final ColumnLinkCollectionResponse response, final IColumnLinkCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

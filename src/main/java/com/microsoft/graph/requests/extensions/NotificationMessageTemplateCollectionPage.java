@@ -23,6 +23,6 @@ public class NotificationMessageTemplateCollectionPage extends BaseCollectionPag
      * @param builder  the request builder for the next collection page
      */
     public NotificationMessageTemplateCollectionPage(final NotificationMessageTemplateCollectionResponse response, final INotificationMessageTemplateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

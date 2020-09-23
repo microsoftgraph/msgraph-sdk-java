@@ -23,6 +23,6 @@ public class IdentityProviderCollectionPage extends BaseCollectionPage<IdentityP
      * @param builder  the request builder for the next collection page
      */
     public IdentityProviderCollectionPage(final IdentityProviderCollectionResponse response, final IIdentityProviderCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

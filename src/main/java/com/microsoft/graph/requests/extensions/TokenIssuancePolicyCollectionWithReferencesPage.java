@@ -35,6 +35,6 @@ public class TokenIssuancePolicyCollectionWithReferencesPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public TokenIssuancePolicyCollectionWithReferencesPage(final TokenIssuancePolicyCollectionResponse response, final ITokenIssuancePolicyCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class MultiValueLegacyExtendedPropertyCollectionPage extends BaseCollecti
      * @param builder  the request builder for the next collection page
      */
     public MultiValueLegacyExtendedPropertyCollectionPage(final MultiValueLegacyExtendedPropertyCollectionResponse response, final IMultiValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

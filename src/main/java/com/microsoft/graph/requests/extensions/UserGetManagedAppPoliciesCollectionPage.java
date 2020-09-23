@@ -34,6 +34,6 @@ public class UserGetManagedAppPoliciesCollectionPage extends BaseCollectionPage<
      * @param builder The request builder for the next collection page
      */
     public UserGetManagedAppPoliciesCollectionPage(final UserGetManagedAppPoliciesCollectionResponse response, final IUserGetManagedAppPoliciesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

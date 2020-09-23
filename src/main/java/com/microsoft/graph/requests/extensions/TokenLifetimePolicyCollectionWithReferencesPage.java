@@ -35,6 +35,6 @@ public class TokenLifetimePolicyCollectionWithReferencesPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public TokenLifetimePolicyCollectionWithReferencesPage(final TokenLifetimePolicyCollectionResponse response, final ITokenLifetimePolicyCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

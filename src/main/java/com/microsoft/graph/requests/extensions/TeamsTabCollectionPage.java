@@ -23,6 +23,6 @@ public class TeamsTabCollectionPage extends BaseCollectionPage<TeamsTab, ITeamsT
      * @param builder  the request builder for the next collection page
      */
     public TeamsTabCollectionPage(final TeamsTabCollectionResponse response, final ITeamsTabCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

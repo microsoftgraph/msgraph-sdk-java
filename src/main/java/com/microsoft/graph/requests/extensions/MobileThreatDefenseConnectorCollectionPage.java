@@ -23,6 +23,6 @@ public class MobileThreatDefenseConnectorCollectionPage extends BaseCollectionPa
      * @param builder  the request builder for the next collection page
      */
     public MobileThreatDefenseConnectorCollectionPage(final MobileThreatDefenseConnectorCollectionResponse response, final IMobileThreatDefenseConnectorCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -34,6 +34,6 @@ public class UserGetManagedAppDiagnosticStatusesCollectionPage extends BaseColle
      * @param builder The request builder for the next collection page
      */
     public UserGetManagedAppDiagnosticStatusesCollectionPage(final UserGetManagedAppDiagnosticStatusesCollectionResponse response, final IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

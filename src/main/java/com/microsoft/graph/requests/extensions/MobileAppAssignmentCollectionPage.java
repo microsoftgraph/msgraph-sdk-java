@@ -23,6 +23,6 @@ public class MobileAppAssignmentCollectionPage extends BaseCollectionPage<Mobile
      * @param builder  the request builder for the next collection page
      */
     public MobileAppAssignmentCollectionPage(final MobileAppAssignmentCollectionResponse response, final IMobileAppAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

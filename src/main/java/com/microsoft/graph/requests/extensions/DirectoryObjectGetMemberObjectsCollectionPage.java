@@ -34,6 +34,6 @@ public class DirectoryObjectGetMemberObjectsCollectionPage extends BaseCollectio
      * @param builder The request builder for the next collection page
      */
     public DirectoryObjectGetMemberObjectsCollectionPage(final DirectoryObjectGetMemberObjectsCollectionResponse response, final IDirectoryObjectGetMemberObjectsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

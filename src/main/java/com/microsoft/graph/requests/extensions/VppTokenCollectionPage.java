@@ -23,6 +23,6 @@ public class VppTokenCollectionPage extends BaseCollectionPage<VppToken, IVppTok
      * @param builder  the request builder for the next collection page
      */
     public VppTokenCollectionPage(final VppTokenCollectionResponse response, final IVppTokenCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

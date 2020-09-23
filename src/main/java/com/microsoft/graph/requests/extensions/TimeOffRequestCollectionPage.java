@@ -23,6 +23,6 @@ public class TimeOffRequestCollectionPage extends BaseCollectionPage<TimeOffRequ
      * @param builder  the request builder for the next collection page
      */
     public TimeOffRequestCollectionPage(final TimeOffRequestCollectionResponse response, final ITimeOffRequestCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

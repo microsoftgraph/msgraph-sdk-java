@@ -34,6 +34,6 @@ public class DeviceManagementGetEffectivePermissionsCollectionPage extends BaseC
      * @param builder The request builder for the next collection page
      */
     public DeviceManagementGetEffectivePermissionsCollectionPage(final DeviceManagementGetEffectivePermissionsCollectionResponse response, final IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class WorkbookWorksheetCollectionPage extends BaseCollectionPage<Workbook
      * @param builder  the request builder for the next collection page
      */
     public WorkbookWorksheetCollectionPage(final WorkbookWorksheetCollectionResponse response, final IWorkbookWorksheetCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class EnrollmentConfigurationAssignmentCollectionPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public EnrollmentConfigurationAssignmentCollectionPage(final EnrollmentConfigurationAssignmentCollectionResponse response, final IEnrollmentConfigurationAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -35,6 +35,6 @@ public class PermissionGrantCollectionPage extends BaseCollectionPage<Permission
      * @param builder The request builder for the next collection page
      */
     public PermissionGrantCollectionPage(final PermissionGrantCollectionResponse response, final IPermissionGrantCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class ThumbnailSetCollectionPage extends BaseCollectionPage<ThumbnailSet,
      * @param builder  the request builder for the next collection page
      */
     public ThumbnailSetCollectionPage(final ThumbnailSetCollectionResponse response, final IThumbnailSetCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class WorkbookCommentReplyCollectionPage extends BaseCollectionPage<Workb
      * @param builder  the request builder for the next collection page
      */
     public WorkbookCommentReplyCollectionPage(final WorkbookCommentReplyCollectionResponse response, final IWorkbookCommentReplyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -35,6 +35,6 @@ public class DriveItemInviteCollectionPage extends BaseCollectionPage<Permission
      * @param builder The request builder for the next collection page
      */
     public DriveItemInviteCollectionPage(final DriveItemInviteCollectionResponse response, final IDriveItemInviteCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

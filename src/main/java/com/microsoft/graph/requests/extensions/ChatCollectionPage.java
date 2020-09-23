@@ -23,6 +23,6 @@ public class ChatCollectionPage extends BaseCollectionPage<Chat, IChatCollection
      * @param builder  the request builder for the next collection page
      */
     public ChatCollectionPage(final ChatCollectionResponse response, final IChatCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

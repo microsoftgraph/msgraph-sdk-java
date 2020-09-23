@@ -34,6 +34,6 @@ public class UserActivityRecentCollectionPage extends BaseCollectionPage<UserAct
      * @param builder The request builder for the next collection page
      */
     public UserActivityRecentCollectionPage(final UserActivityRecentCollectionResponse response, final IUserActivityRecentCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

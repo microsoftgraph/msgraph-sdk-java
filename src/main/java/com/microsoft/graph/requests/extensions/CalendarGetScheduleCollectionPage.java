@@ -35,6 +35,6 @@ public class CalendarGetScheduleCollectionPage extends BaseCollectionPage<Schedu
      * @param builder The request builder for the next collection page
      */
     public CalendarGetScheduleCollectionPage(final CalendarGetScheduleCollectionResponse response, final ICalendarGetScheduleCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class CalendarGroupCollectionPage extends BaseCollectionPage<CalendarGrou
      * @param builder  the request builder for the next collection page
      */
     public CalendarGroupCollectionPage(final CalendarGroupCollectionResponse response, final ICalendarGroupCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class ProfilePhotoCollectionPage extends BaseCollectionPage<ProfilePhoto,
      * @param builder  the request builder for the next collection page
      */
     public ProfilePhotoCollectionPage(final ProfilePhotoCollectionResponse response, final IProfilePhotoCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

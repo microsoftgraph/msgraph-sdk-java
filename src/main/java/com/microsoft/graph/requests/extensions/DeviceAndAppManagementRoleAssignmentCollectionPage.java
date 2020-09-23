@@ -23,6 +23,6 @@ public class DeviceAndAppManagementRoleAssignmentCollectionPage extends BaseColl
      * @param builder  the request builder for the next collection page
      */
     public DeviceAndAppManagementRoleAssignmentCollectionPage(final DeviceAndAppManagementRoleAssignmentCollectionResponse response, final IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

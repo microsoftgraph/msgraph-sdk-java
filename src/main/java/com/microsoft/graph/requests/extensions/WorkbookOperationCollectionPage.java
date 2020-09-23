@@ -23,6 +23,6 @@ public class WorkbookOperationCollectionPage extends BaseCollectionPage<Workbook
      * @param builder  the request builder for the next collection page
      */
     public WorkbookOperationCollectionPage(final WorkbookOperationCollectionResponse response, final IWorkbookOperationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

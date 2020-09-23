@@ -23,6 +23,6 @@ public class OnenoteOperationCollectionPage extends BaseCollectionPage<OnenoteOp
      * @param builder  the request builder for the next collection page
      */
     public OnenoteOperationCollectionPage(final OnenoteOperationCollectionResponse response, final IOnenoteOperationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

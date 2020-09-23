@@ -23,6 +23,6 @@ public class TargetedManagedAppConfigurationCollectionPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public TargetedManagedAppConfigurationCollectionPage(final TargetedManagedAppConfigurationCollectionResponse response, final ITargetedManagedAppConfigurationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

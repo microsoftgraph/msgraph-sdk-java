@@ -23,6 +23,6 @@ public class DeviceComplianceSettingStateCollectionPage extends BaseCollectionPa
      * @param builder  the request builder for the next collection page
      */
     public DeviceComplianceSettingStateCollectionPage(final DeviceComplianceSettingStateCollectionResponse response, final IDeviceComplianceSettingStateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

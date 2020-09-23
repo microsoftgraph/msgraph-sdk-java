@@ -23,6 +23,6 @@ public class RemoteAssistancePartnerCollectionPage extends BaseCollectionPage<Re
      * @param builder  the request builder for the next collection page
      */
     public RemoteAssistancePartnerCollectionPage(final RemoteAssistancePartnerCollectionResponse response, final IRemoteAssistancePartnerCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

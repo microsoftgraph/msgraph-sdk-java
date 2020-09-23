@@ -34,6 +34,6 @@ public class ListItemGetActivitiesByIntervalCollectionPage extends BaseCollectio
      * @param builder The request builder for the next collection page
      */
     public ListItemGetActivitiesByIntervalCollectionPage(final ListItemGetActivitiesByIntervalCollectionResponse response, final IListItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

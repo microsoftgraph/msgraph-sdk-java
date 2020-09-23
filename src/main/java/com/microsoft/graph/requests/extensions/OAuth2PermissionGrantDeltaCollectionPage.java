@@ -40,7 +40,7 @@ public class OAuth2PermissionGrantDeltaCollectionPage extends BaseCollectionPage
      * @param builder The request builder for the next collection page
      */
     public OAuth2PermissionGrantDeltaCollectionPage(final OAuth2PermissionGrantDeltaCollectionResponse response, final IOAuth2PermissionGrantDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

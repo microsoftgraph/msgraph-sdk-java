@@ -23,6 +23,6 @@ public class WorkbookChartSeriesCollectionPage extends BaseCollectionPage<Workbo
      * @param builder  the request builder for the next collection page
      */
     public WorkbookChartSeriesCollectionPage(final WorkbookChartSeriesCollectionResponse response, final IWorkbookChartSeriesCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

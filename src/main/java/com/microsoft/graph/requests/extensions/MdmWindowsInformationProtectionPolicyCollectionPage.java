@@ -23,6 +23,6 @@ public class MdmWindowsInformationProtectionPolicyCollectionPage extends BaseCol
      * @param builder  the request builder for the next collection page
      */
     public MdmWindowsInformationProtectionPolicyCollectionPage(final MdmWindowsInformationProtectionPolicyCollectionResponse response, final IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

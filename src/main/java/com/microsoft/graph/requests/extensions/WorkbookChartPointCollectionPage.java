@@ -23,6 +23,6 @@ public class WorkbookChartPointCollectionPage extends BaseCollectionPage<Workboo
      * @param builder  the request builder for the next collection page
      */
     public WorkbookChartPointCollectionPage(final WorkbookChartPointCollectionResponse response, final IWorkbookChartPointCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

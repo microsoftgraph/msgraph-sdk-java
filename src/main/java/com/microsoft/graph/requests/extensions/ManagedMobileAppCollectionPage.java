@@ -23,6 +23,6 @@ public class ManagedMobileAppCollectionPage extends BaseCollectionPage<ManagedMo
      * @param builder  the request builder for the next collection page
      */
     public ManagedMobileAppCollectionPage(final ManagedMobileAppCollectionResponse response, final IManagedMobileAppCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

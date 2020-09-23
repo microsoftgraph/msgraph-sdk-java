@@ -23,6 +23,6 @@ public class SharedDriveItemCollectionPage extends BaseCollectionPage<SharedDriv
      * @param builder  the request builder for the next collection page
      */
     public SharedDriveItemCollectionPage(final SharedDriveItemCollectionResponse response, final ISharedDriveItemCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

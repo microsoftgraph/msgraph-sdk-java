@@ -23,6 +23,6 @@ public class OpenShiftCollectionPage extends BaseCollectionPage<OpenShift, IOpen
      * @param builder  the request builder for the next collection page
      */
     public OpenShiftCollectionPage(final OpenShiftCollectionResponse response, final IOpenShiftCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

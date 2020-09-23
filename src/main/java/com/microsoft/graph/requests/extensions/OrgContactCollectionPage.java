@@ -23,6 +23,6 @@ public class OrgContactCollectionPage extends BaseCollectionPage<OrgContact, IOr
      * @param builder  the request builder for the next collection page
      */
     public OrgContactCollectionPage(final OrgContactCollectionResponse response, final IOrgContactCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

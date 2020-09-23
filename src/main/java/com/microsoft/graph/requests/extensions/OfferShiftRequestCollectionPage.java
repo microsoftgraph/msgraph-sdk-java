@@ -23,6 +23,6 @@ public class OfferShiftRequestCollectionPage extends BaseCollectionPage<OfferShi
      * @param builder  the request builder for the next collection page
      */
     public OfferShiftRequestCollectionPage(final OfferShiftRequestCollectionResponse response, final IOfferShiftRequestCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

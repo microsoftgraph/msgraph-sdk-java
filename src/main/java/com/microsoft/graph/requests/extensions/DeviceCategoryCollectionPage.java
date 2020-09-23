@@ -23,6 +23,6 @@ public class DeviceCategoryCollectionPage extends BaseCollectionPage<DeviceCateg
      * @param builder  the request builder for the next collection page
      */
     public DeviceCategoryCollectionPage(final DeviceCategoryCollectionResponse response, final IDeviceCategoryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -34,6 +34,6 @@ public class DriveItemGetActivitiesByIntervalCollectionPage extends BaseCollecti
      * @param builder The request builder for the next collection page
      */
     public DriveItemGetActivitiesByIntervalCollectionPage(final DriveItemGetActivitiesByIntervalCollectionResponse response, final IDriveItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

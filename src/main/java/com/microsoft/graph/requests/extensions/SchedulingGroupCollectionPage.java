@@ -23,6 +23,6 @@ public class SchedulingGroupCollectionPage extends BaseCollectionPage<Scheduling
      * @param builder  the request builder for the next collection page
      */
     public SchedulingGroupCollectionPage(final SchedulingGroupCollectionResponse response, final ISchedulingGroupCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,6 +23,6 @@ public class MobileAppContentCollectionPage extends BaseCollectionPage<MobileApp
      * @param builder  the request builder for the next collection page
      */
     public MobileAppContentCollectionPage(final MobileAppContentCollectionResponse response, final IMobileAppContentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

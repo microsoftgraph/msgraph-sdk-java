@@ -23,6 +23,6 @@ public class AndroidManagedAppProtectionCollectionPage extends BaseCollectionPag
      * @param builder  the request builder for the next collection page
      */
     public AndroidManagedAppProtectionCollectionPage(final AndroidManagedAppProtectionCollectionResponse response, final IAndroidManagedAppProtectionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

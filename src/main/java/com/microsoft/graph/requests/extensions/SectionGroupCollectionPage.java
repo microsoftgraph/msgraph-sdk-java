@@ -23,6 +23,6 @@ public class SectionGroupCollectionPage extends BaseCollectionPage<SectionGroup,
      * @param builder  the request builder for the next collection page
      */
     public SectionGroupCollectionPage(final SectionGroupCollectionResponse response, final ISectionGroupCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

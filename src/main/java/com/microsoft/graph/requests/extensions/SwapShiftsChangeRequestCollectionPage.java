@@ -23,6 +23,6 @@ public class SwapShiftsChangeRequestCollectionPage extends BaseCollectionPage<Sw
      * @param builder  the request builder for the next collection page
      */
     public SwapShiftsChangeRequestCollectionPage(final SwapShiftsChangeRequestCollectionResponse response, final ISwapShiftsChangeRequestCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

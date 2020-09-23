@@ -23,6 +23,6 @@ public class TeamsTemplateCollectionPage extends BaseCollectionPage<TeamsTemplat
      * @param builder  the request builder for the next collection page
      */
     public TeamsTemplateCollectionPage(final TeamsTemplateCollectionResponse response, final ITeamsTemplateCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

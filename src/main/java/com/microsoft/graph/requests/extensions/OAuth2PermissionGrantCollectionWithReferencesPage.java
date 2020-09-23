@@ -35,6 +35,6 @@ public class OAuth2PermissionGrantCollectionWithReferencesPage extends BaseColle
      * @param builder  the request builder for the next collection page
      */
     public OAuth2PermissionGrantCollectionWithReferencesPage(final OAuth2PermissionGrantCollectionResponse response, final IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

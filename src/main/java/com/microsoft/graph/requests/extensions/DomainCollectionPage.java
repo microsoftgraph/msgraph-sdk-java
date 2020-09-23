@@ -23,6 +23,6 @@ public class DomainCollectionPage extends BaseCollectionPage<Domain, IDomainColl
      * @param builder  the request builder for the next collection page
      */
     public DomainCollectionPage(final DomainCollectionResponse response, final IDomainCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }
