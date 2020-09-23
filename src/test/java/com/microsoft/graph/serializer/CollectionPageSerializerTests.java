@@ -30,6 +30,7 @@ import com.microsoft.graph.models.extensions.ItemAttachment;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
+import com.microsoft.graph.requests.extensions.EventCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 
 public class CollectionPageSerializerTests {
@@ -99,6 +100,14 @@ public class CollectionPageSerializerTests {
 		assertTrue(page.size() == 2);
 		assertTrue(page.get(0) instanceof User);
 		assertTrue(page.get(1) instanceof ServicePrincipal);
+	}
+	@Test
+	public void testEntityCollectionWithSingleValueExtendedProperties() throws Exception {
+		final String jsonString = "{\"@odata.context\": \"https://graph.microsoft.com/v1.0/$metadata#users('c2e8df37-c6a7-4d88-89b1-feb4f1fda7c5')/events\",\"@odata.nextLink\": \"https://graph.microsoft.com/v1.0/me/events?$skip=10\",\"value\": [{\"@odata.context\": \"https://graph.microsoft.com/v1.0/$metadata#Me/messages/$entity\",\"@odata.id\": \"https://graph.microsoft.com/v1.0/users('ddfcd489-628b-40d7-b48b-57002df800e5@1717622f-1d94-4d0c-9d74-709fad664b77')/messages('AAMkAGE1M2_bs88AACHsLqWAAA=')\",\"@odata.etag\": \"W/\\\"CQAAABYAAACY4MQpaFz9SbqUDe4+bs88AACbyS4H\\\"\",\"id\": \"AAMkAGE1M2_bs88AACHsLqWAAA=\",\"subject\": \"RE: Talk about emergency prep\",\"sender\": {\"emailAddress\": {\"name\": \"Christine Irwin\",\"address\": \"christine@contoso.com\"}},\"from\": null,\"toRecipients\": [{\"emailAddress\": {\"name\": \"Christine Irwin\",\"address\": \"christine@contoso.com\"}}],\"singleValueExtendedProperties@odata.context\": \"https://graph.microsoft.com/v1.0/$metadata#Me/messages('AAMkAGE1M2_bs88AACHsLqWAAA%3D')/singleValueExtendedProperties\",\"singleValueExtendedProperties\": [{\"id\": \"String {66f5a359-4659-4830-9070-00047ec6ac6e} Name Color\",\"value\": \"Green\"}]}]}";
+		final DefaultSerializer defaultSerializer = new DefaultSerializer(logger);
+		final EventCollectionResponse events = defaultSerializer.deserializeObject(jsonString, EventCollectionResponse.class);
+		assertNotNull(events);
+		assertTrue(events.value.get(0).singleValueExtendedProperties.getCurrentPage().size() > 0);
 	}
 
 	private FileAttachment getFileAttachment() throws Exception{

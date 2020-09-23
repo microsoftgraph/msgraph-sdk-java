@@ -6,16 +6,13 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.PlannerBucket;
 import com.microsoft.graph.models.extensions.PlannerPlanDetails;
 import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.PlannerBucketCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionPage;
-import com.microsoft.graph.requests.extensions.PlannerTaskCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionPage;
 
 
@@ -128,35 +125,11 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
 
 
         if (json.has("buckets")) {
-            final PlannerBucketCollectionResponse response = new PlannerBucketCollectionResponse();
-            if (json.has("buckets@odata.nextLink")) {
-                response.nextLink = json.get("buckets@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("buckets").toString(), JsonObject[].class);
-            final PlannerBucket[] array = new PlannerBucket[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerBucket.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            buckets = new PlannerBucketCollectionPage(response, null);
+            buckets = serializer.deserializeObject(json.get("buckets").toString(), PlannerBucketCollectionPage.class);
         }
 
         if (json.has("tasks")) {
-            final PlannerTaskCollectionResponse response = new PlannerTaskCollectionResponse();
-            if (json.has("tasks@odata.nextLink")) {
-                response.nextLink = json.get("tasks@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tasks").toString(), JsonObject[].class);
-            final PlannerTask[] array = new PlannerTask[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerTask.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            tasks = new PlannerTaskCollectionPage(response, null);
+            tasks = serializer.deserializeObject(json.get("tasks").toString(), PlannerTaskCollectionPage.class);
         }
     }
 }

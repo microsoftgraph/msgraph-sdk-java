@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkbookApplication;
 import com.microsoft.graph.models.extensions.WorkbookComment;
@@ -16,15 +15,10 @@ import com.microsoft.graph.models.extensions.WorkbookOperation;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookTableCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookTableCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionPage;
 
 
@@ -137,83 +131,23 @@ public class Workbook extends Entity implements IJsonBackedObject {
 
 
         if (json.has("comments")) {
-            final WorkbookCommentCollectionResponse response = new WorkbookCommentCollectionResponse();
-            if (json.has("comments@odata.nextLink")) {
-                response.nextLink = json.get("comments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("comments").toString(), JsonObject[].class);
-            final WorkbookComment[] array = new WorkbookComment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookComment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            comments = new WorkbookCommentCollectionPage(response, null);
+            comments = serializer.deserializeObject(json.get("comments").toString(), WorkbookCommentCollectionPage.class);
         }
 
         if (json.has("names")) {
-            final WorkbookNamedItemCollectionResponse response = new WorkbookNamedItemCollectionResponse();
-            if (json.has("names@odata.nextLink")) {
-                response.nextLink = json.get("names@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("names").toString(), JsonObject[].class);
-            final WorkbookNamedItem[] array = new WorkbookNamedItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookNamedItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            names = new WorkbookNamedItemCollectionPage(response, null);
+            names = serializer.deserializeObject(json.get("names").toString(), WorkbookNamedItemCollectionPage.class);
         }
 
         if (json.has("operations")) {
-            final WorkbookOperationCollectionResponse response = new WorkbookOperationCollectionResponse();
-            if (json.has("operations@odata.nextLink")) {
-                response.nextLink = json.get("operations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operations").toString(), JsonObject[].class);
-            final WorkbookOperation[] array = new WorkbookOperation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookOperation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            operations = new WorkbookOperationCollectionPage(response, null);
+            operations = serializer.deserializeObject(json.get("operations").toString(), WorkbookOperationCollectionPage.class);
         }
 
         if (json.has("tables")) {
-            final WorkbookTableCollectionResponse response = new WorkbookTableCollectionResponse();
-            if (json.has("tables@odata.nextLink")) {
-                response.nextLink = json.get("tables@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tables").toString(), JsonObject[].class);
-            final WorkbookTable[] array = new WorkbookTable[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookTable.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            tables = new WorkbookTableCollectionPage(response, null);
+            tables = serializer.deserializeObject(json.get("tables").toString(), WorkbookTableCollectionPage.class);
         }
 
         if (json.has("worksheets")) {
-            final WorkbookWorksheetCollectionResponse response = new WorkbookWorksheetCollectionResponse();
-            if (json.has("worksheets@odata.nextLink")) {
-                response.nextLink = json.get("worksheets@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("worksheets").toString(), JsonObject[].class);
-            final WorkbookWorksheet[] array = new WorkbookWorksheet[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookWorksheet.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            worksheets = new WorkbookWorksheetCollectionPage(response, null);
+            worksheets = serializer.deserializeObject(json.get("worksheets").toString(), WorkbookWorksheetCollectionPage.class);
         }
     }
 }

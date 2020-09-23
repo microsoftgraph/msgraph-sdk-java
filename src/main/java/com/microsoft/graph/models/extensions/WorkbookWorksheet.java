@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkbookChart;
 import com.microsoft.graph.models.extensions.WorkbookNamedItem;
@@ -14,13 +13,9 @@ import com.microsoft.graph.models.extensions.WorkbookPivotTable;
 import com.microsoft.graph.models.extensions.WorkbookWorksheetProtection;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookChartCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookChartCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookTableCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookTableCollectionPage;
 
 
@@ -141,67 +136,19 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
 
         if (json.has("charts")) {
-            final WorkbookChartCollectionResponse response = new WorkbookChartCollectionResponse();
-            if (json.has("charts@odata.nextLink")) {
-                response.nextLink = json.get("charts@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("charts").toString(), JsonObject[].class);
-            final WorkbookChart[] array = new WorkbookChart[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookChart.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            charts = new WorkbookChartCollectionPage(response, null);
+            charts = serializer.deserializeObject(json.get("charts").toString(), WorkbookChartCollectionPage.class);
         }
 
         if (json.has("names")) {
-            final WorkbookNamedItemCollectionResponse response = new WorkbookNamedItemCollectionResponse();
-            if (json.has("names@odata.nextLink")) {
-                response.nextLink = json.get("names@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("names").toString(), JsonObject[].class);
-            final WorkbookNamedItem[] array = new WorkbookNamedItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookNamedItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            names = new WorkbookNamedItemCollectionPage(response, null);
+            names = serializer.deserializeObject(json.get("names").toString(), WorkbookNamedItemCollectionPage.class);
         }
 
         if (json.has("pivotTables")) {
-            final WorkbookPivotTableCollectionResponse response = new WorkbookPivotTableCollectionResponse();
-            if (json.has("pivotTables@odata.nextLink")) {
-                response.nextLink = json.get("pivotTables@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("pivotTables").toString(), JsonObject[].class);
-            final WorkbookPivotTable[] array = new WorkbookPivotTable[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookPivotTable.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            pivotTables = new WorkbookPivotTableCollectionPage(response, null);
+            pivotTables = serializer.deserializeObject(json.get("pivotTables").toString(), WorkbookPivotTableCollectionPage.class);
         }
 
         if (json.has("tables")) {
-            final WorkbookTableCollectionResponse response = new WorkbookTableCollectionResponse();
-            if (json.has("tables@odata.nextLink")) {
-                response.nextLink = json.get("tables@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tables").toString(), JsonObject[].class);
-            final WorkbookTable[] array = new WorkbookTable[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookTable.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            tables = new WorkbookTableCollectionPage(response, null);
+            tables = serializer.deserializeObject(json.get("tables").toString(), WorkbookTableCollectionPage.class);
         }
     }
 }

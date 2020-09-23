@@ -6,17 +6,13 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.SharedInsight;
 import com.microsoft.graph.models.extensions.Trending;
 import com.microsoft.graph.models.extensions.UsedInsight;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SharedInsightCollectionResponse;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionPage;
-import com.microsoft.graph.requests.extensions.TrendingCollectionResponse;
 import com.microsoft.graph.requests.extensions.TrendingCollectionPage;
-import com.microsoft.graph.requests.extensions.UsedInsightCollectionResponse;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionPage;
 
 
@@ -97,51 +93,15 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
 
 
         if (json.has("shared")) {
-            final SharedInsightCollectionResponse response = new SharedInsightCollectionResponse();
-            if (json.has("shared@odata.nextLink")) {
-                response.nextLink = json.get("shared@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("shared").toString(), JsonObject[].class);
-            final SharedInsight[] array = new SharedInsight[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SharedInsight.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            shared = new SharedInsightCollectionPage(response, null);
+            shared = serializer.deserializeObject(json.get("shared").toString(), SharedInsightCollectionPage.class);
         }
 
         if (json.has("trending")) {
-            final TrendingCollectionResponse response = new TrendingCollectionResponse();
-            if (json.has("trending@odata.nextLink")) {
-                response.nextLink = json.get("trending@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("trending").toString(), JsonObject[].class);
-            final Trending[] array = new Trending[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Trending.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            trending = new TrendingCollectionPage(response, null);
+            trending = serializer.deserializeObject(json.get("trending").toString(), TrendingCollectionPage.class);
         }
 
         if (json.has("used")) {
-            final UsedInsightCollectionResponse response = new UsedInsightCollectionResponse();
-            if (json.has("used@odata.nextLink")) {
-                response.nextLink = json.get("used@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("used").toString(), JsonObject[].class);
-            final UsedInsight[] array = new UsedInsight[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UsedInsight.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            used = new UsedInsightCollectionPage(response, null);
+            used = serializer.deserializeObject(json.get("used").toString(), UsedInsightCollectionPage.class);
         }
     }
 }

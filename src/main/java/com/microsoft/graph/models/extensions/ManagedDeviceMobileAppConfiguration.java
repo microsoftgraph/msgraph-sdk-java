@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceStatus;
@@ -14,11 +13,8 @@ import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserStatus;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserSummary;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionPage;
 
 
@@ -163,51 +159,15 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
 
 
         if (json.has("assignments")) {
-            final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response = new ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final ManagedDeviceMobileAppConfigurationAssignment[] array = new ManagedDeviceMobileAppConfigurationAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDeviceMobileAppConfigurationAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), ManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class);
         }
 
         if (json.has("deviceStatuses")) {
-            final ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse response = new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse();
-            if (json.has("deviceStatuses@odata.nextLink")) {
-                response.nextLink = json.get("deviceStatuses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStatuses").toString(), JsonObject[].class);
-            final ManagedDeviceMobileAppConfigurationDeviceStatus[] array = new ManagedDeviceMobileAppConfigurationDeviceStatus[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDeviceMobileAppConfigurationDeviceStatus.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceStatuses = new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage(response, null);
+            deviceStatuses = serializer.deserializeObject(json.get("deviceStatuses").toString(), ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage.class);
         }
 
         if (json.has("userStatuses")) {
-            final ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse response = new ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse();
-            if (json.has("userStatuses@odata.nextLink")) {
-                response.nextLink = json.get("userStatuses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userStatuses").toString(), JsonObject[].class);
-            final ManagedDeviceMobileAppConfigurationUserStatus[] array = new ManagedDeviceMobileAppConfigurationUserStatus[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDeviceMobileAppConfigurationUserStatus.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            userStatuses = new ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(response, null);
+            userStatuses = serializer.deserializeObject(json.get("userStatuses").toString(), ManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class);
         }
     }
 }

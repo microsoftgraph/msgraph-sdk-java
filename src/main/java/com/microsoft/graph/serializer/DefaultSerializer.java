@@ -84,27 +84,29 @@ public class DefaultSerializer implements ISerializer {
         // Populate the JSON-backed fields for any annotations that are not in the object model
         if (jsonObject instanceof IJsonBackedObject) {
             logger.logDebug("Deserializing type " + clazz.getSimpleName());
-            final JsonObject rawObject = gson.fromJson(inputString, JsonObject.class);
+            final JsonElement rawElement = gson.fromJson(inputString, JsonElement.class);
+            final JsonObject rawObject = rawElement.isJsonObject() ? rawElement.getAsJsonObject() : null;
 
             // If there is a derived class, try to get it and deserialize to it
-            Class<?> derivedClass = this.getDerivedClass(rawObject, clazz);
-            final T jo;
-            if (derivedClass != null) {
-                jo = (T) gson.fromJson(inputString, derivedClass);
-            } else {
-                jo = jsonObject;
+            T jo = jsonObject;
+            if (rawElement.isJsonObject()) {
+                final Class<?> derivedClass = this.getDerivedClass(rawObject, clazz);
+                if(derivedClass != null)
+                    jo = (T) gson.fromJson(inputString, derivedClass);
             }
 
             final IJsonBackedObject jsonBackedObject = (IJsonBackedObject) jo;
-            jsonBackedObject.setRawObject(this, rawObject);
+            
+            if(rawElement.isJsonObject()) {
+                jsonBackedObject.setRawObject(this, rawObject);
+                jsonBackedObject.additionalDataManager().setAdditionalData(rawObject);
+                setChildAdditionalData(jsonBackedObject,rawObject);
+            }
 
             if (responseHeaders != null) {
 	            JsonElement convertedHeaders = gson.toJsonTree(responseHeaders);
 	            jsonBackedObject.additionalDataManager().put(graphResponseHeadersKey, convertedHeaders);
             }
-            
-            jsonBackedObject.additionalDataManager().setAdditionalData(rawObject);
-            setChildAdditionalData(jsonBackedObject,rawObject);
             return jo;
         } else {
             logger.logDebug("Deserializing a non-IJsonBackedObject type " + clazz.getSimpleName());

@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ListInfo;
 import com.microsoft.graph.models.extensions.SharepointIds;
@@ -17,13 +16,9 @@ import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.Subscription;
 import com.microsoft.graph.models.extensions.BaseItem;
-import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionPage;
-import com.microsoft.graph.requests.extensions.ContentTypeCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionPage;
-import com.microsoft.graph.requests.extensions.ListItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.ListItemCollectionPage;
-import com.microsoft.graph.requests.extensions.SubscriptionCollectionResponse;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionPage;
 
 
@@ -152,67 +147,19 @@ public class List extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            final ColumnDefinitionCollectionResponse response = new ColumnDefinitionCollectionResponse();
-            if (json.has("columns@odata.nextLink")) {
-                response.nextLink = json.get("columns@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("columns").toString(), JsonObject[].class);
-            final ColumnDefinition[] array = new ColumnDefinition[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ColumnDefinition.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            columns = new ColumnDefinitionCollectionPage(response, null);
+            columns = serializer.deserializeObject(json.get("columns").toString(), ColumnDefinitionCollectionPage.class);
         }
 
         if (json.has("contentTypes")) {
-            final ContentTypeCollectionResponse response = new ContentTypeCollectionResponse();
-            if (json.has("contentTypes@odata.nextLink")) {
-                response.nextLink = json.get("contentTypes@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("contentTypes").toString(), JsonObject[].class);
-            final ContentType[] array = new ContentType[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ContentType.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            contentTypes = new ContentTypeCollectionPage(response, null);
+            contentTypes = serializer.deserializeObject(json.get("contentTypes").toString(), ContentTypeCollectionPage.class);
         }
 
         if (json.has("items")) {
-            final ListItemCollectionResponse response = new ListItemCollectionResponse();
-            if (json.has("items@odata.nextLink")) {
-                response.nextLink = json.get("items@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("items").toString(), JsonObject[].class);
-            final ListItem[] array = new ListItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ListItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            items = new ListItemCollectionPage(response, null);
+            items = serializer.deserializeObject(json.get("items").toString(), ListItemCollectionPage.class);
         }
 
         if (json.has("subscriptions")) {
-            final SubscriptionCollectionResponse response = new SubscriptionCollectionResponse();
-            if (json.has("subscriptions@odata.nextLink")) {
-                response.nextLink = json.get("subscriptions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("subscriptions").toString(), JsonObject[].class);
-            final Subscription[] array = new Subscription[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Subscription.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            subscriptions = new SubscriptionCollectionPage(response, null);
+            subscriptions = serializer.deserializeObject(json.get("subscriptions").toString(), SubscriptionCollectionPage.class);
         }
     }
 }

@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.InferenceClassificationOverride;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionResponse;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class InferenceClassification extends Entity implements IJsonBackedObject
 
 
         if (json.has("overrides")) {
-            final InferenceClassificationOverrideCollectionResponse response = new InferenceClassificationOverrideCollectionResponse();
-            if (json.has("overrides@odata.nextLink")) {
-                response.nextLink = json.get("overrides@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("overrides").toString(), JsonObject[].class);
-            final InferenceClassificationOverride[] array = new InferenceClassificationOverride[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), InferenceClassificationOverride.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            overrides = new InferenceClassificationOverrideCollectionPage(response, null);
+            overrides = serializer.deserializeObject(json.get("overrides").toString(), InferenceClassificationOverrideCollectionPage.class);
         }
     }
 }

@@ -6,16 +6,13 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.models.extensions.WorkbookTableSort;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionPage;
 
 
@@ -184,35 +181,11 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
 
 
         if (json.has("columns")) {
-            final WorkbookTableColumnCollectionResponse response = new WorkbookTableColumnCollectionResponse();
-            if (json.has("columns@odata.nextLink")) {
-                response.nextLink = json.get("columns@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("columns").toString(), JsonObject[].class);
-            final WorkbookTableColumn[] array = new WorkbookTableColumn[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookTableColumn.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            columns = new WorkbookTableColumnCollectionPage(response, null);
+            columns = serializer.deserializeObject(json.get("columns").toString(), WorkbookTableColumnCollectionPage.class);
         }
 
         if (json.has("rows")) {
-            final WorkbookTableRowCollectionResponse response = new WorkbookTableRowCollectionResponse();
-            if (json.has("rows@odata.nextLink")) {
-                response.nextLink = json.get("rows@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("rows").toString(), JsonObject[].class);
-            final WorkbookTableRow[] array = new WorkbookTableRow[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookTableRow.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            rows = new WorkbookTableRowCollectionPage(response, null);
+            rows = serializer.deserializeObject(json.get("rows").toString(), WorkbookTableRowCollectionPage.class);
         }
     }
 }

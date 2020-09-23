@@ -6,14 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.SectionLinks;
 import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.SectionGroup;
 import com.microsoft.graph.models.extensions.OnenoteEntityHierarchyModel;
-import com.microsoft.graph.requests.extensions.OnenotePageCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionPage;
 
 
@@ -118,19 +116,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements IJson
 
 
         if (json.has("pages")) {
-            final OnenotePageCollectionResponse response = new OnenotePageCollectionResponse();
-            if (json.has("pages@odata.nextLink")) {
-                response.nextLink = json.get("pages@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("pages").toString(), JsonObject[].class);
-            final OnenotePage[] array = new OnenotePage[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnenotePage.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            pages = new OnenotePageCollectionPage(response, null);
+            pages = serializer.deserializeObject(json.get("pages").toString(), OnenotePageCollectionPage.class);
         }
     }
 }

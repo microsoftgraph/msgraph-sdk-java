@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionPage;
 
 
@@ -123,19 +121,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
 
 
         if (json.has("assignments")) {
-            final EnrollmentConfigurationAssignmentCollectionResponse response = new EnrollmentConfigurationAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final EnrollmentConfigurationAssignment[] array = new EnrollmentConfigurationAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EnrollmentConfigurationAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new EnrollmentConfigurationAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), EnrollmentConfigurationAssignmentCollectionPage.class);
         }
     }
 }

@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PlannerPlan;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.PlannerPlanCollectionResponse;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class PlannerGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("plans")) {
-            final PlannerPlanCollectionResponse response = new PlannerPlanCollectionResponse();
-            if (json.has("plans@odata.nextLink")) {
-                response.nextLink = json.get("plans@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("plans").toString(), JsonObject[].class);
-            final PlannerPlan[] array = new PlannerPlan[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PlannerPlan.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            plans = new PlannerPlanCollectionPage(response, null);
+            plans = serializer.deserializeObject(json.get("plans").toString(), PlannerPlanCollectionPage.class);
         }
     }
 }
