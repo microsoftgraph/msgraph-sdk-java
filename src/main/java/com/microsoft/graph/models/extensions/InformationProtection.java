@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
 
 
         if (json.has("threatAssessmentRequests")) {
-            final ThreatAssessmentRequestCollectionResponse response = new ThreatAssessmentRequestCollectionResponse();
-            if (json.has("threatAssessmentRequests@odata.nextLink")) {
-                response.nextLink = json.get("threatAssessmentRequests@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("threatAssessmentRequests").toString(), JsonObject[].class);
-            final ThreatAssessmentRequest[] array = new ThreatAssessmentRequest[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ThreatAssessmentRequest.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            threatAssessmentRequests = new ThreatAssessmentRequestCollectionPage(response, null);
+            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests").toString(), ThreatAssessmentRequestCollectionPage.class);
         }
     }
 }

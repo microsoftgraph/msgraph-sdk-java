@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AddIn;
 import com.microsoft.graph.models.extensions.ApiApplication;
@@ -24,15 +23,10 @@ import com.microsoft.graph.models.extensions.ExtensionProperty;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
-import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
-import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 
 
@@ -337,83 +331,23 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("extensionProperties")) {
-            final ExtensionPropertyCollectionResponse response = new ExtensionPropertyCollectionResponse();
-            if (json.has("extensionProperties@odata.nextLink")) {
-                response.nextLink = json.get("extensionProperties@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensionProperties").toString(), JsonObject[].class);
-            final ExtensionProperty[] array = new ExtensionProperty[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ExtensionProperty.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            extensionProperties = new ExtensionPropertyCollectionPage(response, null);
+            extensionProperties = serializer.deserializeObject(json.get("extensionProperties").toString(), ExtensionPropertyCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            final HomeRealmDiscoveryPolicyCollectionResponse response = new HomeRealmDiscoveryPolicyCollectionResponse();
-            if (json.has("homeRealmDiscoveryPolicies@odata.nextLink")) {
-                response.nextLink = json.get("homeRealmDiscoveryPolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), JsonObject[].class);
-            final HomeRealmDiscoveryPolicy[] array = new HomeRealmDiscoveryPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), HomeRealmDiscoveryPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            homeRealmDiscoveryPolicies = new HomeRealmDiscoveryPolicyCollectionPage(response, null);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), HomeRealmDiscoveryPolicyCollectionPage.class);
         }
 
         if (json.has("owners")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("owners@odata.nextLink")) {
-                response.nextLink = json.get("owners@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("owners").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            owners = new DirectoryObjectCollectionPage(response, null);
+            owners = serializer.deserializeObject(json.get("owners").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            final TokenIssuancePolicyCollectionResponse response = new TokenIssuancePolicyCollectionResponse();
-            if (json.has("tokenIssuancePolicies@odata.nextLink")) {
-                response.nextLink = json.get("tokenIssuancePolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), JsonObject[].class);
-            final TokenIssuancePolicy[] array = new TokenIssuancePolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TokenIssuancePolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            tokenIssuancePolicies = new TokenIssuancePolicyCollectionPage(response, null);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), TokenIssuancePolicyCollectionPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            final TokenLifetimePolicyCollectionResponse response = new TokenLifetimePolicyCollectionResponse();
-            if (json.has("tokenLifetimePolicies@odata.nextLink")) {
-                response.nextLink = json.get("tokenLifetimePolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), JsonObject[].class);
-            final TokenLifetimePolicy[] array = new TokenLifetimePolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TokenLifetimePolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            tokenLifetimePolicies = new TokenLifetimePolicyCollectionPage(response, null);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), TokenLifetimePolicyCollectionPage.class);
         }
     }
 }

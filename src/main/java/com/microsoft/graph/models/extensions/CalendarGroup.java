@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.CalendarCollectionResponse;
 import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
 
 
@@ -99,19 +97,7 @@ public class CalendarGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("calendars")) {
-            final CalendarCollectionResponse response = new CalendarCollectionResponse();
-            if (json.has("calendars@odata.nextLink")) {
-                response.nextLink = json.get("calendars@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendars").toString(), JsonObject[].class);
-            final Calendar[] array = new Calendar[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Calendar.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            calendars = new CalendarCollectionPage(response, null);
+            calendars = serializer.deserializeObject(json.get("calendars").toString(), CalendarCollectionPage.class);
         }
     }
 }

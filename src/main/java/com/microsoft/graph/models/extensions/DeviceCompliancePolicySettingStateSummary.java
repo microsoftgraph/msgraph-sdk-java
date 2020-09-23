@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.PolicyPlatformType;
 import com.microsoft.graph.models.extensions.DeviceComplianceSettingState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionPage;
 
 
@@ -156,19 +154,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
 
         if (json.has("deviceComplianceSettingStates")) {
-            final DeviceComplianceSettingStateCollectionResponse response = new DeviceComplianceSettingStateCollectionResponse();
-            if (json.has("deviceComplianceSettingStates@odata.nextLink")) {
-                response.nextLink = json.get("deviceComplianceSettingStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceComplianceSettingStates").toString(), JsonObject[].class);
-            final DeviceComplianceSettingState[] array = new DeviceComplianceSettingState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceComplianceSettingState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceComplianceSettingStates = new DeviceComplianceSettingStateCollectionPage(response, null);
+            deviceComplianceSettingStates = serializer.deserializeObject(json.get("deviceComplianceSettingStates").toString(), DeviceComplianceSettingStateCollectionPage.class);
         }
     }
 }

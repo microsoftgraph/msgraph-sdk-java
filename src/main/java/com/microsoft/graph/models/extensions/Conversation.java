@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ConversationThread;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ConversationThreadCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionPage;
 
 
@@ -115,19 +113,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
 
         if (json.has("threads")) {
-            final ConversationThreadCollectionResponse response = new ConversationThreadCollectionResponse();
-            if (json.has("threads@odata.nextLink")) {
-                response.nextLink = json.get("threads@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("threads").toString(), JsonObject[].class);
-            final ConversationThread[] array = new ConversationThread[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConversationThread.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            threads = new ConversationThreadCollectionPage(response, null);
+            threads = serializer.deserializeObject(json.get("threads").toString(), ConversationThreadCollectionPage.class);
         }
     }
 }

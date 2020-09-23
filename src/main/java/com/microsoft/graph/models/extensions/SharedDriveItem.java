@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.DriveItem;
@@ -15,7 +14,6 @@ import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.BaseItem;
-import com.microsoft.graph.requests.extensions.DriveItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 
 
@@ -136,19 +134,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("items")) {
-            final DriveItemCollectionResponse response = new DriveItemCollectionResponse();
-            if (json.has("items@odata.nextLink")) {
-                response.nextLink = json.get("items@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("items").toString(), JsonObject[].class);
-            final DriveItem[] array = new DriveItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            items = new DriveItemCollectionPage(response, null);
+            items = serializer.deserializeObject(json.get("items").toString(), DriveItemCollectionPage.class);
         }
     }
 }

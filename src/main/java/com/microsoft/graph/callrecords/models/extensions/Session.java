@@ -6,14 +6,12 @@ package com.microsoft.graph.callrecords.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.callrecords.models.extensions.Endpoint;
 import com.microsoft.graph.callrecords.models.extensions.FailureInfo;
 import com.microsoft.graph.callrecords.models.generated.Modality;
 import com.microsoft.graph.callrecords.models.extensions.Segment;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionResponse;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionPage;
 
 
@@ -126,19 +124,7 @@ public class Session extends Entity implements IJsonBackedObject {
 
 
         if (json.has("segments")) {
-            final SegmentCollectionResponse response = new SegmentCollectionResponse();
-            if (json.has("segments@odata.nextLink")) {
-                response.nextLink = json.get("segments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("segments").toString(), JsonObject[].class);
-            final Segment[] array = new Segment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Segment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            segments = new SegmentCollectionPage(response, null);
+            segments = serializer.deserializeObject(json.get("segments").toString(), SegmentCollectionPage.class);
         }
     }
 }

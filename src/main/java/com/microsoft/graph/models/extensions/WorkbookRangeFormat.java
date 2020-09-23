@@ -6,14 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 import com.microsoft.graph.models.extensions.WorkbookRangeFill;
 import com.microsoft.graph.models.extensions.WorkbookRangeFont;
 import com.microsoft.graph.models.extensions.WorkbookFormatProtection;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionPage;
 
 
@@ -142,19 +140,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
 
 
         if (json.has("borders")) {
-            final WorkbookRangeBorderCollectionResponse response = new WorkbookRangeBorderCollectionResponse();
-            if (json.has("borders@odata.nextLink")) {
-                response.nextLink = json.get("borders@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("borders").toString(), JsonObject[].class);
-            final WorkbookRangeBorder[] array = new WorkbookRangeBorder[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookRangeBorder.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            borders = new WorkbookRangeBorderCollectionPage(response, null);
+            borders = serializer.deserializeObject(json.get("borders").toString(), WorkbookRangeBorderCollectionPage.class);
         }
     }
 }

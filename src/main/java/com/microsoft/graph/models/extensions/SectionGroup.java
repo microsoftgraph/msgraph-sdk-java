@@ -6,15 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.SectionGroup;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteEntityHierarchyModel;
-import com.microsoft.graph.requests.extensions.SectionGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
 
 
@@ -119,35 +116,11 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
 
 
         if (json.has("sectionGroups")) {
-            final SectionGroupCollectionResponse response = new SectionGroupCollectionResponse();
-            if (json.has("sectionGroups@odata.nextLink")) {
-                response.nextLink = json.get("sectionGroups@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sectionGroups").toString(), JsonObject[].class);
-            final SectionGroup[] array = new SectionGroup[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SectionGroup.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sectionGroups = new SectionGroupCollectionPage(response, null);
+            sectionGroups = serializer.deserializeObject(json.get("sectionGroups").toString(), SectionGroupCollectionPage.class);
         }
 
         if (json.has("sections")) {
-            final OnenoteSectionCollectionResponse response = new OnenoteSectionCollectionResponse();
-            if (json.has("sections@odata.nextLink")) {
-                response.nextLink = json.get("sections@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sections").toString(), JsonObject[].class);
-            final OnenoteSection[] array = new OnenoteSection[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnenoteSection.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sections = new OnenoteSectionCollectionPage(response, null);
+            sections = serializer.deserializeObject(json.get("sections").toString(), OnenoteSectionCollectionPage.class);
         }
     }
 }

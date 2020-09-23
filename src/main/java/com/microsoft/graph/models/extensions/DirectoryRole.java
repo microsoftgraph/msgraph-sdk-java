@@ -6,13 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.ScopedRoleMembership;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
-import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionResponse;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionPage;
 
 
@@ -107,35 +104,11 @@ public class DirectoryRole extends DirectoryObject implements IJsonBackedObject 
 
 
         if (json.has("members")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("members@odata.nextLink")) {
-                response.nextLink = json.get("members@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            members = new DirectoryObjectCollectionPage(response, null);
+            members = serializer.deserializeObject(json.get("members").toString(), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("scopedMembers")) {
-            final ScopedRoleMembershipCollectionResponse response = new ScopedRoleMembershipCollectionResponse();
-            if (json.has("scopedMembers@odata.nextLink")) {
-                response.nextLink = json.get("scopedMembers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("scopedMembers").toString(), JsonObject[].class);
-            final ScopedRoleMembership[] array = new ScopedRoleMembership[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ScopedRoleMembership.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            scopedMembers = new ScopedRoleMembershipCollectionPage(response, null);
+            scopedMembers = serializer.deserializeObject(json.get("scopedMembers").toString(), ScopedRoleMembershipCollectionPage.class);
         }
     }
 }

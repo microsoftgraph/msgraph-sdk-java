@@ -6,16 +6,13 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.generated.MobileAppPublishingState;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionPage;
 
 
@@ -190,35 +187,11 @@ public class MobileApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            final MobileAppAssignmentCollectionResponse response = new MobileAppAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final MobileAppAssignment[] array = new MobileAppAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new MobileAppAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), MobileAppAssignmentCollectionPage.class);
         }
 
         if (json.has("categories")) {
-            final MobileAppCategoryCollectionResponse response = new MobileAppCategoryCollectionResponse();
-            if (json.has("categories@odata.nextLink")) {
-                response.nextLink = json.get("categories@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("categories").toString(), JsonObject[].class);
-            final MobileAppCategory[] array = new MobileAppCategory[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppCategory.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            categories = new MobileAppCategoryCollectionPage(response, null);
+            categories = serializer.deserializeObject(json.get("categories").toString(), MobileAppCategoryCollectionPage.class);
         }
     }
 }

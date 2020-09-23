@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkbookChartAxes;
 import com.microsoft.graph.models.extensions.WorkbookChartDataLabels;
@@ -16,7 +15,6 @@ import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.models.extensions.WorkbookChartTitle;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionPage;
 
 
@@ -169,19 +167,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
 
 
         if (json.has("series")) {
-            final WorkbookChartSeriesCollectionResponse response = new WorkbookChartSeriesCollectionResponse();
-            if (json.has("series@odata.nextLink")) {
-                response.nextLink = json.get("series@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("series").toString(), JsonObject[].class);
-            final WorkbookChartSeries[] array = new WorkbookChartSeries[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookChartSeries.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            series = new WorkbookChartSeriesCollectionPage(response, null);
+            series = serializer.deserializeObject(json.get("series").toString(), WorkbookChartSeriesCollectionPage.class);
         }
     }
 }

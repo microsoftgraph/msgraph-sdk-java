@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.OutlookCategory;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
 
 
         if (json.has("masterCategories")) {
-            final OutlookCategoryCollectionResponse response = new OutlookCategoryCollectionResponse();
-            if (json.has("masterCategories@odata.nextLink")) {
-                response.nextLink = json.get("masterCategories@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("masterCategories").toString(), JsonObject[].class);
-            final OutlookCategory[] array = new OutlookCategory[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OutlookCategory.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            masterCategories = new OutlookCategoryCollectionPage(response, null);
+            masterCategories = serializer.deserializeObject(json.get("masterCategories").toString(), OutlookCategoryCollectionPage.class);
         }
     }
 }

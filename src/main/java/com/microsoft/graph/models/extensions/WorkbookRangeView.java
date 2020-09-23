@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionPage;
 
 
@@ -163,19 +161,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
 
 
         if (json.has("rows")) {
-            final WorkbookRangeViewCollectionResponse response = new WorkbookRangeViewCollectionResponse();
-            if (json.has("rows@odata.nextLink")) {
-                response.nextLink = json.get("rows@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("rows").toString(), JsonObject[].class);
-            final WorkbookRangeView[] array = new WorkbookRangeView[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookRangeView.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            rows = new WorkbookRangeViewCollectionPage(response, null);
+            rows = serializer.deserializeObject(json.get("rows").toString(), WorkbookRangeViewCollectionPage.class);
         }
     }
 }
