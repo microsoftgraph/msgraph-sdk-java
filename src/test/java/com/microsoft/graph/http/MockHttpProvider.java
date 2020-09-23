@@ -59,7 +59,7 @@ public class MockHttpProvider implements IHttpProvider {
 
     @Override
     public <Result, BodyType> void send(IHttpRequest request,
-                                        ICallback<Result> callback,
+                                        ICallback<? super Result> callback,
                                         Class<Result> resultClass,
                                         BodyType serializable) {
         Result result = null;
