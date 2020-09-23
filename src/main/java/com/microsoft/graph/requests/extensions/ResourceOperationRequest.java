@@ -37,7 +37,7 @@ public class ResourceOperationRequest extends BaseRequest implements IResourceOp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ResourceOperation> callback) {
+    public void get(final ICallback<? super ResourceOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ResourceOperationRequest extends BaseRequest implements IResourceOp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ResourceOperation> callback) {
+    public void delete(final ICallback<? super ResourceOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ResourceOperationRequest extends BaseRequest implements IResourceOp
      * @param sourceResourceOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ResourceOperation sourceResourceOperation, final ICallback<ResourceOperation> callback) {
+    public void patch(final ResourceOperation sourceResourceOperation, final ICallback<? super ResourceOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceResourceOperation);
     }
 
@@ -96,7 +96,7 @@ public class ResourceOperationRequest extends BaseRequest implements IResourceOp
      * @param newResourceOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ResourceOperation newResourceOperation, final ICallback<ResourceOperation> callback) {
+    public void post(final ResourceOperation newResourceOperation, final ICallback<? super ResourceOperation> callback) {
         send(HttpMethod.POST, callback, newResourceOperation);
     }
 
@@ -117,7 +117,7 @@ public class ResourceOperationRequest extends BaseRequest implements IResourceOp
      * @param newResourceOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ResourceOperation newResourceOperation, final ICallback<ResourceOperation> callback) {
+    public void put(final ResourceOperation newResourceOperation, final ICallback<? super ResourceOperation> callback) {
         send(HttpMethod.PUT, callback, newResourceOperation);
     }
 

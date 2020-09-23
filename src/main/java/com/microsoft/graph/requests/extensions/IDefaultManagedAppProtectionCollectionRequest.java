@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDefaultManagedAppProtectionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDefaultManagedAppProtectionCollectionPage> callback);
+    void get(final ICallback<? super IDefaultManagedAppProtectionCollectionPage> callback);
 
     IDefaultManagedAppProtectionCollectionPage get() throws ClientException;
 
-    void post(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<DefaultManagedAppProtection> callback);
+    void post(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<? super DefaultManagedAppProtection> callback);
 
     DefaultManagedAppProtection post(final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException;
 

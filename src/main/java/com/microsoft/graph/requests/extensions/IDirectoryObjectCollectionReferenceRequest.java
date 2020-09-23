@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.DirectoryObject;
  */
 public interface IDirectoryObjectCollectionReferenceRequest {
 
-    void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback);
+    void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback);
 
     DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException;
 

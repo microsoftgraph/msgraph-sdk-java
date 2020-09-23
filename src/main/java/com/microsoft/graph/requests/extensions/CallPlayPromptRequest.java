@@ -37,7 +37,7 @@ public class CallPlayPromptRequest extends BaseRequest implements ICallPlayPromp
         body = new CallPlayPromptBody();
     }
 
-    public void post(final ICallback<PlayPromptOperation> callback) {
+    public void post(final ICallback<? super PlayPromptOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

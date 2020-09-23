@@ -21,7 +21,7 @@ public interface IIosDeviceFeaturesConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosDeviceFeaturesConfiguration> callback);
+    void get(final ICallback<? super IosDeviceFeaturesConfiguration> callback);
 
     /**
      * Gets the IosDeviceFeaturesConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosDeviceFeaturesConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosDeviceFeaturesConfiguration> callback);
+    void delete(final ICallback<? super IosDeviceFeaturesConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosDeviceFeaturesConfigurationRequest extends IHttpRequest {
      * @param sourceIosDeviceFeaturesConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosDeviceFeaturesConfiguration sourceIosDeviceFeaturesConfiguration, final ICallback<IosDeviceFeaturesConfiguration> callback);
+    void patch(final IosDeviceFeaturesConfiguration sourceIosDeviceFeaturesConfiguration, final ICallback<? super IosDeviceFeaturesConfiguration> callback);
 
     /**
      * Patches this IosDeviceFeaturesConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosDeviceFeaturesConfigurationRequest extends IHttpRequest {
      * @param newIosDeviceFeaturesConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, final ICallback<IosDeviceFeaturesConfiguration> callback);
+    void post(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, final ICallback<? super IosDeviceFeaturesConfiguration> callback);
 
     /**
      * Posts a IosDeviceFeaturesConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosDeviceFeaturesConfigurationRequest extends IHttpRequest {
      * @param newIosDeviceFeaturesConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, final ICallback<IosDeviceFeaturesConfiguration> callback);
+    void put(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, final ICallback<? super IosDeviceFeaturesConfiguration> callback);
 
     /**
      * Posts a IosDeviceFeaturesConfiguration with a new object

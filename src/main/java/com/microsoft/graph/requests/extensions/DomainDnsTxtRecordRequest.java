@@ -37,7 +37,7 @@ public class DomainDnsTxtRecordRequest extends BaseRequest implements IDomainDns
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DomainDnsTxtRecord> callback) {
+    public void get(final ICallback<? super DomainDnsTxtRecord> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DomainDnsTxtRecordRequest extends BaseRequest implements IDomainDns
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DomainDnsTxtRecord> callback) {
+    public void delete(final ICallback<? super DomainDnsTxtRecord> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DomainDnsTxtRecordRequest extends BaseRequest implements IDomainDns
      * @param sourceDomainDnsTxtRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DomainDnsTxtRecord sourceDomainDnsTxtRecord, final ICallback<DomainDnsTxtRecord> callback) {
+    public void patch(final DomainDnsTxtRecord sourceDomainDnsTxtRecord, final ICallback<? super DomainDnsTxtRecord> callback) {
         send(HttpMethod.PATCH, callback, sourceDomainDnsTxtRecord);
     }
 
@@ -96,7 +96,7 @@ public class DomainDnsTxtRecordRequest extends BaseRequest implements IDomainDns
      * @param newDomainDnsTxtRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DomainDnsTxtRecord newDomainDnsTxtRecord, final ICallback<DomainDnsTxtRecord> callback) {
+    public void post(final DomainDnsTxtRecord newDomainDnsTxtRecord, final ICallback<? super DomainDnsTxtRecord> callback) {
         send(HttpMethod.POST, callback, newDomainDnsTxtRecord);
     }
 
@@ -117,7 +117,7 @@ public class DomainDnsTxtRecordRequest extends BaseRequest implements IDomainDns
      * @param newDomainDnsTxtRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DomainDnsTxtRecord newDomainDnsTxtRecord, final ICallback<DomainDnsTxtRecord> callback) {
+    public void put(final DomainDnsTxtRecord newDomainDnsTxtRecord, final ICallback<? super DomainDnsTxtRecord> callback) {
         send(HttpMethod.PUT, callback, newDomainDnsTxtRecord);
     }
 

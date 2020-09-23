@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOnenoteSectionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOnenoteSectionCollectionPage> callback);
+    void get(final ICallback<? super IOnenoteSectionCollectionPage> callback);
 
     IOnenoteSectionCollectionPage get() throws ClientException;
 
-    void post(final OnenoteSection newOnenoteSection, final ICallback<OnenoteSection> callback);
+    void post(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback);
 
     OnenoteSection post(final OnenoteSection newOnenoteSection) throws ClientException;
 

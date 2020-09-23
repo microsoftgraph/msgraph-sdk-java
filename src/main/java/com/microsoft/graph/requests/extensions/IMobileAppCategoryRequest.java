@@ -21,7 +21,7 @@ public interface IMobileAppCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppCategory> callback);
+    void get(final ICallback<? super MobileAppCategory> callback);
 
     /**
      * Gets the MobileAppCategory from the service
@@ -36,7 +36,7 @@ public interface IMobileAppCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppCategory> callback);
+    void delete(final ICallback<? super MobileAppCategory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppCategoryRequest extends IHttpRequest {
      * @param sourceMobileAppCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppCategory sourceMobileAppCategory, final ICallback<MobileAppCategory> callback);
+    void patch(final MobileAppCategory sourceMobileAppCategory, final ICallback<? super MobileAppCategory> callback);
 
     /**
      * Patches this MobileAppCategory with a source
@@ -68,7 +68,7 @@ public interface IMobileAppCategoryRequest extends IHttpRequest {
      * @param newMobileAppCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback);
+    void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback);
 
     /**
      * Posts a MobileAppCategory with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppCategoryRequest extends IHttpRequest {
      * @param newMobileAppCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback);
+    void put(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback);
 
     /**
      * Posts a MobileAppCategory with a new object

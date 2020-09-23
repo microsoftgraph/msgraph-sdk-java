@@ -19,7 +19,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookFilterApplyBottomPercentFilterRequest extends IHttpRequest {
 
-    void post(final ICallback<Void> callback);
+    void post(final ICallback<? super Void> callback);
 
     Void post() throws ClientException;
 

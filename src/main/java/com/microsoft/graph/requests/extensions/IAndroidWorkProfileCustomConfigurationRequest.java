@@ -21,7 +21,7 @@ public interface IAndroidWorkProfileCustomConfigurationRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidWorkProfileCustomConfiguration> callback);
+    void get(final ICallback<? super AndroidWorkProfileCustomConfiguration> callback);
 
     /**
      * Gets the AndroidWorkProfileCustomConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidWorkProfileCustomConfigurationRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidWorkProfileCustomConfiguration> callback);
+    void delete(final ICallback<? super AndroidWorkProfileCustomConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidWorkProfileCustomConfigurationRequest extends IHttpRequ
      * @param sourceAndroidWorkProfileCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidWorkProfileCustomConfiguration sourceAndroidWorkProfileCustomConfiguration, final ICallback<AndroidWorkProfileCustomConfiguration> callback);
+    void patch(final AndroidWorkProfileCustomConfiguration sourceAndroidWorkProfileCustomConfiguration, final ICallback<? super AndroidWorkProfileCustomConfiguration> callback);
 
     /**
      * Patches this AndroidWorkProfileCustomConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidWorkProfileCustomConfigurationRequest extends IHttpRequ
      * @param newAndroidWorkProfileCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, final ICallback<AndroidWorkProfileCustomConfiguration> callback);
+    void post(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, final ICallback<? super AndroidWorkProfileCustomConfiguration> callback);
 
     /**
      * Posts a AndroidWorkProfileCustomConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidWorkProfileCustomConfigurationRequest extends IHttpRequ
      * @param newAndroidWorkProfileCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, final ICallback<AndroidWorkProfileCustomConfiguration> callback);
+    void put(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, final ICallback<? super AndroidWorkProfileCustomConfiguration> callback);
 
     /**
      * Posts a AndroidWorkProfileCustomConfiguration with a new object

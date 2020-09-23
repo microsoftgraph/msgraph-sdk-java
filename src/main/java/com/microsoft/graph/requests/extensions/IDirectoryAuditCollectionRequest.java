@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDirectoryAuditCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDirectoryAuditCollectionPage> callback);
+    void get(final ICallback<? super IDirectoryAuditCollectionPage> callback);
 
     IDirectoryAuditCollectionPage get() throws ClientException;
 
-    void post(final DirectoryAudit newDirectoryAudit, final ICallback<DirectoryAudit> callback);
+    void post(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback);
 
     DirectoryAudit post(final DirectoryAudit newDirectoryAudit) throws ClientException;
 

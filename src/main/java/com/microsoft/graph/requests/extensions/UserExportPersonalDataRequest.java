@@ -36,7 +36,7 @@ public class UserExportPersonalDataRequest extends BaseRequest implements IUserE
         body = new UserExportPersonalDataBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

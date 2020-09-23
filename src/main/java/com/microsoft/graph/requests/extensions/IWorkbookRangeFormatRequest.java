@@ -21,7 +21,7 @@ public interface IWorkbookRangeFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookRangeFormat> callback);
+    void get(final ICallback<? super WorkbookRangeFormat> callback);
 
     /**
      * Gets the WorkbookRangeFormat from the service
@@ -36,7 +36,7 @@ public interface IWorkbookRangeFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookRangeFormat> callback);
+    void delete(final ICallback<? super WorkbookRangeFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookRangeFormatRequest extends IHttpRequest {
      * @param sourceWorkbookRangeFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookRangeFormat sourceWorkbookRangeFormat, final ICallback<WorkbookRangeFormat> callback);
+    void patch(final WorkbookRangeFormat sourceWorkbookRangeFormat, final ICallback<? super WorkbookRangeFormat> callback);
 
     /**
      * Patches this WorkbookRangeFormat with a source
@@ -68,7 +68,7 @@ public interface IWorkbookRangeFormatRequest extends IHttpRequest {
      * @param newWorkbookRangeFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookRangeFormat newWorkbookRangeFormat, final ICallback<WorkbookRangeFormat> callback);
+    void post(final WorkbookRangeFormat newWorkbookRangeFormat, final ICallback<? super WorkbookRangeFormat> callback);
 
     /**
      * Posts a WorkbookRangeFormat with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookRangeFormatRequest extends IHttpRequest {
      * @param newWorkbookRangeFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookRangeFormat newWorkbookRangeFormat, final ICallback<WorkbookRangeFormat> callback);
+    void put(final WorkbookRangeFormat newWorkbookRangeFormat, final ICallback<? super WorkbookRangeFormat> callback);
 
     /**
      * Posts a WorkbookRangeFormat with a new object

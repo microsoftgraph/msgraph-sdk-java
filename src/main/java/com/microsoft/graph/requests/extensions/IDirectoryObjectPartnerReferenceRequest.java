@@ -21,7 +21,7 @@ public interface IDirectoryObjectPartnerReferenceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DirectoryObjectPartnerReference> callback);
+    void get(final ICallback<? super DirectoryObjectPartnerReference> callback);
 
     /**
      * Gets the DirectoryObjectPartnerReference from the service
@@ -36,7 +36,7 @@ public interface IDirectoryObjectPartnerReferenceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DirectoryObjectPartnerReference> callback);
+    void delete(final ICallback<? super DirectoryObjectPartnerReference> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDirectoryObjectPartnerReferenceRequest extends IHttpRequest {
      * @param sourceDirectoryObjectPartnerReference the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference, final ICallback<DirectoryObjectPartnerReference> callback);
+    void patch(final DirectoryObjectPartnerReference sourceDirectoryObjectPartnerReference, final ICallback<? super DirectoryObjectPartnerReference> callback);
 
     /**
      * Patches this DirectoryObjectPartnerReference with a source
@@ -68,7 +68,7 @@ public interface IDirectoryObjectPartnerReferenceRequest extends IHttpRequest {
      * @param newDirectoryObjectPartnerReference the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, final ICallback<DirectoryObjectPartnerReference> callback);
+    void post(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, final ICallback<? super DirectoryObjectPartnerReference> callback);
 
     /**
      * Posts a DirectoryObjectPartnerReference with a new object
@@ -85,7 +85,7 @@ public interface IDirectoryObjectPartnerReferenceRequest extends IHttpRequest {
      * @param newDirectoryObjectPartnerReference the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, final ICallback<DirectoryObjectPartnerReference> callback);
+    void put(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, final ICallback<? super DirectoryObjectPartnerReference> callback);
 
     /**
      * Posts a DirectoryObjectPartnerReference with a new object

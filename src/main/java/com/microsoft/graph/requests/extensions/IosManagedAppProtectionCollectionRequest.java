@@ -40,7 +40,7 @@ public class IosManagedAppProtectionCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, IosManagedAppProtectionCollectionResponse.class, IIosManagedAppProtectionCollectionPage.class);
     }
 
-    public void get(final ICallback<IIosManagedAppProtectionCollectionPage> callback) {
+    public void get(final ICallback<? super IIosManagedAppProtectionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class IosManagedAppProtectionCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<IosManagedAppProtection> callback) {
+    public void post(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<? super IosManagedAppProtection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

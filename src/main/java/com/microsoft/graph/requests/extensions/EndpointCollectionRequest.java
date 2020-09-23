@@ -40,7 +40,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
         super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, IEndpointCollectionPage.class);
     }
 
-    public void get(final ICallback<IEndpointCollectionPage> callback) {
+    public void get(final ICallback<? super IEndpointCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
         return buildFromResponse(response);
     }
 
-    public void post(final Endpoint newEndpoint, final ICallback<Endpoint> callback) {
+    public void post(final Endpoint newEndpoint, final ICallback<? super Endpoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

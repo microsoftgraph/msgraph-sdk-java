@@ -21,7 +21,7 @@ public interface IActivityHistoryItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ActivityHistoryItem> callback);
+    void get(final ICallback<? super ActivityHistoryItem> callback);
 
     /**
      * Gets the ActivityHistoryItem from the service
@@ -36,7 +36,7 @@ public interface IActivityHistoryItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ActivityHistoryItem> callback);
+    void delete(final ICallback<? super ActivityHistoryItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IActivityHistoryItemRequest extends IHttpRequest {
      * @param sourceActivityHistoryItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ActivityHistoryItem sourceActivityHistoryItem, final ICallback<ActivityHistoryItem> callback);
+    void patch(final ActivityHistoryItem sourceActivityHistoryItem, final ICallback<? super ActivityHistoryItem> callback);
 
     /**
      * Patches this ActivityHistoryItem with a source
@@ -68,7 +68,7 @@ public interface IActivityHistoryItemRequest extends IHttpRequest {
      * @param newActivityHistoryItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ActivityHistoryItem newActivityHistoryItem, final ICallback<ActivityHistoryItem> callback);
+    void post(final ActivityHistoryItem newActivityHistoryItem, final ICallback<? super ActivityHistoryItem> callback);
 
     /**
      * Posts a ActivityHistoryItem with a new object
@@ -85,7 +85,7 @@ public interface IActivityHistoryItemRequest extends IHttpRequest {
      * @param newActivityHistoryItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ActivityHistoryItem newActivityHistoryItem, final ICallback<ActivityHistoryItem> callback);
+    void put(final ActivityHistoryItem newActivityHistoryItem, final ICallback<? super ActivityHistoryItem> callback);
 
     /**
      * Posts a ActivityHistoryItem with a new object

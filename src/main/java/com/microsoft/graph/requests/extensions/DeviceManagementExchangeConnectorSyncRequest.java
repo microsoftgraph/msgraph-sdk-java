@@ -36,7 +36,7 @@ public class DeviceManagementExchangeConnectorSyncRequest extends BaseRequest im
         body = new DeviceManagementExchangeConnectorSyncBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

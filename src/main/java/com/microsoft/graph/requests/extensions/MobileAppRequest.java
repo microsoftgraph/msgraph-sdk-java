@@ -61,7 +61,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileApp> callback) {
+    public void get(final ICallback<? super MobileApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -80,7 +80,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileApp> callback) {
+    public void delete(final ICallback<? super MobileApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -99,7 +99,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param sourceMobileApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileApp sourceMobileApp, final ICallback<MobileApp> callback) {
+    public void patch(final MobileApp sourceMobileApp, final ICallback<? super MobileApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileApp);
     }
 
@@ -120,7 +120,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param newMobileApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileApp newMobileApp, final ICallback<MobileApp> callback) {
+    public void post(final MobileApp newMobileApp, final ICallback<? super MobileApp> callback) {
         send(HttpMethod.POST, callback, newMobileApp);
     }
 
@@ -141,7 +141,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param newMobileApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileApp newMobileApp, final ICallback<MobileApp> callback) {
+    public void put(final MobileApp newMobileApp, final ICallback<? super MobileApp> callback) {
         send(HttpMethod.PUT, callback, newMobileApp);
     }
 

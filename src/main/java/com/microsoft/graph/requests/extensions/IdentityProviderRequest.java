@@ -37,7 +37,7 @@ public class IdentityProviderRequest extends BaseRequest implements IIdentityPro
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IdentityProvider> callback) {
+    public void get(final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IdentityProviderRequest extends BaseRequest implements IIdentityPro
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IdentityProvider> callback) {
+    public void delete(final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IdentityProviderRequest extends BaseRequest implements IIdentityPro
      * @param sourceIdentityProvider the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentityProvider sourceIdentityProvider, final ICallback<IdentityProvider> callback) {
+    public void patch(final IdentityProvider sourceIdentityProvider, final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentityProvider);
     }
 
@@ -96,7 +96,7 @@ public class IdentityProviderRequest extends BaseRequest implements IIdentityPro
      * @param newIdentityProvider the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback) {
+    public void post(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.POST, callback, newIdentityProvider);
     }
 
@@ -117,7 +117,7 @@ public class IdentityProviderRequest extends BaseRequest implements IIdentityPro
      * @param newIdentityProvider the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback) {
+    public void put(final IdentityProvider newIdentityProvider, final ICallback<? super IdentityProvider> callback) {
         send(HttpMethod.PUT, callback, newIdentityProvider);
     }
 

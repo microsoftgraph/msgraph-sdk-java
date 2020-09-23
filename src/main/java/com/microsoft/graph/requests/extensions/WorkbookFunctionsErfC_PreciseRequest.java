@@ -37,7 +37,7 @@ public class WorkbookFunctionsErfC_PreciseRequest extends BaseRequest implements
         body = new WorkbookFunctionsErfC_PreciseBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

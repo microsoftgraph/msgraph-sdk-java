@@ -21,7 +21,7 @@ public interface IServicePrincipalRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ServicePrincipal> callback);
+    void get(final ICallback<? super ServicePrincipal> callback);
 
     /**
      * Gets the ServicePrincipal from the service
@@ -36,7 +36,7 @@ public interface IServicePrincipalRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ServicePrincipal> callback);
+    void delete(final ICallback<? super ServicePrincipal> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IServicePrincipalRequest extends IHttpRequest {
      * @param sourceServicePrincipal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ServicePrincipal sourceServicePrincipal, final ICallback<ServicePrincipal> callback);
+    void patch(final ServicePrincipal sourceServicePrincipal, final ICallback<? super ServicePrincipal> callback);
 
     /**
      * Patches this ServicePrincipal with a source
@@ -68,7 +68,7 @@ public interface IServicePrincipalRequest extends IHttpRequest {
      * @param newServicePrincipal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ServicePrincipal newServicePrincipal, final ICallback<ServicePrincipal> callback);
+    void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback);
 
     /**
      * Posts a ServicePrincipal with a new object
@@ -85,7 +85,7 @@ public interface IServicePrincipalRequest extends IHttpRequest {
      * @param newServicePrincipal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ServicePrincipal newServicePrincipal, final ICallback<ServicePrincipal> callback);
+    void put(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback);
 
     /**
      * Posts a ServicePrincipal with a new object

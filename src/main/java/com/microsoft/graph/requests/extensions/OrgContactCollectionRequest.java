@@ -39,7 +39,7 @@ public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContac
         super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, IOrgContactCollectionPage.class);
     }
 
-    public void get(final ICallback<IOrgContactCollectionPage> callback) {
+    public void get(final ICallback<? super IOrgContactCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContac
         return buildFromResponse(response);
     }
 
-    public void post(final OrgContact newOrgContact, final ICallback<OrgContact> callback) {
+    public void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OrgContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

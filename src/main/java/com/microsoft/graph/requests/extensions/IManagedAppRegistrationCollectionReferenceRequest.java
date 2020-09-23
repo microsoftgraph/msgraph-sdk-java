@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.ManagedAppRegistration;
  */
 public interface IManagedAppRegistrationCollectionReferenceRequest {
 
-    void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<ManagedAppRegistration> callback);
+    void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback);
 
     ManagedAppRegistration post(final ManagedAppRegistration newManagedAppRegistration) throws ClientException;
 

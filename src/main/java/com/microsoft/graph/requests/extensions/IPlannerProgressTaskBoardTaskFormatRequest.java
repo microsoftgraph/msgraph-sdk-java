@@ -21,7 +21,7 @@ public interface IPlannerProgressTaskBoardTaskFormatRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PlannerProgressTaskBoardTaskFormat> callback);
+    void get(final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback);
 
     /**
      * Gets the PlannerProgressTaskBoardTaskFormat from the service
@@ -36,7 +36,7 @@ public interface IPlannerProgressTaskBoardTaskFormatRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PlannerProgressTaskBoardTaskFormat> callback);
+    void delete(final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlannerProgressTaskBoardTaskFormatRequest extends IHttpRequest
      * @param sourcePlannerProgressTaskBoardTaskFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PlannerProgressTaskBoardTaskFormat sourcePlannerProgressTaskBoardTaskFormat, final ICallback<PlannerProgressTaskBoardTaskFormat> callback);
+    void patch(final PlannerProgressTaskBoardTaskFormat sourcePlannerProgressTaskBoardTaskFormat, final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback);
 
     /**
      * Patches this PlannerProgressTaskBoardTaskFormat with a source
@@ -68,7 +68,7 @@ public interface IPlannerProgressTaskBoardTaskFormatRequest extends IHttpRequest
      * @param newPlannerProgressTaskBoardTaskFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, final ICallback<PlannerProgressTaskBoardTaskFormat> callback);
+    void post(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback);
 
     /**
      * Posts a PlannerProgressTaskBoardTaskFormat with a new object
@@ -85,7 +85,7 @@ public interface IPlannerProgressTaskBoardTaskFormatRequest extends IHttpRequest
      * @param newPlannerProgressTaskBoardTaskFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, final ICallback<PlannerProgressTaskBoardTaskFormat> callback);
+    void put(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, final ICallback<? super PlannerProgressTaskBoardTaskFormat> callback);
 
     /**
      * Posts a PlannerProgressTaskBoardTaskFormat with a new object

@@ -52,7 +52,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedAppConfiguration> callback) {
+    public void get(final ICallback<? super ManagedAppConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedAppConfiguration> callback) {
+    public void delete(final ICallback<? super ManagedAppConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @param sourceManagedAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppConfiguration sourceManagedAppConfiguration, final ICallback<ManagedAppConfiguration> callback) {
+    public void patch(final ManagedAppConfiguration sourceManagedAppConfiguration, final ICallback<? super ManagedAppConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppConfiguration);
     }
 
@@ -111,7 +111,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @param newManagedAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppConfiguration newManagedAppConfiguration, final ICallback<ManagedAppConfiguration> callback) {
+    public void post(final ManagedAppConfiguration newManagedAppConfiguration, final ICallback<? super ManagedAppConfiguration> callback) {
         send(HttpMethod.POST, callback, newManagedAppConfiguration);
     }
 
@@ -132,7 +132,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @param newManagedAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppConfiguration newManagedAppConfiguration, final ICallback<ManagedAppConfiguration> callback) {
+    public void put(final ManagedAppConfiguration newManagedAppConfiguration, final ICallback<? super ManagedAppConfiguration> callback) {
         send(HttpMethod.PUT, callback, newManagedAppConfiguration);
     }
 

@@ -37,7 +37,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest implements IIo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosMobileAppConfiguration> callback) {
+    public void get(final ICallback<? super IosMobileAppConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest implements IIo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosMobileAppConfiguration> callback) {
+    public void delete(final ICallback<? super IosMobileAppConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest implements IIo
      * @param sourceIosMobileAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosMobileAppConfiguration sourceIosMobileAppConfiguration, final ICallback<IosMobileAppConfiguration> callback) {
+    public void patch(final IosMobileAppConfiguration sourceIosMobileAppConfiguration, final ICallback<? super IosMobileAppConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosMobileAppConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest implements IIo
      * @param newIosMobileAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosMobileAppConfiguration newIosMobileAppConfiguration, final ICallback<IosMobileAppConfiguration> callback) {
+    public void post(final IosMobileAppConfiguration newIosMobileAppConfiguration, final ICallback<? super IosMobileAppConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosMobileAppConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class IosMobileAppConfigurationRequest extends BaseRequest implements IIo
      * @param newIosMobileAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosMobileAppConfiguration newIosMobileAppConfiguration, final ICallback<IosMobileAppConfiguration> callback) {
+    public void put(final IosMobileAppConfiguration newIosMobileAppConfiguration, final ICallback<? super IosMobileAppConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosMobileAppConfiguration);
     }
 

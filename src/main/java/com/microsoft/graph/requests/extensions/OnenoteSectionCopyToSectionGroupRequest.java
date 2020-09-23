@@ -37,7 +37,7 @@ public class OnenoteSectionCopyToSectionGroupRequest extends BaseRequest impleme
         body = new OnenoteSectionCopyToSectionGroupBody();
     }
 
-    public void post(final ICallback<OnenoteOperation> callback) {
+    public void post(final ICallback<? super OnenoteOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

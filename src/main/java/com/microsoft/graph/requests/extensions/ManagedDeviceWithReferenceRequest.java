@@ -46,7 +46,7 @@ public class ManagedDeviceWithReferenceRequest extends BaseRequest implements IM
         super(requestUrl, client, requestOptions, ManagedDevice.class);
     }
 
-    public void post(final ManagedDevice newManagedDevice, final IJsonBackedObject payload, final ICallback<ManagedDevice> callback) {
+    public void post(final ManagedDevice newManagedDevice, final IJsonBackedObject payload, final ICallback<? super ManagedDevice> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -58,7 +58,7 @@ public class ManagedDeviceWithReferenceRequest extends BaseRequest implements IM
         return null;
     }
 
-    public void get(final ICallback<ManagedDevice> callback) {
+    public void get(final ICallback<? super ManagedDevice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,7 +66,7 @@ public class ManagedDeviceWithReferenceRequest extends BaseRequest implements IM
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<ManagedDevice> callback) {
+	public void delete(final ICallback<? super ManagedDevice> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -74,7 +74,7 @@ public class ManagedDeviceWithReferenceRequest extends BaseRequest implements IM
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ManagedDevice sourceManagedDevice, final ICallback<ManagedDevice> callback) {
+	public void patch(final ManagedDevice sourceManagedDevice, final ICallback<? super ManagedDevice> callback) {
 		send(HttpMethod.PATCH, callback, sourceManagedDevice);
 	}
 

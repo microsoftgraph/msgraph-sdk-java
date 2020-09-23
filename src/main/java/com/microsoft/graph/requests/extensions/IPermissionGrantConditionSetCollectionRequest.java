@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPermissionGrantConditionSetCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPermissionGrantConditionSetCollectionPage> callback);
+    void get(final ICallback<? super IPermissionGrantConditionSetCollectionPage> callback);
 
     IPermissionGrantConditionSetCollectionPage get() throws ClientException;
 
-    void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<PermissionGrantConditionSet> callback);
+    void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback);
 
     PermissionGrantConditionSet post(final PermissionGrantConditionSet newPermissionGrantConditionSet) throws ClientException;
 

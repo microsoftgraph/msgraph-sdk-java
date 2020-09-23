@@ -56,7 +56,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<RoleDefinition> callback) {
+    public void get(final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<RoleDefinition> callback) {
+    public void delete(final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +94,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param sourceRoleDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RoleDefinition sourceRoleDefinition, final ICallback<RoleDefinition> callback) {
+    public void patch(final RoleDefinition sourceRoleDefinition, final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceRoleDefinition);
     }
 
@@ -115,7 +115,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param newRoleDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RoleDefinition newRoleDefinition, final ICallback<RoleDefinition> callback) {
+    public void post(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.POST, callback, newRoleDefinition);
     }
 
@@ -136,7 +136,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param newRoleDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RoleDefinition newRoleDefinition, final ICallback<RoleDefinition> callback) {
+    public void put(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.PUT, callback, newRoleDefinition);
     }
 

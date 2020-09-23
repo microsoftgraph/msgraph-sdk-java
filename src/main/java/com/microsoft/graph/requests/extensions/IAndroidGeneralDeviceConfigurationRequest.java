@@ -21,7 +21,7 @@ public interface IAndroidGeneralDeviceConfigurationRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidGeneralDeviceConfiguration> callback);
+    void get(final ICallback<? super AndroidGeneralDeviceConfiguration> callback);
 
     /**
      * Gets the AndroidGeneralDeviceConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidGeneralDeviceConfigurationRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidGeneralDeviceConfiguration> callback);
+    void delete(final ICallback<? super AndroidGeneralDeviceConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidGeneralDeviceConfigurationRequest extends IHttpRequest 
      * @param sourceAndroidGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidGeneralDeviceConfiguration sourceAndroidGeneralDeviceConfiguration, final ICallback<AndroidGeneralDeviceConfiguration> callback);
+    void patch(final AndroidGeneralDeviceConfiguration sourceAndroidGeneralDeviceConfiguration, final ICallback<? super AndroidGeneralDeviceConfiguration> callback);
 
     /**
      * Patches this AndroidGeneralDeviceConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidGeneralDeviceConfigurationRequest extends IHttpRequest 
      * @param newAndroidGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, final ICallback<AndroidGeneralDeviceConfiguration> callback);
+    void post(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, final ICallback<? super AndroidGeneralDeviceConfiguration> callback);
 
     /**
      * Posts a AndroidGeneralDeviceConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidGeneralDeviceConfigurationRequest extends IHttpRequest 
      * @param newAndroidGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, final ICallback<AndroidGeneralDeviceConfiguration> callback);
+    void put(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, final ICallback<? super AndroidGeneralDeviceConfiguration> callback);
 
     /**
      * Posts a AndroidGeneralDeviceConfiguration with a new object

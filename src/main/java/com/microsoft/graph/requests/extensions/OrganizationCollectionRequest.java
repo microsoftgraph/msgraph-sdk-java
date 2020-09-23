@@ -39,7 +39,7 @@ public class OrganizationCollectionRequest extends BaseCollectionRequest<Organiz
         super(requestUrl, client, requestOptions, OrganizationCollectionResponse.class, IOrganizationCollectionPage.class);
     }
 
-    public void get(final ICallback<IOrganizationCollectionPage> callback) {
+    public void get(final ICallback<? super IOrganizationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class OrganizationCollectionRequest extends BaseCollectionRequest<Organiz
         return buildFromResponse(response);
     }
 
-    public void post(final Organization newOrganization, final ICallback<Organization> callback) {
+    public void post(final Organization newOrganization, final ICallback<? super Organization> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

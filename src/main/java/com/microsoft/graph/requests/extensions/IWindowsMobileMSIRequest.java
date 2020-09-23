@@ -21,7 +21,7 @@ public interface IWindowsMobileMSIRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsMobileMSI> callback);
+    void get(final ICallback<? super WindowsMobileMSI> callback);
 
     /**
      * Gets the WindowsMobileMSI from the service
@@ -36,7 +36,7 @@ public interface IWindowsMobileMSIRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsMobileMSI> callback);
+    void delete(final ICallback<? super WindowsMobileMSI> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsMobileMSIRequest extends IHttpRequest {
      * @param sourceWindowsMobileMSI the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsMobileMSI sourceWindowsMobileMSI, final ICallback<WindowsMobileMSI> callback);
+    void patch(final WindowsMobileMSI sourceWindowsMobileMSI, final ICallback<? super WindowsMobileMSI> callback);
 
     /**
      * Patches this WindowsMobileMSI with a source
@@ -68,7 +68,7 @@ public interface IWindowsMobileMSIRequest extends IHttpRequest {
      * @param newWindowsMobileMSI the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsMobileMSI newWindowsMobileMSI, final ICallback<WindowsMobileMSI> callback);
+    void post(final WindowsMobileMSI newWindowsMobileMSI, final ICallback<? super WindowsMobileMSI> callback);
 
     /**
      * Posts a WindowsMobileMSI with a new object
@@ -85,7 +85,7 @@ public interface IWindowsMobileMSIRequest extends IHttpRequest {
      * @param newWindowsMobileMSI the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsMobileMSI newWindowsMobileMSI, final ICallback<WindowsMobileMSI> callback);
+    void put(final WindowsMobileMSI newWindowsMobileMSI, final ICallback<? super WindowsMobileMSI> callback);
 
     /**
      * Posts a WindowsMobileMSI with a new object

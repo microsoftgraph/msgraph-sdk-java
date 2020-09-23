@@ -152,7 +152,7 @@ public class UserReferenceRequest extends BaseRequest implements IUserReferenceR
         super(requestUrl, client, requestOptions, User.class);
     }
 
-    public void delete(final ICallback<User> callback) {
+    public void delete(final ICallback<? super User> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -197,7 +197,7 @@ public class UserReferenceRequest extends BaseRequest implements IUserReferenceR
      * @param srcUser the User reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(User srcUser, final ICallback<User> callback) {
+    public void put(User srcUser, final ICallback<? super User> callback) {
         send(HttpMethod.PUT, callback, srcUser);
     }
 

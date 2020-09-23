@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookCreateSessionRequest extends IHttpRequest {
 
-    void post(final ICallback<WorkbookSessionInfo> callback);
+    void post(final ICallback<? super WorkbookSessionInfo> callback);
 
     WorkbookSessionInfo post() throws ClientException;
 

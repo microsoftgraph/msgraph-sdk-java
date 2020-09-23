@@ -21,7 +21,7 @@ public interface IOnenoteEntityBaseModelRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnenoteEntityBaseModel> callback);
+    void get(final ICallback<? super OnenoteEntityBaseModel> callback);
 
     /**
      * Gets the OnenoteEntityBaseModel from the service
@@ -36,7 +36,7 @@ public interface IOnenoteEntityBaseModelRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnenoteEntityBaseModel> callback);
+    void delete(final ICallback<? super OnenoteEntityBaseModel> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnenoteEntityBaseModelRequest extends IHttpRequest {
      * @param sourceOnenoteEntityBaseModel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnenoteEntityBaseModel sourceOnenoteEntityBaseModel, final ICallback<OnenoteEntityBaseModel> callback);
+    void patch(final OnenoteEntityBaseModel sourceOnenoteEntityBaseModel, final ICallback<? super OnenoteEntityBaseModel> callback);
 
     /**
      * Patches this OnenoteEntityBaseModel with a source
@@ -68,7 +68,7 @@ public interface IOnenoteEntityBaseModelRequest extends IHttpRequest {
      * @param newOnenoteEntityBaseModel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OnenoteEntityBaseModel newOnenoteEntityBaseModel, final ICallback<OnenoteEntityBaseModel> callback);
+    void post(final OnenoteEntityBaseModel newOnenoteEntityBaseModel, final ICallback<? super OnenoteEntityBaseModel> callback);
 
     /**
      * Posts a OnenoteEntityBaseModel with a new object
@@ -85,7 +85,7 @@ public interface IOnenoteEntityBaseModelRequest extends IHttpRequest {
      * @param newOnenoteEntityBaseModel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnenoteEntityBaseModel newOnenoteEntityBaseModel, final ICallback<OnenoteEntityBaseModel> callback);
+    void put(final OnenoteEntityBaseModel newOnenoteEntityBaseModel, final ICallback<? super OnenoteEntityBaseModel> callback);
 
     /**
      * Posts a OnenoteEntityBaseModel with a new object

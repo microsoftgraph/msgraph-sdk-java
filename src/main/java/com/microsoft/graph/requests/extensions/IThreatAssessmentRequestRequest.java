@@ -21,7 +21,7 @@ public interface IThreatAssessmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ThreatAssessmentRequest> callback);
+    void get(final ICallback<? super ThreatAssessmentRequest> callback);
 
     /**
      * Gets the ThreatAssessmentRequest from the service
@@ -36,7 +36,7 @@ public interface IThreatAssessmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ThreatAssessmentRequest> callback);
+    void delete(final ICallback<? super ThreatAssessmentRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IThreatAssessmentRequestRequest extends IHttpRequest {
      * @param sourceThreatAssessmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ThreatAssessmentRequest sourceThreatAssessmentRequest, final ICallback<ThreatAssessmentRequest> callback);
+    void patch(final ThreatAssessmentRequest sourceThreatAssessmentRequest, final ICallback<? super ThreatAssessmentRequest> callback);
 
     /**
      * Patches this ThreatAssessmentRequest with a source
@@ -68,7 +68,7 @@ public interface IThreatAssessmentRequestRequest extends IHttpRequest {
      * @param newThreatAssessmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ThreatAssessmentRequest newThreatAssessmentRequest, final ICallback<ThreatAssessmentRequest> callback);
+    void post(final ThreatAssessmentRequest newThreatAssessmentRequest, final ICallback<? super ThreatAssessmentRequest> callback);
 
     /**
      * Posts a ThreatAssessmentRequest with a new object
@@ -85,7 +85,7 @@ public interface IThreatAssessmentRequestRequest extends IHttpRequest {
      * @param newThreatAssessmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ThreatAssessmentRequest newThreatAssessmentRequest, final ICallback<ThreatAssessmentRequest> callback);
+    void put(final ThreatAssessmentRequest newThreatAssessmentRequest, final ICallback<? super ThreatAssessmentRequest> callback);
 
     /**
      * Posts a ThreatAssessmentRequest with a new object

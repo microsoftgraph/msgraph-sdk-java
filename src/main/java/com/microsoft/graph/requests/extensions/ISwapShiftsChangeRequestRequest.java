@@ -21,7 +21,7 @@ public interface ISwapShiftsChangeRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SwapShiftsChangeRequest> callback);
+    void get(final ICallback<? super SwapShiftsChangeRequest> callback);
 
     /**
      * Gets the SwapShiftsChangeRequest from the service
@@ -36,7 +36,7 @@ public interface ISwapShiftsChangeRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SwapShiftsChangeRequest> callback);
+    void delete(final ICallback<? super SwapShiftsChangeRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISwapShiftsChangeRequestRequest extends IHttpRequest {
      * @param sourceSwapShiftsChangeRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SwapShiftsChangeRequest sourceSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback);
+    void patch(final SwapShiftsChangeRequest sourceSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback);
 
     /**
      * Patches this SwapShiftsChangeRequest with a source
@@ -68,7 +68,7 @@ public interface ISwapShiftsChangeRequestRequest extends IHttpRequest {
      * @param newSwapShiftsChangeRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback);
+    void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback);
 
     /**
      * Posts a SwapShiftsChangeRequest with a new object
@@ -85,7 +85,7 @@ public interface ISwapShiftsChangeRequestRequest extends IHttpRequest {
      * @param newSwapShiftsChangeRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback);
+    void put(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback);
 
     /**
      * Posts a SwapShiftsChangeRequest with a new object

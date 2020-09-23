@@ -26,7 +26,7 @@ public interface IUserReprocessLicenseAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<User> callback);
+    void post(final ICallback<? super User> callback);
 
     /**
      * Creates the UserReprocessLicenseAssignment

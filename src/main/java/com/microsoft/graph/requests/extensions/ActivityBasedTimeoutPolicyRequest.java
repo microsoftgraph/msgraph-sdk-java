@@ -37,7 +37,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ActivityBasedTimeoutPolicy> callback) {
+    public void get(final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ActivityBasedTimeoutPolicy> callback) {
+    public void delete(final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @param sourceActivityBasedTimeoutPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ActivityBasedTimeoutPolicy sourceActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback) {
+    public void patch(final ActivityBasedTimeoutPolicy sourceActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceActivityBasedTimeoutPolicy);
     }
 
@@ -96,7 +96,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @param newActivityBasedTimeoutPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback) {
+    public void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         send(HttpMethod.POST, callback, newActivityBasedTimeoutPolicy);
     }
 
@@ -117,7 +117,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @param newActivityBasedTimeoutPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback) {
+    public void put(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         send(HttpMethod.PUT, callback, newActivityBasedTimeoutPolicy);
     }
 

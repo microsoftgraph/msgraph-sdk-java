@@ -21,7 +21,7 @@ public interface IAlertRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Alert> callback);
+    void get(final ICallback<? super Alert> callback);
 
     /**
      * Gets the Alert from the service
@@ -36,7 +36,7 @@ public interface IAlertRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Alert> callback);
+    void delete(final ICallback<? super Alert> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAlertRequest extends IHttpRequest {
      * @param sourceAlert the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Alert sourceAlert, final ICallback<Alert> callback);
+    void patch(final Alert sourceAlert, final ICallback<? super Alert> callback);
 
     /**
      * Patches this Alert with a source
@@ -68,7 +68,7 @@ public interface IAlertRequest extends IHttpRequest {
      * @param newAlert the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Alert newAlert, final ICallback<Alert> callback);
+    void post(final Alert newAlert, final ICallback<? super Alert> callback);
 
     /**
      * Posts a Alert with a new object
@@ -85,7 +85,7 @@ public interface IAlertRequest extends IHttpRequest {
      * @param newAlert the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Alert newAlert, final ICallback<Alert> callback);
+    void put(final Alert newAlert, final ICallback<? super Alert> callback);
 
     /**
      * Posts a Alert with a new object

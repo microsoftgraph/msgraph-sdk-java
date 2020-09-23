@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPlaceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPlaceCollectionPage> callback);
+    void get(final ICallback<? super IPlaceCollectionPage> callback);
 
     IPlaceCollectionPage get() throws ClientException;
 
-    void post(final Place newPlace, final ICallback<Place> callback);
+    void post(final Place newPlace, final ICallback<? super Place> callback);
 
     Place post(final Place newPlace) throws ClientException;
 

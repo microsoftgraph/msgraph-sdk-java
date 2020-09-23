@@ -21,7 +21,7 @@ public interface IListItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ListItem> callback);
+    void get(final ICallback<? super ListItem> callback);
 
     /**
      * Gets the ListItem from the service
@@ -36,7 +36,7 @@ public interface IListItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ListItem> callback);
+    void delete(final ICallback<? super ListItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IListItemRequest extends IHttpRequest {
      * @param sourceListItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ListItem sourceListItem, final ICallback<ListItem> callback);
+    void patch(final ListItem sourceListItem, final ICallback<? super ListItem> callback);
 
     /**
      * Patches this ListItem with a source
@@ -68,7 +68,7 @@ public interface IListItemRequest extends IHttpRequest {
      * @param newListItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ListItem newListItem, final ICallback<ListItem> callback);
+    void post(final ListItem newListItem, final ICallback<? super ListItem> callback);
 
     /**
      * Posts a ListItem with a new object
@@ -85,7 +85,7 @@ public interface IListItemRequest extends IHttpRequest {
      * @param newListItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ListItem newListItem, final ICallback<ListItem> callback);
+    void put(final ListItem newListItem, final ICallback<? super ListItem> callback);
 
     /**
      * Posts a ListItem with a new object

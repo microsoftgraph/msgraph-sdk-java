@@ -36,7 +36,7 @@ public class WorkbookChartSetDataRequest extends BaseRequest implements IWorkboo
         body = new WorkbookChartSetDataBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

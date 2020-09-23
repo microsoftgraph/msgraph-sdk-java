@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IOutlookUserSupportedLanguagesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOutlookUserSupportedLanguagesCollectionPage> callback);
+    void get(final ICallback<? super IOutlookUserSupportedLanguagesCollectionPage> callback);
 
     IOutlookUserSupportedLanguagesCollectionPage get() throws ClientException;
 

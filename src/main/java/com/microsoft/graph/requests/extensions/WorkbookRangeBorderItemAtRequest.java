@@ -37,7 +37,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
      * @param srcWorkbookRangeBorder the WorkbookRangeBorder with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback) {
+    public void patch(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookRangeBorder);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
      * @param srcWorkbookRangeBorder the WorkbookRangeBorder to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback) {
+    public void put(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookRangeBorder);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookRangeBorder> callback) {
+    public void get(final ICallback<? super WorkbookRangeBorder> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

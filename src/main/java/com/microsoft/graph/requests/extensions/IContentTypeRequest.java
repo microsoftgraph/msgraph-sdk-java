@@ -21,7 +21,7 @@ public interface IContentTypeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ContentType> callback);
+    void get(final ICallback<? super ContentType> callback);
 
     /**
      * Gets the ContentType from the service
@@ -36,7 +36,7 @@ public interface IContentTypeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ContentType> callback);
+    void delete(final ICallback<? super ContentType> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IContentTypeRequest extends IHttpRequest {
      * @param sourceContentType the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ContentType sourceContentType, final ICallback<ContentType> callback);
+    void patch(final ContentType sourceContentType, final ICallback<? super ContentType> callback);
 
     /**
      * Patches this ContentType with a source
@@ -68,7 +68,7 @@ public interface IContentTypeRequest extends IHttpRequest {
      * @param newContentType the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ContentType newContentType, final ICallback<ContentType> callback);
+    void post(final ContentType newContentType, final ICallback<? super ContentType> callback);
 
     /**
      * Posts a ContentType with a new object
@@ -85,7 +85,7 @@ public interface IContentTypeRequest extends IHttpRequest {
      * @param newContentType the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ContentType newContentType, final ICallback<ContentType> callback);
+    void put(final ContentType newContentType, final ICallback<? super ContentType> callback);
 
     /**
      * Posts a ContentType with a new object

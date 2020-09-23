@@ -21,7 +21,7 @@ public interface IWorkbookFunctionResultRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookFunctionResult> callback);
+    void get(final ICallback<? super WorkbookFunctionResult> callback);
 
     /**
      * Gets the WorkbookFunctionResult from the service
@@ -36,7 +36,7 @@ public interface IWorkbookFunctionResultRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookFunctionResult> callback);
+    void delete(final ICallback<? super WorkbookFunctionResult> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookFunctionResultRequest extends IHttpRequest {
      * @param sourceWorkbookFunctionResult the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookFunctionResult sourceWorkbookFunctionResult, final ICallback<WorkbookFunctionResult> callback);
+    void patch(final WorkbookFunctionResult sourceWorkbookFunctionResult, final ICallback<? super WorkbookFunctionResult> callback);
 
     /**
      * Patches this WorkbookFunctionResult with a source
@@ -68,7 +68,7 @@ public interface IWorkbookFunctionResultRequest extends IHttpRequest {
      * @param newWorkbookFunctionResult the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookFunctionResult newWorkbookFunctionResult, final ICallback<WorkbookFunctionResult> callback);
+    void post(final WorkbookFunctionResult newWorkbookFunctionResult, final ICallback<? super WorkbookFunctionResult> callback);
 
     /**
      * Posts a WorkbookFunctionResult with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookFunctionResultRequest extends IHttpRequest {
      * @param newWorkbookFunctionResult the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookFunctionResult newWorkbookFunctionResult, final ICallback<WorkbookFunctionResult> callback);
+    void put(final WorkbookFunctionResult newWorkbookFunctionResult, final ICallback<? super WorkbookFunctionResult> callback);
 
     /**
      * Posts a WorkbookFunctionResult with a new object

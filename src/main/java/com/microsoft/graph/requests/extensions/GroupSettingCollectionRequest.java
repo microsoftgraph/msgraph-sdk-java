@@ -39,7 +39,7 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
         super(requestUrl, client, requestOptions, GroupSettingCollectionResponse.class, IGroupSettingCollectionPage.class);
     }
 
-    public void get(final ICallback<IGroupSettingCollectionPage> callback) {
+    public void get(final ICallback<? super IGroupSettingCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
         return buildFromResponse(response);
     }
 
-    public void post(final GroupSetting newGroupSetting, final ICallback<GroupSetting> callback) {
+    public void post(final GroupSetting newGroupSetting, final ICallback<? super GroupSetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

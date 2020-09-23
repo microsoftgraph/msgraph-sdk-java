@@ -42,7 +42,7 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
         super(requestUrl, client, requestOptions, OnlineMeetingCollectionResponse.class, IOnlineMeetingCollectionPage.class);
     }
 
-    public void get(final ICallback<IOnlineMeetingCollectionPage> callback) {
+    public void get(final ICallback<? super IOnlineMeetingCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,7 +61,7 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
         return buildFromResponse(response);
     }
 
-    public void post(final OnlineMeeting newOnlineMeeting, final ICallback<OnlineMeeting> callback) {
+    public void post(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnlineMeetingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

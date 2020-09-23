@@ -35,7 +35,7 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest implemen
         super(requestUrl, client, requestOptions, TeamsAppDefinition.class);
     }
 
-    public void post(final TeamsAppDefinition newTeamsAppDefinition, final IJsonBackedObject payload, final ICallback<TeamsAppDefinition> callback) {
+    public void post(final TeamsAppDefinition newTeamsAppDefinition, final IJsonBackedObject payload, final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest implemen
         return null;
     }
 
-    public void get(final ICallback<TeamsAppDefinition> callback) {
+    public void get(final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest implemen
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<TeamsAppDefinition> callback) {
+	public void delete(final ICallback<? super TeamsAppDefinition> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest implemen
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final TeamsAppDefinition sourceTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback) {
+	public void patch(final TeamsAppDefinition sourceTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
 		send(HttpMethod.PATCH, callback, sourceTeamsAppDefinition);
 	}
 

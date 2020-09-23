@@ -40,7 +40,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
         super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLockerFileCollectionResponse.class, IWindowsInformationProtectionAppLockerFileCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsInformationProtectionAppLockerFileCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsInformationProtectionAppLockerFileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback) {
+    public void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionAppLockerFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

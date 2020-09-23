@@ -40,7 +40,7 @@ public class ExtensionPropertyCollectionRequest extends BaseCollectionRequest<Ex
         super(requestUrl, client, requestOptions, ExtensionPropertyCollectionResponse.class, IExtensionPropertyCollectionPage.class);
     }
 
-    public void get(final ICallback<IExtensionPropertyCollectionPage> callback) {
+    public void get(final ICallback<? super IExtensionPropertyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ExtensionPropertyCollectionRequest extends BaseCollectionRequest<Ex
         return buildFromResponse(response);
     }
 
-    public void post(final ExtensionProperty newExtensionProperty, final ICallback<ExtensionProperty> callback) {
+    public void post(final ExtensionProperty newExtensionProperty, final ICallback<? super ExtensionProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExtensionPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

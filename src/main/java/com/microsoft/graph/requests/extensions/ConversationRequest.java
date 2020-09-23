@@ -41,7 +41,7 @@ public class ConversationRequest extends BaseRequest implements IConversationReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Conversation> callback) {
+    public void get(final ICallback<? super Conversation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class ConversationRequest extends BaseRequest implements IConversationReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Conversation> callback) {
+    public void delete(final ICallback<? super Conversation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class ConversationRequest extends BaseRequest implements IConversationReq
      * @param sourceConversation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Conversation sourceConversation, final ICallback<Conversation> callback) {
+    public void patch(final Conversation sourceConversation, final ICallback<? super Conversation> callback) {
         send(HttpMethod.PATCH, callback, sourceConversation);
     }
 
@@ -100,7 +100,7 @@ public class ConversationRequest extends BaseRequest implements IConversationReq
      * @param newConversation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Conversation newConversation, final ICallback<Conversation> callback) {
+    public void post(final Conversation newConversation, final ICallback<? super Conversation> callback) {
         send(HttpMethod.POST, callback, newConversation);
     }
 
@@ -121,7 +121,7 @@ public class ConversationRequest extends BaseRequest implements IConversationReq
      * @param newConversation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Conversation newConversation, final ICallback<Conversation> callback) {
+    public void put(final Conversation newConversation, final ICallback<? super Conversation> callback) {
         send(HttpMethod.PUT, callback, newConversation);
     }
 

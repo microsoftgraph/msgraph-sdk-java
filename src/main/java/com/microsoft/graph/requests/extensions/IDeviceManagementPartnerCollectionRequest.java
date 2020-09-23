@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceManagementPartnerCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementPartnerCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementPartnerCollectionPage> callback);
 
     IDeviceManagementPartnerCollectionPage get() throws ClientException;
 
-    void post(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<DeviceManagementPartner> callback);
+    void post(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<? super DeviceManagementPartner> callback);
 
     DeviceManagementPartner post(final DeviceManagementPartner newDeviceManagementPartner) throws ClientException;
 

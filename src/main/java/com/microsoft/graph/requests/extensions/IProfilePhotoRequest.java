@@ -21,7 +21,7 @@ public interface IProfilePhotoRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ProfilePhoto> callback);
+    void get(final ICallback<? super ProfilePhoto> callback);
 
     /**
      * Gets the ProfilePhoto from the service
@@ -36,7 +36,7 @@ public interface IProfilePhotoRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ProfilePhoto> callback);
+    void delete(final ICallback<? super ProfilePhoto> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IProfilePhotoRequest extends IHttpRequest {
      * @param sourceProfilePhoto the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ProfilePhoto sourceProfilePhoto, final ICallback<ProfilePhoto> callback);
+    void patch(final ProfilePhoto sourceProfilePhoto, final ICallback<? super ProfilePhoto> callback);
 
     /**
      * Patches this ProfilePhoto with a source
@@ -68,7 +68,7 @@ public interface IProfilePhotoRequest extends IHttpRequest {
      * @param newProfilePhoto the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ProfilePhoto newProfilePhoto, final ICallback<ProfilePhoto> callback);
+    void post(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback);
 
     /**
      * Posts a ProfilePhoto with a new object
@@ -85,7 +85,7 @@ public interface IProfilePhotoRequest extends IHttpRequest {
      * @param newProfilePhoto the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ProfilePhoto newProfilePhoto, final ICallback<ProfilePhoto> callback);
+    void put(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback);
 
     /**
      * Posts a ProfilePhoto with a new object

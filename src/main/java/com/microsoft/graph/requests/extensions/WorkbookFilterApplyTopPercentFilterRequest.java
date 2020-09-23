@@ -36,7 +36,7 @@ public class WorkbookFilterApplyTopPercentFilterRequest extends BaseRequest impl
         body = new WorkbookFilterApplyTopPercentFilterBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

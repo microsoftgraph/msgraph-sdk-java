@@ -19,7 +19,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupLifecyclePolicyRemoveGroupRequest extends IHttpRequest {
 
-    void post(final ICallback<Boolean> callback);
+    void post(final ICallback<? super Boolean> callback);
 
     Boolean post() throws ClientException;
 

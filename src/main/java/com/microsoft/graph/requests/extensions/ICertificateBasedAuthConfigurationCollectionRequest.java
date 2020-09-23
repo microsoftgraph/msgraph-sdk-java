@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICertificateBasedAuthConfigurationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICertificateBasedAuthConfigurationCollectionPage> callback);
+    void get(final ICallback<? super ICertificateBasedAuthConfigurationCollectionPage> callback);
 
     ICertificateBasedAuthConfigurationCollectionPage get() throws ClientException;
 
-    void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback);
+    void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
     CertificateBasedAuthConfiguration post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) throws ClientException;
 

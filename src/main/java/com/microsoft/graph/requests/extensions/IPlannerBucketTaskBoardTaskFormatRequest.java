@@ -21,7 +21,7 @@ public interface IPlannerBucketTaskBoardTaskFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PlannerBucketTaskBoardTaskFormat> callback);
+    void get(final ICallback<? super PlannerBucketTaskBoardTaskFormat> callback);
 
     /**
      * Gets the PlannerBucketTaskBoardTaskFormat from the service
@@ -36,7 +36,7 @@ public interface IPlannerBucketTaskBoardTaskFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PlannerBucketTaskBoardTaskFormat> callback);
+    void delete(final ICallback<? super PlannerBucketTaskBoardTaskFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlannerBucketTaskBoardTaskFormatRequest extends IHttpRequest {
      * @param sourcePlannerBucketTaskBoardTaskFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PlannerBucketTaskBoardTaskFormat sourcePlannerBucketTaskBoardTaskFormat, final ICallback<PlannerBucketTaskBoardTaskFormat> callback);
+    void patch(final PlannerBucketTaskBoardTaskFormat sourcePlannerBucketTaskBoardTaskFormat, final ICallback<? super PlannerBucketTaskBoardTaskFormat> callback);
 
     /**
      * Patches this PlannerBucketTaskBoardTaskFormat with a source
@@ -68,7 +68,7 @@ public interface IPlannerBucketTaskBoardTaskFormatRequest extends IHttpRequest {
      * @param newPlannerBucketTaskBoardTaskFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat, final ICallback<PlannerBucketTaskBoardTaskFormat> callback);
+    void post(final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat, final ICallback<? super PlannerBucketTaskBoardTaskFormat> callback);
 
     /**
      * Posts a PlannerBucketTaskBoardTaskFormat with a new object
@@ -85,7 +85,7 @@ public interface IPlannerBucketTaskBoardTaskFormatRequest extends IHttpRequest {
      * @param newPlannerBucketTaskBoardTaskFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat, final ICallback<PlannerBucketTaskBoardTaskFormat> callback);
+    void put(final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat, final ICallback<? super PlannerBucketTaskBoardTaskFormat> callback);
 
     /**
      * Posts a PlannerBucketTaskBoardTaskFormat with a new object

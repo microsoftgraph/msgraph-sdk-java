@@ -44,7 +44,7 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<SiteRemov
     }
 
 
-    public void post(final ICallback<ISiteRemoveCollectionPage> callback) {
+    public void post(final ICallback<? super ISiteRemoveCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

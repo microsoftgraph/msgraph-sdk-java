@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITeamsAppCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITeamsAppCollectionPage> callback);
+    void get(final ICallback<? super ITeamsAppCollectionPage> callback);
 
     ITeamsAppCollectionPage get() throws ClientException;
 
-    void post(final TeamsApp newTeamsApp, final ICallback<TeamsApp> callback);
+    void post(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback);
 
     TeamsApp post(final TeamsApp newTeamsApp) throws ClientException;
 

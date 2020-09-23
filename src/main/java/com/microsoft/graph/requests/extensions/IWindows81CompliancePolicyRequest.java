@@ -21,7 +21,7 @@ public interface IWindows81CompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows81CompliancePolicy> callback);
+    void get(final ICallback<? super Windows81CompliancePolicy> callback);
 
     /**
      * Gets the Windows81CompliancePolicy from the service
@@ -36,7 +36,7 @@ public interface IWindows81CompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows81CompliancePolicy> callback);
+    void delete(final ICallback<? super Windows81CompliancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows81CompliancePolicyRequest extends IHttpRequest {
      * @param sourceWindows81CompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows81CompliancePolicy sourceWindows81CompliancePolicy, final ICallback<Windows81CompliancePolicy> callback);
+    void patch(final Windows81CompliancePolicy sourceWindows81CompliancePolicy, final ICallback<? super Windows81CompliancePolicy> callback);
 
     /**
      * Patches this Windows81CompliancePolicy with a source
@@ -68,7 +68,7 @@ public interface IWindows81CompliancePolicyRequest extends IHttpRequest {
      * @param newWindows81CompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows81CompliancePolicy newWindows81CompliancePolicy, final ICallback<Windows81CompliancePolicy> callback);
+    void post(final Windows81CompliancePolicy newWindows81CompliancePolicy, final ICallback<? super Windows81CompliancePolicy> callback);
 
     /**
      * Posts a Windows81CompliancePolicy with a new object
@@ -85,7 +85,7 @@ public interface IWindows81CompliancePolicyRequest extends IHttpRequest {
      * @param newWindows81CompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows81CompliancePolicy newWindows81CompliancePolicy, final ICallback<Windows81CompliancePolicy> callback);
+    void put(final Windows81CompliancePolicy newWindows81CompliancePolicy, final ICallback<? super Windows81CompliancePolicy> callback);
 
     /**
      * Posts a Windows81CompliancePolicy with a new object

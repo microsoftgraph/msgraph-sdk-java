@@ -21,7 +21,7 @@ public interface IPlannerGroupRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PlannerGroup> callback);
+    void get(final ICallback<? super PlannerGroup> callback);
 
     /**
      * Gets the PlannerGroup from the service
@@ -36,7 +36,7 @@ public interface IPlannerGroupRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PlannerGroup> callback);
+    void delete(final ICallback<? super PlannerGroup> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlannerGroupRequest extends IHttpRequest {
      * @param sourcePlannerGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PlannerGroup sourcePlannerGroup, final ICallback<PlannerGroup> callback);
+    void patch(final PlannerGroup sourcePlannerGroup, final ICallback<? super PlannerGroup> callback);
 
     /**
      * Patches this PlannerGroup with a source
@@ -68,7 +68,7 @@ public interface IPlannerGroupRequest extends IHttpRequest {
      * @param newPlannerGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PlannerGroup newPlannerGroup, final ICallback<PlannerGroup> callback);
+    void post(final PlannerGroup newPlannerGroup, final ICallback<? super PlannerGroup> callback);
 
     /**
      * Posts a PlannerGroup with a new object
@@ -85,7 +85,7 @@ public interface IPlannerGroupRequest extends IHttpRequest {
      * @param newPlannerGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PlannerGroup newPlannerGroup, final ICallback<PlannerGroup> callback);
+    void put(final PlannerGroup newPlannerGroup, final ICallback<? super PlannerGroup> callback);
 
     /**
      * Posts a PlannerGroup with a new object

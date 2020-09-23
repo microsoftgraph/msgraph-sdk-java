@@ -39,7 +39,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AadUserConversationMember> callback) {
+    public void get(final ICallback<? super AadUserConversationMember> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AadUserConversationMember> callback) {
+    public void delete(final ICallback<? super AadUserConversationMember> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @param sourceAadUserConversationMember the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AadUserConversationMember sourceAadUserConversationMember, final ICallback<AadUserConversationMember> callback) {
+    public void patch(final AadUserConversationMember sourceAadUserConversationMember, final ICallback<? super AadUserConversationMember> callback) {
         send(HttpMethod.PATCH, callback, sourceAadUserConversationMember);
     }
 
@@ -98,7 +98,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @param newAadUserConversationMember the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AadUserConversationMember newAadUserConversationMember, final ICallback<AadUserConversationMember> callback) {
+    public void post(final AadUserConversationMember newAadUserConversationMember, final ICallback<? super AadUserConversationMember> callback) {
         send(HttpMethod.POST, callback, newAadUserConversationMember);
     }
 
@@ -119,7 +119,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @param newAadUserConversationMember the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AadUserConversationMember newAadUserConversationMember, final ICallback<AadUserConversationMember> callback) {
+    public void put(final AadUserConversationMember newAadUserConversationMember, final ICallback<? super AadUserConversationMember> callback) {
         send(HttpMethod.PUT, callback, newAadUserConversationMember);
     }
 

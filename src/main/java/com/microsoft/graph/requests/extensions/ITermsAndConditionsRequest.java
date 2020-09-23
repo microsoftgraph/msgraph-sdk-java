@@ -21,7 +21,7 @@ public interface ITermsAndConditionsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TermsAndConditions> callback);
+    void get(final ICallback<? super TermsAndConditions> callback);
 
     /**
      * Gets the TermsAndConditions from the service
@@ -36,7 +36,7 @@ public interface ITermsAndConditionsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TermsAndConditions> callback);
+    void delete(final ICallback<? super TermsAndConditions> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITermsAndConditionsRequest extends IHttpRequest {
      * @param sourceTermsAndConditions the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TermsAndConditions sourceTermsAndConditions, final ICallback<TermsAndConditions> callback);
+    void patch(final TermsAndConditions sourceTermsAndConditions, final ICallback<? super TermsAndConditions> callback);
 
     /**
      * Patches this TermsAndConditions with a source
@@ -68,7 +68,7 @@ public interface ITermsAndConditionsRequest extends IHttpRequest {
      * @param newTermsAndConditions the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TermsAndConditions newTermsAndConditions, final ICallback<TermsAndConditions> callback);
+    void post(final TermsAndConditions newTermsAndConditions, final ICallback<? super TermsAndConditions> callback);
 
     /**
      * Posts a TermsAndConditions with a new object
@@ -85,7 +85,7 @@ public interface ITermsAndConditionsRequest extends IHttpRequest {
      * @param newTermsAndConditions the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TermsAndConditions newTermsAndConditions, final ICallback<TermsAndConditions> callback);
+    void put(final TermsAndConditions newTermsAndConditions, final ICallback<? super TermsAndConditions> callback);
 
     /**
      * Posts a TermsAndConditions with a new object

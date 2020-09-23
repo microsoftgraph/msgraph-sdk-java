@@ -21,7 +21,7 @@ public interface ITargetedManagedAppProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TargetedManagedAppProtection> callback);
+    void get(final ICallback<? super TargetedManagedAppProtection> callback);
 
     /**
      * Gets the TargetedManagedAppProtection from the service
@@ -36,7 +36,7 @@ public interface ITargetedManagedAppProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TargetedManagedAppProtection> callback);
+    void delete(final ICallback<? super TargetedManagedAppProtection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITargetedManagedAppProtectionRequest extends IHttpRequest {
      * @param sourceTargetedManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TargetedManagedAppProtection sourceTargetedManagedAppProtection, final ICallback<TargetedManagedAppProtection> callback);
+    void patch(final TargetedManagedAppProtection sourceTargetedManagedAppProtection, final ICallback<? super TargetedManagedAppProtection> callback);
 
     /**
      * Patches this TargetedManagedAppProtection with a source
@@ -68,7 +68,7 @@ public interface ITargetedManagedAppProtectionRequest extends IHttpRequest {
      * @param newTargetedManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TargetedManagedAppProtection newTargetedManagedAppProtection, final ICallback<TargetedManagedAppProtection> callback);
+    void post(final TargetedManagedAppProtection newTargetedManagedAppProtection, final ICallback<? super TargetedManagedAppProtection> callback);
 
     /**
      * Posts a TargetedManagedAppProtection with a new object
@@ -85,7 +85,7 @@ public interface ITargetedManagedAppProtectionRequest extends IHttpRequest {
      * @param newTargetedManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TargetedManagedAppProtection newTargetedManagedAppProtection, final ICallback<TargetedManagedAppProtection> callback);
+    void put(final TargetedManagedAppProtection newTargetedManagedAppProtection, final ICallback<? super TargetedManagedAppProtection> callback);
 
     /**
      * Posts a TargetedManagedAppProtection with a new object

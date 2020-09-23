@@ -21,7 +21,7 @@ public interface IEventMessageResponseRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EventMessageResponse> callback);
+    void get(final ICallback<? super EventMessageResponse> callback);
 
     /**
      * Gets the EventMessageResponse from the service
@@ -36,7 +36,7 @@ public interface IEventMessageResponseRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EventMessageResponse> callback);
+    void delete(final ICallback<? super EventMessageResponse> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEventMessageResponseRequest extends IHttpRequest {
      * @param sourceEventMessageResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EventMessageResponse sourceEventMessageResponse, final ICallback<EventMessageResponse> callback);
+    void patch(final EventMessageResponse sourceEventMessageResponse, final ICallback<? super EventMessageResponse> callback);
 
     /**
      * Patches this EventMessageResponse with a source
@@ -68,7 +68,7 @@ public interface IEventMessageResponseRequest extends IHttpRequest {
      * @param newEventMessageResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EventMessageResponse newEventMessageResponse, final ICallback<EventMessageResponse> callback);
+    void post(final EventMessageResponse newEventMessageResponse, final ICallback<? super EventMessageResponse> callback);
 
     /**
      * Posts a EventMessageResponse with a new object
@@ -85,7 +85,7 @@ public interface IEventMessageResponseRequest extends IHttpRequest {
      * @param newEventMessageResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EventMessageResponse newEventMessageResponse, final ICallback<EventMessageResponse> callback);
+    void put(final EventMessageResponse newEventMessageResponse, final ICallback<? super EventMessageResponse> callback);
 
     /**
      * Posts a EventMessageResponse with a new object

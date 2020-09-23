@@ -21,7 +21,7 @@ public interface IEducationClassRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationClass> callback);
+    void get(final ICallback<? super EducationClass> callback);
 
     /**
      * Gets the EducationClass from the service
@@ -36,7 +36,7 @@ public interface IEducationClassRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationClass> callback);
+    void delete(final ICallback<? super EducationClass> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationClassRequest extends IHttpRequest {
      * @param sourceEducationClass the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationClass sourceEducationClass, final ICallback<EducationClass> callback);
+    void patch(final EducationClass sourceEducationClass, final ICallback<? super EducationClass> callback);
 
     /**
      * Patches this EducationClass with a source
@@ -68,7 +68,7 @@ public interface IEducationClassRequest extends IHttpRequest {
      * @param newEducationClass the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationClass newEducationClass, final ICallback<EducationClass> callback);
+    void post(final EducationClass newEducationClass, final ICallback<? super EducationClass> callback);
 
     /**
      * Posts a EducationClass with a new object
@@ -85,7 +85,7 @@ public interface IEducationClassRequest extends IHttpRequest {
      * @param newEducationClass the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationClass newEducationClass, final ICallback<EducationClass> callback);
+    void put(final EducationClass newEducationClass, final ICallback<? super EducationClass> callback);
 
     /**
      * Posts a EducationClass with a new object

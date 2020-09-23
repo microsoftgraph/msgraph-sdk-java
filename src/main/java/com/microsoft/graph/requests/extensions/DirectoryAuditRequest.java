@@ -37,7 +37,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DirectoryAudit> callback) {
+    public void get(final ICallback<? super DirectoryAudit> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DirectoryAudit> callback) {
+    public void delete(final ICallback<? super DirectoryAudit> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @param sourceDirectoryAudit the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryAudit sourceDirectoryAudit, final ICallback<DirectoryAudit> callback) {
+    public void patch(final DirectoryAudit sourceDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryAudit);
     }
 
@@ -96,7 +96,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @param newDirectoryAudit the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryAudit newDirectoryAudit, final ICallback<DirectoryAudit> callback) {
+    public void post(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
         send(HttpMethod.POST, callback, newDirectoryAudit);
     }
 
@@ -117,7 +117,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @param newDirectoryAudit the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryAudit newDirectoryAudit, final ICallback<DirectoryAudit> callback) {
+    public void put(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
         send(HttpMethod.PUT, callback, newDirectoryAudit);
     }
 

@@ -21,7 +21,7 @@ public interface IIosStoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosStoreApp> callback);
+    void get(final ICallback<? super IosStoreApp> callback);
 
     /**
      * Gets the IosStoreApp from the service
@@ -36,7 +36,7 @@ public interface IIosStoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosStoreApp> callback);
+    void delete(final ICallback<? super IosStoreApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosStoreAppRequest extends IHttpRequest {
      * @param sourceIosStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosStoreApp sourceIosStoreApp, final ICallback<IosStoreApp> callback);
+    void patch(final IosStoreApp sourceIosStoreApp, final ICallback<? super IosStoreApp> callback);
 
     /**
      * Patches this IosStoreApp with a source
@@ -68,7 +68,7 @@ public interface IIosStoreAppRequest extends IHttpRequest {
      * @param newIosStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosStoreApp newIosStoreApp, final ICallback<IosStoreApp> callback);
+    void post(final IosStoreApp newIosStoreApp, final ICallback<? super IosStoreApp> callback);
 
     /**
      * Posts a IosStoreApp with a new object
@@ -85,7 +85,7 @@ public interface IIosStoreAppRequest extends IHttpRequest {
      * @param newIosStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosStoreApp newIosStoreApp, final ICallback<IosStoreApp> callback);
+    void put(final IosStoreApp newIosStoreApp, final ICallback<? super IosStoreApp> callback);
 
     /**
      * Posts a IosStoreApp with a new object

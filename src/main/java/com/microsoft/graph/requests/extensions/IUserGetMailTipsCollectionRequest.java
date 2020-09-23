@@ -25,7 +25,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IUserGetMailTipsCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IUserGetMailTipsCollectionPage> callback);
+    void post(final ICallback<? super IUserGetMailTipsCollectionPage> callback);
 
     IUserGetMailTipsCollectionPage post() throws ClientException;
 

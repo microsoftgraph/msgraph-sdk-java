@@ -38,7 +38,7 @@ public class WorkbookTableRowRequest extends BaseRequest implements IWorkbookTab
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookTableRow> callback) {
+    public void get(final ICallback<? super WorkbookTableRow> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class WorkbookTableRowRequest extends BaseRequest implements IWorkbookTab
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookTableRow> callback) {
+    public void delete(final ICallback<? super WorkbookTableRow> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class WorkbookTableRowRequest extends BaseRequest implements IWorkbookTab
      * @param sourceWorkbookTableRow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookTableRow sourceWorkbookTableRow, final ICallback<WorkbookTableRow> callback) {
+    public void patch(final WorkbookTableRow sourceWorkbookTableRow, final ICallback<? super WorkbookTableRow> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookTableRow);
     }
 
@@ -97,7 +97,7 @@ public class WorkbookTableRowRequest extends BaseRequest implements IWorkbookTab
      * @param newWorkbookTableRow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookTableRow newWorkbookTableRow, final ICallback<WorkbookTableRow> callback) {
+    public void post(final WorkbookTableRow newWorkbookTableRow, final ICallback<? super WorkbookTableRow> callback) {
         send(HttpMethod.POST, callback, newWorkbookTableRow);
     }
 
@@ -118,7 +118,7 @@ public class WorkbookTableRowRequest extends BaseRequest implements IWorkbookTab
      * @param newWorkbookTableRow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookTableRow newWorkbookTableRow, final ICallback<WorkbookTableRow> callback) {
+    public void put(final WorkbookTableRow newWorkbookTableRow, final ICallback<? super WorkbookTableRow> callback) {
         send(HttpMethod.PUT, callback, newWorkbookTableRow);
     }
 

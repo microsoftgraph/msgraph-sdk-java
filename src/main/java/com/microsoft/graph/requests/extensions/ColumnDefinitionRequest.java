@@ -37,7 +37,7 @@ public class ColumnDefinitionRequest extends BaseRequest implements IColumnDefin
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ColumnDefinition> callback) {
+    public void get(final ICallback<? super ColumnDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ColumnDefinitionRequest extends BaseRequest implements IColumnDefin
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ColumnDefinition> callback) {
+    public void delete(final ICallback<? super ColumnDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ColumnDefinitionRequest extends BaseRequest implements IColumnDefin
      * @param sourceColumnDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ColumnDefinition sourceColumnDefinition, final ICallback<ColumnDefinition> callback) {
+    public void patch(final ColumnDefinition sourceColumnDefinition, final ICallback<? super ColumnDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceColumnDefinition);
     }
 
@@ -96,7 +96,7 @@ public class ColumnDefinitionRequest extends BaseRequest implements IColumnDefin
      * @param newColumnDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ColumnDefinition newColumnDefinition, final ICallback<ColumnDefinition> callback) {
+    public void post(final ColumnDefinition newColumnDefinition, final ICallback<? super ColumnDefinition> callback) {
         send(HttpMethod.POST, callback, newColumnDefinition);
     }
 
@@ -117,7 +117,7 @@ public class ColumnDefinitionRequest extends BaseRequest implements IColumnDefin
      * @param newColumnDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ColumnDefinition newColumnDefinition, final ICallback<ColumnDefinition> callback) {
+    public void put(final ColumnDefinition newColumnDefinition, final ICallback<? super ColumnDefinition> callback) {
         send(HttpMethod.PUT, callback, newColumnDefinition);
     }
 

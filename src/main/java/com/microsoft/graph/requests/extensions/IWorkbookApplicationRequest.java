@@ -21,7 +21,7 @@ public interface IWorkbookApplicationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookApplication> callback);
+    void get(final ICallback<? super WorkbookApplication> callback);
 
     /**
      * Gets the WorkbookApplication from the service
@@ -36,7 +36,7 @@ public interface IWorkbookApplicationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookApplication> callback);
+    void delete(final ICallback<? super WorkbookApplication> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookApplicationRequest extends IHttpRequest {
      * @param sourceWorkbookApplication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookApplication sourceWorkbookApplication, final ICallback<WorkbookApplication> callback);
+    void patch(final WorkbookApplication sourceWorkbookApplication, final ICallback<? super WorkbookApplication> callback);
 
     /**
      * Patches this WorkbookApplication with a source
@@ -68,7 +68,7 @@ public interface IWorkbookApplicationRequest extends IHttpRequest {
      * @param newWorkbookApplication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookApplication newWorkbookApplication, final ICallback<WorkbookApplication> callback);
+    void post(final WorkbookApplication newWorkbookApplication, final ICallback<? super WorkbookApplication> callback);
 
     /**
      * Posts a WorkbookApplication with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookApplicationRequest extends IHttpRequest {
      * @param newWorkbookApplication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookApplication newWorkbookApplication, final ICallback<WorkbookApplication> callback);
+    void put(final WorkbookApplication newWorkbookApplication, final ICallback<? super WorkbookApplication> callback);
 
     /**
      * Posts a WorkbookApplication with a new object

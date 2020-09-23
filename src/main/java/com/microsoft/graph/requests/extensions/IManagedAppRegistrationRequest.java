@@ -21,7 +21,7 @@ public interface IManagedAppRegistrationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedAppRegistration> callback);
+    void get(final ICallback<? super ManagedAppRegistration> callback);
 
     /**
      * Gets the ManagedAppRegistration from the service
@@ -36,7 +36,7 @@ public interface IManagedAppRegistrationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedAppRegistration> callback);
+    void delete(final ICallback<? super ManagedAppRegistration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAppRegistrationRequest extends IHttpRequest {
      * @param sourceManagedAppRegistration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedAppRegistration sourceManagedAppRegistration, final ICallback<ManagedAppRegistration> callback);
+    void patch(final ManagedAppRegistration sourceManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback);
 
     /**
      * Patches this ManagedAppRegistration with a source
@@ -68,7 +68,7 @@ public interface IManagedAppRegistrationRequest extends IHttpRequest {
      * @param newManagedAppRegistration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<ManagedAppRegistration> callback);
+    void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback);
 
     /**
      * Posts a ManagedAppRegistration with a new object
@@ -85,7 +85,7 @@ public interface IManagedAppRegistrationRequest extends IHttpRequest {
      * @param newManagedAppRegistration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedAppRegistration newManagedAppRegistration, final ICallback<ManagedAppRegistration> callback);
+    void put(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback);
 
     /**
      * Posts a ManagedAppRegistration with a new object

@@ -36,7 +36,7 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, ITokenLifetimePolicyCollectionPage.class);
     }
 
-    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback) {
+    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + newTokenLifetimePolicy.id);
         new TokenLifetimePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

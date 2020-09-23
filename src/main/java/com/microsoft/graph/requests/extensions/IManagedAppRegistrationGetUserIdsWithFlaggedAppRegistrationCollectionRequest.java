@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage> callback);
+    void get(final ICallback<? super IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage> callback);
 
     IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage get() throws ClientException;
 

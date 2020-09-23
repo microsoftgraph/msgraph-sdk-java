@@ -37,7 +37,7 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsPhone81CompliancePolicy> callback) {
+    public void get(final ICallback<? super WindowsPhone81CompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsPhone81CompliancePolicy> callback) {
+    public void delete(final ICallback<? super WindowsPhone81CompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest implement
      * @param sourceWindowsPhone81CompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhone81CompliancePolicy sourceWindowsPhone81CompliancePolicy, final ICallback<WindowsPhone81CompliancePolicy> callback) {
+    public void patch(final WindowsPhone81CompliancePolicy sourceWindowsPhone81CompliancePolicy, final ICallback<? super WindowsPhone81CompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhone81CompliancePolicy);
     }
 
@@ -96,7 +96,7 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest implement
      * @param newWindowsPhone81CompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy, final ICallback<WindowsPhone81CompliancePolicy> callback) {
+    public void post(final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy, final ICallback<? super WindowsPhone81CompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newWindowsPhone81CompliancePolicy);
     }
 
@@ -117,7 +117,7 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest implement
      * @param newWindowsPhone81CompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy, final ICallback<WindowsPhone81CompliancePolicy> callback) {
+    public void put(final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy, final ICallback<? super WindowsPhone81CompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhone81CompliancePolicy);
     }
 

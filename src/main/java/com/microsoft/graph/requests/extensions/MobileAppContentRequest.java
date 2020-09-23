@@ -41,7 +41,7 @@ public class MobileAppContentRequest extends BaseRequest implements IMobileAppCo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileAppContent> callback) {
+    public void get(final ICallback<? super MobileAppContent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class MobileAppContentRequest extends BaseRequest implements IMobileAppCo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileAppContent> callback) {
+    public void delete(final ICallback<? super MobileAppContent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class MobileAppContentRequest extends BaseRequest implements IMobileAppCo
      * @param sourceMobileAppContent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppContent sourceMobileAppContent, final ICallback<MobileAppContent> callback) {
+    public void patch(final MobileAppContent sourceMobileAppContent, final ICallback<? super MobileAppContent> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppContent);
     }
 
@@ -100,7 +100,7 @@ public class MobileAppContentRequest extends BaseRequest implements IMobileAppCo
      * @param newMobileAppContent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppContent newMobileAppContent, final ICallback<MobileAppContent> callback) {
+    public void post(final MobileAppContent newMobileAppContent, final ICallback<? super MobileAppContent> callback) {
         send(HttpMethod.POST, callback, newMobileAppContent);
     }
 
@@ -121,7 +121,7 @@ public class MobileAppContentRequest extends BaseRequest implements IMobileAppCo
      * @param newMobileAppContent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppContent newMobileAppContent, final ICallback<MobileAppContent> callback) {
+    public void put(final MobileAppContent newMobileAppContent, final ICallback<? super MobileAppContent> callback) {
         send(HttpMethod.PUT, callback, newMobileAppContent);
     }
 

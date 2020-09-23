@@ -21,7 +21,7 @@ public interface IWorkbookChartLegendRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartLegend> callback);
+    void get(final ICallback<? super WorkbookChartLegend> callback);
 
     /**
      * Gets the WorkbookChartLegend from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartLegendRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartLegend> callback);
+    void delete(final ICallback<? super WorkbookChartLegend> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartLegendRequest extends IHttpRequest {
      * @param sourceWorkbookChartLegend the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartLegend sourceWorkbookChartLegend, final ICallback<WorkbookChartLegend> callback);
+    void patch(final WorkbookChartLegend sourceWorkbookChartLegend, final ICallback<? super WorkbookChartLegend> callback);
 
     /**
      * Patches this WorkbookChartLegend with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartLegendRequest extends IHttpRequest {
      * @param newWorkbookChartLegend the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<WorkbookChartLegend> callback);
+    void post(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<? super WorkbookChartLegend> callback);
 
     /**
      * Posts a WorkbookChartLegend with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartLegendRequest extends IHttpRequest {
      * @param newWorkbookChartLegend the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<WorkbookChartLegend> callback);
+    void put(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<? super WorkbookChartLegend> callback);
 
     /**
      * Posts a WorkbookChartLegend with a new object

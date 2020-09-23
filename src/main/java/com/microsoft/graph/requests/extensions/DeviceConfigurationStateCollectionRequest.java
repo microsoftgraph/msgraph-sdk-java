@@ -40,7 +40,7 @@ public class DeviceConfigurationStateCollectionRequest extends BaseCollectionReq
         super(requestUrl, client, requestOptions, DeviceConfigurationStateCollectionResponse.class, IDeviceConfigurationStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceConfigurationStateCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceConfigurationStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceConfigurationStateCollectionRequest extends BaseCollectionReq
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<DeviceConfigurationState> callback) {
+    public void post(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<? super DeviceConfigurationState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

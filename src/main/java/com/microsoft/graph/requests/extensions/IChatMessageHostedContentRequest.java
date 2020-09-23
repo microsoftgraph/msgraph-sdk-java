@@ -21,7 +21,7 @@ public interface IChatMessageHostedContentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ChatMessageHostedContent> callback);
+    void get(final ICallback<? super ChatMessageHostedContent> callback);
 
     /**
      * Gets the ChatMessageHostedContent from the service
@@ -36,7 +36,7 @@ public interface IChatMessageHostedContentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ChatMessageHostedContent> callback);
+    void delete(final ICallback<? super ChatMessageHostedContent> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IChatMessageHostedContentRequest extends IHttpRequest {
      * @param sourceChatMessageHostedContent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ChatMessageHostedContent sourceChatMessageHostedContent, final ICallback<ChatMessageHostedContent> callback);
+    void patch(final ChatMessageHostedContent sourceChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback);
 
     /**
      * Patches this ChatMessageHostedContent with a source
@@ -68,7 +68,7 @@ public interface IChatMessageHostedContentRequest extends IHttpRequest {
      * @param newChatMessageHostedContent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<ChatMessageHostedContent> callback);
+    void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback);
 
     /**
      * Posts a ChatMessageHostedContent with a new object
@@ -85,7 +85,7 @@ public interface IChatMessageHostedContentRequest extends IHttpRequest {
      * @param newChatMessageHostedContent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<ChatMessageHostedContent> callback);
+    void put(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback);
 
     /**
      * Posts a ChatMessageHostedContent with a new object

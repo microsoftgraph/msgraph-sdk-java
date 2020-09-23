@@ -44,7 +44,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookRange> callback) {
+    public void get(final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,7 +63,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookRange> callback) {
+    public void delete(final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @param sourceWorkbookRange the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookRange sourceWorkbookRange, final ICallback<WorkbookRange> callback) {
+    public void patch(final WorkbookRange sourceWorkbookRange, final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookRange);
     }
 
@@ -103,7 +103,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @param newWorkbookRange the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookRange newWorkbookRange, final ICallback<WorkbookRange> callback) {
+    public void post(final WorkbookRange newWorkbookRange, final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.POST, callback, newWorkbookRange);
     }
 
@@ -124,7 +124,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @param newWorkbookRange the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookRange newWorkbookRange, final ICallback<WorkbookRange> callback) {
+    public void put(final WorkbookRange newWorkbookRange, final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.PUT, callback, newWorkbookRange);
     }
 

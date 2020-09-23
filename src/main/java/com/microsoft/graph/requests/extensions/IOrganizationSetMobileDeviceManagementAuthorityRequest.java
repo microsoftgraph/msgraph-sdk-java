@@ -25,7 +25,7 @@ public interface IOrganizationSetMobileDeviceManagementAuthorityRequest extends 
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<Integer> callback);
+    void post(final ICallback<? super Integer> callback);
 
     /**
      * Creates the OrganizationSetMobileDeviceManagementAuthority

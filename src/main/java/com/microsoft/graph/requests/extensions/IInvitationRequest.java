@@ -21,7 +21,7 @@ public interface IInvitationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Invitation> callback);
+    void get(final ICallback<? super Invitation> callback);
 
     /**
      * Gets the Invitation from the service
@@ -36,7 +36,7 @@ public interface IInvitationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Invitation> callback);
+    void delete(final ICallback<? super Invitation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IInvitationRequest extends IHttpRequest {
      * @param sourceInvitation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Invitation sourceInvitation, final ICallback<Invitation> callback);
+    void patch(final Invitation sourceInvitation, final ICallback<? super Invitation> callback);
 
     /**
      * Patches this Invitation with a source
@@ -68,7 +68,7 @@ public interface IInvitationRequest extends IHttpRequest {
      * @param newInvitation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Invitation newInvitation, final ICallback<Invitation> callback);
+    void post(final Invitation newInvitation, final ICallback<? super Invitation> callback);
 
     /**
      * Posts a Invitation with a new object
@@ -85,7 +85,7 @@ public interface IInvitationRequest extends IHttpRequest {
      * @param newInvitation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Invitation newInvitation, final ICallback<Invitation> callback);
+    void put(final Invitation newInvitation, final ICallback<? super Invitation> callback);
 
     /**
      * Posts a Invitation with a new object

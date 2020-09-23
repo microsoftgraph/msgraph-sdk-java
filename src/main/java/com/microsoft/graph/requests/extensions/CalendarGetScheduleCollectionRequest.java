@@ -45,7 +45,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
     }
 
 
-    public void post(final ICallback<ICalendarGetScheduleCollectionPage> callback) {
+    public void post(final ICallback<? super ICalendarGetScheduleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

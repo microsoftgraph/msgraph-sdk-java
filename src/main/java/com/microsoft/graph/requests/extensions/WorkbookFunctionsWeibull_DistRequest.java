@@ -37,7 +37,7 @@ public class WorkbookFunctionsWeibull_DistRequest extends BaseRequest implements
         body = new WorkbookFunctionsWeibull_DistBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

@@ -21,7 +21,7 @@ public interface IWindows10CustomConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10CustomConfiguration> callback);
+    void get(final ICallback<? super Windows10CustomConfiguration> callback);
 
     /**
      * Gets the Windows10CustomConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows10CustomConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10CustomConfiguration> callback);
+    void delete(final ICallback<? super Windows10CustomConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10CustomConfigurationRequest extends IHttpRequest {
      * @param sourceWindows10CustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10CustomConfiguration sourceWindows10CustomConfiguration, final ICallback<Windows10CustomConfiguration> callback);
+    void patch(final Windows10CustomConfiguration sourceWindows10CustomConfiguration, final ICallback<? super Windows10CustomConfiguration> callback);
 
     /**
      * Patches this Windows10CustomConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows10CustomConfigurationRequest extends IHttpRequest {
      * @param newWindows10CustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10CustomConfiguration newWindows10CustomConfiguration, final ICallback<Windows10CustomConfiguration> callback);
+    void post(final Windows10CustomConfiguration newWindows10CustomConfiguration, final ICallback<? super Windows10CustomConfiguration> callback);
 
     /**
      * Posts a Windows10CustomConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows10CustomConfigurationRequest extends IHttpRequest {
      * @param newWindows10CustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10CustomConfiguration newWindows10CustomConfiguration, final ICallback<Windows10CustomConfiguration> callback);
+    void put(final Windows10CustomConfiguration newWindows10CustomConfiguration, final ICallback<? super Windows10CustomConfiguration> callback);
 
     /**
      * Posts a Windows10CustomConfiguration with a new object

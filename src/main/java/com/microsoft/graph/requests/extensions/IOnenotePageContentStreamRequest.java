@@ -42,7 +42,7 @@ public interface IOnenotePageContentStreamRequest extends IHttpStreamRequest {
      * @param fileContents the contents of the stream to upload
      * @param callback the callback to be called after success or failure
      */
-    void put(final byte[] fileContents, final ICallback<OnenotePage> callback);
+    void put(final byte[] fileContents, final ICallback<? super OnenotePage> callback);
 
     /**
      * Uploads to the stream

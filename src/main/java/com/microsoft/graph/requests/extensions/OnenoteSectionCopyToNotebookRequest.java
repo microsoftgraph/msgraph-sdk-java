@@ -37,7 +37,7 @@ public class OnenoteSectionCopyToNotebookRequest extends BaseRequest implements 
         body = new OnenoteSectionCopyToNotebookBody();
     }
 
-    public void post(final ICallback<OnenoteOperation> callback) {
+    public void post(final ICallback<? super OnenoteOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

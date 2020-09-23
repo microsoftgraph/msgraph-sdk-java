@@ -37,7 +37,7 @@ public class WorkbookChartLineFormatRequest extends BaseRequest implements IWork
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChartLineFormat> callback) {
+    public void get(final ICallback<? super WorkbookChartLineFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WorkbookChartLineFormatRequest extends BaseRequest implements IWork
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookChartLineFormat> callback) {
+    public void delete(final ICallback<? super WorkbookChartLineFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WorkbookChartLineFormatRequest extends BaseRequest implements IWork
      * @param sourceWorkbookChartLineFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartLineFormat sourceWorkbookChartLineFormat, final ICallback<WorkbookChartLineFormat> callback) {
+    public void patch(final WorkbookChartLineFormat sourceWorkbookChartLineFormat, final ICallback<? super WorkbookChartLineFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartLineFormat);
     }
 
@@ -96,7 +96,7 @@ public class WorkbookChartLineFormatRequest extends BaseRequest implements IWork
      * @param newWorkbookChartLineFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartLineFormat newWorkbookChartLineFormat, final ICallback<WorkbookChartLineFormat> callback) {
+    public void post(final WorkbookChartLineFormat newWorkbookChartLineFormat, final ICallback<? super WorkbookChartLineFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartLineFormat);
     }
 
@@ -117,7 +117,7 @@ public class WorkbookChartLineFormatRequest extends BaseRequest implements IWork
      * @param newWorkbookChartLineFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartLineFormat newWorkbookChartLineFormat, final ICallback<WorkbookChartLineFormat> callback) {
+    public void put(final WorkbookChartLineFormat newWorkbookChartLineFormat, final ICallback<? super WorkbookChartLineFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartLineFormat);
     }
 

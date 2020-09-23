@@ -21,7 +21,7 @@ public interface IDeviceCompliancePolicySettingStateSummaryRequest extends IHttp
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceCompliancePolicySettingStateSummary> callback);
+    void get(final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback);
 
     /**
      * Gets the DeviceCompliancePolicySettingStateSummary from the service
@@ -36,7 +36,7 @@ public interface IDeviceCompliancePolicySettingStateSummaryRequest extends IHttp
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceCompliancePolicySettingStateSummary> callback);
+    void delete(final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceCompliancePolicySettingStateSummaryRequest extends IHttp
      * @param sourceDeviceCompliancePolicySettingStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceCompliancePolicySettingStateSummary sourceDeviceCompliancePolicySettingStateSummary, final ICallback<DeviceCompliancePolicySettingStateSummary> callback);
+    void patch(final DeviceCompliancePolicySettingStateSummary sourceDeviceCompliancePolicySettingStateSummary, final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback);
 
     /**
      * Patches this DeviceCompliancePolicySettingStateSummary with a source
@@ -68,7 +68,7 @@ public interface IDeviceCompliancePolicySettingStateSummaryRequest extends IHttp
      * @param newDeviceCompliancePolicySettingStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, final ICallback<DeviceCompliancePolicySettingStateSummary> callback);
+    void post(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback);
 
     /**
      * Posts a DeviceCompliancePolicySettingStateSummary with a new object
@@ -85,7 +85,7 @@ public interface IDeviceCompliancePolicySettingStateSummaryRequest extends IHttp
      * @param newDeviceCompliancePolicySettingStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, final ICallback<DeviceCompliancePolicySettingStateSummary> callback);
+    void put(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback);
 
     /**
      * Posts a DeviceCompliancePolicySettingStateSummary with a new object

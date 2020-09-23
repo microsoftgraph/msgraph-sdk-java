@@ -37,7 +37,7 @@ public class AndroidLobAppRequest extends BaseRequest implements IAndroidLobAppR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidLobApp> callback) {
+    public void get(final ICallback<? super AndroidLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidLobAppRequest extends BaseRequest implements IAndroidLobAppR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidLobApp> callback) {
+    public void delete(final ICallback<? super AndroidLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidLobAppRequest extends BaseRequest implements IAndroidLobAppR
      * @param sourceAndroidLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidLobApp sourceAndroidLobApp, final ICallback<AndroidLobApp> callback) {
+    public void patch(final AndroidLobApp sourceAndroidLobApp, final ICallback<? super AndroidLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidLobApp);
     }
 
@@ -96,7 +96,7 @@ public class AndroidLobAppRequest extends BaseRequest implements IAndroidLobAppR
      * @param newAndroidLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidLobApp newAndroidLobApp, final ICallback<AndroidLobApp> callback) {
+    public void post(final AndroidLobApp newAndroidLobApp, final ICallback<? super AndroidLobApp> callback) {
         send(HttpMethod.POST, callback, newAndroidLobApp);
     }
 
@@ -117,7 +117,7 @@ public class AndroidLobAppRequest extends BaseRequest implements IAndroidLobAppR
      * @param newAndroidLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidLobApp newAndroidLobApp, final ICallback<AndroidLobApp> callback) {
+    public void put(final AndroidLobApp newAndroidLobApp, final ICallback<? super AndroidLobApp> callback) {
         send(HttpMethod.PUT, callback, newAndroidLobApp);
     }
 

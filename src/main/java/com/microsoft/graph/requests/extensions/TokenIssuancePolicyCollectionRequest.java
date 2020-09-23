@@ -40,7 +40,7 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, ITokenIssuancePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<ITokenIssuancePolicyCollectionPage> callback) {
+    public void get(final ICallback<? super ITokenIssuancePolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback) {
+    public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TokenIssuancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

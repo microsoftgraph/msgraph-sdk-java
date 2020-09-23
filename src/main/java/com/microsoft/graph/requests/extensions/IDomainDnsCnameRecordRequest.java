@@ -21,7 +21,7 @@ public interface IDomainDnsCnameRecordRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DomainDnsCnameRecord> callback);
+    void get(final ICallback<? super DomainDnsCnameRecord> callback);
 
     /**
      * Gets the DomainDnsCnameRecord from the service
@@ -36,7 +36,7 @@ public interface IDomainDnsCnameRecordRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DomainDnsCnameRecord> callback);
+    void delete(final ICallback<? super DomainDnsCnameRecord> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDomainDnsCnameRecordRequest extends IHttpRequest {
      * @param sourceDomainDnsCnameRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DomainDnsCnameRecord sourceDomainDnsCnameRecord, final ICallback<DomainDnsCnameRecord> callback);
+    void patch(final DomainDnsCnameRecord sourceDomainDnsCnameRecord, final ICallback<? super DomainDnsCnameRecord> callback);
 
     /**
      * Patches this DomainDnsCnameRecord with a source
@@ -68,7 +68,7 @@ public interface IDomainDnsCnameRecordRequest extends IHttpRequest {
      * @param newDomainDnsCnameRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DomainDnsCnameRecord newDomainDnsCnameRecord, final ICallback<DomainDnsCnameRecord> callback);
+    void post(final DomainDnsCnameRecord newDomainDnsCnameRecord, final ICallback<? super DomainDnsCnameRecord> callback);
 
     /**
      * Posts a DomainDnsCnameRecord with a new object
@@ -85,7 +85,7 @@ public interface IDomainDnsCnameRecordRequest extends IHttpRequest {
      * @param newDomainDnsCnameRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DomainDnsCnameRecord newDomainDnsCnameRecord, final ICallback<DomainDnsCnameRecord> callback);
+    void put(final DomainDnsCnameRecord newDomainDnsCnameRecord, final ICallback<? super DomainDnsCnameRecord> callback);
 
     /**
      * Posts a DomainDnsCnameRecord with a new object

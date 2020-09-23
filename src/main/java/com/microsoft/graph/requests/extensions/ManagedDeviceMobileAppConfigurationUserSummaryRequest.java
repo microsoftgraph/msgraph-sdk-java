@@ -37,7 +37,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummaryRequest extends BaseR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedDeviceMobileAppConfigurationUserSummary> callback) {
+    public void get(final ICallback<? super ManagedDeviceMobileAppConfigurationUserSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummaryRequest extends BaseR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedDeviceMobileAppConfigurationUserSummary> callback) {
+    public void delete(final ICallback<? super ManagedDeviceMobileAppConfigurationUserSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummaryRequest extends BaseR
      * @param sourceManagedDeviceMobileAppConfigurationUserSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedDeviceMobileAppConfigurationUserSummary sourceManagedDeviceMobileAppConfigurationUserSummary, final ICallback<ManagedDeviceMobileAppConfigurationUserSummary> callback) {
+    public void patch(final ManagedDeviceMobileAppConfigurationUserSummary sourceManagedDeviceMobileAppConfigurationUserSummary, final ICallback<? super ManagedDeviceMobileAppConfigurationUserSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedDeviceMobileAppConfigurationUserSummary);
     }
 
@@ -96,7 +96,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummaryRequest extends BaseR
      * @param newManagedDeviceMobileAppConfigurationUserSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedDeviceMobileAppConfigurationUserSummary newManagedDeviceMobileAppConfigurationUserSummary, final ICallback<ManagedDeviceMobileAppConfigurationUserSummary> callback) {
+    public void post(final ManagedDeviceMobileAppConfigurationUserSummary newManagedDeviceMobileAppConfigurationUserSummary, final ICallback<? super ManagedDeviceMobileAppConfigurationUserSummary> callback) {
         send(HttpMethod.POST, callback, newManagedDeviceMobileAppConfigurationUserSummary);
     }
 
@@ -117,7 +117,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummaryRequest extends BaseR
      * @param newManagedDeviceMobileAppConfigurationUserSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedDeviceMobileAppConfigurationUserSummary newManagedDeviceMobileAppConfigurationUserSummary, final ICallback<ManagedDeviceMobileAppConfigurationUserSummary> callback) {
+    public void put(final ManagedDeviceMobileAppConfigurationUserSummary newManagedDeviceMobileAppConfigurationUserSummary, final ICallback<? super ManagedDeviceMobileAppConfigurationUserSummary> callback) {
         send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfigurationUserSummary);
     }
 

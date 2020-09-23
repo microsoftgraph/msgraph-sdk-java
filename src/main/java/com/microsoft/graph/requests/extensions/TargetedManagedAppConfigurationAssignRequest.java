@@ -36,7 +36,7 @@ public class TargetedManagedAppConfigurationAssignRequest extends BaseRequest im
         body = new TargetedManagedAppConfigurationAssignBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

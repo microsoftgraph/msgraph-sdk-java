@@ -21,7 +21,7 @@ public interface IConversationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Conversation> callback);
+    void get(final ICallback<? super Conversation> callback);
 
     /**
      * Gets the Conversation from the service
@@ -36,7 +36,7 @@ public interface IConversationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Conversation> callback);
+    void delete(final ICallback<? super Conversation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IConversationRequest extends IHttpRequest {
      * @param sourceConversation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Conversation sourceConversation, final ICallback<Conversation> callback);
+    void patch(final Conversation sourceConversation, final ICallback<? super Conversation> callback);
 
     /**
      * Patches this Conversation with a source
@@ -68,7 +68,7 @@ public interface IConversationRequest extends IHttpRequest {
      * @param newConversation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Conversation newConversation, final ICallback<Conversation> callback);
+    void post(final Conversation newConversation, final ICallback<? super Conversation> callback);
 
     /**
      * Posts a Conversation with a new object
@@ -85,7 +85,7 @@ public interface IConversationRequest extends IHttpRequest {
      * @param newConversation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Conversation newConversation, final ICallback<Conversation> callback);
+    void put(final Conversation newConversation, final ICallback<? super Conversation> callback);
 
     /**
      * Posts a Conversation with a new object

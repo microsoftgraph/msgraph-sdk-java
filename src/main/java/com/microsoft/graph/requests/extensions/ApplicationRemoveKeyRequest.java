@@ -36,7 +36,7 @@ public class ApplicationRemoveKeyRequest extends BaseRequest implements IApplica
         body = new ApplicationRemoveKeyBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

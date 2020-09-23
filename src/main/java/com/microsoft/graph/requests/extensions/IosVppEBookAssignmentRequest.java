@@ -37,7 +37,7 @@ public class IosVppEBookAssignmentRequest extends BaseRequest implements IIosVpp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosVppEBookAssignment> callback) {
+    public void get(final ICallback<? super IosVppEBookAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosVppEBookAssignmentRequest extends BaseRequest implements IIosVpp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosVppEBookAssignment> callback) {
+    public void delete(final ICallback<? super IosVppEBookAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosVppEBookAssignmentRequest extends BaseRequest implements IIosVpp
      * @param sourceIosVppEBookAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosVppEBookAssignment sourceIosVppEBookAssignment, final ICallback<IosVppEBookAssignment> callback) {
+    public void patch(final IosVppEBookAssignment sourceIosVppEBookAssignment, final ICallback<? super IosVppEBookAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceIosVppEBookAssignment);
     }
 
@@ -96,7 +96,7 @@ public class IosVppEBookAssignmentRequest extends BaseRequest implements IIosVpp
      * @param newIosVppEBookAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosVppEBookAssignment newIosVppEBookAssignment, final ICallback<IosVppEBookAssignment> callback) {
+    public void post(final IosVppEBookAssignment newIosVppEBookAssignment, final ICallback<? super IosVppEBookAssignment> callback) {
         send(HttpMethod.POST, callback, newIosVppEBookAssignment);
     }
 
@@ -117,7 +117,7 @@ public class IosVppEBookAssignmentRequest extends BaseRequest implements IIosVpp
      * @param newIosVppEBookAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosVppEBookAssignment newIosVppEBookAssignment, final ICallback<IosVppEBookAssignment> callback) {
+    public void put(final IosVppEBookAssignment newIosVppEBookAssignment, final ICallback<? super IosVppEBookAssignment> callback) {
         send(HttpMethod.PUT, callback, newIosVppEBookAssignment);
     }
 

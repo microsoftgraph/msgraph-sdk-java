@@ -43,7 +43,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidManagedAppProtection> callback) {
+    public void get(final ICallback<? super AndroidManagedAppProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidManagedAppProtection> callback) {
+    public void delete(final ICallback<? super AndroidManagedAppProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @param sourceAndroidManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidManagedAppProtection sourceAndroidManagedAppProtection, final ICallback<AndroidManagedAppProtection> callback) {
+    public void patch(final AndroidManagedAppProtection sourceAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidManagedAppProtection);
     }
 
@@ -102,7 +102,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @param newAndroidManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<AndroidManagedAppProtection> callback) {
+    public void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback) {
         send(HttpMethod.POST, callback, newAndroidManagedAppProtection);
     }
 
@@ -123,7 +123,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @param newAndroidManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<AndroidManagedAppProtection> callback) {
+    public void put(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback) {
         send(HttpMethod.PUT, callback, newAndroidManagedAppProtection);
     }
 

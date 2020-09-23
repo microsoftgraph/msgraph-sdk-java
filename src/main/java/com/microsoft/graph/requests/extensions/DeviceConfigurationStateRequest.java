@@ -37,7 +37,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceConfigurationState> callback) {
+    public void get(final ICallback<? super DeviceConfigurationState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceConfigurationState> callback) {
+    public void delete(final ICallback<? super DeviceConfigurationState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @param sourceDeviceConfigurationState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationState sourceDeviceConfigurationState, final ICallback<DeviceConfigurationState> callback) {
+    public void patch(final DeviceConfigurationState sourceDeviceConfigurationState, final ICallback<? super DeviceConfigurationState> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationState);
     }
 
@@ -96,7 +96,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @param newDeviceConfigurationState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<DeviceConfigurationState> callback) {
+    public void post(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<? super DeviceConfigurationState> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationState);
     }
 
@@ -117,7 +117,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @param newDeviceConfigurationState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<DeviceConfigurationState> callback) {
+    public void put(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<? super DeviceConfigurationState> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationState);
     }
 

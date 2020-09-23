@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface INotificationMessageTemplateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<INotificationMessageTemplateCollectionPage> callback);
+    void get(final ICallback<? super INotificationMessageTemplateCollectionPage> callback);
 
     INotificationMessageTemplateCollectionPage get() throws ClientException;
 
-    void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback);
+    void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback);
 
     NotificationMessageTemplate post(final NotificationMessageTemplate newNotificationMessageTemplate) throws ClientException;
 

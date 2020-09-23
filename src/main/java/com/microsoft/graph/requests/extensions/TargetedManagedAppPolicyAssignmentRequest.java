@@ -37,7 +37,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TargetedManagedAppPolicyAssignment> callback) {
+    public void get(final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TargetedManagedAppPolicyAssignment> callback) {
+    public void delete(final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest imple
      * @param sourceTargetedManagedAppPolicyAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback) {
+    public void patch(final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceTargetedManagedAppPolicyAssignment);
     }
 
@@ -96,7 +96,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest imple
      * @param newTargetedManagedAppPolicyAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback) {
+    public void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         send(HttpMethod.POST, callback, newTargetedManagedAppPolicyAssignment);
     }
 
@@ -117,7 +117,7 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest imple
      * @param newTargetedManagedAppPolicyAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback) {
+    public void put(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
         send(HttpMethod.PUT, callback, newTargetedManagedAppPolicyAssignment);
     }
 

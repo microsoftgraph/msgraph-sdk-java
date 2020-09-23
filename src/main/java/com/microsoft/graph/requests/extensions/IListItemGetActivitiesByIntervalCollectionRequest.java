@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IListItemGetActivitiesByIntervalCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IListItemGetActivitiesByIntervalCollectionPage> callback);
+    void get(final ICallback<? super IListItemGetActivitiesByIntervalCollectionPage> callback);
 
     IListItemGetActivitiesByIntervalCollectionPage get() throws ClientException;
 

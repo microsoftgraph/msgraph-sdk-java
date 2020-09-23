@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IClaimsMappingPolicyCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IClaimsMappingPolicyCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IClaimsMappingPolicyCollectionWithReferencesPage> callback);
 
     IClaimsMappingPolicyCollectionWithReferencesPage get() throws ClientException;
 

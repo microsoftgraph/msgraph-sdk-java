@@ -37,7 +37,7 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidWorkProfileGeneralDeviceConfiguration> callback) {
+    public void get(final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidWorkProfileGeneralDeviceConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      * @param sourceAndroidWorkProfileGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWorkProfileGeneralDeviceConfiguration sourceAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<AndroidWorkProfileGeneralDeviceConfiguration> callback) {
+    public void patch(final AndroidWorkProfileGeneralDeviceConfiguration sourceAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileGeneralDeviceConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      * @param newAndroidWorkProfileGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<AndroidWorkProfileGeneralDeviceConfiguration> callback) {
+    public void post(final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidWorkProfileGeneralDeviceConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class AndroidWorkProfileGeneralDeviceConfigurationRequest extends BaseReq
      * @param newAndroidWorkProfileGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<AndroidWorkProfileGeneralDeviceConfiguration> callback) {
+    public void put(final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidWorkProfileGeneralDeviceConfiguration);
     }
 

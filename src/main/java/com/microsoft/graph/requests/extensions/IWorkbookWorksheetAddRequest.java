@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookWorksheetAddRequest extends IHttpRequest {
 
-    void post(final ICallback<WorkbookWorksheet> callback);
+    void post(final ICallback<? super WorkbookWorksheet> callback);
 
     WorkbookWorksheet post() throws ClientException;
 

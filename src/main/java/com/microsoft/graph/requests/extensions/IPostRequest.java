@@ -21,7 +21,7 @@ public interface IPostRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Post> callback);
+    void get(final ICallback<? super Post> callback);
 
     /**
      * Gets the Post from the service
@@ -36,7 +36,7 @@ public interface IPostRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Post> callback);
+    void delete(final ICallback<? super Post> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPostRequest extends IHttpRequest {
      * @param sourcePost the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Post sourcePost, final ICallback<Post> callback);
+    void patch(final Post sourcePost, final ICallback<? super Post> callback);
 
     /**
      * Patches this Post with a source
@@ -68,7 +68,7 @@ public interface IPostRequest extends IHttpRequest {
      * @param newPost the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Post newPost, final ICallback<Post> callback);
+    void post(final Post newPost, final ICallback<? super Post> callback);
 
     /**
      * Posts a Post with a new object
@@ -85,7 +85,7 @@ public interface IPostRequest extends IHttpRequest {
      * @param newPost the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Post newPost, final ICallback<Post> callback);
+    void put(final Post newPost, final ICallback<? super Post> callback);
 
     /**
      * Posts a Post with a new object

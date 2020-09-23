@@ -39,7 +39,7 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
         super(requestUrl, client, requestOptions, SubscribedSkuCollectionResponse.class, ISubscribedSkuCollectionPage.class);
     }
 
-    public void get(final ICallback<ISubscribedSkuCollectionPage> callback) {
+    public void get(final ICallback<? super ISubscribedSkuCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
         return buildFromResponse(response);
     }
 
-    public void post(final SubscribedSku newSubscribedSku, final ICallback<SubscribedSku> callback) {
+    public void post(final SubscribedSku newSubscribedSku, final ICallback<? super SubscribedSku> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SubscribedSkuRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

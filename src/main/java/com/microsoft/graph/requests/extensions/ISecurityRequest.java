@@ -21,7 +21,7 @@ public interface ISecurityRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Security> callback);
+    void get(final ICallback<? super Security> callback);
 
     /**
      * Gets the Security from the service
@@ -36,7 +36,7 @@ public interface ISecurityRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Security> callback);
+    void delete(final ICallback<? super Security> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecurityRequest extends IHttpRequest {
      * @param sourceSecurity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Security sourceSecurity, final ICallback<Security> callback);
+    void patch(final Security sourceSecurity, final ICallback<? super Security> callback);
 
     /**
      * Patches this Security with a source
@@ -68,7 +68,7 @@ public interface ISecurityRequest extends IHttpRequest {
      * @param newSecurity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Security newSecurity, final ICallback<Security> callback);
+    void post(final Security newSecurity, final ICallback<? super Security> callback);
 
     /**
      * Posts a Security with a new object
@@ -85,7 +85,7 @@ public interface ISecurityRequest extends IHttpRequest {
      * @param newSecurity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Security newSecurity, final ICallback<Security> callback);
+    void put(final Security newSecurity, final ICallback<? super Security> callback);
 
     /**
      * Posts a Security with a new object

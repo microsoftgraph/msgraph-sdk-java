@@ -37,7 +37,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WebApp> callback) {
+    public void get(final ICallback<? super WebApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WebApp> callback) {
+    public void delete(final ICallback<? super WebApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @param sourceWebApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WebApp sourceWebApp, final ICallback<WebApp> callback) {
+    public void patch(final WebApp sourceWebApp, final ICallback<? super WebApp> callback) {
         send(HttpMethod.PATCH, callback, sourceWebApp);
     }
 
@@ -96,7 +96,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @param newWebApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WebApp newWebApp, final ICallback<WebApp> callback) {
+    public void post(final WebApp newWebApp, final ICallback<? super WebApp> callback) {
         send(HttpMethod.POST, callback, newWebApp);
     }
 
@@ -117,7 +117,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @param newWebApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WebApp newWebApp, final ICallback<WebApp> callback) {
+    public void put(final WebApp newWebApp, final ICallback<? super WebApp> callback) {
         send(HttpMethod.PUT, callback, newWebApp);
     }
 

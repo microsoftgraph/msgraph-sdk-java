@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedAppStatusCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedAppStatusCollectionPage> callback);
+    void get(final ICallback<? super IManagedAppStatusCollectionPage> callback);
 
     IManagedAppStatusCollectionPage get() throws ClientException;
 
-    void post(final ManagedAppStatus newManagedAppStatus, final ICallback<ManagedAppStatus> callback);
+    void post(final ManagedAppStatus newManagedAppStatus, final ICallback<? super ManagedAppStatus> callback);
 
     ManagedAppStatus post(final ManagedAppStatus newManagedAppStatus) throws ClientException;
 

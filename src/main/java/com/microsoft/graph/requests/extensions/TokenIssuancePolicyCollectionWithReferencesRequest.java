@@ -35,7 +35,7 @@ public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseColl
         super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, ITokenIssuancePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<ITokenIssuancePolicyCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super ITokenIssuancePolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

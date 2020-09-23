@@ -41,7 +41,7 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
         super(requestUrl, client, requestOptions, ApplicationCollectionResponse.class, IApplicationCollectionPage.class);
     }
 
-    public void get(final ICallback<IApplicationCollectionPage> callback) {
+    public void get(final ICallback<? super IApplicationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
         return buildFromResponse(response);
     }
 
-    public void post(final Application newApplication, final ICallback<Application> callback) {
+    public void post(final Application newApplication, final ICallback<? super Application> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ApplicationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

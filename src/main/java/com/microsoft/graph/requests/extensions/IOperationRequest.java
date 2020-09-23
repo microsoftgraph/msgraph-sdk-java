@@ -21,7 +21,7 @@ public interface IOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Operation> callback);
+    void get(final ICallback<? super Operation> callback);
 
     /**
      * Gets the Operation from the service
@@ -36,7 +36,7 @@ public interface IOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Operation> callback);
+    void delete(final ICallback<? super Operation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOperationRequest extends IHttpRequest {
      * @param sourceOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Operation sourceOperation, final ICallback<Operation> callback);
+    void patch(final Operation sourceOperation, final ICallback<? super Operation> callback);
 
     /**
      * Patches this Operation with a source
@@ -68,7 +68,7 @@ public interface IOperationRequest extends IHttpRequest {
      * @param newOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Operation newOperation, final ICallback<Operation> callback);
+    void post(final Operation newOperation, final ICallback<? super Operation> callback);
 
     /**
      * Posts a Operation with a new object
@@ -85,7 +85,7 @@ public interface IOperationRequest extends IHttpRequest {
      * @param newOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Operation newOperation, final ICallback<Operation> callback);
+    void put(final Operation newOperation, final ICallback<? super Operation> callback);
 
     /**
      * Posts a Operation with a new object

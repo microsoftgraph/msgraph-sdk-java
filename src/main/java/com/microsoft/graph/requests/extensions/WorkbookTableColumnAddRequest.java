@@ -37,7 +37,7 @@ public class WorkbookTableColumnAddRequest extends BaseRequest implements IWorkb
         body = new WorkbookTableColumnAddBody();
     }
 
-    public void post(final ICallback<WorkbookTableColumn> callback) {
+    public void post(final ICallback<? super WorkbookTableColumn> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

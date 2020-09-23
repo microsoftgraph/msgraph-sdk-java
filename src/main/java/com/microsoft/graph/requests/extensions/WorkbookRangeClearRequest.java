@@ -36,7 +36,7 @@ public class WorkbookRangeClearRequest extends BaseRequest implements IWorkbookR
         body = new WorkbookRangeClearBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

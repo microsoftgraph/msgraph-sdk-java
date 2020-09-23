@@ -37,7 +37,7 @@ public class DriveItemPreviewRequest extends BaseRequest implements IDriveItemPr
         body = new DriveItemPreviewBody();
     }
 
-    public void post(final ICallback<ItemPreviewInfo> callback) {
+    public void post(final ICallback<? super ItemPreviewInfo> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

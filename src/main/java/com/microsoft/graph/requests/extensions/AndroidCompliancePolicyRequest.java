@@ -37,7 +37,7 @@ public class AndroidCompliancePolicyRequest extends BaseRequest implements IAndr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidCompliancePolicy> callback) {
+    public void get(final ICallback<? super AndroidCompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidCompliancePolicyRequest extends BaseRequest implements IAndr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidCompliancePolicy> callback) {
+    public void delete(final ICallback<? super AndroidCompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidCompliancePolicyRequest extends BaseRequest implements IAndr
      * @param sourceAndroidCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidCompliancePolicy sourceAndroidCompliancePolicy, final ICallback<AndroidCompliancePolicy> callback) {
+    public void patch(final AndroidCompliancePolicy sourceAndroidCompliancePolicy, final ICallback<? super AndroidCompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidCompliancePolicy);
     }
 
@@ -96,7 +96,7 @@ public class AndroidCompliancePolicyRequest extends BaseRequest implements IAndr
      * @param newAndroidCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidCompliancePolicy newAndroidCompliancePolicy, final ICallback<AndroidCompliancePolicy> callback) {
+    public void post(final AndroidCompliancePolicy newAndroidCompliancePolicy, final ICallback<? super AndroidCompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newAndroidCompliancePolicy);
     }
 
@@ -117,7 +117,7 @@ public class AndroidCompliancePolicyRequest extends BaseRequest implements IAndr
      * @param newAndroidCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidCompliancePolicy newAndroidCompliancePolicy, final ICallback<AndroidCompliancePolicy> callback) {
+    public void put(final AndroidCompliancePolicy newAndroidCompliancePolicy, final ICallback<? super AndroidCompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newAndroidCompliancePolicy);
     }
 

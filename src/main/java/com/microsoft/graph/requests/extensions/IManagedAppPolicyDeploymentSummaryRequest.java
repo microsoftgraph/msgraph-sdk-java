@@ -21,7 +21,7 @@ public interface IManagedAppPolicyDeploymentSummaryRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedAppPolicyDeploymentSummary> callback);
+    void get(final ICallback<? super ManagedAppPolicyDeploymentSummary> callback);
 
     /**
      * Gets the ManagedAppPolicyDeploymentSummary from the service
@@ -36,7 +36,7 @@ public interface IManagedAppPolicyDeploymentSummaryRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedAppPolicyDeploymentSummary> callback);
+    void delete(final ICallback<? super ManagedAppPolicyDeploymentSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAppPolicyDeploymentSummaryRequest extends IHttpRequest 
      * @param sourceManagedAppPolicyDeploymentSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary, final ICallback<ManagedAppPolicyDeploymentSummary> callback);
+    void patch(final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary, final ICallback<? super ManagedAppPolicyDeploymentSummary> callback);
 
     /**
      * Patches this ManagedAppPolicyDeploymentSummary with a source
@@ -68,7 +68,7 @@ public interface IManagedAppPolicyDeploymentSummaryRequest extends IHttpRequest 
      * @param newManagedAppPolicyDeploymentSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, final ICallback<ManagedAppPolicyDeploymentSummary> callback);
+    void post(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, final ICallback<? super ManagedAppPolicyDeploymentSummary> callback);
 
     /**
      * Posts a ManagedAppPolicyDeploymentSummary with a new object
@@ -85,7 +85,7 @@ public interface IManagedAppPolicyDeploymentSummaryRequest extends IHttpRequest 
      * @param newManagedAppPolicyDeploymentSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, final ICallback<ManagedAppPolicyDeploymentSummary> callback);
+    void put(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, final ICallback<? super ManagedAppPolicyDeploymentSummary> callback);
 
     /**
      * Posts a ManagedAppPolicyDeploymentSummary with a new object

@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IEntityReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<Entity> callback);
+    void delete(final ICallback<? super Entity> callback);
 
     Entity delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IEntityReferenceRequest extends IHttpRequest {
      * @param srcEntity the Entity to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Entity srcEntity, final ICallback<Entity> callback);
+    void put(Entity srcEntity, final ICallback<? super Entity> callback);
 
     /**
      * Puts the Entity

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICommsOperationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICommsOperationCollectionPage> callback);
+    void get(final ICallback<? super ICommsOperationCollectionPage> callback);
 
     ICommsOperationCollectionPage get() throws ClientException;
 
-    void post(final CommsOperation newCommsOperation, final ICallback<CommsOperation> callback);
+    void post(final CommsOperation newCommsOperation, final ICallback<? super CommsOperation> callback);
 
     CommsOperation post(final CommsOperation newCommsOperation) throws ClientException;
 

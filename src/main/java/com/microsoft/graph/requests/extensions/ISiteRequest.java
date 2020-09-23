@@ -21,7 +21,7 @@ public interface ISiteRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Site> callback);
+    void get(final ICallback<? super Site> callback);
 
     /**
      * Gets the Site from the service
@@ -36,7 +36,7 @@ public interface ISiteRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Site> callback);
+    void delete(final ICallback<? super Site> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISiteRequest extends IHttpRequest {
      * @param sourceSite the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Site sourceSite, final ICallback<Site> callback);
+    void patch(final Site sourceSite, final ICallback<? super Site> callback);
 
     /**
      * Patches this Site with a source
@@ -68,7 +68,7 @@ public interface ISiteRequest extends IHttpRequest {
      * @param newSite the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Site newSite, final ICallback<Site> callback);
+    void post(final Site newSite, final ICallback<? super Site> callback);
 
     /**
      * Posts a Site with a new object
@@ -85,7 +85,7 @@ public interface ISiteRequest extends IHttpRequest {
      * @param newSite the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Site newSite, final ICallback<Site> callback);
+    void put(final Site newSite, final ICallback<? super Site> callback);
 
     /**
      * Posts a Site with a new object

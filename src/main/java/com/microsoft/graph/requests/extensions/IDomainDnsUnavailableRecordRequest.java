@@ -21,7 +21,7 @@ public interface IDomainDnsUnavailableRecordRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DomainDnsUnavailableRecord> callback);
+    void get(final ICallback<? super DomainDnsUnavailableRecord> callback);
 
     /**
      * Gets the DomainDnsUnavailableRecord from the service
@@ -36,7 +36,7 @@ public interface IDomainDnsUnavailableRecordRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DomainDnsUnavailableRecord> callback);
+    void delete(final ICallback<? super DomainDnsUnavailableRecord> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDomainDnsUnavailableRecordRequest extends IHttpRequest {
      * @param sourceDomainDnsUnavailableRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord, final ICallback<DomainDnsUnavailableRecord> callback);
+    void patch(final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord, final ICallback<? super DomainDnsUnavailableRecord> callback);
 
     /**
      * Patches this DomainDnsUnavailableRecord with a source
@@ -68,7 +68,7 @@ public interface IDomainDnsUnavailableRecordRequest extends IHttpRequest {
      * @param newDomainDnsUnavailableRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, final ICallback<DomainDnsUnavailableRecord> callback);
+    void post(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, final ICallback<? super DomainDnsUnavailableRecord> callback);
 
     /**
      * Posts a DomainDnsUnavailableRecord with a new object
@@ -85,7 +85,7 @@ public interface IDomainDnsUnavailableRecordRequest extends IHttpRequest {
      * @param newDomainDnsUnavailableRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, final ICallback<DomainDnsUnavailableRecord> callback);
+    void put(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, final ICallback<? super DomainDnsUnavailableRecord> callback);
 
     /**
      * Posts a DomainDnsUnavailableRecord with a new object

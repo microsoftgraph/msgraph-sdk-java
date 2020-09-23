@@ -37,7 +37,7 @@ public class WorkbookFunctionsConfidence_NormRequest extends BaseRequest impleme
         body = new WorkbookFunctionsConfidence_NormBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

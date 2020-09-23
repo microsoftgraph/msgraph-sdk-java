@@ -37,7 +37,7 @@ public class IosCustomConfigurationRequest extends BaseRequest implements IIosCu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosCustomConfiguration> callback) {
+    public void get(final ICallback<? super IosCustomConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosCustomConfigurationRequest extends BaseRequest implements IIosCu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosCustomConfiguration> callback) {
+    public void delete(final ICallback<? super IosCustomConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosCustomConfigurationRequest extends BaseRequest implements IIosCu
      * @param sourceIosCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosCustomConfiguration sourceIosCustomConfiguration, final ICallback<IosCustomConfiguration> callback) {
+    public void patch(final IosCustomConfiguration sourceIosCustomConfiguration, final ICallback<? super IosCustomConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosCustomConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class IosCustomConfigurationRequest extends BaseRequest implements IIosCu
      * @param newIosCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosCustomConfiguration newIosCustomConfiguration, final ICallback<IosCustomConfiguration> callback) {
+    public void post(final IosCustomConfiguration newIosCustomConfiguration, final ICallback<? super IosCustomConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosCustomConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class IosCustomConfigurationRequest extends BaseRequest implements IIosCu
      * @param newIosCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosCustomConfiguration newIosCustomConfiguration, final ICallback<IosCustomConfiguration> callback) {
+    public void put(final IosCustomConfiguration newIosCustomConfiguration, final ICallback<? super IosCustomConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosCustomConfiguration);
     }
 

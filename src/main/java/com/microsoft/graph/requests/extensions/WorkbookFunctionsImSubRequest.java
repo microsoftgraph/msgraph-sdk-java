@@ -37,7 +37,7 @@ public class WorkbookFunctionsImSubRequest extends BaseRequest implements IWorkb
         body = new WorkbookFunctionsImSubBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

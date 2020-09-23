@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IItemAnalyticsReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<ItemAnalytics> callback);
+    void delete(final ICallback<? super ItemAnalytics> callback);
 
     ItemAnalytics delete() throws ClientException;
 
@@ -50,7 +50,7 @@ public interface IItemAnalyticsReferenceRequest extends IHttpRequest {
      * @param srcItemAnalytics the ItemAnalytics to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(ItemAnalytics srcItemAnalytics, final ICallback<ItemAnalytics> callback);
+    void put(ItemAnalytics srcItemAnalytics, final ICallback<? super ItemAnalytics> callback);
 
     /**
      * Puts the ItemAnalytics

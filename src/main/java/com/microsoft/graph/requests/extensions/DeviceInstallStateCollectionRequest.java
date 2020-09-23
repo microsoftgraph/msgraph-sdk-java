@@ -40,7 +40,7 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
         super(requestUrl, client, requestOptions, DeviceInstallStateCollectionResponse.class, IDeviceInstallStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceInstallStateCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceInstallStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceInstallState newDeviceInstallState, final ICallback<DeviceInstallState> callback) {
+    public void post(final DeviceInstallState newDeviceInstallState, final ICallback<? super DeviceInstallState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceInstallStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

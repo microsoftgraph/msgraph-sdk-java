@@ -39,7 +39,7 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
     }
 
 
-    public void get(final ICallback<IChatGetAllMessagesCollectionPage> callback) {
+    public void get(final ICallback<? super IChatGetAllMessagesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

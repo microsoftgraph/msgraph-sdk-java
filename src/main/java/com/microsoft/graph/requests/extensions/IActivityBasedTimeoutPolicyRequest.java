@@ -21,7 +21,7 @@ public interface IActivityBasedTimeoutPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ActivityBasedTimeoutPolicy> callback);
+    void get(final ICallback<? super ActivityBasedTimeoutPolicy> callback);
 
     /**
      * Gets the ActivityBasedTimeoutPolicy from the service
@@ -36,7 +36,7 @@ public interface IActivityBasedTimeoutPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ActivityBasedTimeoutPolicy> callback);
+    void delete(final ICallback<? super ActivityBasedTimeoutPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IActivityBasedTimeoutPolicyRequest extends IHttpRequest {
      * @param sourceActivityBasedTimeoutPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ActivityBasedTimeoutPolicy sourceActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback);
+    void patch(final ActivityBasedTimeoutPolicy sourceActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback);
 
     /**
      * Patches this ActivityBasedTimeoutPolicy with a source
@@ -68,7 +68,7 @@ public interface IActivityBasedTimeoutPolicyRequest extends IHttpRequest {
      * @param newActivityBasedTimeoutPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback);
+    void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback);
 
     /**
      * Posts a ActivityBasedTimeoutPolicy with a new object
@@ -85,7 +85,7 @@ public interface IActivityBasedTimeoutPolicyRequest extends IHttpRequest {
      * @param newActivityBasedTimeoutPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback);
+    void put(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback);
 
     /**
      * Posts a ActivityBasedTimeoutPolicy with a new object

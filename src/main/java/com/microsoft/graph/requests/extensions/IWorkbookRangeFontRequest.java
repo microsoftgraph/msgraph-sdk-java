@@ -21,7 +21,7 @@ public interface IWorkbookRangeFontRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookRangeFont> callback);
+    void get(final ICallback<? super WorkbookRangeFont> callback);
 
     /**
      * Gets the WorkbookRangeFont from the service
@@ -36,7 +36,7 @@ public interface IWorkbookRangeFontRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookRangeFont> callback);
+    void delete(final ICallback<? super WorkbookRangeFont> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookRangeFontRequest extends IHttpRequest {
      * @param sourceWorkbookRangeFont the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookRangeFont sourceWorkbookRangeFont, final ICallback<WorkbookRangeFont> callback);
+    void patch(final WorkbookRangeFont sourceWorkbookRangeFont, final ICallback<? super WorkbookRangeFont> callback);
 
     /**
      * Patches this WorkbookRangeFont with a source
@@ -68,7 +68,7 @@ public interface IWorkbookRangeFontRequest extends IHttpRequest {
      * @param newWorkbookRangeFont the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookRangeFont newWorkbookRangeFont, final ICallback<WorkbookRangeFont> callback);
+    void post(final WorkbookRangeFont newWorkbookRangeFont, final ICallback<? super WorkbookRangeFont> callback);
 
     /**
      * Posts a WorkbookRangeFont with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookRangeFontRequest extends IHttpRequest {
      * @param newWorkbookRangeFont the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookRangeFont newWorkbookRangeFont, final ICallback<WorkbookRangeFont> callback);
+    void put(final WorkbookRangeFont newWorkbookRangeFont, final ICallback<? super WorkbookRangeFont> callback);
 
     /**
      * Posts a WorkbookRangeFont with a new object

@@ -37,7 +37,7 @@ public class DirectoryObjectRestoreRequest extends BaseRequest implements IDirec
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<DirectoryObject> callback) {
+    public void post(final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.POST, callback, null);
     }
 

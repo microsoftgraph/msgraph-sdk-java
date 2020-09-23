@@ -21,7 +21,7 @@ public interface IWorkbookTableSortRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookTableSort> callback);
+    void get(final ICallback<? super WorkbookTableSort> callback);
 
     /**
      * Gets the WorkbookTableSort from the service
@@ -36,7 +36,7 @@ public interface IWorkbookTableSortRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookTableSort> callback);
+    void delete(final ICallback<? super WorkbookTableSort> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookTableSortRequest extends IHttpRequest {
      * @param sourceWorkbookTableSort the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookTableSort sourceWorkbookTableSort, final ICallback<WorkbookTableSort> callback);
+    void patch(final WorkbookTableSort sourceWorkbookTableSort, final ICallback<? super WorkbookTableSort> callback);
 
     /**
      * Patches this WorkbookTableSort with a source
@@ -68,7 +68,7 @@ public interface IWorkbookTableSortRequest extends IHttpRequest {
      * @param newWorkbookTableSort the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookTableSort newWorkbookTableSort, final ICallback<WorkbookTableSort> callback);
+    void post(final WorkbookTableSort newWorkbookTableSort, final ICallback<? super WorkbookTableSort> callback);
 
     /**
      * Posts a WorkbookTableSort with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookTableSortRequest extends IHttpRequest {
      * @param newWorkbookTableSort the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookTableSort newWorkbookTableSort, final ICallback<WorkbookTableSort> callback);
+    void put(final WorkbookTableSort newWorkbookTableSort, final ICallback<? super WorkbookTableSort> callback);
 
     /**
      * Posts a WorkbookTableSort with a new object

@@ -37,7 +37,7 @@ public class WorkbookFunctionsQuartile_IncRequest extends BaseRequest implements
         body = new WorkbookFunctionsQuartile_IncBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

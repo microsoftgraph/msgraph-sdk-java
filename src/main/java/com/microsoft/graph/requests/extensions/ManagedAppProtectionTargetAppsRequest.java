@@ -36,7 +36,7 @@ public class ManagedAppProtectionTargetAppsRequest extends BaseRequest implement
         body = new ManagedAppProtectionTargetAppsBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

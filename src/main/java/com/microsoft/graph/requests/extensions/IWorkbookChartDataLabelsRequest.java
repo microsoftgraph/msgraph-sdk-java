@@ -21,7 +21,7 @@ public interface IWorkbookChartDataLabelsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartDataLabels> callback);
+    void get(final ICallback<? super WorkbookChartDataLabels> callback);
 
     /**
      * Gets the WorkbookChartDataLabels from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartDataLabelsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartDataLabels> callback);
+    void delete(final ICallback<? super WorkbookChartDataLabels> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartDataLabelsRequest extends IHttpRequest {
      * @param sourceWorkbookChartDataLabels the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartDataLabels sourceWorkbookChartDataLabels, final ICallback<WorkbookChartDataLabels> callback);
+    void patch(final WorkbookChartDataLabels sourceWorkbookChartDataLabels, final ICallback<? super WorkbookChartDataLabels> callback);
 
     /**
      * Patches this WorkbookChartDataLabels with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartDataLabelsRequest extends IHttpRequest {
      * @param newWorkbookChartDataLabels the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartDataLabels newWorkbookChartDataLabels, final ICallback<WorkbookChartDataLabels> callback);
+    void post(final WorkbookChartDataLabels newWorkbookChartDataLabels, final ICallback<? super WorkbookChartDataLabels> callback);
 
     /**
      * Posts a WorkbookChartDataLabels with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartDataLabelsRequest extends IHttpRequest {
      * @param newWorkbookChartDataLabels the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartDataLabels newWorkbookChartDataLabels, final ICallback<WorkbookChartDataLabels> callback);
+    void put(final WorkbookChartDataLabels newWorkbookChartDataLabels, final ICallback<? super WorkbookChartDataLabels> callback);
 
     /**
      * Posts a WorkbookChartDataLabels with a new object

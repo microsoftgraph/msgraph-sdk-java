@@ -21,7 +21,7 @@ public interface IWorkbookChartFillRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartFill> callback);
+    void get(final ICallback<? super WorkbookChartFill> callback);
 
     /**
      * Gets the WorkbookChartFill from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartFillRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartFill> callback);
+    void delete(final ICallback<? super WorkbookChartFill> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartFillRequest extends IHttpRequest {
      * @param sourceWorkbookChartFill the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartFill sourceWorkbookChartFill, final ICallback<WorkbookChartFill> callback);
+    void patch(final WorkbookChartFill sourceWorkbookChartFill, final ICallback<? super WorkbookChartFill> callback);
 
     /**
      * Patches this WorkbookChartFill with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartFillRequest extends IHttpRequest {
      * @param newWorkbookChartFill the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartFill newWorkbookChartFill, final ICallback<WorkbookChartFill> callback);
+    void post(final WorkbookChartFill newWorkbookChartFill, final ICallback<? super WorkbookChartFill> callback);
 
     /**
      * Posts a WorkbookChartFill with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartFillRequest extends IHttpRequest {
      * @param newWorkbookChartFill the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartFill newWorkbookChartFill, final ICallback<WorkbookChartFill> callback);
+    void put(final WorkbookChartFill newWorkbookChartFill, final ICallback<? super WorkbookChartFill> callback);
 
     /**
      * Posts a WorkbookChartFill with a new object

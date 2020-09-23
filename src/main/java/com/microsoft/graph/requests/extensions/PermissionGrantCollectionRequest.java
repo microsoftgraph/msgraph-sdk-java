@@ -45,7 +45,7 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
     }
 
 
-    public void post(final ICallback<IPermissionGrantCollectionPage> callback) {
+    public void post(final ICallback<? super IPermissionGrantCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

@@ -36,7 +36,7 @@ public class WorkbookRangeSortApplyRequest extends BaseRequest implements IWorkb
         body = new WorkbookRangeSortApplyBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

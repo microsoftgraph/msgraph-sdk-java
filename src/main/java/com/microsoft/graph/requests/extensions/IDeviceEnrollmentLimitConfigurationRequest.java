@@ -21,7 +21,7 @@ public interface IDeviceEnrollmentLimitConfigurationRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceEnrollmentLimitConfiguration> callback);
+    void get(final ICallback<? super DeviceEnrollmentLimitConfiguration> callback);
 
     /**
      * Gets the DeviceEnrollmentLimitConfiguration from the service
@@ -36,7 +36,7 @@ public interface IDeviceEnrollmentLimitConfigurationRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceEnrollmentLimitConfiguration> callback);
+    void delete(final ICallback<? super DeviceEnrollmentLimitConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceEnrollmentLimitConfigurationRequest extends IHttpRequest
      * @param sourceDeviceEnrollmentLimitConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceEnrollmentLimitConfiguration sourceDeviceEnrollmentLimitConfiguration, final ICallback<DeviceEnrollmentLimitConfiguration> callback);
+    void patch(final DeviceEnrollmentLimitConfiguration sourceDeviceEnrollmentLimitConfiguration, final ICallback<? super DeviceEnrollmentLimitConfiguration> callback);
 
     /**
      * Patches this DeviceEnrollmentLimitConfiguration with a source
@@ -68,7 +68,7 @@ public interface IDeviceEnrollmentLimitConfigurationRequest extends IHttpRequest
      * @param newDeviceEnrollmentLimitConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration, final ICallback<DeviceEnrollmentLimitConfiguration> callback);
+    void post(final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration, final ICallback<? super DeviceEnrollmentLimitConfiguration> callback);
 
     /**
      * Posts a DeviceEnrollmentLimitConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IDeviceEnrollmentLimitConfigurationRequest extends IHttpRequest
      * @param newDeviceEnrollmentLimitConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration, final ICallback<DeviceEnrollmentLimitConfiguration> callback);
+    void put(final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration, final ICallback<? super DeviceEnrollmentLimitConfiguration> callback);
 
     /**
      * Posts a DeviceEnrollmentLimitConfiguration with a new object

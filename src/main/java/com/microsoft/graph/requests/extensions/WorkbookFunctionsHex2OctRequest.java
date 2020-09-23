@@ -37,7 +37,7 @@ public class WorkbookFunctionsHex2OctRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsHex2OctBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

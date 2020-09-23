@@ -21,7 +21,7 @@ public interface IMessageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Message> callback);
+    void get(final ICallback<? super Message> callback);
 
     /**
      * Gets the Message from the service
@@ -36,7 +36,7 @@ public interface IMessageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Message> callback);
+    void delete(final ICallback<? super Message> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMessageRequest extends IHttpRequest {
      * @param sourceMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Message sourceMessage, final ICallback<Message> callback);
+    void patch(final Message sourceMessage, final ICallback<? super Message> callback);
 
     /**
      * Patches this Message with a source
@@ -68,7 +68,7 @@ public interface IMessageRequest extends IHttpRequest {
      * @param newMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Message newMessage, final ICallback<Message> callback);
+    void post(final Message newMessage, final ICallback<? super Message> callback);
 
     /**
      * Posts a Message with a new object
@@ -85,7 +85,7 @@ public interface IMessageRequest extends IHttpRequest {
      * @param newMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Message newMessage, final ICallback<Message> callback);
+    void put(final Message newMessage, final ICallback<? super Message> callback);
 
     /**
      * Posts a Message with a new object

@@ -41,7 +41,7 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, DeviceEnrollmentConfigurationCollectionResponse.class, IDeviceEnrollmentConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceEnrollmentConfigurationCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceEnrollmentConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback) {
+    public void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceEnrollmentConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

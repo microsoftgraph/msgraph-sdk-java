@@ -21,7 +21,7 @@ public interface IDelegatedPermissionClassificationRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DelegatedPermissionClassification> callback);
+    void get(final ICallback<? super DelegatedPermissionClassification> callback);
 
     /**
      * Gets the DelegatedPermissionClassification from the service
@@ -36,7 +36,7 @@ public interface IDelegatedPermissionClassificationRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DelegatedPermissionClassification> callback);
+    void delete(final ICallback<? super DelegatedPermissionClassification> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDelegatedPermissionClassificationRequest extends IHttpRequest 
      * @param sourceDelegatedPermissionClassification the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DelegatedPermissionClassification sourceDelegatedPermissionClassification, final ICallback<DelegatedPermissionClassification> callback);
+    void patch(final DelegatedPermissionClassification sourceDelegatedPermissionClassification, final ICallback<? super DelegatedPermissionClassification> callback);
 
     /**
      * Patches this DelegatedPermissionClassification with a source
@@ -68,7 +68,7 @@ public interface IDelegatedPermissionClassificationRequest extends IHttpRequest 
      * @param newDelegatedPermissionClassification the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DelegatedPermissionClassification newDelegatedPermissionClassification, final ICallback<DelegatedPermissionClassification> callback);
+    void post(final DelegatedPermissionClassification newDelegatedPermissionClassification, final ICallback<? super DelegatedPermissionClassification> callback);
 
     /**
      * Posts a DelegatedPermissionClassification with a new object
@@ -85,7 +85,7 @@ public interface IDelegatedPermissionClassificationRequest extends IHttpRequest 
      * @param newDelegatedPermissionClassification the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DelegatedPermissionClassification newDelegatedPermissionClassification, final ICallback<DelegatedPermissionClassification> callback);
+    void put(final DelegatedPermissionClassification newDelegatedPermissionClassification, final ICallback<? super DelegatedPermissionClassification> callback);
 
     /**
      * Posts a DelegatedPermissionClassification with a new object

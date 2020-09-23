@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICallUnmuteRequest extends IHttpRequest {
 
-    void post(final ICallback<UnmuteParticipantOperation> callback);
+    void post(final ICallback<? super UnmuteParticipantOperation> callback);
 
     UnmuteParticipantOperation post() throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IResourceOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ResourceOperation> callback);
+    void get(final ICallback<? super ResourceOperation> callback);
 
     /**
      * Gets the ResourceOperation from the service
@@ -36,7 +36,7 @@ public interface IResourceOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ResourceOperation> callback);
+    void delete(final ICallback<? super ResourceOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IResourceOperationRequest extends IHttpRequest {
      * @param sourceResourceOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ResourceOperation sourceResourceOperation, final ICallback<ResourceOperation> callback);
+    void patch(final ResourceOperation sourceResourceOperation, final ICallback<? super ResourceOperation> callback);
 
     /**
      * Patches this ResourceOperation with a source
@@ -68,7 +68,7 @@ public interface IResourceOperationRequest extends IHttpRequest {
      * @param newResourceOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ResourceOperation newResourceOperation, final ICallback<ResourceOperation> callback);
+    void post(final ResourceOperation newResourceOperation, final ICallback<? super ResourceOperation> callback);
 
     /**
      * Posts a ResourceOperation with a new object
@@ -85,7 +85,7 @@ public interface IResourceOperationRequest extends IHttpRequest {
      * @param newResourceOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ResourceOperation newResourceOperation, final ICallback<ResourceOperation> callback);
+    void put(final ResourceOperation newResourceOperation, final ICallback<? super ResourceOperation> callback);
 
     /**
      * Posts a ResourceOperation with a new object

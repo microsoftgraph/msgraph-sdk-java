@@ -58,7 +58,7 @@ public class DriveItemVersionContentStreamRequest extends BaseStreamRequest<Driv
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<DriveItemVersion> callback) {
+    public void put(final byte[] fileContents, final ICallback<? super DriveItemVersion> callback) {
         send(fileContents, callback);
     }
 

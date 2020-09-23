@@ -40,7 +40,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, SingleValueLegacyExtendedPropertyCollectionResponse.class, ISingleValueLegacyExtendedPropertyCollectionPage.class);
     }
 
-    public void get(final ICallback<ISingleValueLegacyExtendedPropertyCollectionPage> callback) {
+    public void get(final ICallback<? super ISingleValueLegacyExtendedPropertyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
         return buildFromResponse(response);
     }
 
-    public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback) {
+    public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

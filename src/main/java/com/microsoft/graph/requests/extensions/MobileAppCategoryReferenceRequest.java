@@ -34,7 +34,7 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
         super(requestUrl, client, requestOptions, MobileAppCategory.class);
     }
 
-    public void delete(final ICallback<MobileAppCategory> callback) {
+    public void delete(final ICallback<? super MobileAppCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
      * @param srcMobileAppCategory the MobileAppCategory reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(MobileAppCategory srcMobileAppCategory, final ICallback<MobileAppCategory> callback) {
+    public void put(MobileAppCategory srcMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
         send(HttpMethod.PUT, callback, srcMobileAppCategory);
     }
 

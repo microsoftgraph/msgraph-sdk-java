@@ -37,7 +37,7 @@ public class WorkbookFunctionsDollarFrRequest extends BaseRequest implements IWo
         body = new WorkbookFunctionsDollarFrBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

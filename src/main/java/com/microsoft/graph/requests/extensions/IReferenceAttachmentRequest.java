@@ -21,7 +21,7 @@ public interface IReferenceAttachmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ReferenceAttachment> callback);
+    void get(final ICallback<? super ReferenceAttachment> callback);
 
     /**
      * Gets the ReferenceAttachment from the service
@@ -36,7 +36,7 @@ public interface IReferenceAttachmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ReferenceAttachment> callback);
+    void delete(final ICallback<? super ReferenceAttachment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IReferenceAttachmentRequest extends IHttpRequest {
      * @param sourceReferenceAttachment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ReferenceAttachment sourceReferenceAttachment, final ICallback<ReferenceAttachment> callback);
+    void patch(final ReferenceAttachment sourceReferenceAttachment, final ICallback<? super ReferenceAttachment> callback);
 
     /**
      * Patches this ReferenceAttachment with a source
@@ -68,7 +68,7 @@ public interface IReferenceAttachmentRequest extends IHttpRequest {
      * @param newReferenceAttachment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ReferenceAttachment newReferenceAttachment, final ICallback<ReferenceAttachment> callback);
+    void post(final ReferenceAttachment newReferenceAttachment, final ICallback<? super ReferenceAttachment> callback);
 
     /**
      * Posts a ReferenceAttachment with a new object
@@ -85,7 +85,7 @@ public interface IReferenceAttachmentRequest extends IHttpRequest {
      * @param newReferenceAttachment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ReferenceAttachment newReferenceAttachment, final ICallback<ReferenceAttachment> callback);
+    void put(final ReferenceAttachment newReferenceAttachment, final ICallback<? super ReferenceAttachment> callback);
 
     /**
      * Posts a ReferenceAttachment with a new object

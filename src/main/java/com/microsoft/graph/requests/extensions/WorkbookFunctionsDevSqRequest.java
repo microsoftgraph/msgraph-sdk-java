@@ -37,7 +37,7 @@ public class WorkbookFunctionsDevSqRequest extends BaseRequest implements IWorkb
         body = new WorkbookFunctionsDevSqBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

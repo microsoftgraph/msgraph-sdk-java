@@ -21,7 +21,7 @@ public interface IDeviceCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceCompliancePolicy> callback);
+    void get(final ICallback<? super DeviceCompliancePolicy> callback);
 
     /**
      * Gets the DeviceCompliancePolicy from the service
@@ -36,7 +36,7 @@ public interface IDeviceCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceCompliancePolicy> callback);
+    void delete(final ICallback<? super DeviceCompliancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceCompliancePolicyRequest extends IHttpRequest {
      * @param sourceDeviceCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceCompliancePolicy sourceDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback);
+    void patch(final DeviceCompliancePolicy sourceDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback);
 
     /**
      * Patches this DeviceCompliancePolicy with a source
@@ -68,7 +68,7 @@ public interface IDeviceCompliancePolicyRequest extends IHttpRequest {
      * @param newDeviceCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback);
+    void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback);
 
     /**
      * Posts a DeviceCompliancePolicy with a new object
@@ -85,7 +85,7 @@ public interface IDeviceCompliancePolicyRequest extends IHttpRequest {
      * @param newDeviceCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback);
+    void put(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback);
 
     /**
      * Posts a DeviceCompliancePolicy with a new object

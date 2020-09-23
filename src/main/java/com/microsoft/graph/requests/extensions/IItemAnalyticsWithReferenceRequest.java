@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IItemAnalyticsWithReferenceRequest extends IHttpRequest {
 
-    void post(final ItemAnalytics newItemAnalytics, final IJsonBackedObject payload, final ICallback<ItemAnalytics> callback);
+    void post(final ItemAnalytics newItemAnalytics, final IJsonBackedObject payload, final ICallback<? super ItemAnalytics> callback);
 
     ItemAnalytics post(final ItemAnalytics newItemAnalytics, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<ItemAnalytics> callback);
+    void get(final ICallback<? super ItemAnalytics> callback);
 
     ItemAnalytics get() throws ClientException;
 
-	void delete(final ICallback<ItemAnalytics> callback);
+	void delete(final ICallback<? super ItemAnalytics> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final ItemAnalytics sourceItemAnalytics, final ICallback<ItemAnalytics> callback);
+	void patch(final ItemAnalytics sourceItemAnalytics, final ICallback<? super ItemAnalytics> callback);
 
 	ItemAnalytics patch(final ItemAnalytics sourceItemAnalytics) throws ClientException;
 

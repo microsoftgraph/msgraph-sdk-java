@@ -37,7 +37,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<RestrictedSignIn> callback) {
+    public void get(final ICallback<? super RestrictedSignIn> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<RestrictedSignIn> callback) {
+    public void delete(final ICallback<? super RestrictedSignIn> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @param sourceRestrictedSignIn the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RestrictedSignIn sourceRestrictedSignIn, final ICallback<RestrictedSignIn> callback) {
+    public void patch(final RestrictedSignIn sourceRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback) {
         send(HttpMethod.PATCH, callback, sourceRestrictedSignIn);
     }
 
@@ -96,7 +96,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @param newRestrictedSignIn the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<RestrictedSignIn> callback) {
+    public void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback) {
         send(HttpMethod.POST, callback, newRestrictedSignIn);
     }
 
@@ -117,7 +117,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @param newRestrictedSignIn the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RestrictedSignIn newRestrictedSignIn, final ICallback<RestrictedSignIn> callback) {
+    public void put(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback) {
         send(HttpMethod.PUT, callback, newRestrictedSignIn);
     }
 

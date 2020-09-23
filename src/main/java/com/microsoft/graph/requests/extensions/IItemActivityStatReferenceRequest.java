@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IItemActivityStatReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<ItemActivityStat> callback);
+    void delete(final ICallback<? super ItemActivityStat> callback);
 
     ItemActivityStat delete() throws ClientException;
 
@@ -50,7 +50,7 @@ public interface IItemActivityStatReferenceRequest extends IHttpRequest {
      * @param srcItemActivityStat the ItemActivityStat to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(ItemActivityStat srcItemActivityStat, final ICallback<ItemActivityStat> callback);
+    void put(ItemActivityStat srcItemActivityStat, final ICallback<? super ItemActivityStat> callback);
 
     /**
      * Puts the ItemActivityStat

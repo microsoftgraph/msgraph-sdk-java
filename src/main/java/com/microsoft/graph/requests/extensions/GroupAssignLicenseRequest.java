@@ -37,7 +37,7 @@ public class GroupAssignLicenseRequest extends BaseRequest implements IGroupAssi
         body = new GroupAssignLicenseBody();
     }
 
-    public void post(final ICallback<Group> callback) {
+    public void post(final ICallback<? super Group> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

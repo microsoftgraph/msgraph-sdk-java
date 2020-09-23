@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICallRecordCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICallRecordCollectionPage> callback);
+    void get(final ICallback<? super ICallRecordCollectionPage> callback);
 
     ICallRecordCollectionPage get() throws ClientException;
 
-    void post(final CallRecord newCallRecord, final ICallback<CallRecord> callback);
+    void post(final CallRecord newCallRecord, final ICallback<? super CallRecord> callback);
 
     CallRecord post(final CallRecord newCallRecord) throws ClientException;
 

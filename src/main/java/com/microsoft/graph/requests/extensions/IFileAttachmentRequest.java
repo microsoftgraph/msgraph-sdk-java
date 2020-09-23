@@ -21,7 +21,7 @@ public interface IFileAttachmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<FileAttachment> callback);
+    void get(final ICallback<? super FileAttachment> callback);
 
     /**
      * Gets the FileAttachment from the service
@@ -36,7 +36,7 @@ public interface IFileAttachmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<FileAttachment> callback);
+    void delete(final ICallback<? super FileAttachment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IFileAttachmentRequest extends IHttpRequest {
      * @param sourceFileAttachment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final FileAttachment sourceFileAttachment, final ICallback<FileAttachment> callback);
+    void patch(final FileAttachment sourceFileAttachment, final ICallback<? super FileAttachment> callback);
 
     /**
      * Patches this FileAttachment with a source
@@ -68,7 +68,7 @@ public interface IFileAttachmentRequest extends IHttpRequest {
      * @param newFileAttachment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final FileAttachment newFileAttachment, final ICallback<FileAttachment> callback);
+    void post(final FileAttachment newFileAttachment, final ICallback<? super FileAttachment> callback);
 
     /**
      * Posts a FileAttachment with a new object
@@ -85,7 +85,7 @@ public interface IFileAttachmentRequest extends IHttpRequest {
      * @param newFileAttachment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final FileAttachment newFileAttachment, final ICallback<FileAttachment> callback);
+    void put(final FileAttachment newFileAttachment, final ICallback<? super FileAttachment> callback);
 
     /**
      * Posts a FileAttachment with a new object

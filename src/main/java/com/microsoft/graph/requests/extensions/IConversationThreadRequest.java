@@ -21,7 +21,7 @@ public interface IConversationThreadRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ConversationThread> callback);
+    void get(final ICallback<? super ConversationThread> callback);
 
     /**
      * Gets the ConversationThread from the service
@@ -36,7 +36,7 @@ public interface IConversationThreadRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ConversationThread> callback);
+    void delete(final ICallback<? super ConversationThread> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IConversationThreadRequest extends IHttpRequest {
      * @param sourceConversationThread the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ConversationThread sourceConversationThread, final ICallback<ConversationThread> callback);
+    void patch(final ConversationThread sourceConversationThread, final ICallback<? super ConversationThread> callback);
 
     /**
      * Patches this ConversationThread with a source
@@ -68,7 +68,7 @@ public interface IConversationThreadRequest extends IHttpRequest {
      * @param newConversationThread the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ConversationThread newConversationThread, final ICallback<ConversationThread> callback);
+    void post(final ConversationThread newConversationThread, final ICallback<? super ConversationThread> callback);
 
     /**
      * Posts a ConversationThread with a new object
@@ -85,7 +85,7 @@ public interface IConversationThreadRequest extends IHttpRequest {
      * @param newConversationThread the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ConversationThread newConversationThread, final ICallback<ConversationThread> callback);
+    void put(final ConversationThread newConversationThread, final ICallback<? super ConversationThread> callback);
 
     /**
      * Posts a ConversationThread with a new object

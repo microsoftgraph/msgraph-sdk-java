@@ -39,7 +39,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SharedInsight> callback) {
+    public void get(final ICallback<? super SharedInsight> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SharedInsight> callback) {
+    public void delete(final ICallback<? super SharedInsight> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @param sourceSharedInsight the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharedInsight sourceSharedInsight, final ICallback<SharedInsight> callback) {
+    public void patch(final SharedInsight sourceSharedInsight, final ICallback<? super SharedInsight> callback) {
         send(HttpMethod.PATCH, callback, sourceSharedInsight);
     }
 
@@ -98,7 +98,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @param newSharedInsight the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharedInsight newSharedInsight, final ICallback<SharedInsight> callback) {
+    public void post(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback) {
         send(HttpMethod.POST, callback, newSharedInsight);
     }
 
@@ -119,7 +119,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @param newSharedInsight the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharedInsight newSharedInsight, final ICallback<SharedInsight> callback) {
+    public void put(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback) {
         send(HttpMethod.PUT, callback, newSharedInsight);
     }
 

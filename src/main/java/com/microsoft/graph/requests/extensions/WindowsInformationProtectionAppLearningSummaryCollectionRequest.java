@@ -40,7 +40,7 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequest ext
         super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLearningSummaryCollectionResponse.class, IWindowsInformationProtectionAppLearningSummaryCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsInformationProtectionAppLearningSummaryCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsInformationProtectionAppLearningSummaryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequest ext
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<WindowsInformationProtectionAppLearningSummary> callback) {
+    public void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionAppLearningSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

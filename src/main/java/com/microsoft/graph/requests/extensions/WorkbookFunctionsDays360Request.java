@@ -37,7 +37,7 @@ public class WorkbookFunctionsDays360Request extends BaseRequest implements IWor
         body = new WorkbookFunctionsDays360Body();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

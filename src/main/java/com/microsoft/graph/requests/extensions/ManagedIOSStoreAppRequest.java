@@ -37,7 +37,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedIOSStoreApp> callback) {
+    public void get(final ICallback<? super ManagedIOSStoreApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedIOSStoreApp> callback) {
+    public void delete(final ICallback<? super ManagedIOSStoreApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @param sourceManagedIOSStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedIOSStoreApp sourceManagedIOSStoreApp, final ICallback<ManagedIOSStoreApp> callback) {
+    public void patch(final ManagedIOSStoreApp sourceManagedIOSStoreApp, final ICallback<? super ManagedIOSStoreApp> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedIOSStoreApp);
     }
 
@@ -96,7 +96,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @param newManagedIOSStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<ManagedIOSStoreApp> callback) {
+    public void post(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<? super ManagedIOSStoreApp> callback) {
         send(HttpMethod.POST, callback, newManagedIOSStoreApp);
     }
 
@@ -117,7 +117,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @param newManagedIOSStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<ManagedIOSStoreApp> callback) {
+    public void put(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<? super ManagedIOSStoreApp> callback) {
         send(HttpMethod.PUT, callback, newManagedIOSStoreApp);
     }
 

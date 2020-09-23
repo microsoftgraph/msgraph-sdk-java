@@ -21,7 +21,7 @@ public interface IConversationMemberRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ConversationMember> callback);
+    void get(final ICallback<? super ConversationMember> callback);
 
     /**
      * Gets the ConversationMember from the service
@@ -36,7 +36,7 @@ public interface IConversationMemberRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ConversationMember> callback);
+    void delete(final ICallback<? super ConversationMember> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IConversationMemberRequest extends IHttpRequest {
      * @param sourceConversationMember the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ConversationMember sourceConversationMember, final ICallback<ConversationMember> callback);
+    void patch(final ConversationMember sourceConversationMember, final ICallback<? super ConversationMember> callback);
 
     /**
      * Patches this ConversationMember with a source
@@ -68,7 +68,7 @@ public interface IConversationMemberRequest extends IHttpRequest {
      * @param newConversationMember the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ConversationMember newConversationMember, final ICallback<ConversationMember> callback);
+    void post(final ConversationMember newConversationMember, final ICallback<? super ConversationMember> callback);
 
     /**
      * Posts a ConversationMember with a new object
@@ -85,7 +85,7 @@ public interface IConversationMemberRequest extends IHttpRequest {
      * @param newConversationMember the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ConversationMember newConversationMember, final ICallback<ConversationMember> callback);
+    void put(final ConversationMember newConversationMember, final ICallback<? super ConversationMember> callback);
 
     /**
      * Posts a ConversationMember with a new object

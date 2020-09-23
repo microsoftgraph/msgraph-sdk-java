@@ -25,11 +25,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IParticipantCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IParticipantCollectionPage> callback);
+    void get(final ICallback<? super IParticipantCollectionPage> callback);
 
     IParticipantCollectionPage get() throws ClientException;
 
-    void post(final Participant newParticipant, final ICallback<Participant> callback);
+    void post(final Participant newParticipant, final ICallback<? super Participant> callback);
 
     Participant post(final Participant newParticipant) throws ClientException;
 

@@ -36,7 +36,7 @@ public class ServicePrincipalRemoveKeyRequest extends BaseRequest implements ISe
         body = new ServicePrincipalRemoveKeyBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

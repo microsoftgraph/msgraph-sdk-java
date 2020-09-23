@@ -53,7 +53,7 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DirectoryObject> callback) {
+    public void get(final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DirectoryObject> callback) {
+    public void delete(final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +91,7 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
      * @param sourceDirectoryObject the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryObject sourceDirectoryObject, final ICallback<DirectoryObject> callback) {
+    public void patch(final DirectoryObject sourceDirectoryObject, final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryObject);
     }
 
@@ -112,7 +112,7 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
      * @param newDirectoryObject the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {
+    public void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.POST, callback, newDirectoryObject);
     }
 
@@ -133,7 +133,7 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
      * @param newDirectoryObject the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {
+    public void put(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {
         send(HttpMethod.PUT, callback, newDirectoryObject);
     }
 

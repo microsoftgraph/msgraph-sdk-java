@@ -36,7 +36,7 @@ public class WorkbookFilterApplyCellColorFilterRequest extends BaseRequest imple
         body = new WorkbookFilterApplyCellColorFilterBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

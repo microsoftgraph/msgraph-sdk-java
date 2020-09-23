@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICallCancelMediaProcessingRequest extends IHttpRequest {
 
-    void post(final ICallback<CancelMediaProcessingOperation> callback);
+    void post(final ICallback<? super CancelMediaProcessingOperation> callback);
 
     CancelMediaProcessingOperation post() throws ClientException;
 

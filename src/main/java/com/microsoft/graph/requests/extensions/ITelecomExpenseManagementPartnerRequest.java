@@ -21,7 +21,7 @@ public interface ITelecomExpenseManagementPartnerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TelecomExpenseManagementPartner> callback);
+    void get(final ICallback<? super TelecomExpenseManagementPartner> callback);
 
     /**
      * Gets the TelecomExpenseManagementPartner from the service
@@ -36,7 +36,7 @@ public interface ITelecomExpenseManagementPartnerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TelecomExpenseManagementPartner> callback);
+    void delete(final ICallback<? super TelecomExpenseManagementPartner> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITelecomExpenseManagementPartnerRequest extends IHttpRequest {
      * @param sourceTelecomExpenseManagementPartner the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback);
+    void patch(final TelecomExpenseManagementPartner sourceTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback);
 
     /**
      * Patches this TelecomExpenseManagementPartner with a source
@@ -68,7 +68,7 @@ public interface ITelecomExpenseManagementPartnerRequest extends IHttpRequest {
      * @param newTelecomExpenseManagementPartner the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback);
+    void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback);
 
     /**
      * Posts a TelecomExpenseManagementPartner with a new object
@@ -85,7 +85,7 @@ public interface ITelecomExpenseManagementPartnerRequest extends IHttpRequest {
      * @param newTelecomExpenseManagementPartner the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback);
+    void put(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback);
 
     /**
      * Posts a TelecomExpenseManagementPartner with a new object

@@ -21,7 +21,7 @@ public interface IWorkbookTableRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookTable> callback);
+    void get(final ICallback<? super WorkbookTable> callback);
 
     /**
      * Gets the WorkbookTable from the service
@@ -36,7 +36,7 @@ public interface IWorkbookTableRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookTable> callback);
+    void delete(final ICallback<? super WorkbookTable> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookTableRequest extends IHttpRequest {
      * @param sourceWorkbookTable the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookTable sourceWorkbookTable, final ICallback<WorkbookTable> callback);
+    void patch(final WorkbookTable sourceWorkbookTable, final ICallback<? super WorkbookTable> callback);
 
     /**
      * Patches this WorkbookTable with a source
@@ -68,7 +68,7 @@ public interface IWorkbookTableRequest extends IHttpRequest {
      * @param newWorkbookTable the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookTable newWorkbookTable, final ICallback<WorkbookTable> callback);
+    void post(final WorkbookTable newWorkbookTable, final ICallback<? super WorkbookTable> callback);
 
     /**
      * Posts a WorkbookTable with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookTableRequest extends IHttpRequest {
      * @param newWorkbookTable the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookTable newWorkbookTable, final ICallback<WorkbookTable> callback);
+    void put(final WorkbookTable newWorkbookTable, final ICallback<? super WorkbookTable> callback);
 
     /**
      * Posts a WorkbookTable with a new object

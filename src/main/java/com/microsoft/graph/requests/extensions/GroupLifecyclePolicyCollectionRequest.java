@@ -39,7 +39,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, GroupLifecyclePolicyCollectionResponse.class, IGroupLifecyclePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IGroupLifecyclePolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IGroupLifecyclePolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback) {
+    public void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupLifecyclePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

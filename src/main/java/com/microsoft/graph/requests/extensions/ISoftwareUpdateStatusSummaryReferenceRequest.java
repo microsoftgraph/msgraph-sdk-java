@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ISoftwareUpdateStatusSummaryReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<SoftwareUpdateStatusSummary> callback);
+    void delete(final ICallback<? super SoftwareUpdateStatusSummary> callback);
 
     SoftwareUpdateStatusSummary delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface ISoftwareUpdateStatusSummaryReferenceRequest extends IHttpReque
      * @param srcSoftwareUpdateStatusSummary the SoftwareUpdateStatusSummary to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(SoftwareUpdateStatusSummary srcSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback);
+    void put(SoftwareUpdateStatusSummary srcSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback);
 
     /**
      * Puts the SoftwareUpdateStatusSummary

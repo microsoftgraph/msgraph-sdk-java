@@ -35,7 +35,7 @@ public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseColl
         super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, IClaimsMappingPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IClaimsMappingPolicyCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IClaimsMappingPolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

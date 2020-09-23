@@ -21,7 +21,7 @@ public interface ITokenLifetimePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TokenLifetimePolicy> callback);
+    void get(final ICallback<? super TokenLifetimePolicy> callback);
 
     /**
      * Gets the TokenLifetimePolicy from the service
@@ -36,7 +36,7 @@ public interface ITokenLifetimePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TokenLifetimePolicy> callback);
+    void delete(final ICallback<? super TokenLifetimePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITokenLifetimePolicyRequest extends IHttpRequest {
      * @param sourceTokenLifetimePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TokenLifetimePolicy sourceTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback);
+    void patch(final TokenLifetimePolicy sourceTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback);
 
     /**
      * Patches this TokenLifetimePolicy with a source
@@ -68,7 +68,7 @@ public interface ITokenLifetimePolicyRequest extends IHttpRequest {
      * @param newTokenLifetimePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback);
+    void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback);
 
     /**
      * Posts a TokenLifetimePolicy with a new object
@@ -85,7 +85,7 @@ public interface ITokenLifetimePolicyRequest extends IHttpRequest {
      * @param newTokenLifetimePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback);
+    void put(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback);
 
     /**
      * Posts a TokenLifetimePolicy with a new object

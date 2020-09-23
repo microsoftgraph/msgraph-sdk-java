@@ -36,7 +36,7 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, EducationUserCollectionResponse.class, IEducationUserCollectionPage.class);
     }
 
-    public void post(final EducationUser newEducationUser, final ICallback<EducationUser> callback) {
+    public void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/users/" + newEducationUser.id);
         new EducationUserWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

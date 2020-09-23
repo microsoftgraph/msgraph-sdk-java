@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISiteCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISiteCollectionPage> callback);
+    void get(final ICallback<? super ISiteCollectionPage> callback);
 
     ISiteCollectionPage get() throws ClientException;
 
-    void post(final Site newSite, final ICallback<Site> callback);
+    void post(final Site newSite, final ICallback<? super Site> callback);
 
     Site post(final Site newSite) throws ClientException;
 

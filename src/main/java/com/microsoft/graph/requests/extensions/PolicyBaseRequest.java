@@ -52,7 +52,7 @@ public class PolicyBaseRequest extends BaseRequest implements IPolicyBaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PolicyBase> callback) {
+    public void get(final ICallback<? super PolicyBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class PolicyBaseRequest extends BaseRequest implements IPolicyBaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PolicyBase> callback) {
+    public void delete(final ICallback<? super PolicyBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class PolicyBaseRequest extends BaseRequest implements IPolicyBaseRequest
      * @param sourcePolicyBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PolicyBase sourcePolicyBase, final ICallback<PolicyBase> callback) {
+    public void patch(final PolicyBase sourcePolicyBase, final ICallback<? super PolicyBase> callback) {
         send(HttpMethod.PATCH, callback, sourcePolicyBase);
     }
 
@@ -111,7 +111,7 @@ public class PolicyBaseRequest extends BaseRequest implements IPolicyBaseRequest
      * @param newPolicyBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PolicyBase newPolicyBase, final ICallback<PolicyBase> callback) {
+    public void post(final PolicyBase newPolicyBase, final ICallback<? super PolicyBase> callback) {
         send(HttpMethod.POST, callback, newPolicyBase);
     }
 
@@ -132,7 +132,7 @@ public class PolicyBaseRequest extends BaseRequest implements IPolicyBaseRequest
      * @param newPolicyBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PolicyBase newPolicyBase, final ICallback<PolicyBase> callback) {
+    public void put(final PolicyBase newPolicyBase, final ICallback<? super PolicyBase> callback) {
         send(HttpMethod.PUT, callback, newPolicyBase);
     }
 

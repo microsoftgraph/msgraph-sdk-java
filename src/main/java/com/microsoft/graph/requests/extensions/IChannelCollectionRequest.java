@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IChannelCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IChannelCollectionPage> callback);
+    void get(final ICallback<? super IChannelCollectionPage> callback);
 
     IChannelCollectionPage get() throws ClientException;
 
-    void post(final Channel newChannel, final ICallback<Channel> callback);
+    void post(final Channel newChannel, final ICallback<? super Channel> callback);
 
     Channel post(final Channel newChannel) throws ClientException;
 

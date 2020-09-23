@@ -40,7 +40,7 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
         super(requestUrl, client, requestOptions, SharedInsightCollectionResponse.class, ISharedInsightCollectionPage.class);
     }
 
-    public void get(final ICallback<ISharedInsightCollectionPage> callback) {
+    public void get(final ICallback<? super ISharedInsightCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
         return buildFromResponse(response);
     }
 
-    public void post(final SharedInsight newSharedInsight, final ICallback<SharedInsight> callback) {
+    public void post(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SharedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -44,7 +44,7 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
     }
 
 
-    public void post(final ICallback<IDirectoryObjectGetByIdsCollectionPage> callback) {
+    public void post(final ICallback<? super IDirectoryObjectGetByIdsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

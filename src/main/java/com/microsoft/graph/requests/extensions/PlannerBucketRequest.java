@@ -41,7 +41,7 @@ public class PlannerBucketRequest extends BaseRequest implements IPlannerBucketR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PlannerBucket> callback) {
+    public void get(final ICallback<? super PlannerBucket> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class PlannerBucketRequest extends BaseRequest implements IPlannerBucketR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PlannerBucket> callback) {
+    public void delete(final ICallback<? super PlannerBucket> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class PlannerBucketRequest extends BaseRequest implements IPlannerBucketR
      * @param sourcePlannerBucket the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerBucket sourcePlannerBucket, final ICallback<PlannerBucket> callback) {
+    public void patch(final PlannerBucket sourcePlannerBucket, final ICallback<? super PlannerBucket> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerBucket);
     }
 
@@ -100,7 +100,7 @@ public class PlannerBucketRequest extends BaseRequest implements IPlannerBucketR
      * @param newPlannerBucket the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerBucket newPlannerBucket, final ICallback<PlannerBucket> callback) {
+    public void post(final PlannerBucket newPlannerBucket, final ICallback<? super PlannerBucket> callback) {
         send(HttpMethod.POST, callback, newPlannerBucket);
     }
 
@@ -121,7 +121,7 @@ public class PlannerBucketRequest extends BaseRequest implements IPlannerBucketR
      * @param newPlannerBucket the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerBucket newPlannerBucket, final ICallback<PlannerBucket> callback) {
+    public void put(final PlannerBucket newPlannerBucket, final ICallback<? super PlannerBucket> callback) {
         send(HttpMethod.PUT, callback, newPlannerBucket);
     }
 

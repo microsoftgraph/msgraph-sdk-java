@@ -21,7 +21,7 @@ public interface IDomainDnsMxRecordRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DomainDnsMxRecord> callback);
+    void get(final ICallback<? super DomainDnsMxRecord> callback);
 
     /**
      * Gets the DomainDnsMxRecord from the service
@@ -36,7 +36,7 @@ public interface IDomainDnsMxRecordRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DomainDnsMxRecord> callback);
+    void delete(final ICallback<? super DomainDnsMxRecord> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDomainDnsMxRecordRequest extends IHttpRequest {
      * @param sourceDomainDnsMxRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DomainDnsMxRecord sourceDomainDnsMxRecord, final ICallback<DomainDnsMxRecord> callback);
+    void patch(final DomainDnsMxRecord sourceDomainDnsMxRecord, final ICallback<? super DomainDnsMxRecord> callback);
 
     /**
      * Patches this DomainDnsMxRecord with a source
@@ -68,7 +68,7 @@ public interface IDomainDnsMxRecordRequest extends IHttpRequest {
      * @param newDomainDnsMxRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<DomainDnsMxRecord> callback);
+    void post(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<? super DomainDnsMxRecord> callback);
 
     /**
      * Posts a DomainDnsMxRecord with a new object
@@ -85,7 +85,7 @@ public interface IDomainDnsMxRecordRequest extends IHttpRequest {
      * @param newDomainDnsMxRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<DomainDnsMxRecord> callback);
+    void put(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<? super DomainDnsMxRecord> callback);
 
     /**
      * Posts a DomainDnsMxRecord with a new object

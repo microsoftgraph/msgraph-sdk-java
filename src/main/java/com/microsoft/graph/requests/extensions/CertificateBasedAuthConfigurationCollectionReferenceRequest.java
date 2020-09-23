@@ -36,7 +36,7 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, ICertificateBasedAuthConfigurationCollectionPage.class);
     }
 
-    public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback) {
+    public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/certificateBasedAuthConfiguration/" + newCertificateBasedAuthConfiguration.id);
         new CertificateBasedAuthConfigurationWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

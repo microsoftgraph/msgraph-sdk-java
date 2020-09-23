@@ -21,7 +21,7 @@ public interface ISubscriptionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Subscription> callback);
+    void get(final ICallback<? super Subscription> callback);
 
     /**
      * Gets the Subscription from the service
@@ -36,7 +36,7 @@ public interface ISubscriptionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Subscription> callback);
+    void delete(final ICallback<? super Subscription> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISubscriptionRequest extends IHttpRequest {
      * @param sourceSubscription the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Subscription sourceSubscription, final ICallback<Subscription> callback);
+    void patch(final Subscription sourceSubscription, final ICallback<? super Subscription> callback);
 
     /**
      * Patches this Subscription with a source
@@ -68,7 +68,7 @@ public interface ISubscriptionRequest extends IHttpRequest {
      * @param newSubscription the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Subscription newSubscription, final ICallback<Subscription> callback);
+    void post(final Subscription newSubscription, final ICallback<? super Subscription> callback);
 
     /**
      * Posts a Subscription with a new object
@@ -85,7 +85,7 @@ public interface ISubscriptionRequest extends IHttpRequest {
      * @param newSubscription the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Subscription newSubscription, final ICallback<Subscription> callback);
+    void put(final Subscription newSubscription, final ICallback<? super Subscription> callback);
 
     /**
      * Posts a Subscription with a new object

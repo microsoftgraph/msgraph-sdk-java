@@ -21,7 +21,7 @@ public interface ICommsOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CommsOperation> callback);
+    void get(final ICallback<? super CommsOperation> callback);
 
     /**
      * Gets the CommsOperation from the service
@@ -36,7 +36,7 @@ public interface ICommsOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CommsOperation> callback);
+    void delete(final ICallback<? super CommsOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICommsOperationRequest extends IHttpRequest {
      * @param sourceCommsOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CommsOperation sourceCommsOperation, final ICallback<CommsOperation> callback);
+    void patch(final CommsOperation sourceCommsOperation, final ICallback<? super CommsOperation> callback);
 
     /**
      * Patches this CommsOperation with a source
@@ -68,7 +68,7 @@ public interface ICommsOperationRequest extends IHttpRequest {
      * @param newCommsOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CommsOperation newCommsOperation, final ICallback<CommsOperation> callback);
+    void post(final CommsOperation newCommsOperation, final ICallback<? super CommsOperation> callback);
 
     /**
      * Posts a CommsOperation with a new object
@@ -85,7 +85,7 @@ public interface ICommsOperationRequest extends IHttpRequest {
      * @param newCommsOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CommsOperation newCommsOperation, final ICallback<CommsOperation> callback);
+    void put(final CommsOperation newCommsOperation, final ICallback<? super CommsOperation> callback);
 
     /**
      * Posts a CommsOperation with a new object

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISecureScoreCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISecureScoreCollectionPage> callback);
+    void get(final ICallback<? super ISecureScoreCollectionPage> callback);
 
     ISecureScoreCollectionPage get() throws ClientException;
 
-    void post(final SecureScore newSecureScore, final ICallback<SecureScore> callback);
+    void post(final SecureScore newSecureScore, final ICallback<? super SecureScore> callback);
 
     SecureScore post(final SecureScore newSecureScore) throws ClientException;
 

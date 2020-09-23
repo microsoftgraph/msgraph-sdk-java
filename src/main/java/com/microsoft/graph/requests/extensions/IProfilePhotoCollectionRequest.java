@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IProfilePhotoCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IProfilePhotoCollectionPage> callback);
+    void get(final ICallback<? super IProfilePhotoCollectionPage> callback);
 
     IProfilePhotoCollectionPage get() throws ClientException;
 
-    void post(final ProfilePhoto newProfilePhoto, final ICallback<ProfilePhoto> callback);
+    void post(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback);
 
     ProfilePhoto post(final ProfilePhoto newProfilePhoto) throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IManagedAppStatusRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedAppStatus> callback);
+    void get(final ICallback<? super ManagedAppStatus> callback);
 
     /**
      * Gets the ManagedAppStatus from the service
@@ -36,7 +36,7 @@ public interface IManagedAppStatusRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedAppStatus> callback);
+    void delete(final ICallback<? super ManagedAppStatus> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAppStatusRequest extends IHttpRequest {
      * @param sourceManagedAppStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedAppStatus sourceManagedAppStatus, final ICallback<ManagedAppStatus> callback);
+    void patch(final ManagedAppStatus sourceManagedAppStatus, final ICallback<? super ManagedAppStatus> callback);
 
     /**
      * Patches this ManagedAppStatus with a source
@@ -68,7 +68,7 @@ public interface IManagedAppStatusRequest extends IHttpRequest {
      * @param newManagedAppStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedAppStatus newManagedAppStatus, final ICallback<ManagedAppStatus> callback);
+    void post(final ManagedAppStatus newManagedAppStatus, final ICallback<? super ManagedAppStatus> callback);
 
     /**
      * Posts a ManagedAppStatus with a new object
@@ -85,7 +85,7 @@ public interface IManagedAppStatusRequest extends IHttpRequest {
      * @param newManagedAppStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedAppStatus newManagedAppStatus, final ICallback<ManagedAppStatus> callback);
+    void put(final ManagedAppStatus newManagedAppStatus, final ICallback<? super ManagedAppStatus> callback);
 
     /**
      * Posts a ManagedAppStatus with a new object

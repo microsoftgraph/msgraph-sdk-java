@@ -21,7 +21,7 @@ public interface IAppRoleAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AppRoleAssignment> callback);
+    void get(final ICallback<? super AppRoleAssignment> callback);
 
     /**
      * Gets the AppRoleAssignment from the service
@@ -36,7 +36,7 @@ public interface IAppRoleAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AppRoleAssignment> callback);
+    void delete(final ICallback<? super AppRoleAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAppRoleAssignmentRequest extends IHttpRequest {
      * @param sourceAppRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AppRoleAssignment sourceAppRoleAssignment, final ICallback<AppRoleAssignment> callback);
+    void patch(final AppRoleAssignment sourceAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback);
 
     /**
      * Patches this AppRoleAssignment with a source
@@ -68,7 +68,7 @@ public interface IAppRoleAssignmentRequest extends IHttpRequest {
      * @param newAppRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<AppRoleAssignment> callback);
+    void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback);
 
     /**
      * Posts a AppRoleAssignment with a new object
@@ -85,7 +85,7 @@ public interface IAppRoleAssignmentRequest extends IHttpRequest {
      * @param newAppRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AppRoleAssignment newAppRoleAssignment, final ICallback<AppRoleAssignment> callback);
+    void put(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback);
 
     /**
      * Posts a AppRoleAssignment with a new object

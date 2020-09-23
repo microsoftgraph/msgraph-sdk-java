@@ -21,7 +21,7 @@ public interface IManagedAndroidLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedAndroidLobApp> callback);
+    void get(final ICallback<? super ManagedAndroidLobApp> callback);
 
     /**
      * Gets the ManagedAndroidLobApp from the service
@@ -36,7 +36,7 @@ public interface IManagedAndroidLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedAndroidLobApp> callback);
+    void delete(final ICallback<? super ManagedAndroidLobApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAndroidLobAppRequest extends IHttpRequest {
      * @param sourceManagedAndroidLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedAndroidLobApp sourceManagedAndroidLobApp, final ICallback<ManagedAndroidLobApp> callback);
+    void patch(final ManagedAndroidLobApp sourceManagedAndroidLobApp, final ICallback<? super ManagedAndroidLobApp> callback);
 
     /**
      * Patches this ManagedAndroidLobApp with a source
@@ -68,7 +68,7 @@ public interface IManagedAndroidLobAppRequest extends IHttpRequest {
      * @param newManagedAndroidLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<ManagedAndroidLobApp> callback);
+    void post(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<? super ManagedAndroidLobApp> callback);
 
     /**
      * Posts a ManagedAndroidLobApp with a new object
@@ -85,7 +85,7 @@ public interface IManagedAndroidLobAppRequest extends IHttpRequest {
      * @param newManagedAndroidLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<ManagedAndroidLobApp> callback);
+    void put(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<? super ManagedAndroidLobApp> callback);
 
     /**
      * Posts a ManagedAndroidLobApp with a new object

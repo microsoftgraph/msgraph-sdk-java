@@ -21,7 +21,7 @@ public interface IRoleAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RoleAssignment> callback);
+    void get(final ICallback<? super RoleAssignment> callback);
 
     /**
      * Gets the RoleAssignment from the service
@@ -36,7 +36,7 @@ public interface IRoleAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RoleAssignment> callback);
+    void delete(final ICallback<? super RoleAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRoleAssignmentRequest extends IHttpRequest {
      * @param sourceRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RoleAssignment sourceRoleAssignment, final ICallback<RoleAssignment> callback);
+    void patch(final RoleAssignment sourceRoleAssignment, final ICallback<? super RoleAssignment> callback);
 
     /**
      * Patches this RoleAssignment with a source
@@ -68,7 +68,7 @@ public interface IRoleAssignmentRequest extends IHttpRequest {
      * @param newRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RoleAssignment newRoleAssignment, final ICallback<RoleAssignment> callback);
+    void post(final RoleAssignment newRoleAssignment, final ICallback<? super RoleAssignment> callback);
 
     /**
      * Posts a RoleAssignment with a new object
@@ -85,7 +85,7 @@ public interface IRoleAssignmentRequest extends IHttpRequest {
      * @param newRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RoleAssignment newRoleAssignment, final ICallback<RoleAssignment> callback);
+    void put(final RoleAssignment newRoleAssignment, final ICallback<? super RoleAssignment> callback);
 
     /**
      * Posts a RoleAssignment with a new object

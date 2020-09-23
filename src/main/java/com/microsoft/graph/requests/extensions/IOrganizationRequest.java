@@ -21,7 +21,7 @@ public interface IOrganizationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Organization> callback);
+    void get(final ICallback<? super Organization> callback);
 
     /**
      * Gets the Organization from the service
@@ -36,7 +36,7 @@ public interface IOrganizationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Organization> callback);
+    void delete(final ICallback<? super Organization> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOrganizationRequest extends IHttpRequest {
      * @param sourceOrganization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Organization sourceOrganization, final ICallback<Organization> callback);
+    void patch(final Organization sourceOrganization, final ICallback<? super Organization> callback);
 
     /**
      * Patches this Organization with a source
@@ -68,7 +68,7 @@ public interface IOrganizationRequest extends IHttpRequest {
      * @param newOrganization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Organization newOrganization, final ICallback<Organization> callback);
+    void post(final Organization newOrganization, final ICallback<? super Organization> callback);
 
     /**
      * Posts a Organization with a new object
@@ -85,7 +85,7 @@ public interface IOrganizationRequest extends IHttpRequest {
      * @param newOrganization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Organization newOrganization, final ICallback<Organization> callback);
+    void put(final Organization newOrganization, final ICallback<? super Organization> callback);
 
     /**
      * Posts a Organization with a new object

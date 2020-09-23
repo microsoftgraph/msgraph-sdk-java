@@ -37,7 +37,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
         super(requestUrl, client, requestOptions, SiteCollectionResponse.class, ISiteCollectionPage.class);
     }
 
-    public void post(final Site newSite, final ICallback<Site> callback) {
+    public void post(final Site newSite, final ICallback<? super Site> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/sites/" + newSite.id);
         new SiteWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

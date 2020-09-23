@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IChatCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IChatCollectionPage> callback);
+    void get(final ICallback<? super IChatCollectionPage> callback);
 
     IChatCollectionPage get() throws ClientException;
 
-    void post(final Chat newChat, final ICallback<Chat> callback);
+    void post(final Chat newChat, final ICallback<? super Chat> callback);
 
     Chat post(final Chat newChat) throws ClientException;
 

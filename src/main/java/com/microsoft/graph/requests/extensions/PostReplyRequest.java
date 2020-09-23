@@ -36,7 +36,7 @@ public class PostReplyRequest extends BaseRequest implements IPostReplyRequest {
         body = new PostReplyBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

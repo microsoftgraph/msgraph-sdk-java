@@ -21,7 +21,7 @@ public interface ISharedDriveItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SharedDriveItem> callback);
+    void get(final ICallback<? super SharedDriveItem> callback);
 
     /**
      * Gets the SharedDriveItem from the service
@@ -36,7 +36,7 @@ public interface ISharedDriveItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SharedDriveItem> callback);
+    void delete(final ICallback<? super SharedDriveItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISharedDriveItemRequest extends IHttpRequest {
      * @param sourceSharedDriveItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SharedDriveItem sourceSharedDriveItem, final ICallback<SharedDriveItem> callback);
+    void patch(final SharedDriveItem sourceSharedDriveItem, final ICallback<? super SharedDriveItem> callback);
 
     /**
      * Patches this SharedDriveItem with a source
@@ -68,7 +68,7 @@ public interface ISharedDriveItemRequest extends IHttpRequest {
      * @param newSharedDriveItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SharedDriveItem newSharedDriveItem, final ICallback<SharedDriveItem> callback);
+    void post(final SharedDriveItem newSharedDriveItem, final ICallback<? super SharedDriveItem> callback);
 
     /**
      * Posts a SharedDriveItem with a new object
@@ -85,7 +85,7 @@ public interface ISharedDriveItemRequest extends IHttpRequest {
      * @param newSharedDriveItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SharedDriveItem newSharedDriveItem, final ICallback<SharedDriveItem> callback);
+    void put(final SharedDriveItem newSharedDriveItem, final ICallback<? super SharedDriveItem> callback);
 
     /**
      * Posts a SharedDriveItem with a new object

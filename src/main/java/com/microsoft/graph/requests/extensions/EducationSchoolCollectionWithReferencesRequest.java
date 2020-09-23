@@ -35,7 +35,7 @@ public class EducationSchoolCollectionWithReferencesRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, IEducationSchoolCollectionPage.class);
     }
 
-    public void get(final ICallback<IEducationSchoolCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IEducationSchoolCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

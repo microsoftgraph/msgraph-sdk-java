@@ -37,7 +37,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UrlAssessmentRequest> callback) {
+    public void get(final ICallback<? super UrlAssessmentRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UrlAssessmentRequest> callback) {
+    public void delete(final ICallback<? super UrlAssessmentRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @param sourceUrlAssessmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UrlAssessmentRequest sourceUrlAssessmentRequest, final ICallback<UrlAssessmentRequest> callback) {
+    public void patch(final UrlAssessmentRequest sourceUrlAssessmentRequest, final ICallback<? super UrlAssessmentRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceUrlAssessmentRequest);
     }
 
@@ -96,7 +96,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @param newUrlAssessmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<UrlAssessmentRequest> callback) {
+    public void post(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<? super UrlAssessmentRequest> callback) {
         send(HttpMethod.POST, callback, newUrlAssessmentRequest);
     }
 
@@ -117,7 +117,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @param newUrlAssessmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<UrlAssessmentRequest> callback) {
+    public void put(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<? super UrlAssessmentRequest> callback) {
         send(HttpMethod.PUT, callback, newUrlAssessmentRequest);
     }
 

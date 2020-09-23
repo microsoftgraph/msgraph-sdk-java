@@ -37,7 +37,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceConfigurationDeviceStatus> callback) {
+    public void get(final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceConfigurationDeviceStatus> callback) {
+    public void delete(final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @param sourceDeviceConfigurationDeviceStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationDeviceStatus sourceDeviceConfigurationDeviceStatus, final ICallback<DeviceConfigurationDeviceStatus> callback) {
+    public void patch(final DeviceConfigurationDeviceStatus sourceDeviceConfigurationDeviceStatus, final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationDeviceStatus);
     }
 
@@ -96,7 +96,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @param newDeviceConfigurationDeviceStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus, final ICallback<DeviceConfigurationDeviceStatus> callback) {
+    public void post(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus, final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationDeviceStatus);
     }
 
@@ -117,7 +117,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @param newDeviceConfigurationDeviceStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus, final ICallback<DeviceConfigurationDeviceStatus> callback) {
+    public void put(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus, final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationDeviceStatus);
     }
 

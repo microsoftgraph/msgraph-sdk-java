@@ -39,7 +39,7 @@ public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<Dr
     }
 
 
-    public void get(final ICallback<IDriveSharedWithMeCollectionPage> callback) {
+    public void get(final ICallback<? super IDriveSharedWithMeCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

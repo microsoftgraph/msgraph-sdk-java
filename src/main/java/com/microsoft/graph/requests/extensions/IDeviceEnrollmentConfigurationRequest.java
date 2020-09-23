@@ -21,7 +21,7 @@ public interface IDeviceEnrollmentConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceEnrollmentConfiguration> callback);
+    void get(final ICallback<? super DeviceEnrollmentConfiguration> callback);
 
     /**
      * Gets the DeviceEnrollmentConfiguration from the service
@@ -36,7 +36,7 @@ public interface IDeviceEnrollmentConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceEnrollmentConfiguration> callback);
+    void delete(final ICallback<? super DeviceEnrollmentConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceEnrollmentConfigurationRequest extends IHttpRequest {
      * @param sourceDeviceEnrollmentConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceEnrollmentConfiguration sourceDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback);
+    void patch(final DeviceEnrollmentConfiguration sourceDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback);
 
     /**
      * Patches this DeviceEnrollmentConfiguration with a source
@@ -68,7 +68,7 @@ public interface IDeviceEnrollmentConfigurationRequest extends IHttpRequest {
      * @param newDeviceEnrollmentConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback);
+    void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback);
 
     /**
      * Posts a DeviceEnrollmentConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IDeviceEnrollmentConfigurationRequest extends IHttpRequest {
      * @param newDeviceEnrollmentConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback);
+    void put(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback);
 
     /**
      * Posts a DeviceEnrollmentConfiguration with a new object

@@ -21,7 +21,7 @@ public interface IManagedDeviceOverviewRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedDeviceOverview> callback);
+    void get(final ICallback<? super ManagedDeviceOverview> callback);
 
     /**
      * Gets the ManagedDeviceOverview from the service
@@ -36,7 +36,7 @@ public interface IManagedDeviceOverviewRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedDeviceOverview> callback);
+    void delete(final ICallback<? super ManagedDeviceOverview> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedDeviceOverviewRequest extends IHttpRequest {
      * @param sourceManagedDeviceOverview the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedDeviceOverview sourceManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback);
+    void patch(final ManagedDeviceOverview sourceManagedDeviceOverview, final ICallback<? super ManagedDeviceOverview> callback);
 
     /**
      * Patches this ManagedDeviceOverview with a source
@@ -68,7 +68,7 @@ public interface IManagedDeviceOverviewRequest extends IHttpRequest {
      * @param newManagedDeviceOverview the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedDeviceOverview newManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback);
+    void post(final ManagedDeviceOverview newManagedDeviceOverview, final ICallback<? super ManagedDeviceOverview> callback);
 
     /**
      * Posts a ManagedDeviceOverview with a new object
@@ -85,7 +85,7 @@ public interface IManagedDeviceOverviewRequest extends IHttpRequest {
      * @param newManagedDeviceOverview the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedDeviceOverview newManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback);
+    void put(final ManagedDeviceOverview newManagedDeviceOverview, final ICallback<? super ManagedDeviceOverview> callback);
 
     /**
      * Posts a ManagedDeviceOverview with a new object

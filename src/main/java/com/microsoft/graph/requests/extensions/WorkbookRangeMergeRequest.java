@@ -36,7 +36,7 @@ public class WorkbookRangeMergeRequest extends BaseRequest implements IWorkbookR
         body = new WorkbookRangeMergeBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

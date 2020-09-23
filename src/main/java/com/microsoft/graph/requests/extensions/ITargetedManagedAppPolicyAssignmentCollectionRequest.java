@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITargetedManagedAppPolicyAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITargetedManagedAppPolicyAssignmentCollectionPage> callback);
+    void get(final ICallback<? super ITargetedManagedAppPolicyAssignmentCollectionPage> callback);
 
     ITargetedManagedAppPolicyAssignmentCollectionPage get() throws ClientException;
 
-    void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback);
+    void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback);
 
     TargetedManagedAppPolicyAssignment post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException;
 

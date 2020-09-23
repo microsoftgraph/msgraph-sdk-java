@@ -37,7 +37,7 @@ public class IosLobAppRequest extends BaseRequest implements IIosLobAppRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosLobApp> callback) {
+    public void get(final ICallback<? super IosLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosLobAppRequest extends BaseRequest implements IIosLobAppRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosLobApp> callback) {
+    public void delete(final ICallback<? super IosLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosLobAppRequest extends BaseRequest implements IIosLobAppRequest {
      * @param sourceIosLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosLobApp sourceIosLobApp, final ICallback<IosLobApp> callback) {
+    public void patch(final IosLobApp sourceIosLobApp, final ICallback<? super IosLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceIosLobApp);
     }
 
@@ -96,7 +96,7 @@ public class IosLobAppRequest extends BaseRequest implements IIosLobAppRequest {
      * @param newIosLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosLobApp newIosLobApp, final ICallback<IosLobApp> callback) {
+    public void post(final IosLobApp newIosLobApp, final ICallback<? super IosLobApp> callback) {
         send(HttpMethod.POST, callback, newIosLobApp);
     }
 
@@ -117,7 +117,7 @@ public class IosLobAppRequest extends BaseRequest implements IIosLobAppRequest {
      * @param newIosLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosLobApp newIosLobApp, final ICallback<IosLobApp> callback) {
+    public void put(final IosLobApp newIosLobApp, final ICallback<? super IosLobApp> callback) {
         send(HttpMethod.PUT, callback, newIosLobApp);
     }
 

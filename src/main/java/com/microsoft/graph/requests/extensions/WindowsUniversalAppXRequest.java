@@ -37,7 +37,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsUniversalAppX> callback) {
+    public void get(final ICallback<? super WindowsUniversalAppX> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsUniversalAppX> callback) {
+    public void delete(final ICallback<? super WindowsUniversalAppX> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @param sourceWindowsUniversalAppX the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsUniversalAppX sourceWindowsUniversalAppX, final ICallback<WindowsUniversalAppX> callback) {
+    public void patch(final WindowsUniversalAppX sourceWindowsUniversalAppX, final ICallback<? super WindowsUniversalAppX> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsUniversalAppX);
     }
 
@@ -96,7 +96,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @param newWindowsUniversalAppX the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsUniversalAppX newWindowsUniversalAppX, final ICallback<WindowsUniversalAppX> callback) {
+    public void post(final WindowsUniversalAppX newWindowsUniversalAppX, final ICallback<? super WindowsUniversalAppX> callback) {
         send(HttpMethod.POST, callback, newWindowsUniversalAppX);
     }
 
@@ -117,7 +117,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @param newWindowsUniversalAppX the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsUniversalAppX newWindowsUniversalAppX, final ICallback<WindowsUniversalAppX> callback) {
+    public void put(final WindowsUniversalAppX newWindowsUniversalAppX, final ICallback<? super WindowsUniversalAppX> callback) {
         send(HttpMethod.PUT, callback, newWindowsUniversalAppX);
     }
 

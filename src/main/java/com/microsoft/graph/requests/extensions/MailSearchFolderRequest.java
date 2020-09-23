@@ -37,7 +37,7 @@ public class MailSearchFolderRequest extends BaseRequest implements IMailSearchF
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MailSearchFolder> callback) {
+    public void get(final ICallback<? super MailSearchFolder> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MailSearchFolderRequest extends BaseRequest implements IMailSearchF
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MailSearchFolder> callback) {
+    public void delete(final ICallback<? super MailSearchFolder> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MailSearchFolderRequest extends BaseRequest implements IMailSearchF
      * @param sourceMailSearchFolder the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MailSearchFolder sourceMailSearchFolder, final ICallback<MailSearchFolder> callback) {
+    public void patch(final MailSearchFolder sourceMailSearchFolder, final ICallback<? super MailSearchFolder> callback) {
         send(HttpMethod.PATCH, callback, sourceMailSearchFolder);
     }
 
@@ -96,7 +96,7 @@ public class MailSearchFolderRequest extends BaseRequest implements IMailSearchF
      * @param newMailSearchFolder the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MailSearchFolder newMailSearchFolder, final ICallback<MailSearchFolder> callback) {
+    public void post(final MailSearchFolder newMailSearchFolder, final ICallback<? super MailSearchFolder> callback) {
         send(HttpMethod.POST, callback, newMailSearchFolder);
     }
 
@@ -117,7 +117,7 @@ public class MailSearchFolderRequest extends BaseRequest implements IMailSearchF
      * @param newMailSearchFolder the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MailSearchFolder newMailSearchFolder, final ICallback<MailSearchFolder> callback) {
+    public void put(final MailSearchFolder newMailSearchFolder, final ICallback<? super MailSearchFolder> callback) {
         send(HttpMethod.PUT, callback, newMailSearchFolder);
     }
 

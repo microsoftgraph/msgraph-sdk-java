@@ -21,7 +21,7 @@ public interface IWorkbookChartFontRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartFont> callback);
+    void get(final ICallback<? super WorkbookChartFont> callback);
 
     /**
      * Gets the WorkbookChartFont from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartFontRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartFont> callback);
+    void delete(final ICallback<? super WorkbookChartFont> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartFontRequest extends IHttpRequest {
      * @param sourceWorkbookChartFont the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartFont sourceWorkbookChartFont, final ICallback<WorkbookChartFont> callback);
+    void patch(final WorkbookChartFont sourceWorkbookChartFont, final ICallback<? super WorkbookChartFont> callback);
 
     /**
      * Patches this WorkbookChartFont with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartFontRequest extends IHttpRequest {
      * @param newWorkbookChartFont the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartFont newWorkbookChartFont, final ICallback<WorkbookChartFont> callback);
+    void post(final WorkbookChartFont newWorkbookChartFont, final ICallback<? super WorkbookChartFont> callback);
 
     /**
      * Posts a WorkbookChartFont with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartFontRequest extends IHttpRequest {
      * @param newWorkbookChartFont the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartFont newWorkbookChartFont, final ICallback<WorkbookChartFont> callback);
+    void put(final WorkbookChartFont newWorkbookChartFont, final ICallback<? super WorkbookChartFont> callback);
 
     /**
      * Posts a WorkbookChartFont with a new object

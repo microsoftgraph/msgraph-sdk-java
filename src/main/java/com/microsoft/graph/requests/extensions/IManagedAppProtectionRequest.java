@@ -21,7 +21,7 @@ public interface IManagedAppProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedAppProtection> callback);
+    void get(final ICallback<? super ManagedAppProtection> callback);
 
     /**
      * Gets the ManagedAppProtection from the service
@@ -36,7 +36,7 @@ public interface IManagedAppProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedAppProtection> callback);
+    void delete(final ICallback<? super ManagedAppProtection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAppProtectionRequest extends IHttpRequest {
      * @param sourceManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedAppProtection sourceManagedAppProtection, final ICallback<ManagedAppProtection> callback);
+    void patch(final ManagedAppProtection sourceManagedAppProtection, final ICallback<? super ManagedAppProtection> callback);
 
     /**
      * Patches this ManagedAppProtection with a source
@@ -68,7 +68,7 @@ public interface IManagedAppProtectionRequest extends IHttpRequest {
      * @param newManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedAppProtection newManagedAppProtection, final ICallback<ManagedAppProtection> callback);
+    void post(final ManagedAppProtection newManagedAppProtection, final ICallback<? super ManagedAppProtection> callback);
 
     /**
      * Posts a ManagedAppProtection with a new object
@@ -85,7 +85,7 @@ public interface IManagedAppProtectionRequest extends IHttpRequest {
      * @param newManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedAppProtection newManagedAppProtection, final ICallback<ManagedAppProtection> callback);
+    void put(final ManagedAppProtection newManagedAppProtection, final ICallback<? super ManagedAppProtection> callback);
 
     /**
      * Posts a ManagedAppProtection with a new object

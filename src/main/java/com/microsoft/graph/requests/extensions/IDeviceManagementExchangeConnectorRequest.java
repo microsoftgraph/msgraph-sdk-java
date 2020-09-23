@@ -21,7 +21,7 @@ public interface IDeviceManagementExchangeConnectorRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementExchangeConnector> callback);
+    void get(final ICallback<? super DeviceManagementExchangeConnector> callback);
 
     /**
      * Gets the DeviceManagementExchangeConnector from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementExchangeConnectorRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementExchangeConnector> callback);
+    void delete(final ICallback<? super DeviceManagementExchangeConnector> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementExchangeConnectorRequest extends IHttpRequest 
      * @param sourceDeviceManagementExchangeConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementExchangeConnector sourceDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback);
+    void patch(final DeviceManagementExchangeConnector sourceDeviceManagementExchangeConnector, final ICallback<? super DeviceManagementExchangeConnector> callback);
 
     /**
      * Patches this DeviceManagementExchangeConnector with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementExchangeConnectorRequest extends IHttpRequest 
      * @param newDeviceManagementExchangeConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback);
+    void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<? super DeviceManagementExchangeConnector> callback);
 
     /**
      * Posts a DeviceManagementExchangeConnector with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementExchangeConnectorRequest extends IHttpRequest 
      * @param newDeviceManagementExchangeConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback);
+    void put(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<? super DeviceManagementExchangeConnector> callback);
 
     /**
      * Posts a DeviceManagementExchangeConnector with a new object

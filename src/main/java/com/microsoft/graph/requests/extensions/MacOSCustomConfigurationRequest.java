@@ -37,7 +37,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest implements IMac
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MacOSCustomConfiguration> callback) {
+    public void get(final ICallback<? super MacOSCustomConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest implements IMac
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MacOSCustomConfiguration> callback) {
+    public void delete(final ICallback<? super MacOSCustomConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest implements IMac
      * @param sourceMacOSCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSCustomConfiguration sourceMacOSCustomConfiguration, final ICallback<MacOSCustomConfiguration> callback) {
+    public void patch(final MacOSCustomConfiguration sourceMacOSCustomConfiguration, final ICallback<? super MacOSCustomConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSCustomConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest implements IMac
      * @param newMacOSCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<MacOSCustomConfiguration> callback) {
+    public void post(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<? super MacOSCustomConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSCustomConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest implements IMac
      * @param newMacOSCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<MacOSCustomConfiguration> callback) {
+    public void put(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<? super MacOSCustomConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSCustomConfiguration);
     }
 

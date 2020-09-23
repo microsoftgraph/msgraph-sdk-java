@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IShiftCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IShiftCollectionPage> callback);
+    void get(final ICallback<? super IShiftCollectionPage> callback);
 
     IShiftCollectionPage get() throws ClientException;
 
-    void post(final Shift newShift, final ICallback<Shift> callback);
+    void post(final Shift newShift, final ICallback<? super Shift> callback);
 
     Shift post(final Shift newShift) throws ClientException;
 

@@ -37,7 +37,7 @@ public class CallMuteRequest extends BaseRequest implements ICallMuteRequest {
         body = new CallMuteBody();
     }
 
-    public void post(final ICallback<MuteParticipantOperation> callback) {
+    public void post(final ICallback<? super MuteParticipantOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

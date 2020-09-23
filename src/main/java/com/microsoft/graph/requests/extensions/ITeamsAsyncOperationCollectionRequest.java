@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITeamsAsyncOperationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITeamsAsyncOperationCollectionPage> callback);
+    void get(final ICallback<? super ITeamsAsyncOperationCollectionPage> callback);
 
     ITeamsAsyncOperationCollectionPage get() throws ClientException;
 
-    void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback);
+    void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback);
 
     TeamsAsyncOperation post(final TeamsAsyncOperation newTeamsAsyncOperation) throws ClientException;
 

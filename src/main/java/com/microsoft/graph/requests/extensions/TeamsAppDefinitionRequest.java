@@ -37,7 +37,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest implements ITeamsAppD
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TeamsAppDefinition> callback) {
+    public void get(final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest implements ITeamsAppD
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TeamsAppDefinition> callback) {
+    public void delete(final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest implements ITeamsAppD
      * @param sourceTeamsAppDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsAppDefinition sourceTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback) {
+    public void patch(final TeamsAppDefinition sourceTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsAppDefinition);
     }
 
@@ -96,7 +96,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest implements ITeamsAppD
      * @param newTeamsAppDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback) {
+    public void post(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.POST, callback, newTeamsAppDefinition);
     }
 
@@ -117,7 +117,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest implements ITeamsAppD
      * @param newTeamsAppDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback) {
+    public void put(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
         send(HttpMethod.PUT, callback, newTeamsAppDefinition);
     }
 

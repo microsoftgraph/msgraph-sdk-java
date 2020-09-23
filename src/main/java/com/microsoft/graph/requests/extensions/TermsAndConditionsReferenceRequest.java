@@ -42,7 +42,7 @@ public class TermsAndConditionsReferenceRequest extends BaseRequest implements I
         super(requestUrl, client, requestOptions, TermsAndConditions.class);
     }
 
-    public void delete(final ICallback<TermsAndConditions> callback) {
+    public void delete(final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class TermsAndConditionsReferenceRequest extends BaseRequest implements I
      * @param srcTermsAndConditions the TermsAndConditions reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TermsAndConditions srcTermsAndConditions, final ICallback<TermsAndConditions> callback) {
+    public void put(TermsAndConditions srcTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.PUT, callback, srcTermsAndConditions);
     }
 

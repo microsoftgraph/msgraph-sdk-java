@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IHomeRealmDiscoveryPolicyCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IHomeRealmDiscoveryPolicyCollectionWithReferencesPage> callback);
 
     IHomeRealmDiscoveryPolicyCollectionWithReferencesPage get() throws ClientException;
 

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookTableRowAddRequest extends IHttpRequest {
 
-    void post(final ICallback<WorkbookTableRow> callback);
+    void post(final ICallback<? super WorkbookTableRow> callback);
 
     WorkbookTableRow post() throws ClientException;
 

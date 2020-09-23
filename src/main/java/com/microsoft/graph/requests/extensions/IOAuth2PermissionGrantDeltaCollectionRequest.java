@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IOAuth2PermissionGrantDeltaCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOAuth2PermissionGrantDeltaCollectionPage> callback);
+    void get(final ICallback<? super IOAuth2PermissionGrantDeltaCollectionPage> callback);
 
     IOAuth2PermissionGrantDeltaCollectionPage get() throws ClientException;
 

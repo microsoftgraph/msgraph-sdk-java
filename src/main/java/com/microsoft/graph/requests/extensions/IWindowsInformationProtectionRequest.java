@@ -21,7 +21,7 @@ public interface IWindowsInformationProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsInformationProtection> callback);
+    void get(final ICallback<? super WindowsInformationProtection> callback);
 
     /**
      * Gets the WindowsInformationProtection from the service
@@ -36,7 +36,7 @@ public interface IWindowsInformationProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsInformationProtection> callback);
+    void delete(final ICallback<? super WindowsInformationProtection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsInformationProtectionRequest extends IHttpRequest {
      * @param sourceWindowsInformationProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsInformationProtection sourceWindowsInformationProtection, final ICallback<WindowsInformationProtection> callback);
+    void patch(final WindowsInformationProtection sourceWindowsInformationProtection, final ICallback<? super WindowsInformationProtection> callback);
 
     /**
      * Patches this WindowsInformationProtection with a source
@@ -68,7 +68,7 @@ public interface IWindowsInformationProtectionRequest extends IHttpRequest {
      * @param newWindowsInformationProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<WindowsInformationProtection> callback);
+    void post(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<? super WindowsInformationProtection> callback);
 
     /**
      * Posts a WindowsInformationProtection with a new object
@@ -85,7 +85,7 @@ public interface IWindowsInformationProtectionRequest extends IHttpRequest {
      * @param newWindowsInformationProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<WindowsInformationProtection> callback);
+    void put(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<? super WindowsInformationProtection> callback);
 
     /**
      * Posts a WindowsInformationProtection with a new object

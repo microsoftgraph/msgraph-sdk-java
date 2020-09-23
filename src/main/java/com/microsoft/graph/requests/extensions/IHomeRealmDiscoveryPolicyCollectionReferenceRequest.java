@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
  */
 public interface IHomeRealmDiscoveryPolicyCollectionReferenceRequest {
 
-    void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException;
 

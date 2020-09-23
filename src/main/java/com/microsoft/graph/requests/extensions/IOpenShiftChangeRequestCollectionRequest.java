@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOpenShiftChangeRequestCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOpenShiftChangeRequestCollectionPage> callback);
+    void get(final ICallback<? super IOpenShiftChangeRequestCollectionPage> callback);
 
     IOpenShiftChangeRequestCollectionPage get() throws ClientException;
 
-    void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<OpenShiftChangeRequest> callback);
+    void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<? super OpenShiftChangeRequest> callback);
 
     OpenShiftChangeRequest post(final OpenShiftChangeRequest newOpenShiftChangeRequest) throws ClientException;
 

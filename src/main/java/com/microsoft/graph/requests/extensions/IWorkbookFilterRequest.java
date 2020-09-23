@@ -21,7 +21,7 @@ public interface IWorkbookFilterRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookFilter> callback);
+    void get(final ICallback<? super WorkbookFilter> callback);
 
     /**
      * Gets the WorkbookFilter from the service
@@ -36,7 +36,7 @@ public interface IWorkbookFilterRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookFilter> callback);
+    void delete(final ICallback<? super WorkbookFilter> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookFilterRequest extends IHttpRequest {
      * @param sourceWorkbookFilter the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookFilter sourceWorkbookFilter, final ICallback<WorkbookFilter> callback);
+    void patch(final WorkbookFilter sourceWorkbookFilter, final ICallback<? super WorkbookFilter> callback);
 
     /**
      * Patches this WorkbookFilter with a source
@@ -68,7 +68,7 @@ public interface IWorkbookFilterRequest extends IHttpRequest {
      * @param newWorkbookFilter the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookFilter newWorkbookFilter, final ICallback<WorkbookFilter> callback);
+    void post(final WorkbookFilter newWorkbookFilter, final ICallback<? super WorkbookFilter> callback);
 
     /**
      * Posts a WorkbookFilter with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookFilterRequest extends IHttpRequest {
      * @param newWorkbookFilter the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookFilter newWorkbookFilter, final ICallback<WorkbookFilter> callback);
+    void put(final WorkbookFilter newWorkbookFilter, final ICallback<? super WorkbookFilter> callback);
 
     /**
      * Posts a WorkbookFilter with a new object

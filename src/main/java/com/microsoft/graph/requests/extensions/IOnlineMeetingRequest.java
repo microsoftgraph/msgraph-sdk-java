@@ -21,7 +21,7 @@ public interface IOnlineMeetingRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnlineMeeting> callback);
+    void get(final ICallback<? super OnlineMeeting> callback);
 
     /**
      * Gets the OnlineMeeting from the service
@@ -36,7 +36,7 @@ public interface IOnlineMeetingRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnlineMeeting> callback);
+    void delete(final ICallback<? super OnlineMeeting> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnlineMeetingRequest extends IHttpRequest {
      * @param sourceOnlineMeeting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnlineMeeting sourceOnlineMeeting, final ICallback<OnlineMeeting> callback);
+    void patch(final OnlineMeeting sourceOnlineMeeting, final ICallback<? super OnlineMeeting> callback);
 
     /**
      * Patches this OnlineMeeting with a source
@@ -68,7 +68,7 @@ public interface IOnlineMeetingRequest extends IHttpRequest {
      * @param newOnlineMeeting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OnlineMeeting newOnlineMeeting, final ICallback<OnlineMeeting> callback);
+    void post(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback);
 
     /**
      * Posts a OnlineMeeting with a new object
@@ -85,7 +85,7 @@ public interface IOnlineMeetingRequest extends IHttpRequest {
      * @param newOnlineMeeting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnlineMeeting newOnlineMeeting, final ICallback<OnlineMeeting> callback);
+    void put(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback);
 
     /**
      * Posts a OnlineMeeting with a new object

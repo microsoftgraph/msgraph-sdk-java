@@ -21,7 +21,7 @@ public interface IMultiValueLegacyExtendedPropertyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MultiValueLegacyExtendedProperty> callback);
+    void get(final ICallback<? super MultiValueLegacyExtendedProperty> callback);
 
     /**
      * Gets the MultiValueLegacyExtendedProperty from the service
@@ -36,7 +36,7 @@ public interface IMultiValueLegacyExtendedPropertyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MultiValueLegacyExtendedProperty> callback);
+    void delete(final ICallback<? super MultiValueLegacyExtendedProperty> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMultiValueLegacyExtendedPropertyRequest extends IHttpRequest {
      * @param sourceMultiValueLegacyExtendedProperty the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MultiValueLegacyExtendedProperty sourceMultiValueLegacyExtendedProperty, final ICallback<MultiValueLegacyExtendedProperty> callback);
+    void patch(final MultiValueLegacyExtendedProperty sourceMultiValueLegacyExtendedProperty, final ICallback<? super MultiValueLegacyExtendedProperty> callback);
 
     /**
      * Patches this MultiValueLegacyExtendedProperty with a source
@@ -68,7 +68,7 @@ public interface IMultiValueLegacyExtendedPropertyRequest extends IHttpRequest {
      * @param newMultiValueLegacyExtendedProperty the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<MultiValueLegacyExtendedProperty> callback);
+    void post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<? super MultiValueLegacyExtendedProperty> callback);
 
     /**
      * Posts a MultiValueLegacyExtendedProperty with a new object
@@ -85,7 +85,7 @@ public interface IMultiValueLegacyExtendedPropertyRequest extends IHttpRequest {
      * @param newMultiValueLegacyExtendedProperty the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<MultiValueLegacyExtendedProperty> callback);
+    void put(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<? super MultiValueLegacyExtendedProperty> callback);
 
     /**
      * Posts a MultiValueLegacyExtendedProperty with a new object

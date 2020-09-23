@@ -37,7 +37,7 @@ public class DomainVerifyRequest extends BaseRequest implements IDomainVerifyReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<Domain> callback) {
+    public void post(final ICallback<? super Domain> callback) {
         send(HttpMethod.POST, callback, null);
     }
 

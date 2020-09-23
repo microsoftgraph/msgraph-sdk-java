@@ -21,7 +21,7 @@ public interface IUrlAssessmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UrlAssessmentRequest> callback);
+    void get(final ICallback<? super UrlAssessmentRequest> callback);
 
     /**
      * Gets the UrlAssessmentRequest from the service
@@ -36,7 +36,7 @@ public interface IUrlAssessmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UrlAssessmentRequest> callback);
+    void delete(final ICallback<? super UrlAssessmentRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUrlAssessmentRequestRequest extends IHttpRequest {
      * @param sourceUrlAssessmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UrlAssessmentRequest sourceUrlAssessmentRequest, final ICallback<UrlAssessmentRequest> callback);
+    void patch(final UrlAssessmentRequest sourceUrlAssessmentRequest, final ICallback<? super UrlAssessmentRequest> callback);
 
     /**
      * Patches this UrlAssessmentRequest with a source
@@ -68,7 +68,7 @@ public interface IUrlAssessmentRequestRequest extends IHttpRequest {
      * @param newUrlAssessmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<UrlAssessmentRequest> callback);
+    void post(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<? super UrlAssessmentRequest> callback);
 
     /**
      * Posts a UrlAssessmentRequest with a new object
@@ -85,7 +85,7 @@ public interface IUrlAssessmentRequestRequest extends IHttpRequest {
      * @param newUrlAssessmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<UrlAssessmentRequest> callback);
+    void put(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<? super UrlAssessmentRequest> callback);
 
     /**
      * Posts a UrlAssessmentRequest with a new object

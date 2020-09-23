@@ -34,7 +34,7 @@ public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implement
         super(requestUrl, client, requestOptions, ManagedDeviceOverview.class);
     }
 
-    public void delete(final ICallback<ManagedDeviceOverview> callback) {
+    public void delete(final ICallback<? super ManagedDeviceOverview> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implement
      * @param srcManagedDeviceOverview the ManagedDeviceOverview reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ManagedDeviceOverview srcManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback) {
+    public void put(ManagedDeviceOverview srcManagedDeviceOverview, final ICallback<? super ManagedDeviceOverview> callback) {
         send(HttpMethod.PUT, callback, srcManagedDeviceOverview);
     }
 

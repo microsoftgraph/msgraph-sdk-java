@@ -40,7 +40,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
         super(requestUrl, client, requestOptions, TrendingCollectionResponse.class, ITrendingCollectionPage.class);
     }
 
-    public void get(final ICallback<ITrendingCollectionPage> callback) {
+    public void get(final ICallback<? super ITrendingCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
         return buildFromResponse(response);
     }
 
-    public void post(final Trending newTrending, final ICallback<Trending> callback) {
+    public void post(final Trending newTrending, final ICallback<? super Trending> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

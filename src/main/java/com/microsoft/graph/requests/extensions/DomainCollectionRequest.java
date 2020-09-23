@@ -39,7 +39,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
         super(requestUrl, client, requestOptions, DomainCollectionResponse.class, IDomainCollectionPage.class);
     }
 
-    public void get(final ICallback<IDomainCollectionPage> callback) {
+    public void get(final ICallback<? super IDomainCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
         return buildFromResponse(response);
     }
 
-    public void post(final Domain newDomain, final ICallback<Domain> callback) {
+    public void post(final Domain newDomain, final ICallback<? super Domain> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

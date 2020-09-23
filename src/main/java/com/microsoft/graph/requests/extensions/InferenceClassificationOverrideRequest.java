@@ -37,7 +37,7 @@ public class InferenceClassificationOverrideRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<InferenceClassificationOverride> callback) {
+    public void get(final ICallback<? super InferenceClassificationOverride> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class InferenceClassificationOverrideRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<InferenceClassificationOverride> callback) {
+    public void delete(final ICallback<? super InferenceClassificationOverride> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class InferenceClassificationOverrideRequest extends BaseRequest implemen
      * @param sourceInferenceClassificationOverride the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final InferenceClassificationOverride sourceInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback) {
+    public void patch(final InferenceClassificationOverride sourceInferenceClassificationOverride, final ICallback<? super InferenceClassificationOverride> callback) {
         send(HttpMethod.PATCH, callback, sourceInferenceClassificationOverride);
     }
 
@@ -96,7 +96,7 @@ public class InferenceClassificationOverrideRequest extends BaseRequest implemen
      * @param newInferenceClassificationOverride the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback) {
+    public void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<? super InferenceClassificationOverride> callback) {
         send(HttpMethod.POST, callback, newInferenceClassificationOverride);
     }
 
@@ -117,7 +117,7 @@ public class InferenceClassificationOverrideRequest extends BaseRequest implemen
      * @param newInferenceClassificationOverride the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback) {
+    public void put(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<? super InferenceClassificationOverride> callback) {
         send(HttpMethod.PUT, callback, newInferenceClassificationOverride);
     }
 

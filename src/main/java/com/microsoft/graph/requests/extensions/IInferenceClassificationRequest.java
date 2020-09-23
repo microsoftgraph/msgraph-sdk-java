@@ -21,7 +21,7 @@ public interface IInferenceClassificationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<InferenceClassification> callback);
+    void get(final ICallback<? super InferenceClassification> callback);
 
     /**
      * Gets the InferenceClassification from the service
@@ -36,7 +36,7 @@ public interface IInferenceClassificationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<InferenceClassification> callback);
+    void delete(final ICallback<? super InferenceClassification> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IInferenceClassificationRequest extends IHttpRequest {
      * @param sourceInferenceClassification the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final InferenceClassification sourceInferenceClassification, final ICallback<InferenceClassification> callback);
+    void patch(final InferenceClassification sourceInferenceClassification, final ICallback<? super InferenceClassification> callback);
 
     /**
      * Patches this InferenceClassification with a source
@@ -68,7 +68,7 @@ public interface IInferenceClassificationRequest extends IHttpRequest {
      * @param newInferenceClassification the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final InferenceClassification newInferenceClassification, final ICallback<InferenceClassification> callback);
+    void post(final InferenceClassification newInferenceClassification, final ICallback<? super InferenceClassification> callback);
 
     /**
      * Posts a InferenceClassification with a new object
@@ -85,7 +85,7 @@ public interface IInferenceClassificationRequest extends IHttpRequest {
      * @param newInferenceClassification the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final InferenceClassification newInferenceClassification, final ICallback<InferenceClassification> callback);
+    void put(final InferenceClassification newInferenceClassification, final ICallback<? super InferenceClassification> callback);
 
     /**
      * Posts a InferenceClassification with a new object

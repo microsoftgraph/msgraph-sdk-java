@@ -21,7 +21,7 @@ public interface IWorkbookChartDataLabelFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartDataLabelFormat> callback);
+    void get(final ICallback<? super WorkbookChartDataLabelFormat> callback);
 
     /**
      * Gets the WorkbookChartDataLabelFormat from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartDataLabelFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartDataLabelFormat> callback);
+    void delete(final ICallback<? super WorkbookChartDataLabelFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartDataLabelFormatRequest extends IHttpRequest {
      * @param sourceWorkbookChartDataLabelFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat, final ICallback<WorkbookChartDataLabelFormat> callback);
+    void patch(final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat, final ICallback<? super WorkbookChartDataLabelFormat> callback);
 
     /**
      * Patches this WorkbookChartDataLabelFormat with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartDataLabelFormatRequest extends IHttpRequest {
      * @param newWorkbookChartDataLabelFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, final ICallback<WorkbookChartDataLabelFormat> callback);
+    void post(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, final ICallback<? super WorkbookChartDataLabelFormat> callback);
 
     /**
      * Posts a WorkbookChartDataLabelFormat with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartDataLabelFormatRequest extends IHttpRequest {
      * @param newWorkbookChartDataLabelFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, final ICallback<WorkbookChartDataLabelFormat> callback);
+    void put(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, final ICallback<? super WorkbookChartDataLabelFormat> callback);
 
     /**
      * Posts a WorkbookChartDataLabelFormat with a new object

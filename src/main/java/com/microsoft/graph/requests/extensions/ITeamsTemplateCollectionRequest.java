@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITeamsTemplateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITeamsTemplateCollectionPage> callback);
+    void get(final ICallback<? super ITeamsTemplateCollectionPage> callback);
 
     ITeamsTemplateCollectionPage get() throws ClientException;
 
-    void post(final TeamsTemplate newTeamsTemplate, final ICallback<TeamsTemplate> callback);
+    void post(final TeamsTemplate newTeamsTemplate, final ICallback<? super TeamsTemplate> callback);
 
     TeamsTemplate post(final TeamsTemplate newTeamsTemplate) throws ClientException;
 

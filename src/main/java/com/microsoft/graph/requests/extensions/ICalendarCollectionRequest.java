@@ -25,11 +25,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICalendarCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICalendarCollectionPage> callback);
+    void get(final ICallback<? super ICalendarCollectionPage> callback);
 
     ICalendarCollectionPage get() throws ClientException;
 
-    void post(final Calendar newCalendar, final ICallback<Calendar> callback);
+    void post(final Calendar newCalendar, final ICallback<? super Calendar> callback);
 
     Calendar post(final Calendar newCalendar) throws ClientException;
 

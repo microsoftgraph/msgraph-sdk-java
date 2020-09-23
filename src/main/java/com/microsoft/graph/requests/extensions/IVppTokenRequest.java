@@ -21,7 +21,7 @@ public interface IVppTokenRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<VppToken> callback);
+    void get(final ICallback<? super VppToken> callback);
 
     /**
      * Gets the VppToken from the service
@@ -36,7 +36,7 @@ public interface IVppTokenRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<VppToken> callback);
+    void delete(final ICallback<? super VppToken> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IVppTokenRequest extends IHttpRequest {
      * @param sourceVppToken the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final VppToken sourceVppToken, final ICallback<VppToken> callback);
+    void patch(final VppToken sourceVppToken, final ICallback<? super VppToken> callback);
 
     /**
      * Patches this VppToken with a source
@@ -68,7 +68,7 @@ public interface IVppTokenRequest extends IHttpRequest {
      * @param newVppToken the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final VppToken newVppToken, final ICallback<VppToken> callback);
+    void post(final VppToken newVppToken, final ICallback<? super VppToken> callback);
 
     /**
      * Posts a VppToken with a new object
@@ -85,7 +85,7 @@ public interface IVppTokenRequest extends IHttpRequest {
      * @param newVppToken the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final VppToken newVppToken, final ICallback<VppToken> callback);
+    void put(final VppToken newVppToken, final ICallback<? super VppToken> callback);
 
     /**
      * Posts a VppToken with a new object

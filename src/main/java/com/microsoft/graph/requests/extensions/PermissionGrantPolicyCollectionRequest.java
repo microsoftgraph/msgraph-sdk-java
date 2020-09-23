@@ -40,7 +40,7 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, PermissionGrantPolicyCollectionResponse.class, IPermissionGrantPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IPermissionGrantPolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IPermissionGrantPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<PermissionGrantPolicy> callback) {
+    public void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionGrantPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

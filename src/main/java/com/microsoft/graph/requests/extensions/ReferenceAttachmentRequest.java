@@ -37,7 +37,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ReferenceAttachment> callback) {
+    public void get(final ICallback<? super ReferenceAttachment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ReferenceAttachment> callback) {
+    public void delete(final ICallback<? super ReferenceAttachment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @param sourceReferenceAttachment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ReferenceAttachment sourceReferenceAttachment, final ICallback<ReferenceAttachment> callback) {
+    public void patch(final ReferenceAttachment sourceReferenceAttachment, final ICallback<? super ReferenceAttachment> callback) {
         send(HttpMethod.PATCH, callback, sourceReferenceAttachment);
     }
 
@@ -96,7 +96,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @param newReferenceAttachment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ReferenceAttachment newReferenceAttachment, final ICallback<ReferenceAttachment> callback) {
+    public void post(final ReferenceAttachment newReferenceAttachment, final ICallback<? super ReferenceAttachment> callback) {
         send(HttpMethod.POST, callback, newReferenceAttachment);
     }
 
@@ -117,7 +117,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @param newReferenceAttachment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ReferenceAttachment newReferenceAttachment, final ICallback<ReferenceAttachment> callback) {
+    public void put(final ReferenceAttachment newReferenceAttachment, final ICallback<? super ReferenceAttachment> callback) {
         send(HttpMethod.PUT, callback, newReferenceAttachment);
     }
 

@@ -40,7 +40,7 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, WorkbookRangeBorderCollectionResponse.class, IWorkbookRangeBorderCollectionPage.class);
     }
 
-    public void get(final ICallback<IWorkbookRangeBorderCollectionPage> callback) {
+    public void get(final ICallback<? super IWorkbookRangeBorderCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback) {
+    public void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

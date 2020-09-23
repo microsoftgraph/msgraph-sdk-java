@@ -35,7 +35,7 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest impleme
         super(requestUrl, client, requestOptions, ClaimsMappingPolicy.class);
     }
 
-    public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final IJsonBackedObject payload, final ICallback<ClaimsMappingPolicy> callback) {
+    public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final IJsonBackedObject payload, final ICallback<? super ClaimsMappingPolicy> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest impleme
         return null;
     }
 
-    public void get(final ICallback<ClaimsMappingPolicy> callback) {
+    public void get(final ICallback<? super ClaimsMappingPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest impleme
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<ClaimsMappingPolicy> callback) {
+	public void delete(final ICallback<? super ClaimsMappingPolicy> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest impleme
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ClaimsMappingPolicy sourceClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback) {
+	public void patch(final ClaimsMappingPolicy sourceClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
 		send(HttpMethod.PATCH, callback, sourceClaimsMappingPolicy);
 	}
 

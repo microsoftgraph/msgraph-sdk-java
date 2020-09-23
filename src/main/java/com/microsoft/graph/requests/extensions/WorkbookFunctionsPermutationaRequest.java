@@ -37,7 +37,7 @@ public class WorkbookFunctionsPermutationaRequest extends BaseRequest implements
         body = new WorkbookFunctionsPermutationaBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

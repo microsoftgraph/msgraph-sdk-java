@@ -37,7 +37,7 @@ public class EventMessageResponseRequest extends BaseRequest implements IEventMe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EventMessageResponse> callback) {
+    public void get(final ICallback<? super EventMessageResponse> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EventMessageResponseRequest extends BaseRequest implements IEventMe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EventMessageResponse> callback) {
+    public void delete(final ICallback<? super EventMessageResponse> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EventMessageResponseRequest extends BaseRequest implements IEventMe
      * @param sourceEventMessageResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EventMessageResponse sourceEventMessageResponse, final ICallback<EventMessageResponse> callback) {
+    public void patch(final EventMessageResponse sourceEventMessageResponse, final ICallback<? super EventMessageResponse> callback) {
         send(HttpMethod.PATCH, callback, sourceEventMessageResponse);
     }
 
@@ -96,7 +96,7 @@ public class EventMessageResponseRequest extends BaseRequest implements IEventMe
      * @param newEventMessageResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EventMessageResponse newEventMessageResponse, final ICallback<EventMessageResponse> callback) {
+    public void post(final EventMessageResponse newEventMessageResponse, final ICallback<? super EventMessageResponse> callback) {
         send(HttpMethod.POST, callback, newEventMessageResponse);
     }
 
@@ -117,7 +117,7 @@ public class EventMessageResponseRequest extends BaseRequest implements IEventMe
      * @param newEventMessageResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EventMessageResponse newEventMessageResponse, final ICallback<EventMessageResponse> callback) {
+    public void put(final EventMessageResponse newEventMessageResponse, final ICallback<? super EventMessageResponse> callback) {
         send(HttpMethod.PUT, callback, newEventMessageResponse);
     }
 

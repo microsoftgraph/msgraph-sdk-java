@@ -78,7 +78,7 @@ public class DeviceCompliancePolicyRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceCompliancePolicy> callback) {
+    public void get(final ICallback<? super DeviceCompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -97,7 +97,7 @@ public class DeviceCompliancePolicyRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceCompliancePolicy> callback) {
+    public void delete(final ICallback<? super DeviceCompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -116,7 +116,7 @@ public class DeviceCompliancePolicyRequest extends BaseRequest implements IDevic
      * @param sourceDeviceCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceCompliancePolicy sourceDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback) {
+    public void patch(final DeviceCompliancePolicy sourceDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceCompliancePolicy);
     }
 
@@ -137,7 +137,7 @@ public class DeviceCompliancePolicyRequest extends BaseRequest implements IDevic
      * @param newDeviceCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback) {
+    public void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newDeviceCompliancePolicy);
     }
 
@@ -158,7 +158,7 @@ public class DeviceCompliancePolicyRequest extends BaseRequest implements IDevic
      * @param newDeviceCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback) {
+    public void put(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newDeviceCompliancePolicy);
     }
 

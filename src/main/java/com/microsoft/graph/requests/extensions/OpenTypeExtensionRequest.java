@@ -37,7 +37,7 @@ public class OpenTypeExtensionRequest extends BaseRequest implements IOpenTypeEx
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OpenTypeExtension> callback) {
+    public void get(final ICallback<? super OpenTypeExtension> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OpenTypeExtensionRequest extends BaseRequest implements IOpenTypeEx
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OpenTypeExtension> callback) {
+    public void delete(final ICallback<? super OpenTypeExtension> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OpenTypeExtensionRequest extends BaseRequest implements IOpenTypeEx
      * @param sourceOpenTypeExtension the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OpenTypeExtension sourceOpenTypeExtension, final ICallback<OpenTypeExtension> callback) {
+    public void patch(final OpenTypeExtension sourceOpenTypeExtension, final ICallback<? super OpenTypeExtension> callback) {
         send(HttpMethod.PATCH, callback, sourceOpenTypeExtension);
     }
 
@@ -96,7 +96,7 @@ public class OpenTypeExtensionRequest extends BaseRequest implements IOpenTypeEx
      * @param newOpenTypeExtension the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OpenTypeExtension newOpenTypeExtension, final ICallback<OpenTypeExtension> callback) {
+    public void post(final OpenTypeExtension newOpenTypeExtension, final ICallback<? super OpenTypeExtension> callback) {
         send(HttpMethod.POST, callback, newOpenTypeExtension);
     }
 
@@ -117,7 +117,7 @@ public class OpenTypeExtensionRequest extends BaseRequest implements IOpenTypeEx
      * @param newOpenTypeExtension the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OpenTypeExtension newOpenTypeExtension, final ICallback<OpenTypeExtension> callback) {
+    public void put(final OpenTypeExtension newOpenTypeExtension, final ICallback<? super OpenTypeExtension> callback) {
         send(HttpMethod.PUT, callback, newOpenTypeExtension);
     }
 

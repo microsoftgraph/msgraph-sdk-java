@@ -21,7 +21,7 @@ public interface ICountryNamedLocationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CountryNamedLocation> callback);
+    void get(final ICallback<? super CountryNamedLocation> callback);
 
     /**
      * Gets the CountryNamedLocation from the service
@@ -36,7 +36,7 @@ public interface ICountryNamedLocationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CountryNamedLocation> callback);
+    void delete(final ICallback<? super CountryNamedLocation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICountryNamedLocationRequest extends IHttpRequest {
      * @param sourceCountryNamedLocation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CountryNamedLocation sourceCountryNamedLocation, final ICallback<CountryNamedLocation> callback);
+    void patch(final CountryNamedLocation sourceCountryNamedLocation, final ICallback<? super CountryNamedLocation> callback);
 
     /**
      * Patches this CountryNamedLocation with a source
@@ -68,7 +68,7 @@ public interface ICountryNamedLocationRequest extends IHttpRequest {
      * @param newCountryNamedLocation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CountryNamedLocation newCountryNamedLocation, final ICallback<CountryNamedLocation> callback);
+    void post(final CountryNamedLocation newCountryNamedLocation, final ICallback<? super CountryNamedLocation> callback);
 
     /**
      * Posts a CountryNamedLocation with a new object
@@ -85,7 +85,7 @@ public interface ICountryNamedLocationRequest extends IHttpRequest {
      * @param newCountryNamedLocation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CountryNamedLocation newCountryNamedLocation, final ICallback<CountryNamedLocation> callback);
+    void put(final CountryNamedLocation newCountryNamedLocation, final ICallback<? super CountryNamedLocation> callback);
 
     /**
      * Posts a CountryNamedLocation with a new object

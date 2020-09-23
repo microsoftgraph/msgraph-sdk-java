@@ -41,7 +41,7 @@ public class ManagedEBookCollectionRequest extends BaseCollectionRequest<Managed
         super(requestUrl, client, requestOptions, ManagedEBookCollectionResponse.class, IManagedEBookCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedEBookCollectionPage> callback) {
+    public void get(final ICallback<? super IManagedEBookCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ManagedEBookCollectionRequest extends BaseCollectionRequest<Managed
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedEBook newManagedEBook, final ICallback<ManagedEBook> callback) {
+    public void post(final ManagedEBook newManagedEBook, final ICallback<? super ManagedEBook> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedEBookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

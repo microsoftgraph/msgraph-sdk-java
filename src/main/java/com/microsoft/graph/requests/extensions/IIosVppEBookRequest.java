@@ -21,7 +21,7 @@ public interface IIosVppEBookRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosVppEBook> callback);
+    void get(final ICallback<? super IosVppEBook> callback);
 
     /**
      * Gets the IosVppEBook from the service
@@ -36,7 +36,7 @@ public interface IIosVppEBookRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosVppEBook> callback);
+    void delete(final ICallback<? super IosVppEBook> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosVppEBookRequest extends IHttpRequest {
      * @param sourceIosVppEBook the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosVppEBook sourceIosVppEBook, final ICallback<IosVppEBook> callback);
+    void patch(final IosVppEBook sourceIosVppEBook, final ICallback<? super IosVppEBook> callback);
 
     /**
      * Patches this IosVppEBook with a source
@@ -68,7 +68,7 @@ public interface IIosVppEBookRequest extends IHttpRequest {
      * @param newIosVppEBook the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosVppEBook newIosVppEBook, final ICallback<IosVppEBook> callback);
+    void post(final IosVppEBook newIosVppEBook, final ICallback<? super IosVppEBook> callback);
 
     /**
      * Posts a IosVppEBook with a new object
@@ -85,7 +85,7 @@ public interface IIosVppEBookRequest extends IHttpRequest {
      * @param newIosVppEBook the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosVppEBook newIosVppEBook, final ICallback<IosVppEBook> callback);
+    void put(final IosVppEBook newIosVppEBook, final ICallback<? super IosVppEBook> callback);
 
     /**
      * Posts a IosVppEBook with a new object

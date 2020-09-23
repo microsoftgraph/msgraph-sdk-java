@@ -21,7 +21,7 @@ public interface IRoleDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<RoleDefinition> callback);
+    void get(final ICallback<? super RoleDefinition> callback);
 
     /**
      * Gets the RoleDefinition from the service
@@ -36,7 +36,7 @@ public interface IRoleDefinitionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<RoleDefinition> callback);
+    void delete(final ICallback<? super RoleDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IRoleDefinitionRequest extends IHttpRequest {
      * @param sourceRoleDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final RoleDefinition sourceRoleDefinition, final ICallback<RoleDefinition> callback);
+    void patch(final RoleDefinition sourceRoleDefinition, final ICallback<? super RoleDefinition> callback);
 
     /**
      * Patches this RoleDefinition with a source
@@ -68,7 +68,7 @@ public interface IRoleDefinitionRequest extends IHttpRequest {
      * @param newRoleDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final RoleDefinition newRoleDefinition, final ICallback<RoleDefinition> callback);
+    void post(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback);
 
     /**
      * Posts a RoleDefinition with a new object
@@ -85,7 +85,7 @@ public interface IRoleDefinitionRequest extends IHttpRequest {
      * @param newRoleDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final RoleDefinition newRoleDefinition, final ICallback<RoleDefinition> callback);
+    void put(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback);
 
     /**
      * Posts a RoleDefinition with a new object

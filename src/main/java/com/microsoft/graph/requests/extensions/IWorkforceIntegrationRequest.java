@@ -21,7 +21,7 @@ public interface IWorkforceIntegrationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkforceIntegration> callback);
+    void get(final ICallback<? super WorkforceIntegration> callback);
 
     /**
      * Gets the WorkforceIntegration from the service
@@ -36,7 +36,7 @@ public interface IWorkforceIntegrationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkforceIntegration> callback);
+    void delete(final ICallback<? super WorkforceIntegration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkforceIntegrationRequest extends IHttpRequest {
      * @param sourceWorkforceIntegration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkforceIntegration sourceWorkforceIntegration, final ICallback<WorkforceIntegration> callback);
+    void patch(final WorkforceIntegration sourceWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback);
 
     /**
      * Patches this WorkforceIntegration with a source
@@ -68,7 +68,7 @@ public interface IWorkforceIntegrationRequest extends IHttpRequest {
      * @param newWorkforceIntegration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<WorkforceIntegration> callback);
+    void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback);
 
     /**
      * Posts a WorkforceIntegration with a new object
@@ -85,7 +85,7 @@ public interface IWorkforceIntegrationRequest extends IHttpRequest {
      * @param newWorkforceIntegration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkforceIntegration newWorkforceIntegration, final ICallback<WorkforceIntegration> callback);
+    void put(final WorkforceIntegration newWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback);
 
     /**
      * Posts a WorkforceIntegration with a new object

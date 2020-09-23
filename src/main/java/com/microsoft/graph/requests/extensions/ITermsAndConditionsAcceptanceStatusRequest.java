@@ -21,7 +21,7 @@ public interface ITermsAndConditionsAcceptanceStatusRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TermsAndConditionsAcceptanceStatus> callback);
+    void get(final ICallback<? super TermsAndConditionsAcceptanceStatus> callback);
 
     /**
      * Gets the TermsAndConditionsAcceptanceStatus from the service
@@ -36,7 +36,7 @@ public interface ITermsAndConditionsAcceptanceStatusRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TermsAndConditionsAcceptanceStatus> callback);
+    void delete(final ICallback<? super TermsAndConditionsAcceptanceStatus> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITermsAndConditionsAcceptanceStatusRequest extends IHttpRequest
      * @param sourceTermsAndConditionsAcceptanceStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TermsAndConditionsAcceptanceStatus sourceTermsAndConditionsAcceptanceStatus, final ICallback<TermsAndConditionsAcceptanceStatus> callback);
+    void patch(final TermsAndConditionsAcceptanceStatus sourceTermsAndConditionsAcceptanceStatus, final ICallback<? super TermsAndConditionsAcceptanceStatus> callback);
 
     /**
      * Patches this TermsAndConditionsAcceptanceStatus with a source
@@ -68,7 +68,7 @@ public interface ITermsAndConditionsAcceptanceStatusRequest extends IHttpRequest
      * @param newTermsAndConditionsAcceptanceStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<TermsAndConditionsAcceptanceStatus> callback);
+    void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<? super TermsAndConditionsAcceptanceStatus> callback);
 
     /**
      * Posts a TermsAndConditionsAcceptanceStatus with a new object
@@ -85,7 +85,7 @@ public interface ITermsAndConditionsAcceptanceStatusRequest extends IHttpRequest
      * @param newTermsAndConditionsAcceptanceStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<TermsAndConditionsAcceptanceStatus> callback);
+    void put(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<? super TermsAndConditionsAcceptanceStatus> callback);
 
     /**
      * Posts a TermsAndConditionsAcceptanceStatus with a new object

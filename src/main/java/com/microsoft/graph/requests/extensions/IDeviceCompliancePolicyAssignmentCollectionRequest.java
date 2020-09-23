@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceCompliancePolicyAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceCompliancePolicyAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IDeviceCompliancePolicyAssignmentCollectionPage> callback);
 
     IDeviceCompliancePolicyAssignmentCollectionPage get() throws ClientException;
 
-    void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<DeviceCompliancePolicyAssignment> callback);
+    void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback);
 
     DeviceCompliancePolicyAssignment post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) throws ClientException;
 

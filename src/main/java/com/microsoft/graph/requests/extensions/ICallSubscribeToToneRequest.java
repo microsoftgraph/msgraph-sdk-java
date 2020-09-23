@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICallSubscribeToToneRequest extends IHttpRequest {
 
-    void post(final ICallback<SubscribeToToneOperation> callback);
+    void post(final ICallback<? super SubscribeToToneOperation> callback);
 
     SubscribeToToneOperation post() throws ClientException;
 

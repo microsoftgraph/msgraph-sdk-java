@@ -37,7 +37,7 @@ public class VppTokenSyncLicensesRequest extends BaseRequest implements IVppToke
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<VppToken> callback) {
+    public void post(final ICallback<? super VppToken> callback) {
         send(HttpMethod.POST, callback, null);
     }
 

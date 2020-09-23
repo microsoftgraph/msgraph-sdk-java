@@ -21,7 +21,7 @@ public interface IOnenoteRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Onenote> callback);
+    void get(final ICallback<? super Onenote> callback);
 
     /**
      * Gets the Onenote from the service
@@ -36,7 +36,7 @@ public interface IOnenoteRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Onenote> callback);
+    void delete(final ICallback<? super Onenote> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnenoteRequest extends IHttpRequest {
      * @param sourceOnenote the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Onenote sourceOnenote, final ICallback<Onenote> callback);
+    void patch(final Onenote sourceOnenote, final ICallback<? super Onenote> callback);
 
     /**
      * Patches this Onenote with a source
@@ -68,7 +68,7 @@ public interface IOnenoteRequest extends IHttpRequest {
      * @param newOnenote the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Onenote newOnenote, final ICallback<Onenote> callback);
+    void post(final Onenote newOnenote, final ICallback<? super Onenote> callback);
 
     /**
      * Posts a Onenote with a new object
@@ -85,7 +85,7 @@ public interface IOnenoteRequest extends IHttpRequest {
      * @param newOnenote the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Onenote newOnenote, final ICallback<Onenote> callback);
+    void put(final Onenote newOnenote, final ICallback<? super Onenote> callback);
 
     /**
      * Posts a Onenote with a new object

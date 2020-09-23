@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOrgContactCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOrgContactCollectionPage> callback);
+    void get(final ICallback<? super IOrgContactCollectionPage> callback);
 
     IOrgContactCollectionPage get() throws ClientException;
 
-    void post(final OrgContact newOrgContact, final ICallback<OrgContact> callback);
+    void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback);
 
     OrgContact post(final OrgContact newOrgContact) throws ClientException;
 

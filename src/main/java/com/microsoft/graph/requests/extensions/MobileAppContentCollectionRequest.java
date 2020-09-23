@@ -40,7 +40,7 @@ public class MobileAppContentCollectionRequest extends BaseCollectionRequest<Mob
         super(requestUrl, client, requestOptions, MobileAppContentCollectionResponse.class, IMobileAppContentCollectionPage.class);
     }
 
-    public void get(final ICallback<IMobileAppContentCollectionPage> callback) {
+    public void get(final ICallback<? super IMobileAppContentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MobileAppContentCollectionRequest extends BaseCollectionRequest<Mob
         return buildFromResponse(response);
     }
 
-    public void post(final MobileAppContent newMobileAppContent, final ICallback<MobileAppContent> callback) {
+    public void post(final MobileAppContent newMobileAppContent, final ICallback<? super MobileAppContent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

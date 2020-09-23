@@ -27,7 +27,7 @@ public interface IWorkbookRangeViewItemAtRequest extends IHttpRequest {
      * @param srcWorkbookRangeView the WorkbookRangeView with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    void patch(WorkbookRangeView srcWorkbookRangeView, final ICallback<WorkbookRangeView> callback);
+    void patch(WorkbookRangeView srcWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback);
 
     /**
      * Patches the WorkbookRangeViewItemAt
@@ -44,7 +44,7 @@ public interface IWorkbookRangeViewItemAtRequest extends IHttpRequest {
      * @param srcWorkbookRangeView the WorkbookRangeView to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(WorkbookRangeView srcWorkbookRangeView, final ICallback<WorkbookRangeView> callback);
+    void put(WorkbookRangeView srcWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback);
 
     /**
      * Puts the WorkbookRangeViewItemAt
@@ -59,7 +59,7 @@ public interface IWorkbookRangeViewItemAtRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookRangeView> callback);
+    void get(final ICallback<? super WorkbookRangeView> callback);
 
     /**
      * Gets the WorkbookRangeView

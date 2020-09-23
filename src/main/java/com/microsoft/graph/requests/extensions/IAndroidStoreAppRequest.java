@@ -21,7 +21,7 @@ public interface IAndroidStoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidStoreApp> callback);
+    void get(final ICallback<? super AndroidStoreApp> callback);
 
     /**
      * Gets the AndroidStoreApp from the service
@@ -36,7 +36,7 @@ public interface IAndroidStoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidStoreApp> callback);
+    void delete(final ICallback<? super AndroidStoreApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidStoreAppRequest extends IHttpRequest {
      * @param sourceAndroidStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidStoreApp sourceAndroidStoreApp, final ICallback<AndroidStoreApp> callback);
+    void patch(final AndroidStoreApp sourceAndroidStoreApp, final ICallback<? super AndroidStoreApp> callback);
 
     /**
      * Patches this AndroidStoreApp with a source
@@ -68,7 +68,7 @@ public interface IAndroidStoreAppRequest extends IHttpRequest {
      * @param newAndroidStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidStoreApp newAndroidStoreApp, final ICallback<AndroidStoreApp> callback);
+    void post(final AndroidStoreApp newAndroidStoreApp, final ICallback<? super AndroidStoreApp> callback);
 
     /**
      * Posts a AndroidStoreApp with a new object
@@ -85,7 +85,7 @@ public interface IAndroidStoreAppRequest extends IHttpRequest {
      * @param newAndroidStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidStoreApp newAndroidStoreApp, final ICallback<AndroidStoreApp> callback);
+    void put(final AndroidStoreApp newAndroidStoreApp, final ICallback<? super AndroidStoreApp> callback);
 
     /**
      * Posts a AndroidStoreApp with a new object

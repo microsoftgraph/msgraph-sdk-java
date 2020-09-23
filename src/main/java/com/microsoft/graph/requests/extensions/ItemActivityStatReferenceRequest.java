@@ -38,7 +38,7 @@ public class ItemActivityStatReferenceRequest extends BaseRequest implements IIt
         super(requestUrl, client, requestOptions, ItemActivityStat.class);
     }
 
-    public void delete(final ICallback<ItemActivityStat> callback) {
+    public void delete(final ICallback<? super ItemActivityStat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class ItemActivityStatReferenceRequest extends BaseRequest implements IIt
      * @param srcItemActivityStat the ItemActivityStat reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ItemActivityStat srcItemActivityStat, final ICallback<ItemActivityStat> callback) {
+    public void put(ItemActivityStat srcItemActivityStat, final ICallback<? super ItemActivityStat> callback) {
         send(HttpMethod.PUT, callback, srcItemActivityStat);
     }
 

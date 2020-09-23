@@ -37,7 +37,7 @@ public class WorkbookFunctionsDcountRequest extends BaseRequest implements IWork
         body = new WorkbookFunctionsDcountBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

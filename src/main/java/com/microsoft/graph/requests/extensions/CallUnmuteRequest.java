@@ -37,7 +37,7 @@ public class CallUnmuteRequest extends BaseRequest implements ICallUnmuteRequest
         body = new CallUnmuteBody();
     }
 
-    public void post(final ICallback<UnmuteParticipantOperation> callback) {
+    public void post(final ICallback<? super UnmuteParticipantOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

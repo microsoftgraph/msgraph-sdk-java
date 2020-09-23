@@ -37,7 +37,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidGeneralDeviceConfiguration> callback) {
+    public void get(final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidGeneralDeviceConfiguration> callback) {
+    public void delete(final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @param sourceAndroidGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidGeneralDeviceConfiguration sourceAndroidGeneralDeviceConfiguration, final ICallback<AndroidGeneralDeviceConfiguration> callback) {
+    public void patch(final AndroidGeneralDeviceConfiguration sourceAndroidGeneralDeviceConfiguration, final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidGeneralDeviceConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @param newAndroidGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, final ICallback<AndroidGeneralDeviceConfiguration> callback) {
+    public void post(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidGeneralDeviceConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @param newAndroidGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, final ICallback<AndroidGeneralDeviceConfiguration> callback) {
+    public void put(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidGeneralDeviceConfiguration);
     }
 

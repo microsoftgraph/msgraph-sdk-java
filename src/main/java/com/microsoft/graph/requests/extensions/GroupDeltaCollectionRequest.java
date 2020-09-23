@@ -39,7 +39,7 @@ public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDelt
     }
 
 
-    public void get(final ICallback<IGroupDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super IGroupDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

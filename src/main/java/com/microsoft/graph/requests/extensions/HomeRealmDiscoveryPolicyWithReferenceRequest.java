@@ -35,7 +35,7 @@ public class HomeRealmDiscoveryPolicyWithReferenceRequest extends BaseRequest im
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicy.class);
     }
 
-    public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final IJsonBackedObject payload, final ICallback<HomeRealmDiscoveryPolicy> callback) {
+    public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final IJsonBackedObject payload, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class HomeRealmDiscoveryPolicyWithReferenceRequest extends BaseRequest im
         return null;
     }
 
-    public void get(final ICallback<HomeRealmDiscoveryPolicy> callback) {
+    public void get(final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class HomeRealmDiscoveryPolicyWithReferenceRequest extends BaseRequest im
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<HomeRealmDiscoveryPolicy> callback) {
+	public void delete(final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class HomeRealmDiscoveryPolicyWithReferenceRequest extends BaseRequest im
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback) {
+	public void patch(final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
 		send(HttpMethod.PATCH, callback, sourceHomeRealmDiscoveryPolicy);
 	}
 

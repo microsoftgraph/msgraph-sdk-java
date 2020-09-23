@@ -37,7 +37,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest implements IManaged
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedAndroidLobApp> callback) {
+    public void get(final ICallback<? super ManagedAndroidLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest implements IManaged
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedAndroidLobApp> callback) {
+    public void delete(final ICallback<? super ManagedAndroidLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest implements IManaged
      * @param sourceManagedAndroidLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAndroidLobApp sourceManagedAndroidLobApp, final ICallback<ManagedAndroidLobApp> callback) {
+    public void patch(final ManagedAndroidLobApp sourceManagedAndroidLobApp, final ICallback<? super ManagedAndroidLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAndroidLobApp);
     }
 
@@ -96,7 +96,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest implements IManaged
      * @param newManagedAndroidLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<ManagedAndroidLobApp> callback) {
+    public void post(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<? super ManagedAndroidLobApp> callback) {
         send(HttpMethod.POST, callback, newManagedAndroidLobApp);
     }
 
@@ -117,7 +117,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest implements IManaged
      * @param newManagedAndroidLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<ManagedAndroidLobApp> callback) {
+    public void put(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<? super ManagedAndroidLobApp> callback) {
         send(HttpMethod.PUT, callback, newManagedAndroidLobApp);
     }
 

@@ -45,7 +45,7 @@ public class DirectoryRequest extends BaseRequest implements IDirectoryRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Directory> callback) {
+    public void get(final ICallback<? super Directory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class DirectoryRequest extends BaseRequest implements IDirectoryRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Directory> callback) {
+    public void delete(final ICallback<? super Directory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class DirectoryRequest extends BaseRequest implements IDirectoryRequest {
      * @param sourceDirectory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Directory sourceDirectory, final ICallback<Directory> callback) {
+    public void patch(final Directory sourceDirectory, final ICallback<? super Directory> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectory);
     }
 
@@ -104,7 +104,7 @@ public class DirectoryRequest extends BaseRequest implements IDirectoryRequest {
      * @param newDirectory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Directory newDirectory, final ICallback<Directory> callback) {
+    public void post(final Directory newDirectory, final ICallback<? super Directory> callback) {
         send(HttpMethod.POST, callback, newDirectory);
     }
 
@@ -125,7 +125,7 @@ public class DirectoryRequest extends BaseRequest implements IDirectoryRequest {
      * @param newDirectory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Directory newDirectory, final ICallback<Directory> callback) {
+    public void put(final Directory newDirectory, final ICallback<? super Directory> callback) {
         send(HttpMethod.PUT, callback, newDirectory);
     }
 

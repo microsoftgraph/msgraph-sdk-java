@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedDeviceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedDeviceCollectionPage> callback);
+    void get(final ICallback<? super IManagedDeviceCollectionPage> callback);
 
     IManagedDeviceCollectionPage get() throws ClientException;
 
-    void post(final ManagedDevice newManagedDevice, final ICallback<ManagedDevice> callback);
+    void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback);
 
     ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException;
 

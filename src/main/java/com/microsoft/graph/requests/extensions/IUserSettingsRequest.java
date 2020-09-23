@@ -21,7 +21,7 @@ public interface IUserSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserSettings> callback);
+    void get(final ICallback<? super UserSettings> callback);
 
     /**
      * Gets the UserSettings from the service
@@ -36,7 +36,7 @@ public interface IUserSettingsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserSettings> callback);
+    void delete(final ICallback<? super UserSettings> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserSettingsRequest extends IHttpRequest {
      * @param sourceUserSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserSettings sourceUserSettings, final ICallback<UserSettings> callback);
+    void patch(final UserSettings sourceUserSettings, final ICallback<? super UserSettings> callback);
 
     /**
      * Patches this UserSettings with a source
@@ -68,7 +68,7 @@ public interface IUserSettingsRequest extends IHttpRequest {
      * @param newUserSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserSettings newUserSettings, final ICallback<UserSettings> callback);
+    void post(final UserSettings newUserSettings, final ICallback<? super UserSettings> callback);
 
     /**
      * Posts a UserSettings with a new object
@@ -85,7 +85,7 @@ public interface IUserSettingsRequest extends IHttpRequest {
      * @param newUserSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserSettings newUserSettings, final ICallback<UserSettings> callback);
+    void put(final UserSettings newUserSettings, final ICallback<? super UserSettings> callback);
 
     /**
      * Posts a UserSettings with a new object

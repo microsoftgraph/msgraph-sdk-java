@@ -21,7 +21,7 @@ public interface IMacOSGeneralDeviceConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSGeneralDeviceConfiguration> callback);
+    void get(final ICallback<? super MacOSGeneralDeviceConfiguration> callback);
 
     /**
      * Gets the MacOSGeneralDeviceConfiguration from the service
@@ -36,7 +36,7 @@ public interface IMacOSGeneralDeviceConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSGeneralDeviceConfiguration> callback);
+    void delete(final ICallback<? super MacOSGeneralDeviceConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSGeneralDeviceConfigurationRequest extends IHttpRequest {
      * @param sourceMacOSGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSGeneralDeviceConfiguration sourceMacOSGeneralDeviceConfiguration, final ICallback<MacOSGeneralDeviceConfiguration> callback);
+    void patch(final MacOSGeneralDeviceConfiguration sourceMacOSGeneralDeviceConfiguration, final ICallback<? super MacOSGeneralDeviceConfiguration> callback);
 
     /**
      * Patches this MacOSGeneralDeviceConfiguration with a source
@@ -68,7 +68,7 @@ public interface IMacOSGeneralDeviceConfigurationRequest extends IHttpRequest {
      * @param newMacOSGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration, final ICallback<MacOSGeneralDeviceConfiguration> callback);
+    void post(final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration, final ICallback<? super MacOSGeneralDeviceConfiguration> callback);
 
     /**
      * Posts a MacOSGeneralDeviceConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IMacOSGeneralDeviceConfigurationRequest extends IHttpRequest {
      * @param newMacOSGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration, final ICallback<MacOSGeneralDeviceConfiguration> callback);
+    void put(final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration, final ICallback<? super MacOSGeneralDeviceConfiguration> callback);
 
     /**
      * Posts a MacOSGeneralDeviceConfiguration with a new object

@@ -21,7 +21,7 @@ public interface IDeviceAndAppManagementRoleDefinitionRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceAndAppManagementRoleDefinition> callback);
+    void get(final ICallback<? super DeviceAndAppManagementRoleDefinition> callback);
 
     /**
      * Gets the DeviceAndAppManagementRoleDefinition from the service
@@ -36,7 +36,7 @@ public interface IDeviceAndAppManagementRoleDefinitionRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceAndAppManagementRoleDefinition> callback);
+    void delete(final ICallback<? super DeviceAndAppManagementRoleDefinition> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceAndAppManagementRoleDefinitionRequest extends IHttpReque
      * @param sourceDeviceAndAppManagementRoleDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceAndAppManagementRoleDefinition sourceDeviceAndAppManagementRoleDefinition, final ICallback<DeviceAndAppManagementRoleDefinition> callback);
+    void patch(final DeviceAndAppManagementRoleDefinition sourceDeviceAndAppManagementRoleDefinition, final ICallback<? super DeviceAndAppManagementRoleDefinition> callback);
 
     /**
      * Patches this DeviceAndAppManagementRoleDefinition with a source
@@ -68,7 +68,7 @@ public interface IDeviceAndAppManagementRoleDefinitionRequest extends IHttpReque
      * @param newDeviceAndAppManagementRoleDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, final ICallback<DeviceAndAppManagementRoleDefinition> callback);
+    void post(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, final ICallback<? super DeviceAndAppManagementRoleDefinition> callback);
 
     /**
      * Posts a DeviceAndAppManagementRoleDefinition with a new object
@@ -85,7 +85,7 @@ public interface IDeviceAndAppManagementRoleDefinitionRequest extends IHttpReque
      * @param newDeviceAndAppManagementRoleDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, final ICallback<DeviceAndAppManagementRoleDefinition> callback);
+    void put(final DeviceAndAppManagementRoleDefinition newDeviceAndAppManagementRoleDefinition, final ICallback<? super DeviceAndAppManagementRoleDefinition> callback);
 
     /**
      * Posts a DeviceAndAppManagementRoleDefinition with a new object

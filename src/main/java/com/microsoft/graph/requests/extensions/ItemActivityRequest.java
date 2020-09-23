@@ -39,7 +39,7 @@ public class ItemActivityRequest extends BaseRequest implements IItemActivityReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ItemActivity> callback) {
+    public void get(final ICallback<? super ItemActivity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class ItemActivityRequest extends BaseRequest implements IItemActivityReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ItemActivity> callback) {
+    public void delete(final ICallback<? super ItemActivity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class ItemActivityRequest extends BaseRequest implements IItemActivityReq
      * @param sourceItemActivity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemActivity sourceItemActivity, final ICallback<ItemActivity> callback) {
+    public void patch(final ItemActivity sourceItemActivity, final ICallback<? super ItemActivity> callback) {
         send(HttpMethod.PATCH, callback, sourceItemActivity);
     }
 
@@ -98,7 +98,7 @@ public class ItemActivityRequest extends BaseRequest implements IItemActivityReq
      * @param newItemActivity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemActivity newItemActivity, final ICallback<ItemActivity> callback) {
+    public void post(final ItemActivity newItemActivity, final ICallback<? super ItemActivity> callback) {
         send(HttpMethod.POST, callback, newItemActivity);
     }
 
@@ -119,7 +119,7 @@ public class ItemActivityRequest extends BaseRequest implements IItemActivityReq
      * @param newItemActivity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemActivity newItemActivity, final ICallback<ItemActivity> callback) {
+    public void put(final ItemActivity newItemActivity, final ICallback<? super ItemActivity> callback) {
         send(HttpMethod.PUT, callback, newItemActivity);
     }
 

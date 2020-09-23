@@ -21,7 +21,7 @@ public interface ILicenseDetailsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<LicenseDetails> callback);
+    void get(final ICallback<? super LicenseDetails> callback);
 
     /**
      * Gets the LicenseDetails from the service
@@ -36,7 +36,7 @@ public interface ILicenseDetailsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<LicenseDetails> callback);
+    void delete(final ICallback<? super LicenseDetails> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ILicenseDetailsRequest extends IHttpRequest {
      * @param sourceLicenseDetails the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final LicenseDetails sourceLicenseDetails, final ICallback<LicenseDetails> callback);
+    void patch(final LicenseDetails sourceLicenseDetails, final ICallback<? super LicenseDetails> callback);
 
     /**
      * Patches this LicenseDetails with a source
@@ -68,7 +68,7 @@ public interface ILicenseDetailsRequest extends IHttpRequest {
      * @param newLicenseDetails the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final LicenseDetails newLicenseDetails, final ICallback<LicenseDetails> callback);
+    void post(final LicenseDetails newLicenseDetails, final ICallback<? super LicenseDetails> callback);
 
     /**
      * Posts a LicenseDetails with a new object
@@ -85,7 +85,7 @@ public interface ILicenseDetailsRequest extends IHttpRequest {
      * @param newLicenseDetails the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final LicenseDetails newLicenseDetails, final ICallback<LicenseDetails> callback);
+    void put(final LicenseDetails newLicenseDetails, final ICallback<? super LicenseDetails> callback);
 
     /**
      * Posts a LicenseDetails with a new object

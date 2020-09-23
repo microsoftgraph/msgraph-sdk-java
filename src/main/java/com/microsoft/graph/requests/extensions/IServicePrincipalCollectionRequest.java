@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IServicePrincipalCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IServicePrincipalCollectionPage> callback);
+    void get(final ICallback<? super IServicePrincipalCollectionPage> callback);
 
     IServicePrincipalCollectionPage get() throws ClientException;
 
-    void post(final ServicePrincipal newServicePrincipal, final ICallback<ServicePrincipal> callback);
+    void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback);
 
     ServicePrincipal post(final ServicePrincipal newServicePrincipal) throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IWorkbookCommentReplyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookCommentReply> callback);
+    void get(final ICallback<? super WorkbookCommentReply> callback);
 
     /**
      * Gets the WorkbookCommentReply from the service
@@ -36,7 +36,7 @@ public interface IWorkbookCommentReplyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookCommentReply> callback);
+    void delete(final ICallback<? super WorkbookCommentReply> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookCommentReplyRequest extends IHttpRequest {
      * @param sourceWorkbookCommentReply the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookCommentReply sourceWorkbookCommentReply, final ICallback<WorkbookCommentReply> callback);
+    void patch(final WorkbookCommentReply sourceWorkbookCommentReply, final ICallback<? super WorkbookCommentReply> callback);
 
     /**
      * Patches this WorkbookCommentReply with a source
@@ -68,7 +68,7 @@ public interface IWorkbookCommentReplyRequest extends IHttpRequest {
      * @param newWorkbookCommentReply the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<WorkbookCommentReply> callback);
+    void post(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<? super WorkbookCommentReply> callback);
 
     /**
      * Posts a WorkbookCommentReply with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookCommentReplyRequest extends IHttpRequest {
      * @param newWorkbookCommentReply the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<WorkbookCommentReply> callback);
+    void put(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<? super WorkbookCommentReply> callback);
 
     /**
      * Posts a WorkbookCommentReply with a new object

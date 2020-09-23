@@ -21,7 +21,7 @@ public interface IDeviceComplianceUserStatusRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceComplianceUserStatus> callback);
+    void get(final ICallback<? super DeviceComplianceUserStatus> callback);
 
     /**
      * Gets the DeviceComplianceUserStatus from the service
@@ -36,7 +36,7 @@ public interface IDeviceComplianceUserStatusRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceComplianceUserStatus> callback);
+    void delete(final ICallback<? super DeviceComplianceUserStatus> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceComplianceUserStatusRequest extends IHttpRequest {
      * @param sourceDeviceComplianceUserStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceComplianceUserStatus sourceDeviceComplianceUserStatus, final ICallback<DeviceComplianceUserStatus> callback);
+    void patch(final DeviceComplianceUserStatus sourceDeviceComplianceUserStatus, final ICallback<? super DeviceComplianceUserStatus> callback);
 
     /**
      * Patches this DeviceComplianceUserStatus with a source
@@ -68,7 +68,7 @@ public interface IDeviceComplianceUserStatusRequest extends IHttpRequest {
      * @param newDeviceComplianceUserStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceComplianceUserStatus newDeviceComplianceUserStatus, final ICallback<DeviceComplianceUserStatus> callback);
+    void post(final DeviceComplianceUserStatus newDeviceComplianceUserStatus, final ICallback<? super DeviceComplianceUserStatus> callback);
 
     /**
      * Posts a DeviceComplianceUserStatus with a new object
@@ -85,7 +85,7 @@ public interface IDeviceComplianceUserStatusRequest extends IHttpRequest {
      * @param newDeviceComplianceUserStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceComplianceUserStatus newDeviceComplianceUserStatus, final ICallback<DeviceComplianceUserStatus> callback);
+    void put(final DeviceComplianceUserStatus newDeviceComplianceUserStatus, final ICallback<? super DeviceComplianceUserStatus> callback);
 
     /**
      * Posts a DeviceComplianceUserStatus with a new object

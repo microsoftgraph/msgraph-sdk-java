@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRemoteAssistancePartnerCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IRemoteAssistancePartnerCollectionPage> callback);
+    void get(final ICallback<? super IRemoteAssistancePartnerCollectionPage> callback);
 
     IRemoteAssistancePartnerCollectionPage get() throws ClientException;
 
-    void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback);
+    void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback);
 
     RemoteAssistancePartner post(final RemoteAssistancePartner newRemoteAssistancePartner) throws ClientException;
 

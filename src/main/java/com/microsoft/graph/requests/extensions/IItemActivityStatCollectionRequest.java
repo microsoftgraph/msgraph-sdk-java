@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IItemActivityStatCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IItemActivityStatCollectionPage> callback);
+    void get(final ICallback<? super IItemActivityStatCollectionPage> callback);
 
     IItemActivityStatCollectionPage get() throws ClientException;
 
-    void post(final ItemActivityStat newItemActivityStat, final ICallback<ItemActivityStat> callback);
+    void post(final ItemActivityStat newItemActivityStat, final ICallback<? super ItemActivityStat> callback);
 
     ItemActivityStat post(final ItemActivityStat newItemActivityStat) throws ClientException;
 

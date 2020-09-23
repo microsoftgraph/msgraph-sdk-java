@@ -21,7 +21,7 @@ public interface IEmailFileAssessmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EmailFileAssessmentRequest> callback);
+    void get(final ICallback<? super EmailFileAssessmentRequest> callback);
 
     /**
      * Gets the EmailFileAssessmentRequest from the service
@@ -36,7 +36,7 @@ public interface IEmailFileAssessmentRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EmailFileAssessmentRequest> callback);
+    void delete(final ICallback<? super EmailFileAssessmentRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEmailFileAssessmentRequestRequest extends IHttpRequest {
      * @param sourceEmailFileAssessmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EmailFileAssessmentRequest sourceEmailFileAssessmentRequest, final ICallback<EmailFileAssessmentRequest> callback);
+    void patch(final EmailFileAssessmentRequest sourceEmailFileAssessmentRequest, final ICallback<? super EmailFileAssessmentRequest> callback);
 
     /**
      * Patches this EmailFileAssessmentRequest with a source
@@ -68,7 +68,7 @@ public interface IEmailFileAssessmentRequestRequest extends IHttpRequest {
      * @param newEmailFileAssessmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EmailFileAssessmentRequest newEmailFileAssessmentRequest, final ICallback<EmailFileAssessmentRequest> callback);
+    void post(final EmailFileAssessmentRequest newEmailFileAssessmentRequest, final ICallback<? super EmailFileAssessmentRequest> callback);
 
     /**
      * Posts a EmailFileAssessmentRequest with a new object
@@ -85,7 +85,7 @@ public interface IEmailFileAssessmentRequestRequest extends IHttpRequest {
      * @param newEmailFileAssessmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EmailFileAssessmentRequest newEmailFileAssessmentRequest, final ICallback<EmailFileAssessmentRequest> callback);
+    void put(final EmailFileAssessmentRequest newEmailFileAssessmentRequest, final ICallback<? super EmailFileAssessmentRequest> callback);
 
     /**
      * Posts a EmailFileAssessmentRequest with a new object

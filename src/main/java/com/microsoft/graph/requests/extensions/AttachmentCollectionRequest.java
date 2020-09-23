@@ -42,7 +42,7 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
         super(requestUrl, client, requestOptions, AttachmentCollectionResponse.class, IAttachmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IAttachmentCollectionPage> callback) {
+    public void get(final ICallback<? super IAttachmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,7 +61,7 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
         return buildFromResponse(response);
     }
 
-    public void post(final Attachment newAttachment, final ICallback<Attachment> callback) {
+    public void post(final Attachment newAttachment, final ICallback<? super Attachment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AttachmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

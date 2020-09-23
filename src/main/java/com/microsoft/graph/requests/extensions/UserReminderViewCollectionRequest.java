@@ -39,7 +39,7 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Use
     }
 
 
-    public void get(final ICallback<IUserReminderViewCollectionPage> callback) {
+    public void get(final ICallback<? super IUserReminderViewCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

@@ -37,7 +37,7 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsPhone81GeneralConfiguration> callback) {
+    public void get(final ICallback<? super WindowsPhone81GeneralConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsPhone81GeneralConfiguration> callback) {
+    public void delete(final ICallback<? super WindowsPhone81GeneralConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest imple
      * @param sourceWindowsPhone81GeneralConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhone81GeneralConfiguration sourceWindowsPhone81GeneralConfiguration, final ICallback<WindowsPhone81GeneralConfiguration> callback) {
+    public void patch(final WindowsPhone81GeneralConfiguration sourceWindowsPhone81GeneralConfiguration, final ICallback<? super WindowsPhone81GeneralConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhone81GeneralConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest imple
      * @param newWindowsPhone81GeneralConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration, final ICallback<WindowsPhone81GeneralConfiguration> callback) {
+    public void post(final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration, final ICallback<? super WindowsPhone81GeneralConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsPhone81GeneralConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest imple
      * @param newWindowsPhone81GeneralConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration, final ICallback<WindowsPhone81GeneralConfiguration> callback) {
+    public void put(final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration, final ICallback<? super WindowsPhone81GeneralConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhone81GeneralConfiguration);
     }
 

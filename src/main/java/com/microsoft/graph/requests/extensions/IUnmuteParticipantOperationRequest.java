@@ -21,7 +21,7 @@ public interface IUnmuteParticipantOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UnmuteParticipantOperation> callback);
+    void get(final ICallback<? super UnmuteParticipantOperation> callback);
 
     /**
      * Gets the UnmuteParticipantOperation from the service
@@ -36,7 +36,7 @@ public interface IUnmuteParticipantOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UnmuteParticipantOperation> callback);
+    void delete(final ICallback<? super UnmuteParticipantOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUnmuteParticipantOperationRequest extends IHttpRequest {
      * @param sourceUnmuteParticipantOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UnmuteParticipantOperation sourceUnmuteParticipantOperation, final ICallback<UnmuteParticipantOperation> callback);
+    void patch(final UnmuteParticipantOperation sourceUnmuteParticipantOperation, final ICallback<? super UnmuteParticipantOperation> callback);
 
     /**
      * Patches this UnmuteParticipantOperation with a source
@@ -68,7 +68,7 @@ public interface IUnmuteParticipantOperationRequest extends IHttpRequest {
      * @param newUnmuteParticipantOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UnmuteParticipantOperation newUnmuteParticipantOperation, final ICallback<UnmuteParticipantOperation> callback);
+    void post(final UnmuteParticipantOperation newUnmuteParticipantOperation, final ICallback<? super UnmuteParticipantOperation> callback);
 
     /**
      * Posts a UnmuteParticipantOperation with a new object
@@ -85,7 +85,7 @@ public interface IUnmuteParticipantOperationRequest extends IHttpRequest {
      * @param newUnmuteParticipantOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UnmuteParticipantOperation newUnmuteParticipantOperation, final ICallback<UnmuteParticipantOperation> callback);
+    void put(final UnmuteParticipantOperation newUnmuteParticipantOperation, final ICallback<? super UnmuteParticipantOperation> callback);
 
     /**
      * Posts a UnmuteParticipantOperation with a new object

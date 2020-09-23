@@ -37,7 +37,7 @@ public class OnenotePageCopyToSectionRequest extends BaseRequest implements IOne
         body = new OnenotePageCopyToSectionBody();
     }
 
-    public void post(final ICallback<OnenoteOperation> callback) {
+    public void post(final ICallback<? super OnenoteOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

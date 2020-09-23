@@ -36,7 +36,7 @@ public class ManagedAppPolicyTargetAppsRequest extends BaseRequest implements IM
         body = new ManagedAppPolicyTargetAppsBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

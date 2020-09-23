@@ -63,7 +63,7 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
         super(requestUrl, client, requestOptions, Site.class);
     }
 
-    public void delete(final ICallback<Site> callback) {
+    public void delete(final ICallback<? super Site> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -108,7 +108,7 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
      * @param srcSite the Site reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Site srcSite, final ICallback<Site> callback) {
+    public void put(Site srcSite, final ICallback<? super Site> callback) {
         send(HttpMethod.PUT, callback, srcSite);
     }
 

@@ -36,7 +36,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, IOAuth2PermissionGrantCollectionPage.class);
     }
 
-    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback) {
+    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/oauth2PermissionGrants/" + newOAuth2PermissionGrant.id);
         new OAuth2PermissionGrantWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

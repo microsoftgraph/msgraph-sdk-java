@@ -21,7 +21,7 @@ public interface ISecureScoreRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SecureScore> callback);
+    void get(final ICallback<? super SecureScore> callback);
 
     /**
      * Gets the SecureScore from the service
@@ -36,7 +36,7 @@ public interface ISecureScoreRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SecureScore> callback);
+    void delete(final ICallback<? super SecureScore> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISecureScoreRequest extends IHttpRequest {
      * @param sourceSecureScore the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SecureScore sourceSecureScore, final ICallback<SecureScore> callback);
+    void patch(final SecureScore sourceSecureScore, final ICallback<? super SecureScore> callback);
 
     /**
      * Patches this SecureScore with a source
@@ -68,7 +68,7 @@ public interface ISecureScoreRequest extends IHttpRequest {
      * @param newSecureScore the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SecureScore newSecureScore, final ICallback<SecureScore> callback);
+    void post(final SecureScore newSecureScore, final ICallback<? super SecureScore> callback);
 
     /**
      * Posts a SecureScore with a new object
@@ -85,7 +85,7 @@ public interface ISecureScoreRequest extends IHttpRequest {
      * @param newSecureScore the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SecureScore newSecureScore, final ICallback<SecureScore> callback);
+    void put(final SecureScore newSecureScore, final ICallback<? super SecureScore> callback);
 
     /**
      * Posts a SecureScore with a new object

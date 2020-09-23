@@ -36,7 +36,7 @@ public class WorkbookWorksheetProtectionProtectRequest extends BaseRequest imple
         body = new WorkbookWorksheetProtectionProtectBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

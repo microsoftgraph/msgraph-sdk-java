@@ -21,7 +21,7 @@ public interface IMailSearchFolderRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MailSearchFolder> callback);
+    void get(final ICallback<? super MailSearchFolder> callback);
 
     /**
      * Gets the MailSearchFolder from the service
@@ -36,7 +36,7 @@ public interface IMailSearchFolderRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MailSearchFolder> callback);
+    void delete(final ICallback<? super MailSearchFolder> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMailSearchFolderRequest extends IHttpRequest {
      * @param sourceMailSearchFolder the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MailSearchFolder sourceMailSearchFolder, final ICallback<MailSearchFolder> callback);
+    void patch(final MailSearchFolder sourceMailSearchFolder, final ICallback<? super MailSearchFolder> callback);
 
     /**
      * Patches this MailSearchFolder with a source
@@ -68,7 +68,7 @@ public interface IMailSearchFolderRequest extends IHttpRequest {
      * @param newMailSearchFolder the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MailSearchFolder newMailSearchFolder, final ICallback<MailSearchFolder> callback);
+    void post(final MailSearchFolder newMailSearchFolder, final ICallback<? super MailSearchFolder> callback);
 
     /**
      * Posts a MailSearchFolder with a new object
@@ -85,7 +85,7 @@ public interface IMailSearchFolderRequest extends IHttpRequest {
      * @param newMailSearchFolder the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MailSearchFolder newMailSearchFolder, final ICallback<MailSearchFolder> callback);
+    void put(final MailSearchFolder newMailSearchFolder, final ICallback<? super MailSearchFolder> callback);
 
     /**
      * Posts a MailSearchFolder with a new object

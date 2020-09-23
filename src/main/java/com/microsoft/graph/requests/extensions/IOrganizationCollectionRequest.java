@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOrganizationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOrganizationCollectionPage> callback);
+    void get(final ICallback<? super IOrganizationCollectionPage> callback);
 
     IOrganizationCollectionPage get() throws ClientException;
 
-    void post(final Organization newOrganization, final ICallback<Organization> callback);
+    void post(final Organization newOrganization, final ICallback<? super Organization> callback);
 
     Organization post(final Organization newOrganization) throws ClientException;
 

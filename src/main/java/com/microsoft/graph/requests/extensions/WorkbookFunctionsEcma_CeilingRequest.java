@@ -37,7 +37,7 @@ public class WorkbookFunctionsEcma_CeilingRequest extends BaseRequest implements
         body = new WorkbookFunctionsEcma_CeilingBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

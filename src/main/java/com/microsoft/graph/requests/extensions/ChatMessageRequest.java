@@ -45,7 +45,7 @@ public class ChatMessageRequest extends BaseRequest implements IChatMessageReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ChatMessage> callback) {
+    public void get(final ICallback<? super ChatMessage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class ChatMessageRequest extends BaseRequest implements IChatMessageReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ChatMessage> callback) {
+    public void delete(final ICallback<? super ChatMessage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class ChatMessageRequest extends BaseRequest implements IChatMessageReque
      * @param sourceChatMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ChatMessage sourceChatMessage, final ICallback<ChatMessage> callback) {
+    public void patch(final ChatMessage sourceChatMessage, final ICallback<? super ChatMessage> callback) {
         send(HttpMethod.PATCH, callback, sourceChatMessage);
     }
 
@@ -104,7 +104,7 @@ public class ChatMessageRequest extends BaseRequest implements IChatMessageReque
      * @param newChatMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ChatMessage newChatMessage, final ICallback<ChatMessage> callback) {
+    public void post(final ChatMessage newChatMessage, final ICallback<? super ChatMessage> callback) {
         send(HttpMethod.POST, callback, newChatMessage);
     }
 
@@ -125,7 +125,7 @@ public class ChatMessageRequest extends BaseRequest implements IChatMessageReque
      * @param newChatMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ChatMessage newChatMessage, final ICallback<ChatMessage> callback) {
+    public void put(final ChatMessage newChatMessage, final ICallback<? super ChatMessage> callback) {
         send(HttpMethod.PUT, callback, newChatMessage);
     }
 

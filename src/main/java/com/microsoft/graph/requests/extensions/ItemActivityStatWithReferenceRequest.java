@@ -39,7 +39,7 @@ public class ItemActivityStatWithReferenceRequest extends BaseRequest implements
         super(requestUrl, client, requestOptions, ItemActivityStat.class);
     }
 
-    public void post(final ItemActivityStat newItemActivityStat, final IJsonBackedObject payload, final ICallback<ItemActivityStat> callback) {
+    public void post(final ItemActivityStat newItemActivityStat, final IJsonBackedObject payload, final ICallback<? super ItemActivityStat> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class ItemActivityStatWithReferenceRequest extends BaseRequest implements
         return null;
     }
 
-    public void get(final ICallback<ItemActivityStat> callback) {
+    public void get(final ICallback<? super ItemActivityStat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class ItemActivityStatWithReferenceRequest extends BaseRequest implements
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<ItemActivityStat> callback) {
+	public void delete(final ICallback<? super ItemActivityStat> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class ItemActivityStatWithReferenceRequest extends BaseRequest implements
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ItemActivityStat sourceItemActivityStat, final ICallback<ItemActivityStat> callback) {
+	public void patch(final ItemActivityStat sourceItemActivityStat, final ICallback<? super ItemActivityStat> callback) {
 		send(HttpMethod.PATCH, callback, sourceItemActivityStat);
 	}
 

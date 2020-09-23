@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IClaimsMappingPolicyReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<ClaimsMappingPolicy> callback);
+    void delete(final ICallback<? super ClaimsMappingPolicy> callback);
 
     ClaimsMappingPolicy delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IClaimsMappingPolicyReferenceRequest extends IHttpRequest {
      * @param srcClaimsMappingPolicy the ClaimsMappingPolicy to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(ClaimsMappingPolicy srcClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback);
+    void put(ClaimsMappingPolicy srcClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback);
 
     /**
      * Puts the ClaimsMappingPolicy

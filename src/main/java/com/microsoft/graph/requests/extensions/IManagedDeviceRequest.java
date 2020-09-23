@@ -21,7 +21,7 @@ public interface IManagedDeviceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedDevice> callback);
+    void get(final ICallback<? super ManagedDevice> callback);
 
     /**
      * Gets the ManagedDevice from the service
@@ -36,7 +36,7 @@ public interface IManagedDeviceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedDevice> callback);
+    void delete(final ICallback<? super ManagedDevice> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedDeviceRequest extends IHttpRequest {
      * @param sourceManagedDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedDevice sourceManagedDevice, final ICallback<ManagedDevice> callback);
+    void patch(final ManagedDevice sourceManagedDevice, final ICallback<? super ManagedDevice> callback);
 
     /**
      * Patches this ManagedDevice with a source
@@ -68,7 +68,7 @@ public interface IManagedDeviceRequest extends IHttpRequest {
      * @param newManagedDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedDevice newManagedDevice, final ICallback<ManagedDevice> callback);
+    void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback);
 
     /**
      * Posts a ManagedDevice with a new object
@@ -85,7 +85,7 @@ public interface IManagedDeviceRequest extends IHttpRequest {
      * @param newManagedDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedDevice newManagedDevice, final ICallback<ManagedDevice> callback);
+    void put(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback);
 
     /**
      * Posts a ManagedDevice with a new object

@@ -35,7 +35,7 @@ public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollec
         super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, IMobileAppCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<IMobileAppCategoryCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IMobileAppCategoryCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

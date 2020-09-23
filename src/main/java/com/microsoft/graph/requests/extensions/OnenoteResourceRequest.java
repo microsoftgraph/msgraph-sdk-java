@@ -37,7 +37,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OnenoteResource> callback) {
+    public void get(final ICallback<? super OnenoteResource> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OnenoteResource> callback) {
+    public void delete(final ICallback<? super OnenoteResource> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @param sourceOnenoteResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnenoteResource sourceOnenoteResource, final ICallback<OnenoteResource> callback) {
+    public void patch(final OnenoteResource sourceOnenoteResource, final ICallback<? super OnenoteResource> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteResource);
     }
 
@@ -96,7 +96,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @param newOnenoteResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnenoteResource newOnenoteResource, final ICallback<OnenoteResource> callback) {
+    public void post(final OnenoteResource newOnenoteResource, final ICallback<? super OnenoteResource> callback) {
         send(HttpMethod.POST, callback, newOnenoteResource);
     }
 
@@ -117,7 +117,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @param newOnenoteResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnenoteResource newOnenoteResource, final ICallback<OnenoteResource> callback) {
+    public void put(final OnenoteResource newOnenoteResource, final ICallback<? super OnenoteResource> callback) {
         send(HttpMethod.PUT, callback, newOnenoteResource);
     }
 

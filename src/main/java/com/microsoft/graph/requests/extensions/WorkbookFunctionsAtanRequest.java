@@ -37,7 +37,7 @@ public class WorkbookFunctionsAtanRequest extends BaseRequest implements IWorkbo
         body = new WorkbookFunctionsAtanBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

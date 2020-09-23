@@ -45,7 +45,7 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
     }
 
 
-    public void post(final ICallback<IUserTranslateExchangeIdsCollectionPage> callback) {
+    public void post(final ICallback<? super IUserTranslateExchangeIdsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

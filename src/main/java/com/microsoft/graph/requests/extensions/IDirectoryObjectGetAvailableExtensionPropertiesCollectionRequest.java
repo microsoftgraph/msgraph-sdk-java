@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IDirectoryObjectGetAvailableExtensionPropertiesCollectionPage> callback);
+    void post(final ICallback<? super IDirectoryObjectGetAvailableExtensionPropertiesCollectionPage> callback);
 
     IDirectoryObjectGetAvailableExtensionPropertiesCollectionPage post() throws ClientException;
 

@@ -37,7 +37,7 @@ public class DriveItemCreateLinkRequest extends BaseRequest implements IDriveIte
         body = new DriveItemCreateLinkBody();
     }
 
-    public void post(final ICallback<Permission> callback) {
+    public void post(final ICallback<? super Permission> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

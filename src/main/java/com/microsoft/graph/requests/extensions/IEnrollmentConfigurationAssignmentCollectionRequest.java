@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEnrollmentConfigurationAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IEnrollmentConfigurationAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IEnrollmentConfigurationAssignmentCollectionPage> callback);
 
     IEnrollmentConfigurationAssignmentCollectionPage get() throws ClientException;
 
-    void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback);
+    void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback);
 
     EnrollmentConfigurationAssignment post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException;
 

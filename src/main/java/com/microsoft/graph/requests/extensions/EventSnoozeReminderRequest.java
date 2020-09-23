@@ -36,7 +36,7 @@ public class EventSnoozeReminderRequest extends BaseRequest implements IEventSno
         body = new EventSnoozeReminderBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

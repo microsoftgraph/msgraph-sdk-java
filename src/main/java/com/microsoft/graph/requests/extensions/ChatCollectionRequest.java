@@ -40,7 +40,7 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
         super(requestUrl, client, requestOptions, ChatCollectionResponse.class, IChatCollectionPage.class);
     }
 
-    public void get(final ICallback<IChatCollectionPage> callback) {
+    public void get(final ICallback<? super IChatCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final Chat newChat, final ICallback<Chat> callback) {
+    public void post(final Chat newChat, final ICallback<? super Chat> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

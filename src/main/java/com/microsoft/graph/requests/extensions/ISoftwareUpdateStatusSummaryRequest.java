@@ -21,7 +21,7 @@ public interface ISoftwareUpdateStatusSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SoftwareUpdateStatusSummary> callback);
+    void get(final ICallback<? super SoftwareUpdateStatusSummary> callback);
 
     /**
      * Gets the SoftwareUpdateStatusSummary from the service
@@ -36,7 +36,7 @@ public interface ISoftwareUpdateStatusSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SoftwareUpdateStatusSummary> callback);
+    void delete(final ICallback<? super SoftwareUpdateStatusSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISoftwareUpdateStatusSummaryRequest extends IHttpRequest {
      * @param sourceSoftwareUpdateStatusSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback);
+    void patch(final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback);
 
     /**
      * Patches this SoftwareUpdateStatusSummary with a source
@@ -68,7 +68,7 @@ public interface ISoftwareUpdateStatusSummaryRequest extends IHttpRequest {
      * @param newSoftwareUpdateStatusSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback);
+    void post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback);
 
     /**
      * Posts a SoftwareUpdateStatusSummary with a new object
@@ -85,7 +85,7 @@ public interface ISoftwareUpdateStatusSummaryRequest extends IHttpRequest {
      * @param newSoftwareUpdateStatusSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback);
+    void put(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback);
 
     /**
      * Posts a SoftwareUpdateStatusSummary with a new object

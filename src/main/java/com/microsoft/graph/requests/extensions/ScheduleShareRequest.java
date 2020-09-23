@@ -36,7 +36,7 @@ public class ScheduleShareRequest extends BaseRequest implements IScheduleShareR
         body = new ScheduleShareBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

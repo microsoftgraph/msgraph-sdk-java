@@ -40,7 +40,7 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, PermissionGrantConditionSetCollectionResponse.class, IPermissionGrantConditionSetCollectionPage.class);
     }
 
-    public void get(final ICallback<IPermissionGrantConditionSetCollectionPage> callback) {
+    public void get(final ICallback<? super IPermissionGrantConditionSetCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<PermissionGrantConditionSet> callback) {
+    public void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionGrantConditionSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

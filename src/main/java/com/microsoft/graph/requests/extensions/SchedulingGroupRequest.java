@@ -37,7 +37,7 @@ public class SchedulingGroupRequest extends BaseRequest implements ISchedulingGr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SchedulingGroup> callback) {
+    public void get(final ICallback<? super SchedulingGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SchedulingGroupRequest extends BaseRequest implements ISchedulingGr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SchedulingGroup> callback) {
+    public void delete(final ICallback<? super SchedulingGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SchedulingGroupRequest extends BaseRequest implements ISchedulingGr
      * @param sourceSchedulingGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SchedulingGroup sourceSchedulingGroup, final ICallback<SchedulingGroup> callback) {
+    public void patch(final SchedulingGroup sourceSchedulingGroup, final ICallback<? super SchedulingGroup> callback) {
         send(HttpMethod.PATCH, callback, sourceSchedulingGroup);
     }
 
@@ -96,7 +96,7 @@ public class SchedulingGroupRequest extends BaseRequest implements ISchedulingGr
      * @param newSchedulingGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SchedulingGroup newSchedulingGroup, final ICallback<SchedulingGroup> callback) {
+    public void post(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback) {
         send(HttpMethod.POST, callback, newSchedulingGroup);
     }
 
@@ -117,7 +117,7 @@ public class SchedulingGroupRequest extends BaseRequest implements ISchedulingGr
      * @param newSchedulingGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SchedulingGroup newSchedulingGroup, final ICallback<SchedulingGroup> callback) {
+    public void put(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback) {
         send(HttpMethod.PUT, callback, newSchedulingGroup);
     }
 

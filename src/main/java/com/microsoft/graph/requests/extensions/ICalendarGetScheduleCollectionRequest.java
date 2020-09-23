@@ -24,7 +24,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface ICalendarGetScheduleCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<ICalendarGetScheduleCollectionPage> callback);
+    void post(final ICallback<? super ICalendarGetScheduleCollectionPage> callback);
 
     ICalendarGetScheduleCollectionPage post() throws ClientException;
 

@@ -36,7 +36,7 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequest extends BaseReq
         body = new ManagedDeviceDeleteUserFromSharedAppleDeviceBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

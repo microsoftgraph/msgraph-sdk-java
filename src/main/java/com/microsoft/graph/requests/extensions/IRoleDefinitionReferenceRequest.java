@@ -24,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IRoleDefinitionReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<RoleDefinition> callback);
+    void delete(final ICallback<? super RoleDefinition> callback);
 
     RoleDefinition delete() throws ClientException;
 
@@ -50,7 +50,7 @@ public interface IRoleDefinitionReferenceRequest extends IHttpRequest {
      * @param srcRoleDefinition the RoleDefinition to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(RoleDefinition srcRoleDefinition, final ICallback<RoleDefinition> callback);
+    void put(RoleDefinition srcRoleDefinition, final ICallback<? super RoleDefinition> callback);
 
     /**
      * Puts the RoleDefinition

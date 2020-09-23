@@ -21,7 +21,7 @@ public interface ICalendarSharingMessageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CalendarSharingMessage> callback);
+    void get(final ICallback<? super CalendarSharingMessage> callback);
 
     /**
      * Gets the CalendarSharingMessage from the service
@@ -36,7 +36,7 @@ public interface ICalendarSharingMessageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CalendarSharingMessage> callback);
+    void delete(final ICallback<? super CalendarSharingMessage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICalendarSharingMessageRequest extends IHttpRequest {
      * @param sourceCalendarSharingMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CalendarSharingMessage sourceCalendarSharingMessage, final ICallback<CalendarSharingMessage> callback);
+    void patch(final CalendarSharingMessage sourceCalendarSharingMessage, final ICallback<? super CalendarSharingMessage> callback);
 
     /**
      * Patches this CalendarSharingMessage with a source
@@ -68,7 +68,7 @@ public interface ICalendarSharingMessageRequest extends IHttpRequest {
      * @param newCalendarSharingMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<CalendarSharingMessage> callback);
+    void post(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<? super CalendarSharingMessage> callback);
 
     /**
      * Posts a CalendarSharingMessage with a new object
@@ -85,7 +85,7 @@ public interface ICalendarSharingMessageRequest extends IHttpRequest {
      * @param newCalendarSharingMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<CalendarSharingMessage> callback);
+    void put(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<? super CalendarSharingMessage> callback);
 
     /**
      * Posts a CalendarSharingMessage with a new object

@@ -21,7 +21,7 @@ public interface ITimeOffReasonRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TimeOffReason> callback);
+    void get(final ICallback<? super TimeOffReason> callback);
 
     /**
      * Gets the TimeOffReason from the service
@@ -36,7 +36,7 @@ public interface ITimeOffReasonRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TimeOffReason> callback);
+    void delete(final ICallback<? super TimeOffReason> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITimeOffReasonRequest extends IHttpRequest {
      * @param sourceTimeOffReason the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TimeOffReason sourceTimeOffReason, final ICallback<TimeOffReason> callback);
+    void patch(final TimeOffReason sourceTimeOffReason, final ICallback<? super TimeOffReason> callback);
 
     /**
      * Patches this TimeOffReason with a source
@@ -68,7 +68,7 @@ public interface ITimeOffReasonRequest extends IHttpRequest {
      * @param newTimeOffReason the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TimeOffReason newTimeOffReason, final ICallback<TimeOffReason> callback);
+    void post(final TimeOffReason newTimeOffReason, final ICallback<? super TimeOffReason> callback);
 
     /**
      * Posts a TimeOffReason with a new object
@@ -85,7 +85,7 @@ public interface ITimeOffReasonRequest extends IHttpRequest {
      * @param newTimeOffReason the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TimeOffReason newTimeOffReason, final ICallback<TimeOffReason> callback);
+    void put(final TimeOffReason newTimeOffReason, final ICallback<? super TimeOffReason> callback);
 
     /**
      * Posts a TimeOffReason with a new object

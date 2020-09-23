@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookCommentReplyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWorkbookCommentReplyCollectionPage> callback);
+    void get(final ICallback<? super IWorkbookCommentReplyCollectionPage> callback);
 
     IWorkbookCommentReplyCollectionPage get() throws ClientException;
 
-    void post(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<WorkbookCommentReply> callback);
+    void post(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<? super WorkbookCommentReply> callback);
 
     WorkbookCommentReply post(final WorkbookCommentReply newWorkbookCommentReply) throws ClientException;
 

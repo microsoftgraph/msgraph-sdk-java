@@ -37,7 +37,7 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<Calendar> callback) {
+    public void post(final ICallback<? super Calendar> callback) {
         send(HttpMethod.POST, callback, null);
     }
 

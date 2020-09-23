@@ -36,7 +36,7 @@ public class MobileAppContentFileCommitRequest extends BaseRequest implements IM
         body = new MobileAppContentFileCommitBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

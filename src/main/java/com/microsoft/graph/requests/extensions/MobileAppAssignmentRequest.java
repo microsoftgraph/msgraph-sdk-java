@@ -37,7 +37,7 @@ public class MobileAppAssignmentRequest extends BaseRequest implements IMobileAp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<MobileAppAssignment> callback) {
+    public void get(final ICallback<? super MobileAppAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MobileAppAssignmentRequest extends BaseRequest implements IMobileAp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<MobileAppAssignment> callback) {
+    public void delete(final ICallback<? super MobileAppAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MobileAppAssignmentRequest extends BaseRequest implements IMobileAp
      * @param sourceMobileAppAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppAssignment sourceMobileAppAssignment, final ICallback<MobileAppAssignment> callback) {
+    public void patch(final MobileAppAssignment sourceMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppAssignment);
     }
 
@@ -96,7 +96,7 @@ public class MobileAppAssignmentRequest extends BaseRequest implements IMobileAp
      * @param newMobileAppAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<MobileAppAssignment> callback) {
+    public void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback) {
         send(HttpMethod.POST, callback, newMobileAppAssignment);
     }
 
@@ -117,7 +117,7 @@ public class MobileAppAssignmentRequest extends BaseRequest implements IMobileAp
      * @param newMobileAppAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppAssignment newMobileAppAssignment, final ICallback<MobileAppAssignment> callback) {
+    public void put(final MobileAppAssignment newMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback) {
         send(HttpMethod.PUT, callback, newMobileAppAssignment);
     }
 

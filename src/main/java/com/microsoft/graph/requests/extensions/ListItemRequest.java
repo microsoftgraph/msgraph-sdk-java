@@ -48,7 +48,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ListItem> callback) {
+    public void get(final ICallback<? super ListItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,7 +67,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ListItem> callback) {
+    public void delete(final ICallback<? super ListItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +86,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @param sourceListItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ListItem sourceListItem, final ICallback<ListItem> callback) {
+    public void patch(final ListItem sourceListItem, final ICallback<? super ListItem> callback) {
         send(HttpMethod.PATCH, callback, sourceListItem);
     }
 
@@ -107,7 +107,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @param newListItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ListItem newListItem, final ICallback<ListItem> callback) {
+    public void post(final ListItem newListItem, final ICallback<? super ListItem> callback) {
         send(HttpMethod.POST, callback, newListItem);
     }
 
@@ -128,7 +128,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @param newListItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ListItem newListItem, final ICallback<ListItem> callback) {
+    public void put(final ListItem newListItem, final ICallback<? super ListItem> callback) {
         send(HttpMethod.PUT, callback, newListItem);
     }
 

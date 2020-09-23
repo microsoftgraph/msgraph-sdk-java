@@ -27,7 +27,7 @@ public interface IWorkbookRangeBorderItemAtRequest extends IHttpRequest {
      * @param srcWorkbookRangeBorder the WorkbookRangeBorder with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    void patch(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback);
+    void patch(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback);
 
     /**
      * Patches the WorkbookRangeBorderItemAt
@@ -44,7 +44,7 @@ public interface IWorkbookRangeBorderItemAtRequest extends IHttpRequest {
      * @param srcWorkbookRangeBorder the WorkbookRangeBorder to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback);
+    void put(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback);
 
     /**
      * Puts the WorkbookRangeBorderItemAt
@@ -59,7 +59,7 @@ public interface IWorkbookRangeBorderItemAtRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookRangeBorder> callback);
+    void get(final ICallback<? super WorkbookRangeBorder> callback);
 
     /**
      * Gets the WorkbookRangeBorder

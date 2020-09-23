@@ -38,7 +38,7 @@ public class ItemAnalyticsReferenceRequest extends BaseRequest implements IItemA
         super(requestUrl, client, requestOptions, ItemAnalytics.class);
     }
 
-    public void delete(final ICallback<ItemAnalytics> callback) {
+    public void delete(final ICallback<? super ItemAnalytics> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class ItemAnalyticsReferenceRequest extends BaseRequest implements IItemA
      * @param srcItemAnalytics the ItemAnalytics reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ItemAnalytics srcItemAnalytics, final ICallback<ItemAnalytics> callback) {
+    public void put(ItemAnalytics srcItemAnalytics, final ICallback<? super ItemAnalytics> callback) {
         send(HttpMethod.PUT, callback, srcItemAnalytics);
     }
 

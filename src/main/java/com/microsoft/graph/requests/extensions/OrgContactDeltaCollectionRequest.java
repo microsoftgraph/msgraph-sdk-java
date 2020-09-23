@@ -39,7 +39,7 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
     }
 
 
-    public void get(final ICallback<IOrgContactDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super IOrgContactDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

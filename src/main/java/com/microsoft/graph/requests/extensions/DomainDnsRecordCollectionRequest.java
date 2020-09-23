@@ -39,7 +39,7 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
         super(requestUrl, client, requestOptions, DomainDnsRecordCollectionResponse.class, IDomainDnsRecordCollectionPage.class);
     }
 
-    public void get(final ICallback<IDomainDnsRecordCollectionPage> callback) {
+    public void get(final ICallback<? super IDomainDnsRecordCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
         return buildFromResponse(response);
     }
 
-    public void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<DomainDnsRecord> callback) {
+    public void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<? super DomainDnsRecord> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainDnsRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

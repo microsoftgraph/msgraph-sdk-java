@@ -37,7 +37,7 @@ public class CallCancelMediaProcessingRequest extends BaseRequest implements ICa
         body = new CallCancelMediaProcessingBody();
     }
 
-    public void post(final ICallback<CancelMediaProcessingOperation> callback) {
+    public void post(final ICallback<? super CancelMediaProcessingOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

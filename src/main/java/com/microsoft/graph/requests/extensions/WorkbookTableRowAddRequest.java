@@ -37,7 +37,7 @@ public class WorkbookTableRowAddRequest extends BaseRequest implements IWorkbook
         body = new WorkbookTableRowAddBody();
     }
 
-    public void post(final ICallback<WorkbookTableRow> callback) {
+    public void post(final ICallback<? super WorkbookTableRow> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

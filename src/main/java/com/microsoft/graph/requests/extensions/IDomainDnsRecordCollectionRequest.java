@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDomainDnsRecordCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDomainDnsRecordCollectionPage> callback);
+    void get(final ICallback<? super IDomainDnsRecordCollectionPage> callback);
 
     IDomainDnsRecordCollectionPage get() throws ClientException;
 
-    void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<DomainDnsRecord> callback);
+    void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<? super DomainDnsRecord> callback);
 
     DomainDnsRecord post(final DomainDnsRecord newDomainDnsRecord) throws ClientException;
 

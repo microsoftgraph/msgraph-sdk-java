@@ -37,7 +37,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Windows10SecureAssessmentConfiguration> callback) {
+    public void get(final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Windows10SecureAssessmentConfiguration> callback) {
+    public void delete(final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest i
      * @param sourceWindows10SecureAssessmentConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration, final ICallback<Windows10SecureAssessmentConfiguration> callback) {
+    public void patch(final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration, final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10SecureAssessmentConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest i
      * @param newWindows10SecureAssessmentConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, final ICallback<Windows10SecureAssessmentConfiguration> callback) {
+    public void post(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows10SecureAssessmentConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest i
      * @param newWindows10SecureAssessmentConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, final ICallback<Windows10SecureAssessmentConfiguration> callback) {
+    public void put(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, final ICallback<? super Windows10SecureAssessmentConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows10SecureAssessmentConfiguration);
     }
 

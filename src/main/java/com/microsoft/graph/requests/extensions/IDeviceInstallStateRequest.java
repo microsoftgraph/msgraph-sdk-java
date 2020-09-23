@@ -21,7 +21,7 @@ public interface IDeviceInstallStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceInstallState> callback);
+    void get(final ICallback<? super DeviceInstallState> callback);
 
     /**
      * Gets the DeviceInstallState from the service
@@ -36,7 +36,7 @@ public interface IDeviceInstallStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceInstallState> callback);
+    void delete(final ICallback<? super DeviceInstallState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceInstallStateRequest extends IHttpRequest {
      * @param sourceDeviceInstallState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceInstallState sourceDeviceInstallState, final ICallback<DeviceInstallState> callback);
+    void patch(final DeviceInstallState sourceDeviceInstallState, final ICallback<? super DeviceInstallState> callback);
 
     /**
      * Patches this DeviceInstallState with a source
@@ -68,7 +68,7 @@ public interface IDeviceInstallStateRequest extends IHttpRequest {
      * @param newDeviceInstallState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceInstallState newDeviceInstallState, final ICallback<DeviceInstallState> callback);
+    void post(final DeviceInstallState newDeviceInstallState, final ICallback<? super DeviceInstallState> callback);
 
     /**
      * Posts a DeviceInstallState with a new object
@@ -85,7 +85,7 @@ public interface IDeviceInstallStateRequest extends IHttpRequest {
      * @param newDeviceInstallState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceInstallState newDeviceInstallState, final ICallback<DeviceInstallState> callback);
+    void put(final DeviceInstallState newDeviceInstallState, final ICallback<? super DeviceInstallState> callback);
 
     /**
      * Posts a DeviceInstallState with a new object

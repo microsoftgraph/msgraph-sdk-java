@@ -21,7 +21,7 @@ public interface IWorkbookChartGridlinesRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartGridlines> callback);
+    void get(final ICallback<? super WorkbookChartGridlines> callback);
 
     /**
      * Gets the WorkbookChartGridlines from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartGridlinesRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartGridlines> callback);
+    void delete(final ICallback<? super WorkbookChartGridlines> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartGridlinesRequest extends IHttpRequest {
      * @param sourceWorkbookChartGridlines the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartGridlines sourceWorkbookChartGridlines, final ICallback<WorkbookChartGridlines> callback);
+    void patch(final WorkbookChartGridlines sourceWorkbookChartGridlines, final ICallback<? super WorkbookChartGridlines> callback);
 
     /**
      * Patches this WorkbookChartGridlines with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartGridlinesRequest extends IHttpRequest {
      * @param newWorkbookChartGridlines the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<WorkbookChartGridlines> callback);
+    void post(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<? super WorkbookChartGridlines> callback);
 
     /**
      * Posts a WorkbookChartGridlines with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartGridlinesRequest extends IHttpRequest {
      * @param newWorkbookChartGridlines the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<WorkbookChartGridlines> callback);
+    void put(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<? super WorkbookChartGridlines> callback);
 
     /**
      * Posts a WorkbookChartGridlines with a new object

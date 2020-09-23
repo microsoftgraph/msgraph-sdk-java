@@ -21,7 +21,7 @@ public interface IWindows10SecureAssessmentConfigurationRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10SecureAssessmentConfiguration> callback);
+    void get(final ICallback<? super Windows10SecureAssessmentConfiguration> callback);
 
     /**
      * Gets the Windows10SecureAssessmentConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows10SecureAssessmentConfigurationRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10SecureAssessmentConfiguration> callback);
+    void delete(final ICallback<? super Windows10SecureAssessmentConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10SecureAssessmentConfigurationRequest extends IHttpReq
      * @param sourceWindows10SecureAssessmentConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration, final ICallback<Windows10SecureAssessmentConfiguration> callback);
+    void patch(final Windows10SecureAssessmentConfiguration sourceWindows10SecureAssessmentConfiguration, final ICallback<? super Windows10SecureAssessmentConfiguration> callback);
 
     /**
      * Patches this Windows10SecureAssessmentConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows10SecureAssessmentConfigurationRequest extends IHttpReq
      * @param newWindows10SecureAssessmentConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, final ICallback<Windows10SecureAssessmentConfiguration> callback);
+    void post(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, final ICallback<? super Windows10SecureAssessmentConfiguration> callback);
 
     /**
      * Posts a Windows10SecureAssessmentConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows10SecureAssessmentConfigurationRequest extends IHttpReq
      * @param newWindows10SecureAssessmentConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, final ICallback<Windows10SecureAssessmentConfiguration> callback);
+    void put(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, final ICallback<? super Windows10SecureAssessmentConfiguration> callback);
 
     /**
      * Posts a Windows10SecureAssessmentConfiguration with a new object

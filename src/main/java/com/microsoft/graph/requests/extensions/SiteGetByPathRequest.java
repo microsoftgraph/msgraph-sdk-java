@@ -37,7 +37,7 @@ public class SiteGetByPathRequest extends BaseRequest implements ISiteGetByPathR
      * @param srcSite the Site with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(Site srcSite, final ICallback<Site> callback) {
+    public void patch(Site srcSite, final ICallback<? super Site> callback) {
         send(HttpMethod.PATCH, callback, srcSite);
     }
 
@@ -58,7 +58,7 @@ public class SiteGetByPathRequest extends BaseRequest implements ISiteGetByPathR
      * @param srcSite the Site to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Site srcSite, final ICallback<Site> callback) {
+    public void put(Site srcSite, final ICallback<? super Site> callback) {
         send(HttpMethod.PUT, callback, srcSite);
     }
 
@@ -77,7 +77,7 @@ public class SiteGetByPathRequest extends BaseRequest implements ISiteGetByPathR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Site> callback) {
+    public void get(final ICallback<? super Site> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

@@ -21,7 +21,7 @@ public interface IWorkbookPivotTableRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookPivotTable> callback);
+    void get(final ICallback<? super WorkbookPivotTable> callback);
 
     /**
      * Gets the WorkbookPivotTable from the service
@@ -36,7 +36,7 @@ public interface IWorkbookPivotTableRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookPivotTable> callback);
+    void delete(final ICallback<? super WorkbookPivotTable> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookPivotTableRequest extends IHttpRequest {
      * @param sourceWorkbookPivotTable the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookPivotTable sourceWorkbookPivotTable, final ICallback<WorkbookPivotTable> callback);
+    void patch(final WorkbookPivotTable sourceWorkbookPivotTable, final ICallback<? super WorkbookPivotTable> callback);
 
     /**
      * Patches this WorkbookPivotTable with a source
@@ -68,7 +68,7 @@ public interface IWorkbookPivotTableRequest extends IHttpRequest {
      * @param newWorkbookPivotTable the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<WorkbookPivotTable> callback);
+    void post(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<? super WorkbookPivotTable> callback);
 
     /**
      * Posts a WorkbookPivotTable with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookPivotTableRequest extends IHttpRequest {
      * @param newWorkbookPivotTable the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<WorkbookPivotTable> callback);
+    void put(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<? super WorkbookPivotTable> callback);
 
     /**
      * Posts a WorkbookPivotTable with a new object

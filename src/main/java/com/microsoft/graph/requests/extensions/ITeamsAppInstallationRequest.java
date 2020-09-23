@@ -21,7 +21,7 @@ public interface ITeamsAppInstallationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TeamsAppInstallation> callback);
+    void get(final ICallback<? super TeamsAppInstallation> callback);
 
     /**
      * Gets the TeamsAppInstallation from the service
@@ -36,7 +36,7 @@ public interface ITeamsAppInstallationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TeamsAppInstallation> callback);
+    void delete(final ICallback<? super TeamsAppInstallation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamsAppInstallationRequest extends IHttpRequest {
      * @param sourceTeamsAppInstallation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TeamsAppInstallation sourceTeamsAppInstallation, final ICallback<TeamsAppInstallation> callback);
+    void patch(final TeamsAppInstallation sourceTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback);
 
     /**
      * Patches this TeamsAppInstallation with a source
@@ -68,7 +68,7 @@ public interface ITeamsAppInstallationRequest extends IHttpRequest {
      * @param newTeamsAppInstallation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<TeamsAppInstallation> callback);
+    void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback);
 
     /**
      * Posts a TeamsAppInstallation with a new object
@@ -85,7 +85,7 @@ public interface ITeamsAppInstallationRequest extends IHttpRequest {
      * @param newTeamsAppInstallation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<TeamsAppInstallation> callback);
+    void put(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback);
 
     /**
      * Posts a TeamsAppInstallation with a new object

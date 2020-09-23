@@ -40,7 +40,7 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
         super(requestUrl, client, requestOptions, SegmentCollectionResponse.class, ISegmentCollectionPage.class);
     }
 
-    public void get(final ICallback<ISegmentCollectionPage> callback) {
+    public void get(final ICallback<? super ISegmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
         return buildFromResponse(response);
     }
 
-    public void post(final Segment newSegment, final ICallback<Segment> callback) {
+    public void post(final Segment newSegment, final ICallback<? super Segment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SegmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

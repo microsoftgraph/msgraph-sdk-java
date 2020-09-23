@@ -40,7 +40,7 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
         super(requestUrl, client, requestOptions, ProfilePhotoCollectionResponse.class, IProfilePhotoCollectionPage.class);
     }
 
-    public void get(final ICallback<IProfilePhotoCollectionPage> callback) {
+    public void get(final ICallback<? super IProfilePhotoCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
         return buildFromResponse(response);
     }
 
-    public void post(final ProfilePhoto newProfilePhoto, final ICallback<ProfilePhoto> callback) {
+    public void post(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProfilePhotoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

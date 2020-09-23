@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ILicenseDetailsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ILicenseDetailsCollectionPage> callback);
+    void get(final ICallback<? super ILicenseDetailsCollectionPage> callback);
 
     ILicenseDetailsCollectionPage get() throws ClientException;
 
-    void post(final LicenseDetails newLicenseDetails, final ICallback<LicenseDetails> callback);
+    void post(final LicenseDetails newLicenseDetails, final ICallback<? super LicenseDetails> callback);
 
     LicenseDetails post(final LicenseDetails newLicenseDetails) throws ClientException;
 

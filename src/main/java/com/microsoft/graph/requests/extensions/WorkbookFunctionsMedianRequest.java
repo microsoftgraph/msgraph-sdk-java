@@ -37,7 +37,7 @@ public class WorkbookFunctionsMedianRequest extends BaseRequest implements IWork
         body = new WorkbookFunctionsMedianBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

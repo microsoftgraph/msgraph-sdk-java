@@ -36,7 +36,7 @@ public class EventAcceptRequest extends BaseRequest implements IEventAcceptReque
         body = new EventAcceptBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

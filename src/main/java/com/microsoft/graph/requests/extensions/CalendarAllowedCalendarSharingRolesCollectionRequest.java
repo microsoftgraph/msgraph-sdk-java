@@ -39,7 +39,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequest extends BaseCo
     }
 
 
-    public void get(final ICallback<ICalendarAllowedCalendarSharingRolesCollectionPage> callback) {
+    public void get(final ICallback<? super ICalendarAllowedCalendarSharingRolesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

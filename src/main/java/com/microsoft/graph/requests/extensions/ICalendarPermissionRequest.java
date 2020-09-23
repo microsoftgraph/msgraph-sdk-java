@@ -21,7 +21,7 @@ public interface ICalendarPermissionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CalendarPermission> callback);
+    void get(final ICallback<? super CalendarPermission> callback);
 
     /**
      * Gets the CalendarPermission from the service
@@ -36,7 +36,7 @@ public interface ICalendarPermissionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CalendarPermission> callback);
+    void delete(final ICallback<? super CalendarPermission> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICalendarPermissionRequest extends IHttpRequest {
      * @param sourceCalendarPermission the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CalendarPermission sourceCalendarPermission, final ICallback<CalendarPermission> callback);
+    void patch(final CalendarPermission sourceCalendarPermission, final ICallback<? super CalendarPermission> callback);
 
     /**
      * Patches this CalendarPermission with a source
@@ -68,7 +68,7 @@ public interface ICalendarPermissionRequest extends IHttpRequest {
      * @param newCalendarPermission the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CalendarPermission newCalendarPermission, final ICallback<CalendarPermission> callback);
+    void post(final CalendarPermission newCalendarPermission, final ICallback<? super CalendarPermission> callback);
 
     /**
      * Posts a CalendarPermission with a new object
@@ -85,7 +85,7 @@ public interface ICalendarPermissionRequest extends IHttpRequest {
      * @param newCalendarPermission the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CalendarPermission newCalendarPermission, final ICallback<CalendarPermission> callback);
+    void put(final CalendarPermission newCalendarPermission, final ICallback<? super CalendarPermission> callback);
 
     /**
      * Posts a CalendarPermission with a new object

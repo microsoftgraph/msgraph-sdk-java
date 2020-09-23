@@ -21,7 +21,7 @@ public interface IIosUpdateDeviceStatusRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosUpdateDeviceStatus> callback);
+    void get(final ICallback<? super IosUpdateDeviceStatus> callback);
 
     /**
      * Gets the IosUpdateDeviceStatus from the service
@@ -36,7 +36,7 @@ public interface IIosUpdateDeviceStatusRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosUpdateDeviceStatus> callback);
+    void delete(final ICallback<? super IosUpdateDeviceStatus> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosUpdateDeviceStatusRequest extends IHttpRequest {
      * @param sourceIosUpdateDeviceStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus, final ICallback<IosUpdateDeviceStatus> callback);
+    void patch(final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback);
 
     /**
      * Patches this IosUpdateDeviceStatus with a source
@@ -68,7 +68,7 @@ public interface IIosUpdateDeviceStatusRequest extends IHttpRequest {
      * @param newIosUpdateDeviceStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<IosUpdateDeviceStatus> callback);
+    void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback);
 
     /**
      * Posts a IosUpdateDeviceStatus with a new object
@@ -85,7 +85,7 @@ public interface IIosUpdateDeviceStatusRequest extends IHttpRequest {
      * @param newIosUpdateDeviceStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<IosUpdateDeviceStatus> callback);
+    void put(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback);
 
     /**
      * Posts a IosUpdateDeviceStatus with a new object

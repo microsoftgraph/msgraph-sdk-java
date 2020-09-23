@@ -21,7 +21,7 @@ public interface IWorkbookOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookOperation> callback);
+    void get(final ICallback<? super WorkbookOperation> callback);
 
     /**
      * Gets the WorkbookOperation from the service
@@ -36,7 +36,7 @@ public interface IWorkbookOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookOperation> callback);
+    void delete(final ICallback<? super WorkbookOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookOperationRequest extends IHttpRequest {
      * @param sourceWorkbookOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookOperation sourceWorkbookOperation, final ICallback<WorkbookOperation> callback);
+    void patch(final WorkbookOperation sourceWorkbookOperation, final ICallback<? super WorkbookOperation> callback);
 
     /**
      * Patches this WorkbookOperation with a source
@@ -68,7 +68,7 @@ public interface IWorkbookOperationRequest extends IHttpRequest {
      * @param newWorkbookOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookOperation newWorkbookOperation, final ICallback<WorkbookOperation> callback);
+    void post(final WorkbookOperation newWorkbookOperation, final ICallback<? super WorkbookOperation> callback);
 
     /**
      * Posts a WorkbookOperation with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookOperationRequest extends IHttpRequest {
      * @param newWorkbookOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookOperation newWorkbookOperation, final ICallback<WorkbookOperation> callback);
+    void put(final WorkbookOperation newWorkbookOperation, final ICallback<? super WorkbookOperation> callback);
 
     /**
      * Posts a WorkbookOperation with a new object

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedAppRegistrationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedAppRegistrationCollectionPage> callback);
+    void get(final ICallback<? super IManagedAppRegistrationCollectionPage> callback);
 
     IManagedAppRegistrationCollectionPage get() throws ClientException;
 
-    void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<ManagedAppRegistration> callback);
+    void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback);
 
     ManagedAppRegistration post(final ManagedAppRegistration newManagedAppRegistration) throws ClientException;
 

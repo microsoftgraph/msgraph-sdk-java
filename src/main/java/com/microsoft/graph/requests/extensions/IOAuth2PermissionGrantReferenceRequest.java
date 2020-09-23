@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IOAuth2PermissionGrantReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<OAuth2PermissionGrant> callback);
+    void delete(final ICallback<? super OAuth2PermissionGrant> callback);
 
     OAuth2PermissionGrant delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface IOAuth2PermissionGrantReferenceRequest extends IHttpRequest {
      * @param srcOAuth2PermissionGrant the OAuth2PermissionGrant to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(OAuth2PermissionGrant srcOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback);
+    void put(OAuth2PermissionGrant srcOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback);
 
     /**
      * Puts the OAuth2PermissionGrant

@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDataPolicyOperationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDataPolicyOperationCollectionPage> callback);
+    void get(final ICallback<? super IDataPolicyOperationCollectionPage> callback);
 
     IDataPolicyOperationCollectionPage get() throws ClientException;
 
-    void post(final DataPolicyOperation newDataPolicyOperation, final ICallback<DataPolicyOperation> callback);
+    void post(final DataPolicyOperation newDataPolicyOperation, final ICallback<? super DataPolicyOperation> callback);
 
     DataPolicyOperation post(final DataPolicyOperation newDataPolicyOperation) throws ClientException;
 

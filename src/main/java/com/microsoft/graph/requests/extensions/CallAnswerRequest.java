@@ -36,7 +36,7 @@ public class CallAnswerRequest extends BaseRequest implements ICallAnswerRequest
         body = new CallAnswerBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

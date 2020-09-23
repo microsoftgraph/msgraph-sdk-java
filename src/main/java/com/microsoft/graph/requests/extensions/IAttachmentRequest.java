@@ -21,7 +21,7 @@ public interface IAttachmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Attachment> callback);
+    void get(final ICallback<? super Attachment> callback);
 
     /**
      * Gets the Attachment from the service
@@ -36,7 +36,7 @@ public interface IAttachmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Attachment> callback);
+    void delete(final ICallback<? super Attachment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAttachmentRequest extends IHttpRequest {
      * @param sourceAttachment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Attachment sourceAttachment, final ICallback<Attachment> callback);
+    void patch(final Attachment sourceAttachment, final ICallback<? super Attachment> callback);
 
     /**
      * Patches this Attachment with a source
@@ -68,7 +68,7 @@ public interface IAttachmentRequest extends IHttpRequest {
      * @param newAttachment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Attachment newAttachment, final ICallback<Attachment> callback);
+    void post(final Attachment newAttachment, final ICallback<? super Attachment> callback);
 
     /**
      * Posts a Attachment with a new object
@@ -85,7 +85,7 @@ public interface IAttachmentRequest extends IHttpRequest {
      * @param newAttachment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Attachment newAttachment, final ICallback<Attachment> callback);
+    void put(final Attachment newAttachment, final ICallback<? super Attachment> callback);
 
     /**
      * Posts a Attachment with a new object

@@ -21,7 +21,7 @@ public interface IThreatAssessmentResultRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ThreatAssessmentResult> callback);
+    void get(final ICallback<? super ThreatAssessmentResult> callback);
 
     /**
      * Gets the ThreatAssessmentResult from the service
@@ -36,7 +36,7 @@ public interface IThreatAssessmentResultRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ThreatAssessmentResult> callback);
+    void delete(final ICallback<? super ThreatAssessmentResult> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IThreatAssessmentResultRequest extends IHttpRequest {
      * @param sourceThreatAssessmentResult the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ThreatAssessmentResult sourceThreatAssessmentResult, final ICallback<ThreatAssessmentResult> callback);
+    void patch(final ThreatAssessmentResult sourceThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback);
 
     /**
      * Patches this ThreatAssessmentResult with a source
@@ -68,7 +68,7 @@ public interface IThreatAssessmentResultRequest extends IHttpRequest {
      * @param newThreatAssessmentResult the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<ThreatAssessmentResult> callback);
+    void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback);
 
     /**
      * Posts a ThreatAssessmentResult with a new object
@@ -85,7 +85,7 @@ public interface IThreatAssessmentResultRequest extends IHttpRequest {
      * @param newThreatAssessmentResult the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<ThreatAssessmentResult> callback);
+    void put(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback);
 
     /**
      * Posts a ThreatAssessmentResult with a new object

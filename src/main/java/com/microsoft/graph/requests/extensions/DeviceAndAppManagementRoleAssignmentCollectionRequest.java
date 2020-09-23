@@ -40,7 +40,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
         super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignmentCollectionResponse.class, IDeviceAndAppManagementRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceAndAppManagementRoleAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceAndAppManagementRoleAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<DeviceAndAppManagementRoleAssignment> callback) {
+    public void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceAndAppManagementRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

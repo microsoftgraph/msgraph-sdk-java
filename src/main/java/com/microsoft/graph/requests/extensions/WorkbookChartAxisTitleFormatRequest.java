@@ -39,7 +39,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChartAxisTitleFormat> callback) {
+    public void get(final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookChartAxisTitleFormat> callback) {
+    public void delete(final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @param sourceWorkbookChartAxisTitleFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartAxisTitleFormat sourceWorkbookChartAxisTitleFormat, final ICallback<WorkbookChartAxisTitleFormat> callback) {
+    public void patch(final WorkbookChartAxisTitleFormat sourceWorkbookChartAxisTitleFormat, final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartAxisTitleFormat);
     }
 
@@ -98,7 +98,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @param newWorkbookChartAxisTitleFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<WorkbookChartAxisTitleFormat> callback) {
+    public void post(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartAxisTitleFormat);
     }
 
@@ -119,7 +119,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @param newWorkbookChartAxisTitleFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<WorkbookChartAxisTitleFormat> callback) {
+    public void put(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartAxisTitleFormat);
     }
 

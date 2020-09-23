@@ -37,7 +37,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<GroupLifecyclePolicy> callback) {
+    public void get(final ICallback<? super GroupLifecyclePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<GroupLifecyclePolicy> callback) {
+    public void delete(final ICallback<? super GroupLifecyclePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @param sourceGroupLifecyclePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupLifecyclePolicy sourceGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback) {
+    public void patch(final GroupLifecyclePolicy sourceGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupLifecyclePolicy);
     }
 
@@ -96,7 +96,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @param newGroupLifecyclePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback) {
+    public void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
         send(HttpMethod.POST, callback, newGroupLifecyclePolicy);
     }
 
@@ -117,7 +117,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @param newGroupLifecyclePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback) {
+    public void put(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
         send(HttpMethod.PUT, callback, newGroupLifecyclePolicy);
     }
 

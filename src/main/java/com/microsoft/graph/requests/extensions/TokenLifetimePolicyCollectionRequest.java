@@ -40,7 +40,7 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, ITokenLifetimePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<ITokenLifetimePolicyCollectionPage> callback) {
+    public void get(final ICallback<? super ITokenLifetimePolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback) {
+    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TokenLifetimePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

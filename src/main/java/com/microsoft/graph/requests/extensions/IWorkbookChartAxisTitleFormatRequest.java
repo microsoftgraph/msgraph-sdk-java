@@ -21,7 +21,7 @@ public interface IWorkbookChartAxisTitleFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartAxisTitleFormat> callback);
+    void get(final ICallback<? super WorkbookChartAxisTitleFormat> callback);
 
     /**
      * Gets the WorkbookChartAxisTitleFormat from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartAxisTitleFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartAxisTitleFormat> callback);
+    void delete(final ICallback<? super WorkbookChartAxisTitleFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartAxisTitleFormatRequest extends IHttpRequest {
      * @param sourceWorkbookChartAxisTitleFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartAxisTitleFormat sourceWorkbookChartAxisTitleFormat, final ICallback<WorkbookChartAxisTitleFormat> callback);
+    void patch(final WorkbookChartAxisTitleFormat sourceWorkbookChartAxisTitleFormat, final ICallback<? super WorkbookChartAxisTitleFormat> callback);
 
     /**
      * Patches this WorkbookChartAxisTitleFormat with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartAxisTitleFormatRequest extends IHttpRequest {
      * @param newWorkbookChartAxisTitleFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<WorkbookChartAxisTitleFormat> callback);
+    void post(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<? super WorkbookChartAxisTitleFormat> callback);
 
     /**
      * Posts a WorkbookChartAxisTitleFormat with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartAxisTitleFormatRequest extends IHttpRequest {
      * @param newWorkbookChartAxisTitleFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<WorkbookChartAxisTitleFormat> callback);
+    void put(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<? super WorkbookChartAxisTitleFormat> callback);
 
     /**
      * Posts a WorkbookChartAxisTitleFormat with a new object

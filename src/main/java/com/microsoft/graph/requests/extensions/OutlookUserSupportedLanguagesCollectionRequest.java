@@ -39,7 +39,7 @@ public class OutlookUserSupportedLanguagesCollectionRequest extends BaseCollecti
     }
 
 
-    public void get(final ICallback<IOutlookUserSupportedLanguagesCollectionPage> callback) {
+    public void get(final ICallback<? super IOutlookUserSupportedLanguagesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

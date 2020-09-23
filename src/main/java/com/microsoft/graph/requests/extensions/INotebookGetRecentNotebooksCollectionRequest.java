@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface INotebookGetRecentNotebooksCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<INotebookGetRecentNotebooksCollectionPage> callback);
+    void get(final ICallback<? super INotebookGetRecentNotebooksCollectionPage> callback);
 
     INotebookGetRecentNotebooksCollectionPage get() throws ClientException;
 

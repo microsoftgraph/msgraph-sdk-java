@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITeamsTemplateReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<TeamsTemplate> callback);
+    void delete(final ICallback<? super TeamsTemplate> callback);
 
     TeamsTemplate delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface ITeamsTemplateReferenceRequest extends IHttpRequest {
      * @param srcTeamsTemplate the TeamsTemplate to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(TeamsTemplate srcTeamsTemplate, final ICallback<TeamsTemplate> callback);
+    void put(TeamsTemplate srcTeamsTemplate, final ICallback<? super TeamsTemplate> callback);
 
     /**
      * Puts the TeamsTemplate

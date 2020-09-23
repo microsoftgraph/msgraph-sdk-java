@@ -21,7 +21,7 @@ public interface IPlannerPlanDetailsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PlannerPlanDetails> callback);
+    void get(final ICallback<? super PlannerPlanDetails> callback);
 
     /**
      * Gets the PlannerPlanDetails from the service
@@ -36,7 +36,7 @@ public interface IPlannerPlanDetailsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PlannerPlanDetails> callback);
+    void delete(final ICallback<? super PlannerPlanDetails> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlannerPlanDetailsRequest extends IHttpRequest {
      * @param sourcePlannerPlanDetails the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PlannerPlanDetails sourcePlannerPlanDetails, final ICallback<PlannerPlanDetails> callback);
+    void patch(final PlannerPlanDetails sourcePlannerPlanDetails, final ICallback<? super PlannerPlanDetails> callback);
 
     /**
      * Patches this PlannerPlanDetails with a source
@@ -68,7 +68,7 @@ public interface IPlannerPlanDetailsRequest extends IHttpRequest {
      * @param newPlannerPlanDetails the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PlannerPlanDetails newPlannerPlanDetails, final ICallback<PlannerPlanDetails> callback);
+    void post(final PlannerPlanDetails newPlannerPlanDetails, final ICallback<? super PlannerPlanDetails> callback);
 
     /**
      * Posts a PlannerPlanDetails with a new object
@@ -85,7 +85,7 @@ public interface IPlannerPlanDetailsRequest extends IHttpRequest {
      * @param newPlannerPlanDetails the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PlannerPlanDetails newPlannerPlanDetails, final ICallback<PlannerPlanDetails> callback);
+    void put(final PlannerPlanDetails newPlannerPlanDetails, final ICallback<? super PlannerPlanDetails> callback);
 
     /**
      * Posts a PlannerPlanDetails with a new object

@@ -37,7 +37,7 @@ public class WorkbookChartItemRequest extends BaseRequest implements IWorkbookCh
      * @param srcWorkbookChart the WorkbookChart with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookChart srcWorkbookChart, final ICallback<WorkbookChart> callback) {
+    public void patch(WorkbookChart srcWorkbookChart, final ICallback<? super WorkbookChart> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookChart);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookChartItemRequest extends BaseRequest implements IWorkbookCh
      * @param srcWorkbookChart the WorkbookChart to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookChart srcWorkbookChart, final ICallback<WorkbookChart> callback) {
+    public void put(WorkbookChart srcWorkbookChart, final ICallback<? super WorkbookChart> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookChart);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookChartItemRequest extends BaseRequest implements IWorkbookCh
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChart> callback) {
+    public void get(final ICallback<? super WorkbookChart> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

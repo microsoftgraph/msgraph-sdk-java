@@ -21,7 +21,7 @@ public interface IEditionUpgradeConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EditionUpgradeConfiguration> callback);
+    void get(final ICallback<? super EditionUpgradeConfiguration> callback);
 
     /**
      * Gets the EditionUpgradeConfiguration from the service
@@ -36,7 +36,7 @@ public interface IEditionUpgradeConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EditionUpgradeConfiguration> callback);
+    void delete(final ICallback<? super EditionUpgradeConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEditionUpgradeConfigurationRequest extends IHttpRequest {
      * @param sourceEditionUpgradeConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EditionUpgradeConfiguration sourceEditionUpgradeConfiguration, final ICallback<EditionUpgradeConfiguration> callback);
+    void patch(final EditionUpgradeConfiguration sourceEditionUpgradeConfiguration, final ICallback<? super EditionUpgradeConfiguration> callback);
 
     /**
      * Patches this EditionUpgradeConfiguration with a source
@@ -68,7 +68,7 @@ public interface IEditionUpgradeConfigurationRequest extends IHttpRequest {
      * @param newEditionUpgradeConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EditionUpgradeConfiguration newEditionUpgradeConfiguration, final ICallback<EditionUpgradeConfiguration> callback);
+    void post(final EditionUpgradeConfiguration newEditionUpgradeConfiguration, final ICallback<? super EditionUpgradeConfiguration> callback);
 
     /**
      * Posts a EditionUpgradeConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IEditionUpgradeConfigurationRequest extends IHttpRequest {
      * @param newEditionUpgradeConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EditionUpgradeConfiguration newEditionUpgradeConfiguration, final ICallback<EditionUpgradeConfiguration> callback);
+    void put(final EditionUpgradeConfiguration newEditionUpgradeConfiguration, final ICallback<? super EditionUpgradeConfiguration> callback);
 
     /**
      * Posts a EditionUpgradeConfiguration with a new object

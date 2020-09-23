@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface INotebookGetNotebookFromWebUrlRequest extends IHttpRequest {
 
-    void post(final ICallback<CopyNotebookModel> callback);
+    void post(final ICallback<? super CopyNotebookModel> callback);
 
     CopyNotebookModel post() throws ClientException;
 

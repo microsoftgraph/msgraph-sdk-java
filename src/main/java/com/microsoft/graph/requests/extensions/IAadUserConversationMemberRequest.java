@@ -21,7 +21,7 @@ public interface IAadUserConversationMemberRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AadUserConversationMember> callback);
+    void get(final ICallback<? super AadUserConversationMember> callback);
 
     /**
      * Gets the AadUserConversationMember from the service
@@ -36,7 +36,7 @@ public interface IAadUserConversationMemberRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AadUserConversationMember> callback);
+    void delete(final ICallback<? super AadUserConversationMember> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAadUserConversationMemberRequest extends IHttpRequest {
      * @param sourceAadUserConversationMember the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AadUserConversationMember sourceAadUserConversationMember, final ICallback<AadUserConversationMember> callback);
+    void patch(final AadUserConversationMember sourceAadUserConversationMember, final ICallback<? super AadUserConversationMember> callback);
 
     /**
      * Patches this AadUserConversationMember with a source
@@ -68,7 +68,7 @@ public interface IAadUserConversationMemberRequest extends IHttpRequest {
      * @param newAadUserConversationMember the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AadUserConversationMember newAadUserConversationMember, final ICallback<AadUserConversationMember> callback);
+    void post(final AadUserConversationMember newAadUserConversationMember, final ICallback<? super AadUserConversationMember> callback);
 
     /**
      * Posts a AadUserConversationMember with a new object
@@ -85,7 +85,7 @@ public interface IAadUserConversationMemberRequest extends IHttpRequest {
      * @param newAadUserConversationMember the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AadUserConversationMember newAadUserConversationMember, final ICallback<AadUserConversationMember> callback);
+    void put(final AadUserConversationMember newAadUserConversationMember, final ICallback<? super AadUserConversationMember> callback);
 
     /**
      * Posts a AadUserConversationMember with a new object

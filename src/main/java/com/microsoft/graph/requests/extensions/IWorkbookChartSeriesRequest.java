@@ -21,7 +21,7 @@ public interface IWorkbookChartSeriesRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartSeries> callback);
+    void get(final ICallback<? super WorkbookChartSeries> callback);
 
     /**
      * Gets the WorkbookChartSeries from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartSeriesRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartSeries> callback);
+    void delete(final ICallback<? super WorkbookChartSeries> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartSeriesRequest extends IHttpRequest {
      * @param sourceWorkbookChartSeries the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartSeries sourceWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback);
+    void patch(final WorkbookChartSeries sourceWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback);
 
     /**
      * Patches this WorkbookChartSeries with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartSeriesRequest extends IHttpRequest {
      * @param newWorkbookChartSeries the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback);
+    void post(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback);
 
     /**
      * Posts a WorkbookChartSeries with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartSeriesRequest extends IHttpRequest {
      * @param newWorkbookChartSeries the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback);
+    void put(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback);
 
     /**
      * Posts a WorkbookChartSeries with a new object

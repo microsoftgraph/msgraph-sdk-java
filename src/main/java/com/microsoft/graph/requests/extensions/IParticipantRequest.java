@@ -21,7 +21,7 @@ public interface IParticipantRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Participant> callback);
+    void get(final ICallback<? super Participant> callback);
 
     /**
      * Gets the Participant from the service
@@ -36,7 +36,7 @@ public interface IParticipantRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Participant> callback);
+    void delete(final ICallback<? super Participant> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IParticipantRequest extends IHttpRequest {
      * @param sourceParticipant the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Participant sourceParticipant, final ICallback<Participant> callback);
+    void patch(final Participant sourceParticipant, final ICallback<? super Participant> callback);
 
     /**
      * Patches this Participant with a source
@@ -68,7 +68,7 @@ public interface IParticipantRequest extends IHttpRequest {
      * @param newParticipant the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Participant newParticipant, final ICallback<Participant> callback);
+    void post(final Participant newParticipant, final ICallback<? super Participant> callback);
 
     /**
      * Posts a Participant with a new object
@@ -85,7 +85,7 @@ public interface IParticipantRequest extends IHttpRequest {
      * @param newParticipant the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Participant newParticipant, final ICallback<Participant> callback);
+    void put(final Participant newParticipant, final ICallback<? super Participant> callback);
 
     /**
      * Posts a Participant with a new object

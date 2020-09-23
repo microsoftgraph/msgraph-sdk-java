@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAdministrativeUnitCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAdministrativeUnitCollectionPage> callback);
+    void get(final ICallback<? super IAdministrativeUnitCollectionPage> callback);
 
     IAdministrativeUnitCollectionPage get() throws ClientException;
 
-    void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<AdministrativeUnit> callback);
+    void post(final AdministrativeUnit newAdministrativeUnit, final ICallback<? super AdministrativeUnit> callback);
 
     AdministrativeUnit post(final AdministrativeUnit newAdministrativeUnit) throws ClientException;
 

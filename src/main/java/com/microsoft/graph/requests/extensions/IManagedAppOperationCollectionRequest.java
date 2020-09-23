@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedAppOperationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedAppOperationCollectionPage> callback);
+    void get(final ICallback<? super IManagedAppOperationCollectionPage> callback);
 
     IManagedAppOperationCollectionPage get() throws ClientException;
 
-    void post(final ManagedAppOperation newManagedAppOperation, final ICallback<ManagedAppOperation> callback);
+    void post(final ManagedAppOperation newManagedAppOperation, final ICallback<? super ManagedAppOperation> callback);
 
     ManagedAppOperation post(final ManagedAppOperation newManagedAppOperation) throws ClientException;
 

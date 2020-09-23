@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDriveItemPreviewRequest extends IHttpRequest {
 
-    void post(final ICallback<ItemPreviewInfo> callback);
+    void post(final ICallback<? super ItemPreviewInfo> callback);
 
     ItemPreviewInfo post() throws ClientException;
 

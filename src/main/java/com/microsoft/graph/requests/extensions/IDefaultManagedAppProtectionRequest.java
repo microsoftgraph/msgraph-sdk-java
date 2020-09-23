@@ -21,7 +21,7 @@ public interface IDefaultManagedAppProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DefaultManagedAppProtection> callback);
+    void get(final ICallback<? super DefaultManagedAppProtection> callback);
 
     /**
      * Gets the DefaultManagedAppProtection from the service
@@ -36,7 +36,7 @@ public interface IDefaultManagedAppProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DefaultManagedAppProtection> callback);
+    void delete(final ICallback<? super DefaultManagedAppProtection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDefaultManagedAppProtectionRequest extends IHttpRequest {
      * @param sourceDefaultManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DefaultManagedAppProtection sourceDefaultManagedAppProtection, final ICallback<DefaultManagedAppProtection> callback);
+    void patch(final DefaultManagedAppProtection sourceDefaultManagedAppProtection, final ICallback<? super DefaultManagedAppProtection> callback);
 
     /**
      * Patches this DefaultManagedAppProtection with a source
@@ -68,7 +68,7 @@ public interface IDefaultManagedAppProtectionRequest extends IHttpRequest {
      * @param newDefaultManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<DefaultManagedAppProtection> callback);
+    void post(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<? super DefaultManagedAppProtection> callback);
 
     /**
      * Posts a DefaultManagedAppProtection with a new object
@@ -85,7 +85,7 @@ public interface IDefaultManagedAppProtectionRequest extends IHttpRequest {
      * @param newDefaultManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<DefaultManagedAppProtection> callback);
+    void put(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<? super DefaultManagedAppProtection> callback);
 
     /**
      * Posts a DefaultManagedAppProtection with a new object

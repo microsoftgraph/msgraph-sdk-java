@@ -37,7 +37,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SingleValueLegacyExtendedProperty> callback) {
+    public void get(final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SingleValueLegacyExtendedProperty> callback) {
+    public void delete(final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest implem
      * @param sourceSingleValueLegacyExtendedProperty the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback) {
+    public void patch(final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.PATCH, callback, sourceSingleValueLegacyExtendedProperty);
     }
 
@@ -96,7 +96,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest implem
      * @param newSingleValueLegacyExtendedProperty the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback) {
+    public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.POST, callback, newSingleValueLegacyExtendedProperty);
     }
 
@@ -117,7 +117,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest implem
      * @param newSingleValueLegacyExtendedProperty the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback) {
+    public void put(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.PUT, callback, newSingleValueLegacyExtendedProperty);
     }
 

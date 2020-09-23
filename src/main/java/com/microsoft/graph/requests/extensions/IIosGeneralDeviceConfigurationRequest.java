@@ -21,7 +21,7 @@ public interface IIosGeneralDeviceConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosGeneralDeviceConfiguration> callback);
+    void get(final ICallback<? super IosGeneralDeviceConfiguration> callback);
 
     /**
      * Gets the IosGeneralDeviceConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosGeneralDeviceConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosGeneralDeviceConfiguration> callback);
+    void delete(final ICallback<? super IosGeneralDeviceConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosGeneralDeviceConfigurationRequest extends IHttpRequest {
      * @param sourceIosGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosGeneralDeviceConfiguration sourceIosGeneralDeviceConfiguration, final ICallback<IosGeneralDeviceConfiguration> callback);
+    void patch(final IosGeneralDeviceConfiguration sourceIosGeneralDeviceConfiguration, final ICallback<? super IosGeneralDeviceConfiguration> callback);
 
     /**
      * Patches this IosGeneralDeviceConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosGeneralDeviceConfigurationRequest extends IHttpRequest {
      * @param newIosGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<IosGeneralDeviceConfiguration> callback);
+    void post(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<? super IosGeneralDeviceConfiguration> callback);
 
     /**
      * Posts a IosGeneralDeviceConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosGeneralDeviceConfigurationRequest extends IHttpRequest {
      * @param newIosGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<IosGeneralDeviceConfiguration> callback);
+    void put(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<? super IosGeneralDeviceConfiguration> callback);
 
     /**
      * Posts a IosGeneralDeviceConfiguration with a new object
