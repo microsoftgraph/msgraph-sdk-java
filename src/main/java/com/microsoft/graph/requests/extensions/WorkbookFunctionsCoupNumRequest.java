@@ -37,7 +37,7 @@ public class WorkbookFunctionsCoupNumRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsCoupNumBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

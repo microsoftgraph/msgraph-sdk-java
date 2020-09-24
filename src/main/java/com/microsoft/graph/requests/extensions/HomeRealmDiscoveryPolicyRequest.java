@@ -37,7 +37,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest implements IHom
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<HomeRealmDiscoveryPolicy> callback) {
+    public void get(final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest implements IHom
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<HomeRealmDiscoveryPolicy> callback) {
+    public void delete(final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest implements IHom
      * @param sourceHomeRealmDiscoveryPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback) {
+    public void patch(final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceHomeRealmDiscoveryPolicy);
     }
 
@@ -96,7 +96,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest implements IHom
      * @param newHomeRealmDiscoveryPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback) {
+    public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.POST, callback, newHomeRealmDiscoveryPolicy);
     }
 
@@ -117,7 +117,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest implements IHom
      * @param newHomeRealmDiscoveryPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback) {
+    public void put(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.PUT, callback, newHomeRealmDiscoveryPolicy);
     }
 

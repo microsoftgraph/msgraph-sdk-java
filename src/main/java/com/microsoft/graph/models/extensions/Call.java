@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.CallOptions;
 import com.microsoft.graph.models.extensions.CallRoute;
@@ -26,9 +25,7 @@ import com.microsoft.graph.models.extensions.CallTranscriptionInfo;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import com.microsoft.graph.models.extensions.Participant;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.CommsOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.CommsOperationCollectionPage;
-import com.microsoft.graph.requests.extensions.ParticipantCollectionResponse;
 import com.microsoft.graph.requests.extensions.ParticipantCollectionPage;
 
 
@@ -261,35 +258,11 @@ public class Call extends Entity implements IJsonBackedObject {
 
 
         if (json.has("operations")) {
-            final CommsOperationCollectionResponse response = new CommsOperationCollectionResponse();
-            if (json.has("operations@odata.nextLink")) {
-                response.nextLink = json.get("operations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operations").toString(), JsonObject[].class);
-            final CommsOperation[] array = new CommsOperation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), CommsOperation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            operations = new CommsOperationCollectionPage(response, null);
+            operations = serializer.deserializeObject(json.get("operations").toString(), CommsOperationCollectionPage.class);
         }
 
         if (json.has("participants")) {
-            final ParticipantCollectionResponse response = new ParticipantCollectionResponse();
-            if (json.has("participants@odata.nextLink")) {
-                response.nextLink = json.get("participants@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("participants").toString(), JsonObject[].class);
-            final Participant[] array = new Participant[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Participant.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            participants = new ParticipantCollectionPage(response, null);
+            participants = serializer.deserializeObject(json.get("participants").toString(), ParticipantCollectionPage.class);
         }
     }
 }

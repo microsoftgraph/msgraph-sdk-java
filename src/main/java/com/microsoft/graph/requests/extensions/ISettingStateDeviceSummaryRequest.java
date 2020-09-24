@@ -21,7 +21,7 @@ public interface ISettingStateDeviceSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SettingStateDeviceSummary> callback);
+    void get(final ICallback<? super SettingStateDeviceSummary> callback);
 
     /**
      * Gets the SettingStateDeviceSummary from the service
@@ -36,7 +36,7 @@ public interface ISettingStateDeviceSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SettingStateDeviceSummary> callback);
+    void delete(final ICallback<? super SettingStateDeviceSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISettingStateDeviceSummaryRequest extends IHttpRequest {
      * @param sourceSettingStateDeviceSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SettingStateDeviceSummary sourceSettingStateDeviceSummary, final ICallback<SettingStateDeviceSummary> callback);
+    void patch(final SettingStateDeviceSummary sourceSettingStateDeviceSummary, final ICallback<? super SettingStateDeviceSummary> callback);
 
     /**
      * Patches this SettingStateDeviceSummary with a source
@@ -68,7 +68,7 @@ public interface ISettingStateDeviceSummaryRequest extends IHttpRequest {
      * @param newSettingStateDeviceSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<SettingStateDeviceSummary> callback);
+    void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<? super SettingStateDeviceSummary> callback);
 
     /**
      * Posts a SettingStateDeviceSummary with a new object
@@ -85,7 +85,7 @@ public interface ISettingStateDeviceSummaryRequest extends IHttpRequest {
      * @param newSettingStateDeviceSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<SettingStateDeviceSummary> callback);
+    void put(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<? super SettingStateDeviceSummary> callback);
 
     /**
      * Posts a SettingStateDeviceSummary with a new object

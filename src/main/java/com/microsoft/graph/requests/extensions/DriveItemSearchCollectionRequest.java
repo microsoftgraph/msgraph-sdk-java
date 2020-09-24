@@ -39,7 +39,7 @@ public class DriveItemSearchCollectionRequest extends BaseCollectionRequest<Driv
     }
 
 
-    public void get(final ICallback<IDriveItemSearchCollectionPage> callback) {
+    public void get(final ICallback<? super IDriveItemSearchCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

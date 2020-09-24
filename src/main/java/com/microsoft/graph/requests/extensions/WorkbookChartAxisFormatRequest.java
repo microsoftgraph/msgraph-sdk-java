@@ -41,7 +41,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest implements IWork
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChartAxisFormat> callback) {
+    public void get(final ICallback<? super WorkbookChartAxisFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest implements IWork
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookChartAxisFormat> callback) {
+    public void delete(final ICallback<? super WorkbookChartAxisFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest implements IWork
      * @param sourceWorkbookChartAxisFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat, final ICallback<WorkbookChartAxisFormat> callback) {
+    public void patch(final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat, final ICallback<? super WorkbookChartAxisFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartAxisFormat);
     }
 
@@ -100,7 +100,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest implements IWork
      * @param newWorkbookChartAxisFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<WorkbookChartAxisFormat> callback) {
+    public void post(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<? super WorkbookChartAxisFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartAxisFormat);
     }
 
@@ -121,7 +121,7 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest implements IWork
      * @param newWorkbookChartAxisFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<WorkbookChartAxisFormat> callback) {
+    public void put(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<? super WorkbookChartAxisFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartAxisFormat);
     }
 

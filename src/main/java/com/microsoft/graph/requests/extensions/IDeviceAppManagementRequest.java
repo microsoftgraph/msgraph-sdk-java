@@ -21,7 +21,7 @@ public interface IDeviceAppManagementRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceAppManagement> callback);
+    void get(final ICallback<? super DeviceAppManagement> callback);
 
     /**
      * Gets the DeviceAppManagement from the service
@@ -36,7 +36,7 @@ public interface IDeviceAppManagementRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceAppManagement> callback);
+    void delete(final ICallback<? super DeviceAppManagement> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceAppManagementRequest extends IHttpRequest {
      * @param sourceDeviceAppManagement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceAppManagement sourceDeviceAppManagement, final ICallback<DeviceAppManagement> callback);
+    void patch(final DeviceAppManagement sourceDeviceAppManagement, final ICallback<? super DeviceAppManagement> callback);
 
     /**
      * Patches this DeviceAppManagement with a source
@@ -68,7 +68,7 @@ public interface IDeviceAppManagementRequest extends IHttpRequest {
      * @param newDeviceAppManagement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceAppManagement newDeviceAppManagement, final ICallback<DeviceAppManagement> callback);
+    void post(final DeviceAppManagement newDeviceAppManagement, final ICallback<? super DeviceAppManagement> callback);
 
     /**
      * Posts a DeviceAppManagement with a new object
@@ -85,7 +85,7 @@ public interface IDeviceAppManagementRequest extends IHttpRequest {
      * @param newDeviceAppManagement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceAppManagement newDeviceAppManagement, final ICallback<DeviceAppManagement> callback);
+    void put(final DeviceAppManagement newDeviceAppManagement, final ICallback<? super DeviceAppManagement> callback);
 
     /**
      * Posts a DeviceAppManagement with a new object

@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface ICalendarAllowedCalendarSharingRolesCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICalendarAllowedCalendarSharingRolesCollectionPage> callback);
+    void get(final ICallback<? super ICalendarAllowedCalendarSharingRolesCollectionPage> callback);
 
     ICalendarAllowedCalendarSharingRolesCollectionPage get() throws ClientException;
 

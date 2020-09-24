@@ -21,7 +21,7 @@ public interface IExtensionPropertyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ExtensionProperty> callback);
+    void get(final ICallback<? super ExtensionProperty> callback);
 
     /**
      * Gets the ExtensionProperty from the service
@@ -36,7 +36,7 @@ public interface IExtensionPropertyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ExtensionProperty> callback);
+    void delete(final ICallback<? super ExtensionProperty> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExtensionPropertyRequest extends IHttpRequest {
      * @param sourceExtensionProperty the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ExtensionProperty sourceExtensionProperty, final ICallback<ExtensionProperty> callback);
+    void patch(final ExtensionProperty sourceExtensionProperty, final ICallback<? super ExtensionProperty> callback);
 
     /**
      * Patches this ExtensionProperty with a source
@@ -68,7 +68,7 @@ public interface IExtensionPropertyRequest extends IHttpRequest {
      * @param newExtensionProperty the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ExtensionProperty newExtensionProperty, final ICallback<ExtensionProperty> callback);
+    void post(final ExtensionProperty newExtensionProperty, final ICallback<? super ExtensionProperty> callback);
 
     /**
      * Posts a ExtensionProperty with a new object
@@ -85,7 +85,7 @@ public interface IExtensionPropertyRequest extends IHttpRequest {
      * @param newExtensionProperty the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ExtensionProperty newExtensionProperty, final ICallback<ExtensionProperty> callback);
+    void put(final ExtensionProperty newExtensionProperty, final ICallback<? super ExtensionProperty> callback);
 
     /**
      * Posts a ExtensionProperty with a new object

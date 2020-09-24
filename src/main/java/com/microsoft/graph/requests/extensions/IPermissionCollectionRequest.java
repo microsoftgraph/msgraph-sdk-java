@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPermissionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IPermissionCollectionPage> callback);
+    void get(final ICallback<? super IPermissionCollectionPage> callback);
 
     IPermissionCollectionPage get() throws ClientException;
 
-    void post(final Permission newPermission, final ICallback<Permission> callback);
+    void post(final Permission newPermission, final ICallback<? super Permission> callback);
 
     Permission post(final Permission newPermission) throws ClientException;
 

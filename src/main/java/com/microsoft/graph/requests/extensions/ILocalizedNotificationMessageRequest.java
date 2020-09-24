@@ -21,7 +21,7 @@ public interface ILocalizedNotificationMessageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<LocalizedNotificationMessage> callback);
+    void get(final ICallback<? super LocalizedNotificationMessage> callback);
 
     /**
      * Gets the LocalizedNotificationMessage from the service
@@ -36,7 +36,7 @@ public interface ILocalizedNotificationMessageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<LocalizedNotificationMessage> callback);
+    void delete(final ICallback<? super LocalizedNotificationMessage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ILocalizedNotificationMessageRequest extends IHttpRequest {
      * @param sourceLocalizedNotificationMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final LocalizedNotificationMessage sourceLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback);
+    void patch(final LocalizedNotificationMessage sourceLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback);
 
     /**
      * Patches this LocalizedNotificationMessage with a source
@@ -68,7 +68,7 @@ public interface ILocalizedNotificationMessageRequest extends IHttpRequest {
      * @param newLocalizedNotificationMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback);
+    void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback);
 
     /**
      * Posts a LocalizedNotificationMessage with a new object
@@ -85,7 +85,7 @@ public interface ILocalizedNotificationMessageRequest extends IHttpRequest {
      * @param newLocalizedNotificationMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback);
+    void put(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback);
 
     /**
      * Posts a LocalizedNotificationMessage with a new object

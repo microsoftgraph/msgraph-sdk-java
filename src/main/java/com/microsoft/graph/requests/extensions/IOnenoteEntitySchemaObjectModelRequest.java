@@ -21,7 +21,7 @@ public interface IOnenoteEntitySchemaObjectModelRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnenoteEntitySchemaObjectModel> callback);
+    void get(final ICallback<? super OnenoteEntitySchemaObjectModel> callback);
 
     /**
      * Gets the OnenoteEntitySchemaObjectModel from the service
@@ -36,7 +36,7 @@ public interface IOnenoteEntitySchemaObjectModelRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnenoteEntitySchemaObjectModel> callback);
+    void delete(final ICallback<? super OnenoteEntitySchemaObjectModel> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnenoteEntitySchemaObjectModelRequest extends IHttpRequest {
      * @param sourceOnenoteEntitySchemaObjectModel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel, final ICallback<OnenoteEntitySchemaObjectModel> callback);
+    void patch(final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel, final ICallback<? super OnenoteEntitySchemaObjectModel> callback);
 
     /**
      * Patches this OnenoteEntitySchemaObjectModel with a source
@@ -68,7 +68,7 @@ public interface IOnenoteEntitySchemaObjectModelRequest extends IHttpRequest {
      * @param newOnenoteEntitySchemaObjectModel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, final ICallback<OnenoteEntitySchemaObjectModel> callback);
+    void post(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, final ICallback<? super OnenoteEntitySchemaObjectModel> callback);
 
     /**
      * Posts a OnenoteEntitySchemaObjectModel with a new object
@@ -85,7 +85,7 @@ public interface IOnenoteEntitySchemaObjectModelRequest extends IHttpRequest {
      * @param newOnenoteEntitySchemaObjectModel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, final ICallback<OnenoteEntitySchemaObjectModel> callback);
+    void put(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, final ICallback<? super OnenoteEntitySchemaObjectModel> callback);
 
     /**
      * Posts a OnenoteEntitySchemaObjectModel with a new object

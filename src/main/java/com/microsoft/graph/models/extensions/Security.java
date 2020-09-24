@@ -6,17 +6,13 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Alert;
 import com.microsoft.graph.models.extensions.SecureScoreControlProfile;
 import com.microsoft.graph.models.extensions.SecureScore;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.AlertCollectionResponse;
 import com.microsoft.graph.requests.extensions.AlertCollectionPage;
-import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionPage;
-import com.microsoft.graph.requests.extensions.SecureScoreCollectionResponse;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionPage;
 
 
@@ -97,51 +93,15 @@ public class Security extends Entity implements IJsonBackedObject {
 
 
         if (json.has("alerts")) {
-            final AlertCollectionResponse response = new AlertCollectionResponse();
-            if (json.has("alerts@odata.nextLink")) {
-                response.nextLink = json.get("alerts@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("alerts").toString(), JsonObject[].class);
-            final Alert[] array = new Alert[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Alert.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            alerts = new AlertCollectionPage(response, null);
+            alerts = serializer.deserializeObject(json.get("alerts").toString(), AlertCollectionPage.class);
         }
 
         if (json.has("secureScoreControlProfiles")) {
-            final SecureScoreControlProfileCollectionResponse response = new SecureScoreControlProfileCollectionResponse();
-            if (json.has("secureScoreControlProfiles@odata.nextLink")) {
-                response.nextLink = json.get("secureScoreControlProfiles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("secureScoreControlProfiles").toString(), JsonObject[].class);
-            final SecureScoreControlProfile[] array = new SecureScoreControlProfile[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecureScoreControlProfile.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            secureScoreControlProfiles = new SecureScoreControlProfileCollectionPage(response, null);
+            secureScoreControlProfiles = serializer.deserializeObject(json.get("secureScoreControlProfiles").toString(), SecureScoreControlProfileCollectionPage.class);
         }
 
         if (json.has("secureScores")) {
-            final SecureScoreCollectionResponse response = new SecureScoreCollectionResponse();
-            if (json.has("secureScores@odata.nextLink")) {
-                response.nextLink = json.get("secureScores@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("secureScores").toString(), JsonObject[].class);
-            final SecureScore[] array = new SecureScore[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SecureScore.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            secureScores = new SecureScoreCollectionPage(response, null);
+            secureScores = serializer.deserializeObject(json.get("secureScores").toString(), SecureScoreCollectionPage.class);
         }
     }
 }

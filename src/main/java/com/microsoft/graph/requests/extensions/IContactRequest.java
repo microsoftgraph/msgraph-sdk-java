@@ -21,7 +21,7 @@ public interface IContactRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Contact> callback);
+    void get(final ICallback<? super Contact> callback);
 
     /**
      * Gets the Contact from the service
@@ -36,7 +36,7 @@ public interface IContactRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Contact> callback);
+    void delete(final ICallback<? super Contact> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IContactRequest extends IHttpRequest {
      * @param sourceContact the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Contact sourceContact, final ICallback<Contact> callback);
+    void patch(final Contact sourceContact, final ICallback<? super Contact> callback);
 
     /**
      * Patches this Contact with a source
@@ -68,7 +68,7 @@ public interface IContactRequest extends IHttpRequest {
      * @param newContact the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Contact newContact, final ICallback<Contact> callback);
+    void post(final Contact newContact, final ICallback<? super Contact> callback);
 
     /**
      * Posts a Contact with a new object
@@ -85,7 +85,7 @@ public interface IContactRequest extends IHttpRequest {
      * @param newContact the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Contact newContact, final ICallback<Contact> callback);
+    void put(final Contact newContact, final ICallback<? super Contact> callback);
 
     /**
      * Posts a Contact with a new object

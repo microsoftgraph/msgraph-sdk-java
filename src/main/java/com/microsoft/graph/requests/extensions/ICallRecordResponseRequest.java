@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICallRecordResponseRequest extends IHttpRequest {
 
-    void post(final ICallback<RecordOperation> callback);
+    void post(final ICallback<? super RecordOperation> callback);
 
     RecordOperation post() throws ClientException;
 

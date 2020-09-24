@@ -21,7 +21,7 @@ public interface IAndroidWorkProfileGeneralDeviceConfigurationRequest extends IH
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidWorkProfileGeneralDeviceConfiguration> callback);
+    void get(final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback);
 
     /**
      * Gets the AndroidWorkProfileGeneralDeviceConfiguration from the service
@@ -36,7 +36,7 @@ public interface IAndroidWorkProfileGeneralDeviceConfigurationRequest extends IH
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidWorkProfileGeneralDeviceConfiguration> callback);
+    void delete(final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidWorkProfileGeneralDeviceConfigurationRequest extends IH
      * @param sourceAndroidWorkProfileGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidWorkProfileGeneralDeviceConfiguration sourceAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<AndroidWorkProfileGeneralDeviceConfiguration> callback);
+    void patch(final AndroidWorkProfileGeneralDeviceConfiguration sourceAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback);
 
     /**
      * Patches this AndroidWorkProfileGeneralDeviceConfiguration with a source
@@ -68,7 +68,7 @@ public interface IAndroidWorkProfileGeneralDeviceConfigurationRequest extends IH
      * @param newAndroidWorkProfileGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<AndroidWorkProfileGeneralDeviceConfiguration> callback);
+    void post(final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback);
 
     /**
      * Posts a AndroidWorkProfileGeneralDeviceConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidWorkProfileGeneralDeviceConfigurationRequest extends IH
      * @param newAndroidWorkProfileGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<AndroidWorkProfileGeneralDeviceConfiguration> callback);
+    void put(final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<? super AndroidWorkProfileGeneralDeviceConfiguration> callback);
 
     /**
      * Posts a AndroidWorkProfileGeneralDeviceConfiguration with a new object

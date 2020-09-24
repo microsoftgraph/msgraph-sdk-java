@@ -44,7 +44,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OutlookUser> callback) {
+    public void get(final ICallback<? super OutlookUser> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,7 +63,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OutlookUser> callback) {
+    public void delete(final ICallback<? super OutlookUser> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @param sourceOutlookUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OutlookUser sourceOutlookUser, final ICallback<OutlookUser> callback) {
+    public void patch(final OutlookUser sourceOutlookUser, final ICallback<? super OutlookUser> callback) {
         send(HttpMethod.PATCH, callback, sourceOutlookUser);
     }
 
@@ -103,7 +103,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @param newOutlookUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OutlookUser newOutlookUser, final ICallback<OutlookUser> callback) {
+    public void post(final OutlookUser newOutlookUser, final ICallback<? super OutlookUser> callback) {
         send(HttpMethod.POST, callback, newOutlookUser);
     }
 
@@ -124,7 +124,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @param newOutlookUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OutlookUser newOutlookUser, final ICallback<OutlookUser> callback) {
+    public void put(final OutlookUser newOutlookUser, final ICallback<? super OutlookUser> callback) {
         send(HttpMethod.PUT, callback, newOutlookUser);
     }
 

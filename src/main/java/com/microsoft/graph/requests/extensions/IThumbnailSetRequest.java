@@ -21,7 +21,7 @@ public interface IThumbnailSetRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ThumbnailSet> callback);
+    void get(final ICallback<? super ThumbnailSet> callback);
 
     /**
      * Gets the ThumbnailSet from the service
@@ -36,7 +36,7 @@ public interface IThumbnailSetRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ThumbnailSet> callback);
+    void delete(final ICallback<? super ThumbnailSet> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IThumbnailSetRequest extends IHttpRequest {
      * @param sourceThumbnailSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ThumbnailSet sourceThumbnailSet, final ICallback<ThumbnailSet> callback);
+    void patch(final ThumbnailSet sourceThumbnailSet, final ICallback<? super ThumbnailSet> callback);
 
     /**
      * Patches this ThumbnailSet with a source
@@ -68,7 +68,7 @@ public interface IThumbnailSetRequest extends IHttpRequest {
      * @param newThumbnailSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ThumbnailSet newThumbnailSet, final ICallback<ThumbnailSet> callback);
+    void post(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback);
 
     /**
      * Posts a ThumbnailSet with a new object
@@ -85,7 +85,7 @@ public interface IThumbnailSetRequest extends IHttpRequest {
      * @param newThumbnailSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ThumbnailSet newThumbnailSet, final ICallback<ThumbnailSet> callback);
+    void put(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback);
 
     /**
      * Posts a ThumbnailSet with a new object

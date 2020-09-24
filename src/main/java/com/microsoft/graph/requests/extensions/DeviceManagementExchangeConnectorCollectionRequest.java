@@ -41,7 +41,7 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, DeviceManagementExchangeConnectorCollectionResponse.class, IDeviceManagementExchangeConnectorCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementExchangeConnectorCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementExchangeConnectorCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback) {
+    public void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<? super DeviceManagementExchangeConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -41,7 +41,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest implements IPermis
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<PermissionGrantPolicy> callback) {
+    public void get(final ICallback<? super PermissionGrantPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest implements IPermis
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<PermissionGrantPolicy> callback) {
+    public void delete(final ICallback<? super PermissionGrantPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest implements IPermis
      * @param sourcePermissionGrantPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PermissionGrantPolicy sourcePermissionGrantPolicy, final ICallback<PermissionGrantPolicy> callback) {
+    public void patch(final PermissionGrantPolicy sourcePermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourcePermissionGrantPolicy);
     }
 
@@ -100,7 +100,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest implements IPermis
      * @param newPermissionGrantPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<PermissionGrantPolicy> callback) {
+    public void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback) {
         send(HttpMethod.POST, callback, newPermissionGrantPolicy);
     }
 
@@ -121,7 +121,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest implements IPermis
      * @param newPermissionGrantPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<PermissionGrantPolicy> callback) {
+    public void put(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback) {
         send(HttpMethod.PUT, callback, newPermissionGrantPolicy);
     }
 

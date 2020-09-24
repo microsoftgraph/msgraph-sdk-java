@@ -37,7 +37,7 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Windows81GeneralConfiguration> callback) {
+    public void get(final ICallback<? super Windows81GeneralConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Windows81GeneralConfiguration> callback) {
+    public void delete(final ICallback<? super Windows81GeneralConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest implements
      * @param sourceWindows81GeneralConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows81GeneralConfiguration sourceWindows81GeneralConfiguration, final ICallback<Windows81GeneralConfiguration> callback) {
+    public void patch(final Windows81GeneralConfiguration sourceWindows81GeneralConfiguration, final ICallback<? super Windows81GeneralConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows81GeneralConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest implements
      * @param newWindows81GeneralConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows81GeneralConfiguration newWindows81GeneralConfiguration, final ICallback<Windows81GeneralConfiguration> callback) {
+    public void post(final Windows81GeneralConfiguration newWindows81GeneralConfiguration, final ICallback<? super Windows81GeneralConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows81GeneralConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest implements
      * @param newWindows81GeneralConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows81GeneralConfiguration newWindows81GeneralConfiguration, final ICallback<Windows81GeneralConfiguration> callback) {
+    public void put(final Windows81GeneralConfiguration newWindows81GeneralConfiguration, final ICallback<? super Windows81GeneralConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows81GeneralConfiguration);
     }
 

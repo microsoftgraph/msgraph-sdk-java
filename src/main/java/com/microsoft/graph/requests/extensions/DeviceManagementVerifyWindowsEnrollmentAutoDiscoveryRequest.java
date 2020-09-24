@@ -36,7 +36,7 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Boolean> callback) {
+    public void get(final ICallback<? super Boolean> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

@@ -23,6 +23,6 @@ public class GroupLifecyclePolicyCollectionPage extends BaseCollectionPage<Group
      * @param builder  the request builder for the next collection page
      */
     public GroupLifecyclePolicyCollectionPage(final GroupLifecyclePolicyCollectionResponse response, final IGroupLifecyclePolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

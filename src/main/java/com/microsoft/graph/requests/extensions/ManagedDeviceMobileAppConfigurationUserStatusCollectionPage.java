@@ -23,6 +23,6 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionPage extends
      * @param builder  the request builder for the next collection page
      */
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(final ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse response, final IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

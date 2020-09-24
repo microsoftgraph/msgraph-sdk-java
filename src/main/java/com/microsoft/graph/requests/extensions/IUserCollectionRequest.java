@@ -35,11 +35,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserCollectionPage> callback);
+    void get(final ICallback<? super IUserCollectionPage> callback);
 
     IUserCollectionPage get() throws ClientException;
 
-    void post(final User newUser, final ICallback<User> callback);
+    void post(final User newUser, final ICallback<? super User> callback);
 
     User post(final User newUser) throws ClientException;
 

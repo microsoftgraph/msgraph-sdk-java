@@ -57,7 +57,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TargetedManagedAppProtection> callback) {
+    public void get(final ICallback<? super TargetedManagedAppProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TargetedManagedAppProtection> callback) {
+    public void delete(final ICallback<? super TargetedManagedAppProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +95,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param sourceTargetedManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TargetedManagedAppProtection sourceTargetedManagedAppProtection, final ICallback<TargetedManagedAppProtection> callback) {
+    public void patch(final TargetedManagedAppProtection sourceTargetedManagedAppProtection, final ICallback<? super TargetedManagedAppProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceTargetedManagedAppProtection);
     }
 
@@ -116,7 +116,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param newTargetedManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TargetedManagedAppProtection newTargetedManagedAppProtection, final ICallback<TargetedManagedAppProtection> callback) {
+    public void post(final TargetedManagedAppProtection newTargetedManagedAppProtection, final ICallback<? super TargetedManagedAppProtection> callback) {
         send(HttpMethod.POST, callback, newTargetedManagedAppProtection);
     }
 
@@ -137,7 +137,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param newTargetedManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TargetedManagedAppProtection newTargetedManagedAppProtection, final ICallback<TargetedManagedAppProtection> callback) {
+    public void put(final TargetedManagedAppProtection newTargetedManagedAppProtection, final ICallback<? super TargetedManagedAppProtection> callback) {
         send(HttpMethod.PUT, callback, newTargetedManagedAppProtection);
     }
 

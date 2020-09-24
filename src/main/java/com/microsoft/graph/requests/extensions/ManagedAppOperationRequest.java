@@ -37,7 +37,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedAppOperation> callback) {
+    public void get(final ICallback<? super ManagedAppOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedAppOperation> callback) {
+    public void delete(final ICallback<? super ManagedAppOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @param sourceManagedAppOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppOperation sourceManagedAppOperation, final ICallback<ManagedAppOperation> callback) {
+    public void patch(final ManagedAppOperation sourceManagedAppOperation, final ICallback<? super ManagedAppOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppOperation);
     }
 
@@ -96,7 +96,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @param newManagedAppOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppOperation newManagedAppOperation, final ICallback<ManagedAppOperation> callback) {
+    public void post(final ManagedAppOperation newManagedAppOperation, final ICallback<? super ManagedAppOperation> callback) {
         send(HttpMethod.POST, callback, newManagedAppOperation);
     }
 
@@ -117,7 +117,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @param newManagedAppOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppOperation newManagedAppOperation, final ICallback<ManagedAppOperation> callback) {
+    public void put(final ManagedAppOperation newManagedAppOperation, final ICallback<? super ManagedAppOperation> callback) {
         send(HttpMethod.PUT, callback, newManagedAppOperation);
     }
 

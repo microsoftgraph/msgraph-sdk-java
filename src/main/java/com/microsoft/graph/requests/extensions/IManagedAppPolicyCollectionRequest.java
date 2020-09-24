@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedAppPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedAppPolicyCollectionPage> callback);
+    void get(final ICallback<? super IManagedAppPolicyCollectionPage> callback);
 
     IManagedAppPolicyCollectionPage get() throws ClientException;
 
-    void post(final ManagedAppPolicy newManagedAppPolicy, final ICallback<ManagedAppPolicy> callback);
+    void post(final ManagedAppPolicy newManagedAppPolicy, final ICallback<? super ManagedAppPolicy> callback);
 
     ManagedAppPolicy post(final ManagedAppPolicy newManagedAppPolicy) throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IPlannerAssignedToTaskBoardTaskFormatRequest extends IHttpReque
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback);
+    void get(final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback);
 
     /**
      * Gets the PlannerAssignedToTaskBoardTaskFormat from the service
@@ -36,7 +36,7 @@ public interface IPlannerAssignedToTaskBoardTaskFormatRequest extends IHttpReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback);
+    void delete(final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlannerAssignedToTaskBoardTaskFormatRequest extends IHttpReque
      * @param sourcePlannerAssignedToTaskBoardTaskFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PlannerAssignedToTaskBoardTaskFormat sourcePlannerAssignedToTaskBoardTaskFormat, final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback);
+    void patch(final PlannerAssignedToTaskBoardTaskFormat sourcePlannerAssignedToTaskBoardTaskFormat, final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback);
 
     /**
      * Patches this PlannerAssignedToTaskBoardTaskFormat with a source
@@ -68,7 +68,7 @@ public interface IPlannerAssignedToTaskBoardTaskFormatRequest extends IHttpReque
      * @param newPlannerAssignedToTaskBoardTaskFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat, final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback);
+    void post(final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat, final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback);
 
     /**
      * Posts a PlannerAssignedToTaskBoardTaskFormat with a new object
@@ -85,7 +85,7 @@ public interface IPlannerAssignedToTaskBoardTaskFormatRequest extends IHttpReque
      * @param newPlannerAssignedToTaskBoardTaskFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat, final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback);
+    void put(final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat, final ICallback<? super PlannerAssignedToTaskBoardTaskFormat> callback);
 
     /**
      * Posts a PlannerAssignedToTaskBoardTaskFormat with a new object

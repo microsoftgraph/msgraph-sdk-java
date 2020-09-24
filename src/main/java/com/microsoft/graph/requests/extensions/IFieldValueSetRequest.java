@@ -21,7 +21,7 @@ public interface IFieldValueSetRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<FieldValueSet> callback);
+    void get(final ICallback<? super FieldValueSet> callback);
 
     /**
      * Gets the FieldValueSet from the service
@@ -36,7 +36,7 @@ public interface IFieldValueSetRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<FieldValueSet> callback);
+    void delete(final ICallback<? super FieldValueSet> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IFieldValueSetRequest extends IHttpRequest {
      * @param sourceFieldValueSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final FieldValueSet sourceFieldValueSet, final ICallback<FieldValueSet> callback);
+    void patch(final FieldValueSet sourceFieldValueSet, final ICallback<? super FieldValueSet> callback);
 
     /**
      * Patches this FieldValueSet with a source
@@ -68,7 +68,7 @@ public interface IFieldValueSetRequest extends IHttpRequest {
      * @param newFieldValueSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final FieldValueSet newFieldValueSet, final ICallback<FieldValueSet> callback);
+    void post(final FieldValueSet newFieldValueSet, final ICallback<? super FieldValueSet> callback);
 
     /**
      * Posts a FieldValueSet with a new object
@@ -85,7 +85,7 @@ public interface IFieldValueSetRequest extends IHttpRequest {
      * @param newFieldValueSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final FieldValueSet newFieldValueSet, final ICallback<FieldValueSet> callback);
+    void put(final FieldValueSet newFieldValueSet, final ICallback<? super FieldValueSet> callback);
 
     /**
      * Posts a FieldValueSet with a new object

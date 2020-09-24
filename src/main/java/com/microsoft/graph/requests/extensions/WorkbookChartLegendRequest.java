@@ -39,7 +39,7 @@ public class WorkbookChartLegendRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChartLegend> callback) {
+    public void get(final ICallback<? super WorkbookChartLegend> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookChartLegendRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookChartLegend> callback) {
+    public void delete(final ICallback<? super WorkbookChartLegend> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookChartLegendRequest extends BaseRequest implements IWorkbook
      * @param sourceWorkbookChartLegend the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartLegend sourceWorkbookChartLegend, final ICallback<WorkbookChartLegend> callback) {
+    public void patch(final WorkbookChartLegend sourceWorkbookChartLegend, final ICallback<? super WorkbookChartLegend> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartLegend);
     }
 
@@ -98,7 +98,7 @@ public class WorkbookChartLegendRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookChartLegend the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<WorkbookChartLegend> callback) {
+    public void post(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<? super WorkbookChartLegend> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartLegend);
     }
 
@@ -119,7 +119,7 @@ public class WorkbookChartLegendRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookChartLegend the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<WorkbookChartLegend> callback) {
+    public void put(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<? super WorkbookChartLegend> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartLegend);
     }
 

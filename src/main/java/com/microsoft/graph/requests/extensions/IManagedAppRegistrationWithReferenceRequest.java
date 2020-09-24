@@ -27,19 +27,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IManagedAppRegistrationWithReferenceRequest extends IHttpRequest {
 
-    void post(final ManagedAppRegistration newManagedAppRegistration, final IJsonBackedObject payload, final ICallback<ManagedAppRegistration> callback);
+    void post(final ManagedAppRegistration newManagedAppRegistration, final IJsonBackedObject payload, final ICallback<? super ManagedAppRegistration> callback);
 
     ManagedAppRegistration post(final ManagedAppRegistration newManagedAppRegistration, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<ManagedAppRegistration> callback);
+    void get(final ICallback<? super ManagedAppRegistration> callback);
 
     ManagedAppRegistration get() throws ClientException;
 
-	void delete(final ICallback<ManagedAppRegistration> callback);
+	void delete(final ICallback<? super ManagedAppRegistration> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final ManagedAppRegistration sourceManagedAppRegistration, final ICallback<ManagedAppRegistration> callback);
+	void patch(final ManagedAppRegistration sourceManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback);
 
 	ManagedAppRegistration patch(final ManagedAppRegistration sourceManagedAppRegistration) throws ClientException;
 

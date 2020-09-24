@@ -37,7 +37,7 @@ public class WorkbookCreateSessionRequest extends BaseRequest implements IWorkbo
         body = new WorkbookCreateSessionBody();
     }
 
-    public void post(final ICallback<WorkbookSessionInfo> callback) {
+    public void post(final ICallback<? super WorkbookSessionInfo> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

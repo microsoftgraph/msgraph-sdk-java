@@ -43,7 +43,7 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
         super(requestUrl, client, requestOptions, CalendarCollectionResponse.class, ICalendarCollectionPage.class);
     }
 
-    public void get(final ICallback<ICalendarCollectionPage> callback) {
+    public void get(final ICallback<? super ICalendarCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -62,7 +62,7 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
         return buildFromResponse(response);
     }
 
-    public void post(final Calendar newCalendar, final ICallback<Calendar> callback) {
+    public void post(final Calendar newCalendar, final ICallback<? super Calendar> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

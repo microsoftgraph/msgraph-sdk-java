@@ -37,7 +37,7 @@ public class WorkbookChartPointItemAtRequest extends BaseRequest implements IWor
      * @param srcWorkbookChartPoint the WorkbookChartPoint with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
+    public void patch(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookChartPoint);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookChartPointItemAtRequest extends BaseRequest implements IWor
      * @param srcWorkbookChartPoint the WorkbookChartPoint to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
+    public void put(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookChartPoint);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookChartPointItemAtRequest extends BaseRequest implements IWor
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChartPoint> callback) {
+    public void get(final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

@@ -35,7 +35,7 @@ public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseColl
         super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, ITokenLifetimePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<ITokenLifetimePolicyCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super ITokenLifetimePolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

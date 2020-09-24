@@ -36,7 +36,7 @@ public class DeviceEnrollmentConfigurationSetPriorityRequest extends BaseRequest
         body = new DeviceEnrollmentConfigurationSetPriorityBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

@@ -21,7 +21,7 @@ public interface IShiftPreferencesRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ShiftPreferences> callback);
+    void get(final ICallback<? super ShiftPreferences> callback);
 
     /**
      * Gets the ShiftPreferences from the service
@@ -36,7 +36,7 @@ public interface IShiftPreferencesRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ShiftPreferences> callback);
+    void delete(final ICallback<? super ShiftPreferences> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IShiftPreferencesRequest extends IHttpRequest {
      * @param sourceShiftPreferences the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ShiftPreferences sourceShiftPreferences, final ICallback<ShiftPreferences> callback);
+    void patch(final ShiftPreferences sourceShiftPreferences, final ICallback<? super ShiftPreferences> callback);
 
     /**
      * Patches this ShiftPreferences with a source
@@ -68,7 +68,7 @@ public interface IShiftPreferencesRequest extends IHttpRequest {
      * @param newShiftPreferences the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ShiftPreferences newShiftPreferences, final ICallback<ShiftPreferences> callback);
+    void post(final ShiftPreferences newShiftPreferences, final ICallback<? super ShiftPreferences> callback);
 
     /**
      * Posts a ShiftPreferences with a new object
@@ -85,7 +85,7 @@ public interface IShiftPreferencesRequest extends IHttpRequest {
      * @param newShiftPreferences the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ShiftPreferences newShiftPreferences, final ICallback<ShiftPreferences> callback);
+    void put(final ShiftPreferences newShiftPreferences, final ICallback<? super ShiftPreferences> callback);
 
     /**
      * Posts a ShiftPreferences with a new object

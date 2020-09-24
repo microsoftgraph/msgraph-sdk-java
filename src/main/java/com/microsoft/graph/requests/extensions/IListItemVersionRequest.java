@@ -21,7 +21,7 @@ public interface IListItemVersionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ListItemVersion> callback);
+    void get(final ICallback<? super ListItemVersion> callback);
 
     /**
      * Gets the ListItemVersion from the service
@@ -36,7 +36,7 @@ public interface IListItemVersionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ListItemVersion> callback);
+    void delete(final ICallback<? super ListItemVersion> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IListItemVersionRequest extends IHttpRequest {
      * @param sourceListItemVersion the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ListItemVersion sourceListItemVersion, final ICallback<ListItemVersion> callback);
+    void patch(final ListItemVersion sourceListItemVersion, final ICallback<? super ListItemVersion> callback);
 
     /**
      * Patches this ListItemVersion with a source
@@ -68,7 +68,7 @@ public interface IListItemVersionRequest extends IHttpRequest {
      * @param newListItemVersion the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ListItemVersion newListItemVersion, final ICallback<ListItemVersion> callback);
+    void post(final ListItemVersion newListItemVersion, final ICallback<? super ListItemVersion> callback);
 
     /**
      * Posts a ListItemVersion with a new object
@@ -85,7 +85,7 @@ public interface IListItemVersionRequest extends IHttpRequest {
      * @param newListItemVersion the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ListItemVersion newListItemVersion, final ICallback<ListItemVersion> callback);
+    void put(final ListItemVersion newListItemVersion, final ICallback<? super ListItemVersion> callback);
 
     /**
      * Posts a ListItemVersion with a new object

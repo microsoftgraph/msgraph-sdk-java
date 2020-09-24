@@ -34,6 +34,6 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param builder The request builder for the next collection page
      */
     public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage(final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse response, final IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

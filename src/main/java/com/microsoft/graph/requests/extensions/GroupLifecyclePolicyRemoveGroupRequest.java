@@ -36,7 +36,7 @@ public class GroupLifecyclePolicyRemoveGroupRequest extends BaseRequest implemen
         body = new GroupLifecyclePolicyRemoveGroupBody();
     }
 
-    public void post(final ICallback<Boolean> callback) {
+    public void post(final ICallback<? super Boolean> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

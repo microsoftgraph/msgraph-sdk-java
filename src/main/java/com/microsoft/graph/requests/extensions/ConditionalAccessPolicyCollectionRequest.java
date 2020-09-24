@@ -40,7 +40,7 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, ConditionalAccessPolicyCollectionResponse.class, IConditionalAccessPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IConditionalAccessPolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IConditionalAccessPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback) {
+    public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConditionalAccessPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

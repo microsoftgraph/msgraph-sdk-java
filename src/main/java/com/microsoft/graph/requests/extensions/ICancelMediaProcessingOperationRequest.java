@@ -21,7 +21,7 @@ public interface ICancelMediaProcessingOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CancelMediaProcessingOperation> callback);
+    void get(final ICallback<? super CancelMediaProcessingOperation> callback);
 
     /**
      * Gets the CancelMediaProcessingOperation from the service
@@ -36,7 +36,7 @@ public interface ICancelMediaProcessingOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CancelMediaProcessingOperation> callback);
+    void delete(final ICallback<? super CancelMediaProcessingOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICancelMediaProcessingOperationRequest extends IHttpRequest {
      * @param sourceCancelMediaProcessingOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CancelMediaProcessingOperation sourceCancelMediaProcessingOperation, final ICallback<CancelMediaProcessingOperation> callback);
+    void patch(final CancelMediaProcessingOperation sourceCancelMediaProcessingOperation, final ICallback<? super CancelMediaProcessingOperation> callback);
 
     /**
      * Patches this CancelMediaProcessingOperation with a source
@@ -68,7 +68,7 @@ public interface ICancelMediaProcessingOperationRequest extends IHttpRequest {
      * @param newCancelMediaProcessingOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CancelMediaProcessingOperation newCancelMediaProcessingOperation, final ICallback<CancelMediaProcessingOperation> callback);
+    void post(final CancelMediaProcessingOperation newCancelMediaProcessingOperation, final ICallback<? super CancelMediaProcessingOperation> callback);
 
     /**
      * Posts a CancelMediaProcessingOperation with a new object
@@ -85,7 +85,7 @@ public interface ICancelMediaProcessingOperationRequest extends IHttpRequest {
      * @param newCancelMediaProcessingOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CancelMediaProcessingOperation newCancelMediaProcessingOperation, final ICallback<CancelMediaProcessingOperation> callback);
+    void put(final CancelMediaProcessingOperation newCancelMediaProcessingOperation, final ICallback<? super CancelMediaProcessingOperation> callback);
 
     /**
      * Posts a CancelMediaProcessingOperation with a new object

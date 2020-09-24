@@ -40,7 +40,7 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
         super(requestUrl, client, requestOptions, DeviceCategoryCollectionResponse.class, IDeviceCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceCategoryCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceCategoryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceCategory newDeviceCategory, final ICallback<DeviceCategory> callback) {
+    public void post(final DeviceCategory newDeviceCategory, final ICallback<? super DeviceCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

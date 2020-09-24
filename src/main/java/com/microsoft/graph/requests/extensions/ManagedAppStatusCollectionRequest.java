@@ -40,7 +40,7 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
         super(requestUrl, client, requestOptions, ManagedAppStatusCollectionResponse.class, IManagedAppStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedAppStatusCollectionPage> callback) {
+    public void get(final ICallback<? super IManagedAppStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedAppStatus newManagedAppStatus, final ICallback<ManagedAppStatus> callback) {
+    public void post(final ManagedAppStatus newManagedAppStatus, final ICallback<? super ManagedAppStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

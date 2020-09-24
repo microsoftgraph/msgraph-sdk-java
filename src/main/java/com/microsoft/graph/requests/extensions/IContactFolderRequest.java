@@ -21,7 +21,7 @@ public interface IContactFolderRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ContactFolder> callback);
+    void get(final ICallback<? super ContactFolder> callback);
 
     /**
      * Gets the ContactFolder from the service
@@ -36,7 +36,7 @@ public interface IContactFolderRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ContactFolder> callback);
+    void delete(final ICallback<? super ContactFolder> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IContactFolderRequest extends IHttpRequest {
      * @param sourceContactFolder the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ContactFolder sourceContactFolder, final ICallback<ContactFolder> callback);
+    void patch(final ContactFolder sourceContactFolder, final ICallback<? super ContactFolder> callback);
 
     /**
      * Patches this ContactFolder with a source
@@ -68,7 +68,7 @@ public interface IContactFolderRequest extends IHttpRequest {
      * @param newContactFolder the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ContactFolder newContactFolder, final ICallback<ContactFolder> callback);
+    void post(final ContactFolder newContactFolder, final ICallback<? super ContactFolder> callback);
 
     /**
      * Posts a ContactFolder with a new object
@@ -85,7 +85,7 @@ public interface IContactFolderRequest extends IHttpRequest {
      * @param newContactFolder the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ContactFolder newContactFolder, final ICallback<ContactFolder> callback);
+    void put(final ContactFolder newContactFolder, final ICallback<? super ContactFolder> callback);
 
     /**
      * Posts a ContactFolder with a new object

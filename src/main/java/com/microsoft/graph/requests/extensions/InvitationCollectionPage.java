@@ -23,6 +23,6 @@ public class InvitationCollectionPage extends BaseCollectionPage<Invitation, IIn
      * @param builder  the request builder for the next collection page
      */
     public InvitationCollectionPage(final InvitationCollectionResponse response, final IInvitationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

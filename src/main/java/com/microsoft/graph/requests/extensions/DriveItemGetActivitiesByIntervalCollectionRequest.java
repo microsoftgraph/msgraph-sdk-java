@@ -39,7 +39,7 @@ public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseColle
     }
 
 
-    public void get(final ICallback<IDriveItemGetActivitiesByIntervalCollectionPage> callback) {
+    public void get(final ICallback<? super IDriveItemGetActivitiesByIntervalCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

@@ -36,7 +36,7 @@ public class GroupValidatePropertiesRequest extends BaseRequest implements IGrou
         body = new GroupValidatePropertiesBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

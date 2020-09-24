@@ -21,7 +21,7 @@ public interface IOnenotePageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnenotePage> callback);
+    void get(final ICallback<? super OnenotePage> callback);
 
     /**
      * Gets the OnenotePage from the service
@@ -36,7 +36,7 @@ public interface IOnenotePageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnenotePage> callback);
+    void delete(final ICallback<? super OnenotePage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnenotePageRequest extends IHttpRequest {
      * @param sourceOnenotePage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnenotePage sourceOnenotePage, final ICallback<OnenotePage> callback);
+    void patch(final OnenotePage sourceOnenotePage, final ICallback<? super OnenotePage> callback);
 
     /**
      * Patches this OnenotePage with a source
@@ -68,7 +68,7 @@ public interface IOnenotePageRequest extends IHttpRequest {
      * @param newOnenotePage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final byte[] newOnenotePage, final ICallback<OnenotePage> callback);
+    void post(final byte[] newOnenotePage, final ICallback<? super OnenotePage> callback);
 
     /**
      * Posts a OnenotePage with a new object
@@ -85,7 +85,7 @@ public interface IOnenotePageRequest extends IHttpRequest {
      * @param newOnenotePage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnenotePage newOnenotePage, final ICallback<OnenotePage> callback);
+    void put(final OnenotePage newOnenotePage, final ICallback<? super OnenotePage> callback);
 
     /**
      * Posts a OnenotePage with a new object

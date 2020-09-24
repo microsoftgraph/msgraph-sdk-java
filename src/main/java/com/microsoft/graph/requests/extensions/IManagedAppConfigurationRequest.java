@@ -21,7 +21,7 @@ public interface IManagedAppConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedAppConfiguration> callback);
+    void get(final ICallback<? super ManagedAppConfiguration> callback);
 
     /**
      * Gets the ManagedAppConfiguration from the service
@@ -36,7 +36,7 @@ public interface IManagedAppConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedAppConfiguration> callback);
+    void delete(final ICallback<? super ManagedAppConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAppConfigurationRequest extends IHttpRequest {
      * @param sourceManagedAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedAppConfiguration sourceManagedAppConfiguration, final ICallback<ManagedAppConfiguration> callback);
+    void patch(final ManagedAppConfiguration sourceManagedAppConfiguration, final ICallback<? super ManagedAppConfiguration> callback);
 
     /**
      * Patches this ManagedAppConfiguration with a source
@@ -68,7 +68,7 @@ public interface IManagedAppConfigurationRequest extends IHttpRequest {
      * @param newManagedAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedAppConfiguration newManagedAppConfiguration, final ICallback<ManagedAppConfiguration> callback);
+    void post(final ManagedAppConfiguration newManagedAppConfiguration, final ICallback<? super ManagedAppConfiguration> callback);
 
     /**
      * Posts a ManagedAppConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IManagedAppConfigurationRequest extends IHttpRequest {
      * @param newManagedAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedAppConfiguration newManagedAppConfiguration, final ICallback<ManagedAppConfiguration> callback);
+    void put(final ManagedAppConfiguration newManagedAppConfiguration, final ICallback<? super ManagedAppConfiguration> callback);
 
     /**
      * Posts a ManagedAppConfiguration with a new object

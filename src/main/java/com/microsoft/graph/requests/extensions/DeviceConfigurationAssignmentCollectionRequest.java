@@ -40,7 +40,7 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, DeviceConfigurationAssignmentCollectionResponse.class, IDeviceConfigurationAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceConfigurationAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceConfigurationAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceConfigurationAssignmentCollectionRequest extends BaseCollecti
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<DeviceConfigurationAssignment> callback) {
+    public void post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<? super DeviceConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

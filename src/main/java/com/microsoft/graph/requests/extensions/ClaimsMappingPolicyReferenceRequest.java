@@ -34,7 +34,7 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseRequest implements 
         super(requestUrl, client, requestOptions, ClaimsMappingPolicy.class);
     }
 
-    public void delete(final ICallback<ClaimsMappingPolicy> callback) {
+    public void delete(final ICallback<? super ClaimsMappingPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseRequest implements 
      * @param srcClaimsMappingPolicy the ClaimsMappingPolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ClaimsMappingPolicy srcClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback) {
+    public void put(ClaimsMappingPolicy srcClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
         send(HttpMethod.PUT, callback, srcClaimsMappingPolicy);
     }
 

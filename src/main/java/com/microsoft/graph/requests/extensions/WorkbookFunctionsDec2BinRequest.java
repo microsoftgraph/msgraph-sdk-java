@@ -37,7 +37,7 @@ public class WorkbookFunctionsDec2BinRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsDec2BinBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

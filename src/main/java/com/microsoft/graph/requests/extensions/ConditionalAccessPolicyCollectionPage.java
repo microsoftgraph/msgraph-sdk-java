@@ -23,6 +23,6 @@ public class ConditionalAccessPolicyCollectionPage extends BaseCollectionPage<Co
      * @param builder  the request builder for the next collection page
      */
     public ConditionalAccessPolicyCollectionPage(final ConditionalAccessPolicyCollectionResponse response, final IConditionalAccessPolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOnenoteResourceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOnenoteResourceCollectionPage> callback);
+    void get(final ICallback<? super IOnenoteResourceCollectionPage> callback);
 
     IOnenoteResourceCollectionPage get() throws ClientException;
 
-    void post(final OnenoteResource newOnenoteResource, final ICallback<OnenoteResource> callback);
+    void post(final OnenoteResource newOnenoteResource, final ICallback<? super OnenoteResource> callback);
 
     OnenoteResource post(final OnenoteResource newOnenoteResource) throws ClientException;
 

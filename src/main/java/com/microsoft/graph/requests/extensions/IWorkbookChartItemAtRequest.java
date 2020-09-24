@@ -27,7 +27,7 @@ public interface IWorkbookChartItemAtRequest extends IHttpRequest {
      * @param srcWorkbookChart the WorkbookChart with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    void patch(WorkbookChart srcWorkbookChart, final ICallback<WorkbookChart> callback);
+    void patch(WorkbookChart srcWorkbookChart, final ICallback<? super WorkbookChart> callback);
 
     /**
      * Patches the WorkbookChartItemAt
@@ -44,7 +44,7 @@ public interface IWorkbookChartItemAtRequest extends IHttpRequest {
      * @param srcWorkbookChart the WorkbookChart to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(WorkbookChart srcWorkbookChart, final ICallback<WorkbookChart> callback);
+    void put(WorkbookChart srcWorkbookChart, final ICallback<? super WorkbookChart> callback);
 
     /**
      * Puts the WorkbookChartItemAt
@@ -59,7 +59,7 @@ public interface IWorkbookChartItemAtRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChart> callback);
+    void get(final ICallback<? super WorkbookChart> callback);
 
     /**
      * Gets the WorkbookChart

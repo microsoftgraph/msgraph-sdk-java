@@ -21,7 +21,7 @@ public interface IManagedAppOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedAppOperation> callback);
+    void get(final ICallback<? super ManagedAppOperation> callback);
 
     /**
      * Gets the ManagedAppOperation from the service
@@ -36,7 +36,7 @@ public interface IManagedAppOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedAppOperation> callback);
+    void delete(final ICallback<? super ManagedAppOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAppOperationRequest extends IHttpRequest {
      * @param sourceManagedAppOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedAppOperation sourceManagedAppOperation, final ICallback<ManagedAppOperation> callback);
+    void patch(final ManagedAppOperation sourceManagedAppOperation, final ICallback<? super ManagedAppOperation> callback);
 
     /**
      * Patches this ManagedAppOperation with a source
@@ -68,7 +68,7 @@ public interface IManagedAppOperationRequest extends IHttpRequest {
      * @param newManagedAppOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedAppOperation newManagedAppOperation, final ICallback<ManagedAppOperation> callback);
+    void post(final ManagedAppOperation newManagedAppOperation, final ICallback<? super ManagedAppOperation> callback);
 
     /**
      * Posts a ManagedAppOperation with a new object
@@ -85,7 +85,7 @@ public interface IManagedAppOperationRequest extends IHttpRequest {
      * @param newManagedAppOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedAppOperation newManagedAppOperation, final ICallback<ManagedAppOperation> callback);
+    void put(final ManagedAppOperation newManagedAppOperation, final ICallback<? super ManagedAppOperation> callback);
 
     /**
      * Posts a ManagedAppOperation with a new object

@@ -37,7 +37,7 @@ public class WorkbookFunctionsWorkDay_IntlRequest extends BaseRequest implements
         body = new WorkbookFunctionsWorkDay_IntlBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

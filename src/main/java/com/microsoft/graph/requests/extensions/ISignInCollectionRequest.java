@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISignInCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISignInCollectionPage> callback);
+    void get(final ICallback<? super ISignInCollectionPage> callback);
 
     ISignInCollectionPage get() throws ClientException;
 
-    void post(final SignIn newSignIn, final ICallback<SignIn> callback);
+    void post(final SignIn newSignIn, final ICallback<? super SignIn> callback);
 
     SignIn post(final SignIn newSignIn) throws ClientException;
 

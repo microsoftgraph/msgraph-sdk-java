@@ -37,7 +37,7 @@ public class WorkbookFunctionsTbillYieldRequest extends BaseRequest implements I
         body = new WorkbookFunctionsTbillYieldBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

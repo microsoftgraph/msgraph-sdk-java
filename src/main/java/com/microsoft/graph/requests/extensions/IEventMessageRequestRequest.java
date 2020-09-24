@@ -21,7 +21,7 @@ public interface IEventMessageRequestRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EventMessageRequest> callback);
+    void get(final ICallback<? super EventMessageRequest> callback);
 
     /**
      * Gets the EventMessageRequest from the service
@@ -36,7 +36,7 @@ public interface IEventMessageRequestRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EventMessageRequest> callback);
+    void delete(final ICallback<? super EventMessageRequest> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEventMessageRequestRequest extends IHttpRequest {
      * @param sourceEventMessageRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EventMessageRequest sourceEventMessageRequest, final ICallback<EventMessageRequest> callback);
+    void patch(final EventMessageRequest sourceEventMessageRequest, final ICallback<? super EventMessageRequest> callback);
 
     /**
      * Patches this EventMessageRequest with a source
@@ -68,7 +68,7 @@ public interface IEventMessageRequestRequest extends IHttpRequest {
      * @param newEventMessageRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EventMessageRequest newEventMessageRequest, final ICallback<EventMessageRequest> callback);
+    void post(final EventMessageRequest newEventMessageRequest, final ICallback<? super EventMessageRequest> callback);
 
     /**
      * Posts a EventMessageRequest with a new object
@@ -85,7 +85,7 @@ public interface IEventMessageRequestRequest extends IHttpRequest {
      * @param newEventMessageRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EventMessageRequest newEventMessageRequest, final ICallback<EventMessageRequest> callback);
+    void put(final EventMessageRequest newEventMessageRequest, final ICallback<? super EventMessageRequest> callback);
 
     /**
      * Posts a EventMessageRequest with a new object

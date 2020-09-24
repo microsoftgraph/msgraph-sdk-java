@@ -21,7 +21,7 @@ public interface IIosManagedAppProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosManagedAppProtection> callback);
+    void get(final ICallback<? super IosManagedAppProtection> callback);
 
     /**
      * Gets the IosManagedAppProtection from the service
@@ -36,7 +36,7 @@ public interface IIosManagedAppProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosManagedAppProtection> callback);
+    void delete(final ICallback<? super IosManagedAppProtection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosManagedAppProtectionRequest extends IHttpRequest {
      * @param sourceIosManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosManagedAppProtection sourceIosManagedAppProtection, final ICallback<IosManagedAppProtection> callback);
+    void patch(final IosManagedAppProtection sourceIosManagedAppProtection, final ICallback<? super IosManagedAppProtection> callback);
 
     /**
      * Patches this IosManagedAppProtection with a source
@@ -68,7 +68,7 @@ public interface IIosManagedAppProtectionRequest extends IHttpRequest {
      * @param newIosManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<IosManagedAppProtection> callback);
+    void post(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<? super IosManagedAppProtection> callback);
 
     /**
      * Posts a IosManagedAppProtection with a new object
@@ -85,7 +85,7 @@ public interface IIosManagedAppProtectionRequest extends IHttpRequest {
      * @param newIosManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<IosManagedAppProtection> callback);
+    void put(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<? super IosManagedAppProtection> callback);
 
     /**
      * Posts a IosManagedAppProtection with a new object

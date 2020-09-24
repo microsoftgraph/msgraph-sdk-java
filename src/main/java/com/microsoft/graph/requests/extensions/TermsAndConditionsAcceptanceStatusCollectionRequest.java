@@ -40,7 +40,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
         super(requestUrl, client, requestOptions, TermsAndConditionsAcceptanceStatusCollectionResponse.class, ITermsAndConditionsAcceptanceStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<ITermsAndConditionsAcceptanceStatusCollectionPage> callback) {
+    public void get(final ICallback<? super ITermsAndConditionsAcceptanceStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
         return buildFromResponse(response);
     }
 
-    public void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<TermsAndConditionsAcceptanceStatus> callback) {
+    public void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsAcceptanceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

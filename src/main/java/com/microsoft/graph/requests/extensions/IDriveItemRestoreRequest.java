@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDriveItemRestoreRequest extends IHttpRequest {
 
-    void post(final ICallback<DriveItem> callback);
+    void post(final ICallback<? super DriveItem> callback);
 
     DriveItem post() throws ClientException;
 

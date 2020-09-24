@@ -21,7 +21,7 @@ public interface IDriveItemVersionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DriveItemVersion> callback);
+    void get(final ICallback<? super DriveItemVersion> callback);
 
     /**
      * Gets the DriveItemVersion from the service
@@ -36,7 +36,7 @@ public interface IDriveItemVersionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DriveItemVersion> callback);
+    void delete(final ICallback<? super DriveItemVersion> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDriveItemVersionRequest extends IHttpRequest {
      * @param sourceDriveItemVersion the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DriveItemVersion sourceDriveItemVersion, final ICallback<DriveItemVersion> callback);
+    void patch(final DriveItemVersion sourceDriveItemVersion, final ICallback<? super DriveItemVersion> callback);
 
     /**
      * Patches this DriveItemVersion with a source
@@ -68,7 +68,7 @@ public interface IDriveItemVersionRequest extends IHttpRequest {
      * @param newDriveItemVersion the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DriveItemVersion newDriveItemVersion, final ICallback<DriveItemVersion> callback);
+    void post(final DriveItemVersion newDriveItemVersion, final ICallback<? super DriveItemVersion> callback);
 
     /**
      * Posts a DriveItemVersion with a new object
@@ -85,7 +85,7 @@ public interface IDriveItemVersionRequest extends IHttpRequest {
      * @param newDriveItemVersion the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DriveItemVersion newDriveItemVersion, final ICallback<DriveItemVersion> callback);
+    void put(final DriveItemVersion newDriveItemVersion, final ICallback<? super DriveItemVersion> callback);
 
     /**
      * Posts a DriveItemVersion with a new object

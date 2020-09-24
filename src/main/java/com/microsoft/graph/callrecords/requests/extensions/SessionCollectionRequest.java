@@ -40,7 +40,7 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
         super(requestUrl, client, requestOptions, SessionCollectionResponse.class, ISessionCollectionPage.class);
     }
 
-    public void get(final ICallback<ISessionCollectionPage> callback) {
+    public void get(final ICallback<? super ISessionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
         return buildFromResponse(response);
     }
 
-    public void post(final Session newSession, final ICallback<Session> callback) {
+    public void post(final Session newSession, final ICallback<? super Session> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SessionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

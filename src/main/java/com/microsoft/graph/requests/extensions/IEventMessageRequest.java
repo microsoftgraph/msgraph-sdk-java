@@ -21,7 +21,7 @@ public interface IEventMessageRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EventMessage> callback);
+    void get(final ICallback<? super EventMessage> callback);
 
     /**
      * Gets the EventMessage from the service
@@ -36,7 +36,7 @@ public interface IEventMessageRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EventMessage> callback);
+    void delete(final ICallback<? super EventMessage> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEventMessageRequest extends IHttpRequest {
      * @param sourceEventMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EventMessage sourceEventMessage, final ICallback<EventMessage> callback);
+    void patch(final EventMessage sourceEventMessage, final ICallback<? super EventMessage> callback);
 
     /**
      * Patches this EventMessage with a source
@@ -68,7 +68,7 @@ public interface IEventMessageRequest extends IHttpRequest {
      * @param newEventMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EventMessage newEventMessage, final ICallback<EventMessage> callback);
+    void post(final EventMessage newEventMessage, final ICallback<? super EventMessage> callback);
 
     /**
      * Posts a EventMessage with a new object
@@ -85,7 +85,7 @@ public interface IEventMessageRequest extends IHttpRequest {
      * @param newEventMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EventMessage newEventMessage, final ICallback<EventMessage> callback);
+    void put(final EventMessage newEventMessage, final ICallback<? super EventMessage> callback);
 
     /**
      * Posts a EventMessage with a new object

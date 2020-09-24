@@ -26,7 +26,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IManagedAppRegistrationReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<ManagedAppRegistration> callback);
+    void delete(final ICallback<? super ManagedAppRegistration> callback);
 
     ManagedAppRegistration delete() throws ClientException;
 
@@ -52,7 +52,7 @@ public interface IManagedAppRegistrationReferenceRequest extends IHttpRequest {
      * @param srcManagedAppRegistration the ManagedAppRegistration to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(ManagedAppRegistration srcManagedAppRegistration, final ICallback<ManagedAppRegistration> callback);
+    void put(ManagedAppRegistration srcManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback);
 
     /**
      * Puts the ManagedAppRegistration

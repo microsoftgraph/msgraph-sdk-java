@@ -37,7 +37,7 @@ public class MessageCreateReplyAllRequest extends BaseRequest implements IMessag
         body = new MessageCreateReplyAllBody();
     }
 
-    public void post(final ICallback<Message> callback) {
+    public void post(final ICallback<? super Message> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

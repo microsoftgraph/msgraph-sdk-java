@@ -37,7 +37,7 @@ public class WorkbookFunctionsNorm_S_DistRequest extends BaseRequest implements 
         body = new WorkbookFunctionsNorm_S_DistBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface ISiteRemoveCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<ISiteRemoveCollectionPage> callback);
+    void post(final ICallback<? super ISiteRemoveCollectionPage> callback);
 
     ISiteRemoveCollectionPage post() throws ClientException;
 

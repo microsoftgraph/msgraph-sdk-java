@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITokenIssuancePolicyReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<TokenIssuancePolicy> callback);
+    void delete(final ICallback<? super TokenIssuancePolicy> callback);
 
     TokenIssuancePolicy delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface ITokenIssuancePolicyReferenceRequest extends IHttpRequest {
      * @param srcTokenIssuancePolicy the TokenIssuancePolicy to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(TokenIssuancePolicy srcTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback);
+    void put(TokenIssuancePolicy srcTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback);
 
     /**
      * Puts the TokenIssuancePolicy

@@ -37,7 +37,7 @@ public class WorkbookFunctionsRank_AvgRequest extends BaseRequest implements IWo
         body = new WorkbookFunctionsRank_AvgBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

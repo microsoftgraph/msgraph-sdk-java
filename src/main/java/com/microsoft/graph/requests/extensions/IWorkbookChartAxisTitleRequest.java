@@ -21,7 +21,7 @@ public interface IWorkbookChartAxisTitleRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartAxisTitle> callback);
+    void get(final ICallback<? super WorkbookChartAxisTitle> callback);
 
     /**
      * Gets the WorkbookChartAxisTitle from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartAxisTitleRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartAxisTitle> callback);
+    void delete(final ICallback<? super WorkbookChartAxisTitle> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartAxisTitleRequest extends IHttpRequest {
      * @param sourceWorkbookChartAxisTitle the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle, final ICallback<WorkbookChartAxisTitle> callback);
+    void patch(final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle, final ICallback<? super WorkbookChartAxisTitle> callback);
 
     /**
      * Patches this WorkbookChartAxisTitle with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartAxisTitleRequest extends IHttpRequest {
      * @param newWorkbookChartAxisTitle the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<WorkbookChartAxisTitle> callback);
+    void post(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<? super WorkbookChartAxisTitle> callback);
 
     /**
      * Posts a WorkbookChartAxisTitle with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartAxisTitleRequest extends IHttpRequest {
      * @param newWorkbookChartAxisTitle the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<WorkbookChartAxisTitle> callback);
+    void put(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<? super WorkbookChartAxisTitle> callback);
 
     /**
      * Posts a WorkbookChartAxisTitle with a new object

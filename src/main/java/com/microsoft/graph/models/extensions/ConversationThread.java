@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.PostCollectionResponse;
 import com.microsoft.graph.requests.extensions.PostCollectionPage;
 
 
@@ -140,19 +138,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
 
         if (json.has("posts")) {
-            final PostCollectionResponse response = new PostCollectionResponse();
-            if (json.has("posts@odata.nextLink")) {
-                response.nextLink = json.get("posts@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("posts").toString(), JsonObject[].class);
-            final Post[] array = new Post[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Post.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            posts = new PostCollectionPage(response, null);
+            posts = serializer.deserializeObject(json.get("posts").toString(), PostCollectionPage.class);
         }
     }
 }

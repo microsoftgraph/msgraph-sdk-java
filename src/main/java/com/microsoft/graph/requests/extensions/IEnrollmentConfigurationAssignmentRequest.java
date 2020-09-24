@@ -21,7 +21,7 @@ public interface IEnrollmentConfigurationAssignmentRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EnrollmentConfigurationAssignment> callback);
+    void get(final ICallback<? super EnrollmentConfigurationAssignment> callback);
 
     /**
      * Gets the EnrollmentConfigurationAssignment from the service
@@ -36,7 +36,7 @@ public interface IEnrollmentConfigurationAssignmentRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EnrollmentConfigurationAssignment> callback);
+    void delete(final ICallback<? super EnrollmentConfigurationAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEnrollmentConfigurationAssignmentRequest extends IHttpRequest 
      * @param sourceEnrollmentConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback);
+    void patch(final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback);
 
     /**
      * Patches this EnrollmentConfigurationAssignment with a source
@@ -68,7 +68,7 @@ public interface IEnrollmentConfigurationAssignmentRequest extends IHttpRequest 
      * @param newEnrollmentConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback);
+    void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback);
 
     /**
      * Posts a EnrollmentConfigurationAssignment with a new object
@@ -85,7 +85,7 @@ public interface IEnrollmentConfigurationAssignmentRequest extends IHttpRequest 
      * @param newEnrollmentConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback);
+    void put(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback);
 
     /**
      * Posts a EnrollmentConfigurationAssignment with a new object

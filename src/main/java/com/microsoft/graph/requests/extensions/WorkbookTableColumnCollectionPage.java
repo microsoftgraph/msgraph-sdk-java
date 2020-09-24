@@ -23,6 +23,6 @@ public class WorkbookTableColumnCollectionPage extends BaseCollectionPage<Workbo
      * @param builder  the request builder for the next collection page
      */
     public WorkbookTableColumnCollectionPage(final WorkbookTableColumnCollectionResponse response, final IWorkbookTableColumnCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

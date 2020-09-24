@@ -36,7 +36,7 @@ public class EventTentativelyAcceptRequest extends BaseRequest implements IEvent
         body = new EventTentativelyAcceptBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

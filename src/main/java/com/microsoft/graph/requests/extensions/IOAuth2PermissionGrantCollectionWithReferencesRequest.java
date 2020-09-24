@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOAuth2PermissionGrantCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<IOAuth2PermissionGrantCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super IOAuth2PermissionGrantCollectionWithReferencesPage> callback);
 
     IOAuth2PermissionGrantCollectionWithReferencesPage get() throws ClientException;
 

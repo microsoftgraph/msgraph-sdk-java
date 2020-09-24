@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IHomeRealmDiscoveryPolicyWithReferenceRequest extends IHttpRequest {
 
-    void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final IJsonBackedObject payload, final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final IJsonBackedObject payload, final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void get(final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     HomeRealmDiscoveryPolicy get() throws ClientException;
 
-	void delete(final ICallback<HomeRealmDiscoveryPolicy> callback);
+	void delete(final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback);
+	void patch(final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
 	HomeRealmDiscoveryPolicy patch(final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy) throws ClientException;
 

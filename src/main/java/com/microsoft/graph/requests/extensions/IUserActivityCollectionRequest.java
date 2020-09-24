@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserActivityCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserActivityCollectionPage> callback);
+    void get(final ICallback<? super IUserActivityCollectionPage> callback);
 
     IUserActivityCollectionPage get() throws ClientException;
 
-    void post(final UserActivity newUserActivity, final ICallback<UserActivity> callback);
+    void post(final UserActivity newUserActivity, final ICallback<? super UserActivity> callback);
 
     UserActivity post(final UserActivity newUserActivity) throws ClientException;
 

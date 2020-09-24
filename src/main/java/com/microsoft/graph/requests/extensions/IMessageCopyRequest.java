@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMessageCopyRequest extends IHttpRequest {
 
-    void post(final ICallback<Message> callback);
+    void post(final ICallback<? super Message> callback);
 
     Message post() throws ClientException;
 

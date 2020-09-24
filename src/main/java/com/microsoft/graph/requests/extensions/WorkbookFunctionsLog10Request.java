@@ -37,7 +37,7 @@ public class WorkbookFunctionsLog10Request extends BaseRequest implements IWorkb
         body = new WorkbookFunctionsLog10Body();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

@@ -37,7 +37,7 @@ public class ExtensionPropertyRequest extends BaseRequest implements IExtensionP
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ExtensionProperty> callback) {
+    public void get(final ICallback<? super ExtensionProperty> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ExtensionPropertyRequest extends BaseRequest implements IExtensionP
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ExtensionProperty> callback) {
+    public void delete(final ICallback<? super ExtensionProperty> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ExtensionPropertyRequest extends BaseRequest implements IExtensionP
      * @param sourceExtensionProperty the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExtensionProperty sourceExtensionProperty, final ICallback<ExtensionProperty> callback) {
+    public void patch(final ExtensionProperty sourceExtensionProperty, final ICallback<? super ExtensionProperty> callback) {
         send(HttpMethod.PATCH, callback, sourceExtensionProperty);
     }
 
@@ -96,7 +96,7 @@ public class ExtensionPropertyRequest extends BaseRequest implements IExtensionP
      * @param newExtensionProperty the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExtensionProperty newExtensionProperty, final ICallback<ExtensionProperty> callback) {
+    public void post(final ExtensionProperty newExtensionProperty, final ICallback<? super ExtensionProperty> callback) {
         send(HttpMethod.POST, callback, newExtensionProperty);
     }
 
@@ -117,7 +117,7 @@ public class ExtensionPropertyRequest extends BaseRequest implements IExtensionP
      * @param newExtensionProperty the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExtensionProperty newExtensionProperty, final ICallback<ExtensionProperty> callback) {
+    public void put(final ExtensionProperty newExtensionProperty, final ICallback<? super ExtensionProperty> callback) {
         send(HttpMethod.PUT, callback, newExtensionProperty);
     }
 

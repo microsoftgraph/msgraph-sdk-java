@@ -41,7 +41,7 @@ public class TimeOffRequestCollectionRequest extends BaseCollectionRequest<TimeO
         super(requestUrl, client, requestOptions, TimeOffRequestCollectionResponse.class, ITimeOffRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<ITimeOffRequestCollectionPage> callback) {
+    public void get(final ICallback<? super ITimeOffRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class TimeOffRequestCollectionRequest extends BaseCollectionRequest<TimeO
         return buildFromResponse(response);
     }
 
-    public void post(final TimeOffRequest newTimeOffRequest, final ICallback<TimeOffRequest> callback) {
+    public void post(final TimeOffRequest newTimeOffRequest, final ICallback<? super TimeOffRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TimeOffRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

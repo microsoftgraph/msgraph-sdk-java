@@ -23,6 +23,6 @@ public class CallCollectionPage extends BaseCollectionPage<Call, ICallCollection
      * @param builder  the request builder for the next collection page
      */
     public CallCollectionPage(final CallCollectionResponse response, final ICallCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

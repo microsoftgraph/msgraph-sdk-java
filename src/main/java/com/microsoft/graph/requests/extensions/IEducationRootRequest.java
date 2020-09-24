@@ -21,7 +21,7 @@ public interface IEducationRootRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationRoot> callback);
+    void get(final ICallback<? super EducationRoot> callback);
 
     /**
      * Gets the EducationRoot from the service
@@ -36,7 +36,7 @@ public interface IEducationRootRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationRoot> callback);
+    void delete(final ICallback<? super EducationRoot> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationRootRequest extends IHttpRequest {
      * @param sourceEducationRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationRoot sourceEducationRoot, final ICallback<EducationRoot> callback);
+    void patch(final EducationRoot sourceEducationRoot, final ICallback<? super EducationRoot> callback);
 
     /**
      * Patches this EducationRoot with a source
@@ -68,7 +68,7 @@ public interface IEducationRootRequest extends IHttpRequest {
      * @param newEducationRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationRoot newEducationRoot, final ICallback<EducationRoot> callback);
+    void post(final EducationRoot newEducationRoot, final ICallback<? super EducationRoot> callback);
 
     /**
      * Posts a EducationRoot with a new object
@@ -85,7 +85,7 @@ public interface IEducationRootRequest extends IHttpRequest {
      * @param newEducationRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationRoot newEducationRoot, final ICallback<EducationRoot> callback);
+    void put(final EducationRoot newEducationRoot, final ICallback<? super EducationRoot> callback);
 
     /**
      * Posts a EducationRoot with a new object

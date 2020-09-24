@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Identity;
 import com.microsoft.graph.models.extensions.Entity;
@@ -26,7 +25,7 @@ public class ScopedRoleMembership extends Entity implements IJsonBackedObject {
 
     /**
      * The Administrative Unit Id.
-     * 
+     * Unique identifier for the administrative unit that the directory role is scoped to
      */
     @SerializedName("administrativeUnitId")
     @Expose
@@ -34,7 +33,7 @@ public class ScopedRoleMembership extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Id.
-     * 
+     * Unique identifier for the directory role that the member is in.
      */
     @SerializedName("roleId")
     @Expose
@@ -42,7 +41,7 @@ public class ScopedRoleMembership extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Member Info.
-     * 
+     * Role member identity information. Represents the user that is a member of this scoped-role.
      */
     @SerializedName("roleMemberInfo")
     @Expose

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceManagementTroubleshootingEventCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceManagementTroubleshootingEventCollectionPage> callback);
+    void get(final ICallback<? super IDeviceManagementTroubleshootingEventCollectionPage> callback);
 
     IDeviceManagementTroubleshootingEventCollectionPage get() throws ClientException;
 
-    void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<DeviceManagementTroubleshootingEvent> callback);
+    void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<? super DeviceManagementTroubleshootingEvent> callback);
 
     DeviceManagementTroubleshootingEvent post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) throws ClientException;
 

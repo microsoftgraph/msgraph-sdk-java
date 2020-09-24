@@ -39,7 +39,7 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
     }
 
 
-    public void get(final ICallback<IOAuth2PermissionGrantDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super IOAuth2PermissionGrantDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

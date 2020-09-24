@@ -37,7 +37,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ConditionalAccessPolicy> callback) {
+    public void get(final ICallback<? super ConditionalAccessPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ConditionalAccessPolicy> callback) {
+    public void delete(final ICallback<? super ConditionalAccessPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @param sourceConditionalAccessPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConditionalAccessPolicy sourceConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback) {
+    public void patch(final ConditionalAccessPolicy sourceConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceConditionalAccessPolicy);
     }
 
@@ -96,7 +96,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @param newConditionalAccessPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback) {
+    public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback) {
         send(HttpMethod.POST, callback, newConditionalAccessPolicy);
     }
 
@@ -117,7 +117,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @param newConditionalAccessPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback) {
+    public void put(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback) {
         send(HttpMethod.PUT, callback, newConditionalAccessPolicy);
     }
 

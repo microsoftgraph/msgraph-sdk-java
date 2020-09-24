@@ -23,6 +23,6 @@ public class TargetedManagedAppPolicyAssignmentCollectionPage extends BaseCollec
      * @param builder  the request builder for the next collection page
      */
     public TargetedManagedAppPolicyAssignmentCollectionPage(final TargetedManagedAppPolicyAssignmentCollectionResponse response, final ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

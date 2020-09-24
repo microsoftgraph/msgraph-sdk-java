@@ -37,7 +37,7 @@ public class DriveItemVersionRequest extends BaseRequest implements IDriveItemVe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DriveItemVersion> callback) {
+    public void get(final ICallback<? super DriveItemVersion> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DriveItemVersionRequest extends BaseRequest implements IDriveItemVe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DriveItemVersion> callback) {
+    public void delete(final ICallback<? super DriveItemVersion> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DriveItemVersionRequest extends BaseRequest implements IDriveItemVe
      * @param sourceDriveItemVersion the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DriveItemVersion sourceDriveItemVersion, final ICallback<DriveItemVersion> callback) {
+    public void patch(final DriveItemVersion sourceDriveItemVersion, final ICallback<? super DriveItemVersion> callback) {
         send(HttpMethod.PATCH, callback, sourceDriveItemVersion);
     }
 
@@ -96,7 +96,7 @@ public class DriveItemVersionRequest extends BaseRequest implements IDriveItemVe
      * @param newDriveItemVersion the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DriveItemVersion newDriveItemVersion, final ICallback<DriveItemVersion> callback) {
+    public void post(final DriveItemVersion newDriveItemVersion, final ICallback<? super DriveItemVersion> callback) {
         send(HttpMethod.POST, callback, newDriveItemVersion);
     }
 
@@ -117,7 +117,7 @@ public class DriveItemVersionRequest extends BaseRequest implements IDriveItemVe
      * @param newDriveItemVersion the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DriveItemVersion newDriveItemVersion, final ICallback<DriveItemVersion> callback) {
+    public void put(final DriveItemVersion newDriveItemVersion, final ICallback<? super DriveItemVersion> callback) {
         send(HttpMethod.PUT, callback, newDriveItemVersion);
     }
 

@@ -23,6 +23,6 @@ public class PlaceCollectionPage extends BaseCollectionPage<Place, IPlaceCollect
      * @param builder  the request builder for the next collection page
      */
     public PlaceCollectionPage(final PlaceCollectionResponse response, final IPlaceCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

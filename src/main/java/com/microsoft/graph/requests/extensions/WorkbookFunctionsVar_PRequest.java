@@ -37,7 +37,7 @@ public class WorkbookFunctionsVar_PRequest extends BaseRequest implements IWorkb
         body = new WorkbookFunctionsVar_PBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

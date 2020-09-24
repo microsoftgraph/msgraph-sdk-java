@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IClaimsMappingPolicyWithReferenceRequest extends IHttpRequest {
 
-    void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final IJsonBackedObject payload, final ICallback<ClaimsMappingPolicy> callback);
+    void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final IJsonBackedObject payload, final ICallback<? super ClaimsMappingPolicy> callback);
 
     ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<ClaimsMappingPolicy> callback);
+    void get(final ICallback<? super ClaimsMappingPolicy> callback);
 
     ClaimsMappingPolicy get() throws ClientException;
 
-	void delete(final ICallback<ClaimsMappingPolicy> callback);
+	void delete(final ICallback<? super ClaimsMappingPolicy> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final ClaimsMappingPolicy sourceClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback);
+	void patch(final ClaimsMappingPolicy sourceClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback);
 
 	ClaimsMappingPolicy patch(final ClaimsMappingPolicy sourceClaimsMappingPolicy) throws ClientException;
 

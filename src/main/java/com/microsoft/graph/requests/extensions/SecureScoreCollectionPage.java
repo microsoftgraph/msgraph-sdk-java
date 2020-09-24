@@ -23,6 +23,6 @@ public class SecureScoreCollectionPage extends BaseCollectionPage<SecureScore, I
      * @param builder  the request builder for the next collection page
      */
     public SecureScoreCollectionPage(final SecureScoreCollectionResponse response, final ISecureScoreCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

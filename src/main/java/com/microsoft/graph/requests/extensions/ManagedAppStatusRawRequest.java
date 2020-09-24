@@ -37,7 +37,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest implements IManagedA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedAppStatusRaw> callback) {
+    public void get(final ICallback<? super ManagedAppStatusRaw> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest implements IManagedA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedAppStatusRaw> callback) {
+    public void delete(final ICallback<? super ManagedAppStatusRaw> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest implements IManagedA
      * @param sourceManagedAppStatusRaw the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppStatusRaw sourceManagedAppStatusRaw, final ICallback<ManagedAppStatusRaw> callback) {
+    public void patch(final ManagedAppStatusRaw sourceManagedAppStatusRaw, final ICallback<? super ManagedAppStatusRaw> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppStatusRaw);
     }
 
@@ -96,7 +96,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest implements IManagedA
      * @param newManagedAppStatusRaw the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppStatusRaw newManagedAppStatusRaw, final ICallback<ManagedAppStatusRaw> callback) {
+    public void post(final ManagedAppStatusRaw newManagedAppStatusRaw, final ICallback<? super ManagedAppStatusRaw> callback) {
         send(HttpMethod.POST, callback, newManagedAppStatusRaw);
     }
 
@@ -117,7 +117,7 @@ public class ManagedAppStatusRawRequest extends BaseRequest implements IManagedA
      * @param newManagedAppStatusRaw the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppStatusRaw newManagedAppStatusRaw, final ICallback<ManagedAppStatusRaw> callback) {
+    public void put(final ManagedAppStatusRaw newManagedAppStatusRaw, final ICallback<? super ManagedAppStatusRaw> callback) {
         send(HttpMethod.PUT, callback, newManagedAppStatusRaw);
     }
 

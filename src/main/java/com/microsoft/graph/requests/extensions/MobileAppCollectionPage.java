@@ -23,6 +23,6 @@ public class MobileAppCollectionPage extends BaseCollectionPage<MobileApp, IMobi
      * @param builder  the request builder for the next collection page
      */
     public MobileAppCollectionPage(final MobileAppCollectionResponse response, final IMobileAppCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

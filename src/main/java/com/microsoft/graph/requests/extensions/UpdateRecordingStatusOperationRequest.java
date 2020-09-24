@@ -37,7 +37,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UpdateRecordingStatusOperation> callback) {
+    public void get(final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UpdateRecordingStatusOperation> callback) {
+    public void delete(final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @param sourceUpdateRecordingStatusOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UpdateRecordingStatusOperation sourceUpdateRecordingStatusOperation, final ICallback<UpdateRecordingStatusOperation> callback) {
+    public void patch(final UpdateRecordingStatusOperation sourceUpdateRecordingStatusOperation, final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceUpdateRecordingStatusOperation);
     }
 
@@ -96,7 +96,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @param newUpdateRecordingStatusOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, final ICallback<UpdateRecordingStatusOperation> callback) {
+    public void post(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.POST, callback, newUpdateRecordingStatusOperation);
     }
 
@@ -117,7 +117,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @param newUpdateRecordingStatusOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, final ICallback<UpdateRecordingStatusOperation> callback) {
+    public void put(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.PUT, callback, newUpdateRecordingStatusOperation);
     }
 

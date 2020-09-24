@@ -36,7 +36,7 @@ public class PostForwardRequest extends BaseRequest implements IPostForwardReque
         body = new PostForwardBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

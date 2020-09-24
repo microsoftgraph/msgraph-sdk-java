@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITeamsTabCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITeamsTabCollectionPage> callback);
+    void get(final ICallback<? super ITeamsTabCollectionPage> callback);
 
     ITeamsTabCollectionPage get() throws ClientException;
 
-    void post(final TeamsTab newTeamsTab, final ICallback<TeamsTab> callback);
+    void post(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback);
 
     TeamsTab post(final TeamsTab newTeamsTab) throws ClientException;
 

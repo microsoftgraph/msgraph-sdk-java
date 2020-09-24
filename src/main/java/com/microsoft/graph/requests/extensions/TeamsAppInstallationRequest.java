@@ -41,7 +41,7 @@ public class TeamsAppInstallationRequest extends BaseRequest implements ITeamsAp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<TeamsAppInstallation> callback) {
+    public void get(final ICallback<? super TeamsAppInstallation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class TeamsAppInstallationRequest extends BaseRequest implements ITeamsAp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<TeamsAppInstallation> callback) {
+    public void delete(final ICallback<? super TeamsAppInstallation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class TeamsAppInstallationRequest extends BaseRequest implements ITeamsAp
      * @param sourceTeamsAppInstallation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsAppInstallation sourceTeamsAppInstallation, final ICallback<TeamsAppInstallation> callback) {
+    public void patch(final TeamsAppInstallation sourceTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsAppInstallation);
     }
 
@@ -100,7 +100,7 @@ public class TeamsAppInstallationRequest extends BaseRequest implements ITeamsAp
      * @param newTeamsAppInstallation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<TeamsAppInstallation> callback) {
+    public void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback) {
         send(HttpMethod.POST, callback, newTeamsAppInstallation);
     }
 
@@ -121,7 +121,7 @@ public class TeamsAppInstallationRequest extends BaseRequest implements ITeamsAp
      * @param newTeamsAppInstallation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<TeamsAppInstallation> callback) {
+    public void put(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback) {
         send(HttpMethod.PUT, callback, newTeamsAppInstallation);
     }
 

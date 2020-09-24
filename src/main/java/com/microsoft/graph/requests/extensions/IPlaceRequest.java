@@ -21,7 +21,7 @@ public interface IPlaceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Place> callback);
+    void get(final ICallback<? super Place> callback);
 
     /**
      * Gets the Place from the service
@@ -36,7 +36,7 @@ public interface IPlaceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Place> callback);
+    void delete(final ICallback<? super Place> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlaceRequest extends IHttpRequest {
      * @param sourcePlace the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Place sourcePlace, final ICallback<Place> callback);
+    void patch(final Place sourcePlace, final ICallback<? super Place> callback);
 
     /**
      * Patches this Place with a source
@@ -68,7 +68,7 @@ public interface IPlaceRequest extends IHttpRequest {
      * @param newPlace the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Place newPlace, final ICallback<Place> callback);
+    void post(final Place newPlace, final ICallback<? super Place> callback);
 
     /**
      * Posts a Place with a new object
@@ -85,7 +85,7 @@ public interface IPlaceRequest extends IHttpRequest {
      * @param newPlace the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Place newPlace, final ICallback<Place> callback);
+    void put(final Place newPlace, final ICallback<? super Place> callback);
 
     /**
      * Posts a Place with a new object

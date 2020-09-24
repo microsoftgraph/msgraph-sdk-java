@@ -40,7 +40,7 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, DeviceManagementPartnerCollectionResponse.class, IDeviceManagementPartnerCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceManagementPartnerCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceManagementPartnerCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<DeviceManagementPartner> callback) {
+    public void post(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<? super DeviceManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

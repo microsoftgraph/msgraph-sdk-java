@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITokenLifetimePolicyCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<ITokenLifetimePolicyCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super ITokenLifetimePolicyCollectionWithReferencesPage> callback);
 
     ITokenLifetimePolicyCollectionWithReferencesPage get() throws ClientException;
 

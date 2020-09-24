@@ -36,7 +36,7 @@ public class MessageForwardRequest extends BaseRequest implements IMessageForwar
         body = new MessageForwardBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

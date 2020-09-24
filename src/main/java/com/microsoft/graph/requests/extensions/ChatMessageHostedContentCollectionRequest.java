@@ -40,7 +40,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
         super(requestUrl, client, requestOptions, ChatMessageHostedContentCollectionResponse.class, IChatMessageHostedContentCollectionPage.class);
     }
 
-    public void get(final ICallback<IChatMessageHostedContentCollectionPage> callback) {
+    public void get(final ICallback<? super IChatMessageHostedContentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
         return buildFromResponse(response);
     }
 
-    public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<ChatMessageHostedContent> callback) {
+    public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -21,7 +21,7 @@ public interface IEBookInstallSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EBookInstallSummary> callback);
+    void get(final ICallback<? super EBookInstallSummary> callback);
 
     /**
      * Gets the EBookInstallSummary from the service
@@ -36,7 +36,7 @@ public interface IEBookInstallSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EBookInstallSummary> callback);
+    void delete(final ICallback<? super EBookInstallSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEBookInstallSummaryRequest extends IHttpRequest {
      * @param sourceEBookInstallSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EBookInstallSummary sourceEBookInstallSummary, final ICallback<EBookInstallSummary> callback);
+    void patch(final EBookInstallSummary sourceEBookInstallSummary, final ICallback<? super EBookInstallSummary> callback);
 
     /**
      * Patches this EBookInstallSummary with a source
@@ -68,7 +68,7 @@ public interface IEBookInstallSummaryRequest extends IHttpRequest {
      * @param newEBookInstallSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EBookInstallSummary newEBookInstallSummary, final ICallback<EBookInstallSummary> callback);
+    void post(final EBookInstallSummary newEBookInstallSummary, final ICallback<? super EBookInstallSummary> callback);
 
     /**
      * Posts a EBookInstallSummary with a new object
@@ -85,7 +85,7 @@ public interface IEBookInstallSummaryRequest extends IHttpRequest {
      * @param newEBookInstallSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EBookInstallSummary newEBookInstallSummary, final ICallback<EBookInstallSummary> callback);
+    void put(final EBookInstallSummary newEBookInstallSummary, final ICallback<? super EBookInstallSummary> callback);
 
     /**
      * Posts a EBookInstallSummary with a new object

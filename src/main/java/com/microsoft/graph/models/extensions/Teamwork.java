@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkforceIntegration;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionPage;
 
 
@@ -75,19 +73,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
 
 
         if (json.has("workforceIntegrations")) {
-            final WorkforceIntegrationCollectionResponse response = new WorkforceIntegrationCollectionResponse();
-            if (json.has("workforceIntegrations@odata.nextLink")) {
-                response.nextLink = json.get("workforceIntegrations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("workforceIntegrations").toString(), JsonObject[].class);
-            final WorkforceIntegration[] array = new WorkforceIntegration[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkforceIntegration.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            workforceIntegrations = new WorkforceIntegrationCollectionPage(response, null);
+            workforceIntegrations = serializer.deserializeObject(json.get("workforceIntegrations").toString(), WorkforceIntegrationCollectionPage.class);
         }
     }
 }

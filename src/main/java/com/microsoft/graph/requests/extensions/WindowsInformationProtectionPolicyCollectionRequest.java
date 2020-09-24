@@ -40,7 +40,7 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
         super(requestUrl, client, requestOptions, WindowsInformationProtectionPolicyCollectionResponse.class, IWindowsInformationProtectionPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IWindowsInformationProtectionPolicyCollectionPage> callback) {
+    public void get(final ICallback<? super IWindowsInformationProtectionPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<WindowsInformationProtectionPolicy> callback) {
+    public void post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

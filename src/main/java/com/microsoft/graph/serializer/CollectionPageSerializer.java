@@ -70,6 +70,8 @@ public class CollectionPageSerializer {
      * 
      * @param src the CollectionPage variable for serialization
      * @param logger the logger
+	 * @param <T1> the entity type for the collection
+	 * @param <T2> the collection request builder interface type
      * @return       JsonElement of CollectionPage
      */
 	public static <T1, T2 extends IRequestBuilder> JsonElement serialize(final BaseCollectionPage<T1, T2> src, final ILogger logger) {
@@ -96,17 +98,19 @@ public class CollectionPageSerializer {
      * @param json the source CollectionPage's Json
    	 * @param typeOfT The type of the CollectionPage to deserialize to
      * @param logger the logger
+	 * @param <T1> the entity type for the collection
+	 * @param <T2> the collection request builder interface type
      * @throws JsonParseException the parse exception
      * @return    the deserialized CollectionPage
      */
 	@SuppressWarnings("unchecked")
 	public static <T1, T2 extends IRequestBuilder> BaseCollectionPage<T1, T2> deserialize(final JsonElement json, Type typeOfT, final ILogger logger) throws JsonParseException {
-		if (json == null) {
+		if (json == null || !json.isJsonArray()) {
 			return null;
 		}
 		serializer = new DefaultSerializer(logger);
-		final JsonObject[] sourceArray = serializer.deserializeObject(json.toString(), JsonObject[].class);
-		final ArrayList<T1> list = new ArrayList<T1>(sourceArray.length);
+		final JsonArray sourceArray = json.getAsJsonArray();
+		final ArrayList<T1> list = new ArrayList<T1>(sourceArray.size());
 		/** eg: com.microsoft.graph.requests.extensions.AttachmentCollectionPage */
 		final String collectionPageClassCanonicalName = typeOfT.getTypeName();
 		/** eg: com.microsoft.graph.models.extensions.Attachment */
@@ -115,13 +119,16 @@ public class CollectionPageSerializer {
 					.replace("requests", "models");
 		try {
 			final Class<?> baseEntityClass = Class.forName(baseEntityClassCanonicalName);
-			for (JsonObject sourceObject : sourceArray) {
-				Class<?> entityClass = serializer.getDerivedClass(sourceObject, baseEntityClass);
-				if(entityClass == null)
-					entityClass = baseEntityClass;
-				final T1 targetObject = (T1)serializer.deserializeObject(sourceObject.toString(), entityClass);
-				((IJsonBackedObject)targetObject).setRawObject(serializer, sourceObject);
-				list.add(targetObject);
+			for(JsonElement sourceElement : sourceArray) {
+				if(sourceElement.isJsonObject()) {
+					final JsonObject sourceObject = sourceElement.getAsJsonObject();
+					Class<?> entityClass = serializer.getDerivedClass(sourceObject, baseEntityClass);
+					if(entityClass == null)
+						entityClass = baseEntityClass;
+					final T1 targetObject = (T1)serializer.deserializeObject(sourceObject.toString(), entityClass);
+					((IJsonBackedObject)targetObject).setRawObject(serializer, sourceObject);
+					list.add(targetObject);
+				}
 			}
 			/** eg: com.microsoft.graph.requests.extensions.AttachmentCollectionResponse */
 			final String responseClassCanonicalName = collectionPageClassCanonicalName

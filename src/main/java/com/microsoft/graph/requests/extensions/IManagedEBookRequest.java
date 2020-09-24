@@ -21,7 +21,7 @@ public interface IManagedEBookRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedEBook> callback);
+    void get(final ICallback<? super ManagedEBook> callback);
 
     /**
      * Gets the ManagedEBook from the service
@@ -36,7 +36,7 @@ public interface IManagedEBookRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedEBook> callback);
+    void delete(final ICallback<? super ManagedEBook> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedEBookRequest extends IHttpRequest {
      * @param sourceManagedEBook the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedEBook sourceManagedEBook, final ICallback<ManagedEBook> callback);
+    void patch(final ManagedEBook sourceManagedEBook, final ICallback<? super ManagedEBook> callback);
 
     /**
      * Patches this ManagedEBook with a source
@@ -68,7 +68,7 @@ public interface IManagedEBookRequest extends IHttpRequest {
      * @param newManagedEBook the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedEBook newManagedEBook, final ICallback<ManagedEBook> callback);
+    void post(final ManagedEBook newManagedEBook, final ICallback<? super ManagedEBook> callback);
 
     /**
      * Posts a ManagedEBook with a new object
@@ -85,7 +85,7 @@ public interface IManagedEBookRequest extends IHttpRequest {
      * @param newManagedEBook the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedEBook newManagedEBook, final ICallback<ManagedEBook> callback);
+    void put(final ManagedEBook newManagedEBook, final ICallback<? super ManagedEBook> callback);
 
     /**
      * Posts a ManagedEBook with a new object

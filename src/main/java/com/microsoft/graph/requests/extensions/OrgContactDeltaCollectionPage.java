@@ -40,7 +40,7 @@ public class OrgContactDeltaCollectionPage extends BaseCollectionPage<OrgContact
      * @param builder The request builder for the next collection page
      */
     public OrgContactDeltaCollectionPage(final OrgContactDeltaCollectionResponse response, final IOrgContactDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

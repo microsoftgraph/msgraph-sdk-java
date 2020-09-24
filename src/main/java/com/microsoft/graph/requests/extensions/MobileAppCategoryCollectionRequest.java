@@ -40,7 +40,7 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
         super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, IMobileAppCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<IMobileAppCategoryCollectionPage> callback) {
+    public void get(final ICallback<? super IMobileAppCategoryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
         return buildFromResponse(response);
     }
 
-    public void post(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback) {
+    public void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

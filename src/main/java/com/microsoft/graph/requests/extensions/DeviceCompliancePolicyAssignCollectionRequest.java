@@ -44,7 +44,7 @@ public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectio
     }
 
 
-    public void post(final ICallback<IDeviceCompliancePolicyAssignCollectionPage> callback) {
+    public void post(final ICallback<? super IDeviceCompliancePolicyAssignCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

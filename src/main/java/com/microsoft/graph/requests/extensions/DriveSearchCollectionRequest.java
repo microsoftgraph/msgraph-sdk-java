@@ -39,7 +39,7 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSea
     }
 
 
-    public void get(final ICallback<IDriveSearchCollectionPage> callback) {
+    public void get(final ICallback<? super IDriveSearchCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

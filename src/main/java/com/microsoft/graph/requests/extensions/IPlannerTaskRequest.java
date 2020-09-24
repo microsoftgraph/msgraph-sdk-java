@@ -21,7 +21,7 @@ public interface IPlannerTaskRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PlannerTask> callback);
+    void get(final ICallback<? super PlannerTask> callback);
 
     /**
      * Gets the PlannerTask from the service
@@ -36,7 +36,7 @@ public interface IPlannerTaskRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PlannerTask> callback);
+    void delete(final ICallback<? super PlannerTask> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlannerTaskRequest extends IHttpRequest {
      * @param sourcePlannerTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PlannerTask sourcePlannerTask, final ICallback<PlannerTask> callback);
+    void patch(final PlannerTask sourcePlannerTask, final ICallback<? super PlannerTask> callback);
 
     /**
      * Patches this PlannerTask with a source
@@ -68,7 +68,7 @@ public interface IPlannerTaskRequest extends IHttpRequest {
      * @param newPlannerTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PlannerTask newPlannerTask, final ICallback<PlannerTask> callback);
+    void post(final PlannerTask newPlannerTask, final ICallback<? super PlannerTask> callback);
 
     /**
      * Posts a PlannerTask with a new object
@@ -85,7 +85,7 @@ public interface IPlannerTaskRequest extends IHttpRequest {
      * @param newPlannerTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PlannerTask newPlannerTask, final ICallback<PlannerTask> callback);
+    void put(final PlannerTask newPlannerTask, final ICallback<? super PlannerTask> callback);
 
     /**
      * Posts a PlannerTask with a new object

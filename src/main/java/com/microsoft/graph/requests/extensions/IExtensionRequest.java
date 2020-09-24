@@ -21,7 +21,7 @@ public interface IExtensionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Extension> callback);
+    void get(final ICallback<? super Extension> callback);
 
     /**
      * Gets the Extension from the service
@@ -36,7 +36,7 @@ public interface IExtensionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Extension> callback);
+    void delete(final ICallback<? super Extension> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IExtensionRequest extends IHttpRequest {
      * @param sourceExtension the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Extension sourceExtension, final ICallback<Extension> callback);
+    void patch(final Extension sourceExtension, final ICallback<? super Extension> callback);
 
     /**
      * Patches this Extension with a source
@@ -68,7 +68,7 @@ public interface IExtensionRequest extends IHttpRequest {
      * @param newExtension the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Extension newExtension, final ICallback<Extension> callback);
+    void post(final Extension newExtension, final ICallback<? super Extension> callback);
 
     /**
      * Posts a Extension with a new object
@@ -85,7 +85,7 @@ public interface IExtensionRequest extends IHttpRequest {
      * @param newExtension the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Extension newExtension, final ICallback<Extension> callback);
+    void put(final Extension newExtension, final ICallback<? super Extension> callback);
 
     /**
      * Posts a Extension with a new object

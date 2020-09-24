@@ -37,7 +37,7 @@ public class WorkbookFunctionsGamma_DistRequest extends BaseRequest implements I
         body = new WorkbookFunctionsGamma_DistBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

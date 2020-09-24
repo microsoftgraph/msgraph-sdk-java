@@ -6,14 +6,12 @@ package com.microsoft.graph.callrecords.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.callrecords.models.generated.Modality;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.callrecords.models.generated.CallType;
 import com.microsoft.graph.callrecords.models.extensions.Session;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionResponse;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionPage;
 
 
@@ -150,19 +148,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
 
         if (json.has("sessions")) {
-            final SessionCollectionResponse response = new SessionCollectionResponse();
-            if (json.has("sessions@odata.nextLink")) {
-                response.nextLink = json.get("sessions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sessions").toString(), JsonObject[].class);
-            final Session[] array = new Session[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Session.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sessions = new SessionCollectionPage(response, null);
+            sessions = serializer.deserializeObject(json.get("sessions").toString(), SessionCollectionPage.class);
         }
     }
 }

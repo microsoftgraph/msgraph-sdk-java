@@ -37,7 +37,7 @@ public class WorkbookSessionInfoResourceRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookSessionInfo> callback) {
+    public void get(final ICallback<? super WorkbookSessionInfo> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

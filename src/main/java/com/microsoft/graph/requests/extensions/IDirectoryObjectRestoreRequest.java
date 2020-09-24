@@ -26,7 +26,7 @@ public interface IDirectoryObjectRestoreRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<DirectoryObject> callback);
+    void post(final ICallback<? super DirectoryObject> callback);
 
     /**
      * Creates the DirectoryObjectRestore

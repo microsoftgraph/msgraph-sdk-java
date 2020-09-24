@@ -37,7 +37,7 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DelegatedPermissionClassification> callback) {
+    public void get(final ICallback<? super DelegatedPermissionClassification> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DelegatedPermissionClassification> callback) {
+    public void delete(final ICallback<? super DelegatedPermissionClassification> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest implem
      * @param sourceDelegatedPermissionClassification the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DelegatedPermissionClassification sourceDelegatedPermissionClassification, final ICallback<DelegatedPermissionClassification> callback) {
+    public void patch(final DelegatedPermissionClassification sourceDelegatedPermissionClassification, final ICallback<? super DelegatedPermissionClassification> callback) {
         send(HttpMethod.PATCH, callback, sourceDelegatedPermissionClassification);
     }
 
@@ -96,7 +96,7 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest implem
      * @param newDelegatedPermissionClassification the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DelegatedPermissionClassification newDelegatedPermissionClassification, final ICallback<DelegatedPermissionClassification> callback) {
+    public void post(final DelegatedPermissionClassification newDelegatedPermissionClassification, final ICallback<? super DelegatedPermissionClassification> callback) {
         send(HttpMethod.POST, callback, newDelegatedPermissionClassification);
     }
 
@@ -117,7 +117,7 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest implem
      * @param newDelegatedPermissionClassification the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DelegatedPermissionClassification newDelegatedPermissionClassification, final ICallback<DelegatedPermissionClassification> callback) {
+    public void put(final DelegatedPermissionClassification newDelegatedPermissionClassification, final ICallback<? super DelegatedPermissionClassification> callback) {
         send(HttpMethod.PUT, callback, newDelegatedPermissionClassification);
     }
 

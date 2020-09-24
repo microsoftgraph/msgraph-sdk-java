@@ -23,6 +23,6 @@ public class DirectoryObjectCollectionPage extends BaseCollectionPage<DirectoryO
      * @param builder  the request builder for the next collection page
      */
     public DirectoryObjectCollectionPage(final DirectoryObjectCollectionResponse response, final IDirectoryObjectCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

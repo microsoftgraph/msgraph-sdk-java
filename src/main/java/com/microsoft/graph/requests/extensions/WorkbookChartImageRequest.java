@@ -36,7 +36,7 @@ public class WorkbookChartImageRequest extends BaseRequest implements IWorkbookC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<String> callback) {
+    public void get(final ICallback<? super String> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

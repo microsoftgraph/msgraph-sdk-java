@@ -39,7 +39,7 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
         super(requestUrl, client, requestOptions, SharedDriveItemCollectionResponse.class, ISharedDriveItemCollectionPage.class);
     }
 
-    public void get(final ICallback<ISharedDriveItemCollectionPage> callback) {
+    public void get(final ICallback<? super ISharedDriveItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
         return buildFromResponse(response);
     }
 
-    public void post(final SharedDriveItem newSharedDriveItem, final ICallback<SharedDriveItem> callback) {
+    public void post(final SharedDriveItem newSharedDriveItem, final ICallback<? super SharedDriveItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

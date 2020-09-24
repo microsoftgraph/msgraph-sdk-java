@@ -40,7 +40,7 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
         super(requestUrl, client, requestOptions, RestrictedSignInCollectionResponse.class, IRestrictedSignInCollectionPage.class);
     }
 
-    public void get(final ICallback<IRestrictedSignInCollectionPage> callback) {
+    public void get(final ICallback<? super IRestrictedSignInCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
         return buildFromResponse(response);
     }
 
-    public void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<RestrictedSignIn> callback) {
+    public void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RestrictedSignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

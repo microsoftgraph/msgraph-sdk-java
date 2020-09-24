@@ -37,7 +37,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WindowsInformationProtectionPolicy> callback) {
+    public void get(final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WindowsInformationProtectionPolicy> callback) {
+    public void delete(final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @param sourceWindowsInformationProtectionPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsInformationProtectionPolicy sourceWindowsInformationProtectionPolicy, final ICallback<WindowsInformationProtectionPolicy> callback) {
+    public void patch(final WindowsInformationProtectionPolicy sourceWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsInformationProtectionPolicy);
     }
 
@@ -96,7 +96,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @param newWindowsInformationProtectionPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<WindowsInformationProtectionPolicy> callback) {
+    public void post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.POST, callback, newWindowsInformationProtectionPolicy);
     }
 
@@ -117,7 +117,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @param newWindowsInformationProtectionPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<WindowsInformationProtectionPolicy> callback) {
+    public void put(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.PUT, callback, newWindowsInformationProtectionPolicy);
     }
 

@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISectionGroupCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISectionGroupCollectionPage> callback);
+    void get(final ICallback<? super ISectionGroupCollectionPage> callback);
 
     ISectionGroupCollectionPage get() throws ClientException;
 
-    void post(final SectionGroup newSectionGroup, final ICallback<SectionGroup> callback);
+    void post(final SectionGroup newSectionGroup, final ICallback<? super SectionGroup> callback);
 
     SectionGroup post(final SectionGroup newSectionGroup) throws ClientException;
 

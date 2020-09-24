@@ -23,6 +23,6 @@ public class EndpointCollectionPage extends BaseCollectionPage<Endpoint, IEndpoi
      * @param builder  the request builder for the next collection page
      */
     public EndpointCollectionPage(final EndpointCollectionResponse response, final IEndpointCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

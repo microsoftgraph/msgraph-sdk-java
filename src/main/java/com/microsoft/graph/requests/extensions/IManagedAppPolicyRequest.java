@@ -21,7 +21,7 @@ public interface IManagedAppPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedAppPolicy> callback);
+    void get(final ICallback<? super ManagedAppPolicy> callback);
 
     /**
      * Gets the ManagedAppPolicy from the service
@@ -36,7 +36,7 @@ public interface IManagedAppPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedAppPolicy> callback);
+    void delete(final ICallback<? super ManagedAppPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAppPolicyRequest extends IHttpRequest {
      * @param sourceManagedAppPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedAppPolicy sourceManagedAppPolicy, final ICallback<ManagedAppPolicy> callback);
+    void patch(final ManagedAppPolicy sourceManagedAppPolicy, final ICallback<? super ManagedAppPolicy> callback);
 
     /**
      * Patches this ManagedAppPolicy with a source
@@ -68,7 +68,7 @@ public interface IManagedAppPolicyRequest extends IHttpRequest {
      * @param newManagedAppPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedAppPolicy newManagedAppPolicy, final ICallback<ManagedAppPolicy> callback);
+    void post(final ManagedAppPolicy newManagedAppPolicy, final ICallback<? super ManagedAppPolicy> callback);
 
     /**
      * Posts a ManagedAppPolicy with a new object
@@ -85,7 +85,7 @@ public interface IManagedAppPolicyRequest extends IHttpRequest {
      * @param newManagedAppPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedAppPolicy newManagedAppPolicy, final ICallback<ManagedAppPolicy> callback);
+    void put(final ManagedAppPolicy newManagedAppPolicy, final ICallback<? super ManagedAppPolicy> callback);
 
     /**
      * Posts a ManagedAppPolicy with a new object

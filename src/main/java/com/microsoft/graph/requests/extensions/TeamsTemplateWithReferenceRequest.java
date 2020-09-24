@@ -35,7 +35,7 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest implements IT
         super(requestUrl, client, requestOptions, TeamsTemplate.class);
     }
 
-    public void post(final TeamsTemplate newTeamsTemplate, final IJsonBackedObject payload, final ICallback<TeamsTemplate> callback) {
+    public void post(final TeamsTemplate newTeamsTemplate, final IJsonBackedObject payload, final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest implements IT
         return null;
     }
 
-    public void get(final ICallback<TeamsTemplate> callback) {
+    public void get(final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest implements IT
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<TeamsTemplate> callback) {
+	public void delete(final ICallback<? super TeamsTemplate> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest implements IT
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final TeamsTemplate sourceTeamsTemplate, final ICallback<TeamsTemplate> callback) {
+	public void patch(final TeamsTemplate sourceTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
 		send(HttpMethod.PATCH, callback, sourceTeamsTemplate);
 	}
 

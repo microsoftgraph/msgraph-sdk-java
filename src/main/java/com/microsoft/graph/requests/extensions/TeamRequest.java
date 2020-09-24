@@ -11,6 +11,7 @@ import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
@@ -62,7 +63,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Team> callback) {
+    public void get(final ICallback<? super Team> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,7 +82,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Team> callback) {
+    public void delete(final ICallback<? super Team> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -100,7 +101,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @param sourceTeam the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Team sourceTeam, final ICallback<Team> callback) {
+    public void patch(final Team sourceTeam, final ICallback<? super Team> callback) {
         send(HttpMethod.PATCH, callback, sourceTeam);
     }
 
@@ -121,7 +122,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @param newTeam the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Team newTeam, final ICallback<Team> callback) {
+    public void post(final Team newTeam, final ICallback<? super Team> callback) {
         send(HttpMethod.POST, callback, newTeam);
     }
 
@@ -142,7 +143,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @param newTeam the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Team newTeam, final ICallback<Team> callback) {
+    public void put(final Team newTeam, final ICallback<? super Team> callback) {
         send(HttpMethod.PUT, callback, newTeam);
     }
 

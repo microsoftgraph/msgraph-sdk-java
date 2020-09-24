@@ -23,6 +23,6 @@ public class AppRoleAssignmentCollectionPage extends BaseCollectionPage<AppRoleA
      * @param builder  the request builder for the next collection page
      */
     public AppRoleAssignmentCollectionPage(final AppRoleAssignmentCollectionResponse response, final IAppRoleAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

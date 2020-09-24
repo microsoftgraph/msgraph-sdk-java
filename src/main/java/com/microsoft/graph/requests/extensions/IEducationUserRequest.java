@@ -21,7 +21,7 @@ public interface IEducationUserRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationUser> callback);
+    void get(final ICallback<? super EducationUser> callback);
 
     /**
      * Gets the EducationUser from the service
@@ -36,7 +36,7 @@ public interface IEducationUserRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationUser> callback);
+    void delete(final ICallback<? super EducationUser> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationUserRequest extends IHttpRequest {
      * @param sourceEducationUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationUser sourceEducationUser, final ICallback<EducationUser> callback);
+    void patch(final EducationUser sourceEducationUser, final ICallback<? super EducationUser> callback);
 
     /**
      * Patches this EducationUser with a source
@@ -68,7 +68,7 @@ public interface IEducationUserRequest extends IHttpRequest {
      * @param newEducationUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationUser newEducationUser, final ICallback<EducationUser> callback);
+    void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback);
 
     /**
      * Posts a EducationUser with a new object
@@ -85,7 +85,7 @@ public interface IEducationUserRequest extends IHttpRequest {
      * @param newEducationUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationUser newEducationUser, final ICallback<EducationUser> callback);
+    void put(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback);
 
     /**
      * Posts a EducationUser with a new object

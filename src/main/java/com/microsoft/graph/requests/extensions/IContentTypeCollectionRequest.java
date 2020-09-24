@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IContentTypeCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IContentTypeCollectionPage> callback);
+    void get(final ICallback<? super IContentTypeCollectionPage> callback);
 
     IContentTypeCollectionPage get() throws ClientException;
 
-    void post(final ContentType newContentType, final ICallback<ContentType> callback);
+    void post(final ContentType newContentType, final ICallback<? super ContentType> callback);
 
     ContentType post(final ContentType newContentType) throws ClientException;
 

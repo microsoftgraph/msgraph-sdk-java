@@ -37,7 +37,7 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest impleme
      * @param srcWorkbookRange the WorkbookRange with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback) {
+    public void patch(WorkbookRange srcWorkbookRange, final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookRange);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest impleme
      * @param srcWorkbookRange the WorkbookRange to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback) {
+    public void put(WorkbookRange srcWorkbookRange, final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookRange);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookRange> callback) {
+    public void get(final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

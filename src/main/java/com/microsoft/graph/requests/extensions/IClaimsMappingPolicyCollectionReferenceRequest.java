@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
  */
 public interface IClaimsMappingPolicyCollectionReferenceRequest {
 
-    void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback);
+    void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback);
 
     ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException;
 

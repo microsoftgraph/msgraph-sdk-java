@@ -47,7 +47,7 @@ public class SectionGroupRequest extends BaseRequest implements ISectionGroupReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SectionGroup> callback) {
+    public void get(final ICallback<? super SectionGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,7 +66,7 @@ public class SectionGroupRequest extends BaseRequest implements ISectionGroupReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SectionGroup> callback) {
+    public void delete(final ICallback<? super SectionGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +85,7 @@ public class SectionGroupRequest extends BaseRequest implements ISectionGroupReq
      * @param sourceSectionGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SectionGroup sourceSectionGroup, final ICallback<SectionGroup> callback) {
+    public void patch(final SectionGroup sourceSectionGroup, final ICallback<? super SectionGroup> callback) {
         send(HttpMethod.PATCH, callback, sourceSectionGroup);
     }
 
@@ -106,7 +106,7 @@ public class SectionGroupRequest extends BaseRequest implements ISectionGroupReq
      * @param newSectionGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SectionGroup newSectionGroup, final ICallback<SectionGroup> callback) {
+    public void post(final SectionGroup newSectionGroup, final ICallback<? super SectionGroup> callback) {
         send(HttpMethod.POST, callback, newSectionGroup);
     }
 
@@ -127,7 +127,7 @@ public class SectionGroupRequest extends BaseRequest implements ISectionGroupReq
      * @param newSectionGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SectionGroup newSectionGroup, final ICallback<SectionGroup> callback) {
+    public void put(final SectionGroup newSectionGroup, final ICallback<? super SectionGroup> callback) {
         send(HttpMethod.PUT, callback, newSectionGroup);
     }
 

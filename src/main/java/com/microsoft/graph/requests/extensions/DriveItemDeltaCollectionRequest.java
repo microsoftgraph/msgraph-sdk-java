@@ -39,7 +39,7 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
     }
 
 
-    public void get(final ICallback<IDriveItemDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super IDriveItemDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

@@ -23,6 +23,6 @@ public class RoleAssignmentCollectionPage extends BaseCollectionPage<RoleAssignm
      * @param builder  the request builder for the next collection page
      */
     public RoleAssignmentCollectionPage(final RoleAssignmentCollectionResponse response, final IRoleAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

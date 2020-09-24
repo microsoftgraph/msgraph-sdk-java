@@ -41,7 +41,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChartSeriesFormat> callback) {
+    public void get(final ICallback<? super WorkbookChartSeriesFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookChartSeriesFormat> callback) {
+    public void delete(final ICallback<? super WorkbookChartSeriesFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @param sourceWorkbookChartSeriesFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartSeriesFormat sourceWorkbookChartSeriesFormat, final ICallback<WorkbookChartSeriesFormat> callback) {
+    public void patch(final WorkbookChartSeriesFormat sourceWorkbookChartSeriesFormat, final ICallback<? super WorkbookChartSeriesFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartSeriesFormat);
     }
 
@@ -100,7 +100,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @param newWorkbookChartSeriesFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, final ICallback<WorkbookChartSeriesFormat> callback) {
+    public void post(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, final ICallback<? super WorkbookChartSeriesFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartSeriesFormat);
     }
 
@@ -121,7 +121,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @param newWorkbookChartSeriesFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, final ICallback<WorkbookChartSeriesFormat> callback) {
+    public void put(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, final ICallback<? super WorkbookChartSeriesFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartSeriesFormat);
     }
 

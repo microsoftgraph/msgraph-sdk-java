@@ -21,7 +21,7 @@ public interface IWorkbookChartAreaFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartAreaFormat> callback);
+    void get(final ICallback<? super WorkbookChartAreaFormat> callback);
 
     /**
      * Gets the WorkbookChartAreaFormat from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartAreaFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartAreaFormat> callback);
+    void delete(final ICallback<? super WorkbookChartAreaFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartAreaFormatRequest extends IHttpRequest {
      * @param sourceWorkbookChartAreaFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat, final ICallback<WorkbookChartAreaFormat> callback);
+    void patch(final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat, final ICallback<? super WorkbookChartAreaFormat> callback);
 
     /**
      * Patches this WorkbookChartAreaFormat with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartAreaFormatRequest extends IHttpRequest {
      * @param newWorkbookChartAreaFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartAreaFormat newWorkbookChartAreaFormat, final ICallback<WorkbookChartAreaFormat> callback);
+    void post(final WorkbookChartAreaFormat newWorkbookChartAreaFormat, final ICallback<? super WorkbookChartAreaFormat> callback);
 
     /**
      * Posts a WorkbookChartAreaFormat with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartAreaFormatRequest extends IHttpRequest {
      * @param newWorkbookChartAreaFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartAreaFormat newWorkbookChartAreaFormat, final ICallback<WorkbookChartAreaFormat> callback);
+    void put(final WorkbookChartAreaFormat newWorkbookChartAreaFormat, final ICallback<? super WorkbookChartAreaFormat> callback);
 
     /**
      * Posts a WorkbookChartAreaFormat with a new object

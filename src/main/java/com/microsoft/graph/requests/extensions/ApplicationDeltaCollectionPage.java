@@ -40,7 +40,7 @@ public class ApplicationDeltaCollectionPage extends BaseCollectionPage<Applicati
      * @param builder The request builder for the next collection page
      */
     public ApplicationDeltaCollectionPage(final ApplicationDeltaCollectionResponse response, final IApplicationDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

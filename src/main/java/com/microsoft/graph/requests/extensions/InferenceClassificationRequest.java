@@ -41,7 +41,7 @@ public class InferenceClassificationRequest extends BaseRequest implements IInfe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<InferenceClassification> callback) {
+    public void get(final ICallback<? super InferenceClassification> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class InferenceClassificationRequest extends BaseRequest implements IInfe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<InferenceClassification> callback) {
+    public void delete(final ICallback<? super InferenceClassification> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class InferenceClassificationRequest extends BaseRequest implements IInfe
      * @param sourceInferenceClassification the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final InferenceClassification sourceInferenceClassification, final ICallback<InferenceClassification> callback) {
+    public void patch(final InferenceClassification sourceInferenceClassification, final ICallback<? super InferenceClassification> callback) {
         send(HttpMethod.PATCH, callback, sourceInferenceClassification);
     }
 
@@ -100,7 +100,7 @@ public class InferenceClassificationRequest extends BaseRequest implements IInfe
      * @param newInferenceClassification the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final InferenceClassification newInferenceClassification, final ICallback<InferenceClassification> callback) {
+    public void post(final InferenceClassification newInferenceClassification, final ICallback<? super InferenceClassification> callback) {
         send(HttpMethod.POST, callback, newInferenceClassification);
     }
 
@@ -121,7 +121,7 @@ public class InferenceClassificationRequest extends BaseRequest implements IInfe
      * @param newInferenceClassification the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final InferenceClassification newInferenceClassification, final ICallback<InferenceClassification> callback) {
+    public void put(final InferenceClassification newInferenceClassification, final ICallback<? super InferenceClassification> callback) {
         send(HttpMethod.PUT, callback, newInferenceClassification);
     }
 

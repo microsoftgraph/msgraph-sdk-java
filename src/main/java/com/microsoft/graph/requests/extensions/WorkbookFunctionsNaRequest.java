@@ -37,7 +37,7 @@ public class WorkbookFunctionsNaRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, null);
     }
 

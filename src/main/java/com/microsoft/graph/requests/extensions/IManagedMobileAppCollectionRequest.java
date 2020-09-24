@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedMobileAppCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IManagedMobileAppCollectionPage> callback);
+    void get(final ICallback<? super IManagedMobileAppCollectionPage> callback);
 
     IManagedMobileAppCollectionPage get() throws ClientException;
 
-    void post(final ManagedMobileApp newManagedMobileApp, final ICallback<ManagedMobileApp> callback);
+    void post(final ManagedMobileApp newManagedMobileApp, final ICallback<? super ManagedMobileApp> callback);
 
     ManagedMobileApp post(final ManagedMobileApp newManagedMobileApp) throws ClientException;
 

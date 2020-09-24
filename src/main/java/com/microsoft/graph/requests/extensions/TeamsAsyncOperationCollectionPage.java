@@ -23,6 +23,6 @@ public class TeamsAsyncOperationCollectionPage extends BaseCollectionPage<TeamsA
      * @param builder  the request builder for the next collection page
      */
     public TeamsAsyncOperationCollectionPage(final TeamsAsyncOperationCollectionResponse response, final ITeamsAsyncOperationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

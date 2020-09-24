@@ -40,7 +40,7 @@ public class ShiftCollectionRequest extends BaseCollectionRequest<ShiftCollectio
         super(requestUrl, client, requestOptions, ShiftCollectionResponse.class, IShiftCollectionPage.class);
     }
 
-    public void get(final ICallback<IShiftCollectionPage> callback) {
+    public void get(final ICallback<? super IShiftCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ShiftCollectionRequest extends BaseCollectionRequest<ShiftCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final Shift newShift, final ICallback<Shift> callback) {
+    public void post(final Shift newShift, final ICallback<? super Shift> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

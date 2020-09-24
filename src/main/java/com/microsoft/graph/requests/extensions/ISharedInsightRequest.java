@@ -21,7 +21,7 @@ public interface ISharedInsightRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SharedInsight> callback);
+    void get(final ICallback<? super SharedInsight> callback);
 
     /**
      * Gets the SharedInsight from the service
@@ -36,7 +36,7 @@ public interface ISharedInsightRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SharedInsight> callback);
+    void delete(final ICallback<? super SharedInsight> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISharedInsightRequest extends IHttpRequest {
      * @param sourceSharedInsight the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SharedInsight sourceSharedInsight, final ICallback<SharedInsight> callback);
+    void patch(final SharedInsight sourceSharedInsight, final ICallback<? super SharedInsight> callback);
 
     /**
      * Patches this SharedInsight with a source
@@ -68,7 +68,7 @@ public interface ISharedInsightRequest extends IHttpRequest {
      * @param newSharedInsight the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SharedInsight newSharedInsight, final ICallback<SharedInsight> callback);
+    void post(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback);
 
     /**
      * Posts a SharedInsight with a new object
@@ -85,7 +85,7 @@ public interface ISharedInsightRequest extends IHttpRequest {
      * @param newSharedInsight the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SharedInsight newSharedInsight, final ICallback<SharedInsight> callback);
+    void put(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback);
 
     /**
      * Posts a SharedInsight with a new object

@@ -21,7 +21,7 @@ public interface ITargetedManagedAppConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TargetedManagedAppConfiguration> callback);
+    void get(final ICallback<? super TargetedManagedAppConfiguration> callback);
 
     /**
      * Gets the TargetedManagedAppConfiguration from the service
@@ -36,7 +36,7 @@ public interface ITargetedManagedAppConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TargetedManagedAppConfiguration> callback);
+    void delete(final ICallback<? super TargetedManagedAppConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITargetedManagedAppConfigurationRequest extends IHttpRequest {
      * @param sourceTargetedManagedAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TargetedManagedAppConfiguration sourceTargetedManagedAppConfiguration, final ICallback<TargetedManagedAppConfiguration> callback);
+    void patch(final TargetedManagedAppConfiguration sourceTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback);
 
     /**
      * Patches this TargetedManagedAppConfiguration with a source
@@ -68,7 +68,7 @@ public interface ITargetedManagedAppConfigurationRequest extends IHttpRequest {
      * @param newTargetedManagedAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<TargetedManagedAppConfiguration> callback);
+    void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback);
 
     /**
      * Posts a TargetedManagedAppConfiguration with a new object
@@ -85,7 +85,7 @@ public interface ITargetedManagedAppConfigurationRequest extends IHttpRequest {
      * @param newTargetedManagedAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<TargetedManagedAppConfiguration> callback);
+    void put(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback);
 
     /**
      * Posts a TargetedManagedAppConfiguration with a new object

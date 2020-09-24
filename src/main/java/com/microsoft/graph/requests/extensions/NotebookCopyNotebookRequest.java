@@ -37,7 +37,7 @@ public class NotebookCopyNotebookRequest extends BaseRequest implements INoteboo
         body = new NotebookCopyNotebookBody();
     }
 
-    public void post(final ICallback<OnenoteOperation> callback) {
+    public void post(final ICallback<? super OnenoteOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

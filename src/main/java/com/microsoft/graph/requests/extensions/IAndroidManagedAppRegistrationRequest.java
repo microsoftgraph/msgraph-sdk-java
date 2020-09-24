@@ -21,7 +21,7 @@ public interface IAndroidManagedAppRegistrationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidManagedAppRegistration> callback);
+    void get(final ICallback<? super AndroidManagedAppRegistration> callback);
 
     /**
      * Gets the AndroidManagedAppRegistration from the service
@@ -36,7 +36,7 @@ public interface IAndroidManagedAppRegistrationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidManagedAppRegistration> callback);
+    void delete(final ICallback<? super AndroidManagedAppRegistration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidManagedAppRegistrationRequest extends IHttpRequest {
      * @param sourceAndroidManagedAppRegistration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidManagedAppRegistration sourceAndroidManagedAppRegistration, final ICallback<AndroidManagedAppRegistration> callback);
+    void patch(final AndroidManagedAppRegistration sourceAndroidManagedAppRegistration, final ICallback<? super AndroidManagedAppRegistration> callback);
 
     /**
      * Patches this AndroidManagedAppRegistration with a source
@@ -68,7 +68,7 @@ public interface IAndroidManagedAppRegistrationRequest extends IHttpRequest {
      * @param newAndroidManagedAppRegistration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidManagedAppRegistration newAndroidManagedAppRegistration, final ICallback<AndroidManagedAppRegistration> callback);
+    void post(final AndroidManagedAppRegistration newAndroidManagedAppRegistration, final ICallback<? super AndroidManagedAppRegistration> callback);
 
     /**
      * Posts a AndroidManagedAppRegistration with a new object
@@ -85,7 +85,7 @@ public interface IAndroidManagedAppRegistrationRequest extends IHttpRequest {
      * @param newAndroidManagedAppRegistration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidManagedAppRegistration newAndroidManagedAppRegistration, final ICallback<AndroidManagedAppRegistration> callback);
+    void put(final AndroidManagedAppRegistration newAndroidManagedAppRegistration, final ICallback<? super AndroidManagedAppRegistration> callback);
 
     /**
      * Posts a AndroidManagedAppRegistration with a new object

@@ -21,7 +21,7 @@ public interface IOnenoteEntityHierarchyModelRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnenoteEntityHierarchyModel> callback);
+    void get(final ICallback<? super OnenoteEntityHierarchyModel> callback);
 
     /**
      * Gets the OnenoteEntityHierarchyModel from the service
@@ -36,7 +36,7 @@ public interface IOnenoteEntityHierarchyModelRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnenoteEntityHierarchyModel> callback);
+    void delete(final ICallback<? super OnenoteEntityHierarchyModel> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnenoteEntityHierarchyModelRequest extends IHttpRequest {
      * @param sourceOnenoteEntityHierarchyModel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel, final ICallback<OnenoteEntityHierarchyModel> callback);
+    void patch(final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel, final ICallback<? super OnenoteEntityHierarchyModel> callback);
 
     /**
      * Patches this OnenoteEntityHierarchyModel with a source
@@ -68,7 +68,7 @@ public interface IOnenoteEntityHierarchyModelRequest extends IHttpRequest {
      * @param newOnenoteEntityHierarchyModel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<OnenoteEntityHierarchyModel> callback);
+    void post(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<? super OnenoteEntityHierarchyModel> callback);
 
     /**
      * Posts a OnenoteEntityHierarchyModel with a new object
@@ -85,7 +85,7 @@ public interface IOnenoteEntityHierarchyModelRequest extends IHttpRequest {
      * @param newOnenoteEntityHierarchyModel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<OnenoteEntityHierarchyModel> callback);
+    void put(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<? super OnenoteEntityHierarchyModel> callback);
 
     /**
      * Posts a OnenoteEntityHierarchyModel with a new object

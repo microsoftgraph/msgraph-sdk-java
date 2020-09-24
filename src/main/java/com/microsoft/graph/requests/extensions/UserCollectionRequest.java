@@ -53,7 +53,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<UserCollectionR
         super(requestUrl, client, requestOptions, UserCollectionResponse.class, IUserCollectionPage.class);
     }
 
-    public void get(final ICallback<IUserCollectionPage> callback) {
+    public void get(final ICallback<? super IUserCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -72,7 +72,7 @@ public class UserCollectionRequest extends BaseCollectionRequest<UserCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final User newUser, final ICallback<User> callback) {
+    public void post(final User newUser, final ICallback<? super User> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

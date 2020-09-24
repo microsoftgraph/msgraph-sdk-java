@@ -21,7 +21,7 @@ public interface IOAuth2PermissionGrantRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OAuth2PermissionGrant> callback);
+    void get(final ICallback<? super OAuth2PermissionGrant> callback);
 
     /**
      * Gets the OAuth2PermissionGrant from the service
@@ -36,7 +36,7 @@ public interface IOAuth2PermissionGrantRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OAuth2PermissionGrant> callback);
+    void delete(final ICallback<? super OAuth2PermissionGrant> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOAuth2PermissionGrantRequest extends IHttpRequest {
      * @param sourceOAuth2PermissionGrant the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OAuth2PermissionGrant sourceOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback);
+    void patch(final OAuth2PermissionGrant sourceOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback);
 
     /**
      * Patches this OAuth2PermissionGrant with a source
@@ -68,7 +68,7 @@ public interface IOAuth2PermissionGrantRequest extends IHttpRequest {
      * @param newOAuth2PermissionGrant the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback);
+    void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback);
 
     /**
      * Posts a OAuth2PermissionGrant with a new object
@@ -85,7 +85,7 @@ public interface IOAuth2PermissionGrantRequest extends IHttpRequest {
      * @param newOAuth2PermissionGrant the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback);
+    void put(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback);
 
     /**
      * Posts a OAuth2PermissionGrant with a new object

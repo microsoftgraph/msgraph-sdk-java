@@ -41,7 +41,7 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationCollectionResponse.class, IManagedDeviceMobileAppConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedDeviceMobileAppConfigurationCollectionPage> callback) {
+    public void get(final ICallback<? super IManagedDeviceMobileAppConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<ManagedDeviceMobileAppConfiguration> callback) {
+    public void post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

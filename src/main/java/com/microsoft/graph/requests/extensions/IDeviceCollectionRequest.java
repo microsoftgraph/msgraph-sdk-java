@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceCollectionPage> callback);
+    void get(final ICallback<? super IDeviceCollectionPage> callback);
 
     IDeviceCollectionPage get() throws ClientException;
 
-    void post(final Device newDevice, final ICallback<Device> callback);
+    void post(final Device newDevice, final ICallback<? super Device> callback);
 
     Device post(final Device newDevice) throws ClientException;
 

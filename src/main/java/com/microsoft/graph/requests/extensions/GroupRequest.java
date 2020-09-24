@@ -90,7 +90,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Group> callback) {
+    public void get(final ICallback<? super Group> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -109,7 +109,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Group> callback) {
+    public void delete(final ICallback<? super Group> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -128,7 +128,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @param sourceGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Group sourceGroup, final ICallback<Group> callback) {
+    public void patch(final Group sourceGroup, final ICallback<? super Group> callback) {
         send(HttpMethod.PATCH, callback, sourceGroup);
     }
 
@@ -149,7 +149,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @param newGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Group newGroup, final ICallback<Group> callback) {
+    public void post(final Group newGroup, final ICallback<? super Group> callback) {
         send(HttpMethod.POST, callback, newGroup);
     }
 
@@ -170,7 +170,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @param newGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Group newGroup, final ICallback<Group> callback) {
+    public void put(final Group newGroup, final ICallback<? super Group> callback) {
         send(HttpMethod.PUT, callback, newGroup);
     }
 

@@ -23,6 +23,6 @@ public class PlannerTaskCollectionPage extends BaseCollectionPage<PlannerTask, I
      * @param builder  the request builder for the next collection page
      */
     public PlannerTaskCollectionPage(final PlannerTaskCollectionResponse response, final IPlannerTaskCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

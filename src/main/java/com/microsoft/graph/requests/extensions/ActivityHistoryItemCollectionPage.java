@@ -23,6 +23,6 @@ public class ActivityHistoryItemCollectionPage extends BaseCollectionPage<Activi
      * @param builder  the request builder for the next collection page
      */
     public ActivityHistoryItemCollectionPage(final ActivityHistoryItemCollectionResponse response, final IActivityHistoryItemCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

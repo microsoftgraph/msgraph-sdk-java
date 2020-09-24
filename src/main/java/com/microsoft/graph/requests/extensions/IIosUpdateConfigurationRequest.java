@@ -21,7 +21,7 @@ public interface IIosUpdateConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosUpdateConfiguration> callback);
+    void get(final ICallback<? super IosUpdateConfiguration> callback);
 
     /**
      * Gets the IosUpdateConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosUpdateConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosUpdateConfiguration> callback);
+    void delete(final ICallback<? super IosUpdateConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosUpdateConfigurationRequest extends IHttpRequest {
      * @param sourceIosUpdateConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosUpdateConfiguration sourceIosUpdateConfiguration, final ICallback<IosUpdateConfiguration> callback);
+    void patch(final IosUpdateConfiguration sourceIosUpdateConfiguration, final ICallback<? super IosUpdateConfiguration> callback);
 
     /**
      * Patches this IosUpdateConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosUpdateConfigurationRequest extends IHttpRequest {
      * @param newIosUpdateConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosUpdateConfiguration newIosUpdateConfiguration, final ICallback<IosUpdateConfiguration> callback);
+    void post(final IosUpdateConfiguration newIosUpdateConfiguration, final ICallback<? super IosUpdateConfiguration> callback);
 
     /**
      * Posts a IosUpdateConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosUpdateConfigurationRequest extends IHttpRequest {
      * @param newIosUpdateConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosUpdateConfiguration newIosUpdateConfiguration, final ICallback<IosUpdateConfiguration> callback);
+    void put(final IosUpdateConfiguration newIosUpdateConfiguration, final ICallback<? super IosUpdateConfiguration> callback);
 
     /**
      * Posts a IosUpdateConfiguration with a new object

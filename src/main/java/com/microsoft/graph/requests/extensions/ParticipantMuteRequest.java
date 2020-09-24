@@ -37,7 +37,7 @@ public class ParticipantMuteRequest extends BaseRequest implements IParticipantM
         body = new ParticipantMuteBody();
     }
 
-    public void post(final ICallback<MuteParticipantOperation> callback) {
+    public void post(final ICallback<? super MuteParticipantOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

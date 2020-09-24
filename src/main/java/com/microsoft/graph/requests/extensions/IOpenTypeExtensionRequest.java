@@ -21,7 +21,7 @@ public interface IOpenTypeExtensionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OpenTypeExtension> callback);
+    void get(final ICallback<? super OpenTypeExtension> callback);
 
     /**
      * Gets the OpenTypeExtension from the service
@@ -36,7 +36,7 @@ public interface IOpenTypeExtensionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OpenTypeExtension> callback);
+    void delete(final ICallback<? super OpenTypeExtension> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOpenTypeExtensionRequest extends IHttpRequest {
      * @param sourceOpenTypeExtension the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OpenTypeExtension sourceOpenTypeExtension, final ICallback<OpenTypeExtension> callback);
+    void patch(final OpenTypeExtension sourceOpenTypeExtension, final ICallback<? super OpenTypeExtension> callback);
 
     /**
      * Patches this OpenTypeExtension with a source
@@ -68,7 +68,7 @@ public interface IOpenTypeExtensionRequest extends IHttpRequest {
      * @param newOpenTypeExtension the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OpenTypeExtension newOpenTypeExtension, final ICallback<OpenTypeExtension> callback);
+    void post(final OpenTypeExtension newOpenTypeExtension, final ICallback<? super OpenTypeExtension> callback);
 
     /**
      * Posts a OpenTypeExtension with a new object
@@ -85,7 +85,7 @@ public interface IOpenTypeExtensionRequest extends IHttpRequest {
      * @param newOpenTypeExtension the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OpenTypeExtension newOpenTypeExtension, final ICallback<OpenTypeExtension> callback);
+    void put(final OpenTypeExtension newOpenTypeExtension, final ICallback<? super OpenTypeExtension> callback);
 
     /**
      * Posts a OpenTypeExtension with a new object

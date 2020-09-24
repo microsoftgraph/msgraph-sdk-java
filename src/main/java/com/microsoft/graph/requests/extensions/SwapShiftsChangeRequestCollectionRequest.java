@@ -40,7 +40,7 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, SwapShiftsChangeRequestCollectionResponse.class, ISwapShiftsChangeRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<ISwapShiftsChangeRequestCollectionPage> callback) {
+    public void get(final ICallback<? super ISwapShiftsChangeRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback) {
+    public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SwapShiftsChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

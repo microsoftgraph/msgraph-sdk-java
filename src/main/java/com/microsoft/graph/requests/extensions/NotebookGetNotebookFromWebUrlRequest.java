@@ -37,7 +37,7 @@ public class NotebookGetNotebookFromWebUrlRequest extends BaseRequest implements
         body = new NotebookGetNotebookFromWebUrlBody();
     }
 
-    public void post(final ICallback<CopyNotebookModel> callback) {
+    public void post(final ICallback<? super CopyNotebookModel> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

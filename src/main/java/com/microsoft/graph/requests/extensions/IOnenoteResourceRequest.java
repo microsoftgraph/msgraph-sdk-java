@@ -21,7 +21,7 @@ public interface IOnenoteResourceRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnenoteResource> callback);
+    void get(final ICallback<? super OnenoteResource> callback);
 
     /**
      * Gets the OnenoteResource from the service
@@ -36,7 +36,7 @@ public interface IOnenoteResourceRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnenoteResource> callback);
+    void delete(final ICallback<? super OnenoteResource> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnenoteResourceRequest extends IHttpRequest {
      * @param sourceOnenoteResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnenoteResource sourceOnenoteResource, final ICallback<OnenoteResource> callback);
+    void patch(final OnenoteResource sourceOnenoteResource, final ICallback<? super OnenoteResource> callback);
 
     /**
      * Patches this OnenoteResource with a source
@@ -68,7 +68,7 @@ public interface IOnenoteResourceRequest extends IHttpRequest {
      * @param newOnenoteResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OnenoteResource newOnenoteResource, final ICallback<OnenoteResource> callback);
+    void post(final OnenoteResource newOnenoteResource, final ICallback<? super OnenoteResource> callback);
 
     /**
      * Posts a OnenoteResource with a new object
@@ -85,7 +85,7 @@ public interface IOnenoteResourceRequest extends IHttpRequest {
      * @param newOnenoteResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnenoteResource newOnenoteResource, final ICallback<OnenoteResource> callback);
+    void put(final OnenoteResource newOnenoteResource, final ICallback<? super OnenoteResource> callback);
 
     /**
      * Posts a OnenoteResource with a new object

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsInformationProtectionAppLockerFileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsInformationProtectionAppLockerFileCollectionPage> callback);
+    void get(final ICallback<? super IWindowsInformationProtectionAppLockerFileCollectionPage> callback);
 
     IWindowsInformationProtectionAppLockerFileCollectionPage get() throws ClientException;
 
-    void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback);
+    void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback);
 
     WindowsInformationProtectionAppLockerFile post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) throws ClientException;
 

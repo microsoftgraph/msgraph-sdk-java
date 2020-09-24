@@ -39,7 +39,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, ScopedRoleMembershipCollectionResponse.class, IScopedRoleMembershipCollectionPage.class);
     }
 
-    public void get(final ICallback<IScopedRoleMembershipCollectionPage> callback) {
+    public void get(final ICallback<? super IScopedRoleMembershipCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<ScopedRoleMembership> callback) {
+    public void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ScopedRoleMembershipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

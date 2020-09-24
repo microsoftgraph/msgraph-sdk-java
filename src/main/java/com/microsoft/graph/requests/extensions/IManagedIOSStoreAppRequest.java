@@ -21,7 +21,7 @@ public interface IManagedIOSStoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedIOSStoreApp> callback);
+    void get(final ICallback<? super ManagedIOSStoreApp> callback);
 
     /**
      * Gets the ManagedIOSStoreApp from the service
@@ -36,7 +36,7 @@ public interface IManagedIOSStoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedIOSStoreApp> callback);
+    void delete(final ICallback<? super ManagedIOSStoreApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedIOSStoreAppRequest extends IHttpRequest {
      * @param sourceManagedIOSStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedIOSStoreApp sourceManagedIOSStoreApp, final ICallback<ManagedIOSStoreApp> callback);
+    void patch(final ManagedIOSStoreApp sourceManagedIOSStoreApp, final ICallback<? super ManagedIOSStoreApp> callback);
 
     /**
      * Patches this ManagedIOSStoreApp with a source
@@ -68,7 +68,7 @@ public interface IManagedIOSStoreAppRequest extends IHttpRequest {
      * @param newManagedIOSStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<ManagedIOSStoreApp> callback);
+    void post(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<? super ManagedIOSStoreApp> callback);
 
     /**
      * Posts a ManagedIOSStoreApp with a new object
@@ -85,7 +85,7 @@ public interface IManagedIOSStoreAppRequest extends IHttpRequest {
      * @param newManagedIOSStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<ManagedIOSStoreApp> callback);
+    void put(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<? super ManagedIOSStoreApp> callback);
 
     /**
      * Posts a ManagedIOSStoreApp with a new object

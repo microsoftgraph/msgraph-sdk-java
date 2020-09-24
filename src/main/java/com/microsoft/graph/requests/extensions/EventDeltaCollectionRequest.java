@@ -39,7 +39,7 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
     }
 
 
-    public void get(final ICallback<IEventDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super IEventDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

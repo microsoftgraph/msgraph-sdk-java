@@ -21,7 +21,7 @@ public interface IMuteParticipantOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MuteParticipantOperation> callback);
+    void get(final ICallback<? super MuteParticipantOperation> callback);
 
     /**
      * Gets the MuteParticipantOperation from the service
@@ -36,7 +36,7 @@ public interface IMuteParticipantOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MuteParticipantOperation> callback);
+    void delete(final ICallback<? super MuteParticipantOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMuteParticipantOperationRequest extends IHttpRequest {
      * @param sourceMuteParticipantOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MuteParticipantOperation sourceMuteParticipantOperation, final ICallback<MuteParticipantOperation> callback);
+    void patch(final MuteParticipantOperation sourceMuteParticipantOperation, final ICallback<? super MuteParticipantOperation> callback);
 
     /**
      * Patches this MuteParticipantOperation with a source
@@ -68,7 +68,7 @@ public interface IMuteParticipantOperationRequest extends IHttpRequest {
      * @param newMuteParticipantOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MuteParticipantOperation newMuteParticipantOperation, final ICallback<MuteParticipantOperation> callback);
+    void post(final MuteParticipantOperation newMuteParticipantOperation, final ICallback<? super MuteParticipantOperation> callback);
 
     /**
      * Posts a MuteParticipantOperation with a new object
@@ -85,7 +85,7 @@ public interface IMuteParticipantOperationRequest extends IHttpRequest {
      * @param newMuteParticipantOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MuteParticipantOperation newMuteParticipantOperation, final ICallback<MuteParticipantOperation> callback);
+    void put(final MuteParticipantOperation newMuteParticipantOperation, final ICallback<? super MuteParticipantOperation> callback);
 
     /**
      * Posts a MuteParticipantOperation with a new object

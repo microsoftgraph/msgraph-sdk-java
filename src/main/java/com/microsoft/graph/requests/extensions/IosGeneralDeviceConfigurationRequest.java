@@ -37,7 +37,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosGeneralDeviceConfiguration> callback) {
+    public void get(final ICallback<? super IosGeneralDeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosGeneralDeviceConfiguration> callback) {
+    public void delete(final ICallback<? super IosGeneralDeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest implements
      * @param sourceIosGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosGeneralDeviceConfiguration sourceIosGeneralDeviceConfiguration, final ICallback<IosGeneralDeviceConfiguration> callback) {
+    public void patch(final IosGeneralDeviceConfiguration sourceIosGeneralDeviceConfiguration, final ICallback<? super IosGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosGeneralDeviceConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest implements
      * @param newIosGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<IosGeneralDeviceConfiguration> callback) {
+    public void post(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<? super IosGeneralDeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosGeneralDeviceConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest implements
      * @param newIosGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<IosGeneralDeviceConfiguration> callback) {
+    public void put(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<? super IosGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosGeneralDeviceConfiguration);
     }
 

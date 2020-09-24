@@ -21,7 +21,7 @@ public interface IWindows10GeneralConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10GeneralConfiguration> callback);
+    void get(final ICallback<? super Windows10GeneralConfiguration> callback);
 
     /**
      * Gets the Windows10GeneralConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows10GeneralConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10GeneralConfiguration> callback);
+    void delete(final ICallback<? super Windows10GeneralConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10GeneralConfigurationRequest extends IHttpRequest {
      * @param sourceWindows10GeneralConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10GeneralConfiguration sourceWindows10GeneralConfiguration, final ICallback<Windows10GeneralConfiguration> callback);
+    void patch(final Windows10GeneralConfiguration sourceWindows10GeneralConfiguration, final ICallback<? super Windows10GeneralConfiguration> callback);
 
     /**
      * Patches this Windows10GeneralConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows10GeneralConfigurationRequest extends IHttpRequest {
      * @param newWindows10GeneralConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10GeneralConfiguration newWindows10GeneralConfiguration, final ICallback<Windows10GeneralConfiguration> callback);
+    void post(final Windows10GeneralConfiguration newWindows10GeneralConfiguration, final ICallback<? super Windows10GeneralConfiguration> callback);
 
     /**
      * Posts a Windows10GeneralConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows10GeneralConfigurationRequest extends IHttpRequest {
      * @param newWindows10GeneralConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10GeneralConfiguration newWindows10GeneralConfiguration, final ICallback<Windows10GeneralConfiguration> callback);
+    void put(final Windows10GeneralConfiguration newWindows10GeneralConfiguration, final ICallback<? super Windows10GeneralConfiguration> callback);
 
     /**
      * Posts a Windows10GeneralConfiguration with a new object

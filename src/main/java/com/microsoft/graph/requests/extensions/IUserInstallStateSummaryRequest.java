@@ -21,7 +21,7 @@ public interface IUserInstallStateSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UserInstallStateSummary> callback);
+    void get(final ICallback<? super UserInstallStateSummary> callback);
 
     /**
      * Gets the UserInstallStateSummary from the service
@@ -36,7 +36,7 @@ public interface IUserInstallStateSummaryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UserInstallStateSummary> callback);
+    void delete(final ICallback<? super UserInstallStateSummary> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUserInstallStateSummaryRequest extends IHttpRequest {
      * @param sourceUserInstallStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UserInstallStateSummary sourceUserInstallStateSummary, final ICallback<UserInstallStateSummary> callback);
+    void patch(final UserInstallStateSummary sourceUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback);
 
     /**
      * Patches this UserInstallStateSummary with a source
@@ -68,7 +68,7 @@ public interface IUserInstallStateSummaryRequest extends IHttpRequest {
      * @param newUserInstallStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<UserInstallStateSummary> callback);
+    void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback);
 
     /**
      * Posts a UserInstallStateSummary with a new object
@@ -85,7 +85,7 @@ public interface IUserInstallStateSummaryRequest extends IHttpRequest {
      * @param newUserInstallStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<UserInstallStateSummary> callback);
+    void put(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback);
 
     /**
      * Posts a UserInstallStateSummary with a new object

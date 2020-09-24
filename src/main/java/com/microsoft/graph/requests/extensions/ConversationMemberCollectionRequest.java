@@ -40,7 +40,7 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
         super(requestUrl, client, requestOptions, ConversationMemberCollectionResponse.class, IConversationMemberCollectionPage.class);
     }
 
-    public void get(final ICallback<IConversationMemberCollectionPage> callback) {
+    public void get(final ICallback<? super IConversationMemberCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
         return buildFromResponse(response);
     }
 
-    public void post(final ConversationMember newConversationMember, final ICallback<ConversationMember> callback) {
+    public void post(final ConversationMember newConversationMember, final ICallback<? super ConversationMember> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConversationMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

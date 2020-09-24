@@ -40,7 +40,7 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, LocalizedNotificationMessageCollectionResponse.class, ILocalizedNotificationMessageCollectionPage.class);
     }
 
-    public void get(final ICallback<ILocalizedNotificationMessageCollectionPage> callback) {
+    public void get(final ICallback<? super ILocalizedNotificationMessageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback) {
+    public void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LocalizedNotificationMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

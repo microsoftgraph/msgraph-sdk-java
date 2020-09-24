@@ -36,7 +36,7 @@ public class DirectoryObjectCollectionWithReferencesRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, IDirectoryObjectCollectionPage.class);
     }
 
-    public void get(final ICallback<IDirectoryObjectCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IDirectoryObjectCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

@@ -40,7 +40,7 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
         super(requestUrl, client, requestOptions, WorkbookRangeViewCollectionResponse.class, IWorkbookRangeViewCollectionPage.class);
     }
 
-    public void get(final ICallback<IWorkbookRangeViewCollectionPage> callback) {
+    public void get(final ICallback<? super IWorkbookRangeViewCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<WorkbookRangeView> callback) {
+    public void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -21,7 +21,7 @@ public interface IUsedInsightRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<UsedInsight> callback);
+    void get(final ICallback<? super UsedInsight> callback);
 
     /**
      * Gets the UsedInsight from the service
@@ -36,7 +36,7 @@ public interface IUsedInsightRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<UsedInsight> callback);
+    void delete(final ICallback<? super UsedInsight> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IUsedInsightRequest extends IHttpRequest {
      * @param sourceUsedInsight the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final UsedInsight sourceUsedInsight, final ICallback<UsedInsight> callback);
+    void patch(final UsedInsight sourceUsedInsight, final ICallback<? super UsedInsight> callback);
 
     /**
      * Patches this UsedInsight with a source
@@ -68,7 +68,7 @@ public interface IUsedInsightRequest extends IHttpRequest {
      * @param newUsedInsight the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final UsedInsight newUsedInsight, final ICallback<UsedInsight> callback);
+    void post(final UsedInsight newUsedInsight, final ICallback<? super UsedInsight> callback);
 
     /**
      * Posts a UsedInsight with a new object
@@ -85,7 +85,7 @@ public interface IUsedInsightRequest extends IHttpRequest {
      * @param newUsedInsight the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final UsedInsight newUsedInsight, final ICallback<UsedInsight> callback);
+    void put(final UsedInsight newUsedInsight, final ICallback<? super UsedInsight> callback);
 
     /**
      * Posts a UsedInsight with a new object

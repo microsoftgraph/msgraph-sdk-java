@@ -40,7 +40,7 @@ public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<C
         super(requestUrl, client, requestOptions, CalendarPermissionCollectionResponse.class, ICalendarPermissionCollectionPage.class);
     }
 
-    public void get(final ICallback<ICalendarPermissionCollectionPage> callback) {
+    public void get(final ICallback<? super ICalendarPermissionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<C
         return buildFromResponse(response);
     }
 
-    public void post(final CalendarPermission newCalendarPermission, final ICallback<CalendarPermission> callback) {
+    public void post(final CalendarPermission newCalendarPermission, final ICallback<? super CalendarPermission> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarPermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -39,7 +39,7 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
     }
 
 
-    public void get(final ICallback<INotebookGetRecentNotebooksCollectionPage> callback) {
+    public void get(final ICallback<? super INotebookGetRecentNotebooksCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

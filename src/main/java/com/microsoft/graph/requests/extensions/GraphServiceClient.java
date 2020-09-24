@@ -127,6 +127,10 @@ import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBui
 import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamCollectionRequestBuilder;

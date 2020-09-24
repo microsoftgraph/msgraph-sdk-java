@@ -35,7 +35,7 @@ public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest impleme
         super(requestUrl, client, requestOptions, TokenIssuancePolicy.class);
     }
 
-    public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final IJsonBackedObject payload, final ICallback<TokenIssuancePolicy> callback) {
+    public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final IJsonBackedObject payload, final ICallback<? super TokenIssuancePolicy> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest impleme
         return null;
     }
 
-    public void get(final ICallback<TokenIssuancePolicy> callback) {
+    public void get(final ICallback<? super TokenIssuancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest impleme
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<TokenIssuancePolicy> callback) {
+	public void delete(final ICallback<? super TokenIssuancePolicy> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest impleme
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final TokenIssuancePolicy sourceTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback) {
+	public void patch(final TokenIssuancePolicy sourceTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
 		send(HttpMethod.PATCH, callback, sourceTokenIssuancePolicy);
 	}
 

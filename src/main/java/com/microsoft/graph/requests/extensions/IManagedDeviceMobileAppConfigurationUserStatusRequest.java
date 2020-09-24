@@ -21,7 +21,7 @@ public interface IManagedDeviceMobileAppConfigurationUserStatusRequest extends I
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedDeviceMobileAppConfigurationUserStatus> callback);
+    void get(final ICallback<? super ManagedDeviceMobileAppConfigurationUserStatus> callback);
 
     /**
      * Gets the ManagedDeviceMobileAppConfigurationUserStatus from the service
@@ -36,7 +36,7 @@ public interface IManagedDeviceMobileAppConfigurationUserStatusRequest extends I
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedDeviceMobileAppConfigurationUserStatus> callback);
+    void delete(final ICallback<? super ManagedDeviceMobileAppConfigurationUserStatus> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedDeviceMobileAppConfigurationUserStatusRequest extends I
      * @param sourceManagedDeviceMobileAppConfigurationUserStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedDeviceMobileAppConfigurationUserStatus sourceManagedDeviceMobileAppConfigurationUserStatus, final ICallback<ManagedDeviceMobileAppConfigurationUserStatus> callback);
+    void patch(final ManagedDeviceMobileAppConfigurationUserStatus sourceManagedDeviceMobileAppConfigurationUserStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationUserStatus> callback);
 
     /**
      * Patches this ManagedDeviceMobileAppConfigurationUserStatus with a source
@@ -68,7 +68,7 @@ public interface IManagedDeviceMobileAppConfigurationUserStatusRequest extends I
      * @param newManagedDeviceMobileAppConfigurationUserStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus, final ICallback<ManagedDeviceMobileAppConfigurationUserStatus> callback);
+    void post(final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationUserStatus> callback);
 
     /**
      * Posts a ManagedDeviceMobileAppConfigurationUserStatus with a new object
@@ -85,7 +85,7 @@ public interface IManagedDeviceMobileAppConfigurationUserStatusRequest extends I
      * @param newManagedDeviceMobileAppConfigurationUserStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus, final ICallback<ManagedDeviceMobileAppConfigurationUserStatus> callback);
+    void put(final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationUserStatus> callback);
 
     /**
      * Posts a ManagedDeviceMobileAppConfigurationUserStatus with a new object

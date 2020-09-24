@@ -44,7 +44,7 @@ public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseCollec
     }
 
 
-    public void post(final ICallback<IDirectoryObjectGetMemberObjectsCollectionPage> callback) {
+    public void post(final ICallback<? super IDirectoryObjectGetMemberObjectsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

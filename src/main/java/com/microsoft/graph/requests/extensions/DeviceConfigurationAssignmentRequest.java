@@ -37,7 +37,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceConfigurationAssignment> callback) {
+    public void get(final ICallback<? super DeviceConfigurationAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceConfigurationAssignment> callback) {
+    public void delete(final ICallback<? super DeviceConfigurationAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest implements
      * @param sourceDeviceConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationAssignment sourceDeviceConfigurationAssignment, final ICallback<DeviceConfigurationAssignment> callback) {
+    public void patch(final DeviceConfigurationAssignment sourceDeviceConfigurationAssignment, final ICallback<? super DeviceConfigurationAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationAssignment);
     }
 
@@ -96,7 +96,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest implements
      * @param newDeviceConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<DeviceConfigurationAssignment> callback) {
+    public void post(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<? super DeviceConfigurationAssignment> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationAssignment);
     }
 
@@ -117,7 +117,7 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest implements
      * @param newDeviceConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<DeviceConfigurationAssignment> callback) {
+    public void put(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<? super DeviceConfigurationAssignment> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationAssignment);
     }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IVppTokenCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IVppTokenCollectionPage> callback);
+    void get(final ICallback<? super IVppTokenCollectionPage> callback);
 
     IVppTokenCollectionPage get() throws ClientException;
 
-    void post(final VppToken newVppToken, final ICallback<VppToken> callback);
+    void post(final VppToken newVppToken, final ICallback<? super VppToken> callback);
 
     VppToken post(final VppToken newVppToken) throws ClientException;
 

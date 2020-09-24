@@ -40,7 +40,7 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
         super(requestUrl, client, requestOptions, ItemActivityStatCollectionResponse.class, IItemActivityStatCollectionPage.class);
     }
 
-    public void get(final ICallback<IItemActivityStatCollectionPage> callback) {
+    public void get(final ICallback<? super IItemActivityStatCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
         return buildFromResponse(response);
     }
 
-    public void post(final ItemActivityStat newItemActivityStat, final ICallback<ItemActivityStat> callback) {
+    public void post(final ItemActivityStat newItemActivityStat, final ICallback<? super ItemActivityStat> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemActivityStatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

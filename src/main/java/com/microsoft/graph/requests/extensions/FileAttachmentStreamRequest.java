@@ -58,7 +58,7 @@ public class FileAttachmentStreamRequest extends BaseStreamRequest<FileAttachmen
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<FileAttachment> callback) {
+    public void put(final byte[] fileContents, final ICallback<? super FileAttachment> callback) {
         send(fileContents, callback);
     }
 

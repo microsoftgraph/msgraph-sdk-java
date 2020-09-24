@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAndroidManagedAppProtectionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAndroidManagedAppProtectionCollectionPage> callback);
+    void get(final ICallback<? super IAndroidManagedAppProtectionCollectionPage> callback);
 
     IAndroidManagedAppProtectionCollectionPage get() throws ClientException;
 
-    void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<AndroidManagedAppProtection> callback);
+    void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback);
 
     AndroidManagedAppProtection post(final AndroidManagedAppProtection newAndroidManagedAppProtection) throws ClientException;
 

@@ -6,13 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.Status;
 import com.microsoft.graph.models.extensions.VisualInfo;
 import com.microsoft.graph.models.extensions.ActivityHistoryItem;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionPage;
 
 
@@ -181,19 +179,7 @@ public class UserActivity extends Entity implements IJsonBackedObject {
 
 
         if (json.has("historyItems")) {
-            final ActivityHistoryItemCollectionResponse response = new ActivityHistoryItemCollectionResponse();
-            if (json.has("historyItems@odata.nextLink")) {
-                response.nextLink = json.get("historyItems@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("historyItems").toString(), JsonObject[].class);
-            final ActivityHistoryItem[] array = new ActivityHistoryItem[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ActivityHistoryItem.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            historyItems = new ActivityHistoryItemCollectionPage(response, null);
+            historyItems = serializer.deserializeObject(json.get("historyItems").toString(), ActivityHistoryItemCollectionPage.class);
         }
     }
 }

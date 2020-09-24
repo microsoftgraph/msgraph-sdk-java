@@ -11,6 +11,7 @@ import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -24,11 +25,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITeamCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITeamCollectionPage> callback);
+    void get(final ICallback<? super ITeamCollectionPage> callback);
 
     ITeamCollectionPage get() throws ClientException;
 
-    void post(final Team newTeam, final ICallback<Team> callback);
+    void post(final Team newTeam, final ICallback<? super Team> callback);
 
     Team post(final Team newTeam) throws ClientException;
 

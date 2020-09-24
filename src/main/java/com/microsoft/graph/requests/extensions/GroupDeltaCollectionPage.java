@@ -40,7 +40,7 @@ public class GroupDeltaCollectionPage extends BaseCollectionPage<Group, IGroupDe
      * @param builder The request builder for the next collection page
      */
     public GroupDeltaCollectionPage(final GroupDeltaCollectionResponse response, final IGroupDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

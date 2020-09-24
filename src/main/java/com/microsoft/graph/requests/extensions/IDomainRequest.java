@@ -21,7 +21,7 @@ public interface IDomainRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Domain> callback);
+    void get(final ICallback<? super Domain> callback);
 
     /**
      * Gets the Domain from the service
@@ -36,7 +36,7 @@ public interface IDomainRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Domain> callback);
+    void delete(final ICallback<? super Domain> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDomainRequest extends IHttpRequest {
      * @param sourceDomain the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Domain sourceDomain, final ICallback<Domain> callback);
+    void patch(final Domain sourceDomain, final ICallback<? super Domain> callback);
 
     /**
      * Patches this Domain with a source
@@ -68,7 +68,7 @@ public interface IDomainRequest extends IHttpRequest {
      * @param newDomain the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Domain newDomain, final ICallback<Domain> callback);
+    void post(final Domain newDomain, final ICallback<? super Domain> callback);
 
     /**
      * Posts a Domain with a new object
@@ -85,7 +85,7 @@ public interface IDomainRequest extends IHttpRequest {
      * @param newDomain the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Domain newDomain, final ICallback<Domain> callback);
+    void put(final Domain newDomain, final ICallback<? super Domain> callback);
 
     /**
      * Posts a Domain with a new object

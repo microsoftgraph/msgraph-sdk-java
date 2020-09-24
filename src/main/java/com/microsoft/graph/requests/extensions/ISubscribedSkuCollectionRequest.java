@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISubscribedSkuCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISubscribedSkuCollectionPage> callback);
+    void get(final ICallback<? super ISubscribedSkuCollectionPage> callback);
 
     ISubscribedSkuCollectionPage get() throws ClientException;
 
-    void post(final SubscribedSku newSubscribedSku, final ICallback<SubscribedSku> callback);
+    void post(final SubscribedSku newSubscribedSku, final ICallback<? super SubscribedSku> callback);
 
     SubscribedSku post(final SubscribedSku newSubscribedSku) throws ClientException;
 

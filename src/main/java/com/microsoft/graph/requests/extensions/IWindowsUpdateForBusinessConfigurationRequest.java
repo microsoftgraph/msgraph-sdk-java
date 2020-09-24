@@ -21,7 +21,7 @@ public interface IWindowsUpdateForBusinessConfigurationRequest extends IHttpRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsUpdateForBusinessConfiguration> callback);
+    void get(final ICallback<? super WindowsUpdateForBusinessConfiguration> callback);
 
     /**
      * Gets the WindowsUpdateForBusinessConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsUpdateForBusinessConfigurationRequest extends IHttpRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsUpdateForBusinessConfiguration> callback);
+    void delete(final ICallback<? super WindowsUpdateForBusinessConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsUpdateForBusinessConfigurationRequest extends IHttpRequ
      * @param sourceWindowsUpdateForBusinessConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsUpdateForBusinessConfiguration sourceWindowsUpdateForBusinessConfiguration, final ICallback<WindowsUpdateForBusinessConfiguration> callback);
+    void patch(final WindowsUpdateForBusinessConfiguration sourceWindowsUpdateForBusinessConfiguration, final ICallback<? super WindowsUpdateForBusinessConfiguration> callback);
 
     /**
      * Patches this WindowsUpdateForBusinessConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsUpdateForBusinessConfigurationRequest extends IHttpRequ
      * @param newWindowsUpdateForBusinessConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration, final ICallback<WindowsUpdateForBusinessConfiguration> callback);
+    void post(final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration, final ICallback<? super WindowsUpdateForBusinessConfiguration> callback);
 
     /**
      * Posts a WindowsUpdateForBusinessConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsUpdateForBusinessConfigurationRequest extends IHttpRequ
      * @param newWindowsUpdateForBusinessConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration, final ICallback<WindowsUpdateForBusinessConfiguration> callback);
+    void put(final WindowsUpdateForBusinessConfiguration newWindowsUpdateForBusinessConfiguration, final ICallback<? super WindowsUpdateForBusinessConfiguration> callback);
 
     /**
      * Posts a WindowsUpdateForBusinessConfiguration with a new object

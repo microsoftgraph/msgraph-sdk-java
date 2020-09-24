@@ -40,7 +40,7 @@ public class MailFolderDeltaCollectionPage extends BaseCollectionPage<MailFolder
      * @param builder The request builder for the next collection page
      */
     public MailFolderDeltaCollectionPage(final MailFolderDeltaCollectionResponse response, final IMailFolderDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

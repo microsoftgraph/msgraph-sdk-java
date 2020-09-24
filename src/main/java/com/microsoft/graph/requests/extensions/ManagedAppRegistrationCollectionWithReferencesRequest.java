@@ -35,7 +35,7 @@ public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseC
         super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, IManagedAppRegistrationCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedAppRegistrationCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IManagedAppRegistrationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

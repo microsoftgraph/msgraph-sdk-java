@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICalendarPermissionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICalendarPermissionCollectionPage> callback);
+    void get(final ICallback<? super ICalendarPermissionCollectionPage> callback);
 
     ICalendarPermissionCollectionPage get() throws ClientException;
 
-    void post(final CalendarPermission newCalendarPermission, final ICallback<CalendarPermission> callback);
+    void post(final CalendarPermission newCalendarPermission, final ICallback<? super CalendarPermission> callback);
 
     CalendarPermission post(final CalendarPermission newCalendarPermission) throws ClientException;
 

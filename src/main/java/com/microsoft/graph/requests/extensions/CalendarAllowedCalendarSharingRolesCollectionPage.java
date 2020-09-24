@@ -34,6 +34,6 @@ public class CalendarAllowedCalendarSharingRolesCollectionPage extends BaseColle
      * @param builder The request builder for the next collection page
      */
     public CalendarAllowedCalendarSharingRolesCollectionPage(final CalendarAllowedCalendarSharingRolesCollectionResponse response, final ICalendarAllowedCalendarSharingRolesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -36,7 +36,7 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest implements IUse
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<Boolean> callback) {
+    public void post(final ICallback<? super Boolean> callback) {
         send(HttpMethod.POST, callback, null);
     }
 

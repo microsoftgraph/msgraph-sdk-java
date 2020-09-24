@@ -32,12 +32,12 @@ dependencies {
     testImplementation 'junit:junit:4.13'
     testImplementation 'org.mockito:mockito-inline:+'
     
-    implementation 'com.google.code.gson:gson:2.8.6'
+    api 'com.google.code.gson:gson:2.8.6'
     
     implementation 'com.squareup.okhttp3:okhttp:3.12.1'
     
     // Core Http library 
-    implementation 'com.microsoft.graph:microsoft-graph-core:1.0.4'
+    api 'com.microsoft.graph:microsoft-graph-core:1.0.4'
 }
 
 def pomConfig = {
@@ -56,11 +56,13 @@ def pomConfig = {
 //Bintray Snapshot: publishSnapshotPublicationToMaven3Repository
 
 task sourceJar(type: Jar) {
+    outputs.cacheIf { true }
     from sourceSets.main.allJava
     archiveClassifier = 'sources'
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
+    outputs.cacheIf { true }
     from javadoc.destinationDir
     archiveClassifier = 'javadoc'
 }

@@ -37,7 +37,7 @@ public class DriveItemCopyRequest extends BaseRequest implements IDriveItemCopyR
         body = new DriveItemCopyBody();
     }
 
-    public void post(final ICallback<DriveItem> callback) {
+    public void post(final ICallback<? super DriveItem> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

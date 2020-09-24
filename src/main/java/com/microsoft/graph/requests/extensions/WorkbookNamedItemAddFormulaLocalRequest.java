@@ -37,7 +37,7 @@ public class WorkbookNamedItemAddFormulaLocalRequest extends BaseRequest impleme
         body = new WorkbookNamedItemAddFormulaLocalBody();
     }
 
-    public void post(final ICallback<WorkbookNamedItem> callback) {
+    public void post(final ICallback<? super WorkbookNamedItem> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

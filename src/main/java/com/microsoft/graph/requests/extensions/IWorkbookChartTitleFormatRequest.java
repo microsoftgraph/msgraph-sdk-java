@@ -21,7 +21,7 @@ public interface IWorkbookChartTitleFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartTitleFormat> callback);
+    void get(final ICallback<? super WorkbookChartTitleFormat> callback);
 
     /**
      * Gets the WorkbookChartTitleFormat from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartTitleFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartTitleFormat> callback);
+    void delete(final ICallback<? super WorkbookChartTitleFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartTitleFormatRequest extends IHttpRequest {
      * @param sourceWorkbookChartTitleFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartTitleFormat sourceWorkbookChartTitleFormat, final ICallback<WorkbookChartTitleFormat> callback);
+    void patch(final WorkbookChartTitleFormat sourceWorkbookChartTitleFormat, final ICallback<? super WorkbookChartTitleFormat> callback);
 
     /**
      * Patches this WorkbookChartTitleFormat with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartTitleFormatRequest extends IHttpRequest {
      * @param newWorkbookChartTitleFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartTitleFormat newWorkbookChartTitleFormat, final ICallback<WorkbookChartTitleFormat> callback);
+    void post(final WorkbookChartTitleFormat newWorkbookChartTitleFormat, final ICallback<? super WorkbookChartTitleFormat> callback);
 
     /**
      * Posts a WorkbookChartTitleFormat with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartTitleFormatRequest extends IHttpRequest {
      * @param newWorkbookChartTitleFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartTitleFormat newWorkbookChartTitleFormat, final ICallback<WorkbookChartTitleFormat> callback);
+    void put(final WorkbookChartTitleFormat newWorkbookChartTitleFormat, final ICallback<? super WorkbookChartTitleFormat> callback);
 
     /**
      * Posts a WorkbookChartTitleFormat with a new object

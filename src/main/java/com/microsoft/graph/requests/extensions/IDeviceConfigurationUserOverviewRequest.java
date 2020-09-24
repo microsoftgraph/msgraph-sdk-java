@@ -21,7 +21,7 @@ public interface IDeviceConfigurationUserOverviewRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceConfigurationUserOverview> callback);
+    void get(final ICallback<? super DeviceConfigurationUserOverview> callback);
 
     /**
      * Gets the DeviceConfigurationUserOverview from the service
@@ -36,7 +36,7 @@ public interface IDeviceConfigurationUserOverviewRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceConfigurationUserOverview> callback);
+    void delete(final ICallback<? super DeviceConfigurationUserOverview> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceConfigurationUserOverviewRequest extends IHttpRequest {
      * @param sourceDeviceConfigurationUserOverview the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceConfigurationUserOverview sourceDeviceConfigurationUserOverview, final ICallback<DeviceConfigurationUserOverview> callback);
+    void patch(final DeviceConfigurationUserOverview sourceDeviceConfigurationUserOverview, final ICallback<? super DeviceConfigurationUserOverview> callback);
 
     /**
      * Patches this DeviceConfigurationUserOverview with a source
@@ -68,7 +68,7 @@ public interface IDeviceConfigurationUserOverviewRequest extends IHttpRequest {
      * @param newDeviceConfigurationUserOverview the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview, final ICallback<DeviceConfigurationUserOverview> callback);
+    void post(final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview, final ICallback<? super DeviceConfigurationUserOverview> callback);
 
     /**
      * Posts a DeviceConfigurationUserOverview with a new object
@@ -85,7 +85,7 @@ public interface IDeviceConfigurationUserOverviewRequest extends IHttpRequest {
      * @param newDeviceConfigurationUserOverview the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview, final ICallback<DeviceConfigurationUserOverview> callback);
+    void put(final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview, final ICallback<? super DeviceConfigurationUserOverview> callback);
 
     /**
      * Posts a DeviceConfigurationUserOverview with a new object

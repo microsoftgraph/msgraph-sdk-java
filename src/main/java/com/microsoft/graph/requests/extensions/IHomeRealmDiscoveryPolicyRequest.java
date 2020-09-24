@@ -21,7 +21,7 @@ public interface IHomeRealmDiscoveryPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void get(final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     /**
      * Gets the HomeRealmDiscoveryPolicy from the service
@@ -36,7 +36,7 @@ public interface IHomeRealmDiscoveryPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void delete(final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IHomeRealmDiscoveryPolicyRequest extends IHttpRequest {
      * @param sourceHomeRealmDiscoveryPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void patch(final HomeRealmDiscoveryPolicy sourceHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     /**
      * Patches this HomeRealmDiscoveryPolicy with a source
@@ -68,7 +68,7 @@ public interface IHomeRealmDiscoveryPolicyRequest extends IHttpRequest {
      * @param newHomeRealmDiscoveryPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     /**
      * Posts a HomeRealmDiscoveryPolicy with a new object
@@ -85,7 +85,7 @@ public interface IHomeRealmDiscoveryPolicyRequest extends IHttpRequest {
      * @param newHomeRealmDiscoveryPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback);
+    void put(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback);
 
     /**
      * Posts a HomeRealmDiscoveryPolicy with a new object

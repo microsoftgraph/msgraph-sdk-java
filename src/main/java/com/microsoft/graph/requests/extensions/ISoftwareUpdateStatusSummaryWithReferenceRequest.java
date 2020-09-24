@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ISoftwareUpdateStatusSummaryWithReferenceRequest extends IHttpRequest {
 
-    void post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final IJsonBackedObject payload, final ICallback<SoftwareUpdateStatusSummary> callback);
+    void post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final IJsonBackedObject payload, final ICallback<? super SoftwareUpdateStatusSummary> callback);
 
     SoftwareUpdateStatusSummary post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<SoftwareUpdateStatusSummary> callback);
+    void get(final ICallback<? super SoftwareUpdateStatusSummary> callback);
 
     SoftwareUpdateStatusSummary get() throws ClientException;
 
-	void delete(final ICallback<SoftwareUpdateStatusSummary> callback);
+	void delete(final ICallback<? super SoftwareUpdateStatusSummary> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback);
+	void patch(final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback);
 
 	SoftwareUpdateStatusSummary patch(final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary) throws ClientException;
 

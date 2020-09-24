@@ -24,7 +24,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IPermissionGrantCollectionRequest extends IHttpRequest {
 
-    void post(final ICallback<IPermissionGrantCollectionPage> callback);
+    void post(final ICallback<? super IPermissionGrantCollectionPage> callback);
 
     IPermissionGrantCollectionPage post() throws ClientException;
 

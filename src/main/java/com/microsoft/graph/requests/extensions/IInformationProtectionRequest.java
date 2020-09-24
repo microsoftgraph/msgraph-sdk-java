@@ -21,7 +21,7 @@ public interface IInformationProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<InformationProtection> callback);
+    void get(final ICallback<? super InformationProtection> callback);
 
     /**
      * Gets the InformationProtection from the service
@@ -36,7 +36,7 @@ public interface IInformationProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<InformationProtection> callback);
+    void delete(final ICallback<? super InformationProtection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IInformationProtectionRequest extends IHttpRequest {
      * @param sourceInformationProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final InformationProtection sourceInformationProtection, final ICallback<InformationProtection> callback);
+    void patch(final InformationProtection sourceInformationProtection, final ICallback<? super InformationProtection> callback);
 
     /**
      * Patches this InformationProtection with a source
@@ -68,7 +68,7 @@ public interface IInformationProtectionRequest extends IHttpRequest {
      * @param newInformationProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final InformationProtection newInformationProtection, final ICallback<InformationProtection> callback);
+    void post(final InformationProtection newInformationProtection, final ICallback<? super InformationProtection> callback);
 
     /**
      * Posts a InformationProtection with a new object
@@ -85,7 +85,7 @@ public interface IInformationProtectionRequest extends IHttpRequest {
      * @param newInformationProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final InformationProtection newInformationProtection, final ICallback<InformationProtection> callback);
+    void put(final InformationProtection newInformationProtection, final ICallback<? super InformationProtection> callback);
 
     /**
      * Posts a InformationProtection with a new object

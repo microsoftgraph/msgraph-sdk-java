@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkforceIntegrationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWorkforceIntegrationCollectionPage> callback);
+    void get(final ICallback<? super IWorkforceIntegrationCollectionPage> callback);
 
     IWorkforceIntegrationCollectionPage get() throws ClientException;
 
-    void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<WorkforceIntegration> callback);
+    void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback);
 
     WorkforceIntegration post(final WorkforceIntegration newWorkforceIntegration) throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IAppCatalogsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AppCatalogs> callback);
+    void get(final ICallback<? super AppCatalogs> callback);
 
     /**
      * Gets the AppCatalogs from the service
@@ -36,7 +36,7 @@ public interface IAppCatalogsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AppCatalogs> callback);
+    void delete(final ICallback<? super AppCatalogs> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAppCatalogsRequest extends IHttpRequest {
      * @param sourceAppCatalogs the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AppCatalogs sourceAppCatalogs, final ICallback<AppCatalogs> callback);
+    void patch(final AppCatalogs sourceAppCatalogs, final ICallback<? super AppCatalogs> callback);
 
     /**
      * Patches this AppCatalogs with a source
@@ -68,7 +68,7 @@ public interface IAppCatalogsRequest extends IHttpRequest {
      * @param newAppCatalogs the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AppCatalogs newAppCatalogs, final ICallback<AppCatalogs> callback);
+    void post(final AppCatalogs newAppCatalogs, final ICallback<? super AppCatalogs> callback);
 
     /**
      * Posts a AppCatalogs with a new object
@@ -85,7 +85,7 @@ public interface IAppCatalogsRequest extends IHttpRequest {
      * @param newAppCatalogs the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AppCatalogs newAppCatalogs, final ICallback<AppCatalogs> callback);
+    void put(final AppCatalogs newAppCatalogs, final ICallback<? super AppCatalogs> callback);
 
     /**
      * Posts a AppCatalogs with a new object

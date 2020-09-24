@@ -21,7 +21,7 @@ public interface IMobileAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileApp> callback);
+    void get(final ICallback<? super MobileApp> callback);
 
     /**
      * Gets the MobileApp from the service
@@ -36,7 +36,7 @@ public interface IMobileAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileApp> callback);
+    void delete(final ICallback<? super MobileApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppRequest extends IHttpRequest {
      * @param sourceMobileApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileApp sourceMobileApp, final ICallback<MobileApp> callback);
+    void patch(final MobileApp sourceMobileApp, final ICallback<? super MobileApp> callback);
 
     /**
      * Patches this MobileApp with a source
@@ -68,7 +68,7 @@ public interface IMobileAppRequest extends IHttpRequest {
      * @param newMobileApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileApp newMobileApp, final ICallback<MobileApp> callback);
+    void post(final MobileApp newMobileApp, final ICallback<? super MobileApp> callback);
 
     /**
      * Posts a MobileApp with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppRequest extends IHttpRequest {
      * @param newMobileApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileApp newMobileApp, final ICallback<MobileApp> callback);
+    void put(final MobileApp newMobileApp, final ICallback<? super MobileApp> callback);
 
     /**
      * Posts a MobileApp with a new object

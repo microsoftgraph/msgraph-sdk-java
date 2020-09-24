@@ -21,7 +21,7 @@ public interface INotificationMessageTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<NotificationMessageTemplate> callback);
+    void get(final ICallback<? super NotificationMessageTemplate> callback);
 
     /**
      * Gets the NotificationMessageTemplate from the service
@@ -36,7 +36,7 @@ public interface INotificationMessageTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<NotificationMessageTemplate> callback);
+    void delete(final ICallback<? super NotificationMessageTemplate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface INotificationMessageTemplateRequest extends IHttpRequest {
      * @param sourceNotificationMessageTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final NotificationMessageTemplate sourceNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback);
+    void patch(final NotificationMessageTemplate sourceNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback);
 
     /**
      * Patches this NotificationMessageTemplate with a source
@@ -68,7 +68,7 @@ public interface INotificationMessageTemplateRequest extends IHttpRequest {
      * @param newNotificationMessageTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback);
+    void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback);
 
     /**
      * Posts a NotificationMessageTemplate with a new object
@@ -85,7 +85,7 @@ public interface INotificationMessageTemplateRequest extends IHttpRequest {
      * @param newNotificationMessageTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback);
+    void put(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback);
 
     /**
      * Posts a NotificationMessageTemplate with a new object

@@ -23,6 +23,6 @@ public class AlertCollectionPage extends BaseCollectionPage<Alert, IAlertCollect
      * @param builder  the request builder for the next collection page
      */
     public AlertCollectionPage(final AlertCollectionResponse response, final IAlertCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

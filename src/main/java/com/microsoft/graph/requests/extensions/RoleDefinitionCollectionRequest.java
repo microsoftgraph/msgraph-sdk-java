@@ -40,7 +40,7 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
         super(requestUrl, client, requestOptions, RoleDefinitionCollectionResponse.class, IRoleDefinitionCollectionPage.class);
     }
 
-    public void get(final ICallback<IRoleDefinitionCollectionPage> callback) {
+    public void get(final ICallback<? super IRoleDefinitionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
         return buildFromResponse(response);
     }
 
-    public void post(final RoleDefinition newRoleDefinition, final ICallback<RoleDefinition> callback) {
+    public void post(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

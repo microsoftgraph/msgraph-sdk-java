@@ -24,11 +24,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOnlineMeetingCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IOnlineMeetingCollectionPage> callback);
+    void get(final ICallback<? super IOnlineMeetingCollectionPage> callback);
 
     IOnlineMeetingCollectionPage get() throws ClientException;
 
-    void post(final OnlineMeeting newOnlineMeeting, final ICallback<OnlineMeeting> callback);
+    void post(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback);
 
     OnlineMeeting post(final OnlineMeeting newOnlineMeeting) throws ClientException;
 

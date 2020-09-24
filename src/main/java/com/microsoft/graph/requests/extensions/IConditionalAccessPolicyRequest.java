@@ -21,7 +21,7 @@ public interface IConditionalAccessPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ConditionalAccessPolicy> callback);
+    void get(final ICallback<? super ConditionalAccessPolicy> callback);
 
     /**
      * Gets the ConditionalAccessPolicy from the service
@@ -36,7 +36,7 @@ public interface IConditionalAccessPolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ConditionalAccessPolicy> callback);
+    void delete(final ICallback<? super ConditionalAccessPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IConditionalAccessPolicyRequest extends IHttpRequest {
      * @param sourceConditionalAccessPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ConditionalAccessPolicy sourceConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback);
+    void patch(final ConditionalAccessPolicy sourceConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback);
 
     /**
      * Patches this ConditionalAccessPolicy with a source
@@ -68,7 +68,7 @@ public interface IConditionalAccessPolicyRequest extends IHttpRequest {
      * @param newConditionalAccessPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback);
+    void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback);
 
     /**
      * Posts a ConditionalAccessPolicy with a new object
@@ -85,7 +85,7 @@ public interface IConditionalAccessPolicyRequest extends IHttpRequest {
      * @param newConditionalAccessPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback);
+    void put(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback);
 
     /**
      * Posts a ConditionalAccessPolicy with a new object

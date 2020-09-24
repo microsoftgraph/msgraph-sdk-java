@@ -37,7 +37,7 @@ public class UserFindMeetingTimesRequest extends BaseRequest implements IUserFin
         body = new UserFindMeetingTimesBody();
     }
 
-    public void post(final ICallback<MeetingTimeSuggestionsResult> callback) {
+    public void post(final ICallback<? super MeetingTimeSuggestionsResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

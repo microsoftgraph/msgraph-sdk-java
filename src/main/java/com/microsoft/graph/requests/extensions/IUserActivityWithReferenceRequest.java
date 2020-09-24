@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IUserActivityWithReferenceRequest extends IHttpRequest {
 
-    void post(final UserActivity newUserActivity, final IJsonBackedObject payload, final ICallback<UserActivity> callback);
+    void post(final UserActivity newUserActivity, final IJsonBackedObject payload, final ICallback<? super UserActivity> callback);
 
     UserActivity post(final UserActivity newUserActivity, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<UserActivity> callback);
+    void get(final ICallback<? super UserActivity> callback);
 
     UserActivity get() throws ClientException;
 
-	void delete(final ICallback<UserActivity> callback);
+	void delete(final ICallback<? super UserActivity> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final UserActivity sourceUserActivity, final ICallback<UserActivity> callback);
+	void patch(final UserActivity sourceUserActivity, final ICallback<? super UserActivity> callback);
 
 	UserActivity patch(final UserActivity sourceUserActivity) throws ClientException;
 

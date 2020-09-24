@@ -37,7 +37,7 @@ public class ParticipantInviteRequest extends BaseRequest implements IParticipan
         body = new ParticipantInviteBody();
     }
 
-    public void post(final ICallback<InviteParticipantsOperation> callback) {
+    public void post(final ICallback<? super InviteParticipantsOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

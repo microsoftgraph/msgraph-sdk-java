@@ -21,7 +21,7 @@ public interface IEducationOrganizationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<EducationOrganization> callback);
+    void get(final ICallback<? super EducationOrganization> callback);
 
     /**
      * Gets the EducationOrganization from the service
@@ -36,7 +36,7 @@ public interface IEducationOrganizationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<EducationOrganization> callback);
+    void delete(final ICallback<? super EducationOrganization> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEducationOrganizationRequest extends IHttpRequest {
      * @param sourceEducationOrganization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final EducationOrganization sourceEducationOrganization, final ICallback<EducationOrganization> callback);
+    void patch(final EducationOrganization sourceEducationOrganization, final ICallback<? super EducationOrganization> callback);
 
     /**
      * Patches this EducationOrganization with a source
@@ -68,7 +68,7 @@ public interface IEducationOrganizationRequest extends IHttpRequest {
      * @param newEducationOrganization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final EducationOrganization newEducationOrganization, final ICallback<EducationOrganization> callback);
+    void post(final EducationOrganization newEducationOrganization, final ICallback<? super EducationOrganization> callback);
 
     /**
      * Posts a EducationOrganization with a new object
@@ -85,7 +85,7 @@ public interface IEducationOrganizationRequest extends IHttpRequest {
      * @param newEducationOrganization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final EducationOrganization newEducationOrganization, final ICallback<EducationOrganization> callback);
+    void put(final EducationOrganization newEducationOrganization, final ICallback<? super EducationOrganization> callback);
 
     /**
      * Posts a EducationOrganization with a new object

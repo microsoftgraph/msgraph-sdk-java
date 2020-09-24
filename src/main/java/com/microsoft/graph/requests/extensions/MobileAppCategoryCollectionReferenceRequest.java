@@ -36,7 +36,7 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, IMobileAppCategoryCollectionPage.class);
     }
 
-    public void post(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback) {
+    public void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/categories/" + newMobileAppCategory.id);
         new MobileAppCategoryWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)

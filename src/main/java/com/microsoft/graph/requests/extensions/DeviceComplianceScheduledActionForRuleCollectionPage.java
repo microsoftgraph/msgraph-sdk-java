@@ -23,6 +23,6 @@ public class DeviceComplianceScheduledActionForRuleCollectionPage extends BaseCo
      * @param builder  the request builder for the next collection page
      */
     public DeviceComplianceScheduledActionForRuleCollectionPage(final DeviceComplianceScheduledActionForRuleCollectionResponse response, final IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

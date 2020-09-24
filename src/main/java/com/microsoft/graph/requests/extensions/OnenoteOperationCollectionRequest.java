@@ -40,7 +40,7 @@ public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<One
         super(requestUrl, client, requestOptions, OnenoteOperationCollectionResponse.class, IOnenoteOperationCollectionPage.class);
     }
 
-    public void get(final ICallback<IOnenoteOperationCollectionPage> callback) {
+    public void get(final ICallback<? super IOnenoteOperationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<One
         return buildFromResponse(response);
     }
 
-    public void post(final OnenoteOperation newOnenoteOperation, final ICallback<OnenoteOperation> callback) {
+    public void post(final OnenoteOperation newOnenoteOperation, final ICallback<? super OnenoteOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

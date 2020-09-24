@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IListCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IListCollectionPage> callback);
+    void get(final ICallback<? super IListCollectionPage> callback);
 
     IListCollectionPage get() throws ClientException;
 
-    void post(final List newList, final ICallback<List> callback);
+    void post(final List newList, final ICallback<? super List> callback);
 
     List post(final List newList) throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IDeviceEnrollmentPlatformRestrictionsConfigurationRequest exten
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback);
+    void get(final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback);
 
     /**
      * Gets the DeviceEnrollmentPlatformRestrictionsConfiguration from the service
@@ -36,7 +36,7 @@ public interface IDeviceEnrollmentPlatformRestrictionsConfigurationRequest exten
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback);
+    void delete(final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceEnrollmentPlatformRestrictionsConfigurationRequest exten
      * @param sourceDeviceEnrollmentPlatformRestrictionsConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback);
+    void patch(final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback);
 
     /**
      * Patches this DeviceEnrollmentPlatformRestrictionsConfiguration with a source
@@ -68,7 +68,7 @@ public interface IDeviceEnrollmentPlatformRestrictionsConfigurationRequest exten
      * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback);
+    void post(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback);
 
     /**
      * Posts a DeviceEnrollmentPlatformRestrictionsConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IDeviceEnrollmentPlatformRestrictionsConfigurationRequest exten
      * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback);
+    void put(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback);
 
     /**
      * Posts a DeviceEnrollmentPlatformRestrictionsConfiguration with a new object

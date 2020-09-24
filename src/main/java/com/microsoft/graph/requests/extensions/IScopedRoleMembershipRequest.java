@@ -21,7 +21,7 @@ public interface IScopedRoleMembershipRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ScopedRoleMembership> callback);
+    void get(final ICallback<? super ScopedRoleMembership> callback);
 
     /**
      * Gets the ScopedRoleMembership from the service
@@ -36,7 +36,7 @@ public interface IScopedRoleMembershipRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ScopedRoleMembership> callback);
+    void delete(final ICallback<? super ScopedRoleMembership> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IScopedRoleMembershipRequest extends IHttpRequest {
      * @param sourceScopedRoleMembership the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ScopedRoleMembership sourceScopedRoleMembership, final ICallback<ScopedRoleMembership> callback);
+    void patch(final ScopedRoleMembership sourceScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback);
 
     /**
      * Patches this ScopedRoleMembership with a source
@@ -68,7 +68,7 @@ public interface IScopedRoleMembershipRequest extends IHttpRequest {
      * @param newScopedRoleMembership the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<ScopedRoleMembership> callback);
+    void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback);
 
     /**
      * Posts a ScopedRoleMembership with a new object
@@ -85,7 +85,7 @@ public interface IScopedRoleMembershipRequest extends IHttpRequest {
      * @param newScopedRoleMembership the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ScopedRoleMembership newScopedRoleMembership, final ICallback<ScopedRoleMembership> callback);
+    void put(final ScopedRoleMembership newScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback);
 
     /**
      * Posts a ScopedRoleMembership with a new object

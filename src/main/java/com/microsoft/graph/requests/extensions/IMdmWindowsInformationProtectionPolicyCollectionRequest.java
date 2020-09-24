@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMdmWindowsInformationProtectionPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMdmWindowsInformationProtectionPolicyCollectionPage> callback);
+    void get(final ICallback<? super IMdmWindowsInformationProtectionPolicyCollectionPage> callback);
 
     IMdmWindowsInformationProtectionPolicyCollectionPage get() throws ClientException;
 
-    void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<MdmWindowsInformationProtectionPolicy> callback);
+    void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback);
 
     MdmWindowsInformationProtectionPolicy post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) throws ClientException;
 

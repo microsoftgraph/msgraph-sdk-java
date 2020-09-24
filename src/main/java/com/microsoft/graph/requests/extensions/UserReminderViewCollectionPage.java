@@ -34,6 +34,6 @@ public class UserReminderViewCollectionPage extends BaseCollectionPage<Reminder,
      * @param builder The request builder for the next collection page
      */
     public UserReminderViewCollectionPage(final UserReminderViewCollectionResponse response, final IUserReminderViewCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

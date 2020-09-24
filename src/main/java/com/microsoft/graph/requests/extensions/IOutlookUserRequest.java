@@ -21,7 +21,7 @@ public interface IOutlookUserRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OutlookUser> callback);
+    void get(final ICallback<? super OutlookUser> callback);
 
     /**
      * Gets the OutlookUser from the service
@@ -36,7 +36,7 @@ public interface IOutlookUserRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OutlookUser> callback);
+    void delete(final ICallback<? super OutlookUser> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOutlookUserRequest extends IHttpRequest {
      * @param sourceOutlookUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OutlookUser sourceOutlookUser, final ICallback<OutlookUser> callback);
+    void patch(final OutlookUser sourceOutlookUser, final ICallback<? super OutlookUser> callback);
 
     /**
      * Patches this OutlookUser with a source
@@ -68,7 +68,7 @@ public interface IOutlookUserRequest extends IHttpRequest {
      * @param newOutlookUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OutlookUser newOutlookUser, final ICallback<OutlookUser> callback);
+    void post(final OutlookUser newOutlookUser, final ICallback<? super OutlookUser> callback);
 
     /**
      * Posts a OutlookUser with a new object
@@ -85,7 +85,7 @@ public interface IOutlookUserRequest extends IHttpRequest {
      * @param newOutlookUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OutlookUser newOutlookUser, final ICallback<OutlookUser> callback);
+    void put(final OutlookUser newOutlookUser, final ICallback<? super OutlookUser> callback);
 
     /**
      * Posts a OutlookUser with a new object

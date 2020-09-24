@@ -21,7 +21,7 @@ public interface ISchemaExtensionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SchemaExtension> callback);
+    void get(final ICallback<? super SchemaExtension> callback);
 
     /**
      * Gets the SchemaExtension from the service
@@ -36,7 +36,7 @@ public interface ISchemaExtensionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SchemaExtension> callback);
+    void delete(final ICallback<? super SchemaExtension> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISchemaExtensionRequest extends IHttpRequest {
      * @param sourceSchemaExtension the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SchemaExtension sourceSchemaExtension, final ICallback<SchemaExtension> callback);
+    void patch(final SchemaExtension sourceSchemaExtension, final ICallback<? super SchemaExtension> callback);
 
     /**
      * Patches this SchemaExtension with a source
@@ -68,7 +68,7 @@ public interface ISchemaExtensionRequest extends IHttpRequest {
      * @param newSchemaExtension the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SchemaExtension newSchemaExtension, final ICallback<SchemaExtension> callback);
+    void post(final SchemaExtension newSchemaExtension, final ICallback<? super SchemaExtension> callback);
 
     /**
      * Posts a SchemaExtension with a new object
@@ -85,7 +85,7 @@ public interface ISchemaExtensionRequest extends IHttpRequest {
      * @param newSchemaExtension the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SchemaExtension newSchemaExtension, final ICallback<SchemaExtension> callback);
+    void put(final SchemaExtension newSchemaExtension, final ICallback<? super SchemaExtension> callback);
 
     /**
      * Posts a SchemaExtension with a new object

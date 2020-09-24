@@ -21,7 +21,7 @@ public interface IWorkbookRangeBorderRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookRangeBorder> callback);
+    void get(final ICallback<? super WorkbookRangeBorder> callback);
 
     /**
      * Gets the WorkbookRangeBorder from the service
@@ -36,7 +36,7 @@ public interface IWorkbookRangeBorderRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookRangeBorder> callback);
+    void delete(final ICallback<? super WorkbookRangeBorder> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookRangeBorderRequest extends IHttpRequest {
      * @param sourceWorkbookRangeBorder the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookRangeBorder sourceWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback);
+    void patch(final WorkbookRangeBorder sourceWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback);
 
     /**
      * Patches this WorkbookRangeBorder with a source
@@ -68,7 +68,7 @@ public interface IWorkbookRangeBorderRequest extends IHttpRequest {
      * @param newWorkbookRangeBorder the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback);
+    void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback);
 
     /**
      * Posts a WorkbookRangeBorder with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookRangeBorderRequest extends IHttpRequest {
      * @param newWorkbookRangeBorder the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback);
+    void put(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback);
 
     /**
      * Posts a WorkbookRangeBorder with a new object

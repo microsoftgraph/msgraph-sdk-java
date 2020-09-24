@@ -37,7 +37,7 @@ public class WorkbookFunctionsAverageARequest extends BaseRequest implements IWo
         body = new WorkbookFunctionsAverageABody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

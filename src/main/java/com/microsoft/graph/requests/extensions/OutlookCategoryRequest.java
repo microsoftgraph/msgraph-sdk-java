@@ -37,7 +37,7 @@ public class OutlookCategoryRequest extends BaseRequest implements IOutlookCateg
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<OutlookCategory> callback) {
+    public void get(final ICallback<? super OutlookCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OutlookCategoryRequest extends BaseRequest implements IOutlookCateg
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<OutlookCategory> callback) {
+    public void delete(final ICallback<? super OutlookCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OutlookCategoryRequest extends BaseRequest implements IOutlookCateg
      * @param sourceOutlookCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OutlookCategory sourceOutlookCategory, final ICallback<OutlookCategory> callback) {
+    public void patch(final OutlookCategory sourceOutlookCategory, final ICallback<? super OutlookCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceOutlookCategory);
     }
 
@@ -96,7 +96,7 @@ public class OutlookCategoryRequest extends BaseRequest implements IOutlookCateg
      * @param newOutlookCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OutlookCategory newOutlookCategory, final ICallback<OutlookCategory> callback) {
+    public void post(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback) {
         send(HttpMethod.POST, callback, newOutlookCategory);
     }
 
@@ -117,7 +117,7 @@ public class OutlookCategoryRequest extends BaseRequest implements IOutlookCateg
      * @param newOutlookCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OutlookCategory newOutlookCategory, final ICallback<OutlookCategory> callback) {
+    public void put(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback) {
         send(HttpMethod.PUT, callback, newOutlookCategory);
     }
 

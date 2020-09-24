@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IRoleDefinitionWithReferenceRequest extends IHttpRequest {
 
-    void post(final RoleDefinition newRoleDefinition, final IJsonBackedObject payload, final ICallback<RoleDefinition> callback);
+    void post(final RoleDefinition newRoleDefinition, final IJsonBackedObject payload, final ICallback<? super RoleDefinition> callback);
 
     RoleDefinition post(final RoleDefinition newRoleDefinition, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<RoleDefinition> callback);
+    void get(final ICallback<? super RoleDefinition> callback);
 
     RoleDefinition get() throws ClientException;
 
-	void delete(final ICallback<RoleDefinition> callback);
+	void delete(final ICallback<? super RoleDefinition> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final RoleDefinition sourceRoleDefinition, final ICallback<RoleDefinition> callback);
+	void patch(final RoleDefinition sourceRoleDefinition, final ICallback<? super RoleDefinition> callback);
 
 	RoleDefinition patch(final RoleDefinition sourceRoleDefinition) throws ClientException;
 

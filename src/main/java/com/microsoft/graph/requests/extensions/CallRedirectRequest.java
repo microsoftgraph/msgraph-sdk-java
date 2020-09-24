@@ -36,7 +36,7 @@ public class CallRedirectRequest extends BaseRequest implements ICallRedirectReq
         body = new CallRedirectBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

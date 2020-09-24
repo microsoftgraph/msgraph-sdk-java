@@ -21,7 +21,7 @@ public interface IWorkbookChartPointRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartPoint> callback);
+    void get(final ICallback<? super WorkbookChartPoint> callback);
 
     /**
      * Gets the WorkbookChartPoint from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartPointRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartPoint> callback);
+    void delete(final ICallback<? super WorkbookChartPoint> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartPointRequest extends IHttpRequest {
      * @param sourceWorkbookChartPoint the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartPoint sourceWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
+    void patch(final WorkbookChartPoint sourceWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback);
 
     /**
      * Patches this WorkbookChartPoint with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartPointRequest extends IHttpRequest {
      * @param newWorkbookChartPoint the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
+    void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback);
 
     /**
      * Posts a WorkbookChartPoint with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartPointRequest extends IHttpRequest {
      * @param newWorkbookChartPoint the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
+    void put(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback);
 
     /**
      * Posts a WorkbookChartPoint with a new object

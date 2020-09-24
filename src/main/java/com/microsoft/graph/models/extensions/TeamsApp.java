@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.TeamsAppDistributionMethod;
 import com.microsoft.graph.models.extensions.TeamsAppDefinition;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionPage;
 
 
@@ -100,19 +98,7 @@ public class TeamsApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("appDefinitions")) {
-            final TeamsAppDefinitionCollectionResponse response = new TeamsAppDefinitionCollectionResponse();
-            if (json.has("appDefinitions@odata.nextLink")) {
-                response.nextLink = json.get("appDefinitions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appDefinitions").toString(), JsonObject[].class);
-            final TeamsAppDefinition[] array = new TeamsAppDefinition[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TeamsAppDefinition.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            appDefinitions = new TeamsAppDefinitionCollectionPage(response, null);
+            appDefinitions = serializer.deserializeObject(json.get("appDefinitions").toString(), TeamsAppDefinitionCollectionPage.class);
         }
     }
 }

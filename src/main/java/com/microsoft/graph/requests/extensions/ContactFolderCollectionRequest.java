@@ -39,7 +39,7 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
         super(requestUrl, client, requestOptions, ContactFolderCollectionResponse.class, IContactFolderCollectionPage.class);
     }
 
-    public void get(final ICallback<IContactFolderCollectionPage> callback) {
+    public void get(final ICallback<? super IContactFolderCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
         return buildFromResponse(response);
     }
 
-    public void post(final ContactFolder newContactFolder, final ICallback<ContactFolder> callback) {
+    public void post(final ContactFolder newContactFolder, final ICallback<? super ContactFolder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContactFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -21,7 +21,7 @@ public interface ITermsAndConditionsAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TermsAndConditionsAssignment> callback);
+    void get(final ICallback<? super TermsAndConditionsAssignment> callback);
 
     /**
      * Gets the TermsAndConditionsAssignment from the service
@@ -36,7 +36,7 @@ public interface ITermsAndConditionsAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TermsAndConditionsAssignment> callback);
+    void delete(final ICallback<? super TermsAndConditionsAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITermsAndConditionsAssignmentRequest extends IHttpRequest {
      * @param sourceTermsAndConditionsAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TermsAndConditionsAssignment sourceTermsAndConditionsAssignment, final ICallback<TermsAndConditionsAssignment> callback);
+    void patch(final TermsAndConditionsAssignment sourceTermsAndConditionsAssignment, final ICallback<? super TermsAndConditionsAssignment> callback);
 
     /**
      * Patches this TermsAndConditionsAssignment with a source
@@ -68,7 +68,7 @@ public interface ITermsAndConditionsAssignmentRequest extends IHttpRequest {
      * @param newTermsAndConditionsAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<TermsAndConditionsAssignment> callback);
+    void post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<? super TermsAndConditionsAssignment> callback);
 
     /**
      * Posts a TermsAndConditionsAssignment with a new object
@@ -85,7 +85,7 @@ public interface ITermsAndConditionsAssignmentRequest extends IHttpRequest {
      * @param newTermsAndConditionsAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<TermsAndConditionsAssignment> callback);
+    void put(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<? super TermsAndConditionsAssignment> callback);
 
     /**
      * Posts a TermsAndConditionsAssignment with a new object

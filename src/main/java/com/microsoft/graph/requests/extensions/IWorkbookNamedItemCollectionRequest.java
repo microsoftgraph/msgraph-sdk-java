@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookNamedItemCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWorkbookNamedItemCollectionPage> callback);
+    void get(final ICallback<? super IWorkbookNamedItemCollectionPage> callback);
 
     IWorkbookNamedItemCollectionPage get() throws ClientException;
 
-    void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<WorkbookNamedItem> callback);
+    void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<? super WorkbookNamedItem> callback);
 
     WorkbookNamedItem post(final WorkbookNamedItem newWorkbookNamedItem) throws ClientException;
 

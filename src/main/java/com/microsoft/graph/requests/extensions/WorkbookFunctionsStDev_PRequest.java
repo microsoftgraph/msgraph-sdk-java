@@ -37,7 +37,7 @@ public class WorkbookFunctionsStDev_PRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsStDev_PBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

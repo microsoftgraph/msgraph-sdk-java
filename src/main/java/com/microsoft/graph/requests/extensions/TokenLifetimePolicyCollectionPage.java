@@ -23,6 +23,6 @@ public class TokenLifetimePolicyCollectionPage extends BaseCollectionPage<TokenL
      * @param builder  the request builder for the next collection page
      */
     public TokenLifetimePolicyCollectionPage(final TokenLifetimePolicyCollectionResponse response, final ITokenLifetimePolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

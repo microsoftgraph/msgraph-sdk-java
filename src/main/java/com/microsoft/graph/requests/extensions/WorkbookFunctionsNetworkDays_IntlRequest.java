@@ -37,7 +37,7 @@ public class WorkbookFunctionsNetworkDays_IntlRequest extends BaseRequest implem
         body = new WorkbookFunctionsNetworkDays_IntlBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

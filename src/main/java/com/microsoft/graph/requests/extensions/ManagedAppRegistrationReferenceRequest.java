@@ -42,7 +42,7 @@ public class ManagedAppRegistrationReferenceRequest extends BaseRequest implemen
         super(requestUrl, client, requestOptions, ManagedAppRegistration.class);
     }
 
-    public void delete(final ICallback<ManagedAppRegistration> callback) {
+    public void delete(final ICallback<? super ManagedAppRegistration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class ManagedAppRegistrationReferenceRequest extends BaseRequest implemen
      * @param srcManagedAppRegistration the ManagedAppRegistration reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(ManagedAppRegistration srcManagedAppRegistration, final ICallback<ManagedAppRegistration> callback) {
+    public void put(ManagedAppRegistration srcManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
         send(HttpMethod.PUT, callback, srcManagedAppRegistration);
     }
 

@@ -37,7 +37,7 @@ public class WorkbookFunctionsT_Inv_2TRequest extends BaseRequest implements IWo
         body = new WorkbookFunctionsT_Inv_2TBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

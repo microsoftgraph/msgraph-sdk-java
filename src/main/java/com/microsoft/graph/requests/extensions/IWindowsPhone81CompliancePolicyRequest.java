@@ -21,7 +21,7 @@ public interface IWindowsPhone81CompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WindowsPhone81CompliancePolicy> callback);
+    void get(final ICallback<? super WindowsPhone81CompliancePolicy> callback);
 
     /**
      * Gets the WindowsPhone81CompliancePolicy from the service
@@ -36,7 +36,7 @@ public interface IWindowsPhone81CompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WindowsPhone81CompliancePolicy> callback);
+    void delete(final ICallback<? super WindowsPhone81CompliancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsPhone81CompliancePolicyRequest extends IHttpRequest {
      * @param sourceWindowsPhone81CompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsPhone81CompliancePolicy sourceWindowsPhone81CompliancePolicy, final ICallback<WindowsPhone81CompliancePolicy> callback);
+    void patch(final WindowsPhone81CompliancePolicy sourceWindowsPhone81CompliancePolicy, final ICallback<? super WindowsPhone81CompliancePolicy> callback);
 
     /**
      * Patches this WindowsPhone81CompliancePolicy with a source
@@ -68,7 +68,7 @@ public interface IWindowsPhone81CompliancePolicyRequest extends IHttpRequest {
      * @param newWindowsPhone81CompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy, final ICallback<WindowsPhone81CompliancePolicy> callback);
+    void post(final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy, final ICallback<? super WindowsPhone81CompliancePolicy> callback);
 
     /**
      * Posts a WindowsPhone81CompliancePolicy with a new object
@@ -85,7 +85,7 @@ public interface IWindowsPhone81CompliancePolicyRequest extends IHttpRequest {
      * @param newWindowsPhone81CompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy, final ICallback<WindowsPhone81CompliancePolicy> callback);
+    void put(final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy, final ICallback<? super WindowsPhone81CompliancePolicy> callback);
 
     /**
      * Posts a WindowsPhone81CompliancePolicy with a new object

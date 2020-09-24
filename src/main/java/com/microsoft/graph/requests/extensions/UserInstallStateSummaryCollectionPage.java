@@ -23,6 +23,6 @@ public class UserInstallStateSummaryCollectionPage extends BaseCollectionPage<Us
      * @param builder  the request builder for the next collection page
      */
     public UserInstallStateSummaryCollectionPage(final UserInstallStateSummaryCollectionResponse response, final IUserInstallStateSummaryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

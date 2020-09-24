@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITokenLifetimePolicyReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<TokenLifetimePolicy> callback);
+    void delete(final ICallback<? super TokenLifetimePolicy> callback);
 
     TokenLifetimePolicy delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface ITokenLifetimePolicyReferenceRequest extends IHttpRequest {
      * @param srcTokenLifetimePolicy the TokenLifetimePolicy to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(TokenLifetimePolicy srcTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback);
+    void put(TokenLifetimePolicy srcTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback);
 
     /**
      * Puts the TokenLifetimePolicy

@@ -34,6 +34,6 @@ public class DeviceConfigurationAssignCollectionPage extends BaseCollectionPage<
      * @param builder The request builder for the next collection page
      */
     public DeviceConfigurationAssignCollectionPage(final DeviceConfigurationAssignCollectionResponse response, final IDeviceConfigurationAssignCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

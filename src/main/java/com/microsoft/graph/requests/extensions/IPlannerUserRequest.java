@@ -21,7 +21,7 @@ public interface IPlannerUserRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PlannerUser> callback);
+    void get(final ICallback<? super PlannerUser> callback);
 
     /**
      * Gets the PlannerUser from the service
@@ -36,7 +36,7 @@ public interface IPlannerUserRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PlannerUser> callback);
+    void delete(final ICallback<? super PlannerUser> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlannerUserRequest extends IHttpRequest {
      * @param sourcePlannerUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PlannerUser sourcePlannerUser, final ICallback<PlannerUser> callback);
+    void patch(final PlannerUser sourcePlannerUser, final ICallback<? super PlannerUser> callback);
 
     /**
      * Patches this PlannerUser with a source
@@ -68,7 +68,7 @@ public interface IPlannerUserRequest extends IHttpRequest {
      * @param newPlannerUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PlannerUser newPlannerUser, final ICallback<PlannerUser> callback);
+    void post(final PlannerUser newPlannerUser, final ICallback<? super PlannerUser> callback);
 
     /**
      * Posts a PlannerUser with a new object
@@ -85,7 +85,7 @@ public interface IPlannerUserRequest extends IHttpRequest {
      * @param newPlannerUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PlannerUser newPlannerUser, final ICallback<PlannerUser> callback);
+    void put(final PlannerUser newPlannerUser, final ICallback<? super PlannerUser> callback);
 
     /**
      * Posts a PlannerUser with a new object

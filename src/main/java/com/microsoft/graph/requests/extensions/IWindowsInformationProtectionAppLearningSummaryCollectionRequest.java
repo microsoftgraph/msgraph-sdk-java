@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsInformationProtectionAppLearningSummaryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IWindowsInformationProtectionAppLearningSummaryCollectionPage> callback);
+    void get(final ICallback<? super IWindowsInformationProtectionAppLearningSummaryCollectionPage> callback);
 
     IWindowsInformationProtectionAppLearningSummaryCollectionPage get() throws ClientException;
 
-    void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<WindowsInformationProtectionAppLearningSummary> callback);
+    void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback);
 
     WindowsInformationProtectionAppLearningSummary post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) throws ClientException;
 

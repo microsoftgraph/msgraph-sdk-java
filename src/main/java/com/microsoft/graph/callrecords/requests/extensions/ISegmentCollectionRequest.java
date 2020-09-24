@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISegmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ISegmentCollectionPage> callback);
+    void get(final ICallback<? super ISegmentCollectionPage> callback);
 
     ISegmentCollectionPage get() throws ClientException;
 
-    void post(final Segment newSegment, final ICallback<Segment> callback);
+    void post(final Segment newSegment, final ICallback<? super Segment> callback);
 
     Segment post(final Segment newSegment) throws ClientException;
 

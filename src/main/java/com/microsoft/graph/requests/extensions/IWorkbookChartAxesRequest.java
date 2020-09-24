@@ -21,7 +21,7 @@ public interface IWorkbookChartAxesRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartAxes> callback);
+    void get(final ICallback<? super WorkbookChartAxes> callback);
 
     /**
      * Gets the WorkbookChartAxes from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartAxesRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartAxes> callback);
+    void delete(final ICallback<? super WorkbookChartAxes> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartAxesRequest extends IHttpRequest {
      * @param sourceWorkbookChartAxes the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartAxes sourceWorkbookChartAxes, final ICallback<WorkbookChartAxes> callback);
+    void patch(final WorkbookChartAxes sourceWorkbookChartAxes, final ICallback<? super WorkbookChartAxes> callback);
 
     /**
      * Patches this WorkbookChartAxes with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartAxesRequest extends IHttpRequest {
      * @param newWorkbookChartAxes the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartAxes newWorkbookChartAxes, final ICallback<WorkbookChartAxes> callback);
+    void post(final WorkbookChartAxes newWorkbookChartAxes, final ICallback<? super WorkbookChartAxes> callback);
 
     /**
      * Posts a WorkbookChartAxes with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartAxesRequest extends IHttpRequest {
      * @param newWorkbookChartAxes the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartAxes newWorkbookChartAxes, final ICallback<WorkbookChartAxes> callback);
+    void put(final WorkbookChartAxes newWorkbookChartAxes, final ICallback<? super WorkbookChartAxes> callback);
 
     /**
      * Posts a WorkbookChartAxes with a new object

@@ -37,7 +37,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EnrollmentConfigurationAssignment> callback) {
+    public void get(final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EnrollmentConfigurationAssignment> callback) {
+    public void delete(final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest implem
      * @param sourceEnrollmentConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback) {
+    public void patch(final EnrollmentConfigurationAssignment sourceEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceEnrollmentConfigurationAssignment);
     }
 
@@ -96,7 +96,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest implem
      * @param newEnrollmentConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback) {
+    public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         send(HttpMethod.POST, callback, newEnrollmentConfigurationAssignment);
     }
 
@@ -117,7 +117,7 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest implem
      * @param newEnrollmentConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback) {
+    public void put(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
         send(HttpMethod.PUT, callback, newEnrollmentConfigurationAssignment);
     }
 

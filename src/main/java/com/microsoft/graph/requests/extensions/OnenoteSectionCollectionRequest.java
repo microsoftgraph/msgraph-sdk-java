@@ -41,7 +41,7 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
         super(requestUrl, client, requestOptions, OnenoteSectionCollectionResponse.class, IOnenoteSectionCollectionPage.class);
     }
 
-    public void get(final ICallback<IOnenoteSectionCollectionPage> callback) {
+    public void get(final ICallback<? super IOnenoteSectionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
         return buildFromResponse(response);
     }
 
-    public void post(final OnenoteSection newOnenoteSection, final ICallback<OnenoteSection> callback) {
+    public void post(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteSectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

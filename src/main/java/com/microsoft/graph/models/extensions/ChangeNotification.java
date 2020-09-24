@@ -6,9 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ChangeType;
+import com.microsoft.graph.models.extensions.ChangeNotificationEncryptedContent;
+import com.microsoft.graph.models.generated.LifecycleEventType;
 import com.microsoft.graph.models.extensions.ResourceData;
 
 
@@ -51,12 +52,28 @@ public class ChangeNotification implements IJsonBackedObject {
     public String clientState;
 
     /**
+     * The Encrypted Content.
+     * (Preview) Encrypted content attached with the change notification. Only provided if encryptionCertificate and includeResourceData were defined during the subscription request and if the resource supports it. Optional.
+     */
+    @SerializedName("encryptedContent")
+    @Expose
+    public ChangeNotificationEncryptedContent encryptedContent;
+
+    /**
      * The Id.
      * Unique ID for the notification. Optional.
      */
     @SerializedName("id")
     @Expose
     public String id;
+
+    /**
+     * The Lifecycle Event.
+     * 
+     */
+    @SerializedName("lifecycleEvent")
+    @Expose
+    public LifecycleEventType lifecycleEvent;
 
     /**
      * The Resource.

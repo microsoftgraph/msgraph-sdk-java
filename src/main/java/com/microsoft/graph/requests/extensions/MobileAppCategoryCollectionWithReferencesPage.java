@@ -35,6 +35,6 @@ public class MobileAppCategoryCollectionWithReferencesPage extends BaseCollectio
      * @param builder  the request builder for the next collection page
      */
     public MobileAppCategoryCollectionWithReferencesPage(final MobileAppCategoryCollectionResponse response, final IMobileAppCategoryCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

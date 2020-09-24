@@ -40,7 +40,7 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
         super(requestUrl, client, requestOptions, SiteCollectionResponse.class, ISiteCollectionPage.class);
     }
 
-    public void get(final ICallback<ISiteCollectionPage> callback) {
+    public void get(final ICallback<? super ISiteCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final Site newSite, final ICallback<Site> callback) {
+    public void post(final Site newSite, final ICallback<? super Site> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SiteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

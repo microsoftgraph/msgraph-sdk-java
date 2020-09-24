@@ -23,6 +23,6 @@ public class ParticipantCollectionPage extends BaseCollectionPage<Participant, I
      * @param builder  the request builder for the next collection page
      */
     public ParticipantCollectionPage(final ParticipantCollectionResponse response, final IParticipantCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

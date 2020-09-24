@@ -37,7 +37,7 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidManagedAppRegistration> callback) {
+    public void get(final ICallback<? super AndroidManagedAppRegistration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidManagedAppRegistration> callback) {
+    public void delete(final ICallback<? super AndroidManagedAppRegistration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest implements
      * @param sourceAndroidManagedAppRegistration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidManagedAppRegistration sourceAndroidManagedAppRegistration, final ICallback<AndroidManagedAppRegistration> callback) {
+    public void patch(final AndroidManagedAppRegistration sourceAndroidManagedAppRegistration, final ICallback<? super AndroidManagedAppRegistration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidManagedAppRegistration);
     }
 
@@ -96,7 +96,7 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest implements
      * @param newAndroidManagedAppRegistration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidManagedAppRegistration newAndroidManagedAppRegistration, final ICallback<AndroidManagedAppRegistration> callback) {
+    public void post(final AndroidManagedAppRegistration newAndroidManagedAppRegistration, final ICallback<? super AndroidManagedAppRegistration> callback) {
         send(HttpMethod.POST, callback, newAndroidManagedAppRegistration);
     }
 
@@ -117,7 +117,7 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest implements
      * @param newAndroidManagedAppRegistration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidManagedAppRegistration newAndroidManagedAppRegistration, final ICallback<AndroidManagedAppRegistration> callback) {
+    public void put(final AndroidManagedAppRegistration newAndroidManagedAppRegistration, final ICallback<? super AndroidManagedAppRegistration> callback) {
         send(HttpMethod.PUT, callback, newAndroidManagedAppRegistration);
     }
 

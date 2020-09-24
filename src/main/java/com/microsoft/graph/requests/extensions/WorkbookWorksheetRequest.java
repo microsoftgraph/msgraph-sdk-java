@@ -56,7 +56,7 @@ public class WorkbookWorksheetRequest extends BaseRequest implements IWorkbookWo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookWorksheet> callback) {
+    public void get(final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WorkbookWorksheetRequest extends BaseRequest implements IWorkbookWo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookWorksheet> callback) {
+    public void delete(final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +94,7 @@ public class WorkbookWorksheetRequest extends BaseRequest implements IWorkbookWo
      * @param sourceWorkbookWorksheet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookWorksheet sourceWorkbookWorksheet, final ICallback<WorkbookWorksheet> callback) {
+    public void patch(final WorkbookWorksheet sourceWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookWorksheet);
     }
 
@@ -115,7 +115,7 @@ public class WorkbookWorksheetRequest extends BaseRequest implements IWorkbookWo
      * @param newWorkbookWorksheet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<WorkbookWorksheet> callback) {
+    public void post(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.POST, callback, newWorkbookWorksheet);
     }
 
@@ -136,7 +136,7 @@ public class WorkbookWorksheetRequest extends BaseRequest implements IWorkbookWo
      * @param newWorkbookWorksheet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<WorkbookWorksheet> callback) {
+    public void put(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback) {
         send(HttpMethod.PUT, callback, newWorkbookWorksheet);
     }
 

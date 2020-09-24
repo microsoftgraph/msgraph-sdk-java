@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IContactFolderCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IContactFolderCollectionPage> callback);
+    void get(final ICallback<? super IContactFolderCollectionPage> callback);
 
     IContactFolderCollectionPage get() throws ClientException;
 
-    void post(final ContactFolder newContactFolder, final ICallback<ContactFolder> callback);
+    void post(final ContactFolder newContactFolder, final ICallback<? super ContactFolder> callback);
 
     ContactFolder post(final ContactFolder newContactFolder) throws ClientException;
 

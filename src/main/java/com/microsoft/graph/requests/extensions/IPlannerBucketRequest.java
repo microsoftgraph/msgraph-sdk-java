@@ -21,7 +21,7 @@ public interface IPlannerBucketRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PlannerBucket> callback);
+    void get(final ICallback<? super PlannerBucket> callback);
 
     /**
      * Gets the PlannerBucket from the service
@@ -36,7 +36,7 @@ public interface IPlannerBucketRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PlannerBucket> callback);
+    void delete(final ICallback<? super PlannerBucket> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlannerBucketRequest extends IHttpRequest {
      * @param sourcePlannerBucket the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PlannerBucket sourcePlannerBucket, final ICallback<PlannerBucket> callback);
+    void patch(final PlannerBucket sourcePlannerBucket, final ICallback<? super PlannerBucket> callback);
 
     /**
      * Patches this PlannerBucket with a source
@@ -68,7 +68,7 @@ public interface IPlannerBucketRequest extends IHttpRequest {
      * @param newPlannerBucket the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PlannerBucket newPlannerBucket, final ICallback<PlannerBucket> callback);
+    void post(final PlannerBucket newPlannerBucket, final ICallback<? super PlannerBucket> callback);
 
     /**
      * Posts a PlannerBucket with a new object
@@ -85,7 +85,7 @@ public interface IPlannerBucketRequest extends IHttpRequest {
      * @param newPlannerBucket the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PlannerBucket newPlannerBucket, final ICallback<PlannerBucket> callback);
+    void put(final PlannerBucket newPlannerBucket, final ICallback<? super PlannerBucket> callback);
 
     /**
      * Posts a PlannerBucket with a new object

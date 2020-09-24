@@ -36,7 +36,7 @@ public class WorkbookChartSetPositionRequest extends BaseRequest implements IWor
         body = new WorkbookChartSetPositionBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

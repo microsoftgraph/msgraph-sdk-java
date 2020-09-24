@@ -42,7 +42,7 @@ public class EducationSchoolReferenceRequest extends BaseRequest implements IEdu
         super(requestUrl, client, requestOptions, EducationSchool.class);
     }
 
-    public void delete(final ICallback<EducationSchool> callback) {
+    public void delete(final ICallback<? super EducationSchool> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class EducationSchoolReferenceRequest extends BaseRequest implements IEdu
      * @param srcEducationSchool the EducationSchool reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(EducationSchool srcEducationSchool, final ICallback<EducationSchool> callback) {
+    public void put(EducationSchool srcEducationSchool, final ICallback<? super EducationSchool> callback) {
         send(HttpMethod.PUT, callback, srcEducationSchool);
     }
 

@@ -26,7 +26,7 @@ public interface IWorkbookFunctionsTodayRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<WorkbookFunctionResult> callback);
+    void post(final ICallback<? super WorkbookFunctionResult> callback);
 
     /**
      * Creates the WorkbookFunctionsToday

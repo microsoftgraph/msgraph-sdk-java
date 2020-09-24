@@ -21,7 +21,7 @@ public interface IDeviceManagementRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagement> callback);
+    void get(final ICallback<? super DeviceManagement> callback);
 
     /**
      * Gets the DeviceManagement from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagement> callback);
+    void delete(final ICallback<? super DeviceManagement> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementRequest extends IHttpRequest {
      * @param sourceDeviceManagement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagement sourceDeviceManagement, final ICallback<DeviceManagement> callback);
+    void patch(final DeviceManagement sourceDeviceManagement, final ICallback<? super DeviceManagement> callback);
 
     /**
      * Patches this DeviceManagement with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementRequest extends IHttpRequest {
      * @param newDeviceManagement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagement newDeviceManagement, final ICallback<DeviceManagement> callback);
+    void post(final DeviceManagement newDeviceManagement, final ICallback<? super DeviceManagement> callback);
 
     /**
      * Posts a DeviceManagement with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementRequest extends IHttpRequest {
      * @param newDeviceManagement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagement newDeviceManagement, final ICallback<DeviceManagement> callback);
+    void put(final DeviceManagement newDeviceManagement, final ICallback<? super DeviceManagement> callback);
 
     /**
      * Posts a DeviceManagement with a new object

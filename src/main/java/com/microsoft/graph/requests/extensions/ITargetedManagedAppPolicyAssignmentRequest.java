@@ -21,7 +21,7 @@ public interface ITargetedManagedAppPolicyAssignmentRequest extends IHttpRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TargetedManagedAppPolicyAssignment> callback);
+    void get(final ICallback<? super TargetedManagedAppPolicyAssignment> callback);
 
     /**
      * Gets the TargetedManagedAppPolicyAssignment from the service
@@ -36,7 +36,7 @@ public interface ITargetedManagedAppPolicyAssignmentRequest extends IHttpRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TargetedManagedAppPolicyAssignment> callback);
+    void delete(final ICallback<? super TargetedManagedAppPolicyAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITargetedManagedAppPolicyAssignmentRequest extends IHttpRequest
      * @param sourceTargetedManagedAppPolicyAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback);
+    void patch(final TargetedManagedAppPolicyAssignment sourceTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback);
 
     /**
      * Patches this TargetedManagedAppPolicyAssignment with a source
@@ -68,7 +68,7 @@ public interface ITargetedManagedAppPolicyAssignmentRequest extends IHttpRequest
      * @param newTargetedManagedAppPolicyAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback);
+    void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback);
 
     /**
      * Posts a TargetedManagedAppPolicyAssignment with a new object
@@ -85,7 +85,7 @@ public interface ITargetedManagedAppPolicyAssignmentRequest extends IHttpRequest
      * @param newTargetedManagedAppPolicyAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback);
+    void put(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback);
 
     /**
      * Posts a TargetedManagedAppPolicyAssignment with a new object

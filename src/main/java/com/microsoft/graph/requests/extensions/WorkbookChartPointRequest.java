@@ -39,7 +39,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookChartPoint> callback) {
+    public void get(final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<WorkbookChartPoint> callback) {
+    public void delete(final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @param sourceWorkbookChartPoint the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartPoint sourceWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
+    public void patch(final WorkbookChartPoint sourceWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartPoint);
     }
 
@@ -98,7 +98,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @param newWorkbookChartPoint the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
+    public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartPoint);
     }
 
@@ -119,7 +119,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @param newWorkbookChartPoint the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
+    public void put(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartPoint);
     }
 

@@ -21,7 +21,7 @@ public interface IMacOSOfficeSuiteAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSOfficeSuiteApp> callback);
+    void get(final ICallback<? super MacOSOfficeSuiteApp> callback);
 
     /**
      * Gets the MacOSOfficeSuiteApp from the service
@@ -36,7 +36,7 @@ public interface IMacOSOfficeSuiteAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSOfficeSuiteApp> callback);
+    void delete(final ICallback<? super MacOSOfficeSuiteApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSOfficeSuiteAppRequest extends IHttpRequest {
      * @param sourceMacOSOfficeSuiteApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSOfficeSuiteApp sourceMacOSOfficeSuiteApp, final ICallback<MacOSOfficeSuiteApp> callback);
+    void patch(final MacOSOfficeSuiteApp sourceMacOSOfficeSuiteApp, final ICallback<? super MacOSOfficeSuiteApp> callback);
 
     /**
      * Patches this MacOSOfficeSuiteApp with a source
@@ -68,7 +68,7 @@ public interface IMacOSOfficeSuiteAppRequest extends IHttpRequest {
      * @param newMacOSOfficeSuiteApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp, final ICallback<MacOSOfficeSuiteApp> callback);
+    void post(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp, final ICallback<? super MacOSOfficeSuiteApp> callback);
 
     /**
      * Posts a MacOSOfficeSuiteApp with a new object
@@ -85,7 +85,7 @@ public interface IMacOSOfficeSuiteAppRequest extends IHttpRequest {
      * @param newMacOSOfficeSuiteApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp, final ICallback<MacOSOfficeSuiteApp> callback);
+    void put(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp, final ICallback<? super MacOSOfficeSuiteApp> callback);
 
     /**
      * Posts a MacOSOfficeSuiteApp with a new object

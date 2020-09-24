@@ -23,6 +23,6 @@ public class ComplianceManagementPartnerCollectionPage extends BaseCollectionPag
      * @param builder  the request builder for the next collection page
      */
     public ComplianceManagementPartnerCollectionPage(final ComplianceManagementPartnerCollectionResponse response, final IComplianceManagementPartnerCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

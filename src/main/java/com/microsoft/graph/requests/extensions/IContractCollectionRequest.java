@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IContractCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IContractCollectionPage> callback);
+    void get(final ICallback<? super IContractCollectionPage> callback);
 
     IContractCollectionPage get() throws ClientException;
 
-    void post(final Contract newContract, final ICallback<Contract> callback);
+    void post(final Contract newContract, final ICallback<? super Contract> callback);
 
     Contract post(final Contract newContract) throws ClientException;
 

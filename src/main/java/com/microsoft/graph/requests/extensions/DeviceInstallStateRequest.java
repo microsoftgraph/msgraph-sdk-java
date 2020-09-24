@@ -37,7 +37,7 @@ public class DeviceInstallStateRequest extends BaseRequest implements IDeviceIns
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceInstallState> callback) {
+    public void get(final ICallback<? super DeviceInstallState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceInstallStateRequest extends BaseRequest implements IDeviceIns
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceInstallState> callback) {
+    public void delete(final ICallback<? super DeviceInstallState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceInstallStateRequest extends BaseRequest implements IDeviceIns
      * @param sourceDeviceInstallState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceInstallState sourceDeviceInstallState, final ICallback<DeviceInstallState> callback) {
+    public void patch(final DeviceInstallState sourceDeviceInstallState, final ICallback<? super DeviceInstallState> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceInstallState);
     }
 
@@ -96,7 +96,7 @@ public class DeviceInstallStateRequest extends BaseRequest implements IDeviceIns
      * @param newDeviceInstallState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceInstallState newDeviceInstallState, final ICallback<DeviceInstallState> callback) {
+    public void post(final DeviceInstallState newDeviceInstallState, final ICallback<? super DeviceInstallState> callback) {
         send(HttpMethod.POST, callback, newDeviceInstallState);
     }
 
@@ -117,7 +117,7 @@ public class DeviceInstallStateRequest extends BaseRequest implements IDeviceIns
      * @param newDeviceInstallState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceInstallState newDeviceInstallState, final ICallback<DeviceInstallState> callback) {
+    public void put(final DeviceInstallState newDeviceInstallState, final ICallback<? super DeviceInstallState> callback) {
         send(HttpMethod.PUT, callback, newDeviceInstallState);
     }
 

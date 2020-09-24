@@ -37,7 +37,7 @@ public class OnlineMeetingCreateOrGetRequest extends BaseRequest implements IOnl
         body = new OnlineMeetingCreateOrGetBody();
     }
 
-    public void post(final ICallback<OnlineMeeting> callback) {
+    public void post(final ICallback<? super OnlineMeeting> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

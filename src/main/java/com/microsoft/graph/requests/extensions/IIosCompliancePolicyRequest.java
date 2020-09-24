@@ -21,7 +21,7 @@ public interface IIosCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosCompliancePolicy> callback);
+    void get(final ICallback<? super IosCompliancePolicy> callback);
 
     /**
      * Gets the IosCompliancePolicy from the service
@@ -36,7 +36,7 @@ public interface IIosCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosCompliancePolicy> callback);
+    void delete(final ICallback<? super IosCompliancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosCompliancePolicyRequest extends IHttpRequest {
      * @param sourceIosCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosCompliancePolicy sourceIosCompliancePolicy, final ICallback<IosCompliancePolicy> callback);
+    void patch(final IosCompliancePolicy sourceIosCompliancePolicy, final ICallback<? super IosCompliancePolicy> callback);
 
     /**
      * Patches this IosCompliancePolicy with a source
@@ -68,7 +68,7 @@ public interface IIosCompliancePolicyRequest extends IHttpRequest {
      * @param newIosCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<IosCompliancePolicy> callback);
+    void post(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<? super IosCompliancePolicy> callback);
 
     /**
      * Posts a IosCompliancePolicy with a new object
@@ -85,7 +85,7 @@ public interface IIosCompliancePolicyRequest extends IHttpRequest {
      * @param newIosCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<IosCompliancePolicy> callback);
+    void put(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<? super IosCompliancePolicy> callback);
 
     /**
      * Posts a IosCompliancePolicy with a new object

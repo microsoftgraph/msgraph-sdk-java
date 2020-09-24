@@ -21,7 +21,7 @@ public interface IOutlookCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OutlookCategory> callback);
+    void get(final ICallback<? super OutlookCategory> callback);
 
     /**
      * Gets the OutlookCategory from the service
@@ -36,7 +36,7 @@ public interface IOutlookCategoryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OutlookCategory> callback);
+    void delete(final ICallback<? super OutlookCategory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOutlookCategoryRequest extends IHttpRequest {
      * @param sourceOutlookCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OutlookCategory sourceOutlookCategory, final ICallback<OutlookCategory> callback);
+    void patch(final OutlookCategory sourceOutlookCategory, final ICallback<? super OutlookCategory> callback);
 
     /**
      * Patches this OutlookCategory with a source
@@ -68,7 +68,7 @@ public interface IOutlookCategoryRequest extends IHttpRequest {
      * @param newOutlookCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OutlookCategory newOutlookCategory, final ICallback<OutlookCategory> callback);
+    void post(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback);
 
     /**
      * Posts a OutlookCategory with a new object
@@ -85,7 +85,7 @@ public interface IOutlookCategoryRequest extends IHttpRequest {
      * @param newOutlookCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OutlookCategory newOutlookCategory, final ICallback<OutlookCategory> callback);
+    void put(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback);
 
     /**
      * Posts a OutlookCategory with a new object

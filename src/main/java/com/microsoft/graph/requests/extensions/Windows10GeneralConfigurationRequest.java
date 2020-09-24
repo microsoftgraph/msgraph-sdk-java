@@ -37,7 +37,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Windows10GeneralConfiguration> callback) {
+    public void get(final ICallback<? super Windows10GeneralConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Windows10GeneralConfiguration> callback) {
+    public void delete(final ICallback<? super Windows10GeneralConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @param sourceWindows10GeneralConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10GeneralConfiguration sourceWindows10GeneralConfiguration, final ICallback<Windows10GeneralConfiguration> callback) {
+    public void patch(final Windows10GeneralConfiguration sourceWindows10GeneralConfiguration, final ICallback<? super Windows10GeneralConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10GeneralConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @param newWindows10GeneralConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10GeneralConfiguration newWindows10GeneralConfiguration, final ICallback<Windows10GeneralConfiguration> callback) {
+    public void post(final Windows10GeneralConfiguration newWindows10GeneralConfiguration, final ICallback<? super Windows10GeneralConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows10GeneralConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @param newWindows10GeneralConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10GeneralConfiguration newWindows10GeneralConfiguration, final ICallback<Windows10GeneralConfiguration> callback) {
+    public void put(final Windows10GeneralConfiguration newWindows10GeneralConfiguration, final ICallback<? super Windows10GeneralConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows10GeneralConfiguration);
     }
 

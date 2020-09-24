@@ -21,7 +21,7 @@ public interface IIosVppEBookAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosVppEBookAssignment> callback);
+    void get(final ICallback<? super IosVppEBookAssignment> callback);
 
     /**
      * Gets the IosVppEBookAssignment from the service
@@ -36,7 +36,7 @@ public interface IIosVppEBookAssignmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosVppEBookAssignment> callback);
+    void delete(final ICallback<? super IosVppEBookAssignment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosVppEBookAssignmentRequest extends IHttpRequest {
      * @param sourceIosVppEBookAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosVppEBookAssignment sourceIosVppEBookAssignment, final ICallback<IosVppEBookAssignment> callback);
+    void patch(final IosVppEBookAssignment sourceIosVppEBookAssignment, final ICallback<? super IosVppEBookAssignment> callback);
 
     /**
      * Patches this IosVppEBookAssignment with a source
@@ -68,7 +68,7 @@ public interface IIosVppEBookAssignmentRequest extends IHttpRequest {
      * @param newIosVppEBookAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosVppEBookAssignment newIosVppEBookAssignment, final ICallback<IosVppEBookAssignment> callback);
+    void post(final IosVppEBookAssignment newIosVppEBookAssignment, final ICallback<? super IosVppEBookAssignment> callback);
 
     /**
      * Posts a IosVppEBookAssignment with a new object
@@ -85,7 +85,7 @@ public interface IIosVppEBookAssignmentRequest extends IHttpRequest {
      * @param newIosVppEBookAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosVppEBookAssignment newIosVppEBookAssignment, final ICallback<IosVppEBookAssignment> callback);
+    void put(final IosVppEBookAssignment newIosVppEBookAssignment, final ICallback<? super IosVppEBookAssignment> callback);
 
     /**
      * Posts a IosVppEBookAssignment with a new object

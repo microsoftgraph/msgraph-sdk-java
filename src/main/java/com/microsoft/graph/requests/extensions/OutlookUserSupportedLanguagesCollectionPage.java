@@ -34,6 +34,6 @@ public class OutlookUserSupportedLanguagesCollectionPage extends BaseCollectionP
      * @param builder The request builder for the next collection page
      */
     public OutlookUserSupportedLanguagesCollectionPage(final OutlookUserSupportedLanguagesCollectionResponse response, final IOutlookUserSupportedLanguagesCollectionRequestBuilder builder) {
-       super(response.value, builder);
+       super(response.value, builder, response.additionalDataManager());
     }
 }

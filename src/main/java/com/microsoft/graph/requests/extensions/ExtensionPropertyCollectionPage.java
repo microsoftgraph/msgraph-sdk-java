@@ -23,6 +23,6 @@ public class ExtensionPropertyCollectionPage extends BaseCollectionPage<Extensio
      * @param builder  the request builder for the next collection page
      */
     public ExtensionPropertyCollectionPage(final ExtensionPropertyCollectionResponse response, final IExtensionPropertyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

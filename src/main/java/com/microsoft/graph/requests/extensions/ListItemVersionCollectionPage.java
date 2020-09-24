@@ -23,6 +23,6 @@ public class ListItemVersionCollectionPage extends BaseCollectionPage<ListItemVe
      * @param builder  the request builder for the next collection page
      */
     public ListItemVersionCollectionPage(final ListItemVersionCollectionResponse response, final IListItemVersionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

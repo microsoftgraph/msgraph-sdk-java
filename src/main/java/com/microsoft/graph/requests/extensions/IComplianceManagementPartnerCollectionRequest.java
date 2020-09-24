@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IComplianceManagementPartnerCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IComplianceManagementPartnerCollectionPage> callback);
+    void get(final ICallback<? super IComplianceManagementPartnerCollectionPage> callback);
 
     IComplianceManagementPartnerCollectionPage get() throws ClientException;
 
-    void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<ComplianceManagementPartner> callback);
+    void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<? super ComplianceManagementPartner> callback);
 
     ComplianceManagementPartner post(final ComplianceManagementPartner newComplianceManagementPartner) throws ClientException;
 

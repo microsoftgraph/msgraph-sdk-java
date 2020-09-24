@@ -21,7 +21,7 @@ public interface ISingleValueLegacyExtendedPropertyRequest extends IHttpRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SingleValueLegacyExtendedProperty> callback);
+    void get(final ICallback<? super SingleValueLegacyExtendedProperty> callback);
 
     /**
      * Gets the SingleValueLegacyExtendedProperty from the service
@@ -36,7 +36,7 @@ public interface ISingleValueLegacyExtendedPropertyRequest extends IHttpRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SingleValueLegacyExtendedProperty> callback);
+    void delete(final ICallback<? super SingleValueLegacyExtendedProperty> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISingleValueLegacyExtendedPropertyRequest extends IHttpRequest 
      * @param sourceSingleValueLegacyExtendedProperty the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback);
+    void patch(final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback);
 
     /**
      * Patches this SingleValueLegacyExtendedProperty with a source
@@ -68,7 +68,7 @@ public interface ISingleValueLegacyExtendedPropertyRequest extends IHttpRequest 
      * @param newSingleValueLegacyExtendedProperty the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback);
+    void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback);
 
     /**
      * Posts a SingleValueLegacyExtendedProperty with a new object
@@ -85,7 +85,7 @@ public interface ISingleValueLegacyExtendedPropertyRequest extends IHttpRequest 
      * @param newSingleValueLegacyExtendedProperty the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback);
+    void put(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback);
 
     /**
      * Posts a SingleValueLegacyExtendedProperty with a new object

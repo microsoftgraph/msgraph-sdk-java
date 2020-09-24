@@ -40,7 +40,7 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
         super(requestUrl, client, requestOptions, WorkbookChartPointCollectionResponse.class, IWorkbookChartPointCollectionPage.class);
     }
 
-    public void get(final ICallback<IWorkbookChartPointCollectionPage> callback) {
+    public void get(final ICallback<? super IWorkbookChartPointCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
+    public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

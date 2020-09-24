@@ -21,7 +21,7 @@ public interface IMacOSCustomConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSCustomConfiguration> callback);
+    void get(final ICallback<? super MacOSCustomConfiguration> callback);
 
     /**
      * Gets the MacOSCustomConfiguration from the service
@@ -36,7 +36,7 @@ public interface IMacOSCustomConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSCustomConfiguration> callback);
+    void delete(final ICallback<? super MacOSCustomConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSCustomConfigurationRequest extends IHttpRequest {
      * @param sourceMacOSCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSCustomConfiguration sourceMacOSCustomConfiguration, final ICallback<MacOSCustomConfiguration> callback);
+    void patch(final MacOSCustomConfiguration sourceMacOSCustomConfiguration, final ICallback<? super MacOSCustomConfiguration> callback);
 
     /**
      * Patches this MacOSCustomConfiguration with a source
@@ -68,7 +68,7 @@ public interface IMacOSCustomConfigurationRequest extends IHttpRequest {
      * @param newMacOSCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<MacOSCustomConfiguration> callback);
+    void post(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<? super MacOSCustomConfiguration> callback);
 
     /**
      * Posts a MacOSCustomConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IMacOSCustomConfigurationRequest extends IHttpRequest {
      * @param newMacOSCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<MacOSCustomConfiguration> callback);
+    void put(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<? super MacOSCustomConfiguration> callback);
 
     /**
      * Posts a MacOSCustomConfiguration with a new object

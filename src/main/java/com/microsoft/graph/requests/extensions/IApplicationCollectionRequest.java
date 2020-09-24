@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IApplicationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IApplicationCollectionPage> callback);
+    void get(final ICallback<? super IApplicationCollectionPage> callback);
 
     IApplicationCollectionPage get() throws ClientException;
 
-    void post(final Application newApplication, final ICallback<Application> callback);
+    void post(final Application newApplication, final ICallback<? super Application> callback);
 
     Application post(final Application newApplication) throws ClientException;
 

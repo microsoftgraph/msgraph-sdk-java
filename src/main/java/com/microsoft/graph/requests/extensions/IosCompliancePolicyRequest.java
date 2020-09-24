@@ -37,7 +37,7 @@ public class IosCompliancePolicyRequest extends BaseRequest implements IIosCompl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosCompliancePolicy> callback) {
+    public void get(final ICallback<? super IosCompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosCompliancePolicyRequest extends BaseRequest implements IIosCompl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosCompliancePolicy> callback) {
+    public void delete(final ICallback<? super IosCompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosCompliancePolicyRequest extends BaseRequest implements IIosCompl
      * @param sourceIosCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosCompliancePolicy sourceIosCompliancePolicy, final ICallback<IosCompliancePolicy> callback) {
+    public void patch(final IosCompliancePolicy sourceIosCompliancePolicy, final ICallback<? super IosCompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceIosCompliancePolicy);
     }
 
@@ -96,7 +96,7 @@ public class IosCompliancePolicyRequest extends BaseRequest implements IIosCompl
      * @param newIosCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<IosCompliancePolicy> callback) {
+    public void post(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<? super IosCompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newIosCompliancePolicy);
     }
 
@@ -117,7 +117,7 @@ public class IosCompliancePolicyRequest extends BaseRequest implements IIosCompl
      * @param newIosCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<IosCompliancePolicy> callback) {
+    public void put(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<? super IosCompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newIosCompliancePolicy);
     }
 

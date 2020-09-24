@@ -21,7 +21,7 @@ public interface IWorkbookRangeRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookRange> callback);
+    void get(final ICallback<? super WorkbookRange> callback);
 
     /**
      * Gets the WorkbookRange from the service
@@ -36,7 +36,7 @@ public interface IWorkbookRangeRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookRange> callback);
+    void delete(final ICallback<? super WorkbookRange> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookRangeRequest extends IHttpRequest {
      * @param sourceWorkbookRange the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookRange sourceWorkbookRange, final ICallback<WorkbookRange> callback);
+    void patch(final WorkbookRange sourceWorkbookRange, final ICallback<? super WorkbookRange> callback);
 
     /**
      * Patches this WorkbookRange with a source
@@ -68,7 +68,7 @@ public interface IWorkbookRangeRequest extends IHttpRequest {
      * @param newWorkbookRange the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookRange newWorkbookRange, final ICallback<WorkbookRange> callback);
+    void post(final WorkbookRange newWorkbookRange, final ICallback<? super WorkbookRange> callback);
 
     /**
      * Posts a WorkbookRange with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookRangeRequest extends IHttpRequest {
      * @param newWorkbookRange the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookRange newWorkbookRange, final ICallback<WorkbookRange> callback);
+    void put(final WorkbookRange newWorkbookRange, final ICallback<? super WorkbookRange> callback);
 
     /**
      * Posts a WorkbookRange with a new object

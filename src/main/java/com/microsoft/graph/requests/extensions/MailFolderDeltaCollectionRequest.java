@@ -39,7 +39,7 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
     }
 
 
-    public void get(final ICallback<IMailFolderDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super IMailFolderDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

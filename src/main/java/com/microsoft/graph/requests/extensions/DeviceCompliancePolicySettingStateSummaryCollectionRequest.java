@@ -40,7 +40,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
         super(requestUrl, client, requestOptions, DeviceCompliancePolicySettingStateSummaryCollectionResponse.class, IDeviceCompliancePolicySettingStateSummaryCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceCompliancePolicySettingStateSummaryCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceCompliancePolicySettingStateSummaryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, final ICallback<DeviceCompliancePolicySettingStateSummary> callback) {
+    public void post(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, final ICallback<? super DeviceCompliancePolicySettingStateSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicySettingStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

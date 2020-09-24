@@ -23,6 +23,6 @@ public class OnlineMeetingCollectionPage extends BaseCollectionPage<OnlineMeetin
      * @param builder  the request builder for the next collection page
      */
     public OnlineMeetingCollectionPage(final OnlineMeetingCollectionResponse response, final IOnlineMeetingCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -40,7 +40,7 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
         super(requestUrl, client, requestOptions, VppTokenCollectionResponse.class, IVppTokenCollectionPage.class);
     }
 
-    public void get(final ICallback<IVppTokenCollectionPage> callback) {
+    public void get(final ICallback<? super IVppTokenCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
         return buildFromResponse(response);
     }
 
-    public void post(final VppToken newVppToken, final ICallback<VppToken> callback) {
+    public void post(final VppToken newVppToken, final ICallback<? super VppToken> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new VppTokenRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

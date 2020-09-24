@@ -21,7 +21,7 @@ public interface IIosLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosLobApp> callback);
+    void get(final ICallback<? super IosLobApp> callback);
 
     /**
      * Gets the IosLobApp from the service
@@ -36,7 +36,7 @@ public interface IIosLobAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosLobApp> callback);
+    void delete(final ICallback<? super IosLobApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosLobAppRequest extends IHttpRequest {
      * @param sourceIosLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosLobApp sourceIosLobApp, final ICallback<IosLobApp> callback);
+    void patch(final IosLobApp sourceIosLobApp, final ICallback<? super IosLobApp> callback);
 
     /**
      * Patches this IosLobApp with a source
@@ -68,7 +68,7 @@ public interface IIosLobAppRequest extends IHttpRequest {
      * @param newIosLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosLobApp newIosLobApp, final ICallback<IosLobApp> callback);
+    void post(final IosLobApp newIosLobApp, final ICallback<? super IosLobApp> callback);
 
     /**
      * Posts a IosLobApp with a new object
@@ -85,7 +85,7 @@ public interface IIosLobAppRequest extends IHttpRequest {
      * @param newIosLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosLobApp newIosLobApp, final ICallback<IosLobApp> callback);
+    void put(final IosLobApp newIosLobApp, final ICallback<? super IosLobApp> callback);
 
     /**
      * Posts a IosLobApp with a new object

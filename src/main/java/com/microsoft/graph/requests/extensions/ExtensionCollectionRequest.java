@@ -40,7 +40,7 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
         super(requestUrl, client, requestOptions, ExtensionCollectionResponse.class, IExtensionCollectionPage.class);
     }
 
-    public void get(final ICallback<IExtensionCollectionPage> callback) {
+    public void get(final ICallback<? super IExtensionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
         return buildFromResponse(response);
     }
 
-    public void post(final Extension newExtension, final ICallback<Extension> callback) {
+    public void post(final Extension newExtension, final ICallback<? super Extension> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

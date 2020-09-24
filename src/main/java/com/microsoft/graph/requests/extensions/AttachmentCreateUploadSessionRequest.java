@@ -37,7 +37,7 @@ public class AttachmentCreateUploadSessionRequest extends BaseRequest implements
         body = new AttachmentCreateUploadSessionBody();
     }
 
-    public void post(final ICallback<UploadSession> callback) {
+    public void post(final ICallback<? super UploadSession> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

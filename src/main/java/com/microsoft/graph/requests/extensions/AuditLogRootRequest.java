@@ -49,7 +49,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AuditLogRoot> callback) {
+    public void get(final ICallback<? super AuditLogRoot> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AuditLogRoot> callback) {
+    public void delete(final ICallback<? super AuditLogRoot> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @param sourceAuditLogRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AuditLogRoot sourceAuditLogRoot, final ICallback<AuditLogRoot> callback) {
+    public void patch(final AuditLogRoot sourceAuditLogRoot, final ICallback<? super AuditLogRoot> callback) {
         send(HttpMethod.PATCH, callback, sourceAuditLogRoot);
     }
 
@@ -108,7 +108,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @param newAuditLogRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AuditLogRoot newAuditLogRoot, final ICallback<AuditLogRoot> callback) {
+    public void post(final AuditLogRoot newAuditLogRoot, final ICallback<? super AuditLogRoot> callback) {
         send(HttpMethod.POST, callback, newAuditLogRoot);
     }
 
@@ -129,7 +129,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @param newAuditLogRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AuditLogRoot newAuditLogRoot, final ICallback<AuditLogRoot> callback) {
+    public void put(final AuditLogRoot newAuditLogRoot, final ICallback<? super AuditLogRoot> callback) {
         send(HttpMethod.PUT, callback, newAuditLogRoot);
     }
 

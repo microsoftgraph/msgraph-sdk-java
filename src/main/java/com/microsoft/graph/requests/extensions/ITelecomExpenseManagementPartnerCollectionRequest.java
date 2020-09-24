@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITelecomExpenseManagementPartnerCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITelecomExpenseManagementPartnerCollectionPage> callback);
+    void get(final ICallback<? super ITelecomExpenseManagementPartnerCollectionPage> callback);
 
     ITelecomExpenseManagementPartnerCollectionPage get() throws ClientException;
 
-    void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback);
+    void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback);
 
     TelecomExpenseManagementPartner post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException;
 

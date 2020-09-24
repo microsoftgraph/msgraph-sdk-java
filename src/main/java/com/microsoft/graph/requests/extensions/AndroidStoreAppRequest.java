@@ -37,7 +37,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<AndroidStoreApp> callback) {
+    public void get(final ICallback<? super AndroidStoreApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<AndroidStoreApp> callback) {
+    public void delete(final ICallback<? super AndroidStoreApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @param sourceAndroidStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidStoreApp sourceAndroidStoreApp, final ICallback<AndroidStoreApp> callback) {
+    public void patch(final AndroidStoreApp sourceAndroidStoreApp, final ICallback<? super AndroidStoreApp> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidStoreApp);
     }
 
@@ -96,7 +96,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @param newAndroidStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidStoreApp newAndroidStoreApp, final ICallback<AndroidStoreApp> callback) {
+    public void post(final AndroidStoreApp newAndroidStoreApp, final ICallback<? super AndroidStoreApp> callback) {
         send(HttpMethod.POST, callback, newAndroidStoreApp);
     }
 
@@ -117,7 +117,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @param newAndroidStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidStoreApp newAndroidStoreApp, final ICallback<AndroidStoreApp> callback) {
+    public void put(final AndroidStoreApp newAndroidStoreApp, final ICallback<? super AndroidStoreApp> callback) {
         send(HttpMethod.PUT, callback, newAndroidStoreApp);
     }
 

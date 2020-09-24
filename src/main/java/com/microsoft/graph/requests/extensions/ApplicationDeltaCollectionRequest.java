@@ -39,7 +39,7 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
     }
 
 
-    public void get(final ICallback<IApplicationDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super IApplicationDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

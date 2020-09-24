@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITokenIssuancePolicyCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<ITokenIssuancePolicyCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super ITokenIssuancePolicyCollectionWithReferencesPage> callback);
 
     ITokenIssuancePolicyCollectionWithReferencesPage get() throws ClientException;
 

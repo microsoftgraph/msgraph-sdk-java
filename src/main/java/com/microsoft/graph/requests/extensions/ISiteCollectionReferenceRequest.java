@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.Site;
  */
 public interface ISiteCollectionReferenceRequest {
 
-    void post(final Site newSite, final ICallback<Site> callback);
+    void post(final Site newSite, final ICallback<? super Site> callback);
 
     Site post(final Site newSite) throws ClientException;
 

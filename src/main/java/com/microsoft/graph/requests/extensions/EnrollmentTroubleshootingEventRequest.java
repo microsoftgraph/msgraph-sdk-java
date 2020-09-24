@@ -37,7 +37,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EnrollmentTroubleshootingEvent> callback) {
+    public void get(final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EnrollmentTroubleshootingEvent> callback) {
+    public void delete(final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @param sourceEnrollmentTroubleshootingEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent, final ICallback<EnrollmentTroubleshootingEvent> callback) {
+    public void patch(final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent, final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
         send(HttpMethod.PATCH, callback, sourceEnrollmentTroubleshootingEvent);
     }
 
@@ -96,7 +96,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @param newEnrollmentTroubleshootingEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<EnrollmentTroubleshootingEvent> callback) {
+    public void post(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
         send(HttpMethod.POST, callback, newEnrollmentTroubleshootingEvent);
     }
 
@@ -117,7 +117,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @param newEnrollmentTroubleshootingEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<EnrollmentTroubleshootingEvent> callback) {
+    public void put(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
         send(HttpMethod.PUT, callback, newEnrollmentTroubleshootingEvent);
     }
 

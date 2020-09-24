@@ -21,7 +21,7 @@ public interface IWorkbookRangeFillRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookRangeFill> callback);
+    void get(final ICallback<? super WorkbookRangeFill> callback);
 
     /**
      * Gets the WorkbookRangeFill from the service
@@ -36,7 +36,7 @@ public interface IWorkbookRangeFillRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookRangeFill> callback);
+    void delete(final ICallback<? super WorkbookRangeFill> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookRangeFillRequest extends IHttpRequest {
      * @param sourceWorkbookRangeFill the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookRangeFill sourceWorkbookRangeFill, final ICallback<WorkbookRangeFill> callback);
+    void patch(final WorkbookRangeFill sourceWorkbookRangeFill, final ICallback<? super WorkbookRangeFill> callback);
 
     /**
      * Patches this WorkbookRangeFill with a source
@@ -68,7 +68,7 @@ public interface IWorkbookRangeFillRequest extends IHttpRequest {
      * @param newWorkbookRangeFill the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookRangeFill newWorkbookRangeFill, final ICallback<WorkbookRangeFill> callback);
+    void post(final WorkbookRangeFill newWorkbookRangeFill, final ICallback<? super WorkbookRangeFill> callback);
 
     /**
      * Posts a WorkbookRangeFill with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookRangeFillRequest extends IHttpRequest {
      * @param newWorkbookRangeFill the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookRangeFill newWorkbookRangeFill, final ICallback<WorkbookRangeFill> callback);
+    void put(final WorkbookRangeFill newWorkbookRangeFill, final ICallback<? super WorkbookRangeFill> callback);
 
     /**
      * Posts a WorkbookRangeFill with a new object

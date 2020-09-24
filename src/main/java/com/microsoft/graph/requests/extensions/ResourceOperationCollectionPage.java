@@ -23,6 +23,6 @@ public class ResourceOperationCollectionPage extends BaseCollectionPage<Resource
      * @param builder  the request builder for the next collection page
      */
     public ResourceOperationCollectionPage(final ResourceOperationCollectionResponse response, final IResourceOperationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

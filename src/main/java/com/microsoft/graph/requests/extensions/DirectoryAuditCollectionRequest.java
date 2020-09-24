@@ -40,7 +40,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
         super(requestUrl, client, requestOptions, DirectoryAuditCollectionResponse.class, IDirectoryAuditCollectionPage.class);
     }
 
-    public void get(final ICallback<IDirectoryAuditCollectionPage> callback) {
+    public void get(final ICallback<? super IDirectoryAuditCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
         return buildFromResponse(response);
     }
 
-    public void post(final DirectoryAudit newDirectoryAudit, final ICallback<DirectoryAudit> callback) {
+    public void post(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

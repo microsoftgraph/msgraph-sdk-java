@@ -40,7 +40,7 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
         super(requestUrl, client, requestOptions, RoleAssignmentCollectionResponse.class, IRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<IRoleAssignmentCollectionPage> callback) {
+    public void get(final ICallback<? super IRoleAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
         return buildFromResponse(response);
     }
 
-    public void post(final RoleAssignment newRoleAssignment, final ICallback<RoleAssignment> callback) {
+    public void post(final RoleAssignment newRoleAssignment, final ICallback<? super RoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

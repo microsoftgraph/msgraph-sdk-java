@@ -35,6 +35,6 @@ public class EducationClassCollectionWithReferencesPage extends BaseCollectionPa
      * @param builder  the request builder for the next collection page
      */
     public EducationClassCollectionWithReferencesPage(final EducationClassCollectionResponse response, final IEducationClassCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

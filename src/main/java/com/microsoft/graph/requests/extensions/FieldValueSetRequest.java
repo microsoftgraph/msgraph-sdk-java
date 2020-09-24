@@ -37,7 +37,7 @@ public class FieldValueSetRequest extends BaseRequest implements IFieldValueSetR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<FieldValueSet> callback) {
+    public void get(final ICallback<? super FieldValueSet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class FieldValueSetRequest extends BaseRequest implements IFieldValueSetR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<FieldValueSet> callback) {
+    public void delete(final ICallback<? super FieldValueSet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class FieldValueSetRequest extends BaseRequest implements IFieldValueSetR
      * @param sourceFieldValueSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final FieldValueSet sourceFieldValueSet, final ICallback<FieldValueSet> callback) {
+    public void patch(final FieldValueSet sourceFieldValueSet, final ICallback<? super FieldValueSet> callback) {
         send(HttpMethod.PATCH, callback, sourceFieldValueSet);
     }
 
@@ -96,7 +96,7 @@ public class FieldValueSetRequest extends BaseRequest implements IFieldValueSetR
      * @param newFieldValueSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final FieldValueSet newFieldValueSet, final ICallback<FieldValueSet> callback) {
+    public void post(final FieldValueSet newFieldValueSet, final ICallback<? super FieldValueSet> callback) {
         send(HttpMethod.POST, callback, newFieldValueSet);
     }
 
@@ -117,7 +117,7 @@ public class FieldValueSetRequest extends BaseRequest implements IFieldValueSetR
      * @param newFieldValueSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final FieldValueSet newFieldValueSet, final ICallback<FieldValueSet> callback) {
+    public void put(final FieldValueSet newFieldValueSet, final ICallback<? super FieldValueSet> callback) {
         send(HttpMethod.PUT, callback, newFieldValueSet);
     }
 

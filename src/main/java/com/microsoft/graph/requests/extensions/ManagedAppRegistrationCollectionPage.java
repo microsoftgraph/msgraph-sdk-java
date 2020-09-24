@@ -23,6 +23,6 @@ public class ManagedAppRegistrationCollectionPage extends BaseCollectionPage<Man
      * @param builder  the request builder for the next collection page
      */
     public ManagedAppRegistrationCollectionPage(final ManagedAppRegistrationCollectionResponse response, final IManagedAppRegistrationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

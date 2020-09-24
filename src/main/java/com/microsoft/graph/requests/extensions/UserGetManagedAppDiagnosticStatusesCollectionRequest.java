@@ -39,7 +39,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
     }
 
 
-    public void get(final ICallback<IUserGetManagedAppDiagnosticStatusesCollectionPage> callback) {
+    public void get(final ICallback<? super IUserGetManagedAppDiagnosticStatusesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

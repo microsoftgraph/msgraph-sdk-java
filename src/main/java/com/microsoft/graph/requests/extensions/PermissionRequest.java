@@ -38,7 +38,7 @@ public class PermissionRequest extends BaseRequest implements IPermissionRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Permission> callback) {
+    public void get(final ICallback<? super Permission> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class PermissionRequest extends BaseRequest implements IPermissionRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Permission> callback) {
+    public void delete(final ICallback<? super Permission> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class PermissionRequest extends BaseRequest implements IPermissionRequest
      * @param sourcePermission the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Permission sourcePermission, final ICallback<Permission> callback) {
+    public void patch(final Permission sourcePermission, final ICallback<? super Permission> callback) {
         send(HttpMethod.PATCH, callback, sourcePermission);
     }
 
@@ -97,7 +97,7 @@ public class PermissionRequest extends BaseRequest implements IPermissionRequest
      * @param newPermission the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Permission newPermission, final ICallback<Permission> callback) {
+    public void post(final Permission newPermission, final ICallback<? super Permission> callback) {
         send(HttpMethod.POST, callback, newPermission);
     }
 
@@ -118,7 +118,7 @@ public class PermissionRequest extends BaseRequest implements IPermissionRequest
      * @param newPermission the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Permission newPermission, final ICallback<Permission> callback) {
+    public void put(final Permission newPermission, final ICallback<? super Permission> callback) {
         send(HttpMethod.PUT, callback, newPermission);
     }
 

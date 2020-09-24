@@ -35,6 +35,6 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesPage exten
      * @param builder  the request builder for the next collection page
      */
     public CertificateBasedAuthConfigurationCollectionWithReferencesPage(final CertificateBasedAuthConfigurationCollectionResponse response, final ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

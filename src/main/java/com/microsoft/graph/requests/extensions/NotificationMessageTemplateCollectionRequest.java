@@ -40,7 +40,7 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, NotificationMessageTemplateCollectionResponse.class, INotificationMessageTemplateCollectionPage.class);
     }
 
-    public void get(final ICallback<INotificationMessageTemplateCollectionPage> callback) {
+    public void get(final ICallback<? super INotificationMessageTemplateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback) {
+    public void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NotificationMessageTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

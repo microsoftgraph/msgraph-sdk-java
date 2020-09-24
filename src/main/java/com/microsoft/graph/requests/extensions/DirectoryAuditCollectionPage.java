@@ -23,6 +23,6 @@ public class DirectoryAuditCollectionPage extends BaseCollectionPage<DirectoryAu
      * @param builder  the request builder for the next collection page
      */
     public DirectoryAuditCollectionPage(final DirectoryAuditCollectionResponse response, final IDirectoryAuditCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

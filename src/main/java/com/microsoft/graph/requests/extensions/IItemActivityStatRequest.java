@@ -21,7 +21,7 @@ public interface IItemActivityStatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemActivityStat> callback);
+    void get(final ICallback<? super ItemActivityStat> callback);
 
     /**
      * Gets the ItemActivityStat from the service
@@ -36,7 +36,7 @@ public interface IItemActivityStatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemActivityStat> callback);
+    void delete(final ICallback<? super ItemActivityStat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemActivityStatRequest extends IHttpRequest {
      * @param sourceItemActivityStat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemActivityStat sourceItemActivityStat, final ICallback<ItemActivityStat> callback);
+    void patch(final ItemActivityStat sourceItemActivityStat, final ICallback<? super ItemActivityStat> callback);
 
     /**
      * Patches this ItemActivityStat with a source
@@ -68,7 +68,7 @@ public interface IItemActivityStatRequest extends IHttpRequest {
      * @param newItemActivityStat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemActivityStat newItemActivityStat, final ICallback<ItemActivityStat> callback);
+    void post(final ItemActivityStat newItemActivityStat, final ICallback<? super ItemActivityStat> callback);
 
     /**
      * Posts a ItemActivityStat with a new object
@@ -85,7 +85,7 @@ public interface IItemActivityStatRequest extends IHttpRequest {
      * @param newItemActivityStat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemActivityStat newItemActivityStat, final ICallback<ItemActivityStat> callback);
+    void put(final ItemActivityStat newItemActivityStat, final ICallback<? super ItemActivityStat> callback);
 
     /**
      * Posts a ItemActivityStat with a new object

@@ -37,7 +37,7 @@ public class ReportRootGetYammerActivityUserDetailRequest extends BaseRequest im
      * @param srcReport the Report with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(Report srcReport, final ICallback<Report> callback) {
+    public void patch(Report srcReport, final ICallback<? super Report> callback) {
         send(HttpMethod.PATCH, callback, srcReport);
     }
 
@@ -58,7 +58,7 @@ public class ReportRootGetYammerActivityUserDetailRequest extends BaseRequest im
      * @param srcReport the Report to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Report srcReport, final ICallback<Report> callback) {
+    public void put(Report srcReport, final ICallback<? super Report> callback) {
         send(HttpMethod.PUT, callback, srcReport);
     }
 
@@ -77,7 +77,7 @@ public class ReportRootGetYammerActivityUserDetailRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Report> callback) {
+    public void get(final ICallback<? super Report> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

@@ -41,7 +41,7 @@ public class CalendarGroupRequest extends BaseRequest implements ICalendarGroupR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<CalendarGroup> callback) {
+    public void get(final ICallback<? super CalendarGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class CalendarGroupRequest extends BaseRequest implements ICalendarGroupR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<CalendarGroup> callback) {
+    public void delete(final ICallback<? super CalendarGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class CalendarGroupRequest extends BaseRequest implements ICalendarGroupR
      * @param sourceCalendarGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CalendarGroup sourceCalendarGroup, final ICallback<CalendarGroup> callback) {
+    public void patch(final CalendarGroup sourceCalendarGroup, final ICallback<? super CalendarGroup> callback) {
         send(HttpMethod.PATCH, callback, sourceCalendarGroup);
     }
 
@@ -100,7 +100,7 @@ public class CalendarGroupRequest extends BaseRequest implements ICalendarGroupR
      * @param newCalendarGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CalendarGroup newCalendarGroup, final ICallback<CalendarGroup> callback) {
+    public void post(final CalendarGroup newCalendarGroup, final ICallback<? super CalendarGroup> callback) {
         send(HttpMethod.POST, callback, newCalendarGroup);
     }
 
@@ -121,7 +121,7 @@ public class CalendarGroupRequest extends BaseRequest implements ICalendarGroupR
      * @param newCalendarGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CalendarGroup newCalendarGroup, final ICallback<CalendarGroup> callback) {
+    public void put(final CalendarGroup newCalendarGroup, final ICallback<? super CalendarGroup> callback) {
         send(HttpMethod.PUT, callback, newCalendarGroup);
     }
 

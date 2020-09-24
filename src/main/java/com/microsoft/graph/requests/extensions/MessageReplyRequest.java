@@ -36,7 +36,7 @@ public class MessageReplyRequest extends BaseRequest implements IMessageReplyReq
         body = new MessageReplyBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

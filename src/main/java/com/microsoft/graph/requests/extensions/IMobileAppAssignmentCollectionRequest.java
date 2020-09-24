@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMobileAppAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMobileAppAssignmentCollectionPage> callback);
+    void get(final ICallback<? super IMobileAppAssignmentCollectionPage> callback);
 
     IMobileAppAssignmentCollectionPage get() throws ClientException;
 
-    void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<MobileAppAssignment> callback);
+    void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback);
 
     MobileAppAssignment post(final MobileAppAssignment newMobileAppAssignment) throws ClientException;
 

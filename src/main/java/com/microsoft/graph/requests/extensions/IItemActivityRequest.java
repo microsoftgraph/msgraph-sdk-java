@@ -21,7 +21,7 @@ public interface IItemActivityRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemActivity> callback);
+    void get(final ICallback<? super ItemActivity> callback);
 
     /**
      * Gets the ItemActivity from the service
@@ -36,7 +36,7 @@ public interface IItemActivityRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemActivity> callback);
+    void delete(final ICallback<? super ItemActivity> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemActivityRequest extends IHttpRequest {
      * @param sourceItemActivity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemActivity sourceItemActivity, final ICallback<ItemActivity> callback);
+    void patch(final ItemActivity sourceItemActivity, final ICallback<? super ItemActivity> callback);
 
     /**
      * Patches this ItemActivity with a source
@@ -68,7 +68,7 @@ public interface IItemActivityRequest extends IHttpRequest {
      * @param newItemActivity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemActivity newItemActivity, final ICallback<ItemActivity> callback);
+    void post(final ItemActivity newItemActivity, final ICallback<? super ItemActivity> callback);
 
     /**
      * Posts a ItemActivity with a new object
@@ -85,7 +85,7 @@ public interface IItemActivityRequest extends IHttpRequest {
      * @param newItemActivity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemActivity newItemActivity, final ICallback<ItemActivity> callback);
+    void put(final ItemActivity newItemActivity, final ICallback<? super ItemActivity> callback);
 
     /**
      * Posts a ItemActivity with a new object

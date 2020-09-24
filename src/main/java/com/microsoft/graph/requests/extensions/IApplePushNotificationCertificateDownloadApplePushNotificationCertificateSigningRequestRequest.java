@@ -25,7 +25,7 @@ public interface IApplePushNotificationCertificateDownloadApplePushNotificationC
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<String> callback);
+    void get(final ICallback<? super String> callback);
 
     /**
      * Gets the String

@@ -23,6 +23,6 @@ public class WorkforceIntegrationCollectionPage extends BaseCollectionPage<Workf
      * @param builder  the request builder for the next collection page
      */
     public WorkforceIntegrationCollectionPage(final WorkforceIntegrationCollectionResponse response, final IWorkforceIntegrationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

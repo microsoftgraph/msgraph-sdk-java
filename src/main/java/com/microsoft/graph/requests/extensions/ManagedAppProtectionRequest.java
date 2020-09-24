@@ -53,7 +53,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedAppProtection> callback) {
+    public void get(final ICallback<? super ManagedAppProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedAppProtection> callback) {
+    public void delete(final ICallback<? super ManagedAppProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +91,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @param sourceManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppProtection sourceManagedAppProtection, final ICallback<ManagedAppProtection> callback) {
+    public void patch(final ManagedAppProtection sourceManagedAppProtection, final ICallback<? super ManagedAppProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppProtection);
     }
 
@@ -112,7 +112,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @param newManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppProtection newManagedAppProtection, final ICallback<ManagedAppProtection> callback) {
+    public void post(final ManagedAppProtection newManagedAppProtection, final ICallback<? super ManagedAppProtection> callback) {
         send(HttpMethod.POST, callback, newManagedAppProtection);
     }
 
@@ -133,7 +133,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @param newManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppProtection newManagedAppProtection, final ICallback<ManagedAppProtection> callback) {
+    public void put(final ManagedAppProtection newManagedAppProtection, final ICallback<? super ManagedAppProtection> callback) {
         send(HttpMethod.PUT, callback, newManagedAppProtection);
     }
 

@@ -21,7 +21,7 @@ public interface IManagedAndroidStoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedAndroidStoreApp> callback);
+    void get(final ICallback<? super ManagedAndroidStoreApp> callback);
 
     /**
      * Gets the ManagedAndroidStoreApp from the service
@@ -36,7 +36,7 @@ public interface IManagedAndroidStoreAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedAndroidStoreApp> callback);
+    void delete(final ICallback<? super ManagedAndroidStoreApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAndroidStoreAppRequest extends IHttpRequest {
      * @param sourceManagedAndroidStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedAndroidStoreApp sourceManagedAndroidStoreApp, final ICallback<ManagedAndroidStoreApp> callback);
+    void patch(final ManagedAndroidStoreApp sourceManagedAndroidStoreApp, final ICallback<? super ManagedAndroidStoreApp> callback);
 
     /**
      * Patches this ManagedAndroidStoreApp with a source
@@ -68,7 +68,7 @@ public interface IManagedAndroidStoreAppRequest extends IHttpRequest {
      * @param newManagedAndroidStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedAndroidStoreApp newManagedAndroidStoreApp, final ICallback<ManagedAndroidStoreApp> callback);
+    void post(final ManagedAndroidStoreApp newManagedAndroidStoreApp, final ICallback<? super ManagedAndroidStoreApp> callback);
 
     /**
      * Posts a ManagedAndroidStoreApp with a new object
@@ -85,7 +85,7 @@ public interface IManagedAndroidStoreAppRequest extends IHttpRequest {
      * @param newManagedAndroidStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedAndroidStoreApp newManagedAndroidStoreApp, final ICallback<ManagedAndroidStoreApp> callback);
+    void put(final ManagedAndroidStoreApp newManagedAndroidStoreApp, final ICallback<? super ManagedAndroidStoreApp> callback);
 
     /**
      * Posts a ManagedAndroidStoreApp with a new object

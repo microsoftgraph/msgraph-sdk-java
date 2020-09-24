@@ -34,7 +34,7 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
         super(requestUrl, client, requestOptions, TokenLifetimePolicy.class);
     }
 
-    public void delete(final ICallback<TokenLifetimePolicy> callback) {
+    public void delete(final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
      * @param srcTokenLifetimePolicy the TokenLifetimePolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TokenLifetimePolicy srcTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback) {
+    public void put(TokenLifetimePolicy srcTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
         send(HttpMethod.PUT, callback, srcTokenLifetimePolicy);
     }
 

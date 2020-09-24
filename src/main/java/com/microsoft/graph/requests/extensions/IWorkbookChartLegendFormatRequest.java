@@ -21,7 +21,7 @@ public interface IWorkbookChartLegendFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartLegendFormat> callback);
+    void get(final ICallback<? super WorkbookChartLegendFormat> callback);
 
     /**
      * Gets the WorkbookChartLegendFormat from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartLegendFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartLegendFormat> callback);
+    void delete(final ICallback<? super WorkbookChartLegendFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartLegendFormatRequest extends IHttpRequest {
      * @param sourceWorkbookChartLegendFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat, final ICallback<WorkbookChartLegendFormat> callback);
+    void patch(final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat, final ICallback<? super WorkbookChartLegendFormat> callback);
 
     /**
      * Patches this WorkbookChartLegendFormat with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartLegendFormatRequest extends IHttpRequest {
      * @param newWorkbookChartLegendFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<WorkbookChartLegendFormat> callback);
+    void post(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<? super WorkbookChartLegendFormat> callback);
 
     /**
      * Posts a WorkbookChartLegendFormat with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartLegendFormatRequest extends IHttpRequest {
      * @param newWorkbookChartLegendFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<WorkbookChartLegendFormat> callback);
+    void put(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<? super WorkbookChartLegendFormat> callback);
 
     /**
      * Posts a WorkbookChartLegendFormat with a new object

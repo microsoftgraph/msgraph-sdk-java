@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IApplicationAddPasswordRequest extends IHttpRequest {
 
-    void post(final ICallback<PasswordCredential> callback);
+    void post(final ICallback<? super PasswordCredential> callback);
 
     PasswordCredential post() throws ClientException;
 

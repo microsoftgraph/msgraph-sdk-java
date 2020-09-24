@@ -37,7 +37,7 @@ public class WorkbookNamedItemAddRequest extends BaseRequest implements IWorkboo
         body = new WorkbookNamedItemAddBody();
     }
 
-    public void post(final ICallback<WorkbookNamedItem> callback) {
+    public void post(final ICallback<? super WorkbookNamedItem> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

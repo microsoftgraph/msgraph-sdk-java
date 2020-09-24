@@ -21,7 +21,7 @@ public interface IGroupLifecyclePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<GroupLifecyclePolicy> callback);
+    void get(final ICallback<? super GroupLifecyclePolicy> callback);
 
     /**
      * Gets the GroupLifecyclePolicy from the service
@@ -36,7 +36,7 @@ public interface IGroupLifecyclePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<GroupLifecyclePolicy> callback);
+    void delete(final ICallback<? super GroupLifecyclePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IGroupLifecyclePolicyRequest extends IHttpRequest {
      * @param sourceGroupLifecyclePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final GroupLifecyclePolicy sourceGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback);
+    void patch(final GroupLifecyclePolicy sourceGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback);
 
     /**
      * Patches this GroupLifecyclePolicy with a source
@@ -68,7 +68,7 @@ public interface IGroupLifecyclePolicyRequest extends IHttpRequest {
      * @param newGroupLifecyclePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback);
+    void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback);
 
     /**
      * Posts a GroupLifecyclePolicy with a new object
@@ -85,7 +85,7 @@ public interface IGroupLifecyclePolicyRequest extends IHttpRequest {
      * @param newGroupLifecyclePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback);
+    void put(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback);
 
     /**
      * Posts a GroupLifecyclePolicy with a new object

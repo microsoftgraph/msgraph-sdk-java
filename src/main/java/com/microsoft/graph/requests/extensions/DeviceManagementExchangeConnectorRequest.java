@@ -38,7 +38,7 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceManagementExchangeConnector> callback) {
+    public void get(final ICallback<? super DeviceManagementExchangeConnector> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceManagementExchangeConnector> callback) {
+    public void delete(final ICallback<? super DeviceManagementExchangeConnector> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest implem
      * @param sourceDeviceManagementExchangeConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementExchangeConnector sourceDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback) {
+    public void patch(final DeviceManagementExchangeConnector sourceDeviceManagementExchangeConnector, final ICallback<? super DeviceManagementExchangeConnector> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementExchangeConnector);
     }
 
@@ -97,7 +97,7 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest implem
      * @param newDeviceManagementExchangeConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback) {
+    public void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<? super DeviceManagementExchangeConnector> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementExchangeConnector);
     }
 
@@ -118,7 +118,7 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest implem
      * @param newDeviceManagementExchangeConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback) {
+    public void put(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<? super DeviceManagementExchangeConnector> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementExchangeConnector);
     }
 

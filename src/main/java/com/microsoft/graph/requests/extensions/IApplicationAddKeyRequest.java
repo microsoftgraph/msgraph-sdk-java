@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IApplicationAddKeyRequest extends IHttpRequest {
 
-    void post(final ICallback<KeyCredential> callback);
+    void post(final ICallback<? super KeyCredential> callback);
 
     KeyCredential post() throws ClientException;
 

@@ -23,6 +23,6 @@ public class CommsOperationCollectionPage extends BaseCollectionPage<CommsOperat
      * @param builder  the request builder for the next collection page
      */
     public CommsOperationCollectionPage(final CommsOperationCollectionResponse response, final ICommsOperationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

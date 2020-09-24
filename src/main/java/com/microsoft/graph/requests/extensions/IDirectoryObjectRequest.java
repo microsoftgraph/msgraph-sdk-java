@@ -21,7 +21,7 @@ public interface IDirectoryObjectRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DirectoryObject> callback);
+    void get(final ICallback<? super DirectoryObject> callback);
 
     /**
      * Gets the DirectoryObject from the service
@@ -36,7 +36,7 @@ public interface IDirectoryObjectRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DirectoryObject> callback);
+    void delete(final ICallback<? super DirectoryObject> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDirectoryObjectRequest extends IHttpRequest {
      * @param sourceDirectoryObject the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DirectoryObject sourceDirectoryObject, final ICallback<DirectoryObject> callback);
+    void patch(final DirectoryObject sourceDirectoryObject, final ICallback<? super DirectoryObject> callback);
 
     /**
      * Patches this DirectoryObject with a source
@@ -68,7 +68,7 @@ public interface IDirectoryObjectRequest extends IHttpRequest {
      * @param newDirectoryObject the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback);
+    void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback);
 
     /**
      * Posts a DirectoryObject with a new object
@@ -85,7 +85,7 @@ public interface IDirectoryObjectRequest extends IHttpRequest {
      * @param newDirectoryObject the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback);
+    void put(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback);
 
     /**
      * Posts a DirectoryObject with a new object

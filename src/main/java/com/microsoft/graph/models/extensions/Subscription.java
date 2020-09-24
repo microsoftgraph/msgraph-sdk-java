@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -56,6 +55,22 @@ public class Subscription extends Entity implements IJsonBackedObject {
     public String creatorId;
 
     /**
+     * The Encryption Certificate.
+     * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional. Required when includeResourceData is true.
+     */
+    @SerializedName("encryptionCertificate")
+    @Expose
+    public String encryptionCertificate;
+
+    /**
+     * The Encryption Certificate Id.
+     * A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.
+     */
+    @SerializedName("encryptionCertificateId")
+    @Expose
+    public String encryptionCertificateId;
+
+    /**
      * The Expiration Date Time.
      * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
      */
@@ -64,12 +79,28 @@ public class Subscription extends Entity implements IJsonBackedObject {
     public java.util.Calendar expirationDateTime;
 
     /**
+     * The Include Resource Data.
+     * When set to true, change notifications include resource data (such as content of a chat message). Optional.
+     */
+    @SerializedName("includeResourceData")
+    @Expose
+    public Boolean includeResourceData;
+
+    /**
      * The Latest Supported Tls Version.
-     * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
+     * 
      */
     @SerializedName("latestSupportedTlsVersion")
     @Expose
     public String latestSupportedTlsVersion;
+
+    /**
+     * The Lifecycle Notification Url.
+     * 
+     */
+    @SerializedName("lifecycleNotificationUrl")
+    @Expose
+    public String lifecycleNotificationUrl;
 
     /**
      * The Notification Url.

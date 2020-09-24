@@ -21,7 +21,7 @@ public interface IContractRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Contract> callback);
+    void get(final ICallback<? super Contract> callback);
 
     /**
      * Gets the Contract from the service
@@ -36,7 +36,7 @@ public interface IContractRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Contract> callback);
+    void delete(final ICallback<? super Contract> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IContractRequest extends IHttpRequest {
      * @param sourceContract the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Contract sourceContract, final ICallback<Contract> callback);
+    void patch(final Contract sourceContract, final ICallback<? super Contract> callback);
 
     /**
      * Patches this Contract with a source
@@ -68,7 +68,7 @@ public interface IContractRequest extends IHttpRequest {
      * @param newContract the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Contract newContract, final ICallback<Contract> callback);
+    void post(final Contract newContract, final ICallback<? super Contract> callback);
 
     /**
      * Posts a Contract with a new object
@@ -85,7 +85,7 @@ public interface IContractRequest extends IHttpRequest {
      * @param newContract the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Contract newContract, final ICallback<Contract> callback);
+    void put(final Contract newContract, final ICallback<? super Contract> callback);
 
     /**
      * Posts a Contract with a new object

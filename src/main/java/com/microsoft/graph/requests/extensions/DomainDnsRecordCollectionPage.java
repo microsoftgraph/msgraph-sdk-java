@@ -23,6 +23,6 @@ public class DomainDnsRecordCollectionPage extends BaseCollectionPage<DomainDnsR
      * @param builder  the request builder for the next collection page
      */
     public DomainDnsRecordCollectionPage(final DomainDnsRecordCollectionResponse response, final IDomainDnsRecordCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

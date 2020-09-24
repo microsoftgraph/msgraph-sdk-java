@@ -23,6 +23,6 @@ public class WorkbookPivotTableCollectionPage extends BaseCollectionPage<Workboo
      * @param builder  the request builder for the next collection page
      */
     public WorkbookPivotTableCollectionPage(final WorkbookPivotTableCollectionResponse response, final IWorkbookPivotTableCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

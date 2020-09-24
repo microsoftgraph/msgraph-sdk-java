@@ -21,7 +21,7 @@ public interface IAndroidCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidCompliancePolicy> callback);
+    void get(final ICallback<? super AndroidCompliancePolicy> callback);
 
     /**
      * Gets the AndroidCompliancePolicy from the service
@@ -36,7 +36,7 @@ public interface IAndroidCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidCompliancePolicy> callback);
+    void delete(final ICallback<? super AndroidCompliancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidCompliancePolicyRequest extends IHttpRequest {
      * @param sourceAndroidCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidCompliancePolicy sourceAndroidCompliancePolicy, final ICallback<AndroidCompliancePolicy> callback);
+    void patch(final AndroidCompliancePolicy sourceAndroidCompliancePolicy, final ICallback<? super AndroidCompliancePolicy> callback);
 
     /**
      * Patches this AndroidCompliancePolicy with a source
@@ -68,7 +68,7 @@ public interface IAndroidCompliancePolicyRequest extends IHttpRequest {
      * @param newAndroidCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidCompliancePolicy newAndroidCompliancePolicy, final ICallback<AndroidCompliancePolicy> callback);
+    void post(final AndroidCompliancePolicy newAndroidCompliancePolicy, final ICallback<? super AndroidCompliancePolicy> callback);
 
     /**
      * Posts a AndroidCompliancePolicy with a new object
@@ -85,7 +85,7 @@ public interface IAndroidCompliancePolicyRequest extends IHttpRequest {
      * @param newAndroidCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidCompliancePolicy newAndroidCompliancePolicy, final ICallback<AndroidCompliancePolicy> callback);
+    void put(final AndroidCompliancePolicy newAndroidCompliancePolicy, final ICallback<? super AndroidCompliancePolicy> callback);
 
     /**
      * Posts a AndroidCompliancePolicy with a new object

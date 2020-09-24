@@ -35,7 +35,7 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, ICertificateBasedAuthConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<ICertificateBasedAuthConfigurationCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super ICertificateBasedAuthConfigurationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

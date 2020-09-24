@@ -21,7 +21,7 @@ public interface IChangeTrackedEntityRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ChangeTrackedEntity> callback);
+    void get(final ICallback<? super ChangeTrackedEntity> callback);
 
     /**
      * Gets the ChangeTrackedEntity from the service
@@ -36,7 +36,7 @@ public interface IChangeTrackedEntityRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ChangeTrackedEntity> callback);
+    void delete(final ICallback<? super ChangeTrackedEntity> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IChangeTrackedEntityRequest extends IHttpRequest {
      * @param sourceChangeTrackedEntity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ChangeTrackedEntity sourceChangeTrackedEntity, final ICallback<ChangeTrackedEntity> callback);
+    void patch(final ChangeTrackedEntity sourceChangeTrackedEntity, final ICallback<? super ChangeTrackedEntity> callback);
 
     /**
      * Patches this ChangeTrackedEntity with a source
@@ -68,7 +68,7 @@ public interface IChangeTrackedEntityRequest extends IHttpRequest {
      * @param newChangeTrackedEntity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<ChangeTrackedEntity> callback);
+    void post(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<? super ChangeTrackedEntity> callback);
 
     /**
      * Posts a ChangeTrackedEntity with a new object
@@ -85,7 +85,7 @@ public interface IChangeTrackedEntityRequest extends IHttpRequest {
      * @param newChangeTrackedEntity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<ChangeTrackedEntity> callback);
+    void put(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<? super ChangeTrackedEntity> callback);
 
     /**
      * Posts a ChangeTrackedEntity with a new object

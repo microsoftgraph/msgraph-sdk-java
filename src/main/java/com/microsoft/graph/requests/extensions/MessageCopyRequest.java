@@ -37,7 +37,7 @@ public class MessageCopyRequest extends BaseRequest implements IMessageCopyReque
         body = new MessageCopyBody();
     }
 
-    public void post(final ICallback<Message> callback) {
+    public void post(final ICallback<? super Message> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

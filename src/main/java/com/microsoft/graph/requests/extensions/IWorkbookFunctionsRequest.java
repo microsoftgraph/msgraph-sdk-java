@@ -21,7 +21,7 @@ public interface IWorkbookFunctionsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookFunctions> callback);
+    void get(final ICallback<? super WorkbookFunctions> callback);
 
     /**
      * Gets the WorkbookFunctions from the service
@@ -36,7 +36,7 @@ public interface IWorkbookFunctionsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookFunctions> callback);
+    void delete(final ICallback<? super WorkbookFunctions> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookFunctionsRequest extends IHttpRequest {
      * @param sourceWorkbookFunctions the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookFunctions sourceWorkbookFunctions, final ICallback<WorkbookFunctions> callback);
+    void patch(final WorkbookFunctions sourceWorkbookFunctions, final ICallback<? super WorkbookFunctions> callback);
 
     /**
      * Patches this WorkbookFunctions with a source
@@ -68,7 +68,7 @@ public interface IWorkbookFunctionsRequest extends IHttpRequest {
      * @param newWorkbookFunctions the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookFunctions newWorkbookFunctions, final ICallback<WorkbookFunctions> callback);
+    void post(final WorkbookFunctions newWorkbookFunctions, final ICallback<? super WorkbookFunctions> callback);
 
     /**
      * Posts a WorkbookFunctions with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookFunctionsRequest extends IHttpRequest {
      * @param newWorkbookFunctions the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookFunctions newWorkbookFunctions, final ICallback<WorkbookFunctions> callback);
+    void put(final WorkbookFunctions newWorkbookFunctions, final ICallback<? super WorkbookFunctions> callback);
 
     /**
      * Posts a WorkbookFunctions with a new object

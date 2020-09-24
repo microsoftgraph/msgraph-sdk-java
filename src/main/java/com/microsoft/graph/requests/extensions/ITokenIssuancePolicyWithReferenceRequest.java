@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITokenIssuancePolicyWithReferenceRequest extends IHttpRequest {
 
-    void post(final TokenIssuancePolicy newTokenIssuancePolicy, final IJsonBackedObject payload, final ICallback<TokenIssuancePolicy> callback);
+    void post(final TokenIssuancePolicy newTokenIssuancePolicy, final IJsonBackedObject payload, final ICallback<? super TokenIssuancePolicy> callback);
 
     TokenIssuancePolicy post(final TokenIssuancePolicy newTokenIssuancePolicy, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<TokenIssuancePolicy> callback);
+    void get(final ICallback<? super TokenIssuancePolicy> callback);
 
     TokenIssuancePolicy get() throws ClientException;
 
-	void delete(final ICallback<TokenIssuancePolicy> callback);
+	void delete(final ICallback<? super TokenIssuancePolicy> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final TokenIssuancePolicy sourceTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback);
+	void patch(final TokenIssuancePolicy sourceTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback);
 
 	TokenIssuancePolicy patch(final TokenIssuancePolicy sourceTokenIssuancePolicy) throws ClientException;
 

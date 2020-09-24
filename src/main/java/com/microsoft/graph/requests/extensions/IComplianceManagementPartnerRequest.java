@@ -21,7 +21,7 @@ public interface IComplianceManagementPartnerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ComplianceManagementPartner> callback);
+    void get(final ICallback<? super ComplianceManagementPartner> callback);
 
     /**
      * Gets the ComplianceManagementPartner from the service
@@ -36,7 +36,7 @@ public interface IComplianceManagementPartnerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ComplianceManagementPartner> callback);
+    void delete(final ICallback<? super ComplianceManagementPartner> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IComplianceManagementPartnerRequest extends IHttpRequest {
      * @param sourceComplianceManagementPartner the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ComplianceManagementPartner sourceComplianceManagementPartner, final ICallback<ComplianceManagementPartner> callback);
+    void patch(final ComplianceManagementPartner sourceComplianceManagementPartner, final ICallback<? super ComplianceManagementPartner> callback);
 
     /**
      * Patches this ComplianceManagementPartner with a source
@@ -68,7 +68,7 @@ public interface IComplianceManagementPartnerRequest extends IHttpRequest {
      * @param newComplianceManagementPartner the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<ComplianceManagementPartner> callback);
+    void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<? super ComplianceManagementPartner> callback);
 
     /**
      * Posts a ComplianceManagementPartner with a new object
@@ -85,7 +85,7 @@ public interface IComplianceManagementPartnerRequest extends IHttpRequest {
      * @param newComplianceManagementPartner the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<ComplianceManagementPartner> callback);
+    void put(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<? super ComplianceManagementPartner> callback);
 
     /**
      * Posts a ComplianceManagementPartner with a new object

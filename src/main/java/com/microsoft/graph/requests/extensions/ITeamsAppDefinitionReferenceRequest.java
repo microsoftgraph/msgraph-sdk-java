@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITeamsAppDefinitionReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<TeamsAppDefinition> callback);
+    void delete(final ICallback<? super TeamsAppDefinition> callback);
 
     TeamsAppDefinition delete() throws ClientException;
 
@@ -48,7 +48,7 @@ public interface ITeamsAppDefinitionReferenceRequest extends IHttpRequest {
      * @param srcTeamsAppDefinition the TeamsAppDefinition to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(TeamsAppDefinition srcTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback);
+    void put(TeamsAppDefinition srcTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback);
 
     /**
      * Puts the TeamsAppDefinition

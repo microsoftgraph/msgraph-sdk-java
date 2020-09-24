@@ -58,7 +58,7 @@ public class ProfilePhotoStreamRequest extends BaseStreamRequest<ProfilePhoto> i
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<ProfilePhoto> callback) {
+    public void put(final byte[] fileContents, final ICallback<? super ProfilePhoto> callback) {
         send(fileContents, callback);
     }
 

@@ -6,11 +6,9 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
 
 
@@ -105,19 +103,7 @@ public class DetectedApp extends Entity implements IJsonBackedObject {
 
 
         if (json.has("managedDevices")) {
-            final ManagedDeviceCollectionResponse response = new ManagedDeviceCollectionResponse();
-            if (json.has("managedDevices@odata.nextLink")) {
-                response.nextLink = json.get("managedDevices@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedDevices").toString(), JsonObject[].class);
-            final ManagedDevice[] array = new ManagedDevice[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDevice.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managedDevices = new ManagedDeviceCollectionPage(response, null);
+            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), ManagedDeviceCollectionPage.class);
         }
     }
 }

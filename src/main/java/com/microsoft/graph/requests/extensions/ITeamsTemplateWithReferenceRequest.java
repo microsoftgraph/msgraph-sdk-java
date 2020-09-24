@@ -23,19 +23,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ITeamsTemplateWithReferenceRequest extends IHttpRequest {
 
-    void post(final TeamsTemplate newTeamsTemplate, final IJsonBackedObject payload, final ICallback<TeamsTemplate> callback);
+    void post(final TeamsTemplate newTeamsTemplate, final IJsonBackedObject payload, final ICallback<? super TeamsTemplate> callback);
 
     TeamsTemplate post(final TeamsTemplate newTeamsTemplate, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<TeamsTemplate> callback);
+    void get(final ICallback<? super TeamsTemplate> callback);
 
     TeamsTemplate get() throws ClientException;
 
-	void delete(final ICallback<TeamsTemplate> callback);
+	void delete(final ICallback<? super TeamsTemplate> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final TeamsTemplate sourceTeamsTemplate, final ICallback<TeamsTemplate> callback);
+	void patch(final TeamsTemplate sourceTeamsTemplate, final ICallback<? super TeamsTemplate> callback);
 
 	TeamsTemplate patch(final TeamsTemplate sourceTeamsTemplate) throws ClientException;
 

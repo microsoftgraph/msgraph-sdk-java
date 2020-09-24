@@ -21,7 +21,7 @@ public interface IDirectoryRoleTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DirectoryRoleTemplate> callback);
+    void get(final ICallback<? super DirectoryRoleTemplate> callback);
 
     /**
      * Gets the DirectoryRoleTemplate from the service
@@ -36,7 +36,7 @@ public interface IDirectoryRoleTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DirectoryRoleTemplate> callback);
+    void delete(final ICallback<? super DirectoryRoleTemplate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDirectoryRoleTemplateRequest extends IHttpRequest {
      * @param sourceDirectoryRoleTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DirectoryRoleTemplate sourceDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback);
+    void patch(final DirectoryRoleTemplate sourceDirectoryRoleTemplate, final ICallback<? super DirectoryRoleTemplate> callback);
 
     /**
      * Patches this DirectoryRoleTemplate with a source
@@ -68,7 +68,7 @@ public interface IDirectoryRoleTemplateRequest extends IHttpRequest {
      * @param newDirectoryRoleTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback);
+    void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<? super DirectoryRoleTemplate> callback);
 
     /**
      * Posts a DirectoryRoleTemplate with a new object
@@ -85,7 +85,7 @@ public interface IDirectoryRoleTemplateRequest extends IHttpRequest {
      * @param newDirectoryRoleTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback);
+    void put(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<? super DirectoryRoleTemplate> callback);
 
     /**
      * Posts a DirectoryRoleTemplate with a new object

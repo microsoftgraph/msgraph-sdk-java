@@ -21,7 +21,7 @@ public interface IMacOSCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSCompliancePolicy> callback);
+    void get(final ICallback<? super MacOSCompliancePolicy> callback);
 
     /**
      * Gets the MacOSCompliancePolicy from the service
@@ -36,7 +36,7 @@ public interface IMacOSCompliancePolicyRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSCompliancePolicy> callback);
+    void delete(final ICallback<? super MacOSCompliancePolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSCompliancePolicyRequest extends IHttpRequest {
      * @param sourceMacOSCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSCompliancePolicy sourceMacOSCompliancePolicy, final ICallback<MacOSCompliancePolicy> callback);
+    void patch(final MacOSCompliancePolicy sourceMacOSCompliancePolicy, final ICallback<? super MacOSCompliancePolicy> callback);
 
     /**
      * Patches this MacOSCompliancePolicy with a source
@@ -68,7 +68,7 @@ public interface IMacOSCompliancePolicyRequest extends IHttpRequest {
      * @param newMacOSCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSCompliancePolicy newMacOSCompliancePolicy, final ICallback<MacOSCompliancePolicy> callback);
+    void post(final MacOSCompliancePolicy newMacOSCompliancePolicy, final ICallback<? super MacOSCompliancePolicy> callback);
 
     /**
      * Posts a MacOSCompliancePolicy with a new object
@@ -85,7 +85,7 @@ public interface IMacOSCompliancePolicyRequest extends IHttpRequest {
      * @param newMacOSCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSCompliancePolicy newMacOSCompliancePolicy, final ICallback<MacOSCompliancePolicy> callback);
+    void put(final MacOSCompliancePolicy newMacOSCompliancePolicy, final ICallback<? super MacOSCompliancePolicy> callback);
 
     /**
      * Posts a MacOSCompliancePolicy with a new object

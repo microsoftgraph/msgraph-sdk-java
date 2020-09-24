@@ -73,7 +73,7 @@ public class DeviceConfigurationRequest extends BaseRequest implements IDeviceCo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceConfiguration> callback) {
+    public void get(final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -92,7 +92,7 @@ public class DeviceConfigurationRequest extends BaseRequest implements IDeviceCo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceConfiguration> callback) {
+    public void delete(final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -111,7 +111,7 @@ public class DeviceConfigurationRequest extends BaseRequest implements IDeviceCo
      * @param sourceDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfiguration sourceDeviceConfiguration, final ICallback<DeviceConfiguration> callback) {
+    public void patch(final DeviceConfiguration sourceDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfiguration);
     }
 
@@ -132,7 +132,7 @@ public class DeviceConfigurationRequest extends BaseRequest implements IDeviceCo
      * @param newDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfiguration newDeviceConfiguration, final ICallback<DeviceConfiguration> callback) {
+    public void post(final DeviceConfiguration newDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newDeviceConfiguration);
     }
 
@@ -153,7 +153,7 @@ public class DeviceConfigurationRequest extends BaseRequest implements IDeviceCo
      * @param newDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfiguration newDeviceConfiguration, final ICallback<DeviceConfiguration> callback) {
+    public void put(final DeviceConfiguration newDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfiguration);
     }
 

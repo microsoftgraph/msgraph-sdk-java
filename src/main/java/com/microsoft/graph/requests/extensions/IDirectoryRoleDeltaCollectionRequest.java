@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IDirectoryRoleDeltaCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDirectoryRoleDeltaCollectionPage> callback);
+    void get(final ICallback<? super IDirectoryRoleDeltaCollectionPage> callback);
 
     IDirectoryRoleDeltaCollectionPage get() throws ClientException;
 

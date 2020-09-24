@@ -45,7 +45,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Organization> callback) {
+    public void get(final ICallback<? super Organization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,7 +64,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Organization> callback) {
+    public void delete(final ICallback<? super Organization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @param sourceOrganization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Organization sourceOrganization, final ICallback<Organization> callback) {
+    public void patch(final Organization sourceOrganization, final ICallback<? super Organization> callback) {
         send(HttpMethod.PATCH, callback, sourceOrganization);
     }
 
@@ -104,7 +104,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @param newOrganization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Organization newOrganization, final ICallback<Organization> callback) {
+    public void post(final Organization newOrganization, final ICallback<? super Organization> callback) {
         send(HttpMethod.POST, callback, newOrganization);
     }
 
@@ -125,7 +125,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @param newOrganization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Organization newOrganization, final ICallback<Organization> callback) {
+    public void put(final Organization newOrganization, final ICallback<? super Organization> callback) {
         send(HttpMethod.PUT, callback, newOrganization);
     }
 

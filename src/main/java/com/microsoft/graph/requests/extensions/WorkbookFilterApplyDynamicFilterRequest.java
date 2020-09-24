@@ -36,7 +36,7 @@ public class WorkbookFilterApplyDynamicFilterRequest extends BaseRequest impleme
         body = new WorkbookFilterApplyDynamicFilterBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

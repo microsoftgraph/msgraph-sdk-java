@@ -21,7 +21,7 @@ public interface IWindows10EndpointProtectionConfigurationRequest extends IHttpR
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Windows10EndpointProtectionConfiguration> callback);
+    void get(final ICallback<? super Windows10EndpointProtectionConfiguration> callback);
 
     /**
      * Gets the Windows10EndpointProtectionConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindows10EndpointProtectionConfigurationRequest extends IHttpR
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Windows10EndpointProtectionConfiguration> callback);
+    void delete(final ICallback<? super Windows10EndpointProtectionConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindows10EndpointProtectionConfigurationRequest extends IHttpR
      * @param sourceWindows10EndpointProtectionConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Windows10EndpointProtectionConfiguration sourceWindows10EndpointProtectionConfiguration, final ICallback<Windows10EndpointProtectionConfiguration> callback);
+    void patch(final Windows10EndpointProtectionConfiguration sourceWindows10EndpointProtectionConfiguration, final ICallback<? super Windows10EndpointProtectionConfiguration> callback);
 
     /**
      * Patches this Windows10EndpointProtectionConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindows10EndpointProtectionConfigurationRequest extends IHttpR
      * @param newWindows10EndpointProtectionConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration, final ICallback<Windows10EndpointProtectionConfiguration> callback);
+    void post(final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration, final ICallback<? super Windows10EndpointProtectionConfiguration> callback);
 
     /**
      * Posts a Windows10EndpointProtectionConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindows10EndpointProtectionConfigurationRequest extends IHttpR
      * @param newWindows10EndpointProtectionConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration, final ICallback<Windows10EndpointProtectionConfiguration> callback);
+    void put(final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration, final ICallback<? super Windows10EndpointProtectionConfiguration> callback);
 
     /**
      * Posts a Windows10EndpointProtectionConfiguration with a new object

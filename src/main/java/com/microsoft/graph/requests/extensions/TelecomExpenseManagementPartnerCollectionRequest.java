@@ -40,7 +40,7 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, TelecomExpenseManagementPartnerCollectionResponse.class, ITelecomExpenseManagementPartnerCollectionPage.class);
     }
 
-    public void get(final ICallback<ITelecomExpenseManagementPartnerCollectionPage> callback) {
+    public void get(final ICallback<? super ITelecomExpenseManagementPartnerCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback) {
+    public void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<? super TelecomExpenseManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TelecomExpenseManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

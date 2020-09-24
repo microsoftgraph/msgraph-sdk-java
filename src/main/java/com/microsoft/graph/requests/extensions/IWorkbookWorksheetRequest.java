@@ -21,7 +21,7 @@ public interface IWorkbookWorksheetRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookWorksheet> callback);
+    void get(final ICallback<? super WorkbookWorksheet> callback);
 
     /**
      * Gets the WorkbookWorksheet from the service
@@ -36,7 +36,7 @@ public interface IWorkbookWorksheetRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookWorksheet> callback);
+    void delete(final ICallback<? super WorkbookWorksheet> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookWorksheetRequest extends IHttpRequest {
      * @param sourceWorkbookWorksheet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookWorksheet sourceWorkbookWorksheet, final ICallback<WorkbookWorksheet> callback);
+    void patch(final WorkbookWorksheet sourceWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback);
 
     /**
      * Patches this WorkbookWorksheet with a source
@@ -68,7 +68,7 @@ public interface IWorkbookWorksheetRequest extends IHttpRequest {
      * @param newWorkbookWorksheet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<WorkbookWorksheet> callback);
+    void post(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback);
 
     /**
      * Posts a WorkbookWorksheet with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookWorksheetRequest extends IHttpRequest {
      * @param newWorkbookWorksheet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<WorkbookWorksheet> callback);
+    void put(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<? super WorkbookWorksheet> callback);
 
     /**
      * Posts a WorkbookWorksheet with a new object

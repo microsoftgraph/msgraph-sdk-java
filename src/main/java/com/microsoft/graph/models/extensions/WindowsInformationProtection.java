@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionDataRecoveryCertificate;
 import com.microsoft.graph.models.generated.WindowsInformationProtectionEnforcementLevel;
@@ -17,9 +16,7 @@ import com.microsoft.graph.models.extensions.WindowsInformationProtectionApp;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionPage;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionPage;
 
 
@@ -276,51 +273,15 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
 
 
         if (json.has("assignments")) {
-            final TargetedManagedAppPolicyAssignmentCollectionResponse response = new TargetedManagedAppPolicyAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final TargetedManagedAppPolicyAssignment[] array = new TargetedManagedAppPolicyAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TargetedManagedAppPolicyAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new TargetedManagedAppPolicyAssignmentCollectionPage(response, null);
+            assignments = serializer.deserializeObject(json.get("assignments").toString(), TargetedManagedAppPolicyAssignmentCollectionPage.class);
         }
 
         if (json.has("exemptAppLockerFiles")) {
-            final WindowsInformationProtectionAppLockerFileCollectionResponse response = new WindowsInformationProtectionAppLockerFileCollectionResponse();
-            if (json.has("exemptAppLockerFiles@odata.nextLink")) {
-                response.nextLink = json.get("exemptAppLockerFiles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("exemptAppLockerFiles").toString(), JsonObject[].class);
-            final WindowsInformationProtectionAppLockerFile[] array = new WindowsInformationProtectionAppLockerFile[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsInformationProtectionAppLockerFile.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            exemptAppLockerFiles = new WindowsInformationProtectionAppLockerFileCollectionPage(response, null);
+            exemptAppLockerFiles = serializer.deserializeObject(json.get("exemptAppLockerFiles").toString(), WindowsInformationProtectionAppLockerFileCollectionPage.class);
         }
 
         if (json.has("protectedAppLockerFiles")) {
-            final WindowsInformationProtectionAppLockerFileCollectionResponse response = new WindowsInformationProtectionAppLockerFileCollectionResponse();
-            if (json.has("protectedAppLockerFiles@odata.nextLink")) {
-                response.nextLink = json.get("protectedAppLockerFiles@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("protectedAppLockerFiles").toString(), JsonObject[].class);
-            final WindowsInformationProtectionAppLockerFile[] array = new WindowsInformationProtectionAppLockerFile[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsInformationProtectionAppLockerFile.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            protectedAppLockerFiles = new WindowsInformationProtectionAppLockerFileCollectionPage(response, null);
+            protectedAppLockerFiles = serializer.deserializeObject(json.get("protectedAppLockerFiles").toString(), WindowsInformationProtectionAppLockerFileCollectionPage.class);
         }
     }
 }

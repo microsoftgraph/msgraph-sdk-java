@@ -21,7 +21,7 @@ public interface ICloudCommunicationsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<CloudCommunications> callback);
+    void get(final ICallback<? super CloudCommunications> callback);
 
     /**
      * Gets the CloudCommunications from the service
@@ -36,7 +36,7 @@ public interface ICloudCommunicationsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<CloudCommunications> callback);
+    void delete(final ICallback<? super CloudCommunications> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ICloudCommunicationsRequest extends IHttpRequest {
      * @param sourceCloudCommunications the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final CloudCommunications sourceCloudCommunications, final ICallback<CloudCommunications> callback);
+    void patch(final CloudCommunications sourceCloudCommunications, final ICallback<? super CloudCommunications> callback);
 
     /**
      * Patches this CloudCommunications with a source
@@ -68,7 +68,7 @@ public interface ICloudCommunicationsRequest extends IHttpRequest {
      * @param newCloudCommunications the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final CloudCommunications newCloudCommunications, final ICallback<CloudCommunications> callback);
+    void post(final CloudCommunications newCloudCommunications, final ICallback<? super CloudCommunications> callback);
 
     /**
      * Posts a CloudCommunications with a new object
@@ -85,7 +85,7 @@ public interface ICloudCommunicationsRequest extends IHttpRequest {
      * @param newCloudCommunications the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final CloudCommunications newCloudCommunications, final ICallback<CloudCommunications> callback);
+    void put(final CloudCommunications newCloudCommunications, final ICallback<? super CloudCommunications> callback);
 
     /**
      * Posts a CloudCommunications with a new object

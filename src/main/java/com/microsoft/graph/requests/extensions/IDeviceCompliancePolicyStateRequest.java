@@ -21,7 +21,7 @@ public interface IDeviceCompliancePolicyStateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceCompliancePolicyState> callback);
+    void get(final ICallback<? super DeviceCompliancePolicyState> callback);
 
     /**
      * Gets the DeviceCompliancePolicyState from the service
@@ -36,7 +36,7 @@ public interface IDeviceCompliancePolicyStateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceCompliancePolicyState> callback);
+    void delete(final ICallback<? super DeviceCompliancePolicyState> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceCompliancePolicyStateRequest extends IHttpRequest {
      * @param sourceDeviceCompliancePolicyState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceCompliancePolicyState sourceDeviceCompliancePolicyState, final ICallback<DeviceCompliancePolicyState> callback);
+    void patch(final DeviceCompliancePolicyState sourceDeviceCompliancePolicyState, final ICallback<? super DeviceCompliancePolicyState> callback);
 
     /**
      * Patches this DeviceCompliancePolicyState with a source
@@ -68,7 +68,7 @@ public interface IDeviceCompliancePolicyStateRequest extends IHttpRequest {
      * @param newDeviceCompliancePolicyState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceCompliancePolicyState newDeviceCompliancePolicyState, final ICallback<DeviceCompliancePolicyState> callback);
+    void post(final DeviceCompliancePolicyState newDeviceCompliancePolicyState, final ICallback<? super DeviceCompliancePolicyState> callback);
 
     /**
      * Posts a DeviceCompliancePolicyState with a new object
@@ -85,7 +85,7 @@ public interface IDeviceCompliancePolicyStateRequest extends IHttpRequest {
      * @param newDeviceCompliancePolicyState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceCompliancePolicyState newDeviceCompliancePolicyState, final ICallback<DeviceCompliancePolicyState> callback);
+    void put(final DeviceCompliancePolicyState newDeviceCompliancePolicyState, final ICallback<? super DeviceCompliancePolicyState> callback);
 
     /**
      * Posts a DeviceCompliancePolicyState with a new object

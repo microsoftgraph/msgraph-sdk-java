@@ -37,7 +37,7 @@ public class WorkbookFunctionsBesselKRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsBesselKBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

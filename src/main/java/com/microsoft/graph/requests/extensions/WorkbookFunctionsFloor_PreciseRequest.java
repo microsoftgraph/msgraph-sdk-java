@@ -37,7 +37,7 @@ public class WorkbookFunctionsFloor_PreciseRequest extends BaseRequest implement
         body = new WorkbookFunctionsFloor_PreciseBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

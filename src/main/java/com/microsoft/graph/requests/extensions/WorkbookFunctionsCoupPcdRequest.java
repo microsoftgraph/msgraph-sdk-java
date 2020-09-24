@@ -37,7 +37,7 @@ public class WorkbookFunctionsCoupPcdRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsCoupPcdBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

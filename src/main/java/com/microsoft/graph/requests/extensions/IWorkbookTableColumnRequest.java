@@ -21,7 +21,7 @@ public interface IWorkbookTableColumnRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookTableColumn> callback);
+    void get(final ICallback<? super WorkbookTableColumn> callback);
 
     /**
      * Gets the WorkbookTableColumn from the service
@@ -36,7 +36,7 @@ public interface IWorkbookTableColumnRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookTableColumn> callback);
+    void delete(final ICallback<? super WorkbookTableColumn> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookTableColumnRequest extends IHttpRequest {
      * @param sourceWorkbookTableColumn the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookTableColumn sourceWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback);
+    void patch(final WorkbookTableColumn sourceWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback);
 
     /**
      * Patches this WorkbookTableColumn with a source
@@ -68,7 +68,7 @@ public interface IWorkbookTableColumnRequest extends IHttpRequest {
      * @param newWorkbookTableColumn the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback);
+    void post(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback);
 
     /**
      * Posts a WorkbookTableColumn with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookTableColumnRequest extends IHttpRequest {
      * @param newWorkbookTableColumn the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback);
+    void put(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback);
 
     /**
      * Posts a WorkbookTableColumn with a new object

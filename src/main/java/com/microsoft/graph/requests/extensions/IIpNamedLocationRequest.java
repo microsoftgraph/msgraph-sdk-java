@@ -21,7 +21,7 @@ public interface IIpNamedLocationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IpNamedLocation> callback);
+    void get(final ICallback<? super IpNamedLocation> callback);
 
     /**
      * Gets the IpNamedLocation from the service
@@ -36,7 +36,7 @@ public interface IIpNamedLocationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IpNamedLocation> callback);
+    void delete(final ICallback<? super IpNamedLocation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIpNamedLocationRequest extends IHttpRequest {
      * @param sourceIpNamedLocation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IpNamedLocation sourceIpNamedLocation, final ICallback<IpNamedLocation> callback);
+    void patch(final IpNamedLocation sourceIpNamedLocation, final ICallback<? super IpNamedLocation> callback);
 
     /**
      * Patches this IpNamedLocation with a source
@@ -68,7 +68,7 @@ public interface IIpNamedLocationRequest extends IHttpRequest {
      * @param newIpNamedLocation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IpNamedLocation newIpNamedLocation, final ICallback<IpNamedLocation> callback);
+    void post(final IpNamedLocation newIpNamedLocation, final ICallback<? super IpNamedLocation> callback);
 
     /**
      * Posts a IpNamedLocation with a new object
@@ -85,7 +85,7 @@ public interface IIpNamedLocationRequest extends IHttpRequest {
      * @param newIpNamedLocation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IpNamedLocation newIpNamedLocation, final ICallback<IpNamedLocation> callback);
+    void put(final IpNamedLocation newIpNamedLocation, final ICallback<? super IpNamedLocation> callback);
 
     /**
      * Posts a IpNamedLocation with a new object

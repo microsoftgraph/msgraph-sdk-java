@@ -21,7 +21,7 @@ public interface IWebAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WebApp> callback);
+    void get(final ICallback<? super WebApp> callback);
 
     /**
      * Gets the WebApp from the service
@@ -36,7 +36,7 @@ public interface IWebAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WebApp> callback);
+    void delete(final ICallback<? super WebApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWebAppRequest extends IHttpRequest {
      * @param sourceWebApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WebApp sourceWebApp, final ICallback<WebApp> callback);
+    void patch(final WebApp sourceWebApp, final ICallback<? super WebApp> callback);
 
     /**
      * Patches this WebApp with a source
@@ -68,7 +68,7 @@ public interface IWebAppRequest extends IHttpRequest {
      * @param newWebApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WebApp newWebApp, final ICallback<WebApp> callback);
+    void post(final WebApp newWebApp, final ICallback<? super WebApp> callback);
 
     /**
      * Posts a WebApp with a new object
@@ -85,7 +85,7 @@ public interface IWebAppRequest extends IHttpRequest {
      * @param newWebApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WebApp newWebApp, final ICallback<WebApp> callback);
+    void put(final WebApp newWebApp, final ICallback<? super WebApp> callback);
 
     /**
      * Posts a WebApp with a new object

@@ -67,6 +67,8 @@ import com.microsoft.graph.requests.extensions.IDataPolicyOperationCollectionReq
 import com.microsoft.graph.requests.extensions.IDataPolicyOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequestBuilder;
@@ -545,6 +547,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the request builder for the Subscriptions object
      */
     ISubscriptionRequestBuilder subscriptions(final String id);
+
+    /**
+     * Gets the collection of Chats objects
+     *
+     * @return the request builder for the collection of Chats objects
+     */
+    IChatCollectionRequestBuilder chats();
+
+    /**
+     * Gets a single Chats
+     *
+     * @param id the id of the Chats to retrieve
+     * @return the request builder for the Chats object
+     */
+    IChatRequestBuilder chats(final String id);
 
     /**
      * Gets the collection of Teams objects

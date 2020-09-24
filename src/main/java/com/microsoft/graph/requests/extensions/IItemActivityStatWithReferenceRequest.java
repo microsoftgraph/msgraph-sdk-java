@@ -25,19 +25,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IItemActivityStatWithReferenceRequest extends IHttpRequest {
 
-    void post(final ItemActivityStat newItemActivityStat, final IJsonBackedObject payload, final ICallback<ItemActivityStat> callback);
+    void post(final ItemActivityStat newItemActivityStat, final IJsonBackedObject payload, final ICallback<? super ItemActivityStat> callback);
 
     ItemActivityStat post(final ItemActivityStat newItemActivityStat, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<ItemActivityStat> callback);
+    void get(final ICallback<? super ItemActivityStat> callback);
 
     ItemActivityStat get() throws ClientException;
 
-	void delete(final ICallback<ItemActivityStat> callback);
+	void delete(final ICallback<? super ItemActivityStat> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final ItemActivityStat sourceItemActivityStat, final ICallback<ItemActivityStat> callback);
+	void patch(final ItemActivityStat sourceItemActivityStat, final ICallback<? super ItemActivityStat> callback);
 
 	ItemActivityStat patch(final ItemActivityStat sourceItemActivityStat) throws ClientException;
 

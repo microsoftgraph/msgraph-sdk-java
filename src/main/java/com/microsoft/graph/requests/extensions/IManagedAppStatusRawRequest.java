@@ -21,7 +21,7 @@ public interface IManagedAppStatusRawRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedAppStatusRaw> callback);
+    void get(final ICallback<? super ManagedAppStatusRaw> callback);
 
     /**
      * Gets the ManagedAppStatusRaw from the service
@@ -36,7 +36,7 @@ public interface IManagedAppStatusRawRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedAppStatusRaw> callback);
+    void delete(final ICallback<? super ManagedAppStatusRaw> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAppStatusRawRequest extends IHttpRequest {
      * @param sourceManagedAppStatusRaw the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedAppStatusRaw sourceManagedAppStatusRaw, final ICallback<ManagedAppStatusRaw> callback);
+    void patch(final ManagedAppStatusRaw sourceManagedAppStatusRaw, final ICallback<? super ManagedAppStatusRaw> callback);
 
     /**
      * Patches this ManagedAppStatusRaw with a source
@@ -68,7 +68,7 @@ public interface IManagedAppStatusRawRequest extends IHttpRequest {
      * @param newManagedAppStatusRaw the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedAppStatusRaw newManagedAppStatusRaw, final ICallback<ManagedAppStatusRaw> callback);
+    void post(final ManagedAppStatusRaw newManagedAppStatusRaw, final ICallback<? super ManagedAppStatusRaw> callback);
 
     /**
      * Posts a ManagedAppStatusRaw with a new object
@@ -85,7 +85,7 @@ public interface IManagedAppStatusRawRequest extends IHttpRequest {
      * @param newManagedAppStatusRaw the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedAppStatusRaw newManagedAppStatusRaw, final ICallback<ManagedAppStatusRaw> callback);
+    void put(final ManagedAppStatusRaw newManagedAppStatusRaw, final ICallback<? super ManagedAppStatusRaw> callback);
 
     /**
      * Posts a ManagedAppStatusRaw with a new object

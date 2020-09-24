@@ -23,6 +23,6 @@ public class WindowsInformationProtectionAppLockerFileCollectionPage extends Bas
      * @param builder  the request builder for the next collection page
      */
     public WindowsInformationProtectionAppLockerFileCollectionPage(final WindowsInformationProtectionAppLockerFileCollectionResponse response, final IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -36,7 +36,7 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, IManagedDeviceCollectionPage.class);
     }
 
-    public void get(final ICallback<IManagedDeviceCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IManagedDeviceCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

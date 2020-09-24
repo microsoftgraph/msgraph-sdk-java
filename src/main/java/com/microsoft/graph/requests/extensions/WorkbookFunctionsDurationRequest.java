@@ -37,7 +37,7 @@ public class WorkbookFunctionsDurationRequest extends BaseRequest implements IWo
         body = new WorkbookFunctionsDurationBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

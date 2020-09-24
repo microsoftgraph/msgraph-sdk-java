@@ -21,7 +21,7 @@ public interface IMacOSDeviceFeaturesConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MacOSDeviceFeaturesConfiguration> callback);
+    void get(final ICallback<? super MacOSDeviceFeaturesConfiguration> callback);
 
     /**
      * Gets the MacOSDeviceFeaturesConfiguration from the service
@@ -36,7 +36,7 @@ public interface IMacOSDeviceFeaturesConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MacOSDeviceFeaturesConfiguration> callback);
+    void delete(final ICallback<? super MacOSDeviceFeaturesConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMacOSDeviceFeaturesConfigurationRequest extends IHttpRequest {
      * @param sourceMacOSDeviceFeaturesConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MacOSDeviceFeaturesConfiguration sourceMacOSDeviceFeaturesConfiguration, final ICallback<MacOSDeviceFeaturesConfiguration> callback);
+    void patch(final MacOSDeviceFeaturesConfiguration sourceMacOSDeviceFeaturesConfiguration, final ICallback<? super MacOSDeviceFeaturesConfiguration> callback);
 
     /**
      * Patches this MacOSDeviceFeaturesConfiguration with a source
@@ -68,7 +68,7 @@ public interface IMacOSDeviceFeaturesConfigurationRequest extends IHttpRequest {
      * @param newMacOSDeviceFeaturesConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<MacOSDeviceFeaturesConfiguration> callback);
+    void post(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<? super MacOSDeviceFeaturesConfiguration> callback);
 
     /**
      * Posts a MacOSDeviceFeaturesConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IMacOSDeviceFeaturesConfigurationRequest extends IHttpRequest {
      * @param newMacOSDeviceFeaturesConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<MacOSDeviceFeaturesConfiguration> callback);
+    void put(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<? super MacOSDeviceFeaturesConfiguration> callback);
 
     /**
      * Posts a MacOSDeviceFeaturesConfiguration with a new object

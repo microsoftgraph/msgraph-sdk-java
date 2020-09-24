@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRoleDefinitionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IRoleDefinitionCollectionPage> callback);
+    void get(final ICallback<? super IRoleDefinitionCollectionPage> callback);
 
     IRoleDefinitionCollectionPage get() throws ClientException;
 
-    void post(final RoleDefinition newRoleDefinition, final ICallback<RoleDefinition> callback);
+    void post(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback);
 
     RoleDefinition post(final RoleDefinition newRoleDefinition) throws ClientException;
 

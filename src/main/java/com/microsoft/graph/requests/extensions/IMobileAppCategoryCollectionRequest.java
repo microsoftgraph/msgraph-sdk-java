@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMobileAppCategoryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IMobileAppCategoryCollectionPage> callback);
+    void get(final ICallback<? super IMobileAppCategoryCollectionPage> callback);
 
     IMobileAppCategoryCollectionPage get() throws ClientException;
 
-    void post(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback);
+    void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback);
 
     MobileAppCategory post(final MobileAppCategory newMobileAppCategory) throws ClientException;
 

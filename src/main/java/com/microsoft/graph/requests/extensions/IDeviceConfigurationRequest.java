@@ -21,7 +21,7 @@ public interface IDeviceConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceConfiguration> callback);
+    void get(final ICallback<? super DeviceConfiguration> callback);
 
     /**
      * Gets the DeviceConfiguration from the service
@@ -36,7 +36,7 @@ public interface IDeviceConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceConfiguration> callback);
+    void delete(final ICallback<? super DeviceConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceConfigurationRequest extends IHttpRequest {
      * @param sourceDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceConfiguration sourceDeviceConfiguration, final ICallback<DeviceConfiguration> callback);
+    void patch(final DeviceConfiguration sourceDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback);
 
     /**
      * Patches this DeviceConfiguration with a source
@@ -68,7 +68,7 @@ public interface IDeviceConfigurationRequest extends IHttpRequest {
      * @param newDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceConfiguration newDeviceConfiguration, final ICallback<DeviceConfiguration> callback);
+    void post(final DeviceConfiguration newDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback);
 
     /**
      * Posts a DeviceConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IDeviceConfigurationRequest extends IHttpRequest {
      * @param newDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceConfiguration newDeviceConfiguration, final ICallback<DeviceConfiguration> callback);
+    void put(final DeviceConfiguration newDeviceConfiguration, final ICallback<? super DeviceConfiguration> callback);
 
     /**
      * Posts a DeviceConfiguration with a new object

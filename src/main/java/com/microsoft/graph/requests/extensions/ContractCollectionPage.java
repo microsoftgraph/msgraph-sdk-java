@@ -23,6 +23,6 @@ public class ContractCollectionPage extends BaseCollectionPage<Contract, IContra
      * @param builder  the request builder for the next collection page
      */
     public ContractCollectionPage(final ContractCollectionResponse response, final IContractCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

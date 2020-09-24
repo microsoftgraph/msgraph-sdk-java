@@ -21,7 +21,7 @@ public interface IWorkbookChartTitleRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartTitle> callback);
+    void get(final ICallback<? super WorkbookChartTitle> callback);
 
     /**
      * Gets the WorkbookChartTitle from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartTitleRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartTitle> callback);
+    void delete(final ICallback<? super WorkbookChartTitle> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartTitleRequest extends IHttpRequest {
      * @param sourceWorkbookChartTitle the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartTitle sourceWorkbookChartTitle, final ICallback<WorkbookChartTitle> callback);
+    void patch(final WorkbookChartTitle sourceWorkbookChartTitle, final ICallback<? super WorkbookChartTitle> callback);
 
     /**
      * Patches this WorkbookChartTitle with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartTitleRequest extends IHttpRequest {
      * @param newWorkbookChartTitle the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartTitle newWorkbookChartTitle, final ICallback<WorkbookChartTitle> callback);
+    void post(final WorkbookChartTitle newWorkbookChartTitle, final ICallback<? super WorkbookChartTitle> callback);
 
     /**
      * Posts a WorkbookChartTitle with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartTitleRequest extends IHttpRequest {
      * @param newWorkbookChartTitle the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartTitle newWorkbookChartTitle, final ICallback<WorkbookChartTitle> callback);
+    void put(final WorkbookChartTitle newWorkbookChartTitle, final ICallback<? super WorkbookChartTitle> callback);
 
     /**
      * Posts a WorkbookChartTitle with a new object

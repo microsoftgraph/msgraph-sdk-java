@@ -37,11 +37,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICallCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ICallCollectionPage> callback);
+    void get(final ICallback<? super ICallCollectionPage> callback);
 
     ICallCollectionPage get() throws ClientException;
 
-    void post(final Call newCall, final ICallback<Call> callback);
+    void post(final Call newCall, final ICallback<? super Call> callback);
 
     Call post(final Call newCall) throws ClientException;
 

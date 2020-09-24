@@ -36,7 +36,7 @@ public class WorkbookFilterApplyRequest extends BaseRequest implements IWorkbook
         body = new WorkbookFilterApplyBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

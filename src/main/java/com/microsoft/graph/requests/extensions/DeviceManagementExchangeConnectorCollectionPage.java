@@ -23,6 +23,6 @@ public class DeviceManagementExchangeConnectorCollectionPage extends BaseCollect
      * @param builder  the request builder for the next collection page
      */
     public DeviceManagementExchangeConnectorCollectionPage(final DeviceManagementExchangeConnectorCollectionResponse response, final IDeviceManagementExchangeConnectorCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

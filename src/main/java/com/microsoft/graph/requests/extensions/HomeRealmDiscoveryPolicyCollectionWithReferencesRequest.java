@@ -35,7 +35,7 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends Bas
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, IHomeRealmDiscoveryPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<IHomeRealmDiscoveryPolicyCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super IHomeRealmDiscoveryPolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

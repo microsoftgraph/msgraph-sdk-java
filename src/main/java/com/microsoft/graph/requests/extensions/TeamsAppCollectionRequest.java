@@ -40,7 +40,7 @@ public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsAppCol
         super(requestUrl, client, requestOptions, TeamsAppCollectionResponse.class, ITeamsAppCollectionPage.class);
     }
 
-    public void get(final ICallback<ITeamsAppCollectionPage> callback) {
+    public void get(final ICallback<? super ITeamsAppCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsAppCol
         return buildFromResponse(response);
     }
 
-    public void post(final TeamsApp newTeamsApp, final ICallback<TeamsApp> callback) {
+    public void post(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

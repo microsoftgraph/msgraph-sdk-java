@@ -21,7 +21,7 @@ public interface IIosManagedAppRegistrationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosManagedAppRegistration> callback);
+    void get(final ICallback<? super IosManagedAppRegistration> callback);
 
     /**
      * Gets the IosManagedAppRegistration from the service
@@ -36,7 +36,7 @@ public interface IIosManagedAppRegistrationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosManagedAppRegistration> callback);
+    void delete(final ICallback<? super IosManagedAppRegistration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosManagedAppRegistrationRequest extends IHttpRequest {
      * @param sourceIosManagedAppRegistration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosManagedAppRegistration sourceIosManagedAppRegistration, final ICallback<IosManagedAppRegistration> callback);
+    void patch(final IosManagedAppRegistration sourceIosManagedAppRegistration, final ICallback<? super IosManagedAppRegistration> callback);
 
     /**
      * Patches this IosManagedAppRegistration with a source
@@ -68,7 +68,7 @@ public interface IIosManagedAppRegistrationRequest extends IHttpRequest {
      * @param newIosManagedAppRegistration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosManagedAppRegistration newIosManagedAppRegistration, final ICallback<IosManagedAppRegistration> callback);
+    void post(final IosManagedAppRegistration newIosManagedAppRegistration, final ICallback<? super IosManagedAppRegistration> callback);
 
     /**
      * Posts a IosManagedAppRegistration with a new object
@@ -85,7 +85,7 @@ public interface IIosManagedAppRegistrationRequest extends IHttpRequest {
      * @param newIosManagedAppRegistration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosManagedAppRegistration newIosManagedAppRegistration, final ICallback<IosManagedAppRegistration> callback);
+    void put(final IosManagedAppRegistration newIosManagedAppRegistration, final ICallback<? super IosManagedAppRegistration> callback);
 
     /**
      * Posts a IosManagedAppRegistration with a new object

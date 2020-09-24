@@ -23,6 +23,6 @@ public class PostCollectionPage extends BaseCollectionPage<Post, IPostCollection
      * @param builder  the request builder for the next collection page
      */
     public PostCollectionPage(final PostCollectionResponse response, final IPostCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -21,7 +21,7 @@ public interface IMobileAppContentFileRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MobileAppContentFile> callback);
+    void get(final ICallback<? super MobileAppContentFile> callback);
 
     /**
      * Gets the MobileAppContentFile from the service
@@ -36,7 +36,7 @@ public interface IMobileAppContentFileRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MobileAppContentFile> callback);
+    void delete(final ICallback<? super MobileAppContentFile> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMobileAppContentFileRequest extends IHttpRequest {
      * @param sourceMobileAppContentFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MobileAppContentFile sourceMobileAppContentFile, final ICallback<MobileAppContentFile> callback);
+    void patch(final MobileAppContentFile sourceMobileAppContentFile, final ICallback<? super MobileAppContentFile> callback);
 
     /**
      * Patches this MobileAppContentFile with a source
@@ -68,7 +68,7 @@ public interface IMobileAppContentFileRequest extends IHttpRequest {
      * @param newMobileAppContentFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<MobileAppContentFile> callback);
+    void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<? super MobileAppContentFile> callback);
 
     /**
      * Posts a MobileAppContentFile with a new object
@@ -85,7 +85,7 @@ public interface IMobileAppContentFileRequest extends IHttpRequest {
      * @param newMobileAppContentFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MobileAppContentFile newMobileAppContentFile, final ICallback<MobileAppContentFile> callback);
+    void put(final MobileAppContentFile newMobileAppContentFile, final ICallback<? super MobileAppContentFile> callback);
 
     /**
      * Posts a MobileAppContentFile with a new object

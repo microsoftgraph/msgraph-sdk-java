@@ -23,6 +23,6 @@ public class NotebookCollectionPage extends BaseCollectionPage<Notebook, INotebo
      * @param builder  the request builder for the next collection page
      */
     public NotebookCollectionPage(final NotebookCollectionResponse response, final INotebookCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

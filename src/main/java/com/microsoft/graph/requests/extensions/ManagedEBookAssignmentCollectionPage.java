@@ -23,6 +23,6 @@ public class ManagedEBookAssignmentCollectionPage extends BaseCollectionPage<Man
      * @param builder  the request builder for the next collection page
      */
     public ManagedEBookAssignmentCollectionPage(final ManagedEBookAssignmentCollectionResponse response, final IManagedEBookAssignmentCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

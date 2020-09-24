@@ -36,7 +36,7 @@ public class DirectoryObjectValidatePropertiesRequest extends BaseRequest implem
         body = new DirectoryObjectValidatePropertiesBody();
     }
 
-    public void post(final ICallback<Void> callback) {
+    public void post(final ICallback<? super Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

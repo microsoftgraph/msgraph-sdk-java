@@ -23,6 +23,6 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionPage ex
      * @param builder  the request builder for the next collection page
      */
     public WindowsInformationProtectionNetworkLearningSummaryCollectionPage(final WindowsInformationProtectionNetworkLearningSummaryCollectionResponse response, final IWindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IUserReminderViewCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IUserReminderViewCollectionPage> callback);
+    void get(final ICallback<? super IUserReminderViewCollectionPage> callback);
 
     IUserReminderViewCollectionPage get() throws ClientException;
 

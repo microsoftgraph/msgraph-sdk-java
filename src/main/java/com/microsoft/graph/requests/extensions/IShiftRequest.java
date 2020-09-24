@@ -21,7 +21,7 @@ public interface IShiftRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Shift> callback);
+    void get(final ICallback<? super Shift> callback);
 
     /**
      * Gets the Shift from the service
@@ -36,7 +36,7 @@ public interface IShiftRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Shift> callback);
+    void delete(final ICallback<? super Shift> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IShiftRequest extends IHttpRequest {
      * @param sourceShift the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Shift sourceShift, final ICallback<Shift> callback);
+    void patch(final Shift sourceShift, final ICallback<? super Shift> callback);
 
     /**
      * Patches this Shift with a source
@@ -68,7 +68,7 @@ public interface IShiftRequest extends IHttpRequest {
      * @param newShift the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Shift newShift, final ICallback<Shift> callback);
+    void post(final Shift newShift, final ICallback<? super Shift> callback);
 
     /**
      * Posts a Shift with a new object
@@ -85,7 +85,7 @@ public interface IShiftRequest extends IHttpRequest {
      * @param newShift the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Shift newShift, final ICallback<Shift> callback);
+    void put(final Shift newShift, final ICallback<? super Shift> callback);
 
     /**
      * Posts a Shift with a new object

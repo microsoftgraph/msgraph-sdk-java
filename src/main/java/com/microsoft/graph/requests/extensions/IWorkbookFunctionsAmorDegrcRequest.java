@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookFunctionsAmorDegrcRequest extends IHttpRequest {
 
-    void post(final ICallback<WorkbookFunctionResult> callback);
+    void post(final ICallback<? super WorkbookFunctionResult> callback);
 
     WorkbookFunctionResult post() throws ClientException;
 

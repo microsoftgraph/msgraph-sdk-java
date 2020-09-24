@@ -23,6 +23,6 @@ public class DeviceEnrollmentConfigurationCollectionPage extends BaseCollectionP
      * @param builder  the request builder for the next collection page
      */
     public DeviceEnrollmentConfigurationCollectionPage(final DeviceEnrollmentConfigurationCollectionResponse response, final IDeviceEnrollmentConfigurationCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

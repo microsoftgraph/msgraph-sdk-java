@@ -21,7 +21,7 @@ public interface IWorkbookRangeSortRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookRangeSort> callback);
+    void get(final ICallback<? super WorkbookRangeSort> callback);
 
     /**
      * Gets the WorkbookRangeSort from the service
@@ -36,7 +36,7 @@ public interface IWorkbookRangeSortRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookRangeSort> callback);
+    void delete(final ICallback<? super WorkbookRangeSort> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookRangeSortRequest extends IHttpRequest {
      * @param sourceWorkbookRangeSort the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookRangeSort sourceWorkbookRangeSort, final ICallback<WorkbookRangeSort> callback);
+    void patch(final WorkbookRangeSort sourceWorkbookRangeSort, final ICallback<? super WorkbookRangeSort> callback);
 
     /**
      * Patches this WorkbookRangeSort with a source
@@ -68,7 +68,7 @@ public interface IWorkbookRangeSortRequest extends IHttpRequest {
      * @param newWorkbookRangeSort the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<WorkbookRangeSort> callback);
+    void post(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<? super WorkbookRangeSort> callback);
 
     /**
      * Posts a WorkbookRangeSort with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookRangeSortRequest extends IHttpRequest {
      * @param newWorkbookRangeSort the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<WorkbookRangeSort> callback);
+    void put(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<? super WorkbookRangeSort> callback);
 
     /**
      * Posts a WorkbookRangeSort with a new object

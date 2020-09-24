@@ -21,7 +21,7 @@ public interface IDeviceComplianceActionItemRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceComplianceActionItem> callback);
+    void get(final ICallback<? super DeviceComplianceActionItem> callback);
 
     /**
      * Gets the DeviceComplianceActionItem from the service
@@ -36,7 +36,7 @@ public interface IDeviceComplianceActionItemRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceComplianceActionItem> callback);
+    void delete(final ICallback<? super DeviceComplianceActionItem> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceComplianceActionItemRequest extends IHttpRequest {
      * @param sourceDeviceComplianceActionItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceComplianceActionItem sourceDeviceComplianceActionItem, final ICallback<DeviceComplianceActionItem> callback);
+    void patch(final DeviceComplianceActionItem sourceDeviceComplianceActionItem, final ICallback<? super DeviceComplianceActionItem> callback);
 
     /**
      * Patches this DeviceComplianceActionItem with a source
@@ -68,7 +68,7 @@ public interface IDeviceComplianceActionItemRequest extends IHttpRequest {
      * @param newDeviceComplianceActionItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<DeviceComplianceActionItem> callback);
+    void post(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<? super DeviceComplianceActionItem> callback);
 
     /**
      * Posts a DeviceComplianceActionItem with a new object
@@ -85,7 +85,7 @@ public interface IDeviceComplianceActionItemRequest extends IHttpRequest {
      * @param newDeviceComplianceActionItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<DeviceComplianceActionItem> callback);
+    void put(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<? super DeviceComplianceActionItem> callback);
 
     /**
      * Posts a DeviceComplianceActionItem with a new object

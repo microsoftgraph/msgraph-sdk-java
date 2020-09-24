@@ -37,7 +37,7 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest implements IServi
         body = new ServicePrincipalAddKeyBody();
     }
 
-    public void post(final ICallback<KeyCredential> callback) {
+    public void post(final ICallback<? super KeyCredential> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

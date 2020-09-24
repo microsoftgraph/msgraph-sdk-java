@@ -23,6 +23,6 @@ public class DeviceCompliancePolicyCollectionPage extends BaseCollectionPage<Dev
      * @param builder  the request builder for the next collection page
      */
     public DeviceCompliancePolicyCollectionPage(final DeviceCompliancePolicyCollectionResponse response, final IDeviceCompliancePolicyCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

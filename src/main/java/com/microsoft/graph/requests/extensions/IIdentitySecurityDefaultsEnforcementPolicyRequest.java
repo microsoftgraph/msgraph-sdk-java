@@ -21,7 +21,7 @@ public interface IIdentitySecurityDefaultsEnforcementPolicyRequest extends IHttp
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IdentitySecurityDefaultsEnforcementPolicy> callback);
+    void get(final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback);
 
     /**
      * Gets the IdentitySecurityDefaultsEnforcementPolicy from the service
@@ -36,7 +36,7 @@ public interface IIdentitySecurityDefaultsEnforcementPolicyRequest extends IHttp
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IdentitySecurityDefaultsEnforcementPolicy> callback);
+    void delete(final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIdentitySecurityDefaultsEnforcementPolicyRequest extends IHttp
      * @param sourceIdentitySecurityDefaultsEnforcementPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IdentitySecurityDefaultsEnforcementPolicy sourceIdentitySecurityDefaultsEnforcementPolicy, final ICallback<IdentitySecurityDefaultsEnforcementPolicy> callback);
+    void patch(final IdentitySecurityDefaultsEnforcementPolicy sourceIdentitySecurityDefaultsEnforcementPolicy, final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback);
 
     /**
      * Patches this IdentitySecurityDefaultsEnforcementPolicy with a source
@@ -68,7 +68,7 @@ public interface IIdentitySecurityDefaultsEnforcementPolicyRequest extends IHttp
      * @param newIdentitySecurityDefaultsEnforcementPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy, final ICallback<IdentitySecurityDefaultsEnforcementPolicy> callback);
+    void post(final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy, final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback);
 
     /**
      * Posts a IdentitySecurityDefaultsEnforcementPolicy with a new object
@@ -85,7 +85,7 @@ public interface IIdentitySecurityDefaultsEnforcementPolicyRequest extends IHttp
      * @param newIdentitySecurityDefaultsEnforcementPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy, final ICallback<IdentitySecurityDefaultsEnforcementPolicy> callback);
+    void put(final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy, final ICallback<? super IdentitySecurityDefaultsEnforcementPolicy> callback);
 
     /**
      * Posts a IdentitySecurityDefaultsEnforcementPolicy with a new object

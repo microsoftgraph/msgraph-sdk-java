@@ -24,11 +24,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAttachmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IAttachmentCollectionPage> callback);
+    void get(final ICallback<? super IAttachmentCollectionPage> callback);
 
     IAttachmentCollectionPage get() throws ClientException;
 
-    void post(final Attachment newAttachment, final ICallback<Attachment> callback);
+    void post(final Attachment newAttachment, final ICallback<? super Attachment> callback);
 
     Attachment post(final Attachment newAttachment) throws ClientException;
 

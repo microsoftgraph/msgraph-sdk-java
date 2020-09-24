@@ -21,7 +21,7 @@ public interface IDeviceManagementPartnerRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceManagementPartner> callback);
+    void get(final ICallback<? super DeviceManagementPartner> callback);
 
     /**
      * Gets the DeviceManagementPartner from the service
@@ -36,7 +36,7 @@ public interface IDeviceManagementPartnerRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceManagementPartner> callback);
+    void delete(final ICallback<? super DeviceManagementPartner> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceManagementPartnerRequest extends IHttpRequest {
      * @param sourceDeviceManagementPartner the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceManagementPartner sourceDeviceManagementPartner, final ICallback<DeviceManagementPartner> callback);
+    void patch(final DeviceManagementPartner sourceDeviceManagementPartner, final ICallback<? super DeviceManagementPartner> callback);
 
     /**
      * Patches this DeviceManagementPartner with a source
@@ -68,7 +68,7 @@ public interface IDeviceManagementPartnerRequest extends IHttpRequest {
      * @param newDeviceManagementPartner the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<DeviceManagementPartner> callback);
+    void post(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<? super DeviceManagementPartner> callback);
 
     /**
      * Posts a DeviceManagementPartner with a new object
@@ -85,7 +85,7 @@ public interface IDeviceManagementPartnerRequest extends IHttpRequest {
      * @param newDeviceManagementPartner the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<DeviceManagementPartner> callback);
+    void put(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<? super DeviceManagementPartner> callback);
 
     /**
      * Posts a DeviceManagementPartner with a new object

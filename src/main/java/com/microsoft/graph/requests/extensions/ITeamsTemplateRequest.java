@@ -21,7 +21,7 @@ public interface ITeamsTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TeamsTemplate> callback);
+    void get(final ICallback<? super TeamsTemplate> callback);
 
     /**
      * Gets the TeamsTemplate from the service
@@ -36,7 +36,7 @@ public interface ITeamsTemplateRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TeamsTemplate> callback);
+    void delete(final ICallback<? super TeamsTemplate> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamsTemplateRequest extends IHttpRequest {
      * @param sourceTeamsTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TeamsTemplate sourceTeamsTemplate, final ICallback<TeamsTemplate> callback);
+    void patch(final TeamsTemplate sourceTeamsTemplate, final ICallback<? super TeamsTemplate> callback);
 
     /**
      * Patches this TeamsTemplate with a source
@@ -68,7 +68,7 @@ public interface ITeamsTemplateRequest extends IHttpRequest {
      * @param newTeamsTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TeamsTemplate newTeamsTemplate, final ICallback<TeamsTemplate> callback);
+    void post(final TeamsTemplate newTeamsTemplate, final ICallback<? super TeamsTemplate> callback);
 
     /**
      * Posts a TeamsTemplate with a new object
@@ -85,7 +85,7 @@ public interface ITeamsTemplateRequest extends IHttpRequest {
      * @param newTeamsTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TeamsTemplate newTeamsTemplate, final ICallback<TeamsTemplate> callback);
+    void put(final TeamsTemplate newTeamsTemplate, final ICallback<? super TeamsTemplate> callback);
 
     /**
      * Posts a TeamsTemplate with a new object

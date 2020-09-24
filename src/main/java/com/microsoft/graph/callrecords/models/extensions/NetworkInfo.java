@@ -6,7 +6,6 @@ package com.microsoft.graph.callrecords.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.callrecords.models.generated.NetworkConnectionType;
 import com.microsoft.graph.callrecords.models.generated.WifiBand;

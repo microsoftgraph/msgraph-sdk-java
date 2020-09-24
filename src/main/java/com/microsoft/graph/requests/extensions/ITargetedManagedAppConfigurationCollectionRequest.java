@@ -24,11 +24,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITargetedManagedAppConfigurationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<ITargetedManagedAppConfigurationCollectionPage> callback);
+    void get(final ICallback<? super ITargetedManagedAppConfigurationCollectionPage> callback);
 
     ITargetedManagedAppConfigurationCollectionPage get() throws ClientException;
 
-    void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<TargetedManagedAppConfiguration> callback);
+    void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback);
 
     TargetedManagedAppConfiguration post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) throws ClientException;
 

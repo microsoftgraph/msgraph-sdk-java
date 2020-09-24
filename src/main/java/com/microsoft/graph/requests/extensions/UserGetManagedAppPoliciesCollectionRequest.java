@@ -39,7 +39,7 @@ public class UserGetManagedAppPoliciesCollectionRequest extends BaseCollectionRe
     }
 
 
-    public void get(final ICallback<IUserGetManagedAppPoliciesCollectionPage> callback) {
+    public void get(final ICallback<? super IUserGetManagedAppPoliciesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

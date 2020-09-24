@@ -39,7 +39,7 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, IOAuth2PermissionGrantCollectionPage.class);
     }
 
-    public void get(final ICallback<IOAuth2PermissionGrantCollectionPage> callback) {
+    public void get(final ICallback<? super IOAuth2PermissionGrantCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback) {
+    public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OAuth2PermissionGrantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

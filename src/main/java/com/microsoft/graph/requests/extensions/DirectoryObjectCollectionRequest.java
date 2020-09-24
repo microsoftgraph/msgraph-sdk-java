@@ -40,7 +40,7 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
         super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, IDirectoryObjectCollectionPage.class);
     }
 
-    public void get(final ICallback<IDirectoryObjectCollectionPage> callback) {
+    public void get(final ICallback<? super IDirectoryObjectCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
         return buildFromResponse(response);
     }
 
-    public void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {
+    public void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryObjectRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

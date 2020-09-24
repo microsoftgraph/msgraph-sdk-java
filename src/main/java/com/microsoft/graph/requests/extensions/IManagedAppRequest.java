@@ -21,7 +21,7 @@ public interface IManagedAppRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ManagedApp> callback);
+    void get(final ICallback<? super ManagedApp> callback);
 
     /**
      * Gets the ManagedApp from the service
@@ -36,7 +36,7 @@ public interface IManagedAppRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ManagedApp> callback);
+    void delete(final ICallback<? super ManagedApp> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IManagedAppRequest extends IHttpRequest {
      * @param sourceManagedApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ManagedApp sourceManagedApp, final ICallback<ManagedApp> callback);
+    void patch(final ManagedApp sourceManagedApp, final ICallback<? super ManagedApp> callback);
 
     /**
      * Patches this ManagedApp with a source
@@ -68,7 +68,7 @@ public interface IManagedAppRequest extends IHttpRequest {
      * @param newManagedApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ManagedApp newManagedApp, final ICallback<ManagedApp> callback);
+    void post(final ManagedApp newManagedApp, final ICallback<? super ManagedApp> callback);
 
     /**
      * Posts a ManagedApp with a new object
@@ -85,7 +85,7 @@ public interface IManagedAppRequest extends IHttpRequest {
      * @param newManagedApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ManagedApp newManagedApp, final ICallback<ManagedApp> callback);
+    void put(final ManagedApp newManagedApp, final ICallback<? super ManagedApp> callback);
 
     /**
      * Posts a ManagedApp with a new object

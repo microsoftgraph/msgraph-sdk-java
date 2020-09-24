@@ -40,7 +40,7 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, InferenceClassificationOverrideCollectionResponse.class, IInferenceClassificationOverrideCollectionPage.class);
     }
 
-    public void get(final ICallback<IInferenceClassificationOverrideCollectionPage> callback) {
+    public void get(final ICallback<? super IInferenceClassificationOverrideCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback) {
+    public void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<? super InferenceClassificationOverride> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new InferenceClassificationOverrideRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

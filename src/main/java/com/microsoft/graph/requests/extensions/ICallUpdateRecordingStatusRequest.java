@@ -20,7 +20,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICallUpdateRecordingStatusRequest extends IHttpRequest {
 
-    void post(final ICallback<UpdateRecordingStatusOperation> callback);
+    void post(final ICallback<? super UpdateRecordingStatusOperation> callback);
 
     UpdateRecordingStatusOperation post() throws ClientException;
 

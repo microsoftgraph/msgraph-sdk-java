@@ -21,7 +21,7 @@ public interface ITeamworkRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Teamwork> callback);
+    void get(final ICallback<? super Teamwork> callback);
 
     /**
      * Gets the Teamwork from the service
@@ -36,7 +36,7 @@ public interface ITeamworkRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Teamwork> callback);
+    void delete(final ICallback<? super Teamwork> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamworkRequest extends IHttpRequest {
      * @param sourceTeamwork the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Teamwork sourceTeamwork, final ICallback<Teamwork> callback);
+    void patch(final Teamwork sourceTeamwork, final ICallback<? super Teamwork> callback);
 
     /**
      * Patches this Teamwork with a source
@@ -68,7 +68,7 @@ public interface ITeamworkRequest extends IHttpRequest {
      * @param newTeamwork the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Teamwork newTeamwork, final ICallback<Teamwork> callback);
+    void post(final Teamwork newTeamwork, final ICallback<? super Teamwork> callback);
 
     /**
      * Posts a Teamwork with a new object
@@ -85,7 +85,7 @@ public interface ITeamworkRequest extends IHttpRequest {
      * @param newTeamwork the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Teamwork newTeamwork, final ICallback<Teamwork> callback);
+    void put(final Teamwork newTeamwork, final ICallback<? super Teamwork> callback);
 
     /**
      * Posts a Teamwork with a new object

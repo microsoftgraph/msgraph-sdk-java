@@ -37,7 +37,7 @@ public class IosStoreAppRequest extends BaseRequest implements IIosStoreAppReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<IosStoreApp> callback) {
+    public void get(final ICallback<? super IosStoreApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosStoreAppRequest extends BaseRequest implements IIosStoreAppReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<IosStoreApp> callback) {
+    public void delete(final ICallback<? super IosStoreApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosStoreAppRequest extends BaseRequest implements IIosStoreAppReque
      * @param sourceIosStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosStoreApp sourceIosStoreApp, final ICallback<IosStoreApp> callback) {
+    public void patch(final IosStoreApp sourceIosStoreApp, final ICallback<? super IosStoreApp> callback) {
         send(HttpMethod.PATCH, callback, sourceIosStoreApp);
     }
 
@@ -96,7 +96,7 @@ public class IosStoreAppRequest extends BaseRequest implements IIosStoreAppReque
      * @param newIosStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosStoreApp newIosStoreApp, final ICallback<IosStoreApp> callback) {
+    public void post(final IosStoreApp newIosStoreApp, final ICallback<? super IosStoreApp> callback) {
         send(HttpMethod.POST, callback, newIosStoreApp);
     }
 
@@ -117,7 +117,7 @@ public class IosStoreAppRequest extends BaseRequest implements IIosStoreAppReque
      * @param newIosStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosStoreApp newIosStoreApp, final ICallback<IosStoreApp> callback) {
+    public void put(final IosStoreApp newIosStoreApp, final ICallback<? super IosStoreApp> callback) {
         send(HttpMethod.PUT, callback, newIosStoreApp);
     }
 

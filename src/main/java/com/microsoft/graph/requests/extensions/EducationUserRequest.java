@@ -47,7 +47,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<EducationUser> callback) {
+    public void get(final ICallback<? super EducationUser> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,7 +66,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<EducationUser> callback) {
+    public void delete(final ICallback<? super EducationUser> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +85,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @param sourceEducationUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationUser sourceEducationUser, final ICallback<EducationUser> callback) {
+    public void patch(final EducationUser sourceEducationUser, final ICallback<? super EducationUser> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationUser);
     }
 
@@ -106,7 +106,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @param newEducationUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationUser newEducationUser, final ICallback<EducationUser> callback) {
+    public void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
         send(HttpMethod.POST, callback, newEducationUser);
     }
 
@@ -127,7 +127,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @param newEducationUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationUser newEducationUser, final ICallback<EducationUser> callback) {
+    public void put(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
         send(HttpMethod.PUT, callback, newEducationUser);
     }
 

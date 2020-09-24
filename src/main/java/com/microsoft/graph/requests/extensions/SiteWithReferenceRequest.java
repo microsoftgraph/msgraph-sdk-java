@@ -64,7 +64,7 @@ public class SiteWithReferenceRequest extends BaseRequest implements ISiteWithRe
         super(requestUrl, client, requestOptions, Site.class);
     }
 
-    public void post(final Site newSite, final IJsonBackedObject payload, final ICallback<Site> callback) {
+    public void post(final Site newSite, final IJsonBackedObject payload, final ICallback<? super Site> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -76,7 +76,7 @@ public class SiteWithReferenceRequest extends BaseRequest implements ISiteWithRe
         return null;
     }
 
-    public void get(final ICallback<Site> callback) {
+    public void get(final ICallback<? super Site> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -84,7 +84,7 @@ public class SiteWithReferenceRequest extends BaseRequest implements ISiteWithRe
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<Site> callback) {
+	public void delete(final ICallback<? super Site> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -92,7 +92,7 @@ public class SiteWithReferenceRequest extends BaseRequest implements ISiteWithRe
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Site sourceSite, final ICallback<Site> callback) {
+	public void patch(final Site sourceSite, final ICallback<? super Site> callback) {
 		send(HttpMethod.PATCH, callback, sourceSite);
 	}
 

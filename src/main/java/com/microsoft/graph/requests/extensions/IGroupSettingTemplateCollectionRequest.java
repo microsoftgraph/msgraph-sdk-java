@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupSettingTemplateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IGroupSettingTemplateCollectionPage> callback);
+    void get(final ICallback<? super IGroupSettingTemplateCollectionPage> callback);
 
     IGroupSettingTemplateCollectionPage get() throws ClientException;
 
-    void post(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<GroupSettingTemplate> callback);
+    void post(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<? super GroupSettingTemplate> callback);
 
     GroupSettingTemplate post(final GroupSettingTemplate newGroupSettingTemplate) throws ClientException;
 

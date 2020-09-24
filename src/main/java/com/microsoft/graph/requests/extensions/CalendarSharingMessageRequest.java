@@ -38,7 +38,7 @@ public class CalendarSharingMessageRequest extends BaseRequest implements ICalen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<CalendarSharingMessage> callback) {
+    public void get(final ICallback<? super CalendarSharingMessage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class CalendarSharingMessageRequest extends BaseRequest implements ICalen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<CalendarSharingMessage> callback) {
+    public void delete(final ICallback<? super CalendarSharingMessage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class CalendarSharingMessageRequest extends BaseRequest implements ICalen
      * @param sourceCalendarSharingMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CalendarSharingMessage sourceCalendarSharingMessage, final ICallback<CalendarSharingMessage> callback) {
+    public void patch(final CalendarSharingMessage sourceCalendarSharingMessage, final ICallback<? super CalendarSharingMessage> callback) {
         send(HttpMethod.PATCH, callback, sourceCalendarSharingMessage);
     }
 
@@ -97,7 +97,7 @@ public class CalendarSharingMessageRequest extends BaseRequest implements ICalen
      * @param newCalendarSharingMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<CalendarSharingMessage> callback) {
+    public void post(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<? super CalendarSharingMessage> callback) {
         send(HttpMethod.POST, callback, newCalendarSharingMessage);
     }
 
@@ -118,7 +118,7 @@ public class CalendarSharingMessageRequest extends BaseRequest implements ICalen
      * @param newCalendarSharingMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<CalendarSharingMessage> callback) {
+    public void put(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<? super CalendarSharingMessage> callback) {
         send(HttpMethod.PUT, callback, newCalendarSharingMessage);
     }
 

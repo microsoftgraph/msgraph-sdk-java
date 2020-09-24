@@ -23,6 +23,6 @@ public class DriveItemCollectionPage extends BaseCollectionPage<DriveItem, IDriv
      * @param builder  the request builder for the next collection page
      */
     public DriveItemCollectionPage(final DriveItemCollectionResponse response, final IDriveItemCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

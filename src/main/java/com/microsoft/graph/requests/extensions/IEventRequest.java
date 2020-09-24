@@ -21,7 +21,7 @@ public interface IEventRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Event> callback);
+    void get(final ICallback<? super Event> callback);
 
     /**
      * Gets the Event from the service
@@ -36,7 +36,7 @@ public interface IEventRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Event> callback);
+    void delete(final ICallback<? super Event> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IEventRequest extends IHttpRequest {
      * @param sourceEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Event sourceEvent, final ICallback<Event> callback);
+    void patch(final Event sourceEvent, final ICallback<? super Event> callback);
 
     /**
      * Patches this Event with a source
@@ -68,7 +68,7 @@ public interface IEventRequest extends IHttpRequest {
      * @param newEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Event newEvent, final ICallback<Event> callback);
+    void post(final Event newEvent, final ICallback<? super Event> callback);
 
     /**
      * Posts a Event with a new object
@@ -85,7 +85,7 @@ public interface IEventRequest extends IHttpRequest {
      * @param newEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Event newEvent, final ICallback<Event> callback);
+    void put(final Event newEvent, final ICallback<? super Event> callback);
 
     /**
      * Posts a Event with a new object

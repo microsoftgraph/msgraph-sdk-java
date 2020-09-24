@@ -37,7 +37,7 @@ public class UnmuteParticipantOperationRequest extends BaseRequest implements IU
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<UnmuteParticipantOperation> callback) {
+    public void get(final ICallback<? super UnmuteParticipantOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class UnmuteParticipantOperationRequest extends BaseRequest implements IU
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<UnmuteParticipantOperation> callback) {
+    public void delete(final ICallback<? super UnmuteParticipantOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class UnmuteParticipantOperationRequest extends BaseRequest implements IU
      * @param sourceUnmuteParticipantOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UnmuteParticipantOperation sourceUnmuteParticipantOperation, final ICallback<UnmuteParticipantOperation> callback) {
+    public void patch(final UnmuteParticipantOperation sourceUnmuteParticipantOperation, final ICallback<? super UnmuteParticipantOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceUnmuteParticipantOperation);
     }
 
@@ -96,7 +96,7 @@ public class UnmuteParticipantOperationRequest extends BaseRequest implements IU
      * @param newUnmuteParticipantOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UnmuteParticipantOperation newUnmuteParticipantOperation, final ICallback<UnmuteParticipantOperation> callback) {
+    public void post(final UnmuteParticipantOperation newUnmuteParticipantOperation, final ICallback<? super UnmuteParticipantOperation> callback) {
         send(HttpMethod.POST, callback, newUnmuteParticipantOperation);
     }
 
@@ -117,7 +117,7 @@ public class UnmuteParticipantOperationRequest extends BaseRequest implements IU
      * @param newUnmuteParticipantOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UnmuteParticipantOperation newUnmuteParticipantOperation, final ICallback<UnmuteParticipantOperation> callback) {
+    public void put(final UnmuteParticipantOperation newUnmuteParticipantOperation, final ICallback<? super UnmuteParticipantOperation> callback) {
         send(HttpMethod.PUT, callback, newUnmuteParticipantOperation);
     }
 

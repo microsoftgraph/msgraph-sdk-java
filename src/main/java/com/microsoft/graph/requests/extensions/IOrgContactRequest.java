@@ -21,7 +21,7 @@ public interface IOrgContactRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OrgContact> callback);
+    void get(final ICallback<? super OrgContact> callback);
 
     /**
      * Gets the OrgContact from the service
@@ -36,7 +36,7 @@ public interface IOrgContactRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OrgContact> callback);
+    void delete(final ICallback<? super OrgContact> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOrgContactRequest extends IHttpRequest {
      * @param sourceOrgContact the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OrgContact sourceOrgContact, final ICallback<OrgContact> callback);
+    void patch(final OrgContact sourceOrgContact, final ICallback<? super OrgContact> callback);
 
     /**
      * Patches this OrgContact with a source
@@ -68,7 +68,7 @@ public interface IOrgContactRequest extends IHttpRequest {
      * @param newOrgContact the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OrgContact newOrgContact, final ICallback<OrgContact> callback);
+    void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback);
 
     /**
      * Posts a OrgContact with a new object
@@ -85,7 +85,7 @@ public interface IOrgContactRequest extends IHttpRequest {
      * @param newOrgContact the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OrgContact newOrgContact, final ICallback<OrgContact> callback);
+    void put(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback);
 
     /**
      * Posts a OrgContact with a new object

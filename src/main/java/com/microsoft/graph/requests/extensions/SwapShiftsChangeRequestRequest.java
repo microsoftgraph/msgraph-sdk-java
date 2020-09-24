@@ -37,7 +37,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SwapShiftsChangeRequest> callback) {
+    public void get(final ICallback<? super SwapShiftsChangeRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SwapShiftsChangeRequest> callback) {
+    public void delete(final ICallback<? super SwapShiftsChangeRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @param sourceSwapShiftsChangeRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SwapShiftsChangeRequest sourceSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback) {
+    public void patch(final SwapShiftsChangeRequest sourceSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceSwapShiftsChangeRequest);
     }
 
@@ -96,7 +96,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @param newSwapShiftsChangeRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback) {
+    public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback) {
         send(HttpMethod.POST, callback, newSwapShiftsChangeRequest);
     }
 
@@ -117,7 +117,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @param newSwapShiftsChangeRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback) {
+    public void put(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback) {
         send(HttpMethod.PUT, callback, newSwapShiftsChangeRequest);
     }
 

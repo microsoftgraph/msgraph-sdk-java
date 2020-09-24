@@ -87,7 +87,7 @@ public class GroupReferenceRequest extends BaseRequest implements IGroupReferenc
         super(requestUrl, client, requestOptions, Group.class);
     }
 
-    public void delete(final ICallback<Group> callback) {
+    public void delete(final ICallback<? super Group> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -132,7 +132,7 @@ public class GroupReferenceRequest extends BaseRequest implements IGroupReferenc
      * @param srcGroup the Group reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Group srcGroup, final ICallback<Group> callback) {
+    public void put(Group srcGroup, final ICallback<? super Group> callback) {
         send(HttpMethod.PUT, callback, srcGroup);
     }
 

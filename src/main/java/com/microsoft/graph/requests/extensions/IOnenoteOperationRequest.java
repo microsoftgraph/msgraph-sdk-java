@@ -21,7 +21,7 @@ public interface IOnenoteOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<OnenoteOperation> callback);
+    void get(final ICallback<? super OnenoteOperation> callback);
 
     /**
      * Gets the OnenoteOperation from the service
@@ -36,7 +36,7 @@ public interface IOnenoteOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<OnenoteOperation> callback);
+    void delete(final ICallback<? super OnenoteOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IOnenoteOperationRequest extends IHttpRequest {
      * @param sourceOnenoteOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final OnenoteOperation sourceOnenoteOperation, final ICallback<OnenoteOperation> callback);
+    void patch(final OnenoteOperation sourceOnenoteOperation, final ICallback<? super OnenoteOperation> callback);
 
     /**
      * Patches this OnenoteOperation with a source
@@ -68,7 +68,7 @@ public interface IOnenoteOperationRequest extends IHttpRequest {
      * @param newOnenoteOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final OnenoteOperation newOnenoteOperation, final ICallback<OnenoteOperation> callback);
+    void post(final OnenoteOperation newOnenoteOperation, final ICallback<? super OnenoteOperation> callback);
 
     /**
      * Posts a OnenoteOperation with a new object
@@ -85,7 +85,7 @@ public interface IOnenoteOperationRequest extends IHttpRequest {
      * @param newOnenoteOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final OnenoteOperation newOnenoteOperation, final ICallback<OnenoteOperation> callback);
+    void put(final OnenoteOperation newOnenoteOperation, final ICallback<? super OnenoteOperation> callback);
 
     /**
      * Posts a OnenoteOperation with a new object

@@ -39,7 +39,7 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest implements I
         super(requestUrl, client, requestOptions, RoleDefinition.class);
     }
 
-    public void post(final RoleDefinition newRoleDefinition, final IJsonBackedObject payload, final ICallback<RoleDefinition> callback) {
+    public void post(final RoleDefinition newRoleDefinition, final IJsonBackedObject payload, final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest implements I
         return null;
     }
 
-    public void get(final ICallback<RoleDefinition> callback) {
+    public void get(final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest implements I
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<RoleDefinition> callback) {
+	public void delete(final ICallback<? super RoleDefinition> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class RoleDefinitionWithReferenceRequest extends BaseRequest implements I
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final RoleDefinition sourceRoleDefinition, final ICallback<RoleDefinition> callback) {
+	public void patch(final RoleDefinition sourceRoleDefinition, final ICallback<? super RoleDefinition> callback) {
 		send(HttpMethod.PATCH, callback, sourceRoleDefinition);
 	}
 

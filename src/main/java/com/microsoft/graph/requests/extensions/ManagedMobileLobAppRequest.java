@@ -56,7 +56,7 @@ public class ManagedMobileLobAppRequest extends BaseRequest implements IManagedM
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<ManagedMobileLobApp> callback) {
+    public void get(final ICallback<? super ManagedMobileLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedMobileLobAppRequest extends BaseRequest implements IManagedM
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<ManagedMobileLobApp> callback) {
+    public void delete(final ICallback<? super ManagedMobileLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +94,7 @@ public class ManagedMobileLobAppRequest extends BaseRequest implements IManagedM
      * @param sourceManagedMobileLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedMobileLobApp sourceManagedMobileLobApp, final ICallback<ManagedMobileLobApp> callback) {
+    public void patch(final ManagedMobileLobApp sourceManagedMobileLobApp, final ICallback<? super ManagedMobileLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedMobileLobApp);
     }
 
@@ -115,7 +115,7 @@ public class ManagedMobileLobAppRequest extends BaseRequest implements IManagedM
      * @param newManagedMobileLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedMobileLobApp newManagedMobileLobApp, final ICallback<ManagedMobileLobApp> callback) {
+    public void post(final ManagedMobileLobApp newManagedMobileLobApp, final ICallback<? super ManagedMobileLobApp> callback) {
         send(HttpMethod.POST, callback, newManagedMobileLobApp);
     }
 
@@ -136,7 +136,7 @@ public class ManagedMobileLobAppRequest extends BaseRequest implements IManagedM
      * @param newManagedMobileLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedMobileLobApp newManagedMobileLobApp, final ICallback<ManagedMobileLobApp> callback) {
+    public void put(final ManagedMobileLobApp newManagedMobileLobApp, final ICallback<? super ManagedMobileLobApp> callback) {
         send(HttpMethod.PUT, callback, newManagedMobileLobApp);
     }
 

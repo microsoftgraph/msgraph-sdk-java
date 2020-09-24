@@ -39,7 +39,7 @@ public class SiteGetActivitiesByIntervalCollectionRequest extends BaseCollection
     }
 
 
-    public void get(final ICallback<ISiteGetActivitiesByIntervalCollectionPage> callback) {
+    public void get(final ICallback<? super ISiteGetActivitiesByIntervalCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

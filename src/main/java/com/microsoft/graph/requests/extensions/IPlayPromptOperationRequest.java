@@ -21,7 +21,7 @@ public interface IPlayPromptOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<PlayPromptOperation> callback);
+    void get(final ICallback<? super PlayPromptOperation> callback);
 
     /**
      * Gets the PlayPromptOperation from the service
@@ -36,7 +36,7 @@ public interface IPlayPromptOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<PlayPromptOperation> callback);
+    void delete(final ICallback<? super PlayPromptOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IPlayPromptOperationRequest extends IHttpRequest {
      * @param sourcePlayPromptOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final PlayPromptOperation sourcePlayPromptOperation, final ICallback<PlayPromptOperation> callback);
+    void patch(final PlayPromptOperation sourcePlayPromptOperation, final ICallback<? super PlayPromptOperation> callback);
 
     /**
      * Patches this PlayPromptOperation with a source
@@ -68,7 +68,7 @@ public interface IPlayPromptOperationRequest extends IHttpRequest {
      * @param newPlayPromptOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final PlayPromptOperation newPlayPromptOperation, final ICallback<PlayPromptOperation> callback);
+    void post(final PlayPromptOperation newPlayPromptOperation, final ICallback<? super PlayPromptOperation> callback);
 
     /**
      * Posts a PlayPromptOperation with a new object
@@ -85,7 +85,7 @@ public interface IPlayPromptOperationRequest extends IHttpRequest {
      * @param newPlayPromptOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final PlayPromptOperation newPlayPromptOperation, final ICallback<PlayPromptOperation> callback);
+    void put(final PlayPromptOperation newPlayPromptOperation, final ICallback<? super PlayPromptOperation> callback);
 
     /**
      * Posts a PlayPromptOperation with a new object

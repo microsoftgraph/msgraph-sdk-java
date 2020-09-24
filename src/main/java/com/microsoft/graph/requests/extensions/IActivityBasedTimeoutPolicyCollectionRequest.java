@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IActivityBasedTimeoutPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IActivityBasedTimeoutPolicyCollectionPage> callback);
+    void get(final ICallback<? super IActivityBasedTimeoutPolicyCollectionPage> callback);
 
     IActivityBasedTimeoutPolicyCollectionPage get() throws ClientException;
 
-    void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback);
+    void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback);
 
     ActivityBasedTimeoutPolicy post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException;
 

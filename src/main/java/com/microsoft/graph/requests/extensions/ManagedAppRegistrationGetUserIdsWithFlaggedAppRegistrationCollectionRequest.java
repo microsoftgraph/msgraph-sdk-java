@@ -39,7 +39,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
     }
 
 
-    public void get(final ICallback<IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage> callback) {
+    public void get(final ICallback<? super IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

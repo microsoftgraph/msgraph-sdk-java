@@ -21,7 +21,7 @@ public interface IAndroidManagedAppProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<AndroidManagedAppProtection> callback);
+    void get(final ICallback<? super AndroidManagedAppProtection> callback);
 
     /**
      * Gets the AndroidManagedAppProtection from the service
@@ -36,7 +36,7 @@ public interface IAndroidManagedAppProtectionRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<AndroidManagedAppProtection> callback);
+    void delete(final ICallback<? super AndroidManagedAppProtection> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IAndroidManagedAppProtectionRequest extends IHttpRequest {
      * @param sourceAndroidManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final AndroidManagedAppProtection sourceAndroidManagedAppProtection, final ICallback<AndroidManagedAppProtection> callback);
+    void patch(final AndroidManagedAppProtection sourceAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback);
 
     /**
      * Patches this AndroidManagedAppProtection with a source
@@ -68,7 +68,7 @@ public interface IAndroidManagedAppProtectionRequest extends IHttpRequest {
      * @param newAndroidManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<AndroidManagedAppProtection> callback);
+    void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback);
 
     /**
      * Posts a AndroidManagedAppProtection with a new object
@@ -85,7 +85,7 @@ public interface IAndroidManagedAppProtectionRequest extends IHttpRequest {
      * @param newAndroidManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<AndroidManagedAppProtection> callback);
+    void put(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback);
 
     /**
      * Posts a AndroidManagedAppProtection with a new object

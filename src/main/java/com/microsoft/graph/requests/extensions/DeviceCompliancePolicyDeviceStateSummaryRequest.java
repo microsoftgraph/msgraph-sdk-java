@@ -37,7 +37,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<DeviceCompliancePolicyDeviceStateSummary> callback) {
+    public void get(final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<DeviceCompliancePolicyDeviceStateSummary> callback) {
+    public void delete(final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @param sourceDeviceCompliancePolicyDeviceStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceCompliancePolicyDeviceStateSummary sourceDeviceCompliancePolicyDeviceStateSummary, final ICallback<DeviceCompliancePolicyDeviceStateSummary> callback) {
+    public void patch(final DeviceCompliancePolicyDeviceStateSummary sourceDeviceCompliancePolicyDeviceStateSummary, final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceCompliancePolicyDeviceStateSummary);
     }
 
@@ -96,7 +96,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @param newDeviceCompliancePolicyDeviceStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary, final ICallback<DeviceCompliancePolicyDeviceStateSummary> callback) {
+    public void post(final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary, final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
         send(HttpMethod.POST, callback, newDeviceCompliancePolicyDeviceStateSummary);
     }
 
@@ -117,7 +117,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @param newDeviceCompliancePolicyDeviceStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary, final ICallback<DeviceCompliancePolicyDeviceStateSummary> callback) {
+    public void put(final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary, final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
         send(HttpMethod.PUT, callback, newDeviceCompliancePolicyDeviceStateSummary);
     }
 

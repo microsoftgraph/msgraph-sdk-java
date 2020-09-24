@@ -41,7 +41,7 @@ public class NotificationMessageTemplateRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<NotificationMessageTemplate> callback) {
+    public void get(final ICallback<? super NotificationMessageTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class NotificationMessageTemplateRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<NotificationMessageTemplate> callback) {
+    public void delete(final ICallback<? super NotificationMessageTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class NotificationMessageTemplateRequest extends BaseRequest implements I
      * @param sourceNotificationMessageTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final NotificationMessageTemplate sourceNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback) {
+    public void patch(final NotificationMessageTemplate sourceNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceNotificationMessageTemplate);
     }
 
@@ -100,7 +100,7 @@ public class NotificationMessageTemplateRequest extends BaseRequest implements I
      * @param newNotificationMessageTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback) {
+    public void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback) {
         send(HttpMethod.POST, callback, newNotificationMessageTemplate);
     }
 
@@ -121,7 +121,7 @@ public class NotificationMessageTemplateRequest extends BaseRequest implements I
      * @param newNotificationMessageTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback) {
+    public void put(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback) {
         send(HttpMethod.PUT, callback, newNotificationMessageTemplate);
     }
 

@@ -39,7 +39,7 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseCollectionReques
     }
 
 
-    public void get(final ICallback<IServicePrincipalDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super IServicePrincipalDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

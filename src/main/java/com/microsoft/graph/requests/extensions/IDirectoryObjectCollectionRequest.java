@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDirectoryObjectCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDirectoryObjectCollectionPage> callback);
+    void get(final ICallback<? super IDirectoryObjectCollectionPage> callback);
 
     IDirectoryObjectCollectionPage get() throws ClientException;
 
-    void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback);
+    void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback);
 
     DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException;
 

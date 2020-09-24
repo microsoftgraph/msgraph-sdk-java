@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICertificateBasedAuthConfigurationCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<ICertificateBasedAuthConfigurationCollectionWithReferencesPage> callback);
+    void get(final ICallback<? super ICertificateBasedAuthConfigurationCollectionWithReferencesPage> callback);
 
     ICertificateBasedAuthConfigurationCollectionWithReferencesPage get() throws ClientException;
 

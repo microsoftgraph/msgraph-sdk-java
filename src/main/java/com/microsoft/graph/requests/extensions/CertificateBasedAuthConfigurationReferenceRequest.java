@@ -34,7 +34,7 @@ public class CertificateBasedAuthConfigurationReferenceRequest extends BaseReque
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfiguration.class);
     }
 
-    public void delete(final ICallback<CertificateBasedAuthConfiguration> callback) {
+    public void delete(final ICallback<? super CertificateBasedAuthConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class CertificateBasedAuthConfigurationReferenceRequest extends BaseReque
      * @param srcCertificateBasedAuthConfiguration the CertificateBasedAuthConfiguration reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(CertificateBasedAuthConfiguration srcCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback) {
+    public void put(CertificateBasedAuthConfiguration srcCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
         send(HttpMethod.PUT, callback, srcCertificateBasedAuthConfiguration);
     }
 

@@ -24,11 +24,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceCompliancePolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IDeviceCompliancePolicyCollectionPage> callback);
+    void get(final ICallback<? super IDeviceCompliancePolicyCollectionPage> callback);
 
     IDeviceCompliancePolicyCollectionPage get() throws ClientException;
 
-    void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback);
+    void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback);
 
     DeviceCompliancePolicy post(final DeviceCompliancePolicy newDeviceCompliancePolicy) throws ClientException;
 

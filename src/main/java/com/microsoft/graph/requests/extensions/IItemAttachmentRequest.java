@@ -21,7 +21,7 @@ public interface IItemAttachmentRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemAttachment> callback);
+    void get(final ICallback<? super ItemAttachment> callback);
 
     /**
      * Gets the ItemAttachment from the service
@@ -36,7 +36,7 @@ public interface IItemAttachmentRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemAttachment> callback);
+    void delete(final ICallback<? super ItemAttachment> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemAttachmentRequest extends IHttpRequest {
      * @param sourceItemAttachment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemAttachment sourceItemAttachment, final ICallback<ItemAttachment> callback);
+    void patch(final ItemAttachment sourceItemAttachment, final ICallback<? super ItemAttachment> callback);
 
     /**
      * Patches this ItemAttachment with a source
@@ -68,7 +68,7 @@ public interface IItemAttachmentRequest extends IHttpRequest {
      * @param newItemAttachment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemAttachment newItemAttachment, final ICallback<ItemAttachment> callback);
+    void post(final ItemAttachment newItemAttachment, final ICallback<? super ItemAttachment> callback);
 
     /**
      * Posts a ItemAttachment with a new object
@@ -85,7 +85,7 @@ public interface IItemAttachmentRequest extends IHttpRequest {
      * @param newItemAttachment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemAttachment newItemAttachment, final ICallback<ItemAttachment> callback);
+    void put(final ItemAttachment newItemAttachment, final ICallback<? super ItemAttachment> callback);
 
     /**
      * Posts a ItemAttachment with a new object

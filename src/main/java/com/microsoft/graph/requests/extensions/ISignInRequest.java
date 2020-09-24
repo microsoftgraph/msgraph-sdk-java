@@ -21,7 +21,7 @@ public interface ISignInRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<SignIn> callback);
+    void get(final ICallback<? super SignIn> callback);
 
     /**
      * Gets the SignIn from the service
@@ -36,7 +36,7 @@ public interface ISignInRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<SignIn> callback);
+    void delete(final ICallback<? super SignIn> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ISignInRequest extends IHttpRequest {
      * @param sourceSignIn the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final SignIn sourceSignIn, final ICallback<SignIn> callback);
+    void patch(final SignIn sourceSignIn, final ICallback<? super SignIn> callback);
 
     /**
      * Patches this SignIn with a source
@@ -68,7 +68,7 @@ public interface ISignInRequest extends IHttpRequest {
      * @param newSignIn the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final SignIn newSignIn, final ICallback<SignIn> callback);
+    void post(final SignIn newSignIn, final ICallback<? super SignIn> callback);
 
     /**
      * Posts a SignIn with a new object
@@ -85,7 +85,7 @@ public interface ISignInRequest extends IHttpRequest {
      * @param newSignIn the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final SignIn newSignIn, final ICallback<SignIn> callback);
+    void put(final SignIn newSignIn, final ICallback<? super SignIn> callback);
 
     /**
      * Posts a SignIn with a new object

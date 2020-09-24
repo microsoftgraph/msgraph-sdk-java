@@ -21,7 +21,7 @@ public interface IDeviceComplianceScheduledActionForRuleRequest extends IHttpReq
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<DeviceComplianceScheduledActionForRule> callback);
+    void get(final ICallback<? super DeviceComplianceScheduledActionForRule> callback);
 
     /**
      * Gets the DeviceComplianceScheduledActionForRule from the service
@@ -36,7 +36,7 @@ public interface IDeviceComplianceScheduledActionForRuleRequest extends IHttpReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<DeviceComplianceScheduledActionForRule> callback);
+    void delete(final ICallback<? super DeviceComplianceScheduledActionForRule> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDeviceComplianceScheduledActionForRuleRequest extends IHttpReq
      * @param sourceDeviceComplianceScheduledActionForRule the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final DeviceComplianceScheduledActionForRule sourceDeviceComplianceScheduledActionForRule, final ICallback<DeviceComplianceScheduledActionForRule> callback);
+    void patch(final DeviceComplianceScheduledActionForRule sourceDeviceComplianceScheduledActionForRule, final ICallback<? super DeviceComplianceScheduledActionForRule> callback);
 
     /**
      * Patches this DeviceComplianceScheduledActionForRule with a source
@@ -68,7 +68,7 @@ public interface IDeviceComplianceScheduledActionForRuleRequest extends IHttpReq
      * @param newDeviceComplianceScheduledActionForRule the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<DeviceComplianceScheduledActionForRule> callback);
+    void post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<? super DeviceComplianceScheduledActionForRule> callback);
 
     /**
      * Posts a DeviceComplianceScheduledActionForRule with a new object
@@ -85,7 +85,7 @@ public interface IDeviceComplianceScheduledActionForRuleRequest extends IHttpReq
      * @param newDeviceComplianceScheduledActionForRule the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<DeviceComplianceScheduledActionForRule> callback);
+    void put(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<? super DeviceComplianceScheduledActionForRule> callback);
 
     /**
      * Posts a DeviceComplianceScheduledActionForRule with a new object

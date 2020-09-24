@@ -40,7 +40,7 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, DeviceComplianceSettingStateCollectionResponse.class, IDeviceComplianceSettingStateCollectionPage.class);
     }
 
-    public void get(final ICallback<IDeviceComplianceSettingStateCollectionPage> callback) {
+    public void get(final ICallback<? super IDeviceComplianceSettingStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceComplianceSettingState newDeviceComplianceSettingState, final ICallback<DeviceComplianceSettingState> callback) {
+    public void post(final DeviceComplianceSettingState newDeviceComplianceSettingState, final ICallback<? super DeviceComplianceSettingState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

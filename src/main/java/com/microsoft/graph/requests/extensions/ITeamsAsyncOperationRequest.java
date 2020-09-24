@@ -21,7 +21,7 @@ public interface ITeamsAsyncOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<TeamsAsyncOperation> callback);
+    void get(final ICallback<? super TeamsAsyncOperation> callback);
 
     /**
      * Gets the TeamsAsyncOperation from the service
@@ -36,7 +36,7 @@ public interface ITeamsAsyncOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<TeamsAsyncOperation> callback);
+    void delete(final ICallback<? super TeamsAsyncOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface ITeamsAsyncOperationRequest extends IHttpRequest {
      * @param sourceTeamsAsyncOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final TeamsAsyncOperation sourceTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback);
+    void patch(final TeamsAsyncOperation sourceTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback);
 
     /**
      * Patches this TeamsAsyncOperation with a source
@@ -68,7 +68,7 @@ public interface ITeamsAsyncOperationRequest extends IHttpRequest {
      * @param newTeamsAsyncOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback);
+    void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback);
 
     /**
      * Posts a TeamsAsyncOperation with a new object
@@ -85,7 +85,7 @@ public interface ITeamsAsyncOperationRequest extends IHttpRequest {
      * @param newTeamsAsyncOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback);
+    void put(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback);
 
     /**
      * Posts a TeamsAsyncOperation with a new object

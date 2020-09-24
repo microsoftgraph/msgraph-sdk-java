@@ -23,6 +23,6 @@ public class IosManagedAppProtectionCollectionPage extends BaseCollectionPage<Io
      * @param builder  the request builder for the next collection page
      */
     public IosManagedAppProtectionCollectionPage(final IosManagedAppProtectionCollectionResponse response, final IIosManagedAppProtectionCollectionRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

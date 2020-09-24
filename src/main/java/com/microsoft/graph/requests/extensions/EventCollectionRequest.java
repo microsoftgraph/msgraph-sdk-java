@@ -41,7 +41,7 @@ public class EventCollectionRequest extends BaseCollectionRequest<EventCollectio
         super(requestUrl, client, requestOptions, EventCollectionResponse.class, IEventCollectionPage.class);
     }
 
-    public void get(final ICallback<IEventCollectionPage> callback) {
+    public void get(final ICallback<? super IEventCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class EventCollectionRequest extends BaseCollectionRequest<EventCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final Event newEvent, final ICallback<Event> callback) {
+    public void post(final Event newEvent, final ICallback<? super Event> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

@@ -39,7 +39,7 @@ public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, DataPolicyOperationCollectionResponse.class, IDataPolicyOperationCollectionPage.class);
     }
 
-    public void get(final ICallback<IDataPolicyOperationCollectionPage> callback) {
+    public void get(final ICallback<? super IDataPolicyOperationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final DataPolicyOperation newDataPolicyOperation, final ICallback<DataPolicyOperation> callback) {
+    public void post(final DataPolicyOperation newDataPolicyOperation, final ICallback<? super DataPolicyOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DataPolicyOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

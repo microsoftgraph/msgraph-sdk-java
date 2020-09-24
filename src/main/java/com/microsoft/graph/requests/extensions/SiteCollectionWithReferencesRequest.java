@@ -36,7 +36,7 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionRequest<S
         super(requestUrl, client, requestOptions, SiteCollectionResponse.class, ISiteCollectionPage.class);
     }
 
-    public void get(final ICallback<ISiteCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super ISiteCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

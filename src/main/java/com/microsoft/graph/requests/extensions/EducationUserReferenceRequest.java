@@ -44,7 +44,7 @@ public class EducationUserReferenceRequest extends BaseRequest implements IEduca
         super(requestUrl, client, requestOptions, EducationUser.class);
     }
 
-    public void delete(final ICallback<EducationUser> callback) {
+    public void delete(final ICallback<? super EducationUser> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -89,7 +89,7 @@ public class EducationUserReferenceRequest extends BaseRequest implements IEduca
      * @param srcEducationUser the EducationUser reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(EducationUser srcEducationUser, final ICallback<EducationUser> callback) {
+    public void put(EducationUser srcEducationUser, final ICallback<? super EducationUser> callback) {
         send(HttpMethod.PUT, callback, srcEducationUser);
     }
 

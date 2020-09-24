@@ -21,7 +21,7 @@ public interface IWorkbookChartSeriesFormatRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<WorkbookChartSeriesFormat> callback);
+    void get(final ICallback<? super WorkbookChartSeriesFormat> callback);
 
     /**
      * Gets the WorkbookChartSeriesFormat from the service
@@ -36,7 +36,7 @@ public interface IWorkbookChartSeriesFormatRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<WorkbookChartSeriesFormat> callback);
+    void delete(final ICallback<? super WorkbookChartSeriesFormat> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWorkbookChartSeriesFormatRequest extends IHttpRequest {
      * @param sourceWorkbookChartSeriesFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WorkbookChartSeriesFormat sourceWorkbookChartSeriesFormat, final ICallback<WorkbookChartSeriesFormat> callback);
+    void patch(final WorkbookChartSeriesFormat sourceWorkbookChartSeriesFormat, final ICallback<? super WorkbookChartSeriesFormat> callback);
 
     /**
      * Patches this WorkbookChartSeriesFormat with a source
@@ -68,7 +68,7 @@ public interface IWorkbookChartSeriesFormatRequest extends IHttpRequest {
      * @param newWorkbookChartSeriesFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, final ICallback<WorkbookChartSeriesFormat> callback);
+    void post(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, final ICallback<? super WorkbookChartSeriesFormat> callback);
 
     /**
      * Posts a WorkbookChartSeriesFormat with a new object
@@ -85,7 +85,7 @@ public interface IWorkbookChartSeriesFormatRequest extends IHttpRequest {
      * @param newWorkbookChartSeriesFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, final ICallback<WorkbookChartSeriesFormat> callback);
+    void put(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, final ICallback<? super WorkbookChartSeriesFormat> callback);
 
     /**
      * Posts a WorkbookChartSeriesFormat with a new object

@@ -21,7 +21,7 @@ public interface IIosMobileAppConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<IosMobileAppConfiguration> callback);
+    void get(final ICallback<? super IosMobileAppConfiguration> callback);
 
     /**
      * Gets the IosMobileAppConfiguration from the service
@@ -36,7 +36,7 @@ public interface IIosMobileAppConfigurationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<IosMobileAppConfiguration> callback);
+    void delete(final ICallback<? super IosMobileAppConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IIosMobileAppConfigurationRequest extends IHttpRequest {
      * @param sourceIosMobileAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final IosMobileAppConfiguration sourceIosMobileAppConfiguration, final ICallback<IosMobileAppConfiguration> callback);
+    void patch(final IosMobileAppConfiguration sourceIosMobileAppConfiguration, final ICallback<? super IosMobileAppConfiguration> callback);
 
     /**
      * Patches this IosMobileAppConfiguration with a source
@@ -68,7 +68,7 @@ public interface IIosMobileAppConfigurationRequest extends IHttpRequest {
      * @param newIosMobileAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final IosMobileAppConfiguration newIosMobileAppConfiguration, final ICallback<IosMobileAppConfiguration> callback);
+    void post(final IosMobileAppConfiguration newIosMobileAppConfiguration, final ICallback<? super IosMobileAppConfiguration> callback);
 
     /**
      * Posts a IosMobileAppConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IIosMobileAppConfigurationRequest extends IHttpRequest {
      * @param newIosMobileAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final IosMobileAppConfiguration newIosMobileAppConfiguration, final ICallback<IosMobileAppConfiguration> callback);
+    void put(final IosMobileAppConfiguration newIosMobileAppConfiguration, final ICallback<? super IosMobileAppConfiguration> callback);
 
     /**
      * Posts a IosMobileAppConfiguration with a new object

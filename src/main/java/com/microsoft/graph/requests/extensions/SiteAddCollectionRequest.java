@@ -44,7 +44,7 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
     }
 
 
-    public void post(final ICallback<ISiteAddCollectionPage> callback) {
+    public void post(final ICallback<? super ISiteAddCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override

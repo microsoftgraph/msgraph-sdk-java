@@ -40,7 +40,7 @@ public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<Of
         super(requestUrl, client, requestOptions, OfferShiftRequestCollectionResponse.class, IOfferShiftRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<IOfferShiftRequestCollectionPage> callback) {
+    public void get(final ICallback<? super IOfferShiftRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<Of
         return buildFromResponse(response);
     }
 
-    public void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<OfferShiftRequest> callback) {
+    public void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<? super OfferShiftRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OfferShiftRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

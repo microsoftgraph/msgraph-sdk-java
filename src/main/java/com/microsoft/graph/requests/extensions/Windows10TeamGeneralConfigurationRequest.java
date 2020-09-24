@@ -37,7 +37,7 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Windows10TeamGeneralConfiguration> callback) {
+    public void get(final ICallback<? super Windows10TeamGeneralConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Windows10TeamGeneralConfiguration> callback) {
+    public void delete(final ICallback<? super Windows10TeamGeneralConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest implem
      * @param sourceWindows10TeamGeneralConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10TeamGeneralConfiguration sourceWindows10TeamGeneralConfiguration, final ICallback<Windows10TeamGeneralConfiguration> callback) {
+    public void patch(final Windows10TeamGeneralConfiguration sourceWindows10TeamGeneralConfiguration, final ICallback<? super Windows10TeamGeneralConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10TeamGeneralConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest implem
      * @param newWindows10TeamGeneralConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, final ICallback<Windows10TeamGeneralConfiguration> callback) {
+    public void post(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, final ICallback<? super Windows10TeamGeneralConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows10TeamGeneralConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest implem
      * @param newWindows10TeamGeneralConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, final ICallback<Windows10TeamGeneralConfiguration> callback) {
+    public void put(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, final ICallback<? super Windows10TeamGeneralConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows10TeamGeneralConfiguration);
     }
 

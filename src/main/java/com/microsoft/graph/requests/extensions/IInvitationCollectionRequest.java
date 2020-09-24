@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IInvitationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<IInvitationCollectionPage> callback);
+    void get(final ICallback<? super IInvitationCollectionPage> callback);
 
     IInvitationCollectionPage get() throws ClientException;
 
-    void post(final Invitation newInvitation, final ICallback<Invitation> callback);
+    void post(final Invitation newInvitation, final ICallback<? super Invitation> callback);
 
     Invitation post(final Invitation newInvitation) throws ClientException;
 

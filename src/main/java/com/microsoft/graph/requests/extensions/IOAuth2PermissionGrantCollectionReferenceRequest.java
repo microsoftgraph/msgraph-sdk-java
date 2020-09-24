@@ -22,7 +22,7 @@ import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
  */
 public interface IOAuth2PermissionGrantCollectionReferenceRequest {
 
-    void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback);
+    void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback);
 
     OAuth2PermissionGrant post(final OAuth2PermissionGrant newOAuth2PermissionGrant) throws ClientException;
 

@@ -21,7 +21,7 @@ public interface IDirectoryRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<Directory> callback);
+    void get(final ICallback<? super Directory> callback);
 
     /**
      * Gets the Directory from the service
@@ -36,7 +36,7 @@ public interface IDirectoryRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<Directory> callback);
+    void delete(final ICallback<? super Directory> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDirectoryRequest extends IHttpRequest {
      * @param sourceDirectory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Directory sourceDirectory, final ICallback<Directory> callback);
+    void patch(final Directory sourceDirectory, final ICallback<? super Directory> callback);
 
     /**
      * Patches this Directory with a source
@@ -68,7 +68,7 @@ public interface IDirectoryRequest extends IHttpRequest {
      * @param newDirectory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Directory newDirectory, final ICallback<Directory> callback);
+    void post(final Directory newDirectory, final ICallback<? super Directory> callback);
 
     /**
      * Posts a Directory with a new object
@@ -85,7 +85,7 @@ public interface IDirectoryRequest extends IHttpRequest {
      * @param newDirectory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Directory newDirectory, final ICallback<Directory> callback);
+    void put(final Directory newDirectory, final ICallback<? super Directory> callback);
 
     /**
      * Posts a Directory with a new object

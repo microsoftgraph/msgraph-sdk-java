@@ -6,12 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.models.extensions.RoleAssignment;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionPage;
 
 
@@ -108,19 +106,7 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
 
 
         if (json.has("roleAssignments")) {
-            final RoleAssignmentCollectionResponse response = new RoleAssignmentCollectionResponse();
-            if (json.has("roleAssignments@odata.nextLink")) {
-                response.nextLink = json.get("roleAssignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleAssignments").toString(), JsonObject[].class);
-            final RoleAssignment[] array = new RoleAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), RoleAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            roleAssignments = new RoleAssignmentCollectionPage(response, null);
+            roleAssignments = serializer.deserializeObject(json.get("roleAssignments").toString(), RoleAssignmentCollectionPage.class);
         }
     }
 }

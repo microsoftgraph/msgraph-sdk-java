@@ -40,7 +40,7 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
         super(requestUrl, client, requestOptions, SecureScoreCollectionResponse.class, ISecureScoreCollectionPage.class);
     }
 
-    public void get(final ICallback<ISecureScoreCollectionPage> callback) {
+    public void get(final ICallback<? super ISecureScoreCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
         return buildFromResponse(response);
     }
 
-    public void post(final SecureScore newSecureScore, final ICallback<SecureScore> callback) {
+    public void post(final SecureScore newSecureScore, final ICallback<? super SecureScore> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecureScoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

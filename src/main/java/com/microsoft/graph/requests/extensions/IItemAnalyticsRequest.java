@@ -21,7 +21,7 @@ public interface IItemAnalyticsRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<ItemAnalytics> callback);
+    void get(final ICallback<? super ItemAnalytics> callback);
 
     /**
      * Gets the ItemAnalytics from the service
@@ -36,7 +36,7 @@ public interface IItemAnalyticsRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<ItemAnalytics> callback);
+    void delete(final ICallback<? super ItemAnalytics> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IItemAnalyticsRequest extends IHttpRequest {
      * @param sourceItemAnalytics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final ItemAnalytics sourceItemAnalytics, final ICallback<ItemAnalytics> callback);
+    void patch(final ItemAnalytics sourceItemAnalytics, final ICallback<? super ItemAnalytics> callback);
 
     /**
      * Patches this ItemAnalytics with a source
@@ -68,7 +68,7 @@ public interface IItemAnalyticsRequest extends IHttpRequest {
      * @param newItemAnalytics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final ItemAnalytics newItemAnalytics, final ICallback<ItemAnalytics> callback);
+    void post(final ItemAnalytics newItemAnalytics, final ICallback<? super ItemAnalytics> callback);
 
     /**
      * Posts a ItemAnalytics with a new object
@@ -85,7 +85,7 @@ public interface IItemAnalyticsRequest extends IHttpRequest {
      * @param newItemAnalytics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final ItemAnalytics newItemAnalytics, final ICallback<ItemAnalytics> callback);
+    void put(final ItemAnalytics newItemAnalytics, final ICallback<? super ItemAnalytics> callback);
 
     /**
      * Posts a ItemAnalytics with a new object

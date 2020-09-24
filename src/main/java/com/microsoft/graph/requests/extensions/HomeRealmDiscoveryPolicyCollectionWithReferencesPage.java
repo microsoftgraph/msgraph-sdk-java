@@ -35,6 +35,6 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesPage extends BaseCo
      * @param builder  the request builder for the next collection page
      */
     public HomeRealmDiscoveryPolicyCollectionWithReferencesPage(final HomeRealmDiscoveryPolicyCollectionResponse response, final IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder);
+        super(response.value, builder, response.additionalDataManager());
     }
 }

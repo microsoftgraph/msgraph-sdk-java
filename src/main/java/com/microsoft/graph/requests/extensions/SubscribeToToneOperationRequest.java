@@ -37,7 +37,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest implements ISub
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<SubscribeToToneOperation> callback) {
+    public void get(final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest implements ISub
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<SubscribeToToneOperation> callback) {
+    public void delete(final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest implements ISub
      * @param sourceSubscribeToToneOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SubscribeToToneOperation sourceSubscribeToToneOperation, final ICallback<SubscribeToToneOperation> callback) {
+    public void patch(final SubscribeToToneOperation sourceSubscribeToToneOperation, final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceSubscribeToToneOperation);
     }
 
@@ -96,7 +96,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest implements ISub
      * @param newSubscribeToToneOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SubscribeToToneOperation newSubscribeToToneOperation, final ICallback<SubscribeToToneOperation> callback) {
+    public void post(final SubscribeToToneOperation newSubscribeToToneOperation, final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.POST, callback, newSubscribeToToneOperation);
     }
 
@@ -117,7 +117,7 @@ public class SubscribeToToneOperationRequest extends BaseRequest implements ISub
      * @param newSubscribeToToneOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SubscribeToToneOperation newSubscribeToToneOperation, final ICallback<SubscribeToToneOperation> callback) {
+    public void put(final SubscribeToToneOperation newSubscribeToToneOperation, final ICallback<? super SubscribeToToneOperation> callback) {
         send(HttpMethod.PUT, callback, newSubscribeToToneOperation);
     }
 

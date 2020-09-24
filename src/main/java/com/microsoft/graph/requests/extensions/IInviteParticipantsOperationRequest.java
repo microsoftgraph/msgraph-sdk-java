@@ -21,7 +21,7 @@ public interface IInviteParticipantsOperationRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<InviteParticipantsOperation> callback);
+    void get(final ICallback<? super InviteParticipantsOperation> callback);
 
     /**
      * Gets the InviteParticipantsOperation from the service
@@ -36,7 +36,7 @@ public interface IInviteParticipantsOperationRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<InviteParticipantsOperation> callback);
+    void delete(final ICallback<? super InviteParticipantsOperation> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IInviteParticipantsOperationRequest extends IHttpRequest {
      * @param sourceInviteParticipantsOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final InviteParticipantsOperation sourceInviteParticipantsOperation, final ICallback<InviteParticipantsOperation> callback);
+    void patch(final InviteParticipantsOperation sourceInviteParticipantsOperation, final ICallback<? super InviteParticipantsOperation> callback);
 
     /**
      * Patches this InviteParticipantsOperation with a source
@@ -68,7 +68,7 @@ public interface IInviteParticipantsOperationRequest extends IHttpRequest {
      * @param newInviteParticipantsOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final InviteParticipantsOperation newInviteParticipantsOperation, final ICallback<InviteParticipantsOperation> callback);
+    void post(final InviteParticipantsOperation newInviteParticipantsOperation, final ICallback<? super InviteParticipantsOperation> callback);
 
     /**
      * Posts a InviteParticipantsOperation with a new object
@@ -85,7 +85,7 @@ public interface IInviteParticipantsOperationRequest extends IHttpRequest {
      * @param newInviteParticipantsOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final InviteParticipantsOperation newInviteParticipantsOperation, final ICallback<InviteParticipantsOperation> callback);
+    void put(final InviteParticipantsOperation newInviteParticipantsOperation, final ICallback<? super InviteParticipantsOperation> callback);
 
     /**
      * Posts a InviteParticipantsOperation with a new object

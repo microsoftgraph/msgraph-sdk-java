@@ -37,7 +37,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest implements IWorkbook
      * @param srcWorkbookTable the WorkbookTable with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookTable srcWorkbookTable, final ICallback<WorkbookTable> callback) {
+    public void patch(WorkbookTable srcWorkbookTable, final ICallback<? super WorkbookTable> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookTable);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest implements IWorkbook
      * @param srcWorkbookTable the WorkbookTable to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookTable srcWorkbookTable, final ICallback<WorkbookTable> callback) {
+    public void put(WorkbookTable srcWorkbookTable, final ICallback<? super WorkbookTable> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookTable);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookTableItemAtRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<WorkbookTable> callback) {
+    public void get(final ICallback<? super WorkbookTable> callback) {
         send(HttpMethod.GET, callback, null);
     }
 

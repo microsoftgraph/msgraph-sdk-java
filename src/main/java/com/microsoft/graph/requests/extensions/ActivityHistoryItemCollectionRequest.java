@@ -40,7 +40,7 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, ActivityHistoryItemCollectionResponse.class, IActivityHistoryItemCollectionPage.class);
     }
 
-    public void get(final ICallback<IActivityHistoryItemCollectionPage> callback) {
+    public void get(final ICallback<? super IActivityHistoryItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final ActivityHistoryItem newActivityHistoryItem, final ICallback<ActivityHistoryItem> callback) {
+    public void post(final ActivityHistoryItem newActivityHistoryItem, final ICallback<? super ActivityHistoryItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ActivityHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())

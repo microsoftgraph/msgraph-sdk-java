@@ -37,7 +37,7 @@ public class WorkbookFunctionsNorm_S_InvRequest extends BaseRequest implements I
         body = new WorkbookFunctionsNorm_S_InvBody();
     }
 
-    public void post(final ICallback<WorkbookFunctionResult> callback) {
+    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 

@@ -21,7 +21,7 @@ public interface IMessageRuleRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<MessageRule> callback);
+    void get(final ICallback<? super MessageRule> callback);
 
     /**
      * Gets the MessageRule from the service
@@ -36,7 +36,7 @@ public interface IMessageRuleRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<MessageRule> callback);
+    void delete(final ICallback<? super MessageRule> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IMessageRuleRequest extends IHttpRequest {
      * @param sourceMessageRule the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final MessageRule sourceMessageRule, final ICallback<MessageRule> callback);
+    void patch(final MessageRule sourceMessageRule, final ICallback<? super MessageRule> callback);
 
     /**
      * Patches this MessageRule with a source
@@ -68,7 +68,7 @@ public interface IMessageRuleRequest extends IHttpRequest {
      * @param newMessageRule the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final MessageRule newMessageRule, final ICallback<MessageRule> callback);
+    void post(final MessageRule newMessageRule, final ICallback<? super MessageRule> callback);
 
     /**
      * Posts a MessageRule with a new object
@@ -85,7 +85,7 @@ public interface IMessageRuleRequest extends IHttpRequest {
      * @param newMessageRule the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final MessageRule newMessageRule, final ICallback<MessageRule> callback);
+    void put(final MessageRule newMessageRule, final ICallback<? super MessageRule> callback);
 
     /**
      * Posts a MessageRule with a new object

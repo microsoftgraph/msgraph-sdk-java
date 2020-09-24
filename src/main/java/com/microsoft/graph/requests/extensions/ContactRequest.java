@@ -51,7 +51,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<Contact> callback) {
+    public void get(final ICallback<? super Contact> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -70,7 +70,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Contact> callback) {
+    public void delete(final ICallback<? super Contact> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -89,7 +89,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @param sourceContact the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Contact sourceContact, final ICallback<Contact> callback) {
+    public void patch(final Contact sourceContact, final ICallback<? super Contact> callback) {
         send(HttpMethod.PATCH, callback, sourceContact);
     }
 
@@ -110,7 +110,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @param newContact the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Contact newContact, final ICallback<Contact> callback) {
+    public void post(final Contact newContact, final ICallback<? super Contact> callback) {
         send(HttpMethod.POST, callback, newContact);
     }
 
@@ -131,7 +131,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @param newContact the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Contact newContact, final ICallback<Contact> callback) {
+    public void put(final Contact newContact, final ICallback<? super Contact> callback) {
         send(HttpMethod.PUT, callback, newContact);
     }
 
