@@ -51,7 +51,9 @@ import java.util.Scanner;
 
 /**
  * HTTP provider based off of URLConnection
+ * @deprecated user CoreHttpProvider instead
  */
+@Deprecated
 public class DefaultHttpProvider implements IHttpProvider {
 
     /**
@@ -160,9 +162,9 @@ public class DefaultHttpProvider implements IHttpProvider {
                                     final ICallback<? super Result> callback,
                                     final Class<Result> resultClass,
                                     final Body serializable) {
-        final IProgressCallback<Result> progressCallback;
+        final IProgressCallback<? super Result> progressCallback;
         if (callback instanceof IProgressCallback) {
-            progressCallback = (IProgressCallback<Result>) callback;
+            progressCallback = (IProgressCallback<? super Result>) callback;
         } else {
             progressCallback = null;
         }
@@ -241,7 +243,7 @@ public class DefaultHttpProvider implements IHttpProvider {
     private <Result, Body, DeserializeType> Result sendRequestInternal(final IHttpRequest request,
                                                                        final Class<Result> resultClass,
                                                                        final Body serializable,
-                                                                       final IProgressCallback<Result> progress,
+                                                                       final IProgressCallback<? super Result> progress,
                                                                        final IStatefulResponseHandler<Result, DeserializeType> handler)
             throws ClientException {
         final int defaultBufferSize = 4096;
@@ -535,7 +537,7 @@ public class DefaultHttpProvider implements IHttpProvider {
 
 	@Override
 	public <Result, BodyType> Request getHttpRequest(IHttpRequest request, Class<Result> resultClass,
-			BodyType serializable, IProgressCallback<Result> progress) throws ClientException {
+			BodyType serializable, IProgressCallback<? super Result> progress) throws ClientException {
 		return null;
 	}
 }
