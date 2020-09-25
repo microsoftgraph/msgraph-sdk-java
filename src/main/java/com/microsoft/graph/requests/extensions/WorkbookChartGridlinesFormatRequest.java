@@ -167,5 +167,16 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
          return (WorkbookChartGridlinesFormatRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IWorkbookChartGridlinesFormatRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (WorkbookChartGridlinesFormatRequest)this;
+     }
+
 }
 

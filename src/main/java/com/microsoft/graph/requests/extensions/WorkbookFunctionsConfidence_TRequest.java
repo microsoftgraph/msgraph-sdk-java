@@ -89,4 +89,15 @@ public class WorkbookFunctionsConfidence_TRequest extends BaseRequest implements
         return (WorkbookFunctionsConfidence_TRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsConfidence_TRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsConfidence_TRequest)this;
+    }
+
 }

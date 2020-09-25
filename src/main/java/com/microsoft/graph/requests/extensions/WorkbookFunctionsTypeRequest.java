@@ -89,4 +89,15 @@ public class WorkbookFunctionsTypeRequest extends BaseRequest implements IWorkbo
         return (WorkbookFunctionsTypeRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsTypeRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsTypeRequest)this;
+    }
+
 }

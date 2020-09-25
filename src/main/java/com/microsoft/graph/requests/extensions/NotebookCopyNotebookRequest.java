@@ -89,4 +89,15 @@ public class NotebookCopyNotebookRequest extends BaseRequest implements INoteboo
         return (NotebookCopyNotebookRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public INotebookCopyNotebookRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (NotebookCopyNotebookRequest)this;
+    }
+
 }

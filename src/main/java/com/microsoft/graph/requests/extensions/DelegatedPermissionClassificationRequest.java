@@ -165,5 +165,16 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest implem
          return (DelegatedPermissionClassificationRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IDelegatedPermissionClassificationRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (DelegatedPermissionClassificationRequest)this;
+     }
+
 }
 

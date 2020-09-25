@@ -165,5 +165,16 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
          return (EditionUpgradeConfigurationRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IEditionUpgradeConfigurationRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (EditionUpgradeConfigurationRequest)this;
+     }
+
 }
 

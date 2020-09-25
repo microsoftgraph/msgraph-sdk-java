@@ -89,4 +89,15 @@ public class WorkbookFunctionsIsTextRequest extends BaseRequest implements IWork
         return (WorkbookFunctionsIsTextRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsIsTextRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsIsTextRequest)this;
+    }
+
 }

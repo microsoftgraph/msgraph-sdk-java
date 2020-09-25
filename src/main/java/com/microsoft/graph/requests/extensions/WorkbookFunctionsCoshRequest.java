@@ -89,4 +89,15 @@ public class WorkbookFunctionsCoshRequest extends BaseRequest implements IWorkbo
         return (WorkbookFunctionsCoshRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsCoshRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsCoshRequest)this;
+    }
+
 }

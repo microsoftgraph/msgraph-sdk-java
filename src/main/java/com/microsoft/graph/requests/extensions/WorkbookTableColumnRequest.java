@@ -168,5 +168,16 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
          return (WorkbookTableColumnRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IWorkbookTableColumnRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (WorkbookTableColumnRequest)this;
+     }
+
 }
 

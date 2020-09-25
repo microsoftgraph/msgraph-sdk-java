@@ -165,5 +165,16 @@ public class DataPolicyOperationRequest extends BaseRequest implements IDataPoli
          return (DataPolicyOperationRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IDataPolicyOperationRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (DataPolicyOperationRequest)this;
+     }
+
 }
 

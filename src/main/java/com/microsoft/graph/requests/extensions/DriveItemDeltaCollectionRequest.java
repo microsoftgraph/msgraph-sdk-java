@@ -115,4 +115,15 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
         return (IDriveItemDeltaCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDriveItemDeltaCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (IDriveItemDeltaCollectionRequest)this;
+    }
+
 }

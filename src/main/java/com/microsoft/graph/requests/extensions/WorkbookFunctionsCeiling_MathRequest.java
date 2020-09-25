@@ -89,4 +89,15 @@ public class WorkbookFunctionsCeiling_MathRequest extends BaseRequest implements
         return (WorkbookFunctionsCeiling_MathRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsCeiling_MathRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsCeiling_MathRequest)this;
+    }
+
 }

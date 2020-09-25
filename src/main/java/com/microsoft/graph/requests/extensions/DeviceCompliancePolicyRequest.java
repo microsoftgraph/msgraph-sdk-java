@@ -206,5 +206,16 @@ public class DeviceCompliancePolicyRequest extends BaseRequest implements IDevic
          return (DeviceCompliancePolicyRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IDeviceCompliancePolicyRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (DeviceCompliancePolicyRequest)this;
+     }
+
 }
 

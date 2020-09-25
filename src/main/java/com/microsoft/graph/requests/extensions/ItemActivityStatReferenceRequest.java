@@ -78,6 +78,16 @@ public class ItemActivityStatReferenceRequest extends BaseRequest implements IIt
         return (ItemActivityStatReferenceRequest)this;
     }
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IItemActivityStatReferenceRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (ItemActivityStatReferenceRequest)this;
+    }
+    /**
      * Puts the ItemActivityStat
      *
      * @param srcItemActivityStat the ItemActivityStat reference to PUT

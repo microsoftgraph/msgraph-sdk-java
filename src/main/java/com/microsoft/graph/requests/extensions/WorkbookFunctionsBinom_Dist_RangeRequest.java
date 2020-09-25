@@ -89,4 +89,15 @@ public class WorkbookFunctionsBinom_Dist_RangeRequest extends BaseRequest implem
         return (WorkbookFunctionsBinom_Dist_RangeRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsBinom_Dist_RangeRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsBinom_Dist_RangeRequest)this;
+    }
+
 }

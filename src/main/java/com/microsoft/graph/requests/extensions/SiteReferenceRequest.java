@@ -103,6 +103,16 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
         return (SiteReferenceRequest)this;
     }
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISiteReferenceRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (SiteReferenceRequest)this;
+    }
+    /**
      * Puts the Site
      *
      * @param srcSite the Site reference to PUT

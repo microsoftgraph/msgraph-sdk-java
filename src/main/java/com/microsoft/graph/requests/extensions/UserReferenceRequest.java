@@ -192,6 +192,16 @@ public class UserReferenceRequest extends BaseRequest implements IUserReferenceR
         return (UserReferenceRequest)this;
     }
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IUserReferenceRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (UserReferenceRequest)this;
+    }
+    /**
      * Puts the User
      *
      * @param srcUser the User reference to PUT

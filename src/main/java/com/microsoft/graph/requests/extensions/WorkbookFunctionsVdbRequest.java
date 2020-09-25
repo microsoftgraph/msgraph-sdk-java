@@ -89,4 +89,15 @@ public class WorkbookFunctionsVdbRequest extends BaseRequest implements IWorkboo
         return (WorkbookFunctionsVdbRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsVdbRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsVdbRequest)this;
+    }
+
 }

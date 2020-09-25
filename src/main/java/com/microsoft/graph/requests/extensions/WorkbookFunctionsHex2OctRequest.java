@@ -89,4 +89,15 @@ public class WorkbookFunctionsHex2OctRequest extends BaseRequest implements IWor
         return (WorkbookFunctionsHex2OctRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsHex2OctRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsHex2OctRequest)this;
+    }
+
 }

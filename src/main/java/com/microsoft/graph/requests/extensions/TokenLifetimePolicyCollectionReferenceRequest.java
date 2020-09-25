@@ -74,6 +74,17 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public ITokenLifetimePolicyCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (TokenLifetimePolicyCollectionReferenceRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

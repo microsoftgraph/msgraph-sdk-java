@@ -78,6 +78,16 @@ public class TeamsAppReferenceRequest extends BaseRequest implements ITeamsAppRe
         return (TeamsAppReferenceRequest)this;
     }
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITeamsAppReferenceRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (TeamsAppReferenceRequest)this;
+    }
+    /**
      * Puts the TeamsApp
      *
      * @param srcTeamsApp the TeamsApp reference to PUT

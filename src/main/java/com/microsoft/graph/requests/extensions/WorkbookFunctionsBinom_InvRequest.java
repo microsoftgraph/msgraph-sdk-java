@@ -89,4 +89,15 @@ public class WorkbookFunctionsBinom_InvRequest extends BaseRequest implements IW
         return (WorkbookFunctionsBinom_InvRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsBinom_InvRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsBinom_InvRequest)this;
+    }
+
 }

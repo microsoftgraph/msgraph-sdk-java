@@ -165,5 +165,16 @@ public class OpenShiftChangeRequestRequest extends BaseRequest implements IOpenS
          return (OpenShiftChangeRequestRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IOpenShiftChangeRequestRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (OpenShiftChangeRequestRequest)this;
+     }
+
 }
 

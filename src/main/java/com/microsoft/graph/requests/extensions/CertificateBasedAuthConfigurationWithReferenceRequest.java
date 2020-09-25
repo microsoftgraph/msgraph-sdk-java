@@ -103,4 +103,14 @@ public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseR
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CertificateBasedAuthConfigurationWithReferenceRequest)this;
     }
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ICertificateBasedAuthConfigurationWithReferenceRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (CertificateBasedAuthConfigurationWithReferenceRequest)this;
+    }
 }

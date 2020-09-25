@@ -88,4 +88,15 @@ public class MobileAppAssignRequest extends BaseRequest implements IMobileAppAss
         return (MobileAppAssignRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMobileAppAssignRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (MobileAppAssignRequest)this;
+    }
+
 }

@@ -165,5 +165,16 @@ public class Windows81CompliancePolicyRequest extends BaseRequest implements IWi
          return (Windows81CompliancePolicyRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IWindows81CompliancePolicyRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (Windows81CompliancePolicyRequest)this;
+     }
+
 }
 

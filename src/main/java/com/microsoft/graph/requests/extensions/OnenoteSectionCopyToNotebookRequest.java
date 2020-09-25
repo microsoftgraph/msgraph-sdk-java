@@ -89,4 +89,15 @@ public class OnenoteSectionCopyToNotebookRequest extends BaseRequest implements 
         return (OnenoteSectionCopyToNotebookRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IOnenoteSectionCopyToNotebookRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (OnenoteSectionCopyToNotebookRequest)this;
+    }
+
 }

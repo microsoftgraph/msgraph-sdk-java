@@ -89,4 +89,15 @@ public class WorkbookFunctionsIpmtRequest extends BaseRequest implements IWorkbo
         return (WorkbookFunctionsIpmtRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsIpmtRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsIpmtRequest)this;
+    }
+
 }

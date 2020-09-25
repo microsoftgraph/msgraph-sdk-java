@@ -182,5 +182,16 @@ public class RoleAssignmentRequest extends BaseRequest implements IRoleAssignmen
          return (RoleAssignmentRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IRoleAssignmentRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (RoleAssignmentRequest)this;
+     }
+
 }
 

@@ -88,4 +88,15 @@ public class PostForwardRequest extends BaseRequest implements IPostForwardReque
         return (PostForwardRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPostForwardRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (PostForwardRequest)this;
+    }
+
 }

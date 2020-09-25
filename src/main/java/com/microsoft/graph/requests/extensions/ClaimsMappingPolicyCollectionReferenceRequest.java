@@ -74,6 +74,17 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IClaimsMappingPolicyCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (ClaimsMappingPolicyCollectionReferenceRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

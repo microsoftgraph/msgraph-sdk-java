@@ -89,4 +89,15 @@ public class WorkbookFunctionsT_Dist_2TRequest extends BaseRequest implements IW
         return (WorkbookFunctionsT_Dist_2TRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsT_Dist_2TRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsT_Dist_2TRequest)this;
+    }
+
 }

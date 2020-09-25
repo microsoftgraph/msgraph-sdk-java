@@ -165,5 +165,16 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
          return (SwapShiftsChangeRequestRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public ISwapShiftsChangeRequestRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (SwapShiftsChangeRequestRequest)this;
+     }
+
 }
 

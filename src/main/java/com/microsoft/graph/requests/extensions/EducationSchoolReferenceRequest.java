@@ -82,6 +82,16 @@ public class EducationSchoolReferenceRequest extends BaseRequest implements IEdu
         return (EducationSchoolReferenceRequest)this;
     }
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IEducationSchoolReferenceRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (EducationSchoolReferenceRequest)this;
+    }
+    /**
      * Puts the EducationSchool
      *
      * @param srcEducationSchool the EducationSchool reference to PUT

@@ -89,4 +89,15 @@ public class WorkbookFunctionsSinhRequest extends BaseRequest implements IWorkbo
         return (WorkbookFunctionsSinhRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsSinhRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsSinhRequest)this;
+    }
+
 }

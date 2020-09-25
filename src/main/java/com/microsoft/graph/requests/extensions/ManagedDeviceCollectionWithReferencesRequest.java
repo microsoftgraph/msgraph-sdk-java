@@ -65,6 +65,11 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
         return (ManagedDeviceCollectionWithReferencesRequest)this;
     }
 
+    public IManagedDeviceCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (ManagedDeviceCollectionWithReferencesRequest)this;
+    }
+
     public IManagedDeviceCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedDeviceCollectionWithReferencesRequest)this;

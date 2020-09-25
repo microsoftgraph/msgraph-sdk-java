@@ -127,6 +127,16 @@ public class GroupReferenceRequest extends BaseRequest implements IGroupReferenc
         return (GroupReferenceRequest)this;
     }
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IGroupReferenceRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (GroupReferenceRequest)this;
+    }
+    /**
      * Puts the Group
      *
      * @param srcGroup the Group reference to PUT

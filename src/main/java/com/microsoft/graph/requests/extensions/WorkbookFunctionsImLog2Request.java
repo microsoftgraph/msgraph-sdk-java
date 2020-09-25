@@ -89,4 +89,15 @@ public class WorkbookFunctionsImLog2Request extends BaseRequest implements IWork
         return (WorkbookFunctionsImLog2Request)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsImLog2Request orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsImLog2Request)this;
+    }
+
 }

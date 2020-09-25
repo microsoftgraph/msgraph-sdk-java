@@ -74,6 +74,16 @@ public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implement
         return (ManagedDeviceOverviewReferenceRequest)this;
     }
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IManagedDeviceOverviewReferenceRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (ManagedDeviceOverviewReferenceRequest)this;
+    }
+    /**
      * Puts the ManagedDeviceOverview
      *
      * @param srcManagedDeviceOverview the ManagedDeviceOverview reference to PUT

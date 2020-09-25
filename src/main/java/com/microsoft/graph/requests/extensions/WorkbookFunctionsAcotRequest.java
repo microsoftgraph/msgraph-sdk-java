@@ -89,4 +89,15 @@ public class WorkbookFunctionsAcotRequest extends BaseRequest implements IWorkbo
         return (WorkbookFunctionsAcotRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsAcotRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsAcotRequest)this;
+    }
+
 }

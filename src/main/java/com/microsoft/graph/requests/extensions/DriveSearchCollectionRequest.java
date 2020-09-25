@@ -115,4 +115,15 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSea
         return (IDriveSearchCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDriveSearchCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (IDriveSearchCollectionRequest)this;
+    }
+
 }

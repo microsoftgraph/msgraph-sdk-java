@@ -167,5 +167,16 @@ public class ActivityHistoryItemRequest extends BaseRequest implements IActivity
          return (ActivityHistoryItemRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IActivityHistoryItemRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (ActivityHistoryItemRequest)this;
+     }
+
 }
 

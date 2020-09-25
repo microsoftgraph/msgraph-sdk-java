@@ -169,5 +169,16 @@ public class WorkbookChartAxisFormatRequest extends BaseRequest implements IWork
          return (WorkbookChartAxisFormatRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IWorkbookChartAxisFormatRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (WorkbookChartAxisFormatRequest)this;
+     }
+
 }
 

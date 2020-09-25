@@ -182,5 +182,16 @@ public class BaseItemRequest extends BaseRequest implements IBaseItemRequest {
          return (BaseItemRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IBaseItemRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (BaseItemRequest)this;
+     }
+
 }
 

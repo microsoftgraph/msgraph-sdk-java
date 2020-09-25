@@ -64,6 +64,11 @@ public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseC
         return (ManagedAppRegistrationCollectionWithReferencesRequest)this;
     }
 
+    public IManagedAppRegistrationCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (ManagedAppRegistrationCollectionWithReferencesRequest)this;
+    }
+
     public IManagedAppRegistrationCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedAppRegistrationCollectionWithReferencesRequest)this;

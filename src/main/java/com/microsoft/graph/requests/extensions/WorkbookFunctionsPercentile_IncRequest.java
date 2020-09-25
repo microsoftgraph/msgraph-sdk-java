@@ -89,4 +89,15 @@ public class WorkbookFunctionsPercentile_IncRequest extends BaseRequest implemen
         return (WorkbookFunctionsPercentile_IncRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsPercentile_IncRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsPercentile_IncRequest)this;
+    }
+
 }

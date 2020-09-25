@@ -89,4 +89,15 @@ public class WorkbookFunctionsImConjugateRequest extends BaseRequest implements 
         return (WorkbookFunctionsImConjugateRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsImConjugateRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookFunctionsImConjugateRequest)this;
+    }
+
 }

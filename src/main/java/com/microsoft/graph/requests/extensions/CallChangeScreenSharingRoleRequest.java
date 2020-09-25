@@ -88,4 +88,15 @@ public class CallChangeScreenSharingRoleRequest extends BaseRequest implements I
         return (CallChangeScreenSharingRoleRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ICallChangeScreenSharingRoleRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (CallChangeScreenSharingRoleRequest)this;
+    }
+
 }

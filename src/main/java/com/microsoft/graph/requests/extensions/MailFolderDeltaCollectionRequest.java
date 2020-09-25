@@ -115,4 +115,15 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
         return (IMailFolderDeltaCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMailFolderDeltaCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (IMailFolderDeltaCollectionRequest)this;
+    }
+
 }

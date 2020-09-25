@@ -74,6 +74,16 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest implement
         return (OAuth2PermissionGrantReferenceRequest)this;
     }
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IOAuth2PermissionGrantReferenceRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (OAuth2PermissionGrantReferenceRequest)this;
+    }
+    /**
      * Puts the OAuth2PermissionGrant
      *
      * @param srcOAuth2PermissionGrant the OAuth2PermissionGrant reference to PUT

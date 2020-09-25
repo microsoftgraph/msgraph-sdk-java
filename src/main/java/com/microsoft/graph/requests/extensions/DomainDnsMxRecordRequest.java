@@ -165,5 +165,16 @@ public class DomainDnsMxRecordRequest extends BaseRequest implements IDomainDnsM
          return (DomainDnsMxRecordRequest)this;
      }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+     public IDomainDnsMxRecordRequest orderBy(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+         return (DomainDnsMxRecordRequest)this;
+     }
+
 }
 
