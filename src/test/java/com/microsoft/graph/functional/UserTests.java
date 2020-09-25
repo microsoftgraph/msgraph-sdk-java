@@ -20,8 +20,10 @@ import org.junit.Test;
 import okhttp3.Request;
 
 import com.microsoft.graph.http.HttpMethod;
+import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.IGraphServiceClient;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.User;
@@ -30,6 +32,7 @@ import com.microsoft.graph.options.Option;
 import com.microsoft.graph.requests.extensions.IContactCollectionPage;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionPage;
+import com.microsoft.graph.requests.extensions.IGroupCollectionPage;
 import com.microsoft.graph.requests.extensions.IMailFolderCollectionPage;
 import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.IOrganizationCollectionPage;
@@ -209,5 +212,32 @@ public class UserTests {
                                             .getHttpRequest();
 		assertEquals(contentTypeValue, request.body().contentType().toString());					
 	}
+	@Test
+	public void castTest() {
+		final IGroupCollectionPage groups = graphServiceClient.groups().buildRequest().top(1).get();
+		final Group group = groups.getCurrentPage().get(0);
+		final IUserCollectionPage usersPage = graphServiceClient
+		.groups(group.id)
+		.members()
+		.castToUsers()
+		.buildRequest()
+		.get();
+		assertNotNull(usersPage);
 
+		final IDirectoryObjectCollectionWithReferencesPage testUserCollection = graphServiceClient
+							.groups(group.id)
+							.members()
+							.buildRequest()
+							.top(1)
+							.get();
+		final DirectoryObject testUser = testUserCollection.getCurrentPage().get(0);
+
+		final User user = graphServiceClient
+		.groups(group.id)
+		.members(testUser.id)
+		.castToUser()
+		.buildRequest()
+		.get();
+		assertNotNull(user);
+	}
 }
