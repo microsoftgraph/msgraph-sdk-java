@@ -101,24 +101,4 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest impl
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedAppRegistrationWithReferenceRequest)this;
     }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IManagedAppRegistrationWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedAppRegistrationWithReferenceRequest)this;
-    }
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IManagedAppRegistrationWithReferenceRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ManagedAppRegistrationWithReferenceRequest)this;
-    }
 }

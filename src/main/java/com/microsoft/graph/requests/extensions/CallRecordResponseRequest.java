@@ -78,26 +78,4 @@ public class CallRecordResponseRequest extends BaseRequest implements ICallRecor
         return (CallRecordResponseRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ICallRecordResponseRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (CallRecordResponseRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ICallRecordResponseRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (CallRecordResponseRequest)this;
-    }
-
 }

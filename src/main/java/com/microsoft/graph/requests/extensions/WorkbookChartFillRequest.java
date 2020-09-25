@@ -154,27 +154,5 @@ public class WorkbookChartFillRequest extends BaseRequest implements IWorkbookCh
          return (WorkbookChartFillRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWorkbookChartFillRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (WorkbookChartFillRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IWorkbookChartFillRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (WorkbookChartFillRequest)this;
-     }
-
 }
 

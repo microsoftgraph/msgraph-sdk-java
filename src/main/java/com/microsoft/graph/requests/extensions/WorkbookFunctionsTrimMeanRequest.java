@@ -78,26 +78,4 @@ public class WorkbookFunctionsTrimMeanRequest extends BaseRequest implements IWo
         return (WorkbookFunctionsTrimMeanRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsTrimMeanRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsTrimMeanRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsTrimMeanRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookFunctionsTrimMeanRequest)this;
-    }
-
 }

@@ -78,26 +78,4 @@ public class WorkbookFunctionsStDev_SRequest extends BaseRequest implements IWor
         return (WorkbookFunctionsStDev_SRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsStDev_SRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsStDev_SRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsStDev_SRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookFunctionsStDev_SRequest)this;
-    }
-
 }

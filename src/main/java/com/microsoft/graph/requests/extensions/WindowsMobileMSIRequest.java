@@ -154,27 +154,5 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
          return (WindowsMobileMSIRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWindowsMobileMSIRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (WindowsMobileMSIRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IWindowsMobileMSIRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (WindowsMobileMSIRequest)this;
-     }
-
 }
 

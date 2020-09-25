@@ -97,24 +97,4 @@ public class UserActivityWithReferenceRequest extends BaseRequest implements IUs
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserActivityWithReferenceRequest)this;
     }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IUserActivityWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (UserActivityWithReferenceRequest)this;
-    }
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IUserActivityWithReferenceRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (UserActivityWithReferenceRequest)this;
-    }
 }

@@ -154,27 +154,5 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
          return (ActivityBasedTimeoutPolicyRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IActivityBasedTimeoutPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (ActivityBasedTimeoutPolicyRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IActivityBasedTimeoutPolicyRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (ActivityBasedTimeoutPolicyRequest)this;
-     }
-
 }
 

@@ -154,27 +154,5 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
          return (ConditionalAccessPolicyRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IConditionalAccessPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (ConditionalAccessPolicyRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IConditionalAccessPolicyRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (ConditionalAccessPolicyRequest)this;
-     }
-
 }
 

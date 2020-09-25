@@ -156,27 +156,5 @@ public class WorkbookChartLegendRequest extends BaseRequest implements IWorkbook
          return (WorkbookChartLegendRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWorkbookChartLegendRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (WorkbookChartLegendRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IWorkbookChartLegendRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (WorkbookChartLegendRequest)this;
-     }
-
 }
 

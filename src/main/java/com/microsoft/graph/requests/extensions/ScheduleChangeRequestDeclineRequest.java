@@ -77,26 +77,4 @@ public class ScheduleChangeRequestDeclineRequest extends BaseRequest implements 
         return (ScheduleChangeRequestDeclineRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IScheduleChangeRequestDeclineRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ScheduleChangeRequestDeclineRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IScheduleChangeRequestDeclineRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ScheduleChangeRequestDeclineRequest)this;
-    }
-
 }

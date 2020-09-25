@@ -75,26 +75,6 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
         return (ManagedDeviceReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IManagedDeviceReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedDeviceReferenceRequest)this;
-    }
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IManagedDeviceReferenceRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ManagedDeviceReferenceRequest)this;
-    }
-    /**
      * Puts the ManagedDevice
      *
      * @param srcManagedDevice the ManagedDevice reference to PUT

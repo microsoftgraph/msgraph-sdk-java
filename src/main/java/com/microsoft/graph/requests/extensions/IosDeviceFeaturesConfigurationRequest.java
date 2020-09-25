@@ -154,27 +154,5 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest implement
          return (IosDeviceFeaturesConfigurationRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosDeviceFeaturesConfigurationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (IosDeviceFeaturesConfigurationRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IIosDeviceFeaturesConfigurationRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (IosDeviceFeaturesConfigurationRequest)this;
-     }
-
 }
 

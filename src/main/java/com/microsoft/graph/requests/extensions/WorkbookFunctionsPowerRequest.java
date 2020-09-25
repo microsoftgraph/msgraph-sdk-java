@@ -78,26 +78,4 @@ public class WorkbookFunctionsPowerRequest extends BaseRequest implements IWorkb
         return (WorkbookFunctionsPowerRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsPowerRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsPowerRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsPowerRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookFunctionsPowerRequest)this;
-    }
-
 }

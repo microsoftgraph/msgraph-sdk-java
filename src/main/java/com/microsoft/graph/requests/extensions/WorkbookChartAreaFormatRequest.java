@@ -158,27 +158,5 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
          return (WorkbookChartAreaFormatRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWorkbookChartAreaFormatRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (WorkbookChartAreaFormatRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IWorkbookChartAreaFormatRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (WorkbookChartAreaFormatRequest)this;
-     }
-
 }
 

@@ -154,27 +154,5 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest implements IHom
          return (HomeRealmDiscoveryPolicyRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IHomeRealmDiscoveryPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (HomeRealmDiscoveryPolicyRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IHomeRealmDiscoveryPolicyRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (HomeRealmDiscoveryPolicyRequest)this;
-     }
-
 }
 

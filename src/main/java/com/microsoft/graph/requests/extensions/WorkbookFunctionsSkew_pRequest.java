@@ -78,26 +78,4 @@ public class WorkbookFunctionsSkew_pRequest extends BaseRequest implements IWork
         return (WorkbookFunctionsSkew_pRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsSkew_pRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsSkew_pRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsSkew_pRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (WorkbookFunctionsSkew_pRequest)this;
-    }
-
 }

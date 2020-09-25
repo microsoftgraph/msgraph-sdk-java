@@ -173,27 +173,5 @@ public class ThreatAssessmentRequestRequest extends BaseRequest implements IThre
          return (ThreatAssessmentRequestRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IThreatAssessmentRequestRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (ThreatAssessmentRequestRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IThreatAssessmentRequestRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (ThreatAssessmentRequestRequest)this;
-     }
-
 }
 

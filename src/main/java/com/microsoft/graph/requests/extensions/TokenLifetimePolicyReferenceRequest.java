@@ -64,26 +64,6 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
         return (TokenLifetimePolicyReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ITokenLifetimePolicyReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TokenLifetimePolicyReferenceRequest)this;
-    }
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ITokenLifetimePolicyReferenceRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (TokenLifetimePolicyReferenceRequest)this;
-    }
-    /**
      * Puts the TokenLifetimePolicy
      *
      * @param srcTokenLifetimePolicy the TokenLifetimePolicy reference to PUT

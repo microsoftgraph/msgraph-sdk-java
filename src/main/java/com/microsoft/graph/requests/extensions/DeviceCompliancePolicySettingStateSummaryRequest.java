@@ -158,27 +158,5 @@ public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseReques
          return (DeviceCompliancePolicySettingStateSummaryRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceCompliancePolicySettingStateSummaryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (DeviceCompliancePolicySettingStateSummaryRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IDeviceCompliancePolicySettingStateSummaryRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (DeviceCompliancePolicySettingStateSummaryRequest)this;
-     }
-
 }
 

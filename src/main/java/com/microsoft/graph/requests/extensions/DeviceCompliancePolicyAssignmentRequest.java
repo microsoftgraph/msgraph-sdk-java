@@ -154,27 +154,5 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest impleme
          return (DeviceCompliancePolicyAssignmentRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDeviceCompliancePolicyAssignmentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (DeviceCompliancePolicyAssignmentRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IDeviceCompliancePolicyAssignmentRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (DeviceCompliancePolicyAssignmentRequest)this;
-     }
-
 }
 

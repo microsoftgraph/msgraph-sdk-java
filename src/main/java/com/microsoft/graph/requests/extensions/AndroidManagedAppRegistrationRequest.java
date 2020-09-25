@@ -154,27 +154,5 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest implements
          return (AndroidManagedAppRegistrationRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IAndroidManagedAppRegistrationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (AndroidManagedAppRegistrationRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IAndroidManagedAppRegistrationRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (AndroidManagedAppRegistrationRequest)this;
-     }
-
 }
 

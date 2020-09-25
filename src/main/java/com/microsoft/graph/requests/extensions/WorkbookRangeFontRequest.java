@@ -154,27 +154,5 @@ public class WorkbookRangeFontRequest extends BaseRequest implements IWorkbookRa
          return (WorkbookRangeFontRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWorkbookRangeFontRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (WorkbookRangeFontRequest)this;
-     }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-     public IWorkbookRangeFontRequest orderBy(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
-         return (WorkbookRangeFontRequest)this;
-     }
-
 }
 
