@@ -156,16 +156,5 @@ public class IdentityContainerRequest extends BaseRequest implements IIdentityCo
          return (IdentityContainerRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIdentityContainerRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (IdentityContainerRequest)this;
-     }
-
 }
 

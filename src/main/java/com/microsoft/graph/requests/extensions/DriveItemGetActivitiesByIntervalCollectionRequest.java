@@ -115,4 +115,15 @@ public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseColle
         return (IDriveItemGetActivitiesByIntervalCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDriveItemGetActivitiesByIntervalCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (IDriveItemGetActivitiesByIntervalCollectionRequest)this;
+    }
+
 }

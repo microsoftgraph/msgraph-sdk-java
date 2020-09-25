@@ -58,8 +58,6 @@ public interface IMessageRequestBuilder extends IRequestBuilder {
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
     ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
-
-    IMessageStreamRequestBuilder content();
     IMessageCopyRequestBuilder copy(final String destinationId);
     IMessageMoveRequestBuilder move(final String destinationId);
     IMessageCreateForwardRequestBuilder createForward(final java.util.List<Recipient> toRecipients, final Message message, final String comment);

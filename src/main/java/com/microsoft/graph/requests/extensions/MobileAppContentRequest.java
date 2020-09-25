@@ -158,16 +158,5 @@ public class MobileAppContentRequest extends BaseRequest implements IMobileAppCo
          return (MobileAppContentRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IMobileAppContentRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (MobileAppContentRequest)this;
-     }
-
 }
 

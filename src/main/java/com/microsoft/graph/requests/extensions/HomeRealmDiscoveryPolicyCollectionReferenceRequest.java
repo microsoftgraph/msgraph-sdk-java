@@ -74,6 +74,17 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IHomeRealmDiscoveryPolicyCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (HomeRealmDiscoveryPolicyCollectionReferenceRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -64,6 +64,11 @@ public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollec
         return (MobileAppCategoryCollectionWithReferencesRequest)this;
     }
 
+    public IMobileAppCategoryCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (MobileAppCategoryCollectionWithReferencesRequest)this;
+    }
+
     public IMobileAppCategoryCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MobileAppCategoryCollectionWithReferencesRequest)this;

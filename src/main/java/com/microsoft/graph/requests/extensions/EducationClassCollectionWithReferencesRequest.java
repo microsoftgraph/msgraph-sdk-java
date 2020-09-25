@@ -64,6 +64,11 @@ public class EducationClassCollectionWithReferencesRequest extends BaseCollectio
         return (EducationClassCollectionWithReferencesRequest)this;
     }
 
+    public IEducationClassCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (EducationClassCollectionWithReferencesRequest)this;
+    }
+
     public IEducationClassCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EducationClassCollectionWithReferencesRequest)this;

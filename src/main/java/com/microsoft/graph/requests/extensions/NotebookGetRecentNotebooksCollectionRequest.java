@@ -115,4 +115,15 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
         return (INotebookGetRecentNotebooksCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public INotebookGetRecentNotebooksCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (INotebookGetRecentNotebooksCollectionRequest)this;
+    }
+
 }

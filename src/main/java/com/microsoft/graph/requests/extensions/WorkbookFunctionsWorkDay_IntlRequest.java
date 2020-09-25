@@ -78,15 +78,4 @@ public class WorkbookFunctionsWorkDay_IntlRequest extends BaseRequest implements
         return (WorkbookFunctionsWorkDay_IntlRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsWorkDay_IntlRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsWorkDay_IntlRequest)this;
-    }
-
 }

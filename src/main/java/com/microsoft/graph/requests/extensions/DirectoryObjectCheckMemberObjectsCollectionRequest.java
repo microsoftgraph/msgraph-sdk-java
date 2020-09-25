@@ -120,4 +120,15 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
         return (IDirectoryObjectCheckMemberObjectsCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDirectoryObjectCheckMemberObjectsCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (IDirectoryObjectCheckMemberObjectsCollectionRequest)this;
+    }
+
 }

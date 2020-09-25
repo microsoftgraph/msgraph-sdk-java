@@ -104,14 +104,4 @@ public class ManagedDeviceWithReferenceRequest extends BaseRequest implements IM
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedDeviceWithReferenceRequest)this;
     }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IManagedDeviceWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedDeviceWithReferenceRequest)this;
-    }
 }

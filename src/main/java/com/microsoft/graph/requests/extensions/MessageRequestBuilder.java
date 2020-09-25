@@ -98,10 +98,6 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
-    public IMessageStreamRequestBuilder content() {
-        return new MessageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
-    }
-
     public IMessageCopyRequestBuilder copy(final String destinationId) {
         return new MessageCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
     }

@@ -73,15 +73,4 @@ public class DomainVerifyRequest extends BaseRequest implements IDomainVerifyReq
         return (DomainVerifyRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDomainVerifyRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DomainVerifyRequest)this;
-    }
-
 }

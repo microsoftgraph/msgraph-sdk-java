@@ -46,6 +46,14 @@ public interface IDirectoryRoleCollectionRequest extends IHttpRequest {
     IDirectoryRoleCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDirectoryRoleCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

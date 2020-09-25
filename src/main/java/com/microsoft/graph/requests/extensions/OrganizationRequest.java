@@ -162,16 +162,5 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
          return (OrganizationRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IOrganizationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (OrganizationRequest)this;
-     }
-
 }
 
