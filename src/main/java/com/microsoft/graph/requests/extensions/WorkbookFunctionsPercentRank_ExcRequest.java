@@ -78,15 +78,4 @@ public class WorkbookFunctionsPercentRank_ExcRequest extends BaseRequest impleme
         return (WorkbookFunctionsPercentRank_ExcRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsPercentRank_ExcRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsPercentRank_ExcRequest)this;
-    }
-
 }

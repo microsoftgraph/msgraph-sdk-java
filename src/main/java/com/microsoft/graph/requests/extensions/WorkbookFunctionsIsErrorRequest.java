@@ -78,15 +78,4 @@ public class WorkbookFunctionsIsErrorRequest extends BaseRequest implements IWor
         return (WorkbookFunctionsIsErrorRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsIsErrorRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsIsErrorRequest)this;
-    }
-
 }

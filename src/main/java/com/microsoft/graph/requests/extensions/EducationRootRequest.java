@@ -166,16 +166,5 @@ public class EducationRootRequest extends BaseRequest implements IEducationRootR
          return (EducationRootRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IEducationRootRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (EducationRootRequest)this;
-     }
-
 }
 

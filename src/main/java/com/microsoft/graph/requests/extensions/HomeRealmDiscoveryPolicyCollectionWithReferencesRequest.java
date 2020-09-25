@@ -64,6 +64,11 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends Bas
         return (HomeRealmDiscoveryPolicyCollectionWithReferencesRequest)this;
     }
 
+    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (HomeRealmDiscoveryPolicyCollectionWithReferencesRequest)this;
+    }
+
     public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (HomeRealmDiscoveryPolicyCollectionWithReferencesRequest)this;

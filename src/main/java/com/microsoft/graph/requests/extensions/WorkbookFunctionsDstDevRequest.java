@@ -78,15 +78,4 @@ public class WorkbookFunctionsDstDevRequest extends BaseRequest implements IWork
         return (WorkbookFunctionsDstDevRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsDstDevRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsDstDevRequest)this;
-    }
-
 }

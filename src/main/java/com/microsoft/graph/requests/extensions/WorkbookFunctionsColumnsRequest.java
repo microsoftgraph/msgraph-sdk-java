@@ -78,15 +78,4 @@ public class WorkbookFunctionsColumnsRequest extends BaseRequest implements IWor
         return (WorkbookFunctionsColumnsRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsColumnsRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsColumnsRequest)this;
-    }
-
 }

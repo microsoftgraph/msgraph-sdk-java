@@ -115,4 +115,15 @@ public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequ
         return (IAdministrativeUnitDeltaCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IAdministrativeUnitDeltaCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (IAdministrativeUnitDeltaCollectionRequest)this;
+    }
+
 }

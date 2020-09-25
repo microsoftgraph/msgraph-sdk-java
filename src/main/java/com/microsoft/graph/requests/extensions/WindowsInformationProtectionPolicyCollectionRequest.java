@@ -96,6 +96,17 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionPolicyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WindowsInformationProtectionPolicyCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -158,16 +158,5 @@ public class PermissionGrantPolicyRequest extends BaseRequest implements IPermis
          return (PermissionGrantPolicyRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPermissionGrantPolicyRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (PermissionGrantPolicyRequest)this;
-     }
-
 }
 

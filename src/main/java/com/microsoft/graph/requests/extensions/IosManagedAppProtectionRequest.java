@@ -160,16 +160,5 @@ public class IosManagedAppProtectionRequest extends BaseRequest implements IIosM
          return (IosManagedAppProtectionRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IIosManagedAppProtectionRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (IosManagedAppProtectionRequest)this;
-     }
-
 }
 

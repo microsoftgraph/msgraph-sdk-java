@@ -154,16 +154,5 @@ public class DelegatedPermissionClassificationRequest extends BaseRequest implem
          return (DelegatedPermissionClassificationRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDelegatedPermissionClassificationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (DelegatedPermissionClassificationRequest)this;
-     }
-
 }
 

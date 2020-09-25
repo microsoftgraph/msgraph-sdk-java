@@ -124,4 +124,15 @@ public class SiteGetByPathRequest extends BaseRequest implements ISiteGetByPathR
         return (SiteGetByPathRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISiteGetByPathRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (SiteGetByPathRequest)this;
+    }
+
 }

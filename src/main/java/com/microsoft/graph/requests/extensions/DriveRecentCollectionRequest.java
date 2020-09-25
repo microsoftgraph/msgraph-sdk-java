@@ -115,4 +115,15 @@ public class DriveRecentCollectionRequest extends BaseCollectionRequest<DriveRec
         return (IDriveRecentCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IDriveRecentCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (IDriveRecentCollectionRequest)this;
+    }
+
 }

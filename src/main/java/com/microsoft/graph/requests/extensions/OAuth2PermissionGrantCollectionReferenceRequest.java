@@ -74,6 +74,17 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public IOAuth2PermissionGrantCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (OAuth2PermissionGrantCollectionReferenceRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

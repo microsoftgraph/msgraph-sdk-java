@@ -78,15 +78,4 @@ public class WorkbookFunctionsWeibull_DistRequest extends BaseRequest implements
         return (WorkbookFunctionsWeibull_DistRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsWeibull_DistRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsWeibull_DistRequest)this;
-    }
-
 }

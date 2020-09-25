@@ -64,6 +64,11 @@ public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseColl
         return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
     }
 
+    public ITokenIssuancePolicyCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
+    }
+
     public ITokenIssuancePolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TokenIssuancePolicyCollectionWithReferencesRequest)this;

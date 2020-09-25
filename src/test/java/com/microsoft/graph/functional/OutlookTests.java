@@ -43,7 +43,6 @@ import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.generated.AttachmentType;
 import com.microsoft.graph.models.generated.BodyType;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.IUserCollectionPage;
@@ -115,11 +114,8 @@ public class OutlookTests {
     	//Send the drafted message
     	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
     	
-    	java.util.List<QueryOption> options = new ArrayList<QueryOption>();
-    	QueryOption o = new QueryOption("$filter", "subject eq '" + draftSubject + "'");
-    	options.add(o);
     	//Check that the sent message exists on the server
-    	IMessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest(options).get();
+    	IMessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest().filter("subject eq '" + draftSubject + "'").get();
     	assertFalse(mcp.getCurrentPage().isEmpty());
     }
     private Message createDraftMessage(TestBase testBase, String draftSubject) {

@@ -120,4 +120,15 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<SiteRemov
         return (ISiteRemoveCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISiteRemoveCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (ISiteRemoveCollectionRequest)this;
+    }
+
 }

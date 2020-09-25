@@ -46,6 +46,14 @@ public interface ISubscribedSkuCollectionRequest extends IHttpRequest {
     ISubscribedSkuCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISubscribedSkuCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
