@@ -219,7 +219,7 @@ public class UserTests {
 		final IUserCollectionPage usersPage = graphServiceClient
 		.groups(group.id)
 		.members()
-		.castToUsers()
+		.castToUser()
 		.buildRequest()
 		.get();
 		assertNotNull(usersPage);
