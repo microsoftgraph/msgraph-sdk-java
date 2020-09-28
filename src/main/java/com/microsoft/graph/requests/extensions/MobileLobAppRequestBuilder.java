@@ -77,4 +77,49 @@ public class MobileLobAppRequestBuilder extends BaseRequestBuilder implements IM
     public IMobileAppContentRequestBuilder contentVersions(final String id) {
         return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidLobApp type
+     */
+    public IAndroidLobAppRequestBuilder castToAndroidLobApp() {
+        return new AndroidLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidLobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosLobApp type
+     */
+    public IIosLobAppRequestBuilder castToIosLobApp() {
+        return new IosLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosLobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Win32LobApp type
+     */
+    public IWin32LobAppRequestBuilder castToWin32LobApp() {
+        return new Win32LobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.win32LobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsMobileMSI type
+     */
+    public IWindowsMobileMSIRequestBuilder castToWindowsMobileMSI() {
+        return new WindowsMobileMSIRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsMobileMSI"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsUniversalAppX type
+     */
+    public IWindowsUniversalAppXRequestBuilder castToWindowsUniversalAppX() {
+        return new WindowsUniversalAppXRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsUniversalAppX"), getClient(), null);
+    }
 }

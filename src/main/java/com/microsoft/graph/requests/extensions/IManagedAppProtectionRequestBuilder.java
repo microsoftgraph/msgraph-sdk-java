@@ -36,4 +36,32 @@ public interface IManagedAppProtectionRequestBuilder extends IRequestBuilder {
 
     IManagedAppProtectionTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TargetedManagedAppProtection type
+     */
+    ITargetedManagedAppProtectionRequestBuilder castToTargetedManagedAppProtection();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DefaultManagedAppProtection type
+     */
+    IDefaultManagedAppProtectionRequestBuilder castToDefaultManagedAppProtection();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidManagedAppProtection type
+     */
+    IAndroidManagedAppProtectionRequestBuilder castToAndroidManagedAppProtection();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosManagedAppProtection type
+     */
+    IIosManagedAppProtectionRequestBuilder castToIosManagedAppProtection();
+
 }

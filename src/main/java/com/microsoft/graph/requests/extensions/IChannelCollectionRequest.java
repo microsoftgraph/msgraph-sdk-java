@@ -85,5 +85,5 @@ public interface IChannelCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IChannelCollectionRequest skipToken(String skipToken);
+	IChannelCollectionRequest skipToken(final String skipToken);
 }

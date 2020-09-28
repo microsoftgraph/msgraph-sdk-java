@@ -52,4 +52,76 @@ public class OutlookItemRequestBuilder extends BaseRequestBuilder implements IOu
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Event type
+     */
+    public IEventRequestBuilder castToEvent() {
+        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.event"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Contact type
+     */
+    public IContactRequestBuilder castToContact() {
+        return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.contact"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Message type
+     */
+    public IMessageRequestBuilder castToMessage() {
+        return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.message"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Post type
+     */
+    public IPostRequestBuilder castToPost() {
+        return new PostRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.post"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the CalendarSharingMessage type
+     */
+    public ICalendarSharingMessageRequestBuilder castToCalendarSharingMessage() {
+        return new CalendarSharingMessageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.calendarSharingMessage"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessage type
+     */
+    public IEventMessageRequestBuilder castToEventMessage() {
+        return new EventMessageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.eventMessage"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageRequest type
+     */
+    public IEventMessageRequestRequestBuilder castToEventMessageRequest() {
+        return new EventMessageRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.eventMessageRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageResponse type
+     */
+    public IEventMessageResponseRequestBuilder castToEventMessageResponse() {
+        return new EventMessageResponseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.eventMessageResponse"), getClient(), null);
+    }
 }

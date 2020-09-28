@@ -40,4 +40,32 @@ public interface IThreatAssessmentRequestRequestBuilder extends IRequestBuilder 
 
     IThreatAssessmentResultRequestBuilder results(final String id);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EmailFileAssessmentRequest type
+     */
+    IEmailFileAssessmentRequestRequestBuilder castToEmailFileAssessmentRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the FileAssessmentRequest type
+     */
+    IFileAssessmentRequestRequestBuilder castToFileAssessmentRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MailAssessmentRequest type
+     */
+    IMailAssessmentRequestRequestBuilder castToMailAssessmentRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the UrlAssessmentRequest type
+     */
+    IUrlAssessmentRequestRequestBuilder castToUrlAssessmentRequest();
+
 }

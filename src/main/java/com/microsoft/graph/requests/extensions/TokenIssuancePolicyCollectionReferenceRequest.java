@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -36,21 +35,6 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, ITokenIssuancePolicyCollectionPage.class);
     }
 
-    public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
-        final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + newTokenIssuancePolicy.id);
-        new TokenIssuancePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
-            .post(newTokenIssuancePolicy, body, callback);
-    }
-
-    public TokenIssuancePolicy post(final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException {
-        final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + newTokenIssuancePolicy.id);
-        return new TokenIssuancePolicyWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getHeaders())
-                .post(newTokenIssuancePolicy, body);
-    }
     /**
      * Sets the expand clause for the request
      *

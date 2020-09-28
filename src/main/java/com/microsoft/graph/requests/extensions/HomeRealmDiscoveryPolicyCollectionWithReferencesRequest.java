@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -56,27 +55,27 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends Bas
 
     public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (HomeRealmDiscoveryPolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (HomeRealmDiscoveryPolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (HomeRealmDiscoveryPolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (HomeRealmDiscoveryPolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (HomeRealmDiscoveryPolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IHomeRealmDiscoveryPolicyCollectionWithReferencesPage buildFromResponse(final HomeRealmDiscoveryPolicyCollectionResponse response) {

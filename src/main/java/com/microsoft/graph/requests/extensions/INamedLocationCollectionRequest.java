@@ -85,5 +85,5 @@ public interface INamedLocationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	INamedLocationCollectionRequest skipToken(String skipToken);
+	INamedLocationCollectionRequest skipToken(final String skipToken);
 }

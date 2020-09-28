@@ -84,5 +84,5 @@ public interface IDataPolicyOperationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDataPolicyOperationCollectionRequest skipToken(String skipToken);
+	IDataPolicyOperationCollectionRequest skipToken(final String skipToken);
 }

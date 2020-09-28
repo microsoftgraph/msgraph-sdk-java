@@ -57,4 +57,40 @@ public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder imple
     public IManagedAppProtectionTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps) {
         return new ManagedAppProtectionTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TargetedManagedAppProtection type
+     */
+    public ITargetedManagedAppProtectionRequestBuilder castToTargetedManagedAppProtection() {
+        return new TargetedManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetedManagedAppProtection"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DefaultManagedAppProtection type
+     */
+    public IDefaultManagedAppProtectionRequestBuilder castToDefaultManagedAppProtection() {
+        return new DefaultManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.defaultManagedAppProtection"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidManagedAppProtection type
+     */
+    public IAndroidManagedAppProtectionRequestBuilder castToAndroidManagedAppProtection() {
+        return new AndroidManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidManagedAppProtection"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosManagedAppProtection type
+     */
+    public IIosManagedAppProtectionRequestBuilder castToIosManagedAppProtection() {
+        return new IosManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosManagedAppProtection"), getClient(), null);
+    }
 }

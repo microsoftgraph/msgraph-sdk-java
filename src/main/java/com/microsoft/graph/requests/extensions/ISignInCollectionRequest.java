@@ -85,5 +85,5 @@ public interface ISignInCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISignInCollectionRequest skipToken(String skipToken);
+	ISignInCollectionRequest skipToken(final String skipToken);
 }

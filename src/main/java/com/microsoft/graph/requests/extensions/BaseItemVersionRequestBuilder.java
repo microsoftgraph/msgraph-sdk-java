@@ -52,4 +52,22 @@ public class BaseItemVersionRequestBuilder extends BaseRequestBuilder implements
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DriveItemVersion type
+     */
+    public IDriveItemVersionRequestBuilder castToDriveItemVersion() {
+        return new DriveItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.driveItemVersion"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ListItemVersion type
+     */
+    public IListItemVersionRequestBuilder castToListItemVersion() {
+        return new ListItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.listItemVersion"), getClient(), null);
+    }
 }

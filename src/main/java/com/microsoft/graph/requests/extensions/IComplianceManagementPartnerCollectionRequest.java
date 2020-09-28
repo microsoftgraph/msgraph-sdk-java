@@ -85,5 +85,5 @@ public interface IComplianceManagementPartnerCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	IComplianceManagementPartnerCollectionRequest skipToken(String skipToken);
+	IComplianceManagementPartnerCollectionRequest skipToken(final String skipToken);
 }

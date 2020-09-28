@@ -22,7 +22,6 @@ import com.microsoft.graph.models.extensions.Site;
  * The interface for the Site Collection Reference Request.
  */
 public interface ISiteCollectionReferenceRequest {
-
     void post(final Site newSite, final ICallback<? super Site> callback);
 
     Site post(final Site newSite) throws ClientException;

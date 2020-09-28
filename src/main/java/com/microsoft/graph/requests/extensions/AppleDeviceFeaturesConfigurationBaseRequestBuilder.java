@@ -98,4 +98,22 @@ public class AppleDeviceFeaturesConfigurationBaseRequestBuilder extends BaseRequ
     public IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosDeviceFeaturesConfiguration type
+     */
+    public IIosDeviceFeaturesConfigurationRequestBuilder castToIosDeviceFeaturesConfiguration() {
+        return new IosDeviceFeaturesConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosDeviceFeaturesConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSDeviceFeaturesConfiguration type
+     */
+    public IMacOSDeviceFeaturesConfigurationRequestBuilder castToMacOSDeviceFeaturesConfiguration() {
+        return new MacOSDeviceFeaturesConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.macOSDeviceFeaturesConfiguration"), getClient(), null);
+    }
 }

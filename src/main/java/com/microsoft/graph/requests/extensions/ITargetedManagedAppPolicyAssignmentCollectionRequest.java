@@ -85,5 +85,5 @@ public interface ITargetedManagedAppPolicyAssignmentCollectionRequest extends IH
      *
 	 * @return the updated request
 	 */
-	ITargetedManagedAppPolicyAssignmentCollectionRequest skipToken(String skipToken);
+	ITargetedManagedAppPolicyAssignmentCollectionRequest skipToken(final String skipToken);
 }

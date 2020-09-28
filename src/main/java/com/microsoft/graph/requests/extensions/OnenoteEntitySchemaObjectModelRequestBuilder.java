@@ -52,4 +52,49 @@ public class OnenoteEntitySchemaObjectModelRequestBuilder extends BaseRequestBui
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OnenoteEntityHierarchyModel type
+     */
+    public IOnenoteEntityHierarchyModelRequestBuilder castToOnenoteEntityHierarchyModel() {
+        return new OnenoteEntityHierarchyModelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenoteEntityHierarchyModel"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OnenotePage type
+     */
+    public IOnenotePageRequestBuilder castToOnenotePage() {
+        return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenotePage"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Notebook type
+     */
+    public INotebookRequestBuilder castToNotebook() {
+        return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.notebook"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SectionGroup type
+     */
+    public ISectionGroupRequestBuilder castToSectionGroup() {
+        return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sectionGroup"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OnenoteSection type
+     */
+    public IOnenoteSectionRequestBuilder castToOnenoteSection() {
+        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenoteSection"), getClient(), null);
+    }
 }

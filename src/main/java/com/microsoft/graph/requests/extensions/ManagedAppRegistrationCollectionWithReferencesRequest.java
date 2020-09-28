@@ -56,27 +56,27 @@ public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseC
 
     public IManagedAppRegistrationCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagedAppRegistrationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagedAppRegistrationCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedAppRegistrationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagedAppRegistrationCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ManagedAppRegistrationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagedAppRegistrationCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ManagedAppRegistrationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagedAppRegistrationCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (ManagedAppRegistrationCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IManagedAppRegistrationCollectionWithReferencesPage buildFromResponse(final ManagedAppRegistrationCollectionResponse response) {

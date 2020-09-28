@@ -85,5 +85,5 @@ public interface IDirectoryAuditCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDirectoryAuditCollectionRequest skipToken(String skipToken);
+	IDirectoryAuditCollectionRequest skipToken(final String skipToken);
 }

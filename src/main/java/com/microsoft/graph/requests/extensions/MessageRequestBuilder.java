@@ -133,4 +133,40 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
     public IMessageSendRequestBuilder send() {
         return new MessageSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the CalendarSharingMessage type
+     */
+    public ICalendarSharingMessageRequestBuilder castToCalendarSharingMessage() {
+        return new CalendarSharingMessageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.calendarSharingMessage"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessage type
+     */
+    public IEventMessageRequestBuilder castToEventMessage() {
+        return new EventMessageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.eventMessage"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageRequest type
+     */
+    public IEventMessageRequestRequestBuilder castToEventMessageRequest() {
+        return new EventMessageRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.eventMessageRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageResponse type
+     */
+    public IEventMessageResponseRequestBuilder castToEventMessageResponse() {
+        return new EventMessageResponseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.eventMessageResponse"), getClient(), null);
+    }
 }

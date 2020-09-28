@@ -85,5 +85,5 @@ public interface IRemoteAssistancePartnerCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	IRemoteAssistancePartnerCollectionRequest skipToken(String skipToken);
+	IRemoteAssistancePartnerCollectionRequest skipToken(final String skipToken);
 }

@@ -81,4 +81,22 @@ public class ManagedAppRegistrationRequestBuilder extends BaseRequestBuilder imp
     public IManagedAppOperationRequestBuilder operations(final String id) {
         return new ManagedAppOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidManagedAppRegistration type
+     */
+    public IAndroidManagedAppRegistrationRequestBuilder castToAndroidManagedAppRegistration() {
+        return new AndroidManagedAppRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidManagedAppRegistration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosManagedAppRegistration type
+     */
+    public IIosManagedAppRegistrationRequestBuilder castToIosManagedAppRegistration() {
+        return new IosManagedAppRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosManagedAppRegistration"), getClient(), null);
+    }
 }

@@ -85,5 +85,5 @@ public interface IRoleAssignmentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IRoleAssignmentCollectionRequest skipToken(String skipToken);
+	IRoleAssignmentCollectionRequest skipToken(final String skipToken);
 }

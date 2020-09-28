@@ -85,5 +85,5 @@ public interface IOutlookCategoryCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOutlookCategoryCollectionRequest skipToken(String skipToken);
+	IOutlookCategoryCollectionRequest skipToken(final String skipToken);
 }

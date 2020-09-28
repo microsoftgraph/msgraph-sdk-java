@@ -85,5 +85,5 @@ public interface ITelecomExpenseManagementPartnerCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	ITelecomExpenseManagementPartnerCollectionRequest skipToken(String skipToken);
+	ITelecomExpenseManagementPartnerCollectionRequest skipToken(final String skipToken);
 }

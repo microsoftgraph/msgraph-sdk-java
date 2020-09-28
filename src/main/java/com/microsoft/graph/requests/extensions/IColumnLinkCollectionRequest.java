@@ -85,5 +85,5 @@ public interface IColumnLinkCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IColumnLinkCollectionRequest skipToken(String skipToken);
+	IColumnLinkCollectionRequest skipToken(final String skipToken);
 }

@@ -58,4 +58,18 @@ public interface IEventMessageRequestBuilder extends IRequestBuilder {
      */
     IEventRequestBuilder event();
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageRequest type
+     */
+    IEventMessageRequestRequestBuilder castToEventMessageRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageResponse type
+     */
+    IEventMessageResponseRequestBuilder castToEventMessageResponse();
+
 }

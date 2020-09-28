@@ -26,7 +26,7 @@ public interface IDirectoryObjectCollectionWithReferencesRequestBuilder extends 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IDirectoryObjectCollectionWithReferencesRequest instance
      */
     IDirectoryObjectCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -34,11 +34,186 @@ public interface IDirectoryObjectCollectionWithReferencesRequestBuilder extends 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IDirectoryObjectCollectionWithReferencesRequest instance
      */
     IDirectoryObjectCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IDirectoryObjectWithReferenceRequestBuilder byId(final String id);
 
     IDirectoryObjectCollectionReferenceRequestBuilder references();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the User type
+     */
+    IUserCollectionRequestBuilder castToUser();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AppRoleAssignment type
+     */
+    IAppRoleAssignmentCollectionRequestBuilder castToAppRoleAssignment();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Application type
+     */
+    IApplicationCollectionRequestBuilder castToApplication();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ExtensionProperty type
+     */
+    IExtensionPropertyCollectionRequestBuilder castToExtensionProperty();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the PolicyBase type
+     */
+    IPolicyBaseCollectionRequestBuilder castToPolicyBase();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AdministrativeUnit type
+     */
+    IAdministrativeUnitCollectionRequestBuilder castToAdministrativeUnit();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Contract type
+     */
+    IContractCollectionRequestBuilder castToContract();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Device type
+     */
+    IDeviceCollectionRequestBuilder castToDevice();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DirectoryObjectPartnerReference type
+     */
+    IDirectoryObjectPartnerReferenceCollectionRequestBuilder castToDirectoryObjectPartnerReference();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DirectoryRole type
+     */
+    IDirectoryRoleCollectionRequestBuilder castToDirectoryRole();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DirectoryRoleTemplate type
+     */
+    IDirectoryRoleTemplateCollectionRequestBuilder castToDirectoryRoleTemplate();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Endpoint type
+     */
+    IEndpointCollectionRequestBuilder castToEndpoint();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Group type
+     */
+    IGroupCollectionRequestBuilder castToGroup();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the GroupSettingTemplate type
+     */
+    IGroupSettingTemplateCollectionRequestBuilder castToGroupSettingTemplate();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Organization type
+     */
+    IOrganizationCollectionRequestBuilder castToOrganization();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OrgContact type
+     */
+    IOrgContactCollectionRequestBuilder castToOrgContact();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ServicePrincipal type
+     */
+    IServicePrincipalCollectionRequestBuilder castToServicePrincipal();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the StsPolicy type
+     */
+    IStsPolicyCollectionRequestBuilder castToStsPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the PermissionGrantPolicy type
+     */
+    IPermissionGrantPolicyCollectionRequestBuilder castToPermissionGrantPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IdentitySecurityDefaultsEnforcementPolicy type
+     */
+    IIdentitySecurityDefaultsEnforcementPolicyCollectionRequestBuilder castToIdentitySecurityDefaultsEnforcementPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the HomeRealmDiscoveryPolicy type
+     */
+    IHomeRealmDiscoveryPolicyCollectionRequestBuilder castToHomeRealmDiscoveryPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenIssuancePolicy type
+     */
+    ITokenIssuancePolicyCollectionRequestBuilder castToTokenIssuancePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenLifetimePolicy type
+     */
+    ITokenLifetimePolicyCollectionRequestBuilder castToTokenLifetimePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ActivityBasedTimeoutPolicy type
+     */
+    IActivityBasedTimeoutPolicyCollectionRequestBuilder castToActivityBasedTimeoutPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ClaimsMappingPolicy type
+     */
+    IClaimsMappingPolicyCollectionRequestBuilder castToClaimsMappingPolicy();
 }

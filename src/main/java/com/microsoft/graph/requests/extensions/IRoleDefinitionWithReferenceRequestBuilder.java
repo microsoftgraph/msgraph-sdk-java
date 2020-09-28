@@ -39,4 +39,11 @@ public interface IRoleDefinitionWithReferenceRequestBuilder extends IRequestBuil
 
     IRoleDefinitionReferenceRequestBuilder reference();
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DeviceAndAppManagementRoleDefinition type
+     */
+    IDeviceAndAppManagementRoleDefinitionRequestBuilder castToDeviceAndAppManagementRoleDefinition();
+
 }

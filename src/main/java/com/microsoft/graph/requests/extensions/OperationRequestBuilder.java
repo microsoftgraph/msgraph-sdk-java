@@ -52,4 +52,13 @@ public class OperationRequestBuilder extends BaseRequestBuilder implements IOper
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OnenoteOperation type
+     */
+    public IOnenoteOperationRequestBuilder castToOnenoteOperation() {
+        return new OnenoteOperationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenoteOperation"), getClient(), null);
+    }
 }

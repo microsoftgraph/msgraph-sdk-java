@@ -63,4 +63,13 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder implements 
     public IRoleAssignmentRequestBuilder roleAssignments(final String id) {
         return new RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DeviceAndAppManagementRoleDefinition type
+     */
+    public IDeviceAndAppManagementRoleDefinitionRequestBuilder castToDeviceAndAppManagementRoleDefinition() {
+        return new DeviceAndAppManagementRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deviceAndAppManagementRoleDefinition"), getClient(), null);
+    }
 }

@@ -54,4 +54,31 @@ public class AttachmentRequestBuilder extends BaseRequestBuilder implements IAtt
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the FileAttachment type
+     */
+    public IFileAttachmentRequestBuilder castToFileAttachment() {
+        return new FileAttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fileAttachment"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ItemAttachment type
+     */
+    public IItemAttachmentRequestBuilder castToItemAttachment() {
+        return new ItemAttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAttachment"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ReferenceAttachment type
+     */
+    public IReferenceAttachmentRequestBuilder castToReferenceAttachment() {
+        return new ReferenceAttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.referenceAttachment"), getClient(), null);
+    }
 }

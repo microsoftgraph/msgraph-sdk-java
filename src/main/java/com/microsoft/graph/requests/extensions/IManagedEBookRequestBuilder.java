@@ -62,4 +62,11 @@ public interface IManagedEBookRequestBuilder extends IRequestBuilder {
     IUserInstallStateSummaryRequestBuilder userStateSummary(final String id);
     IManagedEBookAssignRequestBuilder assign(final java.util.List<ManagedEBookAssignment> managedEBookAssignments);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosVppEBook type
+     */
+    IIosVppEBookRequestBuilder castToIosVppEBook();
+
 }

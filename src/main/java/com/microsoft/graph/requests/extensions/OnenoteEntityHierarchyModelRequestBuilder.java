@@ -52,4 +52,31 @@ public class OnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBuilde
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Notebook type
+     */
+    public INotebookRequestBuilder castToNotebook() {
+        return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.notebook"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SectionGroup type
+     */
+    public ISectionGroupRequestBuilder castToSectionGroup() {
+        return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sectionGroup"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OnenoteSection type
+     */
+    public IOnenoteSectionRequestBuilder castToOnenoteSection() {
+        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenoteSection"), getClient(), null);
+    }
 }

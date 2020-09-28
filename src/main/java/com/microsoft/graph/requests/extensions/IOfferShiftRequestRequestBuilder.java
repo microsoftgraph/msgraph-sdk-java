@@ -34,4 +34,11 @@ public interface IOfferShiftRequestRequestBuilder extends IRequestBuilder {
     IOfferShiftRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SwapShiftsChangeRequest type
+     */
+    ISwapShiftsChangeRequestRequestBuilder castToSwapShiftsChangeRequest();
+
 }

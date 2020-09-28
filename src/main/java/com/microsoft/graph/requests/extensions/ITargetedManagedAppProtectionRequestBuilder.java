@@ -42,4 +42,18 @@ public interface ITargetedManagedAppProtectionRequestBuilder extends IRequestBui
     ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id);
     ITargetedManagedAppProtectionAssignRequestBuilder assign(final java.util.List<TargetedManagedAppPolicyAssignment> assignments);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidManagedAppProtection type
+     */
+    IAndroidManagedAppProtectionRequestBuilder castToAndroidManagedAppProtection();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosManagedAppProtection type
+     */
+    IIosManagedAppProtectionRequestBuilder castToIosManagedAppProtection();
+
 }

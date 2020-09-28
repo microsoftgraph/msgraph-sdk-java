@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -36,21 +35,6 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, IHomeRealmDiscoveryPolicyCollectionPage.class);
     }
 
-    public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
-        final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + newHomeRealmDiscoveryPolicy.id);
-        new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
-            .post(newHomeRealmDiscoveryPolicy, body, callback);
-    }
-
-    public HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
-        final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + newHomeRealmDiscoveryPolicy.id);
-        return new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getHeaders())
-                .post(newHomeRealmDiscoveryPolicy, body);
-    }
     /**
      * Sets the expand clause for the request
      *

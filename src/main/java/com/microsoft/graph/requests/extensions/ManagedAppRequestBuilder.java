@@ -66,4 +66,49 @@ public class ManagedAppRequestBuilder extends BaseRequestBuilder implements IMan
     public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedMobileLobApp type
+     */
+    public IManagedMobileLobAppRequestBuilder castToManagedMobileLobApp() {
+        return new ManagedMobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedMobileLobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAndroidStoreApp type
+     */
+    public IManagedAndroidStoreAppRequestBuilder castToManagedAndroidStoreApp() {
+        return new ManagedAndroidStoreAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedAndroidStoreApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedIOSStoreApp type
+     */
+    public IManagedIOSStoreAppRequestBuilder castToManagedIOSStoreApp() {
+        return new ManagedIOSStoreAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedIOSStoreApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAndroidLobApp type
+     */
+    public IManagedAndroidLobAppRequestBuilder castToManagedAndroidLobApp() {
+        return new ManagedAndroidLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedAndroidLobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedIOSLobApp type
+     */
+    public IManagedIOSLobAppRequestBuilder castToManagedIOSLobApp() {
+        return new ManagedIOSLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedIOSLobApp"), getClient(), null);
+    }
 }

@@ -34,4 +34,60 @@ public interface ICommsOperationRequestBuilder extends IRequestBuilder {
     ICommsOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the CancelMediaProcessingOperation type
+     */
+    ICancelMediaProcessingOperationRequestBuilder castToCancelMediaProcessingOperation();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the InviteParticipantsOperation type
+     */
+    IInviteParticipantsOperationRequestBuilder castToInviteParticipantsOperation();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MuteParticipantOperation type
+     */
+    IMuteParticipantOperationRequestBuilder castToMuteParticipantOperation();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the PlayPromptOperation type
+     */
+    IPlayPromptOperationRequestBuilder castToPlayPromptOperation();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the RecordOperation type
+     */
+    IRecordOperationRequestBuilder castToRecordOperation();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SubscribeToToneOperation type
+     */
+    ISubscribeToToneOperationRequestBuilder castToSubscribeToToneOperation();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the UnmuteParticipantOperation type
+     */
+    IUnmuteParticipantOperationRequestBuilder castToUnmuteParticipantOperation();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the UpdateRecordingStatusOperation type
+     */
+    IUpdateRecordingStatusOperationRequestBuilder castToUpdateRecordingStatusOperation();
+
 }

@@ -52,4 +52,76 @@ public class PolicyBaseRequestBuilder extends BaseRequestBuilder implements IPol
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the StsPolicy type
+     */
+    public IStsPolicyRequestBuilder castToStsPolicy() {
+        return new StsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stsPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the PermissionGrantPolicy type
+     */
+    public IPermissionGrantPolicyRequestBuilder castToPermissionGrantPolicy() {
+        return new PermissionGrantPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.permissionGrantPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IdentitySecurityDefaultsEnforcementPolicy type
+     */
+    public IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder castToIdentitySecurityDefaultsEnforcementPolicy() {
+        return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the HomeRealmDiscoveryPolicy type
+     */
+    public IHomeRealmDiscoveryPolicyRequestBuilder castToHomeRealmDiscoveryPolicy() {
+        return new HomeRealmDiscoveryPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.homeRealmDiscoveryPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenIssuancePolicy type
+     */
+    public ITokenIssuancePolicyRequestBuilder castToTokenIssuancePolicy() {
+        return new TokenIssuancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tokenIssuancePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenLifetimePolicy type
+     */
+    public ITokenLifetimePolicyRequestBuilder castToTokenLifetimePolicy() {
+        return new TokenLifetimePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tokenLifetimePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ActivityBasedTimeoutPolicy type
+     */
+    public IActivityBasedTimeoutPolicyRequestBuilder castToActivityBasedTimeoutPolicy() {
+        return new ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.activityBasedTimeoutPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ClaimsMappingPolicy type
+     */
+    public IClaimsMappingPolicyRequestBuilder castToClaimsMappingPolicy() {
+        return new ClaimsMappingPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.claimsMappingPolicy"), getClient(), null);
+    }
 }

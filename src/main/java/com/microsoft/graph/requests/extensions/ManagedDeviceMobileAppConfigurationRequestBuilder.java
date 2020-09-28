@@ -112,4 +112,13 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
     public IManagedDeviceMobileAppConfigurationAssignRequestBuilder assign(final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments) {
         return new ManagedDeviceMobileAppConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosMobileAppConfiguration type
+     */
+    public IIosMobileAppConfigurationRequestBuilder castToIosMobileAppConfiguration() {
+        return new IosMobileAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosMobileAppConfiguration"), getClient(), null);
+    }
 }

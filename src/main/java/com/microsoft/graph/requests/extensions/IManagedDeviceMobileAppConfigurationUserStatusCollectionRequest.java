@@ -85,5 +85,5 @@ public interface IManagedDeviceMobileAppConfigurationUserStatusCollectionRequest
      *
 	 * @return the updated request
 	 */
-	IManagedDeviceMobileAppConfigurationUserStatusCollectionRequest skipToken(String skipToken);
+	IManagedDeviceMobileAppConfigurationUserStatusCollectionRequest skipToken(final String skipToken);
 }

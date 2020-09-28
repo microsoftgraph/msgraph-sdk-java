@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of DeviceManagement
+     * The request builder for this collection of DeviceAndAppManagementRoleAssignment
      *
      * @param requestUrl     the request URL
      * @param client         the service client

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,11 +20,6 @@ import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
  * The interface for the Claims Mapping Policy Collection Reference Request.
  */
 public interface IClaimsMappingPolicyCollectionReferenceRequest {
-
-    void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback);
-
-    ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException;
-
     IClaimsMappingPolicyCollectionReferenceRequest select(final String value);
 
     IClaimsMappingPolicyCollectionReferenceRequest top(final int value);

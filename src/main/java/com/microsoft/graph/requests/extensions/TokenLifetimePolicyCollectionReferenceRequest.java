@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -36,21 +35,6 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, ITokenLifetimePolicyCollectionPage.class);
     }
 
-    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
-        final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + newTokenLifetimePolicy.id);
-        new TokenLifetimePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
-            .post(newTokenLifetimePolicy, body, callback);
-    }
-
-    public TokenLifetimePolicy post(final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
-        final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + newTokenLifetimePolicy.id);
-        return new TokenLifetimePolicyWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getHeaders())
-                .post(newTokenLifetimePolicy, body);
-    }
     /**
      * Sets the expand clause for the request
      *

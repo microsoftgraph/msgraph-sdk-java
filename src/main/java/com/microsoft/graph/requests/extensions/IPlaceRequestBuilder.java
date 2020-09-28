@@ -34,4 +34,18 @@ public interface IPlaceRequestBuilder extends IRequestBuilder {
     IPlaceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Room type
+     */
+    IRoomRequestBuilder castToRoom();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the RoomList type
+     */
+    IRoomListRequestBuilder castToRoomList();
+
 }

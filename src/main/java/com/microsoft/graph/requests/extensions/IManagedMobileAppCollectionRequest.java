@@ -85,5 +85,5 @@ public interface IManagedMobileAppCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IManagedMobileAppCollectionRequest skipToken(String skipToken);
+	IManagedMobileAppCollectionRequest skipToken(final String skipToken);
 }

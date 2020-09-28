@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -85,5 +84,5 @@ public interface IExtensionPropertyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IExtensionPropertyCollectionRequest skipToken(String skipToken);
+	IExtensionPropertyCollectionRequest skipToken(final String skipToken);
 }

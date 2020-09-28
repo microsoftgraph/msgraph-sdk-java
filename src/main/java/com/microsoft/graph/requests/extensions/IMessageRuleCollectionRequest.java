@@ -85,5 +85,5 @@ public interface IMessageRuleCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IMessageRuleCollectionRequest skipToken(String skipToken);
+	IMessageRuleCollectionRequest skipToken(final String skipToken);
 }

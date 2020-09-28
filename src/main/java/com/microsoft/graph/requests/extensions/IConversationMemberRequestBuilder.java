@@ -34,4 +34,11 @@ public interface IConversationMemberRequestBuilder extends IRequestBuilder {
     IConversationMemberRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AadUserConversationMember type
+     */
+    IAadUserConversationMemberRequestBuilder castToAadUserConversationMember();
+
 }

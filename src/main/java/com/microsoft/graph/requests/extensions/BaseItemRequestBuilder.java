@@ -72,4 +72,58 @@ public class BaseItemRequestBuilder extends BaseRequestBuilder implements IBaseI
     public IUserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Drive type
+     */
+    public IDriveRequestBuilder castToDrive() {
+        return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.drive"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Site type
+     */
+    public ISiteRequestBuilder castToSite() {
+        return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.site"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DriveItem type
+     */
+    public IDriveItemRequestBuilder castToDriveItem() {
+        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.driveItem"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the List type
+     */
+    public IListRequestBuilder castToList() {
+        return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.list"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ListItem type
+     */
+    public IListItemRequestBuilder castToListItem() {
+        return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.listItem"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SharedDriveItem type
+     */
+    public ISharedDriveItemRequestBuilder castToSharedDriveItem() {
+        return new SharedDriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sharedDriveItem"), getClient(), null);
+    }
 }

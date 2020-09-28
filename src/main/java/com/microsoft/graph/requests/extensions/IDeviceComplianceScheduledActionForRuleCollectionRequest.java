@@ -85,5 +85,5 @@ public interface IDeviceComplianceScheduledActionForRuleCollectionRequest extend
      *
 	 * @return the updated request
 	 */
-	IDeviceComplianceScheduledActionForRuleCollectionRequest skipToken(String skipToken);
+	IDeviceComplianceScheduledActionForRuleCollectionRequest skipToken(final String skipToken);
 }

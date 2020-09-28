@@ -40,4 +40,39 @@ public interface IStsPolicyRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder appliesTo(final String id);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the HomeRealmDiscoveryPolicy type
+     */
+    IHomeRealmDiscoveryPolicyRequestBuilder castToHomeRealmDiscoveryPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenIssuancePolicy type
+     */
+    ITokenIssuancePolicyRequestBuilder castToTokenIssuancePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenLifetimePolicy type
+     */
+    ITokenLifetimePolicyRequestBuilder castToTokenLifetimePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ActivityBasedTimeoutPolicy type
+     */
+    IActivityBasedTimeoutPolicyRequestBuilder castToActivityBasedTimeoutPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ClaimsMappingPolicy type
+     */
+    IClaimsMappingPolicyRequestBuilder castToClaimsMappingPolicy();
+
 }

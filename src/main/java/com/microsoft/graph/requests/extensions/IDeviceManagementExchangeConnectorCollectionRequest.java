@@ -86,5 +86,5 @@ public interface IDeviceManagementExchangeConnectorCollectionRequest extends IHt
      *
 	 * @return the updated request
 	 */
-	IDeviceManagementExchangeConnectorCollectionRequest skipToken(String skipToken);
+	IDeviceManagementExchangeConnectorCollectionRequest skipToken(final String skipToken);
 }

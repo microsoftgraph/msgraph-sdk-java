@@ -85,5 +85,5 @@ public interface IIosUpdateDeviceStatusCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IIosUpdateDeviceStatusCollectionRequest skipToken(String skipToken);
+	IIosUpdateDeviceStatusCollectionRequest skipToken(final String skipToken);
 }

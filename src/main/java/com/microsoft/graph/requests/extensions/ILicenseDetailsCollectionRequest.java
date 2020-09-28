@@ -85,5 +85,5 @@ public interface ILicenseDetailsCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ILicenseDetailsCollectionRequest skipToken(String skipToken);
+	ILicenseDetailsCollectionRequest skipToken(final String skipToken);
 }

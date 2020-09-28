@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -85,5 +84,5 @@ public interface ITokenLifetimePolicyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITokenLifetimePolicyCollectionRequest skipToken(String skipToken);
+	ITokenLifetimePolicyCollectionRequest skipToken(final String skipToken);
 }

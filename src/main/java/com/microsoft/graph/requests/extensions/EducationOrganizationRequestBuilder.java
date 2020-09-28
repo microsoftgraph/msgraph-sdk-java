@@ -52,4 +52,13 @@ public class EducationOrganizationRequestBuilder extends BaseRequestBuilder impl
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EducationSchool type
+     */
+    public IEducationSchoolRequestBuilder castToEducationSchool() {
+        return new EducationSchoolRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.educationSchool"), getClient(), null);
+    }
 }

@@ -21,7 +21,6 @@ import com.microsoft.graph.models.extensions.MobileAppCategory;
  * The interface for the Mobile App Category Collection Reference Request.
  */
 public interface IMobileAppCategoryCollectionReferenceRequest {
-
     void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback);
 
     MobileAppCategory post(final MobileAppCategory newMobileAppCategory) throws ClientException;

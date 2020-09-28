@@ -87,5 +87,5 @@ public interface ITargetedManagedAppConfigurationCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	ITargetedManagedAppConfigurationCollectionRequest skipToken(String skipToken);
+	ITargetedManagedAppConfigurationCollectionRequest skipToken(final String skipToken);
 }

@@ -85,5 +85,5 @@ public interface ISiteCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISiteCollectionRequest skipToken(String skipToken);
+	ISiteCollectionRequest skipToken(final String skipToken);
 }

@@ -60,4 +60,22 @@ public class ManagedAppRegistrationCollectionWithReferencesRequestBuilder extend
     public IManagedAppRegistrationCollectionReferenceRequestBuilder references(){
         return new ManagedAppRegistrationCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidManagedAppRegistration type
+     */
+    public IAndroidManagedAppRegistrationCollectionRequestBuilder castToAndroidManagedAppRegistration() {
+        return new AndroidManagedAppRegistrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidManagedAppRegistration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosManagedAppRegistration type
+     */
+    public IIosManagedAppRegistrationCollectionRequestBuilder castToIosManagedAppRegistration() {
+        return new IosManagedAppRegistrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosManagedAppRegistration"), getClient(), null);
+    }
 }

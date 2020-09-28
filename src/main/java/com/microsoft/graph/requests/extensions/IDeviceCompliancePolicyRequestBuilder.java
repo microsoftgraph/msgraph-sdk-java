@@ -85,4 +85,60 @@ public interface IDeviceCompliancePolicyRequestBuilder extends IRequestBuilder {
     IDeviceCompliancePolicyAssignCollectionRequestBuilder assign(final java.util.List<DeviceCompliancePolicyAssignment> assignments);
     IDeviceCompliancePolicyScheduleActionsForRulesRequestBuilder scheduleActionsForRules(final java.util.List<DeviceComplianceScheduledActionForRule> deviceComplianceScheduledActionForRules);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidCompliancePolicy type
+     */
+    IAndroidCompliancePolicyRequestBuilder castToAndroidCompliancePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidWorkProfileCompliancePolicy type
+     */
+    IAndroidWorkProfileCompliancePolicyRequestBuilder castToAndroidWorkProfileCompliancePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosCompliancePolicy type
+     */
+    IIosCompliancePolicyRequestBuilder castToIosCompliancePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSCompliancePolicy type
+     */
+    IMacOSCompliancePolicyRequestBuilder castToMacOSCompliancePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10CompliancePolicy type
+     */
+    IWindows10CompliancePolicyRequestBuilder castToWindows10CompliancePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10MobileCompliancePolicy type
+     */
+    IWindows10MobileCompliancePolicyRequestBuilder castToWindows10MobileCompliancePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows81CompliancePolicy type
+     */
+    IWindows81CompliancePolicyRequestBuilder castToWindows81CompliancePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsPhone81CompliancePolicy type
+     */
+    IWindowsPhone81CompliancePolicyRequestBuilder castToWindowsPhone81CompliancePolicy();
+
 }

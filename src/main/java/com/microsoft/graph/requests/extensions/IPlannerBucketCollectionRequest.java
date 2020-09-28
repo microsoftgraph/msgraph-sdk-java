@@ -85,5 +85,5 @@ public interface IPlannerBucketCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPlannerBucketCollectionRequest skipToken(String skipToken);
+	IPlannerBucketCollectionRequest skipToken(final String skipToken);
 }

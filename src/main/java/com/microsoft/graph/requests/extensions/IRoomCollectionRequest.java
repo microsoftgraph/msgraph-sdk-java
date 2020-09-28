@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.RoomList;
 import com.microsoft.graph.models.extensions.Room;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -85,5 +84,5 @@ public interface IRoomCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IRoomCollectionRequest skipToken(String skipToken);
+	IRoomCollectionRequest skipToken(final String skipToken);
 }

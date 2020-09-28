@@ -34,4 +34,53 @@ public interface IOnenoteEntityBaseModelRequestBuilder extends IRequestBuilder {
     IOnenoteEntityBaseModelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OnenoteEntitySchemaObjectModel type
+     */
+    IOnenoteEntitySchemaObjectModelRequestBuilder castToOnenoteEntitySchemaObjectModel();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OnenoteResource type
+     */
+    IOnenoteResourceRequestBuilder castToOnenoteResource();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OnenoteEntityHierarchyModel type
+     */
+    IOnenoteEntityHierarchyModelRequestBuilder castToOnenoteEntityHierarchyModel();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OnenotePage type
+     */
+    IOnenotePageRequestBuilder castToOnenotePage();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Notebook type
+     */
+    INotebookRequestBuilder castToNotebook();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SectionGroup type
+     */
+    ISectionGroupRequestBuilder castToSectionGroup();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OnenoteSection type
+     */
+    IOnenoteSectionRequestBuilder castToOnenoteSection();
+
 }

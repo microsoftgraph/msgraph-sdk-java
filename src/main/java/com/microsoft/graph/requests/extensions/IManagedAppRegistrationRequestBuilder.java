@@ -50,4 +50,18 @@ public interface IManagedAppRegistrationRequestBuilder extends IRequestBuilder {
 
     IManagedAppOperationRequestBuilder operations(final String id);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidManagedAppRegistration type
+     */
+    IAndroidManagedAppRegistrationRequestBuilder castToAndroidManagedAppRegistration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosManagedAppRegistration type
+     */
+    IIosManagedAppRegistrationRequestBuilder castToIosManagedAppRegistration();
+
 }

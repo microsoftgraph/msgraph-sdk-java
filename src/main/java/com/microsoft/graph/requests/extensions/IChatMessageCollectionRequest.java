@@ -84,5 +84,5 @@ public interface IChatMessageCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IChatMessageCollectionRequest skipToken(String skipToken);
+	IChatMessageCollectionRequest skipToken(final String skipToken);
 }

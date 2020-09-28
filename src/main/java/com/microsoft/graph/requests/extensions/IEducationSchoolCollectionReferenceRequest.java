@@ -21,7 +21,6 @@ import com.microsoft.graph.models.extensions.EducationSchool;
  * The interface for the Education School Collection Reference Request.
  */
 public interface IEducationSchoolCollectionReferenceRequest {
-
     void post(final EducationSchool newEducationSchool, final ICallback<? super EducationSchool> callback);
 
     EducationSchool post(final EducationSchool newEducationSchool) throws ClientException;

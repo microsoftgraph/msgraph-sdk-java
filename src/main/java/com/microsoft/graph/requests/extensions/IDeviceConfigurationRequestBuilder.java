@@ -77,4 +77,186 @@ public interface IDeviceConfigurationRequestBuilder extends IRequestBuilder {
 
     IDeviceConfigurationAssignCollectionRequestBuilder assign(final java.util.List<DeviceConfigurationAssignment> assignments);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidCustomConfiguration type
+     */
+    IAndroidCustomConfigurationRequestBuilder castToAndroidCustomConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidGeneralDeviceConfiguration type
+     */
+    IAndroidGeneralDeviceConfigurationRequestBuilder castToAndroidGeneralDeviceConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidWorkProfileCustomConfiguration type
+     */
+    IAndroidWorkProfileCustomConfigurationRequestBuilder castToAndroidWorkProfileCustomConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidWorkProfileGeneralDeviceConfiguration type
+     */
+    IAndroidWorkProfileGeneralDeviceConfigurationRequestBuilder castToAndroidWorkProfileGeneralDeviceConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AppleDeviceFeaturesConfigurationBase type
+     */
+    IAppleDeviceFeaturesConfigurationBaseRequestBuilder castToAppleDeviceFeaturesConfigurationBase();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EditionUpgradeConfiguration type
+     */
+    IEditionUpgradeConfigurationRequestBuilder castToEditionUpgradeConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosCertificateProfile type
+     */
+    IIosCertificateProfileRequestBuilder castToIosCertificateProfile();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosCustomConfiguration type
+     */
+    IIosCustomConfigurationRequestBuilder castToIosCustomConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosGeneralDeviceConfiguration type
+     */
+    IIosGeneralDeviceConfigurationRequestBuilder castToIosGeneralDeviceConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosUpdateConfiguration type
+     */
+    IIosUpdateConfigurationRequestBuilder castToIosUpdateConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSCustomConfiguration type
+     */
+    IMacOSCustomConfigurationRequestBuilder castToMacOSCustomConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSGeneralDeviceConfiguration type
+     */
+    IMacOSGeneralDeviceConfigurationRequestBuilder castToMacOSGeneralDeviceConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SharedPCConfiguration type
+     */
+    ISharedPCConfigurationRequestBuilder castToSharedPCConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10CustomConfiguration type
+     */
+    IWindows10CustomConfigurationRequestBuilder castToWindows10CustomConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10EndpointProtectionConfiguration type
+     */
+    IWindows10EndpointProtectionConfigurationRequestBuilder castToWindows10EndpointProtectionConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10EnterpriseModernAppManagementConfiguration type
+     */
+    IWindows10EnterpriseModernAppManagementConfigurationRequestBuilder castToWindows10EnterpriseModernAppManagementConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10GeneralConfiguration type
+     */
+    IWindows10GeneralConfigurationRequestBuilder castToWindows10GeneralConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10SecureAssessmentConfiguration type
+     */
+    IWindows10SecureAssessmentConfigurationRequestBuilder castToWindows10SecureAssessmentConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10TeamGeneralConfiguration type
+     */
+    IWindows10TeamGeneralConfigurationRequestBuilder castToWindows10TeamGeneralConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows81GeneralConfiguration type
+     */
+    IWindows81GeneralConfigurationRequestBuilder castToWindows81GeneralConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsDefenderAdvancedThreatProtectionConfiguration type
+     */
+    IWindowsDefenderAdvancedThreatProtectionConfigurationRequestBuilder castToWindowsDefenderAdvancedThreatProtectionConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsPhone81CustomConfiguration type
+     */
+    IWindowsPhone81CustomConfigurationRequestBuilder castToWindowsPhone81CustomConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsPhone81GeneralConfiguration type
+     */
+    IWindowsPhone81GeneralConfigurationRequestBuilder castToWindowsPhone81GeneralConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsUpdateForBusinessConfiguration type
+     */
+    IWindowsUpdateForBusinessConfigurationRequestBuilder castToWindowsUpdateForBusinessConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosDeviceFeaturesConfiguration type
+     */
+    IIosDeviceFeaturesConfigurationRequestBuilder castToIosDeviceFeaturesConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSDeviceFeaturesConfiguration type
+     */
+    IMacOSDeviceFeaturesConfigurationRequestBuilder castToMacOSDeviceFeaturesConfiguration();
+
 }

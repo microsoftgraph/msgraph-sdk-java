@@ -85,5 +85,5 @@ public interface IUsedInsightCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IUsedInsightCollectionRequest skipToken(String skipToken);
+	IUsedInsightCollectionRequest skipToken(final String skipToken);
 }

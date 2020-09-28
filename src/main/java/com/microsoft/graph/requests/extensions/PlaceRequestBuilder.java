@@ -52,4 +52,22 @@ public class PlaceRequestBuilder extends BaseRequestBuilder implements IPlaceReq
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Room type
+     */
+    public IRoomRequestBuilder castToRoom() {
+        return new RoomRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.room"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the RoomList type
+     */
+    public IRoomListRequestBuilder castToRoomList() {
+        return new RoomListRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roomList"), getClient(), null);
+    }
 }

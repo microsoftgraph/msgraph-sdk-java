@@ -63,4 +63,40 @@ public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder im
     public IThreatAssessmentResultRequestBuilder results(final String id) {
         return new ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EmailFileAssessmentRequest type
+     */
+    public IEmailFileAssessmentRequestRequestBuilder castToEmailFileAssessmentRequest() {
+        return new EmailFileAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.emailFileAssessmentRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the FileAssessmentRequest type
+     */
+    public IFileAssessmentRequestRequestBuilder castToFileAssessmentRequest() {
+        return new FileAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fileAssessmentRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MailAssessmentRequest type
+     */
+    public IMailAssessmentRequestRequestBuilder castToMailAssessmentRequest() {
+        return new MailAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mailAssessmentRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the UrlAssessmentRequest type
+     */
+    public IUrlAssessmentRequestRequestBuilder castToUrlAssessmentRequest() {
+        return new UrlAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.urlAssessmentRequest"), getClient(), null);
+    }
 }

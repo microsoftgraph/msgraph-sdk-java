@@ -85,5 +85,5 @@ public interface ISwapShiftsChangeRequestCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	ISwapShiftsChangeRequestCollectionRequest skipToken(String skipToken);
+	ISwapShiftsChangeRequestCollectionRequest skipToken(final String skipToken);
 }

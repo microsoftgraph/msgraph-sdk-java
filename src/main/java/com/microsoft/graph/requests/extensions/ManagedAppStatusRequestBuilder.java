@@ -52,4 +52,13 @@ public class ManagedAppStatusRequestBuilder extends BaseRequestBuilder implement
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAppStatusRaw type
+     */
+    public IManagedAppStatusRawRequestBuilder castToManagedAppStatusRaw() {
+        return new ManagedAppStatusRawRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedAppStatusRaw"), getClient(), null);
+    }
 }

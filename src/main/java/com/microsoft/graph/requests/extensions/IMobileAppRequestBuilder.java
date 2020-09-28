@@ -48,4 +48,130 @@ public interface IMobileAppRequestBuilder extends IRequestBuilder {
     IMobileAppCategoryWithReferenceRequestBuilder categories(final String id);
     IMobileAppAssignRequestBuilder assign(final java.util.List<MobileAppAssignment> mobileAppAssignments);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MobileLobApp type
+     */
+    IMobileLobAppRequestBuilder castToMobileLobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidStoreApp type
+     */
+    IAndroidStoreAppRequestBuilder castToAndroidStoreApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosStoreApp type
+     */
+    IIosStoreAppRequestBuilder castToIosStoreApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosVppApp type
+     */
+    IIosVppAppRequestBuilder castToIosVppApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSOfficeSuiteApp type
+     */
+    IMacOSOfficeSuiteAppRequestBuilder castToMacOSOfficeSuiteApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedApp type
+     */
+    IManagedAppRequestBuilder castToManagedApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MicrosoftStoreForBusinessApp type
+     */
+    IMicrosoftStoreForBusinessAppRequestBuilder castToMicrosoftStoreForBusinessApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WebApp type
+     */
+    IWebAppRequestBuilder castToWebApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidLobApp type
+     */
+    IAndroidLobAppRequestBuilder castToAndroidLobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosLobApp type
+     */
+    IIosLobAppRequestBuilder castToIosLobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Win32LobApp type
+     */
+    IWin32LobAppRequestBuilder castToWin32LobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsMobileMSI type
+     */
+    IWindowsMobileMSIRequestBuilder castToWindowsMobileMSI();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsUniversalAppX type
+     */
+    IWindowsUniversalAppXRequestBuilder castToWindowsUniversalAppX();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedMobileLobApp type
+     */
+    IManagedMobileLobAppRequestBuilder castToManagedMobileLobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAndroidStoreApp type
+     */
+    IManagedAndroidStoreAppRequestBuilder castToManagedAndroidStoreApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedIOSStoreApp type
+     */
+    IManagedIOSStoreAppRequestBuilder castToManagedIOSStoreApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAndroidLobApp type
+     */
+    IManagedAndroidLobAppRequestBuilder castToManagedAndroidLobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedIOSLobApp type
+     */
+    IManagedIOSLobAppRequestBuilder castToManagedIOSLobApp();
+
 }

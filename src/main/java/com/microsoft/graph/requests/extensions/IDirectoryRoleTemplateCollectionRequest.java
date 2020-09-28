@@ -84,5 +84,5 @@ public interface IDirectoryRoleTemplateCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDirectoryRoleTemplateCollectionRequest skipToken(String skipToken);
+	IDirectoryRoleTemplateCollectionRequest skipToken(final String skipToken);
 }

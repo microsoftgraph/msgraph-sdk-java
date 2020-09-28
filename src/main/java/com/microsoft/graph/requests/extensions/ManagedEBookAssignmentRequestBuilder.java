@@ -52,4 +52,13 @@ public class ManagedEBookAssignmentRequestBuilder extends BaseRequestBuilder imp
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosVppEBookAssignment type
+     */
+    public IIosVppEBookAssignmentRequestBuilder castToIosVppEBookAssignment() {
+        return new IosVppEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosVppEBookAssignment"), getClient(), null);
+    }
 }

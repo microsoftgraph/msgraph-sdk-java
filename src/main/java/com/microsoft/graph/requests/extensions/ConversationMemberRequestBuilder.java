@@ -52,4 +52,13 @@ public class ConversationMemberRequestBuilder extends BaseRequestBuilder impleme
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AadUserConversationMember type
+     */
+    public IAadUserConversationMemberRequestBuilder castToAadUserConversationMember() {
+        return new AadUserConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.aadUserConversationMember"), getClient(), null);
+    }
 }

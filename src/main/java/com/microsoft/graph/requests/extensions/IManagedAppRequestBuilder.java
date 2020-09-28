@@ -42,4 +42,39 @@ public interface IManagedAppRequestBuilder extends IRequestBuilder {
 
     IMobileAppCategoryWithReferenceRequestBuilder categories(final String id);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedMobileLobApp type
+     */
+    IManagedMobileLobAppRequestBuilder castToManagedMobileLobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAndroidStoreApp type
+     */
+    IManagedAndroidStoreAppRequestBuilder castToManagedAndroidStoreApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedIOSStoreApp type
+     */
+    IManagedIOSStoreAppRequestBuilder castToManagedIOSStoreApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAndroidLobApp type
+     */
+    IManagedAndroidLobAppRequestBuilder castToManagedAndroidLobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedIOSLobApp type
+     */
+    IManagedIOSLobAppRequestBuilder castToManagedIOSLobApp();
+
 }

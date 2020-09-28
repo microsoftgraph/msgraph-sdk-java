@@ -34,4 +34,88 @@ public interface IChangeTrackedEntityRequestBuilder extends IRequestBuilder {
     IChangeTrackedEntityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ShiftPreferences type
+     */
+    IShiftPreferencesRequestBuilder castToShiftPreferences();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WorkforceIntegration type
+     */
+    IWorkforceIntegrationRequestBuilder castToWorkforceIntegration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ScheduleChangeRequest type
+     */
+    IScheduleChangeRequestRequestBuilder castToScheduleChangeRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OpenShift type
+     */
+    IOpenShiftRequestBuilder castToOpenShift();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SchedulingGroup type
+     */
+    ISchedulingGroupRequestBuilder castToSchedulingGroup();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Shift type
+     */
+    IShiftRequestBuilder castToShift();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TimeOffReason type
+     */
+    ITimeOffReasonRequestBuilder castToTimeOffReason();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TimeOff type
+     */
+    ITimeOffRequestBuilder castToTimeOff();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OfferShiftRequest type
+     */
+    IOfferShiftRequestRequestBuilder castToOfferShiftRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OpenShiftChangeRequest type
+     */
+    IOpenShiftChangeRequestRequestBuilder castToOpenShiftChangeRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TimeOffRequest type
+     */
+    ITimeOffRequestRequestBuilder castToTimeOffRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SwapShiftsChangeRequest type
+     */
+    ISwapShiftsChangeRequestRequestBuilder castToSwapShiftsChangeRequest();
+
 }

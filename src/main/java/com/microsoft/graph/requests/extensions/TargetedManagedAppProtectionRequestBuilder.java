@@ -68,4 +68,22 @@ public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuild
     public ITargetedManagedAppProtectionAssignRequestBuilder assign(final java.util.List<TargetedManagedAppPolicyAssignment> assignments) {
         return new TargetedManagedAppProtectionAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidManagedAppProtection type
+     */
+    public IAndroidManagedAppProtectionRequestBuilder castToAndroidManagedAppProtection() {
+        return new AndroidManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidManagedAppProtection"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosManagedAppProtection type
+     */
+    public IIosManagedAppProtectionRequestBuilder castToIosManagedAppProtection() {
+        return new IosManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosManagedAppProtection"), getClient(), null);
+    }
 }

@@ -84,5 +84,5 @@ public interface IGroupLifecyclePolicyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IGroupLifecyclePolicyCollectionRequest skipToken(String skipToken);
+	IGroupLifecyclePolicyCollectionRequest skipToken(final String skipToken);
 }

@@ -79,4 +79,166 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder implements IMobi
     public IMobileAppAssignRequestBuilder assign(final java.util.List<MobileAppAssignment> mobileAppAssignments) {
         return new MobileAppAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, mobileAppAssignments);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MobileLobApp type
+     */
+    public IMobileLobAppRequestBuilder castToMobileLobApp() {
+        return new MobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mobileLobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidStoreApp type
+     */
+    public IAndroidStoreAppRequestBuilder castToAndroidStoreApp() {
+        return new AndroidStoreAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidStoreApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosStoreApp type
+     */
+    public IIosStoreAppRequestBuilder castToIosStoreApp() {
+        return new IosStoreAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosStoreApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosVppApp type
+     */
+    public IIosVppAppRequestBuilder castToIosVppApp() {
+        return new IosVppAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosVppApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSOfficeSuiteApp type
+     */
+    public IMacOSOfficeSuiteAppRequestBuilder castToMacOSOfficeSuiteApp() {
+        return new MacOSOfficeSuiteAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.macOSOfficeSuiteApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedApp type
+     */
+    public IManagedAppRequestBuilder castToManagedApp() {
+        return new ManagedAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MicrosoftStoreForBusinessApp type
+     */
+    public IMicrosoftStoreForBusinessAppRequestBuilder castToMicrosoftStoreForBusinessApp() {
+        return new MicrosoftStoreForBusinessAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.microsoftStoreForBusinessApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WebApp type
+     */
+    public IWebAppRequestBuilder castToWebApp() {
+        return new WebAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.webApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidLobApp type
+     */
+    public IAndroidLobAppRequestBuilder castToAndroidLobApp() {
+        return new AndroidLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidLobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosLobApp type
+     */
+    public IIosLobAppRequestBuilder castToIosLobApp() {
+        return new IosLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosLobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Win32LobApp type
+     */
+    public IWin32LobAppRequestBuilder castToWin32LobApp() {
+        return new Win32LobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.win32LobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsMobileMSI type
+     */
+    public IWindowsMobileMSIRequestBuilder castToWindowsMobileMSI() {
+        return new WindowsMobileMSIRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsMobileMSI"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsUniversalAppX type
+     */
+    public IWindowsUniversalAppXRequestBuilder castToWindowsUniversalAppX() {
+        return new WindowsUniversalAppXRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsUniversalAppX"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedMobileLobApp type
+     */
+    public IManagedMobileLobAppRequestBuilder castToManagedMobileLobApp() {
+        return new ManagedMobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedMobileLobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAndroidStoreApp type
+     */
+    public IManagedAndroidStoreAppRequestBuilder castToManagedAndroidStoreApp() {
+        return new ManagedAndroidStoreAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedAndroidStoreApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedIOSStoreApp type
+     */
+    public IManagedIOSStoreAppRequestBuilder castToManagedIOSStoreApp() {
+        return new ManagedIOSStoreAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedIOSStoreApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAndroidLobApp type
+     */
+    public IManagedAndroidLobAppRequestBuilder castToManagedAndroidLobApp() {
+        return new ManagedAndroidLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedAndroidLobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedIOSLobApp type
+     */
+    public IManagedIOSLobAppRequestBuilder castToManagedIOSLobApp() {
+        return new ManagedIOSLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedIOSLobApp"), getClient(), null);
+    }
 }

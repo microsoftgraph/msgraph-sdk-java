@@ -84,5 +84,5 @@ public interface IContractCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IContractCollectionRequest skipToken(String skipToken);
+	IContractCollectionRequest skipToken(final String skipToken);
 }

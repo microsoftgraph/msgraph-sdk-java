@@ -34,4 +34,60 @@ public interface IOutlookItemRequestBuilder extends IRequestBuilder {
     IOutlookItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Event type
+     */
+    IEventRequestBuilder castToEvent();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Contact type
+     */
+    IContactRequestBuilder castToContact();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Message type
+     */
+    IMessageRequestBuilder castToMessage();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Post type
+     */
+    IPostRequestBuilder castToPost();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the CalendarSharingMessage type
+     */
+    ICalendarSharingMessageRequestBuilder castToCalendarSharingMessage();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessage type
+     */
+    IEventMessageRequestBuilder castToEventMessage();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageRequest type
+     */
+    IEventMessageRequestRequestBuilder castToEventMessageRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageResponse type
+     */
+    IEventMessageResponseRequestBuilder castToEventMessageResponse();
+
 }

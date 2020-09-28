@@ -34,4 +34,60 @@ public interface IPolicyBaseRequestBuilder extends IRequestBuilder {
     IPolicyBaseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the StsPolicy type
+     */
+    IStsPolicyRequestBuilder castToStsPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the PermissionGrantPolicy type
+     */
+    IPermissionGrantPolicyRequestBuilder castToPermissionGrantPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IdentitySecurityDefaultsEnforcementPolicy type
+     */
+    IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder castToIdentitySecurityDefaultsEnforcementPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the HomeRealmDiscoveryPolicy type
+     */
+    IHomeRealmDiscoveryPolicyRequestBuilder castToHomeRealmDiscoveryPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenIssuancePolicy type
+     */
+    ITokenIssuancePolicyRequestBuilder castToTokenIssuancePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenLifetimePolicy type
+     */
+    ITokenLifetimePolicyRequestBuilder castToTokenLifetimePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ActivityBasedTimeoutPolicy type
+     */
+    IActivityBasedTimeoutPolicyRequestBuilder castToActivityBasedTimeoutPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ClaimsMappingPolicy type
+     */
+    IClaimsMappingPolicyRequestBuilder castToClaimsMappingPolicy();
+
 }

@@ -86,5 +86,5 @@ public interface IManagedEBookCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IManagedEBookCollectionRequest skipToken(String skipToken);
+	IManagedEBookCollectionRequest skipToken(final String skipToken);
 }

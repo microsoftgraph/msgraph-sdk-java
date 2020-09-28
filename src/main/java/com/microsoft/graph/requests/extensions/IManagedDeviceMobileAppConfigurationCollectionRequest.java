@@ -86,5 +86,5 @@ public interface IManagedDeviceMobileAppConfigurationCollectionRequest extends I
      *
 	 * @return the updated request
 	 */
-	IManagedDeviceMobileAppConfigurationCollectionRequest skipToken(String skipToken);
+	IManagedDeviceMobileAppConfigurationCollectionRequest skipToken(final String skipToken);
 }

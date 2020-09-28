@@ -63,4 +63,49 @@ public class StsPolicyRequestBuilder extends BaseRequestBuilder implements IStsP
     public IDirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the HomeRealmDiscoveryPolicy type
+     */
+    public IHomeRealmDiscoveryPolicyRequestBuilder castToHomeRealmDiscoveryPolicy() {
+        return new HomeRealmDiscoveryPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.homeRealmDiscoveryPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenIssuancePolicy type
+     */
+    public ITokenIssuancePolicyRequestBuilder castToTokenIssuancePolicy() {
+        return new TokenIssuancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tokenIssuancePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenLifetimePolicy type
+     */
+    public ITokenLifetimePolicyRequestBuilder castToTokenLifetimePolicy() {
+        return new TokenLifetimePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tokenLifetimePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ActivityBasedTimeoutPolicy type
+     */
+    public IActivityBasedTimeoutPolicyRequestBuilder castToActivityBasedTimeoutPolicy() {
+        return new ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.activityBasedTimeoutPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ClaimsMappingPolicy type
+     */
+    public IClaimsMappingPolicyRequestBuilder castToClaimsMappingPolicy() {
+        return new ClaimsMappingPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.claimsMappingPolicy"), getClient(), null);
+    }
 }

@@ -7,8 +7,11 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.PolicyRoot;
 import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
+import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -26,7 +29,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class PermissionGrantPolicyCollectionRequestBuilder extends BaseRequestBuilder implements IPermissionGrantPolicyCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of PolicyRoot
+     * The request builder for this collection of PermissionGrantPolicy
      *
      * @param requestUrl     the request URL
      * @param client         the service client

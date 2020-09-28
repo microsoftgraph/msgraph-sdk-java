@@ -123,4 +123,238 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder implem
     public IDeviceConfigurationAssignCollectionRequestBuilder assign(final java.util.List<DeviceConfigurationAssignment> assignments) {
         return new DeviceConfigurationAssignCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidCustomConfiguration type
+     */
+    public IAndroidCustomConfigurationRequestBuilder castToAndroidCustomConfiguration() {
+        return new AndroidCustomConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidCustomConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidGeneralDeviceConfiguration type
+     */
+    public IAndroidGeneralDeviceConfigurationRequestBuilder castToAndroidGeneralDeviceConfiguration() {
+        return new AndroidGeneralDeviceConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidGeneralDeviceConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidWorkProfileCustomConfiguration type
+     */
+    public IAndroidWorkProfileCustomConfigurationRequestBuilder castToAndroidWorkProfileCustomConfiguration() {
+        return new AndroidWorkProfileCustomConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidWorkProfileCustomConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidWorkProfileGeneralDeviceConfiguration type
+     */
+    public IAndroidWorkProfileGeneralDeviceConfigurationRequestBuilder castToAndroidWorkProfileGeneralDeviceConfiguration() {
+        return new AndroidWorkProfileGeneralDeviceConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidWorkProfileGeneralDeviceConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AppleDeviceFeaturesConfigurationBase type
+     */
+    public IAppleDeviceFeaturesConfigurationBaseRequestBuilder castToAppleDeviceFeaturesConfigurationBase() {
+        return new AppleDeviceFeaturesConfigurationBaseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.appleDeviceFeaturesConfigurationBase"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EditionUpgradeConfiguration type
+     */
+    public IEditionUpgradeConfigurationRequestBuilder castToEditionUpgradeConfiguration() {
+        return new EditionUpgradeConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.editionUpgradeConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosCertificateProfile type
+     */
+    public IIosCertificateProfileRequestBuilder castToIosCertificateProfile() {
+        return new IosCertificateProfileRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosCertificateProfile"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosCustomConfiguration type
+     */
+    public IIosCustomConfigurationRequestBuilder castToIosCustomConfiguration() {
+        return new IosCustomConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosCustomConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosGeneralDeviceConfiguration type
+     */
+    public IIosGeneralDeviceConfigurationRequestBuilder castToIosGeneralDeviceConfiguration() {
+        return new IosGeneralDeviceConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosGeneralDeviceConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosUpdateConfiguration type
+     */
+    public IIosUpdateConfigurationRequestBuilder castToIosUpdateConfiguration() {
+        return new IosUpdateConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosUpdateConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSCustomConfiguration type
+     */
+    public IMacOSCustomConfigurationRequestBuilder castToMacOSCustomConfiguration() {
+        return new MacOSCustomConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.macOSCustomConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSGeneralDeviceConfiguration type
+     */
+    public IMacOSGeneralDeviceConfigurationRequestBuilder castToMacOSGeneralDeviceConfiguration() {
+        return new MacOSGeneralDeviceConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.macOSGeneralDeviceConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SharedPCConfiguration type
+     */
+    public ISharedPCConfigurationRequestBuilder castToSharedPCConfiguration() {
+        return new SharedPCConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sharedPCConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10CustomConfiguration type
+     */
+    public IWindows10CustomConfigurationRequestBuilder castToWindows10CustomConfiguration() {
+        return new Windows10CustomConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windows10CustomConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10EndpointProtectionConfiguration type
+     */
+    public IWindows10EndpointProtectionConfigurationRequestBuilder castToWindows10EndpointProtectionConfiguration() {
+        return new Windows10EndpointProtectionConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windows10EndpointProtectionConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10EnterpriseModernAppManagementConfiguration type
+     */
+    public IWindows10EnterpriseModernAppManagementConfigurationRequestBuilder castToWindows10EnterpriseModernAppManagementConfiguration() {
+        return new Windows10EnterpriseModernAppManagementConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windows10EnterpriseModernAppManagementConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10GeneralConfiguration type
+     */
+    public IWindows10GeneralConfigurationRequestBuilder castToWindows10GeneralConfiguration() {
+        return new Windows10GeneralConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windows10GeneralConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10SecureAssessmentConfiguration type
+     */
+    public IWindows10SecureAssessmentConfigurationRequestBuilder castToWindows10SecureAssessmentConfiguration() {
+        return new Windows10SecureAssessmentConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windows10SecureAssessmentConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10TeamGeneralConfiguration type
+     */
+    public IWindows10TeamGeneralConfigurationRequestBuilder castToWindows10TeamGeneralConfiguration() {
+        return new Windows10TeamGeneralConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windows10TeamGeneralConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows81GeneralConfiguration type
+     */
+    public IWindows81GeneralConfigurationRequestBuilder castToWindows81GeneralConfiguration() {
+        return new Windows81GeneralConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windows81GeneralConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsDefenderAdvancedThreatProtectionConfiguration type
+     */
+    public IWindowsDefenderAdvancedThreatProtectionConfigurationRequestBuilder castToWindowsDefenderAdvancedThreatProtectionConfiguration() {
+        return new WindowsDefenderAdvancedThreatProtectionConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsDefenderAdvancedThreatProtectionConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsPhone81CustomConfiguration type
+     */
+    public IWindowsPhone81CustomConfigurationRequestBuilder castToWindowsPhone81CustomConfiguration() {
+        return new WindowsPhone81CustomConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsPhone81CustomConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsPhone81GeneralConfiguration type
+     */
+    public IWindowsPhone81GeneralConfigurationRequestBuilder castToWindowsPhone81GeneralConfiguration() {
+        return new WindowsPhone81GeneralConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsPhone81GeneralConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsUpdateForBusinessConfiguration type
+     */
+    public IWindowsUpdateForBusinessConfigurationRequestBuilder castToWindowsUpdateForBusinessConfiguration() {
+        return new WindowsUpdateForBusinessConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsUpdateForBusinessConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosDeviceFeaturesConfiguration type
+     */
+    public IIosDeviceFeaturesConfigurationRequestBuilder castToIosDeviceFeaturesConfiguration() {
+        return new IosDeviceFeaturesConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosDeviceFeaturesConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSDeviceFeaturesConfiguration type
+     */
+    public IMacOSDeviceFeaturesConfigurationRequestBuilder castToMacOSDeviceFeaturesConfiguration() {
+        return new MacOSDeviceFeaturesConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.macOSDeviceFeaturesConfiguration"), getClient(), null);
+    }
 }

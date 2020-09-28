@@ -77,4 +77,22 @@ public class ManagedMobileLobAppRequestBuilder extends BaseRequestBuilder implem
     public IMobileAppContentRequestBuilder contentVersions(final String id) {
         return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAndroidLobApp type
+     */
+    public IManagedAndroidLobAppRequestBuilder castToManagedAndroidLobApp() {
+        return new ManagedAndroidLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedAndroidLobApp"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedIOSLobApp type
+     */
+    public IManagedIOSLobAppRequestBuilder castToManagedIOSLobApp() {
+        return new ManagedIOSLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedIOSLobApp"), getClient(), null);
+    }
 }

@@ -85,5 +85,5 @@ public interface IManagedAppStatusCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IManagedAppStatusCollectionRequest skipToken(String skipToken);
+	IManagedAppStatusCollectionRequest skipToken(final String skipToken);
 }

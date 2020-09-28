@@ -49,4 +49,46 @@ public interface IBaseItemRequestBuilder extends IRequestBuilder {
      */
     IUserWithReferenceRequestBuilder lastModifiedByUser();
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Drive type
+     */
+    IDriveRequestBuilder castToDrive();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Site type
+     */
+    ISiteRequestBuilder castToSite();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DriveItem type
+     */
+    IDriveItemRequestBuilder castToDriveItem();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the List type
+     */
+    IListRequestBuilder castToList();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ListItem type
+     */
+    IListItemRequestBuilder castToListItem();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SharedDriveItem type
+     */
+    ISharedDriveItemRequestBuilder castToSharedDriveItem();
+
 }

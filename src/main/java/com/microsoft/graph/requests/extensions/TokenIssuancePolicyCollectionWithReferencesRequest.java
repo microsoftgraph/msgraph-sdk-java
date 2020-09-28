@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -56,27 +55,27 @@ public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseColl
 
     public ITokenIssuancePolicyCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ITokenIssuancePolicyCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ITokenIssuancePolicyCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ITokenIssuancePolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ITokenIssuancePolicyCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ITokenIssuancePolicyCollectionWithReferencesPage buildFromResponse(final TokenIssuancePolicyCollectionResponse response) {

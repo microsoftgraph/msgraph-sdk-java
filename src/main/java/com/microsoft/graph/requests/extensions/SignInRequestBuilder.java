@@ -52,4 +52,13 @@ public class SignInRequestBuilder extends BaseRequestBuilder implements ISignInR
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the RestrictedSignIn type
+     */
+    public IRestrictedSignInRequestBuilder castToRestrictedSignIn() {
+        return new RestrictedSignInRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restrictedSignIn"), getClient(), null);
+    }
 }

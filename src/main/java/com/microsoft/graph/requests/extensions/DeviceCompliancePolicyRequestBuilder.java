@@ -139,4 +139,76 @@ public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder imp
     public IDeviceCompliancePolicyScheduleActionsForRulesRequestBuilder scheduleActionsForRules(final java.util.List<DeviceComplianceScheduledActionForRule> deviceComplianceScheduledActionForRules) {
         return new DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.scheduleActionsForRules"), getClient(), null, deviceComplianceScheduledActionForRules);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidCompliancePolicy type
+     */
+    public IAndroidCompliancePolicyRequestBuilder castToAndroidCompliancePolicy() {
+        return new AndroidCompliancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidCompliancePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidWorkProfileCompliancePolicy type
+     */
+    public IAndroidWorkProfileCompliancePolicyRequestBuilder castToAndroidWorkProfileCompliancePolicy() {
+        return new AndroidWorkProfileCompliancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidWorkProfileCompliancePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosCompliancePolicy type
+     */
+    public IIosCompliancePolicyRequestBuilder castToIosCompliancePolicy() {
+        return new IosCompliancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosCompliancePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSCompliancePolicy type
+     */
+    public IMacOSCompliancePolicyRequestBuilder castToMacOSCompliancePolicy() {
+        return new MacOSCompliancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.macOSCompliancePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10CompliancePolicy type
+     */
+    public IWindows10CompliancePolicyRequestBuilder castToWindows10CompliancePolicy() {
+        return new Windows10CompliancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windows10CompliancePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows10MobileCompliancePolicy type
+     */
+    public IWindows10MobileCompliancePolicyRequestBuilder castToWindows10MobileCompliancePolicy() {
+        return new Windows10MobileCompliancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windows10MobileCompliancePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Windows81CompliancePolicy type
+     */
+    public IWindows81CompliancePolicyRequestBuilder castToWindows81CompliancePolicy() {
+        return new Windows81CompliancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windows81CompliancePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsPhone81CompliancePolicy type
+     */
+    public IWindowsPhone81CompliancePolicyRequestBuilder castToWindowsPhone81CompliancePolicy() {
+        return new WindowsPhone81CompliancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsPhone81CompliancePolicy"), getClient(), null);
+    }
 }

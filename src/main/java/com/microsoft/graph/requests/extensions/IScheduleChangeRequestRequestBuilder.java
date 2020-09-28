@@ -36,4 +36,32 @@ public interface IScheduleChangeRequestRequestBuilder extends IRequestBuilder {
     IScheduleChangeRequestDeclineRequestBuilder decline(final String message);
     IScheduleChangeRequestApproveRequestBuilder approve(final String message);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OfferShiftRequest type
+     */
+    IOfferShiftRequestRequestBuilder castToOfferShiftRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OpenShiftChangeRequest type
+     */
+    IOpenShiftChangeRequestRequestBuilder castToOpenShiftChangeRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TimeOffRequest type
+     */
+    ITimeOffRequestRequestBuilder castToTimeOffRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SwapShiftsChangeRequest type
+     */
+    ISwapShiftsChangeRequestRequestBuilder castToSwapShiftsChangeRequest();
+
 }

@@ -85,5 +85,5 @@ public interface ISecureScoreControlProfileCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	ISecureScoreControlProfileCollectionRequest skipToken(String skipToken);
+	ISecureScoreControlProfileCollectionRequest skipToken(final String skipToken);
 }

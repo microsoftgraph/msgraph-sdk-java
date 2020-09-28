@@ -61,4 +61,229 @@ public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseR
     public IDirectoryObjectCollectionReferenceRequestBuilder references(){
         return new DirectoryObjectCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the User type
+     */
+    public IUserCollectionRequestBuilder castToUser() {
+        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.user"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AppRoleAssignment type
+     */
+    public IAppRoleAssignmentCollectionRequestBuilder castToAppRoleAssignment() {
+        return new AppRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.appRoleAssignment"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Application type
+     */
+    public IApplicationCollectionRequestBuilder castToApplication() {
+        return new ApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.application"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ExtensionProperty type
+     */
+    public IExtensionPropertyCollectionRequestBuilder castToExtensionProperty() {
+        return new ExtensionPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.extensionProperty"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the PolicyBase type
+     */
+    public IPolicyBaseCollectionRequestBuilder castToPolicyBase() {
+        return new PolicyBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.policyBase"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AdministrativeUnit type
+     */
+    public IAdministrativeUnitCollectionRequestBuilder castToAdministrativeUnit() {
+        return new AdministrativeUnitCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.administrativeUnit"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Contract type
+     */
+    public IContractCollectionRequestBuilder castToContract() {
+        return new ContractCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.contract"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Device type
+     */
+    public IDeviceCollectionRequestBuilder castToDevice() {
+        return new DeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.device"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DirectoryObjectPartnerReference type
+     */
+    public IDirectoryObjectPartnerReferenceCollectionRequestBuilder castToDirectoryObjectPartnerReference() {
+        return new DirectoryObjectPartnerReferenceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.directoryObjectPartnerReference"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DirectoryRole type
+     */
+    public IDirectoryRoleCollectionRequestBuilder castToDirectoryRole() {
+        return new DirectoryRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.directoryRole"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DirectoryRoleTemplate type
+     */
+    public IDirectoryRoleTemplateCollectionRequestBuilder castToDirectoryRoleTemplate() {
+        return new DirectoryRoleTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.directoryRoleTemplate"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Endpoint type
+     */
+    public IEndpointCollectionRequestBuilder castToEndpoint() {
+        return new EndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.endpoint"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Group type
+     */
+    public IGroupCollectionRequestBuilder castToGroup() {
+        return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.group"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the GroupSettingTemplate type
+     */
+    public IGroupSettingTemplateCollectionRequestBuilder castToGroupSettingTemplate() {
+        return new GroupSettingTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.groupSettingTemplate"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Organization type
+     */
+    public IOrganizationCollectionRequestBuilder castToOrganization() {
+        return new OrganizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.organization"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OrgContact type
+     */
+    public IOrgContactCollectionRequestBuilder castToOrgContact() {
+        return new OrgContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.orgContact"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ServicePrincipal type
+     */
+    public IServicePrincipalCollectionRequestBuilder castToServicePrincipal() {
+        return new ServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.servicePrincipal"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the StsPolicy type
+     */
+    public IStsPolicyCollectionRequestBuilder castToStsPolicy() {
+        return new StsPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stsPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the PermissionGrantPolicy type
+     */
+    public IPermissionGrantPolicyCollectionRequestBuilder castToPermissionGrantPolicy() {
+        return new PermissionGrantPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.permissionGrantPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IdentitySecurityDefaultsEnforcementPolicy type
+     */
+    public IIdentitySecurityDefaultsEnforcementPolicyCollectionRequestBuilder castToIdentitySecurityDefaultsEnforcementPolicy() {
+        return new IdentitySecurityDefaultsEnforcementPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the HomeRealmDiscoveryPolicy type
+     */
+    public IHomeRealmDiscoveryPolicyCollectionRequestBuilder castToHomeRealmDiscoveryPolicy() {
+        return new HomeRealmDiscoveryPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.homeRealmDiscoveryPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenIssuancePolicy type
+     */
+    public ITokenIssuancePolicyCollectionRequestBuilder castToTokenIssuancePolicy() {
+        return new TokenIssuancePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tokenIssuancePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenLifetimePolicy type
+     */
+    public ITokenLifetimePolicyCollectionRequestBuilder castToTokenLifetimePolicy() {
+        return new TokenLifetimePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tokenLifetimePolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ActivityBasedTimeoutPolicy type
+     */
+    public IActivityBasedTimeoutPolicyCollectionRequestBuilder castToActivityBasedTimeoutPolicy() {
+        return new ActivityBasedTimeoutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.activityBasedTimeoutPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ClaimsMappingPolicy type
+     */
+    public IClaimsMappingPolicyCollectionRequestBuilder castToClaimsMappingPolicy() {
+        return new ClaimsMappingPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.claimsMappingPolicy"), getClient(), null);
+    }
 }

@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -36,21 +35,6 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, IClaimsMappingPolicyCollectionPage.class);
     }
 
-    public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
-        final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/claimsMappingPolicies/" + newClaimsMappingPolicy.id);
-        new ClaimsMappingPolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
-            .post(newClaimsMappingPolicy, body, callback);
-    }
-
-    public ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException {
-        final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/claimsMappingPolicies/" + newClaimsMappingPolicy.id);
-        return new ClaimsMappingPolicyWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getHeaders())
-                .post(newClaimsMappingPolicy, body);
-    }
     /**
      * Sets the expand clause for the request
      *

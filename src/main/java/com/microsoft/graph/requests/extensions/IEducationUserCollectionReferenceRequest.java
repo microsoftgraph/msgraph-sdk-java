@@ -21,7 +21,6 @@ import com.microsoft.graph.models.extensions.EducationUser;
  * The interface for the Education User Collection Reference Request.
  */
 public interface IEducationUserCollectionReferenceRequest {
-
     void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback);
 
     EducationUser post(final EducationUser newEducationUser) throws ClientException;

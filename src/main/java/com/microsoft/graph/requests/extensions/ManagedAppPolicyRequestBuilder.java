@@ -57,4 +57,94 @@ public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder implement
     public IManagedAppPolicyTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps) {
         return new ManagedAppPolicyTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAppProtection type
+     */
+    public IManagedAppProtectionRequestBuilder castToManagedAppProtection() {
+        return new ManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedAppProtection"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsInformationProtection type
+     */
+    public IWindowsInformationProtectionRequestBuilder castToWindowsInformationProtection() {
+        return new WindowsInformationProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsInformationProtection"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAppConfiguration type
+     */
+    public IManagedAppConfigurationRequestBuilder castToManagedAppConfiguration() {
+        return new ManagedAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedAppConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TargetedManagedAppProtection type
+     */
+    public ITargetedManagedAppProtectionRequestBuilder castToTargetedManagedAppProtection() {
+        return new TargetedManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetedManagedAppProtection"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DefaultManagedAppProtection type
+     */
+    public IDefaultManagedAppProtectionRequestBuilder castToDefaultManagedAppProtection() {
+        return new DefaultManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.defaultManagedAppProtection"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidManagedAppProtection type
+     */
+    public IAndroidManagedAppProtectionRequestBuilder castToAndroidManagedAppProtection() {
+        return new AndroidManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.androidManagedAppProtection"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosManagedAppProtection type
+     */
+    public IIosManagedAppProtectionRequestBuilder castToIosManagedAppProtection() {
+        return new IosManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosManagedAppProtection"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MdmWindowsInformationProtectionPolicy type
+     */
+    public IMdmWindowsInformationProtectionPolicyRequestBuilder castToMdmWindowsInformationProtectionPolicy() {
+        return new MdmWindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mdmWindowsInformationProtectionPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsInformationProtectionPolicy type
+     */
+    public IWindowsInformationProtectionPolicyRequestBuilder castToWindowsInformationProtectionPolicy() {
+        return new WindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsInformationProtectionPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TargetedManagedAppConfiguration type
+     */
+    public ITargetedManagedAppConfigurationRequestBuilder castToTargetedManagedAppConfiguration() {
+        return new TargetedManagedAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetedManagedAppConfiguration"), getClient(), null);
+    }
 }

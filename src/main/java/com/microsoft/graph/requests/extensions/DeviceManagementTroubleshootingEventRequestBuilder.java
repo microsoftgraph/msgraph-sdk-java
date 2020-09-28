@@ -52,4 +52,13 @@ public class DeviceManagementTroubleshootingEventRequestBuilder extends BaseRequ
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EnrollmentTroubleshootingEvent type
+     */
+    public IEnrollmentTroubleshootingEventRequestBuilder castToEnrollmentTroubleshootingEvent() {
+        return new EnrollmentTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.enrollmentTroubleshootingEvent"), getClient(), null);
+    }
 }

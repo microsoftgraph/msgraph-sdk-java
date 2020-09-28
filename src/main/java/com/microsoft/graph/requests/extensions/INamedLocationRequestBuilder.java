@@ -34,4 +34,18 @@ public interface INamedLocationRequestBuilder extends IRequestBuilder {
     INamedLocationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the CountryNamedLocation type
+     */
+    ICountryNamedLocationRequestBuilder castToCountryNamedLocation();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IpNamedLocation type
+     */
+    IIpNamedLocationRequestBuilder castToIpNamedLocation();
+
 }

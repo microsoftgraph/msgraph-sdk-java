@@ -60,4 +60,13 @@ public class RoleDefinitionWithReferenceRequestBuilder extends BaseRequestBuilde
         return new RoleDefinitionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DeviceAndAppManagementRoleDefinition type
+     */
+    public IDeviceAndAppManagementRoleDefinitionRequestBuilder castToDeviceAndAppManagementRoleDefinition() {
+        return new DeviceAndAppManagementRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deviceAndAppManagementRoleDefinition"), getClient(), null);
+    }
+
 }

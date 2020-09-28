@@ -70,4 +70,11 @@ public interface IManagedDeviceMobileAppConfigurationRequestBuilder extends IReq
     IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder userStatusSummary();
     IManagedDeviceMobileAppConfigurationAssignRequestBuilder assign(final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosMobileAppConfiguration type
+     */
+    IIosMobileAppConfigurationRequestBuilder castToIosMobileAppConfiguration();
+
 }

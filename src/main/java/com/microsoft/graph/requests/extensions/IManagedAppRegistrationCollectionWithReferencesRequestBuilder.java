@@ -25,7 +25,7 @@ public interface IManagedAppRegistrationCollectionWithReferencesRequestBuilder e
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IManagedAppRegistrationCollectionWithReferencesRequest instance
      */
     IManagedAppRegistrationCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -33,11 +33,25 @@ public interface IManagedAppRegistrationCollectionWithReferencesRequestBuilder e
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IManagedAppRegistrationCollectionWithReferencesRequest instance
      */
     IManagedAppRegistrationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IManagedAppRegistrationWithReferenceRequestBuilder byId(final String id);
 
     IManagedAppRegistrationCollectionReferenceRequestBuilder references();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidManagedAppRegistration type
+     */
+    IAndroidManagedAppRegistrationCollectionRequestBuilder castToAndroidManagedAppRegistration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosManagedAppRegistration type
+     */
+    IIosManagedAppRegistrationCollectionRequestBuilder castToIosManagedAppRegistration();
 }

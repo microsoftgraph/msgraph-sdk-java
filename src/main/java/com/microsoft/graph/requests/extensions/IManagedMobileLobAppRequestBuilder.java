@@ -48,4 +48,18 @@ public interface IManagedMobileLobAppRequestBuilder extends IRequestBuilder {
 
     IMobileAppContentRequestBuilder contentVersions(final String id);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAndroidLobApp type
+     */
+    IManagedAndroidLobAppRequestBuilder castToManagedAndroidLobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedIOSLobApp type
+     */
+    IManagedIOSLobAppRequestBuilder castToManagedIOSLobApp();
+
 }

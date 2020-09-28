@@ -64,4 +64,18 @@ public interface IAppleDeviceFeaturesConfigurationBaseRequestBuilder extends IRe
      */
     IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview();
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosDeviceFeaturesConfiguration type
+     */
+    IIosDeviceFeaturesConfigurationRequestBuilder castToIosDeviceFeaturesConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MacOSDeviceFeaturesConfiguration type
+     */
+    IMacOSDeviceFeaturesConfigurationRequestBuilder castToMacOSDeviceFeaturesConfiguration();
+
 }

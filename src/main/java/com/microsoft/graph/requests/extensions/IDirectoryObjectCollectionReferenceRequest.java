@@ -22,7 +22,6 @@ import com.microsoft.graph.models.extensions.DirectoryObject;
  * The interface for the Directory Object Collection Reference Request.
  */
 public interface IDirectoryObjectCollectionReferenceRequest {
-
     void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback);
 
     DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException;

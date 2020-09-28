@@ -60,4 +60,40 @@ public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder impl
     public IScheduleChangeRequestApproveRequestBuilder approve(final String message) {
         return new ScheduleChangeRequestApproveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.approve"), getClient(), null, message);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OfferShiftRequest type
+     */
+    public IOfferShiftRequestRequestBuilder castToOfferShiftRequest() {
+        return new OfferShiftRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.offerShiftRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OpenShiftChangeRequest type
+     */
+    public IOpenShiftChangeRequestRequestBuilder castToOpenShiftChangeRequest() {
+        return new OpenShiftChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.openShiftChangeRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TimeOffRequest type
+     */
+    public ITimeOffRequestRequestBuilder castToTimeOffRequest() {
+        return new TimeOffRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.timeOffRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SwapShiftsChangeRequest type
+     */
+    public ISwapShiftsChangeRequestRequestBuilder castToSwapShiftsChangeRequest() {
+        return new SwapShiftsChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.swapShiftsChangeRequest"), getClient(), null);
+    }
 }

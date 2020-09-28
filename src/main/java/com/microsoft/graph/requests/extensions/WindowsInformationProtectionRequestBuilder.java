@@ -86,4 +86,22 @@ public class WindowsInformationProtectionRequestBuilder extends BaseRequestBuild
     public IWindowsInformationProtectionAssignRequestBuilder assign(final java.util.List<TargetedManagedAppPolicyAssignment> assignments) {
         return new WindowsInformationProtectionAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MdmWindowsInformationProtectionPolicy type
+     */
+    public IMdmWindowsInformationProtectionPolicyRequestBuilder castToMdmWindowsInformationProtectionPolicy() {
+        return new MdmWindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mdmWindowsInformationProtectionPolicy"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsInformationProtectionPolicy type
+     */
+    public IWindowsInformationProtectionPolicyRequestBuilder castToWindowsInformationProtectionPolicy() {
+        return new WindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsInformationProtectionPolicy"), getClient(), null);
+    }
 }

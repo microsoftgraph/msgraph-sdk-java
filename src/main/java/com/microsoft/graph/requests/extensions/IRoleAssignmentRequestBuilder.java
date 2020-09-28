@@ -42,4 +42,11 @@ public interface IRoleAssignmentRequestBuilder extends IRequestBuilder {
      */
     IRoleDefinitionWithReferenceRequestBuilder roleDefinition();
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DeviceAndAppManagementRoleAssignment type
+     */
+    IDeviceAndAppManagementRoleAssignmentRequestBuilder castToDeviceAndAppManagementRoleAssignment();
+
 }

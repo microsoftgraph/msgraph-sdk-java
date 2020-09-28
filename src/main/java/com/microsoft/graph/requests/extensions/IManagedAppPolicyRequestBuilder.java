@@ -36,4 +36,74 @@ public interface IManagedAppPolicyRequestBuilder extends IRequestBuilder {
 
     IManagedAppPolicyTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAppProtection type
+     */
+    IManagedAppProtectionRequestBuilder castToManagedAppProtection();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsInformationProtection type
+     */
+    IWindowsInformationProtectionRequestBuilder castToWindowsInformationProtection();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ManagedAppConfiguration type
+     */
+    IManagedAppConfigurationRequestBuilder castToManagedAppConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TargetedManagedAppProtection type
+     */
+    ITargetedManagedAppProtectionRequestBuilder castToTargetedManagedAppProtection();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DefaultManagedAppProtection type
+     */
+    IDefaultManagedAppProtectionRequestBuilder castToDefaultManagedAppProtection();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidManagedAppProtection type
+     */
+    IAndroidManagedAppProtectionRequestBuilder castToAndroidManagedAppProtection();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosManagedAppProtection type
+     */
+    IIosManagedAppProtectionRequestBuilder castToIosManagedAppProtection();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MdmWindowsInformationProtectionPolicy type
+     */
+    IMdmWindowsInformationProtectionPolicyRequestBuilder castToMdmWindowsInformationProtectionPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsInformationProtectionPolicy type
+     */
+    IWindowsInformationProtectionPolicyRequestBuilder castToWindowsInformationProtectionPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TargetedManagedAppConfiguration type
+     */
+    ITargetedManagedAppConfigurationRequestBuilder castToTargetedManagedAppConfiguration();
+
 }

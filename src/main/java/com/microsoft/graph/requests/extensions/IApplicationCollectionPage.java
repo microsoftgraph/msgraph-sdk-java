@@ -10,6 +10,16 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
+import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

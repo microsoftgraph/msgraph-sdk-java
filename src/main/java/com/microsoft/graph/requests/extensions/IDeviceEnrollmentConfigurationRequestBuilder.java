@@ -43,4 +43,25 @@ public interface IDeviceEnrollmentConfigurationRequestBuilder extends IRequestBu
     IDeviceEnrollmentConfigurationAssignRequestBuilder assign(final java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments);
     IDeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(final Integer priority);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DeviceEnrollmentLimitConfiguration type
+     */
+    IDeviceEnrollmentLimitConfigurationRequestBuilder castToDeviceEnrollmentLimitConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DeviceEnrollmentPlatformRestrictionsConfiguration type
+     */
+    IDeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder castToDeviceEnrollmentPlatformRestrictionsConfiguration();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DeviceEnrollmentWindowsHelloForBusinessConfiguration type
+     */
+    IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder castToDeviceEnrollmentWindowsHelloForBusinessConfiguration();
+
 }

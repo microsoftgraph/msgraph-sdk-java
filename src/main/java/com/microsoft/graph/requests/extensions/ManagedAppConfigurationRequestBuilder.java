@@ -52,4 +52,13 @@ public class ManagedAppConfigurationRequestBuilder extends BaseRequestBuilder im
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TargetedManagedAppConfiguration type
+     */
+    public ITargetedManagedAppConfigurationRequestBuilder castToTargetedManagedAppConfiguration() {
+        return new TargetedManagedAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetedManagedAppConfiguration"), getClient(), null);
+    }
 }

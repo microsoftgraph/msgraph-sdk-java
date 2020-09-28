@@ -7,8 +7,13 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.models.extensions.AndroidManagedAppProtection;
+import com.microsoft.graph.requests.extensions.IManagedMobileAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedMobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedMobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyDeploymentSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyDeploymentSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -26,7 +31,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class AndroidManagedAppProtectionCollectionRequestBuilder extends BaseRequestBuilder implements IAndroidManagedAppProtectionCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of DeviceAppManagement
+     * The request builder for this collection of AndroidManagedAppProtection
      *
      * @param requestUrl     the request URL
      * @param client         the service client

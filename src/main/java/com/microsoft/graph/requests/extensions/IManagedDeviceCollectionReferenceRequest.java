@@ -22,7 +22,6 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
  * The interface for the Managed Device Collection Reference Request.
  */
 public interface IManagedDeviceCollectionReferenceRequest {
-
     void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback);
 
     ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException;

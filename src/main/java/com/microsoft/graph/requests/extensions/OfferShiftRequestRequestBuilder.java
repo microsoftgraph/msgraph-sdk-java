@@ -52,4 +52,13 @@ public class OfferShiftRequestRequestBuilder extends BaseRequestBuilder implemen
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SwapShiftsChangeRequest type
+     */
+    public ISwapShiftsChangeRequestRequestBuilder castToSwapShiftsChangeRequest() {
+        return new SwapShiftsChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.swapShiftsChangeRequest"), getClient(), null);
+    }
 }

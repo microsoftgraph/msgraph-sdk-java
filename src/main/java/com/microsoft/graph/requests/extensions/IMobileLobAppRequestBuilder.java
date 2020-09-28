@@ -48,4 +48,39 @@ public interface IMobileLobAppRequestBuilder extends IRequestBuilder {
 
     IMobileAppContentRequestBuilder contentVersions(final String id);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AndroidLobApp type
+     */
+    IAndroidLobAppRequestBuilder castToAndroidLobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosLobApp type
+     */
+    IIosLobAppRequestBuilder castToIosLobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Win32LobApp type
+     */
+    IWin32LobAppRequestBuilder castToWin32LobApp();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsMobileMSI type
+     */
+    IWindowsMobileMSIRequestBuilder castToWindowsMobileMSI();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsUniversalAppX type
+     */
+    IWindowsUniversalAppXRequestBuilder castToWindowsUniversalAppX();
+
 }

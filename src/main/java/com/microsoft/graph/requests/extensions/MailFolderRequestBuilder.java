@@ -115,4 +115,13 @@ public class MailFolderRequestBuilder extends BaseRequestBuilder implements IMai
     public IMailFolderMoveRequestBuilder move(final String destinationId) {
         return new MailFolderMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MailSearchFolder type
+     */
+    public IMailSearchFolderRequestBuilder castToMailSearchFolder() {
+        return new MailSearchFolderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mailSearchFolder"), getClient(), null);
+    }
 }

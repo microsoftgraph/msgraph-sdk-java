@@ -52,4 +52,22 @@ public class NamedLocationRequestBuilder extends BaseRequestBuilder implements I
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the CountryNamedLocation type
+     */
+    public ICountryNamedLocationRequestBuilder castToCountryNamedLocation() {
+        return new CountryNamedLocationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countryNamedLocation"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IpNamedLocation type
+     */
+    public IIpNamedLocationRequestBuilder castToIpNamedLocation() {
+        return new IpNamedLocationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ipNamedLocation"), getClient(), null);
+    }
 }

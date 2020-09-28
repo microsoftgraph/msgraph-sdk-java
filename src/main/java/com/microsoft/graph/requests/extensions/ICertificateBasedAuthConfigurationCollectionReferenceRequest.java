@@ -21,7 +21,6 @@ import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
  * The interface for the Certificate Based Auth Configuration Collection Reference Request.
  */
 public interface ICertificateBasedAuthConfigurationCollectionReferenceRequest {
-
     void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback);
 
     CertificateBasedAuthConfiguration post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) throws ClientException;

@@ -66,4 +66,11 @@ public interface IMailFolderRequestBuilder extends IRequestBuilder {
     IMailFolderCopyRequestBuilder copy(final String destinationId);
     IMailFolderMoveRequestBuilder move(final String destinationId);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MailSearchFolder type
+     */
+    IMailSearchFolderRequestBuilder castToMailSearchFolder();
+
 }

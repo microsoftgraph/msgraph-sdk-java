@@ -7,7 +7,6 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,11 +20,6 @@ import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
  * The interface for the Home Realm Discovery Policy Collection Reference Request.
  */
 public interface IHomeRealmDiscoveryPolicyCollectionReferenceRequest {
-
-    void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback);
-
-    HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException;
-
     IHomeRealmDiscoveryPolicyCollectionReferenceRequest select(final String value);
 
     IHomeRealmDiscoveryPolicyCollectionReferenceRequest top(final int value);

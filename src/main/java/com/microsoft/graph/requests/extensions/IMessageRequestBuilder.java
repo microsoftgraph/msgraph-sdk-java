@@ -68,4 +68,32 @@ public interface IMessageRequestBuilder extends IRequestBuilder {
     IMessageReplyAllRequestBuilder replyAll(final Message message, final String comment);
     IMessageSendRequestBuilder send();
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the CalendarSharingMessage type
+     */
+    ICalendarSharingMessageRequestBuilder castToCalendarSharingMessage();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessage type
+     */
+    IEventMessageRequestBuilder castToEventMessage();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageRequest type
+     */
+    IEventMessageRequestRequestBuilder castToEventMessageRequest();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageResponse type
+     */
+    IEventMessageResponseRequestBuilder castToEventMessageResponse();
+
 }

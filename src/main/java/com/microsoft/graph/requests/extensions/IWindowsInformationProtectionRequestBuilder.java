@@ -52,4 +52,18 @@ public interface IWindowsInformationProtectionRequestBuilder extends IRequestBui
     IWindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(final String id);
     IWindowsInformationProtectionAssignRequestBuilder assign(final java.util.List<TargetedManagedAppPolicyAssignment> assignments);
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the MdmWindowsInformationProtectionPolicy type
+     */
+    IMdmWindowsInformationProtectionPolicyRequestBuilder castToMdmWindowsInformationProtectionPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WindowsInformationProtectionPolicy type
+     */
+    IWindowsInformationProtectionPolicyRequestBuilder castToWindowsInformationProtectionPolicy();
+
 }

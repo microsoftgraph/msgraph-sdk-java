@@ -91,4 +91,22 @@ public class EventMessageRequestBuilder extends BaseRequestBuilder implements IE
     public IEventRequestBuilder event() {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("event"), getClient(), null);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageRequest type
+     */
+    public IEventMessageRequestRequestBuilder castToEventMessageRequest() {
+        return new EventMessageRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.eventMessageRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the EventMessageResponse type
+     */
+    public IEventMessageResponseRequestBuilder castToEventMessageResponse() {
+        return new EventMessageResponseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.eventMessageResponse"), getClient(), null);
+    }
 }

@@ -85,5 +85,5 @@ public interface IDriveCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDriveCollectionRequest skipToken(String skipToken);
+	IDriveCollectionRequest skipToken(final String skipToken);
 }

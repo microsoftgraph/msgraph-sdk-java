@@ -44,4 +44,179 @@ public interface IDirectoryObjectRequestBuilder extends IRequestBuilder {
     IDirectoryObjectGetMemberObjectsCollectionRequestBuilder getMemberObjects(final Boolean securityEnabledOnly);
     IDirectoryObjectRestoreRequestBuilder restore();
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the User type
+     */
+    IUserRequestBuilder castToUser();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AppRoleAssignment type
+     */
+    IAppRoleAssignmentRequestBuilder castToAppRoleAssignment();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Application type
+     */
+    IApplicationRequestBuilder castToApplication();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ExtensionProperty type
+     */
+    IExtensionPropertyRequestBuilder castToExtensionProperty();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the PolicyBase type
+     */
+    IPolicyBaseRequestBuilder castToPolicyBase();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the AdministrativeUnit type
+     */
+    IAdministrativeUnitRequestBuilder castToAdministrativeUnit();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Contract type
+     */
+    IContractRequestBuilder castToContract();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Device type
+     */
+    IDeviceRequestBuilder castToDevice();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DirectoryObjectPartnerReference type
+     */
+    IDirectoryObjectPartnerReferenceRequestBuilder castToDirectoryObjectPartnerReference();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DirectoryRole type
+     */
+    IDirectoryRoleRequestBuilder castToDirectoryRole();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DirectoryRoleTemplate type
+     */
+    IDirectoryRoleTemplateRequestBuilder castToDirectoryRoleTemplate();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Endpoint type
+     */
+    IEndpointRequestBuilder castToEndpoint();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Group type
+     */
+    IGroupRequestBuilder castToGroup();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the GroupSettingTemplate type
+     */
+    IGroupSettingTemplateRequestBuilder castToGroupSettingTemplate();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Organization type
+     */
+    IOrganizationRequestBuilder castToOrganization();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OrgContact type
+     */
+    IOrgContactRequestBuilder castToOrgContact();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ServicePrincipal type
+     */
+    IServicePrincipalRequestBuilder castToServicePrincipal();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the StsPolicy type
+     */
+    IStsPolicyRequestBuilder castToStsPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the PermissionGrantPolicy type
+     */
+    IPermissionGrantPolicyRequestBuilder castToPermissionGrantPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IdentitySecurityDefaultsEnforcementPolicy type
+     */
+    IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder castToIdentitySecurityDefaultsEnforcementPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the HomeRealmDiscoveryPolicy type
+     */
+    IHomeRealmDiscoveryPolicyRequestBuilder castToHomeRealmDiscoveryPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenIssuancePolicy type
+     */
+    ITokenIssuancePolicyRequestBuilder castToTokenIssuancePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TokenLifetimePolicy type
+     */
+    ITokenLifetimePolicyRequestBuilder castToTokenLifetimePolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ActivityBasedTimeoutPolicy type
+     */
+    IActivityBasedTimeoutPolicyRequestBuilder castToActivityBasedTimeoutPolicy();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ClaimsMappingPolicy type
+     */
+    IClaimsMappingPolicyRequestBuilder castToClaimsMappingPolicy();
+
 }

@@ -101,4 +101,13 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
     public IManagedEBookAssignRequestBuilder assign(final java.util.List<ManagedEBookAssignment> managedEBookAssignments) {
         return new ManagedEBookAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, managedEBookAssignments);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the IosVppEBook type
+     */
+    public IIosVppEBookRequestBuilder castToIosVppEBook() {
+        return new IosVppEBookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iosVppEBook"), getClient(), null);
+    }
 }

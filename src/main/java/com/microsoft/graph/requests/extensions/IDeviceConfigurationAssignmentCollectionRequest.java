@@ -85,5 +85,5 @@ public interface IDeviceConfigurationAssignmentCollectionRequest extends IHttpRe
      *
 	 * @return the updated request
 	 */
-	IDeviceConfigurationAssignmentCollectionRequest skipToken(String skipToken);
+	IDeviceConfigurationAssignmentCollectionRequest skipToken(final String skipToken);
 }

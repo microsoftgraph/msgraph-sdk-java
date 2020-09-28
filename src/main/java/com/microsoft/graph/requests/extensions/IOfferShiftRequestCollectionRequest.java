@@ -85,5 +85,5 @@ public interface IOfferShiftRequestCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOfferShiftRequestCollectionRequest skipToken(String skipToken);
+	IOfferShiftRequestCollectionRequest skipToken(final String skipToken);
 }

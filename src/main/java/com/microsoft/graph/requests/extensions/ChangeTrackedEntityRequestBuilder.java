@@ -52,4 +52,112 @@ public class ChangeTrackedEntityRequestBuilder extends BaseRequestBuilder implem
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ShiftPreferences type
+     */
+    public IShiftPreferencesRequestBuilder castToShiftPreferences() {
+        return new ShiftPreferencesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.shiftPreferences"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the WorkforceIntegration type
+     */
+    public IWorkforceIntegrationRequestBuilder castToWorkforceIntegration() {
+        return new WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.workforceIntegration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ScheduleChangeRequest type
+     */
+    public IScheduleChangeRequestRequestBuilder castToScheduleChangeRequest() {
+        return new ScheduleChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.scheduleChangeRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OpenShift type
+     */
+    public IOpenShiftRequestBuilder castToOpenShift() {
+        return new OpenShiftRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.openShift"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SchedulingGroup type
+     */
+    public ISchedulingGroupRequestBuilder castToSchedulingGroup() {
+        return new SchedulingGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.schedulingGroup"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the Shift type
+     */
+    public IShiftRequestBuilder castToShift() {
+        return new ShiftRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.shift"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TimeOffReason type
+     */
+    public ITimeOffReasonRequestBuilder castToTimeOffReason() {
+        return new TimeOffReasonRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.timeOffReason"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TimeOff type
+     */
+    public ITimeOffRequestBuilder castToTimeOff() {
+        return new TimeOffRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.timeOff"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OfferShiftRequest type
+     */
+    public IOfferShiftRequestRequestBuilder castToOfferShiftRequest() {
+        return new OfferShiftRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.offerShiftRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OpenShiftChangeRequest type
+     */
+    public IOpenShiftChangeRequestRequestBuilder castToOpenShiftChangeRequest() {
+        return new OpenShiftChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.openShiftChangeRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the TimeOffRequest type
+     */
+    public ITimeOffRequestRequestBuilder castToTimeOffRequest() {
+        return new TimeOffRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.timeOffRequest"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the SwapShiftsChangeRequest type
+     */
+    public ISwapShiftsChangeRequestRequestBuilder castToSwapShiftsChangeRequest() {
+        return new SwapShiftsChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.swapShiftsChangeRequest"), getClient(), null);
+    }
 }

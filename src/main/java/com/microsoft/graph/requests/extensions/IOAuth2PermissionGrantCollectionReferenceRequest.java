@@ -21,7 +21,6 @@ import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
  * The interface for the OAuth2Permission Grant Collection Reference Request.
  */
 public interface IOAuth2PermissionGrantCollectionReferenceRequest {
-
     void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback);
 
     OAuth2PermissionGrant post(final OAuth2PermissionGrant newOAuth2PermissionGrant) throws ClientException;

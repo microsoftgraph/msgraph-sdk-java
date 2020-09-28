@@ -7,12 +7,11 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;

@@ -72,4 +72,31 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
     public IDeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(final Integer priority) {
         return new DeviceEnrollmentConfigurationSetPriorityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPriority"), getClient(), null, priority);
     }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DeviceEnrollmentLimitConfiguration type
+     */
+    public IDeviceEnrollmentLimitConfigurationRequestBuilder castToDeviceEnrollmentLimitConfiguration() {
+        return new DeviceEnrollmentLimitConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deviceEnrollmentLimitConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DeviceEnrollmentPlatformRestrictionsConfiguration type
+     */
+    public IDeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder castToDeviceEnrollmentPlatformRestrictionsConfiguration() {
+        return new DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deviceEnrollmentPlatformRestrictionsConfiguration"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DeviceEnrollmentWindowsHelloForBusinessConfiguration type
+     */
+    public IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder castToDeviceEnrollmentWindowsHelloForBusinessConfiguration() {
+        return new DeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deviceEnrollmentWindowsHelloForBusinessConfiguration"), getClient(), null);
+    }
 }

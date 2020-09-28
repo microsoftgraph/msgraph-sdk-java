@@ -34,4 +34,39 @@ public interface IDomainDnsRecordRequestBuilder extends IRequestBuilder {
     IDomainDnsRecordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DomainDnsCnameRecord type
+     */
+    IDomainDnsCnameRecordRequestBuilder castToDomainDnsCnameRecord();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DomainDnsMxRecord type
+     */
+    IDomainDnsMxRecordRequestBuilder castToDomainDnsMxRecord();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DomainDnsSrvRecord type
+     */
+    IDomainDnsSrvRecordRequestBuilder castToDomainDnsSrvRecord();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DomainDnsTxtRecord type
+     */
+    IDomainDnsTxtRecordRequestBuilder castToDomainDnsTxtRecord();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DomainDnsUnavailableRecord type
+     */
+    IDomainDnsUnavailableRecordRequestBuilder castToDomainDnsUnavailableRecord();
+
 }

@@ -21,7 +21,6 @@ import com.microsoft.graph.models.extensions.ManagedAppRegistration;
  * The interface for the Managed App Registration Collection Reference Request.
  */
 public interface IManagedAppRegistrationCollectionReferenceRequest {
-
     void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback);
 
     ManagedAppRegistration post(final ManagedAppRegistration newManagedAppRegistration) throws ClientException;

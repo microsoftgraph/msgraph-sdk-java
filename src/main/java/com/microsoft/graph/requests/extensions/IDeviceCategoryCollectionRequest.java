@@ -85,5 +85,5 @@ public interface IDeviceCategoryCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDeviceCategoryCollectionRequest skipToken(String skipToken);
+	IDeviceCategoryCollectionRequest skipToken(final String skipToken);
 }

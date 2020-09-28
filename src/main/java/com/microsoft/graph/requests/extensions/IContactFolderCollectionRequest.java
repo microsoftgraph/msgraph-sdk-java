@@ -84,5 +84,5 @@ public interface IContactFolderCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IContactFolderCollectionRequest skipToken(String skipToken);
+	IContactFolderCollectionRequest skipToken(final String skipToken);
 }

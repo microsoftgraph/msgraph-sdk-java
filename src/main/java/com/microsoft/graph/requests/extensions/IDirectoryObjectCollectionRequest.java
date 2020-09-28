@@ -85,5 +85,5 @@ public interface IDirectoryObjectCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDirectoryObjectCollectionRequest skipToken(String skipToken);
+	IDirectoryObjectCollectionRequest skipToken(final String skipToken);
 }

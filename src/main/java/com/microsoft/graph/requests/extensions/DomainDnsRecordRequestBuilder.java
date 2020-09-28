@@ -52,4 +52,49 @@ public class DomainDnsRecordRequestBuilder extends BaseRequestBuilder implements
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DomainDnsCnameRecord type
+     */
+    public IDomainDnsCnameRecordRequestBuilder castToDomainDnsCnameRecord() {
+        return new DomainDnsCnameRecordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.domainDnsCnameRecord"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DomainDnsMxRecord type
+     */
+    public IDomainDnsMxRecordRequestBuilder castToDomainDnsMxRecord() {
+        return new DomainDnsMxRecordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.domainDnsMxRecord"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DomainDnsSrvRecord type
+     */
+    public IDomainDnsSrvRecordRequestBuilder castToDomainDnsSrvRecord() {
+        return new DomainDnsSrvRecordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.domainDnsSrvRecord"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DomainDnsTxtRecord type
+     */
+    public IDomainDnsTxtRecordRequestBuilder castToDomainDnsTxtRecord() {
+        return new DomainDnsTxtRecordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.domainDnsTxtRecord"), getClient(), null);
+    }
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DomainDnsUnavailableRecord type
+     */
+    public IDomainDnsUnavailableRecordRequestBuilder castToDomainDnsUnavailableRecord() {
+        return new DomainDnsUnavailableRecordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.domainDnsUnavailableRecord"), getClient(), null);
+    }
 }

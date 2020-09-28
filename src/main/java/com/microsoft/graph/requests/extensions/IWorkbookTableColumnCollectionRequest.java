@@ -86,5 +86,5 @@ public interface IWorkbookTableColumnCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IWorkbookTableColumnCollectionRequest skipToken(String skipToken);
+	IWorkbookTableColumnCollectionRequest skipToken(final String skipToken);
 }

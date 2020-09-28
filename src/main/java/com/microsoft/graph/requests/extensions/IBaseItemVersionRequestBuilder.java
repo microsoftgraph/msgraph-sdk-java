@@ -34,4 +34,18 @@ public interface IBaseItemVersionRequestBuilder extends IRequestBuilder {
     IBaseItemVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the DriveItemVersion type
+     */
+    IDriveItemVersionRequestBuilder castToDriveItemVersion();
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the ListItemVersion type
+     */
+    IListItemVersionRequestBuilder castToListItemVersion();
+
 }

@@ -52,4 +52,13 @@ public class ExtensionRequestBuilder extends BaseRequestBuilder implements IExte
     }
 
 
+
+    /**
+     * Performs an OData cast on the entity
+     *
+     * @return the entity cast to the OpenTypeExtension type
+     */
+    public IOpenTypeExtensionRequestBuilder castToOpenTypeExtension() {
+        return new OpenTypeExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.openTypeExtension"), getClient(), null);
+    }
 }
