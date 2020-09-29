@@ -85,5 +85,5 @@ public interface IShiftCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IShiftCollectionRequest skipToken(String skipToken);
+	IShiftCollectionRequest skipToken(final String skipToken);
 }

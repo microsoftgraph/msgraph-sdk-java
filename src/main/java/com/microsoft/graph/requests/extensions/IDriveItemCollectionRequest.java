@@ -91,5 +91,5 @@ public interface IDriveItemCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDriveItemCollectionRequest skipToken(String skipToken);
+	IDriveItemCollectionRequest skipToken(final String skipToken);
 }

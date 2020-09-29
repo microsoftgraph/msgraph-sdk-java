@@ -84,5 +84,5 @@ public interface ITeamsTemplateCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITeamsTemplateCollectionRequest skipToken(String skipToken);
+	ITeamsTemplateCollectionRequest skipToken(final String skipToken);
 }

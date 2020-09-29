@@ -85,5 +85,5 @@ public interface IAppRoleAssignmentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAppRoleAssignmentCollectionRequest skipToken(String skipToken);
+	IAppRoleAssignmentCollectionRequest skipToken(final String skipToken);
 }

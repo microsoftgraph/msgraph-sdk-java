@@ -85,5 +85,5 @@ public interface ITokenLifetimePolicyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITokenLifetimePolicyCollectionRequest skipToken(String skipToken);
+	ITokenLifetimePolicyCollectionRequest skipToken(final String skipToken);
 }

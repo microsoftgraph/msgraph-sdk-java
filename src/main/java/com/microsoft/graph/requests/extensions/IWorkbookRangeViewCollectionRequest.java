@@ -85,5 +85,5 @@ public interface IWorkbookRangeViewCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IWorkbookRangeViewCollectionRequest skipToken(String skipToken);
+	IWorkbookRangeViewCollectionRequest skipToken(final String skipToken);
 }

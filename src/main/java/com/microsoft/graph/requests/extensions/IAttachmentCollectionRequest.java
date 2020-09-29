@@ -87,5 +87,5 @@ public interface IAttachmentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAttachmentCollectionRequest skipToken(String skipToken);
+	IAttachmentCollectionRequest skipToken(final String skipToken);
 }

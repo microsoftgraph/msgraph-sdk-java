@@ -85,5 +85,5 @@ public interface IUserInstallStateSummaryCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	IUserInstallStateSummaryCollectionRequest skipToken(String skipToken);
+	IUserInstallStateSummaryCollectionRequest skipToken(final String skipToken);
 }

@@ -85,5 +85,5 @@ public interface IEnrollmentConfigurationAssignmentCollectionRequest extends IHt
      *
 	 * @return the updated request
 	 */
-	IEnrollmentConfigurationAssignmentCollectionRequest skipToken(String skipToken);
+	IEnrollmentConfigurationAssignmentCollectionRequest skipToken(final String skipToken);
 }

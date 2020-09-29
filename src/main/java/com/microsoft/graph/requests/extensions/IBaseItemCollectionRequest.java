@@ -85,5 +85,5 @@ public interface IBaseItemCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IBaseItemCollectionRequest skipToken(String skipToken);
+	IBaseItemCollectionRequest skipToken(final String skipToken);
 }

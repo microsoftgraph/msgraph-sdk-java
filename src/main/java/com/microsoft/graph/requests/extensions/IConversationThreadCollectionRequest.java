@@ -86,5 +86,5 @@ public interface IConversationThreadCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IConversationThreadCollectionRequest skipToken(String skipToken);
+	IConversationThreadCollectionRequest skipToken(final String skipToken);
 }

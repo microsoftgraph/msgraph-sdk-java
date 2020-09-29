@@ -85,5 +85,5 @@ public interface IThumbnailSetCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IThumbnailSetCollectionRequest skipToken(String skipToken);
+	IThumbnailSetCollectionRequest skipToken(final String skipToken);
 }

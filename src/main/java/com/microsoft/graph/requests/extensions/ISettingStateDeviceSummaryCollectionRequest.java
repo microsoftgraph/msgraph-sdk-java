@@ -85,5 +85,5 @@ public interface ISettingStateDeviceSummaryCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	ISettingStateDeviceSummaryCollectionRequest skipToken(String skipToken);
+	ISettingStateDeviceSummaryCollectionRequest skipToken(final String skipToken);
 }

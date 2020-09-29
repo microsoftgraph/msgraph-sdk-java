@@ -85,5 +85,5 @@ public interface ITokenIssuancePolicyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITokenIssuancePolicyCollectionRequest skipToken(String skipToken);
+	ITokenIssuancePolicyCollectionRequest skipToken(final String skipToken);
 }

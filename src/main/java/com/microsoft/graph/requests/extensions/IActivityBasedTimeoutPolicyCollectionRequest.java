@@ -85,5 +85,5 @@ public interface IActivityBasedTimeoutPolicyCollectionRequest extends IHttpReque
      *
 	 * @return the updated request
 	 */
-	IActivityBasedTimeoutPolicyCollectionRequest skipToken(String skipToken);
+	IActivityBasedTimeoutPolicyCollectionRequest skipToken(final String skipToken);
 }

@@ -85,5 +85,5 @@ public interface IIosManagedAppProtectionCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	IIosManagedAppProtectionCollectionRequest skipToken(String skipToken);
+	IIosManagedAppProtectionCollectionRequest skipToken(final String skipToken);
 }

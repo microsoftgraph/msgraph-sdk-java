@@ -84,5 +84,5 @@ public interface ISubscribedSkuCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISubscribedSkuCollectionRequest skipToken(String skipToken);
+	ISubscribedSkuCollectionRequest skipToken(final String skipToken);
 }

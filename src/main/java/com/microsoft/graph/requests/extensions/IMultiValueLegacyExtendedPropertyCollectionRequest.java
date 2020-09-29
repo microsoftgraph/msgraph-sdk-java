@@ -85,5 +85,5 @@ public interface IMultiValueLegacyExtendedPropertyCollectionRequest extends IHtt
      *
 	 * @return the updated request
 	 */
-	IMultiValueLegacyExtendedPropertyCollectionRequest skipToken(String skipToken);
+	IMultiValueLegacyExtendedPropertyCollectionRequest skipToken(final String skipToken);
 }

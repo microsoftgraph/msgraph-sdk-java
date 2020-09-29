@@ -85,5 +85,5 @@ public interface IEducationSchoolCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IEducationSchoolCollectionRequest skipToken(String skipToken);
+	IEducationSchoolCollectionRequest skipToken(final String skipToken);
 }

@@ -85,5 +85,5 @@ public interface IAndroidManagedAppProtectionCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	IAndroidManagedAppProtectionCollectionRequest skipToken(String skipToken);
+	IAndroidManagedAppProtectionCollectionRequest skipToken(final String skipToken);
 }

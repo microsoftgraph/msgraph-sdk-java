@@ -26,7 +26,7 @@ public interface IDirectoryObjectCollectionWithReferencesRequestBuilder extends 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IDirectoryObjectCollectionWithReferencesRequest instance
      */
     IDirectoryObjectCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -34,7 +34,7 @@ public interface IDirectoryObjectCollectionWithReferencesRequestBuilder extends 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IDirectoryObjectCollectionWithReferencesRequest instance
      */
     IDirectoryObjectCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 

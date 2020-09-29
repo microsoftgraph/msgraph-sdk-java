@@ -85,5 +85,5 @@ public interface IAdministrativeUnitCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAdministrativeUnitCollectionRequest skipToken(String skipToken);
+	IAdministrativeUnitCollectionRequest skipToken(final String skipToken);
 }

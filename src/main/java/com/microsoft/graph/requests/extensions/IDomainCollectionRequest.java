@@ -84,5 +84,5 @@ public interface IDomainCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDomainCollectionRequest skipToken(String skipToken);
+	IDomainCollectionRequest skipToken(final String skipToken);
 }

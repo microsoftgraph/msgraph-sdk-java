@@ -85,5 +85,5 @@ public interface IRoomCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IRoomCollectionRequest skipToken(String skipToken);
+	IRoomCollectionRequest skipToken(final String skipToken);
 }

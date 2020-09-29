@@ -85,5 +85,5 @@ public interface IMobileThreatDefenseConnectorCollectionRequest extends IHttpReq
      *
 	 * @return the updated request
 	 */
-	IMobileThreatDefenseConnectorCollectionRequest skipToken(String skipToken);
+	IMobileThreatDefenseConnectorCollectionRequest skipToken(final String skipToken);
 }

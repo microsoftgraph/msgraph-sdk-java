@@ -85,5 +85,5 @@ public interface IWindowsInformationProtectionPolicyCollectionRequest extends IH
      *
 	 * @return the updated request
 	 */
-	IWindowsInformationProtectionPolicyCollectionRequest skipToken(String skipToken);
+	IWindowsInformationProtectionPolicyCollectionRequest skipToken(final String skipToken);
 }

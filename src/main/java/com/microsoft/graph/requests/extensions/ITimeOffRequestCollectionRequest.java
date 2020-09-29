@@ -86,5 +86,5 @@ public interface ITimeOffRequestCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITimeOffRequestCollectionRequest skipToken(String skipToken);
+	ITimeOffRequestCollectionRequest skipToken(final String skipToken);
 }

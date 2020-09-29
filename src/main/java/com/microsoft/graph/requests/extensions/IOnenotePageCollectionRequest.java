@@ -88,5 +88,5 @@ public interface IOnenotePageCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOnenotePageCollectionRequest skipToken(String skipToken);
+	IOnenotePageCollectionRequest skipToken(final String skipToken);
 }

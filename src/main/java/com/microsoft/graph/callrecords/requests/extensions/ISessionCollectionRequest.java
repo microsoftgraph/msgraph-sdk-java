@@ -85,5 +85,5 @@ public interface ISessionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISessionCollectionRequest skipToken(String skipToken);
+	ISessionCollectionRequest skipToken(final String skipToken);
 }

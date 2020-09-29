@@ -84,5 +84,5 @@ public interface IOAuth2PermissionGrantCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOAuth2PermissionGrantCollectionRequest skipToken(String skipToken);
+	IOAuth2PermissionGrantCollectionRequest skipToken(final String skipToken);
 }

@@ -85,5 +85,5 @@ public interface IWindowsInformationProtectionNetworkLearningSummaryCollectionRe
      *
 	 * @return the updated request
 	 */
-	IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest skipToken(String skipToken);
+	IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest skipToken(final String skipToken);
 }

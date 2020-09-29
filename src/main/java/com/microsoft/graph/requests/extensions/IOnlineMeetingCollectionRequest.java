@@ -87,5 +87,5 @@ public interface IOnlineMeetingCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOnlineMeetingCollectionRequest skipToken(String skipToken);
+	IOnlineMeetingCollectionRequest skipToken(final String skipToken);
 }

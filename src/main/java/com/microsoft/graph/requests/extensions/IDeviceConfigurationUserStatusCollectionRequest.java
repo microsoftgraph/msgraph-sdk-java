@@ -85,5 +85,5 @@ public interface IDeviceConfigurationUserStatusCollectionRequest extends IHttpRe
      *
 	 * @return the updated request
 	 */
-	IDeviceConfigurationUserStatusCollectionRequest skipToken(String skipToken);
+	IDeviceConfigurationUserStatusCollectionRequest skipToken(final String skipToken);
 }

@@ -85,5 +85,5 @@ public interface ITeamsAppInstallationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITeamsAppInstallationCollectionRequest skipToken(String skipToken);
+	ITeamsAppInstallationCollectionRequest skipToken(final String skipToken);
 }

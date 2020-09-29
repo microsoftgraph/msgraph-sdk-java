@@ -85,5 +85,5 @@ public interface ICalendarGroupCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ICalendarGroupCollectionRequest skipToken(String skipToken);
+	ICalendarGroupCollectionRequest skipToken(final String skipToken);
 }

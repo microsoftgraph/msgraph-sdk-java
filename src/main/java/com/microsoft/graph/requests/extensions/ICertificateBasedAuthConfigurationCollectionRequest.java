@@ -84,5 +84,5 @@ public interface ICertificateBasedAuthConfigurationCollectionRequest extends IHt
      *
 	 * @return the updated request
 	 */
-	ICertificateBasedAuthConfigurationCollectionRequest skipToken(String skipToken);
+	ICertificateBasedAuthConfigurationCollectionRequest skipToken(final String skipToken);
 }

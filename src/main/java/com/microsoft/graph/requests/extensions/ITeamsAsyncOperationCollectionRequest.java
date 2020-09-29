@@ -85,5 +85,5 @@ public interface ITeamsAsyncOperationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITeamsAsyncOperationCollectionRequest skipToken(String skipToken);
+	ITeamsAsyncOperationCollectionRequest skipToken(final String skipToken);
 }

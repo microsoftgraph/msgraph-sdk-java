@@ -85,5 +85,5 @@ public interface IThreatAssessmentRequestCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	IThreatAssessmentRequestCollectionRequest skipToken(String skipToken);
+	IThreatAssessmentRequestCollectionRequest skipToken(final String skipToken);
 }

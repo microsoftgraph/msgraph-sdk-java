@@ -85,5 +85,5 @@ public interface IDeviceCompliancePolicySettingStateSummaryCollectionRequest ext
      *
 	 * @return the updated request
 	 */
-	IDeviceCompliancePolicySettingStateSummaryCollectionRequest skipToken(String skipToken);
+	IDeviceCompliancePolicySettingStateSummaryCollectionRequest skipToken(final String skipToken);
 }

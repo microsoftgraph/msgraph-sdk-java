@@ -13,6 +13,10 @@ import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionReque
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
@@ -79,6 +83,14 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
     IDirectoryObjectCollectionWithReferencesRequestBuilder members();
 
     IDirectoryObjectWithReferenceRequestBuilder members(final String id);
+
+    IUserCollectionWithReferencesRequestBuilder membersAsUser();
+
+    IUserWithReferenceRequestBuilder membersAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder membersAsGroup();
+
+    IGroupWithReferenceRequestBuilder membersAsGroup(final String id);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder membersWithLicenseErrors();
 

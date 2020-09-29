@@ -85,5 +85,5 @@ public interface ISharedInsightCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISharedInsightCollectionRequest skipToken(String skipToken);
+	ISharedInsightCollectionRequest skipToken(final String skipToken);
 }

@@ -85,5 +85,5 @@ public interface IHomeRealmDiscoveryPolicyCollectionRequest extends IHttpRequest
      *
 	 * @return the updated request
 	 */
-	IHomeRealmDiscoveryPolicyCollectionRequest skipToken(String skipToken);
+	IHomeRealmDiscoveryPolicyCollectionRequest skipToken(final String skipToken);
 }

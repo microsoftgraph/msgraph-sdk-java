@@ -84,5 +84,5 @@ public interface IScopedRoleMembershipCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IScopedRoleMembershipCollectionRequest skipToken(String skipToken);
+	IScopedRoleMembershipCollectionRequest skipToken(final String skipToken);
 }

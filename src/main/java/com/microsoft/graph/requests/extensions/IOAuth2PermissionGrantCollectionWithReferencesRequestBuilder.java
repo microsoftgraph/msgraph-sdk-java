@@ -25,7 +25,7 @@ public interface IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder ex
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IOAuth2PermissionGrantCollectionWithReferencesRequest instance
      */
     IOAuth2PermissionGrantCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -33,7 +33,7 @@ public interface IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder ex
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IOAuth2PermissionGrantCollectionWithReferencesRequest instance
      */
     IOAuth2PermissionGrantCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 

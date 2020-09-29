@@ -85,5 +85,5 @@ public interface IListCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IListCollectionRequest skipToken(String skipToken);
+	IListCollectionRequest skipToken(final String skipToken);
 }
