@@ -38,6 +38,7 @@ import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.IOrganizationCollectionPage;
 import com.microsoft.graph.requests.extensions.IUsedInsightCollectionPage;
 import com.microsoft.graph.requests.extensions.IUserCollectionPage;
+import com.microsoft.graph.requests.extensions.IUserCollectionWithReferencesPage;
 @Ignore
 public class UserTests {
 	IGraphServiceClient graphServiceClient = null;
@@ -216,10 +217,9 @@ public class UserTests {
 	public void castTest() {
 		final IGroupCollectionPage groups = graphServiceClient.groups().buildRequest().top(1).get();
 		final Group group = groups.getCurrentPage().get(0);
-		final IUserCollectionPage usersPage = graphServiceClient
+		final IUserCollectionWithReferencesPage usersPage = graphServiceClient
 		.groups(group.id)
-		.members()
-		.castToUser()
+		.membersAsUser()
 		.buildRequest()
 		.get();
 		assertNotNull(usersPage);
@@ -234,8 +234,7 @@ public class UserTests {
 
 		final User user = graphServiceClient
 		.groups(group.id)
-		.members(testUser.id)
-		.castToUser()
+		.membersAsUser(testUser.id)
 		.buildRequest()
 		.get();
 		assertNotNull(user);
