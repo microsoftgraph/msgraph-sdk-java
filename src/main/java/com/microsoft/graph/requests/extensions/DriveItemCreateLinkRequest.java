@@ -37,7 +37,7 @@ public class DriveItemCreateLinkRequest extends BaseRequest implements IDriveIte
         body = new DriveItemCreateLinkBody();
     }
 
-    public void post(final ICallback<? super Permission> callback) {
+    public void post(final ICallback<Permission> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class DriveItemCreateLinkRequest extends BaseRequest implements IDriveIte
      */
     public IDriveItemCreateLinkRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (DriveItemCreateLinkRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDriveItemCreateLinkRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DriveItemCreateLinkRequest)this;
     }
 

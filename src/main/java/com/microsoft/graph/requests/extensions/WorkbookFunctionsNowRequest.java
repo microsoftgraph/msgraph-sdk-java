@@ -37,7 +37,7 @@ public class WorkbookFunctionsNowRequest extends BaseRequest implements IWorkboo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,6 +70,17 @@ public class WorkbookFunctionsNowRequest extends BaseRequest implements IWorkboo
      */
     public IWorkbookFunctionsNowRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsNowRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsNowRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsNowRequest)this;
     }
 

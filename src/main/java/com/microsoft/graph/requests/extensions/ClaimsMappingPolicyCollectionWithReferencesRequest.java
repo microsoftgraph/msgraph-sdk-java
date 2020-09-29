@@ -35,7 +35,7 @@ public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseColl
         super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, IClaimsMappingPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IClaimsMappingPolicyCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<IClaimsMappingPolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,11 +61,6 @@ public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseColl
 
     public IClaimsMappingPolicyCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ClaimsMappingPolicyCollectionWithReferencesRequest)this;
-    }
-
-    public IClaimsMappingPolicyCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ClaimsMappingPolicyCollectionWithReferencesRequest)this;
     }
 

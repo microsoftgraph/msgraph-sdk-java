@@ -37,7 +37,7 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnPremisesConditionalAccessSettings> callback) {
+    public void get(final ICallback<OnPremisesConditionalAccessSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnPremisesConditionalAccessSettings> callback) {
+    public void delete(final ICallback<OnPremisesConditionalAccessSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest impl
      * @param sourceOnPremisesConditionalAccessSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnPremisesConditionalAccessSettings sourceOnPremisesConditionalAccessSettings, final ICallback<? super OnPremisesConditionalAccessSettings> callback) {
+    public void patch(final OnPremisesConditionalAccessSettings sourceOnPremisesConditionalAccessSettings, final ICallback<OnPremisesConditionalAccessSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceOnPremisesConditionalAccessSettings);
     }
 
@@ -96,7 +96,7 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest impl
      * @param newOnPremisesConditionalAccessSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings, final ICallback<? super OnPremisesConditionalAccessSettings> callback) {
+    public void post(final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings, final ICallback<OnPremisesConditionalAccessSettings> callback) {
         send(HttpMethod.POST, callback, newOnPremisesConditionalAccessSettings);
     }
 
@@ -117,7 +117,7 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest impl
      * @param newOnPremisesConditionalAccessSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings, final ICallback<? super OnPremisesConditionalAccessSettings> callback) {
+    public void put(final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings, final ICallback<OnPremisesConditionalAccessSettings> callback) {
         send(HttpMethod.PUT, callback, newOnPremisesConditionalAccessSettings);
     }
 
@@ -151,6 +151,17 @@ public class OnPremisesConditionalAccessSettingsRequest extends BaseRequest impl
      */
      public IOnPremisesConditionalAccessSettingsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (OnPremisesConditionalAccessSettingsRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOnPremisesConditionalAccessSettingsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OnPremisesConditionalAccessSettingsRequest)this;
      }
 

@@ -36,7 +36,7 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest implements 
         body = new GroupLifecyclePolicyAddGroupBody();
     }
 
-    public void post(final ICallback<? super Boolean> callback) {
+    public void post(final ICallback<Boolean> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class GroupLifecyclePolicyAddGroupRequest extends BaseRequest implements 
      */
     public IGroupLifecyclePolicyAddGroupRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (GroupLifecyclePolicyAddGroupRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IGroupLifecyclePolicyAddGroupRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupLifecyclePolicyAddGroupRequest)this;
     }
 

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDirectoryObjectCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IDirectoryObjectCollectionWithReferencesPage> callback);
+    void get(final ICallback<IDirectoryObjectCollectionWithReferencesPage> callback);
 
     IDirectoryObjectCollectionWithReferencesPage get() throws ClientException;
 

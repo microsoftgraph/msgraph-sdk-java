@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsInformationProtectionAppLearningSummaryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IWindowsInformationProtectionAppLearningSummaryCollectionPage> callback);
+    void get(final ICallback<IWindowsInformationProtectionAppLearningSummaryCollectionPage> callback);
 
     IWindowsInformationProtectionAppLearningSummaryCollectionPage get() throws ClientException;
 
-    void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback);
+    void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<WindowsInformationProtectionAppLearningSummary> callback);
 
     WindowsInformationProtectionAppLearningSummary post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IWindowsInformationProtectionAppLearningSummaryCollectionReques
      * @return the updated request
      */
     IWindowsInformationProtectionAppLearningSummaryCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IWindowsInformationProtectionAppLearningSummaryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IProfilePhotoCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IProfilePhotoCollectionPage> callback);
+    void get(final ICallback<IProfilePhotoCollectionPage> callback);
 
     IProfilePhotoCollectionPage get() throws ClientException;
 
-    void post(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback);
+    void post(final ProfilePhoto newProfilePhoto, final ICallback<ProfilePhoto> callback);
 
     ProfilePhoto post(final ProfilePhoto newProfilePhoto) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IProfilePhotoCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IProfilePhotoCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IProfilePhotoCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

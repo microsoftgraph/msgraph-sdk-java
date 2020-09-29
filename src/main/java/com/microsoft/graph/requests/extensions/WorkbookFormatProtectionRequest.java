@@ -37,7 +37,7 @@ public class WorkbookFormatProtectionRequest extends BaseRequest implements IWor
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookFormatProtection> callback) {
+    public void get(final ICallback<WorkbookFormatProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WorkbookFormatProtectionRequest extends BaseRequest implements IWor
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookFormatProtection> callback) {
+    public void delete(final ICallback<WorkbookFormatProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WorkbookFormatProtectionRequest extends BaseRequest implements IWor
      * @param sourceWorkbookFormatProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookFormatProtection sourceWorkbookFormatProtection, final ICallback<? super WorkbookFormatProtection> callback) {
+    public void patch(final WorkbookFormatProtection sourceWorkbookFormatProtection, final ICallback<WorkbookFormatProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookFormatProtection);
     }
 
@@ -96,7 +96,7 @@ public class WorkbookFormatProtectionRequest extends BaseRequest implements IWor
      * @param newWorkbookFormatProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookFormatProtection newWorkbookFormatProtection, final ICallback<? super WorkbookFormatProtection> callback) {
+    public void post(final WorkbookFormatProtection newWorkbookFormatProtection, final ICallback<WorkbookFormatProtection> callback) {
         send(HttpMethod.POST, callback, newWorkbookFormatProtection);
     }
 
@@ -117,7 +117,7 @@ public class WorkbookFormatProtectionRequest extends BaseRequest implements IWor
      * @param newWorkbookFormatProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookFormatProtection newWorkbookFormatProtection, final ICallback<? super WorkbookFormatProtection> callback) {
+    public void put(final WorkbookFormatProtection newWorkbookFormatProtection, final ICallback<WorkbookFormatProtection> callback) {
         send(HttpMethod.PUT, callback, newWorkbookFormatProtection);
     }
 
@@ -151,6 +151,17 @@ public class WorkbookFormatProtectionRequest extends BaseRequest implements IWor
      */
      public IWorkbookFormatProtectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookFormatProtectionRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookFormatProtectionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookFormatProtectionRequest)this;
      }
 

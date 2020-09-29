@@ -36,7 +36,7 @@ public class PostReplyRequest extends BaseRequest implements IPostReplyRequest {
         body = new PostReplyBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class PostReplyRequest extends BaseRequest implements IPostReplyRequest {
      */
     public IPostReplyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (PostReplyRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IPostReplyRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (PostReplyRequest)this;
     }
 

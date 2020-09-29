@@ -40,7 +40,7 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequest ext
         super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLearningSummaryCollectionResponse.class, IWindowsInformationProtectionAppLearningSummaryCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IWindowsInformationProtectionAppLearningSummaryCollectionPage> callback) {
+    public void get(final ICallback<IWindowsInformationProtectionAppLearningSummaryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequest ext
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<? super WindowsInformationProtectionAppLearningSummary> callback) {
+    public void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<WindowsInformationProtectionAppLearningSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionAppLearningSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequest ext
      */
     public IWindowsInformationProtectionAppLearningSummaryCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WindowsInformationProtectionAppLearningSummaryCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWindowsInformationProtectionAppLearningSummaryCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsInformationProtectionAppLearningSummaryCollectionRequest)this;
     }
 

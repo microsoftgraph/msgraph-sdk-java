@@ -37,7 +37,7 @@ public class WorkbookTableRowAddRequest extends BaseRequest implements IWorkbook
         body = new WorkbookTableRowAddBody();
     }
 
-    public void post(final ICallback<? super WorkbookTableRow> callback) {
+    public void post(final ICallback<WorkbookTableRow> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookTableRowAddRequest extends BaseRequest implements IWorkbook
      */
     public IWorkbookTableRowAddRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookTableRowAddRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookTableRowAddRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookTableRowAddRequest)this;
     }
 

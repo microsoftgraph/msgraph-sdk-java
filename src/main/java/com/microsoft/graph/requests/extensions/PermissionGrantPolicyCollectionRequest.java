@@ -40,7 +40,7 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, PermissionGrantPolicyCollectionResponse.class, IPermissionGrantPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IPermissionGrantPolicyCollectionPage> callback) {
+    public void get(final ICallback<IPermissionGrantPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback) {
+    public void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<PermissionGrantPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionGrantPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
      */
     public IPermissionGrantPolicyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PermissionGrantPolicyCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IPermissionGrantPolicyCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PermissionGrantPolicyCollectionRequest)this;
     }
 

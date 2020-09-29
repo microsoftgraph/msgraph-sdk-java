@@ -37,7 +37,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Win32LobApp> callback) {
+    public void get(final ICallback<Win32LobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Win32LobApp> callback) {
+    public void delete(final ICallback<Win32LobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @param sourceWin32LobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Win32LobApp sourceWin32LobApp, final ICallback<? super Win32LobApp> callback) {
+    public void patch(final Win32LobApp sourceWin32LobApp, final ICallback<Win32LobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceWin32LobApp);
     }
 
@@ -96,7 +96,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @param newWin32LobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Win32LobApp newWin32LobApp, final ICallback<? super Win32LobApp> callback) {
+    public void post(final Win32LobApp newWin32LobApp, final ICallback<Win32LobApp> callback) {
         send(HttpMethod.POST, callback, newWin32LobApp);
     }
 
@@ -117,7 +117,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @param newWin32LobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Win32LobApp newWin32LobApp, final ICallback<? super Win32LobApp> callback) {
+    public void put(final Win32LobApp newWin32LobApp, final ICallback<Win32LobApp> callback) {
         send(HttpMethod.PUT, callback, newWin32LobApp);
     }
 
@@ -151,6 +151,17 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      */
      public IWin32LobAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (Win32LobAppRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWin32LobAppRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Win32LobAppRequest)this;
      }
 

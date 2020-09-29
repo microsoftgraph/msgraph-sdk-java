@@ -37,7 +37,7 @@ public class PersonRequest extends BaseRequest implements IPersonRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Person> callback) {
+    public void get(final ICallback<Person> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PersonRequest extends BaseRequest implements IPersonRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Person> callback) {
+    public void delete(final ICallback<Person> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PersonRequest extends BaseRequest implements IPersonRequest {
      * @param sourcePerson the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Person sourcePerson, final ICallback<? super Person> callback) {
+    public void patch(final Person sourcePerson, final ICallback<Person> callback) {
         send(HttpMethod.PATCH, callback, sourcePerson);
     }
 
@@ -96,7 +96,7 @@ public class PersonRequest extends BaseRequest implements IPersonRequest {
      * @param newPerson the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Person newPerson, final ICallback<? super Person> callback) {
+    public void post(final Person newPerson, final ICallback<Person> callback) {
         send(HttpMethod.POST, callback, newPerson);
     }
 
@@ -117,7 +117,7 @@ public class PersonRequest extends BaseRequest implements IPersonRequest {
      * @param newPerson the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Person newPerson, final ICallback<? super Person> callback) {
+    public void put(final Person newPerson, final ICallback<Person> callback) {
         send(HttpMethod.PUT, callback, newPerson);
     }
 
@@ -151,6 +151,17 @@ public class PersonRequest extends BaseRequest implements IPersonRequest {
      */
      public IPersonRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (PersonRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPersonRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PersonRequest)this;
      }
 

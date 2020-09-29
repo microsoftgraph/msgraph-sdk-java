@@ -40,7 +40,7 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
         super(requestUrl, client, requestOptions, DeviceConfigurationUserStatusCollectionResponse.class, IDeviceConfigurationUserStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDeviceConfigurationUserStatusCollectionPage> callback) {
+    public void get(final ICallback<IDeviceConfigurationUserStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus, final ICallback<? super DeviceConfigurationUserStatus> callback) {
+    public void post(final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus, final ICallback<DeviceConfigurationUserStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationUserStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
      */
     public IDeviceConfigurationUserStatusCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceConfigurationUserStatusCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDeviceConfigurationUserStatusCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceConfigurationUserStatusCollectionRequest)this;
     }
 

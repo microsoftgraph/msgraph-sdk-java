@@ -6,9 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.MobileAppContentFile;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionPage;
 
 
@@ -73,7 +75,19 @@ public class MobileAppContent extends Entity implements IJsonBackedObject {
 
 
         if (json.has("files")) {
-            files = serializer.deserializeObject(json.get("files").toString(), MobileAppContentFileCollectionPage.class);
+            final MobileAppContentFileCollectionResponse response = new MobileAppContentFileCollectionResponse();
+            if (json.has("files@odata.nextLink")) {
+                response.nextLink = json.get("files@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("files").toString(), JsonObject[].class);
+            final MobileAppContentFile[] array = new MobileAppContentFile[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppContentFile.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            files = new MobileAppContentFileCollectionPage(response, null);
         }
     }
 }

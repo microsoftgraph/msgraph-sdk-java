@@ -41,7 +41,7 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
         super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, IServicePrincipalCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IServicePrincipalCollectionPage> callback) {
+    public void get(final ICallback<IServicePrincipalCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
         return buildFromResponse(response);
     }
 
-    public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+    public void post(final ServicePrincipal newServicePrincipal, final ICallback<ServicePrincipal> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ServicePrincipalRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,17 +93,6 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
      */
     public IServicePrincipalCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ServicePrincipalCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IServicePrincipalCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ServicePrincipalCollectionRequest)this;
     }
 

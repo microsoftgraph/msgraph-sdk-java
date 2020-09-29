@@ -28,11 +28,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDriveItemCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IDriveItemCollectionPage> callback);
+    void get(final ICallback<IDriveItemCollectionPage> callback);
 
     IDriveItemCollectionPage get() throws ClientException;
 
-    void post(final DriveItem newDriveItem, final ICallback<? super DriveItem> callback);
+    void post(final DriveItem newDriveItem, final ICallback<DriveItem> callback);
 
     DriveItem post(final DriveItem newDriveItem) throws ClientException;
 
@@ -51,14 +51,6 @@ public interface IDriveItemCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDriveItemCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IDriveItemCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

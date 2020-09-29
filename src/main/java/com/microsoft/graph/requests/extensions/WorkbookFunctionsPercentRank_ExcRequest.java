@@ -37,7 +37,7 @@ public class WorkbookFunctionsPercentRank_ExcRequest extends BaseRequest impleme
         body = new WorkbookFunctionsPercentRank_ExcBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsPercentRank_ExcRequest extends BaseRequest impleme
      */
     public IWorkbookFunctionsPercentRank_ExcRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsPercentRank_ExcRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsPercentRank_ExcRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsPercentRank_ExcRequest)this;
     }
 

@@ -41,7 +41,7 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, DeviceManagementExchangeConnectorCollectionResponse.class, IDeviceManagementExchangeConnectorCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDeviceManagementExchangeConnectorCollectionPage> callback) {
+    public void get(final ICallback<IDeviceManagementExchangeConnectorCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<? super DeviceManagementExchangeConnector> callback) {
+    public void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,17 +93,6 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
      */
     public IDeviceManagementExchangeConnectorCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceManagementExchangeConnectorCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDeviceManagementExchangeConnectorCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementExchangeConnectorCollectionRequest)this;
     }
 

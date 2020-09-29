@@ -51,7 +51,7 @@ public interface IMessageStreamRequest extends IHttpStreamRequest {
      * @param fileContents the contents of the stream to upload
      * @param callback the callback to be called after success or failure
      */
-    void put(final byte[] fileContents, final ICallback<? super Message> callback);
+    void put(final byte[] fileContents, final ICallback<Message> callback);
 
     /**
      * Uploads to the stream

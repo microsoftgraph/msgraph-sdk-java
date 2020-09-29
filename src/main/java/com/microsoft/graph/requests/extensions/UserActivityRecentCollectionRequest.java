@@ -39,7 +39,7 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
     }
 
 
-    public void get(final ICallback<? super IUserActivityRecentCollectionPage> callback) {
+    public void get(final ICallback<IUserActivityRecentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      */
     public IUserActivityRecentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IUserActivityRecentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IUserActivityRecentCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IUserActivityRecentCollectionRequest)this;
     }
 

@@ -37,7 +37,7 @@ public class UserAssignLicenseRequest extends BaseRequest implements IUserAssign
         body = new UserAssignLicenseBody();
     }
 
-    public void post(final ICallback<? super User> callback) {
+    public void post(final ICallback<User> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class UserAssignLicenseRequest extends BaseRequest implements IUserAssign
      */
     public IUserAssignLicenseRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (UserAssignLicenseRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IUserAssignLicenseRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (UserAssignLicenseRequest)this;
     }
 

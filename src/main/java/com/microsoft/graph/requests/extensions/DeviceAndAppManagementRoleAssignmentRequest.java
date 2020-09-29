@@ -37,7 +37,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void get(final ICallback<DeviceAndAppManagementRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void delete(final ICallback<DeviceAndAppManagementRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @param sourceDeviceAndAppManagementRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceAndAppManagementRoleAssignment sourceDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void patch(final DeviceAndAppManagementRoleAssignment sourceDeviceAndAppManagementRoleAssignment, final ICallback<DeviceAndAppManagementRoleAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceAndAppManagementRoleAssignment);
     }
 
@@ -96,7 +96,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @param newDeviceAndAppManagementRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<DeviceAndAppManagementRoleAssignment> callback) {
         send(HttpMethod.POST, callback, newDeviceAndAppManagementRoleAssignment);
     }
 
@@ -117,7 +117,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @param newDeviceAndAppManagementRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void put(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<DeviceAndAppManagementRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, newDeviceAndAppManagementRoleAssignment);
     }
 
@@ -151,6 +151,17 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      */
      public IDeviceAndAppManagementRoleAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DeviceAndAppManagementRoleAssignmentRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceAndAppManagementRoleAssignmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceAndAppManagementRoleAssignmentRequest)this;
      }
 

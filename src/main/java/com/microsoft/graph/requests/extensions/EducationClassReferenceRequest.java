@@ -44,7 +44,7 @@ public class EducationClassReferenceRequest extends BaseRequest implements IEduc
         super(requestUrl, client, requestOptions, EducationClass.class);
     }
 
-    public void delete(final ICallback<? super EducationClass> callback) {
+    public void delete(final ICallback<EducationClass> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -74,12 +74,22 @@ public class EducationClassReferenceRequest extends BaseRequest implements IEduc
         return (EducationClassReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IEducationClassReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EducationClassReferenceRequest)this;
+    }
+    /**
      * Puts the EducationClass
      *
      * @param srcEducationClass the EducationClass reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(EducationClass srcEducationClass, final ICallback<? super EducationClass> callback) {
+    public void put(EducationClass srcEducationClass, final ICallback<EducationClass> callback) {
         send(HttpMethod.PUT, callback, srcEducationClass);
     }
 

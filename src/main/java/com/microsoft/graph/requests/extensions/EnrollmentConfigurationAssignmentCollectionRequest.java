@@ -40,7 +40,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, EnrollmentConfigurationAssignmentCollectionResponse.class, IEnrollmentConfigurationAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IEnrollmentConfigurationAssignmentCollectionPage> callback) {
+    public void get(final ICallback<IEnrollmentConfigurationAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
         return buildFromResponse(response);
     }
 
-    public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback) {
+    public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
      */
     public IEnrollmentConfigurationAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (EnrollmentConfigurationAssignmentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IEnrollmentConfigurationAssignmentCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EnrollmentConfigurationAssignmentCollectionRequest)this;
     }
 

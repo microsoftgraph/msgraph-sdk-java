@@ -27,7 +27,7 @@ public interface IReportRootGetSkypeForBusinessOrganizerActivityCountsRequest ex
      * @param srcReport the Report with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    void patch(Report srcReport, final ICallback<? super Report> callback);
+    void patch(Report srcReport, final ICallback<Report> callback);
 
     /**
      * Patches the ReportRootGetSkypeForBusinessOrganizerActivityCounts
@@ -44,7 +44,7 @@ public interface IReportRootGetSkypeForBusinessOrganizerActivityCountsRequest ex
      * @param srcReport the Report to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Report srcReport, final ICallback<? super Report> callback);
+    void put(Report srcReport, final ICallback<Report> callback);
 
     /**
      * Puts the ReportRootGetSkypeForBusinessOrganizerActivityCounts
@@ -59,7 +59,7 @@ public interface IReportRootGetSkypeForBusinessOrganizerActivityCountsRequest ex
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<? super Report> callback);
+    void get(final ICallback<Report> callback);
 
     /**
      * Gets the Report

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISessionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ISessionCollectionPage> callback);
+    void get(final ICallback<ISessionCollectionPage> callback);
 
     ISessionCollectionPage get() throws ClientException;
 
-    void post(final Session newSession, final ICallback<? super Session> callback);
+    void post(final Session newSession, final ICallback<Session> callback);
 
     Session post(final Session newSession) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ISessionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISessionCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ISessionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

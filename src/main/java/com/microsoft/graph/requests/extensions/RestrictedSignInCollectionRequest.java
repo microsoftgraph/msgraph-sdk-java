@@ -40,7 +40,7 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
         super(requestUrl, client, requestOptions, RestrictedSignInCollectionResponse.class, IRestrictedSignInCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IRestrictedSignInCollectionPage> callback) {
+    public void get(final ICallback<IRestrictedSignInCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
         return buildFromResponse(response);
     }
 
-    public void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback) {
+    public void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<RestrictedSignIn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RestrictedSignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
      */
     public IRestrictedSignInCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (RestrictedSignInCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IRestrictedSignInCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RestrictedSignInCollectionRequest)this;
     }
 

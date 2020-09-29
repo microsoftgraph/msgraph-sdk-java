@@ -6,6 +6,7 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.AssignedPlan;
@@ -45,28 +46,51 @@ import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionResponse;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionPage;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionResponse;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionPage;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionResponse;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionPage;
+import com.microsoft.graph.requests.extensions.CalendarGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.CalendarGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.CalendarCollectionResponse;
 import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
+import com.microsoft.graph.requests.extensions.EventCollectionResponse;
 import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContactFolderCollectionPage;
+import com.microsoft.graph.requests.extensions.ContactCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContactCollectionPage;
+import com.microsoft.graph.requests.extensions.MailFolderCollectionResponse;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionPage;
+import com.microsoft.graph.requests.extensions.MessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.MessageCollectionPage;
+import com.microsoft.graph.requests.extensions.PersonCollectionResponse;
 import com.microsoft.graph.requests.extensions.PersonCollectionPage;
+import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionResponse;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
+import com.microsoft.graph.requests.extensions.DriveCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveCollectionPage;
+import com.microsoft.graph.requests.extensions.SiteCollectionResponse;
 import com.microsoft.graph.requests.extensions.SiteCollectionPage;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionPage;
+import com.microsoft.graph.requests.extensions.UserActivityCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionPage;
+import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionPage;
+import com.microsoft.graph.requests.extensions.TeamCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamCollectionPage;
 
 
@@ -951,123 +975,483 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), AppRoleAssignmentCollectionPage.class);
+            final AppRoleAssignmentCollectionResponse response = new AppRoleAssignmentCollectionResponse();
+            if (json.has("appRoleAssignments@odata.nextLink")) {
+                response.nextLink = json.get("appRoleAssignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appRoleAssignments").toString(), JsonObject[].class);
+            final AppRoleAssignment[] array = new AppRoleAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AppRoleAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            appRoleAssignments = new AppRoleAssignmentCollectionPage(response, null);
         }
 
         if (json.has("createdObjects")) {
-            createdObjects = serializer.deserializeObject(json.get("createdObjects").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("createdObjects@odata.nextLink")) {
+                response.nextLink = json.get("createdObjects@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("createdObjects").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            createdObjects = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("directReports")) {
-            directReports = serializer.deserializeObject(json.get("directReports").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("directReports@odata.nextLink")) {
+                response.nextLink = json.get("directReports@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("directReports").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            directReports = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("licenseDetails")) {
-            licenseDetails = serializer.deserializeObject(json.get("licenseDetails").toString(), LicenseDetailsCollectionPage.class);
+            final LicenseDetailsCollectionResponse response = new LicenseDetailsCollectionResponse();
+            if (json.has("licenseDetails@odata.nextLink")) {
+                response.nextLink = json.get("licenseDetails@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("licenseDetails").toString(), JsonObject[].class);
+            final LicenseDetails[] array = new LicenseDetails[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), LicenseDetails.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            licenseDetails = new LicenseDetailsCollectionPage(response, null);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("memberOf@odata.nextLink")) {
+                response.nextLink = json.get("memberOf@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("memberOf").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            memberOf = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("oauth2PermissionGrants")) {
-            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), OAuth2PermissionGrantCollectionPage.class);
+            final OAuth2PermissionGrantCollectionResponse response = new OAuth2PermissionGrantCollectionResponse();
+            if (json.has("oauth2PermissionGrants@odata.nextLink")) {
+                response.nextLink = json.get("oauth2PermissionGrants@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), JsonObject[].class);
+            final OAuth2PermissionGrant[] array = new OAuth2PermissionGrant[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OAuth2PermissionGrant.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            oauth2PermissionGrants = new OAuth2PermissionGrantCollectionPage(response, null);
         }
 
         if (json.has("ownedDevices")) {
-            ownedDevices = serializer.deserializeObject(json.get("ownedDevices").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("ownedDevices@odata.nextLink")) {
+                response.nextLink = json.get("ownedDevices@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("ownedDevices").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            ownedDevices = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("ownedObjects")) {
-            ownedObjects = serializer.deserializeObject(json.get("ownedObjects").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("ownedObjects@odata.nextLink")) {
+                response.nextLink = json.get("ownedObjects@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("ownedObjects").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            ownedObjects = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("registeredDevices")) {
-            registeredDevices = serializer.deserializeObject(json.get("registeredDevices").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("registeredDevices@odata.nextLink")) {
+                response.nextLink = json.get("registeredDevices@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("registeredDevices").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            registeredDevices = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("scopedRoleMemberOf")) {
-            scopedRoleMemberOf = serializer.deserializeObject(json.get("scopedRoleMemberOf").toString(), ScopedRoleMembershipCollectionPage.class);
+            final ScopedRoleMembershipCollectionResponse response = new ScopedRoleMembershipCollectionResponse();
+            if (json.has("scopedRoleMemberOf@odata.nextLink")) {
+                response.nextLink = json.get("scopedRoleMemberOf@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("scopedRoleMemberOf").toString(), JsonObject[].class);
+            final ScopedRoleMembership[] array = new ScopedRoleMembership[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ScopedRoleMembership.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            scopedRoleMemberOf = new ScopedRoleMembershipCollectionPage(response, null);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("transitiveMemberOf@odata.nextLink")) {
+                response.nextLink = json.get("transitiveMemberOf@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            transitiveMemberOf = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("calendarGroups")) {
-            calendarGroups = serializer.deserializeObject(json.get("calendarGroups").toString(), CalendarGroupCollectionPage.class);
+            final CalendarGroupCollectionResponse response = new CalendarGroupCollectionResponse();
+            if (json.has("calendarGroups@odata.nextLink")) {
+                response.nextLink = json.get("calendarGroups@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarGroups").toString(), JsonObject[].class);
+            final CalendarGroup[] array = new CalendarGroup[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), CalendarGroup.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            calendarGroups = new CalendarGroupCollectionPage(response, null);
         }
 
         if (json.has("calendars")) {
-            calendars = serializer.deserializeObject(json.get("calendars").toString(), CalendarCollectionPage.class);
+            final CalendarCollectionResponse response = new CalendarCollectionResponse();
+            if (json.has("calendars@odata.nextLink")) {
+                response.nextLink = json.get("calendars@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendars").toString(), JsonObject[].class);
+            final Calendar[] array = new Calendar[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Calendar.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            calendars = new CalendarCollectionPage(response, null);
         }
 
         if (json.has("calendarView")) {
-            calendarView = serializer.deserializeObject(json.get("calendarView").toString(), EventCollectionPage.class);
+            final EventCollectionResponse response = new EventCollectionResponse();
+            if (json.has("calendarView@odata.nextLink")) {
+                response.nextLink = json.get("calendarView@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarView").toString(), JsonObject[].class);
+            final Event[] array = new Event[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            calendarView = new EventCollectionPage(response, null);
         }
 
         if (json.has("contactFolders")) {
-            contactFolders = serializer.deserializeObject(json.get("contactFolders").toString(), ContactFolderCollectionPage.class);
+            final ContactFolderCollectionResponse response = new ContactFolderCollectionResponse();
+            if (json.has("contactFolders@odata.nextLink")) {
+                response.nextLink = json.get("contactFolders@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("contactFolders").toString(), JsonObject[].class);
+            final ContactFolder[] array = new ContactFolder[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ContactFolder.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            contactFolders = new ContactFolderCollectionPage(response, null);
         }
 
         if (json.has("contacts")) {
-            contacts = serializer.deserializeObject(json.get("contacts").toString(), ContactCollectionPage.class);
+            final ContactCollectionResponse response = new ContactCollectionResponse();
+            if (json.has("contacts@odata.nextLink")) {
+                response.nextLink = json.get("contacts@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("contacts").toString(), JsonObject[].class);
+            final Contact[] array = new Contact[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Contact.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            contacts = new ContactCollectionPage(response, null);
         }
 
         if (json.has("events")) {
-            events = serializer.deserializeObject(json.get("events").toString(), EventCollectionPage.class);
+            final EventCollectionResponse response = new EventCollectionResponse();
+            if (json.has("events@odata.nextLink")) {
+                response.nextLink = json.get("events@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("events").toString(), JsonObject[].class);
+            final Event[] array = new Event[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            events = new EventCollectionPage(response, null);
         }
 
         if (json.has("mailFolders")) {
-            mailFolders = serializer.deserializeObject(json.get("mailFolders").toString(), MailFolderCollectionPage.class);
+            final MailFolderCollectionResponse response = new MailFolderCollectionResponse();
+            if (json.has("mailFolders@odata.nextLink")) {
+                response.nextLink = json.get("mailFolders@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("mailFolders").toString(), JsonObject[].class);
+            final MailFolder[] array = new MailFolder[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MailFolder.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            mailFolders = new MailFolderCollectionPage(response, null);
         }
 
         if (json.has("messages")) {
-            messages = serializer.deserializeObject(json.get("messages").toString(), MessageCollectionPage.class);
+            final MessageCollectionResponse response = new MessageCollectionResponse();
+            if (json.has("messages@odata.nextLink")) {
+                response.nextLink = json.get("messages@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("messages").toString(), JsonObject[].class);
+            final Message[] array = new Message[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Message.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            messages = new MessageCollectionPage(response, null);
         }
 
         if (json.has("people")) {
-            people = serializer.deserializeObject(json.get("people").toString(), PersonCollectionPage.class);
+            final PersonCollectionResponse response = new PersonCollectionResponse();
+            if (json.has("people@odata.nextLink")) {
+                response.nextLink = json.get("people@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("people").toString(), JsonObject[].class);
+            final Person[] array = new Person[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Person.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            people = new PersonCollectionPage(response, null);
         }
 
         if (json.has("photos")) {
-            photos = serializer.deserializeObject(json.get("photos").toString(), ProfilePhotoCollectionPage.class);
+            final ProfilePhotoCollectionResponse response = new ProfilePhotoCollectionResponse();
+            if (json.has("photos@odata.nextLink")) {
+                response.nextLink = json.get("photos@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("photos").toString(), JsonObject[].class);
+            final ProfilePhoto[] array = new ProfilePhoto[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ProfilePhoto.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            photos = new ProfilePhotoCollectionPage(response, null);
         }
 
         if (json.has("drives")) {
-            drives = serializer.deserializeObject(json.get("drives").toString(), DriveCollectionPage.class);
+            final DriveCollectionResponse response = new DriveCollectionResponse();
+            if (json.has("drives@odata.nextLink")) {
+                response.nextLink = json.get("drives@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("drives").toString(), JsonObject[].class);
+            final Drive[] array = new Drive[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Drive.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            drives = new DriveCollectionPage(response, null);
         }
 
         if (json.has("followedSites")) {
-            followedSites = serializer.deserializeObject(json.get("followedSites").toString(), SiteCollectionPage.class);
+            final SiteCollectionResponse response = new SiteCollectionResponse();
+            if (json.has("followedSites@odata.nextLink")) {
+                response.nextLink = json.get("followedSites@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("followedSites").toString(), JsonObject[].class);
+            final Site[] array = new Site[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Site.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            followedSites = new SiteCollectionPage(response, null);
         }
 
         if (json.has("extensions")) {
-            extensions = serializer.deserializeObject(json.get("extensions").toString(), ExtensionCollectionPage.class);
+            final ExtensionCollectionResponse response = new ExtensionCollectionResponse();
+            if (json.has("extensions@odata.nextLink")) {
+                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
+            final Extension[] array = new Extension[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            extensions = new ExtensionCollectionPage(response, null);
         }
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), ManagedDeviceCollectionPage.class);
+            final ManagedDeviceCollectionResponse response = new ManagedDeviceCollectionResponse();
+            if (json.has("managedDevices@odata.nextLink")) {
+                response.nextLink = json.get("managedDevices@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedDevices").toString(), JsonObject[].class);
+            final ManagedDevice[] array = new ManagedDevice[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDevice.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            managedDevices = new ManagedDeviceCollectionPage(response, null);
         }
 
         if (json.has("managedAppRegistrations")) {
-            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations").toString(), ManagedAppRegistrationCollectionPage.class);
+            final ManagedAppRegistrationCollectionResponse response = new ManagedAppRegistrationCollectionResponse();
+            if (json.has("managedAppRegistrations@odata.nextLink")) {
+                response.nextLink = json.get("managedAppRegistrations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedAppRegistrations").toString(), JsonObject[].class);
+            final ManagedAppRegistration[] array = new ManagedAppRegistration[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedAppRegistration.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            managedAppRegistrations = new ManagedAppRegistrationCollectionPage(response, null);
         }
 
         if (json.has("deviceManagementTroubleshootingEvents")) {
-            deviceManagementTroubleshootingEvents = serializer.deserializeObject(json.get("deviceManagementTroubleshootingEvents").toString(), DeviceManagementTroubleshootingEventCollectionPage.class);
+            final DeviceManagementTroubleshootingEventCollectionResponse response = new DeviceManagementTroubleshootingEventCollectionResponse();
+            if (json.has("deviceManagementTroubleshootingEvents@odata.nextLink")) {
+                response.nextLink = json.get("deviceManagementTroubleshootingEvents@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceManagementTroubleshootingEvents").toString(), JsonObject[].class);
+            final DeviceManagementTroubleshootingEvent[] array = new DeviceManagementTroubleshootingEvent[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementTroubleshootingEvent.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceManagementTroubleshootingEvents = new DeviceManagementTroubleshootingEventCollectionPage(response, null);
         }
 
         if (json.has("activities")) {
-            activities = serializer.deserializeObject(json.get("activities").toString(), UserActivityCollectionPage.class);
+            final UserActivityCollectionResponse response = new UserActivityCollectionResponse();
+            if (json.has("activities@odata.nextLink")) {
+                response.nextLink = json.get("activities@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("activities").toString(), JsonObject[].class);
+            final UserActivity[] array = new UserActivity[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserActivity.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            activities = new UserActivityCollectionPage(response, null);
         }
 
         if (json.has("onlineMeetings")) {
-            onlineMeetings = serializer.deserializeObject(json.get("onlineMeetings").toString(), OnlineMeetingCollectionPage.class);
+            final OnlineMeetingCollectionResponse response = new OnlineMeetingCollectionResponse();
+            if (json.has("onlineMeetings@odata.nextLink")) {
+                response.nextLink = json.get("onlineMeetings@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("onlineMeetings").toString(), JsonObject[].class);
+            final OnlineMeeting[] array = new OnlineMeeting[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnlineMeeting.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            onlineMeetings = new OnlineMeetingCollectionPage(response, null);
         }
 
         if (json.has("joinedTeams")) {
-            joinedTeams = serializer.deserializeObject(json.get("joinedTeams").toString(), TeamCollectionPage.class);
+            final TeamCollectionResponse response = new TeamCollectionResponse();
+            if (json.has("joinedTeams@odata.nextLink")) {
+                response.nextLink = json.get("joinedTeams@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("joinedTeams").toString(), JsonObject[].class);
+            final Team[] array = new Team[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Team.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            joinedTeams = new TeamCollectionPage(response, null);
         }
     }
 }

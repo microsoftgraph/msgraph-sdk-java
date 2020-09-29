@@ -37,7 +37,7 @@ public class WorkbookFunctionsMidRequest extends BaseRequest implements IWorkboo
         body = new WorkbookFunctionsMidBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsMidRequest extends BaseRequest implements IWorkboo
      */
     public IWorkbookFunctionsMidRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsMidRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsMidRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsMidRequest)this;
     }
 

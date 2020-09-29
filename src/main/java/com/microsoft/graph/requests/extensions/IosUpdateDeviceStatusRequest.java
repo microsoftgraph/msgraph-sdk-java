@@ -37,7 +37,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void get(final ICallback<IosUpdateDeviceStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void delete(final ICallback<IosUpdateDeviceStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @param sourceIosUpdateDeviceStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void patch(final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus, final ICallback<IosUpdateDeviceStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceIosUpdateDeviceStatus);
     }
 
@@ -96,7 +96,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @param newIosUpdateDeviceStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<IosUpdateDeviceStatus> callback) {
         send(HttpMethod.POST, callback, newIosUpdateDeviceStatus);
     }
 
@@ -117,7 +117,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @param newIosUpdateDeviceStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void put(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<IosUpdateDeviceStatus> callback) {
         send(HttpMethod.PUT, callback, newIosUpdateDeviceStatus);
     }
 
@@ -151,6 +151,17 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      */
      public IIosUpdateDeviceStatusRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (IosUpdateDeviceStatusRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IIosUpdateDeviceStatusRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosUpdateDeviceStatusRequest)this;
      }
 

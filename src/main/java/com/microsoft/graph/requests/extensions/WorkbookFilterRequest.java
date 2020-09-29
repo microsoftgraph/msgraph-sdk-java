@@ -39,7 +39,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookFilter> callback) {
+    public void get(final ICallback<WorkbookFilter> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookFilter> callback) {
+    public void delete(final ICallback<WorkbookFilter> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @param sourceWorkbookFilter the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookFilter sourceWorkbookFilter, final ICallback<? super WorkbookFilter> callback) {
+    public void patch(final WorkbookFilter sourceWorkbookFilter, final ICallback<WorkbookFilter> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookFilter);
     }
 
@@ -98,7 +98,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @param newWorkbookFilter the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookFilter newWorkbookFilter, final ICallback<? super WorkbookFilter> callback) {
+    public void post(final WorkbookFilter newWorkbookFilter, final ICallback<WorkbookFilter> callback) {
         send(HttpMethod.POST, callback, newWorkbookFilter);
     }
 
@@ -119,7 +119,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @param newWorkbookFilter the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookFilter newWorkbookFilter, final ICallback<? super WorkbookFilter> callback) {
+    public void put(final WorkbookFilter newWorkbookFilter, final ICallback<WorkbookFilter> callback) {
         send(HttpMethod.PUT, callback, newWorkbookFilter);
     }
 
@@ -153,6 +153,17 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      */
      public IWorkbookFilterRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookFilterRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookFilterRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookFilterRequest)this;
      }
 

@@ -40,7 +40,7 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, ManagedEBookAssignmentCollectionResponse.class, IManagedEBookAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IManagedEBookAssignmentCollectionPage> callback) {
+    public void get(final ICallback<IManagedEBookAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback) {
+    public void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<ManagedEBookAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedEBookAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
      */
     public IManagedEBookAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedEBookAssignmentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IManagedEBookAssignmentCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedEBookAssignmentCollectionRequest)this;
     }
 

@@ -39,7 +39,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartAxisTitle> callback) {
+    public void get(final ICallback<WorkbookChartAxisTitle> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartAxisTitle> callback) {
+    public void delete(final ICallback<WorkbookChartAxisTitle> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @param sourceWorkbookChartAxisTitle the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle, final ICallback<? super WorkbookChartAxisTitle> callback) {
+    public void patch(final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle, final ICallback<WorkbookChartAxisTitle> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartAxisTitle);
     }
 
@@ -98,7 +98,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @param newWorkbookChartAxisTitle the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<? super WorkbookChartAxisTitle> callback) {
+    public void post(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<WorkbookChartAxisTitle> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartAxisTitle);
     }
 
@@ -119,7 +119,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @param newWorkbookChartAxisTitle the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<? super WorkbookChartAxisTitle> callback) {
+    public void put(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<WorkbookChartAxisTitle> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartAxisTitle);
     }
 
@@ -153,6 +153,17 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      */
      public IWorkbookChartAxisTitleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookChartAxisTitleRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookChartAxisTitleRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookChartAxisTitleRequest)this;
      }
 

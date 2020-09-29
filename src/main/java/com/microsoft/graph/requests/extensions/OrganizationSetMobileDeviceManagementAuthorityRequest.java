@@ -36,7 +36,7 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super Integer> callback) {
+    public void post(final ICallback<Integer> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -69,6 +69,17 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseR
      */
     public IOrganizationSetMobileDeviceManagementAuthorityRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (OrganizationSetMobileDeviceManagementAuthorityRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IOrganizationSetMobileDeviceManagementAuthorityRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (OrganizationSetMobileDeviceManagementAuthorityRequest)this;
     }
 

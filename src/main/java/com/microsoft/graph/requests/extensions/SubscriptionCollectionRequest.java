@@ -39,7 +39,7 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
         super(requestUrl, client, requestOptions, SubscriptionCollectionResponse.class, ISubscriptionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ISubscriptionCollectionPage> callback) {
+    public void get(final ICallback<ISubscriptionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
         return buildFromResponse(response);
     }
 
-    public void post(final Subscription newSubscription, final ICallback<? super Subscription> callback) {
+    public void post(final Subscription newSubscription, final ICallback<Subscription> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SubscriptionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
      */
     public ISubscriptionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SubscriptionCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ISubscriptionCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SubscriptionCollectionRequest)this;
     }
 

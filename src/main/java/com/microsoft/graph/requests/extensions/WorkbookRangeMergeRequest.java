@@ -36,7 +36,7 @@ public class WorkbookRangeMergeRequest extends BaseRequest implements IWorkbookR
         body = new WorkbookRangeMergeBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class WorkbookRangeMergeRequest extends BaseRequest implements IWorkbookR
      */
     public IWorkbookRangeMergeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookRangeMergeRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookRangeMergeRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeMergeRequest)this;
     }
 

@@ -34,7 +34,7 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest implem
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicy.class);
     }
 
-    public void delete(final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    public void delete(final ICallback<HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,12 +64,22 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest implem
         return (HomeRealmDiscoveryPolicyReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IHomeRealmDiscoveryPolicyReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (HomeRealmDiscoveryPolicyReferenceRequest)this;
+    }
+    /**
      * Puts the HomeRealmDiscoveryPolicy
      *
      * @param srcHomeRealmDiscoveryPolicy the HomeRealmDiscoveryPolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    public void put(HomeRealmDiscoveryPolicy srcHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback) {
         send(HttpMethod.PUT, callback, srcHomeRealmDiscoveryPolicy);
     }
 

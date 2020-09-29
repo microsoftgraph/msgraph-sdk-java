@@ -21,7 +21,7 @@ public interface IDriveRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<? super Drive> callback);
+    void get(final ICallback<Drive> callback);
 
     /**
      * Gets the Drive from the service
@@ -36,7 +36,7 @@ public interface IDriveRequest extends IHttpRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<? super Drive> callback);
+    void delete(final ICallback<Drive> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IDriveRequest extends IHttpRequest {
      * @param sourceDrive the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final Drive sourceDrive, final ICallback<? super Drive> callback);
+    void patch(final Drive sourceDrive, final ICallback<Drive> callback);
 
     /**
      * Patches this Drive with a source
@@ -68,7 +68,7 @@ public interface IDriveRequest extends IHttpRequest {
      * @param newDrive the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final Drive newDrive, final ICallback<? super Drive> callback);
+    void post(final Drive newDrive, final ICallback<Drive> callback);
 
     /**
      * Posts a Drive with a new object
@@ -85,7 +85,7 @@ public interface IDriveRequest extends IHttpRequest {
      * @param newDrive the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final Drive newDrive, final ICallback<? super Drive> callback);
+    void put(final Drive newDrive, final ICallback<Drive> callback);
 
     /**
      * Posts a Drive with a new object

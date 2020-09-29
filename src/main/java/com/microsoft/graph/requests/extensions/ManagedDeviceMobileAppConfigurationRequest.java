@@ -69,7 +69,7 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
+    public void get(final ICallback<ManagedDeviceMobileAppConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -88,7 +88,7 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
+    public void delete(final ICallback<ManagedDeviceMobileAppConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -107,7 +107,7 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest impl
      * @param sourceManagedDeviceMobileAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedDeviceMobileAppConfiguration sourceManagedDeviceMobileAppConfiguration, final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
+    public void patch(final ManagedDeviceMobileAppConfiguration sourceManagedDeviceMobileAppConfiguration, final ICallback<ManagedDeviceMobileAppConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedDeviceMobileAppConfiguration);
     }
 
@@ -128,7 +128,7 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest impl
      * @param newManagedDeviceMobileAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
+    public void post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<ManagedDeviceMobileAppConfiguration> callback) {
         send(HttpMethod.POST, callback, newManagedDeviceMobileAppConfiguration);
     }
 
@@ -149,7 +149,7 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest impl
      * @param newManagedDeviceMobileAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
+    public void put(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<ManagedDeviceMobileAppConfiguration> callback) {
         send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfiguration);
     }
 
@@ -183,6 +183,17 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest impl
      */
      public IManagedDeviceMobileAppConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ManagedDeviceMobileAppConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedDeviceMobileAppConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagedDeviceMobileAppConfigurationRequest)this;
      }
 

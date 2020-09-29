@@ -37,7 +37,7 @@ public class WorkbookFunctionsKurtRequest extends BaseRequest implements IWorkbo
         body = new WorkbookFunctionsKurtBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsKurtRequest extends BaseRequest implements IWorkbo
      */
     public IWorkbookFunctionsKurtRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsKurtRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsKurtRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsKurtRequest)this;
     }
 

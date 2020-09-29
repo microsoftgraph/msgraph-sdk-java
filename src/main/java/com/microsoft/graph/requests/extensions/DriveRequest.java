@@ -44,7 +44,7 @@ public class DriveRequest extends BaseRequest implements IDriveRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Drive> callback) {
+    public void get(final ICallback<Drive> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,7 +63,7 @@ public class DriveRequest extends BaseRequest implements IDriveRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Drive> callback) {
+    public void delete(final ICallback<Drive> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class DriveRequest extends BaseRequest implements IDriveRequest {
      * @param sourceDrive the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Drive sourceDrive, final ICallback<? super Drive> callback) {
+    public void patch(final Drive sourceDrive, final ICallback<Drive> callback) {
         send(HttpMethod.PATCH, callback, sourceDrive);
     }
 
@@ -103,7 +103,7 @@ public class DriveRequest extends BaseRequest implements IDriveRequest {
      * @param newDrive the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Drive newDrive, final ICallback<? super Drive> callback) {
+    public void post(final Drive newDrive, final ICallback<Drive> callback) {
         send(HttpMethod.POST, callback, newDrive);
     }
 
@@ -124,7 +124,7 @@ public class DriveRequest extends BaseRequest implements IDriveRequest {
      * @param newDrive the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Drive newDrive, final ICallback<? super Drive> callback) {
+    public void put(final Drive newDrive, final ICallback<Drive> callback) {
         send(HttpMethod.PUT, callback, newDrive);
     }
 
@@ -158,6 +158,17 @@ public class DriveRequest extends BaseRequest implements IDriveRequest {
      */
      public IDriveRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DriveRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDriveRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DriveRequest)this;
      }
 

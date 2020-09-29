@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IContentTypeCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IContentTypeCollectionPage> callback);
+    void get(final ICallback<IContentTypeCollectionPage> callback);
 
     IContentTypeCollectionPage get() throws ClientException;
 
-    void post(final ContentType newContentType, final ICallback<? super ContentType> callback);
+    void post(final ContentType newContentType, final ICallback<ContentType> callback);
 
     ContentType post(final ContentType newContentType) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IContentTypeCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IContentTypeCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IContentTypeCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

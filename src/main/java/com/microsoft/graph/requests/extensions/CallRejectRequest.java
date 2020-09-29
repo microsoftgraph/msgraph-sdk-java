@@ -36,7 +36,7 @@ public class CallRejectRequest extends BaseRequest implements ICallRejectRequest
         body = new CallRejectBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class CallRejectRequest extends BaseRequest implements ICallRejectRequest
      */
     public ICallRejectRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (CallRejectRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ICallRejectRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CallRejectRequest)this;
     }
 

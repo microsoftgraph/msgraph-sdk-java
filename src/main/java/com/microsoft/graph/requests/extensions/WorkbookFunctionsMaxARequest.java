@@ -37,7 +37,7 @@ public class WorkbookFunctionsMaxARequest extends BaseRequest implements IWorkbo
         body = new WorkbookFunctionsMaxABody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsMaxARequest extends BaseRequest implements IWorkbo
      */
     public IWorkbookFunctionsMaxARequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsMaxARequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsMaxARequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsMaxARequest)this;
     }
 

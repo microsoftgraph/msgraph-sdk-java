@@ -37,7 +37,7 @@ public class FileAssessmentRequestRequest extends BaseRequest implements IFileAs
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super FileAssessmentRequest> callback) {
+    public void get(final ICallback<FileAssessmentRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class FileAssessmentRequestRequest extends BaseRequest implements IFileAs
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super FileAssessmentRequest> callback) {
+    public void delete(final ICallback<FileAssessmentRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class FileAssessmentRequestRequest extends BaseRequest implements IFileAs
      * @param sourceFileAssessmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final FileAssessmentRequest sourceFileAssessmentRequest, final ICallback<? super FileAssessmentRequest> callback) {
+    public void patch(final FileAssessmentRequest sourceFileAssessmentRequest, final ICallback<FileAssessmentRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceFileAssessmentRequest);
     }
 
@@ -96,7 +96,7 @@ public class FileAssessmentRequestRequest extends BaseRequest implements IFileAs
      * @param newFileAssessmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<? super FileAssessmentRequest> callback) {
+    public void post(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<FileAssessmentRequest> callback) {
         send(HttpMethod.POST, callback, newFileAssessmentRequest);
     }
 
@@ -117,7 +117,7 @@ public class FileAssessmentRequestRequest extends BaseRequest implements IFileAs
      * @param newFileAssessmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<? super FileAssessmentRequest> callback) {
+    public void put(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<FileAssessmentRequest> callback) {
         send(HttpMethod.PUT, callback, newFileAssessmentRequest);
     }
 
@@ -151,6 +151,17 @@ public class FileAssessmentRequestRequest extends BaseRequest implements IFileAs
      */
      public IFileAssessmentRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (FileAssessmentRequestRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IFileAssessmentRequestRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (FileAssessmentRequestRequest)this;
      }
 

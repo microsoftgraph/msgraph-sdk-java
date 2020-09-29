@@ -37,7 +37,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void get(final ICallback<LocalizedNotificationMessage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void delete(final ICallback<LocalizedNotificationMessage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest implements 
      * @param sourceLocalizedNotificationMessage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LocalizedNotificationMessage sourceLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void patch(final LocalizedNotificationMessage sourceLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback) {
         send(HttpMethod.PATCH, callback, sourceLocalizedNotificationMessage);
     }
 
@@ -96,7 +96,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest implements 
      * @param newLocalizedNotificationMessage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback) {
         send(HttpMethod.POST, callback, newLocalizedNotificationMessage);
     }
 
@@ -117,7 +117,7 @@ public class LocalizedNotificationMessageRequest extends BaseRequest implements 
      * @param newLocalizedNotificationMessage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void put(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback) {
         send(HttpMethod.PUT, callback, newLocalizedNotificationMessage);
     }
 
@@ -151,6 +151,17 @@ public class LocalizedNotificationMessageRequest extends BaseRequest implements 
      */
      public ILocalizedNotificationMessageRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (LocalizedNotificationMessageRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ILocalizedNotificationMessageRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (LocalizedNotificationMessageRequest)this;
      }
 

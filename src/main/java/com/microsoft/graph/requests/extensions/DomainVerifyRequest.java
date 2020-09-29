@@ -37,7 +37,7 @@ public class DomainVerifyRequest extends BaseRequest implements IDomainVerifyReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super Domain> callback) {
+    public void post(final ICallback<Domain> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,6 +70,17 @@ public class DomainVerifyRequest extends BaseRequest implements IDomainVerifyReq
      */
     public IDomainVerifyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (DomainVerifyRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDomainVerifyRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DomainVerifyRequest)this;
     }
 

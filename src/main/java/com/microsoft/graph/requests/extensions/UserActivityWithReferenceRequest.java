@@ -39,7 +39,7 @@ public class UserActivityWithReferenceRequest extends BaseRequest implements IUs
         super(requestUrl, client, requestOptions, UserActivity.class);
     }
 
-    public void post(final UserActivity newUserActivity, final IJsonBackedObject payload, final ICallback<? super UserActivity> callback) {
+    public void post(final UserActivity newUserActivity, final IJsonBackedObject payload, final ICallback<UserActivity> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class UserActivityWithReferenceRequest extends BaseRequest implements IUs
         return null;
     }
 
-    public void get(final ICallback<? super UserActivity> callback) {
+    public void get(final ICallback<UserActivity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class UserActivityWithReferenceRequest extends BaseRequest implements IUs
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super UserActivity> callback) {
+	public void delete(final ICallback<UserActivity> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class UserActivityWithReferenceRequest extends BaseRequest implements IUs
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final UserActivity sourceUserActivity, final ICallback<? super UserActivity> callback) {
+	public void patch(final UserActivity sourceUserActivity, final ICallback<UserActivity> callback) {
 		send(HttpMethod.PATCH, callback, sourceUserActivity);
 	}
 
@@ -95,6 +95,16 @@ public class UserActivityWithReferenceRequest extends BaseRequest implements IUs
      */
     public IUserActivityWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (UserActivityWithReferenceRequest)this;
+    }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IUserActivityWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (UserActivityWithReferenceRequest)this;
     }
 }

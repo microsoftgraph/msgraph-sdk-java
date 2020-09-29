@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRestrictedSignInCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IRestrictedSignInCollectionPage> callback);
+    void get(final ICallback<IRestrictedSignInCollectionPage> callback);
 
     IRestrictedSignInCollectionPage get() throws ClientException;
 
-    void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback);
+    void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<RestrictedSignIn> callback);
 
     RestrictedSignIn post(final RestrictedSignIn newRestrictedSignIn) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IRestrictedSignInCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IRestrictedSignInCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IRestrictedSignInCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

@@ -39,7 +39,7 @@ public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContac
         super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, IOrgContactCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IOrgContactCollectionPage> callback) {
+    public void get(final ICallback<IOrgContactCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContac
         return buildFromResponse(response);
     }
 
-    public void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {
+    public void post(final OrgContact newOrgContact, final ICallback<OrgContact> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OrgContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContac
      */
     public IOrgContactCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (OrgContactCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IOrgContactCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OrgContactCollectionRequest)this;
     }
 

@@ -37,7 +37,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TeamsTemplate> callback) {
+    public void get(final ICallback<TeamsTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TeamsTemplate> callback) {
+    public void delete(final ICallback<TeamsTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @param sourceTeamsTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsTemplate sourceTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
+    public void patch(final TeamsTemplate sourceTeamsTemplate, final ICallback<TeamsTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsTemplate);
     }
 
@@ -96,7 +96,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @param newTeamsTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsTemplate newTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
+    public void post(final TeamsTemplate newTeamsTemplate, final ICallback<TeamsTemplate> callback) {
         send(HttpMethod.POST, callback, newTeamsTemplate);
     }
 
@@ -117,7 +117,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @param newTeamsTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsTemplate newTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
+    public void put(final TeamsTemplate newTeamsTemplate, final ICallback<TeamsTemplate> callback) {
         send(HttpMethod.PUT, callback, newTeamsTemplate);
     }
 
@@ -151,6 +151,17 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      */
      public ITeamsTemplateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (TeamsTemplateRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ITeamsTemplateRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TeamsTemplateRequest)this;
      }
 

@@ -6,10 +6,12 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.NotificationTemplateBrandingOptions;
 import com.microsoft.graph.models.extensions.LocalizedNotificationMessage;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionPage;
 
 
@@ -106,7 +108,19 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
 
 
         if (json.has("localizedNotificationMessages")) {
-            localizedNotificationMessages = serializer.deserializeObject(json.get("localizedNotificationMessages").toString(), LocalizedNotificationMessageCollectionPage.class);
+            final LocalizedNotificationMessageCollectionResponse response = new LocalizedNotificationMessageCollectionResponse();
+            if (json.has("localizedNotificationMessages@odata.nextLink")) {
+                response.nextLink = json.get("localizedNotificationMessages@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("localizedNotificationMessages").toString(), JsonObject[].class);
+            final LocalizedNotificationMessage[] array = new LocalizedNotificationMessage[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), LocalizedNotificationMessage.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            localizedNotificationMessages = new LocalizedNotificationMessageCollectionPage(response, null);
         }
     }
 }

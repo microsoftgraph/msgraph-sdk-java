@@ -40,7 +40,7 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
         super(requestUrl, client, requestOptions, PlannerBucketCollectionResponse.class, IPlannerBucketCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IPlannerBucketCollectionPage> callback) {
+    public void get(final ICallback<IPlannerBucketCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
         return buildFromResponse(response);
     }
 
-    public void post(final PlannerBucket newPlannerBucket, final ICallback<? super PlannerBucket> callback) {
+    public void post(final PlannerBucket newPlannerBucket, final ICallback<PlannerBucket> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PlannerBucketRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class PlannerBucketCollectionRequest extends BaseCollectionRequest<Planne
      */
     public IPlannerBucketCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PlannerBucketCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IPlannerBucketCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PlannerBucketCollectionRequest)this;
     }
 

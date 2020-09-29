@@ -39,7 +39,7 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
     }
 
 
-    public void get(final ICallback<? super INotebookGetRecentNotebooksCollectionPage> callback) {
+    public void get(final ICallback<INotebookGetRecentNotebooksCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionR
      */
     public INotebookGetRecentNotebooksCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (INotebookGetRecentNotebooksCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public INotebookGetRecentNotebooksCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (INotebookGetRecentNotebooksCollectionRequest)this;
     }
 

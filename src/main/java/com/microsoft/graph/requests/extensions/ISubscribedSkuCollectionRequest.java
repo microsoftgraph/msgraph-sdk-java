@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISubscribedSkuCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ISubscribedSkuCollectionPage> callback);
+    void get(final ICallback<ISubscribedSkuCollectionPage> callback);
 
     ISubscribedSkuCollectionPage get() throws ClientException;
 
-    void post(final SubscribedSku newSubscribedSku, final ICallback<? super SubscribedSku> callback);
+    void post(final SubscribedSku newSubscribedSku, final ICallback<SubscribedSku> callback);
 
     SubscribedSku post(final SubscribedSku newSubscribedSku) throws ClientException;
 
@@ -44,14 +44,6 @@ public interface ISubscribedSkuCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISubscribedSkuCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ISubscribedSkuCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

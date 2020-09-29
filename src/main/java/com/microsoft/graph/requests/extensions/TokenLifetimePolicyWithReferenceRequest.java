@@ -35,7 +35,7 @@ public class TokenLifetimePolicyWithReferenceRequest extends BaseRequest impleme
         super(requestUrl, client, requestOptions, TokenLifetimePolicy.class);
     }
 
-    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final IJsonBackedObject payload, final ICallback<? super TokenLifetimePolicy> callback) {
+    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final IJsonBackedObject payload, final ICallback<TokenLifetimePolicy> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class TokenLifetimePolicyWithReferenceRequest extends BaseRequest impleme
         return null;
     }
 
-    public void get(final ICallback<? super TokenLifetimePolicy> callback) {
+    public void get(final ICallback<TokenLifetimePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class TokenLifetimePolicyWithReferenceRequest extends BaseRequest impleme
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super TokenLifetimePolicy> callback) {
+	public void delete(final ICallback<TokenLifetimePolicy> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class TokenLifetimePolicyWithReferenceRequest extends BaseRequest impleme
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final TokenLifetimePolicy sourceTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
+	public void patch(final TokenLifetimePolicy sourceTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback) {
 		send(HttpMethod.PATCH, callback, sourceTokenLifetimePolicy);
 	}
 
@@ -91,6 +91,16 @@ public class TokenLifetimePolicyWithReferenceRequest extends BaseRequest impleme
      */
     public ITokenLifetimePolicyWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (TokenLifetimePolicyWithReferenceRequest)this;
+    }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITokenLifetimePolicyWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TokenLifetimePolicyWithReferenceRequest)this;
     }
 }

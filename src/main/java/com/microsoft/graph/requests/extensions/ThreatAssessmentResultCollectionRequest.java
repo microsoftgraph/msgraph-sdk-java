@@ -40,7 +40,7 @@ public class ThreatAssessmentResultCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, ThreatAssessmentResultCollectionResponse.class, IThreatAssessmentResultCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IThreatAssessmentResultCollectionPage> callback) {
+    public void get(final ICallback<IThreatAssessmentResultCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ThreatAssessmentResultCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback) {
+    public void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<ThreatAssessmentResult> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ThreatAssessmentResultRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ThreatAssessmentResultCollectionRequest extends BaseCollectionReque
      */
     public IThreatAssessmentResultCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ThreatAssessmentResultCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IThreatAssessmentResultCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ThreatAssessmentResultCollectionRequest)this;
     }
 

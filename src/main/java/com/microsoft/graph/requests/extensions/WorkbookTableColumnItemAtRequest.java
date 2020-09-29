@@ -37,7 +37,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest implements IWo
      * @param srcWorkbookTableColumn the WorkbookTableColumn with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
+    public void patch(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookTableColumn);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest implements IWo
      * @param srcWorkbookTableColumn the WorkbookTableColumn to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
+    public void put(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookTableColumn);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest implements IWo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookTableColumn> callback) {
+    public void get(final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -121,17 +121,6 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest implements IWo
      */
     public IWorkbookTableColumnItemAtRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableColumnItemAtRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookTableColumnItemAtRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookTableColumnItemAtRequest)this;
     }
 

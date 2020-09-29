@@ -37,7 +37,7 @@ public class WorkbookFunctionsHarMeanRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsHarMeanBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsHarMeanRequest extends BaseRequest implements IWor
      */
     public IWorkbookFunctionsHarMeanRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsHarMeanRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsHarMeanRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsHarMeanRequest)this;
     }
 

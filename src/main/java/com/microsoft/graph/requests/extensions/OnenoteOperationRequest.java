@@ -37,7 +37,7 @@ public class OnenoteOperationRequest extends BaseRequest implements IOnenoteOper
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnenoteOperation> callback) {
+    public void get(final ICallback<OnenoteOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class OnenoteOperationRequest extends BaseRequest implements IOnenoteOper
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnenoteOperation> callback) {
+    public void delete(final ICallback<OnenoteOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class OnenoteOperationRequest extends BaseRequest implements IOnenoteOper
      * @param sourceOnenoteOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnenoteOperation sourceOnenoteOperation, final ICallback<? super OnenoteOperation> callback) {
+    public void patch(final OnenoteOperation sourceOnenoteOperation, final ICallback<OnenoteOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteOperation);
     }
 
@@ -96,7 +96,7 @@ public class OnenoteOperationRequest extends BaseRequest implements IOnenoteOper
      * @param newOnenoteOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnenoteOperation newOnenoteOperation, final ICallback<? super OnenoteOperation> callback) {
+    public void post(final OnenoteOperation newOnenoteOperation, final ICallback<OnenoteOperation> callback) {
         send(HttpMethod.POST, callback, newOnenoteOperation);
     }
 
@@ -117,7 +117,7 @@ public class OnenoteOperationRequest extends BaseRequest implements IOnenoteOper
      * @param newOnenoteOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnenoteOperation newOnenoteOperation, final ICallback<? super OnenoteOperation> callback) {
+    public void put(final OnenoteOperation newOnenoteOperation, final ICallback<OnenoteOperation> callback) {
         send(HttpMethod.PUT, callback, newOnenoteOperation);
     }
 
@@ -151,6 +151,17 @@ public class OnenoteOperationRequest extends BaseRequest implements IOnenoteOper
      */
      public IOnenoteOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (OnenoteOperationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOnenoteOperationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OnenoteOperationRequest)this;
      }
 

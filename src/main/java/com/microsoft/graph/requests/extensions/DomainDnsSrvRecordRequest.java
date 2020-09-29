@@ -37,7 +37,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DomainDnsSrvRecord> callback) {
+    public void get(final ICallback<DomainDnsSrvRecord> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DomainDnsSrvRecord> callback) {
+    public void delete(final ICallback<DomainDnsSrvRecord> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @param sourceDomainDnsSrvRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DomainDnsSrvRecord sourceDomainDnsSrvRecord, final ICallback<? super DomainDnsSrvRecord> callback) {
+    public void patch(final DomainDnsSrvRecord sourceDomainDnsSrvRecord, final ICallback<DomainDnsSrvRecord> callback) {
         send(HttpMethod.PATCH, callback, sourceDomainDnsSrvRecord);
     }
 
@@ -96,7 +96,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @param newDomainDnsSrvRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DomainDnsSrvRecord newDomainDnsSrvRecord, final ICallback<? super DomainDnsSrvRecord> callback) {
+    public void post(final DomainDnsSrvRecord newDomainDnsSrvRecord, final ICallback<DomainDnsSrvRecord> callback) {
         send(HttpMethod.POST, callback, newDomainDnsSrvRecord);
     }
 
@@ -117,7 +117,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @param newDomainDnsSrvRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DomainDnsSrvRecord newDomainDnsSrvRecord, final ICallback<? super DomainDnsSrvRecord> callback) {
+    public void put(final DomainDnsSrvRecord newDomainDnsSrvRecord, final ICallback<DomainDnsSrvRecord> callback) {
         send(HttpMethod.PUT, callback, newDomainDnsSrvRecord);
     }
 
@@ -151,6 +151,17 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      */
      public IDomainDnsSrvRecordRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DomainDnsSrvRecordRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDomainDnsSrvRecordRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DomainDnsSrvRecordRequest)this;
      }
 

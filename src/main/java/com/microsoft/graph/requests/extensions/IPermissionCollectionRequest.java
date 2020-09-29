@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPermissionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IPermissionCollectionPage> callback);
+    void get(final ICallback<IPermissionCollectionPage> callback);
 
     IPermissionCollectionPage get() throws ClientException;
 
-    void post(final Permission newPermission, final ICallback<? super Permission> callback);
+    void post(final Permission newPermission, final ICallback<Permission> callback);
 
     Permission post(final Permission newPermission) throws ClientException;
 
@@ -46,14 +46,6 @@ public interface IPermissionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPermissionCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IPermissionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

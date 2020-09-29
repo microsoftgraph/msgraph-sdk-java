@@ -26,7 +26,7 @@ public interface IVppTokenSyncLicensesRequest extends IHttpRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    void post(final ICallback<? super VppToken> callback);
+    void post(final ICallback<VppToken> callback);
 
     /**
      * Creates the VppTokenSyncLicenses

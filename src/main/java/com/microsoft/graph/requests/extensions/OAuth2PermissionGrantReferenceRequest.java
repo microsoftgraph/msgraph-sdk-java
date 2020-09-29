@@ -34,7 +34,7 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest implement
         super(requestUrl, client, requestOptions, OAuth2PermissionGrant.class);
     }
 
-    public void delete(final ICallback<? super OAuth2PermissionGrant> callback) {
+    public void delete(final ICallback<OAuth2PermissionGrant> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,12 +64,22 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest implement
         return (OAuth2PermissionGrantReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IOAuth2PermissionGrantReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (OAuth2PermissionGrantReferenceRequest)this;
+    }
+    /**
      * Puts the OAuth2PermissionGrant
      *
      * @param srcOAuth2PermissionGrant the OAuth2PermissionGrant reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(OAuth2PermissionGrant srcOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
+    public void put(OAuth2PermissionGrant srcOAuth2PermissionGrant, final ICallback<OAuth2PermissionGrant> callback) {
         send(HttpMethod.PUT, callback, srcOAuth2PermissionGrant);
     }
 

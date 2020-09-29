@@ -50,19 +50,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IGroupWithReferenceRequest extends IHttpRequest {
 
-    void post(final Group newGroup, final IJsonBackedObject payload, final ICallback<? super Group> callback);
+    void post(final Group newGroup, final IJsonBackedObject payload, final ICallback<Group> callback);
 
     Group post(final Group newGroup, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<? super Group> callback);
+    void get(final ICallback<Group> callback);
 
     Group get() throws ClientException;
 
-	void delete(final ICallback<? super Group> callback);
+	void delete(final ICallback<Group> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final Group sourceGroup, final ICallback<? super Group> callback);
+	void patch(final Group sourceGroup, final ICallback<Group> callback);
 
 	Group patch(final Group sourceGroup) throws ClientException;
 

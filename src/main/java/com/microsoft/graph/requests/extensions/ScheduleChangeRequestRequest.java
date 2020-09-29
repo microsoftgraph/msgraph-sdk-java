@@ -52,7 +52,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ScheduleChangeRequest> callback) {
+    public void get(final ICallback<ScheduleChangeRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ScheduleChangeRequest> callback) {
+    public void delete(final ICallback<ScheduleChangeRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @param sourceScheduleChangeRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ScheduleChangeRequest sourceScheduleChangeRequest, final ICallback<? super ScheduleChangeRequest> callback) {
+    public void patch(final ScheduleChangeRequest sourceScheduleChangeRequest, final ICallback<ScheduleChangeRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceScheduleChangeRequest);
     }
 
@@ -111,7 +111,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @param newScheduleChangeRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ScheduleChangeRequest newScheduleChangeRequest, final ICallback<? super ScheduleChangeRequest> callback) {
+    public void post(final ScheduleChangeRequest newScheduleChangeRequest, final ICallback<ScheduleChangeRequest> callback) {
         send(HttpMethod.POST, callback, newScheduleChangeRequest);
     }
 
@@ -132,7 +132,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @param newScheduleChangeRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ScheduleChangeRequest newScheduleChangeRequest, final ICallback<? super ScheduleChangeRequest> callback) {
+    public void put(final ScheduleChangeRequest newScheduleChangeRequest, final ICallback<ScheduleChangeRequest> callback) {
         send(HttpMethod.PUT, callback, newScheduleChangeRequest);
     }
 
@@ -166,6 +166,17 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      */
      public IScheduleChangeRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ScheduleChangeRequestRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IScheduleChangeRequestRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ScheduleChangeRequestRequest)this;
      }
 

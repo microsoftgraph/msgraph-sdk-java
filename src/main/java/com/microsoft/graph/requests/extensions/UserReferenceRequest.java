@@ -152,7 +152,7 @@ public class UserReferenceRequest extends BaseRequest implements IUserReferenceR
         super(requestUrl, client, requestOptions, User.class);
     }
 
-    public void delete(final ICallback<? super User> callback) {
+    public void delete(final ICallback<User> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -182,12 +182,22 @@ public class UserReferenceRequest extends BaseRequest implements IUserReferenceR
         return (UserReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IUserReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserReferenceRequest)this;
+    }
+    /**
      * Puts the User
      *
      * @param srcUser the User reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(User srcUser, final ICallback<? super User> callback) {
+    public void put(User srcUser, final ICallback<User> callback) {
         send(HttpMethod.PUT, callback, srcUser);
     }
 

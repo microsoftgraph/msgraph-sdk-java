@@ -41,7 +41,7 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
         super(requestUrl, client, requestOptions, OnenoteSectionCollectionResponse.class, IOnenoteSectionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IOnenoteSectionCollectionPage> callback) {
+    public void get(final ICallback<IOnenoteSectionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
         return buildFromResponse(response);
     }
 
-    public void post(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback) {
+    public void post(final OnenoteSection newOnenoteSection, final ICallback<OnenoteSection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteSectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,17 +93,6 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
      */
     public IOnenoteSectionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (OnenoteSectionCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IOnenoteSectionCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OnenoteSectionCollectionRequest)this;
     }
 

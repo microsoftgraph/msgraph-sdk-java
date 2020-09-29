@@ -37,7 +37,7 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SoftwareUpdateStatusSummary> callback) {
+    public void get(final ICallback<SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SoftwareUpdateStatusSummary> callback) {
+    public void delete(final ICallback<SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest implements I
      * @param sourceSoftwareUpdateStatusSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback) {
+    public void patch(final SoftwareUpdateStatusSummary sourceSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceSoftwareUpdateStatusSummary);
     }
 
@@ -96,7 +96,7 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest implements I
      * @param newSoftwareUpdateStatusSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback) {
+    public void post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.POST, callback, newSoftwareUpdateStatusSummary);
     }
 
@@ -117,7 +117,7 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest implements I
      * @param newSoftwareUpdateStatusSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback) {
+    public void put(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.PUT, callback, newSoftwareUpdateStatusSummary);
     }
 
@@ -151,6 +151,17 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest implements I
      */
      public ISoftwareUpdateStatusSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (SoftwareUpdateStatusSummaryRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISoftwareUpdateStatusSummaryRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SoftwareUpdateStatusSummaryRequest)this;
      }
 

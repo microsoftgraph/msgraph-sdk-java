@@ -38,7 +38,7 @@ public class RoleDefinitionReferenceRequest extends BaseRequest implements IRole
         super(requestUrl, client, requestOptions, RoleDefinition.class);
     }
 
-    public void delete(final ICallback<? super RoleDefinition> callback) {
+    public void delete(final ICallback<RoleDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,12 +68,22 @@ public class RoleDefinitionReferenceRequest extends BaseRequest implements IRole
         return (RoleDefinitionReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IRoleDefinitionReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (RoleDefinitionReferenceRequest)this;
+    }
+    /**
      * Puts the RoleDefinition
      *
      * @param srcRoleDefinition the RoleDefinition reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(RoleDefinition srcRoleDefinition, final ICallback<? super RoleDefinition> callback) {
+    public void put(RoleDefinition srcRoleDefinition, final ICallback<RoleDefinition> callback) {
         send(HttpMethod.PUT, callback, srcRoleDefinition);
     }
 

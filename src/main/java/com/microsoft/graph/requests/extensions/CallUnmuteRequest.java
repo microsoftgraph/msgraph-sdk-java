@@ -37,7 +37,7 @@ public class CallUnmuteRequest extends BaseRequest implements ICallUnmuteRequest
         body = new CallUnmuteBody();
     }
 
-    public void post(final ICallback<? super UnmuteParticipantOperation> callback) {
+    public void post(final ICallback<UnmuteParticipantOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class CallUnmuteRequest extends BaseRequest implements ICallUnmuteRequest
      */
     public ICallUnmuteRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (CallUnmuteRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ICallUnmuteRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CallUnmuteRequest)this;
     }
 

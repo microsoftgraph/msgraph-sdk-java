@@ -40,7 +40,7 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
         super(requestUrl, client, requestOptions, AlertCollectionResponse.class, IAlertCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IAlertCollectionPage> callback) {
+    public void get(final ICallback<IAlertCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final Alert newAlert, final ICallback<? super Alert> callback) {
+    public void post(final Alert newAlert, final ICallback<Alert> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
      */
     public IAlertCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AlertCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IAlertCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AlertCollectionRequest)this;
     }
 

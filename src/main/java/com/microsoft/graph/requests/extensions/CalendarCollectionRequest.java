@@ -43,7 +43,7 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
         super(requestUrl, client, requestOptions, CalendarCollectionResponse.class, ICalendarCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ICalendarCollectionPage> callback) {
+    public void get(final ICallback<ICalendarCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -62,7 +62,7 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
         return buildFromResponse(response);
     }
 
-    public void post(final Calendar newCalendar, final ICallback<? super Calendar> callback) {
+    public void post(final Calendar newCalendar, final ICallback<Calendar> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -95,17 +95,6 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
      */
     public ICalendarCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (CalendarCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ICalendarCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CalendarCollectionRequest)this;
     }
 

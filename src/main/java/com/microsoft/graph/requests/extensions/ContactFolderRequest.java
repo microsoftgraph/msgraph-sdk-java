@@ -53,7 +53,7 @@ public class ContactFolderRequest extends BaseRequest implements IContactFolderR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ContactFolder> callback) {
+    public void get(final ICallback<ContactFolder> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class ContactFolderRequest extends BaseRequest implements IContactFolderR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ContactFolder> callback) {
+    public void delete(final ICallback<ContactFolder> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +91,7 @@ public class ContactFolderRequest extends BaseRequest implements IContactFolderR
      * @param sourceContactFolder the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ContactFolder sourceContactFolder, final ICallback<? super ContactFolder> callback) {
+    public void patch(final ContactFolder sourceContactFolder, final ICallback<ContactFolder> callback) {
         send(HttpMethod.PATCH, callback, sourceContactFolder);
     }
 
@@ -112,7 +112,7 @@ public class ContactFolderRequest extends BaseRequest implements IContactFolderR
      * @param newContactFolder the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ContactFolder newContactFolder, final ICallback<? super ContactFolder> callback) {
+    public void post(final ContactFolder newContactFolder, final ICallback<ContactFolder> callback) {
         send(HttpMethod.POST, callback, newContactFolder);
     }
 
@@ -133,7 +133,7 @@ public class ContactFolderRequest extends BaseRequest implements IContactFolderR
      * @param newContactFolder the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ContactFolder newContactFolder, final ICallback<? super ContactFolder> callback) {
+    public void put(final ContactFolder newContactFolder, final ICallback<ContactFolder> callback) {
         send(HttpMethod.PUT, callback, newContactFolder);
     }
 
@@ -167,6 +167,17 @@ public class ContactFolderRequest extends BaseRequest implements IContactFolderR
      */
      public IContactFolderRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ContactFolderRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IContactFolderRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ContactFolderRequest)this;
      }
 

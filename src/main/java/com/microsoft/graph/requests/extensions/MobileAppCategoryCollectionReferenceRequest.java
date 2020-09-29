@@ -36,7 +36,7 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionR
         super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, IMobileAppCategoryCollectionPage.class);
     }
 
-    public void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
+    public void post(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/deviceAppManagement/categories/" + newMobileAppCategory.id);
         new MobileAppCategoryWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,17 +70,6 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionR
      */
     public IMobileAppCategoryCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (MobileAppCategoryCollectionReferenceRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the sort clause
-     * @return the updated request
-     */
-    public IMobileAppCategoryCollectionReferenceRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppCategoryCollectionReferenceRequest)this;
     }
 

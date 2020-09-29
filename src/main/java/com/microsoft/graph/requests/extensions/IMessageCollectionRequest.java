@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMessageCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IMessageCollectionPage> callback);
+    void get(final ICallback<IMessageCollectionPage> callback);
 
     IMessageCollectionPage get() throws ClientException;
 
-    void post(final Message newMessage, final ICallback<? super Message> callback);
+    void post(final Message newMessage, final ICallback<Message> callback);
 
     Message post(final Message newMessage) throws ClientException;
 
@@ -46,14 +46,6 @@ public interface IMessageCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IMessageCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IMessageCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

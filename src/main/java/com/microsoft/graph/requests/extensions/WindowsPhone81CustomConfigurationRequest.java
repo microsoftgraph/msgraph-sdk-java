@@ -37,7 +37,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
+    public void get(final ICallback<WindowsPhone81CustomConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
+    public void delete(final ICallback<WindowsPhone81CustomConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @param sourceWindowsPhone81CustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhone81CustomConfiguration sourceWindowsPhone81CustomConfiguration, final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
+    public void patch(final WindowsPhone81CustomConfiguration sourceWindowsPhone81CustomConfiguration, final ICallback<WindowsPhone81CustomConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhone81CustomConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @param newWindowsPhone81CustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
+    public void post(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<WindowsPhone81CustomConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsPhone81CustomConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @param newWindowsPhone81CustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
+    public void put(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<WindowsPhone81CustomConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhone81CustomConfiguration);
     }
 
@@ -151,6 +151,17 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      */
      public IWindowsPhone81CustomConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WindowsPhone81CustomConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindowsPhone81CustomConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsPhone81CustomConfigurationRequest)this;
      }
 

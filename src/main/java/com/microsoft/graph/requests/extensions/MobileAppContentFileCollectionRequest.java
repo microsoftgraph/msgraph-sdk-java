@@ -41,7 +41,7 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, MobileAppContentFileCollectionResponse.class, IMobileAppContentFileCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IMobileAppContentFileCollectionPage> callback) {
+    public void get(final ICallback<IMobileAppContentFileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<? super MobileAppContentFile> callback) {
+    public void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<MobileAppContentFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppContentFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,17 +93,6 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
      */
     public IMobileAppContentFileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (MobileAppContentFileCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IMobileAppContentFileCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppContentFileCollectionRequest)this;
     }
 

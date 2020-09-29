@@ -39,7 +39,7 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
         super(requestUrl, client, requestOptions, ChatMessageCollectionResponse.class, IChatMessageCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IChatMessageCollectionPage> callback) {
+    public void get(final ICallback<IChatMessageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
         return buildFromResponse(response);
     }
 
-    public void post(final ChatMessage newChatMessage, final ICallback<? super ChatMessage> callback) {
+    public void post(final ChatMessage newChatMessage, final ICallback<ChatMessage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
      */
     public IChatMessageCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ChatMessageCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IChatMessageCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ChatMessageCollectionRequest)this;
     }
 

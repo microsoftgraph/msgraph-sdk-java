@@ -40,7 +40,7 @@ public class UserActivityCollectionRequest extends BaseCollectionRequest<UserAct
         super(requestUrl, client, requestOptions, UserActivityCollectionResponse.class, IUserActivityCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IUserActivityCollectionPage> callback) {
+    public void get(final ICallback<IUserActivityCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UserActivityCollectionRequest extends BaseCollectionRequest<UserAct
         return buildFromResponse(response);
     }
 
-    public void post(final UserActivity newUserActivity, final ICallback<? super UserActivity> callback) {
+    public void post(final UserActivity newUserActivity, final ICallback<UserActivity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class UserActivityCollectionRequest extends BaseCollectionRequest<UserAct
      */
     public IUserActivityCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (UserActivityCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IUserActivityCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UserActivityCollectionRequest)this;
     }
 

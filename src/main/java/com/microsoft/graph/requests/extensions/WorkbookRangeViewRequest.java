@@ -42,7 +42,7 @@ public class WorkbookRangeViewRequest extends BaseRequest implements IWorkbookRa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRangeView> callback) {
+    public void get(final ICallback<WorkbookRangeView> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -61,7 +61,7 @@ public class WorkbookRangeViewRequest extends BaseRequest implements IWorkbookRa
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookRangeView> callback) {
+    public void delete(final ICallback<WorkbookRangeView> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +80,7 @@ public class WorkbookRangeViewRequest extends BaseRequest implements IWorkbookRa
      * @param sourceWorkbookRangeView the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookRangeView sourceWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
+    public void patch(final WorkbookRangeView sourceWorkbookRangeView, final ICallback<WorkbookRangeView> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookRangeView);
     }
 
@@ -101,7 +101,7 @@ public class WorkbookRangeViewRequest extends BaseRequest implements IWorkbookRa
      * @param newWorkbookRangeView the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
+    public void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<WorkbookRangeView> callback) {
         send(HttpMethod.POST, callback, newWorkbookRangeView);
     }
 
@@ -122,7 +122,7 @@ public class WorkbookRangeViewRequest extends BaseRequest implements IWorkbookRa
      * @param newWorkbookRangeView the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookRangeView newWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
+    public void put(final WorkbookRangeView newWorkbookRangeView, final ICallback<WorkbookRangeView> callback) {
         send(HttpMethod.PUT, callback, newWorkbookRangeView);
     }
 
@@ -156,6 +156,17 @@ public class WorkbookRangeViewRequest extends BaseRequest implements IWorkbookRa
      */
      public IWorkbookRangeViewRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookRangeViewRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookRangeViewRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookRangeViewRequest)this;
      }
 

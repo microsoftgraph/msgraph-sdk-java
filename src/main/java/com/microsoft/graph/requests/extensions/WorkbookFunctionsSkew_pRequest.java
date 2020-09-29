@@ -37,7 +37,7 @@ public class WorkbookFunctionsSkew_pRequest extends BaseRequest implements IWork
         body = new WorkbookFunctionsSkew_pBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsSkew_pRequest extends BaseRequest implements IWork
      */
     public IWorkbookFunctionsSkew_pRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsSkew_pRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsSkew_pRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsSkew_pRequest)this;
     }
 

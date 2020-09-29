@@ -39,7 +39,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, GroupLifecyclePolicyCollectionResponse.class, IGroupLifecyclePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IGroupLifecyclePolicyCollectionPage> callback) {
+    public void get(final ICallback<IGroupLifecyclePolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
+    public void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupLifecyclePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class GroupLifecyclePolicyCollectionRequest extends BaseCollectionRequest
      */
     public IGroupLifecyclePolicyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (GroupLifecyclePolicyCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IGroupLifecyclePolicyCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupLifecyclePolicyCollectionRequest)this;
     }
 

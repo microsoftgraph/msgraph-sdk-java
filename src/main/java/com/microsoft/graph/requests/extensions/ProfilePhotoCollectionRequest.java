@@ -40,7 +40,7 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
         super(requestUrl, client, requestOptions, ProfilePhotoCollectionResponse.class, IProfilePhotoCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IProfilePhotoCollectionPage> callback) {
+    public void get(final ICallback<IProfilePhotoCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
         return buildFromResponse(response);
     }
 
-    public void post(final ProfilePhoto newProfilePhoto, final ICallback<? super ProfilePhoto> callback) {
+    public void post(final ProfilePhoto newProfilePhoto, final ICallback<ProfilePhoto> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ProfilePhotoRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
      */
     public IProfilePhotoCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ProfilePhotoCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IProfilePhotoCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ProfilePhotoCollectionRequest)this;
     }
 

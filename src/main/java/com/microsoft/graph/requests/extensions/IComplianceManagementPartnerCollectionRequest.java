@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IComplianceManagementPartnerCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IComplianceManagementPartnerCollectionPage> callback);
+    void get(final ICallback<IComplianceManagementPartnerCollectionPage> callback);
 
     IComplianceManagementPartnerCollectionPage get() throws ClientException;
 
-    void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<? super ComplianceManagementPartner> callback);
+    void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<ComplianceManagementPartner> callback);
 
     ComplianceManagementPartner post(final ComplianceManagementPartner newComplianceManagementPartner) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IComplianceManagementPartnerCollectionRequest extends IHttpRequ
      * @return the updated request
      */
     IComplianceManagementPartnerCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IComplianceManagementPartnerCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

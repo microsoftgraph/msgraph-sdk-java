@@ -38,7 +38,7 @@ public class TeamsAppReferenceRequest extends BaseRequest implements ITeamsAppRe
         super(requestUrl, client, requestOptions, TeamsApp.class);
     }
 
-    public void delete(final ICallback<? super TeamsApp> callback) {
+    public void delete(final ICallback<TeamsApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,12 +68,22 @@ public class TeamsAppReferenceRequest extends BaseRequest implements ITeamsAppRe
         return (TeamsAppReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITeamsAppReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TeamsAppReferenceRequest)this;
+    }
+    /**
      * Puts the TeamsApp
      *
      * @param srcTeamsApp the TeamsApp reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TeamsApp srcTeamsApp, final ICallback<? super TeamsApp> callback) {
+    public void put(TeamsApp srcTeamsApp, final ICallback<TeamsApp> callback) {
         send(HttpMethod.PUT, callback, srcTeamsApp);
     }
 

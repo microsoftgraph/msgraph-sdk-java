@@ -41,7 +41,7 @@ public class WorkbookCommentRequest extends BaseRequest implements IWorkbookComm
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookComment> callback) {
+    public void get(final ICallback<WorkbookComment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class WorkbookCommentRequest extends BaseRequest implements IWorkbookComm
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookComment> callback) {
+    public void delete(final ICallback<WorkbookComment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class WorkbookCommentRequest extends BaseRequest implements IWorkbookComm
      * @param sourceWorkbookComment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookComment sourceWorkbookComment, final ICallback<? super WorkbookComment> callback) {
+    public void patch(final WorkbookComment sourceWorkbookComment, final ICallback<WorkbookComment> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookComment);
     }
 
@@ -100,7 +100,7 @@ public class WorkbookCommentRequest extends BaseRequest implements IWorkbookComm
      * @param newWorkbookComment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookComment newWorkbookComment, final ICallback<? super WorkbookComment> callback) {
+    public void post(final WorkbookComment newWorkbookComment, final ICallback<WorkbookComment> callback) {
         send(HttpMethod.POST, callback, newWorkbookComment);
     }
 
@@ -121,7 +121,7 @@ public class WorkbookCommentRequest extends BaseRequest implements IWorkbookComm
      * @param newWorkbookComment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookComment newWorkbookComment, final ICallback<? super WorkbookComment> callback) {
+    public void put(final WorkbookComment newWorkbookComment, final ICallback<WorkbookComment> callback) {
         send(HttpMethod.PUT, callback, newWorkbookComment);
     }
 
@@ -155,6 +155,17 @@ public class WorkbookCommentRequest extends BaseRequest implements IWorkbookComm
      */
      public IWorkbookCommentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookCommentRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookCommentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookCommentRequest)this;
      }
 

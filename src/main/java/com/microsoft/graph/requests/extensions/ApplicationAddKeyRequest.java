@@ -37,7 +37,7 @@ public class ApplicationAddKeyRequest extends BaseRequest implements IApplicatio
         body = new ApplicationAddKeyBody();
     }
 
-    public void post(final ICallback<? super KeyCredential> callback) {
+    public void post(final ICallback<KeyCredential> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class ApplicationAddKeyRequest extends BaseRequest implements IApplicatio
      */
     public IApplicationAddKeyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (ApplicationAddKeyRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IApplicationAddKeyRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ApplicationAddKeyRequest)this;
     }
 

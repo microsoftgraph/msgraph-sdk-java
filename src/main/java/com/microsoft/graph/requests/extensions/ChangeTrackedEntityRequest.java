@@ -52,7 +52,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ChangeTrackedEntity> callback) {
+    public void get(final ICallback<ChangeTrackedEntity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ChangeTrackedEntity> callback) {
+    public void delete(final ICallback<ChangeTrackedEntity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @param sourceChangeTrackedEntity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ChangeTrackedEntity sourceChangeTrackedEntity, final ICallback<? super ChangeTrackedEntity> callback) {
+    public void patch(final ChangeTrackedEntity sourceChangeTrackedEntity, final ICallback<ChangeTrackedEntity> callback) {
         send(HttpMethod.PATCH, callback, sourceChangeTrackedEntity);
     }
 
@@ -111,7 +111,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @param newChangeTrackedEntity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<? super ChangeTrackedEntity> callback) {
+    public void post(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<ChangeTrackedEntity> callback) {
         send(HttpMethod.POST, callback, newChangeTrackedEntity);
     }
 
@@ -132,7 +132,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @param newChangeTrackedEntity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<? super ChangeTrackedEntity> callback) {
+    public void put(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<ChangeTrackedEntity> callback) {
         send(HttpMethod.PUT, callback, newChangeTrackedEntity);
     }
 
@@ -166,6 +166,17 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      */
      public IChangeTrackedEntityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ChangeTrackedEntityRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IChangeTrackedEntityRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ChangeTrackedEntityRequest)this;
      }
 

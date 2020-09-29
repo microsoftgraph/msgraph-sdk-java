@@ -37,7 +37,7 @@ public class WorkbookFunctionsExpon_DistRequest extends BaseRequest implements I
         body = new WorkbookFunctionsExpon_DistBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsExpon_DistRequest extends BaseRequest implements I
      */
     public IWorkbookFunctionsExpon_DistRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsExpon_DistRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsExpon_DistRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsExpon_DistRequest)this;
     }
 

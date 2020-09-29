@@ -40,7 +40,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShiftC
         super(requestUrl, client, requestOptions, OpenShiftCollectionResponse.class, IOpenShiftCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IOpenShiftCollectionPage> callback) {
+    public void get(final ICallback<IOpenShiftCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShiftC
         return buildFromResponse(response);
     }
 
-    public void post(final OpenShift newOpenShift, final ICallback<? super OpenShift> callback) {
+    public void post(final OpenShift newOpenShift, final ICallback<OpenShift> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OpenShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShiftC
      */
     public IOpenShiftCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (OpenShiftCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IOpenShiftCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OpenShiftCollectionRequest)this;
     }
 

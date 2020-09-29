@@ -36,7 +36,7 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Boolean> callback) {
+    public void get(final ICallback<Boolean> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -80,17 +80,6 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      */
     public IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest)this;
     }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IThumbnailSetCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IThumbnailSetCollectionPage> callback);
+    void get(final ICallback<IThumbnailSetCollectionPage> callback);
 
     IThumbnailSetCollectionPage get() throws ClientException;
 
-    void post(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback);
+    void post(final ThumbnailSet newThumbnailSet, final ICallback<ThumbnailSet> callback);
 
     ThumbnailSet post(final ThumbnailSet newThumbnailSet) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IThumbnailSetCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IThumbnailSetCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IThumbnailSetCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

@@ -49,7 +49,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Security> callback) {
+    public void get(final ICallback<Security> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Security> callback) {
+    public void delete(final ICallback<Security> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @param sourceSecurity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Security sourceSecurity, final ICallback<? super Security> callback) {
+    public void patch(final Security sourceSecurity, final ICallback<Security> callback) {
         send(HttpMethod.PATCH, callback, sourceSecurity);
     }
 
@@ -108,7 +108,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @param newSecurity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Security newSecurity, final ICallback<? super Security> callback) {
+    public void post(final Security newSecurity, final ICallback<Security> callback) {
         send(HttpMethod.POST, callback, newSecurity);
     }
 
@@ -129,7 +129,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @param newSecurity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Security newSecurity, final ICallback<? super Security> callback) {
+    public void put(final Security newSecurity, final ICallback<Security> callback) {
         send(HttpMethod.PUT, callback, newSecurity);
     }
 
@@ -163,6 +163,17 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      */
      public ISecurityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (SecurityRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISecurityRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SecurityRequest)this;
      }
 

@@ -43,7 +43,7 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest impl
         super(requestUrl, client, requestOptions, ManagedAppRegistration.class);
     }
 
-    public void post(final ManagedAppRegistration newManagedAppRegistration, final IJsonBackedObject payload, final ICallback<? super ManagedAppRegistration> callback) {
+    public void post(final ManagedAppRegistration newManagedAppRegistration, final IJsonBackedObject payload, final ICallback<ManagedAppRegistration> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -55,7 +55,7 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest impl
         return null;
     }
 
-    public void get(final ICallback<? super ManagedAppRegistration> callback) {
+    public void get(final ICallback<ManagedAppRegistration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,7 +63,7 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest impl
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super ManagedAppRegistration> callback) {
+	public void delete(final ICallback<ManagedAppRegistration> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -71,7 +71,7 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest impl
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final ManagedAppRegistration sourceManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
+	public void patch(final ManagedAppRegistration sourceManagedAppRegistration, final ICallback<ManagedAppRegistration> callback) {
 		send(HttpMethod.PATCH, callback, sourceManagedAppRegistration);
 	}
 
@@ -99,6 +99,16 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest impl
      */
     public IManagedAppRegistrationWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (ManagedAppRegistrationWithReferenceRequest)this;
+    }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IManagedAppRegistrationWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedAppRegistrationWithReferenceRequest)this;
     }
 }

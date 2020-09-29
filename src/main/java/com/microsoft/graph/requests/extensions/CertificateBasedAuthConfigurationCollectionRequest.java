@@ -39,7 +39,7 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, ICertificateBasedAuthConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ICertificateBasedAuthConfigurationCollectionPage> callback) {
+    public void get(final ICallback<ICertificateBasedAuthConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
         return buildFromResponse(response);
     }
 
-    public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CertificateBasedAuthConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
      */
     public ICertificateBasedAuthConfigurationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (CertificateBasedAuthConfigurationCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ICertificateBasedAuthConfigurationCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CertificateBasedAuthConfigurationCollectionRequest)this;
     }
 

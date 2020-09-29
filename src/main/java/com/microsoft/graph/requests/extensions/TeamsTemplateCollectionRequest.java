@@ -39,7 +39,7 @@ public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsT
         super(requestUrl, client, requestOptions, TeamsTemplateCollectionResponse.class, ITeamsTemplateCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ITeamsTemplateCollectionPage> callback) {
+    public void get(final ICallback<ITeamsTemplateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsT
         return buildFromResponse(response);
     }
 
-    public void post(final TeamsTemplate newTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
+    public void post(final TeamsTemplate newTeamsTemplate, final ICallback<TeamsTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsT
      */
     public ITeamsTemplateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TeamsTemplateCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ITeamsTemplateCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TeamsTemplateCollectionRequest)this;
     }
 

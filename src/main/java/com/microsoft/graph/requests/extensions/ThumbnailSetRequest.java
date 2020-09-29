@@ -37,7 +37,7 @@ public class ThumbnailSetRequest extends BaseRequest implements IThumbnailSetReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ThumbnailSet> callback) {
+    public void get(final ICallback<ThumbnailSet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ThumbnailSetRequest extends BaseRequest implements IThumbnailSetReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ThumbnailSet> callback) {
+    public void delete(final ICallback<ThumbnailSet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ThumbnailSetRequest extends BaseRequest implements IThumbnailSetReq
      * @param sourceThumbnailSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ThumbnailSet sourceThumbnailSet, final ICallback<? super ThumbnailSet> callback) {
+    public void patch(final ThumbnailSet sourceThumbnailSet, final ICallback<ThumbnailSet> callback) {
         send(HttpMethod.PATCH, callback, sourceThumbnailSet);
     }
 
@@ -96,7 +96,7 @@ public class ThumbnailSetRequest extends BaseRequest implements IThumbnailSetReq
      * @param newThumbnailSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback) {
+    public void post(final ThumbnailSet newThumbnailSet, final ICallback<ThumbnailSet> callback) {
         send(HttpMethod.POST, callback, newThumbnailSet);
     }
 
@@ -117,7 +117,7 @@ public class ThumbnailSetRequest extends BaseRequest implements IThumbnailSetReq
      * @param newThumbnailSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback) {
+    public void put(final ThumbnailSet newThumbnailSet, final ICallback<ThumbnailSet> callback) {
         send(HttpMethod.PUT, callback, newThumbnailSet);
     }
 
@@ -151,6 +151,17 @@ public class ThumbnailSetRequest extends BaseRequest implements IThumbnailSetReq
      */
      public IThumbnailSetRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ThumbnailSetRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IThumbnailSetRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ThumbnailSetRequest)this;
      }
 

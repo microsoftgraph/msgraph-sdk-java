@@ -36,7 +36,7 @@ public class EducationClassCollectionReferenceRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, EducationClassCollectionResponse.class, IEducationClassCollectionPage.class);
     }
 
-    public void post(final EducationClass newEducationClass, final ICallback<? super EducationClass> callback) {
+    public void post(final EducationClass newEducationClass, final ICallback<EducationClass> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/classes/" + newEducationClass.id);
         new EducationClassWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,17 +70,6 @@ public class EducationClassCollectionReferenceRequest extends BaseCollectionRequ
      */
     public IEducationClassCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (EducationClassCollectionReferenceRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the sort clause
-     * @return the updated request
-     */
-    public IEducationClassCollectionReferenceRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EducationClassCollectionReferenceRequest)this;
     }
 

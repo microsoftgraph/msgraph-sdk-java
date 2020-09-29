@@ -52,7 +52,7 @@ public class ConversationMemberRequest extends BaseRequest implements IConversat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ConversationMember> callback) {
+    public void get(final ICallback<ConversationMember> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class ConversationMemberRequest extends BaseRequest implements IConversat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ConversationMember> callback) {
+    public void delete(final ICallback<ConversationMember> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class ConversationMemberRequest extends BaseRequest implements IConversat
      * @param sourceConversationMember the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConversationMember sourceConversationMember, final ICallback<? super ConversationMember> callback) {
+    public void patch(final ConversationMember sourceConversationMember, final ICallback<ConversationMember> callback) {
         send(HttpMethod.PATCH, callback, sourceConversationMember);
     }
 
@@ -111,7 +111,7 @@ public class ConversationMemberRequest extends BaseRequest implements IConversat
      * @param newConversationMember the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConversationMember newConversationMember, final ICallback<? super ConversationMember> callback) {
+    public void post(final ConversationMember newConversationMember, final ICallback<ConversationMember> callback) {
         send(HttpMethod.POST, callback, newConversationMember);
     }
 
@@ -132,7 +132,7 @@ public class ConversationMemberRequest extends BaseRequest implements IConversat
      * @param newConversationMember the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConversationMember newConversationMember, final ICallback<? super ConversationMember> callback) {
+    public void put(final ConversationMember newConversationMember, final ICallback<ConversationMember> callback) {
         send(HttpMethod.PUT, callback, newConversationMember);
     }
 
@@ -166,6 +166,17 @@ public class ConversationMemberRequest extends BaseRequest implements IConversat
      */
      public IConversationMemberRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ConversationMemberRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IConversationMemberRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ConversationMemberRequest)this;
      }
 

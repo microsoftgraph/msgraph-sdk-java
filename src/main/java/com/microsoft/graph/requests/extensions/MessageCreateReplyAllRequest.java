@@ -37,7 +37,7 @@ public class MessageCreateReplyAllRequest extends BaseRequest implements IMessag
         body = new MessageCreateReplyAllBody();
     }
 
-    public void post(final ICallback<? super Message> callback) {
+    public void post(final ICallback<Message> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class MessageCreateReplyAllRequest extends BaseRequest implements IMessag
      */
     public IMessageCreateReplyAllRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (MessageCreateReplyAllRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMessageCreateReplyAllRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MessageCreateReplyAllRequest)this;
     }
 

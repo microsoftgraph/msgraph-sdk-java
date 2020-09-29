@@ -55,7 +55,7 @@ public class ListRequest extends BaseRequest implements IListRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super List> callback) {
+    public void get(final ICallback<List> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -74,7 +74,7 @@ public class ListRequest extends BaseRequest implements IListRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super List> callback) {
+    public void delete(final ICallback<List> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -93,7 +93,7 @@ public class ListRequest extends BaseRequest implements IListRequest {
      * @param sourceList the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final List sourceList, final ICallback<? super List> callback) {
+    public void patch(final List sourceList, final ICallback<List> callback) {
         send(HttpMethod.PATCH, callback, sourceList);
     }
 
@@ -114,7 +114,7 @@ public class ListRequest extends BaseRequest implements IListRequest {
      * @param newList the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final List newList, final ICallback<? super List> callback) {
+    public void post(final List newList, final ICallback<List> callback) {
         send(HttpMethod.POST, callback, newList);
     }
 
@@ -135,7 +135,7 @@ public class ListRequest extends BaseRequest implements IListRequest {
      * @param newList the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final List newList, final ICallback<? super List> callback) {
+    public void put(final List newList, final ICallback<List> callback) {
         send(HttpMethod.PUT, callback, newList);
     }
 
@@ -169,6 +169,17 @@ public class ListRequest extends BaseRequest implements IListRequest {
      */
      public IListRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ListRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IListRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ListRequest)this;
      }
 

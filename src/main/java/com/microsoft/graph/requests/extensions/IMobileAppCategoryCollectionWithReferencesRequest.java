@@ -21,7 +21,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMobileAppCategoryCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IMobileAppCategoryCollectionWithReferencesPage> callback);
+    void get(final ICallback<IMobileAppCategoryCollectionWithReferencesPage> callback);
 
     IMobileAppCategoryCollectionWithReferencesPage get() throws ClientException;
 

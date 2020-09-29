@@ -36,7 +36,7 @@ public class ManagedDeviceWipeRequest extends BaseRequest implements IManagedDev
         body = new ManagedDeviceWipeBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class ManagedDeviceWipeRequest extends BaseRequest implements IManagedDev
      */
     public IManagedDeviceWipeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (ManagedDeviceWipeRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IManagedDeviceWipeRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedDeviceWipeRequest)this;
     }
 

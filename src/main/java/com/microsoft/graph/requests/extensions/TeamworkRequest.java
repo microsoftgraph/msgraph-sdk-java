@@ -41,7 +41,7 @@ public class TeamworkRequest extends BaseRequest implements ITeamworkRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Teamwork> callback) {
+    public void get(final ICallback<Teamwork> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class TeamworkRequest extends BaseRequest implements ITeamworkRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Teamwork> callback) {
+    public void delete(final ICallback<Teamwork> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class TeamworkRequest extends BaseRequest implements ITeamworkRequest {
      * @param sourceTeamwork the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Teamwork sourceTeamwork, final ICallback<? super Teamwork> callback) {
+    public void patch(final Teamwork sourceTeamwork, final ICallback<Teamwork> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamwork);
     }
 
@@ -100,7 +100,7 @@ public class TeamworkRequest extends BaseRequest implements ITeamworkRequest {
      * @param newTeamwork the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Teamwork newTeamwork, final ICallback<? super Teamwork> callback) {
+    public void post(final Teamwork newTeamwork, final ICallback<Teamwork> callback) {
         send(HttpMethod.POST, callback, newTeamwork);
     }
 
@@ -121,7 +121,7 @@ public class TeamworkRequest extends BaseRequest implements ITeamworkRequest {
      * @param newTeamwork the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Teamwork newTeamwork, final ICallback<? super Teamwork> callback) {
+    public void put(final Teamwork newTeamwork, final ICallback<Teamwork> callback) {
         send(HttpMethod.PUT, callback, newTeamwork);
     }
 
@@ -155,6 +155,17 @@ public class TeamworkRequest extends BaseRequest implements ITeamworkRequest {
      */
      public ITeamworkRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (TeamworkRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ITeamworkRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TeamworkRequest)this;
      }
 

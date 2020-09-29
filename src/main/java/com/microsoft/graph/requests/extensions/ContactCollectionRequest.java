@@ -40,7 +40,7 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
         super(requestUrl, client, requestOptions, ContactCollectionResponse.class, IContactCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IContactCollectionPage> callback) {
+    public void get(final ICallback<IContactCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
         return buildFromResponse(response);
     }
 
-    public void post(final Contact newContact, final ICallback<? super Contact> callback) {
+    public void post(final Contact newContact, final ICallback<Contact> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
      */
     public IContactCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ContactCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IContactCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ContactCollectionRequest)this;
     }
 

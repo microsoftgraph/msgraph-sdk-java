@@ -41,7 +41,7 @@ public class ItemActivityStatRequest extends BaseRequest implements IItemActivit
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemActivityStat> callback) {
+    public void get(final ICallback<ItemActivityStat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class ItemActivityStatRequest extends BaseRequest implements IItemActivit
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemActivityStat> callback) {
+    public void delete(final ICallback<ItemActivityStat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class ItemActivityStatRequest extends BaseRequest implements IItemActivit
      * @param sourceItemActivityStat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemActivityStat sourceItemActivityStat, final ICallback<? super ItemActivityStat> callback) {
+    public void patch(final ItemActivityStat sourceItemActivityStat, final ICallback<ItemActivityStat> callback) {
         send(HttpMethod.PATCH, callback, sourceItemActivityStat);
     }
 
@@ -100,7 +100,7 @@ public class ItemActivityStatRequest extends BaseRequest implements IItemActivit
      * @param newItemActivityStat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemActivityStat newItemActivityStat, final ICallback<? super ItemActivityStat> callback) {
+    public void post(final ItemActivityStat newItemActivityStat, final ICallback<ItemActivityStat> callback) {
         send(HttpMethod.POST, callback, newItemActivityStat);
     }
 
@@ -121,7 +121,7 @@ public class ItemActivityStatRequest extends BaseRequest implements IItemActivit
      * @param newItemActivityStat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemActivityStat newItemActivityStat, final ICallback<? super ItemActivityStat> callback) {
+    public void put(final ItemActivityStat newItemActivityStat, final ICallback<ItemActivityStat> callback) {
         send(HttpMethod.PUT, callback, newItemActivityStat);
     }
 
@@ -155,6 +155,17 @@ public class ItemActivityStatRequest extends BaseRequest implements IItemActivit
      */
      public IItemActivityStatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ItemActivityStatRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IItemActivityStatRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ItemActivityStatRequest)this;
      }
 

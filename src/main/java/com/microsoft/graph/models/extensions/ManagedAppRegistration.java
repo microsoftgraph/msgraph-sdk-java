@@ -6,13 +6,16 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.MobileAppIdentifier;
 import com.microsoft.graph.models.generated.ManagedAppFlaggedReason;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedAppOperation;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionPage;
 
 
@@ -189,15 +192,51 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
 
 
         if (json.has("appliedPolicies")) {
-            appliedPolicies = serializer.deserializeObject(json.get("appliedPolicies").toString(), ManagedAppPolicyCollectionPage.class);
+            final ManagedAppPolicyCollectionResponse response = new ManagedAppPolicyCollectionResponse();
+            if (json.has("appliedPolicies@odata.nextLink")) {
+                response.nextLink = json.get("appliedPolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appliedPolicies").toString(), JsonObject[].class);
+            final ManagedAppPolicy[] array = new ManagedAppPolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedAppPolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            appliedPolicies = new ManagedAppPolicyCollectionPage(response, null);
         }
 
         if (json.has("intendedPolicies")) {
-            intendedPolicies = serializer.deserializeObject(json.get("intendedPolicies").toString(), ManagedAppPolicyCollectionPage.class);
+            final ManagedAppPolicyCollectionResponse response = new ManagedAppPolicyCollectionResponse();
+            if (json.has("intendedPolicies@odata.nextLink")) {
+                response.nextLink = json.get("intendedPolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("intendedPolicies").toString(), JsonObject[].class);
+            final ManagedAppPolicy[] array = new ManagedAppPolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedAppPolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            intendedPolicies = new ManagedAppPolicyCollectionPage(response, null);
         }
 
         if (json.has("operations")) {
-            operations = serializer.deserializeObject(json.get("operations").toString(), ManagedAppOperationCollectionPage.class);
+            final ManagedAppOperationCollectionResponse response = new ManagedAppOperationCollectionResponse();
+            if (json.has("operations@odata.nextLink")) {
+                response.nextLink = json.get("operations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operations").toString(), JsonObject[].class);
+            final ManagedAppOperation[] array = new ManagedAppOperation[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedAppOperation.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            operations = new ManagedAppOperationCollectionPage(response, null);
         }
     }
 }

@@ -34,7 +34,7 @@ public class CertificateBasedAuthConfigurationReferenceRequest extends BaseReque
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfiguration.class);
     }
 
-    public void delete(final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    public void delete(final ICallback<CertificateBasedAuthConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,12 +64,22 @@ public class CertificateBasedAuthConfigurationReferenceRequest extends BaseReque
         return (CertificateBasedAuthConfigurationReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ICertificateBasedAuthConfigurationReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (CertificateBasedAuthConfigurationReferenceRequest)this;
+    }
+    /**
      * Puts the CertificateBasedAuthConfiguration
      *
      * @param srcCertificateBasedAuthConfiguration the CertificateBasedAuthConfiguration reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(CertificateBasedAuthConfiguration srcCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    public void put(CertificateBasedAuthConfiguration srcCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback) {
         send(HttpMethod.PUT, callback, srcCertificateBasedAuthConfiguration);
     }
 

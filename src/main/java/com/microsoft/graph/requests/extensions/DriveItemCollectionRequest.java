@@ -46,7 +46,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
         super(requestUrl, client, requestOptions, DriveItemCollectionResponse.class, IDriveItemCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDriveItemCollectionPage> callback) {
+    public void get(final ICallback<IDriveItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -65,7 +65,7 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
         return buildFromResponse(response);
     }
 
-    public void post(final DriveItem newDriveItem, final ICallback<? super DriveItem> callback) {
+    public void post(final DriveItem newDriveItem, final ICallback<DriveItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -98,17 +98,6 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
      */
     public IDriveItemCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DriveItemCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDriveItemCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DriveItemCollectionRequest)this;
     }
 

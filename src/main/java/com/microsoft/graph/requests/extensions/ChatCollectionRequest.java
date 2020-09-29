@@ -40,7 +40,7 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
         super(requestUrl, client, requestOptions, ChatCollectionResponse.class, IChatCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IChatCollectionPage> callback) {
+    public void get(final ICallback<IChatCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final Chat newChat, final ICallback<? super Chat> callback) {
+    public void post(final Chat newChat, final ICallback<Chat> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ChatCollectionRequest extends BaseCollectionRequest<ChatCollectionR
      */
     public IChatCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ChatCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IChatCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ChatCollectionRequest)this;
     }
 

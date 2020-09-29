@@ -153,7 +153,7 @@ public class UserWithReferenceRequest extends BaseRequest implements IUserWithRe
         super(requestUrl, client, requestOptions, User.class);
     }
 
-    public void post(final User newUser, final IJsonBackedObject payload, final ICallback<? super User> callback) {
+    public void post(final User newUser, final IJsonBackedObject payload, final ICallback<User> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -165,7 +165,7 @@ public class UserWithReferenceRequest extends BaseRequest implements IUserWithRe
         return null;
     }
 
-    public void get(final ICallback<? super User> callback) {
+    public void get(final ICallback<User> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -173,7 +173,7 @@ public class UserWithReferenceRequest extends BaseRequest implements IUserWithRe
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super User> callback) {
+	public void delete(final ICallback<User> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -181,7 +181,7 @@ public class UserWithReferenceRequest extends BaseRequest implements IUserWithRe
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final User sourceUser, final ICallback<? super User> callback) {
+	public void patch(final User sourceUser, final ICallback<User> callback) {
 		send(HttpMethod.PATCH, callback, sourceUser);
 	}
 
@@ -209,6 +209,16 @@ public class UserWithReferenceRequest extends BaseRequest implements IUserWithRe
      */
     public IUserWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (UserWithReferenceRequest)this;
+    }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IUserWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (UserWithReferenceRequest)this;
     }
 }

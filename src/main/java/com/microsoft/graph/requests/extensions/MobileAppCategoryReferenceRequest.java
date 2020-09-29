@@ -34,7 +34,7 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
         super(requestUrl, client, requestOptions, MobileAppCategory.class);
     }
 
-    public void delete(final ICallback<? super MobileAppCategory> callback) {
+    public void delete(final ICallback<MobileAppCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,12 +64,22 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
         return (MobileAppCategoryReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMobileAppCategoryReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MobileAppCategoryReferenceRequest)this;
+    }
+    /**
      * Puts the MobileAppCategory
      *
      * @param srcMobileAppCategory the MobileAppCategory reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(MobileAppCategory srcMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
+    public void put(MobileAppCategory srcMobileAppCategory, final ICallback<MobileAppCategory> callback) {
         send(HttpMethod.PUT, callback, srcMobileAppCategory);
     }
 

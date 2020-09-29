@@ -48,7 +48,7 @@ public class NotebookRequest extends BaseRequest implements INotebookRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Notebook> callback) {
+    public void get(final ICallback<Notebook> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,7 +67,7 @@ public class NotebookRequest extends BaseRequest implements INotebookRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Notebook> callback) {
+    public void delete(final ICallback<Notebook> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +86,7 @@ public class NotebookRequest extends BaseRequest implements INotebookRequest {
      * @param sourceNotebook the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Notebook sourceNotebook, final ICallback<? super Notebook> callback) {
+    public void patch(final Notebook sourceNotebook, final ICallback<Notebook> callback) {
         send(HttpMethod.PATCH, callback, sourceNotebook);
     }
 
@@ -107,7 +107,7 @@ public class NotebookRequest extends BaseRequest implements INotebookRequest {
      * @param newNotebook the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Notebook newNotebook, final ICallback<? super Notebook> callback) {
+    public void post(final Notebook newNotebook, final ICallback<Notebook> callback) {
         send(HttpMethod.POST, callback, newNotebook);
     }
 
@@ -128,7 +128,7 @@ public class NotebookRequest extends BaseRequest implements INotebookRequest {
      * @param newNotebook the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Notebook newNotebook, final ICallback<? super Notebook> callback) {
+    public void put(final Notebook newNotebook, final ICallback<Notebook> callback) {
         send(HttpMethod.PUT, callback, newNotebook);
     }
 
@@ -162,6 +162,17 @@ public class NotebookRequest extends BaseRequest implements INotebookRequest {
      */
      public INotebookRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (NotebookRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public INotebookRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (NotebookRequest)this;
      }
 

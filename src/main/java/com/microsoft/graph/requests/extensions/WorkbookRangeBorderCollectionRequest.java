@@ -40,7 +40,7 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, WorkbookRangeBorderCollectionResponse.class, IWorkbookRangeBorderCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IWorkbookRangeBorderCollectionPage> callback) {
+    public void get(final ICallback<IWorkbookRangeBorderCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
+    public void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
      */
     public IWorkbookRangeBorderCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeBorderCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookRangeBorderCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeBorderCollectionRequest)this;
     }
 

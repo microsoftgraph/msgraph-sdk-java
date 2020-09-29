@@ -37,7 +37,7 @@ public class AppRoleAssignmentRequest extends BaseRequest implements IAppRoleAss
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AppRoleAssignment> callback) {
+    public void get(final ICallback<AppRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AppRoleAssignmentRequest extends BaseRequest implements IAppRoleAss
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AppRoleAssignment> callback) {
+    public void delete(final ICallback<AppRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AppRoleAssignmentRequest extends BaseRequest implements IAppRoleAss
      * @param sourceAppRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppRoleAssignment sourceAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
+    public void patch(final AppRoleAssignment sourceAppRoleAssignment, final ICallback<AppRoleAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceAppRoleAssignment);
     }
 
@@ -96,7 +96,7 @@ public class AppRoleAssignmentRequest extends BaseRequest implements IAppRoleAss
      * @param newAppRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
+    public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<AppRoleAssignment> callback) {
         send(HttpMethod.POST, callback, newAppRoleAssignment);
     }
 
@@ -117,7 +117,7 @@ public class AppRoleAssignmentRequest extends BaseRequest implements IAppRoleAss
      * @param newAppRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
+    public void put(final AppRoleAssignment newAppRoleAssignment, final ICallback<AppRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, newAppRoleAssignment);
     }
 
@@ -151,6 +151,17 @@ public class AppRoleAssignmentRequest extends BaseRequest implements IAppRoleAss
      */
      public IAppRoleAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (AppRoleAssignmentRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAppRoleAssignmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AppRoleAssignmentRequest)this;
      }
 

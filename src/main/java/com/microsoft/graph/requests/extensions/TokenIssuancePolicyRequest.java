@@ -37,7 +37,7 @@ public class TokenIssuancePolicyRequest extends BaseRequest implements ITokenIss
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TokenIssuancePolicy> callback) {
+    public void get(final ICallback<TokenIssuancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TokenIssuancePolicyRequest extends BaseRequest implements ITokenIss
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TokenIssuancePolicy> callback) {
+    public void delete(final ICallback<TokenIssuancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TokenIssuancePolicyRequest extends BaseRequest implements ITokenIss
      * @param sourceTokenIssuancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TokenIssuancePolicy sourceTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
+    public void patch(final TokenIssuancePolicy sourceTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceTokenIssuancePolicy);
     }
 
@@ -96,7 +96,7 @@ public class TokenIssuancePolicyRequest extends BaseRequest implements ITokenIss
      * @param newTokenIssuancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
+    public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback) {
         send(HttpMethod.POST, callback, newTokenIssuancePolicy);
     }
 
@@ -117,7 +117,7 @@ public class TokenIssuancePolicyRequest extends BaseRequest implements ITokenIss
      * @param newTokenIssuancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
+    public void put(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback) {
         send(HttpMethod.PUT, callback, newTokenIssuancePolicy);
     }
 
@@ -151,6 +151,17 @@ public class TokenIssuancePolicyRequest extends BaseRequest implements ITokenIss
      */
      public ITokenIssuancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (TokenIssuancePolicyRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ITokenIssuancePolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TokenIssuancePolicyRequest)this;
      }
 

@@ -61,7 +61,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsInformationProtection> callback) {
+    public void get(final ICallback<WindowsInformationProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -80,7 +80,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsInformationProtection> callback) {
+    public void delete(final ICallback<WindowsInformationProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -99,7 +99,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param sourceWindowsInformationProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsInformationProtection sourceWindowsInformationProtection, final ICallback<? super WindowsInformationProtection> callback) {
+    public void patch(final WindowsInformationProtection sourceWindowsInformationProtection, final ICallback<WindowsInformationProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsInformationProtection);
     }
 
@@ -120,7 +120,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param newWindowsInformationProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<? super WindowsInformationProtection> callback) {
+    public void post(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<WindowsInformationProtection> callback) {
         send(HttpMethod.POST, callback, newWindowsInformationProtection);
     }
 
@@ -141,7 +141,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param newWindowsInformationProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<? super WindowsInformationProtection> callback) {
+    public void put(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<WindowsInformationProtection> callback) {
         send(HttpMethod.PUT, callback, newWindowsInformationProtection);
     }
 
@@ -175,6 +175,17 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      */
      public IWindowsInformationProtectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WindowsInformationProtectionRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindowsInformationProtectionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsInformationProtectionRequest)this;
      }
 

@@ -39,7 +39,7 @@ public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, DirectoryRoleTemplateCollectionResponse.class, IDirectoryRoleTemplateCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDirectoryRoleTemplateCollectionPage> callback) {
+    public void get(final ICallback<IDirectoryRoleTemplateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<? super DirectoryRoleTemplate> callback) {
+    public void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryRoleTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionReques
      */
     public IDirectoryRoleTemplateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DirectoryRoleTemplateCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDirectoryRoleTemplateCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DirectoryRoleTemplateCollectionRequest)this;
     }
 

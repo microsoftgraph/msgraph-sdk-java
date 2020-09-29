@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITargetedManagedAppPolicyAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ITargetedManagedAppPolicyAssignmentCollectionPage> callback);
+    void get(final ICallback<ITargetedManagedAppPolicyAssignmentCollectionPage> callback);
 
     ITargetedManagedAppPolicyAssignmentCollectionPage get() throws ClientException;
 
-    void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback);
+    void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback);
 
     TargetedManagedAppPolicyAssignment post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ITargetedManagedAppPolicyAssignmentCollectionRequest extends IH
      * @return the updated request
      */
     ITargetedManagedAppPolicyAssignmentCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ITargetedManagedAppPolicyAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

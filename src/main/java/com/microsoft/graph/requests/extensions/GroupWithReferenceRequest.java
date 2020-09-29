@@ -88,7 +88,7 @@ public class GroupWithReferenceRequest extends BaseRequest implements IGroupWith
         super(requestUrl, client, requestOptions, Group.class);
     }
 
-    public void post(final Group newGroup, final IJsonBackedObject payload, final ICallback<? super Group> callback) {
+    public void post(final Group newGroup, final IJsonBackedObject payload, final ICallback<Group> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -100,7 +100,7 @@ public class GroupWithReferenceRequest extends BaseRequest implements IGroupWith
         return null;
     }
 
-    public void get(final ICallback<? super Group> callback) {
+    public void get(final ICallback<Group> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -108,7 +108,7 @@ public class GroupWithReferenceRequest extends BaseRequest implements IGroupWith
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super Group> callback) {
+	public void delete(final ICallback<Group> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -116,7 +116,7 @@ public class GroupWithReferenceRequest extends BaseRequest implements IGroupWith
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Group sourceGroup, final ICallback<? super Group> callback) {
+	public void patch(final Group sourceGroup, final ICallback<Group> callback) {
 		send(HttpMethod.PATCH, callback, sourceGroup);
 	}
 
@@ -144,6 +144,16 @@ public class GroupWithReferenceRequest extends BaseRequest implements IGroupWith
      */
     public IGroupWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (GroupWithReferenceRequest)this;
+    }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IGroupWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupWithReferenceRequest)this;
     }
 }

@@ -155,7 +155,7 @@ public class UserRequest extends BaseRequest implements IUserRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super User> callback) {
+    public void get(final ICallback<User> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -174,7 +174,7 @@ public class UserRequest extends BaseRequest implements IUserRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super User> callback) {
+    public void delete(final ICallback<User> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -193,7 +193,7 @@ public class UserRequest extends BaseRequest implements IUserRequest {
      * @param sourceUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final User sourceUser, final ICallback<? super User> callback) {
+    public void patch(final User sourceUser, final ICallback<User> callback) {
         send(HttpMethod.PATCH, callback, sourceUser);
     }
 
@@ -214,7 +214,7 @@ public class UserRequest extends BaseRequest implements IUserRequest {
      * @param newUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final User newUser, final ICallback<? super User> callback) {
+    public void post(final User newUser, final ICallback<User> callback) {
         send(HttpMethod.POST, callback, newUser);
     }
 
@@ -235,7 +235,7 @@ public class UserRequest extends BaseRequest implements IUserRequest {
      * @param newUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final User newUser, final ICallback<? super User> callback) {
+    public void put(final User newUser, final ICallback<User> callback) {
         send(HttpMethod.PUT, callback, newUser);
     }
 
@@ -269,6 +269,17 @@ public class UserRequest extends BaseRequest implements IUserRequest {
      */
      public IUserRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (UserRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IUserRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserRequest)this;
      }
 

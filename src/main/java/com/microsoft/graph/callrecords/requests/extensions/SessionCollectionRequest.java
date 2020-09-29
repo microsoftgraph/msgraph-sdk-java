@@ -40,7 +40,7 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
         super(requestUrl, client, requestOptions, SessionCollectionResponse.class, ISessionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ISessionCollectionPage> callback) {
+    public void get(final ICallback<ISessionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
         return buildFromResponse(response);
     }
 
-    public void post(final Session newSession, final ICallback<? super Session> callback) {
+    public void post(final Session newSession, final ICallback<Session> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SessionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
      */
     public ISessionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SessionCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ISessionCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SessionCollectionRequest)this;
     }
 

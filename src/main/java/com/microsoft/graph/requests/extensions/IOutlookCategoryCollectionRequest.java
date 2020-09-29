@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOutlookCategoryCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IOutlookCategoryCollectionPage> callback);
+    void get(final ICallback<IOutlookCategoryCollectionPage> callback);
 
     IOutlookCategoryCollectionPage get() throws ClientException;
 
-    void post(final OutlookCategory newOutlookCategory, final ICallback<? super OutlookCategory> callback);
+    void post(final OutlookCategory newOutlookCategory, final ICallback<OutlookCategory> callback);
 
     OutlookCategory post(final OutlookCategory newOutlookCategory) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IOutlookCategoryCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IOutlookCategoryCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IOutlookCategoryCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

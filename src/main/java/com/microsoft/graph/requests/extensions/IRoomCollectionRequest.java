@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRoomCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IRoomCollectionPage> callback);
+    void get(final ICallback<IRoomCollectionPage> callback);
 
     IRoomCollectionPage get() throws ClientException;
 
-    void post(final Room newRoom, final ICallback<? super Room> callback);
+    void post(final Room newRoom, final ICallback<Room> callback);
 
     Room post(final Room newRoom) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IRoomCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IRoomCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IRoomCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

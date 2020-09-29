@@ -49,7 +49,7 @@ public class CloudCommunicationsRequest extends BaseRequest implements ICloudCom
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CloudCommunications> callback) {
+    public void get(final ICallback<CloudCommunications> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,7 +68,7 @@ public class CloudCommunicationsRequest extends BaseRequest implements ICloudCom
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CloudCommunications> callback) {
+    public void delete(final ICallback<CloudCommunications> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +87,7 @@ public class CloudCommunicationsRequest extends BaseRequest implements ICloudCom
      * @param sourceCloudCommunications the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CloudCommunications sourceCloudCommunications, final ICallback<? super CloudCommunications> callback) {
+    public void patch(final CloudCommunications sourceCloudCommunications, final ICallback<CloudCommunications> callback) {
         send(HttpMethod.PATCH, callback, sourceCloudCommunications);
     }
 
@@ -108,7 +108,7 @@ public class CloudCommunicationsRequest extends BaseRequest implements ICloudCom
      * @param newCloudCommunications the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CloudCommunications newCloudCommunications, final ICallback<? super CloudCommunications> callback) {
+    public void post(final CloudCommunications newCloudCommunications, final ICallback<CloudCommunications> callback) {
         send(HttpMethod.POST, callback, newCloudCommunications);
     }
 
@@ -129,7 +129,7 @@ public class CloudCommunicationsRequest extends BaseRequest implements ICloudCom
      * @param newCloudCommunications the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CloudCommunications newCloudCommunications, final ICallback<? super CloudCommunications> callback) {
+    public void put(final CloudCommunications newCloudCommunications, final ICallback<CloudCommunications> callback) {
         send(HttpMethod.PUT, callback, newCloudCommunications);
     }
 
@@ -163,6 +163,17 @@ public class CloudCommunicationsRequest extends BaseRequest implements ICloudCom
      */
      public ICloudCommunicationsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (CloudCommunicationsRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ICloudCommunicationsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CloudCommunicationsRequest)this;
      }
 

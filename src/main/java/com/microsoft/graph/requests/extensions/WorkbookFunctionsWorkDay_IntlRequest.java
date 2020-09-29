@@ -37,7 +37,7 @@ public class WorkbookFunctionsWorkDay_IntlRequest extends BaseRequest implements
         body = new WorkbookFunctionsWorkDay_IntlBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsWorkDay_IntlRequest extends BaseRequest implements
      */
     public IWorkbookFunctionsWorkDay_IntlRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsWorkDay_IntlRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsWorkDay_IntlRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsWorkDay_IntlRequest)this;
     }
 

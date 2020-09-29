@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IColumnDefinitionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IColumnDefinitionCollectionPage> callback);
+    void get(final ICallback<IColumnDefinitionCollectionPage> callback);
 
     IColumnDefinitionCollectionPage get() throws ClientException;
 
-    void post(final ColumnDefinition newColumnDefinition, final ICallback<? super ColumnDefinition> callback);
+    void post(final ColumnDefinition newColumnDefinition, final ICallback<ColumnDefinition> callback);
 
     ColumnDefinition post(final ColumnDefinition newColumnDefinition) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IColumnDefinitionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IColumnDefinitionCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IColumnDefinitionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

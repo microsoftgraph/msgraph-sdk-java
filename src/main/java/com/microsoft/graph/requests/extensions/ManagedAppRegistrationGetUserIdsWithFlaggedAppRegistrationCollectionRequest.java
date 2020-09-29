@@ -39,7 +39,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
     }
 
 
-    public void get(final ICallback<? super IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage> callback) {
+    public void get(final ICallback<IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      */
     public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
     }
 

@@ -37,7 +37,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest implements ICha
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ChatMessageHostedContent> callback) {
+    public void get(final ICallback<ChatMessageHostedContent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest implements ICha
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ChatMessageHostedContent> callback) {
+    public void delete(final ICallback<ChatMessageHostedContent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest implements ICha
      * @param sourceChatMessageHostedContent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ChatMessageHostedContent sourceChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
+    public void patch(final ChatMessageHostedContent sourceChatMessageHostedContent, final ICallback<ChatMessageHostedContent> callback) {
         send(HttpMethod.PATCH, callback, sourceChatMessageHostedContent);
     }
 
@@ -96,7 +96,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest implements ICha
      * @param newChatMessageHostedContent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
+    public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<ChatMessageHostedContent> callback) {
         send(HttpMethod.POST, callback, newChatMessageHostedContent);
     }
 
@@ -117,7 +117,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest implements ICha
      * @param newChatMessageHostedContent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
+    public void put(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<ChatMessageHostedContent> callback) {
         send(HttpMethod.PUT, callback, newChatMessageHostedContent);
     }
 
@@ -151,6 +151,17 @@ public class ChatMessageHostedContentRequest extends BaseRequest implements ICha
      */
      public IChatMessageHostedContentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ChatMessageHostedContentRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IChatMessageHostedContentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ChatMessageHostedContentRequest)this;
      }
 

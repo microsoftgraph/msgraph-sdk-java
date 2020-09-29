@@ -35,7 +35,7 @@ public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollec
         super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, IMobileAppCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IMobileAppCategoryCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<IMobileAppCategoryCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,11 +61,6 @@ public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollec
 
     public IMobileAppCategoryCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (MobileAppCategoryCollectionWithReferencesRequest)this;
-    }
-
-    public IMobileAppCategoryCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppCategoryCollectionWithReferencesRequest)this;
     }
 

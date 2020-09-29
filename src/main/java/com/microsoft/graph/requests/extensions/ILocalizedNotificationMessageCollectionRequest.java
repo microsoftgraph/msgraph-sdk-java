@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ILocalizedNotificationMessageCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ILocalizedNotificationMessageCollectionPage> callback);
+    void get(final ICallback<ILocalizedNotificationMessageCollectionPage> callback);
 
     ILocalizedNotificationMessageCollectionPage get() throws ClientException;
 
-    void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback);
+    void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback);
 
     LocalizedNotificationMessage post(final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ILocalizedNotificationMessageCollectionRequest extends IHttpReq
      * @return the updated request
      */
     ILocalizedNotificationMessageCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ILocalizedNotificationMessageCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

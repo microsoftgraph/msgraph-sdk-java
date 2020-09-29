@@ -38,7 +38,7 @@ public class UserActivityReferenceRequest extends BaseRequest implements IUserAc
         super(requestUrl, client, requestOptions, UserActivity.class);
     }
 
-    public void delete(final ICallback<? super UserActivity> callback) {
+    public void delete(final ICallback<UserActivity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -68,12 +68,22 @@ public class UserActivityReferenceRequest extends BaseRequest implements IUserAc
         return (UserActivityReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IUserActivityReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserActivityReferenceRequest)this;
+    }
+    /**
      * Puts the UserActivity
      *
      * @param srcUserActivity the UserActivity reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(UserActivity srcUserActivity, final ICallback<? super UserActivity> callback) {
+    public void put(UserActivity srcUserActivity, final ICallback<UserActivity> callback) {
         send(HttpMethod.PUT, callback, srcUserActivity);
     }
 

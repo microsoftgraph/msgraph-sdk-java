@@ -37,7 +37,7 @@ public class OnenotePageCopyToSectionRequest extends BaseRequest implements IOne
         body = new OnenotePageCopyToSectionBody();
     }
 
-    public void post(final ICallback<? super OnenoteOperation> callback) {
+    public void post(final ICallback<OnenoteOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class OnenotePageCopyToSectionRequest extends BaseRequest implements IOne
      */
     public IOnenotePageCopyToSectionRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (OnenotePageCopyToSectionRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IOnenotePageCopyToSectionRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (OnenotePageCopyToSectionRequest)this;
     }
 

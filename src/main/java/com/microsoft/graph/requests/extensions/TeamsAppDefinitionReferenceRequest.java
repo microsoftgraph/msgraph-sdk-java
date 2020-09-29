@@ -34,7 +34,7 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements I
         super(requestUrl, client, requestOptions, TeamsAppDefinition.class);
     }
 
-    public void delete(final ICallback<? super TeamsAppDefinition> callback) {
+    public void delete(final ICallback<TeamsAppDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,12 +64,22 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements I
         return (TeamsAppDefinitionReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITeamsAppDefinitionReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TeamsAppDefinitionReferenceRequest)this;
+    }
+    /**
      * Puts the TeamsAppDefinition
      *
      * @param srcTeamsAppDefinition the TeamsAppDefinition reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TeamsAppDefinition srcTeamsAppDefinition, final ICallback<? super TeamsAppDefinition> callback) {
+    public void put(TeamsAppDefinition srcTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback) {
         send(HttpMethod.PUT, callback, srcTeamsAppDefinition);
     }
 

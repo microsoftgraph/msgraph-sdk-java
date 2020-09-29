@@ -52,7 +52,7 @@ public class EducationOrganizationRequest extends BaseRequest implements IEducat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EducationOrganization> callback) {
+    public void get(final ICallback<EducationOrganization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class EducationOrganizationRequest extends BaseRequest implements IEducat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EducationOrganization> callback) {
+    public void delete(final ICallback<EducationOrganization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class EducationOrganizationRequest extends BaseRequest implements IEducat
      * @param sourceEducationOrganization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationOrganization sourceEducationOrganization, final ICallback<? super EducationOrganization> callback) {
+    public void patch(final EducationOrganization sourceEducationOrganization, final ICallback<EducationOrganization> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationOrganization);
     }
 
@@ -111,7 +111,7 @@ public class EducationOrganizationRequest extends BaseRequest implements IEducat
      * @param newEducationOrganization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationOrganization newEducationOrganization, final ICallback<? super EducationOrganization> callback) {
+    public void post(final EducationOrganization newEducationOrganization, final ICallback<EducationOrganization> callback) {
         send(HttpMethod.POST, callback, newEducationOrganization);
     }
 
@@ -132,7 +132,7 @@ public class EducationOrganizationRequest extends BaseRequest implements IEducat
      * @param newEducationOrganization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationOrganization newEducationOrganization, final ICallback<? super EducationOrganization> callback) {
+    public void put(final EducationOrganization newEducationOrganization, final ICallback<EducationOrganization> callback) {
         send(HttpMethod.PUT, callback, newEducationOrganization);
     }
 
@@ -166,6 +166,17 @@ public class EducationOrganizationRequest extends BaseRequest implements IEducat
      */
      public IEducationOrganizationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (EducationOrganizationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEducationOrganizationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EducationOrganizationRequest)this;
      }
 

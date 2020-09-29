@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookChartCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IWorkbookChartCollectionPage> callback);
+    void get(final ICallback<IWorkbookChartCollectionPage> callback);
 
     IWorkbookChartCollectionPage get() throws ClientException;
 
-    void post(final WorkbookChart newWorkbookChart, final ICallback<? super WorkbookChart> callback);
+    void post(final WorkbookChart newWorkbookChart, final ICallback<WorkbookChart> callback);
 
     WorkbookChart post(final WorkbookChart newWorkbookChart) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IWorkbookChartCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IWorkbookChartCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IWorkbookChartCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

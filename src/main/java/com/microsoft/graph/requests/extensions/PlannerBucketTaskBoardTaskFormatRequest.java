@@ -37,7 +37,7 @@ public class PlannerBucketTaskBoardTaskFormatRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PlannerBucketTaskBoardTaskFormat> callback) {
+    public void get(final ICallback<PlannerBucketTaskBoardTaskFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PlannerBucketTaskBoardTaskFormatRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PlannerBucketTaskBoardTaskFormat> callback) {
+    public void delete(final ICallback<PlannerBucketTaskBoardTaskFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PlannerBucketTaskBoardTaskFormatRequest extends BaseRequest impleme
      * @param sourcePlannerBucketTaskBoardTaskFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerBucketTaskBoardTaskFormat sourcePlannerBucketTaskBoardTaskFormat, final ICallback<? super PlannerBucketTaskBoardTaskFormat> callback) {
+    public void patch(final PlannerBucketTaskBoardTaskFormat sourcePlannerBucketTaskBoardTaskFormat, final ICallback<PlannerBucketTaskBoardTaskFormat> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerBucketTaskBoardTaskFormat);
     }
 
@@ -96,7 +96,7 @@ public class PlannerBucketTaskBoardTaskFormatRequest extends BaseRequest impleme
      * @param newPlannerBucketTaskBoardTaskFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat, final ICallback<? super PlannerBucketTaskBoardTaskFormat> callback) {
+    public void post(final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat, final ICallback<PlannerBucketTaskBoardTaskFormat> callback) {
         send(HttpMethod.POST, callback, newPlannerBucketTaskBoardTaskFormat);
     }
 
@@ -117,7 +117,7 @@ public class PlannerBucketTaskBoardTaskFormatRequest extends BaseRequest impleme
      * @param newPlannerBucketTaskBoardTaskFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat, final ICallback<? super PlannerBucketTaskBoardTaskFormat> callback) {
+    public void put(final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat, final ICallback<PlannerBucketTaskBoardTaskFormat> callback) {
         send(HttpMethod.PUT, callback, newPlannerBucketTaskBoardTaskFormat);
     }
 
@@ -151,6 +151,17 @@ public class PlannerBucketTaskBoardTaskFormatRequest extends BaseRequest impleme
      */
      public IPlannerBucketTaskBoardTaskFormatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (PlannerBucketTaskBoardTaskFormatRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPlannerBucketTaskBoardTaskFormatRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PlannerBucketTaskBoardTaskFormatRequest)this;
      }
 

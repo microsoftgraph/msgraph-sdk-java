@@ -40,7 +40,7 @@ public class DriveItemDeltaCollectionPage extends BaseCollectionPage<DriveItem, 
      * @param builder The request builder for the next collection page
      */
     public DriveItemDeltaCollectionPage(final DriveItemDeltaCollectionResponse response, final IDriveItemDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder, response.additionalDataManager());
+       super(response.value, builder);
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

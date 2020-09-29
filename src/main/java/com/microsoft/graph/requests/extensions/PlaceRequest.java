@@ -52,7 +52,7 @@ public class PlaceRequest extends BaseRequest implements IPlaceRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Place> callback) {
+    public void get(final ICallback<Place> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class PlaceRequest extends BaseRequest implements IPlaceRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Place> callback) {
+    public void delete(final ICallback<Place> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class PlaceRequest extends BaseRequest implements IPlaceRequest {
      * @param sourcePlace the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Place sourcePlace, final ICallback<? super Place> callback) {
+    public void patch(final Place sourcePlace, final ICallback<Place> callback) {
         send(HttpMethod.PATCH, callback, sourcePlace);
     }
 
@@ -111,7 +111,7 @@ public class PlaceRequest extends BaseRequest implements IPlaceRequest {
      * @param newPlace the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Place newPlace, final ICallback<? super Place> callback) {
+    public void post(final Place newPlace, final ICallback<Place> callback) {
         send(HttpMethod.POST, callback, newPlace);
     }
 
@@ -132,7 +132,7 @@ public class PlaceRequest extends BaseRequest implements IPlaceRequest {
      * @param newPlace the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Place newPlace, final ICallback<? super Place> callback) {
+    public void put(final Place newPlace, final ICallback<Place> callback) {
         send(HttpMethod.PUT, callback, newPlace);
     }
 
@@ -166,6 +166,17 @@ public class PlaceRequest extends BaseRequest implements IPlaceRequest {
      */
      public IPlaceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (PlaceRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPlaceRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PlaceRequest)this;
      }
 

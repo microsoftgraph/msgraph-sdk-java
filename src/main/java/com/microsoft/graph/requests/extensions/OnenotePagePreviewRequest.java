@@ -37,7 +37,7 @@ public class OnenotePagePreviewRequest extends BaseRequest implements IOnenotePa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnenotePagePreview> callback) {
+    public void get(final ICallback<OnenotePagePreview> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,17 +81,6 @@ public class OnenotePagePreviewRequest extends BaseRequest implements IOnenotePa
      */
     public IOnenotePagePreviewRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (OnenotePagePreviewRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IOnenotePagePreviewRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OnenotePagePreviewRequest)this;
     }
 

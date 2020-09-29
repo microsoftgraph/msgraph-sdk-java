@@ -39,7 +39,7 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
         super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, IDeviceCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDeviceCollectionPage> callback) {
+    public void get(final ICallback<IDeviceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
         return buildFromResponse(response);
     }
 
-    public void post(final Device newDevice, final ICallback<? super Device> callback) {
+    public void post(final Device newDevice, final ICallback<Device> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
      */
     public IDeviceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDeviceCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceCollectionRequest)this;
     }
 

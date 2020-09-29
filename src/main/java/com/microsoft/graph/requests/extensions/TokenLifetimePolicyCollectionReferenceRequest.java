@@ -36,7 +36,7 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, ITokenLifetimePolicyCollectionPage.class);
     }
 
-    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<? super TokenLifetimePolicy> callback) {
+    public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenLifetimePolicies/" + newTokenLifetimePolicy.id);
         new TokenLifetimePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,17 +70,6 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
      */
     public ITokenLifetimePolicyCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TokenLifetimePolicyCollectionReferenceRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the sort clause
-     * @return the updated request
-     */
-    public ITokenLifetimePolicyCollectionReferenceRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TokenLifetimePolicyCollectionReferenceRequest)this;
     }
 

@@ -35,7 +35,7 @@ public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseC
         super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, IManagedAppRegistrationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IManagedAppRegistrationCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<IManagedAppRegistrationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,11 +61,6 @@ public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseC
 
     public IManagedAppRegistrationCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedAppRegistrationCollectionWithReferencesRequest)this;
-    }
-
-    public IManagedAppRegistrationCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedAppRegistrationCollectionWithReferencesRequest)this;
     }
 

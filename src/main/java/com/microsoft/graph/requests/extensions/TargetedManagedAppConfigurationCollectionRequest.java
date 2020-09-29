@@ -42,7 +42,7 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, TargetedManagedAppConfigurationCollectionResponse.class, ITargetedManagedAppConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ITargetedManagedAppConfigurationCollectionPage> callback) {
+    public void get(final ICallback<ITargetedManagedAppConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,7 +61,7 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback) {
+    public void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<TargetedManagedAppConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TargetedManagedAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -94,17 +94,6 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
      */
     public ITargetedManagedAppConfigurationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TargetedManagedAppConfigurationCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ITargetedManagedAppConfigurationCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TargetedManagedAppConfigurationCollectionRequest)this;
     }
 

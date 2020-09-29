@@ -40,7 +40,7 @@ public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseColle
         super(requestUrl, client, requestOptions, MultiValueLegacyExtendedPropertyCollectionResponse.class, IMultiValueLegacyExtendedPropertyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IMultiValueLegacyExtendedPropertyCollectionPage> callback) {
+    public void get(final ICallback<IMultiValueLegacyExtendedPropertyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseColle
         return buildFromResponse(response);
     }
 
-    public void post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<? super MultiValueLegacyExtendedProperty> callback) {
+    public void post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<MultiValueLegacyExtendedProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MultiValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class MultiValueLegacyExtendedPropertyCollectionRequest extends BaseColle
      */
     public IMultiValueLegacyExtendedPropertyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (MultiValueLegacyExtendedPropertyCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IMultiValueLegacyExtendedPropertyCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MultiValueLegacyExtendedPropertyCollectionRequest)this;
     }
 

@@ -36,7 +36,7 @@ public class ManagedAppProtectionTargetAppsRequest extends BaseRequest implement
         body = new ManagedAppProtectionTargetAppsBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class ManagedAppProtectionTargetAppsRequest extends BaseRequest implement
      */
     public IManagedAppProtectionTargetAppsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (ManagedAppProtectionTargetAppsRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IManagedAppProtectionTargetAppsRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedAppProtectionTargetAppsRequest)this;
     }
 

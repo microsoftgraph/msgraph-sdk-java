@@ -41,7 +41,7 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationCollectionResponse.class, IManagedDeviceMobileAppConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IManagedDeviceMobileAppConfigurationCollectionPage> callback) {
+    public void get(final ICallback<IManagedDeviceMobileAppConfigurationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<? super ManagedDeviceMobileAppConfiguration> callback) {
+    public void post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<ManagedDeviceMobileAppConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,17 +93,6 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
      */
     public IManagedDeviceMobileAppConfigurationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedDeviceMobileAppConfigurationCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IManagedDeviceMobileAppConfigurationCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedDeviceMobileAppConfigurationCollectionRequest)this;
     }
 

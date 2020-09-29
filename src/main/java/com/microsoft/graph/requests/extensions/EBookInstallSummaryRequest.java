@@ -37,7 +37,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EBookInstallSummary> callback) {
+    public void get(final ICallback<EBookInstallSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EBookInstallSummary> callback) {
+    public void delete(final ICallback<EBookInstallSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @param sourceEBookInstallSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EBookInstallSummary sourceEBookInstallSummary, final ICallback<? super EBookInstallSummary> callback) {
+    public void patch(final EBookInstallSummary sourceEBookInstallSummary, final ICallback<EBookInstallSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceEBookInstallSummary);
     }
 
@@ -96,7 +96,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @param newEBookInstallSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EBookInstallSummary newEBookInstallSummary, final ICallback<? super EBookInstallSummary> callback) {
+    public void post(final EBookInstallSummary newEBookInstallSummary, final ICallback<EBookInstallSummary> callback) {
         send(HttpMethod.POST, callback, newEBookInstallSummary);
     }
 
@@ -117,7 +117,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @param newEBookInstallSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EBookInstallSummary newEBookInstallSummary, final ICallback<? super EBookInstallSummary> callback) {
+    public void put(final EBookInstallSummary newEBookInstallSummary, final ICallback<EBookInstallSummary> callback) {
         send(HttpMethod.PUT, callback, newEBookInstallSummary);
     }
 
@@ -151,6 +151,17 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      */
      public IEBookInstallSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (EBookInstallSummaryRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEBookInstallSummaryRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EBookInstallSummaryRequest)this;
      }
 

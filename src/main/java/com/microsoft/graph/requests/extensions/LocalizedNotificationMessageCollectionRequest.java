@@ -40,7 +40,7 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, LocalizedNotificationMessageCollectionResponse.class, ILocalizedNotificationMessageCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ILocalizedNotificationMessageCollectionPage> callback) {
+    public void get(final ICallback<ILocalizedNotificationMessageCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<? super LocalizedNotificationMessage> callback) {
+    public void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LocalizedNotificationMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
      */
     public ILocalizedNotificationMessageCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (LocalizedNotificationMessageCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ILocalizedNotificationMessageCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (LocalizedNotificationMessageCollectionRequest)this;
     }
 

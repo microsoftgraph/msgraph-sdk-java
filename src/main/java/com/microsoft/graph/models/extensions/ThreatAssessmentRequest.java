@@ -6,6 +6,7 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ThreatCategory;
 import com.microsoft.graph.models.generated.ThreatAssessmentContentType;
@@ -15,6 +16,7 @@ import com.microsoft.graph.models.generated.ThreatAssessmentRequestSource;
 import com.microsoft.graph.models.generated.ThreatAssessmentStatus;
 import com.microsoft.graph.models.extensions.ThreatAssessmentResult;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ThreatAssessmentResultCollectionResponse;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultCollectionPage;
 
 
@@ -135,7 +137,19 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
 
 
         if (json.has("results")) {
-            results = serializer.deserializeObject(json.get("results").toString(), ThreatAssessmentResultCollectionPage.class);
+            final ThreatAssessmentResultCollectionResponse response = new ThreatAssessmentResultCollectionResponse();
+            if (json.has("results@odata.nextLink")) {
+                response.nextLink = json.get("results@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("results").toString(), JsonObject[].class);
+            final ThreatAssessmentResult[] array = new ThreatAssessmentResult[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ThreatAssessmentResult.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            results = new ThreatAssessmentResultCollectionPage(response, null);
         }
     }
 }

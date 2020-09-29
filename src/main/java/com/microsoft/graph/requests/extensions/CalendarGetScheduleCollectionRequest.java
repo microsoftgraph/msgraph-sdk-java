@@ -45,7 +45,7 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
     }
 
 
-    public void post(final ICallback<? super ICalendarGetScheduleCollectionPage> callback) {
+    public void post(final ICallback<ICalendarGetScheduleCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -118,17 +118,6 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
      */
     public ICalendarGetScheduleCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ICalendarGetScheduleCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ICalendarGetScheduleCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ICalendarGetScheduleCollectionRequest)this;
     }
 

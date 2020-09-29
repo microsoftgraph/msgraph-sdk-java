@@ -41,7 +41,7 @@ public class EventCollectionRequest extends BaseCollectionRequest<EventCollectio
         super(requestUrl, client, requestOptions, EventCollectionResponse.class, IEventCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IEventCollectionPage> callback) {
+    public void get(final ICallback<IEventCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class EventCollectionRequest extends BaseCollectionRequest<EventCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final Event newEvent, final ICallback<? super Event> callback) {
+    public void post(final Event newEvent, final ICallback<Event> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,17 +93,6 @@ public class EventCollectionRequest extends BaseCollectionRequest<EventCollectio
      */
     public IEventCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (EventCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IEventCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EventCollectionRequest)this;
     }
 

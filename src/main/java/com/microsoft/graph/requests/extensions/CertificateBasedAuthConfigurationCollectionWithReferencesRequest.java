@@ -35,7 +35,7 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, ICertificateBasedAuthConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ICertificateBasedAuthConfigurationCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<ICertificateBasedAuthConfigurationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,11 +61,6 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
 
     public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (CertificateBasedAuthConfigurationCollectionWithReferencesRequest)this;
-    }
-
-    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CertificateBasedAuthConfigurationCollectionWithReferencesRequest)this;
     }
 

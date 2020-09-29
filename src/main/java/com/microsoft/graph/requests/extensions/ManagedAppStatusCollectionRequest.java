@@ -40,7 +40,7 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
         super(requestUrl, client, requestOptions, ManagedAppStatusCollectionResponse.class, IManagedAppStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IManagedAppStatusCollectionPage> callback) {
+    public void get(final ICallback<IManagedAppStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedAppStatus newManagedAppStatus, final ICallback<? super ManagedAppStatus> callback) {
+    public void post(final ManagedAppStatus newManagedAppStatus, final ICallback<ManagedAppStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
      */
     public IManagedAppStatusCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedAppStatusCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IManagedAppStatusCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedAppStatusCollectionRequest)this;
     }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookRangeViewCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IWorkbookRangeViewCollectionPage> callback);
+    void get(final ICallback<IWorkbookRangeViewCollectionPage> callback);
 
     IWorkbookRangeViewCollectionPage get() throws ClientException;
 
-    void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback);
+    void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<WorkbookRangeView> callback);
 
     WorkbookRangeView post(final WorkbookRangeView newWorkbookRangeView) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IWorkbookRangeViewCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IWorkbookRangeViewCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IWorkbookRangeViewCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

@@ -40,7 +40,7 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
         super(requestUrl, client, requestOptions, ConversationMemberCollectionResponse.class, IConversationMemberCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IConversationMemberCollectionPage> callback) {
+    public void get(final ICallback<IConversationMemberCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
         return buildFromResponse(response);
     }
 
-    public void post(final ConversationMember newConversationMember, final ICallback<? super ConversationMember> callback) {
+    public void post(final ConversationMember newConversationMember, final ICallback<ConversationMember> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConversationMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
      */
     public IConversationMemberCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ConversationMemberCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IConversationMemberCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ConversationMemberCollectionRequest)this;
     }
 

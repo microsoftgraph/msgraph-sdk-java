@@ -39,7 +39,7 @@ public class DriveItemSearchCollectionRequest extends BaseCollectionRequest<Driv
     }
 
 
-    public void get(final ICallback<? super IDriveItemSearchCollectionPage> callback) {
+    public void get(final ICallback<IDriveItemSearchCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class DriveItemSearchCollectionRequest extends BaseCollectionRequest<Driv
      */
     public IDriveItemSearchCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDriveItemSearchCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDriveItemSearchCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDriveItemSearchCollectionRequest)this;
     }
 

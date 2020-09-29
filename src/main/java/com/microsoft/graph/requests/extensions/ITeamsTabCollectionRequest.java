@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITeamsTabCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ITeamsTabCollectionPage> callback);
+    void get(final ICallback<ITeamsTabCollectionPage> callback);
 
     ITeamsTabCollectionPage get() throws ClientException;
 
-    void post(final TeamsTab newTeamsTab, final ICallback<? super TeamsTab> callback);
+    void post(final TeamsTab newTeamsTab, final ICallback<TeamsTab> callback);
 
     TeamsTab post(final TeamsTab newTeamsTab) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ITeamsTabCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITeamsTabCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ITeamsTabCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

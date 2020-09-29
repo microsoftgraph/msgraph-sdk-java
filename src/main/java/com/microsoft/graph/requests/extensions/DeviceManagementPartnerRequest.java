@@ -37,7 +37,7 @@ public class DeviceManagementPartnerRequest extends BaseRequest implements IDevi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementPartner> callback) {
+    public void get(final ICallback<DeviceManagementPartner> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceManagementPartnerRequest extends BaseRequest implements IDevi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementPartner> callback) {
+    public void delete(final ICallback<DeviceManagementPartner> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceManagementPartnerRequest extends BaseRequest implements IDevi
      * @param sourceDeviceManagementPartner the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementPartner sourceDeviceManagementPartner, final ICallback<? super DeviceManagementPartner> callback) {
+    public void patch(final DeviceManagementPartner sourceDeviceManagementPartner, final ICallback<DeviceManagementPartner> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementPartner);
     }
 
@@ -96,7 +96,7 @@ public class DeviceManagementPartnerRequest extends BaseRequest implements IDevi
      * @param newDeviceManagementPartner the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<? super DeviceManagementPartner> callback) {
+    public void post(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<DeviceManagementPartner> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementPartner);
     }
 
@@ -117,7 +117,7 @@ public class DeviceManagementPartnerRequest extends BaseRequest implements IDevi
      * @param newDeviceManagementPartner the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<? super DeviceManagementPartner> callback) {
+    public void put(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<DeviceManagementPartner> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementPartner);
     }
 
@@ -151,6 +151,17 @@ public class DeviceManagementPartnerRequest extends BaseRequest implements IDevi
      */
      public IDeviceManagementPartnerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DeviceManagementPartnerRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceManagementPartnerRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementPartnerRequest)this;
      }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedAppRegistrationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IManagedAppRegistrationCollectionPage> callback);
+    void get(final ICallback<IManagedAppRegistrationCollectionPage> callback);
 
     IManagedAppRegistrationCollectionPage get() throws ClientException;
 
-    void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback);
+    void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<ManagedAppRegistration> callback);
 
     ManagedAppRegistration post(final ManagedAppRegistration newManagedAppRegistration) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IManagedAppRegistrationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IManagedAppRegistrationCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IManagedAppRegistrationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

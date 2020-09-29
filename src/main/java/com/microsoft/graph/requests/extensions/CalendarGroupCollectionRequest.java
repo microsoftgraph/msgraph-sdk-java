@@ -40,7 +40,7 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
         super(requestUrl, client, requestOptions, CalendarGroupCollectionResponse.class, ICalendarGroupCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ICalendarGroupCollectionPage> callback) {
+    public void get(final ICallback<ICalendarGroupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
         return buildFromResponse(response);
     }
 
-    public void post(final CalendarGroup newCalendarGroup, final ICallback<? super CalendarGroup> callback) {
+    public void post(final CalendarGroup newCalendarGroup, final ICallback<CalendarGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class CalendarGroupCollectionRequest extends BaseCollectionRequest<Calend
      */
     public ICalendarGroupCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (CalendarGroupCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ICalendarGroupCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CalendarGroupCollectionRequest)this;
     }
 

@@ -41,7 +41,7 @@ public class PlannerGroupRequest extends BaseRequest implements IPlannerGroupReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PlannerGroup> callback) {
+    public void get(final ICallback<PlannerGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class PlannerGroupRequest extends BaseRequest implements IPlannerGroupReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PlannerGroup> callback) {
+    public void delete(final ICallback<PlannerGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class PlannerGroupRequest extends BaseRequest implements IPlannerGroupReq
      * @param sourcePlannerGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerGroup sourcePlannerGroup, final ICallback<? super PlannerGroup> callback) {
+    public void patch(final PlannerGroup sourcePlannerGroup, final ICallback<PlannerGroup> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerGroup);
     }
 
@@ -100,7 +100,7 @@ public class PlannerGroupRequest extends BaseRequest implements IPlannerGroupReq
      * @param newPlannerGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerGroup newPlannerGroup, final ICallback<? super PlannerGroup> callback) {
+    public void post(final PlannerGroup newPlannerGroup, final ICallback<PlannerGroup> callback) {
         send(HttpMethod.POST, callback, newPlannerGroup);
     }
 
@@ -121,7 +121,7 @@ public class PlannerGroupRequest extends BaseRequest implements IPlannerGroupReq
      * @param newPlannerGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerGroup newPlannerGroup, final ICallback<? super PlannerGroup> callback) {
+    public void put(final PlannerGroup newPlannerGroup, final ICallback<PlannerGroup> callback) {
         send(HttpMethod.PUT, callback, newPlannerGroup);
     }
 
@@ -155,6 +155,17 @@ public class PlannerGroupRequest extends BaseRequest implements IPlannerGroupReq
      */
      public IPlannerGroupRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (PlannerGroupRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPlannerGroupRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PlannerGroupRequest)this;
      }
 

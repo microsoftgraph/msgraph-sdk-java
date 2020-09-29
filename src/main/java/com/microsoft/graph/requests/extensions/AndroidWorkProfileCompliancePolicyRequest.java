@@ -37,7 +37,7 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidWorkProfileCompliancePolicy> callback) {
+    public void get(final ICallback<AndroidWorkProfileCompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidWorkProfileCompliancePolicy> callback) {
+    public void delete(final ICallback<AndroidWorkProfileCompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest imple
      * @param sourceAndroidWorkProfileCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWorkProfileCompliancePolicy sourceAndroidWorkProfileCompliancePolicy, final ICallback<? super AndroidWorkProfileCompliancePolicy> callback) {
+    public void patch(final AndroidWorkProfileCompliancePolicy sourceAndroidWorkProfileCompliancePolicy, final ICallback<AndroidWorkProfileCompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileCompliancePolicy);
     }
 
@@ -96,7 +96,7 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest imple
      * @param newAndroidWorkProfileCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy, final ICallback<? super AndroidWorkProfileCompliancePolicy> callback) {
+    public void post(final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy, final ICallback<AndroidWorkProfileCompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newAndroidWorkProfileCompliancePolicy);
     }
 
@@ -117,7 +117,7 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest imple
      * @param newAndroidWorkProfileCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy, final ICallback<? super AndroidWorkProfileCompliancePolicy> callback) {
+    public void put(final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy, final ICallback<AndroidWorkProfileCompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newAndroidWorkProfileCompliancePolicy);
     }
 
@@ -151,6 +151,17 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest imple
      */
      public IAndroidWorkProfileCompliancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (AndroidWorkProfileCompliancePolicyRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidWorkProfileCompliancePolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidWorkProfileCompliancePolicyRequest)this;
      }
 

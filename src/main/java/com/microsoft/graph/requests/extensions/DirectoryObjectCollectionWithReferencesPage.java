@@ -36,6 +36,6 @@ public class DirectoryObjectCollectionWithReferencesPage extends BaseCollectionP
      * @param builder  the request builder for the next collection page
      */
     public DirectoryObjectCollectionWithReferencesPage(final DirectoryObjectCollectionResponse response, final IDirectoryObjectCollectionWithReferencesRequestBuilder builder) {
-        super(response.value, builder, response.additionalDataManager());
+        super(response.value, builder);
     }
 }

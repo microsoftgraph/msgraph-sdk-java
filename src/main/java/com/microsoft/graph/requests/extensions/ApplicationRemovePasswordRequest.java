@@ -36,7 +36,7 @@ public class ApplicationRemovePasswordRequest extends BaseRequest implements IAp
         body = new ApplicationRemovePasswordBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class ApplicationRemovePasswordRequest extends BaseRequest implements IAp
      */
     public IApplicationRemovePasswordRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (ApplicationRemovePasswordRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IApplicationRemovePasswordRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ApplicationRemovePasswordRequest)this;
     }
 

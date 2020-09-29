@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IRemoteAssistancePartnerCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IRemoteAssistancePartnerCollectionPage> callback);
+    void get(final ICallback<IRemoteAssistancePartnerCollectionPage> callback);
 
     IRemoteAssistancePartnerCollectionPage get() throws ClientException;
 
-    void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback);
+    void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback);
 
     RemoteAssistancePartner post(final RemoteAssistancePartner newRemoteAssistancePartner) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IRemoteAssistancePartnerCollectionRequest extends IHttpRequest 
      * @return the updated request
      */
     IRemoteAssistancePartnerCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IRemoteAssistancePartnerCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

@@ -40,7 +40,7 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, MobileAppAssignmentCollectionResponse.class, IMobileAppAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IMobileAppAssignmentCollectionPage> callback) {
+    public void get(final ICallback<IMobileAppAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<? super MobileAppAssignment> callback) {
+    public void post(final MobileAppAssignment newMobileAppAssignment, final ICallback<MobileAppAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class MobileAppAssignmentCollectionRequest extends BaseCollectionRequest<
      */
     public IMobileAppAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (MobileAppAssignmentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IMobileAppAssignmentCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppAssignmentCollectionRequest)this;
     }
 

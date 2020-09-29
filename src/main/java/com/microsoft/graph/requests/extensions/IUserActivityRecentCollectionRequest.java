@@ -23,7 +23,7 @@ import com.google.gson.annotations.Expose;
  */
 public interface IUserActivityRecentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IUserActivityRecentCollectionPage> callback);
+    void get(final ICallback<IUserActivityRecentCollectionPage> callback);
 
     IUserActivityRecentCollectionPage get() throws ClientException;
 

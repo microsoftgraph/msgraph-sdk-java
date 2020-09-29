@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDirectoryObjectCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IDirectoryObjectCollectionPage> callback);
+    void get(final ICallback<IDirectoryObjectCollectionPage> callback);
 
     IDirectoryObjectCollectionPage get() throws ClientException;
 
-    void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback);
+    void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback);
 
     DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IDirectoryObjectCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDirectoryObjectCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IDirectoryObjectCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

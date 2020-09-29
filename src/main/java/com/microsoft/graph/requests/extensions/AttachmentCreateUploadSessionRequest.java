@@ -37,7 +37,7 @@ public class AttachmentCreateUploadSessionRequest extends BaseRequest implements
         body = new AttachmentCreateUploadSessionBody();
     }
 
-    public void post(final ICallback<? super UploadSession> callback) {
+    public void post(final ICallback<UploadSession> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class AttachmentCreateUploadSessionRequest extends BaseRequest implements
      */
     public IAttachmentCreateUploadSessionRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (AttachmentCreateUploadSessionRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IAttachmentCreateUploadSessionRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AttachmentCreateUploadSessionRequest)this;
     }
 

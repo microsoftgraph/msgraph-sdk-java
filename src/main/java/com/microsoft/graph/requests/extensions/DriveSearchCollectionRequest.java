@@ -39,7 +39,7 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSea
     }
 
 
-    public void get(final ICallback<? super IDriveSearchCollectionPage> callback) {
+    public void get(final ICallback<IDriveSearchCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSea
      */
     public IDriveSearchCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDriveSearchCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDriveSearchCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDriveSearchCollectionRequest)this;
     }
 

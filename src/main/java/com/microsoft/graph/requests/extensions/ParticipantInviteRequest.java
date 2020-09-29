@@ -37,7 +37,7 @@ public class ParticipantInviteRequest extends BaseRequest implements IParticipan
         body = new ParticipantInviteBody();
     }
 
-    public void post(final ICallback<? super InviteParticipantsOperation> callback) {
+    public void post(final ICallback<InviteParticipantsOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class ParticipantInviteRequest extends BaseRequest implements IParticipan
      */
     public IParticipantInviteRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (ParticipantInviteRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IParticipantInviteRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ParticipantInviteRequest)this;
     }
 

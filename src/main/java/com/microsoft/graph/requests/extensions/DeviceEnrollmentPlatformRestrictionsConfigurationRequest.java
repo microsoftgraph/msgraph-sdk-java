@@ -37,7 +37,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
+    public void get(final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
+    public void delete(final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @param sourceDeviceEnrollmentPlatformRestrictionsConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
+    public void patch(final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
+    public void post(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
         send(HttpMethod.POST, callback, newDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
+    public void put(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
         send(HttpMethod.PUT, callback, newDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
@@ -151,6 +151,17 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      */
      public IDeviceEnrollmentPlatformRestrictionsConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DeviceEnrollmentPlatformRestrictionsConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceEnrollmentPlatformRestrictionsConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceEnrollmentPlatformRestrictionsConfigurationRequest)this;
      }
 

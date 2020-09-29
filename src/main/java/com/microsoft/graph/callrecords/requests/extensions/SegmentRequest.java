@@ -37,7 +37,7 @@ public class SegmentRequest extends BaseRequest implements ISegmentRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Segment> callback) {
+    public void get(final ICallback<Segment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SegmentRequest extends BaseRequest implements ISegmentRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Segment> callback) {
+    public void delete(final ICallback<Segment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SegmentRequest extends BaseRequest implements ISegmentRequest {
      * @param sourceSegment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Segment sourceSegment, final ICallback<? super Segment> callback) {
+    public void patch(final Segment sourceSegment, final ICallback<Segment> callback) {
         send(HttpMethod.PATCH, callback, sourceSegment);
     }
 
@@ -96,7 +96,7 @@ public class SegmentRequest extends BaseRequest implements ISegmentRequest {
      * @param newSegment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Segment newSegment, final ICallback<? super Segment> callback) {
+    public void post(final Segment newSegment, final ICallback<Segment> callback) {
         send(HttpMethod.POST, callback, newSegment);
     }
 
@@ -117,7 +117,7 @@ public class SegmentRequest extends BaseRequest implements ISegmentRequest {
      * @param newSegment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Segment newSegment, final ICallback<? super Segment> callback) {
+    public void put(final Segment newSegment, final ICallback<Segment> callback) {
         send(HttpMethod.PUT, callback, newSegment);
     }
 
@@ -151,6 +151,17 @@ public class SegmentRequest extends BaseRequest implements ISegmentRequest {
      */
      public ISegmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (SegmentRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISegmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SegmentRequest)this;
      }
 

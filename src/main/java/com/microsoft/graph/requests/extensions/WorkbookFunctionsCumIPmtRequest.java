@@ -37,7 +37,7 @@ public class WorkbookFunctionsCumIPmtRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsCumIPmtBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsCumIPmtRequest extends BaseRequest implements IWor
      */
     public IWorkbookFunctionsCumIPmtRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsCumIPmtRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsCumIPmtRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsCumIPmtRequest)this;
     }
 

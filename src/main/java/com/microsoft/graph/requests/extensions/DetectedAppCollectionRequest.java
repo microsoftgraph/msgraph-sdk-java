@@ -40,7 +40,7 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
         super(requestUrl, client, requestOptions, DetectedAppCollectionResponse.class, IDetectedAppCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDetectedAppCollectionPage> callback) {
+    public void get(final ICallback<IDetectedAppCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
         return buildFromResponse(response);
     }
 
-    public void post(final DetectedApp newDetectedApp, final ICallback<? super DetectedApp> callback) {
+    public void post(final DetectedApp newDetectedApp, final ICallback<DetectedApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DetectedAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
      */
     public IDetectedAppCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DetectedAppCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDetectedAppCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DetectedAppCollectionRequest)this;
     }
 

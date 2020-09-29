@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IListCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IListCollectionPage> callback);
+    void get(final ICallback<IListCollectionPage> callback);
 
     IListCollectionPage get() throws ClientException;
 
-    void post(final List newList, final ICallback<? super List> callback);
+    void post(final List newList, final ICallback<List> callback);
 
     List post(final List newList) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IListCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IListCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IListCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

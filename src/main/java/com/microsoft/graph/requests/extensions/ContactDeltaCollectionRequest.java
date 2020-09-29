@@ -39,7 +39,7 @@ public class ContactDeltaCollectionRequest extends BaseCollectionRequest<Contact
     }
 
 
-    public void get(final ICallback<? super IContactDeltaCollectionPage> callback) {
+    public void get(final ICallback<IContactDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class ContactDeltaCollectionRequest extends BaseCollectionRequest<Contact
      */
     public IContactDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IContactDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IContactDeltaCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IContactDeltaCollectionRequest)this;
     }
 

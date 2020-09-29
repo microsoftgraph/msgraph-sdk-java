@@ -37,7 +37,7 @@ public class NotebookCopyNotebookRequest extends BaseRequest implements INoteboo
         body = new NotebookCopyNotebookBody();
     }
 
-    public void post(final ICallback<? super OnenoteOperation> callback) {
+    public void post(final ICallback<OnenoteOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class NotebookCopyNotebookRequest extends BaseRequest implements INoteboo
      */
     public INotebookCopyNotebookRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (NotebookCopyNotebookRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public INotebookCopyNotebookRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (NotebookCopyNotebookRequest)this;
     }
 

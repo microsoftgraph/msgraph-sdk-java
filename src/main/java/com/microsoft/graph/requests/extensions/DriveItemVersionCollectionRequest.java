@@ -40,7 +40,7 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
         super(requestUrl, client, requestOptions, DriveItemVersionCollectionResponse.class, IDriveItemVersionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDriveItemVersionCollectionPage> callback) {
+    public void get(final ICallback<IDriveItemVersionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
         return buildFromResponse(response);
     }
 
-    public void post(final DriveItemVersion newDriveItemVersion, final ICallback<? super DriveItemVersion> callback) {
+    public void post(final DriveItemVersion newDriveItemVersion, final ICallback<DriveItemVersion> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DriveItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
      */
     public IDriveItemVersionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DriveItemVersionCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDriveItemVersionCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DriveItemVersionCollectionRequest)this;
     }
 

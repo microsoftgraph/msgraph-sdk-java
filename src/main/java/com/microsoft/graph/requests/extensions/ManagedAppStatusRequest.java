@@ -52,7 +52,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAppStatus> callback) {
+    public void get(final ICallback<ManagedAppStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAppStatus> callback) {
+    public void delete(final ICallback<ManagedAppStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @param sourceManagedAppStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppStatus sourceManagedAppStatus, final ICallback<? super ManagedAppStatus> callback) {
+    public void patch(final ManagedAppStatus sourceManagedAppStatus, final ICallback<ManagedAppStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppStatus);
     }
 
@@ -111,7 +111,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @param newManagedAppStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppStatus newManagedAppStatus, final ICallback<? super ManagedAppStatus> callback) {
+    public void post(final ManagedAppStatus newManagedAppStatus, final ICallback<ManagedAppStatus> callback) {
         send(HttpMethod.POST, callback, newManagedAppStatus);
     }
 
@@ -132,7 +132,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @param newManagedAppStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppStatus newManagedAppStatus, final ICallback<? super ManagedAppStatus> callback) {
+    public void put(final ManagedAppStatus newManagedAppStatus, final ICallback<ManagedAppStatus> callback) {
         send(HttpMethod.PUT, callback, newManagedAppStatus);
     }
 
@@ -166,6 +166,17 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      */
      public IManagedAppStatusRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ManagedAppStatusRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedAppStatusRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagedAppStatusRequest)this;
      }
 

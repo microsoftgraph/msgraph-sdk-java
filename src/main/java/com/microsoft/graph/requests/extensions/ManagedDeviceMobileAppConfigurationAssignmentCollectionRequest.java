@@ -40,7 +40,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse.class, IManagedDeviceMobileAppConfigurationAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IManagedDeviceMobileAppConfigurationAssignmentCollectionPage> callback) {
+    public void get(final ICallback<IManagedDeviceMobileAppConfigurationAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<? super ManagedDeviceMobileAppConfigurationAssignment> callback) {
+    public void post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
      */
     public IManagedDeviceMobileAppConfigurationAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IManagedDeviceMobileAppConfigurationAssignmentCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
     }
 

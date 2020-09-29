@@ -37,7 +37,7 @@ public class ManagedDeviceOverviewRequest extends BaseRequest implements IManage
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedDeviceOverview> callback) {
+    public void get(final ICallback<ManagedDeviceOverview> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedDeviceOverviewRequest extends BaseRequest implements IManage
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedDeviceOverview> callback) {
+    public void delete(final ICallback<ManagedDeviceOverview> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedDeviceOverviewRequest extends BaseRequest implements IManage
      * @param sourceManagedDeviceOverview the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedDeviceOverview sourceManagedDeviceOverview, final ICallback<? super ManagedDeviceOverview> callback) {
+    public void patch(final ManagedDeviceOverview sourceManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedDeviceOverview);
     }
 
@@ -96,7 +96,7 @@ public class ManagedDeviceOverviewRequest extends BaseRequest implements IManage
      * @param newManagedDeviceOverview the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedDeviceOverview newManagedDeviceOverview, final ICallback<? super ManagedDeviceOverview> callback) {
+    public void post(final ManagedDeviceOverview newManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback) {
         send(HttpMethod.POST, callback, newManagedDeviceOverview);
     }
 
@@ -117,7 +117,7 @@ public class ManagedDeviceOverviewRequest extends BaseRequest implements IManage
      * @param newManagedDeviceOverview the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedDeviceOverview newManagedDeviceOverview, final ICallback<? super ManagedDeviceOverview> callback) {
+    public void put(final ManagedDeviceOverview newManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback) {
         send(HttpMethod.PUT, callback, newManagedDeviceOverview);
     }
 
@@ -151,6 +151,17 @@ public class ManagedDeviceOverviewRequest extends BaseRequest implements IManage
      */
      public IManagedDeviceOverviewRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ManagedDeviceOverviewRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedDeviceOverviewRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagedDeviceOverviewRequest)this;
      }
 

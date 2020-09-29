@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISchedulingGroupCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ISchedulingGroupCollectionPage> callback);
+    void get(final ICallback<ISchedulingGroupCollectionPage> callback);
 
     ISchedulingGroupCollectionPage get() throws ClientException;
 
-    void post(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback);
+    void post(final SchedulingGroup newSchedulingGroup, final ICallback<SchedulingGroup> callback);
 
     SchedulingGroup post(final SchedulingGroup newSchedulingGroup) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ISchedulingGroupCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISchedulingGroupCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ISchedulingGroupCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

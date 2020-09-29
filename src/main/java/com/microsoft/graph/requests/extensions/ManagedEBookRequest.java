@@ -67,7 +67,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedEBook> callback) {
+    public void get(final ICallback<ManagedEBook> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -86,7 +86,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedEBook> callback) {
+    public void delete(final ICallback<ManagedEBook> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -105,7 +105,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param sourceManagedEBook the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedEBook sourceManagedEBook, final ICallback<? super ManagedEBook> callback) {
+    public void patch(final ManagedEBook sourceManagedEBook, final ICallback<ManagedEBook> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedEBook);
     }
 
@@ -126,7 +126,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param newManagedEBook the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedEBook newManagedEBook, final ICallback<? super ManagedEBook> callback) {
+    public void post(final ManagedEBook newManagedEBook, final ICallback<ManagedEBook> callback) {
         send(HttpMethod.POST, callback, newManagedEBook);
     }
 
@@ -147,7 +147,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param newManagedEBook the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedEBook newManagedEBook, final ICallback<? super ManagedEBook> callback) {
+    public void put(final ManagedEBook newManagedEBook, final ICallback<ManagedEBook> callback) {
         send(HttpMethod.PUT, callback, newManagedEBook);
     }
 
@@ -181,6 +181,17 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      */
      public IManagedEBookRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ManagedEBookRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedEBookRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagedEBookRequest)this;
      }
 

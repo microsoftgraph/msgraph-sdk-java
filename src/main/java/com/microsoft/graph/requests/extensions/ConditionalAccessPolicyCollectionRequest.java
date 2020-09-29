@@ -40,7 +40,7 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, ConditionalAccessPolicyCollectionResponse.class, IConditionalAccessPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IConditionalAccessPolicyCollectionPage> callback) {
+    public void get(final ICallback<IConditionalAccessPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback) {
+    public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConditionalAccessPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
      */
     public IConditionalAccessPolicyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ConditionalAccessPolicyCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IConditionalAccessPolicyCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ConditionalAccessPolicyCollectionRequest)this;
     }
 

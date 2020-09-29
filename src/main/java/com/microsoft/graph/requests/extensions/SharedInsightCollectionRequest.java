@@ -40,7 +40,7 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
         super(requestUrl, client, requestOptions, SharedInsightCollectionResponse.class, ISharedInsightCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ISharedInsightCollectionPage> callback) {
+    public void get(final ICallback<ISharedInsightCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
         return buildFromResponse(response);
     }
 
-    public void post(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback) {
+    public void post(final SharedInsight newSharedInsight, final ICallback<SharedInsight> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SharedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
      */
     public ISharedInsightCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SharedInsightCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ISharedInsightCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SharedInsightCollectionRequest)this;
     }
 

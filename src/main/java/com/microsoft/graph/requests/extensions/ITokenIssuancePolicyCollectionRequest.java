@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITokenIssuancePolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ITokenIssuancePolicyCollectionPage> callback);
+    void get(final ICallback<ITokenIssuancePolicyCollectionPage> callback);
 
     ITokenIssuancePolicyCollectionPage get() throws ClientException;
 
-    void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback);
+    void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback);
 
     TokenIssuancePolicy post(final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ITokenIssuancePolicyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITokenIssuancePolicyCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ITokenIssuancePolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

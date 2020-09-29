@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IServicePrincipalCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IServicePrincipalCollectionPage> callback);
+    void get(final ICallback<IServicePrincipalCollectionPage> callback);
 
     IServicePrincipalCollectionPage get() throws ClientException;
 
-    void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback);
+    void post(final ServicePrincipal newServicePrincipal, final ICallback<ServicePrincipal> callback);
 
     ServicePrincipal post(final ServicePrincipal newServicePrincipal) throws ClientException;
 
@@ -46,14 +46,6 @@ public interface IServicePrincipalCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IServicePrincipalCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IServicePrincipalCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

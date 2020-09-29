@@ -54,7 +54,7 @@ public class RoleAssignmentRequest extends BaseRequest implements IRoleAssignmen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RoleAssignment> callback) {
+    public void get(final ICallback<RoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -73,7 +73,7 @@ public class RoleAssignmentRequest extends BaseRequest implements IRoleAssignmen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RoleAssignment> callback) {
+    public void delete(final ICallback<RoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +92,7 @@ public class RoleAssignmentRequest extends BaseRequest implements IRoleAssignmen
      * @param sourceRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RoleAssignment sourceRoleAssignment, final ICallback<? super RoleAssignment> callback) {
+    public void patch(final RoleAssignment sourceRoleAssignment, final ICallback<RoleAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceRoleAssignment);
     }
 
@@ -113,7 +113,7 @@ public class RoleAssignmentRequest extends BaseRequest implements IRoleAssignmen
      * @param newRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RoleAssignment newRoleAssignment, final ICallback<? super RoleAssignment> callback) {
+    public void post(final RoleAssignment newRoleAssignment, final ICallback<RoleAssignment> callback) {
         send(HttpMethod.POST, callback, newRoleAssignment);
     }
 
@@ -134,7 +134,7 @@ public class RoleAssignmentRequest extends BaseRequest implements IRoleAssignmen
      * @param newRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RoleAssignment newRoleAssignment, final ICallback<? super RoleAssignment> callback) {
+    public void put(final RoleAssignment newRoleAssignment, final ICallback<RoleAssignment> callback) {
         send(HttpMethod.PUT, callback, newRoleAssignment);
     }
 
@@ -168,6 +168,17 @@ public class RoleAssignmentRequest extends BaseRequest implements IRoleAssignmen
      */
      public IRoleAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (RoleAssignmentRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IRoleAssignmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (RoleAssignmentRequest)this;
      }
 

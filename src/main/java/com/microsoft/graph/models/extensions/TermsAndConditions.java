@@ -6,11 +6,14 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAcceptanceStatus;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAssignment;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionPage;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionPage;
 
 
@@ -147,11 +150,35 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
 
 
         if (json.has("acceptanceStatuses")) {
-            acceptanceStatuses = serializer.deserializeObject(json.get("acceptanceStatuses").toString(), TermsAndConditionsAcceptanceStatusCollectionPage.class);
+            final TermsAndConditionsAcceptanceStatusCollectionResponse response = new TermsAndConditionsAcceptanceStatusCollectionResponse();
+            if (json.has("acceptanceStatuses@odata.nextLink")) {
+                response.nextLink = json.get("acceptanceStatuses@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("acceptanceStatuses").toString(), JsonObject[].class);
+            final TermsAndConditionsAcceptanceStatus[] array = new TermsAndConditionsAcceptanceStatus[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TermsAndConditionsAcceptanceStatus.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            acceptanceStatuses = new TermsAndConditionsAcceptanceStatusCollectionPage(response, null);
         }
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), TermsAndConditionsAssignmentCollectionPage.class);
+            final TermsAndConditionsAssignmentCollectionResponse response = new TermsAndConditionsAssignmentCollectionResponse();
+            if (json.has("assignments@odata.nextLink")) {
+                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
+            final TermsAndConditionsAssignment[] array = new TermsAndConditionsAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TermsAndConditionsAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            assignments = new TermsAndConditionsAssignmentCollectionPage(response, null);
         }
     }
 }

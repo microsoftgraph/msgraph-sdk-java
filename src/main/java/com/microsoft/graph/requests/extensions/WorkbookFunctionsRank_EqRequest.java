@@ -37,7 +37,7 @@ public class WorkbookFunctionsRank_EqRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsRank_EqBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsRank_EqRequest extends BaseRequest implements IWor
      */
     public IWorkbookFunctionsRank_EqRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsRank_EqRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsRank_EqRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsRank_EqRequest)this;
     }
 

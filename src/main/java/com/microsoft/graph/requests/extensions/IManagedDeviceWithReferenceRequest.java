@@ -29,19 +29,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IManagedDeviceWithReferenceRequest extends IHttpRequest {
 
-    void post(final ManagedDevice newManagedDevice, final IJsonBackedObject payload, final ICallback<? super ManagedDevice> callback);
+    void post(final ManagedDevice newManagedDevice, final IJsonBackedObject payload, final ICallback<ManagedDevice> callback);
 
     ManagedDevice post(final ManagedDevice newManagedDevice, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<? super ManagedDevice> callback);
+    void get(final ICallback<ManagedDevice> callback);
 
     ManagedDevice get() throws ClientException;
 
-	void delete(final ICallback<? super ManagedDevice> callback);
+	void delete(final ICallback<ManagedDevice> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final ManagedDevice sourceManagedDevice, final ICallback<? super ManagedDevice> callback);
+	void patch(final ManagedDevice sourceManagedDevice, final ICallback<ManagedDevice> callback);
 
 	ManagedDevice patch(final ManagedDevice sourceManagedDevice) throws ClientException;
 

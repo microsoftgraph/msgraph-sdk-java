@@ -39,7 +39,7 @@ public class IdentityContainerRequest extends BaseRequest implements IIdentityCo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IdentityContainer> callback) {
+    public void get(final ICallback<IdentityContainer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class IdentityContainerRequest extends BaseRequest implements IIdentityCo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IdentityContainer> callback) {
+    public void delete(final ICallback<IdentityContainer> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class IdentityContainerRequest extends BaseRequest implements IIdentityCo
      * @param sourceIdentityContainer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentityContainer sourceIdentityContainer, final ICallback<? super IdentityContainer> callback) {
+    public void patch(final IdentityContainer sourceIdentityContainer, final ICallback<IdentityContainer> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentityContainer);
     }
 
@@ -98,7 +98,7 @@ public class IdentityContainerRequest extends BaseRequest implements IIdentityCo
      * @param newIdentityContainer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentityContainer newIdentityContainer, final ICallback<? super IdentityContainer> callback) {
+    public void post(final IdentityContainer newIdentityContainer, final ICallback<IdentityContainer> callback) {
         send(HttpMethod.POST, callback, newIdentityContainer);
     }
 
@@ -119,7 +119,7 @@ public class IdentityContainerRequest extends BaseRequest implements IIdentityCo
      * @param newIdentityContainer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentityContainer newIdentityContainer, final ICallback<? super IdentityContainer> callback) {
+    public void put(final IdentityContainer newIdentityContainer, final ICallback<IdentityContainer> callback) {
         send(HttpMethod.PUT, callback, newIdentityContainer);
     }
 
@@ -153,6 +153,17 @@ public class IdentityContainerRequest extends BaseRequest implements IIdentityCo
      */
      public IIdentityContainerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (IdentityContainerRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IIdentityContainerRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IdentityContainerRequest)this;
      }
 

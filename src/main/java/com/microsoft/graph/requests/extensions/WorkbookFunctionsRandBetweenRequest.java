@@ -37,7 +37,7 @@ public class WorkbookFunctionsRandBetweenRequest extends BaseRequest implements 
         body = new WorkbookFunctionsRandBetweenBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsRandBetweenRequest extends BaseRequest implements 
      */
     public IWorkbookFunctionsRandBetweenRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsRandBetweenRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsRandBetweenRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsRandBetweenRequest)this;
     }
 

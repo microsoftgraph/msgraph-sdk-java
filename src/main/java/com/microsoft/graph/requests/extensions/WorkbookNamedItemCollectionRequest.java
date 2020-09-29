@@ -41,7 +41,7 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
         super(requestUrl, client, requestOptions, WorkbookNamedItemCollectionResponse.class, IWorkbookNamedItemCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IWorkbookNamedItemCollectionPage> callback) {
+    public void get(final ICallback<IWorkbookNamedItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<? super WorkbookNamedItem> callback) {
+    public void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<WorkbookNamedItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookNamedItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,17 +93,6 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
      */
     public IWorkbookNamedItemCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookNamedItemCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookNamedItemCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookNamedItemCollectionRequest)this;
     }
 

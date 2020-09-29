@@ -35,7 +35,7 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
         super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, IOAuth2PermissionGrantCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IOAuth2PermissionGrantCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<IOAuth2PermissionGrantCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,11 +61,6 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
 
     public IOAuth2PermissionGrantCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (OAuth2PermissionGrantCollectionWithReferencesRequest)this;
-    }
-
-    public IOAuth2PermissionGrantCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OAuth2PermissionGrantCollectionWithReferencesRequest)this;
     }
 

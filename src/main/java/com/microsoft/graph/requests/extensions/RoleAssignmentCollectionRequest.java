@@ -40,7 +40,7 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
         super(requestUrl, client, requestOptions, RoleAssignmentCollectionResponse.class, IRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IRoleAssignmentCollectionPage> callback) {
+    public void get(final ICallback<IRoleAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
         return buildFromResponse(response);
     }
 
-    public void post(final RoleAssignment newRoleAssignment, final ICallback<? super RoleAssignment> callback) {
+    public void post(final RoleAssignment newRoleAssignment, final ICallback<RoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
      */
     public IRoleAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (RoleAssignmentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IRoleAssignmentCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RoleAssignmentCollectionRequest)this;
     }
 

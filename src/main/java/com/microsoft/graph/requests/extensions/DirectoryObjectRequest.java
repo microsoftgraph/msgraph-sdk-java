@@ -53,7 +53,7 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DirectoryObject> callback) {
+    public void get(final ICallback<DirectoryObject> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,7 +72,7 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DirectoryObject> callback) {
+    public void delete(final ICallback<DirectoryObject> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +91,7 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
      * @param sourceDirectoryObject the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryObject sourceDirectoryObject, final ICallback<? super DirectoryObject> callback) {
+    public void patch(final DirectoryObject sourceDirectoryObject, final ICallback<DirectoryObject> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryObject);
     }
 
@@ -112,7 +112,7 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
      * @param newDirectoryObject the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {
+    public void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {
         send(HttpMethod.POST, callback, newDirectoryObject);
     }
 
@@ -133,7 +133,7 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
      * @param newDirectoryObject the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {
+    public void put(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {
         send(HttpMethod.PUT, callback, newDirectoryObject);
     }
 
@@ -167,6 +167,17 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
      */
      public IDirectoryObjectRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DirectoryObjectRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDirectoryObjectRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DirectoryObjectRequest)this;
      }
 

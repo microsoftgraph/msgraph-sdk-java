@@ -39,7 +39,7 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
         super(requestUrl, client, requestOptions, DomainDnsRecordCollectionResponse.class, IDomainDnsRecordCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDomainDnsRecordCollectionPage> callback) {
+    public void get(final ICallback<IDomainDnsRecordCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
         return buildFromResponse(response);
     }
 
-    public void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<? super DomainDnsRecord> callback) {
+    public void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<DomainDnsRecord> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainDnsRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
      */
     public IDomainDnsRecordCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DomainDnsRecordCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDomainDnsRecordCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DomainDnsRecordCollectionRequest)this;
     }
 

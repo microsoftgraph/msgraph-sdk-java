@@ -36,7 +36,7 @@ public class UserChangePasswordRequest extends BaseRequest implements IUserChang
         body = new UserChangePasswordBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class UserChangePasswordRequest extends BaseRequest implements IUserChang
      */
     public IUserChangePasswordRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (UserChangePasswordRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IUserChangePasswordRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (UserChangePasswordRequest)this;
     }
 

@@ -40,7 +40,7 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignmentCollectionResponse.class, IDeviceCompliancePolicyAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDeviceCompliancePolicyAssignmentCollectionPage> callback) {
+    public void get(final ICallback<IDeviceCompliancePolicyAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<DeviceCompliancePolicyAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
      */
     public IDeviceCompliancePolicyAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceCompliancePolicyAssignmentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDeviceCompliancePolicyAssignmentCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceCompliancePolicyAssignmentCollectionRequest)this;
     }
 

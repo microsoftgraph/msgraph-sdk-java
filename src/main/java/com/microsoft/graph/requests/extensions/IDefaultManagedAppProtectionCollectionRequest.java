@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDefaultManagedAppProtectionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IDefaultManagedAppProtectionCollectionPage> callback);
+    void get(final ICallback<IDefaultManagedAppProtectionCollectionPage> callback);
 
     IDefaultManagedAppProtectionCollectionPage get() throws ClientException;
 
-    void post(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<? super DefaultManagedAppProtection> callback);
+    void post(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<DefaultManagedAppProtection> callback);
 
     DefaultManagedAppProtection post(final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IDefaultManagedAppProtectionCollectionRequest extends IHttpRequ
      * @return the updated request
      */
     IDefaultManagedAppProtectionCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IDefaultManagedAppProtectionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

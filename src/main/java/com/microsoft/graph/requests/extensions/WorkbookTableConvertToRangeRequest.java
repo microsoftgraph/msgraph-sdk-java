@@ -37,7 +37,7 @@ public class WorkbookTableConvertToRangeRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super WorkbookRange> callback) {
+    public void post(final ICallback<WorkbookRange> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,6 +70,17 @@ public class WorkbookTableConvertToRangeRequest extends BaseRequest implements I
      */
     public IWorkbookTableConvertToRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookTableConvertToRangeRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookTableConvertToRangeRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookTableConvertToRangeRequest)this;
     }
 

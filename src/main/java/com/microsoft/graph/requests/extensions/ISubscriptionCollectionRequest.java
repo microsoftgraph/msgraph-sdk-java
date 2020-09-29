@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISubscriptionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ISubscriptionCollectionPage> callback);
+    void get(final ICallback<ISubscriptionCollectionPage> callback);
 
     ISubscriptionCollectionPage get() throws ClientException;
 
-    void post(final Subscription newSubscription, final ICallback<? super Subscription> callback);
+    void post(final Subscription newSubscription, final ICallback<Subscription> callback);
 
     Subscription post(final Subscription newSubscription) throws ClientException;
 
@@ -44,14 +44,6 @@ public interface ISubscriptionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISubscriptionCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ISubscriptionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

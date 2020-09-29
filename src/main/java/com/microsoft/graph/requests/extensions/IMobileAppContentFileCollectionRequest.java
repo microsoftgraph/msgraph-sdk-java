@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IMobileAppContentFileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IMobileAppContentFileCollectionPage> callback);
+    void get(final ICallback<IMobileAppContentFileCollectionPage> callback);
 
     IMobileAppContentFileCollectionPage get() throws ClientException;
 
-    void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<? super MobileAppContentFile> callback);
+    void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<MobileAppContentFile> callback);
 
     MobileAppContentFile post(final MobileAppContentFile newMobileAppContentFile) throws ClientException;
 
@@ -46,14 +46,6 @@ public interface IMobileAppContentFileCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IMobileAppContentFileCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IMobileAppContentFileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

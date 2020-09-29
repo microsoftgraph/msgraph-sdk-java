@@ -24,11 +24,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOnlineMeetingCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IOnlineMeetingCollectionPage> callback);
+    void get(final ICallback<IOnlineMeetingCollectionPage> callback);
 
     IOnlineMeetingCollectionPage get() throws ClientException;
 
-    void post(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback);
+    void post(final OnlineMeeting newOnlineMeeting, final ICallback<OnlineMeeting> callback);
 
     OnlineMeeting post(final OnlineMeeting newOnlineMeeting) throws ClientException;
 
@@ -47,14 +47,6 @@ public interface IOnlineMeetingCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IOnlineMeetingCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IOnlineMeetingCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

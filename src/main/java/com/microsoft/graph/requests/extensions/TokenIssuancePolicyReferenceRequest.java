@@ -34,7 +34,7 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
         super(requestUrl, client, requestOptions, TokenIssuancePolicy.class);
     }
 
-    public void delete(final ICallback<? super TokenIssuancePolicy> callback) {
+    public void delete(final ICallback<TokenIssuancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,12 +64,22 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
         return (TokenIssuancePolicyReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITokenIssuancePolicyReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TokenIssuancePolicyReferenceRequest)this;
+    }
+    /**
      * Puts the TokenIssuancePolicy
      *
      * @param srcTokenIssuancePolicy the TokenIssuancePolicy reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TokenIssuancePolicy srcTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
+    public void put(TokenIssuancePolicy srcTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback) {
         send(HttpMethod.PUT, callback, srcTokenIssuancePolicy);
     }
 

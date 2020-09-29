@@ -37,7 +37,7 @@ public class WorkbookFunctionsBin2HexRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsBin2HexBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsBin2HexRequest extends BaseRequest implements IWor
      */
     public IWorkbookFunctionsBin2HexRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsBin2HexRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsBin2HexRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsBin2HexRequest)this;
     }
 

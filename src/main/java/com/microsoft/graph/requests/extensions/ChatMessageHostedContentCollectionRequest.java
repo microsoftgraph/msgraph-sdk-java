@@ -40,7 +40,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
         super(requestUrl, client, requestOptions, ChatMessageHostedContentCollectionResponse.class, IChatMessageHostedContentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IChatMessageHostedContentCollectionPage> callback) {
+    public void get(final ICallback<IChatMessageHostedContentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
         return buildFromResponse(response);
     }
 
-    public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<? super ChatMessageHostedContent> callback) {
+    public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<ChatMessageHostedContent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
      */
     public IChatMessageHostedContentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ChatMessageHostedContentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IChatMessageHostedContentCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ChatMessageHostedContentCollectionRequest)this;
     }
 

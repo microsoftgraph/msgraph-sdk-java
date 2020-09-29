@@ -6,6 +6,7 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.OperationStatus;
 import com.microsoft.graph.models.extensions.OfferShiftRequest;
@@ -18,14 +19,23 @@ import com.microsoft.graph.models.extensions.TimeOffReason;
 import com.microsoft.graph.models.extensions.TimeOffRequest;
 import com.microsoft.graph.models.extensions.TimeOff;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionPage;
+import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionPage;
+import com.microsoft.graph.requests.extensions.OpenShiftCollectionResponse;
 import com.microsoft.graph.requests.extensions.OpenShiftCollectionPage;
+import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.ShiftCollectionResponse;
 import com.microsoft.graph.requests.extensions.ShiftCollectionPage;
+import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionPage;
+import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionResponse;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionPage;
+import com.microsoft.graph.requests.extensions.TimeOffRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.TimeOffRequestCollectionPage;
+import com.microsoft.graph.requests.extensions.TimeOffCollectionResponse;
 import com.microsoft.graph.requests.extensions.TimeOffCollectionPage;
 
 
@@ -234,39 +244,147 @@ public class Schedule extends Entity implements IJsonBackedObject {
 
 
         if (json.has("offerShiftRequests")) {
-            offerShiftRequests = serializer.deserializeObject(json.get("offerShiftRequests").toString(), OfferShiftRequestCollectionPage.class);
+            final OfferShiftRequestCollectionResponse response = new OfferShiftRequestCollectionResponse();
+            if (json.has("offerShiftRequests@odata.nextLink")) {
+                response.nextLink = json.get("offerShiftRequests@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("offerShiftRequests").toString(), JsonObject[].class);
+            final OfferShiftRequest[] array = new OfferShiftRequest[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OfferShiftRequest.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            offerShiftRequests = new OfferShiftRequestCollectionPage(response, null);
         }
 
         if (json.has("openShiftChangeRequests")) {
-            openShiftChangeRequests = serializer.deserializeObject(json.get("openShiftChangeRequests").toString(), OpenShiftChangeRequestCollectionPage.class);
+            final OpenShiftChangeRequestCollectionResponse response = new OpenShiftChangeRequestCollectionResponse();
+            if (json.has("openShiftChangeRequests@odata.nextLink")) {
+                response.nextLink = json.get("openShiftChangeRequests@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("openShiftChangeRequests").toString(), JsonObject[].class);
+            final OpenShiftChangeRequest[] array = new OpenShiftChangeRequest[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OpenShiftChangeRequest.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            openShiftChangeRequests = new OpenShiftChangeRequestCollectionPage(response, null);
         }
 
         if (json.has("openShifts")) {
-            openShifts = serializer.deserializeObject(json.get("openShifts").toString(), OpenShiftCollectionPage.class);
+            final OpenShiftCollectionResponse response = new OpenShiftCollectionResponse();
+            if (json.has("openShifts@odata.nextLink")) {
+                response.nextLink = json.get("openShifts@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("openShifts").toString(), JsonObject[].class);
+            final OpenShift[] array = new OpenShift[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OpenShift.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            openShifts = new OpenShiftCollectionPage(response, null);
         }
 
         if (json.has("schedulingGroups")) {
-            schedulingGroups = serializer.deserializeObject(json.get("schedulingGroups").toString(), SchedulingGroupCollectionPage.class);
+            final SchedulingGroupCollectionResponse response = new SchedulingGroupCollectionResponse();
+            if (json.has("schedulingGroups@odata.nextLink")) {
+                response.nextLink = json.get("schedulingGroups@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("schedulingGroups").toString(), JsonObject[].class);
+            final SchedulingGroup[] array = new SchedulingGroup[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SchedulingGroup.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            schedulingGroups = new SchedulingGroupCollectionPage(response, null);
         }
 
         if (json.has("shifts")) {
-            shifts = serializer.deserializeObject(json.get("shifts").toString(), ShiftCollectionPage.class);
+            final ShiftCollectionResponse response = new ShiftCollectionResponse();
+            if (json.has("shifts@odata.nextLink")) {
+                response.nextLink = json.get("shifts@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("shifts").toString(), JsonObject[].class);
+            final Shift[] array = new Shift[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Shift.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            shifts = new ShiftCollectionPage(response, null);
         }
 
         if (json.has("swapShiftsChangeRequests")) {
-            swapShiftsChangeRequests = serializer.deserializeObject(json.get("swapShiftsChangeRequests").toString(), SwapShiftsChangeRequestCollectionPage.class);
+            final SwapShiftsChangeRequestCollectionResponse response = new SwapShiftsChangeRequestCollectionResponse();
+            if (json.has("swapShiftsChangeRequests@odata.nextLink")) {
+                response.nextLink = json.get("swapShiftsChangeRequests@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("swapShiftsChangeRequests").toString(), JsonObject[].class);
+            final SwapShiftsChangeRequest[] array = new SwapShiftsChangeRequest[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SwapShiftsChangeRequest.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            swapShiftsChangeRequests = new SwapShiftsChangeRequestCollectionPage(response, null);
         }
 
         if (json.has("timeOffReasons")) {
-            timeOffReasons = serializer.deserializeObject(json.get("timeOffReasons").toString(), TimeOffReasonCollectionPage.class);
+            final TimeOffReasonCollectionResponse response = new TimeOffReasonCollectionResponse();
+            if (json.has("timeOffReasons@odata.nextLink")) {
+                response.nextLink = json.get("timeOffReasons@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("timeOffReasons").toString(), JsonObject[].class);
+            final TimeOffReason[] array = new TimeOffReason[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TimeOffReason.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            timeOffReasons = new TimeOffReasonCollectionPage(response, null);
         }
 
         if (json.has("timeOffRequests")) {
-            timeOffRequests = serializer.deserializeObject(json.get("timeOffRequests").toString(), TimeOffRequestCollectionPage.class);
+            final TimeOffRequestCollectionResponse response = new TimeOffRequestCollectionResponse();
+            if (json.has("timeOffRequests@odata.nextLink")) {
+                response.nextLink = json.get("timeOffRequests@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("timeOffRequests").toString(), JsonObject[].class);
+            final TimeOffRequest[] array = new TimeOffRequest[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TimeOffRequest.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            timeOffRequests = new TimeOffRequestCollectionPage(response, null);
         }
 
         if (json.has("timesOff")) {
-            timesOff = serializer.deserializeObject(json.get("timesOff").toString(), TimeOffCollectionPage.class);
+            final TimeOffCollectionResponse response = new TimeOffCollectionResponse();
+            if (json.has("timesOff@odata.nextLink")) {
+                response.nextLink = json.get("timesOff@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("timesOff").toString(), JsonObject[].class);
+            final TimeOff[] array = new TimeOff[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TimeOff.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            timesOff = new TimeOffCollectionPage(response, null);
         }
     }
 }

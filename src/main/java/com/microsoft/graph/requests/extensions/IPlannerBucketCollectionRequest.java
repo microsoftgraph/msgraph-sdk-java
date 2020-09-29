@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPlannerBucketCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IPlannerBucketCollectionPage> callback);
+    void get(final ICallback<IPlannerBucketCollectionPage> callback);
 
     IPlannerBucketCollectionPage get() throws ClientException;
 
-    void post(final PlannerBucket newPlannerBucket, final ICallback<? super PlannerBucket> callback);
+    void post(final PlannerBucket newPlannerBucket, final ICallback<PlannerBucket> callback);
 
     PlannerBucket post(final PlannerBucket newPlannerBucket) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IPlannerBucketCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPlannerBucketCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IPlannerBucketCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

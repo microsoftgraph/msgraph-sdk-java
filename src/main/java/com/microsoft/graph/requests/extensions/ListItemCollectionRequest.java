@@ -41,7 +41,7 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
         super(requestUrl, client, requestOptions, ListItemCollectionResponse.class, IListItemCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IListItemCollectionPage> callback) {
+    public void get(final ICallback<IListItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
         return buildFromResponse(response);
     }
 
-    public void post(final ListItem newListItem, final ICallback<? super ListItem> callback) {
+    public void post(final ListItem newListItem, final ICallback<ListItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ListItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,17 +93,6 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
      */
     public IListItemCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ListItemCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IListItemCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ListItemCollectionRequest)this;
     }
 

@@ -40,7 +40,7 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, SwapShiftsChangeRequestCollectionResponse.class, ISwapShiftsChangeRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ISwapShiftsChangeRequestCollectionPage> callback) {
+    public void get(final ICallback<ISwapShiftsChangeRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback) {
+    public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SwapShiftsChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
      */
     public ISwapShiftsChangeRequestCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SwapShiftsChangeRequestCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ISwapShiftsChangeRequestCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SwapShiftsChangeRequestCollectionRequest)this;
     }
 

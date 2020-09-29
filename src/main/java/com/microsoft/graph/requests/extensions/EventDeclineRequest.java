@@ -36,7 +36,7 @@ public class EventDeclineRequest extends BaseRequest implements IEventDeclineReq
         body = new EventDeclineBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class EventDeclineRequest extends BaseRequest implements IEventDeclineReq
      */
     public IEventDeclineRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (EventDeclineRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IEventDeclineRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EventDeclineRequest)this;
     }
 

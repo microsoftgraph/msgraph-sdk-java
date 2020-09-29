@@ -36,7 +36,7 @@ public class ManagedEBookAssignRequest extends BaseRequest implements IManagedEB
         body = new ManagedEBookAssignBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class ManagedEBookAssignRequest extends BaseRequest implements IManagedEB
      */
     public IManagedEBookAssignRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (ManagedEBookAssignRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IManagedEBookAssignRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedEBookAssignRequest)this;
     }
 

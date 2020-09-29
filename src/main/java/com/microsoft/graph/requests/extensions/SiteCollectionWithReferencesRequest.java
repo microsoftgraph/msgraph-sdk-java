@@ -36,7 +36,7 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionRequest<S
         super(requestUrl, client, requestOptions, SiteCollectionResponse.class, ISiteCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ISiteCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<ISiteCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -62,11 +62,6 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionRequest<S
 
     public ISiteCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SiteCollectionWithReferencesRequest)this;
-    }
-
-    public ISiteCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SiteCollectionWithReferencesRequest)this;
     }
 

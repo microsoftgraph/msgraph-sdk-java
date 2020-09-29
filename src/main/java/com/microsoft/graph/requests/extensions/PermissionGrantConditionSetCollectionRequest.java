@@ -40,7 +40,7 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, PermissionGrantConditionSetCollectionResponse.class, IPermissionGrantConditionSetCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IPermissionGrantConditionSetCollectionPage> callback) {
+    public void get(final ICallback<IPermissionGrantConditionSetCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<? super PermissionGrantConditionSet> callback) {
+    public void post(final PermissionGrantConditionSet newPermissionGrantConditionSet, final ICallback<PermissionGrantConditionSet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionGrantConditionSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class PermissionGrantConditionSetCollectionRequest extends BaseCollection
      */
     public IPermissionGrantConditionSetCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PermissionGrantConditionSetCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IPermissionGrantConditionSetCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PermissionGrantConditionSetCollectionRequest)this;
     }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IClaimsMappingPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IClaimsMappingPolicyCollectionPage> callback);
+    void get(final ICallback<IClaimsMappingPolicyCollectionPage> callback);
 
     IClaimsMappingPolicyCollectionPage get() throws ClientException;
 
-    void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback);
+    void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback);
 
     ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IClaimsMappingPolicyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IClaimsMappingPolicyCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IClaimsMappingPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedEBookAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IManagedEBookAssignmentCollectionPage> callback);
+    void get(final ICallback<IManagedEBookAssignmentCollectionPage> callback);
 
     IManagedEBookAssignmentCollectionPage get() throws ClientException;
 
-    void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback);
+    void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<ManagedEBookAssignment> callback);
 
     ManagedEBookAssignment post(final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IManagedEBookAssignmentCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IManagedEBookAssignmentCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IManagedEBookAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

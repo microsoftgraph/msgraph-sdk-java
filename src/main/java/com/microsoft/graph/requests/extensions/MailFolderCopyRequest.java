@@ -37,7 +37,7 @@ public class MailFolderCopyRequest extends BaseRequest implements IMailFolderCop
         body = new MailFolderCopyBody();
     }
 
-    public void post(final ICallback<? super MailFolder> callback) {
+    public void post(final ICallback<MailFolder> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class MailFolderCopyRequest extends BaseRequest implements IMailFolderCop
      */
     public IMailFolderCopyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (MailFolderCopyRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMailFolderCopyRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MailFolderCopyRequest)this;
     }
 

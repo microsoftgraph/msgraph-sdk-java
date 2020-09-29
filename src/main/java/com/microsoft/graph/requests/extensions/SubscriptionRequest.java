@@ -37,7 +37,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Subscription> callback) {
+    public void get(final ICallback<Subscription> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Subscription> callback) {
+    public void delete(final ICallback<Subscription> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @param sourceSubscription the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Subscription sourceSubscription, final ICallback<? super Subscription> callback) {
+    public void patch(final Subscription sourceSubscription, final ICallback<Subscription> callback) {
         send(HttpMethod.PATCH, callback, sourceSubscription);
     }
 
@@ -96,7 +96,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @param newSubscription the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Subscription newSubscription, final ICallback<? super Subscription> callback) {
+    public void post(final Subscription newSubscription, final ICallback<Subscription> callback) {
         send(HttpMethod.POST, callback, newSubscription);
     }
 
@@ -117,7 +117,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @param newSubscription the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Subscription newSubscription, final ICallback<? super Subscription> callback) {
+    public void put(final Subscription newSubscription, final ICallback<Subscription> callback) {
         send(HttpMethod.PUT, callback, newSubscription);
     }
 
@@ -151,6 +151,17 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      */
      public ISubscriptionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (SubscriptionRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISubscriptionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SubscriptionRequest)this;
      }
 

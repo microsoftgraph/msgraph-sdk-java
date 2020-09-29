@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAppRoleAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IAppRoleAssignmentCollectionPage> callback);
+    void get(final ICallback<IAppRoleAssignmentCollectionPage> callback);
 
     IAppRoleAssignmentCollectionPage get() throws ClientException;
 
-    void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback);
+    void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<AppRoleAssignment> callback);
 
     AppRoleAssignment post(final AppRoleAssignment newAppRoleAssignment) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IAppRoleAssignmentCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IAppRoleAssignmentCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IAppRoleAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

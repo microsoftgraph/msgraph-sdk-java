@@ -37,7 +37,7 @@ public class WorkbookFunctionsRank_AvgRequest extends BaseRequest implements IWo
         body = new WorkbookFunctionsRank_AvgBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsRank_AvgRequest extends BaseRequest implements IWo
      */
     public IWorkbookFunctionsRank_AvgRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsRank_AvgRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsRank_AvgRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsRank_AvgRequest)this;
     }
 

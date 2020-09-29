@@ -40,7 +40,7 @@ public class PersonCollectionRequest extends BaseCollectionRequest<PersonCollect
         super(requestUrl, client, requestOptions, PersonCollectionResponse.class, IPersonCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IPersonCollectionPage> callback) {
+    public void get(final ICallback<IPersonCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class PersonCollectionRequest extends BaseCollectionRequest<PersonCollect
         return buildFromResponse(response);
     }
 
-    public void post(final Person newPerson, final ICallback<? super Person> callback) {
+    public void post(final Person newPerson, final ICallback<Person> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PersonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class PersonCollectionRequest extends BaseCollectionRequest<PersonCollect
      */
     public IPersonCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PersonCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IPersonCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PersonCollectionRequest)this;
     }
 

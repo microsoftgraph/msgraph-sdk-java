@@ -6,6 +6,7 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
@@ -13,8 +14,11 @@ import com.microsoft.graph.models.extensions.DeviceInstallState;
 import com.microsoft.graph.models.extensions.EBookInstallSummary;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionPage;
+import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionPage;
 
 
@@ -175,15 +179,51 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments").toString(), ManagedEBookAssignmentCollectionPage.class);
+            final ManagedEBookAssignmentCollectionResponse response = new ManagedEBookAssignmentCollectionResponse();
+            if (json.has("assignments@odata.nextLink")) {
+                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
+            final ManagedEBookAssignment[] array = new ManagedEBookAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedEBookAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            assignments = new ManagedEBookAssignmentCollectionPage(response, null);
         }
 
         if (json.has("deviceStates")) {
-            deviceStates = serializer.deserializeObject(json.get("deviceStates").toString(), DeviceInstallStateCollectionPage.class);
+            final DeviceInstallStateCollectionResponse response = new DeviceInstallStateCollectionResponse();
+            if (json.has("deviceStates@odata.nextLink")) {
+                response.nextLink = json.get("deviceStates@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStates").toString(), JsonObject[].class);
+            final DeviceInstallState[] array = new DeviceInstallState[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceInstallState.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceStates = new DeviceInstallStateCollectionPage(response, null);
         }
 
         if (json.has("userStateSummary")) {
-            userStateSummary = serializer.deserializeObject(json.get("userStateSummary").toString(), UserInstallStateSummaryCollectionPage.class);
+            final UserInstallStateSummaryCollectionResponse response = new UserInstallStateSummaryCollectionResponse();
+            if (json.has("userStateSummary@odata.nextLink")) {
+                response.nextLink = json.get("userStateSummary@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userStateSummary").toString(), JsonObject[].class);
+            final UserInstallStateSummary[] array = new UserInstallStateSummary[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserInstallStateSummary.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            userStateSummary = new UserInstallStateSummaryCollectionPage(response, null);
         }
     }
 }

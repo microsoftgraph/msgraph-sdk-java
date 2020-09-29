@@ -37,7 +37,7 @@ public class WorkbookFunctionsSqrtPiRequest extends BaseRequest implements IWork
         body = new WorkbookFunctionsSqrtPiBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsSqrtPiRequest extends BaseRequest implements IWork
      */
     public IWorkbookFunctionsSqrtPiRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsSqrtPiRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsSqrtPiRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsSqrtPiRequest)this;
     }
 

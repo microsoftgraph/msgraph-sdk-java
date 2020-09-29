@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IEnrollmentConfigurationAssignmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IEnrollmentConfigurationAssignmentCollectionPage> callback);
+    void get(final ICallback<IEnrollmentConfigurationAssignmentCollectionPage> callback);
 
     IEnrollmentConfigurationAssignmentCollectionPage get() throws ClientException;
 
-    void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<? super EnrollmentConfigurationAssignment> callback);
+    void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback);
 
     EnrollmentConfigurationAssignment post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IEnrollmentConfigurationAssignmentCollectionRequest extends IHt
      * @return the updated request
      */
     IEnrollmentConfigurationAssignmentCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IEnrollmentConfigurationAssignmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

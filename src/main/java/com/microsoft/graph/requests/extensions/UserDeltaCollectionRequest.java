@@ -39,7 +39,7 @@ public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaC
     }
 
 
-    public void get(final ICallback<? super IUserDeltaCollectionPage> callback) {
+    public void get(final ICallback<IUserDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaC
      */
     public IUserDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IUserDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IUserDeltaCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IUserDeltaCollectionRequest)this;
     }
 

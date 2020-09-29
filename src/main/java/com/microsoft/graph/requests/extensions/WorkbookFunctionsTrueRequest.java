@@ -37,7 +37,7 @@ public class WorkbookFunctionsTrueRequest extends BaseRequest implements IWorkbo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,6 +70,17 @@ public class WorkbookFunctionsTrueRequest extends BaseRequest implements IWorkbo
      */
     public IWorkbookFunctionsTrueRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsTrueRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsTrueRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsTrueRequest)this;
     }
 

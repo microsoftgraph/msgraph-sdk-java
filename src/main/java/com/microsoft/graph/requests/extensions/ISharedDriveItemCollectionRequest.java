@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISharedDriveItemCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ISharedDriveItemCollectionPage> callback);
+    void get(final ICallback<ISharedDriveItemCollectionPage> callback);
 
     ISharedDriveItemCollectionPage get() throws ClientException;
 
-    void post(final SharedDriveItem newSharedDriveItem, final ICallback<? super SharedDriveItem> callback);
+    void post(final SharedDriveItem newSharedDriveItem, final ICallback<SharedDriveItem> callback);
 
     SharedDriveItem post(final SharedDriveItem newSharedDriveItem) throws ClientException;
 
@@ -44,14 +44,6 @@ public interface ISharedDriveItemCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISharedDriveItemCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ISharedDriveItemCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

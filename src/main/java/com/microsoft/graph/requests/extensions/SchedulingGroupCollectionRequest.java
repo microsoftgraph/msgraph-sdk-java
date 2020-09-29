@@ -40,7 +40,7 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
         super(requestUrl, client, requestOptions, SchedulingGroupCollectionResponse.class, ISchedulingGroupCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ISchedulingGroupCollectionPage> callback) {
+    public void get(final ICallback<ISchedulingGroupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
         return buildFromResponse(response);
     }
 
-    public void post(final SchedulingGroup newSchedulingGroup, final ICallback<? super SchedulingGroup> callback) {
+    public void post(final SchedulingGroup newSchedulingGroup, final ICallback<SchedulingGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SchedulingGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
      */
     public ISchedulingGroupCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SchedulingGroupCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ISchedulingGroupCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SchedulingGroupCollectionRequest)this;
     }
 

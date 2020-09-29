@@ -41,7 +41,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
         super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, IManagedDeviceCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IManagedDeviceCollectionPage> callback) {
+    public void get(final ICallback<IManagedDeviceCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
+    public void post(final ManagedDevice newManagedDevice, final ICallback<ManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,17 +93,6 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
      */
     public IManagedDeviceCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedDeviceCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IManagedDeviceCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedDeviceCollectionRequest)this;
     }
 

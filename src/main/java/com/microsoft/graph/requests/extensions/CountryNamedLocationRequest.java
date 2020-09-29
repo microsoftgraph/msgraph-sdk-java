@@ -37,7 +37,7 @@ public class CountryNamedLocationRequest extends BaseRequest implements ICountry
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CountryNamedLocation> callback) {
+    public void get(final ICallback<CountryNamedLocation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class CountryNamedLocationRequest extends BaseRequest implements ICountry
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CountryNamedLocation> callback) {
+    public void delete(final ICallback<CountryNamedLocation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class CountryNamedLocationRequest extends BaseRequest implements ICountry
      * @param sourceCountryNamedLocation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CountryNamedLocation sourceCountryNamedLocation, final ICallback<? super CountryNamedLocation> callback) {
+    public void patch(final CountryNamedLocation sourceCountryNamedLocation, final ICallback<CountryNamedLocation> callback) {
         send(HttpMethod.PATCH, callback, sourceCountryNamedLocation);
     }
 
@@ -96,7 +96,7 @@ public class CountryNamedLocationRequest extends BaseRequest implements ICountry
      * @param newCountryNamedLocation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CountryNamedLocation newCountryNamedLocation, final ICallback<? super CountryNamedLocation> callback) {
+    public void post(final CountryNamedLocation newCountryNamedLocation, final ICallback<CountryNamedLocation> callback) {
         send(HttpMethod.POST, callback, newCountryNamedLocation);
     }
 
@@ -117,7 +117,7 @@ public class CountryNamedLocationRequest extends BaseRequest implements ICountry
      * @param newCountryNamedLocation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CountryNamedLocation newCountryNamedLocation, final ICallback<? super CountryNamedLocation> callback) {
+    public void put(final CountryNamedLocation newCountryNamedLocation, final ICallback<CountryNamedLocation> callback) {
         send(HttpMethod.PUT, callback, newCountryNamedLocation);
     }
 
@@ -151,6 +151,17 @@ public class CountryNamedLocationRequest extends BaseRequest implements ICountry
      */
      public ICountryNamedLocationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (CountryNamedLocationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ICountryNamedLocationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CountryNamedLocationRequest)this;
      }
 

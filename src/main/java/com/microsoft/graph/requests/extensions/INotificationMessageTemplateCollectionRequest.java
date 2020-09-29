@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface INotificationMessageTemplateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super INotificationMessageTemplateCollectionPage> callback);
+    void get(final ICallback<INotificationMessageTemplateCollectionPage> callback);
 
     INotificationMessageTemplateCollectionPage get() throws ClientException;
 
-    void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback);
+    void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback);
 
     NotificationMessageTemplate post(final NotificationMessageTemplate newNotificationMessageTemplate) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface INotificationMessageTemplateCollectionRequest extends IHttpRequ
      * @return the updated request
      */
     INotificationMessageTemplateCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    INotificationMessageTemplateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

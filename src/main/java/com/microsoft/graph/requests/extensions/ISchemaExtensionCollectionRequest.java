@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISchemaExtensionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ISchemaExtensionCollectionPage> callback);
+    void get(final ICallback<ISchemaExtensionCollectionPage> callback);
 
     ISchemaExtensionCollectionPage get() throws ClientException;
 
-    void post(final SchemaExtension newSchemaExtension, final ICallback<? super SchemaExtension> callback);
+    void post(final SchemaExtension newSchemaExtension, final ICallback<SchemaExtension> callback);
 
     SchemaExtension post(final SchemaExtension newSchemaExtension) throws ClientException;
 
@@ -44,14 +44,6 @@ public interface ISchemaExtensionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISchemaExtensionCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ISchemaExtensionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

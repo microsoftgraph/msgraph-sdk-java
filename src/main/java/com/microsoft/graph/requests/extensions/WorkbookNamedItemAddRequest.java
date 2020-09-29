@@ -37,7 +37,7 @@ public class WorkbookNamedItemAddRequest extends BaseRequest implements IWorkboo
         body = new WorkbookNamedItemAddBody();
     }
 
-    public void post(final ICallback<? super WorkbookNamedItem> callback) {
+    public void post(final ICallback<WorkbookNamedItem> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookNamedItemAddRequest extends BaseRequest implements IWorkboo
      */
     public IWorkbookNamedItemAddRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookNamedItemAddRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookNamedItemAddRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookNamedItemAddRequest)this;
     }
 

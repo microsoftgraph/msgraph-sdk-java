@@ -40,7 +40,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookTableColumn> callback) {
+    public void get(final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookTableColumn> callback) {
+    public void delete(final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +78,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @param sourceWorkbookTableColumn the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookTableColumn sourceWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
+    public void patch(final WorkbookTableColumn sourceWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookTableColumn);
     }
 
@@ -99,7 +99,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookTableColumn the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
+    public void post(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.POST, callback, newWorkbookTableColumn);
     }
 
@@ -120,7 +120,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookTableColumn the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
+    public void put(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.PUT, callback, newWorkbookTableColumn);
     }
 
@@ -154,6 +154,17 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      */
      public IWorkbookTableColumnRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookTableColumnRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookTableColumnRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookTableColumnRequest)this;
      }
 

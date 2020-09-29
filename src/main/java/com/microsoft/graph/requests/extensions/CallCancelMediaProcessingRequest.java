@@ -37,7 +37,7 @@ public class CallCancelMediaProcessingRequest extends BaseRequest implements ICa
         body = new CallCancelMediaProcessingBody();
     }
 
-    public void post(final ICallback<? super CancelMediaProcessingOperation> callback) {
+    public void post(final ICallback<CancelMediaProcessingOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class CallCancelMediaProcessingRequest extends BaseRequest implements ICa
      */
     public ICallCancelMediaProcessingRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (CallCancelMediaProcessingRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ICallCancelMediaProcessingRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CallCancelMediaProcessingRequest)this;
     }
 

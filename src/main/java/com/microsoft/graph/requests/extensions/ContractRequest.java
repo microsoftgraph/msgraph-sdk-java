@@ -37,7 +37,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Contract> callback) {
+    public void get(final ICallback<Contract> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Contract> callback) {
+    public void delete(final ICallback<Contract> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @param sourceContract the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Contract sourceContract, final ICallback<? super Contract> callback) {
+    public void patch(final Contract sourceContract, final ICallback<Contract> callback) {
         send(HttpMethod.PATCH, callback, sourceContract);
     }
 
@@ -96,7 +96,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @param newContract the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Contract newContract, final ICallback<? super Contract> callback) {
+    public void post(final Contract newContract, final ICallback<Contract> callback) {
         send(HttpMethod.POST, callback, newContract);
     }
 
@@ -117,7 +117,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @param newContract the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Contract newContract, final ICallback<? super Contract> callback) {
+    public void put(final Contract newContract, final ICallback<Contract> callback) {
         send(HttpMethod.PUT, callback, newContract);
     }
 
@@ -151,6 +151,17 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      */
      public IContractRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ContractRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IContractRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ContractRequest)this;
      }
 

@@ -52,7 +52,7 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
+    public void get(final ICallback<DeviceManagementTroubleshootingEvent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
+    public void delete(final ICallback<DeviceManagementTroubleshootingEvent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest imp
      * @param sourceDeviceManagementTroubleshootingEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementTroubleshootingEvent sourceDeviceManagementTroubleshootingEvent, final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
+    public void patch(final DeviceManagementTroubleshootingEvent sourceDeviceManagementTroubleshootingEvent, final ICallback<DeviceManagementTroubleshootingEvent> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementTroubleshootingEvent);
     }
 
@@ -111,7 +111,7 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest imp
      * @param newDeviceManagementTroubleshootingEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
+    public void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<DeviceManagementTroubleshootingEvent> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementTroubleshootingEvent);
     }
 
@@ -132,7 +132,7 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest imp
      * @param newDeviceManagementTroubleshootingEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
+    public void put(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<DeviceManagementTroubleshootingEvent> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementTroubleshootingEvent);
     }
 
@@ -166,6 +166,17 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest imp
      */
      public IDeviceManagementTroubleshootingEventRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DeviceManagementTroubleshootingEventRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceManagementTroubleshootingEventRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceManagementTroubleshootingEventRequest)this;
      }
 

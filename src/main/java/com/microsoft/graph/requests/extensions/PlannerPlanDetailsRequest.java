@@ -37,7 +37,7 @@ public class PlannerPlanDetailsRequest extends BaseRequest implements IPlannerPl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PlannerPlanDetails> callback) {
+    public void get(final ICallback<PlannerPlanDetails> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class PlannerPlanDetailsRequest extends BaseRequest implements IPlannerPl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PlannerPlanDetails> callback) {
+    public void delete(final ICallback<PlannerPlanDetails> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PlannerPlanDetailsRequest extends BaseRequest implements IPlannerPl
      * @param sourcePlannerPlanDetails the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerPlanDetails sourcePlannerPlanDetails, final ICallback<? super PlannerPlanDetails> callback) {
+    public void patch(final PlannerPlanDetails sourcePlannerPlanDetails, final ICallback<PlannerPlanDetails> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerPlanDetails);
     }
 
@@ -96,7 +96,7 @@ public class PlannerPlanDetailsRequest extends BaseRequest implements IPlannerPl
      * @param newPlannerPlanDetails the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerPlanDetails newPlannerPlanDetails, final ICallback<? super PlannerPlanDetails> callback) {
+    public void post(final PlannerPlanDetails newPlannerPlanDetails, final ICallback<PlannerPlanDetails> callback) {
         send(HttpMethod.POST, callback, newPlannerPlanDetails);
     }
 
@@ -117,7 +117,7 @@ public class PlannerPlanDetailsRequest extends BaseRequest implements IPlannerPl
      * @param newPlannerPlanDetails the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerPlanDetails newPlannerPlanDetails, final ICallback<? super PlannerPlanDetails> callback) {
+    public void put(final PlannerPlanDetails newPlannerPlanDetails, final ICallback<PlannerPlanDetails> callback) {
         send(HttpMethod.PUT, callback, newPlannerPlanDetails);
     }
 
@@ -151,6 +151,17 @@ public class PlannerPlanDetailsRequest extends BaseRequest implements IPlannerPl
      */
      public IPlannerPlanDetailsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (PlannerPlanDetailsRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPlannerPlanDetailsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PlannerPlanDetailsRequest)this;
      }
 

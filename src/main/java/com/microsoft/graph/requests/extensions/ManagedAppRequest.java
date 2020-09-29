@@ -52,7 +52,7 @@ public class ManagedAppRequest extends BaseRequest implements IManagedAppRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedApp> callback) {
+    public void get(final ICallback<ManagedApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class ManagedAppRequest extends BaseRequest implements IManagedAppRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedApp> callback) {
+    public void delete(final ICallback<ManagedApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class ManagedAppRequest extends BaseRequest implements IManagedAppRequest
      * @param sourceManagedApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedApp sourceManagedApp, final ICallback<? super ManagedApp> callback) {
+    public void patch(final ManagedApp sourceManagedApp, final ICallback<ManagedApp> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedApp);
     }
 
@@ -111,7 +111,7 @@ public class ManagedAppRequest extends BaseRequest implements IManagedAppRequest
      * @param newManagedApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedApp newManagedApp, final ICallback<? super ManagedApp> callback) {
+    public void post(final ManagedApp newManagedApp, final ICallback<ManagedApp> callback) {
         send(HttpMethod.POST, callback, newManagedApp);
     }
 
@@ -132,7 +132,7 @@ public class ManagedAppRequest extends BaseRequest implements IManagedAppRequest
      * @param newManagedApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedApp newManagedApp, final ICallback<? super ManagedApp> callback) {
+    public void put(final ManagedApp newManagedApp, final ICallback<ManagedApp> callback) {
         send(HttpMethod.PUT, callback, newManagedApp);
     }
 
@@ -166,6 +166,17 @@ public class ManagedAppRequest extends BaseRequest implements IManagedAppRequest
      */
      public IManagedAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ManagedAppRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedAppRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagedAppRequest)this;
      }
 

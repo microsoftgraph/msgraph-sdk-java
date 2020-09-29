@@ -52,7 +52,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
+    public void get(final ICallback<OnenoteEntitySchemaObjectModel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
+    public void delete(final ICallback<OnenoteEntitySchemaObjectModel> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @param sourceOnenoteEntitySchemaObjectModel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel, final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
+    public void patch(final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel, final ICallback<OnenoteEntitySchemaObjectModel> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteEntitySchemaObjectModel);
     }
 
@@ -111,7 +111,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @param newOnenoteEntitySchemaObjectModel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
+    public void post(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, final ICallback<OnenoteEntitySchemaObjectModel> callback) {
         send(HttpMethod.POST, callback, newOnenoteEntitySchemaObjectModel);
     }
 
@@ -132,7 +132,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @param newOnenoteEntitySchemaObjectModel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
+    public void put(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, final ICallback<OnenoteEntitySchemaObjectModel> callback) {
         send(HttpMethod.PUT, callback, newOnenoteEntitySchemaObjectModel);
     }
 
@@ -166,6 +166,17 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      */
      public IOnenoteEntitySchemaObjectModelRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (OnenoteEntitySchemaObjectModelRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOnenoteEntitySchemaObjectModelRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OnenoteEntitySchemaObjectModelRequest)this;
      }
 

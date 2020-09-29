@@ -50,7 +50,7 @@ public class WorkbookTableRequest extends BaseRequest implements IWorkbookTableR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookTable> callback) {
+    public void get(final ICallback<WorkbookTable> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -69,7 +69,7 @@ public class WorkbookTableRequest extends BaseRequest implements IWorkbookTableR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookTable> callback) {
+    public void delete(final ICallback<WorkbookTable> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +88,7 @@ public class WorkbookTableRequest extends BaseRequest implements IWorkbookTableR
      * @param sourceWorkbookTable the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookTable sourceWorkbookTable, final ICallback<? super WorkbookTable> callback) {
+    public void patch(final WorkbookTable sourceWorkbookTable, final ICallback<WorkbookTable> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookTable);
     }
 
@@ -109,7 +109,7 @@ public class WorkbookTableRequest extends BaseRequest implements IWorkbookTableR
      * @param newWorkbookTable the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookTable newWorkbookTable, final ICallback<? super WorkbookTable> callback) {
+    public void post(final WorkbookTable newWorkbookTable, final ICallback<WorkbookTable> callback) {
         send(HttpMethod.POST, callback, newWorkbookTable);
     }
 
@@ -130,7 +130,7 @@ public class WorkbookTableRequest extends BaseRequest implements IWorkbookTableR
      * @param newWorkbookTable the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookTable newWorkbookTable, final ICallback<? super WorkbookTable> callback) {
+    public void put(final WorkbookTable newWorkbookTable, final ICallback<WorkbookTable> callback) {
         send(HttpMethod.PUT, callback, newWorkbookTable);
     }
 
@@ -164,6 +164,17 @@ public class WorkbookTableRequest extends BaseRequest implements IWorkbookTableR
      */
      public IWorkbookTableRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookTableRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookTableRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookTableRequest)this;
      }
 

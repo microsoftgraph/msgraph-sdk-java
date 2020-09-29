@@ -37,7 +37,7 @@ public class GroupAssignLicenseRequest extends BaseRequest implements IGroupAssi
         body = new GroupAssignLicenseBody();
     }
 
-    public void post(final ICallback<? super Group> callback) {
+    public void post(final ICallback<Group> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class GroupAssignLicenseRequest extends BaseRequest implements IGroupAssi
      */
     public IGroupAssignLicenseRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (GroupAssignLicenseRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IGroupAssignLicenseRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (GroupAssignLicenseRequest)this;
     }
 

@@ -46,7 +46,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnenoteSection> callback) {
+    public void get(final ICallback<OnenoteSection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,7 +65,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnenoteSection> callback) {
+    public void delete(final ICallback<OnenoteSection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +84,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @param sourceOnenoteSection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnenoteSection sourceOnenoteSection, final ICallback<? super OnenoteSection> callback) {
+    public void patch(final OnenoteSection sourceOnenoteSection, final ICallback<OnenoteSection> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteSection);
     }
 
@@ -105,7 +105,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @param newOnenoteSection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback) {
+    public void post(final OnenoteSection newOnenoteSection, final ICallback<OnenoteSection> callback) {
         send(HttpMethod.POST, callback, newOnenoteSection);
     }
 
@@ -126,7 +126,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @param newOnenoteSection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback) {
+    public void put(final OnenoteSection newOnenoteSection, final ICallback<OnenoteSection> callback) {
         send(HttpMethod.PUT, callback, newOnenoteSection);
     }
 
@@ -160,6 +160,17 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      */
      public IOnenoteSectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (OnenoteSectionRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOnenoteSectionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OnenoteSectionRequest)this;
      }
 

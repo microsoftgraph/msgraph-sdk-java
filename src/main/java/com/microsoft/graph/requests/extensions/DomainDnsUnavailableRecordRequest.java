@@ -37,7 +37,7 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest implements ID
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DomainDnsUnavailableRecord> callback) {
+    public void get(final ICallback<DomainDnsUnavailableRecord> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest implements ID
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DomainDnsUnavailableRecord> callback) {
+    public void delete(final ICallback<DomainDnsUnavailableRecord> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest implements ID
      * @param sourceDomainDnsUnavailableRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord, final ICallback<? super DomainDnsUnavailableRecord> callback) {
+    public void patch(final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord, final ICallback<DomainDnsUnavailableRecord> callback) {
         send(HttpMethod.PATCH, callback, sourceDomainDnsUnavailableRecord);
     }
 
@@ -96,7 +96,7 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest implements ID
      * @param newDomainDnsUnavailableRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, final ICallback<? super DomainDnsUnavailableRecord> callback) {
+    public void post(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, final ICallback<DomainDnsUnavailableRecord> callback) {
         send(HttpMethod.POST, callback, newDomainDnsUnavailableRecord);
     }
 
@@ -117,7 +117,7 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest implements ID
      * @param newDomainDnsUnavailableRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, final ICallback<? super DomainDnsUnavailableRecord> callback) {
+    public void put(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, final ICallback<DomainDnsUnavailableRecord> callback) {
         send(HttpMethod.PUT, callback, newDomainDnsUnavailableRecord);
     }
 
@@ -151,6 +151,17 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest implements ID
      */
      public IDomainDnsUnavailableRecordRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DomainDnsUnavailableRecordRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDomainDnsUnavailableRecordRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DomainDnsUnavailableRecordRequest)this;
      }
 

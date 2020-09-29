@@ -40,7 +40,7 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
         super(requestUrl, client, requestOptions, TargetedManagedAppPolicyAssignmentCollectionResponse.class, ITargetedManagedAppPolicyAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ITargetedManagedAppPolicyAssignmentCollectionPage> callback) {
+    public void get(final ICallback<ITargetedManagedAppPolicyAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
         return buildFromResponse(response);
     }
 
-    public void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<? super TargetedManagedAppPolicyAssignment> callback) {
+    public void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TargetedManagedAppPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
      */
     public ITargetedManagedAppPolicyAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ITargetedManagedAppPolicyAssignmentCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
     }
 

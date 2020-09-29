@@ -37,7 +37,7 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
+    public void get(final ICallback<WindowsInformationProtectionAppLockerFile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
+    public void delete(final ICallback<WindowsInformationProtectionAppLockerFile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      * @param sourceWindowsInformationProtectionAppLockerFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsInformationProtectionAppLockerFile sourceWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
+    public void patch(final WindowsInformationProtectionAppLockerFile sourceWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsInformationProtectionAppLockerFile);
     }
 
@@ -96,7 +96,7 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      * @param newWindowsInformationProtectionAppLockerFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
+    public void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback) {
         send(HttpMethod.POST, callback, newWindowsInformationProtectionAppLockerFile);
     }
 
@@ -117,7 +117,7 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      * @param newWindowsInformationProtectionAppLockerFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
+    public void put(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback) {
         send(HttpMethod.PUT, callback, newWindowsInformationProtectionAppLockerFile);
     }
 
@@ -151,6 +151,17 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
      */
      public IWindowsInformationProtectionAppLockerFileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WindowsInformationProtectionAppLockerFileRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindowsInformationProtectionAppLockerFileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WindowsInformationProtectionAppLockerFileRequest)this;
      }
 

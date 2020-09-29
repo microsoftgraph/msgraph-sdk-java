@@ -43,7 +43,7 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
         super(requestUrl, client, requestOptions, NotebookCollectionResponse.class, INotebookCollectionPage.class);
     }
 
-    public void get(final ICallback<? super INotebookCollectionPage> callback) {
+    public void get(final ICallback<INotebookCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -62,7 +62,7 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
         return buildFromResponse(response);
     }
 
-    public void post(final Notebook newNotebook, final ICallback<? super Notebook> callback) {
+    public void post(final Notebook newNotebook, final ICallback<Notebook> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -95,17 +95,6 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
      */
     public INotebookCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (NotebookCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public INotebookCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (NotebookCollectionRequest)this;
     }
 

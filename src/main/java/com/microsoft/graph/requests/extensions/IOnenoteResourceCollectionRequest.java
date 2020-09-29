@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOnenoteResourceCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IOnenoteResourceCollectionPage> callback);
+    void get(final ICallback<IOnenoteResourceCollectionPage> callback);
 
     IOnenoteResourceCollectionPage get() throws ClientException;
 
-    void post(final OnenoteResource newOnenoteResource, final ICallback<? super OnenoteResource> callback);
+    void post(final OnenoteResource newOnenoteResource, final ICallback<OnenoteResource> callback);
 
     OnenoteResource post(final OnenoteResource newOnenoteResource) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IOnenoteResourceCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IOnenoteResourceCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IOnenoteResourceCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

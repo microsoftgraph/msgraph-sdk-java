@@ -37,7 +37,7 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ApplePushNotificationCertificate> callback) {
+    public void get(final ICallback<ApplePushNotificationCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ApplePushNotificationCertificate> callback) {
+    public void delete(final ICallback<ApplePushNotificationCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest impleme
      * @param sourceApplePushNotificationCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ApplePushNotificationCertificate sourceApplePushNotificationCertificate, final ICallback<? super ApplePushNotificationCertificate> callback) {
+    public void patch(final ApplePushNotificationCertificate sourceApplePushNotificationCertificate, final ICallback<ApplePushNotificationCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceApplePushNotificationCertificate);
     }
 
@@ -96,7 +96,7 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest impleme
      * @param newApplePushNotificationCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ApplePushNotificationCertificate newApplePushNotificationCertificate, final ICallback<? super ApplePushNotificationCertificate> callback) {
+    public void post(final ApplePushNotificationCertificate newApplePushNotificationCertificate, final ICallback<ApplePushNotificationCertificate> callback) {
         send(HttpMethod.POST, callback, newApplePushNotificationCertificate);
     }
 
@@ -117,7 +117,7 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest impleme
      * @param newApplePushNotificationCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ApplePushNotificationCertificate newApplePushNotificationCertificate, final ICallback<? super ApplePushNotificationCertificate> callback) {
+    public void put(final ApplePushNotificationCertificate newApplePushNotificationCertificate, final ICallback<ApplePushNotificationCertificate> callback) {
         send(HttpMethod.PUT, callback, newApplePushNotificationCertificate);
     }
 
@@ -151,6 +151,17 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest impleme
      */
      public IApplePushNotificationCertificateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ApplePushNotificationCertificateRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IApplePushNotificationCertificateRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ApplePushNotificationCertificateRequest)this;
      }
 

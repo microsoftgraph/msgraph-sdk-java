@@ -35,7 +35,7 @@ public class EducationClassCollectionWithReferencesRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, EducationClassCollectionResponse.class, IEducationClassCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IEducationClassCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<IEducationClassCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,11 +61,6 @@ public class EducationClassCollectionWithReferencesRequest extends BaseCollectio
 
     public IEducationClassCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (EducationClassCollectionWithReferencesRequest)this;
-    }
-
-    public IEducationClassCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EducationClassCollectionWithReferencesRequest)this;
     }
 

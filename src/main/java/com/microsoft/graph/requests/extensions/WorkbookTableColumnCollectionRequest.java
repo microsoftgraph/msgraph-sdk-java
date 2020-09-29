@@ -41,7 +41,7 @@ public class WorkbookTableColumnCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, WorkbookTableColumnCollectionResponse.class, IWorkbookTableColumnCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IWorkbookTableColumnCollectionPage> callback) {
+    public void get(final ICallback<IWorkbookTableColumnCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class WorkbookTableColumnCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
+    public void post(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookTableColumnRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,17 +93,6 @@ public class WorkbookTableColumnCollectionRequest extends BaseCollectionRequest<
      */
     public IWorkbookTableColumnCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableColumnCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookTableColumnCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookTableColumnCollectionRequest)this;
     }
 

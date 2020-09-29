@@ -39,7 +39,7 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
     }
 
 
-    public void get(final ICallback<? super IEventDeltaCollectionPage> callback) {
+    public void get(final ICallback<IEventDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
      */
     public IEventDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IEventDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IEventDeltaCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IEventDeltaCollectionRequest)this;
     }
 

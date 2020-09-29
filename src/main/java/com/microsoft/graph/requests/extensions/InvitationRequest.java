@@ -39,7 +39,7 @@ public class InvitationRequest extends BaseRequest implements IInvitationRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Invitation> callback) {
+    public void get(final ICallback<Invitation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class InvitationRequest extends BaseRequest implements IInvitationRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Invitation> callback) {
+    public void delete(final ICallback<Invitation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class InvitationRequest extends BaseRequest implements IInvitationRequest
      * @param sourceInvitation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Invitation sourceInvitation, final ICallback<? super Invitation> callback) {
+    public void patch(final Invitation sourceInvitation, final ICallback<Invitation> callback) {
         send(HttpMethod.PATCH, callback, sourceInvitation);
     }
 
@@ -98,7 +98,7 @@ public class InvitationRequest extends BaseRequest implements IInvitationRequest
      * @param newInvitation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Invitation newInvitation, final ICallback<? super Invitation> callback) {
+    public void post(final Invitation newInvitation, final ICallback<Invitation> callback) {
         send(HttpMethod.POST, callback, newInvitation);
     }
 
@@ -119,7 +119,7 @@ public class InvitationRequest extends BaseRequest implements IInvitationRequest
      * @param newInvitation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Invitation newInvitation, final ICallback<? super Invitation> callback) {
+    public void put(final Invitation newInvitation, final ICallback<Invitation> callback) {
         send(HttpMethod.PUT, callback, newInvitation);
     }
 
@@ -153,6 +153,17 @@ public class InvitationRequest extends BaseRequest implements IInvitationRequest
      */
      public IInvitationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (InvitationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IInvitationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (InvitationRequest)this;
      }
 

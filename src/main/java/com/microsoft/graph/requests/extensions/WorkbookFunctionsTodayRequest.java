@@ -37,7 +37,7 @@ public class WorkbookFunctionsTodayRequest extends BaseRequest implements IWorkb
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,6 +70,17 @@ public class WorkbookFunctionsTodayRequest extends BaseRequest implements IWorkb
      */
     public IWorkbookFunctionsTodayRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsTodayRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsTodayRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsTodayRequest)this;
     }
 

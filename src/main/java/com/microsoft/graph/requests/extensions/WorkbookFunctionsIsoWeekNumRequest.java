@@ -37,7 +37,7 @@ public class WorkbookFunctionsIsoWeekNumRequest extends BaseRequest implements I
         body = new WorkbookFunctionsIsoWeekNumBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsIsoWeekNumRequest extends BaseRequest implements I
      */
     public IWorkbookFunctionsIsoWeekNumRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsIsoWeekNumRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsIsoWeekNumRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsIsoWeekNumRequest)this;
     }
 

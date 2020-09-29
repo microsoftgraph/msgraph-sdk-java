@@ -37,7 +37,7 @@ public class CallUpdateRecordingStatusRequest extends BaseRequest implements ICa
         body = new CallUpdateRecordingStatusBody();
     }
 
-    public void post(final ICallback<? super UpdateRecordingStatusOperation> callback) {
+    public void post(final ICallback<UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class CallUpdateRecordingStatusRequest extends BaseRequest implements ICa
      */
     public ICallUpdateRecordingStatusRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (CallUpdateRecordingStatusRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ICallUpdateRecordingStatusRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CallUpdateRecordingStatusRequest)this;
     }
 

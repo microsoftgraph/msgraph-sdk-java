@@ -56,7 +56,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Post> callback) {
+    public void get(final ICallback<Post> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Post> callback) {
+    public void delete(final ICallback<Post> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +94,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @param sourcePost the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Post sourcePost, final ICallback<? super Post> callback) {
+    public void patch(final Post sourcePost, final ICallback<Post> callback) {
         send(HttpMethod.PATCH, callback, sourcePost);
     }
 
@@ -115,7 +115,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @param newPost the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Post newPost, final ICallback<? super Post> callback) {
+    public void post(final Post newPost, final ICallback<Post> callback) {
         send(HttpMethod.POST, callback, newPost);
     }
 
@@ -136,7 +136,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @param newPost the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Post newPost, final ICallback<? super Post> callback) {
+    public void put(final Post newPost, final ICallback<Post> callback) {
         send(HttpMethod.PUT, callback, newPost);
     }
 
@@ -170,6 +170,17 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      */
      public IPostRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (PostRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPostRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PostRequest)this;
      }
 

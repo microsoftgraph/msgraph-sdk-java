@@ -75,7 +75,7 @@ public class MessageStreamRequest extends BaseStreamRequest<Message> implements 
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<? super Message> callback) {
+    public void put(final byte[] fileContents, final ICallback<Message> callback) {
         send(fileContents, callback);
     }
 

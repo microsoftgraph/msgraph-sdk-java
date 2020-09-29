@@ -37,7 +37,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest implements IWork
      * @param srcWorkbookRangeView the WorkbookRangeView with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookRangeView srcWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
+    public void patch(WorkbookRangeView srcWorkbookRangeView, final ICallback<WorkbookRangeView> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookRangeView);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest implements IWork
      * @param srcWorkbookRangeView the WorkbookRangeView to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookRangeView srcWorkbookRangeView, final ICallback<? super WorkbookRangeView> callback) {
+    public void put(WorkbookRangeView srcWorkbookRangeView, final ICallback<WorkbookRangeView> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookRangeView);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest implements IWork
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRangeView> callback) {
+    public void get(final ICallback<WorkbookRangeView> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -121,17 +121,6 @@ public class WorkbookRangeViewItemAtRequest extends BaseRequest implements IWork
      */
     public IWorkbookRangeViewItemAtRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeViewItemAtRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookRangeViewItemAtRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeViewItemAtRequest)this;
     }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISingleValueLegacyExtendedPropertyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ISingleValueLegacyExtendedPropertyCollectionPage> callback);
+    void get(final ICallback<ISingleValueLegacyExtendedPropertyCollectionPage> callback);
 
     ISingleValueLegacyExtendedPropertyCollectionPage get() throws ClientException;
 
-    void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<? super SingleValueLegacyExtendedProperty> callback);
+    void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback);
 
     SingleValueLegacyExtendedProperty post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ISingleValueLegacyExtendedPropertyCollectionRequest extends IHt
      * @return the updated request
      */
     ISingleValueLegacyExtendedPropertyCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ISingleValueLegacyExtendedPropertyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

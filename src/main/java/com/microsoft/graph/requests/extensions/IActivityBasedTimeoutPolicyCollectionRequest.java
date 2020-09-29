@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IActivityBasedTimeoutPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IActivityBasedTimeoutPolicyCollectionPage> callback);
+    void get(final ICallback<IActivityBasedTimeoutPolicyCollectionPage> callback);
 
     IActivityBasedTimeoutPolicyCollectionPage get() throws ClientException;
 
-    void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback);
+    void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback);
 
     ActivityBasedTimeoutPolicy post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IActivityBasedTimeoutPolicyCollectionRequest extends IHttpReque
      * @return the updated request
      */
     IActivityBasedTimeoutPolicyCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IActivityBasedTimeoutPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

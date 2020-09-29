@@ -24,19 +24,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDirectoryObjectWithReferenceRequest extends IHttpRequest {
 
-    void post(final DirectoryObject newDirectoryObject, final IJsonBackedObject payload, final ICallback<? super DirectoryObject> callback);
+    void post(final DirectoryObject newDirectoryObject, final IJsonBackedObject payload, final ICallback<DirectoryObject> callback);
 
     DirectoryObject post(final DirectoryObject newDirectoryObject, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<? super DirectoryObject> callback);
+    void get(final ICallback<DirectoryObject> callback);
 
     DirectoryObject get() throws ClientException;
 
-	void delete(final ICallback<? super DirectoryObject> callback);
+	void delete(final ICallback<DirectoryObject> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final DirectoryObject sourceDirectoryObject, final ICallback<? super DirectoryObject> callback);
+	void patch(final DirectoryObject sourceDirectoryObject, final ICallback<DirectoryObject> callback);
 
 	DirectoryObject patch(final DirectoryObject sourceDirectoryObject) throws ClientException;
 

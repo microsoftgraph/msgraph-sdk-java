@@ -44,7 +44,7 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRe
     }
 
 
-    public void post(final ICallback<? super IDeviceConfigurationAssignCollectionPage> callback) {
+    public void post(final ICallback<IDeviceConfigurationAssignCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,17 +117,6 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRe
      */
     public IDeviceConfigurationAssignCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDeviceConfigurationAssignCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDeviceConfigurationAssignCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDeviceConfigurationAssignCollectionRequest)this;
     }
 

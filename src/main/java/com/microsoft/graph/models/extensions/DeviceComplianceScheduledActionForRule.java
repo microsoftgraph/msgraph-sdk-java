@@ -6,9 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceComplianceActionItem;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionPage;
 
 
@@ -81,7 +83,19 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
 
 
         if (json.has("scheduledActionConfigurations")) {
-            scheduledActionConfigurations = serializer.deserializeObject(json.get("scheduledActionConfigurations").toString(), DeviceComplianceActionItemCollectionPage.class);
+            final DeviceComplianceActionItemCollectionResponse response = new DeviceComplianceActionItemCollectionResponse();
+            if (json.has("scheduledActionConfigurations@odata.nextLink")) {
+                response.nextLink = json.get("scheduledActionConfigurations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("scheduledActionConfigurations").toString(), JsonObject[].class);
+            final DeviceComplianceActionItem[] array = new DeviceComplianceActionItem[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceComplianceActionItem.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            scheduledActionConfigurations = new DeviceComplianceActionItemCollectionPage(response, null);
         }
     }
 }

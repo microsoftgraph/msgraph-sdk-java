@@ -36,7 +36,7 @@ public class WorkbookTableRowCountRequest extends BaseRequest implements IWorkbo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Integer> callback) {
+    public void get(final ICallback<Integer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -80,17 +80,6 @@ public class WorkbookTableRowCountRequest extends BaseRequest implements IWorkbo
      */
     public IWorkbookTableRowCountRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookTableRowCountRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookTableRowCountRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookTableRowCountRequest)this;
     }
 

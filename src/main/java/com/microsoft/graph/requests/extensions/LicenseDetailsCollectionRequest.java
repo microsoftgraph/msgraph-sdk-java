@@ -40,7 +40,7 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
         super(requestUrl, client, requestOptions, LicenseDetailsCollectionResponse.class, ILicenseDetailsCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ILicenseDetailsCollectionPage> callback) {
+    public void get(final ICallback<ILicenseDetailsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
         return buildFromResponse(response);
     }
 
-    public void post(final LicenseDetails newLicenseDetails, final ICallback<? super LicenseDetails> callback) {
+    public void post(final LicenseDetails newLicenseDetails, final ICallback<LicenseDetails> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LicenseDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
      */
     public ILicenseDetailsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (LicenseDetailsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ILicenseDetailsCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (LicenseDetailsCollectionRequest)this;
     }
 

@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDirectoryRoleTemplateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IDirectoryRoleTemplateCollectionPage> callback);
+    void get(final ICallback<IDirectoryRoleTemplateCollectionPage> callback);
 
     IDirectoryRoleTemplateCollectionPage get() throws ClientException;
 
-    void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<? super DirectoryRoleTemplate> callback);
+    void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback);
 
     DirectoryRoleTemplate post(final DirectoryRoleTemplate newDirectoryRoleTemplate) throws ClientException;
 
@@ -44,14 +44,6 @@ public interface IDirectoryRoleTemplateCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDirectoryRoleTemplateCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IDirectoryRoleTemplateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

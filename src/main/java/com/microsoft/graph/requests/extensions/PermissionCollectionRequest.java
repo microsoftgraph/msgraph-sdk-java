@@ -41,7 +41,7 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
         super(requestUrl, client, requestOptions, PermissionCollectionResponse.class, IPermissionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IPermissionCollectionPage> callback) {
+    public void get(final ICallback<IPermissionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,7 +60,7 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
         return buildFromResponse(response);
     }
 
-    public void post(final Permission newPermission, final ICallback<? super Permission> callback) {
+    public void post(final Permission newPermission, final ICallback<Permission> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -93,17 +93,6 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
      */
     public IPermissionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (PermissionCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IPermissionCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (PermissionCollectionRequest)this;
     }
 

@@ -34,7 +34,7 @@ public class TeamsTemplateReferenceRequest extends BaseRequest implements ITeams
         super(requestUrl, client, requestOptions, TeamsTemplate.class);
     }
 
-    public void delete(final ICallback<? super TeamsTemplate> callback) {
+    public void delete(final ICallback<TeamsTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,12 +64,22 @@ public class TeamsTemplateReferenceRequest extends BaseRequest implements ITeams
         return (TeamsTemplateReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITeamsTemplateReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TeamsTemplateReferenceRequest)this;
+    }
+    /**
      * Puts the TeamsTemplate
      *
      * @param srcTeamsTemplate the TeamsTemplate reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TeamsTemplate srcTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
+    public void put(TeamsTemplate srcTeamsTemplate, final ICallback<TeamsTemplate> callback) {
         send(HttpMethod.PUT, callback, srcTeamsTemplate);
     }
 

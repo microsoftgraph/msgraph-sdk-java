@@ -37,7 +37,7 @@ public class WorkbookFunctionsFactDoubleRequest extends BaseRequest implements I
         body = new WorkbookFunctionsFactDoubleBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsFactDoubleRequest extends BaseRequest implements I
      */
     public IWorkbookFunctionsFactDoubleRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsFactDoubleRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsFactDoubleRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsFactDoubleRequest)this;
     }
 

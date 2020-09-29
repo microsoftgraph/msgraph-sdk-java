@@ -39,7 +39,7 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Use
     }
 
 
-    public void get(final ICallback<? super IUserReminderViewCollectionPage> callback) {
+    public void get(final ICallback<IUserReminderViewCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class UserReminderViewCollectionRequest extends BaseCollectionRequest<Use
      */
     public IUserReminderViewCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IUserReminderViewCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IUserReminderViewCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IUserReminderViewCollectionRequest)this;
     }
 

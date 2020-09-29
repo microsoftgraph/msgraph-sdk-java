@@ -37,7 +37,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
+    public void get(final ICallback<Windows10EnterpriseModernAppManagementConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
+    public void delete(final ICallback<Windows10EnterpriseModernAppManagementConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @param sourceWindows10EnterpriseModernAppManagementConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10EnterpriseModernAppManagementConfiguration sourceWindows10EnterpriseModernAppManagementConfiguration, final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
+    public void patch(final Windows10EnterpriseModernAppManagementConfiguration sourceWindows10EnterpriseModernAppManagementConfiguration, final ICallback<Windows10EnterpriseModernAppManagementConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10EnterpriseModernAppManagementConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @param newWindows10EnterpriseModernAppManagementConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
+    public void post(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, final ICallback<Windows10EnterpriseModernAppManagementConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows10EnterpriseModernAppManagementConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @param newWindows10EnterpriseModernAppManagementConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
+    public void put(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, final ICallback<Windows10EnterpriseModernAppManagementConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows10EnterpriseModernAppManagementConfiguration);
     }
 
@@ -151,6 +151,17 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      */
      public IWindows10EnterpriseModernAppManagementConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (Windows10EnterpriseModernAppManagementConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindows10EnterpriseModernAppManagementConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Windows10EnterpriseModernAppManagementConfigurationRequest)this;
      }
 

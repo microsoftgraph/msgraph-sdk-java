@@ -37,7 +37,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
+    public void get(final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
+    public void delete(final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @param sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
+    public void patch(final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
+    public void post(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
         send(HttpMethod.POST, callback, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
+    public void put(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
         send(HttpMethod.PUT, callback, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
@@ -151,6 +151,17 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      */
      public IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest)this;
      }
 

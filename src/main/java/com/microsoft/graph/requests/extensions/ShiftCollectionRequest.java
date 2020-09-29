@@ -40,7 +40,7 @@ public class ShiftCollectionRequest extends BaseCollectionRequest<ShiftCollectio
         super(requestUrl, client, requestOptions, ShiftCollectionResponse.class, IShiftCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IShiftCollectionPage> callback) {
+    public void get(final ICallback<IShiftCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ShiftCollectionRequest extends BaseCollectionRequest<ShiftCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final Shift newShift, final ICallback<? super Shift> callback) {
+    public void post(final Shift newShift, final ICallback<Shift> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ShiftCollectionRequest extends BaseCollectionRequest<ShiftCollectio
      */
     public IShiftCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ShiftCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IShiftCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ShiftCollectionRequest)this;
     }
 

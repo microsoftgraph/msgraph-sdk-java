@@ -39,7 +39,7 @@ public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequ
     }
 
 
-    public void get(final ICallback<? super IAdministrativeUnitDeltaCollectionPage> callback) {
+    public void get(final ICallback<IAdministrativeUnitDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class AdministrativeUnitDeltaCollectionRequest extends BaseCollectionRequ
      */
     public IAdministrativeUnitDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IAdministrativeUnitDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IAdministrativeUnitDeltaCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IAdministrativeUnitDeltaCollectionRequest)this;
     }
 

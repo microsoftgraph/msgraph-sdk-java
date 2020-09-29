@@ -44,7 +44,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
     }
 
 
-    public void post(final ICallback<? super IDirectoryObjectCheckMemberGroupsCollectionPage> callback) {
+    public void post(final ICallback<IDirectoryObjectCheckMemberGroupsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,17 +117,6 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseColle
      */
     public IDirectoryObjectCheckMemberGroupsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDirectoryObjectCheckMemberGroupsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDirectoryObjectCheckMemberGroupsCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDirectoryObjectCheckMemberGroupsCollectionRequest)this;
     }
 

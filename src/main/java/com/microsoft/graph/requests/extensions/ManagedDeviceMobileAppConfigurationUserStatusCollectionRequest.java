@@ -40,7 +40,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest exte
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse.class, IManagedDeviceMobileAppConfigurationUserStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IManagedDeviceMobileAppConfigurationUserStatusCollectionPage> callback) {
+    public void get(final ICallback<IManagedDeviceMobileAppConfigurationUserStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest exte
         return buildFromResponse(response);
     }
 
-    public void post(final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationUserStatus> callback) {
+    public void post(final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus, final ICallback<ManagedDeviceMobileAppConfigurationUserStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest exte
      */
     public IManagedDeviceMobileAppConfigurationUserStatusCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IManagedDeviceMobileAppConfigurationUserStatusCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedDeviceMobileAppConfigurationUserStatusCollectionRequest)this;
     }
 

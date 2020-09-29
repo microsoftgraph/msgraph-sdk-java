@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISecureScoreCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ISecureScoreCollectionPage> callback);
+    void get(final ICallback<ISecureScoreCollectionPage> callback);
 
     ISecureScoreCollectionPage get() throws ClientException;
 
-    void post(final SecureScore newSecureScore, final ICallback<? super SecureScore> callback);
+    void post(final SecureScore newSecureScore, final ICallback<SecureScore> callback);
 
     SecureScore post(final SecureScore newSecureScore) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ISecureScoreCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISecureScoreCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ISecureScoreCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

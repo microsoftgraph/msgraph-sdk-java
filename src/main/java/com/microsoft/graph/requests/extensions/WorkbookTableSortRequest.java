@@ -38,7 +38,7 @@ public class WorkbookTableSortRequest extends BaseRequest implements IWorkbookTa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookTableSort> callback) {
+    public void get(final ICallback<WorkbookTableSort> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class WorkbookTableSortRequest extends BaseRequest implements IWorkbookTa
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookTableSort> callback) {
+    public void delete(final ICallback<WorkbookTableSort> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class WorkbookTableSortRequest extends BaseRequest implements IWorkbookTa
      * @param sourceWorkbookTableSort the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookTableSort sourceWorkbookTableSort, final ICallback<? super WorkbookTableSort> callback) {
+    public void patch(final WorkbookTableSort sourceWorkbookTableSort, final ICallback<WorkbookTableSort> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookTableSort);
     }
 
@@ -97,7 +97,7 @@ public class WorkbookTableSortRequest extends BaseRequest implements IWorkbookTa
      * @param newWorkbookTableSort the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookTableSort newWorkbookTableSort, final ICallback<? super WorkbookTableSort> callback) {
+    public void post(final WorkbookTableSort newWorkbookTableSort, final ICallback<WorkbookTableSort> callback) {
         send(HttpMethod.POST, callback, newWorkbookTableSort);
     }
 
@@ -118,7 +118,7 @@ public class WorkbookTableSortRequest extends BaseRequest implements IWorkbookTa
      * @param newWorkbookTableSort the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookTableSort newWorkbookTableSort, final ICallback<? super WorkbookTableSort> callback) {
+    public void put(final WorkbookTableSort newWorkbookTableSort, final ICallback<WorkbookTableSort> callback) {
         send(HttpMethod.PUT, callback, newWorkbookTableSort);
     }
 
@@ -152,6 +152,17 @@ public class WorkbookTableSortRequest extends BaseRequest implements IWorkbookTa
      */
      public IWorkbookTableSortRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookTableSortRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookTableSortRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookTableSortRequest)this;
      }
 

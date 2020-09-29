@@ -37,7 +37,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ISiteReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<? super Site> callback);
+    void delete(final ICallback<Site> callback);
 
     Site delete() throws ClientException;
 
@@ -63,7 +63,7 @@ public interface ISiteReferenceRequest extends IHttpRequest {
      * @param srcSite the Site to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Site srcSite, final ICallback<? super Site> callback);
+    void put(Site srcSite, final ICallback<Site> callback);
 
     /**
      * Puts the Site

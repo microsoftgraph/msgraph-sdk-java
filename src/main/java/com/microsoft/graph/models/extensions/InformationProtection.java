@@ -6,9 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
-import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionResponse;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionPage;
 
 
@@ -21,8 +22,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Information Protection.
  */
-public class InformationProtection extends Entity implements IJsonBackedObject {
+public class InformationProtection implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Threat Assessment Requests.
@@ -73,7 +84,19 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
 
 
         if (json.has("threatAssessmentRequests")) {
-            threatAssessmentRequests = serializer.deserializeObject(json.get("threatAssessmentRequests").toString(), ThreatAssessmentRequestCollectionPage.class);
+            final ThreatAssessmentRequestCollectionResponse response = new ThreatAssessmentRequestCollectionResponse();
+            if (json.has("threatAssessmentRequests@odata.nextLink")) {
+                response.nextLink = json.get("threatAssessmentRequests@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("threatAssessmentRequests").toString(), JsonObject[].class);
+            final ThreatAssessmentRequest[] array = new ThreatAssessmentRequest[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ThreatAssessmentRequest.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            threatAssessmentRequests = new ThreatAssessmentRequestCollectionPage(response, null);
         }
     }
 }

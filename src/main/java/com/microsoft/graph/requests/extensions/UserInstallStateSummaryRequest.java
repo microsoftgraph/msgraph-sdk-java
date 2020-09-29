@@ -41,7 +41,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest implements IUser
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserInstallStateSummary> callback) {
+    public void get(final ICallback<UserInstallStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest implements IUser
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserInstallStateSummary> callback) {
+    public void delete(final ICallback<UserInstallStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest implements IUser
      * @param sourceUserInstallStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserInstallStateSummary sourceUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback) {
+    public void patch(final UserInstallStateSummary sourceUserInstallStateSummary, final ICallback<UserInstallStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceUserInstallStateSummary);
     }
 
@@ -100,7 +100,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest implements IUser
      * @param newUserInstallStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback) {
+    public void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<UserInstallStateSummary> callback) {
         send(HttpMethod.POST, callback, newUserInstallStateSummary);
     }
 
@@ -121,7 +121,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest implements IUser
      * @param newUserInstallStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<? super UserInstallStateSummary> callback) {
+    public void put(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<UserInstallStateSummary> callback) {
         send(HttpMethod.PUT, callback, newUserInstallStateSummary);
     }
 
@@ -155,6 +155,17 @@ public class UserInstallStateSummaryRequest extends BaseRequest implements IUser
      */
      public IUserInstallStateSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (UserInstallStateSummaryRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IUserInstallStateSummaryRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (UserInstallStateSummaryRequest)this;
      }
 

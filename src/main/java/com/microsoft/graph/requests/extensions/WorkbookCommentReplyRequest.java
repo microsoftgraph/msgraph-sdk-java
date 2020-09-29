@@ -37,7 +37,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookCommentReply> callback) {
+    public void get(final ICallback<WorkbookCommentReply> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookCommentReply> callback) {
+    public void delete(final ICallback<WorkbookCommentReply> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @param sourceWorkbookCommentReply the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookCommentReply sourceWorkbookCommentReply, final ICallback<? super WorkbookCommentReply> callback) {
+    public void patch(final WorkbookCommentReply sourceWorkbookCommentReply, final ICallback<WorkbookCommentReply> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookCommentReply);
     }
 
@@ -96,7 +96,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @param newWorkbookCommentReply the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<? super WorkbookCommentReply> callback) {
+    public void post(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<WorkbookCommentReply> callback) {
         send(HttpMethod.POST, callback, newWorkbookCommentReply);
     }
 
@@ -117,7 +117,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @param newWorkbookCommentReply the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<? super WorkbookCommentReply> callback) {
+    public void put(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<WorkbookCommentReply> callback) {
         send(HttpMethod.PUT, callback, newWorkbookCommentReply);
     }
 
@@ -151,6 +151,17 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      */
      public IWorkbookCommentReplyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookCommentReplyRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookCommentReplyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookCommentReplyRequest)this;
      }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAndroidManagedAppProtectionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IAndroidManagedAppProtectionCollectionPage> callback);
+    void get(final ICallback<IAndroidManagedAppProtectionCollectionPage> callback);
 
     IAndroidManagedAppProtectionCollectionPage get() throws ClientException;
 
-    void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback);
+    void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<AndroidManagedAppProtection> callback);
 
     AndroidManagedAppProtection post(final AndroidManagedAppProtection newAndroidManagedAppProtection) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IAndroidManagedAppProtectionCollectionRequest extends IHttpRequ
      * @return the updated request
      */
     IAndroidManagedAppProtectionCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IAndroidManagedAppProtectionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

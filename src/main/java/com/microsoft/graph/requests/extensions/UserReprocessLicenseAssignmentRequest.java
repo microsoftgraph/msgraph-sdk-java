@@ -37,7 +37,7 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super User> callback) {
+    public void post(final ICallback<User> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,6 +70,17 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest implement
      */
     public IUserReprocessLicenseAssignmentRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (UserReprocessLicenseAssignmentRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IUserReprocessLicenseAssignmentRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (UserReprocessLicenseAssignmentRequest)this;
     }
 

@@ -38,7 +38,7 @@ public class WorkbookRangeSortRequest extends BaseRequest implements IWorkbookRa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRangeSort> callback) {
+    public void get(final ICallback<WorkbookRangeSort> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class WorkbookRangeSortRequest extends BaseRequest implements IWorkbookRa
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookRangeSort> callback) {
+    public void delete(final ICallback<WorkbookRangeSort> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class WorkbookRangeSortRequest extends BaseRequest implements IWorkbookRa
      * @param sourceWorkbookRangeSort the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookRangeSort sourceWorkbookRangeSort, final ICallback<? super WorkbookRangeSort> callback) {
+    public void patch(final WorkbookRangeSort sourceWorkbookRangeSort, final ICallback<WorkbookRangeSort> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookRangeSort);
     }
 
@@ -97,7 +97,7 @@ public class WorkbookRangeSortRequest extends BaseRequest implements IWorkbookRa
      * @param newWorkbookRangeSort the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<? super WorkbookRangeSort> callback) {
+    public void post(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<WorkbookRangeSort> callback) {
         send(HttpMethod.POST, callback, newWorkbookRangeSort);
     }
 
@@ -118,7 +118,7 @@ public class WorkbookRangeSortRequest extends BaseRequest implements IWorkbookRa
      * @param newWorkbookRangeSort the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<? super WorkbookRangeSort> callback) {
+    public void put(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<WorkbookRangeSort> callback) {
         send(HttpMethod.PUT, callback, newWorkbookRangeSort);
     }
 
@@ -152,6 +152,17 @@ public class WorkbookRangeSortRequest extends BaseRequest implements IWorkbookRa
      */
      public IWorkbookRangeSortRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookRangeSortRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookRangeSortRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookRangeSortRequest)this;
      }
 

@@ -37,7 +37,7 @@ public class DeviceComplianceSettingStateRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceComplianceSettingState> callback) {
+    public void get(final ICallback<DeviceComplianceSettingState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceComplianceSettingStateRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceComplianceSettingState> callback) {
+    public void delete(final ICallback<DeviceComplianceSettingState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceComplianceSettingStateRequest extends BaseRequest implements 
      * @param sourceDeviceComplianceSettingState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceComplianceSettingState sourceDeviceComplianceSettingState, final ICallback<? super DeviceComplianceSettingState> callback) {
+    public void patch(final DeviceComplianceSettingState sourceDeviceComplianceSettingState, final ICallback<DeviceComplianceSettingState> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceComplianceSettingState);
     }
 
@@ -96,7 +96,7 @@ public class DeviceComplianceSettingStateRequest extends BaseRequest implements 
      * @param newDeviceComplianceSettingState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceComplianceSettingState newDeviceComplianceSettingState, final ICallback<? super DeviceComplianceSettingState> callback) {
+    public void post(final DeviceComplianceSettingState newDeviceComplianceSettingState, final ICallback<DeviceComplianceSettingState> callback) {
         send(HttpMethod.POST, callback, newDeviceComplianceSettingState);
     }
 
@@ -117,7 +117,7 @@ public class DeviceComplianceSettingStateRequest extends BaseRequest implements 
      * @param newDeviceComplianceSettingState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceComplianceSettingState newDeviceComplianceSettingState, final ICallback<? super DeviceComplianceSettingState> callback) {
+    public void put(final DeviceComplianceSettingState newDeviceComplianceSettingState, final ICallback<DeviceComplianceSettingState> callback) {
         send(HttpMethod.PUT, callback, newDeviceComplianceSettingState);
     }
 
@@ -151,6 +151,17 @@ public class DeviceComplianceSettingStateRequest extends BaseRequest implements 
      */
      public IDeviceComplianceSettingStateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DeviceComplianceSettingStateRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceComplianceSettingStateRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceComplianceSettingStateRequest)this;
      }
 

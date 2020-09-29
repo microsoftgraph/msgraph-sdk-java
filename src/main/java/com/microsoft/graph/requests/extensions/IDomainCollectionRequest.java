@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDomainCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IDomainCollectionPage> callback);
+    void get(final ICallback<IDomainCollectionPage> callback);
 
     IDomainCollectionPage get() throws ClientException;
 
-    void post(final Domain newDomain, final ICallback<? super Domain> callback);
+    void post(final Domain newDomain, final ICallback<Domain> callback);
 
     Domain post(final Domain newDomain) throws ClientException;
 
@@ -44,14 +44,6 @@ public interface IDomainCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDomainCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IDomainCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

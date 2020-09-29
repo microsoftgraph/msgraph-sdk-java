@@ -37,7 +37,7 @@ public class DriveItemRestoreRequest extends BaseRequest implements IDriveItemRe
         body = new DriveItemRestoreBody();
     }
 
-    public void post(final ICallback<? super DriveItem> callback) {
+    public void post(final ICallback<DriveItem> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class DriveItemRestoreRequest extends BaseRequest implements IDriveItemRe
      */
     public IDriveItemRestoreRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (DriveItemRestoreRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDriveItemRestoreRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DriveItemRestoreRequest)this;
     }
 

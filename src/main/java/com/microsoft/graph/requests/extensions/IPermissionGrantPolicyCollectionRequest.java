@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IPermissionGrantPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IPermissionGrantPolicyCollectionPage> callback);
+    void get(final ICallback<IPermissionGrantPolicyCollectionPage> callback);
 
     IPermissionGrantPolicyCollectionPage get() throws ClientException;
 
-    void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<? super PermissionGrantPolicy> callback);
+    void post(final PermissionGrantPolicy newPermissionGrantPolicy, final ICallback<PermissionGrantPolicy> callback);
 
     PermissionGrantPolicy post(final PermissionGrantPolicy newPermissionGrantPolicy) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IPermissionGrantPolicyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IPermissionGrantPolicyCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IPermissionGrantPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

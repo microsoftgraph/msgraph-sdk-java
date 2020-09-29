@@ -35,7 +35,7 @@ public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseColl
         super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, ITokenIssuancePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ITokenIssuancePolicyCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<ITokenIssuancePolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,11 +61,6 @@ public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseColl
 
     public ITokenIssuancePolicyCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
-    }
-
-    public ITokenIssuancePolicyCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
     }
 

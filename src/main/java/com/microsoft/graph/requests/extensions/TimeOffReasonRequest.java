@@ -37,7 +37,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TimeOffReason> callback) {
+    public void get(final ICallback<TimeOffReason> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TimeOffReason> callback) {
+    public void delete(final ICallback<TimeOffReason> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @param sourceTimeOffReason the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TimeOffReason sourceTimeOffReason, final ICallback<? super TimeOffReason> callback) {
+    public void patch(final TimeOffReason sourceTimeOffReason, final ICallback<TimeOffReason> callback) {
         send(HttpMethod.PATCH, callback, sourceTimeOffReason);
     }
 
@@ -96,7 +96,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @param newTimeOffReason the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TimeOffReason newTimeOffReason, final ICallback<? super TimeOffReason> callback) {
+    public void post(final TimeOffReason newTimeOffReason, final ICallback<TimeOffReason> callback) {
         send(HttpMethod.POST, callback, newTimeOffReason);
     }
 
@@ -117,7 +117,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @param newTimeOffReason the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TimeOffReason newTimeOffReason, final ICallback<? super TimeOffReason> callback) {
+    public void put(final TimeOffReason newTimeOffReason, final ICallback<TimeOffReason> callback) {
         send(HttpMethod.PUT, callback, newTimeOffReason);
     }
 
@@ -151,6 +151,17 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      */
      public ITimeOffReasonRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (TimeOffReasonRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ITimeOffReasonRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TimeOffReasonRequest)this;
      }
 

@@ -37,7 +37,7 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super Calendar> callback) {
+    public void post(final ICallback<Calendar> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,6 +70,17 @@ public class CalendarSharingMessageAcceptRequest extends BaseRequest implements 
      */
     public ICalendarSharingMessageAcceptRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (CalendarSharingMessageAcceptRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ICalendarSharingMessageAcceptRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CalendarSharingMessageAcceptRequest)this;
     }
 

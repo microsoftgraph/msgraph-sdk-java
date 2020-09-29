@@ -40,7 +40,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
         super(requestUrl, client, requestOptions, TrendingCollectionResponse.class, ITrendingCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ITrendingCollectionPage> callback) {
+    public void get(final ICallback<ITrendingCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
         return buildFromResponse(response);
     }
 
-    public void post(final Trending newTrending, final ICallback<? super Trending> callback) {
+    public void post(final Trending newTrending, final ICallback<Trending> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
      */
     public ITrendingCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TrendingCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ITrendingCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TrendingCollectionRequest)this;
     }
 

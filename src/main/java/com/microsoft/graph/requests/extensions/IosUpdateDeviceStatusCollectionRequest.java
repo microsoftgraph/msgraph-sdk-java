@@ -40,7 +40,7 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
         super(requestUrl, client, requestOptions, IosUpdateDeviceStatusCollectionResponse.class, IIosUpdateDeviceStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IIosUpdateDeviceStatusCollectionPage> callback) {
+    public void get(final ICallback<IIosUpdateDeviceStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
         return buildFromResponse(response);
     }
 
-    public void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<IosUpdateDeviceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
      */
     public IIosUpdateDeviceStatusCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IosUpdateDeviceStatusCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IIosUpdateDeviceStatusCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IosUpdateDeviceStatusCollectionRequest)this;
     }
 

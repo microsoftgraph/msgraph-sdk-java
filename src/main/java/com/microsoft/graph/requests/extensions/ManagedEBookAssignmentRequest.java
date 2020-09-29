@@ -52,7 +52,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedEBookAssignment> callback) {
+    public void get(final ICallback<ManagedEBookAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedEBookAssignment> callback) {
+    public void delete(final ICallback<ManagedEBookAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param sourceManagedEBookAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedEBookAssignment sourceManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback) {
+    public void patch(final ManagedEBookAssignment sourceManagedEBookAssignment, final ICallback<ManagedEBookAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedEBookAssignment);
     }
 
@@ -111,7 +111,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param newManagedEBookAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback) {
+    public void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<ManagedEBookAssignment> callback) {
         send(HttpMethod.POST, callback, newManagedEBookAssignment);
     }
 
@@ -132,7 +132,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param newManagedEBookAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback) {
+    public void put(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<ManagedEBookAssignment> callback) {
         send(HttpMethod.PUT, callback, newManagedEBookAssignment);
     }
 
@@ -166,6 +166,17 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      */
      public IManagedEBookAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ManagedEBookAssignmentRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedEBookAssignmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagedEBookAssignmentRequest)this;
      }
 

@@ -41,7 +41,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemAnalytics> callback) {
+    public void get(final ICallback<ItemAnalytics> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemAnalytics> callback) {
+    public void delete(final ICallback<ItemAnalytics> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @param sourceItemAnalytics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemAnalytics sourceItemAnalytics, final ICallback<? super ItemAnalytics> callback) {
+    public void patch(final ItemAnalytics sourceItemAnalytics, final ICallback<ItemAnalytics> callback) {
         send(HttpMethod.PATCH, callback, sourceItemAnalytics);
     }
 
@@ -100,7 +100,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @param newItemAnalytics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemAnalytics newItemAnalytics, final ICallback<? super ItemAnalytics> callback) {
+    public void post(final ItemAnalytics newItemAnalytics, final ICallback<ItemAnalytics> callback) {
         send(HttpMethod.POST, callback, newItemAnalytics);
     }
 
@@ -121,7 +121,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @param newItemAnalytics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemAnalytics newItemAnalytics, final ICallback<? super ItemAnalytics> callback) {
+    public void put(final ItemAnalytics newItemAnalytics, final ICallback<ItemAnalytics> callback) {
         send(HttpMethod.PUT, callback, newItemAnalytics);
     }
 
@@ -155,6 +155,17 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      */
      public IItemAnalyticsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ItemAnalyticsRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IItemAnalyticsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ItemAnalyticsRequest)this;
      }
 

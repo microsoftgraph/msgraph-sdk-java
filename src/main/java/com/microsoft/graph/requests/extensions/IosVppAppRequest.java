@@ -37,7 +37,7 @@ public class IosVppAppRequest extends BaseRequest implements IIosVppAppRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosVppApp> callback) {
+    public void get(final ICallback<IosVppApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosVppAppRequest extends BaseRequest implements IIosVppAppRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosVppApp> callback) {
+    public void delete(final ICallback<IosVppApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosVppAppRequest extends BaseRequest implements IIosVppAppRequest {
      * @param sourceIosVppApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosVppApp sourceIosVppApp, final ICallback<? super IosVppApp> callback) {
+    public void patch(final IosVppApp sourceIosVppApp, final ICallback<IosVppApp> callback) {
         send(HttpMethod.PATCH, callback, sourceIosVppApp);
     }
 
@@ -96,7 +96,7 @@ public class IosVppAppRequest extends BaseRequest implements IIosVppAppRequest {
      * @param newIosVppApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosVppApp newIosVppApp, final ICallback<? super IosVppApp> callback) {
+    public void post(final IosVppApp newIosVppApp, final ICallback<IosVppApp> callback) {
         send(HttpMethod.POST, callback, newIosVppApp);
     }
 
@@ -117,7 +117,7 @@ public class IosVppAppRequest extends BaseRequest implements IIosVppAppRequest {
      * @param newIosVppApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosVppApp newIosVppApp, final ICallback<? super IosVppApp> callback) {
+    public void put(final IosVppApp newIosVppApp, final ICallback<IosVppApp> callback) {
         send(HttpMethod.PUT, callback, newIosVppApp);
     }
 
@@ -151,6 +151,17 @@ public class IosVppAppRequest extends BaseRequest implements IIosVppAppRequest {
      */
      public IIosVppAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (IosVppAppRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IIosVppAppRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosVppAppRequest)this;
      }
 

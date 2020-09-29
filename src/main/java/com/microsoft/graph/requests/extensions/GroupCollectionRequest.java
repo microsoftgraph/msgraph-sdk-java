@@ -40,7 +40,7 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
         super(requestUrl, client, requestOptions, GroupCollectionResponse.class, IGroupCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IGroupCollectionPage> callback) {
+    public void get(final ICallback<IGroupCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final Group newGroup, final ICallback<? super Group> callback) {
+    public void post(final Group newGroup, final ICallback<Group> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
      */
     public IGroupCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (GroupCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IGroupCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (GroupCollectionRequest)this;
     }
 

@@ -40,7 +40,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
         super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignmentCollectionResponse.class, IDeviceAndAppManagementRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDeviceAndAppManagementRoleAssignmentCollectionPage> callback) {
+    public void get(final ICallback<IDeviceAndAppManagementRoleAssignmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<DeviceAndAppManagementRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceAndAppManagementRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
      */
     public IDeviceAndAppManagementRoleAssignmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceAndAppManagementRoleAssignmentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDeviceAndAppManagementRoleAssignmentCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceAndAppManagementRoleAssignmentCollectionRequest)this;
     }
 

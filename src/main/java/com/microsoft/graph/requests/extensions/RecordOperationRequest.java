@@ -37,7 +37,7 @@ public class RecordOperationRequest extends BaseRequest implements IRecordOperat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RecordOperation> callback) {
+    public void get(final ICallback<RecordOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class RecordOperationRequest extends BaseRequest implements IRecordOperat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RecordOperation> callback) {
+    public void delete(final ICallback<RecordOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class RecordOperationRequest extends BaseRequest implements IRecordOperat
      * @param sourceRecordOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RecordOperation sourceRecordOperation, final ICallback<? super RecordOperation> callback) {
+    public void patch(final RecordOperation sourceRecordOperation, final ICallback<RecordOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceRecordOperation);
     }
 
@@ -96,7 +96,7 @@ public class RecordOperationRequest extends BaseRequest implements IRecordOperat
      * @param newRecordOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RecordOperation newRecordOperation, final ICallback<? super RecordOperation> callback) {
+    public void post(final RecordOperation newRecordOperation, final ICallback<RecordOperation> callback) {
         send(HttpMethod.POST, callback, newRecordOperation);
     }
 
@@ -117,7 +117,7 @@ public class RecordOperationRequest extends BaseRequest implements IRecordOperat
      * @param newRecordOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RecordOperation newRecordOperation, final ICallback<? super RecordOperation> callback) {
+    public void put(final RecordOperation newRecordOperation, final ICallback<RecordOperation> callback) {
         send(HttpMethod.PUT, callback, newRecordOperation);
     }
 
@@ -151,6 +151,17 @@ public class RecordOperationRequest extends BaseRequest implements IRecordOperat
      */
      public IRecordOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (RecordOperationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IRecordOperationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (RecordOperationRequest)this;
      }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IListItemVersionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IListItemVersionCollectionPage> callback);
+    void get(final ICallback<IListItemVersionCollectionPage> callback);
 
     IListItemVersionCollectionPage get() throws ClientException;
 
-    void post(final ListItemVersion newListItemVersion, final ICallback<? super ListItemVersion> callback);
+    void post(final ListItemVersion newListItemVersion, final ICallback<ListItemVersion> callback);
 
     ListItemVersion post(final ListItemVersion newListItemVersion) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IListItemVersionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IListItemVersionCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IListItemVersionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

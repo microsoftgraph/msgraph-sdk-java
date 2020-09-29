@@ -37,7 +37,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
+    public void get(final ICallback<MacOSDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
+    public void delete(final ICallback<MacOSDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @param sourceMacOSDeviceFeaturesConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSDeviceFeaturesConfiguration sourceMacOSDeviceFeaturesConfiguration, final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
+    public void patch(final MacOSDeviceFeaturesConfiguration sourceMacOSDeviceFeaturesConfiguration, final ICallback<MacOSDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSDeviceFeaturesConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @param newMacOSDeviceFeaturesConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
+    public void post(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<MacOSDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSDeviceFeaturesConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @param newMacOSDeviceFeaturesConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
+    public void put(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<MacOSDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSDeviceFeaturesConfiguration);
     }
 
@@ -151,6 +151,17 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      */
      public IMacOSDeviceFeaturesConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (MacOSDeviceFeaturesConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMacOSDeviceFeaturesConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSDeviceFeaturesConfigurationRequest)this;
      }
 

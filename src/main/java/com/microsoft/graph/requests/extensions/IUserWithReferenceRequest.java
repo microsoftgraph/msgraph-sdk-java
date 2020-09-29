@@ -89,19 +89,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IUserWithReferenceRequest extends IHttpRequest {
 
-    void post(final User newUser, final IJsonBackedObject payload, final ICallback<? super User> callback);
+    void post(final User newUser, final IJsonBackedObject payload, final ICallback<User> callback);
 
     User post(final User newUser, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<? super User> callback);
+    void get(final ICallback<User> callback);
 
     User get() throws ClientException;
 
-	void delete(final ICallback<? super User> callback);
+	void delete(final ICallback<User> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final User sourceUser, final ICallback<? super User> callback);
+	void patch(final User sourceUser, final ICallback<User> callback);
 
 	User patch(final User sourceUser) throws ClientException;
 

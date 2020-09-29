@@ -39,7 +39,7 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
     }
 
 
-    public void get(final ICallback<? super IChatGetAllMessagesCollectionPage> callback) {
+    public void get(final ICallback<IChatGetAllMessagesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      */
     public IChatGetAllMessagesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IChatGetAllMessagesCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IChatGetAllMessagesCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IChatGetAllMessagesCollectionRequest)this;
     }
 

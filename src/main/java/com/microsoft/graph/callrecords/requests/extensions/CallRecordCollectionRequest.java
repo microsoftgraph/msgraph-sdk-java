@@ -40,7 +40,7 @@ public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecor
         super(requestUrl, client, requestOptions, CallRecordCollectionResponse.class, ICallRecordCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ICallRecordCollectionPage> callback) {
+    public void get(final ICallback<ICallRecordCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecor
         return buildFromResponse(response);
     }
 
-    public void post(final CallRecord newCallRecord, final ICallback<? super CallRecord> callback) {
+    public void post(final CallRecord newCallRecord, final ICallback<CallRecord> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CallRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecor
      */
     public ICallRecordCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (CallRecordCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ICallRecordCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CallRecordCollectionRequest)this;
     }
 

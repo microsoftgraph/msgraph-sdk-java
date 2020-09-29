@@ -6,9 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PermissionGrantConditionSet;
 import com.microsoft.graph.models.extensions.PolicyBase;
+import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionResponse;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionPage;
 
 
@@ -81,11 +83,35 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
 
 
         if (json.has("excludes")) {
-            excludes = serializer.deserializeObject(json.get("excludes").toString(), PermissionGrantConditionSetCollectionPage.class);
+            final PermissionGrantConditionSetCollectionResponse response = new PermissionGrantConditionSetCollectionResponse();
+            if (json.has("excludes@odata.nextLink")) {
+                response.nextLink = json.get("excludes@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("excludes").toString(), JsonObject[].class);
+            final PermissionGrantConditionSet[] array = new PermissionGrantConditionSet[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PermissionGrantConditionSet.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            excludes = new PermissionGrantConditionSetCollectionPage(response, null);
         }
 
         if (json.has("includes")) {
-            includes = serializer.deserializeObject(json.get("includes").toString(), PermissionGrantConditionSetCollectionPage.class);
+            final PermissionGrantConditionSetCollectionResponse response = new PermissionGrantConditionSetCollectionResponse();
+            if (json.has("includes@odata.nextLink")) {
+                response.nextLink = json.get("includes@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("includes").toString(), JsonObject[].class);
+            final PermissionGrantConditionSet[] array = new PermissionGrantConditionSet[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PermissionGrantConditionSet.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            includes = new PermissionGrantConditionSetCollectionPage(response, null);
         }
     }
 }

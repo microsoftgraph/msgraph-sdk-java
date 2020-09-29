@@ -38,7 +38,7 @@ public class MobileAppContentFileRequest extends BaseRequest implements IMobileA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileAppContentFile> callback) {
+    public void get(final ICallback<MobileAppContentFile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,7 +57,7 @@ public class MobileAppContentFileRequest extends BaseRequest implements IMobileA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileAppContentFile> callback) {
+    public void delete(final ICallback<MobileAppContentFile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class MobileAppContentFileRequest extends BaseRequest implements IMobileA
      * @param sourceMobileAppContentFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppContentFile sourceMobileAppContentFile, final ICallback<? super MobileAppContentFile> callback) {
+    public void patch(final MobileAppContentFile sourceMobileAppContentFile, final ICallback<MobileAppContentFile> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppContentFile);
     }
 
@@ -97,7 +97,7 @@ public class MobileAppContentFileRequest extends BaseRequest implements IMobileA
      * @param newMobileAppContentFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<? super MobileAppContentFile> callback) {
+    public void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<MobileAppContentFile> callback) {
         send(HttpMethod.POST, callback, newMobileAppContentFile);
     }
 
@@ -118,7 +118,7 @@ public class MobileAppContentFileRequest extends BaseRequest implements IMobileA
      * @param newMobileAppContentFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppContentFile newMobileAppContentFile, final ICallback<? super MobileAppContentFile> callback) {
+    public void put(final MobileAppContentFile newMobileAppContentFile, final ICallback<MobileAppContentFile> callback) {
         send(HttpMethod.PUT, callback, newMobileAppContentFile);
     }
 
@@ -152,6 +152,17 @@ public class MobileAppContentFileRequest extends BaseRequest implements IMobileA
      */
      public IMobileAppContentFileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (MobileAppContentFileRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMobileAppContentFileRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MobileAppContentFileRequest)this;
      }
 

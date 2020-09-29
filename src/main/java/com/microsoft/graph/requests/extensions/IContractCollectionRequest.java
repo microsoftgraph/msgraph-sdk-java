@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IContractCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IContractCollectionPage> callback);
+    void get(final ICallback<IContractCollectionPage> callback);
 
     IContractCollectionPage get() throws ClientException;
 
-    void post(final Contract newContract, final ICallback<? super Contract> callback);
+    void post(final Contract newContract, final ICallback<Contract> callback);
 
     Contract post(final Contract newContract) throws ClientException;
 
@@ -44,14 +44,6 @@ public interface IContractCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IContractCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IContractCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

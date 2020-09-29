@@ -28,19 +28,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IEducationUserWithReferenceRequest extends IHttpRequest {
 
-    void post(final EducationUser newEducationUser, final IJsonBackedObject payload, final ICallback<? super EducationUser> callback);
+    void post(final EducationUser newEducationUser, final IJsonBackedObject payload, final ICallback<EducationUser> callback);
 
     EducationUser post(final EducationUser newEducationUser, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<? super EducationUser> callback);
+    void get(final ICallback<EducationUser> callback);
 
     EducationUser get() throws ClientException;
 
-	void delete(final ICallback<? super EducationUser> callback);
+	void delete(final ICallback<EducationUser> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final EducationUser sourceEducationUser, final ICallback<? super EducationUser> callback);
+	void patch(final EducationUser sourceEducationUser, final ICallback<EducationUser> callback);
 
 	EducationUser patch(final EducationUser sourceEducationUser) throws ClientException;
 

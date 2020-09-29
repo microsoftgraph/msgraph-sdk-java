@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IShiftCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IShiftCollectionPage> callback);
+    void get(final ICallback<IShiftCollectionPage> callback);
 
     IShiftCollectionPage get() throws ClientException;
 
-    void post(final Shift newShift, final ICallback<? super Shift> callback);
+    void post(final Shift newShift, final ICallback<Shift> callback);
 
     Shift post(final Shift newShift) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IShiftCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IShiftCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IShiftCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

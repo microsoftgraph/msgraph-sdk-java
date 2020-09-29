@@ -37,7 +37,7 @@ public class WorkbookFunctionsBeta_InvRequest extends BaseRequest implements IWo
         body = new WorkbookFunctionsBeta_InvBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsBeta_InvRequest extends BaseRequest implements IWo
      */
     public IWorkbookFunctionsBeta_InvRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsBeta_InvRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsBeta_InvRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsBeta_InvRequest)this;
     }
 

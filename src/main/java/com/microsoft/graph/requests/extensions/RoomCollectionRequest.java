@@ -40,7 +40,7 @@ public class RoomCollectionRequest extends BaseCollectionRequest<RoomCollectionR
         super(requestUrl, client, requestOptions, RoomCollectionResponse.class, IRoomCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IRoomCollectionPage> callback) {
+    public void get(final ICallback<IRoomCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RoomCollectionRequest extends BaseCollectionRequest<RoomCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final Room newRoom, final ICallback<? super Room> callback) {
+    public void post(final Room newRoom, final ICallback<Room> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoomRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class RoomCollectionRequest extends BaseCollectionRequest<RoomCollectionR
      */
     public IRoomCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (RoomCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IRoomCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RoomCollectionRequest)this;
     }
 

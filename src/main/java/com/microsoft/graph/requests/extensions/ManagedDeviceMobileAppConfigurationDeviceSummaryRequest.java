@@ -37,7 +37,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequest extends Bas
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
+    public void get(final ICallback<ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequest extends Bas
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
+    public void delete(final ICallback<ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequest extends Bas
      * @param sourceManagedDeviceMobileAppConfigurationDeviceSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedDeviceMobileAppConfigurationDeviceSummary sourceManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
+    public void patch(final ManagedDeviceMobileAppConfigurationDeviceSummary sourceManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedDeviceMobileAppConfigurationDeviceSummary);
     }
 
@@ -96,7 +96,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequest extends Bas
      * @param newManagedDeviceMobileAppConfigurationDeviceSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
+    public void post(final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
         send(HttpMethod.POST, callback, newManagedDeviceMobileAppConfigurationDeviceSummary);
     }
 
@@ -117,7 +117,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequest extends Bas
      * @param newManagedDeviceMobileAppConfigurationDeviceSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
+    public void put(final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
         send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfigurationDeviceSummary);
     }
 
@@ -151,6 +151,17 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequest extends Bas
      */
      public IManagedDeviceMobileAppConfigurationDeviceSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ManagedDeviceMobileAppConfigurationDeviceSummaryRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedDeviceMobileAppConfigurationDeviceSummaryRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagedDeviceMobileAppConfigurationDeviceSummaryRequest)this;
      }
 

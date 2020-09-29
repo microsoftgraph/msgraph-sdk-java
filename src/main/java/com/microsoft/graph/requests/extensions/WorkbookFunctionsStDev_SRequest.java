@@ -37,7 +37,7 @@ public class WorkbookFunctionsStDev_SRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsStDev_SBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsStDev_SRequest extends BaseRequest implements IWor
      */
     public IWorkbookFunctionsStDev_SRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsStDev_SRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsStDev_SRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsStDev_SRequest)this;
     }
 

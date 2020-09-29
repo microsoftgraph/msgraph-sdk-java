@@ -23,7 +23,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IDirectoryObjectReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<? super DirectoryObject> callback);
+    void delete(final ICallback<DirectoryObject> callback);
 
     DirectoryObject delete() throws ClientException;
 
@@ -49,7 +49,7 @@ public interface IDirectoryObjectReferenceRequest extends IHttpRequest {
      * @param srcDirectoryObject the DirectoryObject to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(DirectoryObject srcDirectoryObject, final ICallback<? super DirectoryObject> callback);
+    void put(DirectoryObject srcDirectoryObject, final ICallback<DirectoryObject> callback);
 
     /**
      * Puts the DirectoryObject

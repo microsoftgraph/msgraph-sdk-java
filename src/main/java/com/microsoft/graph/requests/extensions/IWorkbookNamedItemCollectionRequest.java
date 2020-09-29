@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWorkbookNamedItemCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IWorkbookNamedItemCollectionPage> callback);
+    void get(final ICallback<IWorkbookNamedItemCollectionPage> callback);
 
     IWorkbookNamedItemCollectionPage get() throws ClientException;
 
-    void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<? super WorkbookNamedItem> callback);
+    void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<WorkbookNamedItem> callback);
 
     WorkbookNamedItem post(final WorkbookNamedItem newWorkbookNamedItem) throws ClientException;
 
@@ -46,14 +46,6 @@ public interface IWorkbookNamedItemCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IWorkbookNamedItemCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IWorkbookNamedItemCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

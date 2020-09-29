@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface INamedLocationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super INamedLocationCollectionPage> callback);
+    void get(final ICallback<INamedLocationCollectionPage> callback);
 
     INamedLocationCollectionPage get() throws ClientException;
 
-    void post(final NamedLocation newNamedLocation, final ICallback<? super NamedLocation> callback);
+    void post(final NamedLocation newNamedLocation, final ICallback<NamedLocation> callback);
 
     NamedLocation post(final NamedLocation newNamedLocation) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface INamedLocationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     INamedLocationCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    INamedLocationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

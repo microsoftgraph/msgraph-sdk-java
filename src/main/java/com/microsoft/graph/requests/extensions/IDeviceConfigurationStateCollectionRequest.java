@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceConfigurationStateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IDeviceConfigurationStateCollectionPage> callback);
+    void get(final ICallback<IDeviceConfigurationStateCollectionPage> callback);
 
     IDeviceConfigurationStateCollectionPage get() throws ClientException;
 
-    void post(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<? super DeviceConfigurationState> callback);
+    void post(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<DeviceConfigurationState> callback);
 
     DeviceConfigurationState post(final DeviceConfigurationState newDeviceConfigurationState) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IDeviceConfigurationStateCollectionRequest extends IHttpRequest
      * @return the updated request
      */
     IDeviceConfigurationStateCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IDeviceConfigurationStateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

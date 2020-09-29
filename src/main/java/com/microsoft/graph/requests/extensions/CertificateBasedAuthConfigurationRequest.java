@@ -37,7 +37,7 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    public void get(final ICallback<CertificateBasedAuthConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    public void delete(final ICallback<CertificateBasedAuthConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest implem
      * @param sourceCertificateBasedAuthConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    public void patch(final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceCertificateBasedAuthConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest implem
      * @param newCertificateBasedAuthConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback) {
         send(HttpMethod.POST, callback, newCertificateBasedAuthConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest implem
      * @param newCertificateBasedAuthConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    public void put(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback) {
         send(HttpMethod.PUT, callback, newCertificateBasedAuthConfiguration);
     }
 
@@ -151,6 +151,17 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest implem
      */
      public ICertificateBasedAuthConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (CertificateBasedAuthConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ICertificateBasedAuthConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CertificateBasedAuthConfigurationRequest)this;
      }
 

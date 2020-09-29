@@ -37,7 +37,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10MobileCompliancePolicy> callback) {
+    public void get(final ICallback<Windows10MobileCompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10MobileCompliancePolicy> callback) {
+    public void delete(final ICallback<Windows10MobileCompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @param sourceWindows10MobileCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10MobileCompliancePolicy sourceWindows10MobileCompliancePolicy, final ICallback<? super Windows10MobileCompliancePolicy> callback) {
+    public void patch(final Windows10MobileCompliancePolicy sourceWindows10MobileCompliancePolicy, final ICallback<Windows10MobileCompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10MobileCompliancePolicy);
     }
 
@@ -96,7 +96,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @param newWindows10MobileCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<? super Windows10MobileCompliancePolicy> callback) {
+    public void post(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<Windows10MobileCompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newWindows10MobileCompliancePolicy);
     }
 
@@ -117,7 +117,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @param newWindows10MobileCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<? super Windows10MobileCompliancePolicy> callback) {
+    public void put(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<Windows10MobileCompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newWindows10MobileCompliancePolicy);
     }
 
@@ -151,6 +151,17 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      */
      public IWindows10MobileCompliancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (Windows10MobileCompliancePolicyRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindows10MobileCompliancePolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Windows10MobileCompliancePolicyRequest)this;
      }
 

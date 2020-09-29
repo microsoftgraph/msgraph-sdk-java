@@ -37,7 +37,7 @@ public class DriveItemCopyRequest extends BaseRequest implements IDriveItemCopyR
         body = new DriveItemCopyBody();
     }
 
-    public void post(final ICallback<? super DriveItem> callback) {
+    public void post(final ICallback<DriveItem> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class DriveItemCopyRequest extends BaseRequest implements IDriveItemCopyR
      */
     public IDriveItemCopyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (DriveItemCopyRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDriveItemCopyRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DriveItemCopyRequest)this;
     }
 

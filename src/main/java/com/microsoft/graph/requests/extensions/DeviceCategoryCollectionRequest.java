@@ -40,7 +40,7 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
         super(requestUrl, client, requestOptions, DeviceCategoryCollectionResponse.class, IDeviceCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDeviceCategoryCollectionPage> callback) {
+    public void get(final ICallback<IDeviceCategoryCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceCategory newDeviceCategory, final ICallback<? super DeviceCategory> callback) {
+    public void post(final DeviceCategory newDeviceCategory, final ICallback<DeviceCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
      */
     public IDeviceCategoryCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceCategoryCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDeviceCategoryCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceCategoryCollectionRequest)this;
     }
 

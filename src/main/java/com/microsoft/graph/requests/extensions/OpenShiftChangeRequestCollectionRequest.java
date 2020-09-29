@@ -40,7 +40,7 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
         super(requestUrl, client, requestOptions, OpenShiftChangeRequestCollectionResponse.class, IOpenShiftChangeRequestCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IOpenShiftChangeRequestCollectionPage> callback) {
+    public void get(final ICallback<IOpenShiftChangeRequestCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
         return buildFromResponse(response);
     }
 
-    public void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<? super OpenShiftChangeRequest> callback) {
+    public void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<OpenShiftChangeRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OpenShiftChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
      */
     public IOpenShiftChangeRequestCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (OpenShiftChangeRequestCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IOpenShiftChangeRequestCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OpenShiftChangeRequestCollectionRequest)this;
     }
 

@@ -36,7 +36,7 @@ public class ScheduleChangeRequestApproveRequest extends BaseRequest implements 
         body = new ScheduleChangeRequestApproveBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class ScheduleChangeRequestApproveRequest extends BaseRequest implements 
      */
     public IScheduleChangeRequestApproveRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (ScheduleChangeRequestApproveRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IScheduleChangeRequestApproveRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ScheduleChangeRequestApproveRequest)this;
     }
 

@@ -60,7 +60,7 @@ public class EventRequest extends BaseRequest implements IEventRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Event> callback) {
+    public void get(final ICallback<Event> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class EventRequest extends BaseRequest implements IEventRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Event> callback) {
+    public void delete(final ICallback<Event> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -98,7 +98,7 @@ public class EventRequest extends BaseRequest implements IEventRequest {
      * @param sourceEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Event sourceEvent, final ICallback<? super Event> callback) {
+    public void patch(final Event sourceEvent, final ICallback<Event> callback) {
         send(HttpMethod.PATCH, callback, sourceEvent);
     }
 
@@ -119,7 +119,7 @@ public class EventRequest extends BaseRequest implements IEventRequest {
      * @param newEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Event newEvent, final ICallback<? super Event> callback) {
+    public void post(final Event newEvent, final ICallback<Event> callback) {
         send(HttpMethod.POST, callback, newEvent);
     }
 
@@ -140,7 +140,7 @@ public class EventRequest extends BaseRequest implements IEventRequest {
      * @param newEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Event newEvent, final ICallback<? super Event> callback) {
+    public void put(final Event newEvent, final ICallback<Event> callback) {
         send(HttpMethod.PUT, callback, newEvent);
     }
 
@@ -174,6 +174,17 @@ public class EventRequest extends BaseRequest implements IEventRequest {
      */
      public IEventRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (EventRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEventRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EventRequest)this;
      }
 

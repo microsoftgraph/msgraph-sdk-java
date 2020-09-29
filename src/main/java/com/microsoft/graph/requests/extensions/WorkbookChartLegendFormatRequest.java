@@ -41,7 +41,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartLegendFormat> callback) {
+    public void get(final ICallback<WorkbookChartLegendFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartLegendFormat> callback) {
+    public void delete(final ICallback<WorkbookChartLegendFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @param sourceWorkbookChartLegendFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat, final ICallback<? super WorkbookChartLegendFormat> callback) {
+    public void patch(final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat, final ICallback<WorkbookChartLegendFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartLegendFormat);
     }
 
@@ -100,7 +100,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @param newWorkbookChartLegendFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<? super WorkbookChartLegendFormat> callback) {
+    public void post(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<WorkbookChartLegendFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartLegendFormat);
     }
 
@@ -121,7 +121,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @param newWorkbookChartLegendFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<? super WorkbookChartLegendFormat> callback) {
+    public void put(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<WorkbookChartLegendFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartLegendFormat);
     }
 
@@ -155,6 +155,17 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      */
      public IWorkbookChartLegendFormatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookChartLegendFormatRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookChartLegendFormatRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookChartLegendFormatRequest)this;
      }
 

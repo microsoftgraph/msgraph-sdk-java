@@ -36,7 +36,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, ITokenIssuancePolicyCollectionPage.class);
     }
 
-    public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
+    public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/tokenIssuancePolicies/" + newTokenIssuancePolicy.id);
         new TokenIssuancePolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -70,17 +70,6 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      */
     public ITokenIssuancePolicyCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TokenIssuancePolicyCollectionReferenceRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the sort clause
-     * @return the updated request
-     */
-    public ITokenIssuancePolicyCollectionReferenceRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TokenIssuancePolicyCollectionReferenceRequest)this;
     }
 

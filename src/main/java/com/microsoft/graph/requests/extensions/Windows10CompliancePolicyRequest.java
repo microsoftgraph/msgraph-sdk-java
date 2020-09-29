@@ -37,7 +37,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10CompliancePolicy> callback) {
+    public void get(final ICallback<Windows10CompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10CompliancePolicy> callback) {
+    public void delete(final ICallback<Windows10CompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @param sourceWindows10CompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10CompliancePolicy sourceWindows10CompliancePolicy, final ICallback<? super Windows10CompliancePolicy> callback) {
+    public void patch(final Windows10CompliancePolicy sourceWindows10CompliancePolicy, final ICallback<Windows10CompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10CompliancePolicy);
     }
 
@@ -96,7 +96,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @param newWindows10CompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10CompliancePolicy newWindows10CompliancePolicy, final ICallback<? super Windows10CompliancePolicy> callback) {
+    public void post(final Windows10CompliancePolicy newWindows10CompliancePolicy, final ICallback<Windows10CompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newWindows10CompliancePolicy);
     }
 
@@ -117,7 +117,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @param newWindows10CompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10CompliancePolicy newWindows10CompliancePolicy, final ICallback<? super Windows10CompliancePolicy> callback) {
+    public void put(final Windows10CompliancePolicy newWindows10CompliancePolicy, final ICallback<Windows10CompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newWindows10CompliancePolicy);
     }
 
@@ -151,6 +151,17 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      */
      public IWindows10CompliancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (Windows10CompliancePolicyRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindows10CompliancePolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (Windows10CompliancePolicyRequest)this;
      }
 

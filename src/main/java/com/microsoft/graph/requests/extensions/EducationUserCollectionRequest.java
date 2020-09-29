@@ -40,7 +40,7 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
         super(requestUrl, client, requestOptions, EducationUserCollectionResponse.class, IEducationUserCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IEducationUserCollectionPage> callback) {
+    public void get(final ICallback<IEducationUserCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
         return buildFromResponse(response);
     }
 
-    public void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
+    public void post(final EducationUser newEducationUser, final ICallback<EducationUser> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationUserRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class EducationUserCollectionRequest extends BaseCollectionRequest<Educat
      */
     public IEducationUserCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (EducationUserCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IEducationUserCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EducationUserCollectionRequest)this;
     }
 

@@ -37,7 +37,7 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest implements IMacOSOff
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSOfficeSuiteApp> callback) {
+    public void get(final ICallback<MacOSOfficeSuiteApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest implements IMacOSOff
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSOfficeSuiteApp> callback) {
+    public void delete(final ICallback<MacOSOfficeSuiteApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest implements IMacOSOff
      * @param sourceMacOSOfficeSuiteApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSOfficeSuiteApp sourceMacOSOfficeSuiteApp, final ICallback<? super MacOSOfficeSuiteApp> callback) {
+    public void patch(final MacOSOfficeSuiteApp sourceMacOSOfficeSuiteApp, final ICallback<MacOSOfficeSuiteApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSOfficeSuiteApp);
     }
 
@@ -96,7 +96,7 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest implements IMacOSOff
      * @param newMacOSOfficeSuiteApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp, final ICallback<? super MacOSOfficeSuiteApp> callback) {
+    public void post(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp, final ICallback<MacOSOfficeSuiteApp> callback) {
         send(HttpMethod.POST, callback, newMacOSOfficeSuiteApp);
     }
 
@@ -117,7 +117,7 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest implements IMacOSOff
      * @param newMacOSOfficeSuiteApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp, final ICallback<? super MacOSOfficeSuiteApp> callback) {
+    public void put(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp, final ICallback<MacOSOfficeSuiteApp> callback) {
         send(HttpMethod.PUT, callback, newMacOSOfficeSuiteApp);
     }
 
@@ -151,6 +151,17 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest implements IMacOSOff
      */
      public IMacOSOfficeSuiteAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (MacOSOfficeSuiteAppRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMacOSOfficeSuiteAppRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSOfficeSuiteAppRequest)this;
      }
 

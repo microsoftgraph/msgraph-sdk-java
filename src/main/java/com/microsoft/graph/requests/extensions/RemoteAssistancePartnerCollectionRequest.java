@@ -40,7 +40,7 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
         super(requestUrl, client, requestOptions, RemoteAssistancePartnerCollectionResponse.class, IRemoteAssistancePartnerCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IRemoteAssistancePartnerCollectionPage> callback) {
+    public void get(final ICallback<IRemoteAssistancePartnerCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
         return buildFromResponse(response);
     }
 
-    public void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<? super RemoteAssistancePartner> callback) {
+    public void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RemoteAssistancePartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
      */
     public IRemoteAssistancePartnerCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (RemoteAssistancePartnerCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IRemoteAssistancePartnerCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (RemoteAssistancePartnerCollectionRequest)this;
     }
 

@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IGroupSettingTemplateCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IGroupSettingTemplateCollectionPage> callback);
+    void get(final ICallback<IGroupSettingTemplateCollectionPage> callback);
 
     IGroupSettingTemplateCollectionPage get() throws ClientException;
 
-    void post(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<? super GroupSettingTemplate> callback);
+    void post(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<GroupSettingTemplate> callback);
 
     GroupSettingTemplate post(final GroupSettingTemplate newGroupSettingTemplate) throws ClientException;
 
@@ -44,14 +44,6 @@ public interface IGroupSettingTemplateCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IGroupSettingTemplateCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IGroupSettingTemplateCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

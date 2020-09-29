@@ -40,7 +40,7 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
         super(requestUrl, client, requestOptions, WorkbookChartPointCollectionResponse.class, IWorkbookChartPointCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IWorkbookChartPointCollectionPage> callback) {
+    public void get(final ICallback<IWorkbookChartPointCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
+    public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
      */
     public IWorkbookChartPointCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookChartPointCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookChartPointCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookChartPointCollectionRequest)this;
     }
 

@@ -36,7 +36,7 @@ public class WorkbookChartImageRequest extends BaseRequest implements IWorkbookC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super String> callback) {
+    public void get(final ICallback<String> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -80,17 +80,6 @@ public class WorkbookChartImageRequest extends BaseRequest implements IWorkbookC
      */
     public IWorkbookChartImageRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookChartImageRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookChartImageRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookChartImageRequest)this;
     }
 

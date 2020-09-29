@@ -40,7 +40,7 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
         super(requestUrl, client, requestOptions, ThumbnailSetCollectionResponse.class, IThumbnailSetCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IThumbnailSetCollectionPage> callback) {
+    public void get(final ICallback<IThumbnailSetCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
         return buildFromResponse(response);
     }
 
-    public void post(final ThumbnailSet newThumbnailSet, final ICallback<? super ThumbnailSet> callback) {
+    public void post(final ThumbnailSet newThumbnailSet, final ICallback<ThumbnailSet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ThumbnailSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
      */
     public IThumbnailSetCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ThumbnailSetCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IThumbnailSetCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ThumbnailSetCollectionRequest)this;
     }
 

@@ -39,7 +39,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, ScopedRoleMembershipCollectionResponse.class, IScopedRoleMembershipCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IScopedRoleMembershipCollectionPage> callback) {
+    public void get(final ICallback<IScopedRoleMembershipCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<? super ScopedRoleMembership> callback) {
+    public void post(final ScopedRoleMembership newScopedRoleMembership, final ICallback<ScopedRoleMembership> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ScopedRoleMembershipRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class ScopedRoleMembershipCollectionRequest extends BaseCollectionRequest
      */
     public IScopedRoleMembershipCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ScopedRoleMembershipCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IScopedRoleMembershipCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ScopedRoleMembershipCollectionRequest)this;
     }
 

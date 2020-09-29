@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDriveItemVersionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IDriveItemVersionCollectionPage> callback);
+    void get(final ICallback<IDriveItemVersionCollectionPage> callback);
 
     IDriveItemVersionCollectionPage get() throws ClientException;
 
-    void post(final DriveItemVersion newDriveItemVersion, final ICallback<? super DriveItemVersion> callback);
+    void post(final DriveItemVersion newDriveItemVersion, final ICallback<DriveItemVersion> callback);
 
     DriveItemVersion post(final DriveItemVersion newDriveItemVersion) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IDriveItemVersionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDriveItemVersionCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IDriveItemVersionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

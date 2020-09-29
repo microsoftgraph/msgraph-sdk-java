@@ -45,7 +45,7 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
     }
 
 
-    public void post(final ICallback<? super IUserTranslateExchangeIdsCollectionPage> callback) {
+    public void post(final ICallback<IUserTranslateExchangeIdsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -118,17 +118,6 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      */
     public IUserTranslateExchangeIdsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IUserTranslateExchangeIdsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IUserTranslateExchangeIdsCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IUserTranslateExchangeIdsCollectionRequest)this;
     }
 

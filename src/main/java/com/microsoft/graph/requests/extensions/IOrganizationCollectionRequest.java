@@ -21,11 +21,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IOrganizationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IOrganizationCollectionPage> callback);
+    void get(final ICallback<IOrganizationCollectionPage> callback);
 
     IOrganizationCollectionPage get() throws ClientException;
 
-    void post(final Organization newOrganization, final ICallback<? super Organization> callback);
+    void post(final Organization newOrganization, final ICallback<Organization> callback);
 
     Organization post(final Organization newOrganization) throws ClientException;
 
@@ -44,14 +44,6 @@ public interface IOrganizationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IOrganizationCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IOrganizationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

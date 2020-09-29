@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IThreatAssessmentRequestCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IThreatAssessmentRequestCollectionPage> callback);
+    void get(final ICallback<IThreatAssessmentRequestCollectionPage> callback);
 
     IThreatAssessmentRequestCollectionPage get() throws ClientException;
 
-    void post(final ThreatAssessmentRequest newThreatAssessmentRequest, final ICallback<? super ThreatAssessmentRequest> callback);
+    void post(final ThreatAssessmentRequest newThreatAssessmentRequest, final ICallback<ThreatAssessmentRequest> callback);
 
     ThreatAssessmentRequest post(final ThreatAssessmentRequest newThreatAssessmentRequest) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IThreatAssessmentRequestCollectionRequest extends IHttpRequest 
      * @return the updated request
      */
     IThreatAssessmentRequestCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IThreatAssessmentRequestCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

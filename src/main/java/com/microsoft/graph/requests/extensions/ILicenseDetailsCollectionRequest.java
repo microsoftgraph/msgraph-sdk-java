@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ILicenseDetailsCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ILicenseDetailsCollectionPage> callback);
+    void get(final ICallback<ILicenseDetailsCollectionPage> callback);
 
     ILicenseDetailsCollectionPage get() throws ClientException;
 
-    void post(final LicenseDetails newLicenseDetails, final ICallback<? super LicenseDetails> callback);
+    void post(final LicenseDetails newLicenseDetails, final ICallback<LicenseDetails> callback);
 
     LicenseDetails post(final LicenseDetails newLicenseDetails) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ILicenseDetailsCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ILicenseDetailsCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ILicenseDetailsCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

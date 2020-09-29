@@ -39,7 +39,7 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
         super(requestUrl, client, requestOptions, SharedDriveItemCollectionResponse.class, ISharedDriveItemCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ISharedDriveItemCollectionPage> callback) {
+    public void get(final ICallback<ISharedDriveItemCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
         return buildFromResponse(response);
     }
 
-    public void post(final SharedDriveItem newSharedDriveItem, final ICallback<? super SharedDriveItem> callback) {
+    public void post(final SharedDriveItem newSharedDriveItem, final ICallback<SharedDriveItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
      */
     public ISharedDriveItemCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SharedDriveItemCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ISharedDriveItemCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SharedDriveItemCollectionRequest)this;
     }
 

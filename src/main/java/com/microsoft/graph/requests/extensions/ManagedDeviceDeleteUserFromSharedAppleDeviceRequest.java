@@ -36,7 +36,7 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequest extends BaseReq
         body = new ManagedDeviceDeleteUserFromSharedAppleDeviceBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequest extends BaseReq
      */
     public IManagedDeviceDeleteUserFromSharedAppleDeviceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (ManagedDeviceDeleteUserFromSharedAppleDeviceRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IManagedDeviceDeleteUserFromSharedAppleDeviceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedDeviceDeleteUserFromSharedAppleDeviceRequest)this;
     }
 

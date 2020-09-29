@@ -37,7 +37,7 @@ public class WorkbookApplicationRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookApplication> callback) {
+    public void get(final ICallback<WorkbookApplication> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WorkbookApplicationRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookApplication> callback) {
+    public void delete(final ICallback<WorkbookApplication> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WorkbookApplicationRequest extends BaseRequest implements IWorkbook
      * @param sourceWorkbookApplication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookApplication sourceWorkbookApplication, final ICallback<? super WorkbookApplication> callback) {
+    public void patch(final WorkbookApplication sourceWorkbookApplication, final ICallback<WorkbookApplication> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookApplication);
     }
 
@@ -96,7 +96,7 @@ public class WorkbookApplicationRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookApplication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookApplication newWorkbookApplication, final ICallback<? super WorkbookApplication> callback) {
+    public void post(final WorkbookApplication newWorkbookApplication, final ICallback<WorkbookApplication> callback) {
         send(HttpMethod.POST, callback, newWorkbookApplication);
     }
 
@@ -117,7 +117,7 @@ public class WorkbookApplicationRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookApplication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookApplication newWorkbookApplication, final ICallback<? super WorkbookApplication> callback) {
+    public void put(final WorkbookApplication newWorkbookApplication, final ICallback<WorkbookApplication> callback) {
         send(HttpMethod.PUT, callback, newWorkbookApplication);
     }
 
@@ -151,6 +151,17 @@ public class WorkbookApplicationRequest extends BaseRequest implements IWorkbook
      */
      public IWorkbookApplicationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookApplicationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookApplicationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookApplicationRequest)this;
      }
 

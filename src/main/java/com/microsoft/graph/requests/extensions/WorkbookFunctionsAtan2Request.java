@@ -37,7 +37,7 @@ public class WorkbookFunctionsAtan2Request extends BaseRequest implements IWorkb
         body = new WorkbookFunctionsAtan2Body();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsAtan2Request extends BaseRequest implements IWorkb
      */
     public IWorkbookFunctionsAtan2Request expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsAtan2Request)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsAtan2Request filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsAtan2Request)this;
     }
 

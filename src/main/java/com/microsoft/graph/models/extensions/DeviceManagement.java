@@ -6,6 +6,7 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceManagementSettings;
 import com.microsoft.graph.models.extensions.IntuneBrand;
@@ -39,27 +40,49 @@ import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEven
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLearningSummary;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionNetworkLearningSummary;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionResponse;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionPage;
+import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionPage;
+import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionResponse;
 import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionPage;
+import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionPage;
+import com.microsoft.graph.requests.extensions.DetectedAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.DetectedAppCollectionPage;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
+import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionPage;
+import com.microsoft.graph.requests.extensions.ResourceOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionPage;
+import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionResponse;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionResponse;
 import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionPage;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionPage;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionPage;
 
 
@@ -372,91 +395,355 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
 
         if (json.has("termsAndConditions")) {
-            termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions").toString(), TermsAndConditionsCollectionPage.class);
+            final TermsAndConditionsCollectionResponse response = new TermsAndConditionsCollectionResponse();
+            if (json.has("termsAndConditions@odata.nextLink")) {
+                response.nextLink = json.get("termsAndConditions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("termsAndConditions").toString(), JsonObject[].class);
+            final TermsAndConditions[] array = new TermsAndConditions[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TermsAndConditions.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            termsAndConditions = new TermsAndConditionsCollectionPage(response, null);
         }
 
         if (json.has("deviceCompliancePolicies")) {
-            deviceCompliancePolicies = serializer.deserializeObject(json.get("deviceCompliancePolicies").toString(), DeviceCompliancePolicyCollectionPage.class);
+            final DeviceCompliancePolicyCollectionResponse response = new DeviceCompliancePolicyCollectionResponse();
+            if (json.has("deviceCompliancePolicies@odata.nextLink")) {
+                response.nextLink = json.get("deviceCompliancePolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceCompliancePolicies").toString(), JsonObject[].class);
+            final DeviceCompliancePolicy[] array = new DeviceCompliancePolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceCompliancePolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceCompliancePolicies = new DeviceCompliancePolicyCollectionPage(response, null);
         }
 
         if (json.has("deviceCompliancePolicySettingStateSummaries")) {
-            deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries").toString(), DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
+            final DeviceCompliancePolicySettingStateSummaryCollectionResponse response = new DeviceCompliancePolicySettingStateSummaryCollectionResponse();
+            if (json.has("deviceCompliancePolicySettingStateSummaries@odata.nextLink")) {
+                response.nextLink = json.get("deviceCompliancePolicySettingStateSummaries@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries").toString(), JsonObject[].class);
+            final DeviceCompliancePolicySettingStateSummary[] array = new DeviceCompliancePolicySettingStateSummary[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceCompliancePolicySettingStateSummary.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceCompliancePolicySettingStateSummaries = new DeviceCompliancePolicySettingStateSummaryCollectionPage(response, null);
         }
 
         if (json.has("deviceConfigurations")) {
-            deviceConfigurations = serializer.deserializeObject(json.get("deviceConfigurations").toString(), DeviceConfigurationCollectionPage.class);
+            final DeviceConfigurationCollectionResponse response = new DeviceConfigurationCollectionResponse();
+            if (json.has("deviceConfigurations@odata.nextLink")) {
+                response.nextLink = json.get("deviceConfigurations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceConfigurations").toString(), JsonObject[].class);
+            final DeviceConfiguration[] array = new DeviceConfiguration[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceConfiguration.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceConfigurations = new DeviceConfigurationCollectionPage(response, null);
         }
 
         if (json.has("iosUpdateStatuses")) {
-            iosUpdateStatuses = serializer.deserializeObject(json.get("iosUpdateStatuses").toString(), IosUpdateDeviceStatusCollectionPage.class);
+            final IosUpdateDeviceStatusCollectionResponse response = new IosUpdateDeviceStatusCollectionResponse();
+            if (json.has("iosUpdateStatuses@odata.nextLink")) {
+                response.nextLink = json.get("iosUpdateStatuses@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("iosUpdateStatuses").toString(), JsonObject[].class);
+            final IosUpdateDeviceStatus[] array = new IosUpdateDeviceStatus[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IosUpdateDeviceStatus.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            iosUpdateStatuses = new IosUpdateDeviceStatusCollectionPage(response, null);
         }
 
         if (json.has("complianceManagementPartners")) {
-            complianceManagementPartners = serializer.deserializeObject(json.get("complianceManagementPartners").toString(), ComplianceManagementPartnerCollectionPage.class);
+            final ComplianceManagementPartnerCollectionResponse response = new ComplianceManagementPartnerCollectionResponse();
+            if (json.has("complianceManagementPartners@odata.nextLink")) {
+                response.nextLink = json.get("complianceManagementPartners@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("complianceManagementPartners").toString(), JsonObject[].class);
+            final ComplianceManagementPartner[] array = new ComplianceManagementPartner[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ComplianceManagementPartner.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            complianceManagementPartners = new ComplianceManagementPartnerCollectionPage(response, null);
         }
 
         if (json.has("deviceCategories")) {
-            deviceCategories = serializer.deserializeObject(json.get("deviceCategories").toString(), DeviceCategoryCollectionPage.class);
+            final DeviceCategoryCollectionResponse response = new DeviceCategoryCollectionResponse();
+            if (json.has("deviceCategories@odata.nextLink")) {
+                response.nextLink = json.get("deviceCategories@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceCategories").toString(), JsonObject[].class);
+            final DeviceCategory[] array = new DeviceCategory[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceCategory.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceCategories = new DeviceCategoryCollectionPage(response, null);
         }
 
         if (json.has("deviceEnrollmentConfigurations")) {
-            deviceEnrollmentConfigurations = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations").toString(), DeviceEnrollmentConfigurationCollectionPage.class);
+            final DeviceEnrollmentConfigurationCollectionResponse response = new DeviceEnrollmentConfigurationCollectionResponse();
+            if (json.has("deviceEnrollmentConfigurations@odata.nextLink")) {
+                response.nextLink = json.get("deviceEnrollmentConfigurations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceEnrollmentConfigurations").toString(), JsonObject[].class);
+            final DeviceEnrollmentConfiguration[] array = new DeviceEnrollmentConfiguration[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceEnrollmentConfiguration.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceEnrollmentConfigurations = new DeviceEnrollmentConfigurationCollectionPage(response, null);
         }
 
         if (json.has("deviceManagementPartners")) {
-            deviceManagementPartners = serializer.deserializeObject(json.get("deviceManagementPartners").toString(), DeviceManagementPartnerCollectionPage.class);
+            final DeviceManagementPartnerCollectionResponse response = new DeviceManagementPartnerCollectionResponse();
+            if (json.has("deviceManagementPartners@odata.nextLink")) {
+                response.nextLink = json.get("deviceManagementPartners@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceManagementPartners").toString(), JsonObject[].class);
+            final DeviceManagementPartner[] array = new DeviceManagementPartner[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementPartner.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceManagementPartners = new DeviceManagementPartnerCollectionPage(response, null);
         }
 
         if (json.has("exchangeConnectors")) {
-            exchangeConnectors = serializer.deserializeObject(json.get("exchangeConnectors").toString(), DeviceManagementExchangeConnectorCollectionPage.class);
+            final DeviceManagementExchangeConnectorCollectionResponse response = new DeviceManagementExchangeConnectorCollectionResponse();
+            if (json.has("exchangeConnectors@odata.nextLink")) {
+                response.nextLink = json.get("exchangeConnectors@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("exchangeConnectors").toString(), JsonObject[].class);
+            final DeviceManagementExchangeConnector[] array = new DeviceManagementExchangeConnector[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementExchangeConnector.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            exchangeConnectors = new DeviceManagementExchangeConnectorCollectionPage(response, null);
         }
 
         if (json.has("mobileThreatDefenseConnectors")) {
-            mobileThreatDefenseConnectors = serializer.deserializeObject(json.get("mobileThreatDefenseConnectors").toString(), MobileThreatDefenseConnectorCollectionPage.class);
+            final MobileThreatDefenseConnectorCollectionResponse response = new MobileThreatDefenseConnectorCollectionResponse();
+            if (json.has("mobileThreatDefenseConnectors@odata.nextLink")) {
+                response.nextLink = json.get("mobileThreatDefenseConnectors@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("mobileThreatDefenseConnectors").toString(), JsonObject[].class);
+            final MobileThreatDefenseConnector[] array = new MobileThreatDefenseConnector[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileThreatDefenseConnector.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            mobileThreatDefenseConnectors = new MobileThreatDefenseConnectorCollectionPage(response, null);
         }
 
         if (json.has("detectedApps")) {
-            detectedApps = serializer.deserializeObject(json.get("detectedApps").toString(), DetectedAppCollectionPage.class);
+            final DetectedAppCollectionResponse response = new DetectedAppCollectionResponse();
+            if (json.has("detectedApps@odata.nextLink")) {
+                response.nextLink = json.get("detectedApps@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("detectedApps").toString(), JsonObject[].class);
+            final DetectedApp[] array = new DetectedApp[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DetectedApp.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            detectedApps = new DetectedAppCollectionPage(response, null);
         }
 
         if (json.has("managedDevices")) {
-            managedDevices = serializer.deserializeObject(json.get("managedDevices").toString(), ManagedDeviceCollectionPage.class);
+            final ManagedDeviceCollectionResponse response = new ManagedDeviceCollectionResponse();
+            if (json.has("managedDevices@odata.nextLink")) {
+                response.nextLink = json.get("managedDevices@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedDevices").toString(), JsonObject[].class);
+            final ManagedDevice[] array = new ManagedDevice[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDevice.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            managedDevices = new ManagedDeviceCollectionPage(response, null);
         }
 
         if (json.has("notificationMessageTemplates")) {
-            notificationMessageTemplates = serializer.deserializeObject(json.get("notificationMessageTemplates").toString(), NotificationMessageTemplateCollectionPage.class);
+            final NotificationMessageTemplateCollectionResponse response = new NotificationMessageTemplateCollectionResponse();
+            if (json.has("notificationMessageTemplates@odata.nextLink")) {
+                response.nextLink = json.get("notificationMessageTemplates@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("notificationMessageTemplates").toString(), JsonObject[].class);
+            final NotificationMessageTemplate[] array = new NotificationMessageTemplate[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), NotificationMessageTemplate.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            notificationMessageTemplates = new NotificationMessageTemplateCollectionPage(response, null);
         }
 
         if (json.has("resourceOperations")) {
-            resourceOperations = serializer.deserializeObject(json.get("resourceOperations").toString(), ResourceOperationCollectionPage.class);
+            final ResourceOperationCollectionResponse response = new ResourceOperationCollectionResponse();
+            if (json.has("resourceOperations@odata.nextLink")) {
+                response.nextLink = json.get("resourceOperations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("resourceOperations").toString(), JsonObject[].class);
+            final ResourceOperation[] array = new ResourceOperation[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ResourceOperation.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            resourceOperations = new ResourceOperationCollectionPage(response, null);
         }
 
         if (json.has("roleAssignments")) {
-            roleAssignments = serializer.deserializeObject(json.get("roleAssignments").toString(), DeviceAndAppManagementRoleAssignmentCollectionPage.class);
+            final DeviceAndAppManagementRoleAssignmentCollectionResponse response = new DeviceAndAppManagementRoleAssignmentCollectionResponse();
+            if (json.has("roleAssignments@odata.nextLink")) {
+                response.nextLink = json.get("roleAssignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleAssignments").toString(), JsonObject[].class);
+            final DeviceAndAppManagementRoleAssignment[] array = new DeviceAndAppManagementRoleAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceAndAppManagementRoleAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            roleAssignments = new DeviceAndAppManagementRoleAssignmentCollectionPage(response, null);
         }
 
         if (json.has("roleDefinitions")) {
-            roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions").toString(), RoleDefinitionCollectionPage.class);
+            final RoleDefinitionCollectionResponse response = new RoleDefinitionCollectionResponse();
+            if (json.has("roleDefinitions@odata.nextLink")) {
+                response.nextLink = json.get("roleDefinitions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("roleDefinitions").toString(), JsonObject[].class);
+            final RoleDefinition[] array = new RoleDefinition[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), RoleDefinition.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            roleDefinitions = new RoleDefinitionCollectionPage(response, null);
         }
 
         if (json.has("remoteAssistancePartners")) {
-            remoteAssistancePartners = serializer.deserializeObject(json.get("remoteAssistancePartners").toString(), RemoteAssistancePartnerCollectionPage.class);
+            final RemoteAssistancePartnerCollectionResponse response = new RemoteAssistancePartnerCollectionResponse();
+            if (json.has("remoteAssistancePartners@odata.nextLink")) {
+                response.nextLink = json.get("remoteAssistancePartners@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("remoteAssistancePartners").toString(), JsonObject[].class);
+            final RemoteAssistancePartner[] array = new RemoteAssistancePartner[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), RemoteAssistancePartner.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            remoteAssistancePartners = new RemoteAssistancePartnerCollectionPage(response, null);
         }
 
         if (json.has("telecomExpenseManagementPartners")) {
-            telecomExpenseManagementPartners = serializer.deserializeObject(json.get("telecomExpenseManagementPartners").toString(), TelecomExpenseManagementPartnerCollectionPage.class);
+            final TelecomExpenseManagementPartnerCollectionResponse response = new TelecomExpenseManagementPartnerCollectionResponse();
+            if (json.has("telecomExpenseManagementPartners@odata.nextLink")) {
+                response.nextLink = json.get("telecomExpenseManagementPartners@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("telecomExpenseManagementPartners").toString(), JsonObject[].class);
+            final TelecomExpenseManagementPartner[] array = new TelecomExpenseManagementPartner[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TelecomExpenseManagementPartner.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            telecomExpenseManagementPartners = new TelecomExpenseManagementPartnerCollectionPage(response, null);
         }
 
         if (json.has("troubleshootingEvents")) {
-            troubleshootingEvents = serializer.deserializeObject(json.get("troubleshootingEvents").toString(), DeviceManagementTroubleshootingEventCollectionPage.class);
+            final DeviceManagementTroubleshootingEventCollectionResponse response = new DeviceManagementTroubleshootingEventCollectionResponse();
+            if (json.has("troubleshootingEvents@odata.nextLink")) {
+                response.nextLink = json.get("troubleshootingEvents@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("troubleshootingEvents").toString(), JsonObject[].class);
+            final DeviceManagementTroubleshootingEvent[] array = new DeviceManagementTroubleshootingEvent[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementTroubleshootingEvent.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            troubleshootingEvents = new DeviceManagementTroubleshootingEventCollectionPage(response, null);
         }
 
         if (json.has("windowsInformationProtectionAppLearningSummaries")) {
-            windowsInformationProtectionAppLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionAppLearningSummaries").toString(), WindowsInformationProtectionAppLearningSummaryCollectionPage.class);
+            final WindowsInformationProtectionAppLearningSummaryCollectionResponse response = new WindowsInformationProtectionAppLearningSummaryCollectionResponse();
+            if (json.has("windowsInformationProtectionAppLearningSummaries@odata.nextLink")) {
+                response.nextLink = json.get("windowsInformationProtectionAppLearningSummaries@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("windowsInformationProtectionAppLearningSummaries").toString(), JsonObject[].class);
+            final WindowsInformationProtectionAppLearningSummary[] array = new WindowsInformationProtectionAppLearningSummary[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsInformationProtectionAppLearningSummary.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            windowsInformationProtectionAppLearningSummaries = new WindowsInformationProtectionAppLearningSummaryCollectionPage(response, null);
         }
 
         if (json.has("windowsInformationProtectionNetworkLearningSummaries")) {
-            windowsInformationProtectionNetworkLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionNetworkLearningSummaries").toString(), WindowsInformationProtectionNetworkLearningSummaryCollectionPage.class);
+            final WindowsInformationProtectionNetworkLearningSummaryCollectionResponse response = new WindowsInformationProtectionNetworkLearningSummaryCollectionResponse();
+            if (json.has("windowsInformationProtectionNetworkLearningSummaries@odata.nextLink")) {
+                response.nextLink = json.get("windowsInformationProtectionNetworkLearningSummaries@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("windowsInformationProtectionNetworkLearningSummaries").toString(), JsonObject[].class);
+            final WindowsInformationProtectionNetworkLearningSummary[] array = new WindowsInformationProtectionNetworkLearningSummary[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsInformationProtectionNetworkLearningSummary.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            windowsInformationProtectionNetworkLearningSummaries = new WindowsInformationProtectionNetworkLearningSummaryCollectionPage(response, null);
         }
     }
 }

@@ -40,7 +40,7 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
         super(requestUrl, client, requestOptions, SecureScoreCollectionResponse.class, ISecureScoreCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ISecureScoreCollectionPage> callback) {
+    public void get(final ICallback<ISecureScoreCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
         return buildFromResponse(response);
     }
 
-    public void post(final SecureScore newSecureScore, final ICallback<? super SecureScore> callback) {
+    public void post(final SecureScore newSecureScore, final ICallback<SecureScore> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecureScoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
      */
     public ISecureScoreCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SecureScoreCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ISecureScoreCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SecureScoreCollectionRequest)this;
     }
 

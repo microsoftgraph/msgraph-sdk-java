@@ -37,7 +37,7 @@ public class WorkbookRangeFontRequest extends BaseRequest implements IWorkbookRa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRangeFont> callback) {
+    public void get(final ICallback<WorkbookRangeFont> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WorkbookRangeFontRequest extends BaseRequest implements IWorkbookRa
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookRangeFont> callback) {
+    public void delete(final ICallback<WorkbookRangeFont> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WorkbookRangeFontRequest extends BaseRequest implements IWorkbookRa
      * @param sourceWorkbookRangeFont the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookRangeFont sourceWorkbookRangeFont, final ICallback<? super WorkbookRangeFont> callback) {
+    public void patch(final WorkbookRangeFont sourceWorkbookRangeFont, final ICallback<WorkbookRangeFont> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookRangeFont);
     }
 
@@ -96,7 +96,7 @@ public class WorkbookRangeFontRequest extends BaseRequest implements IWorkbookRa
      * @param newWorkbookRangeFont the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookRangeFont newWorkbookRangeFont, final ICallback<? super WorkbookRangeFont> callback) {
+    public void post(final WorkbookRangeFont newWorkbookRangeFont, final ICallback<WorkbookRangeFont> callback) {
         send(HttpMethod.POST, callback, newWorkbookRangeFont);
     }
 
@@ -117,7 +117,7 @@ public class WorkbookRangeFontRequest extends BaseRequest implements IWorkbookRa
      * @param newWorkbookRangeFont the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookRangeFont newWorkbookRangeFont, final ICallback<? super WorkbookRangeFont> callback) {
+    public void put(final WorkbookRangeFont newWorkbookRangeFont, final ICallback<WorkbookRangeFont> callback) {
         send(HttpMethod.PUT, callback, newWorkbookRangeFont);
     }
 
@@ -151,6 +151,17 @@ public class WorkbookRangeFontRequest extends BaseRequest implements IWorkbookRa
      */
      public IWorkbookRangeFontRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookRangeFontRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookRangeFontRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookRangeFontRequest)this;
      }
 

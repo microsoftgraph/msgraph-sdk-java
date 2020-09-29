@@ -45,7 +45,7 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
     }
 
 
-    public void post(final ICallback<? super IPermissionGrantCollectionPage> callback) {
+    public void post(final ICallback<IPermissionGrantCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -118,17 +118,6 @@ public class PermissionGrantCollectionRequest extends BaseCollectionRequest<Perm
      */
     public IPermissionGrantCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IPermissionGrantCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IPermissionGrantCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IPermissionGrantCollectionRequest)this;
     }
 

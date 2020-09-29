@@ -37,7 +37,7 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidWorkProfileCustomConfiguration> callback) {
+    public void get(final ICallback<AndroidWorkProfileCustomConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidWorkProfileCustomConfiguration> callback) {
+    public void delete(final ICallback<AndroidWorkProfileCustomConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest im
      * @param sourceAndroidWorkProfileCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWorkProfileCustomConfiguration sourceAndroidWorkProfileCustomConfiguration, final ICallback<? super AndroidWorkProfileCustomConfiguration> callback) {
+    public void patch(final AndroidWorkProfileCustomConfiguration sourceAndroidWorkProfileCustomConfiguration, final ICallback<AndroidWorkProfileCustomConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileCustomConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest im
      * @param newAndroidWorkProfileCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, final ICallback<? super AndroidWorkProfileCustomConfiguration> callback) {
+    public void post(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, final ICallback<AndroidWorkProfileCustomConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidWorkProfileCustomConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest im
      * @param newAndroidWorkProfileCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, final ICallback<? super AndroidWorkProfileCustomConfiguration> callback) {
+    public void put(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, final ICallback<AndroidWorkProfileCustomConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidWorkProfileCustomConfiguration);
     }
 
@@ -151,6 +151,17 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest im
      */
      public IAndroidWorkProfileCustomConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (AndroidWorkProfileCustomConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidWorkProfileCustomConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidWorkProfileCustomConfigurationRequest)this;
      }
 

@@ -39,7 +39,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
         super(requestUrl, client, requestOptions, DomainCollectionResponse.class, IDomainCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDomainCollectionPage> callback) {
+    public void get(final ICallback<IDomainCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
         return buildFromResponse(response);
     }
 
-    public void post(final Domain newDomain, final ICallback<? super Domain> callback) {
+    public void post(final Domain newDomain, final ICallback<Domain> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
      */
     public IDomainCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DomainCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDomainCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DomainCollectionRequest)this;
     }
 

@@ -52,7 +52,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super BaseItemVersion> callback) {
+    public void get(final ICallback<BaseItemVersion> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super BaseItemVersion> callback) {
+    public void delete(final ICallback<BaseItemVersion> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @param sourceBaseItemVersion the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BaseItemVersion sourceBaseItemVersion, final ICallback<? super BaseItemVersion> callback) {
+    public void patch(final BaseItemVersion sourceBaseItemVersion, final ICallback<BaseItemVersion> callback) {
         send(HttpMethod.PATCH, callback, sourceBaseItemVersion);
     }
 
@@ -111,7 +111,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @param newBaseItemVersion the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BaseItemVersion newBaseItemVersion, final ICallback<? super BaseItemVersion> callback) {
+    public void post(final BaseItemVersion newBaseItemVersion, final ICallback<BaseItemVersion> callback) {
         send(HttpMethod.POST, callback, newBaseItemVersion);
     }
 
@@ -132,7 +132,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @param newBaseItemVersion the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BaseItemVersion newBaseItemVersion, final ICallback<? super BaseItemVersion> callback) {
+    public void put(final BaseItemVersion newBaseItemVersion, final ICallback<BaseItemVersion> callback) {
         send(HttpMethod.PUT, callback, newBaseItemVersion);
     }
 
@@ -166,6 +166,17 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      */
      public IBaseItemVersionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (BaseItemVersionRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IBaseItemVersionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (BaseItemVersionRequest)this;
      }
 

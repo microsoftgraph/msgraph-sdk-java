@@ -37,7 +37,7 @@ public class ColumnLinkRequest extends BaseRequest implements IColumnLinkRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ColumnLink> callback) {
+    public void get(final ICallback<ColumnLink> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ColumnLinkRequest extends BaseRequest implements IColumnLinkRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ColumnLink> callback) {
+    public void delete(final ICallback<ColumnLink> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ColumnLinkRequest extends BaseRequest implements IColumnLinkRequest
      * @param sourceColumnLink the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ColumnLink sourceColumnLink, final ICallback<? super ColumnLink> callback) {
+    public void patch(final ColumnLink sourceColumnLink, final ICallback<ColumnLink> callback) {
         send(HttpMethod.PATCH, callback, sourceColumnLink);
     }
 
@@ -96,7 +96,7 @@ public class ColumnLinkRequest extends BaseRequest implements IColumnLinkRequest
      * @param newColumnLink the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback) {
+    public void post(final ColumnLink newColumnLink, final ICallback<ColumnLink> callback) {
         send(HttpMethod.POST, callback, newColumnLink);
     }
 
@@ -117,7 +117,7 @@ public class ColumnLinkRequest extends BaseRequest implements IColumnLinkRequest
      * @param newColumnLink the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback) {
+    public void put(final ColumnLink newColumnLink, final ICallback<ColumnLink> callback) {
         send(HttpMethod.PUT, callback, newColumnLink);
     }
 
@@ -151,6 +151,17 @@ public class ColumnLinkRequest extends BaseRequest implements IColumnLinkRequest
      */
      public IColumnLinkRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ColumnLinkRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IColumnLinkRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ColumnLinkRequest)this;
      }
 

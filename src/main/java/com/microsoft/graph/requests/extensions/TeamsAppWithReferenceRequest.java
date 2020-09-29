@@ -39,7 +39,7 @@ public class TeamsAppWithReferenceRequest extends BaseRequest implements ITeamsA
         super(requestUrl, client, requestOptions, TeamsApp.class);
     }
 
-    public void post(final TeamsApp newTeamsApp, final IJsonBackedObject payload, final ICallback<? super TeamsApp> callback) {
+    public void post(final TeamsApp newTeamsApp, final IJsonBackedObject payload, final ICallback<TeamsApp> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -51,7 +51,7 @@ public class TeamsAppWithReferenceRequest extends BaseRequest implements ITeamsA
         return null;
     }
 
-    public void get(final ICallback<? super TeamsApp> callback) {
+    public void get(final ICallback<TeamsApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,7 +59,7 @@ public class TeamsAppWithReferenceRequest extends BaseRequest implements ITeamsA
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super TeamsApp> callback) {
+	public void delete(final ICallback<TeamsApp> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -67,7 +67,7 @@ public class TeamsAppWithReferenceRequest extends BaseRequest implements ITeamsA
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final TeamsApp sourceTeamsApp, final ICallback<? super TeamsApp> callback) {
+	public void patch(final TeamsApp sourceTeamsApp, final ICallback<TeamsApp> callback) {
 		send(HttpMethod.PATCH, callback, sourceTeamsApp);
 	}
 
@@ -95,6 +95,16 @@ public class TeamsAppWithReferenceRequest extends BaseRequest implements ITeamsA
      */
     public ITeamsAppWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (TeamsAppWithReferenceRequest)this;
+    }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITeamsAppWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TeamsAppWithReferenceRequest)this;
     }
 }

@@ -37,7 +37,7 @@ public class WorkbookFunctionsOct2HexRequest extends BaseRequest implements IWor
         body = new WorkbookFunctionsOct2HexBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsOct2HexRequest extends BaseRequest implements IWor
      */
     public IWorkbookFunctionsOct2HexRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsOct2HexRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsOct2HexRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsOct2HexRequest)this;
     }
 

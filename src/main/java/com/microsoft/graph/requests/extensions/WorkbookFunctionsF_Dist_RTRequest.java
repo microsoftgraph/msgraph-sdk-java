@@ -37,7 +37,7 @@ public class WorkbookFunctionsF_Dist_RTRequest extends BaseRequest implements IW
         body = new WorkbookFunctionsF_Dist_RTBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsF_Dist_RTRequest extends BaseRequest implements IW
      */
     public IWorkbookFunctionsF_Dist_RTRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsF_Dist_RTRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsF_Dist_RTRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsF_Dist_RTRequest)this;
     }
 

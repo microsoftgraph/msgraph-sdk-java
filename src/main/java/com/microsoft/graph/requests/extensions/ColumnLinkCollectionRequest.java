@@ -40,7 +40,7 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
         super(requestUrl, client, requestOptions, ColumnLinkCollectionResponse.class, IColumnLinkCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IColumnLinkCollectionPage> callback) {
+    public void get(final ICallback<IColumnLinkCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
         return buildFromResponse(response);
     }
 
-    public void post(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback) {
+    public void post(final ColumnLink newColumnLink, final ICallback<ColumnLink> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ColumnLinkRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
      */
     public IColumnLinkCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ColumnLinkCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IColumnLinkCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ColumnLinkCollectionRequest)this;
     }
 

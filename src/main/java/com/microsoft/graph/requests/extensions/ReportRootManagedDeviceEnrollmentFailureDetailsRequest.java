@@ -37,7 +37,7 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Report> callback) {
+    public void get(final ICallback<Report> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -81,17 +81,6 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      */
     public IReportRootManagedDeviceEnrollmentFailureDetailsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootManagedDeviceEnrollmentFailureDetailsRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IReportRootManagedDeviceEnrollmentFailureDetailsRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootManagedDeviceEnrollmentFailureDetailsRequest)this;
     }
 

@@ -43,7 +43,7 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
         super(requestUrl, client, requestOptions, ParticipantCollectionResponse.class, IParticipantCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IParticipantCollectionPage> callback) {
+    public void get(final ICallback<IParticipantCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -62,7 +62,7 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
         return buildFromResponse(response);
     }
 
-    public void post(final Participant newParticipant, final ICallback<? super Participant> callback) {
+    public void post(final Participant newParticipant, final ICallback<Participant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ParticipantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -95,17 +95,6 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
      */
     public IParticipantCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ParticipantCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IParticipantCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ParticipantCollectionRequest)this;
     }
 

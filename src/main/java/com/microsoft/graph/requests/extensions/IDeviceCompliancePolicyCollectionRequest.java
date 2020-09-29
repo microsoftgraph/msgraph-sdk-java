@@ -24,11 +24,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceCompliancePolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IDeviceCompliancePolicyCollectionPage> callback);
+    void get(final ICallback<IDeviceCompliancePolicyCollectionPage> callback);
 
     IDeviceCompliancePolicyCollectionPage get() throws ClientException;
 
-    void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<? super DeviceCompliancePolicy> callback);
+    void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback);
 
     DeviceCompliancePolicy post(final DeviceCompliancePolicy newDeviceCompliancePolicy) throws ClientException;
 
@@ -47,14 +47,6 @@ public interface IDeviceCompliancePolicyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IDeviceCompliancePolicyCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IDeviceCompliancePolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

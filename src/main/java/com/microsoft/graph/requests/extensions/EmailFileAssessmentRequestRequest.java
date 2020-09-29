@@ -37,7 +37,7 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest implements IE
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EmailFileAssessmentRequest> callback) {
+    public void get(final ICallback<EmailFileAssessmentRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest implements IE
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EmailFileAssessmentRequest> callback) {
+    public void delete(final ICallback<EmailFileAssessmentRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest implements IE
      * @param sourceEmailFileAssessmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmailFileAssessmentRequest sourceEmailFileAssessmentRequest, final ICallback<? super EmailFileAssessmentRequest> callback) {
+    public void patch(final EmailFileAssessmentRequest sourceEmailFileAssessmentRequest, final ICallback<EmailFileAssessmentRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceEmailFileAssessmentRequest);
     }
 
@@ -96,7 +96,7 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest implements IE
      * @param newEmailFileAssessmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmailFileAssessmentRequest newEmailFileAssessmentRequest, final ICallback<? super EmailFileAssessmentRequest> callback) {
+    public void post(final EmailFileAssessmentRequest newEmailFileAssessmentRequest, final ICallback<EmailFileAssessmentRequest> callback) {
         send(HttpMethod.POST, callback, newEmailFileAssessmentRequest);
     }
 
@@ -117,7 +117,7 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest implements IE
      * @param newEmailFileAssessmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmailFileAssessmentRequest newEmailFileAssessmentRequest, final ICallback<? super EmailFileAssessmentRequest> callback) {
+    public void put(final EmailFileAssessmentRequest newEmailFileAssessmentRequest, final ICallback<EmailFileAssessmentRequest> callback) {
         send(HttpMethod.PUT, callback, newEmailFileAssessmentRequest);
     }
 
@@ -151,6 +151,17 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest implements IE
      */
      public IEmailFileAssessmentRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (EmailFileAssessmentRequestRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEmailFileAssessmentRequestRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EmailFileAssessmentRequestRequest)this;
      }
 

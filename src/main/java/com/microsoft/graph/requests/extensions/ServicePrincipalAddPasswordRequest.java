@@ -37,7 +37,7 @@ public class ServicePrincipalAddPasswordRequest extends BaseRequest implements I
         body = new ServicePrincipalAddPasswordBody();
     }
 
-    public void post(final ICallback<? super PasswordCredential> callback) {
+    public void post(final ICallback<PasswordCredential> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class ServicePrincipalAddPasswordRequest extends BaseRequest implements I
      */
     public IServicePrincipalAddPasswordRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (ServicePrincipalAddPasswordRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IServicePrincipalAddPasswordRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ServicePrincipalAddPasswordRequest)this;
     }
 

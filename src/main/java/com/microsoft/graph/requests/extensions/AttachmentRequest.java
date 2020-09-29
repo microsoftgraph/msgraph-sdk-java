@@ -54,7 +54,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Attachment> callback) {
+    public void get(final ICallback<Attachment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -73,7 +73,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Attachment> callback) {
+    public void delete(final ICallback<Attachment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +92,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @param sourceAttachment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Attachment sourceAttachment, final ICallback<? super Attachment> callback) {
+    public void patch(final Attachment sourceAttachment, final ICallback<Attachment> callback) {
         send(HttpMethod.PATCH, callback, sourceAttachment);
     }
 
@@ -113,7 +113,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @param newAttachment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Attachment newAttachment, final ICallback<? super Attachment> callback) {
+    public void post(final Attachment newAttachment, final ICallback<Attachment> callback) {
         send(HttpMethod.POST, callback, newAttachment);
     }
 
@@ -134,7 +134,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @param newAttachment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Attachment newAttachment, final ICallback<? super Attachment> callback) {
+    public void put(final Attachment newAttachment, final ICallback<Attachment> callback) {
         send(HttpMethod.PUT, callback, newAttachment);
     }
 
@@ -168,6 +168,17 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      */
      public IAttachmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (AttachmentRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAttachmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AttachmentRequest)this;
      }
 

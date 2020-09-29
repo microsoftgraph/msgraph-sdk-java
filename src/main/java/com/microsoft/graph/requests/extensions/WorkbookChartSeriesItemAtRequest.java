@@ -37,7 +37,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest implements IWo
      * @param srcWorkbookChartSeries the WorkbookChartSeries with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback) {
+    public void patch(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookChartSeries);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest implements IWo
      * @param srcWorkbookChartSeries the WorkbookChartSeries to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback) {
+    public void put(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookChartSeries);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest implements IWo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartSeries> callback) {
+    public void get(final ICallback<WorkbookChartSeries> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -121,17 +121,6 @@ public class WorkbookChartSeriesItemAtRequest extends BaseRequest implements IWo
      */
     public IWorkbookChartSeriesItemAtRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookChartSeriesItemAtRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookChartSeriesItemAtRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookChartSeriesItemAtRequest)this;
     }
 

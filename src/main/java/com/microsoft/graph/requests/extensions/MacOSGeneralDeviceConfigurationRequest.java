@@ -37,7 +37,7 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSGeneralDeviceConfiguration> callback) {
+    public void get(final ICallback<MacOSGeneralDeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSGeneralDeviceConfiguration> callback) {
+    public void delete(final ICallback<MacOSGeneralDeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest implemen
      * @param sourceMacOSGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSGeneralDeviceConfiguration sourceMacOSGeneralDeviceConfiguration, final ICallback<? super MacOSGeneralDeviceConfiguration> callback) {
+    public void patch(final MacOSGeneralDeviceConfiguration sourceMacOSGeneralDeviceConfiguration, final ICallback<MacOSGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSGeneralDeviceConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest implemen
      * @param newMacOSGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration, final ICallback<? super MacOSGeneralDeviceConfiguration> callback) {
+    public void post(final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration, final ICallback<MacOSGeneralDeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSGeneralDeviceConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest implemen
      * @param newMacOSGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration, final ICallback<? super MacOSGeneralDeviceConfiguration> callback) {
+    public void put(final MacOSGeneralDeviceConfiguration newMacOSGeneralDeviceConfiguration, final ICallback<MacOSGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSGeneralDeviceConfiguration);
     }
 
@@ -151,6 +151,17 @@ public class MacOSGeneralDeviceConfigurationRequest extends BaseRequest implemen
      */
      public IMacOSGeneralDeviceConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (MacOSGeneralDeviceConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMacOSGeneralDeviceConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MacOSGeneralDeviceConfigurationRequest)this;
      }
 

@@ -37,7 +37,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EditionUpgradeConfiguration> callback) {
+    public void get(final ICallback<EditionUpgradeConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EditionUpgradeConfiguration> callback) {
+    public void delete(final ICallback<EditionUpgradeConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @param sourceEditionUpgradeConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EditionUpgradeConfiguration sourceEditionUpgradeConfiguration, final ICallback<? super EditionUpgradeConfiguration> callback) {
+    public void patch(final EditionUpgradeConfiguration sourceEditionUpgradeConfiguration, final ICallback<EditionUpgradeConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceEditionUpgradeConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @param newEditionUpgradeConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EditionUpgradeConfiguration newEditionUpgradeConfiguration, final ICallback<? super EditionUpgradeConfiguration> callback) {
+    public void post(final EditionUpgradeConfiguration newEditionUpgradeConfiguration, final ICallback<EditionUpgradeConfiguration> callback) {
         send(HttpMethod.POST, callback, newEditionUpgradeConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @param newEditionUpgradeConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EditionUpgradeConfiguration newEditionUpgradeConfiguration, final ICallback<? super EditionUpgradeConfiguration> callback) {
+    public void put(final EditionUpgradeConfiguration newEditionUpgradeConfiguration, final ICallback<EditionUpgradeConfiguration> callback) {
         send(HttpMethod.PUT, callback, newEditionUpgradeConfiguration);
     }
 
@@ -151,6 +151,17 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      */
      public IEditionUpgradeConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (EditionUpgradeConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IEditionUpgradeConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (EditionUpgradeConfigurationRequest)this;
      }
 

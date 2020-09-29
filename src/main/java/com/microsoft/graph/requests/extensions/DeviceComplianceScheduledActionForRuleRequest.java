@@ -41,7 +41,7 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
+    public void get(final ICallback<DeviceComplianceScheduledActionForRule> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
+    public void delete(final ICallback<DeviceComplianceScheduledActionForRule> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest i
      * @param sourceDeviceComplianceScheduledActionForRule the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceComplianceScheduledActionForRule sourceDeviceComplianceScheduledActionForRule, final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
+    public void patch(final DeviceComplianceScheduledActionForRule sourceDeviceComplianceScheduledActionForRule, final ICallback<DeviceComplianceScheduledActionForRule> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceComplianceScheduledActionForRule);
     }
 
@@ -100,7 +100,7 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest i
      * @param newDeviceComplianceScheduledActionForRule the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
+    public void post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<DeviceComplianceScheduledActionForRule> callback) {
         send(HttpMethod.POST, callback, newDeviceComplianceScheduledActionForRule);
     }
 
@@ -121,7 +121,7 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest i
      * @param newDeviceComplianceScheduledActionForRule the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<? super DeviceComplianceScheduledActionForRule> callback) {
+    public void put(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<DeviceComplianceScheduledActionForRule> callback) {
         send(HttpMethod.PUT, callback, newDeviceComplianceScheduledActionForRule);
     }
 
@@ -155,6 +155,17 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest i
      */
      public IDeviceComplianceScheduledActionForRuleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DeviceComplianceScheduledActionForRuleRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceComplianceScheduledActionForRuleRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceComplianceScheduledActionForRuleRequest)this;
      }
 

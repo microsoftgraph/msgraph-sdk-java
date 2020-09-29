@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IDeviceManagementExchangeConnectorCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IDeviceManagementExchangeConnectorCollectionPage> callback);
+    void get(final ICallback<IDeviceManagementExchangeConnectorCollectionPage> callback);
 
     IDeviceManagementExchangeConnectorCollectionPage get() throws ClientException;
 
-    void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<? super DeviceManagementExchangeConnector> callback);
+    void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback);
 
     DeviceManagementExchangeConnector post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) throws ClientException;
 
@@ -46,14 +46,6 @@ public interface IDeviceManagementExchangeConnectorCollectionRequest extends IHt
      * @return the updated request
      */
     IDeviceManagementExchangeConnectorCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IDeviceManagementExchangeConnectorCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

@@ -63,7 +63,7 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
         super(requestUrl, client, requestOptions, Site.class);
     }
 
-    public void delete(final ICallback<? super Site> callback) {
+    public void delete(final ICallback<Site> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -93,12 +93,22 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
         return (SiteReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ISiteReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SiteReferenceRequest)this;
+    }
+    /**
      * Puts the Site
      *
      * @param srcSite the Site reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Site srcSite, final ICallback<? super Site> callback) {
+    public void put(Site srcSite, final ICallback<Site> callback) {
         send(HttpMethod.PUT, callback, srcSite);
     }
 

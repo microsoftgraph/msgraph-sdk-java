@@ -37,7 +37,7 @@ public class VppTokenSyncLicensesRequest extends BaseRequest implements IVppToke
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super VppToken> callback) {
+    public void post(final ICallback<VppToken> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,6 +70,17 @@ public class VppTokenSyncLicensesRequest extends BaseRequest implements IVppToke
      */
     public IVppTokenSyncLicensesRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (VppTokenSyncLicensesRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IVppTokenSyncLicensesRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (VppTokenSyncLicensesRequest)this;
     }
 

@@ -40,7 +40,7 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, ComplianceManagementPartnerCollectionResponse.class, IComplianceManagementPartnerCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IComplianceManagementPartnerCollectionPage> callback) {
+    public void get(final ICallback<IComplianceManagementPartnerCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<? super ComplianceManagementPartner> callback) {
+    public void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<ComplianceManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ComplianceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
      */
     public IComplianceManagementPartnerCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ComplianceManagementPartnerCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IComplianceManagementPartnerCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ComplianceManagementPartnerCollectionRequest)this;
     }
 

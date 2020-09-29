@@ -40,7 +40,7 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
         super(requestUrl, client, requestOptions, TeamsAsyncOperationCollectionResponse.class, ITeamsAsyncOperationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ITeamsAsyncOperationCollectionPage> callback) {
+    public void get(final ICallback<ITeamsAsyncOperationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
         return buildFromResponse(response);
     }
 
-    public void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<? super TeamsAsyncOperation> callback) {
+    public void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
      */
     public ITeamsAsyncOperationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TeamsAsyncOperationCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ITeamsAsyncOperationCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TeamsAsyncOperationCollectionRequest)this;
     }
 

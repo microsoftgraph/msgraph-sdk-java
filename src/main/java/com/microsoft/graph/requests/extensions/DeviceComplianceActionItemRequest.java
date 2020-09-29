@@ -37,7 +37,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceComplianceActionItem> callback) {
+    public void get(final ICallback<DeviceComplianceActionItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceComplianceActionItem> callback) {
+    public void delete(final ICallback<DeviceComplianceActionItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @param sourceDeviceComplianceActionItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceComplianceActionItem sourceDeviceComplianceActionItem, final ICallback<? super DeviceComplianceActionItem> callback) {
+    public void patch(final DeviceComplianceActionItem sourceDeviceComplianceActionItem, final ICallback<DeviceComplianceActionItem> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceComplianceActionItem);
     }
 
@@ -96,7 +96,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @param newDeviceComplianceActionItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<? super DeviceComplianceActionItem> callback) {
+    public void post(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<DeviceComplianceActionItem> callback) {
         send(HttpMethod.POST, callback, newDeviceComplianceActionItem);
     }
 
@@ -117,7 +117,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @param newDeviceComplianceActionItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<? super DeviceComplianceActionItem> callback) {
+    public void put(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<DeviceComplianceActionItem> callback) {
         send(HttpMethod.PUT, callback, newDeviceComplianceActionItem);
     }
 
@@ -151,6 +151,17 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      */
      public IDeviceComplianceActionItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DeviceComplianceActionItemRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceComplianceActionItemRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceComplianceActionItemRequest)this;
      }
 

@@ -49,7 +49,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface IGroupReferenceRequest extends IHttpRequest {
 
-    void delete(final ICallback<? super Group> callback);
+    void delete(final ICallback<Group> callback);
 
     Group delete() throws ClientException;
 
@@ -75,7 +75,7 @@ public interface IGroupReferenceRequest extends IHttpRequest {
      * @param srcGroup the Group to PUT
      * @param callback the callback to be called after success or failure
      */
-    void put(Group srcGroup, final ICallback<? super Group> callback);
+    void put(Group srcGroup, final ICallback<Group> callback);
 
     /**
      * Puts the Group

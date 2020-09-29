@@ -35,7 +35,7 @@ public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseR
         super(requestUrl, client, requestOptions, CertificateBasedAuthConfiguration.class);
     }
 
-    public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final IJsonBackedObject payload, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final IJsonBackedObject payload, final ICallback<CertificateBasedAuthConfiguration> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseR
         return null;
     }
 
-    public void get(final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+    public void get(final ICallback<CertificateBasedAuthConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseR
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+	public void delete(final ICallback<CertificateBasedAuthConfiguration> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseR
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
+	public void patch(final CertificateBasedAuthConfiguration sourceCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback) {
 		send(HttpMethod.PATCH, callback, sourceCertificateBasedAuthConfiguration);
 	}
 
@@ -91,6 +91,16 @@ public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseR
      */
     public ICertificateBasedAuthConfigurationWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (CertificateBasedAuthConfigurationWithReferenceRequest)this;
+    }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ICertificateBasedAuthConfigurationWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CertificateBasedAuthConfigurationWithReferenceRequest)this;
     }
 }

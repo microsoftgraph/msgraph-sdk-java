@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISharedInsightCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ISharedInsightCollectionPage> callback);
+    void get(final ICallback<ISharedInsightCollectionPage> callback);
 
     ISharedInsightCollectionPage get() throws ClientException;
 
-    void post(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback);
+    void post(final SharedInsight newSharedInsight, final ICallback<SharedInsight> callback);
 
     SharedInsight post(final SharedInsight newSharedInsight) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ISharedInsightCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISharedInsightCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ISharedInsightCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

@@ -6,13 +6,16 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PhysicalAddress;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationOrganization;
+import com.microsoft.graph.requests.extensions.EducationClassCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionPage;
+import com.microsoft.graph.requests.extensions.EducationUserCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionPage;
 
 
@@ -169,11 +172,35 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
 
         if (json.has("classes")) {
-            classes = serializer.deserializeObject(json.get("classes").toString(), EducationClassCollectionPage.class);
+            final EducationClassCollectionResponse response = new EducationClassCollectionResponse();
+            if (json.has("classes@odata.nextLink")) {
+                response.nextLink = json.get("classes@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("classes").toString(), JsonObject[].class);
+            final EducationClass[] array = new EducationClass[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationClass.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            classes = new EducationClassCollectionPage(response, null);
         }
 
         if (json.has("users")) {
-            users = serializer.deserializeObject(json.get("users").toString(), EducationUserCollectionPage.class);
+            final EducationUserCollectionResponse response = new EducationUserCollectionResponse();
+            if (json.has("users@odata.nextLink")) {
+                response.nextLink = json.get("users@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("users").toString(), JsonObject[].class);
+            final EducationUser[] array = new EducationUser[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationUser.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            users = new EducationUserCollectionPage(response, null);
         }
     }
 }

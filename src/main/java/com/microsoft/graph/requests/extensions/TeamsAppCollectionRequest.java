@@ -40,7 +40,7 @@ public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsAppCol
         super(requestUrl, client, requestOptions, TeamsAppCollectionResponse.class, ITeamsAppCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ITeamsAppCollectionPage> callback) {
+    public void get(final ICallback<ITeamsAppCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsAppCol
         return buildFromResponse(response);
     }
 
-    public void post(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback) {
+    public void post(final TeamsApp newTeamsApp, final ICallback<TeamsApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsAppCol
      */
     public ITeamsAppCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TeamsAppCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ITeamsAppCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TeamsAppCollectionRequest)this;
     }
 

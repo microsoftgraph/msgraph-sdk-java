@@ -37,7 +37,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    public void get(final ICallback<MdmWindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    public void delete(final ICallback<MdmWindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @param sourceMdmWindowsInformationProtectionPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    public void patch(final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy, final ICallback<MdmWindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceMdmWindowsInformationProtectionPolicy);
     }
 
@@ -96,7 +96,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @param newMdmWindowsInformationProtectionPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    public void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<MdmWindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.POST, callback, newMdmWindowsInformationProtectionPolicy);
     }
 
@@ -117,7 +117,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @param newMdmWindowsInformationProtectionPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    public void put(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<MdmWindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.PUT, callback, newMdmWindowsInformationProtectionPolicy);
     }
 
@@ -151,6 +151,17 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      */
      public IMdmWindowsInformationProtectionPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (MdmWindowsInformationProtectionPolicyRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMdmWindowsInformationProtectionPolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MdmWindowsInformationProtectionPolicyRequest)this;
      }
 

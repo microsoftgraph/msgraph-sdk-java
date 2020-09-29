@@ -37,7 +37,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void get(final ICallback<DeviceCompliancePolicyAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void delete(final ICallback<DeviceCompliancePolicyAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest impleme
      * @param sourceDeviceCompliancePolicyAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceCompliancePolicyAssignment sourceDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void patch(final DeviceCompliancePolicyAssignment sourceDeviceCompliancePolicyAssignment, final ICallback<DeviceCompliancePolicyAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceCompliancePolicyAssignment);
     }
 
@@ -96,7 +96,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest impleme
      * @param newDeviceCompliancePolicyAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<DeviceCompliancePolicyAssignment> callback) {
         send(HttpMethod.POST, callback, newDeviceCompliancePolicyAssignment);
     }
 
@@ -117,7 +117,7 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest impleme
      * @param newDeviceCompliancePolicyAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<? super DeviceCompliancePolicyAssignment> callback) {
+    public void put(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<DeviceCompliancePolicyAssignment> callback) {
         send(HttpMethod.PUT, callback, newDeviceCompliancePolicyAssignment);
     }
 
@@ -151,6 +151,17 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest impleme
      */
      public IDeviceCompliancePolicyAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DeviceCompliancePolicyAssignmentRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceCompliancePolicyAssignmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceCompliancePolicyAssignmentRequest)this;
      }
 

@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedMobileAppCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IManagedMobileAppCollectionPage> callback);
+    void get(final ICallback<IManagedMobileAppCollectionPage> callback);
 
     IManagedMobileAppCollectionPage get() throws ClientException;
 
-    void post(final ManagedMobileApp newManagedMobileApp, final ICallback<? super ManagedMobileApp> callback);
+    void post(final ManagedMobileApp newManagedMobileApp, final ICallback<ManagedMobileApp> callback);
 
     ManagedMobileApp post(final ManagedMobileApp newManagedMobileApp) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IManagedMobileAppCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IManagedMobileAppCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IManagedMobileAppCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

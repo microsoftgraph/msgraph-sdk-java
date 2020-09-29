@@ -40,7 +40,7 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
         super(requestUrl, client, requestOptions, DeviceManagementTroubleshootingEventCollectionResponse.class, IDeviceManagementTroubleshootingEventCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDeviceManagementTroubleshootingEventCollectionPage> callback) {
+    public void get(final ICallback<IDeviceManagementTroubleshootingEventCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<? super DeviceManagementTroubleshootingEvent> callback) {
+    public void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<DeviceManagementTroubleshootingEvent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
      */
     public IDeviceManagementTroubleshootingEventCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceManagementTroubleshootingEventCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDeviceManagementTroubleshootingEventCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementTroubleshootingEventCollectionRequest)this;
     }
 

@@ -6,6 +6,7 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ComplianceState;
 import com.microsoft.graph.models.extensions.ConfigurationManagerClientEnabledFeatures;
@@ -22,7 +23,9 @@ import com.microsoft.graph.models.extensions.DeviceCompliancePolicyState;
 import com.microsoft.graph.models.extensions.DeviceConfigurationState;
 import com.microsoft.graph.models.extensions.DeviceCategory;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionPage;
 
 
@@ -471,11 +474,35 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
 
         if (json.has("deviceCompliancePolicyStates")) {
-            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates").toString(), DeviceCompliancePolicyStateCollectionPage.class);
+            final DeviceCompliancePolicyStateCollectionResponse response = new DeviceCompliancePolicyStateCollectionResponse();
+            if (json.has("deviceCompliancePolicyStates@odata.nextLink")) {
+                response.nextLink = json.get("deviceCompliancePolicyStates@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceCompliancePolicyStates").toString(), JsonObject[].class);
+            final DeviceCompliancePolicyState[] array = new DeviceCompliancePolicyState[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceCompliancePolicyState.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceCompliancePolicyStates = new DeviceCompliancePolicyStateCollectionPage(response, null);
         }
 
         if (json.has("deviceConfigurationStates")) {
-            deviceConfigurationStates = serializer.deserializeObject(json.get("deviceConfigurationStates").toString(), DeviceConfigurationStateCollectionPage.class);
+            final DeviceConfigurationStateCollectionResponse response = new DeviceConfigurationStateCollectionResponse();
+            if (json.has("deviceConfigurationStates@odata.nextLink")) {
+                response.nextLink = json.get("deviceConfigurationStates@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceConfigurationStates").toString(), JsonObject[].class);
+            final DeviceConfigurationState[] array = new DeviceConfigurationState[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceConfigurationState.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceConfigurationStates = new DeviceConfigurationStateCollectionPage(response, null);
         }
     }
 }

@@ -23,11 +23,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedAppPolicyCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IManagedAppPolicyCollectionPage> callback);
+    void get(final ICallback<IManagedAppPolicyCollectionPage> callback);
 
     IManagedAppPolicyCollectionPage get() throws ClientException;
 
-    void post(final ManagedAppPolicy newManagedAppPolicy, final ICallback<? super ManagedAppPolicy> callback);
+    void post(final ManagedAppPolicy newManagedAppPolicy, final ICallback<ManagedAppPolicy> callback);
 
     ManagedAppPolicy post(final ManagedAppPolicy newManagedAppPolicy) throws ClientException;
 
@@ -46,14 +46,6 @@ public interface IManagedAppPolicyCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IManagedAppPolicyCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IManagedAppPolicyCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

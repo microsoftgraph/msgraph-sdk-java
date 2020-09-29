@@ -37,7 +37,7 @@ public class InviteParticipantsOperationRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super InviteParticipantsOperation> callback) {
+    public void get(final ICallback<InviteParticipantsOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class InviteParticipantsOperationRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super InviteParticipantsOperation> callback) {
+    public void delete(final ICallback<InviteParticipantsOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class InviteParticipantsOperationRequest extends BaseRequest implements I
      * @param sourceInviteParticipantsOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final InviteParticipantsOperation sourceInviteParticipantsOperation, final ICallback<? super InviteParticipantsOperation> callback) {
+    public void patch(final InviteParticipantsOperation sourceInviteParticipantsOperation, final ICallback<InviteParticipantsOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceInviteParticipantsOperation);
     }
 
@@ -96,7 +96,7 @@ public class InviteParticipantsOperationRequest extends BaseRequest implements I
      * @param newInviteParticipantsOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final InviteParticipantsOperation newInviteParticipantsOperation, final ICallback<? super InviteParticipantsOperation> callback) {
+    public void post(final InviteParticipantsOperation newInviteParticipantsOperation, final ICallback<InviteParticipantsOperation> callback) {
         send(HttpMethod.POST, callback, newInviteParticipantsOperation);
     }
 
@@ -117,7 +117,7 @@ public class InviteParticipantsOperationRequest extends BaseRequest implements I
      * @param newInviteParticipantsOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final InviteParticipantsOperation newInviteParticipantsOperation, final ICallback<? super InviteParticipantsOperation> callback) {
+    public void put(final InviteParticipantsOperation newInviteParticipantsOperation, final ICallback<InviteParticipantsOperation> callback) {
         send(HttpMethod.PUT, callback, newInviteParticipantsOperation);
     }
 
@@ -151,6 +151,17 @@ public class InviteParticipantsOperationRequest extends BaseRequest implements I
      */
      public IInviteParticipantsOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (InviteParticipantsOperationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IInviteParticipantsOperationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (InviteParticipantsOperationRequest)this;
      }
 

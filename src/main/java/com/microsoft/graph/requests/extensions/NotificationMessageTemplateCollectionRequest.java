@@ -40,7 +40,7 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
         super(requestUrl, client, requestOptions, NotificationMessageTemplateCollectionResponse.class, INotificationMessageTemplateCollectionPage.class);
     }
 
-    public void get(final ICallback<? super INotificationMessageTemplateCollectionPage> callback) {
+    public void get(final ICallback<INotificationMessageTemplateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
         return buildFromResponse(response);
     }
 
-    public void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<? super NotificationMessageTemplate> callback) {
+    public void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NotificationMessageTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
      */
     public INotificationMessageTemplateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (NotificationMessageTemplateCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public INotificationMessageTemplateCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (NotificationMessageTemplateCollectionRequest)this;
     }
 

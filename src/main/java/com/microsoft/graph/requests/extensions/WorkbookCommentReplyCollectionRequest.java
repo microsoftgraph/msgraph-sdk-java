@@ -40,7 +40,7 @@ public class WorkbookCommentReplyCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, WorkbookCommentReplyCollectionResponse.class, IWorkbookCommentReplyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IWorkbookCommentReplyCollectionPage> callback) {
+    public void get(final ICallback<IWorkbookCommentReplyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WorkbookCommentReplyCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<? super WorkbookCommentReply> callback) {
+    public void post(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<WorkbookCommentReply> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookCommentReplyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class WorkbookCommentReplyCollectionRequest extends BaseCollectionRequest
      */
     public IWorkbookCommentReplyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookCommentReplyCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookCommentReplyCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookCommentReplyCollectionRequest)this;
     }
 

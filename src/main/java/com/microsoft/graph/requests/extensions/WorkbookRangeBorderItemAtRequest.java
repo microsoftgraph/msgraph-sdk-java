@@ -37,7 +37,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
      * @param srcWorkbookRangeBorder the WorkbookRangeBorder with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
+    public void patch(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookRangeBorder);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
      * @param srcWorkbookRangeBorder the WorkbookRangeBorder to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
+    public void put(WorkbookRangeBorder srcWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookRangeBorder);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRangeBorder> callback) {
+    public void get(final ICallback<WorkbookRangeBorder> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -121,17 +121,6 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
      */
     public IWorkbookRangeBorderItemAtRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeBorderItemAtRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookRangeBorderItemAtRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeBorderItemAtRequest)this;
     }
 

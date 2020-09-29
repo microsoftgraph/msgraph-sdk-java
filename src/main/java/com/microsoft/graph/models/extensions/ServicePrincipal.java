@@ -6,6 +6,7 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AddIn;
 import com.microsoft.graph.models.extensions.AppRole;
@@ -22,13 +23,21 @@ import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.EndpointCollectionResponse;
 import com.microsoft.graph.requests.extensions.EndpointCollectionPage;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionResponse;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionPage;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 
 
@@ -401,55 +410,211 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
 
         if (json.has("appRoleAssignedTo")) {
-            appRoleAssignedTo = serializer.deserializeObject(json.get("appRoleAssignedTo").toString(), AppRoleAssignmentCollectionPage.class);
+            final AppRoleAssignmentCollectionResponse response = new AppRoleAssignmentCollectionResponse();
+            if (json.has("appRoleAssignedTo@odata.nextLink")) {
+                response.nextLink = json.get("appRoleAssignedTo@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appRoleAssignedTo").toString(), JsonObject[].class);
+            final AppRoleAssignment[] array = new AppRoleAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AppRoleAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            appRoleAssignedTo = new AppRoleAssignmentCollectionPage(response, null);
         }
 
         if (json.has("appRoleAssignments")) {
-            appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), AppRoleAssignmentCollectionPage.class);
+            final AppRoleAssignmentCollectionResponse response = new AppRoleAssignmentCollectionResponse();
+            if (json.has("appRoleAssignments@odata.nextLink")) {
+                response.nextLink = json.get("appRoleAssignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appRoleAssignments").toString(), JsonObject[].class);
+            final AppRoleAssignment[] array = new AppRoleAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AppRoleAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            appRoleAssignments = new AppRoleAssignmentCollectionPage(response, null);
         }
 
         if (json.has("claimsMappingPolicies")) {
-            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies").toString(), ClaimsMappingPolicyCollectionPage.class);
+            final ClaimsMappingPolicyCollectionResponse response = new ClaimsMappingPolicyCollectionResponse();
+            if (json.has("claimsMappingPolicies@odata.nextLink")) {
+                response.nextLink = json.get("claimsMappingPolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("claimsMappingPolicies").toString(), JsonObject[].class);
+            final ClaimsMappingPolicy[] array = new ClaimsMappingPolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ClaimsMappingPolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            claimsMappingPolicies = new ClaimsMappingPolicyCollectionPage(response, null);
         }
 
         if (json.has("createdObjects")) {
-            createdObjects = serializer.deserializeObject(json.get("createdObjects").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("createdObjects@odata.nextLink")) {
+                response.nextLink = json.get("createdObjects@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("createdObjects").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            createdObjects = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("endpoints")) {
-            endpoints = serializer.deserializeObject(json.get("endpoints").toString(), EndpointCollectionPage.class);
+            final EndpointCollectionResponse response = new EndpointCollectionResponse();
+            if (json.has("endpoints@odata.nextLink")) {
+                response.nextLink = json.get("endpoints@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("endpoints").toString(), JsonObject[].class);
+            final Endpoint[] array = new Endpoint[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Endpoint.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            endpoints = new EndpointCollectionPage(response, null);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), HomeRealmDiscoveryPolicyCollectionPage.class);
+            final HomeRealmDiscoveryPolicyCollectionResponse response = new HomeRealmDiscoveryPolicyCollectionResponse();
+            if (json.has("homeRealmDiscoveryPolicies@odata.nextLink")) {
+                response.nextLink = json.get("homeRealmDiscoveryPolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), JsonObject[].class);
+            final HomeRealmDiscoveryPolicy[] array = new HomeRealmDiscoveryPolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), HomeRealmDiscoveryPolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            homeRealmDiscoveryPolicies = new HomeRealmDiscoveryPolicyCollectionPage(response, null);
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("memberOf@odata.nextLink")) {
+                response.nextLink = json.get("memberOf@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("memberOf").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            memberOf = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("oauth2PermissionGrants")) {
-            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), OAuth2PermissionGrantCollectionPage.class);
+            final OAuth2PermissionGrantCollectionResponse response = new OAuth2PermissionGrantCollectionResponse();
+            if (json.has("oauth2PermissionGrants@odata.nextLink")) {
+                response.nextLink = json.get("oauth2PermissionGrants@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), JsonObject[].class);
+            final OAuth2PermissionGrant[] array = new OAuth2PermissionGrant[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OAuth2PermissionGrant.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            oauth2PermissionGrants = new OAuth2PermissionGrantCollectionPage(response, null);
         }
 
         if (json.has("ownedObjects")) {
-            ownedObjects = serializer.deserializeObject(json.get("ownedObjects").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("ownedObjects@odata.nextLink")) {
+                response.nextLink = json.get("ownedObjects@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("ownedObjects").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            ownedObjects = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("owners@odata.nextLink")) {
+                response.nextLink = json.get("owners@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("owners").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            owners = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), TokenIssuancePolicyCollectionPage.class);
+            final TokenIssuancePolicyCollectionResponse response = new TokenIssuancePolicyCollectionResponse();
+            if (json.has("tokenIssuancePolicies@odata.nextLink")) {
+                response.nextLink = json.get("tokenIssuancePolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), JsonObject[].class);
+            final TokenIssuancePolicy[] array = new TokenIssuancePolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TokenIssuancePolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            tokenIssuancePolicies = new TokenIssuancePolicyCollectionPage(response, null);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), TokenLifetimePolicyCollectionPage.class);
+            final TokenLifetimePolicyCollectionResponse response = new TokenLifetimePolicyCollectionResponse();
+            if (json.has("tokenLifetimePolicies@odata.nextLink")) {
+                response.nextLink = json.get("tokenLifetimePolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), JsonObject[].class);
+            final TokenLifetimePolicy[] array = new TokenLifetimePolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TokenLifetimePolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            tokenLifetimePolicies = new TokenLifetimePolicyCollectionPage(response, null);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("transitiveMemberOf@odata.nextLink")) {
+                response.nextLink = json.get("transitiveMemberOf@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            transitiveMemberOf = new DirectoryObjectCollectionPage(response, null);
         }
     }
 }

@@ -40,7 +40,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
         super(requestUrl, client, requestOptions, WindowsInformationProtectionAppLockerFileCollectionResponse.class, IWindowsInformationProtectionAppLockerFileCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IWindowsInformationProtectionAppLockerFileCollectionPage> callback) {
+    public void get(final ICallback<IWindowsInformationProtectionAppLockerFileCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
         return buildFromResponse(response);
     }
 
-    public void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback) {
+    public void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionAppLockerFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
      */
     public IWindowsInformationProtectionAppLockerFileCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WindowsInformationProtectionAppLockerFileCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWindowsInformationProtectionAppLockerFileCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WindowsInformationProtectionAppLockerFileCollectionRequest)this;
     }
 

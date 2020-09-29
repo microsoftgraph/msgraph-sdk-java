@@ -25,11 +25,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICalendarCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ICalendarCollectionPage> callback);
+    void get(final ICallback<ICalendarCollectionPage> callback);
 
     ICalendarCollectionPage get() throws ClientException;
 
-    void post(final Calendar newCalendar, final ICallback<? super Calendar> callback);
+    void post(final Calendar newCalendar, final ICallback<Calendar> callback);
 
     Calendar post(final Calendar newCalendar) throws ClientException;
 
@@ -48,14 +48,6 @@ public interface ICalendarCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ICalendarCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ICalendarCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

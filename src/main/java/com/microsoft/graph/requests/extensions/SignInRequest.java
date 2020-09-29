@@ -52,7 +52,7 @@ public class SignInRequest extends BaseRequest implements ISignInRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SignIn> callback) {
+    public void get(final ICallback<SignIn> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class SignInRequest extends BaseRequest implements ISignInRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SignIn> callback) {
+    public void delete(final ICallback<SignIn> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class SignInRequest extends BaseRequest implements ISignInRequest {
      * @param sourceSignIn the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SignIn sourceSignIn, final ICallback<? super SignIn> callback) {
+    public void patch(final SignIn sourceSignIn, final ICallback<SignIn> callback) {
         send(HttpMethod.PATCH, callback, sourceSignIn);
     }
 
@@ -111,7 +111,7 @@ public class SignInRequest extends BaseRequest implements ISignInRequest {
      * @param newSignIn the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SignIn newSignIn, final ICallback<? super SignIn> callback) {
+    public void post(final SignIn newSignIn, final ICallback<SignIn> callback) {
         send(HttpMethod.POST, callback, newSignIn);
     }
 
@@ -132,7 +132,7 @@ public class SignInRequest extends BaseRequest implements ISignInRequest {
      * @param newSignIn the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SignIn newSignIn, final ICallback<? super SignIn> callback) {
+    public void put(final SignIn newSignIn, final ICallback<SignIn> callback) {
         send(HttpMethod.PUT, callback, newSignIn);
     }
 
@@ -166,6 +166,17 @@ public class SignInRequest extends BaseRequest implements ISignInRequest {
      */
      public ISignInRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (SignInRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ISignInRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (SignInRequest)this;
      }
 

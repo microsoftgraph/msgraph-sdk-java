@@ -41,7 +41,7 @@ public class InformationProtectionRequest extends BaseRequest implements IInform
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super InformationProtection> callback) {
+    public void get(final ICallback<InformationProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,7 +60,7 @@ public class InformationProtectionRequest extends BaseRequest implements IInform
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super InformationProtection> callback) {
+    public void delete(final ICallback<InformationProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +79,7 @@ public class InformationProtectionRequest extends BaseRequest implements IInform
      * @param sourceInformationProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final InformationProtection sourceInformationProtection, final ICallback<? super InformationProtection> callback) {
+    public void patch(final InformationProtection sourceInformationProtection, final ICallback<InformationProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceInformationProtection);
     }
 
@@ -100,7 +100,7 @@ public class InformationProtectionRequest extends BaseRequest implements IInform
      * @param newInformationProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final InformationProtection newInformationProtection, final ICallback<? super InformationProtection> callback) {
+    public void post(final InformationProtection newInformationProtection, final ICallback<InformationProtection> callback) {
         send(HttpMethod.POST, callback, newInformationProtection);
     }
 
@@ -121,7 +121,7 @@ public class InformationProtectionRequest extends BaseRequest implements IInform
      * @param newInformationProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final InformationProtection newInformationProtection, final ICallback<? super InformationProtection> callback) {
+    public void put(final InformationProtection newInformationProtection, final ICallback<InformationProtection> callback) {
         send(HttpMethod.PUT, callback, newInformationProtection);
     }
 
@@ -155,6 +155,17 @@ public class InformationProtectionRequest extends BaseRequest implements IInform
      */
      public IInformationProtectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (InformationProtectionRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IInformationProtectionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (InformationProtectionRequest)this;
      }
 

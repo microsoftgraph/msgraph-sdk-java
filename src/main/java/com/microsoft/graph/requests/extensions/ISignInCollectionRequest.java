@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ISignInCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ISignInCollectionPage> callback);
+    void get(final ICallback<ISignInCollectionPage> callback);
 
     ISignInCollectionPage get() throws ClientException;
 
-    void post(final SignIn newSignIn, final ICallback<? super SignIn> callback);
+    void post(final SignIn newSignIn, final ICallback<SignIn> callback);
 
     SignIn post(final SignIn newSignIn) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ISignInCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ISignInCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ISignInCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

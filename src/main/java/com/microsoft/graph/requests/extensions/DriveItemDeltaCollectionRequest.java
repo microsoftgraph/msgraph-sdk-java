@@ -39,7 +39,7 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
     }
 
 
-    public void get(final ICallback<? super IDriveItemDeltaCollectionPage> callback) {
+    public void get(final ICallback<IDriveItemDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
      */
     public IDriveItemDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDriveItemDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDriveItemDeltaCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDriveItemDeltaCollectionRequest)this;
     }
 

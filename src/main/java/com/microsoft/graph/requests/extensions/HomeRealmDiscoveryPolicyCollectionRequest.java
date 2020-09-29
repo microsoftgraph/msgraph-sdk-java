@@ -40,7 +40,7 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
         super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, IHomeRealmDiscoveryPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IHomeRealmDiscoveryPolicyCollectionPage> callback) {
+    public void get(final ICallback<IHomeRealmDiscoveryPolicyCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
         return buildFromResponse(response);
     }
 
-    public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
+    public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new HomeRealmDiscoveryPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
      */
     public IHomeRealmDiscoveryPolicyCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (HomeRealmDiscoveryPolicyCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IHomeRealmDiscoveryPolicyCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (HomeRealmDiscoveryPolicyCollectionRequest)this;
     }
 

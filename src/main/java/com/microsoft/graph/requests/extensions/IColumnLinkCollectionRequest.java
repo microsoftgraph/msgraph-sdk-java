@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IColumnLinkCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IColumnLinkCollectionPage> callback);
+    void get(final ICallback<IColumnLinkCollectionPage> callback);
 
     IColumnLinkCollectionPage get() throws ClientException;
 
-    void post(final ColumnLink newColumnLink, final ICallback<? super ColumnLink> callback);
+    void post(final ColumnLink newColumnLink, final ICallback<ColumnLink> callback);
 
     ColumnLink post(final ColumnLink newColumnLink) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IColumnLinkCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IColumnLinkCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IColumnLinkCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

@@ -40,7 +40,7 @@ public class DirectoryRoleDeltaCollectionPage extends BaseCollectionPage<Directo
      * @param builder The request builder for the next collection page
      */
     public DirectoryRoleDeltaCollectionPage(final DirectoryRoleDeltaCollectionResponse response, final IDirectoryRoleDeltaCollectionRequestBuilder builder) {
-       super(response.value, builder, response.additionalDataManager());
+       super(response.value, builder);
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {
             deltaLink = response.getRawObject().get("@odata.deltaLink").getAsString();

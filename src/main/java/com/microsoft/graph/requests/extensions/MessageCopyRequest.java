@@ -37,7 +37,7 @@ public class MessageCopyRequest extends BaseRequest implements IMessageCopyReque
         body = new MessageCopyBody();
     }
 
-    public void post(final ICallback<? super Message> callback) {
+    public void post(final ICallback<Message> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class MessageCopyRequest extends BaseRequest implements IMessageCopyReque
      */
     public IMessageCopyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (MessageCopyRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMessageCopyRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MessageCopyRequest)this;
     }
 

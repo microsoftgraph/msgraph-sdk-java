@@ -37,7 +37,7 @@ public class MessageMoveRequest extends BaseRequest implements IMessageMoveReque
         body = new MessageMoveBody();
     }
 
-    public void post(final ICallback<? super Message> callback) {
+    public void post(final ICallback<Message> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class MessageMoveRequest extends BaseRequest implements IMessageMoveReque
      */
     public IMessageMoveRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (MessageMoveRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMessageMoveRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MessageMoveRequest)this;
     }
 

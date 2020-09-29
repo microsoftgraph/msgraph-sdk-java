@@ -37,7 +37,7 @@ public class IosManagedAppRegistrationRequest extends BaseRequest implements IIo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosManagedAppRegistration> callback) {
+    public void get(final ICallback<IosManagedAppRegistration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class IosManagedAppRegistrationRequest extends BaseRequest implements IIo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosManagedAppRegistration> callback) {
+    public void delete(final ICallback<IosManagedAppRegistration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class IosManagedAppRegistrationRequest extends BaseRequest implements IIo
      * @param sourceIosManagedAppRegistration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosManagedAppRegistration sourceIosManagedAppRegistration, final ICallback<? super IosManagedAppRegistration> callback) {
+    public void patch(final IosManagedAppRegistration sourceIosManagedAppRegistration, final ICallback<IosManagedAppRegistration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosManagedAppRegistration);
     }
 
@@ -96,7 +96,7 @@ public class IosManagedAppRegistrationRequest extends BaseRequest implements IIo
      * @param newIosManagedAppRegistration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosManagedAppRegistration newIosManagedAppRegistration, final ICallback<? super IosManagedAppRegistration> callback) {
+    public void post(final IosManagedAppRegistration newIosManagedAppRegistration, final ICallback<IosManagedAppRegistration> callback) {
         send(HttpMethod.POST, callback, newIosManagedAppRegistration);
     }
 
@@ -117,7 +117,7 @@ public class IosManagedAppRegistrationRequest extends BaseRequest implements IIo
      * @param newIosManagedAppRegistration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosManagedAppRegistration newIosManagedAppRegistration, final ICallback<? super IosManagedAppRegistration> callback) {
+    public void put(final IosManagedAppRegistration newIosManagedAppRegistration, final ICallback<IosManagedAppRegistration> callback) {
         send(HttpMethod.PUT, callback, newIosManagedAppRegistration);
     }
 
@@ -151,6 +151,17 @@ public class IosManagedAppRegistrationRequest extends BaseRequest implements IIo
      */
      public IIosManagedAppRegistrationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (IosManagedAppRegistrationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IIosManagedAppRegistrationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (IosManagedAppRegistrationRequest)this;
      }
 

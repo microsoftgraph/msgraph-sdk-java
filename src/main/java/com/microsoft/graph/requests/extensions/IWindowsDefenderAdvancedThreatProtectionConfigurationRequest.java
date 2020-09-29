@@ -21,7 +21,7 @@ public interface IWindowsDefenderAdvancedThreatProtectionConfigurationRequest ex
      *
      * @param callback the callback to be called after success or failure
      */
-    void get(final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback);
+    void get(final ICallback<WindowsDefenderAdvancedThreatProtectionConfiguration> callback);
 
     /**
      * Gets the WindowsDefenderAdvancedThreatProtectionConfiguration from the service
@@ -36,7 +36,7 @@ public interface IWindowsDefenderAdvancedThreatProtectionConfigurationRequest ex
      *
      * @param callback the callback when the deletion action has completed
      */
-    void delete(final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback);
+    void delete(final ICallback<WindowsDefenderAdvancedThreatProtectionConfiguration> callback);
 
     /**
      * Delete this item from the service
@@ -51,7 +51,7 @@ public interface IWindowsDefenderAdvancedThreatProtectionConfigurationRequest ex
      * @param sourceWindowsDefenderAdvancedThreatProtectionConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    void patch(final WindowsDefenderAdvancedThreatProtectionConfiguration sourceWindowsDefenderAdvancedThreatProtectionConfiguration, final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback);
+    void patch(final WindowsDefenderAdvancedThreatProtectionConfiguration sourceWindowsDefenderAdvancedThreatProtectionConfiguration, final ICallback<WindowsDefenderAdvancedThreatProtectionConfiguration> callback);
 
     /**
      * Patches this WindowsDefenderAdvancedThreatProtectionConfiguration with a source
@@ -68,7 +68,7 @@ public interface IWindowsDefenderAdvancedThreatProtectionConfigurationRequest ex
      * @param newWindowsDefenderAdvancedThreatProtectionConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    void post(final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration, final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback);
+    void post(final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration, final ICallback<WindowsDefenderAdvancedThreatProtectionConfiguration> callback);
 
     /**
      * Posts a WindowsDefenderAdvancedThreatProtectionConfiguration with a new object
@@ -85,7 +85,7 @@ public interface IWindowsDefenderAdvancedThreatProtectionConfigurationRequest ex
      * @param newWindowsDefenderAdvancedThreatProtectionConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    void put(final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration, final ICallback<? super WindowsDefenderAdvancedThreatProtectionConfiguration> callback);
+    void put(final WindowsDefenderAdvancedThreatProtectionConfiguration newWindowsDefenderAdvancedThreatProtectionConfiguration, final ICallback<WindowsDefenderAdvancedThreatProtectionConfiguration> callback);
 
     /**
      * Posts a WindowsDefenderAdvancedThreatProtectionConfiguration with a new object

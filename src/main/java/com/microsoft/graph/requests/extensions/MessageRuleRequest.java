@@ -37,7 +37,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MessageRule> callback) {
+    public void get(final ICallback<MessageRule> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MessageRule> callback) {
+    public void delete(final ICallback<MessageRule> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @param sourceMessageRule the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MessageRule sourceMessageRule, final ICallback<? super MessageRule> callback) {
+    public void patch(final MessageRule sourceMessageRule, final ICallback<MessageRule> callback) {
         send(HttpMethod.PATCH, callback, sourceMessageRule);
     }
 
@@ -96,7 +96,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @param newMessageRule the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MessageRule newMessageRule, final ICallback<? super MessageRule> callback) {
+    public void post(final MessageRule newMessageRule, final ICallback<MessageRule> callback) {
         send(HttpMethod.POST, callback, newMessageRule);
     }
 
@@ -117,7 +117,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @param newMessageRule the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MessageRule newMessageRule, final ICallback<? super MessageRule> callback) {
+    public void put(final MessageRule newMessageRule, final ICallback<MessageRule> callback) {
         send(HttpMethod.PUT, callback, newMessageRule);
     }
 
@@ -151,6 +151,17 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      */
      public IMessageRuleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (MessageRuleRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMessageRuleRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (MessageRuleRequest)this;
      }
 

@@ -40,7 +40,7 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
         super(requestUrl, client, requestOptions, UsedInsightCollectionResponse.class, IUsedInsightCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IUsedInsightCollectionPage> callback) {
+    public void get(final ICallback<IUsedInsightCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
         return buildFromResponse(response);
     }
 
-    public void post(final UsedInsight newUsedInsight, final ICallback<? super UsedInsight> callback) {
+    public void post(final UsedInsight newUsedInsight, final ICallback<UsedInsight> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UsedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
      */
     public IUsedInsightCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (UsedInsightCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IUsedInsightCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (UsedInsightCollectionRequest)this;
     }
 

@@ -52,7 +52,7 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest implements IOneno
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnenoteEntityBaseModel> callback) {
+    public void get(final ICallback<OnenoteEntityBaseModel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,7 +71,7 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest implements IOneno
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnenoteEntityBaseModel> callback) {
+    public void delete(final ICallback<OnenoteEntityBaseModel> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +90,7 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest implements IOneno
      * @param sourceOnenoteEntityBaseModel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnenoteEntityBaseModel sourceOnenoteEntityBaseModel, final ICallback<? super OnenoteEntityBaseModel> callback) {
+    public void patch(final OnenoteEntityBaseModel sourceOnenoteEntityBaseModel, final ICallback<OnenoteEntityBaseModel> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteEntityBaseModel);
     }
 
@@ -111,7 +111,7 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest implements IOneno
      * @param newOnenoteEntityBaseModel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnenoteEntityBaseModel newOnenoteEntityBaseModel, final ICallback<? super OnenoteEntityBaseModel> callback) {
+    public void post(final OnenoteEntityBaseModel newOnenoteEntityBaseModel, final ICallback<OnenoteEntityBaseModel> callback) {
         send(HttpMethod.POST, callback, newOnenoteEntityBaseModel);
     }
 
@@ -132,7 +132,7 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest implements IOneno
      * @param newOnenoteEntityBaseModel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnenoteEntityBaseModel newOnenoteEntityBaseModel, final ICallback<? super OnenoteEntityBaseModel> callback) {
+    public void put(final OnenoteEntityBaseModel newOnenoteEntityBaseModel, final ICallback<OnenoteEntityBaseModel> callback) {
         send(HttpMethod.PUT, callback, newOnenoteEntityBaseModel);
     }
 
@@ -166,6 +166,17 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest implements IOneno
      */
      public IOnenoteEntityBaseModelRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (OnenoteEntityBaseModelRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOnenoteEntityBaseModelRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OnenoteEntityBaseModelRequest)this;
      }
 

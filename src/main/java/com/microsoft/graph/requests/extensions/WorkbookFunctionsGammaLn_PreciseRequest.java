@@ -37,7 +37,7 @@ public class WorkbookFunctionsGammaLn_PreciseRequest extends BaseRequest impleme
         body = new WorkbookFunctionsGammaLn_PreciseBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsGammaLn_PreciseRequest extends BaseRequest impleme
      */
     public IWorkbookFunctionsGammaLn_PreciseRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsGammaLn_PreciseRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsGammaLn_PreciseRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsGammaLn_PreciseRequest)this;
     }
 

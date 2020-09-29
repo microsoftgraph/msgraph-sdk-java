@@ -37,7 +37,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidCustomConfiguration> callback) {
+    public void get(final ICallback<AndroidCustomConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidCustomConfiguration> callback) {
+    public void delete(final ICallback<AndroidCustomConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @param sourceAndroidCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidCustomConfiguration sourceAndroidCustomConfiguration, final ICallback<? super AndroidCustomConfiguration> callback) {
+    public void patch(final AndroidCustomConfiguration sourceAndroidCustomConfiguration, final ICallback<AndroidCustomConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidCustomConfiguration);
     }
 
@@ -96,7 +96,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @param newAndroidCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<? super AndroidCustomConfiguration> callback) {
+    public void post(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<AndroidCustomConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidCustomConfiguration);
     }
 
@@ -117,7 +117,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @param newAndroidCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<? super AndroidCustomConfiguration> callback) {
+    public void put(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<AndroidCustomConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidCustomConfiguration);
     }
 
@@ -151,6 +151,17 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      */
      public IAndroidCustomConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (AndroidCustomConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidCustomConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (AndroidCustomConfigurationRequest)this;
      }
 

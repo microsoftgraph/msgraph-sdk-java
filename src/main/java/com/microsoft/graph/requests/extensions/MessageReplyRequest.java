@@ -36,7 +36,7 @@ public class MessageReplyRequest extends BaseRequest implements IMessageReplyReq
         body = new MessageReplyBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class MessageReplyRequest extends BaseRequest implements IMessageReplyReq
      */
     public IMessageReplyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (MessageReplyRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMessageReplyRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MessageReplyRequest)this;
     }
 

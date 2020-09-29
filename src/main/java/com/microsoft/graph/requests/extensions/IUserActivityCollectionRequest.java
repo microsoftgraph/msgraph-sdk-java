@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IUserActivityCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IUserActivityCollectionPage> callback);
+    void get(final ICallback<IUserActivityCollectionPage> callback);
 
     IUserActivityCollectionPage get() throws ClientException;
 
-    void post(final UserActivity newUserActivity, final ICallback<? super UserActivity> callback);
+    void post(final UserActivity newUserActivity, final ICallback<UserActivity> callback);
 
     UserActivity post(final UserActivity newUserActivity) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IUserActivityCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IUserActivityCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IUserActivityCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

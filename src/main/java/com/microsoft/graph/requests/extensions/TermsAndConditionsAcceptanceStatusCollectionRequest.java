@@ -40,7 +40,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
         super(requestUrl, client, requestOptions, TermsAndConditionsAcceptanceStatusCollectionResponse.class, ITermsAndConditionsAcceptanceStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ITermsAndConditionsAcceptanceStatusCollectionPage> callback) {
+    public void get(final ICallback<ITermsAndConditionsAcceptanceStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
         return buildFromResponse(response);
     }
 
-    public void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<? super TermsAndConditionsAcceptanceStatus> callback) {
+    public void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<TermsAndConditionsAcceptanceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsAcceptanceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
      */
     public ITermsAndConditionsAcceptanceStatusCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TermsAndConditionsAcceptanceStatusCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ITermsAndConditionsAcceptanceStatusCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TermsAndConditionsAcceptanceStatusCollectionRequest)this;
     }
 

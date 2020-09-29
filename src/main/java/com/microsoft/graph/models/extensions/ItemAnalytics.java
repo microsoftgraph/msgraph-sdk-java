@@ -6,9 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionResponse;
 import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionPage;
 
 
@@ -89,7 +91,19 @@ public class ItemAnalytics extends Entity implements IJsonBackedObject {
 
 
         if (json.has("itemActivityStats")) {
-            itemActivityStats = serializer.deserializeObject(json.get("itemActivityStats").toString(), ItemActivityStatCollectionPage.class);
+            final ItemActivityStatCollectionResponse response = new ItemActivityStatCollectionResponse();
+            if (json.has("itemActivityStats@odata.nextLink")) {
+                response.nextLink = json.get("itemActivityStats@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("itemActivityStats").toString(), JsonObject[].class);
+            final ItemActivityStat[] array = new ItemActivityStat[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ItemActivityStat.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            itemActivityStats = new ItemActivityStatCollectionPage(response, null);
         }
     }
 }

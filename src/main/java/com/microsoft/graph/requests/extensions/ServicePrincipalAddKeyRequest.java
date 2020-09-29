@@ -37,7 +37,7 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest implements IServi
         body = new ServicePrincipalAddKeyBody();
     }
 
-    public void post(final ICallback<? super KeyCredential> callback) {
+    public void post(final ICallback<KeyCredential> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest implements IServi
      */
     public IServicePrincipalAddKeyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (ServicePrincipalAddKeyRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IServicePrincipalAddKeyRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ServicePrincipalAddKeyRequest)this;
     }
 

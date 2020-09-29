@@ -44,7 +44,7 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
     }
 
 
-    public void post(final ICallback<? super IDirectoryObjectGetByIdsCollectionPage> callback) {
+    public void post(final ICallback<IDirectoryObjectGetByIdsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -117,17 +117,6 @@ public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequ
      */
     public IDirectoryObjectGetByIdsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDirectoryObjectGetByIdsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDirectoryObjectGetByIdsCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IDirectoryObjectGetByIdsCollectionRequest)this;
     }
 

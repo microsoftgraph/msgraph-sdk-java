@@ -40,7 +40,7 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
         super(requestUrl, client, requestOptions, WorkforceIntegrationCollectionResponse.class, IWorkforceIntegrationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IWorkforceIntegrationCollectionPage> callback) {
+    public void get(final ICallback<IWorkforceIntegrationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
         return buildFromResponse(response);
     }
 
-    public void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback) {
+    public void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<WorkforceIntegration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
      */
     public IWorkforceIntegrationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkforceIntegrationCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkforceIntegrationCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkforceIntegrationCollectionRequest)this;
     }
 

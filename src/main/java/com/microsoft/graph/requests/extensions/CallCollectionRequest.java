@@ -55,7 +55,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<CallCollectionR
         super(requestUrl, client, requestOptions, CallCollectionResponse.class, ICallCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ICallCollectionPage> callback) {
+    public void get(final ICallback<ICallCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -74,7 +74,7 @@ public class CallCollectionRequest extends BaseCollectionRequest<CallCollectionR
         return buildFromResponse(response);
     }
 
-    public void post(final Call newCall, final ICallback<? super Call> callback) {
+    public void post(final Call newCall, final ICallback<Call> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CallRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -107,17 +107,6 @@ public class CallCollectionRequest extends BaseCollectionRequest<CallCollectionR
      */
     public ICallCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (CallCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public ICallCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CallCollectionRequest)this;
     }
 

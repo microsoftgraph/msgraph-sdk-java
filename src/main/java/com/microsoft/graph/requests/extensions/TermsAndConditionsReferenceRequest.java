@@ -42,7 +42,7 @@ public class TermsAndConditionsReferenceRequest extends BaseRequest implements I
         super(requestUrl, client, requestOptions, TermsAndConditions.class);
     }
 
-    public void delete(final ICallback<? super TermsAndConditions> callback) {
+    public void delete(final ICallback<TermsAndConditions> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -72,12 +72,22 @@ public class TermsAndConditionsReferenceRequest extends BaseRequest implements I
         return (TermsAndConditionsReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITermsAndConditionsReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TermsAndConditionsReferenceRequest)this;
+    }
+    /**
      * Puts the TermsAndConditions
      *
      * @param srcTermsAndConditions the TermsAndConditions reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(TermsAndConditions srcTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
+    public void put(TermsAndConditions srcTermsAndConditions, final ICallback<TermsAndConditions> callback) {
         send(HttpMethod.PUT, callback, srcTermsAndConditions);
     }
 

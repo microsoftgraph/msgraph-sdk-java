@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITeamsAppInstallationCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ITeamsAppInstallationCollectionPage> callback);
+    void get(final ICallback<ITeamsAppInstallationCollectionPage> callback);
 
     ITeamsAppInstallationCollectionPage get() throws ClientException;
 
-    void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<? super TeamsAppInstallation> callback);
+    void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<TeamsAppInstallation> callback);
 
     TeamsAppInstallation post(final TeamsAppInstallation newTeamsAppInstallation) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ITeamsAppInstallationCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITeamsAppInstallationCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ITeamsAppInstallationCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

@@ -40,7 +40,7 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
         super(requestUrl, client, requestOptions, ColumnDefinitionCollectionResponse.class, IColumnDefinitionCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IColumnDefinitionCollectionPage> callback) {
+    public void get(final ICallback<IColumnDefinitionCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
         return buildFromResponse(response);
     }
 
-    public void post(final ColumnDefinition newColumnDefinition, final ICallback<? super ColumnDefinition> callback) {
+    public void post(final ColumnDefinition newColumnDefinition, final ICallback<ColumnDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ColumnDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
      */
     public IColumnDefinitionCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ColumnDefinitionCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IColumnDefinitionCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ColumnDefinitionCollectionRequest)this;
     }
 

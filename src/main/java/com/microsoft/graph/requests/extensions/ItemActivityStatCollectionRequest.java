@@ -40,7 +40,7 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
         super(requestUrl, client, requestOptions, ItemActivityStatCollectionResponse.class, IItemActivityStatCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IItemActivityStatCollectionPage> callback) {
+    public void get(final ICallback<IItemActivityStatCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
         return buildFromResponse(response);
     }
 
-    public void post(final ItemActivityStat newItemActivityStat, final ICallback<? super ItemActivityStat> callback) {
+    public void post(final ItemActivityStat newItemActivityStat, final ICallback<ItemActivityStat> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemActivityStatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
      */
     public IItemActivityStatCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ItemActivityStatCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IItemActivityStatCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ItemActivityStatCollectionRequest)this;
     }
 

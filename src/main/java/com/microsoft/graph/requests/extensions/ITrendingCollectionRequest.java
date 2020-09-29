@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITrendingCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ITrendingCollectionPage> callback);
+    void get(final ICallback<ITrendingCollectionPage> callback);
 
     ITrendingCollectionPage get() throws ClientException;
 
-    void post(final Trending newTrending, final ICallback<? super Trending> callback);
+    void post(final Trending newTrending, final ICallback<Trending> callback);
 
     Trending post(final Trending newTrending) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ITrendingCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITrendingCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ITrendingCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

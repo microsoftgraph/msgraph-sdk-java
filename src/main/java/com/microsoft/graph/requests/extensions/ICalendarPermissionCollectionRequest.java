@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ICalendarPermissionCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ICalendarPermissionCollectionPage> callback);
+    void get(final ICallback<ICalendarPermissionCollectionPage> callback);
 
     ICalendarPermissionCollectionPage get() throws ClientException;
 
-    void post(final CalendarPermission newCalendarPermission, final ICallback<? super CalendarPermission> callback);
+    void post(final CalendarPermission newCalendarPermission, final ICallback<CalendarPermission> callback);
 
     CalendarPermission post(final CalendarPermission newCalendarPermission) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ICalendarPermissionCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ICalendarPermissionCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ICalendarPermissionCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

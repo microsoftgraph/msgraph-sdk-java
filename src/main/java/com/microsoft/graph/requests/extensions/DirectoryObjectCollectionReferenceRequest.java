@@ -37,7 +37,7 @@ public class DirectoryObjectCollectionReferenceRequest extends BaseCollectionReq
         super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, IDirectoryObjectCollectionPage.class);
     }
 
-    public void post(final DirectoryObject newDirectoryObject, final ICallback<? super DirectoryObject> callback) {
+    public void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/directoryObjects/" + newDirectoryObject.id);
         new DirectoryObjectWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -71,17 +71,6 @@ public class DirectoryObjectCollectionReferenceRequest extends BaseCollectionReq
      */
     public IDirectoryObjectCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DirectoryObjectCollectionReferenceRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the sort clause
-     * @return the updated request
-     */
-    public IDirectoryObjectCollectionReferenceRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DirectoryObjectCollectionReferenceRequest)this;
     }
 

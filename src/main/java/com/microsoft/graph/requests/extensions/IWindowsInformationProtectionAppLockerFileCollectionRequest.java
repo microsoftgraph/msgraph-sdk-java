@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IWindowsInformationProtectionAppLockerFileCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IWindowsInformationProtectionAppLockerFileCollectionPage> callback);
+    void get(final ICallback<IWindowsInformationProtectionAppLockerFileCollectionPage> callback);
 
     IWindowsInformationProtectionAppLockerFileCollectionPage get() throws ClientException;
 
-    void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<? super WindowsInformationProtectionAppLockerFile> callback);
+    void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback);
 
     WindowsInformationProtectionAppLockerFile post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface IWindowsInformationProtectionAppLockerFileCollectionRequest ext
      * @return the updated request
      */
     IWindowsInformationProtectionAppLockerFileCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IWindowsInformationProtectionAppLockerFileCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

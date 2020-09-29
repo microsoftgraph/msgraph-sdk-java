@@ -37,7 +37,7 @@ public class DirectoryObjectRestoreRequest extends BaseRequest implements IDirec
      *
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ICallback<? super DirectoryObject> callback) {
+    public void post(final ICallback<DirectoryObject> callback) {
         send(HttpMethod.POST, callback, null);
     }
 
@@ -70,6 +70,17 @@ public class DirectoryObjectRestoreRequest extends BaseRequest implements IDirec
      */
     public IDirectoryObjectRestoreRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (DirectoryObjectRestoreRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDirectoryObjectRestoreRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DirectoryObjectRestoreRequest)this;
     }
 

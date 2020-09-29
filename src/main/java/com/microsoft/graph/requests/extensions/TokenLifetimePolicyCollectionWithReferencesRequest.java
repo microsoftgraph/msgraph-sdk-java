@@ -35,7 +35,7 @@ public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseColl
         super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, ITokenLifetimePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ITokenLifetimePolicyCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<ITokenLifetimePolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,11 +61,6 @@ public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseColl
 
     public ITokenLifetimePolicyCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TokenLifetimePolicyCollectionWithReferencesRequest)this;
-    }
-
-    public ITokenLifetimePolicyCollectionWithReferencesRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TokenLifetimePolicyCollectionWithReferencesRequest)this;
     }
 

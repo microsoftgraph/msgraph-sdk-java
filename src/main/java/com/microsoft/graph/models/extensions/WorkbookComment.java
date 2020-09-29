@@ -6,9 +6,11 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkbookCommentReply;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionPage;
 
 
@@ -89,7 +91,19 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
 
 
         if (json.has("replies")) {
-            replies = serializer.deserializeObject(json.get("replies").toString(), WorkbookCommentReplyCollectionPage.class);
+            final WorkbookCommentReplyCollectionResponse response = new WorkbookCommentReplyCollectionResponse();
+            if (json.has("replies@odata.nextLink")) {
+                response.nextLink = json.get("replies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("replies").toString(), JsonObject[].class);
+            final WorkbookCommentReply[] array = new WorkbookCommentReply[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookCommentReply.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            replies = new WorkbookCommentReplyCollectionPage(response, null);
         }
     }
 }

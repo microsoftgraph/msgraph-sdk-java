@@ -40,7 +40,7 @@ public class DeviceConfigurationDeviceStatusCollectionRequest extends BaseCollec
         super(requestUrl, client, requestOptions, DeviceConfigurationDeviceStatusCollectionResponse.class, IDeviceConfigurationDeviceStatusCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDeviceConfigurationDeviceStatusCollectionPage> callback) {
+    public void get(final ICallback<IDeviceConfigurationDeviceStatusCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceConfigurationDeviceStatusCollectionRequest extends BaseCollec
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus, final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
+    public void post(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus, final ICallback<DeviceConfigurationDeviceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class DeviceConfigurationDeviceStatusCollectionRequest extends BaseCollec
      */
     public IDeviceConfigurationDeviceStatusCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceConfigurationDeviceStatusCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDeviceConfigurationDeviceStatusCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceConfigurationDeviceStatusCollectionRequest)this;
     }
 

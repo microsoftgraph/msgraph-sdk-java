@@ -37,7 +37,7 @@ public class ShiftPreferencesRequest extends BaseRequest implements IShiftPrefer
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ShiftPreferences> callback) {
+    public void get(final ICallback<ShiftPreferences> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ShiftPreferencesRequest extends BaseRequest implements IShiftPrefer
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ShiftPreferences> callback) {
+    public void delete(final ICallback<ShiftPreferences> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ShiftPreferencesRequest extends BaseRequest implements IShiftPrefer
      * @param sourceShiftPreferences the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ShiftPreferences sourceShiftPreferences, final ICallback<? super ShiftPreferences> callback) {
+    public void patch(final ShiftPreferences sourceShiftPreferences, final ICallback<ShiftPreferences> callback) {
         send(HttpMethod.PATCH, callback, sourceShiftPreferences);
     }
 
@@ -96,7 +96,7 @@ public class ShiftPreferencesRequest extends BaseRequest implements IShiftPrefer
      * @param newShiftPreferences the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ShiftPreferences newShiftPreferences, final ICallback<? super ShiftPreferences> callback) {
+    public void post(final ShiftPreferences newShiftPreferences, final ICallback<ShiftPreferences> callback) {
         send(HttpMethod.POST, callback, newShiftPreferences);
     }
 
@@ -117,7 +117,7 @@ public class ShiftPreferencesRequest extends BaseRequest implements IShiftPrefer
      * @param newShiftPreferences the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ShiftPreferences newShiftPreferences, final ICallback<? super ShiftPreferences> callback) {
+    public void put(final ShiftPreferences newShiftPreferences, final ICallback<ShiftPreferences> callback) {
         send(HttpMethod.PUT, callback, newShiftPreferences);
     }
 
@@ -151,6 +151,17 @@ public class ShiftPreferencesRequest extends BaseRequest implements IShiftPrefer
      */
      public IShiftPreferencesRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ShiftPreferencesRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IShiftPreferencesRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ShiftPreferencesRequest)this;
      }
 

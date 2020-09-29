@@ -43,7 +43,7 @@ public class WorkbookChartSeriesRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartSeries> callback) {
+    public void get(final ICallback<WorkbookChartSeries> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,7 +62,7 @@ public class WorkbookChartSeriesRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartSeries> callback) {
+    public void delete(final ICallback<WorkbookChartSeries> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +81,7 @@ public class WorkbookChartSeriesRequest extends BaseRequest implements IWorkbook
      * @param sourceWorkbookChartSeries the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartSeries sourceWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback) {
+    public void patch(final WorkbookChartSeries sourceWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartSeries);
     }
 
@@ -102,7 +102,7 @@ public class WorkbookChartSeriesRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookChartSeries the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback) {
+    public void post(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartSeries);
     }
 
@@ -123,7 +123,7 @@ public class WorkbookChartSeriesRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookChartSeries the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<? super WorkbookChartSeries> callback) {
+    public void put(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartSeries);
     }
 
@@ -157,6 +157,17 @@ public class WorkbookChartSeriesRequest extends BaseRequest implements IWorkbook
      */
      public IWorkbookChartSeriesRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookChartSeriesRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookChartSeriesRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookChartSeriesRequest)this;
      }
 

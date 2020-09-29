@@ -35,7 +35,7 @@ public class EntityWithReferenceRequest extends BaseRequest implements IEntityWi
         super(requestUrl, client, requestOptions, Entity.class);
     }
 
-    public void post(final Entity newEntity, final IJsonBackedObject payload, final ICallback<? super Entity> callback) {
+    public void post(final Entity newEntity, final IJsonBackedObject payload, final ICallback<Entity> callback) {
         send(HttpMethod.POST, callback, payload);
     }
 
@@ -47,7 +47,7 @@ public class EntityWithReferenceRequest extends BaseRequest implements IEntityWi
         return null;
     }
 
-    public void get(final ICallback<? super Entity> callback) {
+    public void get(final ICallback<Entity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,7 +55,7 @@ public class EntityWithReferenceRequest extends BaseRequest implements IEntityWi
        return send(HttpMethod.GET, null);
     }
 
-	public void delete(final ICallback<? super Entity> callback) {
+	public void delete(final ICallback<Entity> callback) {
 		send(HttpMethod.DELETE, callback, null);
 	}
 
@@ -63,7 +63,7 @@ public class EntityWithReferenceRequest extends BaseRequest implements IEntityWi
 		send(HttpMethod.DELETE, null);
 	}
 
-	public void patch(final Entity sourceEntity, final ICallback<? super Entity> callback) {
+	public void patch(final Entity sourceEntity, final ICallback<Entity> callback) {
 		send(HttpMethod.PATCH, callback, sourceEntity);
 	}
 
@@ -91,6 +91,16 @@ public class EntityWithReferenceRequest extends BaseRequest implements IEntityWi
      */
     public IEntityWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (EntityWithReferenceRequest)this;
+    }
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IEntityWithReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EntityWithReferenceRequest)this;
     }
 }

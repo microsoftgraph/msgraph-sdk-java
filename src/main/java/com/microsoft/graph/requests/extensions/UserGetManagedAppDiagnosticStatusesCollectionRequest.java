@@ -39,7 +39,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
     }
 
 
-    public void get(final ICallback<? super IUserGetManagedAppDiagnosticStatusesCollectionPage> callback) {
+    public void get(final ICallback<IUserGetManagedAppDiagnosticStatusesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      */
     public IUserGetManagedAppDiagnosticStatusesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
     }
 

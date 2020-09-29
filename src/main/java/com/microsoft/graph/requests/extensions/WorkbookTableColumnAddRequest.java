@@ -37,7 +37,7 @@ public class WorkbookTableColumnAddRequest extends BaseRequest implements IWorkb
         body = new WorkbookTableColumnAddBody();
     }
 
-    public void post(final ICallback<? super WorkbookTableColumn> callback) {
+    public void post(final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookTableColumnAddRequest extends BaseRequest implements IWorkb
      */
     public IWorkbookTableColumnAddRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookTableColumnAddRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookTableColumnAddRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookTableColumnAddRequest)this;
     }
 

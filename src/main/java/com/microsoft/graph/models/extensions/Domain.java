@@ -6,12 +6,15 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DomainState;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.DomainDnsRecord;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionResponse;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionPage;
 
 
@@ -194,15 +197,51 @@ public class Domain extends Entity implements IJsonBackedObject {
 
 
         if (json.has("domainNameReferences")) {
-            domainNameReferences = serializer.deserializeObject(json.get("domainNameReferences").toString(), DirectoryObjectCollectionPage.class);
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("domainNameReferences@odata.nextLink")) {
+                response.nextLink = json.get("domainNameReferences@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("domainNameReferences").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            domainNameReferences = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("serviceConfigurationRecords")) {
-            serviceConfigurationRecords = serializer.deserializeObject(json.get("serviceConfigurationRecords").toString(), DomainDnsRecordCollectionPage.class);
+            final DomainDnsRecordCollectionResponse response = new DomainDnsRecordCollectionResponse();
+            if (json.has("serviceConfigurationRecords@odata.nextLink")) {
+                response.nextLink = json.get("serviceConfigurationRecords@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("serviceConfigurationRecords").toString(), JsonObject[].class);
+            final DomainDnsRecord[] array = new DomainDnsRecord[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DomainDnsRecord.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            serviceConfigurationRecords = new DomainDnsRecordCollectionPage(response, null);
         }
 
         if (json.has("verificationDnsRecords")) {
-            verificationDnsRecords = serializer.deserializeObject(json.get("verificationDnsRecords").toString(), DomainDnsRecordCollectionPage.class);
+            final DomainDnsRecordCollectionResponse response = new DomainDnsRecordCollectionResponse();
+            if (json.has("verificationDnsRecords@odata.nextLink")) {
+                response.nextLink = json.get("verificationDnsRecords@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("verificationDnsRecords").toString(), JsonObject[].class);
+            final DomainDnsRecord[] array = new DomainDnsRecord[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DomainDnsRecord.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            verificationDnsRecords = new DomainDnsRecordCollectionPage(response, null);
         }
     }
 }

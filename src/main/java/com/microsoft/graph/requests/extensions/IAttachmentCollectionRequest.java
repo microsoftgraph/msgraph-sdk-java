@@ -24,11 +24,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IAttachmentCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IAttachmentCollectionPage> callback);
+    void get(final ICallback<IAttachmentCollectionPage> callback);
 
     IAttachmentCollectionPage get() throws ClientException;
 
-    void post(final Attachment newAttachment, final ICallback<? super Attachment> callback);
+    void post(final Attachment newAttachment, final ICallback<Attachment> callback);
 
     Attachment post(final Attachment newAttachment) throws ClientException;
 
@@ -47,14 +47,6 @@ public interface IAttachmentCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     IAttachmentCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    IAttachmentCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

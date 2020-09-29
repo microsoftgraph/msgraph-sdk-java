@@ -37,7 +37,7 @@ public class WorkbookFunctionsIsNumberRequest extends BaseRequest implements IWo
         body = new WorkbookFunctionsIsNumberBody();
     }
 
-    public void post(final ICallback<? super WorkbookFunctionResult> callback) {
+    public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -75,6 +75,17 @@ public class WorkbookFunctionsIsNumberRequest extends BaseRequest implements IWo
      */
     public IWorkbookFunctionsIsNumberRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFunctionsIsNumberRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsIsNumberRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFunctionsIsNumberRequest)this;
     }
 

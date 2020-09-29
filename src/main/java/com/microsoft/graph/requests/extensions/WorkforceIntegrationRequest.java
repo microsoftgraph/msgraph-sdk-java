@@ -37,7 +37,7 @@ public class WorkforceIntegrationRequest extends BaseRequest implements IWorkfor
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkforceIntegration> callback) {
+    public void get(final ICallback<WorkforceIntegration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class WorkforceIntegrationRequest extends BaseRequest implements IWorkfor
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkforceIntegration> callback) {
+    public void delete(final ICallback<WorkforceIntegration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class WorkforceIntegrationRequest extends BaseRequest implements IWorkfor
      * @param sourceWorkforceIntegration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkforceIntegration sourceWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback) {
+    public void patch(final WorkforceIntegration sourceWorkforceIntegration, final ICallback<WorkforceIntegration> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkforceIntegration);
     }
 
@@ -96,7 +96,7 @@ public class WorkforceIntegrationRequest extends BaseRequest implements IWorkfor
      * @param newWorkforceIntegration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback) {
+    public void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<WorkforceIntegration> callback) {
         send(HttpMethod.POST, callback, newWorkforceIntegration);
     }
 
@@ -117,7 +117,7 @@ public class WorkforceIntegrationRequest extends BaseRequest implements IWorkfor
      * @param newWorkforceIntegration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkforceIntegration newWorkforceIntegration, final ICallback<? super WorkforceIntegration> callback) {
+    public void put(final WorkforceIntegration newWorkforceIntegration, final ICallback<WorkforceIntegration> callback) {
         send(HttpMethod.PUT, callback, newWorkforceIntegration);
     }
 
@@ -151,6 +151,17 @@ public class WorkforceIntegrationRequest extends BaseRequest implements IWorkfor
      */
      public IWorkforceIntegrationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkforceIntegrationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkforceIntegrationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkforceIntegrationRequest)this;
      }
 

@@ -22,7 +22,7 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface IManagedDeviceCollectionWithReferencesRequest extends IHttpRequest {
 
-    void get(final ICallback<? super IManagedDeviceCollectionWithReferencesPage> callback);
+    void get(final ICallback<IManagedDeviceCollectionWithReferencesPage> callback);
 
     IManagedDeviceCollectionWithReferencesPage get() throws ClientException;
 

@@ -6,6 +6,7 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.Quota;
@@ -14,6 +15,7 @@ import com.microsoft.graph.models.extensions.SystemFacet;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.List;
 import com.microsoft.graph.models.extensions.BaseItem;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 
 
@@ -150,15 +152,51 @@ public class Drive extends BaseItem implements IJsonBackedObject {
 
 
         if (json.has("following")) {
-            following = serializer.deserializeObject(json.get("following").toString(), DriveItemCollectionPage.class);
+            final DriveItemCollectionResponse response = new DriveItemCollectionResponse();
+            if (json.has("following@odata.nextLink")) {
+                response.nextLink = json.get("following@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("following").toString(), JsonObject[].class);
+            final DriveItem[] array = new DriveItem[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItem.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            following = new DriveItemCollectionPage(response, null);
         }
 
         if (json.has("items")) {
-            items = serializer.deserializeObject(json.get("items").toString(), DriveItemCollectionPage.class);
+            final DriveItemCollectionResponse response = new DriveItemCollectionResponse();
+            if (json.has("items@odata.nextLink")) {
+                response.nextLink = json.get("items@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("items").toString(), JsonObject[].class);
+            final DriveItem[] array = new DriveItem[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItem.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            items = new DriveItemCollectionPage(response, null);
         }
 
         if (json.has("special")) {
-            special = serializer.deserializeObject(json.get("special").toString(), DriveItemCollectionPage.class);
+            final DriveItemCollectionResponse response = new DriveItemCollectionResponse();
+            if (json.has("special@odata.nextLink")) {
+                response.nextLink = json.get("special@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("special").toString(), JsonObject[].class);
+            final DriveItem[] array = new DriveItem[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItem.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            special = new DriveItemCollectionPage(response, null);
         }
     }
 }

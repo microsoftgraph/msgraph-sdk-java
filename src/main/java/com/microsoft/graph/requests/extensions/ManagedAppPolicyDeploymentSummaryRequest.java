@@ -37,7 +37,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
+    public void get(final ICallback<ManagedAppPolicyDeploymentSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
+    public void delete(final ICallback<ManagedAppPolicyDeploymentSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest implem
      * @param sourceManagedAppPolicyDeploymentSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary, final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
+    public void patch(final ManagedAppPolicyDeploymentSummary sourceManagedAppPolicyDeploymentSummary, final ICallback<ManagedAppPolicyDeploymentSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppPolicyDeploymentSummary);
     }
 
@@ -96,7 +96,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest implem
      * @param newManagedAppPolicyDeploymentSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
+    public void post(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, final ICallback<ManagedAppPolicyDeploymentSummary> callback) {
         send(HttpMethod.POST, callback, newManagedAppPolicyDeploymentSummary);
     }
 
@@ -117,7 +117,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest implem
      * @param newManagedAppPolicyDeploymentSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, final ICallback<? super ManagedAppPolicyDeploymentSummary> callback) {
+    public void put(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, final ICallback<ManagedAppPolicyDeploymentSummary> callback) {
         send(HttpMethod.PUT, callback, newManagedAppPolicyDeploymentSummary);
     }
 
@@ -151,6 +151,17 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest implem
      */
      public IManagedAppPolicyDeploymentSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ManagedAppPolicyDeploymentSummaryRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedAppPolicyDeploymentSummaryRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagedAppPolicyDeploymentSummaryRequest)this;
      }
 

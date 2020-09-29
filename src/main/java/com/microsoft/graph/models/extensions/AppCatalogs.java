@@ -6,9 +6,10 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TeamsApp;
-import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.TeamsAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionPage;
 
 
@@ -21,8 +22,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the App Catalogs.
  */
-public class AppCatalogs extends Entity implements IJsonBackedObject {
+public class AppCatalogs implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Teams Apps.
@@ -73,7 +84,19 @@ public class AppCatalogs extends Entity implements IJsonBackedObject {
 
 
         if (json.has("teamsApps")) {
-            teamsApps = serializer.deserializeObject(json.get("teamsApps").toString(), TeamsAppCollectionPage.class);
+            final TeamsAppCollectionResponse response = new TeamsAppCollectionResponse();
+            if (json.has("teamsApps@odata.nextLink")) {
+                response.nextLink = json.get("teamsApps@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("teamsApps").toString(), JsonObject[].class);
+            final TeamsApp[] array = new TeamsApp[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TeamsApp.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            teamsApps = new TeamsAppCollectionPage(response, null);
         }
     }
 }

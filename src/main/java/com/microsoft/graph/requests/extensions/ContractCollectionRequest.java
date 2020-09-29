@@ -39,7 +39,7 @@ public class ContractCollectionRequest extends BaseCollectionRequest<ContractCol
         super(requestUrl, client, requestOptions, ContractCollectionResponse.class, IContractCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IContractCollectionPage> callback) {
+    public void get(final ICallback<IContractCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,7 +58,7 @@ public class ContractCollectionRequest extends BaseCollectionRequest<ContractCol
         return buildFromResponse(response);
     }
 
-    public void post(final Contract newContract, final ICallback<? super Contract> callback) {
+    public void post(final Contract newContract, final ICallback<Contract> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContractRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -91,17 +91,6 @@ public class ContractCollectionRequest extends BaseCollectionRequest<ContractCol
      */
     public IContractCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ContractCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IContractCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ContractCollectionRequest)this;
     }
 

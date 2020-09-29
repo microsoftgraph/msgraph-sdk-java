@@ -37,7 +37,7 @@ public class ManagedMobileAppRequest extends BaseRequest implements IManagedMobi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedMobileApp> callback) {
+    public void get(final ICallback<ManagedMobileApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,7 +56,7 @@ public class ManagedMobileAppRequest extends BaseRequest implements IManagedMobi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedMobileApp> callback) {
+    public void delete(final ICallback<ManagedMobileApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class ManagedMobileAppRequest extends BaseRequest implements IManagedMobi
      * @param sourceManagedMobileApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedMobileApp sourceManagedMobileApp, final ICallback<? super ManagedMobileApp> callback) {
+    public void patch(final ManagedMobileApp sourceManagedMobileApp, final ICallback<ManagedMobileApp> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedMobileApp);
     }
 
@@ -96,7 +96,7 @@ public class ManagedMobileAppRequest extends BaseRequest implements IManagedMobi
      * @param newManagedMobileApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedMobileApp newManagedMobileApp, final ICallback<? super ManagedMobileApp> callback) {
+    public void post(final ManagedMobileApp newManagedMobileApp, final ICallback<ManagedMobileApp> callback) {
         send(HttpMethod.POST, callback, newManagedMobileApp);
     }
 
@@ -117,7 +117,7 @@ public class ManagedMobileAppRequest extends BaseRequest implements IManagedMobi
      * @param newManagedMobileApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedMobileApp newManagedMobileApp, final ICallback<? super ManagedMobileApp> callback) {
+    public void put(final ManagedMobileApp newManagedMobileApp, final ICallback<ManagedMobileApp> callback) {
         send(HttpMethod.PUT, callback, newManagedMobileApp);
     }
 
@@ -151,6 +151,17 @@ public class ManagedMobileAppRequest extends BaseRequest implements IManagedMobi
      */
      public IManagedMobileAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (ManagedMobileAppRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedMobileAppRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (ManagedMobileAppRequest)this;
      }
 

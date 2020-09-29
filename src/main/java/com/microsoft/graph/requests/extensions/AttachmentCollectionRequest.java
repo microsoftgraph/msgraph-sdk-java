@@ -42,7 +42,7 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
         super(requestUrl, client, requestOptions, AttachmentCollectionResponse.class, IAttachmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IAttachmentCollectionPage> callback) {
+    public void get(final ICallback<IAttachmentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -61,7 +61,7 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
         return buildFromResponse(response);
     }
 
-    public void post(final Attachment newAttachment, final ICallback<? super Attachment> callback) {
+    public void post(final Attachment newAttachment, final ICallback<Attachment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AttachmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -94,17 +94,6 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
      */
     public IAttachmentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (AttachmentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IAttachmentCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AttachmentCollectionRequest)this;
     }
 

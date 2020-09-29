@@ -40,7 +40,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
         super(requestUrl, client, requestOptions, DirectoryAuditCollectionResponse.class, IDirectoryAuditCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDirectoryAuditCollectionPage> callback) {
+    public void get(final ICallback<IDirectoryAuditCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
         return buildFromResponse(response);
     }
 
-    public void post(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
+    public void post(final DirectoryAudit newDirectoryAudit, final ICallback<DirectoryAudit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
      */
     public IDirectoryAuditCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DirectoryAuditCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDirectoryAuditCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DirectoryAuditCollectionRequest)this;
     }
 

@@ -39,7 +39,7 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseCollectionReques
     }
 
 
-    public void get(final ICallback<? super IServicePrincipalDeltaCollectionPage> callback) {
+    public void get(final ICallback<IServicePrincipalDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -112,17 +112,6 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseCollectionReques
      */
     public IServicePrincipalDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IServicePrincipalDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IServicePrincipalDeltaCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (IServicePrincipalDeltaCollectionRequest)this;
     }
 

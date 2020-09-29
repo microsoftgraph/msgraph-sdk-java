@@ -37,7 +37,7 @@ public class ReportRootGetSkypeForBusinessParticipantActivityCountsRequest exten
      * @param srcReport the Report with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(Report srcReport, final ICallback<? super Report> callback) {
+    public void patch(Report srcReport, final ICallback<Report> callback) {
         send(HttpMethod.PATCH, callback, srcReport);
     }
 
@@ -58,7 +58,7 @@ public class ReportRootGetSkypeForBusinessParticipantActivityCountsRequest exten
      * @param srcReport the Report to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(Report srcReport, final ICallback<? super Report> callback) {
+    public void put(Report srcReport, final ICallback<Report> callback) {
         send(HttpMethod.PUT, callback, srcReport);
     }
 
@@ -77,7 +77,7 @@ public class ReportRootGetSkypeForBusinessParticipantActivityCountsRequest exten
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Report> callback) {
+    public void get(final ICallback<Report> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -121,17 +121,6 @@ public class ReportRootGetSkypeForBusinessParticipantActivityCountsRequest exten
      */
     public IReportRootGetSkypeForBusinessParticipantActivityCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetSkypeForBusinessParticipantActivityCountsRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IReportRootGetSkypeForBusinessParticipantActivityCountsRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetSkypeForBusinessParticipantActivityCountsRequest)this;
     }
 

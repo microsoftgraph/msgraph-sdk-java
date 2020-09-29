@@ -34,7 +34,7 @@ public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest imp
         super(requestUrl, client, requestOptions, SoftwareUpdateStatusSummary.class);
     }
 
-    public void delete(final ICallback<? super SoftwareUpdateStatusSummary> callback) {
+    public void delete(final ICallback<SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -64,12 +64,22 @@ public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest imp
         return (SoftwareUpdateStatusSummaryReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ISoftwareUpdateStatusSummaryReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SoftwareUpdateStatusSummaryReferenceRequest)this;
+    }
+    /**
      * Puts the SoftwareUpdateStatusSummary
      *
      * @param srcSoftwareUpdateStatusSummary the SoftwareUpdateStatusSummary reference to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(SoftwareUpdateStatusSummary srcSoftwareUpdateStatusSummary, final ICallback<? super SoftwareUpdateStatusSummary> callback) {
+    public void put(SoftwareUpdateStatusSummary srcSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback) {
         send(HttpMethod.PUT, callback, srcSoftwareUpdateStatusSummary);
     }
 

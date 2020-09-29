@@ -38,19 +38,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
  */
 public interface ISiteWithReferenceRequest extends IHttpRequest {
 
-    void post(final Site newSite, final IJsonBackedObject payload, final ICallback<? super Site> callback);
+    void post(final Site newSite, final IJsonBackedObject payload, final ICallback<Site> callback);
 
     Site post(final Site newSite, final IJsonBackedObject payload) throws ClientException;
 
-    void get(final ICallback<? super Site> callback);
+    void get(final ICallback<Site> callback);
 
     Site get() throws ClientException;
 
-	void delete(final ICallback<? super Site> callback);
+	void delete(final ICallback<Site> callback);
 
 	void delete() throws ClientException;
 
-	void patch(final Site sourceSite, final ICallback<? super Site> callback);
+	void patch(final Site sourceSite, final ICallback<Site> callback);
 
 	Site patch(final Site sourceSite) throws ClientException;
 

@@ -36,7 +36,7 @@ public class WorkbookFilterApplyDynamicFilterRequest extends BaseRequest impleme
         body = new WorkbookFilterApplyDynamicFilterBody();
     }
 
-    public void post(final ICallback<? super Void> callback) {
+    public void post(final ICallback<Void> callback) {
         send(HttpMethod.POST, callback, body);
     }
 
@@ -74,6 +74,17 @@ public class WorkbookFilterApplyDynamicFilterRequest extends BaseRequest impleme
      */
     public IWorkbookFilterApplyDynamicFilterRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+        return (WorkbookFilterApplyDynamicFilterRequest)this;
+    }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFilterApplyDynamicFilterRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookFilterApplyDynamicFilterRequest)this;
     }
 

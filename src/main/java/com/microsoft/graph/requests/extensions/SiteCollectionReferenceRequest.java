@@ -37,7 +37,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
         super(requestUrl, client, requestOptions, SiteCollectionResponse.class, ISiteCollectionPage.class);
     }
 
-    public void post(final Site newSite, final ICallback<? super Site> callback) {
+    public void post(final Site newSite, final ICallback<Site> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/sites/" + newSite.id);
         new SiteWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
@@ -71,17 +71,6 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      */
     public ISiteCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SiteCollectionReferenceRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the sort clause
-     * @return the updated request
-     */
-    public ISiteCollectionReferenceRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SiteCollectionReferenceRequest)this;
     }
 

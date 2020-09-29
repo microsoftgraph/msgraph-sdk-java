@@ -57,7 +57,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    public void get(final ICallback<DeviceEnrollmentConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -76,7 +76,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    public void delete(final ICallback<DeviceEnrollmentConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +95,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param sourceDeviceEnrollmentConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceEnrollmentConfiguration sourceDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    public void patch(final DeviceEnrollmentConfiguration sourceDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceEnrollmentConfiguration);
     }
 
@@ -116,7 +116,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param newDeviceEnrollmentConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    public void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback) {
         send(HttpMethod.POST, callback, newDeviceEnrollmentConfiguration);
     }
 
@@ -137,7 +137,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param newDeviceEnrollmentConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    public void put(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback) {
         send(HttpMethod.PUT, callback, newDeviceEnrollmentConfiguration);
     }
 
@@ -171,6 +171,17 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      */
      public IDeviceEnrollmentConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (DeviceEnrollmentConfigurationRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceEnrollmentConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DeviceEnrollmentConfigurationRequest)this;
      }
 

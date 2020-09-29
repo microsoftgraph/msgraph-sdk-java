@@ -6,6 +6,7 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ChatMessageAttachment;
 import com.microsoft.graph.models.extensions.ItemBody;
@@ -18,7 +19,9 @@ import com.microsoft.graph.models.extensions.ChatMessageReaction;
 import com.microsoft.graph.models.extensions.ChatMessageHostedContent;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionPage;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
 
 
@@ -132,7 +135,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Policy Violation.
-     * 
+     * Defines the properties of a policy violation set by a data loss prevention (DLP) application.
      */
     @SerializedName("policyViolation")
     @Expose
@@ -235,11 +238,35 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
 
         if (json.has("hostedContents")) {
-            hostedContents = serializer.deserializeObject(json.get("hostedContents").toString(), ChatMessageHostedContentCollectionPage.class);
+            final ChatMessageHostedContentCollectionResponse response = new ChatMessageHostedContentCollectionResponse();
+            if (json.has("hostedContents@odata.nextLink")) {
+                response.nextLink = json.get("hostedContents@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("hostedContents").toString(), JsonObject[].class);
+            final ChatMessageHostedContent[] array = new ChatMessageHostedContent[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ChatMessageHostedContent.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            hostedContents = new ChatMessageHostedContentCollectionPage(response, null);
         }
 
         if (json.has("replies")) {
-            replies = serializer.deserializeObject(json.get("replies").toString(), ChatMessageCollectionPage.class);
+            final ChatMessageCollectionResponse response = new ChatMessageCollectionResponse();
+            if (json.has("replies@odata.nextLink")) {
+                response.nextLink = json.get("replies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("replies").toString(), JsonObject[].class);
+            final ChatMessage[] array = new ChatMessage[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ChatMessage.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            replies = new ChatMessageCollectionPage(response, null);
         }
     }
 }

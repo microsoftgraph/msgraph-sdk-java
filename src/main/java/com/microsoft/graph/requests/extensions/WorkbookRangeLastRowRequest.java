@@ -37,7 +37,7 @@ public class WorkbookRangeLastRowRequest extends BaseRequest implements IWorkboo
      * @param srcWorkbookRange the WorkbookRange with which to PATCH
      * @param callback the callback to be called after success or failure
      */
-    public void patch(WorkbookRange srcWorkbookRange, final ICallback<? super WorkbookRange> callback) {
+    public void patch(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookRange);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookRangeLastRowRequest extends BaseRequest implements IWorkboo
      * @param srcWorkbookRange the WorkbookRange to PUT
      * @param callback the callback to be called after success or failure
      */
-    public void put(WorkbookRange srcWorkbookRange, final ICallback<? super WorkbookRange> callback) {
+    public void put(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookRange);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookRangeLastRowRequest extends BaseRequest implements IWorkboo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRange> callback) {
+    public void get(final ICallback<WorkbookRange> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -121,17 +121,6 @@ public class WorkbookRangeLastRowRequest extends BaseRequest implements IWorkboo
      */
     public IWorkbookRangeLastRowRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookRangeLastRowRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IWorkbookRangeLastRowRequest orderBy(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeLastRowRequest)this;
     }
 

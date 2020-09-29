@@ -22,11 +22,11 @@ import com.microsoft.graph.http.IHttpRequest;
  */
 public interface ITimeOffCollectionRequest extends IHttpRequest {
 
-    void get(final ICallback<? super ITimeOffCollectionPage> callback);
+    void get(final ICallback<ITimeOffCollectionPage> callback);
 
     ITimeOffCollectionPage get() throws ClientException;
 
-    void post(final TimeOff newTimeOff, final ICallback<? super TimeOff> callback);
+    void post(final TimeOff newTimeOff, final ICallback<TimeOff> callback);
 
     TimeOff post(final TimeOff newTimeOff) throws ClientException;
 
@@ -45,14 +45,6 @@ public interface ITimeOffCollectionRequest extends IHttpRequest {
      * @return the updated request
      */
     ITimeOffCollectionRequest filter(final String value);
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    ITimeOffCollectionRequest orderBy(final String value);
 
     /**
      * Sets the select clause for the request

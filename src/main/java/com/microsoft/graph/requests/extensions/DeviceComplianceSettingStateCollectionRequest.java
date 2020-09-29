@@ -40,7 +40,7 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseCollectio
         super(requestUrl, client, requestOptions, DeviceComplianceSettingStateCollectionResponse.class, IDeviceComplianceSettingStateCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDeviceComplianceSettingStateCollectionPage> callback) {
+    public void get(final ICallback<IDeviceComplianceSettingStateCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseCollectio
         return buildFromResponse(response);
     }
 
-    public void post(final DeviceComplianceSettingState newDeviceComplianceSettingState, final ICallback<? super DeviceComplianceSettingState> callback) {
+    public void post(final DeviceComplianceSettingState newDeviceComplianceSettingState, final ICallback<DeviceComplianceSettingState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseCollectio
      */
     public IDeviceComplianceSettingStateCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DeviceComplianceSettingStateCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IDeviceComplianceSettingStateCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceComplianceSettingStateCollectionRequest)this;
     }
 

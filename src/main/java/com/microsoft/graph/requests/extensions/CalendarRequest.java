@@ -56,7 +56,7 @@ public class CalendarRequest extends BaseRequest implements ICalendarRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Calendar> callback) {
+    public void get(final ICallback<Calendar> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -75,7 +75,7 @@ public class CalendarRequest extends BaseRequest implements ICalendarRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Calendar> callback) {
+    public void delete(final ICallback<Calendar> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +94,7 @@ public class CalendarRequest extends BaseRequest implements ICalendarRequest {
      * @param sourceCalendar the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Calendar sourceCalendar, final ICallback<? super Calendar> callback) {
+    public void patch(final Calendar sourceCalendar, final ICallback<Calendar> callback) {
         send(HttpMethod.PATCH, callback, sourceCalendar);
     }
 
@@ -115,7 +115,7 @@ public class CalendarRequest extends BaseRequest implements ICalendarRequest {
      * @param newCalendar the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Calendar newCalendar, final ICallback<? super Calendar> callback) {
+    public void post(final Calendar newCalendar, final ICallback<Calendar> callback) {
         send(HttpMethod.POST, callback, newCalendar);
     }
 
@@ -136,7 +136,7 @@ public class CalendarRequest extends BaseRequest implements ICalendarRequest {
      * @param newCalendar the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Calendar newCalendar, final ICallback<? super Calendar> callback) {
+    public void put(final Calendar newCalendar, final ICallback<Calendar> callback) {
         send(HttpMethod.PUT, callback, newCalendar);
     }
 
@@ -170,6 +170,17 @@ public class CalendarRequest extends BaseRequest implements ICalendarRequest {
      */
      public ICalendarRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (CalendarRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ICalendarRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (CalendarRequest)this;
      }
 

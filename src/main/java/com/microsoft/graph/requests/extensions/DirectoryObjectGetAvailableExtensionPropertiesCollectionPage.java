@@ -34,6 +34,6 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionPage extend
      * @param builder The request builder for the next collection page
      */
     public DirectoryObjectGetAvailableExtensionPropertiesCollectionPage(final DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse response, final IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder builder) {
-       super(response.value, builder, response.additionalDataManager());
+       super(response.value, builder);
     }
 }

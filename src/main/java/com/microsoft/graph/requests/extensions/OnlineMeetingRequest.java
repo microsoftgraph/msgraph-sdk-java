@@ -39,7 +39,7 @@ public class OnlineMeetingRequest extends BaseRequest implements IOnlineMeetingR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnlineMeeting> callback) {
+    public void get(final ICallback<OnlineMeeting> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class OnlineMeetingRequest extends BaseRequest implements IOnlineMeetingR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnlineMeeting> callback) {
+    public void delete(final ICallback<OnlineMeeting> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class OnlineMeetingRequest extends BaseRequest implements IOnlineMeetingR
      * @param sourceOnlineMeeting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnlineMeeting sourceOnlineMeeting, final ICallback<? super OnlineMeeting> callback) {
+    public void patch(final OnlineMeeting sourceOnlineMeeting, final ICallback<OnlineMeeting> callback) {
         send(HttpMethod.PATCH, callback, sourceOnlineMeeting);
     }
 
@@ -98,7 +98,7 @@ public class OnlineMeetingRequest extends BaseRequest implements IOnlineMeetingR
      * @param newOnlineMeeting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback) {
+    public void post(final OnlineMeeting newOnlineMeeting, final ICallback<OnlineMeeting> callback) {
         send(HttpMethod.POST, callback, newOnlineMeeting);
     }
 
@@ -119,7 +119,7 @@ public class OnlineMeetingRequest extends BaseRequest implements IOnlineMeetingR
      * @param newOnlineMeeting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnlineMeeting newOnlineMeeting, final ICallback<? super OnlineMeeting> callback) {
+    public void put(final OnlineMeeting newOnlineMeeting, final ICallback<OnlineMeeting> callback) {
         send(HttpMethod.PUT, callback, newOnlineMeeting);
     }
 
@@ -153,6 +153,17 @@ public class OnlineMeetingRequest extends BaseRequest implements IOnlineMeetingR
      */
      public IOnlineMeetingRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (OnlineMeetingRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOnlineMeetingRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (OnlineMeetingRequest)this;
      }
 

@@ -39,7 +39,7 @@ public class TrendingRequest extends BaseRequest implements ITrendingRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Trending> callback) {
+    public void get(final ICallback<Trending> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class TrendingRequest extends BaseRequest implements ITrendingRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Trending> callback) {
+    public void delete(final ICallback<Trending> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class TrendingRequest extends BaseRequest implements ITrendingRequest {
      * @param sourceTrending the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Trending sourceTrending, final ICallback<? super Trending> callback) {
+    public void patch(final Trending sourceTrending, final ICallback<Trending> callback) {
         send(HttpMethod.PATCH, callback, sourceTrending);
     }
 
@@ -98,7 +98,7 @@ public class TrendingRequest extends BaseRequest implements ITrendingRequest {
      * @param newTrending the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Trending newTrending, final ICallback<? super Trending> callback) {
+    public void post(final Trending newTrending, final ICallback<Trending> callback) {
         send(HttpMethod.POST, callback, newTrending);
     }
 
@@ -119,7 +119,7 @@ public class TrendingRequest extends BaseRequest implements ITrendingRequest {
      * @param newTrending the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Trending newTrending, final ICallback<? super Trending> callback) {
+    public void put(final Trending newTrending, final ICallback<Trending> callback) {
         send(HttpMethod.PUT, callback, newTrending);
     }
 
@@ -153,6 +153,17 @@ public class TrendingRequest extends BaseRequest implements ITrendingRequest {
      */
      public ITrendingRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (TrendingRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ITrendingRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (TrendingRequest)this;
      }
 

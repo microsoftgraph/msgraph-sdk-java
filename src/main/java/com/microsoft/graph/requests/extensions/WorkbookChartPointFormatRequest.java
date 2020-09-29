@@ -39,7 +39,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest implements IWor
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartPointFormat> callback) {
+    public void get(final ICallback<WorkbookChartPointFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,7 +58,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest implements IWor
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartPointFormat> callback) {
+    public void delete(final ICallback<WorkbookChartPointFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +77,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest implements IWor
      * @param sourceWorkbookChartPointFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartPointFormat sourceWorkbookChartPointFormat, final ICallback<? super WorkbookChartPointFormat> callback) {
+    public void patch(final WorkbookChartPointFormat sourceWorkbookChartPointFormat, final ICallback<WorkbookChartPointFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartPointFormat);
     }
 
@@ -98,7 +98,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest implements IWor
      * @param newWorkbookChartPointFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartPointFormat newWorkbookChartPointFormat, final ICallback<? super WorkbookChartPointFormat> callback) {
+    public void post(final WorkbookChartPointFormat newWorkbookChartPointFormat, final ICallback<WorkbookChartPointFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartPointFormat);
     }
 
@@ -119,7 +119,7 @@ public class WorkbookChartPointFormatRequest extends BaseRequest implements IWor
      * @param newWorkbookChartPointFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartPointFormat newWorkbookChartPointFormat, final ICallback<? super WorkbookChartPointFormat> callback) {
+    public void put(final WorkbookChartPointFormat newWorkbookChartPointFormat, final ICallback<WorkbookChartPointFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartPointFormat);
     }
 
@@ -153,6 +153,17 @@ public class WorkbookChartPointFormatRequest extends BaseRequest implements IWor
      */
      public IWorkbookChartPointFormatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
+         return (WorkbookChartPointFormatRequest)this;
+     }
+
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookChartPointFormatRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (WorkbookChartPointFormatRequest)this;
      }
 

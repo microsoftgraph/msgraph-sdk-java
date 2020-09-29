@@ -40,7 +40,7 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
         super(requestUrl, client, requestOptions, ContentTypeCollectionResponse.class, IContentTypeCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IContentTypeCollectionPage> callback) {
+    public void get(final ICallback<IContentTypeCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
         return buildFromResponse(response);
     }
 
-    public void post(final ContentType newContentType, final ICallback<? super ContentType> callback) {
+    public void post(final ContentType newContentType, final ICallback<ContentType> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContentTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
      */
     public IContentTypeCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ContentTypeCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IContentTypeCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ContentTypeCollectionRequest)this;
     }
 

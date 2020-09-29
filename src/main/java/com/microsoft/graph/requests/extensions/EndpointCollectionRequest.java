@@ -40,7 +40,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
         super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, IEndpointCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IEndpointCollectionPage> callback) {
+    public void get(final ICallback<IEndpointCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,7 +59,7 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
         return buildFromResponse(response);
     }
 
-    public void post(final Endpoint newEndpoint, final ICallback<? super Endpoint> callback) {
+    public void post(final Endpoint newEndpoint, final ICallback<Endpoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
@@ -92,17 +92,6 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
      */
     public IEndpointCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (EndpointCollectionRequest)this;
-    }
-
-    /**
-     * Sets the order by clause for the request
-     *
-     * @param value the order by clause
-     * @return the updated request
-     */
-    public IEndpointCollectionRequest orderBy(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EndpointCollectionRequest)this;
     }
 
