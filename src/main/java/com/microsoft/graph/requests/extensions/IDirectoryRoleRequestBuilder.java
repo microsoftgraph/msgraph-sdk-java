@@ -42,6 +42,30 @@ public interface IDirectoryRoleRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder members(final String id);
 
+    IUserCollectionWithReferencesRequestBuilder membersAsUser();
+
+    IUserWithReferenceRequestBuilder membersAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder membersAsGroup();
+
+    IGroupWithReferenceRequestBuilder membersAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder membersAsApplication();
+
+    IApplicationWithReferenceRequestBuilder membersAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder membersAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder membersAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder membersAsDevice();
+
+    IDeviceWithReferenceRequestBuilder membersAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder membersAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder membersAsOrgContact(final String id);
+
     IScopedRoleMembershipCollectionRequestBuilder scopedMembers();
 
     IScopedRoleMembershipRequestBuilder scopedMembers(final String id);

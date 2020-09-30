@@ -136,6 +136,20 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
     public IMobileAppRequestBuilder mobileApps(final String id) {
         return new MobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id, getClient(), null);
     }
+    public IMobileLobAppCollectionRequestBuilder mobileAppsAsMobileLobApp() {
+        return new MobileLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.mobileLobApp", getClient(), null);
+    }
+
+    public IMobileLobAppRequestBuilder mobileAppsAsMobileLobApp(final String id) {
+        return new MobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.mobileLobApp", getClient(), null);
+    }
+    public IManagedMobileLobAppCollectionRequestBuilder mobileAppsAsManagedMobileLobApp() {
+        return new ManagedMobileLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.managedMobileLobApp", getClient(), null);
+    }
+
+    public IManagedMobileLobAppRequestBuilder mobileAppsAsManagedMobileLobApp(final String id) {
+        return new ManagedMobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.managedMobileLobApp", getClient(), null);
+    }
     public IVppTokenCollectionRequestBuilder vppTokens() {
         return new VppTokenCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("vppTokens"), getClient(), null);
     }

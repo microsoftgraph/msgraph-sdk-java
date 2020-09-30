@@ -104,6 +104,34 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
     public IDirectoryObjectWithReferenceRequestBuilder owners(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
     }
+    public IAppRoleAssignmentCollectionWithReferencesRequestBuilder ownersAsAppRoleAssignment() {
+        return new AppRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.appRoleAssignment", getClient(), null);
+    }
+
+    public IAppRoleAssignmentWithReferenceRequestBuilder ownersAsAppRoleAssignment(final String id) {
+        return new AppRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
+    }
+    public IEndpointCollectionWithReferencesRequestBuilder ownersAsEndpoint() {
+        return new EndpointCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.endpoint", getClient(), null);
+    }
+
+    public IEndpointWithReferenceRequestBuilder ownersAsEndpoint(final String id) {
+        return new EndpointWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
+    }
+    public IServicePrincipalCollectionWithReferencesRequestBuilder ownersAsServicePrincipal() {
+        return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+
+    public IServicePrincipalWithReferenceRequestBuilder ownersAsServicePrincipal(final String id) {
+        return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+    public IUserCollectionWithReferencesRequestBuilder ownersAsUser() {
+        return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.user", getClient(), null);
+    }
+
+    public IUserWithReferenceRequestBuilder ownersAsUser(final String id) {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.user", getClient(), null);
+    }
     public ITokenIssuancePolicyCollectionWithReferencesRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies"), getClient(), null);
     }

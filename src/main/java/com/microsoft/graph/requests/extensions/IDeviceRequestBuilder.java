@@ -42,20 +42,124 @@ public interface IDeviceRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
 
+    IUserCollectionWithReferencesRequestBuilder memberOfAsUser();
+
+    IUserWithReferenceRequestBuilder memberOfAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder memberOfAsGroup();
+
+    IGroupWithReferenceRequestBuilder memberOfAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder memberOfAsApplication();
+
+    IApplicationWithReferenceRequestBuilder memberOfAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder memberOfAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder memberOfAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder memberOfAsDevice();
+
+    IDeviceWithReferenceRequestBuilder memberOfAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder memberOfAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder memberOfAsOrgContact(final String id);
+
     IDirectoryObjectCollectionWithReferencesRequestBuilder registeredOwners();
 
     IDirectoryObjectWithReferenceRequestBuilder registeredOwners(final String id);
+
+    IAppRoleAssignmentCollectionWithReferencesRequestBuilder registeredOwnersAsAppRoleAssignment();
+
+    IAppRoleAssignmentWithReferenceRequestBuilder registeredOwnersAsAppRoleAssignment(final String id);
+
+    IEndpointCollectionWithReferencesRequestBuilder registeredOwnersAsEndpoint();
+
+    IEndpointWithReferenceRequestBuilder registeredOwnersAsEndpoint(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder registeredOwnersAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder registeredOwnersAsServicePrincipal(final String id);
+
+    IUserCollectionWithReferencesRequestBuilder registeredOwnersAsUser();
+
+    IUserWithReferenceRequestBuilder registeredOwnersAsUser(final String id);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder registeredUsers();
 
     IDirectoryObjectWithReferenceRequestBuilder registeredUsers(final String id);
 
+    IAppRoleAssignmentCollectionWithReferencesRequestBuilder registeredUsersAsAppRoleAssignment();
+
+    IAppRoleAssignmentWithReferenceRequestBuilder registeredUsersAsAppRoleAssignment(final String id);
+
+    IEndpointCollectionWithReferencesRequestBuilder registeredUsersAsEndpoint();
+
+    IEndpointWithReferenceRequestBuilder registeredUsersAsEndpoint(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder registeredUsersAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder registeredUsersAsServicePrincipal(final String id);
+
+    IUserCollectionWithReferencesRequestBuilder registeredUsersAsUser();
+
+    IUserWithReferenceRequestBuilder registeredUsersAsUser(final String id);
+
     IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf();
 
     IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id);
 
+    IUserCollectionWithReferencesRequestBuilder transitiveMemberOfAsUser();
+
+    IUserWithReferenceRequestBuilder transitiveMemberOfAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder transitiveMemberOfAsGroup();
+
+    IGroupWithReferenceRequestBuilder transitiveMemberOfAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder transitiveMemberOfAsApplication();
+
+    IApplicationWithReferenceRequestBuilder transitiveMemberOfAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder transitiveMemberOfAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder transitiveMemberOfAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder transitiveMemberOfAsDevice();
+
+    IDeviceWithReferenceRequestBuilder transitiveMemberOfAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder transitiveMemberOfAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder transitiveMemberOfAsOrgContact(final String id);
+
     IExtensionCollectionRequestBuilder extensions();
 
     IExtensionRequestBuilder extensions(final String id);
+
+    IUserCollectionRequestBuilder extensionsAsUser();
+
+    IUserRequestBuilder extensionsAsUser(final String id);
+
+    IGroupCollectionRequestBuilder extensionsAsGroup();
+
+    IGroupRequestBuilder extensionsAsGroup(final String id);
+
+    IApplicationCollectionRequestBuilder extensionsAsApplication();
+
+    IApplicationRequestBuilder extensionsAsApplication(final String id);
+
+    IServicePrincipalCollectionRequestBuilder extensionsAsServicePrincipal();
+
+    IServicePrincipalRequestBuilder extensionsAsServicePrincipal(final String id);
+
+    IDeviceCollectionRequestBuilder extensionsAsDevice();
+
+    IDeviceRequestBuilder extensionsAsDevice(final String id);
+
+    IOrgContactCollectionRequestBuilder extensionsAsOrgContact();
+
+    IOrgContactRequestBuilder extensionsAsOrgContact(final String id);
 
 }

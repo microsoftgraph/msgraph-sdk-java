@@ -108,9 +108,21 @@ public interface IUserRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder createdObjects(final String id);
 
+    IServicePrincipalCollectionWithReferencesRequestBuilder createdObjectsAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder createdObjectsAsServicePrincipal(final String id);
+
     IDirectoryObjectCollectionWithReferencesRequestBuilder directReports();
 
     IDirectoryObjectWithReferenceRequestBuilder directReports(final String id);
+
+    IUserCollectionWithReferencesRequestBuilder directReportsAsUser();
+
+    IUserWithReferenceRequestBuilder directReportsAsUser(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder directReportsAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder directReportsAsOrgContact(final String id);
 
     ILicenseDetailsCollectionRequestBuilder licenseDetails();
 
@@ -127,6 +139,30 @@ public interface IUserRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
 
+    IUserCollectionWithReferencesRequestBuilder memberOfAsUser();
+
+    IUserWithReferenceRequestBuilder memberOfAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder memberOfAsGroup();
+
+    IGroupWithReferenceRequestBuilder memberOfAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder memberOfAsApplication();
+
+    IApplicationWithReferenceRequestBuilder memberOfAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder memberOfAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder memberOfAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder memberOfAsDevice();
+
+    IDeviceWithReferenceRequestBuilder memberOfAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder memberOfAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder memberOfAsOrgContact(final String id);
+
     IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder oauth2PermissionGrants();
 
     IOAuth2PermissionGrantWithReferenceRequestBuilder oauth2PermissionGrants(final String id);
@@ -135,13 +171,49 @@ public interface IUserRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder ownedDevices(final String id);
 
+    IDeviceCollectionWithReferencesRequestBuilder ownedDevicesAsDevice();
+
+    IDeviceWithReferenceRequestBuilder ownedDevicesAsDevice(final String id);
+
+    IAppRoleAssignmentCollectionWithReferencesRequestBuilder ownedDevicesAsAppRoleAssignment();
+
+    IAppRoleAssignmentWithReferenceRequestBuilder ownedDevicesAsAppRoleAssignment(final String id);
+
+    IEndpointCollectionWithReferencesRequestBuilder ownedDevicesAsEndpoint();
+
+    IEndpointWithReferenceRequestBuilder ownedDevicesAsEndpoint(final String id);
+
     IDirectoryObjectCollectionWithReferencesRequestBuilder ownedObjects();
 
     IDirectoryObjectWithReferenceRequestBuilder ownedObjects(final String id);
 
+    IApplicationCollectionWithReferencesRequestBuilder ownedObjectsAsApplication();
+
+    IApplicationWithReferenceRequestBuilder ownedObjectsAsApplication(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder ownedObjectsAsGroup();
+
+    IGroupWithReferenceRequestBuilder ownedObjectsAsGroup(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder ownedObjectsAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder ownedObjectsAsServicePrincipal(final String id);
+
     IDirectoryObjectCollectionWithReferencesRequestBuilder registeredDevices();
 
     IDirectoryObjectWithReferenceRequestBuilder registeredDevices(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder registeredDevicesAsDevice();
+
+    IDeviceWithReferenceRequestBuilder registeredDevicesAsDevice(final String id);
+
+    IAppRoleAssignmentCollectionWithReferencesRequestBuilder registeredDevicesAsAppRoleAssignment();
+
+    IAppRoleAssignmentWithReferenceRequestBuilder registeredDevicesAsAppRoleAssignment(final String id);
+
+    IEndpointCollectionWithReferencesRequestBuilder registeredDevicesAsEndpoint();
+
+    IEndpointWithReferenceRequestBuilder registeredDevicesAsEndpoint(final String id);
 
     IScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberOf();
 
@@ -150,6 +222,30 @@ public interface IUserRequestBuilder extends IRequestBuilder {
     IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf();
 
     IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id);
+
+    IUserCollectionWithReferencesRequestBuilder transitiveMemberOfAsUser();
+
+    IUserWithReferenceRequestBuilder transitiveMemberOfAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder transitiveMemberOfAsGroup();
+
+    IGroupWithReferenceRequestBuilder transitiveMemberOfAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder transitiveMemberOfAsApplication();
+
+    IApplicationWithReferenceRequestBuilder transitiveMemberOfAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder transitiveMemberOfAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder transitiveMemberOfAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder transitiveMemberOfAsDevice();
+
+    IDeviceWithReferenceRequestBuilder transitiveMemberOfAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder transitiveMemberOfAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder transitiveMemberOfAsOrgContact(final String id);
 
     /**
      * Gets the request builder for Calendar
