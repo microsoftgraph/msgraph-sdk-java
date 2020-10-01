@@ -26,9 +26,9 @@ import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.PlannerAssignment;
-import com.microsoft.graph.models.extensions.PlannerAssignments;	
-import com.microsoft.graph.models.extensions.PlannerTask;	
-import com.microsoft.graph.models.extensions.PlannerTaskDetails;	
+import com.microsoft.graph.models.extensions.PlannerAssignments;
+import com.microsoft.graph.models.extensions.PlannerTask;
+import com.microsoft.graph.models.extensions.PlannerTaskDetails;
 import com.microsoft.graph.models.extensions.User;
 
 import java.util.Collections;
