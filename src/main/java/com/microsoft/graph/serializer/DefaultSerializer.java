@@ -287,9 +287,34 @@ public class DefaultSerializer implements ISerializer {
 						}
 					}
 				}
-				// If the object is a valid Graph object, add its additional data
-				else if (fieldObject != null && fieldObject instanceof IJsonBackedObject) {
-					IJsonBackedObject serializableChild = (IJsonBackedObject) fieldObject;
+                // If the object is a list of Graph objects, iterate through elements
+                else if (fieldObject instanceof List) {
+                    if(outJson != null
+                            && outJson.get(field.getName()) != null
+                            && outJson.get(field.getName()).isJsonArray()) {
+                        final List<?> fieldObjectList = (List<?>) fieldObject;
+                        for (int index = 0; index < fieldObjectList.size(); index++) {
+                            Object element = fieldObjectList.get(index);
+                            JsonObject jsonElement = outJson
+                                    .get(field.getName())
+                                    .getAsJsonArray()
+                                    .get(index)
+                                    .getAsJsonObject();
+                            if (element instanceof IJsonBackedObject) {
+                                AdditionalDataManager elementAdditionalData = ((IJsonBackedObject) element)
+                                        .additionalDataManager();
+                                addAdditionalDataToJson(
+                                        elementAdditionalData,
+                                        jsonElement
+                                );
+                                outJson = getChildAdditionalData((IJsonBackedObject) element, jsonElement);
+                            }
+                        }
+                    }
+                }
+                // If the object is a valid Graph object, add its additional data
+                else if (fieldObject != null && fieldObject instanceof IJsonBackedObject) {
+                    IJsonBackedObject serializableChild = (IJsonBackedObject) fieldObject;
 					AdditionalDataManager childAdditionalData = serializableChild.additionalDataManager();
 					if(outJson != null && field != null && outJson.get(field.getName()) != null && outJson.get(field.getName()).isJsonObject()) {
 						addAdditionalDataToJson(childAdditionalData, outJson.get(field.getName()).getAsJsonObject());
