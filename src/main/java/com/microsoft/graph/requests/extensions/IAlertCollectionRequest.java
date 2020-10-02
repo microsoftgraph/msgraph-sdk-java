@@ -85,5 +85,5 @@ public interface IAlertCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAlertCollectionRequest skipToken(String skipToken);
+	IAlertCollectionRequest skipToken(final String skipToken);
 }

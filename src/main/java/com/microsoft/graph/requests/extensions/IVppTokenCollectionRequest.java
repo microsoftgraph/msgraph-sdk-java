@@ -85,5 +85,5 @@ public interface IVppTokenCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IVppTokenCollectionRequest skipToken(String skipToken);
+	IVppTokenCollectionRequest skipToken(final String skipToken);
 }

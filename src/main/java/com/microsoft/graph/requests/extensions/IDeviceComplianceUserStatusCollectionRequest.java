@@ -85,5 +85,5 @@ public interface IDeviceComplianceUserStatusCollectionRequest extends IHttpReque
      *
 	 * @return the updated request
 	 */
-	IDeviceComplianceUserStatusCollectionRequest skipToken(String skipToken);
+	IDeviceComplianceUserStatusCollectionRequest skipToken(final String skipToken);
 }

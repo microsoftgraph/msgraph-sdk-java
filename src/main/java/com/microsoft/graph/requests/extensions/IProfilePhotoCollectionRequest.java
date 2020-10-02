@@ -85,5 +85,5 @@ public interface IProfilePhotoCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IProfilePhotoCollectionRequest skipToken(String skipToken);
+	IProfilePhotoCollectionRequest skipToken(final String skipToken);
 }

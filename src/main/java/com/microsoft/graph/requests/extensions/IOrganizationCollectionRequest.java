@@ -84,5 +84,5 @@ public interface IOrganizationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOrganizationCollectionRequest skipToken(String skipToken);
+	IOrganizationCollectionRequest skipToken(final String skipToken);
 }

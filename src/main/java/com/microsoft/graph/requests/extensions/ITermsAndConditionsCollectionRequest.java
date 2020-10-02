@@ -85,5 +85,5 @@ public interface ITermsAndConditionsCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITermsAndConditionsCollectionRequest skipToken(String skipToken);
+	ITermsAndConditionsCollectionRequest skipToken(final String skipToken);
 }

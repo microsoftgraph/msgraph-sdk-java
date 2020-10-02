@@ -85,5 +85,5 @@ public interface IManagedAppRegistrationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IManagedAppRegistrationCollectionRequest skipToken(String skipToken);
+	IManagedAppRegistrationCollectionRequest skipToken(final String skipToken);
 }

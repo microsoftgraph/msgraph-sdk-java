@@ -68,6 +68,10 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder createdObjects(final String id);
 
+    IServicePrincipalCollectionWithReferencesRequestBuilder createdObjectsAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder createdObjectsAsServicePrincipal(final String id);
+
     IEndpointCollectionRequestBuilder endpoints();
 
     IEndpointRequestBuilder endpoints(final String id);
@@ -80,6 +84,30 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
 
+    IUserCollectionWithReferencesRequestBuilder memberOfAsUser();
+
+    IUserWithReferenceRequestBuilder memberOfAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder memberOfAsGroup();
+
+    IGroupWithReferenceRequestBuilder memberOfAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder memberOfAsApplication();
+
+    IApplicationWithReferenceRequestBuilder memberOfAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder memberOfAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder memberOfAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder memberOfAsDevice();
+
+    IDeviceWithReferenceRequestBuilder memberOfAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder memberOfAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder memberOfAsOrgContact(final String id);
+
     IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder oauth2PermissionGrants();
 
     IOAuth2PermissionGrantWithReferenceRequestBuilder oauth2PermissionGrants(final String id);
@@ -88,9 +116,45 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder ownedObjects(final String id);
 
+    IAppRoleAssignmentCollectionWithReferencesRequestBuilder ownedObjectsAsAppRoleAssignment();
+
+    IAppRoleAssignmentWithReferenceRequestBuilder ownedObjectsAsAppRoleAssignment(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder ownedObjectsAsApplication();
+
+    IApplicationWithReferenceRequestBuilder ownedObjectsAsApplication(final String id);
+
+    IEndpointCollectionWithReferencesRequestBuilder ownedObjectsAsEndpoint();
+
+    IEndpointWithReferenceRequestBuilder ownedObjectsAsEndpoint(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder ownedObjectsAsGroup();
+
+    IGroupWithReferenceRequestBuilder ownedObjectsAsGroup(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder ownedObjectsAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder ownedObjectsAsServicePrincipal(final String id);
+
     IDirectoryObjectCollectionWithReferencesRequestBuilder owners();
 
     IDirectoryObjectWithReferenceRequestBuilder owners(final String id);
+
+    IAppRoleAssignmentCollectionWithReferencesRequestBuilder ownersAsAppRoleAssignment();
+
+    IAppRoleAssignmentWithReferenceRequestBuilder ownersAsAppRoleAssignment(final String id);
+
+    IEndpointCollectionWithReferencesRequestBuilder ownersAsEndpoint();
+
+    IEndpointWithReferenceRequestBuilder ownersAsEndpoint(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder ownersAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder ownersAsServicePrincipal(final String id);
+
+    IUserCollectionWithReferencesRequestBuilder ownersAsUser();
+
+    IUserWithReferenceRequestBuilder ownersAsUser(final String id);
 
     ITokenIssuancePolicyCollectionWithReferencesRequestBuilder tokenIssuancePolicies();
 
@@ -103,6 +167,30 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
     IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf();
 
     IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id);
+
+    IUserCollectionWithReferencesRequestBuilder transitiveMemberOfAsUser();
+
+    IUserWithReferenceRequestBuilder transitiveMemberOfAsUser(final String id);
+
+    IGroupCollectionWithReferencesRequestBuilder transitiveMemberOfAsGroup();
+
+    IGroupWithReferenceRequestBuilder transitiveMemberOfAsGroup(final String id);
+
+    IApplicationCollectionWithReferencesRequestBuilder transitiveMemberOfAsApplication();
+
+    IApplicationWithReferenceRequestBuilder transitiveMemberOfAsApplication(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder transitiveMemberOfAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder transitiveMemberOfAsServicePrincipal(final String id);
+
+    IDeviceCollectionWithReferencesRequestBuilder transitiveMemberOfAsDevice();
+
+    IDeviceWithReferenceRequestBuilder transitiveMemberOfAsDevice(final String id);
+
+    IOrgContactCollectionWithReferencesRequestBuilder transitiveMemberOfAsOrgContact();
+
+    IOrgContactWithReferenceRequestBuilder transitiveMemberOfAsOrgContact(final String id);
     IServicePrincipalAddKeyRequestBuilder addKey(final KeyCredential keyCredential, final PasswordCredential passwordCredential, final String proof);
     IServicePrincipalAddPasswordRequestBuilder addPassword(final PasswordCredential passwordCredential);
     IServicePrincipalRemoveKeyRequestBuilder removeKey(final java.util.UUID keyId, final String proof);

@@ -85,5 +85,5 @@ public interface IContactCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IContactCollectionRequest skipToken(String skipToken);
+	IContactCollectionRequest skipToken(final String skipToken);
 }

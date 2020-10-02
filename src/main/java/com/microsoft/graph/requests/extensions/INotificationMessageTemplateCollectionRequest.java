@@ -85,5 +85,5 @@ public interface INotificationMessageTemplateCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	INotificationMessageTemplateCollectionRequest skipToken(String skipToken);
+	INotificationMessageTemplateCollectionRequest skipToken(final String skipToken);
 }

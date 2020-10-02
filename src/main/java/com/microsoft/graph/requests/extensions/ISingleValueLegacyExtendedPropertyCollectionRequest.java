@@ -85,5 +85,5 @@ public interface ISingleValueLegacyExtendedPropertyCollectionRequest extends IHt
      *
 	 * @return the updated request
 	 */
-	ISingleValueLegacyExtendedPropertyCollectionRequest skipToken(String skipToken);
+	ISingleValueLegacyExtendedPropertyCollectionRequest skipToken(final String skipToken);
 }

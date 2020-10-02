@@ -85,5 +85,5 @@ public interface IPermissionGrantPolicyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPermissionGrantPolicyCollectionRequest skipToken(String skipToken);
+	IPermissionGrantPolicyCollectionRequest skipToken(final String skipToken);
 }

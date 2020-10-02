@@ -85,5 +85,5 @@ public interface IInferenceClassificationOverrideCollectionRequest extends IHttp
      *
 	 * @return the updated request
 	 */
-	IInferenceClassificationOverrideCollectionRequest skipToken(String skipToken);
+	IInferenceClassificationOverrideCollectionRequest skipToken(final String skipToken);
 }

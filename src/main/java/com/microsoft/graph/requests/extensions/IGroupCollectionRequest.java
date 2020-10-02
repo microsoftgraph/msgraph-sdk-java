@@ -85,5 +85,5 @@ public interface IGroupCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IGroupCollectionRequest skipToken(String skipToken);
+	IGroupCollectionRequest skipToken(final String skipToken);
 }

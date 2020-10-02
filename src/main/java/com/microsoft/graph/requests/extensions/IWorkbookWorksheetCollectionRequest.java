@@ -86,5 +86,5 @@ public interface IWorkbookWorksheetCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IWorkbookWorksheetCollectionRequest skipToken(String skipToken);
+	IWorkbookWorksheetCollectionRequest skipToken(final String skipToken);
 }

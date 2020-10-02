@@ -85,5 +85,5 @@ public interface IConditionalAccessPolicyCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	IConditionalAccessPolicyCollectionRequest skipToken(String skipToken);
+	IConditionalAccessPolicyCollectionRequest skipToken(final String skipToken);
 }

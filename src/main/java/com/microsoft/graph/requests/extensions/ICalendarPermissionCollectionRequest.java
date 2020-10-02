@@ -85,5 +85,5 @@ public interface ICalendarPermissionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ICalendarPermissionCollectionRequest skipToken(String skipToken);
+	ICalendarPermissionCollectionRequest skipToken(final String skipToken);
 }

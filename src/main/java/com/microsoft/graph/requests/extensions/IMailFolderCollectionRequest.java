@@ -84,5 +84,5 @@ public interface IMailFolderCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IMailFolderCollectionRequest skipToken(String skipToken);
+	IMailFolderCollectionRequest skipToken(final String skipToken);
 }

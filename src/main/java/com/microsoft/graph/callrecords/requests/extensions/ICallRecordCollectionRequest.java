@@ -85,5 +85,5 @@ public interface ICallRecordCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ICallRecordCollectionRequest skipToken(String skipToken);
+	ICallRecordCollectionRequest skipToken(final String skipToken);
 }

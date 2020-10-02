@@ -71,6 +71,48 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder impleme
     public IDirectoryObjectWithReferenceRequestBuilder members(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
+    public IUserCollectionWithReferencesRequestBuilder membersAsUser() {
+        return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.user", getClient(), null);
+    }
+
+    public IUserWithReferenceRequestBuilder membersAsUser(final String id) {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.user", getClient(), null);
+    }
+    public IGroupCollectionWithReferencesRequestBuilder membersAsGroup() {
+        return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.group", getClient(), null);
+    }
+
+    public IGroupWithReferenceRequestBuilder membersAsGroup(final String id) {
+        return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.group", getClient(), null);
+    }
+    public IApplicationCollectionWithReferencesRequestBuilder membersAsApplication() {
+        return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.application", getClient(), null);
+    }
+
+    public IApplicationWithReferenceRequestBuilder membersAsApplication(final String id) {
+        return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.application", getClient(), null);
+    }
+    public IServicePrincipalCollectionWithReferencesRequestBuilder membersAsServicePrincipal() {
+        return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+
+    public IServicePrincipalWithReferenceRequestBuilder membersAsServicePrincipal(final String id) {
+        return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+    public IDeviceCollectionWithReferencesRequestBuilder membersAsDevice() {
+        return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.device", getClient(), null);
+    }
+
+    public IDeviceWithReferenceRequestBuilder membersAsDevice(final String id) {
+        return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.device", getClient(), null);
+    }
+    public IOrgContactCollectionWithReferencesRequestBuilder membersAsOrgContact() {
+        return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/microsoft.graph.orgContact", getClient(), null);
+    }
+
+    public IOrgContactWithReferenceRequestBuilder membersAsOrgContact(final String id) {
+        return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
+    }
     public IScopedRoleMembershipCollectionRequestBuilder scopedRoleMembers() {
         return new ScopedRoleMembershipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scopedRoleMembers"), getClient(), null);
     }

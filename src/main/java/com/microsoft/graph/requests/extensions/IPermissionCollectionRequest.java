@@ -86,5 +86,5 @@ public interface IPermissionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPermissionCollectionRequest skipToken(String skipToken);
+	IPermissionCollectionRequest skipToken(final String skipToken);
 }

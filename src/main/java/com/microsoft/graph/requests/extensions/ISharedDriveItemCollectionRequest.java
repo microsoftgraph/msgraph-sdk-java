@@ -84,5 +84,5 @@ public interface ISharedDriveItemCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISharedDriveItemCollectionRequest skipToken(String skipToken);
+	ISharedDriveItemCollectionRequest skipToken(final String skipToken);
 }

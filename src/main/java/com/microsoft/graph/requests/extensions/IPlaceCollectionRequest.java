@@ -84,5 +84,5 @@ public interface IPlaceCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPlaceCollectionRequest skipToken(String skipToken);
+	IPlaceCollectionRequest skipToken(final String skipToken);
 }

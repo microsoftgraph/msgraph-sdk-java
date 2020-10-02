@@ -98,5 +98,5 @@ public interface IUserCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IUserCollectionRequest skipToken(String skipToken);
+	IUserCollectionRequest skipToken(final String skipToken);
 }

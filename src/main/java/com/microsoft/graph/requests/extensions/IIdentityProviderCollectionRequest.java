@@ -84,5 +84,5 @@ public interface IIdentityProviderCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IIdentityProviderCollectionRequest skipToken(String skipToken);
+	IIdentityProviderCollectionRequest skipToken(final String skipToken);
 }

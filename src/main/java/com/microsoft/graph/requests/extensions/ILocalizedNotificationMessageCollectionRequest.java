@@ -85,5 +85,5 @@ public interface ILocalizedNotificationMessageCollectionRequest extends IHttpReq
      *
 	 * @return the updated request
 	 */
-	ILocalizedNotificationMessageCollectionRequest skipToken(String skipToken);
+	ILocalizedNotificationMessageCollectionRequest skipToken(final String skipToken);
 }

@@ -84,5 +84,5 @@ public interface IInvitationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IInvitationCollectionRequest skipToken(String skipToken);
+	IInvitationCollectionRequest skipToken(final String skipToken);
 }

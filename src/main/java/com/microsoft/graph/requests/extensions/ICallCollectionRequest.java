@@ -100,5 +100,5 @@ public interface ICallCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ICallCollectionRequest skipToken(String skipToken);
+	ICallCollectionRequest skipToken(final String skipToken);
 }

@@ -85,5 +85,5 @@ public interface ITermsAndConditionsAcceptanceStatusCollectionRequest extends IH
      *
 	 * @return the updated request
 	 */
-	ITermsAndConditionsAcceptanceStatusCollectionRequest skipToken(String skipToken);
+	ITermsAndConditionsAcceptanceStatusCollectionRequest skipToken(final String skipToken);
 }

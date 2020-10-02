@@ -85,5 +85,5 @@ public interface IDeviceManagementTroubleshootingEventCollectionRequest extends 
      *
 	 * @return the updated request
 	 */
-	IDeviceManagementTroubleshootingEventCollectionRequest skipToken(String skipToken);
+	IDeviceManagementTroubleshootingEventCollectionRequest skipToken(final String skipToken);
 }

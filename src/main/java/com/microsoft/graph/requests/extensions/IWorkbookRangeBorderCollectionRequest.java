@@ -85,5 +85,5 @@ public interface IWorkbookRangeBorderCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IWorkbookRangeBorderCollectionRequest skipToken(String skipToken);
+	IWorkbookRangeBorderCollectionRequest skipToken(final String skipToken);
 }

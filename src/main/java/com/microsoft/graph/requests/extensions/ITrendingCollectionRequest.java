@@ -85,5 +85,5 @@ public interface ITrendingCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITrendingCollectionRequest skipToken(String skipToken);
+	ITrendingCollectionRequest skipToken(final String skipToken);
 }

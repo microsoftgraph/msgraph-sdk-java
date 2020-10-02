@@ -85,5 +85,5 @@ public interface ITeamsTabCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITeamsTabCollectionRequest skipToken(String skipToken);
+	ITeamsTabCollectionRequest skipToken(final String skipToken);
 }

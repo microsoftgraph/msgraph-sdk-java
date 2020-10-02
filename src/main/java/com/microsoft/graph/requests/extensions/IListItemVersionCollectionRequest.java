@@ -85,5 +85,5 @@ public interface IListItemVersionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IListItemVersionCollectionRequest skipToken(String skipToken);
+	IListItemVersionCollectionRequest skipToken(final String skipToken);
 }

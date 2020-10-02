@@ -85,5 +85,5 @@ public interface IMobileAppAssignmentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IMobileAppAssignmentCollectionRequest skipToken(String skipToken);
+	IMobileAppAssignmentCollectionRequest skipToken(final String skipToken);
 }

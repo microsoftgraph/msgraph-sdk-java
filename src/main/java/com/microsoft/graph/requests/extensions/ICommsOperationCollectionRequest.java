@@ -85,5 +85,5 @@ public interface ICommsOperationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ICommsOperationCollectionRequest skipToken(String skipToken);
+	ICommsOperationCollectionRequest skipToken(final String skipToken);
 }

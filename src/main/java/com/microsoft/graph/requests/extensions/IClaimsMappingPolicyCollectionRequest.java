@@ -85,5 +85,5 @@ public interface IClaimsMappingPolicyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IClaimsMappingPolicyCollectionRequest skipToken(String skipToken);
+	IClaimsMappingPolicyCollectionRequest skipToken(final String skipToken);
 }

@@ -25,7 +25,7 @@ public interface IMobileAppCategoryCollectionWithReferencesRequestBuilder extend
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IMobileAppCategoryCollectionWithReferencesRequest instance
      */
     IMobileAppCategoryCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -33,7 +33,7 @@ public interface IMobileAppCategoryCollectionWithReferencesRequestBuilder extend
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IMobileAppCategoryCollectionWithReferencesRequest instance
      */
     IMobileAppCategoryCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 

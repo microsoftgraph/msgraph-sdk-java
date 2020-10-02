@@ -85,5 +85,5 @@ public interface IUserActivityCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IUserActivityCollectionRequest skipToken(String skipToken);
+	IUserActivityCollectionRequest skipToken(final String skipToken);
 }

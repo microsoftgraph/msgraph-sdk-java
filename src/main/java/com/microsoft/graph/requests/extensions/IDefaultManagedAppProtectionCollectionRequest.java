@@ -85,5 +85,5 @@ public interface IDefaultManagedAppProtectionCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	IDefaultManagedAppProtectionCollectionRequest skipToken(String skipToken);
+	IDefaultManagedAppProtectionCollectionRequest skipToken(final String skipToken);
 }

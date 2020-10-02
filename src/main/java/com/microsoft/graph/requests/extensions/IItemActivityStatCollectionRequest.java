@@ -85,5 +85,5 @@ public interface IItemActivityStatCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IItemActivityStatCollectionRequest skipToken(String skipToken);
+	IItemActivityStatCollectionRequest skipToken(final String skipToken);
 }

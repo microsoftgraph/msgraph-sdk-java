@@ -85,5 +85,5 @@ public interface IMdmWindowsInformationProtectionPolicyCollectionRequest extends
      *
 	 * @return the updated request
 	 */
-	IMdmWindowsInformationProtectionPolicyCollectionRequest skipToken(String skipToken);
+	IMdmWindowsInformationProtectionPolicyCollectionRequest skipToken(final String skipToken);
 }

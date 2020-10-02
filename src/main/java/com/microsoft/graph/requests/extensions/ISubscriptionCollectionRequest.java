@@ -84,5 +84,5 @@ public interface ISubscriptionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISubscriptionCollectionRequest skipToken(String skipToken);
+	ISubscriptionCollectionRequest skipToken(final String skipToken);
 }

@@ -85,5 +85,5 @@ public interface IPermissionGrantConditionSetCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	IPermissionGrantConditionSetCollectionRequest skipToken(String skipToken);
+	IPermissionGrantConditionSetCollectionRequest skipToken(final String skipToken);
 }

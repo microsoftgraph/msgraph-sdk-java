@@ -85,5 +85,5 @@ public interface IWorkbookPivotTableCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IWorkbookPivotTableCollectionRequest skipToken(String skipToken);
+	IWorkbookPivotTableCollectionRequest skipToken(final String skipToken);
 }

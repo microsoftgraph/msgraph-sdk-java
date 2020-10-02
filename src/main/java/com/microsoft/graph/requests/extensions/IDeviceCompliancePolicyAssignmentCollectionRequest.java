@@ -85,5 +85,5 @@ public interface IDeviceCompliancePolicyAssignmentCollectionRequest extends IHtt
      *
 	 * @return the updated request
 	 */
-	IDeviceCompliancePolicyAssignmentCollectionRequest skipToken(String skipToken);
+	IDeviceCompliancePolicyAssignmentCollectionRequest skipToken(final String skipToken);
 }

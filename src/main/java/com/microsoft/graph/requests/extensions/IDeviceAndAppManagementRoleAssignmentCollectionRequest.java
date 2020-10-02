@@ -85,5 +85,5 @@ public interface IDeviceAndAppManagementRoleAssignmentCollectionRequest extends 
      *
 	 * @return the updated request
 	 */
-	IDeviceAndAppManagementRoleAssignmentCollectionRequest skipToken(String skipToken);
+	IDeviceAndAppManagementRoleAssignmentCollectionRequest skipToken(final String skipToken);
 }

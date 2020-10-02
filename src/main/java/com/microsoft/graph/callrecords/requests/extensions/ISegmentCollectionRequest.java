@@ -85,5 +85,5 @@ public interface ISegmentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISegmentCollectionRequest skipToken(String skipToken);
+	ISegmentCollectionRequest skipToken(final String skipToken);
 }

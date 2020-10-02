@@ -88,5 +88,5 @@ public interface INotebookCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	INotebookCollectionRequest skipToken(String skipToken);
+	INotebookCollectionRequest skipToken(final String skipToken);
 }

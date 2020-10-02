@@ -84,5 +84,5 @@ public interface ISchemaExtensionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISchemaExtensionCollectionRequest skipToken(String skipToken);
+	ISchemaExtensionCollectionRequest skipToken(final String skipToken);
 }

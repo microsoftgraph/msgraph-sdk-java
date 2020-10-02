@@ -57,27 +57,27 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionRequest<S
 
     public ISiteCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SiteCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ISiteCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SiteCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ISiteCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (SiteCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ISiteCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (SiteCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ISiteCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (SiteCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ISiteCollectionWithReferencesPage buildFromResponse(final SiteCollectionResponse response) {

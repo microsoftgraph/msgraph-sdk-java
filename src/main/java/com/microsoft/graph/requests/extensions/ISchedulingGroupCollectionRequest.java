@@ -85,5 +85,5 @@ public interface ISchedulingGroupCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ISchedulingGroupCollectionRequest skipToken(String skipToken);
+	ISchedulingGroupCollectionRequest skipToken(final String skipToken);
 }

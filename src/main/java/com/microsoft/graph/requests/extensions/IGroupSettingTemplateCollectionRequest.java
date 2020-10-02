@@ -84,5 +84,5 @@ public interface IGroupSettingTemplateCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IGroupSettingTemplateCollectionRequest skipToken(String skipToken);
+	IGroupSettingTemplateCollectionRequest skipToken(final String skipToken);
 }

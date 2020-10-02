@@ -85,5 +85,5 @@ public interface IDeviceInstallStateCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDeviceInstallStateCollectionRequest skipToken(String skipToken);
+	IDeviceInstallStateCollectionRequest skipToken(final String skipToken);
 }

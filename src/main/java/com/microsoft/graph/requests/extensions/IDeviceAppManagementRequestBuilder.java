@@ -78,6 +78,14 @@ public interface IDeviceAppManagementRequestBuilder extends IRequestBuilder {
 
     IMobileAppRequestBuilder mobileApps(final String id);
 
+    IMobileLobAppCollectionRequestBuilder mobileAppsAsMobileLobApp();
+
+    IMobileLobAppRequestBuilder mobileAppsAsMobileLobApp(final String id);
+
+    IManagedMobileLobAppCollectionRequestBuilder mobileAppsAsManagedMobileLobApp();
+
+    IManagedMobileLobAppRequestBuilder mobileAppsAsManagedMobileLobApp(final String id);
+
     IVppTokenCollectionRequestBuilder vppTokens();
 
     IVppTokenRequestBuilder vppTokens(final String id);

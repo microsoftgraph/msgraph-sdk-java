@@ -85,5 +85,5 @@ public interface IContentTypeCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IContentTypeCollectionRequest skipToken(String skipToken);
+	IContentTypeCollectionRequest skipToken(final String skipToken);
 }

@@ -85,5 +85,5 @@ public interface IWorkforceIntegrationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IWorkforceIntegrationCollectionRequest skipToken(String skipToken);
+	IWorkforceIntegrationCollectionRequest skipToken(final String skipToken);
 }

@@ -85,5 +85,5 @@ public interface IDeviceManagementPartnerCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	IDeviceManagementPartnerCollectionRequest skipToken(String skipToken);
+	IDeviceManagementPartnerCollectionRequest skipToken(final String skipToken);
 }

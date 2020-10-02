@@ -85,5 +85,5 @@ public interface IOpenShiftCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOpenShiftCollectionRequest skipToken(String skipToken);
+	IOpenShiftCollectionRequest skipToken(final String skipToken);
 }

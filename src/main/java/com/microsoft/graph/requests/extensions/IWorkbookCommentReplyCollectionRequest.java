@@ -85,5 +85,5 @@ public interface IWorkbookCommentReplyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IWorkbookCommentReplyCollectionRequest skipToken(String skipToken);
+	IWorkbookCommentReplyCollectionRequest skipToken(final String skipToken);
 }

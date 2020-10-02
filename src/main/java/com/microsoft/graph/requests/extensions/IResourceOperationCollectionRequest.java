@@ -85,5 +85,5 @@ public interface IResourceOperationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IResourceOperationCollectionRequest skipToken(String skipToken);
+	IResourceOperationCollectionRequest skipToken(final String skipToken);
 }

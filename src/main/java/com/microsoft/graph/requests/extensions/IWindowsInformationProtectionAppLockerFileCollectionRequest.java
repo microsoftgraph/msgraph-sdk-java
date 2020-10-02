@@ -85,5 +85,5 @@ public interface IWindowsInformationProtectionAppLockerFileCollectionRequest ext
      *
 	 * @return the updated request
 	 */
-	IWindowsInformationProtectionAppLockerFileCollectionRequest skipToken(String skipToken);
+	IWindowsInformationProtectionAppLockerFileCollectionRequest skipToken(final String skipToken);
 }
