@@ -387,11 +387,11 @@ public class CoreHttpProvider implements IHttpProvider {
 									.newBuilder()
 									.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS)
 									.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS)
-									.followRedirects(false) //TODO those are duplicated for the time being with core, remove in 3.0
+									.followRedirects(false) //TODO https://github.com/microsoftgraph/msgraph-sdk-java/issues/516
 									.protocols(Arrays.asList(Protocol.HTTP_1_1)) //https://stackoverflow.com/questions/62031298/sockettimeout-on-java-11-but-not-on-java-8
 									.build();
 			}
-			if (authenticationProvider != null) { //TODO remove the authentication provider as this is done by the interceptor anyway
+			if (authenticationProvider != null) { //TODO https://github.com/microsoftgraph/msgraph-sdk-java/issues/517
 				authenticationProvider.authenticateRequest(request);
 			}
 			Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
