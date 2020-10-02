@@ -32,6 +32,8 @@ import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.serializer.ISerializer;
 
+import okhttp3.OkHttpClient;
+
 /**
  * The default configuration for a service client
  */
@@ -55,7 +57,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
     /**
      * The serializer instance
      */
-    private DefaultSerializer serializer;
+    private ISerializer serializer;
 
     /**
      * Creates an instance of this configuration with an authentication provider
@@ -97,11 +99,22 @@ public abstract class DefaultClientConfig implements IClientConfig {
      */
     @Override
     public IHttpProvider getHttpProvider() {
+        return this.getHttpProvider(null);
+    }
+
+    /**
+     * Gets the HTTP provider
+     *
+     * @param httpClient the http client to pass to the http provider when building it
+     * @param <T1> the http client type
+     * @return the HTTP provider
+     */
+    @Override
+    public <T1> IHttpProvider getHttpProvider(final T1 httpClient) {
         if (httpProvider == null) {
-            httpProvider = new CoreHttpProvider(getSerializer(),
-                    getAuthenticationProvider(),
-                    getExecutors(),
-                    getLogger());
+            httpProvider = (httpClient instanceof OkHttpClient) ? 
+                            new CoreHttpProvider(this, (OkHttpClient) httpClient) :
+                            new CoreHttpProvider(this, null);
             getLogger().logDebug("Created CoreHttpProvider");
         }
         return httpProvider;
