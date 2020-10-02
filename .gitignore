@@ -32,3 +32,4 @@ hs_err_pid*
 # Maven
 /target/
 local.properties
+.idea
