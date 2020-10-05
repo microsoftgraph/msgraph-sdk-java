@@ -29,16 +29,16 @@ import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
-import com.microsoft.graph.requests.extensions.IContactCollectionPage;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesPage;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionPage;
-import com.microsoft.graph.requests.extensions.IGroupCollectionPage;
-import com.microsoft.graph.requests.extensions.IMailFolderCollectionPage;
-import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
-import com.microsoft.graph.requests.extensions.IOrganizationCollectionPage;
-import com.microsoft.graph.requests.extensions.IUsedInsightCollectionPage;
-import com.microsoft.graph.requests.extensions.IUserCollectionPage;
-import com.microsoft.graph.requests.extensions.IUserCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.ContactCollectionPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
+import com.microsoft.graph.requests.extensions.GroupCollectionPage;
+import com.microsoft.graph.requests.extensions.MailFolderCollectionPage;
+import com.microsoft.graph.requests.extensions.MessageCollectionPage;
+import com.microsoft.graph.requests.extensions.OrganizationCollectionPage;
+import com.microsoft.graph.requests.extensions.UsedInsightCollectionPage;
+import com.microsoft.graph.requests.extensions.UserCollectionPage;
+import com.microsoft.graph.requests.extensions.UserCollectionWithReferencesPage;
 @Ignore
 public class UserTests {
 	IGraphServiceClient graphServiceClient = null;
@@ -71,14 +71,14 @@ public class UserTests {
 	@Test
 	public void meDriveTest() {
 		//GET me/drive/root/children
-		IDriveItemCollectionPage driveItemCollectionPage = graphServiceClient.me().drive().root().children().buildRequest().get();
+		DriveItemCollectionPage driveItemCollectionPage = graphServiceClient.me().drive().root().children().buildRequest().get();
 		assertNotNull(driveItemCollectionPage);
 	}
 
 	@Test
 	public void userKeyTest() {
 		//GET users('<<key>>')
-		IUserCollectionPage userCollectionPage = graphServiceClient.users().buildRequest().get();
+		UserCollectionPage userCollectionPage = graphServiceClient.users().buildRequest().get();
 		assertNotNull(userCollectionPage);
 		assertNotNull(userCollectionPage.additionalDataManager().get("graphResponseHeaders"));
 		List<User> list = userCollectionPage.getCurrentPage();
@@ -105,7 +105,7 @@ public class UserTests {
 	@Test
 	public void meDriveItems() {
 		//GET me/drive/items('<key>')
-		IDriveItemCollectionPage driveItemCollectionPage = graphServiceClient.me().drive().items().buildRequest().get();
+		DriveItemCollectionPage driveItemCollectionPage = graphServiceClient.me().drive().items().buildRequest().get();
 		assertNotNull(driveItemCollectionPage);
 		if(driveItemCollectionPage.getCurrentPage().size() > 0) {
 			DriveItem item = graphServiceClient.me().drive().items(driveItemCollectionPage.getCurrentPage().get(0).id).buildRequest().get();
@@ -116,21 +116,21 @@ public class UserTests {
 	@Test
 	public void meMessagesTest() {
 		//GET me/messages
-		IMessageCollectionPage messageCollectionPage = graphServiceClient.me().messages().buildRequest().get();
+		MessageCollectionPage messageCollectionPage = graphServiceClient.me().messages().buildRequest().get();
 		assertNotNull(messageCollectionPage);
 	}
 
 	@Test
 	public void meContactsTest() {
 		//GET me/contacts
-		IContactCollectionPage contactCollectionPage = graphServiceClient.me().contacts().buildRequest().get();
+		ContactCollectionPage contactCollectionPage = graphServiceClient.me().contacts().buildRequest().get();
 		assertNotNull(contactCollectionPage);
 	}
 
 	@Test
 	public void usersKeyPhotoValueTest() {
 		//GET users('<<key>>')/photo/$value
-		IUserCollectionPage userCollectionPage = graphServiceClient.users().buildRequest().get();
+		UserCollectionPage userCollectionPage = graphServiceClient.users().buildRequest().get();
 		for(User user:userCollectionPage.getCurrentPage()) {
 			if(user.photo!=null) {
 				InputStream stream = graphServiceClient.users(userCollectionPage.getCurrentPage().get(0).id).photo().content().buildRequest().get();
@@ -150,32 +150,32 @@ public class UserTests {
 	@Test
 	public void getOrganization() {
 		//GET organization
-		IOrganizationCollectionPage organizationCollectionPage = graphServiceClient.organization().buildRequest().get();
+		OrganizationCollectionPage organizationCollectionPage = graphServiceClient.organization().buildRequest().get();
 		assertNotNull(organizationCollectionPage);
 	}
 
 	@Test
 	public void meInsightsUsed() {
 		//GET me/insights/used
-		IUsedInsightCollectionPage usedInsightCollectionPage = graphServiceClient.me().insights().used().buildRequest().get();
+		UsedInsightCollectionPage usedInsightCollectionPage = graphServiceClient.me().insights().used().buildRequest().get();
 		assertNotNull(usedInsightCollectionPage);
 	}
 	
 	@Test
 	public void mailFoldertest() {
 		//GET me/mailFolders
-		IMailFolderCollectionPage mailFolderCollectionPage = graphServiceClient.me().mailFolders().buildRequest().get();
+		MailFolderCollectionPage mailFolderCollectionPage = graphServiceClient.me().mailFolders().buildRequest().get();
 		assertNotNull(mailFolderCollectionPage);
 		if(mailFolderCollectionPage.getCurrentPage().size() > 0) {
 			String mailFolderId = mailFolderCollectionPage.getCurrentPage().get(0).id;
-			IMessageCollectionPage messageCollectionPage = graphServiceClient.me().mailFolders(mailFolderId).messages().buildRequest().get();
+			MessageCollectionPage messageCollectionPage = graphServiceClient.me().mailFolders(mailFolderId).messages().buildRequest().get();
 			assertNotNull(messageCollectionPage);
 		}
 	}
 	
 	@Test
 	public void meMemberof() {
-		IDirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().memberOf().buildRequest().get();
+		DirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().memberOf().buildRequest().get();
 		assertNotNull(page);
 	}
 	@Test
@@ -186,7 +186,7 @@ public class UserTests {
 				exec.submit(new Runnable() {
 					@Override
 					public void run() {
-						final IUserCollectionPage users = graphServiceClient.users().buildRequest().get();
+						final UserCollectionPage users = graphServiceClient.users().buildRequest().get();
 						assertNotNull(users);
 						final List<User> currentPage = users.getCurrentPage();
 						assertNotNull(currentPage);
@@ -215,16 +215,16 @@ public class UserTests {
 	}
 	@Test
 	public void castTest() {
-		final IGroupCollectionPage groups = graphServiceClient.groups().buildRequest().top(1).get();
+		final GroupCollectionPage groups = graphServiceClient.groups().buildRequest().top(1).get();
 		final Group group = groups.getCurrentPage().get(0);
-		final IUserCollectionWithReferencesPage usersPage = graphServiceClient
+		final UserCollectionWithReferencesPage usersPage = graphServiceClient
 		.groups(group.id)
 		.membersAsUser()
 		.buildRequest()
 		.get();
 		assertNotNull(usersPage);
 
-		final IDirectoryObjectCollectionWithReferencesPage testUserCollection = graphServiceClient
+		final DirectoryObjectCollectionWithReferencesPage testUserCollection = graphServiceClient
 							.groups(group.id)
 							.members()
 							.buildRequest()
