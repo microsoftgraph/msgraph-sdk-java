@@ -30,5 +30,5 @@ public final class Constants {
 	public static final String PASSWORD = "password";
 	public static final String TENANTID = "tenantid";
 	public static final String CLIENTSECRET = "clientsecret";
-	public static final String VERSION_NAME = "2.3.0";
+	public static final String VERSION_NAME = "2.3.1";
 }
