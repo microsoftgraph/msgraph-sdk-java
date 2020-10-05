@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedAppOperation;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionResp
 /**
  * The class for the Managed App Operation Collection Page.
  */
-public class ManagedAppOperationCollectionPage extends BaseCollectionPage<ManagedAppOperation, IManagedAppOperationCollectionRequestBuilder> implements IManagedAppOperationCollectionPage {
+public class ManagedAppOperationCollectionPage extends BaseCollectionPage<ManagedAppOperation, ManagedAppOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedAppOperation
@@ -22,7 +22,7 @@ public class ManagedAppOperationCollectionPage extends BaseCollectionPage<Manage
      * @param response the serialized ManagedAppOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedAppOperationCollectionPage(final ManagedAppOperationCollectionResponse response, final IManagedAppOperationCollectionRequestBuilder builder) {
+    public ManagedAppOperationCollectionPage(final ManagedAppOperationCollectionResponse response, final ManagedAppOperationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

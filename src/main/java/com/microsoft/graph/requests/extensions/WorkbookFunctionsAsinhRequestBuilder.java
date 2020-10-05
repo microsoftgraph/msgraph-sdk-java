@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAsinhRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAsinhRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Asinh Request Builder.
  */
-public class WorkbookFunctionsAsinhRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsAsinhRequestBuilder {
+public class WorkbookFunctionsAsinhRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsAsinh
@@ -32,22 +31,22 @@ public class WorkbookFunctionsAsinhRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsAsinhRequest
+     * Creates the WorkbookFunctionsAsinhRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAsinhRequest instance
+     * @return the WorkbookFunctionsAsinhRequest instance
      */
-    public IWorkbookFunctionsAsinhRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsAsinhRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsAsinhRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsAsinhRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAsinhRequest instance
+     * @return the WorkbookFunctionsAsinhRequest instance
      */
-    public IWorkbookFunctionsAsinhRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsAsinhRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsAsinhRequest request = new WorkbookFunctionsAsinhRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAsinRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAsinRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Asin Request Builder.
  */
-public class WorkbookFunctionsAsinRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsAsinRequestBuilder {
+public class WorkbookFunctionsAsinRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsAsin
@@ -32,22 +31,22 @@ public class WorkbookFunctionsAsinRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsAsinRequest
+     * Creates the WorkbookFunctionsAsinRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAsinRequest instance
+     * @return the WorkbookFunctionsAsinRequest instance
      */
-    public IWorkbookFunctionsAsinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsAsinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsAsinRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsAsinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAsinRequest instance
+     * @return the WorkbookFunctionsAsinRequest instance
      */
-    public IWorkbookFunctionsAsinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsAsinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsAsinRequest request = new WorkbookFunctionsAsinRequest(
                 getRequestUrl(),
                 getClient(),

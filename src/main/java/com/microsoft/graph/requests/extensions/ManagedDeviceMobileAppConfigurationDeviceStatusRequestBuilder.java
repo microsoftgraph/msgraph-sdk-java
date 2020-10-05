@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Device Mobile App Configuration Device Status Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder extends BaseRequestBuilder implements IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedDeviceMobileAppConfigurationDeviceStatus
@@ -35,9 +35,9 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder exten
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationDeviceStatusRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationDeviceStatusRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder exten
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationDeviceStatusRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationDeviceStatusRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

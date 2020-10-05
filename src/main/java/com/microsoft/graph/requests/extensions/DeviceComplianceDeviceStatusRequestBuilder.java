@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Device Status Request Builder.
  */
-public class DeviceComplianceDeviceStatusRequestBuilder extends BaseRequestBuilder implements IDeviceComplianceDeviceStatusRequestBuilder {
+public class DeviceComplianceDeviceStatusRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceComplianceDeviceStatus
@@ -35,9 +35,9 @@ public class DeviceComplianceDeviceStatusRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceComplianceDeviceStatusRequest instance
+     * @return the DeviceComplianceDeviceStatusRequest instance
      */
-    public IDeviceComplianceDeviceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceComplianceDeviceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DeviceComplianceDeviceStatusRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceComplianceDeviceStatusRequest instance
+     * @return the DeviceComplianceDeviceStatusRequest instance
      */
-    public IDeviceComplianceDeviceStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceDeviceStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

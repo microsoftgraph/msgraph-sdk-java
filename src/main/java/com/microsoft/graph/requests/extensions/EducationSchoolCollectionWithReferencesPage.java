@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.EducationSchool;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionResponse;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Education School Collection With References Page.
  */
-public class EducationSchoolCollectionWithReferencesPage extends BaseCollectionPage<EducationSchool, IEducationSchoolCollectionWithReferencesRequestBuilder> implements IEducationSchoolCollectionWithReferencesPage {
+public class EducationSchoolCollectionWithReferencesPage extends BaseCollectionPage<EducationSchool, EducationSchoolCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for EducationSchool
@@ -34,7 +34,7 @@ public class EducationSchoolCollectionWithReferencesPage extends BaseCollectionP
      * @param response the serialized EducationSchoolCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EducationSchoolCollectionWithReferencesPage(final EducationSchoolCollectionResponse response, final IEducationSchoolCollectionWithReferencesRequestBuilder builder) {
+    public EducationSchoolCollectionWithReferencesPage(final EducationSchoolCollectionResponse response, final EducationSchoolCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

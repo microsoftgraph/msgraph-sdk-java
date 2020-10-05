@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEventTentativelyAcceptRequest;
 import com.microsoft.graph.requests.extensions.EventTentativelyAcceptRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Event Tentatively Accept Request Builder.
  */
-public class EventTentativelyAcceptRequestBuilder extends BaseActionRequestBuilder implements IEventTentativelyAcceptRequestBuilder {
+public class EventTentativelyAcceptRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this EventTentativelyAccept
@@ -34,22 +33,22 @@ public class EventTentativelyAcceptRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IEventTentativelyAcceptRequest
+     * Creates the EventTentativelyAcceptRequest
      *
      * @param requestOptions the options for the request
-     * @return the IEventTentativelyAcceptRequest instance
+     * @return the EventTentativelyAcceptRequest instance
      */
-    public IEventTentativelyAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EventTentativelyAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IEventTentativelyAcceptRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the EventTentativelyAcceptRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IEventTentativelyAcceptRequest instance
+     * @return the EventTentativelyAcceptRequest instance
      */
-    public IEventTentativelyAcceptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventTentativelyAcceptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         EventTentativelyAcceptRequest request = new EventTentativelyAcceptRequest(
                 getRequestUrl(),
                 getClient(),

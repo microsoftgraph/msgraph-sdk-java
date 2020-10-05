@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentResultCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentResultRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Threat Assessment Request Request.
  */
-public class ThreatAssessmentRequestRequest extends BaseRequest implements IThreatAssessmentRequestRequest {
+public class ThreatAssessmentRequestRequest extends BaseRequest {
 	
     /**
      * The request for the ThreatAssessmentRequest
@@ -157,7 +155,7 @@ public class ThreatAssessmentRequestRequest extends BaseRequest implements IThre
      * @param value the select clause
      * @return the updated request
      */
-     public IThreatAssessmentRequestRequest select(final String value) {
+     public ThreatAssessmentRequestRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ThreatAssessmentRequestRequest)this;
      }
@@ -168,7 +166,7 @@ public class ThreatAssessmentRequestRequest extends BaseRequest implements IThre
      * @param value the expand clause
      * @return the updated request
      */
-     public IThreatAssessmentRequestRequest expand(final String value) {
+     public ThreatAssessmentRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ThreatAssessmentRequestRequest)this;
      }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeInsertRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeInsertRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Insert Request Builder.
  */
-public class WorkbookRangeInsertRequestBuilder extends BaseActionRequestBuilder implements IWorkbookRangeInsertRequestBuilder {
+public class WorkbookRangeInsertRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeInsert
@@ -32,22 +31,22 @@ public class WorkbookRangeInsertRequestBuilder extends BaseActionRequestBuilder 
     }
 
     /**
-     * Creates the IWorkbookRangeInsertRequest
+     * Creates the WorkbookRangeInsertRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeInsertRequest instance
+     * @return the WorkbookRangeInsertRequest instance
      */
-    public IWorkbookRangeInsertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeInsertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeInsertRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeInsertRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeInsertRequest instance
+     * @return the WorkbookRangeInsertRequest instance
      */
-    public IWorkbookRangeInsertRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeInsertRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeInsertRequest request = new WorkbookRangeInsertRequest(
                 getRequestUrl(),
                 getClient(),

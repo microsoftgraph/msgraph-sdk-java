@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeViewItemAtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range View Item At Request Builder.
  */
-public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookRangeViewItemAtRequestBuilder {
+public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeViewItemAt
@@ -32,22 +31,22 @@ public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBu
     }
 
     /**
-     * Creates the IWorkbookRangeViewItemAtRequest
+     * Creates the WorkbookRangeViewItemAtRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeViewItemAtRequest instance
+     * @return the WorkbookRangeViewItemAtRequest instance
      */
-    public IWorkbookRangeViewItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeViewItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeViewItemAtRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeViewItemAtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeViewItemAtRequest instance
+     * @return the WorkbookRangeViewItemAtRequest instance
      */
-    public IWorkbookRangeViewItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeViewItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeViewItemAtRequest request = new WorkbookRangeViewItemAtRequest(
                 getRequestUrl(),
                 getClient(),
@@ -60,11 +59,11 @@ public class WorkbookRangeViewItemAtRequestBuilder extends BaseFunctionRequestBu
 
         return request;
     }
-    public IWorkbookRangeViewCollectionRequestBuilder rows() {
+    public WorkbookRangeViewCollectionRequestBuilder rows() {
         return new WorkbookRangeViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
-    public IWorkbookRangeViewRequestBuilder rows(final String id) {
+    public WorkbookRangeViewRequestBuilder rows(final String id) {
         return new WorkbookRangeViewRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
     }
 }

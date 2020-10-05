@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.Group;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IGroupDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupDeltaCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Group Delta Collection Page.
  */
-public class GroupDeltaCollectionPage extends BaseCollectionPage<Group, IGroupDeltaCollectionRequestBuilder> implements IGroupDeltaCollectionPage {
+public class GroupDeltaCollectionPage extends BaseCollectionPage<Group, GroupDeltaCollectionRequestBuilder> {
 
     /**
      * The opaque link to query delta after the 
@@ -39,7 +39,7 @@ public class GroupDeltaCollectionPage extends BaseCollectionPage<Group, IGroupDe
      * @param response The serialized GroupDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public GroupDeltaCollectionPage(final GroupDeltaCollectionResponse response, final IGroupDeltaCollectionRequestBuilder builder) {
+    public GroupDeltaCollectionPage(final GroupDeltaCollectionResponse response, final GroupDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {

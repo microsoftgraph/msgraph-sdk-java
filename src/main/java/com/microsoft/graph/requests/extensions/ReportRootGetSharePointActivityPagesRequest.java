@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityPagesRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityPagesRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Share Point Activity Pages Request.
  */
-public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest implements IReportRootGetSharePointActivityPagesRequest {
+public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetSharePointActivityPages
@@ -97,7 +96,7 @@ public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest imp
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityPagesRequest select(final String value) {
+    public ReportRootGetSharePointActivityPagesRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetSharePointActivityPagesRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest imp
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityPagesRequest expand(final String value) {
+    public ReportRootGetSharePointActivityPagesRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetSharePointActivityPagesRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest imp
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityPagesRequest filter(final String value) {
+    public ReportRootGetSharePointActivityPagesRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetSharePointActivityPagesRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetSharePointActivityPagesRequest extends BaseRequest imp
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityPagesRequest orderBy(final String value) {
+    public ReportRootGetSharePointActivityPagesRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetSharePointActivityPagesRequest)this;
     }

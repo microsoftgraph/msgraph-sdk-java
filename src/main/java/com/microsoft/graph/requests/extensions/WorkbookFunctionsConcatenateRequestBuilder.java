@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsConcatenateRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsConcatenateRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Concatenate Request Builder.
  */
-public class WorkbookFunctionsConcatenateRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsConcatenateRequestBuilder {
+public class WorkbookFunctionsConcatenateRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsConcatenate
@@ -32,22 +31,22 @@ public class WorkbookFunctionsConcatenateRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IWorkbookFunctionsConcatenateRequest
+     * Creates the WorkbookFunctionsConcatenateRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsConcatenateRequest instance
+     * @return the WorkbookFunctionsConcatenateRequest instance
      */
-    public IWorkbookFunctionsConcatenateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsConcatenateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsConcatenateRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsConcatenateRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsConcatenateRequest instance
+     * @return the WorkbookFunctionsConcatenateRequest instance
      */
-    public IWorkbookFunctionsConcatenateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsConcatenateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsConcatenateRequest request = new WorkbookFunctionsConcatenateRequest(
                 getRequestUrl(),
                 getClient(),

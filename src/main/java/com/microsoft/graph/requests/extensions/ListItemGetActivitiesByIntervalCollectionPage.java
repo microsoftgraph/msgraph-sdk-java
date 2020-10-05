@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IListItemGetActivitiesByIntervalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionPage;
 import com.microsoft.graph.requests.extensions.ListItemGetActivitiesByIntervalCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the List Item Get Activities By Interval Collection Page.
  */
-public class ListItemGetActivitiesByIntervalCollectionPage extends BaseCollectionPage<ItemActivityStat, IListItemGetActivitiesByIntervalCollectionRequestBuilder> implements IListItemGetActivitiesByIntervalCollectionPage {
+public class ListItemGetActivitiesByIntervalCollectionPage extends BaseCollectionPage<ItemActivityStat, ListItemGetActivitiesByIntervalCollectionRequestBuilder> {
 
     /**
      * A collection page for ItemActivityStat.
@@ -33,7 +33,7 @@ public class ListItemGetActivitiesByIntervalCollectionPage extends BaseCollectio
      * @param response The serialized ListItemGetActivitiesByIntervalCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public ListItemGetActivitiesByIntervalCollectionPage(final ListItemGetActivitiesByIntervalCollectionResponse response, final IListItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
+    public ListItemGetActivitiesByIntervalCollectionPage(final ListItemGetActivitiesByIntervalCollectionResponse response, final ListItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IServicePrincipalAddPasswordRequest;
 import com.microsoft.graph.requests.extensions.ServicePrincipalAddPasswordRequest;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Service Principal Add Password Request Builder.
  */
-public class ServicePrincipalAddPasswordRequestBuilder extends BaseActionRequestBuilder implements IServicePrincipalAddPasswordRequestBuilder {
+public class ServicePrincipalAddPasswordRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ServicePrincipalAddPassword
@@ -32,22 +31,22 @@ public class ServicePrincipalAddPasswordRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IServicePrincipalAddPasswordRequest
+     * Creates the ServicePrincipalAddPasswordRequest
      *
      * @param requestOptions the options for the request
-     * @return the IServicePrincipalAddPasswordRequest instance
+     * @return the ServicePrincipalAddPasswordRequest instance
      */
-    public IServicePrincipalAddPasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ServicePrincipalAddPasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IServicePrincipalAddPasswordRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ServicePrincipalAddPasswordRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IServicePrincipalAddPasswordRequest instance
+     * @return the ServicePrincipalAddPasswordRequest instance
      */
-    public IServicePrincipalAddPasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalAddPasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ServicePrincipalAddPasswordRequest request = new ServicePrincipalAddPasswordRequest(
                 getRequestUrl(),
                 getClient(),

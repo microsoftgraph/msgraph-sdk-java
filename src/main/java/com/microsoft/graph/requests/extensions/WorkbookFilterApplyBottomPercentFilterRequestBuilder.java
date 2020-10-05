@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyBottomPercentFilterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyBottomPercentFilterRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Filter Apply Bottom Percent Filter Request Builder.
  */
-public class WorkbookFilterApplyBottomPercentFilterRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFilterApplyBottomPercentFilterRequestBuilder {
+public class WorkbookFilterApplyBottomPercentFilterRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFilterApplyBottomPercentFilter
@@ -32,22 +31,22 @@ public class WorkbookFilterApplyBottomPercentFilterRequestBuilder extends BaseAc
     }
 
     /**
-     * Creates the IWorkbookFilterApplyBottomPercentFilterRequest
+     * Creates the WorkbookFilterApplyBottomPercentFilterRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyBottomPercentFilterRequest instance
+     * @return the WorkbookFilterApplyBottomPercentFilterRequest instance
      */
-    public IWorkbookFilterApplyBottomPercentFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFilterApplyBottomPercentFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFilterApplyBottomPercentFilterRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFilterApplyBottomPercentFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyBottomPercentFilterRequest instance
+     * @return the WorkbookFilterApplyBottomPercentFilterRequest instance
      */
-    public IWorkbookFilterApplyBottomPercentFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterApplyBottomPercentFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyBottomPercentFilterRequest request = new WorkbookFilterApplyBottomPercentFilterRequest(
                 getRequestUrl(),
                 getClient(),

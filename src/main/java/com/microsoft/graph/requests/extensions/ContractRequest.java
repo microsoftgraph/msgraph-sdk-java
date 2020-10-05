@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Contract Request.
  */
-public class ContractRequest extends BaseRequest implements IContractRequest {
+public class ContractRequest extends BaseRequest {
 	
     /**
      * The request for the Contract
@@ -138,7 +138,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IContractRequest select(final String value) {
+     public ContractRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ContractRequest)this;
      }
@@ -149,7 +149,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IContractRequest expand(final String value) {
+     public ContractRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ContractRequest)this;
      }

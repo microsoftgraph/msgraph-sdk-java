@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserActivity;
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Activity Request Builder.
  */
-public class UserActivityRequestBuilder extends BaseRequestBuilder implements IUserActivityRequestBuilder {
+public class UserActivityRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the UserActivity
@@ -39,9 +37,9 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder implements IU
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserActivityRequest instance
+     * @return the UserActivityRequest instance
      */
-    public IUserActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder implements IU
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserActivityRequest instance
+     * @return the UserActivityRequest instance
      */
-    public IUserActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserActivityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IActivityHistoryItemCollectionRequestBuilder historyItems() {
+    public ActivityHistoryItemCollectionRequestBuilder historyItems() {
         return new ActivityHistoryItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("historyItems"), getClient(), null);
     }
 
-    public IActivityHistoryItemRequestBuilder historyItems(final String id) {
+    public ActivityHistoryItemRequestBuilder historyItems(final String id) {
         return new ActivityHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment("historyItems") + "/" + id, getClient(), null);
     }
 }

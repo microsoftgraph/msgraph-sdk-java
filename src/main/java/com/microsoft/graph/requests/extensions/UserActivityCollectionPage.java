@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.UserActivity;
-import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserActivityCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionPage;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.UserActivityCollectionResponse;
 /**
  * The class for the User Activity Collection Page.
  */
-public class UserActivityCollectionPage extends BaseCollectionPage<UserActivity, IUserActivityCollectionRequestBuilder> implements IUserActivityCollectionPage {
+public class UserActivityCollectionPage extends BaseCollectionPage<UserActivity, UserActivityCollectionRequestBuilder> {
 
     /**
      * A collection page for UserActivity
@@ -22,7 +22,7 @@ public class UserActivityCollectionPage extends BaseCollectionPage<UserActivity,
      * @param response the serialized UserActivityCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UserActivityCollectionPage(final UserActivityCollectionResponse response, final IUserActivityCollectionRequestBuilder builder) {
+    public UserActivityCollectionPage(final UserActivityCollectionResponse response, final UserActivityCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

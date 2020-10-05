@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserRevokeSignInSessionsRequest;
 import com.microsoft.graph.requests.extensions.UserRevokeSignInSessionsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Revoke Sign In Sessions Request.
  */
-public class UserRevokeSignInSessionsRequest extends BaseRequest implements IUserRevokeSignInSessionsRequest {
+public class UserRevokeSignInSessionsRequest extends BaseRequest {
 
     /**
      * The request for this UserRevokeSignInSessions
@@ -56,7 +55,7 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest implements IUse
      * @param value the select clause
      * @return the updated request
      */
-    public IUserRevokeSignInSessionsRequest select(final String value) {
+    public UserRevokeSignInSessionsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserRevokeSignInSessionsRequest)this;
     }
@@ -67,7 +66,7 @@ public class UserRevokeSignInSessionsRequest extends BaseRequest implements IUse
      * @param value the expand clause
      * @return the updated request
      */
-    public IUserRevokeSignInSessionsRequest expand(final String value) {
+    public UserRevokeSignInSessionsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserRevokeSignInSessionsRequest)this;
     }

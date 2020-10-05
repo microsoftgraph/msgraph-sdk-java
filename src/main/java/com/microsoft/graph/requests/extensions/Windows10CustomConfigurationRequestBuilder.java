@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows10Custom Configuration Request Builder.
  */
-public class Windows10CustomConfigurationRequestBuilder extends BaseRequestBuilder implements IWindows10CustomConfigurationRequestBuilder {
+public class Windows10CustomConfigurationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Windows10CustomConfiguration
@@ -35,9 +35,9 @@ public class Windows10CustomConfigurationRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindows10CustomConfigurationRequest instance
+     * @return the Windows10CustomConfigurationRequest instance
      */
-    public IWindows10CustomConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public Windows10CustomConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,57 +45,57 @@ public class Windows10CustomConfigurationRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindows10CustomConfigurationRequest instance
+     * @return the Windows10CustomConfigurationRequest instance
      */
-    public IWindows10CustomConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10CustomConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.Windows10CustomConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
+    public DeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IDeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
+    public DeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+    public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
-    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
-    public IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
+    public DeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
+    public DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceConfigurationDeviceOverview
      *
-     * @return the IDeviceConfigurationDeviceOverviewRequestBuilder instance
+     * @return the DeviceConfigurationDeviceOverviewRequestBuilder instance
      */
-    public IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
+    public DeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
-    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+    public DeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
-    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+    public DeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
         return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
      *
-     * @return the IDeviceConfigurationUserOverviewRequestBuilder instance
+     * @return the DeviceConfigurationUserOverviewRequestBuilder instance
      */
-    public IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
+    public DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
 }

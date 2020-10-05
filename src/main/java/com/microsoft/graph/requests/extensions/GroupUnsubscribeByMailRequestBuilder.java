@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupUnsubscribeByMailRequest;
 import com.microsoft.graph.requests.extensions.GroupUnsubscribeByMailRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Group Unsubscribe By Mail Request Builder.
  */
-public class GroupUnsubscribeByMailRequestBuilder extends BaseActionRequestBuilder implements IGroupUnsubscribeByMailRequestBuilder {
+public class GroupUnsubscribeByMailRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupUnsubscribeByMail
@@ -30,22 +29,22 @@ public class GroupUnsubscribeByMailRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IGroupUnsubscribeByMailRequest
+     * Creates the GroupUnsubscribeByMailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IGroupUnsubscribeByMailRequest instance
+     * @return the GroupUnsubscribeByMailRequest instance
      */
-    public IGroupUnsubscribeByMailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupUnsubscribeByMailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IGroupUnsubscribeByMailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the GroupUnsubscribeByMailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IGroupUnsubscribeByMailRequest instance
+     * @return the GroupUnsubscribeByMailRequest instance
      */
-    public IGroupUnsubscribeByMailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupUnsubscribeByMailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupUnsubscribeByMailRequest request = new GroupUnsubscribeByMailRequest(
                 getRequestUrl(),
                 getClient(),

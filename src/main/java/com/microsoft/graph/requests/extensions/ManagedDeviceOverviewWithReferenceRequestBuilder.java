@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Overview With Reference Request Builder.
  */
-public class ManagedDeviceOverviewWithReferenceRequestBuilder extends BaseRequestBuilder implements IManagedDeviceOverviewWithReferenceRequestBuilder {
+public class ManagedDeviceOverviewWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedDeviceOverview
@@ -36,9 +36,9 @@ public class ManagedDeviceOverviewWithReferenceRequestBuilder extends BaseReques
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceOverviewWithReferenceRequest instance
+     * @return the ManagedDeviceOverviewWithReferenceRequest instance
      */
-    public IManagedDeviceOverviewWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceOverviewWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,13 +46,13 @@ public class ManagedDeviceOverviewWithReferenceRequestBuilder extends BaseReques
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceOverviewWithReferenceRequest instance
+     * @return the ManagedDeviceOverviewWithReferenceRequest instance
      */
-    public IManagedDeviceOverviewWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceOverviewWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceOverviewWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedDeviceOverviewReferenceRequestBuilder reference(){
+    public ManagedDeviceOverviewReferenceRequestBuilder reference(){
         return new ManagedDeviceOverviewReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

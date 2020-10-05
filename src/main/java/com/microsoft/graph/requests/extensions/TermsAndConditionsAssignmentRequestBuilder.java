@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Terms And Conditions Assignment Request Builder.
  */
-public class TermsAndConditionsAssignmentRequestBuilder extends BaseRequestBuilder implements ITermsAndConditionsAssignmentRequestBuilder {
+public class TermsAndConditionsAssignmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TermsAndConditionsAssignment
@@ -35,9 +35,9 @@ public class TermsAndConditionsAssignmentRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITermsAndConditionsAssignmentRequest instance
+     * @return the TermsAndConditionsAssignmentRequest instance
      */
-    public ITermsAndConditionsAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TermsAndConditionsAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class TermsAndConditionsAssignmentRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITermsAndConditionsAssignmentRequest instance
+     * @return the TermsAndConditionsAssignmentRequest instance
      */
-    public ITermsAndConditionsAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

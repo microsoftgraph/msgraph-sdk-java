@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeEntireColumnRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeEntireColumnRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Entire Column Request.
  */
-public class WorkbookRangeEntireColumnRequest extends BaseRequest implements IWorkbookRangeEntireColumnRequest {
+public class WorkbookRangeEntireColumnRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeEntireColumn
@@ -97,7 +96,7 @@ public class WorkbookRangeEntireColumnRequest extends BaseRequest implements IWo
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeEntireColumnRequest select(final String value) {
+    public WorkbookRangeEntireColumnRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeEntireColumnRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookRangeEntireColumnRequest extends BaseRequest implements IWo
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeEntireColumnRequest expand(final String value) {
+    public WorkbookRangeEntireColumnRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeEntireColumnRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookRangeEntireColumnRequest extends BaseRequest implements IWo
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeEntireColumnRequest filter(final String value) {
+    public WorkbookRangeEntireColumnRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeEntireColumnRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookRangeEntireColumnRequest extends BaseRequest implements IWo
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeEntireColumnRequest orderBy(final String value) {
+    public WorkbookRangeEntireColumnRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeEntireColumnRequest)this;
     }

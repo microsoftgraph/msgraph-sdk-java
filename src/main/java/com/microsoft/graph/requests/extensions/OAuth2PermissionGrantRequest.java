@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the OAuth2Permission Grant Request.
  */
-public class OAuth2PermissionGrantRequest extends BaseRequest implements IOAuth2PermissionGrantRequest {
+public class OAuth2PermissionGrantRequest extends BaseRequest {
 	
     /**
      * The request for the OAuth2PermissionGrant
@@ -138,7 +138,7 @@ public class OAuth2PermissionGrantRequest extends BaseRequest implements IOAuth2
      * @param value the select clause
      * @return the updated request
      */
-     public IOAuth2PermissionGrantRequest select(final String value) {
+     public OAuth2PermissionGrantRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OAuth2PermissionGrantRequest)this;
      }
@@ -149,7 +149,7 @@ public class OAuth2PermissionGrantRequest extends BaseRequest implements IOAuth2
      * @param value the expand clause
      * @return the updated request
      */
-     public IOAuth2PermissionGrantRequest expand(final String value) {
+     public OAuth2PermissionGrantRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OAuth2PermissionGrantRequest)this;
      }

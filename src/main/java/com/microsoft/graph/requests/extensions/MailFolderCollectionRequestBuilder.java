@@ -11,10 +11,10 @@ import com.microsoft.graph.models.extensions.MailFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequest;
-import com.microsoft.graph.requests.extensions.IMailFolderDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MailFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MailFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.MailFolderCollectionRequest;
+import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mail Folder Collection Request Builder.
  */
-public class MailFolderCollectionRequestBuilder extends BaseRequestBuilder implements IMailFolderCollectionRequestBuilder {
+public class MailFolderCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of MailFolder
@@ -42,7 +42,7 @@ public class MailFolderCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMailFolderCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MailFolderCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,21 +52,21 @@ public class MailFolderCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMailFolderCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailFolderCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MailFolderCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMailFolderRequestBuilder byId(final String id) {
+    public MailFolderRequestBuilder byId(final String id) {
         return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IMailFolderDeltaCollectionRequestBuilder delta() {
+    public MailFolderDeltaCollectionRequestBuilder delta() {
         return new MailFolderDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IMailFolderDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public MailFolderDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new MailFolderDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

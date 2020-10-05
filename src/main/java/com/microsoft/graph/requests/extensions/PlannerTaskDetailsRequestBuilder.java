@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Task Details Request Builder.
  */
-public class PlannerTaskDetailsRequestBuilder extends BaseRequestBuilder implements IPlannerTaskDetailsRequestBuilder {
+public class PlannerTaskDetailsRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the PlannerTaskDetails
@@ -35,9 +35,9 @@ public class PlannerTaskDetailsRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerTaskDetailsRequest instance
+     * @return the PlannerTaskDetailsRequest instance
      */
-    public IPlannerTaskDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlannerTaskDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class PlannerTaskDetailsRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerTaskDetailsRequest instance
+     * @return the PlannerTaskDetailsRequest instance
      */
-    public IPlannerTaskDetailsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerTaskDetailsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerTaskDetailsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

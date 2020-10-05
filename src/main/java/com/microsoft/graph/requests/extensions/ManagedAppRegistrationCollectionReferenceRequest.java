@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 /**
  * The class for the Managed App Registration Collection Reference Request.
  */
-public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollectionRequest<ManagedAppRegistrationCollectionResponse, IManagedAppRegistrationCollectionPage> implements IManagedAppRegistrationCollectionReferenceRequest {
+public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollectionRequest<ManagedAppRegistrationCollectionResponse, ManagedAppRegistrationCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedAppRegistration
@@ -33,7 +33,7 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param requestOptions the options for this request
      */
     public ManagedAppRegistrationCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, IManagedAppRegistrationCollectionPage.class);
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, ManagedAppRegistrationCollectionPage.class);
     }
 
     public void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
@@ -57,7 +57,7 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param value the expand clause
      * @return the updated request
      */
-    public IManagedAppRegistrationCollectionReferenceRequest expand(final String value) {
+    public ManagedAppRegistrationCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedAppRegistrationCollectionReferenceRequest)this;
     }
@@ -68,7 +68,7 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param value the filter clause
      * @return the updated request
      */
-    public IManagedAppRegistrationCollectionReferenceRequest filter(final String value) {
+    public ManagedAppRegistrationCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedAppRegistrationCollectionReferenceRequest)this;
     }
@@ -79,7 +79,7 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param value the sort clause
      * @return the updated request
      */
-    public IManagedAppRegistrationCollectionReferenceRequest orderBy(final String value) {
+    public ManagedAppRegistrationCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedAppRegistrationCollectionReferenceRequest)this;
     }
@@ -90,7 +90,7 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param value the select clause
      * @return the updated request
      */
-    public IManagedAppRegistrationCollectionReferenceRequest select(final String value) {
+    public ManagedAppRegistrationCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedAppRegistrationCollectionReferenceRequest)this;
     }
@@ -101,7 +101,7 @@ public class ManagedAppRegistrationCollectionReferenceRequest extends BaseCollec
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IManagedAppRegistrationCollectionReferenceRequest top(final int value) {
+    public ManagedAppRegistrationCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ManagedAppRegistrationCollectionReferenceRequest)this;
     }

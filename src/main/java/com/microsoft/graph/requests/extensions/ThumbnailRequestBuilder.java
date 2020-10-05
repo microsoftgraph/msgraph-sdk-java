@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Thumbnail Request Builder.
  */
-public class ThumbnailRequestBuilder extends BaseRequestBuilder implements IThumbnailRequestBuilder {
+public class ThumbnailRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Thumbnail
@@ -35,9 +35,9 @@ public class ThumbnailRequestBuilder extends BaseRequestBuilder implements IThum
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IThumbnailRequest instance
+     * @return the ThumbnailRequest instance
      */
-    public IThumbnailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ThumbnailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,15 +45,15 @@ public class ThumbnailRequestBuilder extends BaseRequestBuilder implements IThum
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IThumbnailRequest instance
+     * @return the ThumbnailRequest instance
      */
-    public IThumbnailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThumbnailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ThumbnailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IThumbnailContentStreamRequestBuilder content() {
+    public ThumbnailContentStreamRequestBuilder content() {
         return new ThumbnailContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 }

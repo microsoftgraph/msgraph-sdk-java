@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAreasRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAreasRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Areas Request Builder.
  */
-public class WorkbookFunctionsAreasRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsAreasRequestBuilder {
+public class WorkbookFunctionsAreasRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsAreas
@@ -32,22 +31,22 @@ public class WorkbookFunctionsAreasRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsAreasRequest
+     * Creates the WorkbookFunctionsAreasRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAreasRequest instance
+     * @return the WorkbookFunctionsAreasRequest instance
      */
-    public IWorkbookFunctionsAreasRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsAreasRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsAreasRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsAreasRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAreasRequest instance
+     * @return the WorkbookFunctionsAreasRequest instance
      */
-    public IWorkbookFunctionsAreasRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsAreasRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsAreasRequest request = new WorkbookFunctionsAreasRequest(
                 getRequestUrl(),
                 getClient(),

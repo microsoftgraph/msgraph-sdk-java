@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveActivityUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveActivityUserDetailRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get One Drive Activity User Detail Request Builder.
  */
-public class ReportRootGetOneDriveActivityUserDetailRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetOneDriveActivityUserDetailRequestBuilder {
+public class ReportRootGetOneDriveActivityUserDetailRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetOneDriveActivityUserDetail
@@ -45,22 +44,22 @@ public class ReportRootGetOneDriveActivityUserDetailRequestBuilder extends BaseF
     }
 
     /**
-     * Creates the IReportRootGetOneDriveActivityUserDetailRequest
+     * Creates the ReportRootGetOneDriveActivityUserDetailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOneDriveActivityUserDetailRequest instance
+     * @return the ReportRootGetOneDriveActivityUserDetailRequest instance
      */
-    public IReportRootGetOneDriveActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetOneDriveActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetOneDriveActivityUserDetailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetOneDriveActivityUserDetailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOneDriveActivityUserDetailRequest instance
+     * @return the ReportRootGetOneDriveActivityUserDetailRequest instance
      */
-    public IReportRootGetOneDriveActivityUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetOneDriveActivityUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOneDriveActivityUserDetailRequest request = new ReportRootGetOneDriveActivityUserDetailRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IApplicationAddKeyRequest;
 import com.microsoft.graph.requests.extensions.ApplicationAddKeyRequest;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Application Add Key Request Builder.
  */
-public class ApplicationAddKeyRequestBuilder extends BaseActionRequestBuilder implements IApplicationAddKeyRequestBuilder {
+public class ApplicationAddKeyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ApplicationAddKey
@@ -37,22 +36,22 @@ public class ApplicationAddKeyRequestBuilder extends BaseActionRequestBuilder im
     }
 
     /**
-     * Creates the IApplicationAddKeyRequest
+     * Creates the ApplicationAddKeyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IApplicationAddKeyRequest instance
+     * @return the ApplicationAddKeyRequest instance
      */
-    public IApplicationAddKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplicationAddKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IApplicationAddKeyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ApplicationAddKeyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IApplicationAddKeyRequest instance
+     * @return the ApplicationAddKeyRequest instance
      */
-    public IApplicationAddKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationAddKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ApplicationAddKeyRequest request = new ApplicationAddKeyRequest(
                 getRequestUrl(),
                 getClient(),

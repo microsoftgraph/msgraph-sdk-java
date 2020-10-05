@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Endpoint With Reference Request.
  */
-public class EndpointWithReferenceRequest extends BaseRequest implements IEndpointWithReferenceRequest {
+public class EndpointWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the Endpoint
@@ -78,9 +78,9 @@ public class EndpointWithReferenceRequest extends BaseRequest implements IEndpoi
      * @param value the select clause
      * @return the updated request
      */
-    public IEndpointWithReferenceRequest select(final String value) {
+    public EndpointWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IEndpointWithReferenceRequest)this;
+        return (EndpointWithReferenceRequest)this;
     }
 
     /**
@@ -89,7 +89,7 @@ public class EndpointWithReferenceRequest extends BaseRequest implements IEndpoi
      * @param value the expand clause
      * @return the updated request
      */
-    public IEndpointWithReferenceRequest expand(final String value) {
+    public EndpointWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EndpointWithReferenceRequest)this;
     }

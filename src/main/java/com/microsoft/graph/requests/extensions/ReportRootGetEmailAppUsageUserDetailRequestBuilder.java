@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetEmailAppUsageUserDetailRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Email App Usage User Detail Request Builder.
  */
-public class ReportRootGetEmailAppUsageUserDetailRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetEmailAppUsageUserDetailRequestBuilder {
+public class ReportRootGetEmailAppUsageUserDetailRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetEmailAppUsageUserDetail
@@ -45,22 +44,22 @@ public class ReportRootGetEmailAppUsageUserDetailRequestBuilder extends BaseFunc
     }
 
     /**
-     * Creates the IReportRootGetEmailAppUsageUserDetailRequest
+     * Creates the ReportRootGetEmailAppUsageUserDetailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetEmailAppUsageUserDetailRequest instance
+     * @return the ReportRootGetEmailAppUsageUserDetailRequest instance
      */
-    public IReportRootGetEmailAppUsageUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetEmailAppUsageUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetEmailAppUsageUserDetailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetEmailAppUsageUserDetailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetEmailAppUsageUserDetailRequest instance
+     * @return the ReportRootGetEmailAppUsageUserDetailRequest instance
      */
-    public IReportRootGetEmailAppUsageUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetEmailAppUsageUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetEmailAppUsageUserDetailRequest request = new ReportRootGetEmailAppUsageUserDetailRequest(
                 getRequestUrl(),
                 getClient(),

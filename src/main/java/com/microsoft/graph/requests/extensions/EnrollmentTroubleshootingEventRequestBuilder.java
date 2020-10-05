@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Enrollment Troubleshooting Event Request Builder.
  */
-public class EnrollmentTroubleshootingEventRequestBuilder extends BaseRequestBuilder implements IEnrollmentTroubleshootingEventRequestBuilder {
+public class EnrollmentTroubleshootingEventRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the EnrollmentTroubleshootingEvent
@@ -35,9 +35,9 @@ public class EnrollmentTroubleshootingEventRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEnrollmentTroubleshootingEventRequest instance
+     * @return the EnrollmentTroubleshootingEventRequest instance
      */
-    public IEnrollmentTroubleshootingEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EnrollmentTroubleshootingEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class EnrollmentTroubleshootingEventRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEnrollmentTroubleshootingEventRequest instance
+     * @return the EnrollmentTroubleshootingEventRequest instance
      */
-    public IEnrollmentTroubleshootingEventRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EnrollmentTroubleshootingEventRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EnrollmentTroubleshootingEventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

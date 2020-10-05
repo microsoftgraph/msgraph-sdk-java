@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Alert Request Builder.
  */
-public class AlertRequestBuilder extends BaseRequestBuilder implements IAlertRequestBuilder {
+public class AlertRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Alert
@@ -35,9 +35,9 @@ public class AlertRequestBuilder extends BaseRequestBuilder implements IAlertReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAlertRequest instance
+     * @return the AlertRequest instance
      */
-    public IAlertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AlertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class AlertRequestBuilder extends BaseRequestBuilder implements IAlertReq
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAlertRequest instance
+     * @return the AlertRequest instance
      */
-    public IAlertRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AlertRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AlertRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

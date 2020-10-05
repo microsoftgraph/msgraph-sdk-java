@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICalendarSharingMessageAcceptRequest;
 import com.microsoft.graph.requests.extensions.CalendarSharingMessageAcceptRequest;
 import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Calendar Sharing Message Accept Request Builder.
  */
-public class CalendarSharingMessageAcceptRequestBuilder extends BaseActionRequestBuilder implements ICalendarSharingMessageAcceptRequestBuilder {
+public class CalendarSharingMessageAcceptRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CalendarSharingMessageAccept
@@ -30,22 +29,22 @@ public class CalendarSharingMessageAcceptRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the ICalendarSharingMessageAcceptRequest
+     * Creates the CalendarSharingMessageAcceptRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICalendarSharingMessageAcceptRequest instance
+     * @return the CalendarSharingMessageAcceptRequest instance
      */
-    public ICalendarSharingMessageAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CalendarSharingMessageAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICalendarSharingMessageAcceptRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CalendarSharingMessageAcceptRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICalendarSharingMessageAcceptRequest instance
+     * @return the CalendarSharingMessageAcceptRequest instance
      */
-    public ICalendarSharingMessageAcceptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarSharingMessageAcceptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CalendarSharingMessageAcceptRequest request = new CalendarSharingMessageAcceptRequest(
                 getRequestUrl(),
                 getClient(),

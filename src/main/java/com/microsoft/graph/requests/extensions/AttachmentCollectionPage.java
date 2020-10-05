@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Attachment;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 /**
  * The class for the Attachment Collection Page.
  */
-public class AttachmentCollectionPage extends BaseCollectionPage<Attachment, IAttachmentCollectionRequestBuilder> implements IAttachmentCollectionPage {
+public class AttachmentCollectionPage extends BaseCollectionPage<Attachment, AttachmentCollectionRequestBuilder> {
 
     /**
      * A collection page for Attachment
@@ -22,7 +22,7 @@ public class AttachmentCollectionPage extends BaseCollectionPage<Attachment, IAt
      * @param response the serialized AttachmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AttachmentCollectionPage(final AttachmentCollectionResponse response, final IAttachmentCollectionRequestBuilder builder) {
+    public AttachmentCollectionPage(final AttachmentCollectionResponse response, final AttachmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

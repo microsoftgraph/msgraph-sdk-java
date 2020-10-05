@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.RoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequest;
+import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Role Assignment Collection Request Builder.
  */
-public class RoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder implements IRoleAssignmentCollectionRequestBuilder {
+public class RoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of RoleDefinition
@@ -42,7 +42,7 @@ public class RoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IRoleAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public RoleAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class RoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IRoleAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RoleAssignmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IRoleAssignmentRequestBuilder byId(final String id) {
+    public RoleAssignmentRequestBuilder byId(final String id) {
         return new RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

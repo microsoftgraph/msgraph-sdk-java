@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtection;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Information Protection Request Builder.
  */
-public class InformationProtectionRequestBuilder extends BaseRequestBuilder implements IInformationProtectionRequestBuilder {
+public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the InformationProtection
@@ -39,9 +37,9 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IInformationProtectionRequest instance
+     * @return the InformationProtectionRequest instance
      */
-    public IInformationProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public InformationProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IInformationProtectionRequest instance
+     * @return the InformationProtectionRequest instance
      */
-    public IInformationProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InformationProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.InformationProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests() {
+    public ThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests() {
         return new ThreatAssessmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests"), getClient(), null);
     }
 
-    public IThreatAssessmentRequestRequestBuilder threatAssessmentRequests(final String id) {
+    public ThreatAssessmentRequestRequestBuilder threatAssessmentRequests(final String id) {
         return new ThreatAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests") + "/" + id, getClient(), null);
     }
 }

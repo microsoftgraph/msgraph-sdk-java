@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentRequestBuilder;
 import java.util.Arrays;
@@ -24,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Enrollment Configuration Request.
  */
-public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements IDeviceEnrollmentConfigurationRequest {
+public class DeviceEnrollmentConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the DeviceEnrollmentConfiguration
@@ -158,7 +156,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceEnrollmentConfigurationRequest select(final String value) {
+     public DeviceEnrollmentConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceEnrollmentConfigurationRequest)this;
      }
@@ -169,7 +167,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceEnrollmentConfigurationRequest expand(final String value) {
+     public DeviceEnrollmentConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceEnrollmentConfigurationRequest)this;
      }

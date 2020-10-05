@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyCellColorFilterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyCellColorFilterRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Filter Apply Cell Color Filter Request Builder.
  */
-public class WorkbookFilterApplyCellColorFilterRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFilterApplyCellColorFilterRequestBuilder {
+public class WorkbookFilterApplyCellColorFilterRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFilterApplyCellColorFilter
@@ -32,22 +31,22 @@ public class WorkbookFilterApplyCellColorFilterRequestBuilder extends BaseAction
     }
 
     /**
-     * Creates the IWorkbookFilterApplyCellColorFilterRequest
+     * Creates the WorkbookFilterApplyCellColorFilterRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyCellColorFilterRequest instance
+     * @return the WorkbookFilterApplyCellColorFilterRequest instance
      */
-    public IWorkbookFilterApplyCellColorFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFilterApplyCellColorFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFilterApplyCellColorFilterRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFilterApplyCellColorFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyCellColorFilterRequest instance
+     * @return the WorkbookFilterApplyCellColorFilterRequest instance
      */
-    public IWorkbookFilterApplyCellColorFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterApplyCellColorFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyCellColorFilterRequest request = new WorkbookFilterApplyCellColorFilterRequest(
                 getRequestUrl(),
                 getClient(),

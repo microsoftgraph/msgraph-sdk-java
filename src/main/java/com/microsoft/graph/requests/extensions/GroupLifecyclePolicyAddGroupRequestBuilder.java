@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyAddGroupRequest;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyAddGroupRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Group Lifecycle Policy Add Group Request Builder.
  */
-public class GroupLifecyclePolicyAddGroupRequestBuilder extends BaseActionRequestBuilder implements IGroupLifecyclePolicyAddGroupRequestBuilder {
+public class GroupLifecyclePolicyAddGroupRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupLifecyclePolicyAddGroup
@@ -32,22 +31,22 @@ public class GroupLifecyclePolicyAddGroupRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IGroupLifecyclePolicyAddGroupRequest
+     * Creates the GroupLifecyclePolicyAddGroupRequest
      *
      * @param requestOptions the options for the request
-     * @return the IGroupLifecyclePolicyAddGroupRequest instance
+     * @return the GroupLifecyclePolicyAddGroupRequest instance
      */
-    public IGroupLifecyclePolicyAddGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupLifecyclePolicyAddGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IGroupLifecyclePolicyAddGroupRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the GroupLifecyclePolicyAddGroupRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IGroupLifecyclePolicyAddGroupRequest instance
+     * @return the GroupLifecyclePolicyAddGroupRequest instance
      */
-    public IGroupLifecyclePolicyAddGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupLifecyclePolicyAddGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupLifecyclePolicyAddGroupRequest request = new GroupLifecyclePolicyAddGroupRequest(
                 getRequestUrl(),
                 getClient(),

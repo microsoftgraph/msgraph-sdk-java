@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesItemAtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Series Item At Request Builder.
  */
-public class WorkbookChartSeriesItemAtRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookChartSeriesItemAtRequestBuilder {
+public class WorkbookChartSeriesItemAtRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartSeriesItemAt
@@ -32,22 +31,22 @@ public class WorkbookChartSeriesItemAtRequestBuilder extends BaseFunctionRequest
     }
 
     /**
-     * Creates the IWorkbookChartSeriesItemAtRequest
+     * Creates the WorkbookChartSeriesItemAtRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartSeriesItemAtRequest instance
+     * @return the WorkbookChartSeriesItemAtRequest instance
      */
-    public IWorkbookChartSeriesItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartSeriesItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartSeriesItemAtRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartSeriesItemAtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartSeriesItemAtRequest instance
+     * @return the WorkbookChartSeriesItemAtRequest instance
      */
-    public IWorkbookChartSeriesItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSeriesItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartSeriesItemAtRequest request = new WorkbookChartSeriesItemAtRequest(
                 getRequestUrl(),
                 getClient(),
@@ -64,16 +63,16 @@ public class WorkbookChartSeriesItemAtRequestBuilder extends BaseFunctionRequest
     /**
      * Gets the request builder for WorkbookChartSeriesFormat
      *
-     * @return the IWorkbookChartSeriesFormatRequestBuilder instance
+     * @return the WorkbookChartSeriesFormatRequestBuilder instance
      */
-    public IWorkbookChartSeriesFormatRequestBuilder format() {
+    public WorkbookChartSeriesFormatRequestBuilder format() {
         return new WorkbookChartSeriesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
-    public IWorkbookChartPointCollectionRequestBuilder points() {
+    public WorkbookChartPointCollectionRequestBuilder points() {
         return new WorkbookChartPointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("points"), getClient(), null);
     }
 
-    public IWorkbookChartPointRequestBuilder points(final String id) {
+    public WorkbookChartPointRequestBuilder points(final String id) {
         return new WorkbookChartPointRequestBuilder(getRequestUrlWithAdditionalSegment("points") + "/" + id, getClient(), null);
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Outlook Item Request Builder.
  */
-public class OutlookItemRequestBuilder extends BaseRequestBuilder implements IOutlookItemRequestBuilder {
+public class OutlookItemRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OutlookItem
@@ -35,9 +35,9 @@ public class OutlookItemRequestBuilder extends BaseRequestBuilder implements IOu
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOutlookItemRequest instance
+     * @return the OutlookItemRequest instance
      */
-    public IOutlookItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OutlookItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class OutlookItemRequestBuilder extends BaseRequestBuilder implements IOu
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOutlookItemRequest instance
+     * @return the OutlookItemRequest instance
      */
-    public IOutlookItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OutlookItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

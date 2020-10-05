@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivity;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Activity Request.
  */
-public class ItemActivityRequest extends BaseRequest implements IItemActivityRequest {
+public class ItemActivityRequest extends BaseRequest {
 	
     /**
      * The request for the ItemActivity
@@ -140,7 +139,7 @@ public class ItemActivityRequest extends BaseRequest implements IItemActivityReq
      * @param value the select clause
      * @return the updated request
      */
-     public IItemActivityRequest select(final String value) {
+     public ItemActivityRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ItemActivityRequest)this;
      }
@@ -151,7 +150,7 @@ public class ItemActivityRequest extends BaseRequest implements IItemActivityReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemActivityRequest expand(final String value) {
+     public ItemActivityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ItemActivityRequest)this;
      }

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.callrecords.requests.extensions;
 import com.microsoft.graph.callrecords.models.extensions.Segment;
-import com.microsoft.graph.callrecords.requests.extensions.ISegmentCollectionRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionPage;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionResp
 /**
  * The class for the Segment Collection Page.
  */
-public class SegmentCollectionPage extends BaseCollectionPage<Segment, ISegmentCollectionRequestBuilder> implements ISegmentCollectionPage {
+public class SegmentCollectionPage extends BaseCollectionPage<Segment, SegmentCollectionRequestBuilder> {
 
     /**
      * A collection page for Segment
@@ -22,7 +22,7 @@ public class SegmentCollectionPage extends BaseCollectionPage<Segment, ISegmentC
      * @param response the serialized SegmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SegmentCollectionPage(final SegmentCollectionResponse response, final ISegmentCollectionRequestBuilder builder) {
+    public SegmentCollectionPage(final SegmentCollectionResponse response, final SegmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

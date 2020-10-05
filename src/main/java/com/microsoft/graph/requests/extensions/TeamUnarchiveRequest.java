@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITeamUnarchiveRequest;
 import com.microsoft.graph.requests.extensions.TeamUnarchiveRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Team Unarchive Request.
  */
-public class TeamUnarchiveRequest extends BaseRequest implements ITeamUnarchiveRequest {
+public class TeamUnarchiveRequest extends BaseRequest {
 
     /**
      * The request for this TeamUnarchive

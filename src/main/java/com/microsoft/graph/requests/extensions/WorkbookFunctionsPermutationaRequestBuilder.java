@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPermutationaRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsPermutationaRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Permutationa Request Builder.
  */
-public class WorkbookFunctionsPermutationaRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsPermutationaRequestBuilder {
+public class WorkbookFunctionsPermutationaRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsPermutationa
@@ -34,22 +33,22 @@ public class WorkbookFunctionsPermutationaRequestBuilder extends BaseActionReque
     }
 
     /**
-     * Creates the IWorkbookFunctionsPermutationaRequest
+     * Creates the WorkbookFunctionsPermutationaRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPermutationaRequest instance
+     * @return the WorkbookFunctionsPermutationaRequest instance
      */
-    public IWorkbookFunctionsPermutationaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsPermutationaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsPermutationaRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsPermutationaRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPermutationaRequest instance
+     * @return the WorkbookFunctionsPermutationaRequest instance
      */
-    public IWorkbookFunctionsPermutationaRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsPermutationaRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsPermutationaRequest request = new WorkbookFunctionsPermutationaRequest(
                 getRequestUrl(),
                 getClient(),

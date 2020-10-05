@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DeviceComplianceActionItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceComplianceActionItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceActionItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceActionItemCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Compliance Action Item Collection Request Builder.
  */
-public class DeviceComplianceActionItemCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceComplianceActionItemCollectionRequestBuilder {
+public class DeviceComplianceActionItemCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceComplianceScheduledActionForRule
@@ -42,7 +42,7 @@ public class DeviceComplianceActionItemCollectionRequestBuilder extends BaseRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceComplianceActionItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceComplianceActionItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DeviceComplianceActionItemCollectionRequestBuilder extends BaseRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceComplianceActionItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceActionItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceComplianceActionItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceComplianceActionItemRequestBuilder byId(final String id) {
+    public DeviceComplianceActionItemRequestBuilder byId(final String id) {
         return new DeviceComplianceActionItemRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

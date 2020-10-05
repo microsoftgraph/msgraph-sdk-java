@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Calendar Permission Request.
  */
-public class CalendarPermissionRequest extends BaseRequest implements ICalendarPermissionRequest {
+public class CalendarPermissionRequest extends BaseRequest {
 	
     /**
      * The request for the CalendarPermission
@@ -138,7 +138,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @param value the select clause
      * @return the updated request
      */
-     public ICalendarPermissionRequest select(final String value) {
+     public CalendarPermissionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (CalendarPermissionRequest)this;
      }
@@ -149,7 +149,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @param value the expand clause
      * @return the updated request
      */
-     public ICalendarPermissionRequest expand(final String value) {
+     public CalendarPermissionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (CalendarPermissionRequest)this;
      }

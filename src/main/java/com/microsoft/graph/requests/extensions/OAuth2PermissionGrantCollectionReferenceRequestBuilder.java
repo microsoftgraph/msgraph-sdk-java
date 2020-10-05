@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the OAuth2Permission Grant Collection Reference Request Builder.
  */
-public class OAuth2PermissionGrantCollectionReferenceRequestBuilder extends BaseRequestBuilder implements IOAuth2PermissionGrantCollectionReferenceRequestBuilder {
+public class OAuth2PermissionGrantCollectionReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -39,7 +39,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOAuth2PermissionGrantCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OAuth2PermissionGrantCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +49,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOAuth2PermissionGrantCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OAuth2PermissionGrantCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

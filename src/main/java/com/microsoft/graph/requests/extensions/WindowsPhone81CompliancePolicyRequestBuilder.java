@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Phone81Compliance Policy Request Builder.
  */
-public class WindowsPhone81CompliancePolicyRequestBuilder extends BaseRequestBuilder implements IWindowsPhone81CompliancePolicyRequestBuilder {
+public class WindowsPhone81CompliancePolicyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WindowsPhone81CompliancePolicy
@@ -35,9 +35,9 @@ public class WindowsPhone81CompliancePolicyRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsPhone81CompliancePolicyRequest instance
+     * @return the WindowsPhone81CompliancePolicyRequest instance
      */
-    public IWindowsPhone81CompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WindowsPhone81CompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,64 +45,64 @@ public class WindowsPhone81CompliancePolicyRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsPhone81CompliancePolicyRequest instance
+     * @return the WindowsPhone81CompliancePolicyRequest instance
      */
-    public IWindowsPhone81CompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsPhone81CompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsPhone81CompliancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
+    public DeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
         return new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IDeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id) {
+    public DeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id) {
         return new DeviceCompliancePolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+    public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
-    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
-    public IDeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses() {
+    public DeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceComplianceDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public IDeviceComplianceDeviceStatusRequestBuilder deviceStatuses(final String id) {
+    public DeviceComplianceDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new DeviceComplianceDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceComplianceDeviceOverview
      *
-     * @return the IDeviceComplianceDeviceOverviewRequestBuilder instance
+     * @return the DeviceComplianceDeviceOverviewRequestBuilder instance
      */
-    public IDeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview() {
+    public DeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceComplianceDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
-    public IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
+    public DeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
         return new DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule"), getClient(), null);
     }
 
-    public IDeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id) {
+    public DeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id) {
         return new DeviceComplianceScheduledActionForRuleRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule") + "/" + id, getClient(), null);
     }
-    public IDeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
+    public DeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
         return new DeviceComplianceUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
-    public IDeviceComplianceUserStatusRequestBuilder userStatuses(final String id) {
+    public DeviceComplianceUserStatusRequestBuilder userStatuses(final String id) {
         return new DeviceComplianceUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceComplianceUserOverview
      *
-     * @return the IDeviceComplianceUserOverviewRequestBuilder instance
+     * @return the DeviceComplianceUserOverviewRequestBuilder instance
      */
-    public IDeviceComplianceUserOverviewRequestBuilder userStatusOverview() {
+    public DeviceComplianceUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceComplianceUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
 }

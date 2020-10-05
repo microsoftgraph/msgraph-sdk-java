@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageStorageRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageStorageRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Share Point Site Usage Storage Request Builder.
  */
-public class ReportRootGetSharePointSiteUsageStorageRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetSharePointSiteUsageStorageRequestBuilder {
+public class ReportRootGetSharePointSiteUsageStorageRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetSharePointSiteUsageStorage
@@ -32,22 +31,22 @@ public class ReportRootGetSharePointSiteUsageStorageRequestBuilder extends BaseF
     }
 
     /**
-     * Creates the IReportRootGetSharePointSiteUsageStorageRequest
+     * Creates the ReportRootGetSharePointSiteUsageStorageRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSharePointSiteUsageStorageRequest instance
+     * @return the ReportRootGetSharePointSiteUsageStorageRequest instance
      */
-    public IReportRootGetSharePointSiteUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetSharePointSiteUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetSharePointSiteUsageStorageRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetSharePointSiteUsageStorageRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSharePointSiteUsageStorageRequest instance
+     * @return the ReportRootGetSharePointSiteUsageStorageRequest instance
      */
-    public IReportRootGetSharePointSiteUsageStorageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetSharePointSiteUsageStorageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetSharePointSiteUsageStorageRequest request = new ReportRootGetSharePointSiteUsageStorageRequest(
                 getRequestUrl(),
                 getClient(),

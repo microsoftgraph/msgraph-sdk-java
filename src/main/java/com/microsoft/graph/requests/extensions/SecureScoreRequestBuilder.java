@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Secure Score Request Builder.
  */
-public class SecureScoreRequestBuilder extends BaseRequestBuilder implements ISecureScoreRequestBuilder {
+public class SecureScoreRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SecureScore
@@ -35,9 +35,9 @@ public class SecureScoreRequestBuilder extends BaseRequestBuilder implements ISe
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISecureScoreRequest instance
+     * @return the SecureScoreRequest instance
      */
-    public ISecureScoreRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SecureScoreRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class SecureScoreRequestBuilder extends BaseRequestBuilder implements ISe
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISecureScoreRequest instance
+     * @return the SecureScoreRequest instance
      */
-    public ISecureScoreRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecureScoreRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SecureScoreRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

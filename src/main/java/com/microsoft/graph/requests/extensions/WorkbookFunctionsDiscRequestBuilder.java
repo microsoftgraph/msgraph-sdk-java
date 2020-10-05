@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDiscRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsDiscRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Disc Request Builder.
  */
-public class WorkbookFunctionsDiscRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsDiscRequestBuilder {
+public class WorkbookFunctionsDiscRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsDisc
@@ -40,22 +39,22 @@ public class WorkbookFunctionsDiscRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsDiscRequest
+     * Creates the WorkbookFunctionsDiscRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDiscRequest instance
+     * @return the WorkbookFunctionsDiscRequest instance
      */
-    public IWorkbookFunctionsDiscRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsDiscRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsDiscRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsDiscRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDiscRequest instance
+     * @return the WorkbookFunctionsDiscRequest instance
      */
-    public IWorkbookFunctionsDiscRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsDiscRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDiscRequest request = new WorkbookFunctionsDiscRequest(
                 getRequestUrl(),
                 getClient(),

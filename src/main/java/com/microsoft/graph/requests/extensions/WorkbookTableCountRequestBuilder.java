@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableCountRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableCountRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Count Request Builder.
  */
-public class WorkbookTableCountRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookTableCountRequestBuilder {
+public class WorkbookTableCountRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableCount
@@ -30,22 +29,22 @@ public class WorkbookTableCountRequestBuilder extends BaseFunctionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookTableCountRequest
+     * Creates the WorkbookTableCountRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableCountRequest instance
+     * @return the WorkbookTableCountRequest instance
      */
-    public IWorkbookTableCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableCountRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableCountRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableCountRequest instance
+     * @return the WorkbookTableCountRequest instance
      */
-    public IWorkbookTableCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableCountRequest request = new WorkbookTableCountRequest(
                 getRequestUrl(),
                 getClient(),

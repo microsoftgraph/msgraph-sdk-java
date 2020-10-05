@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFvscheduleRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFvscheduleRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Fvschedule Request Builder.
  */
-public class WorkbookFunctionsFvscheduleRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsFvscheduleRequestBuilder {
+public class WorkbookFunctionsFvscheduleRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsFvschedule
@@ -34,22 +33,22 @@ public class WorkbookFunctionsFvscheduleRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookFunctionsFvscheduleRequest
+     * Creates the WorkbookFunctionsFvscheduleRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFvscheduleRequest instance
+     * @return the WorkbookFunctionsFvscheduleRequest instance
      */
-    public IWorkbookFunctionsFvscheduleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsFvscheduleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsFvscheduleRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsFvscheduleRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFvscheduleRequest instance
+     * @return the WorkbookFunctionsFvscheduleRequest instance
      */
-    public IWorkbookFunctionsFvscheduleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsFvscheduleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsFvscheduleRequest request = new WorkbookFunctionsFvscheduleRequest(
                 getRequestUrl(),
                 getClient(),

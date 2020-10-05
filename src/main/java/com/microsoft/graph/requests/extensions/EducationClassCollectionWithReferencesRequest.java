@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Education Class Collection With References Request.
  */
-public class EducationClassCollectionWithReferencesRequest extends BaseCollectionRequest<EducationClassCollectionResponse, IEducationClassCollectionPage> implements IEducationClassCollectionWithReferencesRequest {
+public class EducationClassCollectionWithReferencesRequest extends BaseCollectionRequest<EducationClassCollectionResponse, EducationClassCollectionPage> {
 
     /**
      * The request builder for this collection of EducationClass
@@ -32,10 +32,10 @@ public class EducationClassCollectionWithReferencesRequest extends BaseCollectio
      * @param requestOptions the options for this request
      */
     public EducationClassCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EducationClassCollectionResponse.class, IEducationClassCollectionPage.class);
+        super(requestUrl, client, requestOptions, EducationClassCollectionResponse.class, EducationClassCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IEducationClassCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super EducationClassCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class EducationClassCollectionWithReferencesRequest extends BaseCollectio
         });
     }
 
-    public IEducationClassCollectionWithReferencesPage get() throws ClientException {
+    public EducationClassCollectionWithReferencesPage get() throws ClientException {
         final EducationClassCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IEducationClassCollectionWithReferencesRequest expand(final String value) {
+    public EducationClassCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IEducationClassCollectionWithReferencesRequest filter(final String value) {
+    public EducationClassCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IEducationClassCollectionWithReferencesRequest orderBy(final String value) {
+    public EducationClassCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IEducationClassCollectionWithReferencesRequest select(final String value) {
+    public EducationClassCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IEducationClassCollectionWithReferencesRequest top(final int value) {
+    public EducationClassCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IEducationClassCollectionWithReferencesPage buildFromResponse(final EducationClassCollectionResponse response) {
-        final IEducationClassCollectionWithReferencesRequestBuilder builder;
+    public EducationClassCollectionWithReferencesPage buildFromResponse(final EducationClassCollectionResponse response) {
+        final EducationClassCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new EducationClassCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed EBook Assignment Request Builder.
  */
-public class ManagedEBookAssignmentRequestBuilder extends BaseRequestBuilder implements IManagedEBookAssignmentRequestBuilder {
+public class ManagedEBookAssignmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedEBookAssignment
@@ -35,9 +35,9 @@ public class ManagedEBookAssignmentRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedEBookAssignmentRequest instance
+     * @return the ManagedEBookAssignmentRequest instance
      */
-    public IManagedEBookAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedEBookAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ManagedEBookAssignmentRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedEBookAssignmentRequest instance
+     * @return the ManagedEBookAssignmentRequest instance
      */
-    public IManagedEBookAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedEBookAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedEBookAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

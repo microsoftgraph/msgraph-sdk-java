@@ -11,7 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCheckMemberObjectsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionResponse;
 import com.microsoft.graph.models.extensions.DirectoryObjectCheckMemberObjectsBody;
@@ -25,7 +25,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Directory Object Check Member Objects Collection Request.
  */
-public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseCollectionRequest<DirectoryObjectCheckMemberObjectsCollectionResponse, IDirectoryObjectCheckMemberObjectsCollectionPage> implements IDirectoryObjectCheckMemberObjectsCollectionRequest {
+public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseCollectionRequest<DirectoryObjectCheckMemberObjectsCollectionResponse, DirectoryObjectCheckMemberObjectsCollectionPage> {
 
 
     protected final DirectoryObjectCheckMemberObjectsBody body;
@@ -39,12 +39,12 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      * @param requestOptions the options for this request
      */
     public DirectoryObjectCheckMemberObjectsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberObjectsCollectionResponse.class, IDirectoryObjectCheckMemberObjectsCollectionPage.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberObjectsCollectionResponse.class, DirectoryObjectCheckMemberObjectsCollectionPage.class);
         body = new DirectoryObjectCheckMemberObjectsBody();
     }
 
 
-    public void post(final ICallback<? super IDirectoryObjectCheckMemberObjectsCollectionPage> callback) {
+    public void post(final ICallback<? super DirectoryObjectCheckMemberObjectsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,20 +58,20 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
         });
     }
 
-    public IDirectoryObjectCheckMemberObjectsCollectionPage post() throws ClientException {
+    public DirectoryObjectCheckMemberObjectsCollectionPage post() throws ClientException {
         final DirectoryObjectCheckMemberObjectsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public IDirectoryObjectCheckMemberObjectsCollectionPage buildFromResponse(final DirectoryObjectCheckMemberObjectsCollectionResponse response) {
-        final IDirectoryObjectCheckMemberObjectsCollectionRequestBuilder builder;
+    public DirectoryObjectCheckMemberObjectsCollectionPage buildFromResponse(final DirectoryObjectCheckMemberObjectsCollectionResponse response) {
+        final DirectoryObjectCheckMemberObjectsCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DirectoryObjectCheckMemberObjectsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<String>) null);
         } else {
             builder = null;
         }
-        final IDirectoryObjectCheckMemberObjectsCollectionPage page = new DirectoryObjectCheckMemberObjectsCollectionPage(response, builder);
+        final DirectoryObjectCheckMemberObjectsCollectionPage page = new DirectoryObjectCheckMemberObjectsCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -82,9 +82,9 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      * @param value the select clause
      * @return the updated request
      */
-    public IDirectoryObjectCheckMemberObjectsCollectionRequest select(final String value) {
+    public DirectoryObjectCheckMemberObjectsCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IDirectoryObjectCheckMemberObjectsCollectionRequest)this;
+        return (DirectoryObjectCheckMemberObjectsCollectionRequest)this;
     }
 
     /**
@@ -93,9 +93,9 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IDirectoryObjectCheckMemberObjectsCollectionRequest top(final int value) {
+    public DirectoryObjectCheckMemberObjectsCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IDirectoryObjectCheckMemberObjectsCollectionRequest)this;
+        return (DirectoryObjectCheckMemberObjectsCollectionRequest)this;
     }
 
     /**
@@ -104,9 +104,9 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      * @param value the expand clause
      * @return the updated request
      */
-    public IDirectoryObjectCheckMemberObjectsCollectionRequest expand(final String value) {
+    public DirectoryObjectCheckMemberObjectsCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IDirectoryObjectCheckMemberObjectsCollectionRequest)this;
+        return (DirectoryObjectCheckMemberObjectsCollectionRequest)this;
     }
 
     /**
@@ -115,9 +115,9 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      * @param value the filter clause
      * @return the updated request
      */
-    public IDirectoryObjectCheckMemberObjectsCollectionRequest filter(final String value) {
+    public DirectoryObjectCheckMemberObjectsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDirectoryObjectCheckMemberObjectsCollectionRequest)this;
+        return (DirectoryObjectCheckMemberObjectsCollectionRequest)this;
     }
 
     /**
@@ -126,9 +126,9 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
      * @param value the order by clause
      * @return the updated request
      */
-    public IDirectoryObjectCheckMemberObjectsCollectionRequest orderBy(final String value) {
+    public DirectoryObjectCheckMemberObjectsCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IDirectoryObjectCheckMemberObjectsCollectionRequest)this;
+        return (DirectoryObjectCheckMemberObjectsCollectionRequest)this;
     }
 
 }

@@ -9,12 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Request Builder.
  */
-public class MobileAppRequestBuilder extends BaseRequestBuilder implements IMobileAppRequestBuilder {
+public class MobileAppRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MobileApp
@@ -44,9 +40,9 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder implements IMobi
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppRequest instance
+     * @return the MobileAppRequest instance
      */
-    public IMobileAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,29 +50,29 @@ public class MobileAppRequestBuilder extends BaseRequestBuilder implements IMobi
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppRequest instance
+     * @return the MobileAppRequest instance
      */
-    public IMobileAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MobileAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
+    public MobileAppAssignmentCollectionRequestBuilder assignments() {
         return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
+    public MobileAppAssignmentRequestBuilder assignments(final String id) {
         return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public IMobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+    public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
-    public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
+    public MobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
 
-    public IMobileAppAssignRequestBuilder assign(final java.util.List<MobileAppAssignment> mobileAppAssignments) {
+    public MobileAppAssignRequestBuilder assign(final java.util.List<MobileAppAssignment> mobileAppAssignments) {
         return new MobileAppAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, mobileAppAssignments);
     }
 }

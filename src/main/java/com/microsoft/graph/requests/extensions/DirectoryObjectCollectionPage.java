@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DirectoryObject;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse
 /**
  * The class for the Directory Object Collection Page.
  */
-public class DirectoryObjectCollectionPage extends BaseCollectionPage<DirectoryObject, IDirectoryObjectCollectionRequestBuilder> implements IDirectoryObjectCollectionPage {
+public class DirectoryObjectCollectionPage extends BaseCollectionPage<DirectoryObject, DirectoryObjectCollectionRequestBuilder> {
 
     /**
      * A collection page for DirectoryObject
@@ -22,7 +22,7 @@ public class DirectoryObjectCollectionPage extends BaseCollectionPage<DirectoryO
      * @param response the serialized DirectoryObjectCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DirectoryObjectCollectionPage(final DirectoryObjectCollectionResponse response, final IDirectoryObjectCollectionRequestBuilder builder) {
+    public DirectoryObjectCollectionPage(final DirectoryObjectCollectionResponse response, final DirectoryObjectCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

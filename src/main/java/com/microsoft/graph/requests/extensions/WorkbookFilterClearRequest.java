@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterClearRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterClearRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Filter Clear Request.
  */
-public class WorkbookFilterClearRequest extends BaseRequest implements IWorkbookFilterClearRequest {
+public class WorkbookFilterClearRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookFilterClear

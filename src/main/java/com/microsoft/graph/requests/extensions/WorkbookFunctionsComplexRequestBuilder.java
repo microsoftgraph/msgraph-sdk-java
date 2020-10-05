@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsComplexRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsComplexRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Complex Request Builder.
  */
-public class WorkbookFunctionsComplexRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsComplexRequestBuilder {
+public class WorkbookFunctionsComplexRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsComplex
@@ -36,22 +35,22 @@ public class WorkbookFunctionsComplexRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsComplexRequest
+     * Creates the WorkbookFunctionsComplexRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsComplexRequest instance
+     * @return the WorkbookFunctionsComplexRequest instance
      */
-    public IWorkbookFunctionsComplexRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsComplexRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsComplexRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsComplexRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsComplexRequest instance
+     * @return the WorkbookFunctionsComplexRequest instance
      */
-    public IWorkbookFunctionsComplexRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsComplexRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsComplexRequest request = new WorkbookFunctionsComplexRequest(
                 getRequestUrl(),
                 getClient(),

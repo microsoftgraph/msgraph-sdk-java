@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Vpp EBook Assignment Request Builder.
  */
-public class IosVppEBookAssignmentRequestBuilder extends BaseRequestBuilder implements IIosVppEBookAssignmentRequestBuilder {
+public class IosVppEBookAssignmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the IosVppEBookAssignment
@@ -35,9 +35,9 @@ public class IosVppEBookAssignmentRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IIosVppEBookAssignmentRequest instance
+     * @return the IosVppEBookAssignmentRequest instance
      */
-    public IIosVppEBookAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public IosVppEBookAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class IosVppEBookAssignmentRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IIosVppEBookAssignmentRequest instance
+     * @return the IosVppEBookAssignmentRequest instance
      */
-    public IIosVppEBookAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosVppEBookAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IosVppEBookAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsXorRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsXorRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Xor Request Builder.
  */
-public class WorkbookFunctionsXorRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsXorRequestBuilder {
+public class WorkbookFunctionsXorRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsXor
@@ -32,22 +31,22 @@ public class WorkbookFunctionsXorRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookFunctionsXorRequest
+     * Creates the WorkbookFunctionsXorRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsXorRequest instance
+     * @return the WorkbookFunctionsXorRequest instance
      */
-    public IWorkbookFunctionsXorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsXorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsXorRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsXorRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsXorRequest instance
+     * @return the WorkbookFunctionsXorRequest instance
      */
-    public IWorkbookFunctionsXorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsXorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsXorRequest request = new WorkbookFunctionsXorRequest(
                 getRequestUrl(),
                 getClient(),

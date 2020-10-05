@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupRenewRequest;
 import com.microsoft.graph.requests.extensions.GroupRenewRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Renew Request.
  */
-public class GroupRenewRequest extends BaseRequest implements IGroupRenewRequest {
+public class GroupRenewRequest extends BaseRequest {
 
     /**
      * The request for this GroupRenew

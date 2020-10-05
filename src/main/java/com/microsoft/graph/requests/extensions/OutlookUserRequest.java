@@ -11,8 +11,6 @@ import com.microsoft.graph.models.extensions.OutlookUser;
 import com.microsoft.graph.models.extensions.LocaleInfo;
 import com.microsoft.graph.models.extensions.TimeZoneInformation;
 import com.microsoft.graph.models.generated.TimeZoneStandard;
-import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryRequestBuilder;
 import java.util.Arrays;
@@ -26,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Outlook User Request.
  */
-public class OutlookUserRequest extends BaseRequest implements IOutlookUserRequest {
+public class OutlookUserRequest extends BaseRequest {
 	
     /**
      * The request for the OutlookUser
@@ -145,7 +143,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @param value the select clause
      * @return the updated request
      */
-     public IOutlookUserRequest select(final String value) {
+     public OutlookUserRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OutlookUserRequest)this;
      }
@@ -156,7 +154,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IOutlookUserRequest expand(final String value) {
+     public OutlookUserRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OutlookUserRequest)this;
      }

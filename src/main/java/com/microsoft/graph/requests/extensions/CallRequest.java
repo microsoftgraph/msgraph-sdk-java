@@ -23,12 +23,8 @@ import com.microsoft.graph.models.extensions.UnmuteParticipantOperation;
 import com.microsoft.graph.models.generated.RecordingStatus;
 import com.microsoft.graph.models.extensions.UpdateRecordingStatusOperation;
 import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
-import com.microsoft.graph.requests.extensions.ICommsOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICommsOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CommsOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CommsOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IParticipantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IParticipantRequestBuilder;
 import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ParticipantRequestBuilder;
 import java.util.Arrays;
@@ -42,7 +38,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Call Request.
  */
-public class CallRequest extends BaseRequest implements ICallRequest {
+public class CallRequest extends BaseRequest {
 	
     /**
      * The request for the Call
@@ -161,7 +157,7 @@ public class CallRequest extends BaseRequest implements ICallRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ICallRequest select(final String value) {
+     public CallRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (CallRequest)this;
      }
@@ -172,7 +168,7 @@ public class CallRequest extends BaseRequest implements ICallRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ICallRequest expand(final String value) {
+     public CallRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (CallRequest)this;
      }

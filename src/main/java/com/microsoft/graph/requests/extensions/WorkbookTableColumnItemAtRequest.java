@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnItemAtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnItemAtRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Item At Request.
  */
-public class WorkbookTableColumnItemAtRequest extends BaseRequest implements IWorkbookTableColumnItemAtRequest {
+public class WorkbookTableColumnItemAtRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookTableColumnItemAt
@@ -97,7 +96,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest implements IWo
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookTableColumnItemAtRequest select(final String value) {
+    public WorkbookTableColumnItemAtRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookTableColumnItemAtRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest implements IWo
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookTableColumnItemAtRequest expand(final String value) {
+    public WorkbookTableColumnItemAtRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookTableColumnItemAtRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest implements IWo
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookTableColumnItemAtRequest filter(final String value) {
+    public WorkbookTableColumnItemAtRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookTableColumnItemAtRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookTableColumnItemAtRequest extends BaseRequest implements IWo
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookTableColumnItemAtRequest orderBy(final String value) {
+    public WorkbookTableColumnItemAtRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookTableColumnItemAtRequest)this;
     }

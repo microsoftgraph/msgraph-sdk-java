@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Targeted Managed App Policy Assignment Request Builder.
  */
-public class TargetedManagedAppPolicyAssignmentRequestBuilder extends BaseRequestBuilder implements ITargetedManagedAppPolicyAssignmentRequestBuilder {
+public class TargetedManagedAppPolicyAssignmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TargetedManagedAppPolicyAssignment
@@ -35,9 +35,9 @@ public class TargetedManagedAppPolicyAssignmentRequestBuilder extends BaseReques
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITargetedManagedAppPolicyAssignmentRequest instance
+     * @return the TargetedManagedAppPolicyAssignmentRequest instance
      */
-    public ITargetedManagedAppPolicyAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TargetedManagedAppPolicyAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class TargetedManagedAppPolicyAssignmentRequestBuilder extends BaseReques
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITargetedManagedAppPolicyAssignmentRequest instance
+     * @return the TargetedManagedAppPolicyAssignmentRequest instance
      */
-    public ITargetedManagedAppPolicyAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppPolicyAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

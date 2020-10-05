@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsApp;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
 import java.util.Arrays;
@@ -26,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Teams App With Reference Request.
  */
-public class TeamsAppWithReferenceRequest extends BaseRequest implements ITeamsAppWithReferenceRequest {
+public class TeamsAppWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the TeamsApp
@@ -82,9 +80,9 @@ public class TeamsAppWithReferenceRequest extends BaseRequest implements ITeamsA
      * @param value the select clause
      * @return the updated request
      */
-    public ITeamsAppWithReferenceRequest select(final String value) {
+    public TeamsAppWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ITeamsAppWithReferenceRequest)this;
+        return (TeamsAppWithReferenceRequest)this;
     }
 
     /**
@@ -93,7 +91,7 @@ public class TeamsAppWithReferenceRequest extends BaseRequest implements ITeamsA
      * @param value the expand clause
      * @return the updated request
      */
-    public ITeamsAppWithReferenceRequest expand(final String value) {
+    public TeamsAppWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamsAppWithReferenceRequest)this;
     }

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeLastColumnRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeLastColumnRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Last Column Request.
  */
-public class WorkbookRangeLastColumnRequest extends BaseRequest implements IWorkbookRangeLastColumnRequest {
+public class WorkbookRangeLastColumnRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeLastColumn
@@ -97,7 +96,7 @@ public class WorkbookRangeLastColumnRequest extends BaseRequest implements IWork
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeLastColumnRequest select(final String value) {
+    public WorkbookRangeLastColumnRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeLastColumnRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookRangeLastColumnRequest extends BaseRequest implements IWork
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeLastColumnRequest expand(final String value) {
+    public WorkbookRangeLastColumnRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeLastColumnRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookRangeLastColumnRequest extends BaseRequest implements IWork
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeLastColumnRequest filter(final String value) {
+    public WorkbookRangeLastColumnRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeLastColumnRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookRangeLastColumnRequest extends BaseRequest implements IWork
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeLastColumnRequest orderBy(final String value) {
+    public WorkbookRangeLastColumnRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeLastColumnRequest)this;
     }

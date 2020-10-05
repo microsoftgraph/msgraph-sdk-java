@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the App Role Assignment Reference Request.
  */
-public class AppRoleAssignmentReferenceRequest extends BaseRequest implements IAppRoleAssignmentReferenceRequest {
+public class AppRoleAssignmentReferenceRequest extends BaseRequest {
 
     /**
      * The request for the AppRoleAssignment
@@ -48,7 +48,7 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest implements IA
      * @param value the select clause
      * @return the updated request
      */
-    public IAppRoleAssignmentReferenceRequest select(final String value) {
+    public AppRoleAssignmentReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AppRoleAssignmentReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class AppRoleAssignmentReferenceRequest extends BaseRequest implements IA
      * @param value the expand clause
      * @return the updated request
      */
-    public IAppRoleAssignmentReferenceRequest expand(final String value) {
+    public AppRoleAssignmentReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AppRoleAssignmentReferenceRequest)this;
     }

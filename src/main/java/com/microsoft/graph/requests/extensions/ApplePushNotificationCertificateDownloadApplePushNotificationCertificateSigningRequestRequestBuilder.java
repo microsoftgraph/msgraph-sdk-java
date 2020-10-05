@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest;
 import com.microsoft.graph.requests.extensions.ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Apple Push Notification Certificate Download Apple Push Notification Certificate Signing Request Request Builder.
  */
-public class ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder extends BaseFunctionRequestBuilder implements IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder {
+public class ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequest
@@ -30,22 +29,22 @@ public class ApplePushNotificationCertificateDownloadApplePushNotificationCertif
     }
 
     /**
-     * Creates the IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest
+     * Creates the ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest
      *
      * @param requestOptions the options for the request
-     * @return the IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest instance
+     * @return the ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest instance
      */
-    public IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest instance
+     * @return the ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest instance
      */
-    public IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest request = new ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest(
                 getRequestUrl(),
                 getClient(),

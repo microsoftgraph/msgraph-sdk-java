@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSkew_pRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSkew_pRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Skew_p Request Builder.
  */
-public class WorkbookFunctionsSkew_pRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSkew_pRequestBuilder {
+public class WorkbookFunctionsSkew_pRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSkew_p
@@ -32,22 +31,22 @@ public class WorkbookFunctionsSkew_pRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsSkew_pRequest
+     * Creates the WorkbookFunctionsSkew_pRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSkew_pRequest instance
+     * @return the WorkbookFunctionsSkew_pRequest instance
      */
-    public IWorkbookFunctionsSkew_pRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSkew_pRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSkew_pRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSkew_pRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSkew_pRequest instance
+     * @return the WorkbookFunctionsSkew_pRequest instance
      */
-    public IWorkbookFunctionsSkew_pRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSkew_pRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSkew_pRequest request = new WorkbookFunctionsSkew_pRequest(
                 getRequestUrl(),
                 getClient(),

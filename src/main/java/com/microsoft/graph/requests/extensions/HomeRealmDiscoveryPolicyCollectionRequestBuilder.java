@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequest;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy Collection Request Builder.
  */
-public class HomeRealmDiscoveryPolicyCollectionRequestBuilder extends BaseRequestBuilder implements IHomeRealmDiscoveryPolicyCollectionRequestBuilder {
+public class HomeRealmDiscoveryPolicyCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of PolicyRoot
@@ -42,7 +42,7 @@ public class HomeRealmDiscoveryPolicyCollectionRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IHomeRealmDiscoveryPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public HomeRealmDiscoveryPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class HomeRealmDiscoveryPolicyCollectionRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IHomeRealmDiscoveryPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new HomeRealmDiscoveryPolicyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IHomeRealmDiscoveryPolicyRequestBuilder byId(final String id) {
+    public HomeRealmDiscoveryPolicyRequestBuilder byId(final String id) {
         return new HomeRealmDiscoveryPolicyRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

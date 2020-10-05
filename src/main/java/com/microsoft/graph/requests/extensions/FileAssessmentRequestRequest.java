@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the File Assessment Request Request.
  */
-public class FileAssessmentRequestRequest extends BaseRequest implements IFileAssessmentRequestRequest {
+public class FileAssessmentRequestRequest extends BaseRequest {
 	
     /**
      * The request for the FileAssessmentRequest
@@ -138,7 +138,7 @@ public class FileAssessmentRequestRequest extends BaseRequest implements IFileAs
      * @param value the select clause
      * @return the updated request
      */
-     public IFileAssessmentRequestRequest select(final String value) {
+     public FileAssessmentRequestRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (FileAssessmentRequestRequest)this;
      }
@@ -149,7 +149,7 @@ public class FileAssessmentRequestRequest extends BaseRequest implements IFileAs
      * @param value the expand clause
      * @return the updated request
      */
-     public IFileAssessmentRequestRequest expand(final String value) {
+     public FileAssessmentRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (FileAssessmentRequestRequest)this;
      }

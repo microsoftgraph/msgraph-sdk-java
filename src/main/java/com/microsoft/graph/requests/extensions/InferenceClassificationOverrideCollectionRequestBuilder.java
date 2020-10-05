@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.InferenceClassificationOverride;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideCollectionRequest;
+import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideRequestBuilder;
+import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Inference Classification Override Collection Request Builder.
  */
-public class InferenceClassificationOverrideCollectionRequestBuilder extends BaseRequestBuilder implements IInferenceClassificationOverrideCollectionRequestBuilder {
+public class InferenceClassificationOverrideCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of InferenceClassification
@@ -42,7 +42,7 @@ public class InferenceClassificationOverrideCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IInferenceClassificationOverrideCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public InferenceClassificationOverrideCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class InferenceClassificationOverrideCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IInferenceClassificationOverrideCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InferenceClassificationOverrideCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new InferenceClassificationOverrideCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IInferenceClassificationOverrideRequestBuilder byId(final String id) {
+    public InferenceClassificationOverrideRequestBuilder byId(final String id) {
         return new InferenceClassificationOverrideRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DetectedApp;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDetectedAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDetectedAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDetectedAppCollectionRequest;
+import com.microsoft.graph.requests.extensions.DetectedAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DetectedAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.DetectedAppCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Detected App Collection Request Builder.
  */
-public class DetectedAppCollectionRequestBuilder extends BaseRequestBuilder implements IDetectedAppCollectionRequestBuilder {
+public class DetectedAppCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class DetectedAppCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDetectedAppCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DetectedAppCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DetectedAppCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDetectedAppCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DetectedAppCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DetectedAppCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDetectedAppRequestBuilder byId(final String id) {
+    public DetectedAppRequestBuilder byId(final String id) {
         return new DetectedAppRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

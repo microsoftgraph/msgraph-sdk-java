@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.TeamsAppInstallation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequest;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams App Installation Collection Request Builder.
  */
-public class TeamsAppInstallationCollectionRequestBuilder extends BaseRequestBuilder implements ITeamsAppInstallationCollectionRequestBuilder {
+public class TeamsAppInstallationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Team
@@ -42,7 +42,7 @@ public class TeamsAppInstallationCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamsAppInstallationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsAppInstallationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class TeamsAppInstallationCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamsAppInstallationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppInstallationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsAppInstallationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITeamsAppInstallationRequestBuilder byId(final String id) {
+    public TeamsAppInstallationRequestBuilder byId(final String id) {
         return new TeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

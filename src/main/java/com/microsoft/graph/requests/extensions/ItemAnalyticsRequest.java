@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemAnalytics;
-import com.microsoft.graph.requests.extensions.IItemActivityStatCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Analytics Request.
  */
-public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsRequest {
+public class ItemAnalyticsRequest extends BaseRequest {
 	
     /**
      * The request for the ItemAnalytics
@@ -142,7 +140,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @param value the select clause
      * @return the updated request
      */
-     public IItemAnalyticsRequest select(final String value) {
+     public ItemAnalyticsRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ItemAnalyticsRequest)this;
      }
@@ -153,7 +151,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemAnalyticsRequest expand(final String value) {
+     public ItemAnalyticsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ItemAnalyticsRequest)this;
      }

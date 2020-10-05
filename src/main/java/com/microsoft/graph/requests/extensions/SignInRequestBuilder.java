@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Sign In Request Builder.
  */
-public class SignInRequestBuilder extends BaseRequestBuilder implements ISignInRequestBuilder {
+public class SignInRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SignIn
@@ -35,9 +35,9 @@ public class SignInRequestBuilder extends BaseRequestBuilder implements ISignInR
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISignInRequest instance
+     * @return the SignInRequest instance
      */
-    public ISignInRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SignInRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class SignInRequestBuilder extends BaseRequestBuilder implements ISignInR
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISignInRequest instance
+     * @return the SignInRequest instance
      */
-    public ISignInRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SignInRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SignInRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

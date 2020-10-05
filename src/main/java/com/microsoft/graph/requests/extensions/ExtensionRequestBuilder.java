@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Extension Request Builder.
  */
-public class ExtensionRequestBuilder extends BaseRequestBuilder implements IExtensionRequestBuilder {
+public class ExtensionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Extension
@@ -35,9 +35,9 @@ public class ExtensionRequestBuilder extends BaseRequestBuilder implements IExte
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IExtensionRequest instance
+     * @return the ExtensionRequest instance
      */
-    public IExtensionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ExtensionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ExtensionRequestBuilder extends BaseRequestBuilder implements IExte
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IExtensionRequest instance
+     * @return the ExtensionRequest instance
      */
-    public IExtensionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExtensionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ExtensionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

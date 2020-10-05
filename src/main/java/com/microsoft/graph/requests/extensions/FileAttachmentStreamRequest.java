@@ -20,7 +20,7 @@ import java.io.InputStream;
 /**
  * The class for the File Attachment Stream Request.
  */
-public class FileAttachmentStreamRequest extends BaseStreamRequest<FileAttachment> implements IFileAttachmentStreamRequest {
+public class FileAttachmentStreamRequest extends BaseStreamRequest<FileAttachment> {
 
     /**
      * The request for the FileAttachment

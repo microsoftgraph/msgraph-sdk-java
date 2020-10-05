@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Policy Request Builder.
  */
-public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder implements IManagedAppPolicyRequestBuilder {
+public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedAppPolicy
@@ -36,9 +36,9 @@ public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppPolicyRequest instance
+     * @return the ManagedAppPolicyRequest instance
      */
-    public IManagedAppPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,15 +46,15 @@ public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppPolicyRequest instance
+     * @return the ManagedAppPolicyRequest instance
      */
-    public IManagedAppPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedAppPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IManagedAppPolicyTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps) {
+    public ManagedAppPolicyTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps) {
         return new ManagedAppPolicyTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);
     }
 }

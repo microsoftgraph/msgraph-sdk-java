@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ColumnLink;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IColumnLinkCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnLinkRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnLinkCollectionRequest;
+import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnLinkRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Column Link Collection Request Builder.
  */
-public class ColumnLinkCollectionRequestBuilder extends BaseRequestBuilder implements IColumnLinkCollectionRequestBuilder {
+public class ColumnLinkCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ContentType
@@ -42,7 +42,7 @@ public class ColumnLinkCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IColumnLinkCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ColumnLinkCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ColumnLinkCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IColumnLinkCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ColumnLinkCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ColumnLinkCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IColumnLinkRequestBuilder byId(final String id) {
+    public ColumnLinkRequestBuilder byId(final String id) {
         return new ColumnLinkRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

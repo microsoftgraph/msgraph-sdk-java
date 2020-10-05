@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemUnfollowRequest;
 import com.microsoft.graph.requests.extensions.DriveItemUnfollowRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Unfollow Request Builder.
  */
-public class DriveItemUnfollowRequestBuilder extends BaseActionRequestBuilder implements IDriveItemUnfollowRequestBuilder {
+public class DriveItemUnfollowRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DriveItemUnfollow
@@ -30,22 +29,22 @@ public class DriveItemUnfollowRequestBuilder extends BaseActionRequestBuilder im
     }
 
     /**
-     * Creates the IDriveItemUnfollowRequest
+     * Creates the DriveItemUnfollowRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemUnfollowRequest instance
+     * @return the DriveItemUnfollowRequest instance
      */
-    public IDriveItemUnfollowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemUnfollowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDriveItemUnfollowRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DriveItemUnfollowRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemUnfollowRequest instance
+     * @return the DriveItemUnfollowRequest instance
      */
-    public IDriveItemUnfollowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemUnfollowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemUnfollowRequest request = new DriveItemUnfollowRequest(
                 getRequestUrl(),
                 getClient(),

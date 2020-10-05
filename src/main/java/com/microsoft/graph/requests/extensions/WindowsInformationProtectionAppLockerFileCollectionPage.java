@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLo
 /**
  * The class for the Windows Information Protection App Locker File Collection Page.
  */
-public class WindowsInformationProtectionAppLockerFileCollectionPage extends BaseCollectionPage<WindowsInformationProtectionAppLockerFile, IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder> implements IWindowsInformationProtectionAppLockerFileCollectionPage {
+public class WindowsInformationProtectionAppLockerFileCollectionPage extends BaseCollectionPage<WindowsInformationProtectionAppLockerFile, WindowsInformationProtectionAppLockerFileCollectionRequestBuilder> {
 
     /**
      * A collection page for WindowsInformationProtectionAppLockerFile
@@ -22,7 +22,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionPage extends Bas
      * @param response the serialized WindowsInformationProtectionAppLockerFileCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WindowsInformationProtectionAppLockerFileCollectionPage(final WindowsInformationProtectionAppLockerFileCollectionResponse response, final IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder builder) {
+    public WindowsInformationProtectionAppLockerFileCollectionPage(final WindowsInformationProtectionAppLockerFileCollectionResponse response, final WindowsInformationProtectionAppLockerFileCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

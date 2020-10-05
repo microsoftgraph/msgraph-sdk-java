@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Install State Summary Request.
  */
-public class UserInstallStateSummaryRequest extends BaseRequest implements IUserInstallStateSummaryRequest {
+public class UserInstallStateSummaryRequest extends BaseRequest {
 	
     /**
      * The request for the UserInstallStateSummary
@@ -142,7 +140,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest implements IUser
      * @param value the select clause
      * @return the updated request
      */
-     public IUserInstallStateSummaryRequest select(final String value) {
+     public UserInstallStateSummaryRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (UserInstallStateSummaryRequest)this;
      }
@@ -153,7 +151,7 @@ public class UserInstallStateSummaryRequest extends BaseRequest implements IUser
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserInstallStateSummaryRequest expand(final String value) {
+     public UserInstallStateSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (UserInstallStateSummaryRequest)this;
      }

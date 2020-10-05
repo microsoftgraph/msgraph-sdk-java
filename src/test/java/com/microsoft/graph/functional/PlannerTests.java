@@ -30,11 +30,11 @@ import com.microsoft.graph.models.extensions.PlannerProgressTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.models.extensions.PlannerTaskDetails;
 import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.requests.extensions.IPlannerBucketRequest;
-import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequest;
-import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequest;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequest;
+import com.microsoft.graph.requests.extensions.PlannerBucketRequest;
+import com.microsoft.graph.requests.extensions.PlannerPlanDetailsRequest;
+import com.microsoft.graph.requests.extensions.PlannerRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskDetailsRequest;
+import com.microsoft.graph.requests.extensions.PlannerTaskRequest;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.serializer.DefaultSerializer;
 
@@ -46,7 +46,7 @@ public class PlannerTests {
     private static String planId = "f1WS2LJ4_k2G-KXzHwH-lGUABSKq";
     private static PlannerBucket planBucket;
     private static PlannerTask planTask;
-    private static IPlannerRequestBuilder prb;
+    private static PlannerRequestBuilder prb;
 
     @BeforeClass
     public static void setUp() {
@@ -131,7 +131,7 @@ public class PlannerTests {
         a2.put(me.id, assignment);
         task.assignments = a2;
 
-        IPlannerTaskRequest req = prb
+        PlannerTaskRequest req = prb
         		.tasks(planTask.id)
         		.buildRequest();
         req.addHeader("If-Match", planTask.additionalDataManager().get("@odata.etag").getAsString());
@@ -186,7 +186,7 @@ public class PlannerTests {
         		.details()
         		.buildRequest()
         		.get();
-        IPlannerTaskDetailsRequest req = prb
+        PlannerTaskDetailsRequest req = prb
         		.tasks(planTask.id)
         		.details()
         		.buildRequest();
@@ -226,7 +226,7 @@ public class PlannerTests {
             		.details()
             		.buildRequest()
             		.get();
-            IPlannerTaskDetailsRequest req = prb
+            PlannerTaskDetailsRequest req = prb
             		.tasks(planTask.id)
             		.details()
             		.buildRequest();
@@ -258,7 +258,7 @@ public class PlannerTests {
         PlannerTask task = new PlannerTask();
         task.percentComplete = 50;
 
-        IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
+        PlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
         req.addHeader("If-Match", planTask.additionalDataManager().get("@odata.etag").getAsString());
         req.patch(task);
         
@@ -274,7 +274,7 @@ public class PlannerTests {
         PlannerTask task = new PlannerTask();
         task.startDateTime = Calendar.getInstance();
 
-        IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
+        PlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
         req.addHeader("If-Match", planTask.additionalDataManager().get("@odata.etag").getAsString());
         req.patch(task);
 
@@ -291,7 +291,7 @@ public class PlannerTests {
         PlannerTask task = new PlannerTask();
         task.dueDateTime = Calendar.getInstance();
 
-        IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
+        PlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
         planTask = prb.tasks(planTask.id).buildRequest().get();
         
         req.addHeader("If-Match", planTask.additionalDataManager().get("@odata.etag").getAsString());
@@ -321,7 +321,7 @@ public class PlannerTests {
         dataManager.put("appliedCategories", data);
 
         PlannerTask newTask = prb.tasks(planTask.id).buildRequest().get();
-        IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
+        PlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
         req.addHeader("If-Match", newTask.additionalDataManager().get("@odata.etag").getAsString());
         req.addHeader("If-None-Match", newTask.additionalDataManager().get("@odata.etag").getAsString());
         req.addHeader("Prefer", "return=representation");
@@ -340,7 +340,7 @@ public class PlannerTests {
         planDetails.categoryDescriptions = descriptions;
 
         PlannerPlanDetails newDetails = prb.plans(planId).details().buildRequest().get();
-        IPlannerPlanDetailsRequest req = prb.plans(planId).details().buildRequest();
+        PlannerPlanDetailsRequest req = prb.plans(planId).details().buildRequest();
         req.addHeader("If-Match", newDetails.additionalDataManager().get("@odata.etag").getAsString());
         req.addHeader("If-None-Match", newDetails.additionalDataManager().get("@odata.etag").getAsString());
         req.addHeader("Prefer", "return=representation");
@@ -358,7 +358,7 @@ public class PlannerTests {
 
         PlannerTask task = prb.tasks().buildRequest().post(newTask);
 
-        IPlannerTaskRequest req = testBase.graphClient.planner().tasks(task.id).buildRequest();
+        PlannerTaskRequest req = testBase.graphClient.planner().tasks(task.id).buildRequest();
         req.addHeader("If-Match", task.additionalDataManager().get("@odata.etag").getAsString());
         req.delete();
     }
@@ -378,7 +378,7 @@ public class PlannerTests {
         PlannerBucket patchBucket = new PlannerBucket();
         patchBucket.name = "RenamedBucket";
 
-        IPlannerBucketRequest req = prb.buckets(planBucket.id).buildRequest();
+        PlannerBucketRequest req = prb.buckets(planBucket.id).buildRequest();
         req.addHeader("If-Match", planBucket.additionalDataManager().get("@odata.etag").getAsString());
 
         req.patch(patchBucket);
@@ -387,7 +387,7 @@ public class PlannerTests {
         assertEquals(patchBucket.name, updatedBucket.name);
 
         patchBucket.name = "Test Bucket";
-        IPlannerBucketRequest req2 = testBase.graphClient.planner().buckets(planBucket.id).buildRequest();
+        PlannerBucketRequest req2 = testBase.graphClient.planner().buckets(planBucket.id).buildRequest();
         req2.addHeader("If-Match", updatedBucket.additionalDataManager().get("@odata.etag").getAsString());
         req2.patch(patchBucket);
     }
@@ -400,7 +400,7 @@ public class PlannerTests {
 
         PlannerBucket createdBucket = testBase.graphClient.planner().buckets().buildRequest().post(newBucket);
 
-        IPlannerBucketRequest req = testBase.graphClient.planner().buckets(createdBucket.id).buildRequest();
+        PlannerBucketRequest req = testBase.graphClient.planner().buckets(createdBucket.id).buildRequest();
         req.addHeader("If-Match", createdBucket.additionalDataManager().get("@odata.etag").getAsString());
         req.delete();
     }
@@ -457,12 +457,12 @@ public class PlannerTests {
     	
         //This may have updated since we last saw it
         PlannerTask task = testBase.graphClient.planner().tasks(planTask.id).buildRequest().get();
-        IPlannerTaskRequest taskReq = testBase.graphClient.planner().tasks(planTask.id).buildRequest();
+        PlannerTaskRequest taskReq = testBase.graphClient.planner().tasks(planTask.id).buildRequest();
         taskReq.addHeader("If-Match", task.additionalDataManager().get("@odata.etag").getAsString());
         taskReq.delete();
 
         PlannerBucket bucket = testBase.graphClient.planner().buckets(planBucket.id).buildRequest().get();
-        IPlannerBucketRequest bucketReq = testBase.graphClient.planner().buckets(planBucket.id).buildRequest();
+        PlannerBucketRequest bucketReq = testBase.graphClient.planner().buckets(planBucket.id).buildRequest();
         bucketReq.addHeader("If-Match", bucket.additionalDataManager().get("@odata.etag").getAsString());
         bucketReq.delete();
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IApplicationRemoveKeyRequest;
 import com.microsoft.graph.requests.extensions.ApplicationRemoveKeyRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Application Remove Key Request Builder.
  */
-public class ApplicationRemoveKeyRequestBuilder extends BaseActionRequestBuilder implements IApplicationRemoveKeyRequestBuilder {
+public class ApplicationRemoveKeyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ApplicationRemoveKey
@@ -34,22 +33,22 @@ public class ApplicationRemoveKeyRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IApplicationRemoveKeyRequest
+     * Creates the ApplicationRemoveKeyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IApplicationRemoveKeyRequest instance
+     * @return the ApplicationRemoveKeyRequest instance
      */
-    public IApplicationRemoveKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplicationRemoveKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IApplicationRemoveKeyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ApplicationRemoveKeyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IApplicationRemoveKeyRequest instance
+     * @return the ApplicationRemoveKeyRequest instance
      */
-    public IApplicationRemoveKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationRemoveKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ApplicationRemoveKeyRequest request = new ApplicationRemoveKeyRequest(
                 getRequestUrl(),
                 getClient(),

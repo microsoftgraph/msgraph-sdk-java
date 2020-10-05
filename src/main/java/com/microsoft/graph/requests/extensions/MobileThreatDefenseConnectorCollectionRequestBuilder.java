@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.MobileThreatDefenseConnector;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorCollectionRequest;
+import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile Threat Defense Connector Collection Request Builder.
  */
-public class MobileThreatDefenseConnectorCollectionRequestBuilder extends BaseRequestBuilder implements IMobileThreatDefenseConnectorCollectionRequestBuilder {
+public class MobileThreatDefenseConnectorCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class MobileThreatDefenseConnectorCollectionRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMobileThreatDefenseConnectorCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileThreatDefenseConnectorCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class MobileThreatDefenseConnectorCollectionRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMobileThreatDefenseConnectorCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileThreatDefenseConnectorCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileThreatDefenseConnectorCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMobileThreatDefenseConnectorRequestBuilder byId(final String id) {
+    public MobileThreatDefenseConnectorRequestBuilder byId(final String id) {
         return new MobileThreatDefenseConnectorRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

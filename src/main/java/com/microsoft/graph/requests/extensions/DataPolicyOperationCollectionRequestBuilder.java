@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.DataPolicyOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDataPolicyOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDataPolicyOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDataPolicyOperationCollectionRequest;
+import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DataPolicyOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Data Policy Operation Collection Request Builder.
  */
-public class DataPolicyOperationCollectionRequestBuilder extends BaseRequestBuilder implements IDataPolicyOperationCollectionRequestBuilder {
+public class DataPolicyOperationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DataPolicyOperation
@@ -41,7 +41,7 @@ public class DataPolicyOperationCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDataPolicyOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DataPolicyOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class DataPolicyOperationCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDataPolicyOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DataPolicyOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DataPolicyOperationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDataPolicyOperationRequestBuilder byId(final String id) {
+    public DataPolicyOperationRequestBuilder byId(final String id) {
         return new DataPolicyOperationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

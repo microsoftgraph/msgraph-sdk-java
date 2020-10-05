@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ListItemVersion;
-import com.microsoft.graph.requests.extensions.IFieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.FieldValueSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -20,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the List Item Version Request Builder.
  */
-public class ListItemVersionRequestBuilder extends BaseRequestBuilder implements IListItemVersionRequestBuilder {
+public class ListItemVersionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ListItemVersion
@@ -37,9 +36,9 @@ public class ListItemVersionRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IListItemVersionRequest instance
+     * @return the ListItemVersionRequest instance
      */
-    public IListItemVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ListItemVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +46,9 @@ public class ListItemVersionRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IListItemVersionRequest instance
+     * @return the ListItemVersionRequest instance
      */
-    public IListItemVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ListItemVersionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,13 +57,13 @@ public class ListItemVersionRequestBuilder extends BaseRequestBuilder implements
     /**
      * Gets the request builder for FieldValueSet
      *
-     * @return the IFieldValueSetRequestBuilder instance
+     * @return the FieldValueSetRequestBuilder instance
      */
-    public IFieldValueSetRequestBuilder fields() {
+    public FieldValueSetRequestBuilder fields() {
         return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
 
-    public IListItemVersionRestoreVersionRequestBuilder restoreVersion() {
+    public ListItemVersionRestoreVersionRequestBuilder restoreVersion() {
         return new ListItemVersionRestoreVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreVersion"), getClient(), null);
     }
 }

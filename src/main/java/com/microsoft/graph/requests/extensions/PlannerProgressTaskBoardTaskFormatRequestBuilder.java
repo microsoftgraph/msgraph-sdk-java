@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Progress Task Board Task Format Request Builder.
  */
-public class PlannerProgressTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder implements IPlannerProgressTaskBoardTaskFormatRequestBuilder {
+public class PlannerProgressTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the PlannerProgressTaskBoardTaskFormat
@@ -35,9 +35,9 @@ public class PlannerProgressTaskBoardTaskFormatRequestBuilder extends BaseReques
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerProgressTaskBoardTaskFormatRequest instance
+     * @return the PlannerProgressTaskBoardTaskFormatRequest instance
      */
-    public IPlannerProgressTaskBoardTaskFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlannerProgressTaskBoardTaskFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class PlannerProgressTaskBoardTaskFormatRequestBuilder extends BaseReques
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerProgressTaskBoardTaskFormatRequest instance
+     * @return the PlannerProgressTaskBoardTaskFormatRequest instance
      */
-    public IPlannerProgressTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerProgressTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerProgressTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRespons
 /**
  * The class for the Onenote Operation Collection Page.
  */
-public class OnenoteOperationCollectionPage extends BaseCollectionPage<OnenoteOperation, IOnenoteOperationCollectionRequestBuilder> implements IOnenoteOperationCollectionPage {
+public class OnenoteOperationCollectionPage extends BaseCollectionPage<OnenoteOperation, OnenoteOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for OnenoteOperation
@@ -22,7 +22,7 @@ public class OnenoteOperationCollectionPage extends BaseCollectionPage<OnenoteOp
      * @param response the serialized OnenoteOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OnenoteOperationCollectionPage(final OnenoteOperationCollectionResponse response, final IOnenoteOperationCollectionRequestBuilder builder) {
+    public OnenoteOperationCollectionPage(final OnenoteOperationCollectionResponse response, final OnenoteOperationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

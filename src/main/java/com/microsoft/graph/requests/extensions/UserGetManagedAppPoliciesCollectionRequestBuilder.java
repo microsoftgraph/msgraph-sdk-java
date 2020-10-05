@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserGetManagedAppPoliciesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserGetManagedAppPoliciesCollectionRequest;
+import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the User Get Managed App Policies Collection Request Builder.
  */
-public class UserGetManagedAppPoliciesCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IUserGetManagedAppPoliciesCollectionRequestBuilder {
+public class UserGetManagedAppPoliciesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -42,7 +41,7 @@ public class UserGetManagedAppPoliciesCollectionRequestBuilder extends BaseFunct
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserGetManagedAppPoliciesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserGetManagedAppPoliciesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class UserGetManagedAppPoliciesCollectionRequestBuilder extends BaseFunct
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserGetManagedAppPoliciesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserGetManagedAppPoliciesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserGetManagedAppPoliciesCollectionRequest request = new UserGetManagedAppPoliciesCollectionRequest(
                 getRequestUrl(),
                 getClient(),

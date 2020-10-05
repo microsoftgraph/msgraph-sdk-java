@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TargetedManagedAppProtection;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
@@ -24,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Targeted Managed App Protection Request.
  */
-public class TargetedManagedAppProtectionRequest extends BaseRequest implements ITargetedManagedAppProtectionRequest {
+public class TargetedManagedAppProtectionRequest extends BaseRequest {
 	
     /**
      * The request for the TargetedManagedAppProtection
@@ -158,7 +156,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public ITargetedManagedAppProtectionRequest select(final String value) {
+     public TargetedManagedAppProtectionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TargetedManagedAppProtectionRequest)this;
      }
@@ -169,7 +167,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public ITargetedManagedAppProtectionRequest expand(final String value) {
+     public TargetedManagedAppProtectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TargetedManagedAppProtectionRequest)this;
      }

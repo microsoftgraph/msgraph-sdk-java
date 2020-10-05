@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationUpgradeRequest;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationUpgradeRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Teams App Installation Upgrade Request Builder.
  */
-public class TeamsAppInstallationUpgradeRequestBuilder extends BaseActionRequestBuilder implements ITeamsAppInstallationUpgradeRequestBuilder {
+public class TeamsAppInstallationUpgradeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this TeamsAppInstallationUpgrade
@@ -30,22 +29,22 @@ public class TeamsAppInstallationUpgradeRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the ITeamsAppInstallationUpgradeRequest
+     * Creates the TeamsAppInstallationUpgradeRequest
      *
      * @param requestOptions the options for the request
-     * @return the ITeamsAppInstallationUpgradeRequest instance
+     * @return the TeamsAppInstallationUpgradeRequest instance
      */
-    public ITeamsAppInstallationUpgradeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsAppInstallationUpgradeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ITeamsAppInstallationUpgradeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the TeamsAppInstallationUpgradeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ITeamsAppInstallationUpgradeRequest instance
+     * @return the TeamsAppInstallationUpgradeRequest instance
      */
-    public ITeamsAppInstallationUpgradeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppInstallationUpgradeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TeamsAppInstallationUpgradeRequest request = new TeamsAppInstallationUpgradeRequest(
                 getRequestUrl(),
                 getClient(),

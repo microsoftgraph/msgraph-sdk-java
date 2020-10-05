@@ -10,33 +10,19 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -49,7 +35,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Site Reference Request Builder.
  */
-public class SiteReferenceRequestBuilder extends BaseRequestBuilder implements ISiteReferenceRequestBuilder {
+public class SiteReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Site
@@ -66,9 +52,9 @@ public class SiteReferenceRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The ISiteReferenceRequest instance
+     * @return The SiteReferenceRequest instance
      */
-    public ISiteReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SiteReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -76,9 +62,9 @@ public class SiteReferenceRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISiteReferenceRequest instance
+     * @return the SiteReferenceRequest instance
      */
-    public ISiteReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SiteReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

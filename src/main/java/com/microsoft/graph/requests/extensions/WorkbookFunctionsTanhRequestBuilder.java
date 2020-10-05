@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTanhRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsTanhRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Tanh Request Builder.
  */
-public class WorkbookFunctionsTanhRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsTanhRequestBuilder {
+public class WorkbookFunctionsTanhRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsTanh
@@ -32,22 +31,22 @@ public class WorkbookFunctionsTanhRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsTanhRequest
+     * Creates the WorkbookFunctionsTanhRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTanhRequest instance
+     * @return the WorkbookFunctionsTanhRequest instance
      */
-    public IWorkbookFunctionsTanhRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsTanhRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsTanhRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsTanhRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTanhRequest instance
+     * @return the WorkbookFunctionsTanhRequest instance
      */
-    public IWorkbookFunctionsTanhRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsTanhRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsTanhRequest request = new WorkbookFunctionsTanhRequest(
                 getRequestUrl(),
                 getClient(),

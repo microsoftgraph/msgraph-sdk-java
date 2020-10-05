@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Overview Reference Request.
  */
-public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implements IManagedDeviceOverviewReferenceRequest {
+public class ManagedDeviceOverviewReferenceRequest extends BaseRequest {
 
     /**
      * The request for the ManagedDeviceOverview
@@ -48,7 +48,7 @@ public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-    public IManagedDeviceOverviewReferenceRequest select(final String value) {
+    public ManagedDeviceOverviewReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedDeviceOverviewReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-    public IManagedDeviceOverviewReferenceRequest expand(final String value) {
+    public ManagedDeviceOverviewReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedDeviceOverviewReferenceRequest)this;
     }

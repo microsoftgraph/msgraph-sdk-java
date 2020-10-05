@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Issuance Policy With Reference Request Builder.
  */
-public class TokenIssuancePolicyWithReferenceRequestBuilder extends BaseRequestBuilder implements ITokenIssuancePolicyWithReferenceRequestBuilder {
+public class TokenIssuancePolicyWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TokenIssuancePolicy
@@ -36,9 +36,9 @@ public class TokenIssuancePolicyWithReferenceRequestBuilder extends BaseRequestB
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITokenIssuancePolicyWithReferenceRequest instance
+     * @return the TokenIssuancePolicyWithReferenceRequest instance
      */
-    public ITokenIssuancePolicyWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TokenIssuancePolicyWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,13 +46,13 @@ public class TokenIssuancePolicyWithReferenceRequestBuilder extends BaseRequestB
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the ITokenIssuancePolicyWithReferenceRequest instance
+     * @return the TokenIssuancePolicyWithReferenceRequest instance
      */
-    public ITokenIssuancePolicyWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TokenIssuancePolicyWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITokenIssuancePolicyReferenceRequestBuilder reference(){
+    public TokenIssuancePolicyReferenceRequestBuilder reference(){
         return new TokenIssuancePolicyReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

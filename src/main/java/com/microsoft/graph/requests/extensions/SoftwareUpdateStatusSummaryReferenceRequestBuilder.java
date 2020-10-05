@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Software Update Status Summary Reference Request Builder.
  */
-public class SoftwareUpdateStatusSummaryReferenceRequestBuilder extends BaseRequestBuilder implements ISoftwareUpdateStatusSummaryReferenceRequestBuilder {
+public class SoftwareUpdateStatusSummaryReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SoftwareUpdateStatusSummary
@@ -37,9 +37,9 @@ public class SoftwareUpdateStatusSummaryReferenceRequestBuilder extends BaseRequ
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The ISoftwareUpdateStatusSummaryReferenceRequest instance
+     * @return The SoftwareUpdateStatusSummaryReferenceRequest instance
      */
-    public ISoftwareUpdateStatusSummaryReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SoftwareUpdateStatusSummaryReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class SoftwareUpdateStatusSummaryReferenceRequestBuilder extends BaseRequ
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISoftwareUpdateStatusSummaryReferenceRequest instance
+     * @return the SoftwareUpdateStatusSummaryReferenceRequest instance
      */
-    public ISoftwareUpdateStatusSummaryReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SoftwareUpdateStatusSummaryReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SoftwareUpdateStatusSummaryReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

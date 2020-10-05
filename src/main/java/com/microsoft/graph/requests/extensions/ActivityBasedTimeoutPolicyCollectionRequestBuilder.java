@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyCollectionRequest;
+import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Activity Based Timeout Policy Collection Request Builder.
  */
-public class ActivityBasedTimeoutPolicyCollectionRequestBuilder extends BaseRequestBuilder implements IActivityBasedTimeoutPolicyCollectionRequestBuilder {
+public class ActivityBasedTimeoutPolicyCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of PolicyRoot
@@ -42,7 +42,7 @@ public class ActivityBasedTimeoutPolicyCollectionRequestBuilder extends BaseRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IActivityBasedTimeoutPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ActivityBasedTimeoutPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ActivityBasedTimeoutPolicyCollectionRequestBuilder extends BaseRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IActivityBasedTimeoutPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActivityBasedTimeoutPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ActivityBasedTimeoutPolicyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IActivityBasedTimeoutPolicyRequestBuilder byId(final String id) {
+    public ActivityBasedTimeoutPolicyRequestBuilder byId(final String id) {
         return new ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

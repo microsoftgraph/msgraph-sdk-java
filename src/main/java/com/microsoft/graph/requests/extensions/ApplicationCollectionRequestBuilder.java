@@ -13,10 +13,10 @@ import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationCollectionRequest;
-import com.microsoft.graph.requests.extensions.IApplicationDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionRequest;
+import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Application Collection Request Builder.
  */
-public class ApplicationCollectionRequestBuilder extends BaseRequestBuilder implements IApplicationCollectionRequestBuilder {
+public class ApplicationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Application
@@ -44,7 +44,7 @@ public class ApplicationCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IApplicationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplicationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,21 +54,21 @@ public class ApplicationCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IApplicationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ApplicationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IApplicationRequestBuilder byId(final String id) {
+    public ApplicationRequestBuilder byId(final String id) {
         return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IApplicationDeltaCollectionRequestBuilder delta() {
+    public ApplicationDeltaCollectionRequestBuilder delta() {
         return new ApplicationDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IApplicationDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public ApplicationDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new ApplicationDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookApplicationCalculateRequest;
 import com.microsoft.graph.requests.extensions.WorkbookApplicationCalculateRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Application Calculate Request Builder.
  */
-public class WorkbookApplicationCalculateRequestBuilder extends BaseActionRequestBuilder implements IWorkbookApplicationCalculateRequestBuilder {
+public class WorkbookApplicationCalculateRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookApplicationCalculate
@@ -32,22 +31,22 @@ public class WorkbookApplicationCalculateRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IWorkbookApplicationCalculateRequest
+     * Creates the WorkbookApplicationCalculateRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookApplicationCalculateRequest instance
+     * @return the WorkbookApplicationCalculateRequest instance
      */
-    public IWorkbookApplicationCalculateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookApplicationCalculateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookApplicationCalculateRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookApplicationCalculateRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookApplicationCalculateRequest instance
+     * @return the WorkbookApplicationCalculateRequest instance
      */
-    public IWorkbookApplicationCalculateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookApplicationCalculateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookApplicationCalculateRequest request = new WorkbookApplicationCalculateRequest(
                 getRequestUrl(),
                 getClient(),

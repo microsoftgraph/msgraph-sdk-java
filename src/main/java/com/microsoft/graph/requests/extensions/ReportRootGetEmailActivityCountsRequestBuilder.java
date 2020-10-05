@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetEmailActivityCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Email Activity Counts Request Builder.
  */
-public class ReportRootGetEmailActivityCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetEmailActivityCountsRequestBuilder {
+public class ReportRootGetEmailActivityCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetEmailActivityCounts
@@ -32,22 +31,22 @@ public class ReportRootGetEmailActivityCountsRequestBuilder extends BaseFunction
     }
 
     /**
-     * Creates the IReportRootGetEmailActivityCountsRequest
+     * Creates the ReportRootGetEmailActivityCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetEmailActivityCountsRequest instance
+     * @return the ReportRootGetEmailActivityCountsRequest instance
      */
-    public IReportRootGetEmailActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetEmailActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetEmailActivityCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetEmailActivityCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetEmailActivityCountsRequest instance
+     * @return the ReportRootGetEmailActivityCountsRequest instance
      */
-    public IReportRootGetEmailActivityCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetEmailActivityCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetEmailActivityCountsRequest request = new ReportRootGetEmailActivityCountsRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHex2OctRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsHex2OctRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Hex2Oct Request Builder.
  */
-public class WorkbookFunctionsHex2OctRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsHex2OctRequestBuilder {
+public class WorkbookFunctionsHex2OctRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsHex2Oct
@@ -34,22 +33,22 @@ public class WorkbookFunctionsHex2OctRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsHex2OctRequest
+     * Creates the WorkbookFunctionsHex2OctRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsHex2OctRequest instance
+     * @return the WorkbookFunctionsHex2OctRequest instance
      */
-    public IWorkbookFunctionsHex2OctRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsHex2OctRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsHex2OctRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsHex2OctRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsHex2OctRequest instance
+     * @return the WorkbookFunctionsHex2OctRequest instance
      */
-    public IWorkbookFunctionsHex2OctRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsHex2OctRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsHex2OctRequest request = new WorkbookFunctionsHex2OctRequest(
                 getRequestUrl(),
                 getClient(),

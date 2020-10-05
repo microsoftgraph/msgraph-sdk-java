@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DefaultManagedAppProtection;
-import com.microsoft.graph.requests.extensions.IDefaultManagedAppProtectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionPage;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollec
 /**
  * The class for the Default Managed App Protection Collection Page.
  */
-public class DefaultManagedAppProtectionCollectionPage extends BaseCollectionPage<DefaultManagedAppProtection, IDefaultManagedAppProtectionCollectionRequestBuilder> implements IDefaultManagedAppProtectionCollectionPage {
+public class DefaultManagedAppProtectionCollectionPage extends BaseCollectionPage<DefaultManagedAppProtection, DefaultManagedAppProtectionCollectionRequestBuilder> {
 
     /**
      * A collection page for DefaultManagedAppProtection
@@ -22,7 +22,7 @@ public class DefaultManagedAppProtectionCollectionPage extends BaseCollectionPag
      * @param response the serialized DefaultManagedAppProtectionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DefaultManagedAppProtectionCollectionPage(final DefaultManagedAppProtectionCollectionResponse response, final IDefaultManagedAppProtectionCollectionRequestBuilder builder) {
+    public DefaultManagedAppProtectionCollectionPage(final DefaultManagedAppProtectionCollectionResponse response, final DefaultManagedAppProtectionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

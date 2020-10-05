@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Open Type Extension Request Builder.
  */
-public class OpenTypeExtensionRequestBuilder extends BaseRequestBuilder implements IOpenTypeExtensionRequestBuilder {
+public class OpenTypeExtensionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OpenTypeExtension
@@ -35,9 +35,9 @@ public class OpenTypeExtensionRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOpenTypeExtensionRequest instance
+     * @return the OpenTypeExtensionRequest instance
      */
-    public IOpenTypeExtensionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OpenTypeExtensionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class OpenTypeExtensionRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOpenTypeExtensionRequest instance
+     * @return the OpenTypeExtensionRequest instance
      */
-    public IOpenTypeExtensionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OpenTypeExtensionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OpenTypeExtensionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

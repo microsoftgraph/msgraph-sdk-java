@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemUnfollowRequest;
 import com.microsoft.graph.requests.extensions.DriveItemUnfollowRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Unfollow Request.
  */
-public class DriveItemUnfollowRequest extends BaseRequest implements IDriveItemUnfollowRequest {
+public class DriveItemUnfollowRequest extends BaseRequest {
 
     /**
      * The request for this DriveItemUnfollow

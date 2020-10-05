@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ChatMessageHostedContent;
-import com.microsoft.graph.requests.extensions.IChatMessageHostedContentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectio
 /**
  * The class for the Chat Message Hosted Content Collection Page.
  */
-public class ChatMessageHostedContentCollectionPage extends BaseCollectionPage<ChatMessageHostedContent, IChatMessageHostedContentCollectionRequestBuilder> implements IChatMessageHostedContentCollectionPage {
+public class ChatMessageHostedContentCollectionPage extends BaseCollectionPage<ChatMessageHostedContent, ChatMessageHostedContentCollectionRequestBuilder> {
 
     /**
      * A collection page for ChatMessageHostedContent
@@ -22,7 +22,7 @@ public class ChatMessageHostedContentCollectionPage extends BaseCollectionPage<C
      * @param response the serialized ChatMessageHostedContentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ChatMessageHostedContentCollectionPage(final ChatMessageHostedContentCollectionResponse response, final IChatMessageHostedContentCollectionRequestBuilder builder) {
+    public ChatMessageHostedContentCollectionPage(final ChatMessageHostedContentCollectionResponse response, final ChatMessageHostedContentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

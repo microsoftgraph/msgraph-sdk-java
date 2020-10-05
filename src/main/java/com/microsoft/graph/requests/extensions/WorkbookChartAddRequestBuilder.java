@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartAddRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartAddRequest;
 import com.microsoft.graph.models.extensions.WorkbookChart;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Add Request Builder.
  */
-public class WorkbookChartAddRequestBuilder extends BaseActionRequestBuilder implements IWorkbookChartAddRequestBuilder {
+public class WorkbookChartAddRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartAdd
@@ -36,22 +35,22 @@ public class WorkbookChartAddRequestBuilder extends BaseActionRequestBuilder imp
     }
 
     /**
-     * Creates the IWorkbookChartAddRequest
+     * Creates the WorkbookChartAddRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartAddRequest instance
+     * @return the WorkbookChartAddRequest instance
      */
-    public IWorkbookChartAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartAddRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartAddRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartAddRequest instance
+     * @return the WorkbookChartAddRequest instance
      */
-    public IWorkbookChartAddRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAddRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartAddRequest request = new WorkbookChartAddRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGammaLn_PreciseRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsGammaLn_PreciseRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Gamma Ln_Precise Request Builder.
  */
-public class WorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsGammaLn_PreciseRequestBuilder {
+public class WorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsGammaLn_Precise
@@ -32,22 +31,22 @@ public class WorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActionRe
     }
 
     /**
-     * Creates the IWorkbookFunctionsGammaLn_PreciseRequest
+     * Creates the WorkbookFunctionsGammaLn_PreciseRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGammaLn_PreciseRequest instance
+     * @return the WorkbookFunctionsGammaLn_PreciseRequest instance
      */
-    public IWorkbookFunctionsGammaLn_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsGammaLn_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsGammaLn_PreciseRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsGammaLn_PreciseRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGammaLn_PreciseRequest instance
+     * @return the WorkbookFunctionsGammaLn_PreciseRequest instance
      */
-    public IWorkbookFunctionsGammaLn_PreciseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsGammaLn_PreciseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsGammaLn_PreciseRequest request = new WorkbookFunctionsGammaLn_PreciseRequest(
                 getRequestUrl(),
                 getClient(),

@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerGroup;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Group Request Builder.
  */
-public class PlannerGroupRequestBuilder extends BaseRequestBuilder implements IPlannerGroupRequestBuilder {
+public class PlannerGroupRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the PlannerGroup
@@ -39,9 +37,9 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder implements IP
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerGroupRequest instance
+     * @return the PlannerGroupRequest instance
      */
-    public IPlannerGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlannerGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder implements IP
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerGroupRequest instance
+     * @return the PlannerGroupRequest instance
      */
-    public IPlannerGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IPlannerPlanCollectionRequestBuilder plans() {
+    public PlannerPlanCollectionRequestBuilder plans() {
         return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
-    public IPlannerPlanRequestBuilder plans(final String id) {
+    public PlannerPlanRequestBuilder plans(final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
 }

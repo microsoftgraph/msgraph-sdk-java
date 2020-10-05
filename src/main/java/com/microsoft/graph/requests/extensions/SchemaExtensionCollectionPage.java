@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SchemaExtension;
-import com.microsoft.graph.requests.extensions.ISchemaExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionPage;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionResponse
 /**
  * The class for the Schema Extension Collection Page.
  */
-public class SchemaExtensionCollectionPage extends BaseCollectionPage<SchemaExtension, ISchemaExtensionCollectionRequestBuilder> implements ISchemaExtensionCollectionPage {
+public class SchemaExtensionCollectionPage extends BaseCollectionPage<SchemaExtension, SchemaExtensionCollectionRequestBuilder> {
 
     /**
      * A collection page for SchemaExtension
@@ -22,7 +22,7 @@ public class SchemaExtensionCollectionPage extends BaseCollectionPage<SchemaExte
      * @param response the serialized SchemaExtensionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SchemaExtensionCollectionPage(final SchemaExtensionCollectionResponse response, final ISchemaExtensionCollectionRequestBuilder builder) {
+    public SchemaExtensionCollectionPage(final SchemaExtensionCollectionResponse response, final SchemaExtensionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

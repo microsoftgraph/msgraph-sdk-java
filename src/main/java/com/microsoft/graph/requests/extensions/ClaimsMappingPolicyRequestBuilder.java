@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Claims Mapping Policy Request Builder.
  */
-public class ClaimsMappingPolicyRequestBuilder extends BaseRequestBuilder implements IClaimsMappingPolicyRequestBuilder {
+public class ClaimsMappingPolicyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ClaimsMappingPolicy
@@ -35,9 +35,9 @@ public class ClaimsMappingPolicyRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IClaimsMappingPolicyRequest instance
+     * @return the ClaimsMappingPolicyRequest instance
      */
-    public IClaimsMappingPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ClaimsMappingPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,18 +45,18 @@ public class ClaimsMappingPolicyRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IClaimsMappingPolicyRequest instance
+     * @return the ClaimsMappingPolicyRequest instance
      */
-    public IClaimsMappingPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ClaimsMappingPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
+    public DirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
     }
 }

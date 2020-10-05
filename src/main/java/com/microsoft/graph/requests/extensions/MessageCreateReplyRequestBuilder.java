@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMessageCreateReplyRequest;
 import com.microsoft.graph.requests.extensions.MessageCreateReplyRequest;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Message Create Reply Request Builder.
  */
-public class MessageCreateReplyRequestBuilder extends BaseActionRequestBuilder implements IMessageCreateReplyRequestBuilder {
+public class MessageCreateReplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageCreateReply
@@ -34,22 +33,22 @@ public class MessageCreateReplyRequestBuilder extends BaseActionRequestBuilder i
     }
 
     /**
-     * Creates the IMessageCreateReplyRequest
+     * Creates the MessageCreateReplyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IMessageCreateReplyRequest instance
+     * @return the MessageCreateReplyRequest instance
      */
-    public IMessageCreateReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MessageCreateReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IMessageCreateReplyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the MessageCreateReplyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IMessageCreateReplyRequest instance
+     * @return the MessageCreateReplyRequest instance
      */
-    public IMessageCreateReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageCreateReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MessageCreateReplyRequest request = new MessageCreateReplyRequest(
                 getRequestUrl(),
                 getClient(),

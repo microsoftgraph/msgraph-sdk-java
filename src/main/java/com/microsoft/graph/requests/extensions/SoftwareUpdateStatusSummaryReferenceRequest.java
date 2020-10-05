@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Software Update Status Summary Reference Request.
  */
-public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest implements ISoftwareUpdateStatusSummaryReferenceRequest {
+public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest {
 
     /**
      * The request for the SoftwareUpdateStatusSummary
@@ -48,7 +48,7 @@ public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest imp
      * @param value the select clause
      * @return the updated request
      */
-    public ISoftwareUpdateStatusSummaryReferenceRequest select(final String value) {
+    public SoftwareUpdateStatusSummaryReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SoftwareUpdateStatusSummaryReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class SoftwareUpdateStatusSummaryReferenceRequest extends BaseRequest imp
      * @param value the expand clause
      * @return the updated request
      */
-    public ISoftwareUpdateStatusSummaryReferenceRequest expand(final String value) {
+    public SoftwareUpdateStatusSummaryReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SoftwareUpdateStatusSummaryReferenceRequest)this;
     }

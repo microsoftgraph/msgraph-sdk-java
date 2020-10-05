@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsConvertRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsConvertRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Convert Request Builder.
  */
-public class WorkbookFunctionsConvertRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsConvertRequestBuilder {
+public class WorkbookFunctionsConvertRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsConvert
@@ -36,22 +35,22 @@ public class WorkbookFunctionsConvertRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsConvertRequest
+     * Creates the WorkbookFunctionsConvertRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsConvertRequest instance
+     * @return the WorkbookFunctionsConvertRequest instance
      */
-    public IWorkbookFunctionsConvertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsConvertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsConvertRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsConvertRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsConvertRequest instance
+     * @return the WorkbookFunctionsConvertRequest instance
      */
-    public IWorkbookFunctionsConvertRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsConvertRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsConvertRequest request = new WorkbookFunctionsConvertRequest(
                 getRequestUrl(),
                 getClient(),

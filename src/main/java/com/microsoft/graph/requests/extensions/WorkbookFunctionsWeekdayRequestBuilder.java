@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsWeekdayRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsWeekdayRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Weekday Request Builder.
  */
-public class WorkbookFunctionsWeekdayRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsWeekdayRequestBuilder {
+public class WorkbookFunctionsWeekdayRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsWeekday
@@ -34,22 +33,22 @@ public class WorkbookFunctionsWeekdayRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsWeekdayRequest
+     * Creates the WorkbookFunctionsWeekdayRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsWeekdayRequest instance
+     * @return the WorkbookFunctionsWeekdayRequest instance
      */
-    public IWorkbookFunctionsWeekdayRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsWeekdayRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsWeekdayRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsWeekdayRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsWeekdayRequest instance
+     * @return the WorkbookFunctionsWeekdayRequest instance
      */
-    public IWorkbookFunctionsWeekdayRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsWeekdayRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsWeekdayRequest request = new WorkbookFunctionsWeekdayRequest(
                 getRequestUrl(),
                 getClient(),

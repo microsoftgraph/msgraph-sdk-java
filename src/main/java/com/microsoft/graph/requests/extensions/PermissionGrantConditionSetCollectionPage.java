@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.PermissionGrantConditionSet;
-import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollec
 /**
  * The class for the Permission Grant Condition Set Collection Page.
  */
-public class PermissionGrantConditionSetCollectionPage extends BaseCollectionPage<PermissionGrantConditionSet, IPermissionGrantConditionSetCollectionRequestBuilder> implements IPermissionGrantConditionSetCollectionPage {
+public class PermissionGrantConditionSetCollectionPage extends BaseCollectionPage<PermissionGrantConditionSet, PermissionGrantConditionSetCollectionRequestBuilder> {
 
     /**
      * A collection page for PermissionGrantConditionSet
@@ -22,7 +22,7 @@ public class PermissionGrantConditionSetCollectionPage extends BaseCollectionPag
      * @param response the serialized PermissionGrantConditionSetCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PermissionGrantConditionSetCollectionPage(final PermissionGrantConditionSetCollectionResponse response, final IPermissionGrantConditionSetCollectionRequestBuilder builder) {
+    public PermissionGrantConditionSetCollectionPage(final PermissionGrantConditionSetCollectionResponse response, final PermissionGrantConditionSetCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

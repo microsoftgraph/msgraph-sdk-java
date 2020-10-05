@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRadiansRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRadiansRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Radians Request Builder.
  */
-public class WorkbookFunctionsRadiansRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsRadiansRequestBuilder {
+public class WorkbookFunctionsRadiansRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsRadians
@@ -32,22 +31,22 @@ public class WorkbookFunctionsRadiansRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsRadiansRequest
+     * Creates the WorkbookFunctionsRadiansRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRadiansRequest instance
+     * @return the WorkbookFunctionsRadiansRequest instance
      */
-    public IWorkbookFunctionsRadiansRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsRadiansRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsRadiansRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsRadiansRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRadiansRequest instance
+     * @return the WorkbookFunctionsRadiansRequest instance
      */
-    public IWorkbookFunctionsRadiansRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsRadiansRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsRadiansRequest request = new WorkbookFunctionsRadiansRequest(
                 getRequestUrl(),
                 getClient(),

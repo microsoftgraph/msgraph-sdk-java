@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCopyToSectionGroupRequest;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCopyToSectionGroupRequest;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Onenote Section Copy To Section Group Request Builder.
  */
-public class OnenoteSectionCopyToSectionGroupRequestBuilder extends BaseActionRequestBuilder implements IOnenoteSectionCopyToSectionGroupRequestBuilder {
+public class OnenoteSectionCopyToSectionGroupRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this OnenoteSectionCopyToSectionGroup
@@ -40,22 +39,22 @@ public class OnenoteSectionCopyToSectionGroupRequestBuilder extends BaseActionRe
     }
 
     /**
-     * Creates the IOnenoteSectionCopyToSectionGroupRequest
+     * Creates the OnenoteSectionCopyToSectionGroupRequest
      *
      * @param requestOptions the options for the request
-     * @return the IOnenoteSectionCopyToSectionGroupRequest instance
+     * @return the OnenoteSectionCopyToSectionGroupRequest instance
      */
-    public IOnenoteSectionCopyToSectionGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenoteSectionCopyToSectionGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IOnenoteSectionCopyToSectionGroupRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the OnenoteSectionCopyToSectionGroupRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IOnenoteSectionCopyToSectionGroupRequest instance
+     * @return the OnenoteSectionCopyToSectionGroupRequest instance
      */
-    public IOnenoteSectionCopyToSectionGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteSectionCopyToSectionGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         OnenoteSectionCopyToSectionGroupRequest request = new OnenoteSectionCopyToSectionGroupRequest(
                 getRequestUrl(),
                 getClient(),

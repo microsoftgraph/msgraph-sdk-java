@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeViewCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionRespon
 /**
  * The class for the Workbook Range View Collection Page.
  */
-public class WorkbookRangeViewCollectionPage extends BaseCollectionPage<WorkbookRangeView, IWorkbookRangeViewCollectionRequestBuilder> implements IWorkbookRangeViewCollectionPage {
+public class WorkbookRangeViewCollectionPage extends BaseCollectionPage<WorkbookRangeView, WorkbookRangeViewCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookRangeView
@@ -22,7 +22,7 @@ public class WorkbookRangeViewCollectionPage extends BaseCollectionPage<Workbook
      * @param response the serialized WorkbookRangeViewCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookRangeViewCollectionPage(final WorkbookRangeViewCollectionResponse response, final IWorkbookRangeViewCollectionRequestBuilder builder) {
+    public WorkbookRangeViewCollectionPage(final WorkbookRangeViewCollectionResponse response, final WorkbookRangeViewCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

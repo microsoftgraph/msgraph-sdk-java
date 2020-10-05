@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationSetPriorityRequest;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationSetPriorityRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Device Enrollment Configuration Set Priority Request Builder.
  */
-public class DeviceEnrollmentConfigurationSetPriorityRequestBuilder extends BaseActionRequestBuilder implements IDeviceEnrollmentConfigurationSetPriorityRequestBuilder {
+public class DeviceEnrollmentConfigurationSetPriorityRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DeviceEnrollmentConfigurationSetPriority
@@ -32,22 +31,22 @@ public class DeviceEnrollmentConfigurationSetPriorityRequestBuilder extends Base
     }
 
     /**
-     * Creates the IDeviceEnrollmentConfigurationSetPriorityRequest
+     * Creates the DeviceEnrollmentConfigurationSetPriorityRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDeviceEnrollmentConfigurationSetPriorityRequest instance
+     * @return the DeviceEnrollmentConfigurationSetPriorityRequest instance
      */
-    public IDeviceEnrollmentConfigurationSetPriorityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceEnrollmentConfigurationSetPriorityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDeviceEnrollmentConfigurationSetPriorityRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DeviceEnrollmentConfigurationSetPriorityRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDeviceEnrollmentConfigurationSetPriorityRequest instance
+     * @return the DeviceEnrollmentConfigurationSetPriorityRequest instance
      */
-    public IDeviceEnrollmentConfigurationSetPriorityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentConfigurationSetPriorityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceEnrollmentConfigurationSetPriorityRequest request = new DeviceEnrollmentConfigurationSetPriorityRequest(
                 getRequestUrl(),
                 getClient(),

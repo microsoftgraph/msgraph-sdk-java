@@ -13,10 +13,10 @@ import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequest;
-import com.microsoft.graph.requests.extensions.IEventDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventCollectionRequest;
+import com.microsoft.graph.requests.extensions.EventDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Event Collection Request Builder.
  */
-public class EventCollectionRequestBuilder extends BaseRequestBuilder implements IEventCollectionRequestBuilder {
+public class EventCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Group
@@ -44,7 +44,7 @@ public class EventCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEventCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EventCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,21 +54,21 @@ public class EventCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEventCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EventCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IEventRequestBuilder byId(final String id) {
+    public EventRequestBuilder byId(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IEventDeltaCollectionRequestBuilder delta() {
+    public EventDeltaCollectionRequestBuilder delta() {
         return new EventDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IEventDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public EventDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new EventDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

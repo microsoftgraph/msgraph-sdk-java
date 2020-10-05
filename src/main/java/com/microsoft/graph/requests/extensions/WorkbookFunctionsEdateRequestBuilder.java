@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsEdateRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsEdateRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Edate Request Builder.
  */
-public class WorkbookFunctionsEdateRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsEdateRequestBuilder {
+public class WorkbookFunctionsEdateRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsEdate
@@ -34,22 +33,22 @@ public class WorkbookFunctionsEdateRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsEdateRequest
+     * Creates the WorkbookFunctionsEdateRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsEdateRequest instance
+     * @return the WorkbookFunctionsEdateRequest instance
      */
-    public IWorkbookFunctionsEdateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsEdateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsEdateRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsEdateRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsEdateRequest instance
+     * @return the WorkbookFunctionsEdateRequest instance
      */
-    public IWorkbookFunctionsEdateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsEdateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsEdateRequest request = new WorkbookFunctionsEdateRequest(
                 getRequestUrl(),
                 getClient(),

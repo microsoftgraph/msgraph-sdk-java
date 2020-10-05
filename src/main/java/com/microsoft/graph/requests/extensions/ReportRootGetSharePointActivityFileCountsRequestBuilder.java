@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityFileCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityFileCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Share Point Activity File Counts Request Builder.
  */
-public class ReportRootGetSharePointActivityFileCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetSharePointActivityFileCountsRequestBuilder {
+public class ReportRootGetSharePointActivityFileCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetSharePointActivityFileCounts
@@ -32,22 +31,22 @@ public class ReportRootGetSharePointActivityFileCountsRequestBuilder extends Bas
     }
 
     /**
-     * Creates the IReportRootGetSharePointActivityFileCountsRequest
+     * Creates the ReportRootGetSharePointActivityFileCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSharePointActivityFileCountsRequest instance
+     * @return the ReportRootGetSharePointActivityFileCountsRequest instance
      */
-    public IReportRootGetSharePointActivityFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetSharePointActivityFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetSharePointActivityFileCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetSharePointActivityFileCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSharePointActivityFileCountsRequest instance
+     * @return the ReportRootGetSharePointActivityFileCountsRequest instance
      */
-    public IReportRootGetSharePointActivityFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetSharePointActivityFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetSharePointActivityFileCountsRequest request = new ReportRootGetSharePointActivityFileCountsRequest(
                 getRequestUrl(),
                 getClient(),

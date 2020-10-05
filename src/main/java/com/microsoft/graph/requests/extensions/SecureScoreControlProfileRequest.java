@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Secure Score Control Profile Request.
  */
-public class SecureScoreControlProfileRequest extends BaseRequest implements ISecureScoreControlProfileRequest {
+public class SecureScoreControlProfileRequest extends BaseRequest {
 	
     /**
      * The request for the SecureScoreControlProfile
@@ -138,7 +138,7 @@ public class SecureScoreControlProfileRequest extends BaseRequest implements ISe
      * @param value the select clause
      * @return the updated request
      */
-     public ISecureScoreControlProfileRequest select(final String value) {
+     public SecureScoreControlProfileRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SecureScoreControlProfileRequest)this;
      }
@@ -149,7 +149,7 @@ public class SecureScoreControlProfileRequest extends BaseRequest implements ISe
      * @param value the expand clause
      * @return the updated request
      */
-     public ISecureScoreControlProfileRequest expand(final String value) {
+     public SecureScoreControlProfileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SecureScoreControlProfileRequest)this;
      }

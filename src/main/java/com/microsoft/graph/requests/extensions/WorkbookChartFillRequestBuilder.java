@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Fill Request Builder.
  */
-public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder implements IWorkbookChartFillRequestBuilder {
+public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookChartFill
@@ -35,9 +35,9 @@ public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartFillRequest instance
+     * @return the WorkbookChartFillRequest instance
      */
-    public IWorkbookChartFillRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartFillRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,19 +45,19 @@ public class WorkbookChartFillRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartFillRequest instance
+     * @return the WorkbookChartFillRequest instance
      */
-    public IWorkbookChartFillRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartFillRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartFillRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IWorkbookChartFillClearRequestBuilder clear() {
+    public WorkbookChartFillClearRequestBuilder clear() {
         return new WorkbookChartFillClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 
-    public IWorkbookChartFillSetSolidColorRequestBuilder setSolidColor(final String color) {
+    public WorkbookChartFillSetSolidColorRequestBuilder setSolidColor(final String color) {
         return new WorkbookChartFillSetSolidColorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setSolidColor"), getClient(), null, color);
     }
 }

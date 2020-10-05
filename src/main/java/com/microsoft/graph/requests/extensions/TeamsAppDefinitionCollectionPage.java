@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsAppDefinition;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRespo
 /**
  * The class for the Teams App Definition Collection Page.
  */
-public class TeamsAppDefinitionCollectionPage extends BaseCollectionPage<TeamsAppDefinition, ITeamsAppDefinitionCollectionRequestBuilder> implements ITeamsAppDefinitionCollectionPage {
+public class TeamsAppDefinitionCollectionPage extends BaseCollectionPage<TeamsAppDefinition, TeamsAppDefinitionCollectionRequestBuilder> {
 
     /**
      * A collection page for TeamsAppDefinition
@@ -22,7 +22,7 @@ public class TeamsAppDefinitionCollectionPage extends BaseCollectionPage<TeamsAp
      * @param response the serialized TeamsAppDefinitionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsAppDefinitionCollectionPage(final TeamsAppDefinitionCollectionResponse response, final ITeamsAppDefinitionCollectionRequestBuilder builder) {
+    public TeamsAppDefinitionCollectionPage(final TeamsAppDefinitionCollectionResponse response, final TeamsAppDefinitionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

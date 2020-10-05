@@ -11,8 +11,7 @@ import com.microsoft.graph.models.generated.CalendarRoleType;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ICalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarAllowedCalendarSharingRolesCollectionRequest;
+import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Calendar Allowed Calendar Sharing Roles Collection Request Builder.
  */
-public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends BaseFunctionRequestBuilder implements ICalendarAllowedCalendarSharingRolesCollectionRequestBuilder {
+public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of Calendar
@@ -46,7 +45,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,7 +55,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CalendarAllowedCalendarSharingRolesCollectionRequest request = new CalendarAllowedCalendarSharingRolesCollectionRequest(
                 getRequestUrl(),
                 getClient(),

@@ -9,12 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import java.util.Arrays;
@@ -28,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Terms And Conditions Reference Request Builder.
  */
-public class TermsAndConditionsReferenceRequestBuilder extends BaseRequestBuilder implements ITermsAndConditionsReferenceRequestBuilder {
+public class TermsAndConditionsReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TermsAndConditions
@@ -45,9 +41,9 @@ public class TermsAndConditionsReferenceRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The ITermsAndConditionsReferenceRequest instance
+     * @return The TermsAndConditionsReferenceRequest instance
      */
-    public ITermsAndConditionsReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TermsAndConditionsReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,9 +51,9 @@ public class TermsAndConditionsReferenceRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITermsAndConditionsReferenceRequest instance
+     * @return the TermsAndConditionsReferenceRequest instance
      */
-    public ITermsAndConditionsReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TermsAndConditionsReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

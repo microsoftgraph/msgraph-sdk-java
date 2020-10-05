@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ActivityHistoryItem;
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionPage;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionResp
 /**
  * The class for the Activity History Item Collection Page.
  */
-public class ActivityHistoryItemCollectionPage extends BaseCollectionPage<ActivityHistoryItem, IActivityHistoryItemCollectionRequestBuilder> implements IActivityHistoryItemCollectionPage {
+public class ActivityHistoryItemCollectionPage extends BaseCollectionPage<ActivityHistoryItem, ActivityHistoryItemCollectionRequestBuilder> {
 
     /**
      * A collection page for ActivityHistoryItem
@@ -22,7 +22,7 @@ public class ActivityHistoryItemCollectionPage extends BaseCollectionPage<Activi
      * @param response the serialized ActivityHistoryItemCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ActivityHistoryItemCollectionPage(final ActivityHistoryItemCollectionResponse response, final IActivityHistoryItemCollectionRequestBuilder builder) {
+    public ActivityHistoryItemCollectionPage(final ActivityHistoryItemCollectionResponse response, final ActivityHistoryItemCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

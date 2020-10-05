@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyFontColorFilterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyFontColorFilterRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Filter Apply Font Color Filter Request Builder.
  */
-public class WorkbookFilterApplyFontColorFilterRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFilterApplyFontColorFilterRequestBuilder {
+public class WorkbookFilterApplyFontColorFilterRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFilterApplyFontColorFilter
@@ -32,22 +31,22 @@ public class WorkbookFilterApplyFontColorFilterRequestBuilder extends BaseAction
     }
 
     /**
-     * Creates the IWorkbookFilterApplyFontColorFilterRequest
+     * Creates the WorkbookFilterApplyFontColorFilterRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyFontColorFilterRequest instance
+     * @return the WorkbookFilterApplyFontColorFilterRequest instance
      */
-    public IWorkbookFilterApplyFontColorFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFilterApplyFontColorFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFilterApplyFontColorFilterRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFilterApplyFontColorFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyFontColorFilterRequest instance
+     * @return the WorkbookFilterApplyFontColorFilterRequest instance
      */
-    public IWorkbookFilterApplyFontColorFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterApplyFontColorFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyFontColorFilterRequest request = new WorkbookFilterApplyFontColorFilterRequest(
                 getRequestUrl(),
                 getClient(),

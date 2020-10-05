@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.Message;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMessageDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.MessageDeltaCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Message Delta Collection Page.
  */
-public class MessageDeltaCollectionPage extends BaseCollectionPage<Message, IMessageDeltaCollectionRequestBuilder> implements IMessageDeltaCollectionPage {
+public class MessageDeltaCollectionPage extends BaseCollectionPage<Message, MessageDeltaCollectionRequestBuilder> {
 
     /**
      * The opaque link to query delta after the 
@@ -39,7 +39,7 @@ public class MessageDeltaCollectionPage extends BaseCollectionPage<Message, IMes
      * @param response The serialized MessageDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public MessageDeltaCollectionPage(final MessageDeltaCollectionResponse response, final IMessageDeltaCollectionRequestBuilder builder) {
+    public MessageDeltaCollectionPage(final MessageDeltaCollectionResponse response, final MessageDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {

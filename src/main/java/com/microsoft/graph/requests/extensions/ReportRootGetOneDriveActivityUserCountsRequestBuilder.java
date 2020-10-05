@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveActivityUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveActivityUserCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get One Drive Activity User Counts Request Builder.
  */
-public class ReportRootGetOneDriveActivityUserCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetOneDriveActivityUserCountsRequestBuilder {
+public class ReportRootGetOneDriveActivityUserCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetOneDriveActivityUserCounts
@@ -32,22 +31,22 @@ public class ReportRootGetOneDriveActivityUserCountsRequestBuilder extends BaseF
     }
 
     /**
-     * Creates the IReportRootGetOneDriveActivityUserCountsRequest
+     * Creates the ReportRootGetOneDriveActivityUserCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOneDriveActivityUserCountsRequest instance
+     * @return the ReportRootGetOneDriveActivityUserCountsRequest instance
      */
-    public IReportRootGetOneDriveActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetOneDriveActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetOneDriveActivityUserCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetOneDriveActivityUserCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOneDriveActivityUserCountsRequest instance
+     * @return the ReportRootGetOneDriveActivityUserCountsRequest instance
      */
-    public IReportRootGetOneDriveActivityUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetOneDriveActivityUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOneDriveActivityUserCountsRequest request = new ReportRootGetOneDriveActivityUserCountsRequest(
                 getRequestUrl(),
                 getClient(),

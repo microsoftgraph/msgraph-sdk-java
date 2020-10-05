@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequest;
+import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Drive Collection Request Builder.
  */
-public class DriveCollectionRequestBuilder extends BaseRequestBuilder implements IDriveCollectionRequestBuilder {
+public class DriveCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Drive
@@ -42,7 +42,7 @@ public class DriveCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DriveCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DriveCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDriveRequestBuilder byId(final String id) {
+    public DriveRequestBuilder byId(final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

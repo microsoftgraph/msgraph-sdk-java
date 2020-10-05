@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.LicenseDetails;
-import com.microsoft.graph.requests.extensions.ILicenseDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionPage;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionResponse;
 /**
  * The class for the License Details Collection Page.
  */
-public class LicenseDetailsCollectionPage extends BaseCollectionPage<LicenseDetails, ILicenseDetailsCollectionRequestBuilder> implements ILicenseDetailsCollectionPage {
+public class LicenseDetailsCollectionPage extends BaseCollectionPage<LicenseDetails, LicenseDetailsCollectionRequestBuilder> {
 
     /**
      * A collection page for LicenseDetails
@@ -22,7 +22,7 @@ public class LicenseDetailsCollectionPage extends BaseCollectionPage<LicenseDeta
      * @param response the serialized LicenseDetailsCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public LicenseDetailsCollectionPage(final LicenseDetailsCollectionResponse response, final ILicenseDetailsCollectionRequestBuilder builder) {
+    public LicenseDetailsCollectionPage(final LicenseDetailsCollectionResponse response, final LicenseDetailsCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

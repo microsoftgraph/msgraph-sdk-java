@@ -9,21 +9,13 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -35,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Device Mobile App Configuration Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseRequestBuilder implements IManagedDeviceMobileAppConfigurationRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedDeviceMobileAppConfiguration
@@ -52,9 +44,9 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceMobileAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -62,54 +54,54 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments() {
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(final String id) {
+    public ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ManagedDeviceMobileAppConfigurationDeviceSummary
      *
-     * @return the IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder instance
+     * @return the ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder instance
      */
-    public IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary() {
+    public ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary() {
         return new ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusSummary"), getClient(), null);
     }
-    public IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+    public ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
-    public IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+    public ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(final String id) {
         return new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ManagedDeviceMobileAppConfigurationUserSummary
      *
-     * @return the IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder instance
+     * @return the ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder instance
      */
-    public IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder userStatusSummary() {
+    public ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder userStatusSummary() {
         return new ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusSummary"), getClient(), null);
     }
 
-    public IManagedDeviceMobileAppConfigurationAssignRequestBuilder assign(final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments) {
+    public ManagedDeviceMobileAppConfigurationAssignRequestBuilder assign(final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments) {
         return new ManagedDeviceMobileAppConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 }

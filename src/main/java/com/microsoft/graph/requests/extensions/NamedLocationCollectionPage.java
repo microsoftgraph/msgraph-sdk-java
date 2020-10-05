@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.NamedLocation;
-import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionPage;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.NamedLocationCollectionResponse;
 /**
  * The class for the Named Location Collection Page.
  */
-public class NamedLocationCollectionPage extends BaseCollectionPage<NamedLocation, INamedLocationCollectionRequestBuilder> implements INamedLocationCollectionPage {
+public class NamedLocationCollectionPage extends BaseCollectionPage<NamedLocation, NamedLocationCollectionRequestBuilder> {
 
     /**
      * A collection page for NamedLocation
@@ -22,7 +22,7 @@ public class NamedLocationCollectionPage extends BaseCollectionPage<NamedLocatio
      * @param response the serialized NamedLocationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public NamedLocationCollectionPage(final NamedLocationCollectionResponse response, final INamedLocationCollectionRequestBuilder builder) {
+    public NamedLocationCollectionPage(final NamedLocationCollectionResponse response, final NamedLocationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

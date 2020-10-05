@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Entity Hierarchy Model Request.
  */
-public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements IOnenoteEntityHierarchyModelRequest {
+public class OnenoteEntityHierarchyModelRequest extends BaseRequest {
 	
     /**
      * The request for the OnenoteEntityHierarchyModel
@@ -153,7 +153,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IOnenoteEntityHierarchyModelRequest select(final String value) {
+     public OnenoteEntityHierarchyModelRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OnenoteEntityHierarchyModelRequest)this;
      }
@@ -164,7 +164,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnenoteEntityHierarchyModelRequest expand(final String value) {
+     public OnenoteEntityHierarchyModelRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OnenoteEntityHierarchyModelRequest)this;
      }

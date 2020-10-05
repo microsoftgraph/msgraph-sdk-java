@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Column Definition Request Builder.
  */
-public class ColumnDefinitionRequestBuilder extends BaseRequestBuilder implements IColumnDefinitionRequestBuilder {
+public class ColumnDefinitionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ColumnDefinition
@@ -35,9 +35,9 @@ public class ColumnDefinitionRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IColumnDefinitionRequest instance
+     * @return the ColumnDefinitionRequest instance
      */
-    public IColumnDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ColumnDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ColumnDefinitionRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IColumnDefinitionRequest instance
+     * @return the ColumnDefinitionRequest instance
      */
-    public IColumnDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ColumnDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ColumnDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

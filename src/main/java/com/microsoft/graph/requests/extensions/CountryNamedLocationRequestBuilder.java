@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Country Named Location Request Builder.
  */
-public class CountryNamedLocationRequestBuilder extends BaseRequestBuilder implements ICountryNamedLocationRequestBuilder {
+public class CountryNamedLocationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the CountryNamedLocation
@@ -35,9 +35,9 @@ public class CountryNamedLocationRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICountryNamedLocationRequest instance
+     * @return the CountryNamedLocationRequest instance
      */
-    public ICountryNamedLocationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CountryNamedLocationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class CountryNamedLocationRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICountryNamedLocationRequest instance
+     * @return the CountryNamedLocationRequest instance
      */
-    public ICountryNamedLocationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CountryNamedLocationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CountryNamedLocationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

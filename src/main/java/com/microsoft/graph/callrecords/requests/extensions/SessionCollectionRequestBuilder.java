@@ -12,9 +12,9 @@ import com.microsoft.graph.callrecords.models.extensions.Session;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.callrecords.requests.extensions.ISessionCollectionRequestBuilder;
-import com.microsoft.graph.callrecords.requests.extensions.ISessionRequestBuilder;
-import com.microsoft.graph.callrecords.requests.extensions.ISessionCollectionRequest;
+import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.SessionRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Session Collection Request Builder.
  */
-public class SessionCollectionRequestBuilder extends BaseRequestBuilder implements ISessionCollectionRequestBuilder {
+public class SessionCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of CallRecord
@@ -42,7 +42,7 @@ public class SessionCollectionRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISessionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SessionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class SessionCollectionRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISessionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SessionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SessionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISessionRequestBuilder byId(final String id) {
+    public SessionRequestBuilder byId(final String id) {
         return new SessionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

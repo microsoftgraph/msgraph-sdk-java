@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPriceDiscRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsPriceDiscRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Price Disc Request Builder.
  */
-public class WorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsPriceDiscRequestBuilder {
+public class WorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsPriceDisc
@@ -40,22 +39,22 @@ public class WorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsPriceDiscRequest
+     * Creates the WorkbookFunctionsPriceDiscRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPriceDiscRequest instance
+     * @return the WorkbookFunctionsPriceDiscRequest instance
      */
-    public IWorkbookFunctionsPriceDiscRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsPriceDiscRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsPriceDiscRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsPriceDiscRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPriceDiscRequest instance
+     * @return the WorkbookFunctionsPriceDiscRequest instance
      */
-    public IWorkbookFunctionsPriceDiscRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsPriceDiscRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsPriceDiscRequest request = new WorkbookFunctionsPriceDiscRequest(
                 getRequestUrl(),
                 getClient(),

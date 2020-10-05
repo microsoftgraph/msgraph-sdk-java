@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance User Overview Request.
  */
-public class DeviceComplianceUserOverviewRequest extends BaseRequest implements IDeviceComplianceUserOverviewRequest {
+public class DeviceComplianceUserOverviewRequest extends BaseRequest {
 	
     /**
      * The request for the DeviceComplianceUserOverview
@@ -138,7 +138,7 @@ public class DeviceComplianceUserOverviewRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceComplianceUserOverviewRequest select(final String value) {
+     public DeviceComplianceUserOverviewRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceComplianceUserOverviewRequest)this;
      }
@@ -149,7 +149,7 @@ public class DeviceComplianceUserOverviewRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceComplianceUserOverviewRequest expand(final String value) {
+     public DeviceComplianceUserOverviewRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceComplianceUserOverviewRequest)this;
      }

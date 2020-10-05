@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android General Device Configuration Request.
  */
-public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implements IAndroidGeneralDeviceConfigurationRequest {
+public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the AndroidGeneralDeviceConfiguration
@@ -138,7 +138,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidGeneralDeviceConfigurationRequest select(final String value) {
+     public AndroidGeneralDeviceConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (AndroidGeneralDeviceConfigurationRequest)this;
      }
@@ -149,7 +149,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidGeneralDeviceConfigurationRequest expand(final String value) {
+     public AndroidGeneralDeviceConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (AndroidGeneralDeviceConfigurationRequest)this;
      }

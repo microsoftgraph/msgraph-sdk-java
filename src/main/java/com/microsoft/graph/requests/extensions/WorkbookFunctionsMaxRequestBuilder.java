@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMaxRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsMaxRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Max Request Builder.
  */
-public class WorkbookFunctionsMaxRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsMaxRequestBuilder {
+public class WorkbookFunctionsMaxRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsMax
@@ -32,22 +31,22 @@ public class WorkbookFunctionsMaxRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookFunctionsMaxRequest
+     * Creates the WorkbookFunctionsMaxRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMaxRequest instance
+     * @return the WorkbookFunctionsMaxRequest instance
      */
-    public IWorkbookFunctionsMaxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsMaxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsMaxRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsMaxRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMaxRequest instance
+     * @return the WorkbookFunctionsMaxRequest instance
      */
-    public IWorkbookFunctionsMaxRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsMaxRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsMaxRequest request = new WorkbookFunctionsMaxRequest(
                 getRequestUrl(),
                 getClient(),

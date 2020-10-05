@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionPage;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionRespo
 /**
  * The class for the Terms And Conditions Collection Page.
  */
-public class TermsAndConditionsCollectionPage extends BaseCollectionPage<TermsAndConditions, ITermsAndConditionsCollectionRequestBuilder> implements ITermsAndConditionsCollectionPage {
+public class TermsAndConditionsCollectionPage extends BaseCollectionPage<TermsAndConditions, TermsAndConditionsCollectionRequestBuilder> {
 
     /**
      * A collection page for TermsAndConditions
@@ -22,7 +22,7 @@ public class TermsAndConditionsCollectionPage extends BaseCollectionPage<TermsAn
      * @param response the serialized TermsAndConditionsCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TermsAndConditionsCollectionPage(final TermsAndConditionsCollectionResponse response, final ITermsAndConditionsCollectionRequestBuilder builder) {
+    public TermsAndConditionsCollectionPage(final TermsAndConditionsCollectionResponse response, final TermsAndConditionsCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

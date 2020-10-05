@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMobileAppContentFileRenewUploadRequest;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileRenewUploadRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Content File Renew Upload Request.
  */
-public class MobileAppContentFileRenewUploadRequest extends BaseRequest implements IMobileAppContentFileRenewUploadRequest {
+public class MobileAppContentFileRenewUploadRequest extends BaseRequest {
 
     /**
      * The request for this MobileAppContentFileRenewUpload

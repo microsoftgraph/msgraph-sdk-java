@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMessageSendRequest;
 import com.microsoft.graph.requests.extensions.MessageSendRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Message Send Request.
  */
-public class MessageSendRequest extends BaseRequest implements IMessageSendRequest {
+public class MessageSendRequest extends BaseRequest {
 
     /**
      * The request for this MessageSend

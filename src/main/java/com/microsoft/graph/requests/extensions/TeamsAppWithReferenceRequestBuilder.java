@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsApp;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams App With Reference Request Builder.
  */
-public class TeamsAppWithReferenceRequestBuilder extends BaseRequestBuilder implements ITeamsAppWithReferenceRequestBuilder {
+public class TeamsAppWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TeamsApp
@@ -40,9 +38,9 @@ public class TeamsAppWithReferenceRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsAppWithReferenceRequest instance
+     * @return the TeamsAppWithReferenceRequest instance
      */
-    public ITeamsAppWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsAppWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,13 +48,13 @@ public class TeamsAppWithReferenceRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the ITeamsAppWithReferenceRequest instance
+     * @return the TeamsAppWithReferenceRequest instance
      */
-    public ITeamsAppWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsAppWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITeamsAppReferenceRequestBuilder reference(){
+    public TeamsAppReferenceRequestBuilder reference(){
         return new TeamsAppReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

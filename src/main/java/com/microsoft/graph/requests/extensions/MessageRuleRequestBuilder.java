@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Message Rule Request Builder.
  */
-public class MessageRuleRequestBuilder extends BaseRequestBuilder implements IMessageRuleRequestBuilder {
+public class MessageRuleRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MessageRule
@@ -35,9 +35,9 @@ public class MessageRuleRequestBuilder extends BaseRequestBuilder implements IMe
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMessageRuleRequest instance
+     * @return the MessageRuleRequest instance
      */
-    public IMessageRuleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MessageRuleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class MessageRuleRequestBuilder extends BaseRequestBuilder implements IMe
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMessageRuleRequest instance
+     * @return the MessageRuleRequest instance
      */
-    public IMessageRuleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageRuleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MessageRuleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

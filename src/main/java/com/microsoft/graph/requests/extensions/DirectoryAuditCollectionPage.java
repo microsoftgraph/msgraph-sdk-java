@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DirectoryAudit;
-import com.microsoft.graph.requests.extensions.IDirectoryAuditCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionResponse;
 /**
  * The class for the Directory Audit Collection Page.
  */
-public class DirectoryAuditCollectionPage extends BaseCollectionPage<DirectoryAudit, IDirectoryAuditCollectionRequestBuilder> implements IDirectoryAuditCollectionPage {
+public class DirectoryAuditCollectionPage extends BaseCollectionPage<DirectoryAudit, DirectoryAuditCollectionRequestBuilder> {
 
     /**
      * A collection page for DirectoryAudit
@@ -22,7 +22,7 @@ public class DirectoryAuditCollectionPage extends BaseCollectionPage<DirectoryAu
      * @param response the serialized DirectoryAuditCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DirectoryAuditCollectionPage(final DirectoryAuditCollectionResponse response, final IDirectoryAuditCollectionRequestBuilder builder) {
+    public DirectoryAuditCollectionPage(final DirectoryAuditCollectionResponse response, final DirectoryAuditCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

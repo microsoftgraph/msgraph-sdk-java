@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DriveItemVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionRequest;
+import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Drive Item Version Collection Request Builder.
  */
-public class DriveItemVersionCollectionRequestBuilder extends BaseRequestBuilder implements IDriveItemVersionCollectionRequestBuilder {
+public class DriveItemVersionCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DriveItem
@@ -42,7 +42,7 @@ public class DriveItemVersionCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveItemVersionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemVersionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DriveItemVersionCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveItemVersionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemVersionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DriveItemVersionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDriveItemVersionRequestBuilder byId(final String id) {
+    public DriveItemVersionRequestBuilder byId(final String id) {
         return new DriveItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

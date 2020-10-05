@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRespon
 /**
  * The class for the Mobile App Category Collection Page.
  */
-public class MobileAppCategoryCollectionPage extends BaseCollectionPage<MobileAppCategory, IMobileAppCategoryCollectionRequestBuilder> implements IMobileAppCategoryCollectionPage {
+public class MobileAppCategoryCollectionPage extends BaseCollectionPage<MobileAppCategory, MobileAppCategoryCollectionRequestBuilder> {
 
     /**
      * A collection page for MobileAppCategory
@@ -22,7 +22,7 @@ public class MobileAppCategoryCollectionPage extends BaseCollectionPage<MobileAp
      * @param response the serialized MobileAppCategoryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MobileAppCategoryCollectionPage(final MobileAppCategoryCollectionResponse response, final IMobileAppCategoryCollectionRequestBuilder builder) {
+    public MobileAppCategoryCollectionPage(final MobileAppCategoryCollectionResponse response, final MobileAppCategoryCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

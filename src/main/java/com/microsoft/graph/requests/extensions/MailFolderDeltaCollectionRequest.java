@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.MailFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMailFolderDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Mail Folder Delta Collection Request.
  */
-public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<MailFolderDeltaCollectionResponse, IMailFolderDeltaCollectionPage> implements IMailFolderDeltaCollectionRequest {
+public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<MailFolderDeltaCollectionResponse, MailFolderDeltaCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param requestOptions the options for this request
      */
     public MailFolderDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MailFolderDeltaCollectionResponse.class, IMailFolderDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, MailFolderDeltaCollectionResponse.class, MailFolderDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IMailFolderDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super MailFolderDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
         });
     }
 
-    public IMailFolderDeltaCollectionPage get() throws ClientException {
+    public MailFolderDeltaCollectionPage get() throws ClientException {
         final MailFolderDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IMailFolderDeltaCollectionPage buildFromResponse(final MailFolderDeltaCollectionResponse response) {
-        final IMailFolderDeltaCollectionRequestBuilder builder;
+    public MailFolderDeltaCollectionPage buildFromResponse(final MailFolderDeltaCollectionResponse response) {
+        final MailFolderDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new MailFolderDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IMailFolderDeltaCollectionPage page = new MailFolderDeltaCollectionPage(response, builder);
+        final MailFolderDeltaCollectionPage page = new MailFolderDeltaCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the select clause
      * @return the updated request
      */
-    public IMailFolderDeltaCollectionRequest select(final String value) {
+    public MailFolderDeltaCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IMailFolderDeltaCollectionRequest)this;
+        return (MailFolderDeltaCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IMailFolderDeltaCollectionRequest top(final int value) {
+    public MailFolderDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IMailFolderDeltaCollectionRequest)this;
+        return (MailFolderDeltaCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the expand clause
      * @return the updated request
      */
-    public IMailFolderDeltaCollectionRequest expand(final String value) {
+    public MailFolderDeltaCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IMailFolderDeltaCollectionRequest)this;
+        return (MailFolderDeltaCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the filter clause
      * @return the updated request
      */
-    public IMailFolderDeltaCollectionRequest filter(final String value) {
+    public MailFolderDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IMailFolderDeltaCollectionRequest)this;
+        return (MailFolderDeltaCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<Mail
      * @param value the order by clause
      * @return the updated request
      */
-    public IMailFolderDeltaCollectionRequest orderBy(final String value) {
+    public MailFolderDeltaCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IMailFolderDeltaCollectionRequest)this;
+        return (MailFolderDeltaCollectionRequest)this;
     }
 
 }

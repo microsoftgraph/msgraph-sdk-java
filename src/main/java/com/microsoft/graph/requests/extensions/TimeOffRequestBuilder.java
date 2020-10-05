@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Time Off Request Builder.
  */
-public class TimeOffRequestBuilder extends BaseRequestBuilder implements ITimeOffRequestBuilder {
+public class TimeOffRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TimeOff
@@ -35,9 +35,9 @@ public class TimeOffRequestBuilder extends BaseRequestBuilder implements ITimeOf
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITimeOffRequest instance
+     * @return the TimeOffRequest instance
      */
-    public ITimeOffRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TimeOffRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class TimeOffRequestBuilder extends BaseRequestBuilder implements ITimeOf
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITimeOffRequest instance
+     * @return the TimeOffRequest instance
      */
-    public ITimeOffRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TimeOffRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TimeOffRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

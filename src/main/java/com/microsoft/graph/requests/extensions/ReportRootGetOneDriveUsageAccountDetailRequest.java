@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageAccountDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveUsageAccountDetailRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get One Drive Usage Account Detail Request.
  */
-public class ReportRootGetOneDriveUsageAccountDetailRequest extends BaseRequest implements IReportRootGetOneDriveUsageAccountDetailRequest {
+public class ReportRootGetOneDriveUsageAccountDetailRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetOneDriveUsageAccountDetail
@@ -97,7 +96,7 @@ public class ReportRootGetOneDriveUsageAccountDetailRequest extends BaseRequest 
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetOneDriveUsageAccountDetailRequest select(final String value) {
+    public ReportRootGetOneDriveUsageAccountDetailRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetOneDriveUsageAccountDetailRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetOneDriveUsageAccountDetailRequest extends BaseRequest 
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetOneDriveUsageAccountDetailRequest expand(final String value) {
+    public ReportRootGetOneDriveUsageAccountDetailRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetOneDriveUsageAccountDetailRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetOneDriveUsageAccountDetailRequest extends BaseRequest 
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetOneDriveUsageAccountDetailRequest filter(final String value) {
+    public ReportRootGetOneDriveUsageAccountDetailRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetOneDriveUsageAccountDetailRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetOneDriveUsageAccountDetailRequest extends BaseRequest 
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetOneDriveUsageAccountDetailRequest orderBy(final String value) {
+    public ReportRootGetOneDriveUsageAccountDetailRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetOneDriveUsageAccountDetailRequest)this;
     }

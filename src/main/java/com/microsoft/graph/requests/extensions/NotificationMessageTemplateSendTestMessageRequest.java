@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.INotificationMessageTemplateSendTestMessageRequest;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateSendTestMessageRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Notification Message Template Send Test Message Request.
  */
-public class NotificationMessageTemplateSendTestMessageRequest extends BaseRequest implements INotificationMessageTemplateSendTestMessageRequest {
+public class NotificationMessageTemplateSendTestMessageRequest extends BaseRequest {
 
     /**
      * The request for this NotificationMessageTemplateSendTestMessage

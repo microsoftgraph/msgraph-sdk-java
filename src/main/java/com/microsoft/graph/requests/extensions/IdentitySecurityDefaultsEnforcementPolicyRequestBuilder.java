@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Identity Security Defaults Enforcement Policy Request Builder.
  */
-public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseRequestBuilder implements IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder {
+public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the IdentitySecurityDefaultsEnforcementPolicy
@@ -35,9 +35,9 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IIdentitySecurityDefaultsEnforcementPolicyRequest instance
+     * @return the IdentitySecurityDefaultsEnforcementPolicyRequest instance
      */
-    public IIdentitySecurityDefaultsEnforcementPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public IdentitySecurityDefaultsEnforcementPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IIdentitySecurityDefaultsEnforcementPolicyRequest instance
+     * @return the IdentitySecurityDefaultsEnforcementPolicyRequest instance
      */
-    public IIdentitySecurityDefaultsEnforcementPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentitySecurityDefaultsEnforcementPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

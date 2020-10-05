@@ -20,7 +20,7 @@ import java.io.InputStream;
 /**
  * The class for the Chat Message Hosted Content Stream Request.
  */
-public class ChatMessageHostedContentStreamRequest extends BaseStreamRequest<ChatMessageHostedContent> implements IChatMessageHostedContentStreamRequest {
+public class ChatMessageHostedContentStreamRequest extends BaseStreamRequest<ChatMessageHostedContent> {
 
     /**
      * The request for the ChatMessageHostedContent

@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Object Collection Reference Request Builder.
  */
-public class DirectoryObjectCollectionReferenceRequestBuilder extends BaseRequestBuilder implements IDirectoryObjectCollectionReferenceRequestBuilder {
+public class DirectoryObjectCollectionReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -40,7 +40,7 @@ public class DirectoryObjectCollectionReferenceRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryObjectCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryObjectCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,7 +50,7 @@ public class DirectoryObjectCollectionReferenceRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryObjectCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryObjectCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

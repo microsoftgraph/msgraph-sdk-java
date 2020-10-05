@@ -12,10 +12,10 @@ import com.microsoft.graph.models.extensions.AssignedLicense;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupCollectionRequest;
-import com.microsoft.graph.requests.extensions.IGroupDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupCollectionRequest;
+import com.microsoft.graph.requests.extensions.GroupDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Collection Request Builder.
  */
-public class GroupCollectionRequestBuilder extends BaseRequestBuilder implements IGroupCollectionRequestBuilder {
+public class GroupCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Group
@@ -43,7 +43,7 @@ public class GroupCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IGroupCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,21 +53,21 @@ public class GroupCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IGroupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IGroupRequestBuilder byId(final String id) {
+    public GroupRequestBuilder byId(final String id) {
         return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IGroupDeltaCollectionRequestBuilder delta() {
+    public GroupDeltaCollectionRequestBuilder delta() {
         return new GroupDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IGroupDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public GroupDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new GroupDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

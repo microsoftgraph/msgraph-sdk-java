@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLenRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsLenRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Len Request Builder.
  */
-public class WorkbookFunctionsLenRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsLenRequestBuilder {
+public class WorkbookFunctionsLenRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsLen
@@ -32,22 +31,22 @@ public class WorkbookFunctionsLenRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookFunctionsLenRequest
+     * Creates the WorkbookFunctionsLenRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLenRequest instance
+     * @return the WorkbookFunctionsLenRequest instance
      */
-    public IWorkbookFunctionsLenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsLenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsLenRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsLenRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLenRequest instance
+     * @return the WorkbookFunctionsLenRequest instance
      */
-    public IWorkbookFunctionsLenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsLenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsLenRequest request = new WorkbookFunctionsLenRequest(
                 getRequestUrl(),
                 getClient(),

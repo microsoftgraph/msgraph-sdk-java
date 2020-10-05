@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the App Role Assignment Collection With References Request.
  */
-public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollectionRequest<AppRoleAssignmentCollectionResponse, IAppRoleAssignmentCollectionPage> implements IAppRoleAssignmentCollectionWithReferencesRequest {
+public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollectionRequest<AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of AppRoleAssignment
@@ -32,10 +32,10 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
      * @param requestOptions the options for this request
      */
     public AppRoleAssignmentCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, IAppRoleAssignmentCollectionPage.class);
+        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IAppRoleAssignmentCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super AppRoleAssignmentCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class AppRoleAssignmentCollectionWithReferencesRequest extends BaseCollec
         });
     }
 
-    public IAppRoleAssignmentCollectionWithReferencesPage get() throws ClientException {
+    public AppRoleAssignmentCollectionWithReferencesPage get() throws ClientException {
         final AppRoleAssignmentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IAppRoleAssignmentCollectionWithReferencesRequest expand(final String value) {
+    public AppRoleAssignmentCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IAppRoleAssignmentCollectionWithReferencesRequest filter(final String value) {
+    public AppRoleAssignmentCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IAppRoleAssignmentCollectionWithReferencesRequest orderBy(final String value) {
+    public AppRoleAssignmentCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IAppRoleAssignmentCollectionWithReferencesRequest select(final String value) {
+    public AppRoleAssignmentCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IAppRoleAssignmentCollectionWithReferencesRequest top(final int value) {
+    public AppRoleAssignmentCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IAppRoleAssignmentCollectionWithReferencesPage buildFromResponse(final AppRoleAssignmentCollectionResponse response) {
-        final IAppRoleAssignmentCollectionWithReferencesRequestBuilder builder;
+    public AppRoleAssignmentCollectionWithReferencesPage buildFromResponse(final AppRoleAssignmentCollectionResponse response) {
+        final AppRoleAssignmentCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new AppRoleAssignmentCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

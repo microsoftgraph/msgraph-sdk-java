@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeResizedRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeResizedRangeRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Resized Range Request Builder.
  */
-public class WorkbookRangeResizedRangeRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookRangeResizedRangeRequestBuilder {
+public class WorkbookRangeResizedRangeRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeResizedRange
@@ -34,22 +33,22 @@ public class WorkbookRangeResizedRangeRequestBuilder extends BaseFunctionRequest
     }
 
     /**
-     * Creates the IWorkbookRangeResizedRangeRequest
+     * Creates the WorkbookRangeResizedRangeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeResizedRangeRequest instance
+     * @return the WorkbookRangeResizedRangeRequest instance
      */
-    public IWorkbookRangeResizedRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeResizedRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeResizedRangeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeResizedRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeResizedRangeRequest instance
+     * @return the WorkbookRangeResizedRangeRequest instance
      */
-    public IWorkbookRangeResizedRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeResizedRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeResizedRangeRequest request = new WorkbookRangeResizedRangeRequest(
                 getRequestUrl(),
                 getClient(),
@@ -66,27 +65,27 @@ public class WorkbookRangeResizedRangeRequestBuilder extends BaseFunctionRequest
     /**
      * Gets the request builder for WorkbookRangeFormat
      *
-     * @return the IWorkbookRangeFormatRequestBuilder instance
+     * @return the WorkbookRangeFormatRequestBuilder instance
      */
-    public IWorkbookRangeFormatRequestBuilder format() {
+    public WorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeSort
      *
-     * @return the IWorkbookRangeSortRequestBuilder instance
+     * @return the WorkbookRangeSortRequestBuilder instance
      */
-    public IWorkbookRangeSortRequestBuilder sort() {
+    public WorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

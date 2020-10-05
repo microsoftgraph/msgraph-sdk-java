@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.INotebookCopyNotebookRequest;
 import com.microsoft.graph.requests.extensions.NotebookCopyNotebookRequest;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Notebook Copy Notebook Request Builder.
  */
-public class NotebookCopyNotebookRequestBuilder extends BaseActionRequestBuilder implements INotebookCopyNotebookRequestBuilder {
+public class NotebookCopyNotebookRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this NotebookCopyNotebook
@@ -40,22 +39,22 @@ public class NotebookCopyNotebookRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the INotebookCopyNotebookRequest
+     * Creates the NotebookCopyNotebookRequest
      *
      * @param requestOptions the options for the request
-     * @return the INotebookCopyNotebookRequest instance
+     * @return the NotebookCopyNotebookRequest instance
      */
-    public INotebookCopyNotebookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public NotebookCopyNotebookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the INotebookCopyNotebookRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the NotebookCopyNotebookRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the INotebookCopyNotebookRequest instance
+     * @return the NotebookCopyNotebookRequest instance
      */
-    public INotebookCopyNotebookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotebookCopyNotebookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         NotebookCopyNotebookRequest request = new NotebookCopyNotebookRequest(
                 getRequestUrl(),
                 getClient(),

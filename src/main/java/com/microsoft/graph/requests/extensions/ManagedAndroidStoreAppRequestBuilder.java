@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Android Store App Request Builder.
  */
-public class ManagedAndroidStoreAppRequestBuilder extends BaseRequestBuilder implements IManagedAndroidStoreAppRequestBuilder {
+public class ManagedAndroidStoreAppRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedAndroidStoreApp
@@ -35,9 +35,9 @@ public class ManagedAndroidStoreAppRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAndroidStoreAppRequest instance
+     * @return the ManagedAndroidStoreAppRequest instance
      */
-    public IManagedAndroidStoreAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAndroidStoreAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,25 +45,25 @@ public class ManagedAndroidStoreAppRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAndroidStoreAppRequest instance
+     * @return the ManagedAndroidStoreAppRequest instance
      */
-    public IManagedAndroidStoreAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAndroidStoreAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedAndroidStoreAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
+    public MobileAppAssignmentCollectionRequestBuilder assignments() {
         return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
+    public MobileAppAssignmentRequestBuilder assignments(final String id) {
         return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public IMobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+    public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
-    public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
+    public MobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
 }

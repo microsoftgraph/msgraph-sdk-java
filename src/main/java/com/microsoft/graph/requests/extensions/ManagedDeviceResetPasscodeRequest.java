@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceResetPasscodeRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceResetPasscodeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Reset Passcode Request.
  */
-public class ManagedDeviceResetPasscodeRequest extends BaseRequest implements IManagedDeviceResetPasscodeRequest {
+public class ManagedDeviceResetPasscodeRequest extends BaseRequest {
 
     /**
      * The request for this ManagedDeviceResetPasscode

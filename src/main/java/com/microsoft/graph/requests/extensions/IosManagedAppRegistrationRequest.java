@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Managed App Registration Request.
  */
-public class IosManagedAppRegistrationRequest extends BaseRequest implements IIosManagedAppRegistrationRequest {
+public class IosManagedAppRegistrationRequest extends BaseRequest {
 	
     /**
      * The request for the IosManagedAppRegistration
@@ -138,7 +138,7 @@ public class IosManagedAppRegistrationRequest extends BaseRequest implements IIo
      * @param value the select clause
      * @return the updated request
      */
-     public IIosManagedAppRegistrationRequest select(final String value) {
+     public IosManagedAppRegistrationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (IosManagedAppRegistrationRequest)this;
      }
@@ -149,7 +149,7 @@ public class IosManagedAppRegistrationRequest extends BaseRequest implements IIo
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosManagedAppRegistrationRequest expand(final String value) {
+     public IosManagedAppRegistrationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (IosManagedAppRegistrationRequest)this;
      }

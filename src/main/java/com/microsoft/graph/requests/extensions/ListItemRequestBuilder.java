@@ -9,15 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IListItemVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemVersionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.FieldValueSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -29,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the List Item Request Builder.
  */
-public class ListItemRequestBuilder extends BaseRequestBuilder implements IListItemRequestBuilder {
+public class ListItemRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ListItem
@@ -46,9 +41,9 @@ public class ListItemRequestBuilder extends BaseRequestBuilder implements IListI
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IListItemRequest instance
+     * @return the ListItemRequest instance
      */
-    public IListItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ListItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,9 +51,9 @@ public class ListItemRequestBuilder extends BaseRequestBuilder implements IListI
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IListItemRequest instance
+     * @return the ListItemRequest instance
      */
-    public IListItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ListItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -67,60 +62,60 @@ public class ListItemRequestBuilder extends BaseRequestBuilder implements IListI
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder createdByUser() {
+    public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+    public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     /**
      * Gets the request builder for ItemAnalytics
      *
-     * @return the IItemAnalyticsWithReferenceRequestBuilder instance
+     * @return the ItemAnalyticsWithReferenceRequestBuilder instance
      */
-    public IItemAnalyticsWithReferenceRequestBuilder analytics() {
+    public ItemAnalyticsWithReferenceRequestBuilder analytics() {
         return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
 
     /**
      * Gets the request builder for DriveItem
      *
-     * @return the IDriveItemRequestBuilder instance
+     * @return the DriveItemRequestBuilder instance
      */
-    public IDriveItemRequestBuilder driveItem() {
+    public DriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
 
     /**
      * Gets the request builder for FieldValueSet
      *
-     * @return the IFieldValueSetRequestBuilder instance
+     * @return the FieldValueSetRequestBuilder instance
      */
-    public IFieldValueSetRequestBuilder fields() {
+    public FieldValueSetRequestBuilder fields() {
         return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
-    public IListItemVersionCollectionRequestBuilder versions() {
+    public ListItemVersionCollectionRequestBuilder versions() {
         return new ListItemVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
     }
 
-    public IListItemVersionRequestBuilder versions(final String id) {
+    public ListItemVersionRequestBuilder versions(final String id) {
         return new ListItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
     }
 
-    public IListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
+    public ListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
         return new ListItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
     }
 
-    public IListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {
+    public ListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {
         return new ListItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);
     }
 }

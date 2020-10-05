@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.TeamsApp;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITeamsAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppCollectionRequest;
+import com.microsoft.graph.requests.extensions.TeamsAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams App Collection Request Builder.
  */
-public class TeamsAppCollectionRequestBuilder extends BaseRequestBuilder implements ITeamsAppCollectionRequestBuilder {
+public class TeamsAppCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of AppCatalogs
@@ -42,7 +42,7 @@ public class TeamsAppCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamsAppCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsAppCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class TeamsAppCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamsAppCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsAppCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITeamsAppRequestBuilder byId(final String id) {
+    public TeamsAppRequestBuilder byId(final String id) {
         return new TeamsAppRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

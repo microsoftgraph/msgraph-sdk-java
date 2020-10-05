@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsT_Inv_2TRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsT_Inv_2TRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions T_Inv_2TRequest Builder.
  */
-public class WorkbookFunctionsT_Inv_2TRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsT_Inv_2TRequestBuilder {
+public class WorkbookFunctionsT_Inv_2TRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsT_Inv_2T
@@ -34,22 +33,22 @@ public class WorkbookFunctionsT_Inv_2TRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsT_Inv_2TRequest
+     * Creates the WorkbookFunctionsT_Inv_2TRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsT_Inv_2TRequest instance
+     * @return the WorkbookFunctionsT_Inv_2TRequest instance
      */
-    public IWorkbookFunctionsT_Inv_2TRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsT_Inv_2TRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsT_Inv_2TRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsT_Inv_2TRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsT_Inv_2TRequest instance
+     * @return the WorkbookFunctionsT_Inv_2TRequest instance
      */
-    public IWorkbookFunctionsT_Inv_2TRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsT_Inv_2TRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsT_Inv_2TRequest request = new WorkbookFunctionsT_Inv_2TRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsWeekNumRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsWeekNumRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Week Num Request Builder.
  */
-public class WorkbookFunctionsWeekNumRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsWeekNumRequestBuilder {
+public class WorkbookFunctionsWeekNumRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsWeekNum
@@ -34,22 +33,22 @@ public class WorkbookFunctionsWeekNumRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsWeekNumRequest
+     * Creates the WorkbookFunctionsWeekNumRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsWeekNumRequest instance
+     * @return the WorkbookFunctionsWeekNumRequest instance
      */
-    public IWorkbookFunctionsWeekNumRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsWeekNumRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsWeekNumRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsWeekNumRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsWeekNumRequest instance
+     * @return the WorkbookFunctionsWeekNumRequest instance
      */
-    public IWorkbookFunctionsWeekNumRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsWeekNumRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsWeekNumRequest request = new WorkbookFunctionsWeekNumRequest(
                 getRequestUrl(),
                 getClient(),

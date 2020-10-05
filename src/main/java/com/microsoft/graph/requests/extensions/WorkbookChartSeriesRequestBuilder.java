@@ -8,11 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartSeries;
-import com.microsoft.graph.requests.extensions.IWorkbookChartPointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartPointRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -24,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Series Request Builder.
  */
-public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder implements IWorkbookChartSeriesRequestBuilder {
+public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookChartSeries
@@ -41,9 +38,9 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartSeriesRequest instance
+     * @return the WorkbookChartSeriesRequest instance
      */
-    public IWorkbookChartSeriesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartSeriesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,9 +48,9 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartSeriesRequest instance
+     * @return the WorkbookChartSeriesRequest instance
      */
-    public IWorkbookChartSeriesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSeriesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartSeriesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -62,16 +59,16 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder implem
     /**
      * Gets the request builder for WorkbookChartSeriesFormat
      *
-     * @return the IWorkbookChartSeriesFormatRequestBuilder instance
+     * @return the WorkbookChartSeriesFormatRequestBuilder instance
      */
-    public IWorkbookChartSeriesFormatRequestBuilder format() {
+    public WorkbookChartSeriesFormatRequestBuilder format() {
         return new WorkbookChartSeriesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
-    public IWorkbookChartPointCollectionRequestBuilder points() {
+    public WorkbookChartPointCollectionRequestBuilder points() {
         return new WorkbookChartPointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("points"), getClient(), null);
     }
 
-    public IWorkbookChartPointRequestBuilder points(final String id) {
+    public WorkbookChartPointRequestBuilder points(final String id) {
         return new WorkbookChartPointRequestBuilder(getRequestUrlWithAdditionalSegment("points") + "/" + id, getClient(), null);
     }
 }

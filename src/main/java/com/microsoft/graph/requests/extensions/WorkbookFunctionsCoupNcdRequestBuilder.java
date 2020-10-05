@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCoupNcdRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsCoupNcdRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Coup Ncd Request Builder.
  */
-public class WorkbookFunctionsCoupNcdRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsCoupNcdRequestBuilder {
+public class WorkbookFunctionsCoupNcdRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsCoupNcd
@@ -38,22 +37,22 @@ public class WorkbookFunctionsCoupNcdRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsCoupNcdRequest
+     * Creates the WorkbookFunctionsCoupNcdRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCoupNcdRequest instance
+     * @return the WorkbookFunctionsCoupNcdRequest instance
      */
-    public IWorkbookFunctionsCoupNcdRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsCoupNcdRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsCoupNcdRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsCoupNcdRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCoupNcdRequest instance
+     * @return the WorkbookFunctionsCoupNcdRequest instance
      */
-    public IWorkbookFunctionsCoupNcdRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsCoupNcdRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCoupNcdRequest request = new WorkbookFunctionsCoupNcdRequest(
                 getRequestUrl(),
                 getClient(),

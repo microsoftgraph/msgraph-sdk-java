@@ -14,8 +14,8 @@ import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IApplicationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.ApplicationCollectionResponse;
 import com.microsoft.graph.models.extensions.Application;
 import com.google.gson.JsonObject;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Application Collection With References Page.
  */
-public class ApplicationCollectionWithReferencesPage extends BaseCollectionPage<Application, IApplicationCollectionWithReferencesRequestBuilder> implements IApplicationCollectionWithReferencesPage {
+public class ApplicationCollectionWithReferencesPage extends BaseCollectionPage<Application, ApplicationCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for Application
@@ -36,7 +36,7 @@ public class ApplicationCollectionWithReferencesPage extends BaseCollectionPage<
      * @param response the serialized ApplicationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ApplicationCollectionWithReferencesPage(final ApplicationCollectionResponse response, final IApplicationCollectionWithReferencesRequestBuilder builder) {
+    public ApplicationCollectionWithReferencesPage(final ApplicationCollectionResponse response, final ApplicationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

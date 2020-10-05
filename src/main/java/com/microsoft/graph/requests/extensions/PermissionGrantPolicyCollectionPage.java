@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
-import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionRe
 /**
  * The class for the Permission Grant Policy Collection Page.
  */
-public class PermissionGrantPolicyCollectionPage extends BaseCollectionPage<PermissionGrantPolicy, IPermissionGrantPolicyCollectionRequestBuilder> implements IPermissionGrantPolicyCollectionPage {
+public class PermissionGrantPolicyCollectionPage extends BaseCollectionPage<PermissionGrantPolicy, PermissionGrantPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for PermissionGrantPolicy
@@ -22,7 +22,7 @@ public class PermissionGrantPolicyCollectionPage extends BaseCollectionPage<Perm
      * @param response the serialized PermissionGrantPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PermissionGrantPolicyCollectionPage(final PermissionGrantPolicyCollectionResponse response, final IPermissionGrantPolicyCollectionRequestBuilder builder) {
+    public PermissionGrantPolicyCollectionPage(final PermissionGrantPolicyCollectionResponse response, final PermissionGrantPolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

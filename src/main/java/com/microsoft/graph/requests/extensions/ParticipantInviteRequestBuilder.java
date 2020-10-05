@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IParticipantInviteRequest;
 import com.microsoft.graph.requests.extensions.ParticipantInviteRequest;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.models.extensions.InviteParticipantsOperation;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Participant Invite Request Builder.
  */
-public class ParticipantInviteRequestBuilder extends BaseActionRequestBuilder implements IParticipantInviteRequestBuilder {
+public class ParticipantInviteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ParticipantInvite
@@ -35,22 +34,22 @@ public class ParticipantInviteRequestBuilder extends BaseActionRequestBuilder im
     }
 
     /**
-     * Creates the IParticipantInviteRequest
+     * Creates the ParticipantInviteRequest
      *
      * @param requestOptions the options for the request
-     * @return the IParticipantInviteRequest instance
+     * @return the ParticipantInviteRequest instance
      */
-    public IParticipantInviteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ParticipantInviteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IParticipantInviteRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ParticipantInviteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IParticipantInviteRequest instance
+     * @return the ParticipantInviteRequest instance
      */
-    public IParticipantInviteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ParticipantInviteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ParticipantInviteRequest request = new ParticipantInviteRequest(
                 getRequestUrl(),
                 getClient(),

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Mobile App Configuration Device Status Collection Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder extends BaseRequestBuilder implements IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ManagedDeviceMobileAppConfiguration
@@ -42,7 +42,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder byId(final String id) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder byId(final String id) {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

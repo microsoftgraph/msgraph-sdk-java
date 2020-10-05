@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InferenceClassification;
-import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideRequestBuilder;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Inference Classification Request.
  */
-public class InferenceClassificationRequest extends BaseRequest implements IInferenceClassificationRequest {
+public class InferenceClassificationRequest extends BaseRequest {
 	
     /**
      * The request for the InferenceClassification
@@ -142,7 +140,7 @@ public class InferenceClassificationRequest extends BaseRequest implements IInfe
      * @param value the select clause
      * @return the updated request
      */
-     public IInferenceClassificationRequest select(final String value) {
+     public InferenceClassificationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (InferenceClassificationRequest)this;
      }
@@ -153,7 +151,7 @@ public class InferenceClassificationRequest extends BaseRequest implements IInfe
      * @param value the expand clause
      * @return the updated request
      */
-     public IInferenceClassificationRequest expand(final String value) {
+     public InferenceClassificationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (InferenceClassificationRequest)this;
      }

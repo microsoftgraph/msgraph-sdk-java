@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Mobile App Category Collection With References Request.
  */
-public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollectionRequest<MobileAppCategoryCollectionResponse, IMobileAppCategoryCollectionPage> implements IMobileAppCategoryCollectionWithReferencesRequest {
+public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollectionRequest<MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionPage> {
 
     /**
      * The request builder for this collection of MobileAppCategory
@@ -32,10 +32,10 @@ public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollec
      * @param requestOptions the options for this request
      */
     public MobileAppCategoryCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, IMobileAppCategoryCollectionPage.class);
+        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IMobileAppCategoryCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super MobileAppCategoryCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class MobileAppCategoryCollectionWithReferencesRequest extends BaseCollec
         });
     }
 
-    public IMobileAppCategoryCollectionWithReferencesPage get() throws ClientException {
+    public MobileAppCategoryCollectionWithReferencesPage get() throws ClientException {
         final MobileAppCategoryCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IMobileAppCategoryCollectionWithReferencesRequest expand(final String value) {
+    public MobileAppCategoryCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IMobileAppCategoryCollectionWithReferencesRequest filter(final String value) {
+    public MobileAppCategoryCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IMobileAppCategoryCollectionWithReferencesRequest orderBy(final String value) {
+    public MobileAppCategoryCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IMobileAppCategoryCollectionWithReferencesRequest select(final String value) {
+    public MobileAppCategoryCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IMobileAppCategoryCollectionWithReferencesRequest top(final int value) {
+    public MobileAppCategoryCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IMobileAppCategoryCollectionWithReferencesPage buildFromResponse(final MobileAppCategoryCollectionResponse response) {
-        final IMobileAppCategoryCollectionWithReferencesRequestBuilder builder;
+    public MobileAppCategoryCollectionWithReferencesPage buildFromResponse(final MobileAppCategoryCollectionResponse response) {
+        final MobileAppCategoryCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new MobileAppCategoryCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

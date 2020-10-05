@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNumberValueRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsNumberValueRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Number Value Request Builder.
  */
-public class WorkbookFunctionsNumberValueRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsNumberValueRequestBuilder {
+public class WorkbookFunctionsNumberValueRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsNumberValue
@@ -36,22 +35,22 @@ public class WorkbookFunctionsNumberValueRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IWorkbookFunctionsNumberValueRequest
+     * Creates the WorkbookFunctionsNumberValueRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNumberValueRequest instance
+     * @return the WorkbookFunctionsNumberValueRequest instance
      */
-    public IWorkbookFunctionsNumberValueRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsNumberValueRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsNumberValueRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsNumberValueRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNumberValueRequest instance
+     * @return the WorkbookFunctionsNumberValueRequest instance
      */
-    public IWorkbookFunctionsNumberValueRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsNumberValueRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsNumberValueRequest request = new WorkbookFunctionsNumberValueRequest(
                 getRequestUrl(),
                 getClient(),

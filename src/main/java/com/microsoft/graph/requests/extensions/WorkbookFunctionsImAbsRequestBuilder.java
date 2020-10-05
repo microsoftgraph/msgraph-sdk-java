@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImAbsRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImAbsRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Im Abs Request Builder.
  */
-public class WorkbookFunctionsImAbsRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImAbsRequestBuilder {
+public class WorkbookFunctionsImAbsRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImAbs
@@ -32,22 +31,22 @@ public class WorkbookFunctionsImAbsRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsImAbsRequest
+     * Creates the WorkbookFunctionsImAbsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImAbsRequest instance
+     * @return the WorkbookFunctionsImAbsRequest instance
      */
-    public IWorkbookFunctionsImAbsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImAbsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImAbsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImAbsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImAbsRequest instance
+     * @return the WorkbookFunctionsImAbsRequest instance
      */
-    public IWorkbookFunctionsImAbsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImAbsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImAbsRequest request = new WorkbookFunctionsImAbsRequest(
                 getRequestUrl(),
                 getClient(),

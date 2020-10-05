@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DetectedApp;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Detected App Request.
  */
-public class DetectedAppRequest extends BaseRequest implements IDetectedAppRequest {
+public class DetectedAppRequest extends BaseRequest {
 	
     /**
      * The request for the DetectedApp
@@ -142,7 +140,7 @@ public class DetectedAppRequest extends BaseRequest implements IDetectedAppReque
      * @param value the select clause
      * @return the updated request
      */
-     public IDetectedAppRequest select(final String value) {
+     public DetectedAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DetectedAppRequest)this;
      }
@@ -153,7 +151,7 @@ public class DetectedAppRequest extends BaseRequest implements IDetectedAppReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IDetectedAppRequest expand(final String value) {
+     public DetectedAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DetectedAppRequest)this;
      }

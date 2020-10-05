@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Audit Request.
  */
-public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAuditRequest {
+public class DirectoryAuditRequest extends BaseRequest {
 	
     /**
      * The request for the DirectoryAudit
@@ -138,7 +138,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @param value the select clause
      * @return the updated request
      */
-     public IDirectoryAuditRequest select(final String value) {
+     public DirectoryAuditRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DirectoryAuditRequest)this;
      }
@@ -149,7 +149,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @param value the expand clause
      * @return the updated request
      */
-     public IDirectoryAuditRequest expand(final String value) {
+     public DirectoryAuditRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DirectoryAuditRequest)this;
      }

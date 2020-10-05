@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Entity With Reference Request Builder.
  */
-public class EntityWithReferenceRequestBuilder extends BaseRequestBuilder implements IEntityWithReferenceRequestBuilder {
+public class EntityWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Entity
@@ -36,9 +36,9 @@ public class EntityWithReferenceRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEntityWithReferenceRequest instance
+     * @return the EntityWithReferenceRequest instance
      */
-    public IEntityWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EntityWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,13 +46,13 @@ public class EntityWithReferenceRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IEntityWithReferenceRequest instance
+     * @return the EntityWithReferenceRequest instance
      */
-    public IEntityWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EntityWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EntityWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IEntityReferenceRequestBuilder reference(){
+    public EntityReferenceRequestBuilder reference(){
         return new EntityReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

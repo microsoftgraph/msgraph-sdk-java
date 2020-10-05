@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ActivityHistoryItem;
-import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserActivityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Activity History Item Request.
  */
-public class ActivityHistoryItemRequest extends BaseRequest implements IActivityHistoryItemRequest {
+public class ActivityHistoryItemRequest extends BaseRequest {
 	
     /**
      * The request for the ActivityHistoryItem
@@ -140,7 +139,7 @@ public class ActivityHistoryItemRequest extends BaseRequest implements IActivity
      * @param value the select clause
      * @return the updated request
      */
-     public IActivityHistoryItemRequest select(final String value) {
+     public ActivityHistoryItemRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ActivityHistoryItemRequest)this;
      }
@@ -151,7 +150,7 @@ public class ActivityHistoryItemRequest extends BaseRequest implements IActivity
      * @param value the expand clause
      * @return the updated request
      */
-     public IActivityHistoryItemRequest expand(final String value) {
+     public ActivityHistoryItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ActivityHistoryItemRequest)this;
      }

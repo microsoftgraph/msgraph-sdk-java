@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.GroupSetting;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IGroupSettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupSettingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupSettingCollectionRequest;
+import com.microsoft.graph.requests.extensions.GroupSettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupSettingRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupSettingCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Setting Collection Request Builder.
  */
-public class GroupSettingCollectionRequestBuilder extends BaseRequestBuilder implements IGroupSettingCollectionRequestBuilder {
+public class GroupSettingCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of GroupSetting
@@ -41,7 +41,7 @@ public class GroupSettingCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IGroupSettingCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupSettingCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class GroupSettingCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IGroupSettingCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupSettingCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupSettingCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IGroupSettingRequestBuilder byId(final String id) {
+    public GroupSettingRequestBuilder byId(final String id) {
         return new GroupSettingRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

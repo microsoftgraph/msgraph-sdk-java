@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnenotePagePreviewRequest;
 import com.microsoft.graph.requests.extensions.OnenotePagePreviewRequest;
 import com.microsoft.graph.models.extensions.OnenotePagePreview;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Onenote Page Preview Request Builder.
  */
-public class OnenotePagePreviewRequestBuilder extends BaseFunctionRequestBuilder implements IOnenotePagePreviewRequestBuilder {
+public class OnenotePagePreviewRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this OnenotePagePreview
@@ -30,22 +29,22 @@ public class OnenotePagePreviewRequestBuilder extends BaseFunctionRequestBuilder
     }
 
     /**
-     * Creates the IOnenotePagePreviewRequest
+     * Creates the OnenotePagePreviewRequest
      *
      * @param requestOptions the options for the request
-     * @return the IOnenotePagePreviewRequest instance
+     * @return the OnenotePagePreviewRequest instance
      */
-    public IOnenotePagePreviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenotePagePreviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IOnenotePagePreviewRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the OnenotePagePreviewRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IOnenotePagePreviewRequest instance
+     * @return the OnenotePagePreviewRequest instance
      */
-    public IOnenotePagePreviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenotePagePreviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         OnenotePagePreviewRequest request = new OnenotePagePreviewRequest(
                 getRequestUrl(),
                 getClient(),

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Device Mobile App Configuration Assignment Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends BaseRequestBuilder implements IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedDeviceMobileAppConfigurationAssignment
@@ -35,9 +35,9 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationAssignmentRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationAssignmentRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationAssignmentRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationAssignmentRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IScheduleChangeRequestApproveRequest;
 import com.microsoft.graph.requests.extensions.ScheduleChangeRequestApproveRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Schedule Change Request Approve Request Builder.
  */
-public class ScheduleChangeRequestApproveRequestBuilder extends BaseActionRequestBuilder implements IScheduleChangeRequestApproveRequestBuilder {
+public class ScheduleChangeRequestApproveRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ScheduleChangeRequestApprove
@@ -32,22 +31,22 @@ public class ScheduleChangeRequestApproveRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IScheduleChangeRequestApproveRequest
+     * Creates the ScheduleChangeRequestApproveRequest
      *
      * @param requestOptions the options for the request
-     * @return the IScheduleChangeRequestApproveRequest instance
+     * @return the ScheduleChangeRequestApproveRequest instance
      */
-    public IScheduleChangeRequestApproveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ScheduleChangeRequestApproveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IScheduleChangeRequestApproveRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ScheduleChangeRequestApproveRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IScheduleChangeRequestApproveRequest instance
+     * @return the ScheduleChangeRequestApproveRequest instance
      */
-    public IScheduleChangeRequestApproveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ScheduleChangeRequestApproveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ScheduleChangeRequestApproveRequest request = new ScheduleChangeRequestApproveRequest(
                 getRequestUrl(),
                 getClient(),

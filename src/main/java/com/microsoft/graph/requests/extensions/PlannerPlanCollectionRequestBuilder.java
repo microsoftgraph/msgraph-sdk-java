@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.PlannerPlan;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequest;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Planner Plan Collection Request Builder.
  */
-public class PlannerPlanCollectionRequestBuilder extends BaseRequestBuilder implements IPlannerPlanCollectionRequestBuilder {
+public class PlannerPlanCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Planner
@@ -42,7 +42,7 @@ public class PlannerPlanCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPlannerPlanCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlannerPlanCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class PlannerPlanCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPlannerPlanCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerPlanCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlannerPlanCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPlannerPlanRequestBuilder byId(final String id) {
+    public PlannerPlanRequestBuilder byId(final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

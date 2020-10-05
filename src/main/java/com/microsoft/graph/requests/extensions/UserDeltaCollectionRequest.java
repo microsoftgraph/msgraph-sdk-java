@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.User;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.UserDeltaCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the User Delta Collection Request.
  */
-public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaCollectionResponse, IUserDeltaCollectionPage> implements IUserDeltaCollectionRequest {
+public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaCollectionResponse, UserDeltaCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaC
      * @param requestOptions the options for this request
      */
     public UserDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserDeltaCollectionResponse.class, IUserDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, UserDeltaCollectionResponse.class, UserDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IUserDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super UserDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaC
         });
     }
 
-    public IUserDeltaCollectionPage get() throws ClientException {
+    public UserDeltaCollectionPage get() throws ClientException {
         final UserDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IUserDeltaCollectionPage buildFromResponse(final UserDeltaCollectionResponse response) {
-        final IUserDeltaCollectionRequestBuilder builder;
+    public UserDeltaCollectionPage buildFromResponse(final UserDeltaCollectionResponse response) {
+        final UserDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new UserDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IUserDeltaCollectionPage page = new UserDeltaCollectionPage(response, builder);
+        final UserDeltaCollectionPage page = new UserDeltaCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaC
      * @param value the select clause
      * @return the updated request
      */
-    public IUserDeltaCollectionRequest select(final String value) {
+    public UserDeltaCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IUserDeltaCollectionRequest)this;
+        return (UserDeltaCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaC
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IUserDeltaCollectionRequest top(final int value) {
+    public UserDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IUserDeltaCollectionRequest)this;
+        return (UserDeltaCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaC
      * @param value the expand clause
      * @return the updated request
      */
-    public IUserDeltaCollectionRequest expand(final String value) {
+    public UserDeltaCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IUserDeltaCollectionRequest)this;
+        return (UserDeltaCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaC
      * @param value the filter clause
      * @return the updated request
      */
-    public IUserDeltaCollectionRequest filter(final String value) {
+    public UserDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IUserDeltaCollectionRequest)this;
+        return (UserDeltaCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaC
      * @param value the order by clause
      * @return the updated request
      */
-    public IUserDeltaCollectionRequest orderBy(final String value) {
+    public UserDeltaCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IUserDeltaCollectionRequest)this;
+        return (UserDeltaCollectionRequest)this;
     }
 
 }

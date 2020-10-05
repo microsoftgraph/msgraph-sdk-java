@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Event;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.EventCollectionResponse;
 /**
  * The class for the Event Collection Page.
  */
-public class EventCollectionPage extends BaseCollectionPage<Event, IEventCollectionRequestBuilder> implements IEventCollectionPage {
+public class EventCollectionPage extends BaseCollectionPage<Event, EventCollectionRequestBuilder> {
 
     /**
      * A collection page for Event
@@ -22,7 +22,7 @@ public class EventCollectionPage extends BaseCollectionPage<Event, IEventCollect
      * @param response the serialized EventCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EventCollectionPage(final EventCollectionResponse response, final IEventCollectionRequestBuilder builder) {
+    public EventCollectionPage(final EventCollectionResponse response, final EventCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

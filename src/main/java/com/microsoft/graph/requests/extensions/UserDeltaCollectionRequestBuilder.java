@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.User;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserDeltaCollectionRequest;
+import com.microsoft.graph.requests.extensions.UserDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserDeltaCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the User Delta Collection Request Builder.
  */
-public class UserDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IUserDeltaCollectionRequestBuilder {
+public class UserDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -42,7 +41,7 @@ public class UserDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class UserDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserDeltaCollectionRequest request = new UserDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

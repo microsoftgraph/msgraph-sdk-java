@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.ContactFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IContactFolderDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactFolderDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactFolderDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.ContactFolderDeltaCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Contact Folder Delta Collection Page.
  */
-public class ContactFolderDeltaCollectionPage extends BaseCollectionPage<ContactFolder, IContactFolderDeltaCollectionRequestBuilder> implements IContactFolderDeltaCollectionPage {
+public class ContactFolderDeltaCollectionPage extends BaseCollectionPage<ContactFolder, ContactFolderDeltaCollectionRequestBuilder> {
 
     /**
      * The opaque link to query delta after the 
@@ -39,7 +39,7 @@ public class ContactFolderDeltaCollectionPage extends BaseCollectionPage<Contact
      * @param response The serialized ContactFolderDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public ContactFolderDeltaCollectionPage(final ContactFolderDeltaCollectionResponse response, final IContactFolderDeltaCollectionRequestBuilder builder) {
+    public ContactFolderDeltaCollectionPage(final ContactFolderDeltaCollectionResponse response, final ContactFolderDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {

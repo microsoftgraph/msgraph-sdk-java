@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemFollowRequest;
 import com.microsoft.graph.requests.extensions.DriveItemFollowRequest;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Follow Request Builder.
  */
-public class DriveItemFollowRequestBuilder extends BaseActionRequestBuilder implements IDriveItemFollowRequestBuilder {
+public class DriveItemFollowRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DriveItemFollow
@@ -30,22 +29,22 @@ public class DriveItemFollowRequestBuilder extends BaseActionRequestBuilder impl
     }
 
     /**
-     * Creates the IDriveItemFollowRequest
+     * Creates the DriveItemFollowRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemFollowRequest instance
+     * @return the DriveItemFollowRequest instance
      */
-    public IDriveItemFollowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemFollowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDriveItemFollowRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DriveItemFollowRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemFollowRequest instance
+     * @return the DriveItemFollowRequest instance
      */
-    public IDriveItemFollowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemFollowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemFollowRequest request = new DriveItemFollowRequest(
                 getRequestUrl(),
                 getClient(),

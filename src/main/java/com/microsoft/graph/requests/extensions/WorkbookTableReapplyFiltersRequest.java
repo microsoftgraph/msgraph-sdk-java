@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableReapplyFiltersRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableReapplyFiltersRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Reapply Filters Request.
  */
-public class WorkbookTableReapplyFiltersRequest extends BaseRequest implements IWorkbookTableReapplyFiltersRequest {
+public class WorkbookTableReapplyFiltersRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookTableReapplyFilters

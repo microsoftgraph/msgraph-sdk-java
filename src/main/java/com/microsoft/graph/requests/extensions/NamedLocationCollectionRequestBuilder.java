@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.NamedLocation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INamedLocationRequestBuilder;
-import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequest;
+import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.NamedLocationRequestBuilder;
+import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Named Location Collection Request Builder.
  */
-public class NamedLocationCollectionRequestBuilder extends BaseRequestBuilder implements INamedLocationCollectionRequestBuilder {
+public class NamedLocationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ConditionalAccessRoot
@@ -42,7 +42,7 @@ public class NamedLocationCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public INamedLocationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public NamedLocationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class NamedLocationCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public INamedLocationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NamedLocationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new NamedLocationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public INamedLocationRequestBuilder byId(final String id) {
+    public NamedLocationRequestBuilder byId(final String id) {
         return new NamedLocationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

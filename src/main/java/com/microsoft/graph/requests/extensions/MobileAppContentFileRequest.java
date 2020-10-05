@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Content File Request.
  */
-public class MobileAppContentFileRequest extends BaseRequest implements IMobileAppContentFileRequest {
+public class MobileAppContentFileRequest extends BaseRequest {
 	
     /**
      * The request for the MobileAppContentFile
@@ -139,7 +139,7 @@ public class MobileAppContentFileRequest extends BaseRequest implements IMobileA
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileAppContentFileRequest select(final String value) {
+     public MobileAppContentFileRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MobileAppContentFileRequest)this;
      }
@@ -150,7 +150,7 @@ public class MobileAppContentFileRequest extends BaseRequest implements IMobileA
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileAppContentFileRequest expand(final String value) {
+     public MobileAppContentFileRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MobileAppContentFileRequest)this;
      }

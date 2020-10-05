@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.Alert;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IAlertCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAlertRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAlertCollectionRequest;
+import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AlertRequestBuilder;
+import com.microsoft.graph.requests.extensions.AlertCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Alert Collection Request Builder.
  */
-public class AlertCollectionRequestBuilder extends BaseRequestBuilder implements IAlertCollectionRequestBuilder {
+public class AlertCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Security
@@ -42,7 +42,7 @@ public class AlertCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAlertCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AlertCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class AlertCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAlertCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AlertCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AlertCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IAlertRequestBuilder byId(final String id) {
+    public AlertRequestBuilder byId(final String id) {
         return new AlertRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

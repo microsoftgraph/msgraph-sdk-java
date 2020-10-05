@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsNARequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsNARequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Is NARequest Builder.
  */
-public class WorkbookFunctionsIsNARequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsIsNARequestBuilder {
+public class WorkbookFunctionsIsNARequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsIsNA
@@ -32,22 +31,22 @@ public class WorkbookFunctionsIsNARequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsNARequest
+     * Creates the WorkbookFunctionsIsNARequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsNARequest instance
+     * @return the WorkbookFunctionsIsNARequest instance
      */
-    public IWorkbookFunctionsIsNARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsIsNARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsNARequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsIsNARequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsNARequest instance
+     * @return the WorkbookFunctionsIsNARequest instance
      */
-    public IWorkbookFunctionsIsNARequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsIsNARequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIsNARequest request = new WorkbookFunctionsIsNARequest(
                 getRequestUrl(),
                 getClient(),

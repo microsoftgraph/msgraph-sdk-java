@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeUnmergeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeUnmergeRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Unmerge Request Builder.
  */
-public class WorkbookRangeUnmergeRequestBuilder extends BaseActionRequestBuilder implements IWorkbookRangeUnmergeRequestBuilder {
+public class WorkbookRangeUnmergeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeUnmerge
@@ -30,22 +29,22 @@ public class WorkbookRangeUnmergeRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookRangeUnmergeRequest
+     * Creates the WorkbookRangeUnmergeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeUnmergeRequest instance
+     * @return the WorkbookRangeUnmergeRequest instance
      */
-    public IWorkbookRangeUnmergeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeUnmergeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeUnmergeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeUnmergeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeUnmergeRequest instance
+     * @return the WorkbookRangeUnmergeRequest instance
      */
-    public IWorkbookRangeUnmergeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeUnmergeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeUnmergeRequest request = new WorkbookRangeUnmergeRequest(
                 getRequestUrl(),
                 getClient(),

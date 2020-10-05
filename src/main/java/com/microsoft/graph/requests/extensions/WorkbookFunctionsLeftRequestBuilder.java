@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLeftRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsLeftRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Left Request Builder.
  */
-public class WorkbookFunctionsLeftRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsLeftRequestBuilder {
+public class WorkbookFunctionsLeftRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsLeft
@@ -34,22 +33,22 @@ public class WorkbookFunctionsLeftRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsLeftRequest
+     * Creates the WorkbookFunctionsLeftRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLeftRequest instance
+     * @return the WorkbookFunctionsLeftRequest instance
      */
-    public IWorkbookFunctionsLeftRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsLeftRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsLeftRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsLeftRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLeftRequest instance
+     * @return the WorkbookFunctionsLeftRequest instance
      */
-    public IWorkbookFunctionsLeftRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsLeftRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsLeftRequest request = new WorkbookFunctionsLeftRequest(
                 getRequestUrl(),
                 getClient(),

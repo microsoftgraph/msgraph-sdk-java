@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Registration Request.
  */
-public class ManagedAppRegistrationRequest extends BaseRequest implements IManagedAppRegistrationRequest {
+public class ManagedAppRegistrationRequest extends BaseRequest {
 	
     /**
      * The request for the ManagedAppRegistration
@@ -161,7 +157,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedAppRegistrationRequest select(final String value) {
+     public ManagedAppRegistrationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedAppRegistrationRequest)this;
      }
@@ -172,7 +168,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedAppRegistrationRequest expand(final String value) {
+     public ManagedAppRegistrationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedAppRegistrationRequest)this;
      }

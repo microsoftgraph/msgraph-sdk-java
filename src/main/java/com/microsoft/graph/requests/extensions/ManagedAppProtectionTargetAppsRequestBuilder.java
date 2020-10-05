@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedAppProtectionTargetAppsRequest;
 import com.microsoft.graph.requests.extensions.ManagedAppProtectionTargetAppsRequest;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed App Protection Target Apps Request Builder.
  */
-public class ManagedAppProtectionTargetAppsRequestBuilder extends BaseActionRequestBuilder implements IManagedAppProtectionTargetAppsRequestBuilder {
+public class ManagedAppProtectionTargetAppsRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedAppProtectionTargetApps
@@ -32,22 +31,22 @@ public class ManagedAppProtectionTargetAppsRequestBuilder extends BaseActionRequ
     }
 
     /**
-     * Creates the IManagedAppProtectionTargetAppsRequest
+     * Creates the ManagedAppProtectionTargetAppsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedAppProtectionTargetAppsRequest instance
+     * @return the ManagedAppProtectionTargetAppsRequest instance
      */
-    public IManagedAppProtectionTargetAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppProtectionTargetAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedAppProtectionTargetAppsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedAppProtectionTargetAppsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedAppProtectionTargetAppsRequest instance
+     * @return the ManagedAppProtectionTargetAppsRequest instance
      */
-    public IManagedAppProtectionTargetAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppProtectionTargetAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedAppProtectionTargetAppsRequest request = new ManagedAppProtectionTargetAppsRequest(
                 getRequestUrl(),
                 getClient(),

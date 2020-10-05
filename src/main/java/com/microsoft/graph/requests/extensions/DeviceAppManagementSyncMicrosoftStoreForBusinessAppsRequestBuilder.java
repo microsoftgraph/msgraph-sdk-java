@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Device App Management Sync Microsoft Store For Business Apps Request Builder.
  */
-public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder extends BaseActionRequestBuilder implements IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder {
+public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DeviceAppManagementSyncMicrosoftStoreForBusinessApps
@@ -30,22 +29,22 @@ public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder 
     }
 
     /**
-     * Creates the IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest
+     * Creates the DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest instance
+     * @return the DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest instance
      */
-    public IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest instance
+     * @return the DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest instance
      */
-    public IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest request = new DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest(
                 getRequestUrl(),
                 getClient(),

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Software Update Status Summary Request.
  */
-public class SoftwareUpdateStatusSummaryRequest extends BaseRequest implements ISoftwareUpdateStatusSummaryRequest {
+public class SoftwareUpdateStatusSummaryRequest extends BaseRequest {
 	
     /**
      * The request for the SoftwareUpdateStatusSummary
@@ -138,7 +138,7 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public ISoftwareUpdateStatusSummaryRequest select(final String value) {
+     public SoftwareUpdateStatusSummaryRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SoftwareUpdateStatusSummaryRequest)this;
      }
@@ -149,7 +149,7 @@ public class SoftwareUpdateStatusSummaryRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public ISoftwareUpdateStatusSummaryRequest expand(final String value) {
+     public SoftwareUpdateStatusSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SoftwareUpdateStatusSummaryRequest)this;
      }

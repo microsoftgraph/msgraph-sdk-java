@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education Organization Request Builder.
  */
-public class EducationOrganizationRequestBuilder extends BaseRequestBuilder implements IEducationOrganizationRequestBuilder {
+public class EducationOrganizationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the EducationOrganization
@@ -35,9 +35,9 @@ public class EducationOrganizationRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEducationOrganizationRequest instance
+     * @return the EducationOrganizationRequest instance
      */
-    public IEducationOrganizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EducationOrganizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class EducationOrganizationRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEducationOrganizationRequest instance
+     * @return the EducationOrganizationRequest instance
      */
-    public IEducationOrganizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationOrganizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EducationOrganizationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Setting Request Builder.
  */
-public class GroupSettingRequestBuilder extends BaseRequestBuilder implements IGroupSettingRequestBuilder {
+public class GroupSettingRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the GroupSetting
@@ -35,9 +35,9 @@ public class GroupSettingRequestBuilder extends BaseRequestBuilder implements IG
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGroupSettingRequest instance
+     * @return the GroupSettingRequest instance
      */
-    public IGroupSettingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupSettingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class GroupSettingRequestBuilder extends BaseRequestBuilder implements IG
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGroupSettingRequest instance
+     * @return the GroupSettingRequest instance
      */
-    public IGroupSettingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupSettingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GroupSettingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

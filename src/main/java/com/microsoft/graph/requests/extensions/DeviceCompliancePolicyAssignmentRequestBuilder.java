@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Policy Assignment Request Builder.
  */
-public class DeviceCompliancePolicyAssignmentRequestBuilder extends BaseRequestBuilder implements IDeviceCompliancePolicyAssignmentRequestBuilder {
+public class DeviceCompliancePolicyAssignmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceCompliancePolicyAssignment
@@ -35,9 +35,9 @@ public class DeviceCompliancePolicyAssignmentRequestBuilder extends BaseRequestB
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceCompliancePolicyAssignmentRequest instance
+     * @return the DeviceCompliancePolicyAssignmentRequest instance
      */
-    public IDeviceCompliancePolicyAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceCompliancePolicyAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DeviceCompliancePolicyAssignmentRequestBuilder extends BaseRequestB
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceCompliancePolicyAssignmentRequest instance
+     * @return the DeviceCompliancePolicyAssignmentRequest instance
      */
-    public IDeviceCompliancePolicyAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

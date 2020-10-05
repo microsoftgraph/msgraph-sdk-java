@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ContactFolder;
-import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ContactFolderCollectionPage;
 import com.microsoft.graph.requests.extensions.ContactFolderCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ContactFolderCollectionResponse;
 /**
  * The class for the Contact Folder Collection Page.
  */
-public class ContactFolderCollectionPage extends BaseCollectionPage<ContactFolder, IContactFolderCollectionRequestBuilder> implements IContactFolderCollectionPage {
+public class ContactFolderCollectionPage extends BaseCollectionPage<ContactFolder, ContactFolderCollectionRequestBuilder> {
 
     /**
      * A collection page for ContactFolder
@@ -22,7 +22,7 @@ public class ContactFolderCollectionPage extends BaseCollectionPage<ContactFolde
      * @param response the serialized ContactFolderCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ContactFolderCollectionPage(final ContactFolderCollectionResponse response, final IContactFolderCollectionRequestBuilder builder) {
+    public ContactFolderCollectionPage(final ContactFolderCollectionResponse response, final ContactFolderCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

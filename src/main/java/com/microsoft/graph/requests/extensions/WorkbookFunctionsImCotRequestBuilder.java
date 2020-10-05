@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImCotRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImCotRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Im Cot Request Builder.
  */
-public class WorkbookFunctionsImCotRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImCotRequestBuilder {
+public class WorkbookFunctionsImCotRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImCot
@@ -32,22 +31,22 @@ public class WorkbookFunctionsImCotRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsImCotRequest
+     * Creates the WorkbookFunctionsImCotRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImCotRequest instance
+     * @return the WorkbookFunctionsImCotRequest instance
      */
-    public IWorkbookFunctionsImCotRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImCotRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImCotRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImCotRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImCotRequest instance
+     * @return the WorkbookFunctionsImCotRequest instance
      */
-    public IWorkbookFunctionsImCotRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImCotRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImCotRequest request = new WorkbookFunctionsImCotRequest(
                 getRequestUrl(),
                 getClient(),

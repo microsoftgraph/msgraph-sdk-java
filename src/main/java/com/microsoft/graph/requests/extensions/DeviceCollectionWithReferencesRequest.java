@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Device Collection With References Request.
  */
-public class DeviceCollectionWithReferencesRequest extends BaseCollectionRequest<DeviceCollectionResponse, IDeviceCollectionPage> implements IDeviceCollectionWithReferencesRequest {
+public class DeviceCollectionWithReferencesRequest extends BaseCollectionRequest<DeviceCollectionResponse, DeviceCollectionPage> {
 
     /**
      * The request builder for this collection of Device
@@ -32,10 +32,10 @@ public class DeviceCollectionWithReferencesRequest extends BaseCollectionRequest
      * @param requestOptions the options for this request
      */
     public DeviceCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, IDeviceCollectionPage.class);
+        super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDeviceCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super DeviceCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class DeviceCollectionWithReferencesRequest extends BaseCollectionRequest
         });
     }
 
-    public IDeviceCollectionWithReferencesPage get() throws ClientException {
+    public DeviceCollectionWithReferencesPage get() throws ClientException {
         final DeviceCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IDeviceCollectionWithReferencesRequest expand(final String value) {
+    public DeviceCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IDeviceCollectionWithReferencesRequest filter(final String value) {
+    public DeviceCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IDeviceCollectionWithReferencesRequest orderBy(final String value) {
+    public DeviceCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IDeviceCollectionWithReferencesRequest select(final String value) {
+    public DeviceCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IDeviceCollectionWithReferencesRequest top(final int value) {
+    public DeviceCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IDeviceCollectionWithReferencesPage buildFromResponse(final DeviceCollectionResponse response) {
-        final IDeviceCollectionWithReferencesRequestBuilder builder;
+    public DeviceCollectionWithReferencesPage buildFromResponse(final DeviceCollectionResponse response) {
+        final DeviceCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

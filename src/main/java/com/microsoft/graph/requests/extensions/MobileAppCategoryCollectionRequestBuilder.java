@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.MobileAppCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequest;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Category Collection Request Builder.
  */
-public class MobileAppCategoryCollectionRequestBuilder extends BaseRequestBuilder implements IMobileAppCategoryCollectionRequestBuilder {
+public class MobileAppCategoryCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceAppManagement
@@ -42,7 +42,7 @@ public class MobileAppCategoryCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMobileAppCategoryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileAppCategoryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class MobileAppCategoryCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMobileAppCategoryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppCategoryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileAppCategoryCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMobileAppCategoryRequestBuilder byId(final String id) {
+    public MobileAppCategoryRequestBuilder byId(final String id) {
         return new MobileAppCategoryRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

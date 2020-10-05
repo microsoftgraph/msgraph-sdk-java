@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Endpoint Collection With References Request.
  */
-public class EndpointCollectionWithReferencesRequest extends BaseCollectionRequest<EndpointCollectionResponse, IEndpointCollectionPage> implements IEndpointCollectionWithReferencesRequest {
+public class EndpointCollectionWithReferencesRequest extends BaseCollectionRequest<EndpointCollectionResponse, EndpointCollectionPage> {
 
     /**
      * The request builder for this collection of Endpoint
@@ -32,10 +32,10 @@ public class EndpointCollectionWithReferencesRequest extends BaseCollectionReque
      * @param requestOptions the options for this request
      */
     public EndpointCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, IEndpointCollectionPage.class);
+        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IEndpointCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super EndpointCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class EndpointCollectionWithReferencesRequest extends BaseCollectionReque
         });
     }
 
-    public IEndpointCollectionWithReferencesPage get() throws ClientException {
+    public EndpointCollectionWithReferencesPage get() throws ClientException {
         final EndpointCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IEndpointCollectionWithReferencesRequest expand(final String value) {
+    public EndpointCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IEndpointCollectionWithReferencesRequest filter(final String value) {
+    public EndpointCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IEndpointCollectionWithReferencesRequest orderBy(final String value) {
+    public EndpointCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IEndpointCollectionWithReferencesRequest select(final String value) {
+    public EndpointCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IEndpointCollectionWithReferencesRequest top(final int value) {
+    public EndpointCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IEndpointCollectionWithReferencesPage buildFromResponse(final EndpointCollectionResponse response) {
-        final IEndpointCollectionWithReferencesRequestBuilder builder;
+    public EndpointCollectionWithReferencesPage buildFromResponse(final EndpointCollectionResponse response) {
+        final EndpointCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new EndpointCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHlookupRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsHlookupRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Hlookup Request Builder.
  */
-public class WorkbookFunctionsHlookupRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsHlookupRequestBuilder {
+public class WorkbookFunctionsHlookupRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsHlookup
@@ -38,22 +37,22 @@ public class WorkbookFunctionsHlookupRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsHlookupRequest
+     * Creates the WorkbookFunctionsHlookupRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsHlookupRequest instance
+     * @return the WorkbookFunctionsHlookupRequest instance
      */
-    public IWorkbookFunctionsHlookupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsHlookupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsHlookupRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsHlookupRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsHlookupRequest instance
+     * @return the WorkbookFunctionsHlookupRequest instance
      */
-    public IWorkbookFunctionsHlookupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsHlookupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsHlookupRequest request = new WorkbookFunctionsHlookupRequest(
                 getRequestUrl(),
                 getClient(),

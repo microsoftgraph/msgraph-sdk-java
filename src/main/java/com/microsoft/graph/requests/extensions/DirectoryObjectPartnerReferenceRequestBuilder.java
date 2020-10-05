@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Directory Object Partner Reference Request Builder.
  */
-public class DirectoryObjectPartnerReferenceRequestBuilder extends BaseRequestBuilder implements IDirectoryObjectPartnerReferenceRequestBuilder {
+public class DirectoryObjectPartnerReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DirectoryObjectPartnerReference
@@ -35,9 +35,9 @@ public class DirectoryObjectPartnerReferenceRequestBuilder extends BaseRequestBu
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDirectoryObjectPartnerReferenceRequest instance
+     * @return the DirectoryObjectPartnerReferenceRequest instance
      */
-    public IDirectoryObjectPartnerReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryObjectPartnerReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DirectoryObjectPartnerReferenceRequestBuilder extends BaseRequestBu
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDirectoryObjectPartnerReferenceRequest instance
+     * @return the DirectoryObjectPartnerReferenceRequest instance
      */
-    public IDirectoryObjectPartnerReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectPartnerReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DirectoryObjectPartnerReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

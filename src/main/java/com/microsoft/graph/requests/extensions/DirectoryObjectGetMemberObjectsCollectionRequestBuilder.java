@@ -11,8 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetMemberObjectsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetMemberObjectsCollectionRequest;
+import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Directory Object Get Member Objects Collection Request Builder.
  */
-public class DirectoryObjectGetMemberObjectsCollectionRequestBuilder extends BaseActionRequestBuilder implements IDirectoryObjectGetMemberObjectsCollectionRequestBuilder {
+public class DirectoryObjectGetMemberObjectsCollectionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this collection of DirectoryObject
@@ -46,7 +45,7 @@ public class DirectoryObjectGetMemberObjectsCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryObjectGetMemberObjectsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryObjectGetMemberObjectsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,7 +55,7 @@ public class DirectoryObjectGetMemberObjectsCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryObjectGetMemberObjectsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectGetMemberObjectsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectGetMemberObjectsCollectionRequest request = new DirectoryObjectGetMemberObjectsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

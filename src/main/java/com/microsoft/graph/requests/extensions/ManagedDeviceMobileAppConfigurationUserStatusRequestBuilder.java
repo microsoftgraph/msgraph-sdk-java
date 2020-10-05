@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Device Mobile App Configuration User Status Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder extends BaseRequestBuilder implements IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedDeviceMobileAppConfigurationUserStatus
@@ -35,9 +35,9 @@ public class ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder extends
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationUserStatusRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationUserStatusRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationUserStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceMobileAppConfigurationUserStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder extends
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationUserStatusRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationUserStatusRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationUserStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationUserStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

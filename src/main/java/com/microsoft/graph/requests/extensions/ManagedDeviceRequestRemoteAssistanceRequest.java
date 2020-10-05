@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRequestRemoteAssistanceRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRequestRemoteAssistanceRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Request Remote Assistance Request.
  */
-public class ManagedDeviceRequestRemoteAssistanceRequest extends BaseRequest implements IManagedDeviceRequestRemoteAssistanceRequest {
+public class ManagedDeviceRequestRemoteAssistanceRequest extends BaseRequest {
 
     /**
      * The request for this ManagedDeviceRequestRemoteAssistance

@@ -8,17 +8,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharedDriveItem;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -31,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Shared Drive Item Request.
  */
-public class SharedDriveItemRequest extends BaseRequest implements ISharedDriveItemRequest {
+public class SharedDriveItemRequest extends BaseRequest {
 	
     /**
      * The request for the SharedDriveItem
@@ -150,7 +144,7 @@ public class SharedDriveItemRequest extends BaseRequest implements ISharedDriveI
      * @param value the select clause
      * @return the updated request
      */
-     public ISharedDriveItemRequest select(final String value) {
+     public SharedDriveItemRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SharedDriveItemRequest)this;
      }
@@ -161,7 +155,7 @@ public class SharedDriveItemRequest extends BaseRequest implements ISharedDriveI
      * @param value the expand clause
      * @return the updated request
      */
-     public ISharedDriveItemRequest expand(final String value) {
+     public SharedDriveItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SharedDriveItemRequest)this;
      }

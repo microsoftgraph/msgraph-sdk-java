@@ -23,7 +23,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Managed Device Collection With References Request.
  */
-public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollectionRequest<ManagedDeviceCollectionResponse, IManagedDeviceCollectionPage> implements IManagedDeviceCollectionWithReferencesRequest {
+public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollectionRequest<ManagedDeviceCollectionResponse, ManagedDeviceCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedDevice
@@ -33,10 +33,10 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
      * @param requestOptions the options for this request
      */
     public ManagedDeviceCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, IManagedDeviceCollectionPage.class);
+        super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, ManagedDeviceCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IManagedDeviceCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super ManagedDeviceCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -50,38 +50,38 @@ public class ManagedDeviceCollectionWithReferencesRequest extends BaseCollection
         });
     }
 
-    public IManagedDeviceCollectionWithReferencesPage get() throws ClientException {
+    public ManagedDeviceCollectionWithReferencesPage get() throws ClientException {
         final ManagedDeviceCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IManagedDeviceCollectionWithReferencesRequest expand(final String value) {
+    public ManagedDeviceCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IManagedDeviceCollectionWithReferencesRequest filter(final String value) {
+    public ManagedDeviceCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IManagedDeviceCollectionWithReferencesRequest orderBy(final String value) {
+    public ManagedDeviceCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IManagedDeviceCollectionWithReferencesRequest select(final String value) {
+    public ManagedDeviceCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IManagedDeviceCollectionWithReferencesRequest top(final int value) {
+    public ManagedDeviceCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IManagedDeviceCollectionWithReferencesPage buildFromResponse(final ManagedDeviceCollectionResponse response) {
-        final IManagedDeviceCollectionWithReferencesRequestBuilder builder;
+    public ManagedDeviceCollectionWithReferencesPage buildFromResponse(final ManagedDeviceCollectionResponse response) {
+        final ManagedDeviceCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ManagedDeviceCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

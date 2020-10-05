@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsUserActivityUserCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Teams User Activity User Counts Request Builder.
  */
-public class ReportRootGetTeamsUserActivityUserCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetTeamsUserActivityUserCountsRequestBuilder {
+public class ReportRootGetTeamsUserActivityUserCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetTeamsUserActivityUserCounts
@@ -32,22 +31,22 @@ public class ReportRootGetTeamsUserActivityUserCountsRequestBuilder extends Base
     }
 
     /**
-     * Creates the IReportRootGetTeamsUserActivityUserCountsRequest
+     * Creates the ReportRootGetTeamsUserActivityUserCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetTeamsUserActivityUserCountsRequest instance
+     * @return the ReportRootGetTeamsUserActivityUserCountsRequest instance
      */
-    public IReportRootGetTeamsUserActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetTeamsUserActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetTeamsUserActivityUserCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetTeamsUserActivityUserCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetTeamsUserActivityUserCountsRequest instance
+     * @return the ReportRootGetTeamsUserActivityUserCountsRequest instance
      */
-    public IReportRootGetTeamsUserActivityUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetTeamsUserActivityUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetTeamsUserActivityUserCountsRequest request = new ReportRootGetTeamsUserActivityUserCountsRequest(
                 getRequestUrl(),
                 getClient(),

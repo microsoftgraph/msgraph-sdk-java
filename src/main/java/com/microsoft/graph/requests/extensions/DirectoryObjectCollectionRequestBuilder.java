@@ -12,12 +12,12 @@ import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequest;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectValidatePropertiesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetByIdsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequest;
+import com.microsoft.graph.requests.extensions.DirectoryObjectValidatePropertiesRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Object Collection Request Builder.
  */
-public class DirectoryObjectCollectionRequestBuilder extends BaseRequestBuilder implements IDirectoryObjectCollectionRequestBuilder {
+public class DirectoryObjectCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DirectoryObject
@@ -45,7 +45,7 @@ public class DirectoryObjectCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryObjectCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryObjectCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,25 +55,25 @@ public class DirectoryObjectCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryObjectCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryObjectCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDirectoryObjectRequestBuilder byId(final String id) {
+    public DirectoryObjectRequestBuilder byId(final String id) {
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IDirectoryObjectValidatePropertiesRequestBuilder validateProperties(final String entityType, final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
+    public DirectoryObjectValidatePropertiesRequestBuilder validateProperties(final String entityType, final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
         return new DirectoryObjectValidatePropertiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateProperties"), getClient(), null, entityType, displayName, mailNickname, onBehalfOfUserId);
     }
 
-    public IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder getAvailableExtensionProperties(final Boolean isSyncedFromOnPremises) {
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder getAvailableExtensionProperties(final Boolean isSyncedFromOnPremises) {
         return new DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAvailableExtensionProperties"), getClient(), null, isSyncedFromOnPremises);
     }
 
-    public IDirectoryObjectGetByIdsCollectionRequestBuilder getByIds(final java.util.List<String> ids, final java.util.List<String> types) {
+    public DirectoryObjectGetByIdsCollectionRequestBuilder getByIds(final java.util.List<String> ids, final java.util.List<String> types) {
         return new DirectoryObjectGetByIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByIds"), getClient(), null, ids, types);
     }
 }

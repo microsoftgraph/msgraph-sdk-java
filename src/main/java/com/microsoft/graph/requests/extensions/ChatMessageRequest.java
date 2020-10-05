@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.requests.extensions.IChatMessageHostedContentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageHostedContentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Chat Message Request.
  */
-public class ChatMessageRequest extends BaseRequest implements IChatMessageRequest {
+public class ChatMessageRequest extends BaseRequest {
 	
     /**
      * The request for the ChatMessage
@@ -146,7 +142,7 @@ public class ChatMessageRequest extends BaseRequest implements IChatMessageReque
      * @param value the select clause
      * @return the updated request
      */
-     public IChatMessageRequest select(final String value) {
+     public ChatMessageRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ChatMessageRequest)this;
      }
@@ -157,7 +153,7 @@ public class ChatMessageRequest extends BaseRequest implements IChatMessageReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IChatMessageRequest expand(final String value) {
+     public ChatMessageRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ChatMessageRequest)this;
      }

@@ -23,7 +23,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Group Collection With References Request.
  */
-public class GroupCollectionWithReferencesRequest extends BaseCollectionRequest<GroupCollectionResponse, IGroupCollectionPage> implements IGroupCollectionWithReferencesRequest {
+public class GroupCollectionWithReferencesRequest extends BaseCollectionRequest<GroupCollectionResponse, GroupCollectionPage> {
 
     /**
      * The request builder for this collection of Group
@@ -33,10 +33,10 @@ public class GroupCollectionWithReferencesRequest extends BaseCollectionRequest<
      * @param requestOptions the options for this request
      */
     public GroupCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupCollectionResponse.class, IGroupCollectionPage.class);
+        super(requestUrl, client, requestOptions, GroupCollectionResponse.class, GroupCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IGroupCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super GroupCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -50,38 +50,38 @@ public class GroupCollectionWithReferencesRequest extends BaseCollectionRequest<
         });
     }
 
-    public IGroupCollectionWithReferencesPage get() throws ClientException {
+    public GroupCollectionWithReferencesPage get() throws ClientException {
         final GroupCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IGroupCollectionWithReferencesRequest expand(final String value) {
+    public GroupCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IGroupCollectionWithReferencesRequest filter(final String value) {
+    public GroupCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IGroupCollectionWithReferencesRequest orderBy(final String value) {
+    public GroupCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IGroupCollectionWithReferencesRequest select(final String value) {
+    public GroupCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IGroupCollectionWithReferencesRequest top(final int value) {
+    public GroupCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IGroupCollectionWithReferencesPage buildFromResponse(final GroupCollectionResponse response) {
-        final IGroupCollectionWithReferencesRequestBuilder builder;
+    public GroupCollectionWithReferencesPage buildFromResponse(final GroupCollectionResponse response) {
+        final GroupCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new GroupCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

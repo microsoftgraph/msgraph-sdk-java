@@ -45,7 +45,6 @@ import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
 
 public class CollectionPageSerializer {
 
@@ -137,12 +136,12 @@ public class CollectionPageSerializer {
 			final Object response = responseClass.getConstructor().newInstance();
 			responseClass.getField("value").set(response, list);
 			final Class<?> collectionPageClass = Class.forName(collectionPageClassCanonicalName);
-			/** eg: com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder */
-			final String responseBuilderInterfaceCanonicalName = responseClassCanonicalName
+			/** eg: com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder */
+			final String responseBuilderCanonicalName = responseClassCanonicalName
 						.substring(0, responseClassCanonicalName.length() - responseLength)
-						.replace(extensionsPath, extensionsPath + "I") + "RequestBuilder";
-			final Class<?> responseBuilderInterfaceClass = Class.forName(responseBuilderInterfaceCanonicalName);
-			return (BaseCollectionPage<T1, T2>)collectionPageClass.getConstructor(responseClass, responseBuilderInterfaceClass).newInstance(response, null);
+						.replace(extensionsPath, extensionsPath) + "RequestBuilder";
+			final Class<?> responseBuilderClass = Class.forName(responseBuilderCanonicalName);
+			return (BaseCollectionPage<T1, T2>)collectionPageClass.getConstructor(responseClass, responseBuilderClass).newInstance(response, null);
 		} catch(ClassNotFoundException ex) {
 			logger.logError("Could not find class during deserialization", ex);
 		} catch(NoSuchMethodException | InstantiationException | InvocationTargetException ex) {

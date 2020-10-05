@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImCschRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImCschRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Im Csch Request Builder.
  */
-public class WorkbookFunctionsImCschRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImCschRequestBuilder {
+public class WorkbookFunctionsImCschRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImCsch
@@ -32,22 +31,22 @@ public class WorkbookFunctionsImCschRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsImCschRequest
+     * Creates the WorkbookFunctionsImCschRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImCschRequest instance
+     * @return the WorkbookFunctionsImCschRequest instance
      */
-    public IWorkbookFunctionsImCschRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImCschRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImCschRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImCschRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImCschRequest instance
+     * @return the WorkbookFunctionsImCschRequest instance
      */
-    public IWorkbookFunctionsImCschRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImCschRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImCschRequest request = new WorkbookFunctionsImCschRequest(
                 getRequestUrl(),
                 getClient(),

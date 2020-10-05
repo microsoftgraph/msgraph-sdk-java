@@ -9,11 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItem;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Request.
  */
-public class DriveRequest extends BaseRequest implements IDriveRequest {
+public class DriveRequest extends BaseRequest {
 	
     /**
      * The request for the Drive
@@ -145,7 +142,7 @@ public class DriveRequest extends BaseRequest implements IDriveRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IDriveRequest select(final String value) {
+     public DriveRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DriveRequest)this;
      }
@@ -156,7 +153,7 @@ public class DriveRequest extends BaseRequest implements IDriveRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IDriveRequest expand(final String value) {
+     public DriveRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DriveRequest)this;
      }

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentCollectionRequest;
+import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Enrollment Configuration Assignment Collection Request Builder.
  */
-public class EnrollmentConfigurationAssignmentCollectionRequestBuilder extends BaseRequestBuilder implements IEnrollmentConfigurationAssignmentCollectionRequestBuilder {
+public class EnrollmentConfigurationAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceEnrollmentConfiguration
@@ -42,7 +42,7 @@ public class EnrollmentConfigurationAssignmentCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEnrollmentConfigurationAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EnrollmentConfigurationAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class EnrollmentConfigurationAssignmentCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEnrollmentConfigurationAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EnrollmentConfigurationAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EnrollmentConfigurationAssignmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IEnrollmentConfigurationAssignmentRequestBuilder byId(final String id) {
+    public EnrollmentConfigurationAssignmentRequestBuilder byId(final String id) {
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDsumRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsDsumRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Dsum Request Builder.
  */
-public class WorkbookFunctionsDsumRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsDsumRequestBuilder {
+public class WorkbookFunctionsDsumRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsDsum
@@ -36,22 +35,22 @@ public class WorkbookFunctionsDsumRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsDsumRequest
+     * Creates the WorkbookFunctionsDsumRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDsumRequest instance
+     * @return the WorkbookFunctionsDsumRequest instance
      */
-    public IWorkbookFunctionsDsumRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsDsumRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsDsumRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsDsumRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDsumRequest instance
+     * @return the WorkbookFunctionsDsumRequest instance
      */
-    public IWorkbookFunctionsDsumRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsDsumRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDsumRequest request = new WorkbookFunctionsDsumRequest(
                 getRequestUrl(),
                 getClient(),

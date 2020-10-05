@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Teams App Definition With Reference Request.
  */
-public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest implements ITeamsAppDefinitionWithReferenceRequest {
+public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the TeamsAppDefinition
@@ -78,9 +78,9 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-    public ITeamsAppDefinitionWithReferenceRequest select(final String value) {
+    public TeamsAppDefinitionWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ITeamsAppDefinitionWithReferenceRequest)this;
+        return (TeamsAppDefinitionWithReferenceRequest)this;
     }
 
     /**
@@ -89,7 +89,7 @@ public class TeamsAppDefinitionWithReferenceRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-    public ITeamsAppDefinitionWithReferenceRequest expand(final String value) {
+    public TeamsAppDefinitionWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamsAppDefinitionWithReferenceRequest)this;
     }

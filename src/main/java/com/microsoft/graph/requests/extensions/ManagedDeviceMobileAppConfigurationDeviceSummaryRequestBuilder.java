@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Device Mobile App Configuration Device Summary Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder extends BaseRequestBuilder implements IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedDeviceMobileAppConfigurationDeviceSummary
@@ -35,9 +35,9 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder exte
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationDeviceSummaryRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationDeviceSummaryRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationDeviceSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder exte
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationDeviceSummaryRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationDeviceSummaryRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationDeviceSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

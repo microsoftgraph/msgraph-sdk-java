@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Comms Operation Request Builder.
  */
-public class CommsOperationRequestBuilder extends BaseRequestBuilder implements ICommsOperationRequestBuilder {
+public class CommsOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the CommsOperation
@@ -35,9 +35,9 @@ public class CommsOperationRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICommsOperationRequest instance
+     * @return the CommsOperationRequest instance
      */
-    public ICommsOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CommsOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class CommsOperationRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICommsOperationRequest instance
+     * @return the CommsOperationRequest instance
      */
-    public ICommsOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CommsOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CommsOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

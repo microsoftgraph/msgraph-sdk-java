@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartImageRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartImageRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Image Request Builder.
  */
-public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookChartImageRequestBuilder {
+public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartImage
@@ -72,22 +71,22 @@ public class WorkbookChartImageRequestBuilder extends BaseFunctionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookChartImageRequest
+     * Creates the WorkbookChartImageRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartImageRequest instance
+     * @return the WorkbookChartImageRequest instance
      */
-    public IWorkbookChartImageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartImageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartImageRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartImageRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartImageRequest instance
+     * @return the WorkbookChartImageRequest instance
      */
-    public IWorkbookChartImageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartImageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartImageRequest request = new WorkbookChartImageRequest(
                 getRequestUrl(),
                 getClient(),

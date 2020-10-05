@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLogNorm_DistRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsLogNorm_DistRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Log Norm_Dist Request Builder.
  */
-public class WorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsLogNorm_DistRequestBuilder {
+public class WorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsLogNorm_Dist
@@ -38,22 +37,22 @@ public class WorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionReque
     }
 
     /**
-     * Creates the IWorkbookFunctionsLogNorm_DistRequest
+     * Creates the WorkbookFunctionsLogNorm_DistRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLogNorm_DistRequest instance
+     * @return the WorkbookFunctionsLogNorm_DistRequest instance
      */
-    public IWorkbookFunctionsLogNorm_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsLogNorm_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsLogNorm_DistRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsLogNorm_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLogNorm_DistRequest instance
+     * @return the WorkbookFunctionsLogNorm_DistRequest instance
      */
-    public IWorkbookFunctionsLogNorm_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsLogNorm_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsLogNorm_DistRequest request = new WorkbookFunctionsLogNorm_DistRequest(
                 getRequestUrl(),
                 getClient(),

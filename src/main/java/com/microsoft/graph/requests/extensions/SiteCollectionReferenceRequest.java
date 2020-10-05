@@ -24,7 +24,7 @@ import com.microsoft.graph.models.extensions.Site;
 /**
  * The class for the Site Collection Reference Request.
  */
-public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCollectionResponse, ISiteCollectionPage> implements ISiteCollectionReferenceRequest {
+public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCollectionResponse, SiteCollectionPage> {
 
     /**
      * The request builder for this collection of Site
@@ -34,7 +34,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param requestOptions the options for this request
      */
     public SiteCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SiteCollectionResponse.class, ISiteCollectionPage.class);
+        super(requestUrl, client, requestOptions, SiteCollectionResponse.class, SiteCollectionPage.class);
     }
 
     public void post(final Site newSite, final ICallback<? super Site> callback) {
@@ -58,7 +58,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param value the expand clause
      * @return the updated request
      */
-    public ISiteCollectionReferenceRequest expand(final String value) {
+    public SiteCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SiteCollectionReferenceRequest)this;
     }
@@ -69,7 +69,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param value the filter clause
      * @return the updated request
      */
-    public ISiteCollectionReferenceRequest filter(final String value) {
+    public SiteCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SiteCollectionReferenceRequest)this;
     }
@@ -80,7 +80,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param value the sort clause
      * @return the updated request
      */
-    public ISiteCollectionReferenceRequest orderBy(final String value) {
+    public SiteCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SiteCollectionReferenceRequest)this;
     }
@@ -91,7 +91,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param value the select clause
      * @return the updated request
      */
-    public ISiteCollectionReferenceRequest select(final String value) {
+    public SiteCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SiteCollectionReferenceRequest)this;
     }
@@ -102,7 +102,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
      * @param value the max number of items to return
      * @return the updated request
      */
-    public ISiteCollectionReferenceRequest top(final int value) {
+    public SiteCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (SiteCollectionReferenceRequest)this;
     }

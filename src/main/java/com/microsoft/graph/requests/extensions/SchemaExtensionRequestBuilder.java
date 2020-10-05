@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Schema Extension Request Builder.
  */
-public class SchemaExtensionRequestBuilder extends BaseRequestBuilder implements ISchemaExtensionRequestBuilder {
+public class SchemaExtensionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SchemaExtension
@@ -35,9 +35,9 @@ public class SchemaExtensionRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISchemaExtensionRequest instance
+     * @return the SchemaExtensionRequest instance
      */
-    public ISchemaExtensionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SchemaExtensionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class SchemaExtensionRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISchemaExtensionRequest instance
+     * @return the SchemaExtensionRequest instance
      */
-    public ISchemaExtensionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SchemaExtensionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SchemaExtensionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

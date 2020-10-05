@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.TelecomExpenseManagementPartner;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITelecomExpenseManagementPartnerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITelecomExpenseManagementPartnerRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITelecomExpenseManagementPartnerCollectionRequest;
+import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerRequestBuilder;
+import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Telecom Expense Management Partner Collection Request Builder.
  */
-public class TelecomExpenseManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder implements ITelecomExpenseManagementPartnerCollectionRequestBuilder {
+public class TelecomExpenseManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class TelecomExpenseManagementPartnerCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITelecomExpenseManagementPartnerCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TelecomExpenseManagementPartnerCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class TelecomExpenseManagementPartnerCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITelecomExpenseManagementPartnerCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TelecomExpenseManagementPartnerCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TelecomExpenseManagementPartnerCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITelecomExpenseManagementPartnerRequestBuilder byId(final String id) {
+    public TelecomExpenseManagementPartnerRequestBuilder byId(final String id) {
         return new TelecomExpenseManagementPartnerRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

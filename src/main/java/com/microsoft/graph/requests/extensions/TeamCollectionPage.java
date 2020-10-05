@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Team;
-import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TeamCollectionResponse;
 /**
  * The class for the Team Collection Page.
  */
-public class TeamCollectionPage extends BaseCollectionPage<Team, ITeamCollectionRequestBuilder> implements ITeamCollectionPage {
+public class TeamCollectionPage extends BaseCollectionPage<Team, TeamCollectionRequestBuilder> {
 
     /**
      * A collection page for Team
@@ -22,7 +22,7 @@ public class TeamCollectionPage extends BaseCollectionPage<Team, ITeamCollection
      * @param response the serialized TeamCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamCollectionPage(final TeamCollectionResponse response, final ITeamCollectionRequestBuilder builder) {
+    public TeamCollectionPage(final TeamCollectionResponse response, final TeamCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

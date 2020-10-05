@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookSessionInfoResourceRequest;
 import com.microsoft.graph.requests.extensions.WorkbookSessionInfoResourceRequest;
 import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Session Info Resource Request Builder.
  */
-public class WorkbookSessionInfoResourceRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookSessionInfoResourceRequestBuilder {
+public class WorkbookSessionInfoResourceRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookSessionInfoResource
@@ -32,22 +31,22 @@ public class WorkbookSessionInfoResourceRequestBuilder extends BaseFunctionReque
     }
 
     /**
-     * Creates the IWorkbookSessionInfoResourceRequest
+     * Creates the WorkbookSessionInfoResourceRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookSessionInfoResourceRequest instance
+     * @return the WorkbookSessionInfoResourceRequest instance
      */
-    public IWorkbookSessionInfoResourceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookSessionInfoResourceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookSessionInfoResourceRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookSessionInfoResourceRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookSessionInfoResourceRequest instance
+     * @return the WorkbookSessionInfoResourceRequest instance
      */
-    public IWorkbookSessionInfoResourceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookSessionInfoResourceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookSessionInfoResourceRequest request = new WorkbookSessionInfoResourceRequest(
                 getRequestUrl(),
                 getClient(),

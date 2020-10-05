@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallMuteRequest;
 import com.microsoft.graph.requests.extensions.CallMuteRequest;
 import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Mute Request Builder.
  */
-public class CallMuteRequestBuilder extends BaseActionRequestBuilder implements ICallMuteRequestBuilder {
+public class CallMuteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallMute
@@ -32,22 +31,22 @@ public class CallMuteRequestBuilder extends BaseActionRequestBuilder implements 
     }
 
     /**
-     * Creates the ICallMuteRequest
+     * Creates the CallMuteRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallMuteRequest instance
+     * @return the CallMuteRequest instance
      */
-    public ICallMuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallMuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallMuteRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallMuteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallMuteRequest instance
+     * @return the CallMuteRequest instance
      */
-    public ICallMuteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallMuteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallMuteRequest request = new CallMuteRequest(
                 getRequestUrl(),
                 getClient(),

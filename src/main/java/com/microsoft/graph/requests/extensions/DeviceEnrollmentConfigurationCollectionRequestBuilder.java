@@ -13,9 +13,9 @@ import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Enrollment Configuration Collection Request Builder.
  */
-public class DeviceEnrollmentConfigurationCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceEnrollmentConfigurationCollectionRequestBuilder {
+public class DeviceEnrollmentConfigurationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -43,7 +43,7 @@ public class DeviceEnrollmentConfigurationCollectionRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceEnrollmentConfigurationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceEnrollmentConfigurationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,11 +53,11 @@ public class DeviceEnrollmentConfigurationCollectionRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceEnrollmentConfigurationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentConfigurationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceEnrollmentConfigurationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceEnrollmentConfigurationRequestBuilder byId(final String id) {
+    public DeviceEnrollmentConfigurationRequestBuilder byId(final String id) {
         return new DeviceEnrollmentConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams App Definition Reference Request Builder.
  */
-public class TeamsAppDefinitionReferenceRequestBuilder extends BaseRequestBuilder implements ITeamsAppDefinitionReferenceRequestBuilder {
+public class TeamsAppDefinitionReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TeamsAppDefinition
@@ -37,9 +37,9 @@ public class TeamsAppDefinitionReferenceRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The ITeamsAppDefinitionReferenceRequest instance
+     * @return The TeamsAppDefinitionReferenceRequest instance
      */
-    public ITeamsAppDefinitionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsAppDefinitionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class TeamsAppDefinitionReferenceRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsAppDefinitionReferenceRequest instance
+     * @return the TeamsAppDefinitionReferenceRequest instance
      */
-    public ITeamsAppDefinitionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppDefinitionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsAppDefinitionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

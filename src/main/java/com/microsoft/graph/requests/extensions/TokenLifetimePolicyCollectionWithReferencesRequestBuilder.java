@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Lifetime Policy Collection With References Request Builder.
  */
-public class TokenLifetimePolicyCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements ITokenLifetimePolicyCollectionWithReferencesRequestBuilder {
+public class TokenLifetimePolicyCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -39,7 +39,7 @@ public class TokenLifetimePolicyCollectionWithReferencesRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITokenLifetimePolicyCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TokenLifetimePolicyCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,15 +49,15 @@ public class TokenLifetimePolicyCollectionWithReferencesRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITokenLifetimePolicyCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenLifetimePolicyCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TokenLifetimePolicyCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITokenLifetimePolicyWithReferenceRequestBuilder byId(final String id) {
+    public TokenLifetimePolicyWithReferenceRequestBuilder byId(final String id) {
         return new TokenLifetimePolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public ITokenLifetimePolicyCollectionReferenceRequestBuilder references(){
+    public TokenLifetimePolicyCollectionReferenceRequestBuilder references(){
         return new TokenLifetimePolicyCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

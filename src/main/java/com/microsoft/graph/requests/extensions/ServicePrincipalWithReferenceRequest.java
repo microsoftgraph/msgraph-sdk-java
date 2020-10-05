@@ -10,36 +10,20 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
@@ -56,7 +40,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Service Principal With Reference Request.
  */
-public class ServicePrincipalWithReferenceRequest extends BaseRequest implements IServicePrincipalWithReferenceRequest {
+public class ServicePrincipalWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the ServicePrincipal
@@ -112,9 +96,9 @@ public class ServicePrincipalWithReferenceRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-    public IServicePrincipalWithReferenceRequest select(final String value) {
+    public ServicePrincipalWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IServicePrincipalWithReferenceRequest)this;
+        return (ServicePrincipalWithReferenceRequest)this;
     }
 
     /**
@@ -123,7 +107,7 @@ public class ServicePrincipalWithReferenceRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-    public IServicePrincipalWithReferenceRequest expand(final String value) {
+    public ServicePrincipalWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ServicePrincipalWithReferenceRequest)this;
     }

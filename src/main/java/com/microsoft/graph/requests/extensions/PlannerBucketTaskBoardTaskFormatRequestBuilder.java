@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Bucket Task Board Task Format Request Builder.
  */
-public class PlannerBucketTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder implements IPlannerBucketTaskBoardTaskFormatRequestBuilder {
+public class PlannerBucketTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the PlannerBucketTaskBoardTaskFormat
@@ -35,9 +35,9 @@ public class PlannerBucketTaskBoardTaskFormatRequestBuilder extends BaseRequestB
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerBucketTaskBoardTaskFormatRequest instance
+     * @return the PlannerBucketTaskBoardTaskFormatRequest instance
      */
-    public IPlannerBucketTaskBoardTaskFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlannerBucketTaskBoardTaskFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class PlannerBucketTaskBoardTaskFormatRequestBuilder extends BaseRequestB
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerBucketTaskBoardTaskFormatRequest instance
+     * @return the PlannerBucketTaskBoardTaskFormatRequest instance
      */
-    public IPlannerBucketTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerBucketTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerBucketTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

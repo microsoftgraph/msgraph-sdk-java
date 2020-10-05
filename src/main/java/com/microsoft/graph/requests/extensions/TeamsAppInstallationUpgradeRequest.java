@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationUpgradeRequest;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationUpgradeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams App Installation Upgrade Request.
  */
-public class TeamsAppInstallationUpgradeRequest extends BaseRequest implements ITeamsAppInstallationUpgradeRequest {
+public class TeamsAppInstallationUpgradeRequest extends BaseRequest {
 
     /**
      * The request for this TeamsAppInstallationUpgrade

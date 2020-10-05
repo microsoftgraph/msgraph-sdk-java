@@ -12,10 +12,10 @@ import com.microsoft.graph.models.extensions.UserActivity;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequest;
-import com.microsoft.graph.requests.extensions.IUserActivityRecentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserActivityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserActivityCollectionRequest;
+import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Activity Collection Request Builder.
  */
-public class UserActivityCollectionRequestBuilder extends BaseRequestBuilder implements IUserActivityCollectionRequestBuilder {
+public class UserActivityCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -43,7 +43,7 @@ public class UserActivityCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserActivityCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserActivityCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,17 +53,17 @@ public class UserActivityCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserActivityCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserActivityCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserActivityCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IUserActivityRequestBuilder byId(final String id) {
+    public UserActivityRequestBuilder byId(final String id) {
         return new UserActivityRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IUserActivityRecentCollectionRequestBuilder recent() {
+    public UserActivityRecentCollectionRequestBuilder recent() {
         return new UserActivityRecentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recent"), getClient(), null);
     }
 }

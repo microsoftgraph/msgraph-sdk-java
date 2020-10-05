@@ -11,7 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed App Registration Get User Ids With Flagged App Registration Collection Page.
  */
-public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage extends BaseCollectionPage<String, IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder> implements IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage {
+public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage extends BaseCollectionPage<String, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder> {
 
     /**
      * A collection page for String.
@@ -33,7 +33,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param response The serialized ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage(final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse response, final IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder builder) {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage(final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse response, final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

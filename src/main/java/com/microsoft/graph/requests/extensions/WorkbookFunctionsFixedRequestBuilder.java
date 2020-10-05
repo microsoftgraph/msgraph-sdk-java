@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFixedRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFixedRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Fixed Request Builder.
  */
-public class WorkbookFunctionsFixedRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsFixedRequestBuilder {
+public class WorkbookFunctionsFixedRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsFixed
@@ -36,22 +35,22 @@ public class WorkbookFunctionsFixedRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsFixedRequest
+     * Creates the WorkbookFunctionsFixedRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFixedRequest instance
+     * @return the WorkbookFunctionsFixedRequest instance
      */
-    public IWorkbookFunctionsFixedRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsFixedRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsFixedRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsFixedRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFixedRequest instance
+     * @return the WorkbookFunctionsFixedRequest instance
      */
-    public IWorkbookFunctionsFixedRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsFixedRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsFixedRequest request = new WorkbookFunctionsFixedRequest(
                 getRequestUrl(),
                 getClient(),

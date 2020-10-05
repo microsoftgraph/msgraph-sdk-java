@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.Site;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISiteAddCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteAddCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionResponse;
 import com.microsoft.graph.models.extensions.SiteAddBody;
@@ -25,7 +25,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Site Add Collection Request.
  */
-public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddCollectionResponse, ISiteAddCollectionPage> implements ISiteAddCollectionRequest {
+public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddCollectionResponse, SiteAddCollectionPage> {
 
 
     protected final SiteAddBody body;
@@ -39,12 +39,12 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param requestOptions the options for this request
      */
     public SiteAddCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SiteAddCollectionResponse.class, ISiteAddCollectionPage.class);
+        super(requestUrl, client, requestOptions, SiteAddCollectionResponse.class, SiteAddCollectionPage.class);
         body = new SiteAddBody();
     }
 
 
-    public void post(final ICallback<? super ISiteAddCollectionPage> callback) {
+    public void post(final ICallback<? super SiteAddCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,20 +58,20 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
         });
     }
 
-    public ISiteAddCollectionPage post() throws ClientException {
+    public SiteAddCollectionPage post() throws ClientException {
         final SiteAddCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public ISiteAddCollectionPage buildFromResponse(final SiteAddCollectionResponse response) {
-        final ISiteAddCollectionRequestBuilder builder;
+    public SiteAddCollectionPage buildFromResponse(final SiteAddCollectionResponse response) {
+        final SiteAddCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SiteAddCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<Site>) null);
         } else {
             builder = null;
         }
-        final ISiteAddCollectionPage page = new SiteAddCollectionPage(response, builder);
+        final SiteAddCollectionPage page = new SiteAddCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -82,9 +82,9 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param value the select clause
      * @return the updated request
      */
-    public ISiteAddCollectionRequest select(final String value) {
+    public SiteAddCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ISiteAddCollectionRequest)this;
+        return (SiteAddCollectionRequest)this;
     }
 
     /**
@@ -93,9 +93,9 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param value the max number of items to return
      * @return the updated request
      */
-    public ISiteAddCollectionRequest top(final int value) {
+    public SiteAddCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ISiteAddCollectionRequest)this;
+        return (SiteAddCollectionRequest)this;
     }
 
     /**
@@ -104,9 +104,9 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param value the expand clause
      * @return the updated request
      */
-    public ISiteAddCollectionRequest expand(final String value) {
+    public SiteAddCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ISiteAddCollectionRequest)this;
+        return (SiteAddCollectionRequest)this;
     }
 
     /**
@@ -115,9 +115,9 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param value the filter clause
      * @return the updated request
      */
-    public ISiteAddCollectionRequest filter(final String value) {
+    public SiteAddCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ISiteAddCollectionRequest)this;
+        return (SiteAddCollectionRequest)this;
     }
 
     /**
@@ -126,9 +126,9 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
      * @param value the order by clause
      * @return the updated request
      */
-    public ISiteAddCollectionRequest orderBy(final String value) {
+    public SiteAddCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ISiteAddCollectionRequest)this;
+        return (SiteAddCollectionRequest)this;
     }
 
 }

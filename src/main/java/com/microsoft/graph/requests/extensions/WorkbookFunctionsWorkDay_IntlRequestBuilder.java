@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsWorkDay_IntlRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsWorkDay_IntlRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Work Day_Intl Request Builder.
  */
-public class WorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsWorkDay_IntlRequestBuilder {
+public class WorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsWorkDay_Intl
@@ -38,22 +37,22 @@ public class WorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionReque
     }
 
     /**
-     * Creates the IWorkbookFunctionsWorkDay_IntlRequest
+     * Creates the WorkbookFunctionsWorkDay_IntlRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsWorkDay_IntlRequest instance
+     * @return the WorkbookFunctionsWorkDay_IntlRequest instance
      */
-    public IWorkbookFunctionsWorkDay_IntlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsWorkDay_IntlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsWorkDay_IntlRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsWorkDay_IntlRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsWorkDay_IntlRequest instance
+     * @return the WorkbookFunctionsWorkDay_IntlRequest instance
      */
-    public IWorkbookFunctionsWorkDay_IntlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsWorkDay_IntlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsWorkDay_IntlRequest request = new WorkbookFunctionsWorkDay_IntlRequest(
                 getRequestUrl(),
                 getClient(),

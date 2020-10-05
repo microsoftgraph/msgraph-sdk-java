@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHarMeanRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsHarMeanRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Har Mean Request Builder.
  */
-public class WorkbookFunctionsHarMeanRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsHarMeanRequestBuilder {
+public class WorkbookFunctionsHarMeanRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsHarMean
@@ -32,22 +31,22 @@ public class WorkbookFunctionsHarMeanRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsHarMeanRequest
+     * Creates the WorkbookFunctionsHarMeanRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsHarMeanRequest instance
+     * @return the WorkbookFunctionsHarMeanRequest instance
      */
-    public IWorkbookFunctionsHarMeanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsHarMeanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsHarMeanRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsHarMeanRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsHarMeanRequest instance
+     * @return the WorkbookFunctionsHarMeanRequest instance
      */
-    public IWorkbookFunctionsHarMeanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsHarMeanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsHarMeanRequest request = new WorkbookFunctionsHarMeanRequest(
                 getRequestUrl(),
                 getClient(),

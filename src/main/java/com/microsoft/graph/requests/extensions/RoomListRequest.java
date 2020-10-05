@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoomList;
-import com.microsoft.graph.requests.extensions.IRoomCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoomRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Room List Request.
  */
-public class RoomListRequest extends BaseRequest implements IRoomListRequest {
+public class RoomListRequest extends BaseRequest {
 	
     /**
      * The request for the RoomList
@@ -142,7 +140,7 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IRoomListRequest select(final String value) {
+     public RoomListRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (RoomListRequest)this;
      }
@@ -153,7 +151,7 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IRoomListRequest expand(final String value) {
+     public RoomListRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (RoomListRequest)this;
      }

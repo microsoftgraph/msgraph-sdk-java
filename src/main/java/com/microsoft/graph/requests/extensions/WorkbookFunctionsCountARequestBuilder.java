@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCountARequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsCountARequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Count ARequest Builder.
  */
-public class WorkbookFunctionsCountARequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsCountARequestBuilder {
+public class WorkbookFunctionsCountARequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsCountA
@@ -32,22 +31,22 @@ public class WorkbookFunctionsCountARequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsCountARequest
+     * Creates the WorkbookFunctionsCountARequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCountARequest instance
+     * @return the WorkbookFunctionsCountARequest instance
      */
-    public IWorkbookFunctionsCountARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsCountARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsCountARequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsCountARequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCountARequest instance
+     * @return the WorkbookFunctionsCountARequest instance
      */
-    public IWorkbookFunctionsCountARequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsCountARequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCountARequest request = new WorkbookFunctionsCountARequest(
                 getRequestUrl(),
                 getClient(),

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Font Request Builder.
  */
-public class WorkbookChartFontRequestBuilder extends BaseRequestBuilder implements IWorkbookChartFontRequestBuilder {
+public class WorkbookChartFontRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookChartFont
@@ -35,9 +35,9 @@ public class WorkbookChartFontRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartFontRequest instance
+     * @return the WorkbookChartFontRequest instance
      */
-    public IWorkbookChartFontRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartFontRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class WorkbookChartFontRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartFontRequest instance
+     * @return the WorkbookChartFontRequest instance
      */
-    public IWorkbookChartFontRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartFontRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartFontRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DeviceManagementPartner;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementPartnerRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Management Partner Collection Request Builder.
  */
-public class DeviceManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceManagementPartnerCollectionRequestBuilder {
+public class DeviceManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class DeviceManagementPartnerCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceManagementPartnerCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceManagementPartnerCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DeviceManagementPartnerCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceManagementPartnerCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementPartnerCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementPartnerCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceManagementPartnerRequestBuilder byId(final String id) {
+    public DeviceManagementPartnerRequestBuilder byId(final String id) {
         return new DeviceManagementPartnerRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

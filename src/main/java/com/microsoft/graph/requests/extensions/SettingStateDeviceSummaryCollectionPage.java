@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollecti
 /**
  * The class for the Setting State Device Summary Collection Page.
  */
-public class SettingStateDeviceSummaryCollectionPage extends BaseCollectionPage<SettingStateDeviceSummary, ISettingStateDeviceSummaryCollectionRequestBuilder> implements ISettingStateDeviceSummaryCollectionPage {
+public class SettingStateDeviceSummaryCollectionPage extends BaseCollectionPage<SettingStateDeviceSummary, SettingStateDeviceSummaryCollectionRequestBuilder> {
 
     /**
      * A collection page for SettingStateDeviceSummary
@@ -22,7 +22,7 @@ public class SettingStateDeviceSummaryCollectionPage extends BaseCollectionPage<
      * @param response the serialized SettingStateDeviceSummaryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SettingStateDeviceSummaryCollectionPage(final SettingStateDeviceSummaryCollectionResponse response, final ISettingStateDeviceSummaryCollectionRequestBuilder builder) {
+    public SettingStateDeviceSummaryCollectionPage(final SettingStateDeviceSummaryCollectionResponse response, final SettingStateDeviceSummaryCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

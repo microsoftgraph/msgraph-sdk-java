@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookChart;
-import com.microsoft.graph.requests.extensions.IWorkbookChartCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookChartCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookChartCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WorkbookChartCollectionResponse;
 /**
  * The class for the Workbook Chart Collection Page.
  */
-public class WorkbookChartCollectionPage extends BaseCollectionPage<WorkbookChart, IWorkbookChartCollectionRequestBuilder> implements IWorkbookChartCollectionPage {
+public class WorkbookChartCollectionPage extends BaseCollectionPage<WorkbookChart, WorkbookChartCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookChart
@@ -22,7 +22,7 @@ public class WorkbookChartCollectionPage extends BaseCollectionPage<WorkbookChar
      * @param response the serialized WorkbookChartCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookChartCollectionPage(final WorkbookChartCollectionResponse response, final IWorkbookChartCollectionRequestBuilder builder) {
+    public WorkbookChartCollectionPage(final WorkbookChartCollectionResponse response, final WorkbookChartCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

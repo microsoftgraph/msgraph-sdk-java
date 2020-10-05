@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLargeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsLargeRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Large Request Builder.
  */
-public class WorkbookFunctionsLargeRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsLargeRequestBuilder {
+public class WorkbookFunctionsLargeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsLarge
@@ -34,22 +33,22 @@ public class WorkbookFunctionsLargeRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsLargeRequest
+     * Creates the WorkbookFunctionsLargeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLargeRequest instance
+     * @return the WorkbookFunctionsLargeRequest instance
      */
-    public IWorkbookFunctionsLargeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsLargeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsLargeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsLargeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLargeRequest instance
+     * @return the WorkbookFunctionsLargeRequest instance
      */
-    public IWorkbookFunctionsLargeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsLargeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsLargeRequest request = new WorkbookFunctionsLargeRequest(
                 getRequestUrl(),
                 getClient(),

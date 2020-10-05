@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsArabicRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsArabicRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Arabic Request Builder.
  */
-public class WorkbookFunctionsArabicRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsArabicRequestBuilder {
+public class WorkbookFunctionsArabicRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsArabic
@@ -32,22 +31,22 @@ public class WorkbookFunctionsArabicRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsArabicRequest
+     * Creates the WorkbookFunctionsArabicRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsArabicRequest instance
+     * @return the WorkbookFunctionsArabicRequest instance
      */
-    public IWorkbookFunctionsArabicRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsArabicRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsArabicRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsArabicRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsArabicRequest instance
+     * @return the WorkbookFunctionsArabicRequest instance
      */
-    public IWorkbookFunctionsArabicRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsArabicRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsArabicRequest request = new WorkbookFunctionsArabicRequest(
                 getRequestUrl(),
                 getClient(),

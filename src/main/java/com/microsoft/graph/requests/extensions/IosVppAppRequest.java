@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Vpp App Request.
  */
-public class IosVppAppRequest extends BaseRequest implements IIosVppAppRequest {
+public class IosVppAppRequest extends BaseRequest {
 	
     /**
      * The request for the IosVppApp
@@ -138,7 +138,7 @@ public class IosVppAppRequest extends BaseRequest implements IIosVppAppRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IIosVppAppRequest select(final String value) {
+     public IosVppAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (IosVppAppRequest)this;
      }
@@ -149,7 +149,7 @@ public class IosVppAppRequest extends BaseRequest implements IIosVppAppRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosVppAppRequest expand(final String value) {
+     public IosVppAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (IosVppAppRequest)this;
      }

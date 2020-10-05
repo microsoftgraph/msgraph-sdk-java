@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.requests.extensions.IChatMessageHostedContentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageHostedContentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
 import java.util.Arrays;
@@ -26,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Chat Message Request Builder.
  */
-public class ChatMessageRequestBuilder extends BaseRequestBuilder implements IChatMessageRequestBuilder {
+public class ChatMessageRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ChatMessage
@@ -43,9 +39,9 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder implements ICh
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IChatMessageRequest instance
+     * @return the ChatMessageRequest instance
      */
-    public IChatMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ChatMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,25 +49,25 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder implements ICh
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IChatMessageRequest instance
+     * @return the ChatMessageRequest instance
      */
-    public IChatMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ChatMessageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IChatMessageHostedContentCollectionRequestBuilder hostedContents() {
+    public ChatMessageHostedContentCollectionRequestBuilder hostedContents() {
         return new ChatMessageHostedContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents"), getClient(), null);
     }
 
-    public IChatMessageHostedContentRequestBuilder hostedContents(final String id) {
+    public ChatMessageHostedContentRequestBuilder hostedContents(final String id) {
         return new ChatMessageHostedContentRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents") + "/" + id, getClient(), null);
     }
-    public IChatMessageCollectionRequestBuilder replies() {
+    public ChatMessageCollectionRequestBuilder replies() {
         return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
     }
 
-    public IChatMessageRequestBuilder replies(final String id) {
+    public ChatMessageRequestBuilder replies(final String id) {
         return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }
 }

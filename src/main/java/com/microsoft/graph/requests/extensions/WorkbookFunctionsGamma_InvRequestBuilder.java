@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGamma_InvRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsGamma_InvRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Gamma_Inv Request Builder.
  */
-public class WorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsGamma_InvRequestBuilder {
+public class WorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsGamma_Inv
@@ -36,22 +35,22 @@ public class WorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsGamma_InvRequest
+     * Creates the WorkbookFunctionsGamma_InvRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGamma_InvRequest instance
+     * @return the WorkbookFunctionsGamma_InvRequest instance
      */
-    public IWorkbookFunctionsGamma_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsGamma_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsGamma_InvRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsGamma_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGamma_InvRequest instance
+     * @return the WorkbookFunctionsGamma_InvRequest instance
      */
-    public IWorkbookFunctionsGamma_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsGamma_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsGamma_InvRequest request = new WorkbookFunctionsGamma_InvRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRebootNowRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRebootNowRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Reboot Now Request.
  */
-public class ManagedDeviceRebootNowRequest extends BaseRequest implements IManagedDeviceRebootNowRequest {
+public class ManagedDeviceRebootNowRequest extends BaseRequest {
 
     /**
      * The request for this ManagedDeviceRebootNow

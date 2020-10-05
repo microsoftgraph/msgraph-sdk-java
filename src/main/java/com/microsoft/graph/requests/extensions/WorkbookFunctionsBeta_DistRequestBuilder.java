@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBeta_DistRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsBeta_DistRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Beta_Dist Request Builder.
  */
-public class WorkbookFunctionsBeta_DistRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsBeta_DistRequestBuilder {
+public class WorkbookFunctionsBeta_DistRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsBeta_Dist
@@ -42,22 +41,22 @@ public class WorkbookFunctionsBeta_DistRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsBeta_DistRequest
+     * Creates the WorkbookFunctionsBeta_DistRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBeta_DistRequest instance
+     * @return the WorkbookFunctionsBeta_DistRequest instance
      */
-    public IWorkbookFunctionsBeta_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsBeta_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsBeta_DistRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsBeta_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBeta_DistRequest instance
+     * @return the WorkbookFunctionsBeta_DistRequest instance
      */
-    public IWorkbookFunctionsBeta_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsBeta_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBeta_DistRequest request = new WorkbookFunctionsBeta_DistRequest(
                 getRequestUrl(),
                 getClient(),

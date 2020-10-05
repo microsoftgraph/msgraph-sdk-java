@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionResponse;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Claims Mapping Policy Collection With References Page.
  */
-public class ClaimsMappingPolicyCollectionWithReferencesPage extends BaseCollectionPage<ClaimsMappingPolicy, IClaimsMappingPolicyCollectionWithReferencesRequestBuilder> implements IClaimsMappingPolicyCollectionWithReferencesPage {
+public class ClaimsMappingPolicyCollectionWithReferencesPage extends BaseCollectionPage<ClaimsMappingPolicy, ClaimsMappingPolicyCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for ClaimsMappingPolicy
@@ -34,7 +34,7 @@ public class ClaimsMappingPolicyCollectionWithReferencesPage extends BaseCollect
      * @param response the serialized ClaimsMappingPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ClaimsMappingPolicyCollectionWithReferencesPage(final ClaimsMappingPolicyCollectionResponse response, final IClaimsMappingPolicyCollectionWithReferencesRequestBuilder builder) {
+    public ClaimsMappingPolicyCollectionWithReferencesPage(final ClaimsMappingPolicyCollectionResponse response, final ClaimsMappingPolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

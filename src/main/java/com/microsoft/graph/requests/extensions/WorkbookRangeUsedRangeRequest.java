@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeUsedRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeUsedRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Used Range Request.
  */
-public class WorkbookRangeUsedRangeRequest extends BaseRequest implements IWorkbookRangeUsedRangeRequest {
+public class WorkbookRangeUsedRangeRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeUsedRange
@@ -97,7 +96,7 @@ public class WorkbookRangeUsedRangeRequest extends BaseRequest implements IWorkb
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeUsedRangeRequest select(final String value) {
+    public WorkbookRangeUsedRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeUsedRangeRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookRangeUsedRangeRequest extends BaseRequest implements IWorkb
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeUsedRangeRequest expand(final String value) {
+    public WorkbookRangeUsedRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeUsedRangeRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookRangeUsedRangeRequest extends BaseRequest implements IWorkb
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeUsedRangeRequest filter(final String value) {
+    public WorkbookRangeUsedRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeUsedRangeRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookRangeUsedRangeRequest extends BaseRequest implements IWorkb
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeUsedRangeRequest orderBy(final String value) {
+    public WorkbookRangeUsedRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeUsedRangeRequest)this;
     }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIso_CeilingRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsIso_CeilingRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Iso_Ceiling Request Builder.
  */
-public class WorkbookFunctionsIso_CeilingRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsIso_CeilingRequestBuilder {
+public class WorkbookFunctionsIso_CeilingRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsIso_Ceiling
@@ -34,22 +33,22 @@ public class WorkbookFunctionsIso_CeilingRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IWorkbookFunctionsIso_CeilingRequest
+     * Creates the WorkbookFunctionsIso_CeilingRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIso_CeilingRequest instance
+     * @return the WorkbookFunctionsIso_CeilingRequest instance
      */
-    public IWorkbookFunctionsIso_CeilingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsIso_CeilingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsIso_CeilingRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsIso_CeilingRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIso_CeilingRequest instance
+     * @return the WorkbookFunctionsIso_CeilingRequest instance
      */
-    public IWorkbookFunctionsIso_CeilingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsIso_CeilingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIso_CeilingRequest request = new WorkbookFunctionsIso_CeilingRequest(
                 getRequestUrl(),
                 getClient(),

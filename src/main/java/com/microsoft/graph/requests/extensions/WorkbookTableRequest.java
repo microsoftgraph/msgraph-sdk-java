@@ -9,17 +9,11 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableRowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableRowRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableSortRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableSortRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -32,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Request.
  */
-public class WorkbookTableRequest extends BaseRequest implements IWorkbookTableRequest {
+public class WorkbookTableRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookTable
@@ -151,7 +145,7 @@ public class WorkbookTableRequest extends BaseRequest implements IWorkbookTableR
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookTableRequest select(final String value) {
+     public WorkbookTableRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookTableRequest)this;
      }
@@ -162,7 +156,7 @@ public class WorkbookTableRequest extends BaseRequest implements IWorkbookTableR
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookTableRequest expand(final String value) {
+     public WorkbookTableRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookTableRequest)this;
      }

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Vpp EBook Assignment Request.
  */
-public class IosVppEBookAssignmentRequest extends BaseRequest implements IIosVppEBookAssignmentRequest {
+public class IosVppEBookAssignmentRequest extends BaseRequest {
 	
     /**
      * The request for the IosVppEBookAssignment
@@ -138,7 +138,7 @@ public class IosVppEBookAssignmentRequest extends BaseRequest implements IIosVpp
      * @param value the select clause
      * @return the updated request
      */
-     public IIosVppEBookAssignmentRequest select(final String value) {
+     public IosVppEBookAssignmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (IosVppEBookAssignmentRequest)this;
      }
@@ -149,7 +149,7 @@ public class IosVppEBookAssignmentRequest extends BaseRequest implements IIosVpp
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosVppEBookAssignmentRequest expand(final String value) {
+     public IosVppEBookAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (IosVppEBookAssignmentRequest)this;
      }

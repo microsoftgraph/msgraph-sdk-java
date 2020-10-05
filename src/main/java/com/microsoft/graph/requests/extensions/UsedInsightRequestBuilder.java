@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UsedInsight;
-import com.microsoft.graph.requests.extensions.IEntityRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -20,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Used Insight Request Builder.
  */
-public class UsedInsightRequestBuilder extends BaseRequestBuilder implements IUsedInsightRequestBuilder {
+public class UsedInsightRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the UsedInsight
@@ -37,9 +36,9 @@ public class UsedInsightRequestBuilder extends BaseRequestBuilder implements IUs
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUsedInsightRequest instance
+     * @return the UsedInsightRequest instance
      */
-    public IUsedInsightRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UsedInsightRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +46,9 @@ public class UsedInsightRequestBuilder extends BaseRequestBuilder implements IUs
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUsedInsightRequest instance
+     * @return the UsedInsightRequest instance
      */
-    public IUsedInsightRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UsedInsightRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UsedInsightRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,9 +57,9 @@ public class UsedInsightRequestBuilder extends BaseRequestBuilder implements IUs
     /**
      * Gets the request builder for Entity
      *
-     * @return the IEntityWithReferenceRequestBuilder instance
+     * @return the EntityWithReferenceRequestBuilder instance
      */
-    public IEntityWithReferenceRequestBuilder resource() {
+    public EntityWithReferenceRequestBuilder resource() {
         return new EntityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
     }
 }

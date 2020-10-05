@@ -8,9 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartTitleFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Title Format Request.
  */
-public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWorkbookChartTitleFormatRequest {
+public class WorkbookChartTitleFormatRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookChartTitleFormat
@@ -142,7 +140,7 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartTitleFormatRequest select(final String value) {
+     public WorkbookChartTitleFormatRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookChartTitleFormatRequest)this;
      }
@@ -153,7 +151,7 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartTitleFormatRequest expand(final String value) {
+     public WorkbookChartTitleFormatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookChartTitleFormatRequest)this;
      }

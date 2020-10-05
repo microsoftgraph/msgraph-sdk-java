@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DeviceCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Category Collection Request Builder.
  */
-public class DeviceCategoryCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceCategoryCollectionRequestBuilder {
+public class DeviceCategoryCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class DeviceCategoryCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceCategoryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceCategoryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DeviceCategoryCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceCategoryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCategoryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceCategoryCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceCategoryRequestBuilder byId(final String id) {
+    public DeviceCategoryRequestBuilder byId(final String id) {
         return new DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

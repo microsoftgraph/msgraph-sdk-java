@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Permission Grant Condition Set Request Builder.
  */
-public class PermissionGrantConditionSetRequestBuilder extends BaseRequestBuilder implements IPermissionGrantConditionSetRequestBuilder {
+public class PermissionGrantConditionSetRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the PermissionGrantConditionSet
@@ -35,9 +35,9 @@ public class PermissionGrantConditionSetRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPermissionGrantConditionSetRequest instance
+     * @return the PermissionGrantConditionSetRequest instance
      */
-    public IPermissionGrantConditionSetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PermissionGrantConditionSetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class PermissionGrantConditionSetRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPermissionGrantConditionSetRequest instance
+     * @return the PermissionGrantConditionSetRequest instance
      */
-    public IPermissionGrantConditionSetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantConditionSetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

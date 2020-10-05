@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationUserActivityRequest;
 import com.microsoft.graph.requests.extensions.ReportRootDeviceConfigurationUserActivityRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Device Configuration User Activity Request.
  */
-public class ReportRootDeviceConfigurationUserActivityRequest extends BaseRequest implements IReportRootDeviceConfigurationUserActivityRequest {
+public class ReportRootDeviceConfigurationUserActivityRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootDeviceConfigurationUserActivity
@@ -97,7 +96,7 @@ public class ReportRootDeviceConfigurationUserActivityRequest extends BaseReques
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootDeviceConfigurationUserActivityRequest select(final String value) {
+    public ReportRootDeviceConfigurationUserActivityRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootDeviceConfigurationUserActivityRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootDeviceConfigurationUserActivityRequest extends BaseReques
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootDeviceConfigurationUserActivityRequest expand(final String value) {
+    public ReportRootDeviceConfigurationUserActivityRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootDeviceConfigurationUserActivityRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootDeviceConfigurationUserActivityRequest extends BaseReques
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootDeviceConfigurationUserActivityRequest filter(final String value) {
+    public ReportRootDeviceConfigurationUserActivityRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootDeviceConfigurationUserActivityRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootDeviceConfigurationUserActivityRequest extends BaseReques
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootDeviceConfigurationUserActivityRequest orderBy(final String value) {
+    public ReportRootDeviceConfigurationUserActivityRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootDeviceConfigurationUserActivityRequest)this;
     }

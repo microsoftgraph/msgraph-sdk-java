@@ -20,7 +20,7 @@ import java.io.InputStream;
 /**
  * The class for the Drive Item Version Content Stream Request.
  */
-public class DriveItemVersionContentStreamRequest extends BaseStreamRequest<DriveItemVersion> implements IDriveItemVersionContentStreamRequest {
+public class DriveItemVersionContentStreamRequest extends BaseStreamRequest<DriveItemVersion> {
 
     /**
      * The request for the DriveItemVersionContentStream

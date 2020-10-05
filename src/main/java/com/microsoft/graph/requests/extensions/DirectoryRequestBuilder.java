@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Directory;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
@@ -26,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Directory Request Builder.
  */
-public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDirectoryRequestBuilder {
+public class DirectoryRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Directory
@@ -43,9 +39,9 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDirectoryRequest instance
+     * @return the DirectoryRequest instance
      */
-    public IDirectoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,46 +49,46 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDirectoryRequest instance
+     * @return the DirectoryRequest instance
      */
-    public IDirectoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DirectoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAdministrativeUnitCollectionRequestBuilder administrativeUnits() {
+    public AdministrativeUnitCollectionRequestBuilder administrativeUnits() {
         return new AdministrativeUnitCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnits"), getClient(), null);
     }
 
-    public IAdministrativeUnitRequestBuilder administrativeUnits(final String id) {
+    public AdministrativeUnitRequestBuilder administrativeUnits(final String id) {
         return new AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnits") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionRequestBuilder deletedItems() {
+    public DirectoryObjectCollectionRequestBuilder deletedItems() {
         return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems"), getClient(), null);
     }
 
-    public IDirectoryObjectRequestBuilder deletedItems(final String id) {
+    public DirectoryObjectRequestBuilder deletedItems(final String id) {
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id, getClient(), null);
     }
-    public IUserCollectionRequestBuilder deletedItemsAsUser() {
+    public UserCollectionRequestBuilder deletedItemsAsUser() {
         return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.user", getClient(), null);
     }
 
-    public IUserRequestBuilder deletedItemsAsUser(final String id) {
+    public UserRequestBuilder deletedItemsAsUser(final String id) {
         return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
-    public IGroupCollectionRequestBuilder deletedItemsAsGroup() {
+    public GroupCollectionRequestBuilder deletedItemsAsGroup() {
         return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.group", getClient(), null);
     }
 
-    public IGroupRequestBuilder deletedItemsAsGroup(final String id) {
+    public GroupRequestBuilder deletedItemsAsGroup(final String id) {
         return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
-    public IApplicationCollectionRequestBuilder deletedItemsAsApplication() {
+    public ApplicationCollectionRequestBuilder deletedItemsAsApplication() {
         return new ApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.application", getClient(), null);
     }
 
-    public IApplicationRequestBuilder deletedItemsAsApplication(final String id) {
+    public ApplicationRequestBuilder deletedItemsAsApplication(final String id) {
         return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
 }

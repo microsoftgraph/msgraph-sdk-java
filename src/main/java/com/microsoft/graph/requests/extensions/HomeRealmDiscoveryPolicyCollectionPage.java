@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectio
 /**
  * The class for the Home Realm Discovery Policy Collection Page.
  */
-public class HomeRealmDiscoveryPolicyCollectionPage extends BaseCollectionPage<HomeRealmDiscoveryPolicy, IHomeRealmDiscoveryPolicyCollectionRequestBuilder> implements IHomeRealmDiscoveryPolicyCollectionPage {
+public class HomeRealmDiscoveryPolicyCollectionPage extends BaseCollectionPage<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for HomeRealmDiscoveryPolicy
@@ -22,7 +22,7 @@ public class HomeRealmDiscoveryPolicyCollectionPage extends BaseCollectionPage<H
      * @param response the serialized HomeRealmDiscoveryPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public HomeRealmDiscoveryPolicyCollectionPage(final HomeRealmDiscoveryPolicyCollectionResponse response, final IHomeRealmDiscoveryPolicyCollectionRequestBuilder builder) {
+    public HomeRealmDiscoveryPolicyCollectionPage(final HomeRealmDiscoveryPolicyCollectionResponse response, final HomeRealmDiscoveryPolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

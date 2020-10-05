@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRecoverPasscodeRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRecoverPasscodeRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Recover Passcode Request Builder.
  */
-public class ManagedDeviceRecoverPasscodeRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceRecoverPasscodeRequestBuilder {
+public class ManagedDeviceRecoverPasscodeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceRecoverPasscode
@@ -30,22 +29,22 @@ public class ManagedDeviceRecoverPasscodeRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IManagedDeviceRecoverPasscodeRequest
+     * Creates the ManagedDeviceRecoverPasscodeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceRecoverPasscodeRequest instance
+     * @return the ManagedDeviceRecoverPasscodeRequest instance
      */
-    public IManagedDeviceRecoverPasscodeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceRecoverPasscodeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceRecoverPasscodeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceRecoverPasscodeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceRecoverPasscodeRequest instance
+     * @return the ManagedDeviceRecoverPasscodeRequest instance
      */
-    public IManagedDeviceRecoverPasscodeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceRecoverPasscodeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceRecoverPasscodeRequest request = new ManagedDeviceRecoverPasscodeRequest(
                 getRequestUrl(),
                 getClient(),

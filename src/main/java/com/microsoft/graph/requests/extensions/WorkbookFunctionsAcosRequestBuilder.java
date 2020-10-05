@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAcosRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAcosRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Acos Request Builder.
  */
-public class WorkbookFunctionsAcosRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsAcosRequestBuilder {
+public class WorkbookFunctionsAcosRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsAcos
@@ -32,22 +31,22 @@ public class WorkbookFunctionsAcosRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsAcosRequest
+     * Creates the WorkbookFunctionsAcosRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAcosRequest instance
+     * @return the WorkbookFunctionsAcosRequest instance
      */
-    public IWorkbookFunctionsAcosRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsAcosRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsAcosRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsAcosRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAcosRequest instance
+     * @return the WorkbookFunctionsAcosRequest instance
      */
-    public IWorkbookFunctionsAcosRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsAcosRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsAcosRequest request = new WorkbookFunctionsAcosRequest(
                 getRequestUrl(),
                 getClient(),

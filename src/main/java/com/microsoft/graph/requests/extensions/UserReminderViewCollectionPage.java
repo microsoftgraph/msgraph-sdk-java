@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.Reminder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserReminderViewCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionPage;
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the User Reminder View Collection Page.
  */
-public class UserReminderViewCollectionPage extends BaseCollectionPage<Reminder, IUserReminderViewCollectionRequestBuilder> implements IUserReminderViewCollectionPage {
+public class UserReminderViewCollectionPage extends BaseCollectionPage<Reminder, UserReminderViewCollectionRequestBuilder> {
 
     /**
      * A collection page for Reminder.
@@ -33,7 +33,7 @@ public class UserReminderViewCollectionPage extends BaseCollectionPage<Reminder,
      * @param response The serialized UserReminderViewCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserReminderViewCollectionPage(final UserReminderViewCollectionResponse response, final IUserReminderViewCollectionRequestBuilder builder) {
+    public UserReminderViewCollectionPage(final UserReminderViewCollectionResponse response, final UserReminderViewCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

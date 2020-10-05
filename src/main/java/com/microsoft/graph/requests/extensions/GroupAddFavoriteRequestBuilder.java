@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupAddFavoriteRequest;
 import com.microsoft.graph.requests.extensions.GroupAddFavoriteRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Group Add Favorite Request Builder.
  */
-public class GroupAddFavoriteRequestBuilder extends BaseActionRequestBuilder implements IGroupAddFavoriteRequestBuilder {
+public class GroupAddFavoriteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupAddFavorite
@@ -30,22 +29,22 @@ public class GroupAddFavoriteRequestBuilder extends BaseActionRequestBuilder imp
     }
 
     /**
-     * Creates the IGroupAddFavoriteRequest
+     * Creates the GroupAddFavoriteRequest
      *
      * @param requestOptions the options for the request
-     * @return the IGroupAddFavoriteRequest instance
+     * @return the GroupAddFavoriteRequest instance
      */
-    public IGroupAddFavoriteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupAddFavoriteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IGroupAddFavoriteRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the GroupAddFavoriteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IGroupAddFavoriteRequest instance
+     * @return the GroupAddFavoriteRequest instance
      */
-    public IGroupAddFavoriteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupAddFavoriteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupAddFavoriteRequest request = new GroupAddFavoriteRequest(
                 getRequestUrl(),
                 getClient(),

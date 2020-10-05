@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Online Meeting Request Builder.
  */
-public class OnlineMeetingRequestBuilder extends BaseRequestBuilder implements IOnlineMeetingRequestBuilder {
+public class OnlineMeetingRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OnlineMeeting
@@ -37,9 +37,9 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnlineMeetingRequest instance
+     * @return the OnlineMeetingRequest instance
      */
-    public IOnlineMeetingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnlineMeetingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnlineMeetingRequest instance
+     * @return the OnlineMeetingRequest instance
      */
-    public IOnlineMeetingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnlineMeetingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnlineMeetingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

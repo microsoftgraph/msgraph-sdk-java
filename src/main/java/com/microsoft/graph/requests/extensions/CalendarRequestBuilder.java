@@ -11,20 +11,12 @@ import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.models.extensions.ScheduleInformation;
 import com.microsoft.graph.models.generated.CalendarRoleType;
-import com.microsoft.graph.requests.extensions.ICalendarPermissionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarPermissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
@@ -37,7 +29,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Calendar Request Builder.
  */
-public class CalendarRequestBuilder extends BaseRequestBuilder implements ICalendarRequestBuilder {
+public class CalendarRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Calendar
@@ -54,9 +46,9 @@ public class CalendarRequestBuilder extends BaseRequestBuilder implements ICalen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICalendarRequest instance
+     * @return the CalendarRequest instance
      */
-    public ICalendarRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CalendarRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -64,54 +56,54 @@ public class CalendarRequestBuilder extends BaseRequestBuilder implements ICalen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICalendarRequest instance
+     * @return the CalendarRequest instance
      */
-    public ICalendarRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CalendarRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ICalendarPermissionCollectionRequestBuilder calendarPermissions() {
+    public CalendarPermissionCollectionRequestBuilder calendarPermissions() {
         return new CalendarPermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarPermissions"), getClient(), null);
     }
 
-    public ICalendarPermissionRequestBuilder calendarPermissions(final String id) {
+    public CalendarPermissionRequestBuilder calendarPermissions(final String id) {
         return new CalendarPermissionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarPermissions") + "/" + id, getClient(), null);
     }
-    public IEventCollectionRequestBuilder calendarView() {
+    public EventCollectionRequestBuilder calendarView() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
     }
 
-    public IEventRequestBuilder calendarView(final String id) {
+    public EventRequestBuilder calendarView(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
     }
-    public IEventCollectionRequestBuilder events() {
+    public EventCollectionRequestBuilder events() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
     }
 
-    public IEventRequestBuilder events(final String id) {
+    public EventRequestBuilder events(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
-    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
+    public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
-    public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
+    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
-    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
+    public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
-    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
+    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
-    public ICalendarGetScheduleCollectionRequestBuilder getSchedule(final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval) {
+    public CalendarGetScheduleCollectionRequestBuilder getSchedule(final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval) {
         return new CalendarGetScheduleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSchedule"), getClient(), null, schedules, endTime, startTime, availabilityViewInterval);
     }
 
-    public ICalendarAllowedCalendarSharingRolesCollectionRequestBuilder allowedCalendarSharingRoles(final String user) {
+    public CalendarAllowedCalendarSharingRolesCollectionRequestBuilder allowedCalendarSharingRoles(final String user) {
         return new CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.allowedCalendarSharingRoles"), getClient(), null, user);
     }
 }

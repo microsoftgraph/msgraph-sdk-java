@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRriRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRriRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Rri Request Builder.
  */
-public class WorkbookFunctionsRriRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsRriRequestBuilder {
+public class WorkbookFunctionsRriRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsRri
@@ -36,22 +35,22 @@ public class WorkbookFunctionsRriRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookFunctionsRriRequest
+     * Creates the WorkbookFunctionsRriRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRriRequest instance
+     * @return the WorkbookFunctionsRriRequest instance
      */
-    public IWorkbookFunctionsRriRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsRriRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsRriRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsRriRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRriRequest instance
+     * @return the WorkbookFunctionsRriRequest instance
      */
-    public IWorkbookFunctionsRriRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsRriRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsRriRequest request = new WorkbookFunctionsRriRequest(
                 getRequestUrl(),
                 getClient(),

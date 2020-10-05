@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOddFYieldRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsOddFYieldRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Odd FYield Request Builder.
  */
-public class WorkbookFunctionsOddFYieldRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsOddFYieldRequestBuilder {
+public class WorkbookFunctionsOddFYieldRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsOddFYield
@@ -48,22 +47,22 @@ public class WorkbookFunctionsOddFYieldRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsOddFYieldRequest
+     * Creates the WorkbookFunctionsOddFYieldRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsOddFYieldRequest instance
+     * @return the WorkbookFunctionsOddFYieldRequest instance
      */
-    public IWorkbookFunctionsOddFYieldRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsOddFYieldRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsOddFYieldRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsOddFYieldRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsOddFYieldRequest instance
+     * @return the WorkbookFunctionsOddFYieldRequest instance
      */
-    public IWorkbookFunctionsOddFYieldRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsOddFYieldRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsOddFYieldRequest request = new WorkbookFunctionsOddFYieldRequest(
                 getRequestUrl(),
                 getClient(),

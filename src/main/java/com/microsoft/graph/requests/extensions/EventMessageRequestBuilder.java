@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EventMessage;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -20,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Event Message Request Builder.
  */
-public class EventMessageRequestBuilder extends BaseRequestBuilder implements IEventMessageRequestBuilder {
+public class EventMessageRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the EventMessage
@@ -37,9 +36,9 @@ public class EventMessageRequestBuilder extends BaseRequestBuilder implements IE
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEventMessageRequest instance
+     * @return the EventMessageRequest instance
      */
-    public IEventMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EventMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,48 +46,48 @@ public class EventMessageRequestBuilder extends BaseRequestBuilder implements IE
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEventMessageRequest instance
+     * @return the EventMessageRequest instance
      */
-    public IEventMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EventMessageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAttachmentCollectionRequestBuilder attachments() {
+    public AttachmentCollectionRequestBuilder attachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
-    public IAttachmentRequestBuilder attachments(final String id) {
+    public AttachmentRequestBuilder attachments(final String id) {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
-    public IExtensionCollectionRequestBuilder extensions() {
+    public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder extensions(final String id) {
+    public ExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
+    public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
-    public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
+    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
-    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
+    public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
-    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
+    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Event
      *
-     * @return the IEventRequestBuilder instance
+     * @return the EventRequestBuilder instance
      */
-    public IEventRequestBuilder event() {
+    public EventRequestBuilder event() {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("event"), getClient(), null);
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPostForwardRequest;
 import com.microsoft.graph.requests.extensions.PostForwardRequest;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Post Forward Request Builder.
  */
-public class PostForwardRequestBuilder extends BaseActionRequestBuilder implements IPostForwardRequestBuilder {
+public class PostForwardRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this PostForward
@@ -34,22 +33,22 @@ public class PostForwardRequestBuilder extends BaseActionRequestBuilder implemen
     }
 
     /**
-     * Creates the IPostForwardRequest
+     * Creates the PostForwardRequest
      *
      * @param requestOptions the options for the request
-     * @return the IPostForwardRequest instance
+     * @return the PostForwardRequest instance
      */
-    public IPostForwardRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PostForwardRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IPostForwardRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the PostForwardRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IPostForwardRequest instance
+     * @return the PostForwardRequest instance
      */
-    public IPostForwardRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PostForwardRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PostForwardRequest request = new PostForwardRequest(
                 getRequestUrl(),
                 getClient(),

@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Claims Mapping Policy Reference Request.
  */
-public class ClaimsMappingPolicyReferenceRequest extends BaseRequest implements IClaimsMappingPolicyReferenceRequest {
+public class ClaimsMappingPolicyReferenceRequest extends BaseRequest {
 
     /**
      * The request for the ClaimsMappingPolicy
@@ -48,7 +48,7 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-    public IClaimsMappingPolicyReferenceRequest select(final String value) {
+    public ClaimsMappingPolicyReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ClaimsMappingPolicyReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class ClaimsMappingPolicyReferenceRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-    public IClaimsMappingPolicyReferenceRequest expand(final String value) {
+    public ClaimsMappingPolicyReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ClaimsMappingPolicyReferenceRequest)this;
     }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Delegated Permission Classification Request Builder.
  */
-public class DelegatedPermissionClassificationRequestBuilder extends BaseRequestBuilder implements IDelegatedPermissionClassificationRequestBuilder {
+public class DelegatedPermissionClassificationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DelegatedPermissionClassification
@@ -35,9 +35,9 @@ public class DelegatedPermissionClassificationRequestBuilder extends BaseRequest
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDelegatedPermissionClassificationRequest instance
+     * @return the DelegatedPermissionClassificationRequest instance
      */
-    public IDelegatedPermissionClassificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DelegatedPermissionClassificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DelegatedPermissionClassificationRequestBuilder extends BaseRequest
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDelegatedPermissionClassificationRequest instance
+     * @return the DelegatedPermissionClassificationRequest instance
      */
-    public IDelegatedPermissionClassificationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DelegatedPermissionClassificationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

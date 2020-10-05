@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageFileCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveUsageFileCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get One Drive Usage File Counts Request Builder.
  */
-public class ReportRootGetOneDriveUsageFileCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetOneDriveUsageFileCountsRequestBuilder {
+public class ReportRootGetOneDriveUsageFileCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetOneDriveUsageFileCounts
@@ -32,22 +31,22 @@ public class ReportRootGetOneDriveUsageFileCountsRequestBuilder extends BaseFunc
     }
 
     /**
-     * Creates the IReportRootGetOneDriveUsageFileCountsRequest
+     * Creates the ReportRootGetOneDriveUsageFileCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOneDriveUsageFileCountsRequest instance
+     * @return the ReportRootGetOneDriveUsageFileCountsRequest instance
      */
-    public IReportRootGetOneDriveUsageFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetOneDriveUsageFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetOneDriveUsageFileCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetOneDriveUsageFileCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOneDriveUsageFileCountsRequest instance
+     * @return the ReportRootGetOneDriveUsageFileCountsRequest instance
      */
-    public IReportRootGetOneDriveUsageFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetOneDriveUsageFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOneDriveUsageFileCountsRequest request = new ReportRootGetOneDriveUsageFileCountsRequest(
                 getRequestUrl(),
                 getClient(),

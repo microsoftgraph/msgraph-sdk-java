@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallPlayPromptRequest;
 import com.microsoft.graph.requests.extensions.CallPlayPromptRequest;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.PlayPromptOperation;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Play Prompt Request Builder.
  */
-public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder implements ICallPlayPromptRequestBuilder {
+public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallPlayPrompt
@@ -35,22 +34,22 @@ public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder imple
     }
 
     /**
-     * Creates the ICallPlayPromptRequest
+     * Creates the CallPlayPromptRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallPlayPromptRequest instance
+     * @return the CallPlayPromptRequest instance
      */
-    public ICallPlayPromptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallPlayPromptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallPlayPromptRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallPlayPromptRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallPlayPromptRequest instance
+     * @return the CallPlayPromptRequest instance
      */
-    public ICallPlayPromptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallPlayPromptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallPlayPromptRequest request = new CallPlayPromptRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceBypassActivationLockRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceBypassActivationLockRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Bypass Activation Lock Request.
  */
-public class ManagedDeviceBypassActivationLockRequest extends BaseRequest implements IManagedDeviceBypassActivationLockRequest {
+public class ManagedDeviceBypassActivationLockRequest extends BaseRequest {
 
     /**
      * The request for this ManagedDeviceBypassActivationLock

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCharRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsCharRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Char Request Builder.
  */
-public class WorkbookFunctionsCharRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsCharRequestBuilder {
+public class WorkbookFunctionsCharRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsChar
@@ -32,22 +31,22 @@ public class WorkbookFunctionsCharRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsCharRequest
+     * Creates the WorkbookFunctionsCharRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCharRequest instance
+     * @return the WorkbookFunctionsCharRequest instance
      */
-    public IWorkbookFunctionsCharRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsCharRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsCharRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsCharRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCharRequest instance
+     * @return the WorkbookFunctionsCharRequest instance
      */
-    public IWorkbookFunctionsCharRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsCharRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCharRequest request = new WorkbookFunctionsCharRequest(
                 getRequestUrl(),
                 getClient(),

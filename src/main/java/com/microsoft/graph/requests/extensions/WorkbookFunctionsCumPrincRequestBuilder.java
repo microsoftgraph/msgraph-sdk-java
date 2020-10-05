@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCumPrincRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsCumPrincRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Cum Princ Request Builder.
  */
-public class WorkbookFunctionsCumPrincRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsCumPrincRequestBuilder {
+public class WorkbookFunctionsCumPrincRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsCumPrinc
@@ -42,22 +41,22 @@ public class WorkbookFunctionsCumPrincRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsCumPrincRequest
+     * Creates the WorkbookFunctionsCumPrincRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCumPrincRequest instance
+     * @return the WorkbookFunctionsCumPrincRequest instance
      */
-    public IWorkbookFunctionsCumPrincRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsCumPrincRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsCumPrincRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsCumPrincRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCumPrincRequest instance
+     * @return the WorkbookFunctionsCumPrincRequest instance
      */
-    public IWorkbookFunctionsCumPrincRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsCumPrincRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCumPrincRequest request = new WorkbookFunctionsCumPrincRequest(
                 getRequestUrl(),
                 getClient(),

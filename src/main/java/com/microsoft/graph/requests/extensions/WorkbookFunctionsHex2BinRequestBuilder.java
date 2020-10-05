@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHex2BinRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsHex2BinRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Hex2Bin Request Builder.
  */
-public class WorkbookFunctionsHex2BinRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsHex2BinRequestBuilder {
+public class WorkbookFunctionsHex2BinRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsHex2Bin
@@ -34,22 +33,22 @@ public class WorkbookFunctionsHex2BinRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsHex2BinRequest
+     * Creates the WorkbookFunctionsHex2BinRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsHex2BinRequest instance
+     * @return the WorkbookFunctionsHex2BinRequest instance
      */
-    public IWorkbookFunctionsHex2BinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsHex2BinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsHex2BinRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsHex2BinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsHex2BinRequest instance
+     * @return the WorkbookFunctionsHex2BinRequest instance
      */
-    public IWorkbookFunctionsHex2BinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsHex2BinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsHex2BinRequest request = new WorkbookFunctionsHex2BinRequest(
                 getRequestUrl(),
                 getClient(),

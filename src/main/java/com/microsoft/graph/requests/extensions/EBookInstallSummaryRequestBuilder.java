@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the EBook Install Summary Request Builder.
  */
-public class EBookInstallSummaryRequestBuilder extends BaseRequestBuilder implements IEBookInstallSummaryRequestBuilder {
+public class EBookInstallSummaryRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the EBookInstallSummary
@@ -35,9 +35,9 @@ public class EBookInstallSummaryRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEBookInstallSummaryRequest instance
+     * @return the EBookInstallSummaryRequest instance
      */
-    public IEBookInstallSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EBookInstallSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class EBookInstallSummaryRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEBookInstallSummaryRequest instance
+     * @return the EBookInstallSummaryRequest instance
      */
-    public IEBookInstallSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EBookInstallSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EBookInstallSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

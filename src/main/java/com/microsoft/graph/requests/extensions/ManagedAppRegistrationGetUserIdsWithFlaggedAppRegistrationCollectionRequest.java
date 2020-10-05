@@ -11,7 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Managed App Registration Get User Ids With Flagged App Registration Collection Request.
  */
-public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest extends BaseCollectionRequest<ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse, IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage> implements IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest {
+public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest extends BaseCollectionRequest<ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param requestOptions the options for this request
      */
     public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse.class, IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage.class);
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse.class, ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage> callback) {
+    public void get(final ICallback<? super ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
         });
     }
 
-    public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage get() throws ClientException {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage get() throws ClientException {
         final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage buildFromResponse(final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse response) {
-        final IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder builder;
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage buildFromResponse(final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionResponse response) {
+        final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage page = new ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage(response, builder);
+        final ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage page = new ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest select(final String value) {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
+        return (ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest top(final int value) {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
+        return (ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest expand(final String value) {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
+        return (ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest filter(final String value) {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
+        return (ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param value the order by clause
      * @return the updated request
      */
-    public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest orderBy(final String value) {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
+        return (ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest)this;
     }
 
 }

@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.Site;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISiteRemoveCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRemoveCollectionRequest;
+import com.microsoft.graph.requests.extensions.SiteRemoveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Site Remove Collection Request Builder.
  */
-public class SiteRemoveCollectionRequestBuilder extends BaseActionRequestBuilder implements ISiteRemoveCollectionRequestBuilder {
+public class SiteRemoveCollectionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this collection of Site
@@ -46,7 +45,7 @@ public class SiteRemoveCollectionRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISiteRemoveCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SiteRemoveCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,7 +55,7 @@ public class SiteRemoveCollectionRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISiteRemoveCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteRemoveCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SiteRemoveCollectionRequest request = new SiteRemoveCollectionRequest(
                 getRequestUrl(),
                 getClient(),

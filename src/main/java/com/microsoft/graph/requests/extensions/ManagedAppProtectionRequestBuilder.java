@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Protection Request Builder.
  */
-public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder implements IManagedAppProtectionRequestBuilder {
+public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedAppProtection
@@ -36,9 +36,9 @@ public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppProtectionRequest instance
+     * @return the ManagedAppProtectionRequest instance
      */
-    public IManagedAppProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,15 +46,15 @@ public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppProtectionRequest instance
+     * @return the ManagedAppProtectionRequest instance
      */
-    public IManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IManagedAppProtectionTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps) {
+    public ManagedAppProtectionTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps) {
         return new ManagedAppProtectionTargetAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.targetApps"), getClient(), null, apps);
     }
 }

@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharedInsight;
-import com.microsoft.graph.requests.extensions.IEntityRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Shared Insight Request.
  */
-public class SharedInsightRequest extends BaseRequest implements ISharedInsightRequest {
+public class SharedInsightRequest extends BaseRequest {
 	
     /**
      * The request for the SharedInsight
@@ -140,7 +139,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @param value the select clause
      * @return the updated request
      */
-     public ISharedInsightRequest select(final String value) {
+     public SharedInsightRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SharedInsightRequest)this;
      }
@@ -151,7 +150,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @param value the expand clause
      * @return the updated request
      */
-     public ISharedInsightRequest expand(final String value) {
+     public SharedInsightRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SharedInsightRequest)this;
      }

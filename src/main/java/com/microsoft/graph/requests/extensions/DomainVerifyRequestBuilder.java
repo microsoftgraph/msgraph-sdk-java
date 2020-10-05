@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDomainVerifyRequest;
 import com.microsoft.graph.requests.extensions.DomainVerifyRequest;
 import com.microsoft.graph.models.extensions.Domain;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Domain Verify Request Builder.
  */
-public class DomainVerifyRequestBuilder extends BaseActionRequestBuilder implements IDomainVerifyRequestBuilder {
+public class DomainVerifyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DomainVerify
@@ -30,22 +29,22 @@ public class DomainVerifyRequestBuilder extends BaseActionRequestBuilder impleme
     }
 
     /**
-     * Creates the IDomainVerifyRequest
+     * Creates the DomainVerifyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDomainVerifyRequest instance
+     * @return the DomainVerifyRequest instance
      */
-    public IDomainVerifyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DomainVerifyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDomainVerifyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DomainVerifyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDomainVerifyRequest instance
+     * @return the DomainVerifyRequest instance
      */
-    public IDomainVerifyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainVerifyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DomainVerifyRequest request = new DomainVerifyRequest(
                 getRequestUrl(),
                 getClient(),

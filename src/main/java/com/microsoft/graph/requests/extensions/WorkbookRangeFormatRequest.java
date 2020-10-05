@@ -8,15 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFillRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFontRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookFormatProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookFormatProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -29,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Format Request.
  */
-public class WorkbookRangeFormatRequest extends BaseRequest implements IWorkbookRangeFormatRequest {
+public class WorkbookRangeFormatRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookRangeFormat
@@ -148,7 +143,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest implements IWorkbook
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookRangeFormatRequest select(final String value) {
+     public WorkbookRangeFormatRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookRangeFormatRequest)this;
      }
@@ -159,7 +154,7 @@ public class WorkbookRangeFormatRequest extends BaseRequest implements IWorkbook
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookRangeFormatRequest expand(final String value) {
+     public WorkbookRangeFormatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookRangeFormatRequest)this;
      }

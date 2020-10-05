@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.WindowsInformationProtectionPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyCollectionRequest;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Windows Information Protection Policy Collection Request Builder.
  */
-public class WindowsInformationProtectionPolicyCollectionRequestBuilder extends BaseRequestBuilder implements IWindowsInformationProtectionPolicyCollectionRequestBuilder {
+public class WindowsInformationProtectionPolicyCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceAppManagement
@@ -42,7 +42,7 @@ public class WindowsInformationProtectionPolicyCollectionRequestBuilder extends 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWindowsInformationProtectionPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WindowsInformationProtectionPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class WindowsInformationProtectionPolicyCollectionRequestBuilder extends 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWindowsInformationProtectionPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsInformationProtectionPolicyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWindowsInformationProtectionPolicyRequestBuilder byId(final String id) {
+    public WindowsInformationProtectionPolicyRequestBuilder byId(final String id) {
         return new WindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

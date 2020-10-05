@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRemoveGroupRequest;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRemoveGroupRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Group Lifecycle Policy Remove Group Request Builder.
  */
-public class GroupLifecyclePolicyRemoveGroupRequestBuilder extends BaseActionRequestBuilder implements IGroupLifecyclePolicyRemoveGroupRequestBuilder {
+public class GroupLifecyclePolicyRemoveGroupRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupLifecyclePolicyRemoveGroup
@@ -32,22 +31,22 @@ public class GroupLifecyclePolicyRemoveGroupRequestBuilder extends BaseActionReq
     }
 
     /**
-     * Creates the IGroupLifecyclePolicyRemoveGroupRequest
+     * Creates the GroupLifecyclePolicyRemoveGroupRequest
      *
      * @param requestOptions the options for the request
-     * @return the IGroupLifecyclePolicyRemoveGroupRequest instance
+     * @return the GroupLifecyclePolicyRemoveGroupRequest instance
      */
-    public IGroupLifecyclePolicyRemoveGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupLifecyclePolicyRemoveGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IGroupLifecyclePolicyRemoveGroupRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the GroupLifecyclePolicyRemoveGroupRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IGroupLifecyclePolicyRemoveGroupRequest instance
+     * @return the GroupLifecyclePolicyRemoveGroupRequest instance
      */
-    public IGroupLifecyclePolicyRemoveGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupLifecyclePolicyRemoveGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupLifecyclePolicyRemoveGroupRequest request = new GroupLifecyclePolicyRemoveGroupRequest(
                 getRequestUrl(),
                 getClient(),

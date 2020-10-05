@@ -9,27 +9,16 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -42,7 +31,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Event Request.
  */
-public class EventRequest extends BaseRequest implements IEventRequest {
+public class EventRequest extends BaseRequest {
 	
     /**
      * The request for the Event
@@ -161,7 +150,7 @@ public class EventRequest extends BaseRequest implements IEventRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IEventRequest select(final String value) {
+     public EventRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (EventRequest)this;
      }
@@ -172,7 +161,7 @@ public class EventRequest extends BaseRequest implements IEventRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IEventRequest expand(final String value) {
+     public EventRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (EventRequest)this;
      }

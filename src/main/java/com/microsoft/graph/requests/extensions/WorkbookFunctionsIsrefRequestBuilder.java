@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsrefRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsrefRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Isref Request Builder.
  */
-public class WorkbookFunctionsIsrefRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsIsrefRequestBuilder {
+public class WorkbookFunctionsIsrefRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsIsref
@@ -32,22 +31,22 @@ public class WorkbookFunctionsIsrefRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsrefRequest
+     * Creates the WorkbookFunctionsIsrefRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsrefRequest instance
+     * @return the WorkbookFunctionsIsrefRequest instance
      */
-    public IWorkbookFunctionsIsrefRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsIsrefRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsrefRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsIsrefRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsrefRequest instance
+     * @return the WorkbookFunctionsIsrefRequest instance
      */
-    public IWorkbookFunctionsIsrefRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsIsrefRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIsrefRequest request = new WorkbookFunctionsIsrefRequest(
                 getRequestUrl(),
                 getClient(),

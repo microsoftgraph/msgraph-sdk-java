@@ -24,7 +24,7 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 /**
  * The class for the Managed Device Collection Reference Request.
  */
-public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionRequest<ManagedDeviceCollectionResponse, IManagedDeviceCollectionPage> implements IManagedDeviceCollectionReferenceRequest {
+public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionRequest<ManagedDeviceCollectionResponse, ManagedDeviceCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedDevice
@@ -34,7 +34,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
      * @param requestOptions the options for this request
      */
     public ManagedDeviceCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, IManagedDeviceCollectionPage.class);
+        super(requestUrl, client, requestOptions, ManagedDeviceCollectionResponse.class, ManagedDeviceCollectionPage.class);
     }
 
     public void post(final ManagedDevice newManagedDevice, final ICallback<? super ManagedDevice> callback) {
@@ -58,7 +58,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
      * @param value the expand clause
      * @return the updated request
      */
-    public IManagedDeviceCollectionReferenceRequest expand(final String value) {
+    public ManagedDeviceCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedDeviceCollectionReferenceRequest)this;
     }
@@ -69,7 +69,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
      * @param value the filter clause
      * @return the updated request
      */
-    public IManagedDeviceCollectionReferenceRequest filter(final String value) {
+    public ManagedDeviceCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ManagedDeviceCollectionReferenceRequest)this;
     }
@@ -80,7 +80,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
      * @param value the sort clause
      * @return the updated request
      */
-    public IManagedDeviceCollectionReferenceRequest orderBy(final String value) {
+    public ManagedDeviceCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ManagedDeviceCollectionReferenceRequest)this;
     }
@@ -91,7 +91,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
      * @param value the select clause
      * @return the updated request
      */
-    public IManagedDeviceCollectionReferenceRequest select(final String value) {
+    public ManagedDeviceCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedDeviceCollectionReferenceRequest)this;
     }
@@ -102,7 +102,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IManagedDeviceCollectionReferenceRequest top(final int value) {
+    public ManagedDeviceCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ManagedDeviceCollectionReferenceRequest)this;
     }

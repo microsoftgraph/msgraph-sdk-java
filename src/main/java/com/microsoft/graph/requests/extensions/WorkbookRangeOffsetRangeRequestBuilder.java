@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeOffsetRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeOffsetRangeRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Offset Range Request Builder.
  */
-public class WorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookRangeOffsetRangeRequestBuilder {
+public class WorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeOffsetRange
@@ -34,22 +33,22 @@ public class WorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequestB
     }
 
     /**
-     * Creates the IWorkbookRangeOffsetRangeRequest
+     * Creates the WorkbookRangeOffsetRangeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeOffsetRangeRequest instance
+     * @return the WorkbookRangeOffsetRangeRequest instance
      */
-    public IWorkbookRangeOffsetRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeOffsetRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeOffsetRangeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeOffsetRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeOffsetRangeRequest instance
+     * @return the WorkbookRangeOffsetRangeRequest instance
      */
-    public IWorkbookRangeOffsetRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeOffsetRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeOffsetRangeRequest request = new WorkbookRangeOffsetRangeRequest(
                 getRequestUrl(),
                 getClient(),
@@ -66,27 +65,27 @@ public class WorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequestB
     /**
      * Gets the request builder for WorkbookRangeFormat
      *
-     * @return the IWorkbookRangeFormatRequestBuilder instance
+     * @return the WorkbookRangeFormatRequestBuilder instance
      */
-    public IWorkbookRangeFormatRequestBuilder format() {
+    public WorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeSort
      *
-     * @return the IWorkbookRangeSortRequestBuilder instance
+     * @return the WorkbookRangeSortRequestBuilder instance
      */
-    public IWorkbookRangeSortRequestBuilder sort() {
+    public WorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

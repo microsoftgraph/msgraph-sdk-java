@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyTargetAppsRequest;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyTargetAppsRequest;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed App Policy Target Apps Request Builder.
  */
-public class ManagedAppPolicyTargetAppsRequestBuilder extends BaseActionRequestBuilder implements IManagedAppPolicyTargetAppsRequestBuilder {
+public class ManagedAppPolicyTargetAppsRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedAppPolicyTargetApps
@@ -32,22 +31,22 @@ public class ManagedAppPolicyTargetAppsRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IManagedAppPolicyTargetAppsRequest
+     * Creates the ManagedAppPolicyTargetAppsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedAppPolicyTargetAppsRequest instance
+     * @return the ManagedAppPolicyTargetAppsRequest instance
      */
-    public IManagedAppPolicyTargetAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppPolicyTargetAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedAppPolicyTargetAppsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedAppPolicyTargetAppsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedAppPolicyTargetAppsRequest instance
+     * @return the ManagedAppPolicyTargetAppsRequest instance
      */
-    public IManagedAppPolicyTargetAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppPolicyTargetAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedAppPolicyTargetAppsRequest request = new ManagedAppPolicyTargetAppsRequest(
                 getRequestUrl(),
                 getClient(),

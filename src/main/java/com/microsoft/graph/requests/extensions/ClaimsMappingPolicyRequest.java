@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Claims Mapping Policy Request.
  */
-public class ClaimsMappingPolicyRequest extends BaseRequest implements IClaimsMappingPolicyRequest {
+public class ClaimsMappingPolicyRequest extends BaseRequest {
 	
     /**
      * The request for the ClaimsMappingPolicy
@@ -138,7 +138,7 @@ public class ClaimsMappingPolicyRequest extends BaseRequest implements IClaimsMa
      * @param value the select clause
      * @return the updated request
      */
-     public IClaimsMappingPolicyRequest select(final String value) {
+     public ClaimsMappingPolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ClaimsMappingPolicyRequest)this;
      }
@@ -149,7 +149,7 @@ public class ClaimsMappingPolicyRequest extends BaseRequest implements IClaimsMa
      * @param value the expand clause
      * @return the updated request
      */
-     public IClaimsMappingPolicyRequest expand(final String value) {
+     public ClaimsMappingPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ClaimsMappingPolicyRequest)this;
      }

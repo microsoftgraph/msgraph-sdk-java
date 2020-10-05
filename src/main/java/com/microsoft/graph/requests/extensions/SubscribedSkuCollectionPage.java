@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SubscribedSku;
-import com.microsoft.graph.requests.extensions.ISubscribedSkuCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionPage;
 import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionResponse;
 /**
  * The class for the Subscribed Sku Collection Page.
  */
-public class SubscribedSkuCollectionPage extends BaseCollectionPage<SubscribedSku, ISubscribedSkuCollectionRequestBuilder> implements ISubscribedSkuCollectionPage {
+public class SubscribedSkuCollectionPage extends BaseCollectionPage<SubscribedSku, SubscribedSkuCollectionRequestBuilder> {
 
     /**
      * A collection page for SubscribedSku
@@ -22,7 +22,7 @@ public class SubscribedSkuCollectionPage extends BaseCollectionPage<SubscribedSk
      * @param response the serialized SubscribedSkuCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SubscribedSkuCollectionPage(final SubscribedSkuCollectionResponse response, final ISubscribedSkuCollectionRequestBuilder builder) {
+    public SubscribedSkuCollectionPage(final SubscribedSkuCollectionResponse response, final SubscribedSkuCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

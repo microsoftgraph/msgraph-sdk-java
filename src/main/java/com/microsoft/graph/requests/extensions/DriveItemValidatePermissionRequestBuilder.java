@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemValidatePermissionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemValidatePermissionRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Validate Permission Request Builder.
  */
-public class DriveItemValidatePermissionRequestBuilder extends BaseActionRequestBuilder implements IDriveItemValidatePermissionRequestBuilder {
+public class DriveItemValidatePermissionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DriveItemValidatePermission
@@ -34,22 +33,22 @@ public class DriveItemValidatePermissionRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IDriveItemValidatePermissionRequest
+     * Creates the DriveItemValidatePermissionRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemValidatePermissionRequest instance
+     * @return the DriveItemValidatePermissionRequest instance
      */
-    public IDriveItemValidatePermissionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemValidatePermissionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDriveItemValidatePermissionRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DriveItemValidatePermissionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemValidatePermissionRequest instance
+     * @return the DriveItemValidatePermissionRequest instance
      */
-    public IDriveItemValidatePermissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemValidatePermissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemValidatePermissionRequest request = new DriveItemValidatePermissionRequest(
                 getRequestUrl(),
                 getClient(),

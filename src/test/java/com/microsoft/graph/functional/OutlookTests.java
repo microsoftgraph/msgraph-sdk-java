@@ -44,13 +44,13 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.generated.AttachmentType;
 import com.microsoft.graph.models.generated.BodyType;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
-import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
-import com.microsoft.graph.requests.extensions.IUserCollectionPage;
+import com.microsoft.graph.requests.extensions.MessageCollectionPage;
+import com.microsoft.graph.requests.extensions.UserCollectionPage;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
-import com.microsoft.graph.requests.extensions.IEventCollectionPage;
+import com.microsoft.graph.requests.extensions.EventCollectionPage;
 
 @Ignore
 public class OutlookTests {
@@ -78,7 +78,7 @@ public class OutlookTests {
 
         // Get the first user in the tenant
         User me = testBase.graphClient.me().buildRequest().get();
-        IUserCollectionPage users = testBase.graphClient.users().buildRequest().get();
+        UserCollectionPage users = testBase.graphClient.users().buildRequest().get();
         User tenantUser = users.getCurrentPage().get(0);
 
         //Ensure that the user grabbed is not the logged-in user
@@ -115,7 +115,7 @@ public class OutlookTests {
     	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
     	
     	//Check that the sent message exists on the server
-    	IMessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest().filter("subject eq '" + draftSubject + "'").get();
+    	MessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest().filter("subject eq '" + draftSubject + "'").get();
     	assertFalse(mcp.getCurrentPage().isEmpty());
     }
     private Message createDraftMessage(TestBase testBase, String draftSubject) {
@@ -320,7 +320,7 @@ public class OutlookTests {
 	@Test
 	public void testSingleValuesExtendedProperties() {
     	final TestBase testBase = new TestBase();
-		final IEventCollectionPage arrangePage = testBase.graphClient.me().events().buildRequest().top(1).get();
+		final EventCollectionPage arrangePage = testBase.graphClient.me().events().buildRequest().top(1).get();
 		final String eventId = arrangePage.getCurrentPage().get(0).id;
 		final Event updatedEvent = new Event();
 		final String uuid = UUID.randomUUID().toString();
@@ -333,7 +333,7 @@ public class OutlookTests {
 		updatedEvent.singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(null, null, null));
 
 		testBase.graphClient.me().events(eventId).buildRequest().patch(updatedEvent);
-		final IEventCollectionPage page = testBase.graphClient.me()
+		final EventCollectionPage page = testBase.graphClient.me()
 										.events()
 										.buildRequest()
 										.expand("singleValueExtendedProperties")

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillClearRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillClearRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Fill Clear Request Builder.
  */
-public class WorkbookChartFillClearRequestBuilder extends BaseActionRequestBuilder implements IWorkbookChartFillClearRequestBuilder {
+public class WorkbookChartFillClearRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartFillClear
@@ -30,22 +29,22 @@ public class WorkbookChartFillClearRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookChartFillClearRequest
+     * Creates the WorkbookChartFillClearRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartFillClearRequest instance
+     * @return the WorkbookChartFillClearRequest instance
      */
-    public IWorkbookChartFillClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartFillClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartFillClearRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartFillClearRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartFillClearRequest instance
+     * @return the WorkbookChartFillClearRequest instance
      */
-    public IWorkbookChartFillClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartFillClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartFillClearRequest request = new WorkbookChartFillClearRequest(
                 getRequestUrl(),
                 getClient(),

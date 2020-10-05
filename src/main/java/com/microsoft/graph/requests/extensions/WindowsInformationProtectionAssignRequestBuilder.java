@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAssignRequest;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAssignRequest;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Windows Information Protection Assign Request Builder.
  */
-public class WindowsInformationProtectionAssignRequestBuilder extends BaseActionRequestBuilder implements IWindowsInformationProtectionAssignRequestBuilder {
+public class WindowsInformationProtectionAssignRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WindowsInformationProtectionAssign
@@ -32,22 +31,22 @@ public class WindowsInformationProtectionAssignRequestBuilder extends BaseAction
     }
 
     /**
-     * Creates the IWindowsInformationProtectionAssignRequest
+     * Creates the WindowsInformationProtectionAssignRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWindowsInformationProtectionAssignRequest instance
+     * @return the WindowsInformationProtectionAssignRequest instance
      */
-    public IWindowsInformationProtectionAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WindowsInformationProtectionAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWindowsInformationProtectionAssignRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WindowsInformationProtectionAssignRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWindowsInformationProtectionAssignRequest instance
+     * @return the WindowsInformationProtectionAssignRequest instance
      */
-    public IWindowsInformationProtectionAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WindowsInformationProtectionAssignRequest request = new WindowsInformationProtectionAssignRequest(
                 getRequestUrl(),
                 getClient(),

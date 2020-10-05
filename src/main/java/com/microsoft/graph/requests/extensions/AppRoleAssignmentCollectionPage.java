@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRespon
 /**
  * The class for the App Role Assignment Collection Page.
  */
-public class AppRoleAssignmentCollectionPage extends BaseCollectionPage<AppRoleAssignment, IAppRoleAssignmentCollectionRequestBuilder> implements IAppRoleAssignmentCollectionPage {
+public class AppRoleAssignmentCollectionPage extends BaseCollectionPage<AppRoleAssignment, AppRoleAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for AppRoleAssignment
@@ -22,7 +22,7 @@ public class AppRoleAssignmentCollectionPage extends BaseCollectionPage<AppRoleA
      * @param response the serialized AppRoleAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AppRoleAssignmentCollectionPage(final AppRoleAssignmentCollectionResponse response, final IAppRoleAssignmentCollectionRequestBuilder builder) {
+    public AppRoleAssignmentCollectionPage(final AppRoleAssignmentCollectionResponse response, final AppRoleAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

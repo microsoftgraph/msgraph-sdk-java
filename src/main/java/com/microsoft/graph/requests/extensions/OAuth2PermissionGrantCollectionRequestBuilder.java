@@ -11,10 +11,10 @@ import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequest;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequest;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the OAuth2Permission Grant Collection Request Builder.
  */
-public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseRequestBuilder implements IOAuth2PermissionGrantCollectionRequestBuilder {
+public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of OAuth2PermissionGrant
@@ -42,7 +42,7 @@ public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOAuth2PermissionGrantCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OAuth2PermissionGrantCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,21 +52,21 @@ public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOAuth2PermissionGrantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OAuth2PermissionGrantCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOAuth2PermissionGrantRequestBuilder byId(final String id) {
+    public OAuth2PermissionGrantRequestBuilder byId(final String id) {
         return new OAuth2PermissionGrantRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IOAuth2PermissionGrantDeltaCollectionRequestBuilder delta() {
+    public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta() {
         return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IOAuth2PermissionGrantDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public OAuth2PermissionGrantDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

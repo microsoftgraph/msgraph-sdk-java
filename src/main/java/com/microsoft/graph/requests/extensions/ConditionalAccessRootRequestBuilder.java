@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
-import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INamedLocationRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import java.util.Arrays;
@@ -26,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Conditional Access Root Request Builder.
  */
-public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder implements IConditionalAccessRootRequestBuilder {
+public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ConditionalAccessRoot
@@ -43,9 +39,9 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IConditionalAccessRootRequest instance
+     * @return the ConditionalAccessRootRequest instance
      */
-    public IConditionalAccessRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ConditionalAccessRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,25 +49,25 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IConditionalAccessRootRequest instance
+     * @return the ConditionalAccessRootRequest instance
      */
-    public IConditionalAccessRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConditionalAccessRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ConditionalAccessRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public INamedLocationCollectionRequestBuilder namedLocations() {
+    public NamedLocationCollectionRequestBuilder namedLocations() {
         return new NamedLocationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations"), getClient(), null);
     }
 
-    public INamedLocationRequestBuilder namedLocations(final String id) {
+    public NamedLocationRequestBuilder namedLocations(final String id) {
         return new NamedLocationRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations") + "/" + id, getClient(), null);
     }
-    public IConditionalAccessPolicyCollectionRequestBuilder policies() {
+    public ConditionalAccessPolicyCollectionRequestBuilder policies() {
         return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
     }
 
-    public IConditionalAccessPolicyRequestBuilder policies(final String id) {
+    public ConditionalAccessPolicyRequestBuilder policies(final String id) {
         return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
     }
 }

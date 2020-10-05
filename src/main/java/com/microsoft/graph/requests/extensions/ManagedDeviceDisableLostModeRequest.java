@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceDisableLostModeRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceDisableLostModeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Disable Lost Mode Request.
  */
-public class ManagedDeviceDisableLostModeRequest extends BaseRequest implements IManagedDeviceDisableLostModeRequest {
+public class ManagedDeviceDisableLostModeRequest extends BaseRequest {
 
     /**
      * The request for this ManagedDeviceDisableLostMode

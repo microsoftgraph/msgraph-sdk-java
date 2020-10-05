@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Endpoint Reference Request.
  */
-public class EndpointReferenceRequest extends BaseRequest implements IEndpointReferenceRequest {
+public class EndpointReferenceRequest extends BaseRequest {
 
     /**
      * The request for the Endpoint
@@ -48,7 +48,7 @@ public class EndpointReferenceRequest extends BaseRequest implements IEndpointRe
      * @param value the select clause
      * @return the updated request
      */
-    public IEndpointReferenceRequest select(final String value) {
+    public EndpointReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EndpointReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class EndpointReferenceRequest extends BaseRequest implements IEndpointRe
      * @param value the expand clause
      * @return the updated request
      */
-    public IEndpointReferenceRequest expand(final String value) {
+    public EndpointReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EndpointReferenceRequest)this;
     }

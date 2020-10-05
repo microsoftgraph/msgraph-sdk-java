@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Conditional Access Policy Request Builder.
  */
-public class ConditionalAccessPolicyRequestBuilder extends BaseRequestBuilder implements IConditionalAccessPolicyRequestBuilder {
+public class ConditionalAccessPolicyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ConditionalAccessPolicy
@@ -35,9 +35,9 @@ public class ConditionalAccessPolicyRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IConditionalAccessPolicyRequest instance
+     * @return the ConditionalAccessPolicyRequest instance
      */
-    public IConditionalAccessPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ConditionalAccessPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ConditionalAccessPolicyRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IConditionalAccessPolicyRequest instance
+     * @return the ConditionalAccessPolicyRequest instance
      */
-    public IConditionalAccessPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConditionalAccessPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

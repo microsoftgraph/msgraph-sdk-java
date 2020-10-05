@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImLnRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImLnRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Im Ln Request Builder.
  */
-public class WorkbookFunctionsImLnRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImLnRequestBuilder {
+public class WorkbookFunctionsImLnRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImLn
@@ -32,22 +31,22 @@ public class WorkbookFunctionsImLnRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsImLnRequest
+     * Creates the WorkbookFunctionsImLnRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImLnRequest instance
+     * @return the WorkbookFunctionsImLnRequest instance
      */
-    public IWorkbookFunctionsImLnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImLnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImLnRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImLnRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImLnRequest instance
+     * @return the WorkbookFunctionsImLnRequest instance
      */
-    public IWorkbookFunctionsImLnRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImLnRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImLnRequest request = new WorkbookFunctionsImLnRequest(
                 getRequestUrl(),
                 getClient(),

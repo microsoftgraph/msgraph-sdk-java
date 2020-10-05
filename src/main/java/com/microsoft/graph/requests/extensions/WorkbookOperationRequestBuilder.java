@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Operation Request Builder.
  */
-public class WorkbookOperationRequestBuilder extends BaseRequestBuilder implements IWorkbookOperationRequestBuilder {
+public class WorkbookOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookOperation
@@ -35,9 +35,9 @@ public class WorkbookOperationRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookOperationRequest instance
+     * @return the WorkbookOperationRequest instance
      */
-    public IWorkbookOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class WorkbookOperationRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookOperationRequest instance
+     * @return the WorkbookOperationRequest instance
      */
-    public IWorkbookOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerDeviceUsageUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetYammerDeviceUsageUserCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Yammer Device Usage User Counts Request.
  */
-public class ReportRootGetYammerDeviceUsageUserCountsRequest extends BaseRequest implements IReportRootGetYammerDeviceUsageUserCountsRequest {
+public class ReportRootGetYammerDeviceUsageUserCountsRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetYammerDeviceUsageUserCounts
@@ -97,7 +96,7 @@ public class ReportRootGetYammerDeviceUsageUserCountsRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetYammerDeviceUsageUserCountsRequest select(final String value) {
+    public ReportRootGetYammerDeviceUsageUserCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetYammerDeviceUsageUserCountsRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetYammerDeviceUsageUserCountsRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetYammerDeviceUsageUserCountsRequest expand(final String value) {
+    public ReportRootGetYammerDeviceUsageUserCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetYammerDeviceUsageUserCountsRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetYammerDeviceUsageUserCountsRequest extends BaseRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetYammerDeviceUsageUserCountsRequest filter(final String value) {
+    public ReportRootGetYammerDeviceUsageUserCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetYammerDeviceUsageUserCountsRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetYammerDeviceUsageUserCountsRequest extends BaseRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetYammerDeviceUsageUserCountsRequest orderBy(final String value) {
+    public ReportRootGetYammerDeviceUsageUserCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetYammerDeviceUsageUserCountsRequest)this;
     }

@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
-import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Permission Grant Policy Request Builder.
  */
-public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder implements IPermissionGrantPolicyRequestBuilder {
+public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the PermissionGrantPolicy
@@ -39,9 +37,9 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPermissionGrantPolicyRequest instance
+     * @return the PermissionGrantPolicyRequest instance
      */
-    public IPermissionGrantPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PermissionGrantPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,25 +47,25 @@ public class PermissionGrantPolicyRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPermissionGrantPolicyRequest instance
+     * @return the PermissionGrantPolicyRequest instance
      */
-    public IPermissionGrantPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PermissionGrantPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IPermissionGrantConditionSetCollectionRequestBuilder excludes() {
+    public PermissionGrantConditionSetCollectionRequestBuilder excludes() {
         return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("excludes"), getClient(), null);
     }
 
-    public IPermissionGrantConditionSetRequestBuilder excludes(final String id) {
+    public PermissionGrantConditionSetRequestBuilder excludes(final String id) {
         return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("excludes") + "/" + id, getClient(), null);
     }
-    public IPermissionGrantConditionSetCollectionRequestBuilder includes() {
+    public PermissionGrantConditionSetCollectionRequestBuilder includes() {
         return new PermissionGrantConditionSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includes"), getClient(), null);
     }
 
-    public IPermissionGrantConditionSetRequestBuilder includes(final String id) {
+    public PermissionGrantConditionSetRequestBuilder includes(final String id) {
         return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment("includes") + "/" + id, getClient(), null);
     }
 }

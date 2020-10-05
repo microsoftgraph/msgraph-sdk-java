@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the File Attachment Request Builder.
  */
-public class FileAttachmentRequestBuilder extends BaseRequestBuilder implements IFileAttachmentRequestBuilder {
+public class FileAttachmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the FileAttachment
@@ -35,9 +35,9 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IFileAttachmentRequest instance
+     * @return the FileAttachmentRequest instance
      */
-    public IFileAttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public FileAttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,15 +45,15 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IFileAttachmentRequest instance
+     * @return the FileAttachmentRequest instance
      */
-    public IFileAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FileAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.FileAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IFileAttachmentStreamRequestBuilder content() {
+    public FileAttachmentStreamRequestBuilder content() {
         return new FileAttachmentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }
 }

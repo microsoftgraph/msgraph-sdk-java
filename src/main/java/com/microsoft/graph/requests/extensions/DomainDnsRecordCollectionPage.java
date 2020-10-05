@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DomainDnsRecord;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionPage;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionResponse
 /**
  * The class for the Domain Dns Record Collection Page.
  */
-public class DomainDnsRecordCollectionPage extends BaseCollectionPage<DomainDnsRecord, IDomainDnsRecordCollectionRequestBuilder> implements IDomainDnsRecordCollectionPage {
+public class DomainDnsRecordCollectionPage extends BaseCollectionPage<DomainDnsRecord, DomainDnsRecordCollectionRequestBuilder> {
 
     /**
      * A collection page for DomainDnsRecord
@@ -22,7 +22,7 @@ public class DomainDnsRecordCollectionPage extends BaseCollectionPage<DomainDnsR
      * @param response the serialized DomainDnsRecordCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DomainDnsRecordCollectionPage(final DomainDnsRecordCollectionResponse response, final IDomainDnsRecordCollectionRequestBuilder builder) {
+    public DomainDnsRecordCollectionPage(final DomainDnsRecordCollectionResponse response, final DomainDnsRecordCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

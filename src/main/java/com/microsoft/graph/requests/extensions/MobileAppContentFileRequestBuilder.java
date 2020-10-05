@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Content File Request Builder.
  */
-public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder implements IMobileAppContentFileRequestBuilder {
+public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MobileAppContentFile
@@ -36,9 +36,9 @@ public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppContentFileRequest instance
+     * @return the MobileAppContentFileRequest instance
      */
-    public IMobileAppContentFileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileAppContentFileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,19 +46,19 @@ public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppContentFileRequest instance
+     * @return the MobileAppContentFileRequest instance
      */
-    public IMobileAppContentFileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppContentFileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MobileAppContentFileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IMobileAppContentFileCommitRequestBuilder commit(final FileEncryptionInfo fileEncryptionInfo) {
+    public MobileAppContentFileCommitRequestBuilder commit(final FileEncryptionInfo fileEncryptionInfo) {
         return new MobileAppContentFileCommitRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.commit"), getClient(), null, fileEncryptionInfo);
     }
 
-    public IMobileAppContentFileRenewUploadRequestBuilder renewUpload() {
+    public MobileAppContentFileRenewUploadRequestBuilder renewUpload() {
         return new MobileAppContentFileRenewUploadRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.renewUpload"), getClient(), null);
     }
 }

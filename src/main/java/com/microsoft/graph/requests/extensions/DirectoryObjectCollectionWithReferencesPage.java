@@ -13,8 +13,8 @@ import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.google.gson.JsonObject;
@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Directory Object Collection With References Page.
  */
-public class DirectoryObjectCollectionWithReferencesPage extends BaseCollectionPage<DirectoryObject, IDirectoryObjectCollectionWithReferencesRequestBuilder> implements IDirectoryObjectCollectionWithReferencesPage {
+public class DirectoryObjectCollectionWithReferencesPage extends BaseCollectionPage<DirectoryObject, DirectoryObjectCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for DirectoryObject
@@ -35,7 +35,7 @@ public class DirectoryObjectCollectionWithReferencesPage extends BaseCollectionP
      * @param response the serialized DirectoryObjectCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DirectoryObjectCollectionWithReferencesPage(final DirectoryObjectCollectionResponse response, final IDirectoryObjectCollectionWithReferencesRequestBuilder builder) {
+    public DirectoryObjectCollectionWithReferencesPage(final DirectoryObjectCollectionResponse response, final DirectoryObjectCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

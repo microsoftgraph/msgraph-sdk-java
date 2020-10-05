@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImLog2Request;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImLog2Request;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Im Log2Request Builder.
  */
-public class WorkbookFunctionsImLog2RequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImLog2RequestBuilder {
+public class WorkbookFunctionsImLog2RequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImLog2
@@ -32,22 +31,22 @@ public class WorkbookFunctionsImLog2RequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsImLog2Request
+     * Creates the WorkbookFunctionsImLog2Request
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImLog2Request instance
+     * @return the WorkbookFunctionsImLog2Request instance
      */
-    public IWorkbookFunctionsImLog2Request buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImLog2Request buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImLog2Request with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImLog2Request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImLog2Request instance
+     * @return the WorkbookFunctionsImLog2Request instance
      */
-    public IWorkbookFunctionsImLog2Request buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImLog2Request buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImLog2Request request = new WorkbookFunctionsImLog2Request(
                 getRequestUrl(),
                 getClient(),

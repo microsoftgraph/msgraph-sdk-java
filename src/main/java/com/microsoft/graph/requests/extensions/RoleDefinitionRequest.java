@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleDefinition;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Role Definition Request.
  */
-public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitionRequest {
+public class RoleDefinitionRequest extends BaseRequest {
 	
     /**
      * The request for the RoleDefinition
@@ -157,7 +155,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param value the select clause
      * @return the updated request
      */
-     public IRoleDefinitionRequest select(final String value) {
+     public RoleDefinitionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (RoleDefinitionRequest)this;
      }
@@ -168,7 +166,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param value the expand clause
      * @return the updated request
      */
-     public IRoleDefinitionRequest expand(final String value) {
+     public RoleDefinitionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (RoleDefinitionRequest)this;
      }

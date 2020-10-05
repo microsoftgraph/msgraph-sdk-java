@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRandBetweenRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRandBetweenRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Rand Between Request Builder.
  */
-public class WorkbookFunctionsRandBetweenRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsRandBetweenRequestBuilder {
+public class WorkbookFunctionsRandBetweenRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsRandBetween
@@ -34,22 +33,22 @@ public class WorkbookFunctionsRandBetweenRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IWorkbookFunctionsRandBetweenRequest
+     * Creates the WorkbookFunctionsRandBetweenRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRandBetweenRequest instance
+     * @return the WorkbookFunctionsRandBetweenRequest instance
      */
-    public IWorkbookFunctionsRandBetweenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsRandBetweenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsRandBetweenRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsRandBetweenRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRandBetweenRequest instance
+     * @return the WorkbookFunctionsRandBetweenRequest instance
      */
-    public IWorkbookFunctionsRandBetweenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsRandBetweenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsRandBetweenRequest request = new WorkbookFunctionsRandBetweenRequest(
                 getRequestUrl(),
                 getClient(),

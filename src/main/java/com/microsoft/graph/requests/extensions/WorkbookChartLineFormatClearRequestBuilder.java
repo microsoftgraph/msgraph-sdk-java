@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartLineFormatClearRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatClearRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Line Format Clear Request Builder.
  */
-public class WorkbookChartLineFormatClearRequestBuilder extends BaseActionRequestBuilder implements IWorkbookChartLineFormatClearRequestBuilder {
+public class WorkbookChartLineFormatClearRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartLineFormatClear
@@ -30,22 +29,22 @@ public class WorkbookChartLineFormatClearRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IWorkbookChartLineFormatClearRequest
+     * Creates the WorkbookChartLineFormatClearRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartLineFormatClearRequest instance
+     * @return the WorkbookChartLineFormatClearRequest instance
      */
-    public IWorkbookChartLineFormatClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartLineFormatClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartLineFormatClearRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartLineFormatClearRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartLineFormatClearRequest instance
+     * @return the WorkbookChartLineFormatClearRequest instance
      */
-    public IWorkbookChartLineFormatClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartLineFormatClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartLineFormatClearRequest request = new WorkbookChartLineFormatClearRequest(
                 getRequestUrl(),
                 getClient(),

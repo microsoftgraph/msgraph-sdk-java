@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingStateSummary;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStat
 /**
  * The class for the Device Compliance Policy Setting State Summary Collection Page.
  */
-public class DeviceCompliancePolicySettingStateSummaryCollectionPage extends BaseCollectionPage<DeviceCompliancePolicySettingStateSummary, IDeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder> implements IDeviceCompliancePolicySettingStateSummaryCollectionPage {
+public class DeviceCompliancePolicySettingStateSummaryCollectionPage extends BaseCollectionPage<DeviceCompliancePolicySettingStateSummary, DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceCompliancePolicySettingStateSummary
@@ -22,7 +22,7 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionPage extends Bas
      * @param response the serialized DeviceCompliancePolicySettingStateSummaryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceCompliancePolicySettingStateSummaryCollectionPage(final DeviceCompliancePolicySettingStateSummaryCollectionResponse response, final IDeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder builder) {
+    public DeviceCompliancePolicySettingStateSummaryCollectionPage(final DeviceCompliancePolicySettingStateSummaryCollectionResponse response, final DeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

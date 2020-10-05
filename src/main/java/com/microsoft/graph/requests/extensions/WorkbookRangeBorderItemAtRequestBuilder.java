@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderItemAtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Border Item At Request Builder.
  */
-public class WorkbookRangeBorderItemAtRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookRangeBorderItemAtRequestBuilder {
+public class WorkbookRangeBorderItemAtRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeBorderItemAt
@@ -32,22 +31,22 @@ public class WorkbookRangeBorderItemAtRequestBuilder extends BaseFunctionRequest
     }
 
     /**
-     * Creates the IWorkbookRangeBorderItemAtRequest
+     * Creates the WorkbookRangeBorderItemAtRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeBorderItemAtRequest instance
+     * @return the WorkbookRangeBorderItemAtRequest instance
      */
-    public IWorkbookRangeBorderItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeBorderItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeBorderItemAtRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeBorderItemAtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeBorderItemAtRequest instance
+     * @return the WorkbookRangeBorderItemAtRequest instance
      */
-    public IWorkbookRangeBorderItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeBorderItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeBorderItemAtRequest request = new WorkbookRangeBorderItemAtRequest(
                 getRequestUrl(),
                 getClient(),

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Configuration Assignment Request Builder.
  */
-public class DeviceConfigurationAssignmentRequestBuilder extends BaseRequestBuilder implements IDeviceConfigurationAssignmentRequestBuilder {
+public class DeviceConfigurationAssignmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceConfigurationAssignment
@@ -35,9 +35,9 @@ public class DeviceConfigurationAssignmentRequestBuilder extends BaseRequestBuil
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceConfigurationAssignmentRequest instance
+     * @return the DeviceConfigurationAssignmentRequest instance
      */
-    public IDeviceConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DeviceConfigurationAssignmentRequestBuilder extends BaseRequestBuil
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceConfigurationAssignmentRequest instance
+     * @return the DeviceConfigurationAssignmentRequest instance
      */
-    public IDeviceConfigurationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

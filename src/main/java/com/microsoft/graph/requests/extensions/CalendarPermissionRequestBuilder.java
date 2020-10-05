@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Calendar Permission Request Builder.
  */
-public class CalendarPermissionRequestBuilder extends BaseRequestBuilder implements ICalendarPermissionRequestBuilder {
+public class CalendarPermissionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the CalendarPermission
@@ -35,9 +35,9 @@ public class CalendarPermissionRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICalendarPermissionRequest instance
+     * @return the CalendarPermissionRequest instance
      */
-    public ICalendarPermissionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CalendarPermissionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class CalendarPermissionRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICalendarPermissionRequest instance
+     * @return the CalendarPermissionRequest instance
      */
-    public ICalendarPermissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarPermissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CalendarPermissionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IPostReplyRequest;
 import com.microsoft.graph.requests.extensions.PostReplyRequest;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Post Reply Request Builder.
  */
-public class PostReplyRequestBuilder extends BaseActionRequestBuilder implements IPostReplyRequestBuilder {
+public class PostReplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this PostReply
@@ -32,22 +31,22 @@ public class PostReplyRequestBuilder extends BaseActionRequestBuilder implements
     }
 
     /**
-     * Creates the IPostReplyRequest
+     * Creates the PostReplyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IPostReplyRequest instance
+     * @return the PostReplyRequest instance
      */
-    public IPostReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PostReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IPostReplyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the PostReplyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IPostReplyRequest instance
+     * @return the PostReplyRequest instance
      */
-    public IPostReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PostReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PostReplyRequest request = new PostReplyRequest(
                 getRequestUrl(),
                 getClient(),

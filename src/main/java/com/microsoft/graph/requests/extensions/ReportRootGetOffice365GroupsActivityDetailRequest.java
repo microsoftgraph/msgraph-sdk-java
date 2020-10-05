@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityDetailRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Office365Groups Activity Detail Request.
  */
-public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseRequest implements IReportRootGetOffice365GroupsActivityDetailRequest {
+public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetOffice365GroupsActivityDetail
@@ -97,7 +96,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetOffice365GroupsActivityDetailRequest select(final String value) {
+    public ReportRootGetOffice365GroupsActivityDetailRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetOffice365GroupsActivityDetailRequest expand(final String value) {
+    public ReportRootGetOffice365GroupsActivityDetailRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetOffice365GroupsActivityDetailRequest filter(final String value) {
+    public ReportRootGetOffice365GroupsActivityDetailRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetOffice365GroupsActivityDetailRequest orderBy(final String value) {
+    public ReportRootGetOffice365GroupsActivityDetailRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
     }

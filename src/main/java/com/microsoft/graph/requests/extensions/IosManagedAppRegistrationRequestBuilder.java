@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Managed App Registration Request Builder.
  */
-public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder implements IIosManagedAppRegistrationRequestBuilder {
+public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the IosManagedAppRegistration
@@ -35,9 +35,9 @@ public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IIosManagedAppRegistrationRequest instance
+     * @return the IosManagedAppRegistrationRequest instance
      */
-    public IIosManagedAppRegistrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public IosManagedAppRegistrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,32 +45,32 @@ public class IosManagedAppRegistrationRequestBuilder extends BaseRequestBuilder 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IIosManagedAppRegistrationRequest instance
+     * @return the IosManagedAppRegistrationRequest instance
      */
-    public IIosManagedAppRegistrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosManagedAppRegistrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IosManagedAppRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IManagedAppPolicyCollectionRequestBuilder appliedPolicies() {
+    public ManagedAppPolicyCollectionRequestBuilder appliedPolicies() {
         return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies"), getClient(), null);
     }
 
-    public IManagedAppPolicyRequestBuilder appliedPolicies(final String id) {
+    public ManagedAppPolicyRequestBuilder appliedPolicies(final String id) {
         return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies") + "/" + id, getClient(), null);
     }
-    public IManagedAppPolicyCollectionRequestBuilder intendedPolicies() {
+    public ManagedAppPolicyCollectionRequestBuilder intendedPolicies() {
         return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies"), getClient(), null);
     }
 
-    public IManagedAppPolicyRequestBuilder intendedPolicies(final String id) {
+    public ManagedAppPolicyRequestBuilder intendedPolicies(final String id) {
         return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies") + "/" + id, getClient(), null);
     }
-    public IManagedAppOperationCollectionRequestBuilder operations() {
+    public ManagedAppOperationCollectionRequestBuilder operations() {
         return new ManagedAppOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
-    public IManagedAppOperationRequestBuilder operations(final String id) {
+    public ManagedAppOperationRequestBuilder operations(final String id) {
         return new ManagedAppOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 }

@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams Template Reference Request Builder.
  */
-public class TeamsTemplateReferenceRequestBuilder extends BaseRequestBuilder implements ITeamsTemplateReferenceRequestBuilder {
+public class TeamsTemplateReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TeamsTemplate
@@ -37,9 +37,9 @@ public class TeamsTemplateReferenceRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The ITeamsTemplateReferenceRequest instance
+     * @return The TeamsTemplateReferenceRequest instance
      */
-    public ITeamsTemplateReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsTemplateReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class TeamsTemplateReferenceRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsTemplateReferenceRequest instance
+     * @return the TeamsTemplateReferenceRequest instance
      */
-    public ITeamsTemplateReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTemplateReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsTemplateReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

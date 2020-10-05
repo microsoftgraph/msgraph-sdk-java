@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyRequest;
 import com.microsoft.graph.models.extensions.WorkbookFilterCriteria;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Filter Apply Request Builder.
  */
-public class WorkbookFilterApplyRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFilterApplyRequestBuilder {
+public class WorkbookFilterApplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFilterApply
@@ -32,22 +31,22 @@ public class WorkbookFilterApplyRequestBuilder extends BaseActionRequestBuilder 
     }
 
     /**
-     * Creates the IWorkbookFilterApplyRequest
+     * Creates the WorkbookFilterApplyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyRequest instance
+     * @return the WorkbookFilterApplyRequest instance
      */
-    public IWorkbookFilterApplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFilterApplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFilterApplyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFilterApplyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyRequest instance
+     * @return the WorkbookFilterApplyRequest instance
      */
-    public IWorkbookFilterApplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterApplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyRequest request = new WorkbookFilterApplyRequest(
                 getRequestUrl(),
                 getClient(),

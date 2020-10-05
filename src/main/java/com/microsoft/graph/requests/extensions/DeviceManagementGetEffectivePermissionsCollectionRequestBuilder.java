@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.RolePermission;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementGetEffectivePermissionsCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Device Management Get Effective Permissions Collection Request Builder.
  */
-public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder {
+public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -46,7 +45,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder ext
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceManagementGetEffectivePermissionsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceManagementGetEffectivePermissionsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,7 +55,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder ext
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceManagementGetEffectivePermissionsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementGetEffectivePermissionsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementGetEffectivePermissionsCollectionRequest request = new DeviceManagementGetEffectivePermissionsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

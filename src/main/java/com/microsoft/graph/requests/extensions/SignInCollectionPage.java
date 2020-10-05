@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SignIn;
-import com.microsoft.graph.requests.extensions.ISignInCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SignInCollectionPage;
 import com.microsoft.graph.requests.extensions.SignInCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SignInCollectionResponse;
 /**
  * The class for the Sign In Collection Page.
  */
-public class SignInCollectionPage extends BaseCollectionPage<SignIn, ISignInCollectionRequestBuilder> implements ISignInCollectionPage {
+public class SignInCollectionPage extends BaseCollectionPage<SignIn, SignInCollectionRequestBuilder> {
 
     /**
      * A collection page for SignIn
@@ -22,7 +22,7 @@ public class SignInCollectionPage extends BaseCollectionPage<SignIn, ISignInColl
      * @param response the serialized SignInCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SignInCollectionPage(final SignInCollectionResponse response, final ISignInCollectionRequestBuilder builder) {
+    public SignInCollectionPage(final SignInCollectionResponse response, final SignInCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

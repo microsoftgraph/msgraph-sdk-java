@@ -12,11 +12,11 @@ import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCollectionRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCountRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesItemAtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartSeriesRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionRequest;
+import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCountRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartSeriesItemAtRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Chart Series Collection Request Builder.
  */
-public class WorkbookChartSeriesCollectionRequestBuilder extends BaseRequestBuilder implements IWorkbookChartSeriesCollectionRequestBuilder {
+public class WorkbookChartSeriesCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of WorkbookChart
@@ -44,7 +44,7 @@ public class WorkbookChartSeriesCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookChartSeriesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartSeriesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,21 +54,21 @@ public class WorkbookChartSeriesCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookChartSeriesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSeriesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookChartSeriesCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookChartSeriesRequestBuilder byId(final String id) {
+    public WorkbookChartSeriesRequestBuilder byId(final String id) {
         return new WorkbookChartSeriesRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IWorkbookChartSeriesCountRequestBuilder count() {
+    public WorkbookChartSeriesCountRequestBuilder count() {
         return new WorkbookChartSeriesCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 
-    public IWorkbookChartSeriesItemAtRequestBuilder itemAt(final Integer index) {
+    public WorkbookChartSeriesItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookChartSeriesItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

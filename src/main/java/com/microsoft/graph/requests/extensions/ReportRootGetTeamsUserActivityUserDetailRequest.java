@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsUserActivityUserDetailRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Teams User Activity User Detail Request.
  */
-public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest implements IReportRootGetTeamsUserActivityUserDetailRequest {
+public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetTeamsUserActivityUserDetail
@@ -97,7 +96,7 @@ public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetTeamsUserActivityUserDetailRequest select(final String value) {
+    public ReportRootGetTeamsUserActivityUserDetailRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetTeamsUserActivityUserDetailRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetTeamsUserActivityUserDetailRequest expand(final String value) {
+    public ReportRootGetTeamsUserActivityUserDetailRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetTeamsUserActivityUserDetailRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetTeamsUserActivityUserDetailRequest filter(final String value) {
+    public ReportRootGetTeamsUserActivityUserDetailRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetTeamsUserActivityUserDetailRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetTeamsUserActivityUserDetailRequest extends BaseRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetTeamsUserActivityUserDetailRequest orderBy(final String value) {
+    public ReportRootGetTeamsUserActivityUserDetailRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetTeamsUserActivityUserDetailRequest)this;
     }

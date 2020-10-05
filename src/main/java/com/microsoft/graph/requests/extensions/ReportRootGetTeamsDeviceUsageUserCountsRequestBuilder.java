@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageUserCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Teams Device Usage User Counts Request Builder.
  */
-public class ReportRootGetTeamsDeviceUsageUserCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetTeamsDeviceUsageUserCountsRequestBuilder {
+public class ReportRootGetTeamsDeviceUsageUserCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetTeamsDeviceUsageUserCounts
@@ -32,22 +31,22 @@ public class ReportRootGetTeamsDeviceUsageUserCountsRequestBuilder extends BaseF
     }
 
     /**
-     * Creates the IReportRootGetTeamsDeviceUsageUserCountsRequest
+     * Creates the ReportRootGetTeamsDeviceUsageUserCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetTeamsDeviceUsageUserCountsRequest instance
+     * @return the ReportRootGetTeamsDeviceUsageUserCountsRequest instance
      */
-    public IReportRootGetTeamsDeviceUsageUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetTeamsDeviceUsageUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetTeamsDeviceUsageUserCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetTeamsDeviceUsageUserCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetTeamsDeviceUsageUserCountsRequest instance
+     * @return the ReportRootGetTeamsDeviceUsageUserCountsRequest instance
      */
-    public IReportRootGetTeamsDeviceUsageUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetTeamsDeviceUsageUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetTeamsDeviceUsageUserCountsRequest request = new ReportRootGetTeamsDeviceUsageUserCountsRequest(
                 getRequestUrl(),
                 getClient(),

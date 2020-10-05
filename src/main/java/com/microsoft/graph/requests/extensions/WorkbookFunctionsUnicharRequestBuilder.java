@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsUnicharRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsUnicharRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Unichar Request Builder.
  */
-public class WorkbookFunctionsUnicharRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsUnicharRequestBuilder {
+public class WorkbookFunctionsUnicharRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsUnichar
@@ -32,22 +31,22 @@ public class WorkbookFunctionsUnicharRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsUnicharRequest
+     * Creates the WorkbookFunctionsUnicharRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsUnicharRequest instance
+     * @return the WorkbookFunctionsUnicharRequest instance
      */
-    public IWorkbookFunctionsUnicharRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsUnicharRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsUnicharRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsUnicharRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsUnicharRequest instance
+     * @return the WorkbookFunctionsUnicharRequest instance
      */
-    public IWorkbookFunctionsUnicharRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsUnicharRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsUnicharRequest request = new WorkbookFunctionsUnicharRequest(
                 getRequestUrl(),
                 getClient(),

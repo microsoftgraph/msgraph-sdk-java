@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequest;
+import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserInstallStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Install State Summary Collection Request Builder.
  */
-public class UserInstallStateSummaryCollectionRequestBuilder extends BaseRequestBuilder implements IUserInstallStateSummaryCollectionRequestBuilder {
+public class UserInstallStateSummaryCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ManagedEBook
@@ -42,7 +42,7 @@ public class UserInstallStateSummaryCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserInstallStateSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserInstallStateSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class UserInstallStateSummaryCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserInstallStateSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserInstallStateSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserInstallStateSummaryCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IUserInstallStateSummaryRequestBuilder byId(final String id) {
+    public UserInstallStateSummaryRequestBuilder byId(final String id) {
         return new UserInstallStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNorm_DistRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsNorm_DistRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Norm_Dist Request Builder.
  */
-public class WorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsNorm_DistRequestBuilder {
+public class WorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsNorm_Dist
@@ -38,22 +37,22 @@ public class WorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsNorm_DistRequest
+     * Creates the WorkbookFunctionsNorm_DistRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNorm_DistRequest instance
+     * @return the WorkbookFunctionsNorm_DistRequest instance
      */
-    public IWorkbookFunctionsNorm_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsNorm_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsNorm_DistRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsNorm_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNorm_DistRequest instance
+     * @return the WorkbookFunctionsNorm_DistRequest instance
      */
-    public IWorkbookFunctionsNorm_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsNorm_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsNorm_DistRequest request = new WorkbookFunctionsNorm_DistRequest(
                 getRequestUrl(),
                 getClient(),

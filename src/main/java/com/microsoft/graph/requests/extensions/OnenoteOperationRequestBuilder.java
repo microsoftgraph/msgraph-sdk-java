@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Operation Request Builder.
  */
-public class OnenoteOperationRequestBuilder extends BaseRequestBuilder implements IOnenoteOperationRequestBuilder {
+public class OnenoteOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OnenoteOperation
@@ -35,9 +35,9 @@ public class OnenoteOperationRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnenoteOperationRequest instance
+     * @return the OnenoteOperationRequest instance
      */
-    public IOnenoteOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenoteOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class OnenoteOperationRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnenoteOperationRequest instance
+     * @return the OnenoteOperationRequest instance
      */
-    public IOnenoteOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnenoteOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

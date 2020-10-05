@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Shift;
-import com.microsoft.graph.requests.extensions.IShiftCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ShiftCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ShiftCollectionPage;
 import com.microsoft.graph.requests.extensions.ShiftCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ShiftCollectionResponse;
 /**
  * The class for the Shift Collection Page.
  */
-public class ShiftCollectionPage extends BaseCollectionPage<Shift, IShiftCollectionRequestBuilder> implements IShiftCollectionPage {
+public class ShiftCollectionPage extends BaseCollectionPage<Shift, ShiftCollectionRequestBuilder> {
 
     /**
      * A collection page for Shift
@@ -22,7 +22,7 @@ public class ShiftCollectionPage extends BaseCollectionPage<Shift, IShiftCollect
      * @param response the serialized ShiftCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ShiftCollectionPage(final ShiftCollectionResponse response, final IShiftCollectionRequestBuilder builder) {
+    public ShiftCollectionPage(final ShiftCollectionResponse response, final ShiftCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

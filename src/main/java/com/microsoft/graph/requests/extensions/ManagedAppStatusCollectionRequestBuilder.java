@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ManagedAppStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IManagedAppStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppStatusCollectionRequest;
+import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Status Collection Request Builder.
  */
-public class ManagedAppStatusCollectionRequestBuilder extends BaseRequestBuilder implements IManagedAppStatusCollectionRequestBuilder {
+public class ManagedAppStatusCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceAppManagement
@@ -42,7 +42,7 @@ public class ManagedAppStatusCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ManagedAppStatusCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppStatusCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedAppStatusRequestBuilder byId(final String id) {
+    public ManagedAppStatusRequestBuilder byId(final String id) {
         return new ManagedAppStatusRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

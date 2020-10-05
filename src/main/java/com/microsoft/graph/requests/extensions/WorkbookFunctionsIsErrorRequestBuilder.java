@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsErrorRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsErrorRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Is Error Request Builder.
  */
-public class WorkbookFunctionsIsErrorRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsIsErrorRequestBuilder {
+public class WorkbookFunctionsIsErrorRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsIsError
@@ -32,22 +31,22 @@ public class WorkbookFunctionsIsErrorRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsErrorRequest
+     * Creates the WorkbookFunctionsIsErrorRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsErrorRequest instance
+     * @return the WorkbookFunctionsIsErrorRequest instance
      */
-    public IWorkbookFunctionsIsErrorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsIsErrorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsErrorRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsIsErrorRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsErrorRequest instance
+     * @return the WorkbookFunctionsIsErrorRequest instance
      */
-    public IWorkbookFunctionsIsErrorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsIsErrorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIsErrorRequest request = new WorkbookFunctionsIsErrorRequest(
                 getRequestUrl(),
                 getClient(),

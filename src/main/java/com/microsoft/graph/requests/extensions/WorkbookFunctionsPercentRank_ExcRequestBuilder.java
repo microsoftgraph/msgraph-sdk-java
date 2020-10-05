@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPercentRank_ExcRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsPercentRank_ExcRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Percent Rank_Exc Request Builder.
  */
-public class WorkbookFunctionsPercentRank_ExcRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsPercentRank_ExcRequestBuilder {
+public class WorkbookFunctionsPercentRank_ExcRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsPercentRank_Exc
@@ -36,22 +35,22 @@ public class WorkbookFunctionsPercentRank_ExcRequestBuilder extends BaseActionRe
     }
 
     /**
-     * Creates the IWorkbookFunctionsPercentRank_ExcRequest
+     * Creates the WorkbookFunctionsPercentRank_ExcRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPercentRank_ExcRequest instance
+     * @return the WorkbookFunctionsPercentRank_ExcRequest instance
      */
-    public IWorkbookFunctionsPercentRank_ExcRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsPercentRank_ExcRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsPercentRank_ExcRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsPercentRank_ExcRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPercentRank_ExcRequest instance
+     * @return the WorkbookFunctionsPercentRank_ExcRequest instance
      */
-    public IWorkbookFunctionsPercentRank_ExcRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsPercentRank_ExcRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsPercentRank_ExcRequest request = new WorkbookFunctionsPercentRank_ExcRequest(
                 getRequestUrl(),
                 getClient(),

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Web App Request Builder.
  */
-public class WebAppRequestBuilder extends BaseRequestBuilder implements IWebAppRequestBuilder {
+public class WebAppRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WebApp
@@ -35,9 +35,9 @@ public class WebAppRequestBuilder extends BaseRequestBuilder implements IWebAppR
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWebAppRequest instance
+     * @return the WebAppRequest instance
      */
-    public IWebAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WebAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,25 +45,25 @@ public class WebAppRequestBuilder extends BaseRequestBuilder implements IWebAppR
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWebAppRequest instance
+     * @return the WebAppRequest instance
      */
-    public IWebAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WebAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WebAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
+    public MobileAppAssignmentCollectionRequestBuilder assignments() {
         return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
+    public MobileAppAssignmentRequestBuilder assignments(final String id) {
         return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public IMobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+    public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
-    public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
+    public MobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
 }

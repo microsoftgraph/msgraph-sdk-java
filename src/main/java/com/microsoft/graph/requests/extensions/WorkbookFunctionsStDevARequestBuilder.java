@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsStDevARequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsStDevARequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions St Dev ARequest Builder.
  */
-public class WorkbookFunctionsStDevARequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsStDevARequestBuilder {
+public class WorkbookFunctionsStDevARequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsStDevA
@@ -32,22 +31,22 @@ public class WorkbookFunctionsStDevARequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsStDevARequest
+     * Creates the WorkbookFunctionsStDevARequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsStDevARequest instance
+     * @return the WorkbookFunctionsStDevARequest instance
      */
-    public IWorkbookFunctionsStDevARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsStDevARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsStDevARequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsStDevARequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsStDevARequest instance
+     * @return the WorkbookFunctionsStDevARequest instance
      */
-    public IWorkbookFunctionsStDevARequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsStDevARequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsStDevARequest request = new WorkbookFunctionsStDevARequest(
                 getRequestUrl(),
                 getClient(),

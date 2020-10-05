@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ItemActivity;
-import com.microsoft.graph.requests.extensions.IItemActivityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionPage;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ItemActivityCollectionResponse;
 /**
  * The class for the Item Activity Collection Page.
  */
-public class ItemActivityCollectionPage extends BaseCollectionPage<ItemActivity, IItemActivityCollectionRequestBuilder> implements IItemActivityCollectionPage {
+public class ItemActivityCollectionPage extends BaseCollectionPage<ItemActivity, ItemActivityCollectionRequestBuilder> {
 
     /**
      * A collection page for ItemActivity
@@ -22,7 +22,7 @@ public class ItemActivityCollectionPage extends BaseCollectionPage<ItemActivity,
      * @param response the serialized ItemActivityCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ItemActivityCollectionPage(final ItemActivityCollectionResponse response, final IItemActivityCollectionRequestBuilder builder) {
+    public ItemActivityCollectionPage(final ItemActivityCollectionResponse response, final ItemActivityCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

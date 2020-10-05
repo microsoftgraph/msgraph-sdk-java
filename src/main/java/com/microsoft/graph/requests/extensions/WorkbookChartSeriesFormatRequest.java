@@ -8,9 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartSeriesFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartLineFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Series Format Request.
  */
-public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWorkbookChartSeriesFormatRequest {
+public class WorkbookChartSeriesFormatRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookChartSeriesFormat
@@ -142,7 +140,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartSeriesFormatRequest select(final String value) {
+     public WorkbookChartSeriesFormatRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookChartSeriesFormatRequest)this;
      }
@@ -153,7 +151,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartSeriesFormatRequest expand(final String value) {
+     public WorkbookChartSeriesFormatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookChartSeriesFormatRequest)this;
      }

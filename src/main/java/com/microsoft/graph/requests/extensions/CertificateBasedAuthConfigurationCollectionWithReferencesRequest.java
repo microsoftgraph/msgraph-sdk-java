@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Certificate Based Auth Configuration Collection With References Request.
  */
-public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest extends BaseCollectionRequest<CertificateBasedAuthConfigurationCollectionResponse, ICertificateBasedAuthConfigurationCollectionPage> implements ICertificateBasedAuthConfigurationCollectionWithReferencesRequest {
+public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest extends BaseCollectionRequest<CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionPage> {
 
     /**
      * The request builder for this collection of CertificateBasedAuthConfiguration
@@ -32,10 +32,10 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
      * @param requestOptions the options for this request
      */
     public CertificateBasedAuthConfigurationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, ICertificateBasedAuthConfigurationCollectionPage.class);
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ICertificateBasedAuthConfigurationCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super CertificateBasedAuthConfigurationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
         });
     }
 
-    public ICertificateBasedAuthConfigurationCollectionWithReferencesPage get() throws ClientException {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesPage get() throws ClientException {
         final CertificateBasedAuthConfigurationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest expand(final String value) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest filter(final String value) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest orderBy(final String value) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest select(final String value) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest top(final int value) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public ICertificateBasedAuthConfigurationCollectionWithReferencesPage buildFromResponse(final CertificateBasedAuthConfigurationCollectionResponse response) {
-        final ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder builder;
+    public CertificateBasedAuthConfigurationCollectionWithReferencesPage buildFromResponse(final CertificateBasedAuthConfigurationCollectionResponse response) {
+        final CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

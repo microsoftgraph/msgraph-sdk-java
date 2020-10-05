@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Report Root Request Builder.
  */
-public class ReportRootRequestBuilder extends BaseRequestBuilder implements IReportRootRequestBuilder {
+public class ReportRootRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ReportRoot
@@ -36,9 +36,9 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IReportRootRequest instance
+     * @return the ReportRootRequest instance
      */
-    public IReportRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,367 +46,367 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IReportRootRequest instance
+     * @return the ReportRootRequest instance
      */
-    public IReportRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ReportRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IReportRootDeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity() {
+    public ReportRootDeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity() {
         return new ReportRootDeviceConfigurationDeviceActivityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deviceConfigurationDeviceActivity"), getClient(), null);
     }
 
-    public IReportRootDeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity() {
+    public ReportRootDeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity() {
         return new ReportRootDeviceConfigurationUserActivityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deviceConfigurationUserActivity"), getClient(), null);
     }
 
-    public IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails() {
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails() {
         return new ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentFailureDetails"), getClient(), null);
     }
 
-    public IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails(final Integer skip, final Integer top, final String filter, final String skipToken) {
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails(final Integer skip, final Integer top, final String filter, final String skipToken) {
         return new ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentFailureDetails"), getClient(), null, skip, top, filter, skipToken);
     }
 
-    public IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures() {
+    public ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures() {
         return new ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentTopFailures"), getClient(), null);
     }
 
-    public IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures(final String period) {
+    public ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures(final String period) {
         return new ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentTopFailures"), getClient(), null, period);
     }
 
-    public IReportRootGetEmailActivityCountsRequestBuilder getEmailActivityCounts(final String period) {
+    public ReportRootGetEmailActivityCountsRequestBuilder getEmailActivityCounts(final String period) {
         return new ReportRootGetEmailActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailActivityCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetEmailActivityUserCountsRequestBuilder getEmailActivityUserCounts(final String period) {
+    public ReportRootGetEmailActivityUserCountsRequestBuilder getEmailActivityUserCounts(final String period) {
         return new ReportRootGetEmailActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailActivityUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetEmailActivityUserDetailRequestBuilder getEmailActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetEmailActivityUserDetailRequestBuilder getEmailActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetEmailActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailActivityUserDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetEmailActivityUserDetailRequestBuilder getEmailActivityUserDetail(final String period) {
+    public ReportRootGetEmailActivityUserDetailRequestBuilder getEmailActivityUserDetail(final String period) {
         return new ReportRootGetEmailActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailActivityUserDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetEmailAppUsageAppsUserCountsRequestBuilder getEmailAppUsageAppsUserCounts(final String period) {
+    public ReportRootGetEmailAppUsageAppsUserCountsRequestBuilder getEmailAppUsageAppsUserCounts(final String period) {
         return new ReportRootGetEmailAppUsageAppsUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageAppsUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetEmailAppUsageUserCountsRequestBuilder getEmailAppUsageUserCounts(final String period) {
+    public ReportRootGetEmailAppUsageUserCountsRequestBuilder getEmailAppUsageUserCounts(final String period) {
         return new ReportRootGetEmailAppUsageUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetEmailAppUsageUserDetailRequestBuilder getEmailAppUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetEmailAppUsageUserDetailRequestBuilder getEmailAppUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetEmailAppUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageUserDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetEmailAppUsageUserDetailRequestBuilder getEmailAppUsageUserDetail(final String period) {
+    public ReportRootGetEmailAppUsageUserDetailRequestBuilder getEmailAppUsageUserDetail(final String period) {
         return new ReportRootGetEmailAppUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageUserDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder getEmailAppUsageVersionsUserCounts(final String period) {
+    public ReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder getEmailAppUsageVersionsUserCounts(final String period) {
         return new ReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageVersionsUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetMailboxUsageDetailRequestBuilder getMailboxUsageDetail(final String period) {
+    public ReportRootGetMailboxUsageDetailRequestBuilder getMailboxUsageDetail(final String period) {
         return new ReportRootGetMailboxUsageDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailboxUsageDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetMailboxUsageMailboxCountsRequestBuilder getMailboxUsageMailboxCounts(final String period) {
+    public ReportRootGetMailboxUsageMailboxCountsRequestBuilder getMailboxUsageMailboxCounts(final String period) {
         return new ReportRootGetMailboxUsageMailboxCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailboxUsageMailboxCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder getMailboxUsageQuotaStatusMailboxCounts(final String period) {
+    public ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder getMailboxUsageQuotaStatusMailboxCounts(final String period) {
         return new ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailboxUsageQuotaStatusMailboxCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetMailboxUsageStorageRequestBuilder getMailboxUsageStorage(final String period) {
+    public ReportRootGetMailboxUsageStorageRequestBuilder getMailboxUsageStorage(final String period) {
         return new ReportRootGetMailboxUsageStorageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailboxUsageStorage"), getClient(), null, period);
     }
 
-    public IReportRootGetOffice365ActivationCountsRequestBuilder getOffice365ActivationCounts() {
+    public ReportRootGetOffice365ActivationCountsRequestBuilder getOffice365ActivationCounts() {
         return new ReportRootGetOffice365ActivationCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationCounts"), getClient(), null);
     }
 
-    public IReportRootGetOffice365ActivationsUserCountsRequestBuilder getOffice365ActivationsUserCounts() {
+    public ReportRootGetOffice365ActivationsUserCountsRequestBuilder getOffice365ActivationsUserCounts() {
         return new ReportRootGetOffice365ActivationsUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationsUserCounts"), getClient(), null);
     }
 
-    public IReportRootGetOffice365ActivationsUserDetailRequestBuilder getOffice365ActivationsUserDetail() {
+    public ReportRootGetOffice365ActivationsUserDetailRequestBuilder getOffice365ActivationsUserDetail() {
         return new ReportRootGetOffice365ActivationsUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActivationsUserDetail"), getClient(), null);
     }
 
-    public IReportRootGetOffice365ActiveUserCountsRequestBuilder getOffice365ActiveUserCounts(final String period) {
+    public ReportRootGetOffice365ActiveUserCountsRequestBuilder getOffice365ActiveUserCounts(final String period) {
         return new ReportRootGetOffice365ActiveUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActiveUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetOffice365ActiveUserDetailRequestBuilder getOffice365ActiveUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetOffice365ActiveUserDetailRequestBuilder getOffice365ActiveUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetOffice365ActiveUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActiveUserDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetOffice365ActiveUserDetailRequestBuilder getOffice365ActiveUserDetail(final String period) {
+    public ReportRootGetOffice365ActiveUserDetailRequestBuilder getOffice365ActiveUserDetail(final String period) {
         return new ReportRootGetOffice365ActiveUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ActiveUserDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetOffice365GroupsActivityCountsRequestBuilder getOffice365GroupsActivityCounts(final String period) {
+    public ReportRootGetOffice365GroupsActivityCountsRequestBuilder getOffice365GroupsActivityCounts(final String period) {
         return new ReportRootGetOffice365GroupsActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetOffice365GroupsActivityDetailRequestBuilder getOffice365GroupsActivityDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetOffice365GroupsActivityDetailRequestBuilder getOffice365GroupsActivityDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetOffice365GroupsActivityDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetOffice365GroupsActivityDetailRequestBuilder getOffice365GroupsActivityDetail(final String period) {
+    public ReportRootGetOffice365GroupsActivityDetailRequestBuilder getOffice365GroupsActivityDetail(final String period) {
         return new ReportRootGetOffice365GroupsActivityDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetOffice365GroupsActivityFileCountsRequestBuilder getOffice365GroupsActivityFileCounts(final String period) {
+    public ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder getOffice365GroupsActivityFileCounts(final String period) {
         return new ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityFileCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetOffice365GroupsActivityGroupCountsRequestBuilder getOffice365GroupsActivityGroupCounts(final String period) {
+    public ReportRootGetOffice365GroupsActivityGroupCountsRequestBuilder getOffice365GroupsActivityGroupCounts(final String period) {
         return new ReportRootGetOffice365GroupsActivityGroupCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityGroupCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetOffice365GroupsActivityStorageRequestBuilder getOffice365GroupsActivityStorage(final String period) {
+    public ReportRootGetOffice365GroupsActivityStorageRequestBuilder getOffice365GroupsActivityStorage(final String period) {
         return new ReportRootGetOffice365GroupsActivityStorageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365GroupsActivityStorage"), getClient(), null, period);
     }
 
-    public IReportRootGetOffice365ServicesUserCountsRequestBuilder getOffice365ServicesUserCounts(final String period) {
+    public ReportRootGetOffice365ServicesUserCountsRequestBuilder getOffice365ServicesUserCounts(final String period) {
         return new ReportRootGetOffice365ServicesUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOffice365ServicesUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetOneDriveActivityFileCountsRequestBuilder getOneDriveActivityFileCounts(final String period) {
+    public ReportRootGetOneDriveActivityFileCountsRequestBuilder getOneDriveActivityFileCounts(final String period) {
         return new ReportRootGetOneDriveActivityFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityFileCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetOneDriveActivityUserCountsRequestBuilder getOneDriveActivityUserCounts(final String period) {
+    public ReportRootGetOneDriveActivityUserCountsRequestBuilder getOneDriveActivityUserCounts(final String period) {
         return new ReportRootGetOneDriveActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetOneDriveActivityUserDetailRequestBuilder getOneDriveActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetOneDriveActivityUserDetailRequestBuilder getOneDriveActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetOneDriveActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityUserDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetOneDriveActivityUserDetailRequestBuilder getOneDriveActivityUserDetail(final String period) {
+    public ReportRootGetOneDriveActivityUserDetailRequestBuilder getOneDriveActivityUserDetail(final String period) {
         return new ReportRootGetOneDriveActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveActivityUserDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetOneDriveUsageAccountCountsRequestBuilder getOneDriveUsageAccountCounts(final String period) {
+    public ReportRootGetOneDriveUsageAccountCountsRequestBuilder getOneDriveUsageAccountCounts(final String period) {
         return new ReportRootGetOneDriveUsageAccountCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageAccountCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetOneDriveUsageAccountDetailRequestBuilder getOneDriveUsageAccountDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetOneDriveUsageAccountDetailRequestBuilder getOneDriveUsageAccountDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetOneDriveUsageAccountDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageAccountDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetOneDriveUsageAccountDetailRequestBuilder getOneDriveUsageAccountDetail(final String period) {
+    public ReportRootGetOneDriveUsageAccountDetailRequestBuilder getOneDriveUsageAccountDetail(final String period) {
         return new ReportRootGetOneDriveUsageAccountDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageAccountDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetOneDriveUsageFileCountsRequestBuilder getOneDriveUsageFileCounts(final String period) {
+    public ReportRootGetOneDriveUsageFileCountsRequestBuilder getOneDriveUsageFileCounts(final String period) {
         return new ReportRootGetOneDriveUsageFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageFileCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetOneDriveUsageStorageRequestBuilder getOneDriveUsageStorage(final String period) {
+    public ReportRootGetOneDriveUsageStorageRequestBuilder getOneDriveUsageStorage(final String period) {
         return new ReportRootGetOneDriveUsageStorageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getOneDriveUsageStorage"), getClient(), null, period);
     }
 
-    public IReportRootGetSharePointActivityFileCountsRequestBuilder getSharePointActivityFileCounts(final String period) {
+    public ReportRootGetSharePointActivityFileCountsRequestBuilder getSharePointActivityFileCounts(final String period) {
         return new ReportRootGetSharePointActivityFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityFileCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSharePointActivityPagesRequestBuilder getSharePointActivityPages(final String period) {
+    public ReportRootGetSharePointActivityPagesRequestBuilder getSharePointActivityPages(final String period) {
         return new ReportRootGetSharePointActivityPagesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityPages"), getClient(), null, period);
     }
 
-    public IReportRootGetSharePointActivityUserCountsRequestBuilder getSharePointActivityUserCounts(final String period) {
+    public ReportRootGetSharePointActivityUserCountsRequestBuilder getSharePointActivityUserCounts(final String period) {
         return new ReportRootGetSharePointActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSharePointActivityUserDetailRequestBuilder getSharePointActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetSharePointActivityUserDetailRequestBuilder getSharePointActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetSharePointActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityUserDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetSharePointActivityUserDetailRequestBuilder getSharePointActivityUserDetail(final String period) {
+    public ReportRootGetSharePointActivityUserDetailRequestBuilder getSharePointActivityUserDetail(final String period) {
         return new ReportRootGetSharePointActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointActivityUserDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetSharePointSiteUsageDetailRequestBuilder getSharePointSiteUsageDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetSharePointSiteUsageDetailRequestBuilder getSharePointSiteUsageDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetSharePointSiteUsageDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetSharePointSiteUsageDetailRequestBuilder getSharePointSiteUsageDetail(final String period) {
+    public ReportRootGetSharePointSiteUsageDetailRequestBuilder getSharePointSiteUsageDetail(final String period) {
         return new ReportRootGetSharePointSiteUsageDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetSharePointSiteUsageFileCountsRequestBuilder getSharePointSiteUsageFileCounts(final String period) {
+    public ReportRootGetSharePointSiteUsageFileCountsRequestBuilder getSharePointSiteUsageFileCounts(final String period) {
         return new ReportRootGetSharePointSiteUsageFileCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageFileCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSharePointSiteUsagePagesRequestBuilder getSharePointSiteUsagePages(final String period) {
+    public ReportRootGetSharePointSiteUsagePagesRequestBuilder getSharePointSiteUsagePages(final String period) {
         return new ReportRootGetSharePointSiteUsagePagesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsagePages"), getClient(), null, period);
     }
 
-    public IReportRootGetSharePointSiteUsageSiteCountsRequestBuilder getSharePointSiteUsageSiteCounts(final String period) {
+    public ReportRootGetSharePointSiteUsageSiteCountsRequestBuilder getSharePointSiteUsageSiteCounts(final String period) {
         return new ReportRootGetSharePointSiteUsageSiteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageSiteCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSharePointSiteUsageStorageRequestBuilder getSharePointSiteUsageStorage(final String period) {
+    public ReportRootGetSharePointSiteUsageStorageRequestBuilder getSharePointSiteUsageStorage(final String period) {
         return new ReportRootGetSharePointSiteUsageStorageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharePointSiteUsageStorage"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessActivityCountsRequestBuilder getSkypeForBusinessActivityCounts(final String period) {
+    public ReportRootGetSkypeForBusinessActivityCountsRequestBuilder getSkypeForBusinessActivityCounts(final String period) {
         return new ReportRootGetSkypeForBusinessActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder getSkypeForBusinessActivityUserCounts(final String period) {
+    public ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder getSkypeForBusinessActivityUserCounts(final String period) {
         return new ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder getSkypeForBusinessActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder getSkypeForBusinessActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityUserDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder getSkypeForBusinessActivityUserDetail(final String period) {
+    public ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder getSkypeForBusinessActivityUserDetail(final String period) {
         return new ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessActivityUserDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder getSkypeForBusinessDeviceUsageDistributionUserCounts(final String period) {
+    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder getSkypeForBusinessDeviceUsageDistributionUserCounts(final String period) {
         return new ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageDistributionUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder getSkypeForBusinessDeviceUsageUserCounts(final String period) {
+    public ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder getSkypeForBusinessDeviceUsageUserCounts(final String period) {
         return new ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageUserDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(final String period) {
+    public ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder getSkypeForBusinessDeviceUsageUserDetail(final String period) {
         return new ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessDeviceUsageUserDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessOrganizerActivityCountsRequestBuilder getSkypeForBusinessOrganizerActivityCounts(final String period) {
+    public ReportRootGetSkypeForBusinessOrganizerActivityCountsRequestBuilder getSkypeForBusinessOrganizerActivityCounts(final String period) {
         return new ReportRootGetSkypeForBusinessOrganizerActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder getSkypeForBusinessOrganizerActivityMinuteCounts(final String period) {
+    public ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder getSkypeForBusinessOrganizerActivityMinuteCounts(final String period) {
         return new ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityMinuteCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequestBuilder getSkypeForBusinessOrganizerActivityUserCounts(final String period) {
+    public ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequestBuilder getSkypeForBusinessOrganizerActivityUserCounts(final String period) {
         return new ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessOrganizerActivityUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessParticipantActivityCountsRequestBuilder getSkypeForBusinessParticipantActivityCounts(final String period) {
+    public ReportRootGetSkypeForBusinessParticipantActivityCountsRequestBuilder getSkypeForBusinessParticipantActivityCounts(final String period) {
         return new ReportRootGetSkypeForBusinessParticipantActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequestBuilder getSkypeForBusinessParticipantActivityMinuteCounts(final String period) {
+    public ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequestBuilder getSkypeForBusinessParticipantActivityMinuteCounts(final String period) {
         return new ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityMinuteCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessParticipantActivityUserCountsRequestBuilder getSkypeForBusinessParticipantActivityUserCounts(final String period) {
+    public ReportRootGetSkypeForBusinessParticipantActivityUserCountsRequestBuilder getSkypeForBusinessParticipantActivityUserCounts(final String period) {
         return new ReportRootGetSkypeForBusinessParticipantActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessParticipantActivityUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessPeerToPeerActivityCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityCounts(final String period) {
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityCounts(final String period) {
         return new ReportRootGetSkypeForBusinessPeerToPeerActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityMinuteCounts(final String period) {
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityMinuteCounts(final String period) {
         return new ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityMinuteCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityUserCounts(final String period) {
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder getSkypeForBusinessPeerToPeerActivityUserCounts(final String period) {
         return new ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSkypeForBusinessPeerToPeerActivityUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder getTeamsDeviceUsageDistributionUserCounts(final String period) {
+    public ReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder getTeamsDeviceUsageDistributionUserCounts(final String period) {
         return new ReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsDeviceUsageDistributionUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetTeamsDeviceUsageUserCountsRequestBuilder getTeamsDeviceUsageUserCounts(final String period) {
+    public ReportRootGetTeamsDeviceUsageUserCountsRequestBuilder getTeamsDeviceUsageUserCounts(final String period) {
         return new ReportRootGetTeamsDeviceUsageUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsDeviceUsageUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetTeamsDeviceUsageUserDetailRequestBuilder getTeamsDeviceUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder getTeamsDeviceUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsDeviceUsageUserDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetTeamsDeviceUsageUserDetailRequestBuilder getTeamsDeviceUsageUserDetail(final String period) {
+    public ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder getTeamsDeviceUsageUserDetail(final String period) {
         return new ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsDeviceUsageUserDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetTeamsUserActivityCountsRequestBuilder getTeamsUserActivityCounts(final String period) {
+    public ReportRootGetTeamsUserActivityCountsRequestBuilder getTeamsUserActivityCounts(final String period) {
         return new ReportRootGetTeamsUserActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsUserActivityCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetTeamsUserActivityUserCountsRequestBuilder getTeamsUserActivityUserCounts(final String period) {
+    public ReportRootGetTeamsUserActivityUserCountsRequestBuilder getTeamsUserActivityUserCounts(final String period) {
         return new ReportRootGetTeamsUserActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsUserActivityUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetTeamsUserActivityUserDetailRequestBuilder getTeamsUserActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetTeamsUserActivityUserDetailRequestBuilder getTeamsUserActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetTeamsUserActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsUserActivityUserDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetTeamsUserActivityUserDetailRequestBuilder getTeamsUserActivityUserDetail(final String period) {
+    public ReportRootGetTeamsUserActivityUserDetailRequestBuilder getTeamsUserActivityUserDetail(final String period) {
         return new ReportRootGetTeamsUserActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsUserActivityUserDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetYammerActivityCountsRequestBuilder getYammerActivityCounts(final String period) {
+    public ReportRootGetYammerActivityCountsRequestBuilder getYammerActivityCounts(final String period) {
         return new ReportRootGetYammerActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetYammerActivityUserCountsRequestBuilder getYammerActivityUserCounts(final String period) {
+    public ReportRootGetYammerActivityUserCountsRequestBuilder getYammerActivityUserCounts(final String period) {
         return new ReportRootGetYammerActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetYammerActivityUserDetailRequestBuilder getYammerActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetYammerActivityUserDetailRequestBuilder getYammerActivityUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetYammerActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityUserDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetYammerActivityUserDetailRequestBuilder getYammerActivityUserDetail(final String period) {
+    public ReportRootGetYammerActivityUserDetailRequestBuilder getYammerActivityUserDetail(final String period) {
         return new ReportRootGetYammerActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerActivityUserDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder getYammerDeviceUsageDistributionUserCounts(final String period) {
+    public ReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder getYammerDeviceUsageDistributionUserCounts(final String period) {
         return new ReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageDistributionUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetYammerDeviceUsageUserCountsRequestBuilder getYammerDeviceUsageUserCounts(final String period) {
+    public ReportRootGetYammerDeviceUsageUserCountsRequestBuilder getYammerDeviceUsageUserCounts(final String period) {
         return new ReportRootGetYammerDeviceUsageUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageUserCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetYammerDeviceUsageUserDetailRequestBuilder getYammerDeviceUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetYammerDeviceUsageUserDetailRequestBuilder getYammerDeviceUsageUserDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetYammerDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageUserDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetYammerDeviceUsageUserDetailRequestBuilder getYammerDeviceUsageUserDetail(final String period) {
+    public ReportRootGetYammerDeviceUsageUserDetailRequestBuilder getYammerDeviceUsageUserDetail(final String period) {
         return new ReportRootGetYammerDeviceUsageUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerDeviceUsageUserDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetYammerGroupsActivityCountsRequestBuilder getYammerGroupsActivityCounts(final String period) {
+    public ReportRootGetYammerGroupsActivityCountsRequestBuilder getYammerGroupsActivityCounts(final String period) {
         return new ReportRootGetYammerGroupsActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityCounts"), getClient(), null, period);
     }
 
-    public IReportRootGetYammerGroupsActivityDetailRequestBuilder getYammerGroupsActivityDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetYammerGroupsActivityDetailRequestBuilder getYammerGroupsActivityDetail(final com.microsoft.graph.models.extensions.DateOnly date) {
         return new ReportRootGetYammerGroupsActivityDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityDetail"), getClient(), null, date);
     }
 
-    public IReportRootGetYammerGroupsActivityDetailRequestBuilder getYammerGroupsActivityDetail(final String period) {
+    public ReportRootGetYammerGroupsActivityDetailRequestBuilder getYammerGroupsActivityDetail(final String period) {
         return new ReportRootGetYammerGroupsActivityDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityDetail"), getClient(), null, period);
     }
 
-    public IReportRootGetYammerGroupsActivityGroupCountsRequestBuilder getYammerGroupsActivityGroupCounts(final String period) {
+    public ReportRootGetYammerGroupsActivityGroupCountsRequestBuilder getYammerGroupsActivityGroupCounts(final String period) {
         return new ReportRootGetYammerGroupsActivityGroupCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getYammerGroupsActivityGroupCounts"), getClient(), null, period);
     }
 }

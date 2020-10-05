@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Issuance Policy Collection With References Request Builder.
  */
-public class TokenIssuancePolicyCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements ITokenIssuancePolicyCollectionWithReferencesRequestBuilder {
+public class TokenIssuancePolicyCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -39,7 +39,7 @@ public class TokenIssuancePolicyCollectionWithReferencesRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITokenIssuancePolicyCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TokenIssuancePolicyCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,15 +49,15 @@ public class TokenIssuancePolicyCollectionWithReferencesRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITokenIssuancePolicyCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TokenIssuancePolicyCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITokenIssuancePolicyWithReferenceRequestBuilder byId(final String id) {
+    public TokenIssuancePolicyWithReferenceRequestBuilder byId(final String id) {
         return new TokenIssuancePolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public ITokenIssuancePolicyCollectionReferenceRequestBuilder references(){
+    public TokenIssuancePolicyCollectionReferenceRequestBuilder references(){
         return new TokenIssuancePolicyCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

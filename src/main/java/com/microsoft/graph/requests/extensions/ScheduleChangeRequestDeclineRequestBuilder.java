@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IScheduleChangeRequestDeclineRequest;
 import com.microsoft.graph.requests.extensions.ScheduleChangeRequestDeclineRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Schedule Change Request Decline Request Builder.
  */
-public class ScheduleChangeRequestDeclineRequestBuilder extends BaseActionRequestBuilder implements IScheduleChangeRequestDeclineRequestBuilder {
+public class ScheduleChangeRequestDeclineRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ScheduleChangeRequestDecline
@@ -32,22 +31,22 @@ public class ScheduleChangeRequestDeclineRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IScheduleChangeRequestDeclineRequest
+     * Creates the ScheduleChangeRequestDeclineRequest
      *
      * @param requestOptions the options for the request
-     * @return the IScheduleChangeRequestDeclineRequest instance
+     * @return the ScheduleChangeRequestDeclineRequest instance
      */
-    public IScheduleChangeRequestDeclineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ScheduleChangeRequestDeclineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IScheduleChangeRequestDeclineRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ScheduleChangeRequestDeclineRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IScheduleChangeRequestDeclineRequest instance
+     * @return the ScheduleChangeRequestDeclineRequest instance
      */
-    public IScheduleChangeRequestDeclineRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ScheduleChangeRequestDeclineRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ScheduleChangeRequestDeclineRequest request = new ScheduleChangeRequestDeclineRequest(
                 getRequestUrl(),
                 getClient(),

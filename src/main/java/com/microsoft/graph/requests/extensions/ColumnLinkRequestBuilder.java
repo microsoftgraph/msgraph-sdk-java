@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Column Link Request Builder.
  */
-public class ColumnLinkRequestBuilder extends BaseRequestBuilder implements IColumnLinkRequestBuilder {
+public class ColumnLinkRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ColumnLink
@@ -35,9 +35,9 @@ public class ColumnLinkRequestBuilder extends BaseRequestBuilder implements ICol
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IColumnLinkRequest instance
+     * @return the ColumnLinkRequest instance
      */
-    public IColumnLinkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ColumnLinkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ColumnLinkRequestBuilder extends BaseRequestBuilder implements ICol
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IColumnLinkRequest instance
+     * @return the ColumnLinkRequest instance
      */
-    public IColumnLinkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ColumnLinkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ColumnLinkRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

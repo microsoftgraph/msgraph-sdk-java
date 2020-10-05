@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSumIfRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSumIfRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Sum If Request Builder.
  */
-public class WorkbookFunctionsSumIfRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSumIfRequestBuilder {
+public class WorkbookFunctionsSumIfRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSumIf
@@ -36,22 +35,22 @@ public class WorkbookFunctionsSumIfRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsSumIfRequest
+     * Creates the WorkbookFunctionsSumIfRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSumIfRequest instance
+     * @return the WorkbookFunctionsSumIfRequest instance
      */
-    public IWorkbookFunctionsSumIfRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSumIfRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSumIfRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSumIfRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSumIfRequest instance
+     * @return the WorkbookFunctionsSumIfRequest instance
      */
-    public IWorkbookFunctionsSumIfRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSumIfRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSumIfRequest request = new WorkbookFunctionsSumIfRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectValidatePropertiesRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectValidatePropertiesRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Directory Object Validate Properties Request Builder.
  */
-public class DirectoryObjectValidatePropertiesRequestBuilder extends BaseActionRequestBuilder implements IDirectoryObjectValidatePropertiesRequestBuilder {
+public class DirectoryObjectValidatePropertiesRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DirectoryObjectValidateProperties
@@ -38,22 +37,22 @@ public class DirectoryObjectValidatePropertiesRequestBuilder extends BaseActionR
     }
 
     /**
-     * Creates the IDirectoryObjectValidatePropertiesRequest
+     * Creates the DirectoryObjectValidatePropertiesRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDirectoryObjectValidatePropertiesRequest instance
+     * @return the DirectoryObjectValidatePropertiesRequest instance
      */
-    public IDirectoryObjectValidatePropertiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryObjectValidatePropertiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDirectoryObjectValidatePropertiesRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DirectoryObjectValidatePropertiesRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDirectoryObjectValidatePropertiesRequest instance
+     * @return the DirectoryObjectValidatePropertiesRequest instance
      */
-    public IDirectoryObjectValidatePropertiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectValidatePropertiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectValidatePropertiesRequest request = new DirectoryObjectValidatePropertiesRequest(
                 getRequestUrl(),
                 getClient(),

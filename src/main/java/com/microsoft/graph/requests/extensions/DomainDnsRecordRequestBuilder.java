@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Domain Dns Record Request Builder.
  */
-public class DomainDnsRecordRequestBuilder extends BaseRequestBuilder implements IDomainDnsRecordRequestBuilder {
+public class DomainDnsRecordRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DomainDnsRecord
@@ -35,9 +35,9 @@ public class DomainDnsRecordRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDomainDnsRecordRequest instance
+     * @return the DomainDnsRecordRequest instance
      */
-    public IDomainDnsRecordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DomainDnsRecordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DomainDnsRecordRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDomainDnsRecordRequest instance
+     * @return the DomainDnsRecordRequest instance
      */
-    public IDomainDnsRecordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainDnsRecordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DomainDnsRecordRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeMergeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeMergeRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Merge Request Builder.
  */
-public class WorkbookRangeMergeRequestBuilder extends BaseActionRequestBuilder implements IWorkbookRangeMergeRequestBuilder {
+public class WorkbookRangeMergeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeMerge
@@ -32,22 +31,22 @@ public class WorkbookRangeMergeRequestBuilder extends BaseActionRequestBuilder i
     }
 
     /**
-     * Creates the IWorkbookRangeMergeRequest
+     * Creates the WorkbookRangeMergeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeMergeRequest instance
+     * @return the WorkbookRangeMergeRequest instance
      */
-    public IWorkbookRangeMergeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeMergeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeMergeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeMergeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeMergeRequest instance
+     * @return the WorkbookRangeMergeRequest instance
      */
-    public IWorkbookRangeMergeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeMergeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeMergeRequest request = new WorkbookRangeMergeRequest(
                 getRequestUrl(),
                 getClient(),

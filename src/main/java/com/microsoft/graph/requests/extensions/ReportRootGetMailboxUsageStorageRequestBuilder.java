@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageStorageRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetMailboxUsageStorageRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Mailbox Usage Storage Request Builder.
  */
-public class ReportRootGetMailboxUsageStorageRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetMailboxUsageStorageRequestBuilder {
+public class ReportRootGetMailboxUsageStorageRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetMailboxUsageStorage
@@ -32,22 +31,22 @@ public class ReportRootGetMailboxUsageStorageRequestBuilder extends BaseFunction
     }
 
     /**
-     * Creates the IReportRootGetMailboxUsageStorageRequest
+     * Creates the ReportRootGetMailboxUsageStorageRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetMailboxUsageStorageRequest instance
+     * @return the ReportRootGetMailboxUsageStorageRequest instance
      */
-    public IReportRootGetMailboxUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetMailboxUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetMailboxUsageStorageRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetMailboxUsageStorageRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetMailboxUsageStorageRequest instance
+     * @return the ReportRootGetMailboxUsageStorageRequest instance
      */
-    public IReportRootGetMailboxUsageStorageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetMailboxUsageStorageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetMailboxUsageStorageRequest request = new ReportRootGetMailboxUsageStorageRequest(
                 getRequestUrl(),
                 getClient(),

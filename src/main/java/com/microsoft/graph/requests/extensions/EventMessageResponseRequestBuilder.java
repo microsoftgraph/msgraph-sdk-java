@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Event Message Response Request Builder.
  */
-public class EventMessageResponseRequestBuilder extends BaseRequestBuilder implements IEventMessageResponseRequestBuilder {
+public class EventMessageResponseRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the EventMessageResponse
@@ -35,9 +35,9 @@ public class EventMessageResponseRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEventMessageResponseRequest instance
+     * @return the EventMessageResponseRequest instance
      */
-    public IEventMessageResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EventMessageResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,48 +45,48 @@ public class EventMessageResponseRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEventMessageResponseRequest instance
+     * @return the EventMessageResponseRequest instance
      */
-    public IEventMessageResponseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventMessageResponseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EventMessageResponseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAttachmentCollectionRequestBuilder attachments() {
+    public AttachmentCollectionRequestBuilder attachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
-    public IAttachmentRequestBuilder attachments(final String id) {
+    public AttachmentRequestBuilder attachments(final String id) {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
-    public IExtensionCollectionRequestBuilder extensions() {
+    public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder extensions(final String id) {
+    public ExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
+    public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
-    public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
+    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
-    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
+    public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
-    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
+    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Event
      *
-     * @return the IEventRequestBuilder instance
+     * @return the EventRequestBuilder instance
      */
-    public IEventRequestBuilder event() {
+    public EventRequestBuilder event() {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("event"), getClient(), null);
     }
 }

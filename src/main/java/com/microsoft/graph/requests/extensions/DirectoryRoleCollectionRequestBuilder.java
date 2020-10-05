@@ -11,10 +11,10 @@ import com.microsoft.graph.models.extensions.DirectoryRole;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleCollectionRequest;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionRequest;
+import com.microsoft.graph.requests.extensions.DirectoryRoleDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Role Collection Request Builder.
  */
-public class DirectoryRoleCollectionRequestBuilder extends BaseRequestBuilder implements IDirectoryRoleCollectionRequestBuilder {
+public class DirectoryRoleCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DirectoryRole
@@ -42,7 +42,7 @@ public class DirectoryRoleCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryRoleCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryRoleCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,21 +52,21 @@ public class DirectoryRoleCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryRoleCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryRoleCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryRoleCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDirectoryRoleRequestBuilder byId(final String id) {
+    public DirectoryRoleRequestBuilder byId(final String id) {
         return new DirectoryRoleRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IDirectoryRoleDeltaCollectionRequestBuilder delta() {
+    public DirectoryRoleDeltaCollectionRequestBuilder delta() {
         return new DirectoryRoleDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IDirectoryRoleDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public DirectoryRoleDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new DirectoryRoleDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

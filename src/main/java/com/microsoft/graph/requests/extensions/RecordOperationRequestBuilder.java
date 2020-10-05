@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Record Operation Request Builder.
  */
-public class RecordOperationRequestBuilder extends BaseRequestBuilder implements IRecordOperationRequestBuilder {
+public class RecordOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the RecordOperation
@@ -35,9 +35,9 @@ public class RecordOperationRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IRecordOperationRequest instance
+     * @return the RecordOperationRequest instance
      */
-    public IRecordOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public RecordOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class RecordOperationRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IRecordOperationRequest instance
+     * @return the RecordOperationRequest instance
      */
-    public IRecordOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RecordOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.RecordOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

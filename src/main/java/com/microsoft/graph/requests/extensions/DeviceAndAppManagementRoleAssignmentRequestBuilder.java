@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device And App Management Role Assignment Request Builder.
  */
-public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequestBuilder implements IDeviceAndAppManagementRoleAssignmentRequestBuilder {
+public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceAndAppManagementRoleAssignment
@@ -35,9 +35,9 @@ public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequ
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceAndAppManagementRoleAssignmentRequest instance
+     * @return the DeviceAndAppManagementRoleAssignmentRequest instance
      */
-    public IDeviceAndAppManagementRoleAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceAndAppManagementRoleAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequ
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceAndAppManagementRoleAssignmentRequest instance
+     * @return the DeviceAndAppManagementRoleAssignmentRequest instance
      */
-    public IDeviceAndAppManagementRoleAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAndAppManagementRoleAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -56,9 +56,9 @@ public class DeviceAndAppManagementRoleAssignmentRequestBuilder extends BaseRequ
     /**
      * Gets the request builder for RoleDefinition
      *
-     * @return the IRoleDefinitionWithReferenceRequestBuilder instance
+     * @return the RoleDefinitionWithReferenceRequestBuilder instance
      */
-    public IRoleDefinitionWithReferenceRequestBuilder roleDefinition() {
+    public RoleDefinitionWithReferenceRequestBuilder roleDefinition() {
         return new RoleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 }

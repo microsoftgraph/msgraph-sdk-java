@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageUserDetailRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Teams Device Usage User Detail Request Builder.
  */
-public class ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetTeamsDeviceUsageUserDetailRequestBuilder {
+public class ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetTeamsDeviceUsageUserDetail
@@ -45,22 +44,22 @@ public class ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder extends BaseF
     }
 
     /**
-     * Creates the IReportRootGetTeamsDeviceUsageUserDetailRequest
+     * Creates the ReportRootGetTeamsDeviceUsageUserDetailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetTeamsDeviceUsageUserDetailRequest instance
+     * @return the ReportRootGetTeamsDeviceUsageUserDetailRequest instance
      */
-    public IReportRootGetTeamsDeviceUsageUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetTeamsDeviceUsageUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetTeamsDeviceUsageUserDetailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetTeamsDeviceUsageUserDetailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetTeamsDeviceUsageUserDetailRequest instance
+     * @return the ReportRootGetTeamsDeviceUsageUserDetailRequest instance
      */
-    public IReportRootGetTeamsDeviceUsageUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetTeamsDeviceUsageUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetTeamsDeviceUsageUserDetailRequest request = new ReportRootGetTeamsDeviceUsageUserDetailRequest(
                 getRequestUrl(),
                 getClient(),

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Scheduling Group Request Builder.
  */
-public class SchedulingGroupRequestBuilder extends BaseRequestBuilder implements ISchedulingGroupRequestBuilder {
+public class SchedulingGroupRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SchedulingGroup
@@ -35,9 +35,9 @@ public class SchedulingGroupRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISchedulingGroupRequest instance
+     * @return the SchedulingGroupRequest instance
      */
-    public ISchedulingGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SchedulingGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class SchedulingGroupRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISchedulingGroupRequest instance
+     * @return the SchedulingGroupRequest instance
      */
-    public ISchedulingGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SchedulingGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SchedulingGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

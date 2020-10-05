@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDomainForceDeleteRequest;
 import com.microsoft.graph.requests.extensions.DomainForceDeleteRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Domain Force Delete Request Builder.
  */
-public class DomainForceDeleteRequestBuilder extends BaseActionRequestBuilder implements IDomainForceDeleteRequestBuilder {
+public class DomainForceDeleteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DomainForceDelete
@@ -32,22 +31,22 @@ public class DomainForceDeleteRequestBuilder extends BaseActionRequestBuilder im
     }
 
     /**
-     * Creates the IDomainForceDeleteRequest
+     * Creates the DomainForceDeleteRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDomainForceDeleteRequest instance
+     * @return the DomainForceDeleteRequest instance
      */
-    public IDomainForceDeleteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DomainForceDeleteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDomainForceDeleteRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DomainForceDeleteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDomainForceDeleteRequest instance
+     * @return the DomainForceDeleteRequest instance
      */
-    public IDomainForceDeleteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainForceDeleteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DomainForceDeleteRequest request = new DomainForceDeleteRequest(
                 getRequestUrl(),
                 getClient(),

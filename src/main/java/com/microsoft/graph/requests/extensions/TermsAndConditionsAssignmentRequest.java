@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Terms And Conditions Assignment Request.
  */
-public class TermsAndConditionsAssignmentRequest extends BaseRequest implements ITermsAndConditionsAssignmentRequest {
+public class TermsAndConditionsAssignmentRequest extends BaseRequest {
 	
     /**
      * The request for the TermsAndConditionsAssignment
@@ -138,7 +138,7 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public ITermsAndConditionsAssignmentRequest select(final String value) {
+     public TermsAndConditionsAssignmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TermsAndConditionsAssignmentRequest)this;
      }
@@ -149,7 +149,7 @@ public class TermsAndConditionsAssignmentRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public ITermsAndConditionsAssignmentRequest expand(final String value) {
+     public TermsAndConditionsAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TermsAndConditionsAssignmentRequest)this;
      }

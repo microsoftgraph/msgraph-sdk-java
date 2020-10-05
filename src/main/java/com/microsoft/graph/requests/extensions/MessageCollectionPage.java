@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MessageCollectionPage;
 import com.microsoft.graph.requests.extensions.MessageCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.MessageCollectionResponse;
 /**
  * The class for the Message Collection Page.
  */
-public class MessageCollectionPage extends BaseCollectionPage<Message, IMessageCollectionRequestBuilder> implements IMessageCollectionPage {
+public class MessageCollectionPage extends BaseCollectionPage<Message, MessageCollectionRequestBuilder> {
 
     /**
      * A collection page for Message
@@ -22,7 +22,7 @@ public class MessageCollectionPage extends BaseCollectionPage<Message, IMessageC
      * @param response the serialized MessageCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MessageCollectionPage(final MessageCollectionResponse response, final IMessageCollectionRequestBuilder builder) {
+    public MessageCollectionPage(final MessageCollectionResponse response, final MessageCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

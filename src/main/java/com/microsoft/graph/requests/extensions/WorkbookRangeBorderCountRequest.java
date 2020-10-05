@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCountRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCountRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Border Count Request.
  */
-public class WorkbookRangeBorderCountRequest extends BaseRequest implements IWorkbookRangeBorderCountRequest {
+public class WorkbookRangeBorderCountRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeBorderCount
@@ -56,7 +55,7 @@ public class WorkbookRangeBorderCountRequest extends BaseRequest implements IWor
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeBorderCountRequest select(final String value) {
+    public WorkbookRangeBorderCountRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeBorderCountRequest)this;
     }
@@ -67,7 +66,7 @@ public class WorkbookRangeBorderCountRequest extends BaseRequest implements IWor
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeBorderCountRequest expand(final String value) {
+    public WorkbookRangeBorderCountRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeBorderCountRequest)this;
     }
@@ -78,7 +77,7 @@ public class WorkbookRangeBorderCountRequest extends BaseRequest implements IWor
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeBorderCountRequest filter(final String value) {
+    public WorkbookRangeBorderCountRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeBorderCountRequest)this;
     }
@@ -89,7 +88,7 @@ public class WorkbookRangeBorderCountRequest extends BaseRequest implements IWor
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeBorderCountRequest orderBy(final String value) {
+    public WorkbookRangeBorderCountRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeBorderCountRequest)this;
     }

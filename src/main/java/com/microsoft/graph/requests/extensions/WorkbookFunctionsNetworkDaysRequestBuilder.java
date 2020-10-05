@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNetworkDaysRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsNetworkDaysRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Network Days Request Builder.
  */
-public class WorkbookFunctionsNetworkDaysRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsNetworkDaysRequestBuilder {
+public class WorkbookFunctionsNetworkDaysRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsNetworkDays
@@ -36,22 +35,22 @@ public class WorkbookFunctionsNetworkDaysRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IWorkbookFunctionsNetworkDaysRequest
+     * Creates the WorkbookFunctionsNetworkDaysRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNetworkDaysRequest instance
+     * @return the WorkbookFunctionsNetworkDaysRequest instance
      */
-    public IWorkbookFunctionsNetworkDaysRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsNetworkDaysRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsNetworkDaysRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsNetworkDaysRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNetworkDaysRequest instance
+     * @return the WorkbookFunctionsNetworkDaysRequest instance
      */
-    public IWorkbookFunctionsNetworkDaysRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsNetworkDaysRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsNetworkDaysRequest request = new WorkbookFunctionsNetworkDaysRequest(
                 getRequestUrl(),
                 getClient(),

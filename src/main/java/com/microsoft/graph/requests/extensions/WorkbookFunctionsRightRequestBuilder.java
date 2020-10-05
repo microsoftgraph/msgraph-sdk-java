@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRightRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRightRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Right Request Builder.
  */
-public class WorkbookFunctionsRightRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsRightRequestBuilder {
+public class WorkbookFunctionsRightRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsRight
@@ -34,22 +33,22 @@ public class WorkbookFunctionsRightRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsRightRequest
+     * Creates the WorkbookFunctionsRightRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRightRequest instance
+     * @return the WorkbookFunctionsRightRequest instance
      */
-    public IWorkbookFunctionsRightRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsRightRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsRightRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsRightRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRightRequest instance
+     * @return the WorkbookFunctionsRightRequest instance
      */
-    public IWorkbookFunctionsRightRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsRightRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsRightRequest request = new WorkbookFunctionsRightRequest(
                 getRequestUrl(),
                 getClient(),

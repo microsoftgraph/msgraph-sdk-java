@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNegBinom_DistRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsNegBinom_DistRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Neg Binom_Dist Request Builder.
  */
-public class WorkbookFunctionsNegBinom_DistRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsNegBinom_DistRequestBuilder {
+public class WorkbookFunctionsNegBinom_DistRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsNegBinom_Dist
@@ -38,22 +37,22 @@ public class WorkbookFunctionsNegBinom_DistRequestBuilder extends BaseActionRequ
     }
 
     /**
-     * Creates the IWorkbookFunctionsNegBinom_DistRequest
+     * Creates the WorkbookFunctionsNegBinom_DistRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNegBinom_DistRequest instance
+     * @return the WorkbookFunctionsNegBinom_DistRequest instance
      */
-    public IWorkbookFunctionsNegBinom_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsNegBinom_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsNegBinom_DistRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsNegBinom_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNegBinom_DistRequest instance
+     * @return the WorkbookFunctionsNegBinom_DistRequest instance
      */
-    public IWorkbookFunctionsNegBinom_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsNegBinom_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsNegBinom_DistRequest request = new WorkbookFunctionsNegBinom_DistRequest(
                 getRequestUrl(),
                 getClient(),

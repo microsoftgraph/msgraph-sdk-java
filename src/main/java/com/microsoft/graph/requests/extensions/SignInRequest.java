@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sign In Request.
  */
-public class SignInRequest extends BaseRequest implements ISignInRequest {
+public class SignInRequest extends BaseRequest {
 	
     /**
      * The request for the SignIn
@@ -153,7 +153,7 @@ public class SignInRequest extends BaseRequest implements ISignInRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ISignInRequest select(final String value) {
+     public SignInRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SignInRequest)this;
      }
@@ -164,7 +164,7 @@ public class SignInRequest extends BaseRequest implements ISignInRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ISignInRequest expand(final String value) {
+     public SignInRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SignInRequest)this;
      }

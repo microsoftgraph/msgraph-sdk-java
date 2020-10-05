@@ -21,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Participant Request Builder.
  */
-public class ParticipantRequestBuilder extends BaseRequestBuilder implements IParticipantRequestBuilder {
+public class ParticipantRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Participant
@@ -38,9 +38,9 @@ public class ParticipantRequestBuilder extends BaseRequestBuilder implements IPa
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IParticipantRequest instance
+     * @return the ParticipantRequest instance
      */
-    public IParticipantRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ParticipantRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,15 +48,15 @@ public class ParticipantRequestBuilder extends BaseRequestBuilder implements IPa
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IParticipantRequest instance
+     * @return the ParticipantRequest instance
      */
-    public IParticipantRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ParticipantRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ParticipantRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IParticipantMuteRequestBuilder mute(final String clientContext) {
+    public ParticipantMuteRequestBuilder mute(final String clientContext) {
         return new ParticipantMuteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mute"), getClient(), null, clientContext);
     }
 }

@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatusesCollectionPage;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatusesCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the User Get Managed App Diagnostic Statuses Collection Request.
  */
-public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCollectionRequest<UserGetManagedAppDiagnosticStatusesCollectionResponse, IUserGetManagedAppDiagnosticStatusesCollectionPage> implements IUserGetManagedAppDiagnosticStatusesCollectionRequest {
+public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCollectionRequest<UserGetManagedAppDiagnosticStatusesCollectionResponse, UserGetManagedAppDiagnosticStatusesCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      * @param requestOptions the options for this request
      */
     public UserGetManagedAppDiagnosticStatusesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserGetManagedAppDiagnosticStatusesCollectionResponse.class, IUserGetManagedAppDiagnosticStatusesCollectionPage.class);
+        super(requestUrl, client, requestOptions, UserGetManagedAppDiagnosticStatusesCollectionResponse.class, UserGetManagedAppDiagnosticStatusesCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IUserGetManagedAppDiagnosticStatusesCollectionPage> callback) {
+    public void get(final ICallback<? super UserGetManagedAppDiagnosticStatusesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
         });
     }
 
-    public IUserGetManagedAppDiagnosticStatusesCollectionPage get() throws ClientException {
+    public UserGetManagedAppDiagnosticStatusesCollectionPage get() throws ClientException {
         final UserGetManagedAppDiagnosticStatusesCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IUserGetManagedAppDiagnosticStatusesCollectionPage buildFromResponse(final UserGetManagedAppDiagnosticStatusesCollectionResponse response) {
-        final IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder builder;
+    public UserGetManagedAppDiagnosticStatusesCollectionPage buildFromResponse(final UserGetManagedAppDiagnosticStatusesCollectionResponse response) {
+        final UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IUserGetManagedAppDiagnosticStatusesCollectionPage page = new UserGetManagedAppDiagnosticStatusesCollectionPage(response, builder);
+        final UserGetManagedAppDiagnosticStatusesCollectionPage page = new UserGetManagedAppDiagnosticStatusesCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      * @param value the select clause
      * @return the updated request
      */
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest select(final String value) {
+    public UserGetManagedAppDiagnosticStatusesCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
+        return (UserGetManagedAppDiagnosticStatusesCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest top(final int value) {
+    public UserGetManagedAppDiagnosticStatusesCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
+        return (UserGetManagedAppDiagnosticStatusesCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      * @param value the expand clause
      * @return the updated request
      */
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest expand(final String value) {
+    public UserGetManagedAppDiagnosticStatusesCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
+        return (UserGetManagedAppDiagnosticStatusesCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      * @param value the filter clause
      * @return the updated request
      */
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest filter(final String value) {
+    public UserGetManagedAppDiagnosticStatusesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
+        return (UserGetManagedAppDiagnosticStatusesCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
      * @param value the order by clause
      * @return the updated request
      */
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest orderBy(final String value) {
+    public UserGetManagedAppDiagnosticStatusesCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
+        return (UserGetManagedAppDiagnosticStatusesCollectionRequest)this;
     }
 
 }

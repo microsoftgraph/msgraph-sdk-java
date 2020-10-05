@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Android Lob App Request.
  */
-public class ManagedAndroidLobAppRequest extends BaseRequest implements IManagedAndroidLobAppRequest {
+public class ManagedAndroidLobAppRequest extends BaseRequest {
 	
     /**
      * The request for the ManagedAndroidLobApp
@@ -138,7 +138,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest implements IManaged
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedAndroidLobAppRequest select(final String value) {
+     public ManagedAndroidLobAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedAndroidLobAppRequest)this;
      }
@@ -149,7 +149,7 @@ public class ManagedAndroidLobAppRequest extends BaseRequest implements IManaged
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedAndroidLobAppRequest expand(final String value) {
+     public ManagedAndroidLobAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedAndroidLobAppRequest)this;
      }

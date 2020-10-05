@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemCheckoutRequest;
 import com.microsoft.graph.requests.extensions.DriveItemCheckoutRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Checkout Request.
  */
-public class DriveItemCheckoutRequest extends BaseRequest implements IDriveItemCheckoutRequest {
+public class DriveItemCheckoutRequest extends BaseRequest {
 
     /**
      * The request for this DriveItemCheckout

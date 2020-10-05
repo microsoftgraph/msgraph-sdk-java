@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.OfferShiftRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOfferShiftRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfferShiftRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfferShiftRequestCollectionRequest;
+import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OfferShiftRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Offer Shift Request Collection Request Builder.
  */
-public class OfferShiftRequestCollectionRequestBuilder extends BaseRequestBuilder implements IOfferShiftRequestCollectionRequestBuilder {
+public class OfferShiftRequestCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Schedule
@@ -42,7 +42,7 @@ public class OfferShiftRequestCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOfferShiftRequestCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OfferShiftRequestCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class OfferShiftRequestCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOfferShiftRequestCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OfferShiftRequestCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OfferShiftRequestCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOfferShiftRequestRequestBuilder byId(final String id) {
+    public OfferShiftRequestRequestBuilder byId(final String id) {
         return new OfferShiftRequestRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsTab;
-import com.microsoft.graph.requests.extensions.ITeamsAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams Tab Request.
  */
-public class TeamsTabRequest extends BaseRequest implements ITeamsTabRequest {
+public class TeamsTabRequest extends BaseRequest {
 	
     /**
      * The request for the TeamsTab
@@ -140,7 +139,7 @@ public class TeamsTabRequest extends BaseRequest implements ITeamsTabRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamsTabRequest select(final String value) {
+     public TeamsTabRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TeamsTabRequest)this;
      }
@@ -151,7 +150,7 @@ public class TeamsTabRequest extends BaseRequest implements ITeamsTabRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamsTabRequest expand(final String value) {
+     public TeamsTabRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TeamsTabRequest)this;
      }

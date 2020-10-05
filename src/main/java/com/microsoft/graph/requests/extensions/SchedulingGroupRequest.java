@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Scheduling Group Request.
  */
-public class SchedulingGroupRequest extends BaseRequest implements ISchedulingGroupRequest {
+public class SchedulingGroupRequest extends BaseRequest {
 	
     /**
      * The request for the SchedulingGroup
@@ -138,7 +138,7 @@ public class SchedulingGroupRequest extends BaseRequest implements ISchedulingGr
      * @param value the select clause
      * @return the updated request
      */
-     public ISchedulingGroupRequest select(final String value) {
+     public SchedulingGroupRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SchedulingGroupRequest)this;
      }
@@ -149,7 +149,7 @@ public class SchedulingGroupRequest extends BaseRequest implements ISchedulingGr
      * @param value the expand clause
      * @return the updated request
      */
-     public ISchedulingGroupRequest expand(final String value) {
+     public SchedulingGroupRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SchedulingGroupRequest)this;
      }

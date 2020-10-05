@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.Endpoint;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IEndpointCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.EndpointCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.EndpointCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.EndpointCollectionResponse;
 import com.microsoft.graph.models.extensions.Endpoint;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Endpoint Collection With References Page.
  */
-public class EndpointCollectionWithReferencesPage extends BaseCollectionPage<Endpoint, IEndpointCollectionWithReferencesRequestBuilder> implements IEndpointCollectionWithReferencesPage {
+public class EndpointCollectionWithReferencesPage extends BaseCollectionPage<Endpoint, EndpointCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for Endpoint
@@ -34,7 +34,7 @@ public class EndpointCollectionWithReferencesPage extends BaseCollectionPage<End
      * @param response the serialized EndpointCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EndpointCollectionWithReferencesPage(final EndpointCollectionResponse response, final IEndpointCollectionWithReferencesRequestBuilder builder) {
+    public EndpointCollectionWithReferencesPage(final EndpointCollectionResponse response, final EndpointCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

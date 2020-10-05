@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Software Update Status Summary Request Builder.
  */
-public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilder implements ISoftwareUpdateStatusSummaryRequestBuilder {
+public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SoftwareUpdateStatusSummary
@@ -35,9 +35,9 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISoftwareUpdateStatusSummaryRequest instance
+     * @return the SoftwareUpdateStatusSummaryRequest instance
      */
-    public ISoftwareUpdateStatusSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SoftwareUpdateStatusSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISoftwareUpdateStatusSummaryRequest instance
+     * @return the SoftwareUpdateStatusSummaryRequest instance
      */
-    public ISoftwareUpdateStatusSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SoftwareUpdateStatusSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SoftwareUpdateStatusSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

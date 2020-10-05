@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnAddRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnAddRequest;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Column Add Request Builder.
  */
-public class WorkbookTableColumnAddRequestBuilder extends BaseActionRequestBuilder implements IWorkbookTableColumnAddRequestBuilder {
+public class WorkbookTableColumnAddRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableColumnAdd
@@ -36,22 +35,22 @@ public class WorkbookTableColumnAddRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookTableColumnAddRequest
+     * Creates the WorkbookTableColumnAddRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableColumnAddRequest instance
+     * @return the WorkbookTableColumnAddRequest instance
      */
-    public IWorkbookTableColumnAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableColumnAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableColumnAddRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableColumnAddRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableColumnAddRequest instance
+     * @return the WorkbookTableColumnAddRequest instance
      */
-    public IWorkbookTableColumnAddRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnAddRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableColumnAddRequest request = new WorkbookTableColumnAddRequest(
                 getRequestUrl(),
                 getClient(),

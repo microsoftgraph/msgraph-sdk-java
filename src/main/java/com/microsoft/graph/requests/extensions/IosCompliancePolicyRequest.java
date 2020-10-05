@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Compliance Policy Request.
  */
-public class IosCompliancePolicyRequest extends BaseRequest implements IIosCompliancePolicyRequest {
+public class IosCompliancePolicyRequest extends BaseRequest {
 	
     /**
      * The request for the IosCompliancePolicy
@@ -138,7 +138,7 @@ public class IosCompliancePolicyRequest extends BaseRequest implements IIosCompl
      * @param value the select clause
      * @return the updated request
      */
-     public IIosCompliancePolicyRequest select(final String value) {
+     public IosCompliancePolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (IosCompliancePolicyRequest)this;
      }
@@ -149,7 +149,7 @@ public class IosCompliancePolicyRequest extends BaseRequest implements IIosCompl
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosCompliancePolicyRequest expand(final String value) {
+     public IosCompliancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (IosCompliancePolicyRequest)this;
      }

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.SchedulingGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISchedulingGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchedulingGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchedulingGroupCollectionRequest;
+import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SchedulingGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Scheduling Group Collection Request Builder.
  */
-public class SchedulingGroupCollectionRequestBuilder extends BaseRequestBuilder implements ISchedulingGroupCollectionRequestBuilder {
+public class SchedulingGroupCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Schedule
@@ -42,7 +42,7 @@ public class SchedulingGroupCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISchedulingGroupCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SchedulingGroupCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class SchedulingGroupCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISchedulingGroupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SchedulingGroupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SchedulingGroupCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISchedulingGroupRequestBuilder byId(final String id) {
+    public SchedulingGroupRequestBuilder byId(final String id) {
         return new SchedulingGroupRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

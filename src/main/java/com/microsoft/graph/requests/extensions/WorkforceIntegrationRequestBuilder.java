@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workforce Integration Request Builder.
  */
-public class WorkforceIntegrationRequestBuilder extends BaseRequestBuilder implements IWorkforceIntegrationRequestBuilder {
+public class WorkforceIntegrationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkforceIntegration
@@ -35,9 +35,9 @@ public class WorkforceIntegrationRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkforceIntegrationRequest instance
+     * @return the WorkforceIntegrationRequest instance
      */
-    public IWorkforceIntegrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkforceIntegrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class WorkforceIntegrationRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkforceIntegrationRequest instance
+     * @return the WorkforceIntegrationRequest instance
      */
-    public IWorkforceIntegrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkforceIntegrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkforceIntegrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

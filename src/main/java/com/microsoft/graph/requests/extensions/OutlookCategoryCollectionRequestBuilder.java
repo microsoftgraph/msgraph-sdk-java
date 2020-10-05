@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.OutlookCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequest;
+import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Outlook Category Collection Request Builder.
  */
-public class OutlookCategoryCollectionRequestBuilder extends BaseRequestBuilder implements IOutlookCategoryCollectionRequestBuilder {
+public class OutlookCategoryCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of OutlookUser
@@ -42,7 +42,7 @@ public class OutlookCategoryCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOutlookCategoryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OutlookCategoryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class OutlookCategoryCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOutlookCategoryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookCategoryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OutlookCategoryCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOutlookCategoryRequestBuilder byId(final String id) {
+    public OutlookCategoryRequestBuilder byId(final String id) {
         return new OutlookCategoryRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

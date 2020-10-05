@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Restricted Sign In Request.
  */
-public class RestrictedSignInRequest extends BaseRequest implements IRestrictedSignInRequest {
+public class RestrictedSignInRequest extends BaseRequest {
 	
     /**
      * The request for the RestrictedSignIn
@@ -138,7 +138,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @param value the select clause
      * @return the updated request
      */
-     public IRestrictedSignInRequest select(final String value) {
+     public RestrictedSignInRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (RestrictedSignInRequest)this;
      }
@@ -149,7 +149,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @param value the expand clause
      * @return the updated request
      */
-     public IRestrictedSignInRequest expand(final String value) {
+     public RestrictedSignInRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (RestrictedSignInRequest)this;
      }

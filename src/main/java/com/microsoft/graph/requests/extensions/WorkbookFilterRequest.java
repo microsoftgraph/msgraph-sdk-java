@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Filter Request.
  */
-public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilterRequest {
+public class WorkbookFilterRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookFilter
@@ -140,7 +140,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookFilterRequest select(final String value) {
+     public WorkbookFilterRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookFilterRequest)this;
      }
@@ -151,7 +151,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookFilterRequest expand(final String value) {
+     public WorkbookFilterRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookFilterRequest)this;
      }

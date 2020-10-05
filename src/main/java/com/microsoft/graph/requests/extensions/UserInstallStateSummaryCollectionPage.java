@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
-import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollection
 /**
  * The class for the User Install State Summary Collection Page.
  */
-public class UserInstallStateSummaryCollectionPage extends BaseCollectionPage<UserInstallStateSummary, IUserInstallStateSummaryCollectionRequestBuilder> implements IUserInstallStateSummaryCollectionPage {
+public class UserInstallStateSummaryCollectionPage extends BaseCollectionPage<UserInstallStateSummary, UserInstallStateSummaryCollectionRequestBuilder> {
 
     /**
      * A collection page for UserInstallStateSummary
@@ -22,7 +22,7 @@ public class UserInstallStateSummaryCollectionPage extends BaseCollectionPage<Us
      * @param response the serialized UserInstallStateSummaryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UserInstallStateSummaryCollectionPage(final UserInstallStateSummaryCollectionResponse response, final IUserInstallStateSummaryCollectionRequestBuilder builder) {
+    public UserInstallStateSummaryCollectionPage(final UserInstallStateSummaryCollectionResponse response, final UserInstallStateSummaryCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

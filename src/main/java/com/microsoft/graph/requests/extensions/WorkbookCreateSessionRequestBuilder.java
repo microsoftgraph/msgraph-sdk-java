@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookCreateSessionRequest;
 import com.microsoft.graph.requests.extensions.WorkbookCreateSessionRequest;
 import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Create Session Request Builder.
  */
-public class WorkbookCreateSessionRequestBuilder extends BaseActionRequestBuilder implements IWorkbookCreateSessionRequestBuilder {
+public class WorkbookCreateSessionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookCreateSession
@@ -32,22 +31,22 @@ public class WorkbookCreateSessionRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookCreateSessionRequest
+     * Creates the WorkbookCreateSessionRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookCreateSessionRequest instance
+     * @return the WorkbookCreateSessionRequest instance
      */
-    public IWorkbookCreateSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookCreateSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookCreateSessionRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookCreateSessionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookCreateSessionRequest instance
+     * @return the WorkbookCreateSessionRequest instance
      */
-    public IWorkbookCreateSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookCreateSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookCreateSessionRequest request = new WorkbookCreateSessionRequest(
                 getRequestUrl(),
                 getClient(),

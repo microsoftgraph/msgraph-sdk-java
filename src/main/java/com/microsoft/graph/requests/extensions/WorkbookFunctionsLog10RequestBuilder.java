@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLog10Request;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsLog10Request;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Log10Request Builder.
  */
-public class WorkbookFunctionsLog10RequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsLog10RequestBuilder {
+public class WorkbookFunctionsLog10RequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsLog10
@@ -32,22 +31,22 @@ public class WorkbookFunctionsLog10RequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsLog10Request
+     * Creates the WorkbookFunctionsLog10Request
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLog10Request instance
+     * @return the WorkbookFunctionsLog10Request instance
      */
-    public IWorkbookFunctionsLog10Request buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsLog10Request buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsLog10Request with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsLog10Request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLog10Request instance
+     * @return the WorkbookFunctionsLog10Request instance
      */
-    public IWorkbookFunctionsLog10Request buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsLog10Request buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsLog10Request request = new WorkbookFunctionsLog10Request(
                 getRequestUrl(),
                 getClient(),

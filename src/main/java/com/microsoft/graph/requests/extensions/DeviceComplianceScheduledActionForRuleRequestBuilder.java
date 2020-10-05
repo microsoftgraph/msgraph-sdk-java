@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceActionItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceActionItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Scheduled Action For Rule Request Builder.
  */
-public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRequestBuilder implements IDeviceComplianceScheduledActionForRuleRequestBuilder {
+public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceComplianceScheduledActionForRule
@@ -39,9 +37,9 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceComplianceScheduledActionForRuleRequest instance
+     * @return the DeviceComplianceScheduledActionForRuleRequest instance
      */
-    public IDeviceComplianceScheduledActionForRuleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceComplianceScheduledActionForRuleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceComplianceScheduledActionForRuleRequest instance
+     * @return the DeviceComplianceScheduledActionForRuleRequest instance
      */
-    public IDeviceComplianceScheduledActionForRuleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceScheduledActionForRuleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceComplianceActionItemCollectionRequestBuilder scheduledActionConfigurations() {
+    public DeviceComplianceActionItemCollectionRequestBuilder scheduledActionConfigurations() {
         return new DeviceComplianceActionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations"), getClient(), null);
     }
 
-    public IDeviceComplianceActionItemRequestBuilder scheduledActionConfigurations(final String id) {
+    public DeviceComplianceActionItemRequestBuilder scheduledActionConfigurations(final String id) {
         return new DeviceComplianceActionItemRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionConfigurations") + "/" + id, getClient(), null);
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeIntersectionRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeIntersectionRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Intersection Request Builder.
  */
-public class WorkbookRangeIntersectionRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookRangeIntersectionRequestBuilder {
+public class WorkbookRangeIntersectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeIntersection
@@ -32,22 +31,22 @@ public class WorkbookRangeIntersectionRequestBuilder extends BaseFunctionRequest
     }
 
     /**
-     * Creates the IWorkbookRangeIntersectionRequest
+     * Creates the WorkbookRangeIntersectionRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeIntersectionRequest instance
+     * @return the WorkbookRangeIntersectionRequest instance
      */
-    public IWorkbookRangeIntersectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeIntersectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeIntersectionRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeIntersectionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeIntersectionRequest instance
+     * @return the WorkbookRangeIntersectionRequest instance
      */
-    public IWorkbookRangeIntersectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeIntersectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeIntersectionRequest request = new WorkbookRangeIntersectionRequest(
                 getRequestUrl(),
                 getClient(),
@@ -64,27 +63,27 @@ public class WorkbookRangeIntersectionRequestBuilder extends BaseFunctionRequest
     /**
      * Gets the request builder for WorkbookRangeFormat
      *
-     * @return the IWorkbookRangeFormatRequestBuilder instance
+     * @return the WorkbookRangeFormatRequestBuilder instance
      */
-    public IWorkbookRangeFormatRequestBuilder format() {
+    public WorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeSort
      *
-     * @return the IWorkbookRangeSortRequestBuilder instance
+     * @return the WorkbookRangeSortRequestBuilder instance
      */
-    public IWorkbookRangeSortRequestBuilder sort() {
+    public WorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

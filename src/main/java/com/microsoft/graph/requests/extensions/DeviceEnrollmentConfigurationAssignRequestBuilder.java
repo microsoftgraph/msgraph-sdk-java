@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationAssignRequest;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationAssignRequest;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Device Enrollment Configuration Assign Request Builder.
  */
-public class DeviceEnrollmentConfigurationAssignRequestBuilder extends BaseActionRequestBuilder implements IDeviceEnrollmentConfigurationAssignRequestBuilder {
+public class DeviceEnrollmentConfigurationAssignRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DeviceEnrollmentConfigurationAssign
@@ -32,22 +31,22 @@ public class DeviceEnrollmentConfigurationAssignRequestBuilder extends BaseActio
     }
 
     /**
-     * Creates the IDeviceEnrollmentConfigurationAssignRequest
+     * Creates the DeviceEnrollmentConfigurationAssignRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDeviceEnrollmentConfigurationAssignRequest instance
+     * @return the DeviceEnrollmentConfigurationAssignRequest instance
      */
-    public IDeviceEnrollmentConfigurationAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceEnrollmentConfigurationAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDeviceEnrollmentConfigurationAssignRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DeviceEnrollmentConfigurationAssignRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDeviceEnrollmentConfigurationAssignRequest instance
+     * @return the DeviceEnrollmentConfigurationAssignRequest instance
      */
-    public IDeviceEnrollmentConfigurationAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentConfigurationAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceEnrollmentConfigurationAssignRequest request = new DeviceEnrollmentConfigurationAssignRequest(
                 getRequestUrl(),
                 getClient(),

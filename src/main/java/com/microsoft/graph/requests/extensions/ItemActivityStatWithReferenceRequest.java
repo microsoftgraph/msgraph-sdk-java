@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IItemActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityRequestBuilder;
 import java.util.Arrays;
@@ -26,7 +24,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Item Activity Stat With Reference Request.
  */
-public class ItemActivityStatWithReferenceRequest extends BaseRequest implements IItemActivityStatWithReferenceRequest {
+public class ItemActivityStatWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the ItemActivityStat
@@ -82,9 +80,9 @@ public class ItemActivityStatWithReferenceRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-    public IItemActivityStatWithReferenceRequest select(final String value) {
+    public ItemActivityStatWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IItemActivityStatWithReferenceRequest)this;
+        return (ItemActivityStatWithReferenceRequest)this;
     }
 
     /**
@@ -93,7 +91,7 @@ public class ItemActivityStatWithReferenceRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-    public IItemActivityStatWithReferenceRequest expand(final String value) {
+    public ItemActivityStatWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ItemActivityStatWithReferenceRequest)this;
     }

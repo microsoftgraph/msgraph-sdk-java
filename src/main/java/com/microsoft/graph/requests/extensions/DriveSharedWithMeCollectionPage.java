@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveSharedWithMeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Drive Shared With Me Collection Page.
  */
-public class DriveSharedWithMeCollectionPage extends BaseCollectionPage<DriveItem, IDriveSharedWithMeCollectionRequestBuilder> implements IDriveSharedWithMeCollectionPage {
+public class DriveSharedWithMeCollectionPage extends BaseCollectionPage<DriveItem, DriveSharedWithMeCollectionRequestBuilder> {
 
     /**
      * A collection page for DriveItem.
@@ -33,7 +33,7 @@ public class DriveSharedWithMeCollectionPage extends BaseCollectionPage<DriveIte
      * @param response The serialized DriveSharedWithMeCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveSharedWithMeCollectionPage(final DriveSharedWithMeCollectionResponse response, final IDriveSharedWithMeCollectionRequestBuilder builder) {
+    public DriveSharedWithMeCollectionPage(final DriveSharedWithMeCollectionResponse response, final DriveSharedWithMeCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SharedInsight;
-import com.microsoft.graph.requests.extensions.ISharedInsightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionPage;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SharedInsightCollectionResponse;
 /**
  * The class for the Shared Insight Collection Page.
  */
-public class SharedInsightCollectionPage extends BaseCollectionPage<SharedInsight, ISharedInsightCollectionRequestBuilder> implements ISharedInsightCollectionPage {
+public class SharedInsightCollectionPage extends BaseCollectionPage<SharedInsight, SharedInsightCollectionRequestBuilder> {
 
     /**
      * A collection page for SharedInsight
@@ -22,7 +22,7 @@ public class SharedInsightCollectionPage extends BaseCollectionPage<SharedInsigh
      * @param response the serialized SharedInsightCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SharedInsightCollectionPage(final SharedInsightCollectionResponse response, final ISharedInsightCollectionRequestBuilder builder) {
+    public SharedInsightCollectionPage(final SharedInsightCollectionResponse response, final SharedInsightCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Calendar;
-import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.CalendarCollectionResponse;
 /**
  * The class for the Calendar Collection Page.
  */
-public class CalendarCollectionPage extends BaseCollectionPage<Calendar, ICalendarCollectionRequestBuilder> implements ICalendarCollectionPage {
+public class CalendarCollectionPage extends BaseCollectionPage<Calendar, CalendarCollectionRequestBuilder> {
 
     /**
      * A collection page for Calendar
@@ -22,7 +22,7 @@ public class CalendarCollectionPage extends BaseCollectionPage<Calendar, ICalend
      * @param response the serialized CalendarCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public CalendarCollectionPage(final CalendarCollectionResponse response, final ICalendarCollectionRequestBuilder builder) {
+    public CalendarCollectionPage(final CalendarCollectionResponse response, final CalendarCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

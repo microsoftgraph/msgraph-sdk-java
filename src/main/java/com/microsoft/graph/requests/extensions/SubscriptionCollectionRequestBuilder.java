@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.Subscription;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequest;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Subscription Collection Request Builder.
  */
-public class SubscriptionCollectionRequestBuilder extends BaseRequestBuilder implements ISubscriptionCollectionRequestBuilder {
+public class SubscriptionCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Subscription
@@ -41,7 +41,7 @@ public class SubscriptionCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISubscriptionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SubscriptionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class SubscriptionCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISubscriptionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SubscriptionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SubscriptionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISubscriptionRequestBuilder byId(final String id) {
+    public SubscriptionRequestBuilder byId(final String id) {
         return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

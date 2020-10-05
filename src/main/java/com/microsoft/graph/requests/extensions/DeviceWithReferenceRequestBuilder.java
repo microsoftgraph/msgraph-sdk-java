@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Device;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device With Reference Request Builder.
  */
-public class DeviceWithReferenceRequestBuilder extends BaseRequestBuilder implements IDeviceWithReferenceRequestBuilder {
+public class DeviceWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Device
@@ -44,9 +40,9 @@ public class DeviceWithReferenceRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceWithReferenceRequest instance
+     * @return the DeviceWithReferenceRequest instance
      */
-    public IDeviceWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,13 +50,13 @@ public class DeviceWithReferenceRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IDeviceWithReferenceRequest instance
+     * @return the DeviceWithReferenceRequest instance
      */
-    public IDeviceWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceReferenceRequestBuilder reference(){
+    public DeviceReferenceRequestBuilder reference(){
         return new DeviceReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

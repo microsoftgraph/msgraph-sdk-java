@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.Event;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IEventDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EventDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.EventDeltaCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Event Delta Collection Page.
  */
-public class EventDeltaCollectionPage extends BaseCollectionPage<Event, IEventDeltaCollectionRequestBuilder> implements IEventDeltaCollectionPage {
+public class EventDeltaCollectionPage extends BaseCollectionPage<Event, EventDeltaCollectionRequestBuilder> {
 
     /**
      * The opaque link to query delta after the 
@@ -39,7 +39,7 @@ public class EventDeltaCollectionPage extends BaseCollectionPage<Event, IEventDe
      * @param response The serialized EventDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public EventDeltaCollectionPage(final EventDeltaCollectionResponse response, final IEventDeltaCollectionRequestBuilder builder) {
+    public EventDeltaCollectionPage(final EventDeltaCollectionResponse response, final EventDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {

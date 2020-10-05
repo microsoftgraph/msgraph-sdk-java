@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSchool;
-import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
 import java.util.Arrays;
@@ -30,7 +26,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Education School With Reference Request.
  */
-public class EducationSchoolWithReferenceRequest extends BaseRequest implements IEducationSchoolWithReferenceRequest {
+public class EducationSchoolWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the EducationSchool
@@ -86,9 +82,9 @@ public class EducationSchoolWithReferenceRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-    public IEducationSchoolWithReferenceRequest select(final String value) {
+    public EducationSchoolWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IEducationSchoolWithReferenceRequest)this;
+        return (EducationSchoolWithReferenceRequest)this;
     }
 
     /**
@@ -97,7 +93,7 @@ public class EducationSchoolWithReferenceRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-    public IEducationSchoolWithReferenceRequest expand(final String value) {
+    public EducationSchoolWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EducationSchoolWithReferenceRequest)this;
     }

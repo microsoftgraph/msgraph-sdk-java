@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.UsedInsight;
-import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionPage;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.UsedInsightCollectionResponse;
 /**
  * The class for the Used Insight Collection Page.
  */
-public class UsedInsightCollectionPage extends BaseCollectionPage<UsedInsight, IUsedInsightCollectionRequestBuilder> implements IUsedInsightCollectionPage {
+public class UsedInsightCollectionPage extends BaseCollectionPage<UsedInsight, UsedInsightCollectionRequestBuilder> {
 
     /**
      * A collection page for UsedInsight
@@ -22,7 +22,7 @@ public class UsedInsightCollectionPage extends BaseCollectionPage<UsedInsight, I
      * @param response the serialized UsedInsightCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UsedInsightCollectionPage(final UsedInsightCollectionResponse response, final IUsedInsightCollectionRequestBuilder builder) {
+    public UsedInsightCollectionPage(final UsedInsightCollectionResponse response, final UsedInsightCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

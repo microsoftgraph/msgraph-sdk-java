@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.SecureScore;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequest;
+import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Secure Score Collection Request Builder.
  */
-public class SecureScoreCollectionRequestBuilder extends BaseRequestBuilder implements ISecureScoreCollectionRequestBuilder {
+public class SecureScoreCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Security
@@ -42,7 +42,7 @@ public class SecureScoreCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISecureScoreCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SecureScoreCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class SecureScoreCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISecureScoreCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecureScoreCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SecureScoreCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISecureScoreRequestBuilder byId(final String id) {
+    public SecureScoreRequestBuilder byId(final String id) {
         return new SecureScoreRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

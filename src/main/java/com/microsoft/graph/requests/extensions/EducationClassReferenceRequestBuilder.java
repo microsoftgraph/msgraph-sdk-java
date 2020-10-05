@@ -9,15 +9,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationClass;
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -30,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Education Class Reference Request Builder.
  */
-public class EducationClassReferenceRequestBuilder extends BaseRequestBuilder implements IEducationClassReferenceRequestBuilder {
+public class EducationClassReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the EducationClass
@@ -47,9 +42,9 @@ public class EducationClassReferenceRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The IEducationClassReferenceRequest instance
+     * @return The EducationClassReferenceRequest instance
      */
-    public IEducationClassReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EducationClassReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -57,9 +52,9 @@ public class EducationClassReferenceRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEducationClassReferenceRequest instance
+     * @return the EducationClassReferenceRequest instance
      */
-    public IEducationClassReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationClassReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EducationClassReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

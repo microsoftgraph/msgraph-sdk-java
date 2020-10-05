@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Device;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import java.util.Arrays;
@@ -26,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Request Builder.
  */
-public class DeviceRequestBuilder extends BaseRequestBuilder implements IDeviceRequestBuilder {
+public class DeviceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Device
@@ -43,9 +39,9 @@ public class DeviceRequestBuilder extends BaseRequestBuilder implements IDeviceR
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceRequest instance
+     * @return the DeviceRequest instance
      */
-    public IDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,228 +49,228 @@ public class DeviceRequestBuilder extends BaseRequestBuilder implements IDeviceR
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceRequest instance
+     * @return the DeviceRequest instance
      */
-    public IDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
+    public DirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder memberOf(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
     }
-    public IUserCollectionWithReferencesRequestBuilder memberOfAsUser() {
+    public UserCollectionWithReferencesRequestBuilder memberOfAsUser() {
         return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.user", getClient(), null);
     }
 
-    public IUserWithReferenceRequestBuilder memberOfAsUser(final String id) {
+    public UserWithReferenceRequestBuilder memberOfAsUser(final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
-    public IGroupCollectionWithReferencesRequestBuilder memberOfAsGroup() {
+    public GroupCollectionWithReferencesRequestBuilder memberOfAsGroup() {
         return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.group", getClient(), null);
     }
 
-    public IGroupWithReferenceRequestBuilder memberOfAsGroup(final String id) {
+    public GroupWithReferenceRequestBuilder memberOfAsGroup(final String id) {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
-    public IApplicationCollectionWithReferencesRequestBuilder memberOfAsApplication() {
+    public ApplicationCollectionWithReferencesRequestBuilder memberOfAsApplication() {
         return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.application", getClient(), null);
     }
 
-    public IApplicationWithReferenceRequestBuilder memberOfAsApplication(final String id) {
+    public ApplicationWithReferenceRequestBuilder memberOfAsApplication(final String id) {
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
-    public IServicePrincipalCollectionWithReferencesRequestBuilder memberOfAsServicePrincipal() {
+    public ServicePrincipalCollectionWithReferencesRequestBuilder memberOfAsServicePrincipal() {
         return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
-    public IServicePrincipalWithReferenceRequestBuilder memberOfAsServicePrincipal(final String id) {
+    public ServicePrincipalWithReferenceRequestBuilder memberOfAsServicePrincipal(final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
-    public IDeviceCollectionWithReferencesRequestBuilder memberOfAsDevice() {
+    public DeviceCollectionWithReferencesRequestBuilder memberOfAsDevice() {
         return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.device", getClient(), null);
     }
 
-    public IDeviceWithReferenceRequestBuilder memberOfAsDevice(final String id) {
+    public DeviceWithReferenceRequestBuilder memberOfAsDevice(final String id) {
         return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
-    public IOrgContactCollectionWithReferencesRequestBuilder memberOfAsOrgContact() {
+    public OrgContactCollectionWithReferencesRequestBuilder memberOfAsOrgContact() {
         return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.orgContact", getClient(), null);
     }
 
-    public IOrgContactWithReferenceRequestBuilder memberOfAsOrgContact(final String id) {
+    public OrgContactWithReferenceRequestBuilder memberOfAsOrgContact(final String id) {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder registeredOwners() {
+    public DirectoryObjectCollectionWithReferencesRequestBuilder registeredOwners() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder registeredOwners(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder registeredOwners(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners") + "/" + id, getClient(), null);
     }
-    public IAppRoleAssignmentCollectionWithReferencesRequestBuilder registeredOwnersAsAppRoleAssignment() {
+    public AppRoleAssignmentCollectionWithReferencesRequestBuilder registeredOwnersAsAppRoleAssignment() {
         return new AppRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners") + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
 
-    public IAppRoleAssignmentWithReferenceRequestBuilder registeredOwnersAsAppRoleAssignment(final String id) {
+    public AppRoleAssignmentWithReferenceRequestBuilder registeredOwnersAsAppRoleAssignment(final String id) {
         return new AppRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
-    public IEndpointCollectionWithReferencesRequestBuilder registeredOwnersAsEndpoint() {
+    public EndpointCollectionWithReferencesRequestBuilder registeredOwnersAsEndpoint() {
         return new EndpointCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners") + "/microsoft.graph.endpoint", getClient(), null);
     }
 
-    public IEndpointWithReferenceRequestBuilder registeredOwnersAsEndpoint(final String id) {
+    public EndpointWithReferenceRequestBuilder registeredOwnersAsEndpoint(final String id) {
         return new EndpointWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
     }
-    public IServicePrincipalCollectionWithReferencesRequestBuilder registeredOwnersAsServicePrincipal() {
+    public ServicePrincipalCollectionWithReferencesRequestBuilder registeredOwnersAsServicePrincipal() {
         return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
-    public IServicePrincipalWithReferenceRequestBuilder registeredOwnersAsServicePrincipal(final String id) {
+    public ServicePrincipalWithReferenceRequestBuilder registeredOwnersAsServicePrincipal(final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
-    public IUserCollectionWithReferencesRequestBuilder registeredOwnersAsUser() {
+    public UserCollectionWithReferencesRequestBuilder registeredOwnersAsUser() {
         return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners") + "/microsoft.graph.user", getClient(), null);
     }
 
-    public IUserWithReferenceRequestBuilder registeredOwnersAsUser(final String id) {
+    public UserWithReferenceRequestBuilder registeredOwnersAsUser(final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder registeredUsers() {
+    public DirectoryObjectCollectionWithReferencesRequestBuilder registeredUsers() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder registeredUsers(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder registeredUsers(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers") + "/" + id, getClient(), null);
     }
-    public IAppRoleAssignmentCollectionWithReferencesRequestBuilder registeredUsersAsAppRoleAssignment() {
+    public AppRoleAssignmentCollectionWithReferencesRequestBuilder registeredUsersAsAppRoleAssignment() {
         return new AppRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers") + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
 
-    public IAppRoleAssignmentWithReferenceRequestBuilder registeredUsersAsAppRoleAssignment(final String id) {
+    public AppRoleAssignmentWithReferenceRequestBuilder registeredUsersAsAppRoleAssignment(final String id) {
         return new AppRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
-    public IEndpointCollectionWithReferencesRequestBuilder registeredUsersAsEndpoint() {
+    public EndpointCollectionWithReferencesRequestBuilder registeredUsersAsEndpoint() {
         return new EndpointCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers") + "/microsoft.graph.endpoint", getClient(), null);
     }
 
-    public IEndpointWithReferenceRequestBuilder registeredUsersAsEndpoint(final String id) {
+    public EndpointWithReferenceRequestBuilder registeredUsersAsEndpoint(final String id) {
         return new EndpointWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
     }
-    public IServicePrincipalCollectionWithReferencesRequestBuilder registeredUsersAsServicePrincipal() {
+    public ServicePrincipalCollectionWithReferencesRequestBuilder registeredUsersAsServicePrincipal() {
         return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
-    public IServicePrincipalWithReferenceRequestBuilder registeredUsersAsServicePrincipal(final String id) {
+    public ServicePrincipalWithReferenceRequestBuilder registeredUsersAsServicePrincipal(final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
-    public IUserCollectionWithReferencesRequestBuilder registeredUsersAsUser() {
+    public UserCollectionWithReferencesRequestBuilder registeredUsersAsUser() {
         return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers") + "/microsoft.graph.user", getClient(), null);
     }
 
-    public IUserWithReferenceRequestBuilder registeredUsersAsUser(final String id) {
+    public UserWithReferenceRequestBuilder registeredUsersAsUser(final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
+    public DirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id, getClient(), null);
     }
-    public IUserCollectionWithReferencesRequestBuilder transitiveMemberOfAsUser() {
+    public UserCollectionWithReferencesRequestBuilder transitiveMemberOfAsUser() {
         return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.user", getClient(), null);
     }
 
-    public IUserWithReferenceRequestBuilder transitiveMemberOfAsUser(final String id) {
+    public UserWithReferenceRequestBuilder transitiveMemberOfAsUser(final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
-    public IGroupCollectionWithReferencesRequestBuilder transitiveMemberOfAsGroup() {
+    public GroupCollectionWithReferencesRequestBuilder transitiveMemberOfAsGroup() {
         return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.group", getClient(), null);
     }
 
-    public IGroupWithReferenceRequestBuilder transitiveMemberOfAsGroup(final String id) {
+    public GroupWithReferenceRequestBuilder transitiveMemberOfAsGroup(final String id) {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
-    public IApplicationCollectionWithReferencesRequestBuilder transitiveMemberOfAsApplication() {
+    public ApplicationCollectionWithReferencesRequestBuilder transitiveMemberOfAsApplication() {
         return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.application", getClient(), null);
     }
 
-    public IApplicationWithReferenceRequestBuilder transitiveMemberOfAsApplication(final String id) {
+    public ApplicationWithReferenceRequestBuilder transitiveMemberOfAsApplication(final String id) {
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
-    public IServicePrincipalCollectionWithReferencesRequestBuilder transitiveMemberOfAsServicePrincipal() {
+    public ServicePrincipalCollectionWithReferencesRequestBuilder transitiveMemberOfAsServicePrincipal() {
         return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
-    public IServicePrincipalWithReferenceRequestBuilder transitiveMemberOfAsServicePrincipal(final String id) {
+    public ServicePrincipalWithReferenceRequestBuilder transitiveMemberOfAsServicePrincipal(final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
-    public IDeviceCollectionWithReferencesRequestBuilder transitiveMemberOfAsDevice() {
+    public DeviceCollectionWithReferencesRequestBuilder transitiveMemberOfAsDevice() {
         return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.device", getClient(), null);
     }
 
-    public IDeviceWithReferenceRequestBuilder transitiveMemberOfAsDevice(final String id) {
+    public DeviceWithReferenceRequestBuilder transitiveMemberOfAsDevice(final String id) {
         return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
-    public IOrgContactCollectionWithReferencesRequestBuilder transitiveMemberOfAsOrgContact() {
+    public OrgContactCollectionWithReferencesRequestBuilder transitiveMemberOfAsOrgContact() {
         return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.orgContact", getClient(), null);
     }
 
-    public IOrgContactWithReferenceRequestBuilder transitiveMemberOfAsOrgContact(final String id) {
+    public OrgContactWithReferenceRequestBuilder transitiveMemberOfAsOrgContact(final String id) {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
-    public IExtensionCollectionRequestBuilder extensions() {
+    public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder extensions(final String id) {
+    public ExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public IUserCollectionRequestBuilder extensionsAsUser() {
+    public UserCollectionRequestBuilder extensionsAsUser() {
         return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.user", getClient(), null);
     }
 
-    public IUserRequestBuilder extensionsAsUser(final String id) {
+    public UserRequestBuilder extensionsAsUser(final String id) {
         return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
-    public IGroupCollectionRequestBuilder extensionsAsGroup() {
+    public GroupCollectionRequestBuilder extensionsAsGroup() {
         return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.group", getClient(), null);
     }
 
-    public IGroupRequestBuilder extensionsAsGroup(final String id) {
+    public GroupRequestBuilder extensionsAsGroup(final String id) {
         return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
-    public IApplicationCollectionRequestBuilder extensionsAsApplication() {
+    public ApplicationCollectionRequestBuilder extensionsAsApplication() {
         return new ApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.application", getClient(), null);
     }
 
-    public IApplicationRequestBuilder extensionsAsApplication(final String id) {
+    public ApplicationRequestBuilder extensionsAsApplication(final String id) {
         return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
-    public IServicePrincipalCollectionRequestBuilder extensionsAsServicePrincipal() {
+    public ServicePrincipalCollectionRequestBuilder extensionsAsServicePrincipal() {
         return new ServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
-    public IServicePrincipalRequestBuilder extensionsAsServicePrincipal(final String id) {
+    public ServicePrincipalRequestBuilder extensionsAsServicePrincipal(final String id) {
         return new ServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
-    public IDeviceCollectionRequestBuilder extensionsAsDevice() {
+    public DeviceCollectionRequestBuilder extensionsAsDevice() {
         return new DeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.device", getClient(), null);
     }
 
-    public IDeviceRequestBuilder extensionsAsDevice(final String id) {
+    public DeviceRequestBuilder extensionsAsDevice(final String id) {
         return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
-    public IOrgContactCollectionRequestBuilder extensionsAsOrgContact() {
+    public OrgContactCollectionRequestBuilder extensionsAsOrgContact() {
         return new OrgContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/microsoft.graph.orgContact", getClient(), null);
     }
 
-    public IOrgContactRequestBuilder extensionsAsOrgContact(final String id) {
+    public OrgContactRequestBuilder extensionsAsOrgContact(final String id) {
         return new OrgContactRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
 }

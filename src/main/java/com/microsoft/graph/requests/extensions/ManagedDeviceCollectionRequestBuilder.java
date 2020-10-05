@@ -13,9 +13,9 @@ import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionPar
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequest;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Collection Request Builder.
  */
-public class ManagedDeviceCollectionRequestBuilder extends BaseRequestBuilder implements IManagedDeviceCollectionRequestBuilder {
+public class ManagedDeviceCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -43,7 +43,7 @@ public class ManagedDeviceCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedDeviceCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,11 +53,11 @@ public class ManagedDeviceCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedDeviceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedDeviceRequestBuilder byId(final String id) {
+    public ManagedDeviceRequestBuilder byId(final String id) {
         return new ManagedDeviceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

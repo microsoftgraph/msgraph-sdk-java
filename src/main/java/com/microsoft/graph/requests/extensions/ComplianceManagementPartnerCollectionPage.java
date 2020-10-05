@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ComplianceManagementPartner;
-import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollec
 /**
  * The class for the Compliance Management Partner Collection Page.
  */
-public class ComplianceManagementPartnerCollectionPage extends BaseCollectionPage<ComplianceManagementPartner, IComplianceManagementPartnerCollectionRequestBuilder> implements IComplianceManagementPartnerCollectionPage {
+public class ComplianceManagementPartnerCollectionPage extends BaseCollectionPage<ComplianceManagementPartner, ComplianceManagementPartnerCollectionRequestBuilder> {
 
     /**
      * A collection page for ComplianceManagementPartner
@@ -22,7 +22,7 @@ public class ComplianceManagementPartnerCollectionPage extends BaseCollectionPag
      * @param response the serialized ComplianceManagementPartnerCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ComplianceManagementPartnerCollectionPage(final ComplianceManagementPartnerCollectionResponse response, final IComplianceManagementPartnerCollectionRequestBuilder builder) {
+    public ComplianceManagementPartnerCollectionPage(final ComplianceManagementPartnerCollectionResponse response, final ComplianceManagementPartnerCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

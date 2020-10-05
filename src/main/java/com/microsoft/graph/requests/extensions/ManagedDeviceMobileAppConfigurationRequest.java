@@ -9,21 +9,13 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -36,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Mobile App Configuration Request.
  */
-public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest implements IManagedDeviceMobileAppConfigurationRequest {
+public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the ManagedDeviceMobileAppConfiguration
@@ -170,7 +162,7 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedDeviceMobileAppConfigurationRequest select(final String value) {
+     public ManagedDeviceMobileAppConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedDeviceMobileAppConfigurationRequest)this;
      }
@@ -181,7 +173,7 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedDeviceMobileAppConfigurationRequest expand(final String value) {
+     public ManagedDeviceMobileAppConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedDeviceMobileAppConfigurationRequest)this;
      }

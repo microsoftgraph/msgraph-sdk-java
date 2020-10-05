@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageFileCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveUsageFileCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get One Drive Usage File Counts Request.
  */
-public class ReportRootGetOneDriveUsageFileCountsRequest extends BaseRequest implements IReportRootGetOneDriveUsageFileCountsRequest {
+public class ReportRootGetOneDriveUsageFileCountsRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetOneDriveUsageFileCounts
@@ -97,7 +96,7 @@ public class ReportRootGetOneDriveUsageFileCountsRequest extends BaseRequest imp
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetOneDriveUsageFileCountsRequest select(final String value) {
+    public ReportRootGetOneDriveUsageFileCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetOneDriveUsageFileCountsRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetOneDriveUsageFileCountsRequest extends BaseRequest imp
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetOneDriveUsageFileCountsRequest expand(final String value) {
+    public ReportRootGetOneDriveUsageFileCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetOneDriveUsageFileCountsRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetOneDriveUsageFileCountsRequest extends BaseRequest imp
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetOneDriveUsageFileCountsRequest filter(final String value) {
+    public ReportRootGetOneDriveUsageFileCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetOneDriveUsageFileCountsRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetOneDriveUsageFileCountsRequest extends BaseRequest imp
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetOneDriveUsageFileCountsRequest orderBy(final String value) {
+    public ReportRootGetOneDriveUsageFileCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetOneDriveUsageFileCountsRequest)this;
     }

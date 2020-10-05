@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOct2BinRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsOct2BinRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Oct2Bin Request Builder.
  */
-public class WorkbookFunctionsOct2BinRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsOct2BinRequestBuilder {
+public class WorkbookFunctionsOct2BinRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsOct2Bin
@@ -34,22 +33,22 @@ public class WorkbookFunctionsOct2BinRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsOct2BinRequest
+     * Creates the WorkbookFunctionsOct2BinRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsOct2BinRequest instance
+     * @return the WorkbookFunctionsOct2BinRequest instance
      */
-    public IWorkbookFunctionsOct2BinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsOct2BinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsOct2BinRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsOct2BinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsOct2BinRequest instance
+     * @return the WorkbookFunctionsOct2BinRequest instance
      */
-    public IWorkbookFunctionsOct2BinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsOct2BinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsOct2BinRequest request = new WorkbookFunctionsOct2BinRequest(
                 getRequestUrl(),
                 getClient(),

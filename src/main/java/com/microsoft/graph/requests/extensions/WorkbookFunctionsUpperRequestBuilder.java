@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsUpperRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsUpperRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Upper Request Builder.
  */
-public class WorkbookFunctionsUpperRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsUpperRequestBuilder {
+public class WorkbookFunctionsUpperRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsUpper
@@ -32,22 +31,22 @@ public class WorkbookFunctionsUpperRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsUpperRequest
+     * Creates the WorkbookFunctionsUpperRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsUpperRequest instance
+     * @return the WorkbookFunctionsUpperRequest instance
      */
-    public IWorkbookFunctionsUpperRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsUpperRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsUpperRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsUpperRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsUpperRequest instance
+     * @return the WorkbookFunctionsUpperRequest instance
      */
-    public IWorkbookFunctionsUpperRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsUpperRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsUpperRequest request = new WorkbookFunctionsUpperRequest(
                 getRequestUrl(),
                 getClient(),

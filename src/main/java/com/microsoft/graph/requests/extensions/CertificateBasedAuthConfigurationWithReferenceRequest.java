@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Certificate Based Auth Configuration With Reference Request.
  */
-public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseRequest implements ICertificateBasedAuthConfigurationWithReferenceRequest {
+public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the CertificateBasedAuthConfiguration
@@ -78,9 +78,9 @@ public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseR
      * @param value the select clause
      * @return the updated request
      */
-    public ICertificateBasedAuthConfigurationWithReferenceRequest select(final String value) {
+    public CertificateBasedAuthConfigurationWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ICertificateBasedAuthConfigurationWithReferenceRequest)this;
+        return (CertificateBasedAuthConfigurationWithReferenceRequest)this;
     }
 
     /**
@@ -89,7 +89,7 @@ public class CertificateBasedAuthConfigurationWithReferenceRequest extends BaseR
      * @param value the expand clause
      * @return the updated request
      */
-    public ICertificateBasedAuthConfigurationWithReferenceRequest expand(final String value) {
+    public CertificateBasedAuthConfigurationWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (CertificateBasedAuthConfigurationWithReferenceRequest)this;
     }

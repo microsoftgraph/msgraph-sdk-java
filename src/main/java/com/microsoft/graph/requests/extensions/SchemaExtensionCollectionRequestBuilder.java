@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.SchemaExtension;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISchemaExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchemaExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchemaExtensionCollectionRequest;
+import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SchemaExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Schema Extension Collection Request Builder.
  */
-public class SchemaExtensionCollectionRequestBuilder extends BaseRequestBuilder implements ISchemaExtensionCollectionRequestBuilder {
+public class SchemaExtensionCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of SchemaExtension
@@ -41,7 +41,7 @@ public class SchemaExtensionCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISchemaExtensionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SchemaExtensionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class SchemaExtensionCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISchemaExtensionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SchemaExtensionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SchemaExtensionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISchemaExtensionRequestBuilder byId(final String id) {
+    public SchemaExtensionRequestBuilder byId(final String id) {
         return new SchemaExtensionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

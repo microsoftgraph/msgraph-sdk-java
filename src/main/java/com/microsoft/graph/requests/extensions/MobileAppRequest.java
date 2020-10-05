@@ -9,12 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
 import java.util.Arrays;
@@ -28,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Request.
  */
-public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
+public class MobileAppRequest extends BaseRequest {
 	
     /**
      * The request for the MobileApp
@@ -162,7 +158,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileAppRequest select(final String value) {
+     public MobileAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MobileAppRequest)this;
      }
@@ -173,7 +169,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileAppRequest expand(final String value) {
+     public MobileAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MobileAppRequest)this;
      }

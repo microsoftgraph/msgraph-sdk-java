@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DirectoryAudit;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryAuditCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryAuditRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryAuditCollectionRequest;
+import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryAuditRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Audit Collection Request Builder.
  */
-public class DirectoryAuditCollectionRequestBuilder extends BaseRequestBuilder implements IDirectoryAuditCollectionRequestBuilder {
+public class DirectoryAuditCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of AuditLogRoot
@@ -42,7 +42,7 @@ public class DirectoryAuditCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryAuditCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryAuditCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DirectoryAuditCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryAuditCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryAuditCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryAuditCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDirectoryAuditRequestBuilder byId(final String id) {
+    public DirectoryAuditRequestBuilder byId(final String id) {
         return new DirectoryAuditRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

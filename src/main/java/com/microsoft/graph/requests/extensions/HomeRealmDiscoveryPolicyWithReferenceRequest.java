@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Home Realm Discovery Policy With Reference Request.
  */
-public class HomeRealmDiscoveryPolicyWithReferenceRequest extends BaseRequest implements IHomeRealmDiscoveryPolicyWithReferenceRequest {
+public class HomeRealmDiscoveryPolicyWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the HomeRealmDiscoveryPolicy
@@ -78,9 +78,9 @@ public class HomeRealmDiscoveryPolicyWithReferenceRequest extends BaseRequest im
      * @param value the select clause
      * @return the updated request
      */
-    public IHomeRealmDiscoveryPolicyWithReferenceRequest select(final String value) {
+    public HomeRealmDiscoveryPolicyWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IHomeRealmDiscoveryPolicyWithReferenceRequest)this;
+        return (HomeRealmDiscoveryPolicyWithReferenceRequest)this;
     }
 
     /**
@@ -89,7 +89,7 @@ public class HomeRealmDiscoveryPolicyWithReferenceRequest extends BaseRequest im
      * @param value the expand clause
      * @return the updated request
      */
-    public IHomeRealmDiscoveryPolicyWithReferenceRequest expand(final String value) {
+    public HomeRealmDiscoveryPolicyWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (HomeRealmDiscoveryPolicyWithReferenceRequest)this;
     }

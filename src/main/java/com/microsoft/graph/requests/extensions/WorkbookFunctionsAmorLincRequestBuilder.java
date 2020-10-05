@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAmorLincRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAmorLincRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Amor Linc Request Builder.
  */
-public class WorkbookFunctionsAmorLincRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsAmorLincRequestBuilder {
+public class WorkbookFunctionsAmorLincRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsAmorLinc
@@ -44,22 +43,22 @@ public class WorkbookFunctionsAmorLincRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsAmorLincRequest
+     * Creates the WorkbookFunctionsAmorLincRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAmorLincRequest instance
+     * @return the WorkbookFunctionsAmorLincRequest instance
      */
-    public IWorkbookFunctionsAmorLincRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsAmorLincRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsAmorLincRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsAmorLincRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAmorLincRequest instance
+     * @return the WorkbookFunctionsAmorLincRequest instance
      */
-    public IWorkbookFunctionsAmorLincRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsAmorLincRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsAmorLincRequest request = new WorkbookFunctionsAmorLincRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IListItemVersionRestoreVersionRequest;
 import com.microsoft.graph.requests.extensions.ListItemVersionRestoreVersionRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the List Item Version Restore Version Request Builder.
  */
-public class ListItemVersionRestoreVersionRequestBuilder extends BaseActionRequestBuilder implements IListItemVersionRestoreVersionRequestBuilder {
+public class ListItemVersionRestoreVersionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ListItemVersionRestoreVersion
@@ -30,22 +29,22 @@ public class ListItemVersionRestoreVersionRequestBuilder extends BaseActionReque
     }
 
     /**
-     * Creates the IListItemVersionRestoreVersionRequest
+     * Creates the ListItemVersionRestoreVersionRequest
      *
      * @param requestOptions the options for the request
-     * @return the IListItemVersionRestoreVersionRequest instance
+     * @return the ListItemVersionRestoreVersionRequest instance
      */
-    public IListItemVersionRestoreVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ListItemVersionRestoreVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IListItemVersionRestoreVersionRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ListItemVersionRestoreVersionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IListItemVersionRestoreVersionRequest instance
+     * @return the ListItemVersionRestoreVersionRequest instance
      */
-    public IListItemVersionRestoreVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemVersionRestoreVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ListItemVersionRestoreVersionRequest request = new ListItemVersionRestoreVersionRequest(
                 getRequestUrl(),
                 getClient(),

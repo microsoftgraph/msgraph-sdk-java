@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemAnalytics;
-import com.microsoft.graph.requests.extensions.IItemActivityStatCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Item Analytics With Reference Request Builder.
  */
-public class ItemAnalyticsWithReferenceRequestBuilder extends BaseRequestBuilder implements IItemAnalyticsWithReferenceRequestBuilder {
+public class ItemAnalyticsWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ItemAnalytics
@@ -40,9 +38,9 @@ public class ItemAnalyticsWithReferenceRequestBuilder extends BaseRequestBuilder
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IItemAnalyticsWithReferenceRequest instance
+     * @return the ItemAnalyticsWithReferenceRequest instance
      */
-    public IItemAnalyticsWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ItemAnalyticsWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,13 +48,13 @@ public class ItemAnalyticsWithReferenceRequestBuilder extends BaseRequestBuilder
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IItemAnalyticsWithReferenceRequest instance
+     * @return the ItemAnalyticsWithReferenceRequest instance
      */
-    public IItemAnalyticsWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemAnalyticsWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ItemAnalyticsWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IItemAnalyticsReferenceRequestBuilder reference(){
+    public ItemAnalyticsReferenceRequestBuilder reference(){
         return new ItemAnalyticsReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

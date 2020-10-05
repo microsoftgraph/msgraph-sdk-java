@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitDeltaCollectionRequest;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitDeltaCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Administrative Unit Delta Collection Request Builder.
  */
-public class AdministrativeUnitDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IAdministrativeUnitDeltaCollectionRequestBuilder {
+public class AdministrativeUnitDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of AdministrativeUnit
@@ -42,7 +41,7 @@ public class AdministrativeUnitDeltaCollectionRequestBuilder extends BaseFunctio
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAdministrativeUnitDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AdministrativeUnitDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class AdministrativeUnitDeltaCollectionRequestBuilder extends BaseFunctio
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAdministrativeUnitDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AdministrativeUnitDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         AdministrativeUnitDeltaCollectionRequest request = new AdministrativeUnitDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

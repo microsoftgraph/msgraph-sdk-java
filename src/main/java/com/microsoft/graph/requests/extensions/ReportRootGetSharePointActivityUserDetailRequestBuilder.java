@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityUserDetailRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Share Point Activity User Detail Request Builder.
  */
-public class ReportRootGetSharePointActivityUserDetailRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetSharePointActivityUserDetailRequestBuilder {
+public class ReportRootGetSharePointActivityUserDetailRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetSharePointActivityUserDetail
@@ -45,22 +44,22 @@ public class ReportRootGetSharePointActivityUserDetailRequestBuilder extends Bas
     }
 
     /**
-     * Creates the IReportRootGetSharePointActivityUserDetailRequest
+     * Creates the ReportRootGetSharePointActivityUserDetailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSharePointActivityUserDetailRequest instance
+     * @return the ReportRootGetSharePointActivityUserDetailRequest instance
      */
-    public IReportRootGetSharePointActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetSharePointActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetSharePointActivityUserDetailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetSharePointActivityUserDetailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSharePointActivityUserDetailRequest instance
+     * @return the ReportRootGetSharePointActivityUserDetailRequest instance
      */
-    public IReportRootGetSharePointActivityUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetSharePointActivityUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetSharePointActivityUserDetailRequest request = new ReportRootGetSharePointActivityUserDetailRequest(
                 getRequestUrl(),
                 getClient(),
