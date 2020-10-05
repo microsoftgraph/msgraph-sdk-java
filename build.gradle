@@ -16,6 +16,18 @@ plugins {
     id 'com.jfrog.bintray' version '1.8.5'
 }
 
+java {
+    modularity.inferModulePath = true
+}
+
+sourceSets {
+    main {
+        java {
+            exclude 'pom.xml'
+        }
+    }
+}
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -26,7 +38,7 @@ repositories {
 
 dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:20.0'
+    implementation 'com.google.guava:guava:23.0'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.13'
@@ -37,7 +49,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.12.1'
     
     // Core Http library 
-    api 'com.microsoft.graph:microsoft-graph-core:1.0.4'
+    api 'com.microsoft.graph:microsoft-graph-core:1.0.5'
 }
 
 def pomConfig = {
@@ -54,6 +66,12 @@ def pomConfig = {
 //Maven Central Snapshot: publishSnapshotPublicationToMavenRepository
 //Maven Central Release: publishMavenCentralReleasePublicationToMaven2Repository
 //Bintray Snapshot: publishSnapshotPublicationToMaven3Repository
+
+tasks.jar {
+    manifest {
+        attributes('Automatic-Module-Name': project.property('mavenGroupId'))
+    }
+}
 
 task sourceJar(type: Jar) {
     outputs.cacheIf { true }
@@ -221,8 +239,8 @@ bintray {
 }
 
 compileJava {
-  sourceCompatibility = 1.7
-  targetCompatibility = 1.7
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
 }
 
 def getVersionCode() {

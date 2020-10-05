@@ -96,6 +96,17 @@ public class PermissionGrantPolicyCollectionRequest extends BaseCollectionReques
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IPermissionGrantPolicyCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (PermissionGrantPolicyCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

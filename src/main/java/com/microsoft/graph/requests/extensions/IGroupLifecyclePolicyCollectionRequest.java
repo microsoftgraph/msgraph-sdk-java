@@ -46,6 +46,14 @@ public interface IGroupLifecyclePolicyCollectionRequest extends IHttpRequest {
     IGroupLifecyclePolicyCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IGroupLifecyclePolicyCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -76,5 +84,5 @@ public interface IGroupLifecyclePolicyCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IGroupLifecyclePolicyCollectionRequest skipToken(String skipToken);
+	IGroupLifecyclePolicyCollectionRequest skipToken(final String skipToken);
 }

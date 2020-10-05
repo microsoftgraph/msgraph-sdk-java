@@ -47,6 +47,14 @@ public interface IDeviceCompliancePolicyStateCollectionRequest extends IHttpRequ
     IDeviceCompliancePolicyStateCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceCompliancePolicyStateCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IDeviceCompliancePolicyStateCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	IDeviceCompliancePolicyStateCollectionRequest skipToken(String skipToken);
+	IDeviceCompliancePolicyStateCollectionRequest skipToken(final String skipToken);
 }

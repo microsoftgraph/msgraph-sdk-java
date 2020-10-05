@@ -47,6 +47,14 @@ public interface IChatCollectionRequest extends IHttpRequest {
     IChatCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IChatCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IChatCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IChatCollectionRequest skipToken(String skipToken);
+	IChatCollectionRequest skipToken(final String skipToken);
 }

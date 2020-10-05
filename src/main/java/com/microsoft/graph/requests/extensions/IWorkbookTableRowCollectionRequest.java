@@ -48,6 +48,14 @@ public interface IWorkbookTableRowCollectionRequest extends IHttpRequest {
     IWorkbookTableRowCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWorkbookTableRowCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -78,5 +86,5 @@ public interface IWorkbookTableRowCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IWorkbookTableRowCollectionRequest skipToken(String skipToken);
+	IWorkbookTableRowCollectionRequest skipToken(final String skipToken);
 }

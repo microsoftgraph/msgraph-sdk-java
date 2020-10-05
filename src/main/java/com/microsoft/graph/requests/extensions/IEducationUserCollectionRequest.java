@@ -47,6 +47,14 @@ public interface IEducationUserCollectionRequest extends IHttpRequest {
     IEducationUserCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IEducationUserCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IEducationUserCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IEducationUserCollectionRequest skipToken(String skipToken);
+	IEducationUserCollectionRequest skipToken(final String skipToken);
 }

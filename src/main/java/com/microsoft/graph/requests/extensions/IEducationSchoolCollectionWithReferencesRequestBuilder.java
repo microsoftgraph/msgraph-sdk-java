@@ -25,7 +25,7 @@ public interface IEducationSchoolCollectionWithReferencesRequestBuilder extends 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IEducationSchoolCollectionWithReferencesRequest instance
      */
     IEducationSchoolCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -33,7 +33,7 @@ public interface IEducationSchoolCollectionWithReferencesRequestBuilder extends 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IEducationSchoolCollectionWithReferencesRequest instance
      */
     IEducationSchoolCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 

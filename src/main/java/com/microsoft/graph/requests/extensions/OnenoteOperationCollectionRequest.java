@@ -96,6 +96,17 @@ public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<One
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IOnenoteOperationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (OnenoteOperationCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

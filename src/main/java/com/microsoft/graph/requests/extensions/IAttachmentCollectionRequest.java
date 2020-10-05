@@ -49,6 +49,14 @@ public interface IAttachmentCollectionRequest extends IHttpRequest {
     IAttachmentCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAttachmentCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -79,5 +87,5 @@ public interface IAttachmentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IAttachmentCollectionRequest skipToken(String skipToken);
+	IAttachmentCollectionRequest skipToken(final String skipToken);
 }

@@ -47,6 +47,14 @@ public interface IResourceOperationCollectionRequest extends IHttpRequest {
     IResourceOperationCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IResourceOperationCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IResourceOperationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IResourceOperationCollectionRequest skipToken(String skipToken);
+	IResourceOperationCollectionRequest skipToken(final String skipToken);
 }

@@ -46,6 +46,14 @@ public interface IPlaceCollectionRequest extends IHttpRequest {
     IPlaceCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPlaceCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -76,5 +84,5 @@ public interface IPlaceCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPlaceCollectionRequest skipToken(String skipToken);
+	IPlaceCollectionRequest skipToken(final String skipToken);
 }

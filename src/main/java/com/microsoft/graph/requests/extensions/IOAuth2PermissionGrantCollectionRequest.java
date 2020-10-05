@@ -46,6 +46,14 @@ public interface IOAuth2PermissionGrantCollectionRequest extends IHttpRequest {
     IOAuth2PermissionGrantCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOAuth2PermissionGrantCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -76,5 +84,5 @@ public interface IOAuth2PermissionGrantCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOAuth2PermissionGrantCollectionRequest skipToken(String skipToken);
+	IOAuth2PermissionGrantCollectionRequest skipToken(final String skipToken);
 }

@@ -47,6 +47,14 @@ public interface IDirectoryObjectCollectionRequest extends IHttpRequest {
     IDirectoryObjectCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDirectoryObjectCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IDirectoryObjectCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDirectoryObjectCollectionRequest skipToken(String skipToken);
+	IDirectoryObjectCollectionRequest skipToken(final String skipToken);
 }

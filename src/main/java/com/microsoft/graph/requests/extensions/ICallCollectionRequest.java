@@ -62,6 +62,14 @@ public interface ICallCollectionRequest extends IHttpRequest {
     ICallCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ICallCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -92,5 +100,5 @@ public interface ICallCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ICallCollectionRequest skipToken(String skipToken);
+	ICallCollectionRequest skipToken(final String skipToken);
 }

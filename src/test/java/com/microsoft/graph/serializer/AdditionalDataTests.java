@@ -18,15 +18,20 @@ import com.google.gson.JsonPrimitive;
 import com.microsoft.graph.functional.TestBase;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.logger.DefaultLogger;
+import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.models.extensions.ChatMessageMention;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionBody;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.PlannerAssignment;
 import com.microsoft.graph.models.extensions.PlannerAssignments;
 import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.models.extensions.PlannerTaskDetails;
 import com.microsoft.graph.models.extensions.User;
+
+import java.util.Collections;
 
 public class AdditionalDataTests {
 	public DefaultSerializer serializer;
@@ -149,5 +154,21 @@ public class AdditionalDataTests {
 		assertFalse(taskDetails.checklist.isEmpty());
 		assertTrue(taskDetails.checklist.get("d280ed1a-9f6b-4f9c-a962-fb4d00dc50ff").title.equals("Try reading task details"));
 		assertTrue(taskDetails.checklist.get("d280ed1a-9f6b-4f9c-a962-fb4d00dc50ff").lastModifiedBy.user.additionalDataManager().get("customProp").getAsString().equals("somestring"));
+	}
+
+	@Test
+	public void testSerializeAdditionalDataOnCollections() {
+		final ChatMessage chatMessage = new ChatMessage();
+		final ChatMessageMention chatMessageMention = new ChatMessageMention();
+		chatMessageMention.additionalDataManager().put("helloWorld", new JsonPrimitive("3.141516"));
+		final IdentitySet identitySet = new IdentitySet();
+		identitySet.additionalDataManager().put("identitySetKey", new JsonPrimitive("identitySetValue"));
+		chatMessageMention.mentioned = identitySet;
+		chatMessage.mentions = Collections.singletonList(chatMessageMention);
+		final String output = serializer.serializeObject(chatMessage);
+		final JsonObject parsed = JsonParser.parseString(output).getAsJsonObject();
+		final JsonObject mentionJsonObject = parsed.get("mentions").getAsJsonArray().get(0).getAsJsonObject();
+		assertEquals("3.141516", mentionJsonObject.get("helloWorld").getAsString());
+		assertEquals("identitySetValue", mentionJsonObject.get("mentioned").getAsJsonObject().get("identitySetKey").getAsString());
 	}
 }

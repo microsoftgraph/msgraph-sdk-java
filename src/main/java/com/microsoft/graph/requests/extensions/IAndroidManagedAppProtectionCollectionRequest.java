@@ -47,6 +47,14 @@ public interface IAndroidManagedAppProtectionCollectionRequest extends IHttpRequ
     IAndroidManagedAppProtectionCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IAndroidManagedAppProtectionCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IAndroidManagedAppProtectionCollectionRequest extends IHttpRequ
      *
 	 * @return the updated request
 	 */
-	IAndroidManagedAppProtectionCollectionRequest skipToken(String skipToken);
+	IAndroidManagedAppProtectionCollectionRequest skipToken(final String skipToken);
 }

@@ -47,6 +47,14 @@ public interface IMobileAppContentCollectionRequest extends IHttpRequest {
     IMobileAppContentCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMobileAppContentCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IMobileAppContentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IMobileAppContentCollectionRequest skipToken(String skipToken);
+	IMobileAppContentCollectionRequest skipToken(final String skipToken);
 }

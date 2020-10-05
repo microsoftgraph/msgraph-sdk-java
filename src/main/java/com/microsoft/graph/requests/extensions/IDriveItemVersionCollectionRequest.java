@@ -47,6 +47,14 @@ public interface IDriveItemVersionCollectionRequest extends IHttpRequest {
     IDriveItemVersionCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDriveItemVersionCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IDriveItemVersionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDriveItemVersionCollectionRequest skipToken(String skipToken);
+	IDriveItemVersionCollectionRequest skipToken(final String skipToken);
 }

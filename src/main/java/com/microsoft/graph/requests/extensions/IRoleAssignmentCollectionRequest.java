@@ -47,6 +47,14 @@ public interface IRoleAssignmentCollectionRequest extends IHttpRequest {
     IRoleAssignmentCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IRoleAssignmentCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IRoleAssignmentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IRoleAssignmentCollectionRequest skipToken(String skipToken);
+	IRoleAssignmentCollectionRequest skipToken(final String skipToken);
 }

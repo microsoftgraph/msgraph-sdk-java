@@ -47,6 +47,14 @@ public interface IWindowsInformationProtectionNetworkLearningSummaryCollectionRe
     IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IWindowsInformationProtectionNetworkLearningSummaryCollectionRe
      *
 	 * @return the updated request
 	 */
-	IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest skipToken(String skipToken);
+	IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest skipToken(final String skipToken);
 }

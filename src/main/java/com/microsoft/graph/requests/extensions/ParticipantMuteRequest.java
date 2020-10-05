@@ -78,15 +78,4 @@ public class ParticipantMuteRequest extends BaseRequest implements IParticipantM
         return (ParticipantMuteRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IParticipantMuteRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ParticipantMuteRequest)this;
-    }
-
 }

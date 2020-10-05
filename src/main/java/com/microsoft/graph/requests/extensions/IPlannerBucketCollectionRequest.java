@@ -47,6 +47,14 @@ public interface IPlannerBucketCollectionRequest extends IHttpRequest {
     IPlannerBucketCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPlannerBucketCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IPlannerBucketCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPlannerBucketCollectionRequest skipToken(String skipToken);
+	IPlannerBucketCollectionRequest skipToken(final String skipToken);
 }

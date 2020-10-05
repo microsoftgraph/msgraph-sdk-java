@@ -65,6 +65,22 @@ public interface IApplicationRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder owners(final String id);
 
+    IAppRoleAssignmentCollectionWithReferencesRequestBuilder ownersAsAppRoleAssignment();
+
+    IAppRoleAssignmentWithReferenceRequestBuilder ownersAsAppRoleAssignment(final String id);
+
+    IEndpointCollectionWithReferencesRequestBuilder ownersAsEndpoint();
+
+    IEndpointWithReferenceRequestBuilder ownersAsEndpoint(final String id);
+
+    IServicePrincipalCollectionWithReferencesRequestBuilder ownersAsServicePrincipal();
+
+    IServicePrincipalWithReferenceRequestBuilder ownersAsServicePrincipal(final String id);
+
+    IUserCollectionWithReferencesRequestBuilder ownersAsUser();
+
+    IUserWithReferenceRequestBuilder ownersAsUser(final String id);
+
     ITokenIssuancePolicyCollectionWithReferencesRequestBuilder tokenIssuancePolicies();
 
     ITokenIssuancePolicyWithReferenceRequestBuilder tokenIssuancePolicies(final String id);

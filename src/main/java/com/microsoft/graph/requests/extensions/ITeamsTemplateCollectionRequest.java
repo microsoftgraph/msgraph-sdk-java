@@ -46,6 +46,14 @@ public interface ITeamsTemplateCollectionRequest extends IHttpRequest {
     ITeamsTemplateCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITeamsTemplateCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -76,5 +84,5 @@ public interface ITeamsTemplateCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITeamsTemplateCollectionRequest skipToken(String skipToken);
+	ITeamsTemplateCollectionRequest skipToken(final String skipToken);
 }

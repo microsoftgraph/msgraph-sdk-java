@@ -47,6 +47,14 @@ public interface IEnrollmentConfigurationAssignmentCollectionRequest extends IHt
     IEnrollmentConfigurationAssignmentCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IEnrollmentConfigurationAssignmentCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IEnrollmentConfigurationAssignmentCollectionRequest extends IHt
      *
 	 * @return the updated request
 	 */
-	IEnrollmentConfigurationAssignmentCollectionRequest skipToken(String skipToken);
+	IEnrollmentConfigurationAssignmentCollectionRequest skipToken(final String skipToken);
 }

@@ -47,6 +47,14 @@ public interface IDeviceAndAppManagementRoleAssignmentCollectionRequest extends 
     IDeviceAndAppManagementRoleAssignmentCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceAndAppManagementRoleAssignmentCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IDeviceAndAppManagementRoleAssignmentCollectionRequest extends 
      *
 	 * @return the updated request
 	 */
-	IDeviceAndAppManagementRoleAssignmentCollectionRequest skipToken(String skipToken);
+	IDeviceAndAppManagementRoleAssignmentCollectionRequest skipToken(final String skipToken);
 }

@@ -47,6 +47,14 @@ public interface IManagedEBookAssignmentCollectionRequest extends IHttpRequest {
     IManagedEBookAssignmentCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IManagedEBookAssignmentCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IManagedEBookAssignmentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IManagedEBookAssignmentCollectionRequest skipToken(String skipToken);
+	IManagedEBookAssignmentCollectionRequest skipToken(final String skipToken);
 }

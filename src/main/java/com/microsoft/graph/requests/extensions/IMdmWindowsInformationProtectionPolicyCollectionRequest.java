@@ -47,6 +47,14 @@ public interface IMdmWindowsInformationProtectionPolicyCollectionRequest extends
     IMdmWindowsInformationProtectionPolicyCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMdmWindowsInformationProtectionPolicyCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IMdmWindowsInformationProtectionPolicyCollectionRequest extends
      *
 	 * @return the updated request
 	 */
-	IMdmWindowsInformationProtectionPolicyCollectionRequest skipToken(String skipToken);
+	IMdmWindowsInformationProtectionPolicyCollectionRequest skipToken(final String skipToken);
 }

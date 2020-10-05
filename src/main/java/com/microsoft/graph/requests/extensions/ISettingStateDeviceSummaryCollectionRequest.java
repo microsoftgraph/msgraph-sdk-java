@@ -47,6 +47,14 @@ public interface ISettingStateDeviceSummaryCollectionRequest extends IHttpReques
     ISettingStateDeviceSummaryCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISettingStateDeviceSummaryCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface ISettingStateDeviceSummaryCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	ISettingStateDeviceSummaryCollectionRequest skipToken(String skipToken);
+	ISettingStateDeviceSummaryCollectionRequest skipToken(final String skipToken);
 }

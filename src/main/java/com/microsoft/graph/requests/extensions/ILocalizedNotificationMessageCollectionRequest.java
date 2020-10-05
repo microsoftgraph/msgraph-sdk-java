@@ -47,6 +47,14 @@ public interface ILocalizedNotificationMessageCollectionRequest extends IHttpReq
     ILocalizedNotificationMessageCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ILocalizedNotificationMessageCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface ILocalizedNotificationMessageCollectionRequest extends IHttpReq
      *
 	 * @return the updated request
 	 */
-	ILocalizedNotificationMessageCollectionRequest skipToken(String skipToken);
+	ILocalizedNotificationMessageCollectionRequest skipToken(final String skipToken);
 }

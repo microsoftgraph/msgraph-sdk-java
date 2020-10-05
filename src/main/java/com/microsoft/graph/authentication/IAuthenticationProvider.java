@@ -26,7 +26,9 @@ import com.microsoft.graph.http.IHttpRequest;
 
 /**
  * Provides authentication for a requests before it is sent by an HTTP provider
+ * @deprecated use ICoreAuthenticationProvider instead
  */
+@Deprecated
 public interface IAuthenticationProvider {
 
     /**

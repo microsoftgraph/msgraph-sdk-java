@@ -31,5 +31,5 @@ hs_err_pid*
 
 # Maven
 /target/
-/pom.xml
 local.properties
+.idea

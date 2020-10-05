@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:2.2.+'
+    implementation 'com.microsoft.graph:microsoft-graph:2.3.+'
 }
 ```
 
@@ -31,7 +31,7 @@ Add the dependency in `dependencies` in pom.xml
 <dependency>
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>2.2.0</version>
+  <version>2.3.0</version>
 </dependency>
 ```
 
@@ -110,7 +110,7 @@ The Microsoft Graph SDK is open for contribution. To contribute to this project,
 
 ## 7. Supported Java versions
 
-The Microsoft Graph SDK for Java library is supported at runtime for Java 7+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater.
+The Microsoft Graph SDK for Java library is supported at runtime for Java 8+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater through [desugaring](https://developer.android.com/studio/write/java8-support.html#library-desugaring).
 
 ## 8. License
 

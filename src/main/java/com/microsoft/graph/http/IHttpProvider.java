@@ -123,6 +123,6 @@ public interface IHttpProvider {
     <Result, BodyType> Request getHttpRequest(final IHttpRequest request,
                                               final Class<Result> resultClass,
                                               final BodyType serializable,
-                                              final IProgressCallback<Result> progress)
+                                              final IProgressCallback<? super Result> progress)
             throws ClientException;
 }

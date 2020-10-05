@@ -46,6 +46,7 @@ import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.Constants;
 import com.microsoft.graph.core.DefaultConnectionConfig;
+import com.microsoft.graph.core.IClientConfig;
 import com.microsoft.graph.core.IConnectionConfig;
 import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
@@ -138,6 +139,18 @@ public class CoreHttpProvider implements IHttpProvider {
 	}
 
 	/**
+	 * Creates the DefaultHttpProvider
+	 *
+	 * @param clientConfig           the client configuration to use for the provider
+	 * @param httpClient             the http client to execute the requests with
+	 */
+	public CoreHttpProvider(final IClientConfig clientConfig,
+			final OkHttpClient httpClient) {
+		this(clientConfig.getSerializer(), clientConfig.getAuthenticationProvider(), clientConfig.getExecutors(), clientConfig.getLogger());
+		this.corehttpClient = httpClient;
+	}
+
+	/**
 	 * Gets the serializer for this HTTP provider
 	 *
 	 * @return the serializer for this provider
@@ -162,9 +175,9 @@ public class CoreHttpProvider implements IHttpProvider {
 			final ICallback<? super Result> callback,
 			final Class<Result> resultClass,
 			final Body serializable) {
-		final IProgressCallback<Result> progressCallback;
+		final IProgressCallback<? super Result> progressCallback;
 		if (callback instanceof IProgressCallback) {
-			progressCallback = (IProgressCallback<Result>) callback;
+			progressCallback = (IProgressCallback<? super Result>) callback;
 		} else {
 			progressCallback = null;
 		}
@@ -239,7 +252,7 @@ public class CoreHttpProvider implements IHttpProvider {
 	public <Result, Body> Request getHttpRequest(final IHttpRequest request,
 			final Class<Result> resultClass,
 			final Body serializable,
-			final IProgressCallback<Result> progress) throws ClientException {
+			final IProgressCallback<? super Result> progress) throws ClientException {
 		final int defaultBufferSize = 4096;
 
 		final URL requestUrl = request.getRequestUrl();
@@ -372,7 +385,7 @@ public class CoreHttpProvider implements IHttpProvider {
 	private <Result, Body, DeserializeType> Result sendRequestInternal(final IHttpRequest request,
 			final Class<Result> resultClass,
 			final Body serializable,
-			final IProgressCallback<Result> progress,
+			final IProgressCallback<? super Result> progress,
 			final IStatefulResponseHandler<Result, DeserializeType> handler)
 					throws ClientException {
 
@@ -392,11 +405,11 @@ public class CoreHttpProvider implements IHttpProvider {
 									.newBuilder()
 									.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS)
 									.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS)
-									.followRedirects(false)
+									.followRedirects(false) //TODO https://github.com/microsoftgraph/msgraph-sdk-java/issues/516
 									.protocols(Arrays.asList(Protocol.HTTP_1_1)) //https://stackoverflow.com/questions/62031298/sockettimeout-on-java-11-but-not-on-java-8
 									.build();
 			}
-			if (authenticationProvider != null) {
+			if (authenticationProvider != null) { //TODO https://github.com/microsoftgraph/msgraph-sdk-java/issues/517
 				authenticationProvider.authenticateRequest(request);
 			}
 			Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);

@@ -49,6 +49,14 @@ public interface IOnlineMeetingCollectionRequest extends IHttpRequest {
     IOnlineMeetingCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOnlineMeetingCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -79,5 +87,5 @@ public interface IOnlineMeetingCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOnlineMeetingCollectionRequest skipToken(String skipToken);
+	IOnlineMeetingCollectionRequest skipToken(final String skipToken);
 }

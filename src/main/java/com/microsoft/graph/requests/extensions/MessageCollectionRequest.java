@@ -97,6 +97,17 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IMessageCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (MessageCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

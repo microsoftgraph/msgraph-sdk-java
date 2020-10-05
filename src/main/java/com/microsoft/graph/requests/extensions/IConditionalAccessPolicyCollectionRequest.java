@@ -47,6 +47,14 @@ public interface IConditionalAccessPolicyCollectionRequest extends IHttpRequest 
     IConditionalAccessPolicyCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IConditionalAccessPolicyCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IConditionalAccessPolicyCollectionRequest extends IHttpRequest 
      *
 	 * @return the updated request
 	 */
-	IConditionalAccessPolicyCollectionRequest skipToken(String skipToken);
+	IConditionalAccessPolicyCollectionRequest skipToken(final String skipToken);
 }

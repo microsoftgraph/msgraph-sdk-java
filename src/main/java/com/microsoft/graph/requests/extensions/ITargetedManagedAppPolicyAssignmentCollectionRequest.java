@@ -47,6 +47,14 @@ public interface ITargetedManagedAppPolicyAssignmentCollectionRequest extends IH
     ITargetedManagedAppPolicyAssignmentCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITargetedManagedAppPolicyAssignmentCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface ITargetedManagedAppPolicyAssignmentCollectionRequest extends IH
      *
 	 * @return the updated request
 	 */
-	ITargetedManagedAppPolicyAssignmentCollectionRequest skipToken(String skipToken);
+	ITargetedManagedAppPolicyAssignmentCollectionRequest skipToken(final String skipToken);
 }

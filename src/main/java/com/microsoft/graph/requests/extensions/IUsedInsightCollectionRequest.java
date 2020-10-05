@@ -47,6 +47,14 @@ public interface IUsedInsightCollectionRequest extends IHttpRequest {
     IUsedInsightCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IUsedInsightCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IUsedInsightCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IUsedInsightCollectionRequest skipToken(String skipToken);
+	IUsedInsightCollectionRequest skipToken(final String skipToken);
 }

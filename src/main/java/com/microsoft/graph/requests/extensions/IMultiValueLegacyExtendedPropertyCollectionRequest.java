@@ -47,6 +47,14 @@ public interface IMultiValueLegacyExtendedPropertyCollectionRequest extends IHtt
     IMultiValueLegacyExtendedPropertyCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IMultiValueLegacyExtendedPropertyCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IMultiValueLegacyExtendedPropertyCollectionRequest extends IHtt
      *
 	 * @return the updated request
 	 */
-	IMultiValueLegacyExtendedPropertyCollectionRequest skipToken(String skipToken);
+	IMultiValueLegacyExtendedPropertyCollectionRequest skipToken(final String skipToken);
 }

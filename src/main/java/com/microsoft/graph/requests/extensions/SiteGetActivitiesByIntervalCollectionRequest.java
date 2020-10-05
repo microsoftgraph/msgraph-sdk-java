@@ -115,4 +115,15 @@ public class SiteGetActivitiesByIntervalCollectionRequest extends BaseCollection
         return (ISiteGetActivitiesByIntervalCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISiteGetActivitiesByIntervalCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (ISiteGetActivitiesByIntervalCollectionRequest)this;
+    }
+
 }

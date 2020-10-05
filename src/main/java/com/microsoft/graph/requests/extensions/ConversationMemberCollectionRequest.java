@@ -96,6 +96,17 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IConversationMemberCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (ConversationMemberCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

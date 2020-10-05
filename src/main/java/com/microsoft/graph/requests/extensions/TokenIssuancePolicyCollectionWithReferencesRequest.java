@@ -56,22 +56,27 @@ public class TokenIssuancePolicyCollectionWithReferencesRequest extends BaseColl
 
     public ITokenIssuancePolicyCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ITokenIssuancePolicyCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public ITokenIssuancePolicyCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public ITokenIssuancePolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ITokenIssuancePolicyCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (TokenIssuancePolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public ITokenIssuancePolicyCollectionWithReferencesPage buildFromResponse(final TokenIssuancePolicyCollectionResponse response) {

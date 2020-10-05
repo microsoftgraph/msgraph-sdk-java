@@ -46,6 +46,14 @@ public interface IDirectoryRoleTemplateCollectionRequest extends IHttpRequest {
     IDirectoryRoleTemplateCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDirectoryRoleTemplateCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -76,5 +84,5 @@ public interface IDirectoryRoleTemplateCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDirectoryRoleTemplateCollectionRequest skipToken(String skipToken);
+	IDirectoryRoleTemplateCollectionRequest skipToken(final String skipToken);
 }

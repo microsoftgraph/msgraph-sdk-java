@@ -47,6 +47,14 @@ public interface IDeviceComplianceUserStatusCollectionRequest extends IHttpReque
     IDeviceComplianceUserStatusCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceComplianceUserStatusCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IDeviceComplianceUserStatusCollectionRequest extends IHttpReque
      *
 	 * @return the updated request
 	 */
-	IDeviceComplianceUserStatusCollectionRequest skipToken(String skipToken);
+	IDeviceComplianceUserStatusCollectionRequest skipToken(final String skipToken);
 }

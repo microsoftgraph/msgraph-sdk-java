@@ -47,6 +47,14 @@ public interface IOpenShiftChangeRequestCollectionRequest extends IHttpRequest {
     IOpenShiftChangeRequestCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOpenShiftChangeRequestCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IOpenShiftChangeRequestCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOpenShiftChangeRequestCollectionRequest skipToken(String skipToken);
+	IOpenShiftChangeRequestCollectionRequest skipToken(final String skipToken);
 }

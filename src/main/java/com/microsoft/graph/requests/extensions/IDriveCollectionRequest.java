@@ -47,6 +47,14 @@ public interface IDriveCollectionRequest extends IHttpRequest {
     IDriveCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDriveCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IDriveCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDriveCollectionRequest skipToken(String skipToken);
+	IDriveCollectionRequest skipToken(final String skipToken);
 }

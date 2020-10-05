@@ -96,6 +96,17 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookRangeBorderCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookRangeBorderCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

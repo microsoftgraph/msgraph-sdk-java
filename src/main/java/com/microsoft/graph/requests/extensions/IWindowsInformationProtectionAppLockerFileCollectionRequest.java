@@ -47,6 +47,14 @@ public interface IWindowsInformationProtectionAppLockerFileCollectionRequest ext
     IWindowsInformationProtectionAppLockerFileCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWindowsInformationProtectionAppLockerFileCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IWindowsInformationProtectionAppLockerFileCollectionRequest ext
      *
 	 * @return the updated request
 	 */
-	IWindowsInformationProtectionAppLockerFileCollectionRequest skipToken(String skipToken);
+	IWindowsInformationProtectionAppLockerFileCollectionRequest skipToken(final String skipToken);
 }

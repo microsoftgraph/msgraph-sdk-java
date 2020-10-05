@@ -46,6 +46,14 @@ public interface IContactFolderCollectionRequest extends IHttpRequest {
     IContactFolderCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IContactFolderCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -76,5 +84,5 @@ public interface IContactFolderCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IContactFolderCollectionRequest skipToken(String skipToken);
+	IContactFolderCollectionRequest skipToken(final String skipToken);
 }

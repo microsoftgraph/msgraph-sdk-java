@@ -96,6 +96,17 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITermsAndConditionsAcceptanceStatusCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (TermsAndConditionsAcceptanceStatusCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

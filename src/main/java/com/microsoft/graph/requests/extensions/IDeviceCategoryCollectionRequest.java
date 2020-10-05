@@ -47,6 +47,14 @@ public interface IDeviceCategoryCollectionRequest extends IHttpRequest {
     IDeviceCategoryCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IDeviceCategoryCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IDeviceCategoryCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IDeviceCategoryCollectionRequest skipToken(String skipToken);
+	IDeviceCategoryCollectionRequest skipToken(final String skipToken);
 }

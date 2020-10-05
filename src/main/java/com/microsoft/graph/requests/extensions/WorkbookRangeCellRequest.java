@@ -124,4 +124,15 @@ public class WorkbookRangeCellRequest extends BaseRequest implements IWorkbookRa
         return (WorkbookRangeCellRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IWorkbookRangeCellRequest orderBy(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (WorkbookRangeCellRequest)this;
+    }
+
 }

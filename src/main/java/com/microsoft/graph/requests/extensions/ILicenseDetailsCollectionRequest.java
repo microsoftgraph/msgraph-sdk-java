@@ -47,6 +47,14 @@ public interface ILicenseDetailsCollectionRequest extends IHttpRequest {
     ILicenseDetailsCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ILicenseDetailsCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface ILicenseDetailsCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ILicenseDetailsCollectionRequest skipToken(String skipToken);
+	ILicenseDetailsCollectionRequest skipToken(final String skipToken);
 }

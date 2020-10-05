@@ -48,6 +48,14 @@ public interface IPermissionCollectionRequest extends IHttpRequest {
     IPermissionCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IPermissionCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -78,5 +86,5 @@ public interface IPermissionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IPermissionCollectionRequest skipToken(String skipToken);
+	IPermissionCollectionRequest skipToken(final String skipToken);
 }

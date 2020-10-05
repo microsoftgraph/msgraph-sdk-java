@@ -56,22 +56,27 @@ public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseColl
 
     public IClaimsMappingPolicyCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ClaimsMappingPolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IClaimsMappingPolicyCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ClaimsMappingPolicyCollectionWithReferencesRequest)this;
+        return this;
+    }
+
+    public IClaimsMappingPolicyCollectionWithReferencesRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return this;
     }
 
     public IClaimsMappingPolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ClaimsMappingPolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IClaimsMappingPolicyCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
-        return (ClaimsMappingPolicyCollectionWithReferencesRequest)this;
+        return this;
     }
 
     public IClaimsMappingPolicyCollectionWithReferencesPage buildFromResponse(final ClaimsMappingPolicyCollectionResponse response) {

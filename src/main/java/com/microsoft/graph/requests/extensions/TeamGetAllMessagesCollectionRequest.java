@@ -115,4 +115,15 @@ public class TeamGetAllMessagesCollectionRequest extends BaseCollectionRequest<T
         return (ITeamGetAllMessagesCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ITeamGetAllMessagesCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (ITeamGetAllMessagesCollectionRequest)this;
+    }
+
 }

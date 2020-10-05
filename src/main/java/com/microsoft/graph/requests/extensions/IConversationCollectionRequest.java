@@ -47,6 +47,14 @@ public interface IConversationCollectionRequest extends IHttpRequest {
     IConversationCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IConversationCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IConversationCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IConversationCollectionRequest skipToken(String skipToken);
+	IConversationCollectionRequest skipToken(final String skipToken);
 }

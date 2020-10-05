@@ -47,6 +47,14 @@ public interface IThumbnailSetCollectionRequest extends IHttpRequest {
     IThumbnailSetCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IThumbnailSetCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IThumbnailSetCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IThumbnailSetCollectionRequest skipToken(String skipToken);
+	IThumbnailSetCollectionRequest skipToken(final String skipToken);
 }

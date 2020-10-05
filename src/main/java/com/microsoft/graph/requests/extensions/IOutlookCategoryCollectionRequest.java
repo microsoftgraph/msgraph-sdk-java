@@ -47,6 +47,14 @@ public interface IOutlookCategoryCollectionRequest extends IHttpRequest {
     IOutlookCategoryCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOutlookCategoryCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IOutlookCategoryCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOutlookCategoryCollectionRequest skipToken(String skipToken);
+	IOutlookCategoryCollectionRequest skipToken(final String skipToken);
 }

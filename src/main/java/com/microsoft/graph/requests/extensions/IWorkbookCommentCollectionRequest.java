@@ -47,6 +47,14 @@ public interface IWorkbookCommentCollectionRequest extends IHttpRequest {
     IWorkbookCommentCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IWorkbookCommentCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IWorkbookCommentCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IWorkbookCommentCollectionRequest skipToken(String skipToken);
+	IWorkbookCommentCollectionRequest skipToken(final String skipToken);
 }

@@ -96,6 +96,17 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISwapShiftsChangeRequestCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (SwapShiftsChangeRequestCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

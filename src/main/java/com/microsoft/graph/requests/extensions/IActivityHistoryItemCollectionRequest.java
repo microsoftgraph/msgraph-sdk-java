@@ -47,6 +47,14 @@ public interface IActivityHistoryItemCollectionRequest extends IHttpRequest {
     IActivityHistoryItemCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IActivityHistoryItemCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IActivityHistoryItemCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IActivityHistoryItemCollectionRequest skipToken(String skipToken);
+	IActivityHistoryItemCollectionRequest skipToken(final String skipToken);
 }

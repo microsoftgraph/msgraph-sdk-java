@@ -97,6 +97,17 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public IManagedDeviceMobileAppConfigurationCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (ManagedDeviceMobileAppConfigurationCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

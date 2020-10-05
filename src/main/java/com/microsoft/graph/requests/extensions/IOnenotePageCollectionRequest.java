@@ -50,6 +50,14 @@ public interface IOnenotePageCollectionRequest extends IHttpRequest {
     IOnenotePageCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IOnenotePageCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -80,5 +88,5 @@ public interface IOnenotePageCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IOnenotePageCollectionRequest skipToken(String skipToken);
+	IOnenotePageCollectionRequest skipToken(final String skipToken);
 }

@@ -47,6 +47,14 @@ public interface IManagedDeviceMobileAppConfigurationUserStatusCollectionRequest
     IManagedDeviceMobileAppConfigurationUserStatusCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IManagedDeviceMobileAppConfigurationUserStatusCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IManagedDeviceMobileAppConfigurationUserStatusCollectionRequest
      *
 	 * @return the updated request
 	 */
-	IManagedDeviceMobileAppConfigurationUserStatusCollectionRequest skipToken(String skipToken);
+	IManagedDeviceMobileAppConfigurationUserStatusCollectionRequest skipToken(final String skipToken);
 }

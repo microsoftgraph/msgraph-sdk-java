@@ -47,6 +47,14 @@ public interface IColumnDefinitionCollectionRequest extends IHttpRequest {
     IColumnDefinitionCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IColumnDefinitionCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IColumnDefinitionCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IColumnDefinitionCollectionRequest skipToken(String skipToken);
+	IColumnDefinitionCollectionRequest skipToken(final String skipToken);
 }

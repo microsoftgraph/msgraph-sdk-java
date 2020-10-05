@@ -26,7 +26,7 @@ public interface IManagedDeviceCollectionWithReferencesRequestBuilder extends IR
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IManagedDeviceCollectionWithReferencesRequest instance
      */
     IManagedDeviceCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
     
@@ -34,7 +34,7 @@ public interface IManagedDeviceCollectionWithReferencesRequestBuilder extends IR
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the IManagedDeviceCollectionWithReferencesRequest instance
      */
     IManagedDeviceCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 

@@ -74,6 +74,17 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
     }
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the sort clause
+     * @return the updated request
+     */
+    public ICertificateBasedAuthConfigurationCollectionReferenceRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (CertificateBasedAuthConfigurationCollectionReferenceRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

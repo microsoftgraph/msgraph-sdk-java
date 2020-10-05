@@ -74,4 +74,25 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
     public IDirectoryObjectRequestBuilder deletedItems(final String id) {
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id, getClient(), null);
     }
+    public IUserCollectionRequestBuilder deletedItemsAsUser() {
+        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.user", getClient(), null);
+    }
+
+    public IUserRequestBuilder deletedItemsAsUser(final String id) {
+        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.user", getClient(), null);
+    }
+    public IGroupCollectionRequestBuilder deletedItemsAsGroup() {
+        return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.group", getClient(), null);
+    }
+
+    public IGroupRequestBuilder deletedItemsAsGroup(final String id) {
+        return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.group", getClient(), null);
+    }
+    public IApplicationCollectionRequestBuilder deletedItemsAsApplication() {
+        return new ApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.application", getClient(), null);
+    }
+
+    public IApplicationRequestBuilder deletedItemsAsApplication(final String id) {
+        return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.application", getClient(), null);
+    }
 }

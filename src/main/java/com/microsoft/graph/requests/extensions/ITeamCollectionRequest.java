@@ -50,6 +50,14 @@ public interface ITeamCollectionRequest extends IHttpRequest {
     ITeamCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ITeamCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -80,5 +88,5 @@ public interface ITeamCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	ITeamCollectionRequest skipToken(String skipToken);
+	ITeamCollectionRequest skipToken(final String skipToken);
 }

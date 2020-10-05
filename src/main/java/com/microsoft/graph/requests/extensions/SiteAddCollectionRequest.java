@@ -120,4 +120,15 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
         return (ISiteAddCollectionRequest)this;
     }
 
+    /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    public ISiteAddCollectionRequest orderBy(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
+        return (ISiteAddCollectionRequest)this;
+    }
+
 }

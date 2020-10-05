@@ -47,6 +47,14 @@ public interface ISecureScoreControlProfileCollectionRequest extends IHttpReques
     ISecureScoreControlProfileCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    ISecureScoreControlProfileCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface ISecureScoreControlProfileCollectionRequest extends IHttpReques
      *
 	 * @return the updated request
 	 */
-	ISecureScoreControlProfileCollectionRequest skipToken(String skipToken);
+	ISecureScoreControlProfileCollectionRequest skipToken(final String skipToken);
 }

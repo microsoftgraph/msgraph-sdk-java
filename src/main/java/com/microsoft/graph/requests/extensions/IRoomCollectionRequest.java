@@ -47,6 +47,14 @@ public interface IRoomCollectionRequest extends IHttpRequest {
     IRoomCollectionRequest filter(final String value);
 
     /**
+     * Sets the order by clause for the request
+     *
+     * @param value the order by clause
+     * @return the updated request
+     */
+    IRoomCollectionRequest orderBy(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
@@ -77,5 +85,5 @@ public interface IRoomCollectionRequest extends IHttpRequest {
      *
 	 * @return the updated request
 	 */
-	IRoomCollectionRequest skipToken(String skipToken);
+	IRoomCollectionRequest skipToken(final String skipToken);
 }
