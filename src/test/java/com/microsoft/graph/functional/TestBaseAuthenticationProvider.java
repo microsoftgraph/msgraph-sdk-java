@@ -1,12 +1,11 @@
 package com.microsoft.graph.functional;
 
-import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
 
 import okhttp3.Request;
 
-public class TestBaseAuthenticationProvider implements IAuthenticationProvider, ICoreAuthenticationProvider {
+public class TestBaseAuthenticationProvider implements ICoreAuthenticationProvider {
     private String _accessToken;
     private String hostNameToCheck = "graph";
     public TestBaseAuthenticationProvider(String accessToken) {
@@ -19,12 +18,4 @@ public class TestBaseAuthenticationProvider implements IAuthenticationProvider, 
         else
             return request;
     }
-
-    @Override
-    public void authenticateRequest(IHttpRequest request) {
-        if(request.getRequestUrl().getHost().toLowerCase().contains(hostNameToCheck))
-            request.addHeader("Authorization",
-                                "Bearer " + _accessToken);
-    }
-    
 }

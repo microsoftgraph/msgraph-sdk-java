@@ -10,7 +10,6 @@ import org.junit.Test;
 
 import okhttp3.Request;
 
-import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.DefaultExecutors;
 import com.microsoft.graph.concurrency.ICallback;
@@ -32,19 +31,10 @@ import com.microsoft.graph.serializer.ISerializer;
 
 public class GraphServiceClientTest {
 
-    private static final IAuthenticationProvider auth = new MockAuthenticationProvider();
-
     @Test
     public void testClientMethodsReturnStuff() {
 
-        IGraphServiceClient client = GraphServiceClient.fromConfig(new DefaultClientConfig() {
-
-            @Override
-            public IAuthenticationProvider getAuthenticationProvider() {
-                return auth;
-            }
-        });
-        assertEquals(auth, client.getAuthenticationProvider());
+        IGraphServiceClient client = GraphServiceClient.fromConfig(new DefaultClientConfig());
         assertNotNull(client.getExecutors());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
@@ -58,7 +48,6 @@ public class GraphServiceClientTest {
                 .authenticationProvider(auth) //
                 .logger(logger) //
                 .buildClient();
-        assertEquals(auth, client.getAuthenticationProvider());
         assertNotNull(client.getExecutors());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
@@ -71,23 +60,12 @@ public class GraphServiceClientTest {
 
     @Test
     public void testOverrideOfDefaultAuthenticationProvider() {
-        IAuthenticationProvider ap = new IAuthenticationProvider() {
-
-            @Override
-            public void authenticateRequest(IHttpRequest request) {
-                // do nothing
-            }
-        };
         IGraphServiceClient client = GraphServiceClient.builder() //
-                .authenticationProvider(ap) //
                 .buildClient();
-        assertEquals(ap, client.getAuthenticationProvider());
         assertNotNull(client.getExecutors());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getSerializer());
-        assertEquals(ap,
-                ((CoreHttpProvider) client.getHttpProvider()).getAuthenticationProvider());
     }
 
     @Test
@@ -127,7 +105,6 @@ public class GraphServiceClientTest {
                 .executors(ex) //
                 .buildClient();
         assertEquals(ex, client.getExecutors());
-        assertEquals(auth, client.getAuthenticationProvider());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getSerializer());
@@ -159,7 +136,6 @@ public class GraphServiceClientTest {
                 .serializer(serializer) //
                 .buildClient();
         assertEquals(serializer, client.getSerializer());
-        assertEquals(auth, client.getAuthenticationProvider());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getExecutors());
@@ -217,7 +193,6 @@ public class GraphServiceClientTest {
                 .httpProvider(hp) //
                 .buildClient();
         assertEquals(hp, client.getHttpProvider());
-        assertEquals(auth, client.getAuthenticationProvider());
         assertNotNull(client.getSerializer());
         assertNotNull(client.getLogger());
         assertNotNull(client.getExecutors());
@@ -245,14 +220,7 @@ public class GraphServiceClientTest {
     
     @Test
     public void connectionConfigTest() {
-    	 IAuthenticationProvider ap = new IAuthenticationProvider() {
-             @Override
-             public void authenticateRequest(IHttpRequest request) {
-                 // do nothing
-             }
-         };
          IGraphServiceClient client = GraphServiceClient.builder()
-                 .authenticationProvider(ap)
                  .buildClient();
          client.getHttpProvider().setConnectionConfig(new DefaultConnectionConfig());
          assertEquals(30_000, client.getHttpProvider().getConnectionConfig().getConnectTimeout());
@@ -261,14 +229,7 @@ public class GraphServiceClientTest {
     
     @Test
     public void connectionConfigValuesChangeTest() {
-    	 IAuthenticationProvider ap = new IAuthenticationProvider() {
-             @Override
-             public void authenticateRequest(IHttpRequest request) {
-                 // do nothing
-             }
-         };
          IGraphServiceClient client = GraphServiceClient.builder()
-                 .authenticationProvider(ap)
                  .buildClient();
          client.getHttpProvider().getConnectionConfig().setConnectTimeout(20_000);
          client.getHttpProvider().getConnectionConfig().setReadTimeout(10_000);

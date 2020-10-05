@@ -22,7 +22,6 @@
 
 package com.microsoft.graph.core;
 
-import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.DefaultExecutors;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.CoreHttpProvider;
@@ -59,39 +58,6 @@ public abstract class DefaultClientConfig implements IClientConfig {
      */
     private ISerializer serializer;
 
-    /**
-     * Creates an instance of this configuration with an authentication provider
-     *
-     * @param authenticationProvider the authentication provider
-     * @return the IClientConfig
-     */
-    public static IClientConfig createWithAuthenticationProvider(
-            final IAuthenticationProvider authenticationProvider
-    ) {
-        DefaultClientConfig config = new DefaultClientConfig() {
-
-            @Override
-            public IAuthenticationProvider getAuthenticationProvider() {
-                return authenticationProvider;
-            }
-        };
-        config.getLogger()
-              .logDebug(
-                        "Using provided auth provider "
-                                + authenticationProvider
-                                .getClass()
-                                .getSimpleName()
-                );
-        return config;
-    }
-
-    /**
-     * Gets the authentication provider
-     *
-     * @return the authentication provider
-     */
-    @Override
-    public abstract IAuthenticationProvider getAuthenticationProvider();
     /**
      * Gets the HTTP provider
      *

@@ -8,8 +8,6 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.microsoft.graph.authentication.IAuthenticationProvider;
-import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.http.IHttpProvider;
@@ -26,7 +24,6 @@ public class BaseClientTests {
 	public static final String DEFAULT_GRAPH_ENDPOINT = "https://graph.microsoft.com/v1.0";
     private String mEndpoint = DEFAULT_GRAPH_ENDPOINT;
     private BaseClient baseClient;
-    private IAuthenticationProvider mAuthenticationProvider;
     private IExecutors mExecutors;
     private IHttpProvider mHttpProvider;
     private ILogger mLogger;
@@ -45,7 +42,6 @@ public class BaseClientTests {
                 mEndpoint = value;
             }
         };
-        mAuthenticationProvider = new MockAuthenticationProvider();
         mExecutors = new MockExecutors();
         mLogger = new MockLogger();
         mSerializer = new MockSerializer(null, "");
@@ -91,13 +87,6 @@ public class BaseClientTests {
         String expectedServiceRoot = "https://foo.bar";
         baseClient.setServiceRoot(expectedServiceRoot);
         assertEquals(expectedServiceRoot, baseClient.getServiceRoot());
-    }
-
-	@Test
-    public void testAuthenticationProvider() {
-        assertNull(baseClient.getAuthenticationProvider());
-        baseClient.setAuthenticationProvider(mAuthenticationProvider);
-        assertEquals(mAuthenticationProvider, baseClient.getAuthenticationProvider());
     }
 
 	@Test

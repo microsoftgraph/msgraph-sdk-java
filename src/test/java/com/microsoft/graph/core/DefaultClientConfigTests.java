@@ -6,7 +6,6 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.logger.ILogger;
@@ -17,24 +16,19 @@ import com.microsoft.graph.logger.ILogger;
 public class DefaultClientConfigTests {
 
 	private IClientConfig mClientConfig;
-    private IAuthenticationProvider mAuthenticationProvider;
 	
 	@Before
 	public void setUp() throws Exception {
-		mAuthenticationProvider = new MockAuthenticationProvider();
-        mClientConfig = DefaultClientConfig.createWithAuthenticationProvider(mAuthenticationProvider);
+        mClientConfig = new DefaultClientConfig();
 	}
 
 	@Test
 	public void testDefaultClientConfig() {
-        assertNotNull(mAuthenticationProvider);
         assertNotNull(mClientConfig);
         assertNotNull(mClientConfig.getLogger());
         assertNotNull(mClientConfig.getExecutors());
         assertNotNull(mClientConfig.getSerializer());
         assertNotNull(mClientConfig.getHttpProvider());
-        assertNotNull(mClientConfig.getAuthenticationProvider());
-        assertEquals(mAuthenticationProvider, mClientConfig.getAuthenticationProvider());
     }
 	
     @Test
@@ -46,15 +40,8 @@ public class DefaultClientConfigTests {
             public ILogger getLogger() {
                 return logger;
             }
-
-            @Override
-            public IAuthenticationProvider getAuthenticationProvider() {
-                return new MockAuthenticationProvider();
-            }
-
         };
         config.getExecutors();
-        config.getAuthenticationProvider();
         config.getHttpProvider();
         config.getSerializer();
         config.getLogger();

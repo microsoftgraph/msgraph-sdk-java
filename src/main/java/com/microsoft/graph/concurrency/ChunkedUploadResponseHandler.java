@@ -97,7 +97,7 @@ public class ChunkedUploadResponseHandler<UploadType>
 				logger.logDebug("Receiving error during upload, see detail on result error");
 
 				return new ChunkedUploadResult<UploadType>(
-						GraphServiceException.createFromConnection(request, null, serializer,
+						GraphServiceException.createFromResponse(request, null, serializer,
 							response, logger));
 			} else if (response.code() >= HttpResponseCode.HTTP_OK
 					&& response.code() < HttpResponseCode.HTTP_MULTIPLE_CHOICES) {

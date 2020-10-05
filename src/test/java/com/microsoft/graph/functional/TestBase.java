@@ -8,7 +8,6 @@ import java.net.URL;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
-import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.core.Constants;
 import com.microsoft.graph.core.DefaultClientConfig;
 import com.microsoft.graph.core.IClientConfig;

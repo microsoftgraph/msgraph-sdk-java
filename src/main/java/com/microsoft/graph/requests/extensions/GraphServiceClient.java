@@ -170,7 +170,6 @@ import com.microsoft.graph.requests.extensions.InformationProtectionRequestBuild
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.authentication.*;
 import com.microsoft.graph.logger.*;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.concurrency.IExecutors;
@@ -227,7 +226,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
      */
     public static IGraphServiceClient fromConfig(final IClientConfig config) {
         GraphServiceClient client = new GraphServiceClient();
-        client.setAuthenticationProvider(config.getAuthenticationProvider());
         client.setExecutors(config.getExecutors());
         client.setHttpProvider(config.getHttpProvider());
         client.setLogger(config.getLogger());
@@ -241,40 +239,11 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
     }
     
     public static final class Builder {
-        
-        Builder() {
-            // restrict instantiation
-        }
-
-        /**
-         * Sets the authentication provider
-         * 
-         * @param authenticationProvider
-         *            the authentication provider
-         * @return a new builder that allows specification of other aspects of the GraphServiceClient
-         */
-        public Builder2 authenticationProvider(IAuthenticationProvider authenticationProvider) {
-            checkNotNull(authenticationProvider, "authenticationProvider");
-            return new Builder2(authenticationProvider);
-        }
-    }
-
-	/**
-     * The builder for this GraphServiceClient
-     */
-    public static final class Builder2 {
-        
-        private final IAuthenticationProvider authenticationProvider;
         private ISerializer serializer;
         private IHttpProvider httpProvider;
         private IExecutors executors;
         private ILogger logger;
-
         
-        Builder2(IAuthenticationProvider authenticationProvider) {
-            this.authenticationProvider = authenticationProvider;
-        }
-
         /**
          * Sets the serializer.
          * 
@@ -282,7 +251,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          *            the serializer
          * @return the instance of this builder
          */
-        public Builder2 serializer(final ISerializer serializer) {
+        public Builder serializer(final ISerializer serializer) {
             checkNotNull(serializer, "serializer");
             this.serializer = serializer;
             return this;
@@ -295,7 +264,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          *            the httpProvider
          * @return the instance of this builder
          */
-        public Builder2 httpProvider(final IHttpProvider httpProvider) {
+        public Builder httpProvider(final IHttpProvider httpProvider) {
             checkNotNull(httpProvider, "httpProvider");
             this.httpProvider = httpProvider;
             return this;
@@ -308,7 +277,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          *            the executors
          * @return the instance of this builder
          */
-        public Builder2 executors(final IExecutors executors) {
+        public Builder executors(final IExecutors executors) {
             checkNotNull(executors, "executors");
             this.executors = executors;
             return this;
@@ -321,7 +290,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          *            the logger
          * @return the instance of this builder
          */
-        public Builder2 logger(final ILogger logger) {
+        public Builder logger(final ILogger logger) {
             checkNotNull(logger, "logger");
             this.logger = logger;
             return this;
@@ -336,12 +305,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          */
         public IGraphServiceClient buildClient() throws ClientException {
             DefaultClientConfig config = new DefaultClientConfig() {
-
-                @Override
-                public IAuthenticationProvider getAuthenticationProvider() {
-                    return authenticationProvider; 
-                }
-
                 @Override
                 public IHttpProvider getHttpProvider() {
                     if (httpProvider != null) {

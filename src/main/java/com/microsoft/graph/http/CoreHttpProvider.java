@@ -39,7 +39,6 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 import com.google.common.annotations.VisibleForTesting;
-import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.IProgressCallback;
@@ -78,11 +77,6 @@ public class CoreHttpProvider implements IHttpProvider {
 	private final ISerializer serializer;
 
 	/**
-	 * The authentication provider
-	 */
-	private final IAuthenticationProvider authenticationProvider;
-
-	/**
 	 * The executors
 	 */
 	private final IExecutors executors;
@@ -106,33 +100,28 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * Creates the CoreHttpProvider
 	 *
 	 * @param serializer             the serializer
-	 * @param authenticationProvider the authentication provider
 	 * @param executors              the executors
 	 * @param logger                 the logger for diagnostic information
 	 */
 	public CoreHttpProvider(final ISerializer serializer,
-			final IAuthenticationProvider authenticationProvider,
 			final IExecutors executors,
 			final ILogger logger) {
-		this(serializer, authenticationProvider, executors, logger, null);
+		this(serializer, executors, logger, null);
 	}
 
 	/**
 	 * Creates the CoreHttpProvider
 	 *
 	 * @param serializer             the serializer
-	 * @param authenticationProvider the authentication provider
 	 * @param executors              the executors
 	 * @param logger                 the logger for diagnostic information
 	 * @param httpClient             the client to send http requests with
 	 */
 	public CoreHttpProvider(final ISerializer serializer,
-			final IAuthenticationProvider authenticationProvider,
 			final IExecutors executors,
 			final ILogger logger,
 			final OkHttpClient httpClient) {
 		this.serializer = serializer;
-		this.authenticationProvider = authenticationProvider;
 		this.executors = executors;
 		this.logger = logger;
 		this.corehttpClient = httpClient;
@@ -146,7 +135,7 @@ public class CoreHttpProvider implements IHttpProvider {
 	 */
 	public CoreHttpProvider(final IClientConfig clientConfig,
 			final OkHttpClient httpClient) {
-		this(clientConfig.getSerializer(), clientConfig.getAuthenticationProvider(), clientConfig.getExecutors(), clientConfig.getLogger());
+		this(clientConfig.getSerializer(), clientConfig.getExecutors(), clientConfig.getLogger());
 		this.corehttpClient = httpClient;
 	}
 
@@ -405,12 +394,7 @@ public class CoreHttpProvider implements IHttpProvider {
 									.newBuilder()
 									.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS)
 									.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS)
-									.followRedirects(false) //TODO https://github.com/microsoftgraph/msgraph-sdk-java/issues/516
-									.protocols(Arrays.asList(Protocol.HTTP_1_1)) //https://stackoverflow.com/questions/62031298/sockettimeout-on-java-11-but-not-on-java-8
 									.build();
-			}
-			if (authenticationProvider != null) { //TODO https://github.com/microsoftgraph/msgraph-sdk-java/issues/517
-				authenticationProvider.authenticateRequest(request);
 			}
 			Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
 			Response response = corehttpClient.newCall(coreHttpRequest).execute();
@@ -610,12 +594,6 @@ public class CoreHttpProvider implements IHttpProvider {
 	public IExecutors getExecutors() {
 		return executors;
 	}
-
-	@VisibleForTesting
-	public IAuthenticationProvider getAuthenticationProvider() {
-		return authenticationProvider;
-	}
-
 
 	/**
 	 * Get connection config for read and connect timeout in requests
