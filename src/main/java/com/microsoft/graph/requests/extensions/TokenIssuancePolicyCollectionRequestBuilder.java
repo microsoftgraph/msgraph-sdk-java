@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequest;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Issuance Policy Collection Request Builder.
  */
-public class TokenIssuancePolicyCollectionRequestBuilder extends BaseRequestBuilder implements ITokenIssuancePolicyCollectionRequestBuilder {
+public class TokenIssuancePolicyCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of PolicyRoot
@@ -42,7 +42,7 @@ public class TokenIssuancePolicyCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITokenIssuancePolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TokenIssuancePolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class TokenIssuancePolicyCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITokenIssuancePolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TokenIssuancePolicyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITokenIssuancePolicyRequestBuilder byId(final String id) {
+    public TokenIssuancePolicyRequestBuilder byId(final String id) {
         return new TokenIssuancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

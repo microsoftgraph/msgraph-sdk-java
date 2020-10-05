@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DeviceConfigurationState;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Configuration State Collection Request Builder.
  */
-public class DeviceConfigurationStateCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceConfigurationStateCollectionRequestBuilder {
+public class DeviceConfigurationStateCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ManagedDevice
@@ -42,7 +42,7 @@ public class DeviceConfigurationStateCollectionRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceConfigurationStateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceConfigurationStateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DeviceConfigurationStateCollectionRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceConfigurationStateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationStateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceConfigurationStateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceConfigurationStateRequestBuilder byId(final String id) {
+    public DeviceConfigurationStateRequestBuilder byId(final String id) {
         return new DeviceConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

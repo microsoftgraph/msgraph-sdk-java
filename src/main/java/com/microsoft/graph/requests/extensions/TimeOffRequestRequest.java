@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Time Off Request Request.
  */
-public class TimeOffRequestRequest extends BaseRequest implements ITimeOffRequestRequest {
+public class TimeOffRequestRequest extends BaseRequest {
 	
     /**
      * The request for the TimeOffRequest
@@ -138,7 +138,7 @@ public class TimeOffRequestRequest extends BaseRequest implements ITimeOffReques
      * @param value the select clause
      * @return the updated request
      */
-     public ITimeOffRequestRequest select(final String value) {
+     public TimeOffRequestRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TimeOffRequestRequest)this;
      }
@@ -149,7 +149,7 @@ public class TimeOffRequestRequest extends BaseRequest implements ITimeOffReques
      * @param value the expand clause
      * @return the updated request
      */
-     public ITimeOffRequestRequest expand(final String value) {
+     public TimeOffRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TimeOffRequestRequest)this;
      }

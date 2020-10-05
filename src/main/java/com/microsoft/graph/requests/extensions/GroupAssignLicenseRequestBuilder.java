@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupAssignLicenseRequest;
 import com.microsoft.graph.requests.extensions.GroupAssignLicenseRequest;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.Group;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Group Assign License Request Builder.
  */
-public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder implements IGroupAssignLicenseRequestBuilder {
+public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupAssignLicense
@@ -35,22 +34,22 @@ public class GroupAssignLicenseRequestBuilder extends BaseActionRequestBuilder i
     }
 
     /**
-     * Creates the IGroupAssignLicenseRequest
+     * Creates the GroupAssignLicenseRequest
      *
      * @param requestOptions the options for the request
-     * @return the IGroupAssignLicenseRequest instance
+     * @return the GroupAssignLicenseRequest instance
      */
-    public IGroupAssignLicenseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupAssignLicenseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IGroupAssignLicenseRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the GroupAssignLicenseRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IGroupAssignLicenseRequest instance
+     * @return the GroupAssignLicenseRequest instance
      */
-    public IGroupAssignLicenseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupAssignLicenseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupAssignLicenseRequest request = new GroupAssignLicenseRequest(
                 getRequestUrl(),
                 getClient(),

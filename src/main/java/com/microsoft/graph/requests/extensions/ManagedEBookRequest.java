@@ -9,19 +9,12 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
-import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.EBookInstallSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -34,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed EBook Request.
  */
-public class ManagedEBookRequest extends BaseRequest implements IManagedEBookRequest {
+public class ManagedEBookRequest extends BaseRequest {
 	
     /**
      * The request for the ManagedEBook
@@ -168,7 +161,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedEBookRequest select(final String value) {
+     public ManagedEBookRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedEBookRequest)this;
      }
@@ -179,7 +172,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedEBookRequest expand(final String value) {
+     public ManagedEBookRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedEBookRequest)this;
      }

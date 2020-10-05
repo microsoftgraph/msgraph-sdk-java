@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.UserActivity;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserActivityRecentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionPage;
 import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the User Activity Recent Collection Request.
  */
-public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<UserActivityRecentCollectionResponse, IUserActivityRecentCollectionPage> implements IUserActivityRecentCollectionRequest {
+public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<UserActivityRecentCollectionResponse, UserActivityRecentCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param requestOptions the options for this request
      */
     public UserActivityRecentCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserActivityRecentCollectionResponse.class, IUserActivityRecentCollectionPage.class);
+        super(requestUrl, client, requestOptions, UserActivityRecentCollectionResponse.class, UserActivityRecentCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IUserActivityRecentCollectionPage> callback) {
+    public void get(final ICallback<? super UserActivityRecentCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
         });
     }
 
-    public IUserActivityRecentCollectionPage get() throws ClientException {
+    public UserActivityRecentCollectionPage get() throws ClientException {
         final UserActivityRecentCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IUserActivityRecentCollectionPage buildFromResponse(final UserActivityRecentCollectionResponse response) {
-        final IUserActivityRecentCollectionRequestBuilder builder;
+    public UserActivityRecentCollectionPage buildFromResponse(final UserActivityRecentCollectionResponse response) {
+        final UserActivityRecentCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new UserActivityRecentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IUserActivityRecentCollectionPage page = new UserActivityRecentCollectionPage(response, builder);
+        final UserActivityRecentCollectionPage page = new UserActivityRecentCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param value the select clause
      * @return the updated request
      */
-    public IUserActivityRecentCollectionRequest select(final String value) {
+    public UserActivityRecentCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IUserActivityRecentCollectionRequest)this;
+        return (UserActivityRecentCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IUserActivityRecentCollectionRequest top(final int value) {
+    public UserActivityRecentCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IUserActivityRecentCollectionRequest)this;
+        return (UserActivityRecentCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param value the expand clause
      * @return the updated request
      */
-    public IUserActivityRecentCollectionRequest expand(final String value) {
+    public UserActivityRecentCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IUserActivityRecentCollectionRequest)this;
+        return (UserActivityRecentCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param value the filter clause
      * @return the updated request
      */
-    public IUserActivityRecentCollectionRequest filter(final String value) {
+    public UserActivityRecentCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IUserActivityRecentCollectionRequest)this;
+        return (UserActivityRecentCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<U
      * @param value the order by clause
      * @return the updated request
      */
-    public IUserActivityRecentCollectionRequest orderBy(final String value) {
+    public UserActivityRecentCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IUserActivityRecentCollectionRequest)this;
+        return (UserActivityRecentCollectionRequest)this;
     }
 
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeDeleteRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeDeleteRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Delete Request Builder.
  */
-public class WorkbookRangeDeleteRequestBuilder extends BaseActionRequestBuilder implements IWorkbookRangeDeleteRequestBuilder {
+public class WorkbookRangeDeleteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeDelete
@@ -32,22 +31,22 @@ public class WorkbookRangeDeleteRequestBuilder extends BaseActionRequestBuilder 
     }
 
     /**
-     * Creates the IWorkbookRangeDeleteRequest
+     * Creates the WorkbookRangeDeleteRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeDeleteRequest instance
+     * @return the WorkbookRangeDeleteRequest instance
      */
-    public IWorkbookRangeDeleteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeDeleteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeDeleteRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeDeleteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeDeleteRequest instance
+     * @return the WorkbookRangeDeleteRequest instance
      */
-    public IWorkbookRangeDeleteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeDeleteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeDeleteRequest request = new WorkbookRangeDeleteRequest(
                 getRequestUrl(),
                 getClient(),

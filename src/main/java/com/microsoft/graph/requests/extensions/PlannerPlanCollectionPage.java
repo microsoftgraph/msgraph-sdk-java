@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.PlannerPlan;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionPage;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.PlannerPlanCollectionResponse;
 /**
  * The class for the Planner Plan Collection Page.
  */
-public class PlannerPlanCollectionPage extends BaseCollectionPage<PlannerPlan, IPlannerPlanCollectionRequestBuilder> implements IPlannerPlanCollectionPage {
+public class PlannerPlanCollectionPage extends BaseCollectionPage<PlannerPlan, PlannerPlanCollectionRequestBuilder> {
 
     /**
      * A collection page for PlannerPlan
@@ -22,7 +22,7 @@ public class PlannerPlanCollectionPage extends BaseCollectionPage<PlannerPlan, I
      * @param response the serialized PlannerPlanCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PlannerPlanCollectionPage(final PlannerPlanCollectionResponse response, final IPlannerPlanCollectionRequestBuilder builder) {
+    public PlannerPlanCollectionPage(final PlannerPlanCollectionResponse response, final PlannerPlanCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDollarDeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsDollarDeRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Dollar De Request Builder.
  */
-public class WorkbookFunctionsDollarDeRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsDollarDeRequestBuilder {
+public class WorkbookFunctionsDollarDeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsDollarDe
@@ -34,22 +33,22 @@ public class WorkbookFunctionsDollarDeRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsDollarDeRequest
+     * Creates the WorkbookFunctionsDollarDeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDollarDeRequest instance
+     * @return the WorkbookFunctionsDollarDeRequest instance
      */
-    public IWorkbookFunctionsDollarDeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsDollarDeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsDollarDeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsDollarDeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDollarDeRequest instance
+     * @return the WorkbookFunctionsDollarDeRequest instance
      */
-    public IWorkbookFunctionsDollarDeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsDollarDeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDollarDeRequest request = new WorkbookFunctionsDollarDeRequest(
                 getRequestUrl(),
                 getClient(),

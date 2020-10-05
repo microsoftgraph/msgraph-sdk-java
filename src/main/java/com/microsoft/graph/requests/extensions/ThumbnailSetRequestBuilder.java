@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Thumbnail Set Request Builder.
  */
-public class ThumbnailSetRequestBuilder extends BaseRequestBuilder implements IThumbnailSetRequestBuilder {
+public class ThumbnailSetRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ThumbnailSet
@@ -35,9 +35,9 @@ public class ThumbnailSetRequestBuilder extends BaseRequestBuilder implements IT
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IThumbnailSetRequest instance
+     * @return the ThumbnailSetRequest instance
      */
-    public IThumbnailSetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ThumbnailSetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,14 +45,13 @@ public class ThumbnailSetRequestBuilder extends BaseRequestBuilder implements IT
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IThumbnailSetRequest instance
+     * @return the ThumbnailSetRequest instance
      */
-    public IThumbnailSetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThumbnailSetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ThumbnailSetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    @Override
-    public IThumbnailRequestBuilder getThumbnailSize(final String size) {
+    public ThumbnailRequestBuilder getThumbnailSize(final String size) {
         return new ThumbnailRequestBuilder(getRequestUrlWithAdditionalSegment(size), getClient(), /* options */ null);
     }
 

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Organization;
-import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionPage;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.OrganizationCollectionResponse;
 /**
  * The class for the Organization Collection Page.
  */
-public class OrganizationCollectionPage extends BaseCollectionPage<Organization, IOrganizationCollectionRequestBuilder> implements IOrganizationCollectionPage {
+public class OrganizationCollectionPage extends BaseCollectionPage<Organization, OrganizationCollectionRequestBuilder> {
 
     /**
      * A collection page for Organization
@@ -22,7 +22,7 @@ public class OrganizationCollectionPage extends BaseCollectionPage<Organization,
      * @param response the serialized OrganizationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OrganizationCollectionPage(final OrganizationCollectionResponse response, final IOrganizationCollectionRequestBuilder builder) {
+    public OrganizationCollectionPage(final OrganizationCollectionResponse response, final OrganizationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

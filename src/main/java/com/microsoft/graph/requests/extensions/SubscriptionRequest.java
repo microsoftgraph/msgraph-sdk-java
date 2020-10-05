@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Subscription Request.
  */
-public class SubscriptionRequest extends BaseRequest implements ISubscriptionRequest {
+public class SubscriptionRequest extends BaseRequest {
 	
     /**
      * The request for the Subscription
@@ -138,7 +138,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @param value the select clause
      * @return the updated request
      */
-     public ISubscriptionRequest select(final String value) {
+     public SubscriptionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SubscriptionRequest)this;
      }
@@ -149,7 +149,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @param value the expand clause
      * @return the updated request
      */
-     public ISubscriptionRequest expand(final String value) {
+     public SubscriptionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SubscriptionRequest)this;
      }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mac OSOffice Suite App Request Builder.
  */
-public class MacOSOfficeSuiteAppRequestBuilder extends BaseRequestBuilder implements IMacOSOfficeSuiteAppRequestBuilder {
+public class MacOSOfficeSuiteAppRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MacOSOfficeSuiteApp
@@ -35,9 +35,9 @@ public class MacOSOfficeSuiteAppRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMacOSOfficeSuiteAppRequest instance
+     * @return the MacOSOfficeSuiteAppRequest instance
      */
-    public IMacOSOfficeSuiteAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MacOSOfficeSuiteAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,25 +45,25 @@ public class MacOSOfficeSuiteAppRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMacOSOfficeSuiteAppRequest instance
+     * @return the MacOSOfficeSuiteAppRequest instance
      */
-    public IMacOSOfficeSuiteAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSOfficeSuiteAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MacOSOfficeSuiteAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
+    public MobileAppAssignmentCollectionRequestBuilder assignments() {
         return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
+    public MobileAppAssignmentRequestBuilder assignments(final String id) {
         return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public IMobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+    public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
-    public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
+    public MobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
 }

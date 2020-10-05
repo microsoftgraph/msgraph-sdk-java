@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBesselYRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsBesselYRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Bessel YRequest Builder.
  */
-public class WorkbookFunctionsBesselYRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsBesselYRequestBuilder {
+public class WorkbookFunctionsBesselYRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsBesselY
@@ -34,22 +33,22 @@ public class WorkbookFunctionsBesselYRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsBesselYRequest
+     * Creates the WorkbookFunctionsBesselYRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBesselYRequest instance
+     * @return the WorkbookFunctionsBesselYRequest instance
      */
-    public IWorkbookFunctionsBesselYRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsBesselYRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsBesselYRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsBesselYRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBesselYRequest instance
+     * @return the WorkbookFunctionsBesselYRequest instance
      */
-    public IWorkbookFunctionsBesselYRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsBesselYRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBesselYRequest request = new WorkbookFunctionsBesselYRequest(
                 getRequestUrl(),
                 getClient(),

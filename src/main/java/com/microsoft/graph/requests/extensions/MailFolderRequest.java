@@ -8,24 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailFolder;
-import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRuleRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageRuleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
@@ -39,7 +29,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mail Folder Request.
  */
-public class MailFolderRequest extends BaseRequest implements IMailFolderRequest {
+public class MailFolderRequest extends BaseRequest {
 	
     /**
      * The request for the MailFolder
@@ -173,7 +163,7 @@ public class MailFolderRequest extends BaseRequest implements IMailFolderRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IMailFolderRequest select(final String value) {
+     public MailFolderRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MailFolderRequest)this;
      }
@@ -184,7 +174,7 @@ public class MailFolderRequest extends BaseRequest implements IMailFolderRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IMailFolderRequest expand(final String value) {
+     public MailFolderRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MailFolderRequest)this;
      }

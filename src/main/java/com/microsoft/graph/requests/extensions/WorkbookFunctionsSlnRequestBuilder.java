@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSlnRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSlnRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Sln Request Builder.
  */
-public class WorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSlnRequestBuilder {
+public class WorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSln
@@ -36,22 +35,22 @@ public class WorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookFunctionsSlnRequest
+     * Creates the WorkbookFunctionsSlnRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSlnRequest instance
+     * @return the WorkbookFunctionsSlnRequest instance
      */
-    public IWorkbookFunctionsSlnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSlnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSlnRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSlnRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSlnRequest instance
+     * @return the WorkbookFunctionsSlnRequest instance
      */
-    public IWorkbookFunctionsSlnRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSlnRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSlnRequest request = new WorkbookFunctionsSlnRequest(
                 getRequestUrl(),
                 getClient(),

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Contract Request Builder.
  */
-public class ContractRequestBuilder extends BaseRequestBuilder implements IContractRequestBuilder {
+public class ContractRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Contract
@@ -35,9 +35,9 @@ public class ContractRequestBuilder extends BaseRequestBuilder implements IContr
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IContractRequest instance
+     * @return the ContractRequest instance
      */
-    public IContractRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ContractRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ContractRequestBuilder extends BaseRequestBuilder implements IContr
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IContractRequest instance
+     * @return the ContractRequest instance
      */
-    public IContractRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContractRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ContractRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

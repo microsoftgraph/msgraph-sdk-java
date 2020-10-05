@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Swap Shifts Change Request Request Builder.
  */
-public class SwapShiftsChangeRequestRequestBuilder extends BaseRequestBuilder implements ISwapShiftsChangeRequestRequestBuilder {
+public class SwapShiftsChangeRequestRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SwapShiftsChangeRequest
@@ -35,9 +35,9 @@ public class SwapShiftsChangeRequestRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISwapShiftsChangeRequestRequest instance
+     * @return the SwapShiftsChangeRequestRequest instance
      */
-    public ISwapShiftsChangeRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SwapShiftsChangeRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class SwapShiftsChangeRequestRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISwapShiftsChangeRequestRequest instance
+     * @return the SwapShiftsChangeRequestRequest instance
      */
-    public ISwapShiftsChangeRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SwapShiftsChangeRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

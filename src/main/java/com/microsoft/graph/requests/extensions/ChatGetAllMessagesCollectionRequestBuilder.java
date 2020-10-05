@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IChatGetAllMessagesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatGetAllMessagesCollectionRequest;
+import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Chat Get All Messages Collection Request Builder.
  */
-public class ChatGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IChatGetAllMessagesCollectionRequestBuilder {
+public class ChatGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of Chat
@@ -42,7 +41,7 @@ public class ChatGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IChatGetAllMessagesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ChatGetAllMessagesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class ChatGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IChatGetAllMessagesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatGetAllMessagesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ChatGetAllMessagesCollectionRequest request = new ChatGetAllMessagesCollectionRequest(
                 getRequestUrl(),
                 getClient(),

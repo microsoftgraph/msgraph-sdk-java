@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teams Async Operation Request Builder.
  */
-public class TeamsAsyncOperationRequestBuilder extends BaseRequestBuilder implements ITeamsAsyncOperationRequestBuilder {
+public class TeamsAsyncOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TeamsAsyncOperation
@@ -35,9 +35,9 @@ public class TeamsAsyncOperationRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsAsyncOperationRequest instance
+     * @return the TeamsAsyncOperationRequest instance
      */
-    public ITeamsAsyncOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsAsyncOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class TeamsAsyncOperationRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsAsyncOperationRequest instance
+     * @return the TeamsAsyncOperationRequest instance
      */
-    public ITeamsAsyncOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAsyncOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TeamsAsyncOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

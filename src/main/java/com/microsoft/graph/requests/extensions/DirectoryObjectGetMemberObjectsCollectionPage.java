@@ -11,7 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetMemberObjectsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberObjectsCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Directory Object Get Member Objects Collection Page.
  */
-public class DirectoryObjectGetMemberObjectsCollectionPage extends BaseCollectionPage<String, IDirectoryObjectGetMemberObjectsCollectionRequestBuilder> implements IDirectoryObjectGetMemberObjectsCollectionPage {
+public class DirectoryObjectGetMemberObjectsCollectionPage extends BaseCollectionPage<String, DirectoryObjectGetMemberObjectsCollectionRequestBuilder> {
 
     /**
      * A collection page for String.
@@ -33,7 +33,7 @@ public class DirectoryObjectGetMemberObjectsCollectionPage extends BaseCollectio
      * @param response The serialized DirectoryObjectGetMemberObjectsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DirectoryObjectGetMemberObjectsCollectionPage(final DirectoryObjectGetMemberObjectsCollectionResponse response, final IDirectoryObjectGetMemberObjectsCollectionRequestBuilder builder) {
+    public DirectoryObjectGetMemberObjectsCollectionPage(final DirectoryObjectGetMemberObjectsCollectionResponse response, final DirectoryObjectGetMemberObjectsCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

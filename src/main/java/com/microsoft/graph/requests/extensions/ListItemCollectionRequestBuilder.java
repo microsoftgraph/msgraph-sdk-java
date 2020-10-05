@@ -13,9 +13,9 @@ import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IListItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemCollectionRequest;
+import com.microsoft.graph.requests.extensions.ListItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListItemCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the List Item Collection Request Builder.
  */
-public class ListItemCollectionRequestBuilder extends BaseRequestBuilder implements IListItemCollectionRequestBuilder {
+public class ListItemCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of List
@@ -43,7 +43,7 @@ public class ListItemCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IListItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ListItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,11 +53,11 @@ public class ListItemCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IListItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ListItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IListItemRequestBuilder byId(final String id) {
+    public ListItemRequestBuilder byId(final String id) {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

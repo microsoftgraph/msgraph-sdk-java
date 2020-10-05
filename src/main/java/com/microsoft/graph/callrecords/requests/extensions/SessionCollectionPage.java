@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.callrecords.requests.extensions;
 import com.microsoft.graph.callrecords.models.extensions.Session;
-import com.microsoft.graph.callrecords.requests.extensions.ISessionCollectionRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionPage;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionResp
 /**
  * The class for the Session Collection Page.
  */
-public class SessionCollectionPage extends BaseCollectionPage<Session, ISessionCollectionRequestBuilder> implements ISessionCollectionPage {
+public class SessionCollectionPage extends BaseCollectionPage<Session, SessionCollectionRequestBuilder> {
 
     /**
      * A collection page for Session
@@ -22,7 +22,7 @@ public class SessionCollectionPage extends BaseCollectionPage<Session, ISessionC
      * @param response the serialized SessionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SessionCollectionPage(final SessionCollectionResponse response, final ISessionCollectionRequestBuilder builder) {
+    public SessionCollectionPage(final SessionCollectionResponse response, final SessionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

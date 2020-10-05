@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.DirectoryRole;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryRoleDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryRoleDeltaCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Directory Role Delta Collection Request.
  */
-public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<DirectoryRoleDeltaCollectionResponse, IDirectoryRoleDeltaCollectionPage> implements IDirectoryRoleDeltaCollectionRequest {
+public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<DirectoryRoleDeltaCollectionResponse, DirectoryRoleDeltaCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      * @param requestOptions the options for this request
      */
     public DirectoryRoleDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryRoleDeltaCollectionResponse.class, IDirectoryRoleDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, DirectoryRoleDeltaCollectionResponse.class, DirectoryRoleDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IDirectoryRoleDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super DirectoryRoleDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
         });
     }
 
-    public IDirectoryRoleDeltaCollectionPage get() throws ClientException {
+    public DirectoryRoleDeltaCollectionPage get() throws ClientException {
         final DirectoryRoleDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IDirectoryRoleDeltaCollectionPage buildFromResponse(final DirectoryRoleDeltaCollectionResponse response) {
-        final IDirectoryRoleDeltaCollectionRequestBuilder builder;
+    public DirectoryRoleDeltaCollectionPage buildFromResponse(final DirectoryRoleDeltaCollectionResponse response) {
+        final DirectoryRoleDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DirectoryRoleDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IDirectoryRoleDeltaCollectionPage page = new DirectoryRoleDeltaCollectionPage(response, builder);
+        final DirectoryRoleDeltaCollectionPage page = new DirectoryRoleDeltaCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      * @param value the select clause
      * @return the updated request
      */
-    public IDirectoryRoleDeltaCollectionRequest select(final String value) {
+    public DirectoryRoleDeltaCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IDirectoryRoleDeltaCollectionRequest)this;
+        return (DirectoryRoleDeltaCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IDirectoryRoleDeltaCollectionRequest top(final int value) {
+    public DirectoryRoleDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IDirectoryRoleDeltaCollectionRequest)this;
+        return (DirectoryRoleDeltaCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      * @param value the expand clause
      * @return the updated request
      */
-    public IDirectoryRoleDeltaCollectionRequest expand(final String value) {
+    public DirectoryRoleDeltaCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IDirectoryRoleDeltaCollectionRequest)this;
+        return (DirectoryRoleDeltaCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      * @param value the filter clause
      * @return the updated request
      */
-    public IDirectoryRoleDeltaCollectionRequest filter(final String value) {
+    public DirectoryRoleDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDirectoryRoleDeltaCollectionRequest)this;
+        return (DirectoryRoleDeltaCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<D
      * @param value the order by clause
      * @return the updated request
      */
-    public IDirectoryRoleDeltaCollectionRequest orderBy(final String value) {
+    public DirectoryRoleDeltaCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IDirectoryRoleDeltaCollectionRequest)this;
+        return (DirectoryRoleDeltaCollectionRequest)this;
     }
 
 }

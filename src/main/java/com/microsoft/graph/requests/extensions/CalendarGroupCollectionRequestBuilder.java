@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.CalendarGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ICalendarGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarGroupCollectionRequest;
+import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Calendar Group Collection Request Builder.
  */
-public class CalendarGroupCollectionRequestBuilder extends BaseRequestBuilder implements ICalendarGroupCollectionRequestBuilder {
+public class CalendarGroupCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -42,7 +42,7 @@ public class CalendarGroupCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICalendarGroupCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CalendarGroupCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class CalendarGroupCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICalendarGroupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarGroupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CalendarGroupCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ICalendarGroupRequestBuilder byId(final String id) {
+    public CalendarGroupRequestBuilder byId(final String id) {
         return new CalendarGroupRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

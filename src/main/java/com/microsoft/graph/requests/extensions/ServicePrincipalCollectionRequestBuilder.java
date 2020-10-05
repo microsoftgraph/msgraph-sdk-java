@@ -13,10 +13,10 @@ import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IServicePrincipalRequestBuilder;
-import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequest;
-import com.microsoft.graph.requests.extensions.IServicePrincipalDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequest;
+import com.microsoft.graph.requests.extensions.ServicePrincipalDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Service Principal Collection Request Builder.
  */
-public class ServicePrincipalCollectionRequestBuilder extends BaseRequestBuilder implements IServicePrincipalCollectionRequestBuilder {
+public class ServicePrincipalCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -44,7 +44,7 @@ public class ServicePrincipalCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IServicePrincipalCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ServicePrincipalCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,21 +54,21 @@ public class ServicePrincipalCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IServicePrincipalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ServicePrincipalCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IServicePrincipalRequestBuilder byId(final String id) {
+    public ServicePrincipalRequestBuilder byId(final String id) {
         return new ServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IServicePrincipalDeltaCollectionRequestBuilder delta() {
+    public ServicePrincipalDeltaCollectionRequestBuilder delta() {
         return new ServicePrincipalDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IServicePrincipalDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public ServicePrincipalDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new ServicePrincipalDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

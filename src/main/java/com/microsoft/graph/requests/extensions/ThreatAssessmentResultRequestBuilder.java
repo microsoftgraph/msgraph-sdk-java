@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Threat Assessment Result Request Builder.
  */
-public class ThreatAssessmentResultRequestBuilder extends BaseRequestBuilder implements IThreatAssessmentResultRequestBuilder {
+public class ThreatAssessmentResultRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ThreatAssessmentResult
@@ -35,9 +35,9 @@ public class ThreatAssessmentResultRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IThreatAssessmentResultRequest instance
+     * @return the ThreatAssessmentResultRequest instance
      */
-    public IThreatAssessmentResultRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ThreatAssessmentResultRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ThreatAssessmentResultRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IThreatAssessmentResultRequest instance
+     * @return the ThreatAssessmentResultRequest instance
      */
-    public IThreatAssessmentResultRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThreatAssessmentResultRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ThreatAssessmentResultRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

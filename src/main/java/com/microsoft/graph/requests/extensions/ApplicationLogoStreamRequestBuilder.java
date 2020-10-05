@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Application Logo Stream Request Builder.
  */
-public class ApplicationLogoStreamRequestBuilder extends BaseRequestBuilder implements IApplicationLogoStreamRequestBuilder {
+public class ApplicationLogoStreamRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ApplicationLogoStream
@@ -35,9 +35,9 @@ public class ApplicationLogoStreamRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IApplicationLogoStreamRequest instance
+     * @return the ApplicationLogoStreamRequest instance
      */
-    public IApplicationLogoStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplicationLogoStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ApplicationLogoStreamRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IApplicationLogoStreamRequest instance
+     * @return the ApplicationLogoStreamRequest instance
      */
-    public IApplicationLogoStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationLogoStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ApplicationLogoStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

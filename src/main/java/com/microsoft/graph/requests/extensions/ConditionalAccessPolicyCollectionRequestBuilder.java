@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequest;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Conditional Access Policy Collection Request Builder.
  */
-public class ConditionalAccessPolicyCollectionRequestBuilder extends BaseRequestBuilder implements IConditionalAccessPolicyCollectionRequestBuilder {
+public class ConditionalAccessPolicyCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of PolicyRoot
@@ -42,7 +42,7 @@ public class ConditionalAccessPolicyCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IConditionalAccessPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ConditionalAccessPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ConditionalAccessPolicyCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IConditionalAccessPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConditionalAccessPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ConditionalAccessPolicyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IConditionalAccessPolicyRequestBuilder byId(final String id) {
+    public ConditionalAccessPolicyRequestBuilder byId(final String id) {
         return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

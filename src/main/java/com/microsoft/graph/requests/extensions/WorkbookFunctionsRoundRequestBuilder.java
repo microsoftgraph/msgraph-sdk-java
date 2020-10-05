@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRoundRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRoundRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Round Request Builder.
  */
-public class WorkbookFunctionsRoundRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsRoundRequestBuilder {
+public class WorkbookFunctionsRoundRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsRound
@@ -34,22 +33,22 @@ public class WorkbookFunctionsRoundRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsRoundRequest
+     * Creates the WorkbookFunctionsRoundRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRoundRequest instance
+     * @return the WorkbookFunctionsRoundRequest instance
      */
-    public IWorkbookFunctionsRoundRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsRoundRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsRoundRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsRoundRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRoundRequest instance
+     * @return the WorkbookFunctionsRoundRequest instance
      */
-    public IWorkbookFunctionsRoundRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsRoundRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsRoundRequest request = new WorkbookFunctionsRoundRequest(
                 getRequestUrl(),
                 getClient(),

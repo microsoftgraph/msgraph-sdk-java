@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyCustomFilterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyCustomFilterRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Filter Apply Custom Filter Request Builder.
  */
-public class WorkbookFilterApplyCustomFilterRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFilterApplyCustomFilterRequestBuilder {
+public class WorkbookFilterApplyCustomFilterRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFilterApplyCustomFilter
@@ -36,22 +35,22 @@ public class WorkbookFilterApplyCustomFilterRequestBuilder extends BaseActionReq
     }
 
     /**
-     * Creates the IWorkbookFilterApplyCustomFilterRequest
+     * Creates the WorkbookFilterApplyCustomFilterRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyCustomFilterRequest instance
+     * @return the WorkbookFilterApplyCustomFilterRequest instance
      */
-    public IWorkbookFilterApplyCustomFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFilterApplyCustomFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFilterApplyCustomFilterRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFilterApplyCustomFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyCustomFilterRequest instance
+     * @return the WorkbookFilterApplyCustomFilterRequest instance
      */
-    public IWorkbookFilterApplyCustomFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterApplyCustomFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyCustomFilterRequest request = new WorkbookFilterApplyCustomFilterRequest(
                 getRequestUrl(),
                 getClient(),

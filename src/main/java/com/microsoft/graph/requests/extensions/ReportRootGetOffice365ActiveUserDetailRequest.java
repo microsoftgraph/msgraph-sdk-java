@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActiveUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActiveUserDetailRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Office365Active User Detail Request.
  */
-public class ReportRootGetOffice365ActiveUserDetailRequest extends BaseRequest implements IReportRootGetOffice365ActiveUserDetailRequest {
+public class ReportRootGetOffice365ActiveUserDetailRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetOffice365ActiveUserDetail
@@ -97,7 +96,7 @@ public class ReportRootGetOffice365ActiveUserDetailRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetOffice365ActiveUserDetailRequest select(final String value) {
+    public ReportRootGetOffice365ActiveUserDetailRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetOffice365ActiveUserDetailRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetOffice365ActiveUserDetailRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetOffice365ActiveUserDetailRequest expand(final String value) {
+    public ReportRootGetOffice365ActiveUserDetailRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetOffice365ActiveUserDetailRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetOffice365ActiveUserDetailRequest extends BaseRequest i
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetOffice365ActiveUserDetailRequest filter(final String value) {
+    public ReportRootGetOffice365ActiveUserDetailRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetOffice365ActiveUserDetailRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetOffice365ActiveUserDetailRequest extends BaseRequest i
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetOffice365ActiveUserDetailRequest orderBy(final String value) {
+    public ReportRootGetOffice365ActiveUserDetailRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetOffice365ActiveUserDetailRequest)this;
     }

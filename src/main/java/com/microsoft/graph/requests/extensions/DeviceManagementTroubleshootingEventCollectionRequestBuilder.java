@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEven
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Management Troubleshooting Event Collection Request Builder.
  */
-public class DeviceManagementTroubleshootingEventCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceManagementTroubleshootingEventCollectionRequestBuilder {
+public class DeviceManagementTroubleshootingEventCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class DeviceManagementTroubleshootingEventCollectionRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceManagementTroubleshootingEventCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceManagementTroubleshootingEventCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DeviceManagementTroubleshootingEventCollectionRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceManagementTroubleshootingEventCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementTroubleshootingEventCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementTroubleshootingEventCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceManagementTroubleshootingEventRequestBuilder byId(final String id) {
+    public DeviceManagementTroubleshootingEventRequestBuilder byId(final String id) {
         return new DeviceManagementTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

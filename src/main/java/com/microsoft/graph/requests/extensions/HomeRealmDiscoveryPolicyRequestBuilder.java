@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Home Realm Discovery Policy Request Builder.
  */
-public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder implements IHomeRealmDiscoveryPolicyRequestBuilder {
+public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the HomeRealmDiscoveryPolicy
@@ -35,9 +35,9 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IHomeRealmDiscoveryPolicyRequest instance
+     * @return the HomeRealmDiscoveryPolicyRequest instance
      */
-    public IHomeRealmDiscoveryPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public HomeRealmDiscoveryPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,18 +45,18 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IHomeRealmDiscoveryPolicyRequest instance
+     * @return the HomeRealmDiscoveryPolicyRequest instance
      */
-    public IHomeRealmDiscoveryPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
+    public DirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
     }
 }

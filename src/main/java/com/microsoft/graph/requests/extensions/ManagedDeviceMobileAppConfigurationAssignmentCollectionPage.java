@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurati
 /**
  * The class for the Managed Device Mobile App Configuration Assignment Collection Page.
  */
-public class ManagedDeviceMobileAppConfigurationAssignmentCollectionPage extends BaseCollectionPage<ManagedDeviceMobileAppConfigurationAssignment, IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder> implements IManagedDeviceMobileAppConfigurationAssignmentCollectionPage {
+public class ManagedDeviceMobileAppConfigurationAssignmentCollectionPage extends BaseCollectionPage<ManagedDeviceMobileAppConfigurationAssignment, ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedDeviceMobileAppConfigurationAssignment
@@ -22,7 +22,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionPage extends
      * @param response the serialized ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response, final IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder builder) {
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response, final ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

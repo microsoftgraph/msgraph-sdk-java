@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.Shift;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShiftRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShiftCollectionRequest;
+import com.microsoft.graph.requests.extensions.ShiftCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ShiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.ShiftCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Shift Collection Request Builder.
  */
-public class ShiftCollectionRequestBuilder extends BaseRequestBuilder implements IShiftCollectionRequestBuilder {
+public class ShiftCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Schedule
@@ -42,7 +42,7 @@ public class ShiftCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IShiftCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ShiftCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ShiftCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IShiftCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ShiftCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ShiftCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IShiftRequestBuilder byId(final String id) {
+    public ShiftRequestBuilder byId(final String id) {
         return new ShiftRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

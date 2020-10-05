@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserChangePasswordRequest;
 import com.microsoft.graph.requests.extensions.UserChangePasswordRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the User Change Password Request Builder.
  */
-public class UserChangePasswordRequestBuilder extends BaseActionRequestBuilder implements IUserChangePasswordRequestBuilder {
+public class UserChangePasswordRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this UserChangePassword
@@ -34,22 +33,22 @@ public class UserChangePasswordRequestBuilder extends BaseActionRequestBuilder i
     }
 
     /**
-     * Creates the IUserChangePasswordRequest
+     * Creates the UserChangePasswordRequest
      *
      * @param requestOptions the options for the request
-     * @return the IUserChangePasswordRequest instance
+     * @return the UserChangePasswordRequest instance
      */
-    public IUserChangePasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserChangePasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IUserChangePasswordRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the UserChangePasswordRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IUserChangePasswordRequest instance
+     * @return the UserChangePasswordRequest instance
      */
-    public IUserChangePasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserChangePasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserChangePasswordRequest request = new UserChangePasswordRequest(
                 getRequestUrl(),
                 getClient(),

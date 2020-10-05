@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.RoleAssignment;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionResponse;
 /**
  * The class for the Role Assignment Collection Page.
  */
-public class RoleAssignmentCollectionPage extends BaseCollectionPage<RoleAssignment, IRoleAssignmentCollectionRequestBuilder> implements IRoleAssignmentCollectionPage {
+public class RoleAssignmentCollectionPage extends BaseCollectionPage<RoleAssignment, RoleAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for RoleAssignment
@@ -22,7 +22,7 @@ public class RoleAssignmentCollectionPage extends BaseCollectionPage<RoleAssignm
      * @param response the serialized RoleAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public RoleAssignmentCollectionPage(final RoleAssignmentCollectionResponse response, final IRoleAssignmentCollectionRequestBuilder builder) {
+    public RoleAssignmentCollectionPage(final RoleAssignmentCollectionResponse response, final RoleAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

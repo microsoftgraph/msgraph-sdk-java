@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImSinRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImSinRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Im Sin Request Builder.
  */
-public class WorkbookFunctionsImSinRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImSinRequestBuilder {
+public class WorkbookFunctionsImSinRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImSin
@@ -32,22 +31,22 @@ public class WorkbookFunctionsImSinRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsImSinRequest
+     * Creates the WorkbookFunctionsImSinRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImSinRequest instance
+     * @return the WorkbookFunctionsImSinRequest instance
      */
-    public IWorkbookFunctionsImSinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImSinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImSinRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImSinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImSinRequest instance
+     * @return the WorkbookFunctionsImSinRequest instance
      */
-    public IWorkbookFunctionsImSinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImSinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImSinRequest request = new WorkbookFunctionsImSinRequest(
                 getRequestUrl(),
                 getClient(),

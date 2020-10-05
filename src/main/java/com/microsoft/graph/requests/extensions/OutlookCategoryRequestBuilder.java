@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Outlook Category Request Builder.
  */
-public class OutlookCategoryRequestBuilder extends BaseRequestBuilder implements IOutlookCategoryRequestBuilder {
+public class OutlookCategoryRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OutlookCategory
@@ -35,9 +35,9 @@ public class OutlookCategoryRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOutlookCategoryRequest instance
+     * @return the OutlookCategoryRequest instance
      */
-    public IOutlookCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OutlookCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class OutlookCategoryRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOutlookCategoryRequest instance
+     * @return the OutlookCategoryRequest instance
      */
-    public IOutlookCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OutlookCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

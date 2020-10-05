@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
-import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRespon
 /**
  * The class for the Extension Property Collection Page.
  */
-public class ExtensionPropertyCollectionPage extends BaseCollectionPage<ExtensionProperty, IExtensionPropertyCollectionRequestBuilder> implements IExtensionPropertyCollectionPage {
+public class ExtensionPropertyCollectionPage extends BaseCollectionPage<ExtensionProperty, ExtensionPropertyCollectionRequestBuilder> {
 
     /**
      * A collection page for ExtensionProperty
@@ -22,7 +22,7 @@ public class ExtensionPropertyCollectionPage extends BaseCollectionPage<Extensio
      * @param response the serialized ExtensionPropertyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ExtensionPropertyCollectionPage(final ExtensionPropertyCollectionResponse response, final IExtensionPropertyCollectionRequestBuilder builder) {
+    public ExtensionPropertyCollectionPage(final ExtensionPropertyCollectionResponse response, final ExtensionPropertyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Play Prompt Operation Request Builder.
  */
-public class PlayPromptOperationRequestBuilder extends BaseRequestBuilder implements IPlayPromptOperationRequestBuilder {
+public class PlayPromptOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the PlayPromptOperation
@@ -35,9 +35,9 @@ public class PlayPromptOperationRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlayPromptOperationRequest instance
+     * @return the PlayPromptOperationRequest instance
      */
-    public IPlayPromptOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlayPromptOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class PlayPromptOperationRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlayPromptOperationRequest instance
+     * @return the PlayPromptOperationRequest instance
      */
-    public IPlayPromptOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlayPromptOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlayPromptOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

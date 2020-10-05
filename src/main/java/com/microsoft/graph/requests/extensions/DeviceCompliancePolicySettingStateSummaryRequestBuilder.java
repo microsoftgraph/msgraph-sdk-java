@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingStateSummary;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Policy Setting State Summary Request Builder.
  */
-public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends BaseRequestBuilder implements IDeviceCompliancePolicySettingStateSummaryRequestBuilder {
+public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceCompliancePolicySettingStateSummary
@@ -39,9 +37,9 @@ public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends Bas
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceCompliancePolicySettingStateSummaryRequest instance
+     * @return the DeviceCompliancePolicySettingStateSummaryRequest instance
      */
-    public IDeviceCompliancePolicySettingStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceCompliancePolicySettingStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class DeviceCompliancePolicySettingStateSummaryRequestBuilder extends Bas
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceCompliancePolicySettingStateSummaryRequest instance
+     * @return the DeviceCompliancePolicySettingStateSummaryRequest instance
      */
-    public IDeviceCompliancePolicySettingStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicySettingStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceComplianceSettingStateCollectionRequestBuilder deviceComplianceSettingStates() {
+    public DeviceComplianceSettingStateCollectionRequestBuilder deviceComplianceSettingStates() {
         return new DeviceComplianceSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates"), getClient(), null);
     }
 
-    public IDeviceComplianceSettingStateRequestBuilder deviceComplianceSettingStates(final String id) {
+    public DeviceComplianceSettingStateRequestBuilder deviceComplianceSettingStates(final String id) {
         return new DeviceComplianceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceComplianceSettingStates") + "/" + id, getClient(), null);
     }
 }

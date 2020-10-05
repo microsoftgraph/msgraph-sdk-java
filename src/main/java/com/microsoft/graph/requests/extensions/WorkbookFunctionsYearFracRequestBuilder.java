@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsYearFracRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsYearFracRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Year Frac Request Builder.
  */
-public class WorkbookFunctionsYearFracRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsYearFracRequestBuilder {
+public class WorkbookFunctionsYearFracRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsYearFrac
@@ -36,22 +35,22 @@ public class WorkbookFunctionsYearFracRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsYearFracRequest
+     * Creates the WorkbookFunctionsYearFracRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsYearFracRequest instance
+     * @return the WorkbookFunctionsYearFracRequest instance
      */
-    public IWorkbookFunctionsYearFracRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsYearFracRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsYearFracRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsYearFracRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsYearFracRequest instance
+     * @return the WorkbookFunctionsYearFracRequest instance
      */
-    public IWorkbookFunctionsYearFracRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsYearFracRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsYearFracRequest request = new WorkbookFunctionsYearFracRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IServicePrincipalAddKeyRequest;
 import com.microsoft.graph.requests.extensions.ServicePrincipalAddKeyRequest;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Service Principal Add Key Request Builder.
  */
-public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuilder implements IServicePrincipalAddKeyRequestBuilder {
+public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ServicePrincipalAddKey
@@ -37,22 +36,22 @@ public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IServicePrincipalAddKeyRequest
+     * Creates the ServicePrincipalAddKeyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IServicePrincipalAddKeyRequest instance
+     * @return the ServicePrincipalAddKeyRequest instance
      */
-    public IServicePrincipalAddKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ServicePrincipalAddKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IServicePrincipalAddKeyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ServicePrincipalAddKeyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IServicePrincipalAddKeyRequest instance
+     * @return the ServicePrincipalAddKeyRequest instance
      */
-    public IServicePrincipalAddKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalAddKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ServicePrincipalAddKeyRequest request = new ServicePrincipalAddKeyRequest(
                 getRequestUrl(),
                 getClient(),

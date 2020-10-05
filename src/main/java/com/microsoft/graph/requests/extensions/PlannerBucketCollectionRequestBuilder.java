@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.PlannerBucket;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerBucketRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionRequest;
+import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerBucketRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Planner Bucket Collection Request Builder.
  */
-public class PlannerBucketCollectionRequestBuilder extends BaseRequestBuilder implements IPlannerBucketCollectionRequestBuilder {
+public class PlannerBucketCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of PlannerPlan
@@ -42,7 +42,7 @@ public class PlannerBucketCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPlannerBucketCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlannerBucketCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class PlannerBucketCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPlannerBucketCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerBucketCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlannerBucketCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPlannerBucketRequestBuilder byId(final String id) {
+    public PlannerBucketRequestBuilder byId(final String id) {
         return new PlannerBucketRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

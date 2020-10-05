@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SectionGroup;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionPage;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SectionGroupCollectionResponse;
 /**
  * The class for the Section Group Collection Page.
  */
-public class SectionGroupCollectionPage extends BaseCollectionPage<SectionGroup, ISectionGroupCollectionRequestBuilder> implements ISectionGroupCollectionPage {
+public class SectionGroupCollectionPage extends BaseCollectionPage<SectionGroup, SectionGroupCollectionRequestBuilder> {
 
     /**
      * A collection page for SectionGroup
@@ -22,7 +22,7 @@ public class SectionGroupCollectionPage extends BaseCollectionPage<SectionGroup,
      * @param response the serialized SectionGroupCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SectionGroupCollectionPage(final SectionGroupCollectionResponse response, final ISectionGroupCollectionRequestBuilder builder) {
+    public SectionGroupCollectionPage(final SectionGroupCollectionResponse response, final SectionGroupCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

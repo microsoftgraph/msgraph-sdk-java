@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsVar_PRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsVar_PRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Var_PRequest Builder.
  */
-public class WorkbookFunctionsVar_PRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsVar_PRequestBuilder {
+public class WorkbookFunctionsVar_PRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsVar_P
@@ -32,22 +31,22 @@ public class WorkbookFunctionsVar_PRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsVar_PRequest
+     * Creates the WorkbookFunctionsVar_PRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsVar_PRequest instance
+     * @return the WorkbookFunctionsVar_PRequest instance
      */
-    public IWorkbookFunctionsVar_PRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsVar_PRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsVar_PRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsVar_PRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsVar_PRequest instance
+     * @return the WorkbookFunctionsVar_PRequest instance
      */
-    public IWorkbookFunctionsVar_PRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsVar_PRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsVar_PRequest request = new WorkbookFunctionsVar_PRequest(
                 getRequestUrl(),
                 getClient(),

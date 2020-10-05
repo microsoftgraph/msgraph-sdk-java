@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OutlookCategory;
-import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionResponse
 /**
  * The class for the Outlook Category Collection Page.
  */
-public class OutlookCategoryCollectionPage extends BaseCollectionPage<OutlookCategory, IOutlookCategoryCollectionRequestBuilder> implements IOutlookCategoryCollectionPage {
+public class OutlookCategoryCollectionPage extends BaseCollectionPage<OutlookCategory, OutlookCategoryCollectionRequestBuilder> {
 
     /**
      * A collection page for OutlookCategory
@@ -22,7 +22,7 @@ public class OutlookCategoryCollectionPage extends BaseCollectionPage<OutlookCat
      * @param response the serialized OutlookCategoryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OutlookCategoryCollectionPage(final OutlookCategoryCollectionResponse response, final IOutlookCategoryCollectionRequestBuilder builder) {
+    public OutlookCategoryCollectionPage(final OutlookCategoryCollectionResponse response, final OutlookCategoryCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

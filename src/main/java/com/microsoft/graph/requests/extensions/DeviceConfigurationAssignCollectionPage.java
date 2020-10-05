@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Configuration Assign Collection Page.
  */
-public class DeviceConfigurationAssignCollectionPage extends BaseCollectionPage<DeviceConfigurationAssignment, IDeviceConfigurationAssignCollectionRequestBuilder> implements IDeviceConfigurationAssignCollectionPage {
+public class DeviceConfigurationAssignCollectionPage extends BaseCollectionPage<DeviceConfigurationAssignment, DeviceConfigurationAssignCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceConfigurationAssignment.
@@ -33,7 +33,7 @@ public class DeviceConfigurationAssignCollectionPage extends BaseCollectionPage<
      * @param response The serialized DeviceConfigurationAssignCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DeviceConfigurationAssignCollectionPage(final DeviceConfigurationAssignCollectionResponse response, final IDeviceConfigurationAssignCollectionRequestBuilder builder) {
+    public DeviceConfigurationAssignCollectionPage(final DeviceConfigurationAssignCollectionResponse response, final DeviceConfigurationAssignCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

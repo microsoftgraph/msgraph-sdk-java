@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Object Reference Request.
  */
-public class DirectoryObjectReferenceRequest extends BaseRequest implements IDirectoryObjectReferenceRequest {
+public class DirectoryObjectReferenceRequest extends BaseRequest {
 
     /**
      * The request for the DirectoryObject
@@ -49,7 +49,7 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
      * @param value the select clause
      * @return the updated request
      */
-    public IDirectoryObjectReferenceRequest select(final String value) {
+    public DirectoryObjectReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DirectoryObjectReferenceRequest)this;
     }
@@ -60,7 +60,7 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
      * @param value the expand clause
      * @return the updated request
      */
-    public IDirectoryObjectReferenceRequest expand(final String value) {
+    public DirectoryObjectReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DirectoryObjectReferenceRequest)this;
     }

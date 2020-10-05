@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.LocalizedNotificationMessage;
-import com.microsoft.graph.requests.extensions.ILocalizedNotificationMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageColle
 /**
  * The class for the Localized Notification Message Collection Page.
  */
-public class LocalizedNotificationMessageCollectionPage extends BaseCollectionPage<LocalizedNotificationMessage, ILocalizedNotificationMessageCollectionRequestBuilder> implements ILocalizedNotificationMessageCollectionPage {
+public class LocalizedNotificationMessageCollectionPage extends BaseCollectionPage<LocalizedNotificationMessage, LocalizedNotificationMessageCollectionRequestBuilder> {
 
     /**
      * A collection page for LocalizedNotificationMessage
@@ -22,7 +22,7 @@ public class LocalizedNotificationMessageCollectionPage extends BaseCollectionPa
      * @param response the serialized LocalizedNotificationMessageCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public LocalizedNotificationMessageCollectionPage(final LocalizedNotificationMessageCollectionResponse response, final ILocalizedNotificationMessageCollectionRequestBuilder builder) {
+    public LocalizedNotificationMessageCollectionPage(final LocalizedNotificationMessageCollectionResponse response, final LocalizedNotificationMessageCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Mobile App Category With Reference Request.
  */
-public class MobileAppCategoryWithReferenceRequest extends BaseRequest implements IMobileAppCategoryWithReferenceRequest {
+public class MobileAppCategoryWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the MobileAppCategory
@@ -78,9 +78,9 @@ public class MobileAppCategoryWithReferenceRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-    public IMobileAppCategoryWithReferenceRequest select(final String value) {
+    public MobileAppCategoryWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IMobileAppCategoryWithReferenceRequest)this;
+        return (MobileAppCategoryWithReferenceRequest)this;
     }
 
     /**
@@ -89,7 +89,7 @@ public class MobileAppCategoryWithReferenceRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-    public IMobileAppCategoryWithReferenceRequest expand(final String value) {
+    public MobileAppCategoryWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MobileAppCategoryWithReferenceRequest)this;
     }

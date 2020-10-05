@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserSendMailRequest;
 import com.microsoft.graph.requests.extensions.UserSendMailRequest;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the User Send Mail Request Builder.
  */
-public class UserSendMailRequestBuilder extends BaseActionRequestBuilder implements IUserSendMailRequestBuilder {
+public class UserSendMailRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this UserSendMail
@@ -34,22 +33,22 @@ public class UserSendMailRequestBuilder extends BaseActionRequestBuilder impleme
     }
 
     /**
-     * Creates the IUserSendMailRequest
+     * Creates the UserSendMailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IUserSendMailRequest instance
+     * @return the UserSendMailRequest instance
      */
-    public IUserSendMailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserSendMailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IUserSendMailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the UserSendMailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IUserSendMailRequest instance
+     * @return the UserSendMailRequest instance
      */
-    public IUserSendMailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserSendMailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserSendMailRequest request = new UserSendMailRequest(
                 getRequestUrl(),
                 getClient(),

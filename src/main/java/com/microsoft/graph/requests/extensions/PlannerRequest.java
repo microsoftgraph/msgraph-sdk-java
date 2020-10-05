@@ -8,16 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Planner;
-import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerBucketRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
 import java.util.Arrays;
@@ -31,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Planner Request.
  */
-public class PlannerRequest extends BaseRequest implements IPlannerRequest {
+public class PlannerRequest extends BaseRequest {
 	
     /**
      * The request for the Planner
@@ -150,7 +144,7 @@ public class PlannerRequest extends BaseRequest implements IPlannerRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IPlannerRequest select(final String value) {
+     public PlannerRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PlannerRequest)this;
      }
@@ -161,7 +155,7 @@ public class PlannerRequest extends BaseRequest implements IPlannerRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IPlannerRequest expand(final String value) {
+     public PlannerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PlannerRequest)this;
      }

@@ -13,7 +13,7 @@ import java.util.EnumSet;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionPage;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionResponse;
 import com.microsoft.graph.models.extensions.UserGetMailTipsBody;
@@ -27,7 +27,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the User Get Mail Tips Collection Request.
  */
-public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<UserGetMailTipsCollectionResponse, IUserGetMailTipsCollectionPage> implements IUserGetMailTipsCollectionRequest {
+public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<UserGetMailTipsCollectionResponse, UserGetMailTipsCollectionPage> {
 
 
     protected final UserGetMailTipsBody body;
@@ -41,12 +41,12 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      * @param requestOptions the options for this request
      */
     public UserGetMailTipsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserGetMailTipsCollectionResponse.class, IUserGetMailTipsCollectionPage.class);
+        super(requestUrl, client, requestOptions, UserGetMailTipsCollectionResponse.class, UserGetMailTipsCollectionPage.class);
         body = new UserGetMailTipsBody();
     }
 
 
-    public void post(final ICallback<? super IUserGetMailTipsCollectionPage> callback) {
+    public void post(final ICallback<? super UserGetMailTipsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -60,20 +60,20 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
         });
     }
 
-    public IUserGetMailTipsCollectionPage post() throws ClientException {
+    public UserGetMailTipsCollectionPage post() throws ClientException {
         final UserGetMailTipsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public IUserGetMailTipsCollectionPage buildFromResponse(final UserGetMailTipsCollectionResponse response) {
-        final IUserGetMailTipsCollectionRequestBuilder builder;
+    public UserGetMailTipsCollectionPage buildFromResponse(final UserGetMailTipsCollectionResponse response) {
+        final UserGetMailTipsCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new UserGetMailTipsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<String>) null, (EnumSet<MailTipsType>) null);
         } else {
             builder = null;
         }
-        final IUserGetMailTipsCollectionPage page = new UserGetMailTipsCollectionPage(response, builder);
+        final UserGetMailTipsCollectionPage page = new UserGetMailTipsCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -84,9 +84,9 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      * @param value the select clause
      * @return the updated request
      */
-    public IUserGetMailTipsCollectionRequest select(final String value) {
+    public UserGetMailTipsCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IUserGetMailTipsCollectionRequest)this;
+        return (UserGetMailTipsCollectionRequest)this;
     }
 
     /**
@@ -95,9 +95,9 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IUserGetMailTipsCollectionRequest top(final int value) {
+    public UserGetMailTipsCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IUserGetMailTipsCollectionRequest)this;
+        return (UserGetMailTipsCollectionRequest)this;
     }
 
     /**
@@ -106,9 +106,9 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      * @param value the expand clause
      * @return the updated request
      */
-    public IUserGetMailTipsCollectionRequest expand(final String value) {
+    public UserGetMailTipsCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IUserGetMailTipsCollectionRequest)this;
+        return (UserGetMailTipsCollectionRequest)this;
     }
 
     /**
@@ -117,9 +117,9 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      * @param value the filter clause
      * @return the updated request
      */
-    public IUserGetMailTipsCollectionRequest filter(final String value) {
+    public UserGetMailTipsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IUserGetMailTipsCollectionRequest)this;
+        return (UserGetMailTipsCollectionRequest)this;
     }
 
     /**
@@ -128,9 +128,9 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      * @param value the order by clause
      * @return the updated request
      */
-    public IUserGetMailTipsCollectionRequest orderBy(final String value) {
+    public UserGetMailTipsCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IUserGetMailTipsCollectionRequest)this;
+        return (UserGetMailTipsCollectionRequest)this;
     }
 
 }

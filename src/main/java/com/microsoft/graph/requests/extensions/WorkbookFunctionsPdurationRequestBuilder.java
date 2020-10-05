@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPdurationRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsPdurationRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Pduration Request Builder.
  */
-public class WorkbookFunctionsPdurationRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsPdurationRequestBuilder {
+public class WorkbookFunctionsPdurationRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsPduration
@@ -36,22 +35,22 @@ public class WorkbookFunctionsPdurationRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsPdurationRequest
+     * Creates the WorkbookFunctionsPdurationRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPdurationRequest instance
+     * @return the WorkbookFunctionsPdurationRequest instance
      */
-    public IWorkbookFunctionsPdurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsPdurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsPdurationRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsPdurationRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPdurationRequest instance
+     * @return the WorkbookFunctionsPdurationRequest instance
      */
-    public IWorkbookFunctionsPdurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsPdurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsPdurationRequest request = new WorkbookFunctionsPdurationRequest(
                 getRequestUrl(),
                 getClient(),

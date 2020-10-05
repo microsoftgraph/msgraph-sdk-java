@@ -23,7 +23,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Directory Object With Reference Request.
  */
-public class DirectoryObjectWithReferenceRequest extends BaseRequest implements IDirectoryObjectWithReferenceRequest {
+public class DirectoryObjectWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the DirectoryObject
@@ -79,9 +79,9 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-    public IDirectoryObjectWithReferenceRequest select(final String value) {
+    public DirectoryObjectWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IDirectoryObjectWithReferenceRequest)this;
+        return (DirectoryObjectWithReferenceRequest)this;
     }
 
     /**
@@ -90,7 +90,7 @@ public class DirectoryObjectWithReferenceRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-    public IDirectoryObjectWithReferenceRequest expand(final String value) {
+    public DirectoryObjectWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DirectoryObjectWithReferenceRequest)this;
     }

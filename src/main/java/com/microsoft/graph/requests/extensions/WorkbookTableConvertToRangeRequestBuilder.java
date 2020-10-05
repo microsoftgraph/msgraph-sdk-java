@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableConvertToRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableConvertToRangeRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Convert To Range Request Builder.
  */
-public class WorkbookTableConvertToRangeRequestBuilder extends BaseActionRequestBuilder implements IWorkbookTableConvertToRangeRequestBuilder {
+public class WorkbookTableConvertToRangeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableConvertToRange
@@ -30,22 +29,22 @@ public class WorkbookTableConvertToRangeRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookTableConvertToRangeRequest
+     * Creates the WorkbookTableConvertToRangeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableConvertToRangeRequest instance
+     * @return the WorkbookTableConvertToRangeRequest instance
      */
-    public IWorkbookTableConvertToRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableConvertToRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableConvertToRangeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableConvertToRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableConvertToRangeRequest instance
+     * @return the WorkbookTableConvertToRangeRequest instance
      */
-    public IWorkbookTableConvertToRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableConvertToRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableConvertToRangeRequest request = new WorkbookTableConvertToRangeRequest(
                 getRequestUrl(),
                 getClient(),

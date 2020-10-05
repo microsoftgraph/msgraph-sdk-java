@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Teams Device Usage Distribution User Counts Request.
  */
-public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest implements IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest {
+public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetTeamsDeviceUsageDistributionUserCounts
@@ -97,7 +96,7 @@ public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends 
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest select(final String value) {
+    public ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends 
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest expand(final String value) {
+    public ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends 
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest filter(final String value) {
+    public ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest extends 
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest orderBy(final String value) {
+    public ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetTeamsDeviceUsageDistributionUserCountsRequest)this;
     }

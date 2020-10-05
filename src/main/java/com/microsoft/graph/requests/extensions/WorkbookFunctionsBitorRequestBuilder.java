@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBitorRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsBitorRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Bitor Request Builder.
  */
-public class WorkbookFunctionsBitorRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsBitorRequestBuilder {
+public class WorkbookFunctionsBitorRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsBitor
@@ -34,22 +33,22 @@ public class WorkbookFunctionsBitorRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsBitorRequest
+     * Creates the WorkbookFunctionsBitorRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBitorRequest instance
+     * @return the WorkbookFunctionsBitorRequest instance
      */
-    public IWorkbookFunctionsBitorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsBitorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsBitorRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsBitorRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBitorRequest instance
+     * @return the WorkbookFunctionsBitorRequest instance
      */
-    public IWorkbookFunctionsBitorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsBitorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBitorRequest request = new WorkbookFunctionsBitorRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableSortReapplyRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableSortReapplyRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Sort Reapply Request Builder.
  */
-public class WorkbookTableSortReapplyRequestBuilder extends BaseActionRequestBuilder implements IWorkbookTableSortReapplyRequestBuilder {
+public class WorkbookTableSortReapplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableSortReapply
@@ -30,22 +29,22 @@ public class WorkbookTableSortReapplyRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookTableSortReapplyRequest
+     * Creates the WorkbookTableSortReapplyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableSortReapplyRequest instance
+     * @return the WorkbookTableSortReapplyRequest instance
      */
-    public IWorkbookTableSortReapplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableSortReapplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableSortReapplyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableSortReapplyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableSortReapplyRequest instance
+     * @return the WorkbookTableSortReapplyRequest instance
      */
-    public IWorkbookTableSortReapplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableSortReapplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableSortReapplyRequest request = new WorkbookTableSortReapplyRequest(
                 getRequestUrl(),
                 getClient(),

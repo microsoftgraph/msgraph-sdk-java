@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Claims Mapping Policy Reference Request Builder.
  */
-public class ClaimsMappingPolicyReferenceRequestBuilder extends BaseRequestBuilder implements IClaimsMappingPolicyReferenceRequestBuilder {
+public class ClaimsMappingPolicyReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ClaimsMappingPolicy
@@ -37,9 +37,9 @@ public class ClaimsMappingPolicyReferenceRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The IClaimsMappingPolicyReferenceRequest instance
+     * @return The ClaimsMappingPolicyReferenceRequest instance
      */
-    public IClaimsMappingPolicyReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ClaimsMappingPolicyReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class ClaimsMappingPolicyReferenceRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IClaimsMappingPolicyReferenceRequest instance
+     * @return the ClaimsMappingPolicyReferenceRequest instance
      */
-    public IClaimsMappingPolicyReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ClaimsMappingPolicyReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ClaimsMappingPolicyReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

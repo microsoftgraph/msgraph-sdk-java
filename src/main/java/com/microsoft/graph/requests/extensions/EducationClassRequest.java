@@ -8,15 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationClass;
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -29,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education Class Request.
  */
-public class EducationClassRequest extends BaseRequest implements IEducationClassRequest {
+public class EducationClassRequest extends BaseRequest {
 	
     /**
      * The request for the EducationClass
@@ -148,7 +143,7 @@ public class EducationClassRequest extends BaseRequest implements IEducationClas
      * @param value the select clause
      * @return the updated request
      */
-     public IEducationClassRequest select(final String value) {
+     public EducationClassRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (EducationClassRequest)this;
      }
@@ -159,7 +154,7 @@ public class EducationClassRequest extends BaseRequest implements IEducationClas
      * @param value the expand clause
      * @return the updated request
      */
-     public IEducationClassRequest expand(final String value) {
+     public EducationClassRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (EducationClassRequest)this;
      }

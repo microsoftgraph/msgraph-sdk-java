@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityUserCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Share Point Activity User Counts Request.
  */
-public class ReportRootGetSharePointActivityUserCountsRequest extends BaseRequest implements IReportRootGetSharePointActivityUserCountsRequest {
+public class ReportRootGetSharePointActivityUserCountsRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetSharePointActivityUserCounts
@@ -97,7 +96,7 @@ public class ReportRootGetSharePointActivityUserCountsRequest extends BaseReques
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityUserCountsRequest select(final String value) {
+    public ReportRootGetSharePointActivityUserCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetSharePointActivityUserCountsRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetSharePointActivityUserCountsRequest extends BaseReques
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityUserCountsRequest expand(final String value) {
+    public ReportRootGetSharePointActivityUserCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetSharePointActivityUserCountsRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetSharePointActivityUserCountsRequest extends BaseReques
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityUserCountsRequest filter(final String value) {
+    public ReportRootGetSharePointActivityUserCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetSharePointActivityUserCountsRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetSharePointActivityUserCountsRequest extends BaseReques
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityUserCountsRequest orderBy(final String value) {
+    public ReportRootGetSharePointActivityUserCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetSharePointActivityUserCountsRequest)this;
     }

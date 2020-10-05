@@ -9,11 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeSortRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeSortRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Request.
  */
-public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeRequest {
+public class WorkbookRangeRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookRange
@@ -145,7 +142,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookRangeRequest select(final String value) {
+     public WorkbookRangeRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookRangeRequest)this;
      }
@@ -156,7 +153,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookRangeRequest expand(final String value) {
+     public WorkbookRangeRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookRangeRequest)this;
      }

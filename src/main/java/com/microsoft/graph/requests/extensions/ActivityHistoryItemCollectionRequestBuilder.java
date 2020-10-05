@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ActivityHistoryItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemCollectionRequest;
+import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ActivityHistoryItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Activity History Item Collection Request Builder.
  */
-public class ActivityHistoryItemCollectionRequestBuilder extends BaseRequestBuilder implements IActivityHistoryItemCollectionRequestBuilder {
+public class ActivityHistoryItemCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of UserActivity
@@ -42,7 +42,7 @@ public class ActivityHistoryItemCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IActivityHistoryItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ActivityHistoryItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ActivityHistoryItemCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IActivityHistoryItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActivityHistoryItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ActivityHistoryItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IActivityHistoryItemRequestBuilder byId(final String id) {
+    public ActivityHistoryItemRequestBuilder byId(final String id) {
         return new ActivityHistoryItemRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

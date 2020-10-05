@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Chat Message Hosted Content Request Builder.
  */
-public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder implements IChatMessageHostedContentRequestBuilder {
+public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ChatMessageHostedContent
@@ -35,9 +35,9 @@ public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IChatMessageHostedContentRequest instance
+     * @return the ChatMessageHostedContentRequest instance
      */
-    public IChatMessageHostedContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ChatMessageHostedContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,15 +45,15 @@ public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IChatMessageHostedContentRequest instance
+     * @return the ChatMessageHostedContentRequest instance
      */
-    public IChatMessageHostedContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatMessageHostedContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ChatMessageHostedContentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IChatMessageHostedContentStreamRequestBuilder content() {
+    public ChatMessageHostedContentStreamRequestBuilder content() {
         return new ChatMessageHostedContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }
 }

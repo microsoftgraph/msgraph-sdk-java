@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Font Request Builder.
  */
-public class WorkbookRangeFontRequestBuilder extends BaseRequestBuilder implements IWorkbookRangeFontRequestBuilder {
+public class WorkbookRangeFontRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookRangeFont
@@ -35,9 +35,9 @@ public class WorkbookRangeFontRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookRangeFontRequest instance
+     * @return the WorkbookRangeFontRequest instance
      */
-    public IWorkbookRangeFontRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeFontRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class WorkbookRangeFontRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookRangeFontRequest instance
+     * @return the WorkbookRangeFontRequest instance
      */
-    public IWorkbookRangeFontRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeFontRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookRangeFontRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionResp
 /**
  * The class for the Claims Mapping Policy Collection Page.
  */
-public class ClaimsMappingPolicyCollectionPage extends BaseCollectionPage<ClaimsMappingPolicy, IClaimsMappingPolicyCollectionRequestBuilder> implements IClaimsMappingPolicyCollectionPage {
+public class ClaimsMappingPolicyCollectionPage extends BaseCollectionPage<ClaimsMappingPolicy, ClaimsMappingPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for ClaimsMappingPolicy
@@ -22,7 +22,7 @@ public class ClaimsMappingPolicyCollectionPage extends BaseCollectionPage<Claims
      * @param response the serialized ClaimsMappingPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ClaimsMappingPolicyCollectionPage(final ClaimsMappingPolicyCollectionResponse response, final IClaimsMappingPolicyCollectionRequestBuilder builder) {
+    public ClaimsMappingPolicyCollectionPage(final ClaimsMappingPolicyCollectionResponse response, final ClaimsMappingPolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

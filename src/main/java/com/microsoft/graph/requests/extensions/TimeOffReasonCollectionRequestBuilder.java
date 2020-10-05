@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.TimeOffReason;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffReasonRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequest;
+import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TimeOffReasonRequestBuilder;
+import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Time Off Reason Collection Request Builder.
  */
-public class TimeOffReasonCollectionRequestBuilder extends BaseRequestBuilder implements ITimeOffReasonCollectionRequestBuilder {
+public class TimeOffReasonCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Schedule
@@ -42,7 +42,7 @@ public class TimeOffReasonCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITimeOffReasonCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TimeOffReasonCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class TimeOffReasonCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITimeOffReasonCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TimeOffReasonCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TimeOffReasonCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITimeOffReasonRequestBuilder byId(final String id) {
+    public TimeOffReasonRequestBuilder byId(final String id) {
         return new TimeOffReasonRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

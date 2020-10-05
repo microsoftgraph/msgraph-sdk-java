@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageMailboxCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetMailboxUsageMailboxCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Mailbox Usage Mailbox Counts Request Builder.
  */
-public class ReportRootGetMailboxUsageMailboxCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetMailboxUsageMailboxCountsRequestBuilder {
+public class ReportRootGetMailboxUsageMailboxCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetMailboxUsageMailboxCounts
@@ -32,22 +31,22 @@ public class ReportRootGetMailboxUsageMailboxCountsRequestBuilder extends BaseFu
     }
 
     /**
-     * Creates the IReportRootGetMailboxUsageMailboxCountsRequest
+     * Creates the ReportRootGetMailboxUsageMailboxCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetMailboxUsageMailboxCountsRequest instance
+     * @return the ReportRootGetMailboxUsageMailboxCountsRequest instance
      */
-    public IReportRootGetMailboxUsageMailboxCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetMailboxUsageMailboxCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetMailboxUsageMailboxCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetMailboxUsageMailboxCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetMailboxUsageMailboxCountsRequest instance
+     * @return the ReportRootGetMailboxUsageMailboxCountsRequest instance
      */
-    public IReportRootGetMailboxUsageMailboxCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetMailboxUsageMailboxCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetMailboxUsageMailboxCountsRequest request = new ReportRootGetMailboxUsageMailboxCountsRequest(
                 getRequestUrl(),
                 getClient(),

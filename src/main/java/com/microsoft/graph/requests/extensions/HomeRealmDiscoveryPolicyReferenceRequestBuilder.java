@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy Reference Request Builder.
  */
-public class HomeRealmDiscoveryPolicyReferenceRequestBuilder extends BaseRequestBuilder implements IHomeRealmDiscoveryPolicyReferenceRequestBuilder {
+public class HomeRealmDiscoveryPolicyReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the HomeRealmDiscoveryPolicy
@@ -37,9 +37,9 @@ public class HomeRealmDiscoveryPolicyReferenceRequestBuilder extends BaseRequest
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The IHomeRealmDiscoveryPolicyReferenceRequest instance
+     * @return The HomeRealmDiscoveryPolicyReferenceRequest instance
      */
-    public IHomeRealmDiscoveryPolicyReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public HomeRealmDiscoveryPolicyReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class HomeRealmDiscoveryPolicyReferenceRequestBuilder extends BaseRequest
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IHomeRealmDiscoveryPolicyReferenceRequest instance
+     * @return the HomeRealmDiscoveryPolicyReferenceRequest instance
      */
-    public IHomeRealmDiscoveryPolicyReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new HomeRealmDiscoveryPolicyReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

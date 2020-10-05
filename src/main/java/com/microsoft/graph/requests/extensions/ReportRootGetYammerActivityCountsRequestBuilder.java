@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerActivityCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetYammerActivityCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Yammer Activity Counts Request Builder.
  */
-public class ReportRootGetYammerActivityCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetYammerActivityCountsRequestBuilder {
+public class ReportRootGetYammerActivityCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetYammerActivityCounts
@@ -32,22 +31,22 @@ public class ReportRootGetYammerActivityCountsRequestBuilder extends BaseFunctio
     }
 
     /**
-     * Creates the IReportRootGetYammerActivityCountsRequest
+     * Creates the ReportRootGetYammerActivityCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetYammerActivityCountsRequest instance
+     * @return the ReportRootGetYammerActivityCountsRequest instance
      */
-    public IReportRootGetYammerActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetYammerActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetYammerActivityCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetYammerActivityCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetYammerActivityCountsRequest instance
+     * @return the ReportRootGetYammerActivityCountsRequest instance
      */
-    public IReportRootGetYammerActivityCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetYammerActivityCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetYammerActivityCountsRequest request = new ReportRootGetYammerActivityCountsRequest(
                 getRequestUrl(),
                 getClient(),

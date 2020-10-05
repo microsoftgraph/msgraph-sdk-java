@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppContent;
-import com.microsoft.graph.requests.extensions.IMobileAppContentFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppContentFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Content Request.
  */
-public class MobileAppContentRequest extends BaseRequest implements IMobileAppContentRequest {
+public class MobileAppContentRequest extends BaseRequest {
 	
     /**
      * The request for the MobileAppContent
@@ -142,7 +140,7 @@ public class MobileAppContentRequest extends BaseRequest implements IMobileAppCo
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileAppContentRequest select(final String value) {
+     public MobileAppContentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MobileAppContentRequest)this;
      }
@@ -153,7 +151,7 @@ public class MobileAppContentRequest extends BaseRequest implements IMobileAppCo
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileAppContentRequest expand(final String value) {
+     public MobileAppContentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MobileAppContentRequest)this;
      }

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Partner Request.
  */
-public class DeviceManagementPartnerRequest extends BaseRequest implements IDeviceManagementPartnerRequest {
+public class DeviceManagementPartnerRequest extends BaseRequest {
 	
     /**
      * The request for the DeviceManagementPartner
@@ -138,7 +138,7 @@ public class DeviceManagementPartnerRequest extends BaseRequest implements IDevi
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementPartnerRequest select(final String value) {
+     public DeviceManagementPartnerRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceManagementPartnerRequest)this;
      }
@@ -149,7 +149,7 @@ public class DeviceManagementPartnerRequest extends BaseRequest implements IDevi
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementPartnerRequest expand(final String value) {
+     public DeviceManagementPartnerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceManagementPartnerRequest)this;
      }

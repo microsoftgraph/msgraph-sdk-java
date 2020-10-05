@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemVersionRestoreVersionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemVersionRestoreVersionRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Version Restore Version Request.
  */
-public class DriveItemVersionRestoreVersionRequest extends BaseRequest implements IDriveItemVersionRestoreVersionRequest {
+public class DriveItemVersionRestoreVersionRequest extends BaseRequest {
 
     /**
      * The request for this DriveItemVersionRestoreVersion

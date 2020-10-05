@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableSortClearRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableSortClearRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Sort Clear Request Builder.
  */
-public class WorkbookTableSortClearRequestBuilder extends BaseActionRequestBuilder implements IWorkbookTableSortClearRequestBuilder {
+public class WorkbookTableSortClearRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableSortClear
@@ -30,22 +29,22 @@ public class WorkbookTableSortClearRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookTableSortClearRequest
+     * Creates the WorkbookTableSortClearRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableSortClearRequest instance
+     * @return the WorkbookTableSortClearRequest instance
      */
-    public IWorkbookTableSortClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableSortClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableSortClearRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableSortClearRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableSortClearRequest instance
+     * @return the WorkbookTableSortClearRequest instance
      */
-    public IWorkbookTableSortClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableSortClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableSortClearRequest request = new WorkbookTableSortClearRequest(
                 getRequestUrl(),
                 getClient(),

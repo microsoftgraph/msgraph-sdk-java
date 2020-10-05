@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Update Recording Status Operation Request Builder.
  */
-public class UpdateRecordingStatusOperationRequestBuilder extends BaseRequestBuilder implements IUpdateRecordingStatusOperationRequestBuilder {
+public class UpdateRecordingStatusOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the UpdateRecordingStatusOperation
@@ -35,9 +35,9 @@ public class UpdateRecordingStatusOperationRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUpdateRecordingStatusOperationRequest instance
+     * @return the UpdateRecordingStatusOperationRequest instance
      */
-    public IUpdateRecordingStatusOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UpdateRecordingStatusOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class UpdateRecordingStatusOperationRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUpdateRecordingStatusOperationRequest instance
+     * @return the UpdateRecordingStatusOperationRequest instance
      */
-    public IUpdateRecordingStatusOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UpdateRecordingStatusOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UpdateRecordingStatusOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignm
 /**
  * The class for the Device And App Management Role Assignment Collection Page.
  */
-public class DeviceAndAppManagementRoleAssignmentCollectionPage extends BaseCollectionPage<DeviceAndAppManagementRoleAssignment, IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder> implements IDeviceAndAppManagementRoleAssignmentCollectionPage {
+public class DeviceAndAppManagementRoleAssignmentCollectionPage extends BaseCollectionPage<DeviceAndAppManagementRoleAssignment, DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceAndAppManagementRoleAssignment
@@ -22,7 +22,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionPage extends BaseColl
      * @param response the serialized DeviceAndAppManagementRoleAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceAndAppManagementRoleAssignmentCollectionPage(final DeviceAndAppManagementRoleAssignmentCollectionResponse response, final IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder builder) {
+    public DeviceAndAppManagementRoleAssignmentCollectionPage(final DeviceAndAppManagementRoleAssignmentCollectionResponse response, final DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

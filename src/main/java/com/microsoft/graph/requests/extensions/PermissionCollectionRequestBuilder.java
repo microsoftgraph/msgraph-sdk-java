@@ -13,9 +13,9 @@ import com.microsoft.graph.models.extensions.DriveRecipient;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IPermissionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionCollectionRequest;
+import com.microsoft.graph.requests.extensions.PermissionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Permission Collection Request Builder.
  */
-public class PermissionCollectionRequestBuilder extends BaseRequestBuilder implements IPermissionCollectionRequestBuilder {
+public class PermissionCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DriveItem
@@ -43,7 +43,7 @@ public class PermissionCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPermissionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PermissionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,11 +53,11 @@ public class PermissionCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPermissionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PermissionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPermissionRequestBuilder byId(final String id) {
+    public PermissionRequestBuilder byId(final String id) {
         return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

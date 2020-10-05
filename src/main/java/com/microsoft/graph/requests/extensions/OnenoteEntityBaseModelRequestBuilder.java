@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Entity Base Model Request Builder.
  */
-public class OnenoteEntityBaseModelRequestBuilder extends BaseRequestBuilder implements IOnenoteEntityBaseModelRequestBuilder {
+public class OnenoteEntityBaseModelRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OnenoteEntityBaseModel
@@ -35,9 +35,9 @@ public class OnenoteEntityBaseModelRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnenoteEntityBaseModelRequest instance
+     * @return the OnenoteEntityBaseModelRequest instance
      */
-    public IOnenoteEntityBaseModelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenoteEntityBaseModelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class OnenoteEntityBaseModelRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnenoteEntityBaseModelRequest instance
+     * @return the OnenoteEntityBaseModelRequest instance
      */
-    public IOnenoteEntityBaseModelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteEntityBaseModelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnenoteEntityBaseModelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

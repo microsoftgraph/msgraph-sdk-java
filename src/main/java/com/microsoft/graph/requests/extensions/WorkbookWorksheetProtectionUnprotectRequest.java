@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionUnprotectRequest;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionUnprotectRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Worksheet Protection Unprotect Request.
  */
-public class WorkbookWorksheetProtectionUnprotectRequest extends BaseRequest implements IWorkbookWorksheetProtectionUnprotectRequest {
+public class WorkbookWorksheetProtectionUnprotectRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookWorksheetProtectionUnprotect

@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionResponse;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed App Registration Collection With References Page.
  */
-public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseCollectionPage<ManagedAppRegistration, IManagedAppRegistrationCollectionWithReferencesRequestBuilder> implements IManagedAppRegistrationCollectionWithReferencesPage {
+public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseCollectionPage<ManagedAppRegistration, ManagedAppRegistrationCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for ManagedAppRegistration
@@ -34,7 +34,7 @@ public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseColl
      * @param response the serialized ManagedAppRegistrationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedAppRegistrationCollectionWithReferencesPage(final ManagedAppRegistrationCollectionResponse response, final IManagedAppRegistrationCollectionWithReferencesRequestBuilder builder) {
+    public ManagedAppRegistrationCollectionWithReferencesPage(final ManagedAppRegistrationCollectionResponse response, final ManagedAppRegistrationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

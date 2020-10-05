@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Endpoint With Reference Request Builder.
  */
-public class EndpointWithReferenceRequestBuilder extends BaseRequestBuilder implements IEndpointWithReferenceRequestBuilder {
+public class EndpointWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Endpoint
@@ -36,9 +36,9 @@ public class EndpointWithReferenceRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEndpointWithReferenceRequest instance
+     * @return the EndpointWithReferenceRequest instance
      */
-    public IEndpointWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EndpointWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,13 +46,13 @@ public class EndpointWithReferenceRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IEndpointWithReferenceRequest instance
+     * @return the EndpointWithReferenceRequest instance
      */
-    public IEndpointWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EndpointWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EndpointWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IEndpointReferenceRequestBuilder reference(){
+    public EndpointReferenceRequestBuilder reference(){
         return new EndpointReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

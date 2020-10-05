@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Education School Collection With References Request.
  */
-public class EducationSchoolCollectionWithReferencesRequest extends BaseCollectionRequest<EducationSchoolCollectionResponse, IEducationSchoolCollectionPage> implements IEducationSchoolCollectionWithReferencesRequest {
+public class EducationSchoolCollectionWithReferencesRequest extends BaseCollectionRequest<EducationSchoolCollectionResponse, EducationSchoolCollectionPage> {
 
     /**
      * The request builder for this collection of EducationSchool
@@ -32,10 +32,10 @@ public class EducationSchoolCollectionWithReferencesRequest extends BaseCollecti
      * @param requestOptions the options for this request
      */
     public EducationSchoolCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, IEducationSchoolCollectionPage.class);
+        super(requestUrl, client, requestOptions, EducationSchoolCollectionResponse.class, EducationSchoolCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IEducationSchoolCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super EducationSchoolCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class EducationSchoolCollectionWithReferencesRequest extends BaseCollecti
         });
     }
 
-    public IEducationSchoolCollectionWithReferencesPage get() throws ClientException {
+    public EducationSchoolCollectionWithReferencesPage get() throws ClientException {
         final EducationSchoolCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IEducationSchoolCollectionWithReferencesRequest expand(final String value) {
+    public EducationSchoolCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IEducationSchoolCollectionWithReferencesRequest filter(final String value) {
+    public EducationSchoolCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IEducationSchoolCollectionWithReferencesRequest orderBy(final String value) {
+    public EducationSchoolCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IEducationSchoolCollectionWithReferencesRequest select(final String value) {
+    public EducationSchoolCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IEducationSchoolCollectionWithReferencesRequest top(final int value) {
+    public EducationSchoolCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IEducationSchoolCollectionWithReferencesPage buildFromResponse(final EducationSchoolCollectionResponse response) {
-        final IEducationSchoolCollectionWithReferencesRequestBuilder builder;
+    public EducationSchoolCollectionWithReferencesPage buildFromResponse(final EducationSchoolCollectionResponse response) {
+        final EducationSchoolCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new EducationSchoolCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

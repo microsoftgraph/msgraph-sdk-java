@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SchedulingGroup;
-import com.microsoft.graph.requests.extensions.ISchedulingGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionPage;
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionResponse
 /**
  * The class for the Scheduling Group Collection Page.
  */
-public class SchedulingGroupCollectionPage extends BaseCollectionPage<SchedulingGroup, ISchedulingGroupCollectionRequestBuilder> implements ISchedulingGroupCollectionPage {
+public class SchedulingGroupCollectionPage extends BaseCollectionPage<SchedulingGroup, SchedulingGroupCollectionRequestBuilder> {
 
     /**
      * A collection page for SchedulingGroup
@@ -22,7 +22,7 @@ public class SchedulingGroupCollectionPage extends BaseCollectionPage<Scheduling
      * @param response the serialized SchedulingGroupCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SchedulingGroupCollectionPage(final SchedulingGroupCollectionResponse response, final ISchedulingGroupCollectionRequestBuilder builder) {
+    public SchedulingGroupCollectionPage(final SchedulingGroupCollectionResponse response, final SchedulingGroupCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

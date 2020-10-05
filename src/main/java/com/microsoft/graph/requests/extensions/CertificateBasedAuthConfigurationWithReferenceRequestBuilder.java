@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Certificate Based Auth Configuration With Reference Request Builder.
  */
-public class CertificateBasedAuthConfigurationWithReferenceRequestBuilder extends BaseRequestBuilder implements ICertificateBasedAuthConfigurationWithReferenceRequestBuilder {
+public class CertificateBasedAuthConfigurationWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the CertificateBasedAuthConfiguration
@@ -36,9 +36,9 @@ public class CertificateBasedAuthConfigurationWithReferenceRequestBuilder extend
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICertificateBasedAuthConfigurationWithReferenceRequest instance
+     * @return the CertificateBasedAuthConfigurationWithReferenceRequest instance
      */
-    public ICertificateBasedAuthConfigurationWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CertificateBasedAuthConfigurationWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,13 +46,13 @@ public class CertificateBasedAuthConfigurationWithReferenceRequestBuilder extend
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the ICertificateBasedAuthConfigurationWithReferenceRequest instance
+     * @return the CertificateBasedAuthConfigurationWithReferenceRequest instance
      */
-    public ICertificateBasedAuthConfigurationWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CertificateBasedAuthConfigurationWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CertificateBasedAuthConfigurationWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ICertificateBasedAuthConfigurationReferenceRequestBuilder reference(){
+    public CertificateBasedAuthConfigurationReferenceRequestBuilder reference(){
         return new CertificateBasedAuthConfigurationReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

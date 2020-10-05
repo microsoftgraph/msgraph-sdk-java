@@ -13,8 +13,8 @@ import com.microsoft.graph.models.extensions.PasswordCredential;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionResponse;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.google.gson.JsonObject;
@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Service Principal Collection With References Page.
  */
-public class ServicePrincipalCollectionWithReferencesPage extends BaseCollectionPage<ServicePrincipal, IServicePrincipalCollectionWithReferencesRequestBuilder> implements IServicePrincipalCollectionWithReferencesPage {
+public class ServicePrincipalCollectionWithReferencesPage extends BaseCollectionPage<ServicePrincipal, ServicePrincipalCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for ServicePrincipal
@@ -35,7 +35,7 @@ public class ServicePrincipalCollectionWithReferencesPage extends BaseCollection
      * @param response the serialized ServicePrincipalCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ServicePrincipalCollectionWithReferencesPage(final ServicePrincipalCollectionResponse response, final IServicePrincipalCollectionWithReferencesRequestBuilder builder) {
+    public ServicePrincipalCollectionWithReferencesPage(final ServicePrincipalCollectionResponse response, final ServicePrincipalCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

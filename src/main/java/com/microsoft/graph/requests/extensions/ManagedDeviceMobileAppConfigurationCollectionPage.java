@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurati
 /**
  * The class for the Managed Device Mobile App Configuration Collection Page.
  */
-public class ManagedDeviceMobileAppConfigurationCollectionPage extends BaseCollectionPage<ManagedDeviceMobileAppConfiguration, IManagedDeviceMobileAppConfigurationCollectionRequestBuilder> implements IManagedDeviceMobileAppConfigurationCollectionPage {
+public class ManagedDeviceMobileAppConfigurationCollectionPage extends BaseCollectionPage<ManagedDeviceMobileAppConfiguration, ManagedDeviceMobileAppConfigurationCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedDeviceMobileAppConfiguration
@@ -22,7 +22,7 @@ public class ManagedDeviceMobileAppConfigurationCollectionPage extends BaseColle
      * @param response the serialized ManagedDeviceMobileAppConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceMobileAppConfigurationCollectionPage(final ManagedDeviceMobileAppConfigurationCollectionResponse response, final IManagedDeviceMobileAppConfigurationCollectionRequestBuilder builder) {
+    public ManagedDeviceMobileAppConfigurationCollectionPage(final ManagedDeviceMobileAppConfigurationCollectionResponse response, final ManagedDeviceMobileAppConfigurationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

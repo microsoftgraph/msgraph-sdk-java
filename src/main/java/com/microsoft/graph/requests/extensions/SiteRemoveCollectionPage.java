@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.Site;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISiteRemoveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteRemoveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Site Remove Collection Page.
  */
-public class SiteRemoveCollectionPage extends BaseCollectionPage<Site, ISiteRemoveCollectionRequestBuilder> implements ISiteRemoveCollectionPage {
+public class SiteRemoveCollectionPage extends BaseCollectionPage<Site, SiteRemoveCollectionRequestBuilder> {
 
     /**
      * A collection page for Site.
@@ -33,7 +33,7 @@ public class SiteRemoveCollectionPage extends BaseCollectionPage<Site, ISiteRemo
      * @param response The serialized SiteRemoveCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public SiteRemoveCollectionPage(final SiteRemoveCollectionResponse response, final ISiteRemoveCollectionRequestBuilder builder) {
+    public SiteRemoveCollectionPage(final SiteRemoveCollectionResponse response, final SiteRemoveCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

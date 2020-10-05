@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Resource Content Stream Request Builder.
  */
-public class OnenoteResourceContentStreamRequestBuilder extends BaseRequestBuilder implements IOnenoteResourceContentStreamRequestBuilder {
+public class OnenoteResourceContentStreamRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OnenoteResourceContentStream
@@ -35,9 +35,9 @@ public class OnenoteResourceContentStreamRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnenoteResourceContentStreamRequest instance
+     * @return the OnenoteResourceContentStreamRequest instance
      */
-    public IOnenoteResourceContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenoteResourceContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class OnenoteResourceContentStreamRequestBuilder extends BaseRequestBuild
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IOnenoteResourceContentStreamRequest instance
+     * @return the OnenoteResourceContentStreamRequest instance
      */
-    public IOnenoteResourceContentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteResourceContentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OnenoteResourceContentStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

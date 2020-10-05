@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OfferShiftRequest;
-import com.microsoft.graph.requests.extensions.IOfferShiftRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionPage;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRespon
 /**
  * The class for the Offer Shift Request Collection Page.
  */
-public class OfferShiftRequestCollectionPage extends BaseCollectionPage<OfferShiftRequest, IOfferShiftRequestCollectionRequestBuilder> implements IOfferShiftRequestCollectionPage {
+public class OfferShiftRequestCollectionPage extends BaseCollectionPage<OfferShiftRequest, OfferShiftRequestCollectionRequestBuilder> {
 
     /**
      * A collection page for OfferShiftRequest
@@ -22,7 +22,7 @@ public class OfferShiftRequestCollectionPage extends BaseCollectionPage<OfferShi
      * @param response the serialized OfferShiftRequestCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OfferShiftRequestCollectionPage(final OfferShiftRequestCollectionResponse response, final IOfferShiftRequestCollectionRequestBuilder builder) {
+    public OfferShiftRequestCollectionPage(final OfferShiftRequestCollectionResponse response, final OfferShiftRequestCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

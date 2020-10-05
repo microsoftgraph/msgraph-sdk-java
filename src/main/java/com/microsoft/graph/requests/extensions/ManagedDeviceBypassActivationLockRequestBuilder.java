@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceBypassActivationLockRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceBypassActivationLockRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Bypass Activation Lock Request Builder.
  */
-public class ManagedDeviceBypassActivationLockRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceBypassActivationLockRequestBuilder {
+public class ManagedDeviceBypassActivationLockRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceBypassActivationLock
@@ -30,22 +29,22 @@ public class ManagedDeviceBypassActivationLockRequestBuilder extends BaseActionR
     }
 
     /**
-     * Creates the IManagedDeviceBypassActivationLockRequest
+     * Creates the ManagedDeviceBypassActivationLockRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceBypassActivationLockRequest instance
+     * @return the ManagedDeviceBypassActivationLockRequest instance
      */
-    public IManagedDeviceBypassActivationLockRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceBypassActivationLockRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceBypassActivationLockRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceBypassActivationLockRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceBypassActivationLockRequest instance
+     * @return the ManagedDeviceBypassActivationLockRequest instance
      */
-    public IManagedDeviceBypassActivationLockRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceBypassActivationLockRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceBypassActivationLockRequest request = new ManagedDeviceBypassActivationLockRequest(
                 getRequestUrl(),
                 getClient(),

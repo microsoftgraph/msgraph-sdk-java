@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Token Issuance Policy Request Builder.
  */
-public class TokenIssuancePolicyRequestBuilder extends BaseRequestBuilder implements ITokenIssuancePolicyRequestBuilder {
+public class TokenIssuancePolicyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TokenIssuancePolicy
@@ -35,9 +35,9 @@ public class TokenIssuancePolicyRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITokenIssuancePolicyRequest instance
+     * @return the TokenIssuancePolicyRequest instance
      */
-    public ITokenIssuancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TokenIssuancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,18 +45,18 @@ public class TokenIssuancePolicyRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITokenIssuancePolicyRequest instance
+     * @return the TokenIssuancePolicyRequest instance
      */
-    public ITokenIssuancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
+    public DirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
     }
 }

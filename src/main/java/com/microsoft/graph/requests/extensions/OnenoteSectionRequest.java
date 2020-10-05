@@ -9,13 +9,9 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
-import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Section Request.
  */
-public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectionRequest {
+public class OnenoteSectionRequest extends BaseRequest {
 	
     /**
      * The request for the OnenoteSection
@@ -147,7 +143,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @param value the select clause
      * @return the updated request
      */
-     public IOnenoteSectionRequest select(final String value) {
+     public OnenoteSectionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OnenoteSectionRequest)this;
      }
@@ -158,7 +154,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnenoteSectionRequest expand(final String value) {
+     public OnenoteSectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OnenoteSectionRequest)this;
      }

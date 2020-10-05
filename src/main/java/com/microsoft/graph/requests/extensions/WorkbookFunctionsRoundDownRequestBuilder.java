@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRoundDownRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRoundDownRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Round Down Request Builder.
  */
-public class WorkbookFunctionsRoundDownRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsRoundDownRequestBuilder {
+public class WorkbookFunctionsRoundDownRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsRoundDown
@@ -34,22 +33,22 @@ public class WorkbookFunctionsRoundDownRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsRoundDownRequest
+     * Creates the WorkbookFunctionsRoundDownRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRoundDownRequest instance
+     * @return the WorkbookFunctionsRoundDownRequest instance
      */
-    public IWorkbookFunctionsRoundDownRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsRoundDownRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsRoundDownRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsRoundDownRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRoundDownRequest instance
+     * @return the WorkbookFunctionsRoundDownRequest instance
      */
-    public IWorkbookFunctionsRoundDownRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsRoundDownRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsRoundDownRequest request = new WorkbookFunctionsRoundDownRequest(
                 getRequestUrl(),
                 getClient(),

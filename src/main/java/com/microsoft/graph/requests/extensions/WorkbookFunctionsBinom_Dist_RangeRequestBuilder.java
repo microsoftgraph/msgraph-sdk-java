@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBinom_Dist_RangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsBinom_Dist_RangeRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Binom_Dist_Range Request Builder.
  */
-public class WorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsBinom_Dist_RangeRequestBuilder {
+public class WorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsBinom_Dist_Range
@@ -38,22 +37,22 @@ public class WorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseActionR
     }
 
     /**
-     * Creates the IWorkbookFunctionsBinom_Dist_RangeRequest
+     * Creates the WorkbookFunctionsBinom_Dist_RangeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBinom_Dist_RangeRequest instance
+     * @return the WorkbookFunctionsBinom_Dist_RangeRequest instance
      */
-    public IWorkbookFunctionsBinom_Dist_RangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsBinom_Dist_RangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsBinom_Dist_RangeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsBinom_Dist_RangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBinom_Dist_RangeRequest instance
+     * @return the WorkbookFunctionsBinom_Dist_RangeRequest instance
      */
-    public IWorkbookFunctionsBinom_Dist_RangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsBinom_Dist_RangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBinom_Dist_RangeRequest request = new WorkbookFunctionsBinom_Dist_RangeRequest(
                 getRequestUrl(),
                 getClient(),

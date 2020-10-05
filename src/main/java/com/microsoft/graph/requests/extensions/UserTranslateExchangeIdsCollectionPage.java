@@ -12,7 +12,7 @@ import com.microsoft.graph.models.extensions.ConvertIdResult;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserTranslateExchangeIdsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionPage;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionResponse;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the User Translate Exchange Ids Collection Page.
  */
-public class UserTranslateExchangeIdsCollectionPage extends BaseCollectionPage<ConvertIdResult, IUserTranslateExchangeIdsCollectionRequestBuilder> implements IUserTranslateExchangeIdsCollectionPage {
+public class UserTranslateExchangeIdsCollectionPage extends BaseCollectionPage<ConvertIdResult, UserTranslateExchangeIdsCollectionRequestBuilder> {
 
     /**
      * A collection page for ConvertIdResult.
@@ -34,7 +34,7 @@ public class UserTranslateExchangeIdsCollectionPage extends BaseCollectionPage<C
      * @param response The serialized UserTranslateExchangeIdsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserTranslateExchangeIdsCollectionPage(final UserTranslateExchangeIdsCollectionResponse response, final IUserTranslateExchangeIdsCollectionRequestBuilder builder) {
+    public UserTranslateExchangeIdsCollectionPage(final UserTranslateExchangeIdsCollectionResponse response, final UserTranslateExchangeIdsCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMedianRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsMedianRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Median Request Builder.
  */
-public class WorkbookFunctionsMedianRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsMedianRequestBuilder {
+public class WorkbookFunctionsMedianRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsMedian
@@ -32,22 +31,22 @@ public class WorkbookFunctionsMedianRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsMedianRequest
+     * Creates the WorkbookFunctionsMedianRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMedianRequest instance
+     * @return the WorkbookFunctionsMedianRequest instance
      */
-    public IWorkbookFunctionsMedianRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsMedianRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsMedianRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsMedianRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMedianRequest instance
+     * @return the WorkbookFunctionsMedianRequest instance
      */
-    public IWorkbookFunctionsMedianRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsMedianRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsMedianRequest request = new WorkbookFunctionsMedianRequest(
                 getRequestUrl(),
                 getClient(),

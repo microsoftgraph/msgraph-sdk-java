@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrgContact;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
@@ -24,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Org Contact Reference Request Builder.
  */
-public class OrgContactReferenceRequestBuilder extends BaseRequestBuilder implements IOrgContactReferenceRequestBuilder {
+public class OrgContactReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OrgContact
@@ -41,9 +39,9 @@ public class OrgContactReferenceRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The IOrgContactReferenceRequest instance
+     * @return The OrgContactReferenceRequest instance
      */
-    public IOrgContactReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OrgContactReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,9 +49,9 @@ public class OrgContactReferenceRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOrgContactReferenceRequest instance
+     * @return the OrgContactReferenceRequest instance
      */
-    public IOrgContactReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OrgContactReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

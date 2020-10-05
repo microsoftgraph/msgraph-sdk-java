@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyC
 /**
  * The class for the Multi Value Legacy Extended Property Collection Page.
  */
-public class MultiValueLegacyExtendedPropertyCollectionPage extends BaseCollectionPage<MultiValueLegacyExtendedProperty, IMultiValueLegacyExtendedPropertyCollectionRequestBuilder> implements IMultiValueLegacyExtendedPropertyCollectionPage {
+public class MultiValueLegacyExtendedPropertyCollectionPage extends BaseCollectionPage<MultiValueLegacyExtendedProperty, MultiValueLegacyExtendedPropertyCollectionRequestBuilder> {
 
     /**
      * A collection page for MultiValueLegacyExtendedProperty
@@ -22,7 +22,7 @@ public class MultiValueLegacyExtendedPropertyCollectionPage extends BaseCollecti
      * @param response the serialized MultiValueLegacyExtendedPropertyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MultiValueLegacyExtendedPropertyCollectionPage(final MultiValueLegacyExtendedPropertyCollectionResponse response, final IMultiValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
+    public MultiValueLegacyExtendedPropertyCollectionPage(final MultiValueLegacyExtendedPropertyCollectionResponse response, final MultiValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

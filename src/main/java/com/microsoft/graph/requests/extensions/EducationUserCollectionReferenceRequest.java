@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.EducationUser;
 /**
  * The class for the Education User Collection Reference Request.
  */
-public class EducationUserCollectionReferenceRequest extends BaseCollectionRequest<EducationUserCollectionResponse, IEducationUserCollectionPage> implements IEducationUserCollectionReferenceRequest {
+public class EducationUserCollectionReferenceRequest extends BaseCollectionRequest<EducationUserCollectionResponse, EducationUserCollectionPage> {
 
     /**
      * The request builder for this collection of EducationUser
@@ -33,7 +33,7 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionReque
      * @param requestOptions the options for this request
      */
     public EducationUserCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EducationUserCollectionResponse.class, IEducationUserCollectionPage.class);
+        super(requestUrl, client, requestOptions, EducationUserCollectionResponse.class, EducationUserCollectionPage.class);
     }
 
     public void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
@@ -57,7 +57,7 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionReque
      * @param value the expand clause
      * @return the updated request
      */
-    public IEducationUserCollectionReferenceRequest expand(final String value) {
+    public EducationUserCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EducationUserCollectionReferenceRequest)this;
     }
@@ -68,7 +68,7 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionReque
      * @param value the filter clause
      * @return the updated request
      */
-    public IEducationUserCollectionReferenceRequest filter(final String value) {
+    public EducationUserCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EducationUserCollectionReferenceRequest)this;
     }
@@ -79,7 +79,7 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionReque
      * @param value the sort clause
      * @return the updated request
      */
-    public IEducationUserCollectionReferenceRequest orderBy(final String value) {
+    public EducationUserCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EducationUserCollectionReferenceRequest)this;
     }
@@ -90,7 +90,7 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionReque
      * @param value the select clause
      * @return the updated request
      */
-    public IEducationUserCollectionReferenceRequest select(final String value) {
+    public EducationUserCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EducationUserCollectionReferenceRequest)this;
     }
@@ -101,7 +101,7 @@ public class EducationUserCollectionReferenceRequest extends BaseCollectionReque
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IEducationUserCollectionReferenceRequest top(final int value) {
+    public EducationUserCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (EducationUserCollectionReferenceRequest)this;
     }

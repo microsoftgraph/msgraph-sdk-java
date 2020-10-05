@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Education User Collection Reference Request Builder.
  */
-public class EducationUserCollectionReferenceRequestBuilder extends BaseRequestBuilder implements IEducationUserCollectionReferenceRequestBuilder {
+public class EducationUserCollectionReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of EducationSchool
@@ -39,7 +39,7 @@ public class EducationUserCollectionReferenceRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEducationUserCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EducationUserCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +49,7 @@ public class EducationUserCollectionReferenceRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEducationUserCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationUserCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EducationUserCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

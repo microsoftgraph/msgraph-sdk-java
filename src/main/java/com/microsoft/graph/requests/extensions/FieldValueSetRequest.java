@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Field Value Set Request.
  */
-public class FieldValueSetRequest extends BaseRequest implements IFieldValueSetRequest {
+public class FieldValueSetRequest extends BaseRequest {
 	
     /**
      * The request for the FieldValueSet
@@ -138,7 +138,7 @@ public class FieldValueSetRequest extends BaseRequest implements IFieldValueSetR
      * @param value the select clause
      * @return the updated request
      */
-     public IFieldValueSetRequest select(final String value) {
+     public FieldValueSetRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (FieldValueSetRequest)this;
      }
@@ -149,7 +149,7 @@ public class FieldValueSetRequest extends BaseRequest implements IFieldValueSetR
      * @param value the expand clause
      * @return the updated request
      */
-     public IFieldValueSetRequest expand(final String value) {
+     public FieldValueSetRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (FieldValueSetRequest)this;
      }

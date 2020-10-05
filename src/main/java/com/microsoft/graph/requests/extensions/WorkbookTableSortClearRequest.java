@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableSortClearRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableSortClearRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Sort Clear Request.
  */
-public class WorkbookTableSortClearRequest extends BaseRequest implements IWorkbookTableSortClearRequest {
+public class WorkbookTableSortClearRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookTableSortClear

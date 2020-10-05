@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAcceptanceStatus;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Terms And Conditions Acceptance Status Request.
  */
-public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest implements ITermsAndConditionsAcceptanceStatusRequest {
+public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest {
 	
     /**
      * The request for the TermsAndConditionsAcceptanceStatus
@@ -140,7 +139,7 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-     public ITermsAndConditionsAcceptanceStatusRequest select(final String value) {
+     public TermsAndConditionsAcceptanceStatusRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TermsAndConditionsAcceptanceStatusRequest)this;
      }
@@ -151,7 +150,7 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-     public ITermsAndConditionsAcceptanceStatusRequest expand(final String value) {
+     public TermsAndConditionsAcceptanceStatusRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TermsAndConditionsAcceptanceStatusRequest)this;
      }

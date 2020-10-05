@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Chat Request.
  */
-public class ChatRequest extends BaseRequest implements IChatRequest {
+public class ChatRequest extends BaseRequest {
 	
     /**
      * The request for the Chat
@@ -139,7 +139,7 @@ public class ChatRequest extends BaseRequest implements IChatRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IChatRequest select(final String value) {
+     public ChatRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ChatRequest)this;
      }
@@ -150,7 +150,7 @@ public class ChatRequest extends BaseRequest implements IChatRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IChatRequest expand(final String value) {
+     public ChatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ChatRequest)this;
      }

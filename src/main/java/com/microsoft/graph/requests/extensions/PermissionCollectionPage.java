@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Permission;
-import com.microsoft.graph.requests.extensions.IPermissionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.PermissionCollectionResponse;
 /**
  * The class for the Permission Collection Page.
  */
-public class PermissionCollectionPage extends BaseCollectionPage<Permission, IPermissionCollectionRequestBuilder> implements IPermissionCollectionPage {
+public class PermissionCollectionPage extends BaseCollectionPage<Permission, PermissionCollectionRequestBuilder> {
 
     /**
      * A collection page for Permission
@@ -22,7 +22,7 @@ public class PermissionCollectionPage extends BaseCollectionPage<Permission, IPe
      * @param response the serialized PermissionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PermissionCollectionPage(final PermissionCollectionResponse response, final IPermissionCollectionRequestBuilder builder) {
+    public PermissionCollectionPage(final PermissionCollectionResponse response, final PermissionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

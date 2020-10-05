@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.Device;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.DeviceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.DeviceCollectionResponse;
 import com.microsoft.graph.models.extensions.Device;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Collection With References Page.
  */
-public class DeviceCollectionWithReferencesPage extends BaseCollectionPage<Device, IDeviceCollectionWithReferencesRequestBuilder> implements IDeviceCollectionWithReferencesPage {
+public class DeviceCollectionWithReferencesPage extends BaseCollectionPage<Device, DeviceCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for Device
@@ -34,7 +34,7 @@ public class DeviceCollectionWithReferencesPage extends BaseCollectionPage<Devic
      * @param response the serialized DeviceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceCollectionWithReferencesPage(final DeviceCollectionResponse response, final IDeviceCollectionWithReferencesRequestBuilder builder) {
+    public DeviceCollectionWithReferencesPage(final DeviceCollectionResponse response, final DeviceCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

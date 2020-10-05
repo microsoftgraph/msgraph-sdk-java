@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the App Role Assignment With Reference Request.
  */
-public class AppRoleAssignmentWithReferenceRequest extends BaseRequest implements IAppRoleAssignmentWithReferenceRequest {
+public class AppRoleAssignmentWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the AppRoleAssignment
@@ -78,9 +78,9 @@ public class AppRoleAssignmentWithReferenceRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-    public IAppRoleAssignmentWithReferenceRequest select(final String value) {
+    public AppRoleAssignmentWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IAppRoleAssignmentWithReferenceRequest)this;
+        return (AppRoleAssignmentWithReferenceRequest)this;
     }
 
     /**
@@ -89,7 +89,7 @@ public class AppRoleAssignmentWithReferenceRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-    public IAppRoleAssignmentWithReferenceRequest expand(final String value) {
+    public AppRoleAssignmentWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AppRoleAssignmentWithReferenceRequest)this;
     }

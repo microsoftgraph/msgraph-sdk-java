@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCothRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsCothRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Coth Request Builder.
  */
-public class WorkbookFunctionsCothRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsCothRequestBuilder {
+public class WorkbookFunctionsCothRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsCoth
@@ -32,22 +31,22 @@ public class WorkbookFunctionsCothRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsCothRequest
+     * Creates the WorkbookFunctionsCothRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCothRequest instance
+     * @return the WorkbookFunctionsCothRequest instance
      */
-    public IWorkbookFunctionsCothRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsCothRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsCothRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsCothRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCothRequest instance
+     * @return the WorkbookFunctionsCothRequest instance
      */
-    public IWorkbookFunctionsCothRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsCothRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCothRequest request = new WorkbookFunctionsCothRequest(
                 getRequestUrl(),
                 getClient(),

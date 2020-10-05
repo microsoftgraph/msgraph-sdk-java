@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionResp
 /**
  * The class for the Workbook Range Border Collection Page.
  */
-public class WorkbookRangeBorderCollectionPage extends BaseCollectionPage<WorkbookRangeBorder, IWorkbookRangeBorderCollectionRequestBuilder> implements IWorkbookRangeBorderCollectionPage {
+public class WorkbookRangeBorderCollectionPage extends BaseCollectionPage<WorkbookRangeBorder, WorkbookRangeBorderCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookRangeBorder
@@ -22,7 +22,7 @@ public class WorkbookRangeBorderCollectionPage extends BaseCollectionPage<Workbo
      * @param response the serialized WorkbookRangeBorderCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookRangeBorderCollectionPage(final WorkbookRangeBorderCollectionResponse response, final IWorkbookRangeBorderCollectionRequestBuilder builder) {
+    public WorkbookRangeBorderCollectionPage(final WorkbookRangeBorderCollectionResponse response, final WorkbookRangeBorderCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

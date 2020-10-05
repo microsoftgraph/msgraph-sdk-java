@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupValidatePropertiesRequest;
 import com.microsoft.graph.requests.extensions.GroupValidatePropertiesRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Group Validate Properties Request Builder.
  */
-public class GroupValidatePropertiesRequestBuilder extends BaseActionRequestBuilder implements IGroupValidatePropertiesRequestBuilder {
+public class GroupValidatePropertiesRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupValidateProperties
@@ -36,22 +35,22 @@ public class GroupValidatePropertiesRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IGroupValidatePropertiesRequest
+     * Creates the GroupValidatePropertiesRequest
      *
      * @param requestOptions the options for the request
-     * @return the IGroupValidatePropertiesRequest instance
+     * @return the GroupValidatePropertiesRequest instance
      */
-    public IGroupValidatePropertiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupValidatePropertiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IGroupValidatePropertiesRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the GroupValidatePropertiesRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IGroupValidatePropertiesRequest instance
+     * @return the GroupValidatePropertiesRequest instance
      */
-    public IGroupValidatePropertiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupValidatePropertiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupValidatePropertiesRequest request = new GroupValidatePropertiesRequest(
                 getRequestUrl(),
                 getClient(),

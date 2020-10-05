@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsChiSq_DistRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsChiSq_DistRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Chi Sq_Dist Request Builder.
  */
-public class WorkbookFunctionsChiSq_DistRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsChiSq_DistRequestBuilder {
+public class WorkbookFunctionsChiSq_DistRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsChiSq_Dist
@@ -36,22 +35,22 @@ public class WorkbookFunctionsChiSq_DistRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookFunctionsChiSq_DistRequest
+     * Creates the WorkbookFunctionsChiSq_DistRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsChiSq_DistRequest instance
+     * @return the WorkbookFunctionsChiSq_DistRequest instance
      */
-    public IWorkbookFunctionsChiSq_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsChiSq_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsChiSq_DistRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsChiSq_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsChiSq_DistRequest instance
+     * @return the WorkbookFunctionsChiSq_DistRequest instance
      */
-    public IWorkbookFunctionsChiSq_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsChiSq_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsChiSq_DistRequest request = new WorkbookFunctionsChiSq_DistRequest(
                 getRequestUrl(),
                 getClient(),

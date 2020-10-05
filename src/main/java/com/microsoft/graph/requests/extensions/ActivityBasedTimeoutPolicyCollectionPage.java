@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
-import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollect
 /**
  * The class for the Activity Based Timeout Policy Collection Page.
  */
-public class ActivityBasedTimeoutPolicyCollectionPage extends BaseCollectionPage<ActivityBasedTimeoutPolicy, IActivityBasedTimeoutPolicyCollectionRequestBuilder> implements IActivityBasedTimeoutPolicyCollectionPage {
+public class ActivityBasedTimeoutPolicyCollectionPage extends BaseCollectionPage<ActivityBasedTimeoutPolicy, ActivityBasedTimeoutPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for ActivityBasedTimeoutPolicy
@@ -22,7 +22,7 @@ public class ActivityBasedTimeoutPolicyCollectionPage extends BaseCollectionPage
      * @param response the serialized ActivityBasedTimeoutPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ActivityBasedTimeoutPolicyCollectionPage(final ActivityBasedTimeoutPolicyCollectionResponse response, final IActivityBasedTimeoutPolicyCollectionRequestBuilder builder) {
+    public ActivityBasedTimeoutPolicyCollectionPage(final ActivityBasedTimeoutPolicyCollectionResponse response, final ActivityBasedTimeoutPolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Certificate Based Auth Configuration Reference Request Builder.
  */
-public class CertificateBasedAuthConfigurationReferenceRequestBuilder extends BaseRequestBuilder implements ICertificateBasedAuthConfigurationReferenceRequestBuilder {
+public class CertificateBasedAuthConfigurationReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the CertificateBasedAuthConfiguration
@@ -37,9 +37,9 @@ public class CertificateBasedAuthConfigurationReferenceRequestBuilder extends Ba
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The ICertificateBasedAuthConfigurationReferenceRequest instance
+     * @return The CertificateBasedAuthConfigurationReferenceRequest instance
      */
-    public ICertificateBasedAuthConfigurationReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CertificateBasedAuthConfigurationReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class CertificateBasedAuthConfigurationReferenceRequestBuilder extends Ba
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICertificateBasedAuthConfigurationReferenceRequest instance
+     * @return the CertificateBasedAuthConfigurationReferenceRequest instance
      */
-    public ICertificateBasedAuthConfigurationReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CertificateBasedAuthConfigurationReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CertificateBasedAuthConfigurationReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

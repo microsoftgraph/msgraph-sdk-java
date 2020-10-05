@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.INotebookGetNotebookFromWebUrlRequest;
 import com.microsoft.graph.requests.extensions.NotebookGetNotebookFromWebUrlRequest;
 import com.microsoft.graph.models.extensions.CopyNotebookModel;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Notebook Get Notebook From Web Url Request Builder.
  */
-public class NotebookGetNotebookFromWebUrlRequestBuilder extends BaseActionRequestBuilder implements INotebookGetNotebookFromWebUrlRequestBuilder {
+public class NotebookGetNotebookFromWebUrlRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this NotebookGetNotebookFromWebUrl
@@ -32,22 +31,22 @@ public class NotebookGetNotebookFromWebUrlRequestBuilder extends BaseActionReque
     }
 
     /**
-     * Creates the INotebookGetNotebookFromWebUrlRequest
+     * Creates the NotebookGetNotebookFromWebUrlRequest
      *
      * @param requestOptions the options for the request
-     * @return the INotebookGetNotebookFromWebUrlRequest instance
+     * @return the NotebookGetNotebookFromWebUrlRequest instance
      */
-    public INotebookGetNotebookFromWebUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public NotebookGetNotebookFromWebUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the INotebookGetNotebookFromWebUrlRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the NotebookGetNotebookFromWebUrlRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the INotebookGetNotebookFromWebUrlRequest instance
+     * @return the NotebookGetNotebookFromWebUrlRequest instance
      */
-    public INotebookGetNotebookFromWebUrlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotebookGetNotebookFromWebUrlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         NotebookGetNotebookFromWebUrlRequest request = new NotebookGetNotebookFromWebUrlRequest(
                 getRequestUrl(),
                 getClient(),

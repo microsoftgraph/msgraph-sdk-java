@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatusesCollectionPage;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatusesCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the User Get Managed App Diagnostic Statuses Collection Page.
  */
-public class UserGetManagedAppDiagnosticStatusesCollectionPage extends BaseCollectionPage<ManagedAppDiagnosticStatus, IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder> implements IUserGetManagedAppDiagnosticStatusesCollectionPage {
+public class UserGetManagedAppDiagnosticStatusesCollectionPage extends BaseCollectionPage<ManagedAppDiagnosticStatus, UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedAppDiagnosticStatus.
@@ -33,7 +33,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionPage extends BaseColle
      * @param response The serialized UserGetManagedAppDiagnosticStatusesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserGetManagedAppDiagnosticStatusesCollectionPage(final UserGetManagedAppDiagnosticStatusesCollectionResponse response, final IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder builder) {
+    public UserGetManagedAppDiagnosticStatusesCollectionPage(final UserGetManagedAppDiagnosticStatusesCollectionResponse response, final UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

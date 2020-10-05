@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITeamArchiveRequest;
 import com.microsoft.graph.requests.extensions.TeamArchiveRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Team Archive Request Builder.
  */
-public class TeamArchiveRequestBuilder extends BaseActionRequestBuilder implements ITeamArchiveRequestBuilder {
+public class TeamArchiveRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this TeamArchive
@@ -32,22 +31,22 @@ public class TeamArchiveRequestBuilder extends BaseActionRequestBuilder implemen
     }
 
     /**
-     * Creates the ITeamArchiveRequest
+     * Creates the TeamArchiveRequest
      *
      * @param requestOptions the options for the request
-     * @return the ITeamArchiveRequest instance
+     * @return the TeamArchiveRequest instance
      */
-    public ITeamArchiveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamArchiveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ITeamArchiveRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the TeamArchiveRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ITeamArchiveRequest instance
+     * @return the TeamArchiveRequest instance
      */
-    public ITeamArchiveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamArchiveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TeamArchiveRequest request = new TeamArchiveRequest(
                 getRequestUrl(),
                 getClient(),

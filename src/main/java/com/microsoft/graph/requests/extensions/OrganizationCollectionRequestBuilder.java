@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.Organization;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequest;
+import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Organization Collection Request Builder.
  */
-public class OrganizationCollectionRequestBuilder extends BaseRequestBuilder implements IOrganizationCollectionRequestBuilder {
+public class OrganizationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Organization
@@ -41,7 +41,7 @@ public class OrganizationCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOrganizationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OrganizationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class OrganizationCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOrganizationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrganizationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OrganizationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOrganizationRequestBuilder byId(final String id) {
+    public OrganizationRequestBuilder byId(final String id) {
         return new OrganizationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

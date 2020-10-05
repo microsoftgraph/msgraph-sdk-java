@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsF_InvRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsF_InvRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions F_Inv Request Builder.
  */
-public class WorkbookFunctionsF_InvRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsF_InvRequestBuilder {
+public class WorkbookFunctionsF_InvRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsF_Inv
@@ -36,22 +35,22 @@ public class WorkbookFunctionsF_InvRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsF_InvRequest
+     * Creates the WorkbookFunctionsF_InvRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsF_InvRequest instance
+     * @return the WorkbookFunctionsF_InvRequest instance
      */
-    public IWorkbookFunctionsF_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsF_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsF_InvRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsF_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsF_InvRequest instance
+     * @return the WorkbookFunctionsF_InvRequest instance
      */
-    public IWorkbookFunctionsF_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsF_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsF_InvRequest request = new WorkbookFunctionsF_InvRequest(
                 getRequestUrl(),
                 getClient(),

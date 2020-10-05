@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartGridlines;
-import com.microsoft.graph.requests.extensions.IWorkbookChartGridlinesFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartGridlinesFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Gridlines Request.
  */
-public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkbookChartGridlinesRequest {
+public class WorkbookChartGridlinesRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookChartGridlines
@@ -140,7 +139,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartGridlinesRequest select(final String value) {
+     public WorkbookChartGridlinesRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookChartGridlinesRequest)this;
      }
@@ -151,7 +150,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartGridlinesRequest expand(final String value) {
+     public WorkbookChartGridlinesRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookChartGridlinesRequest)this;
      }

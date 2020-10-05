@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsApp;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teams App Request Builder.
  */
-public class TeamsAppRequestBuilder extends BaseRequestBuilder implements ITeamsAppRequestBuilder {
+public class TeamsAppRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TeamsApp
@@ -39,9 +37,9 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder implements ITeams
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsAppRequest instance
+     * @return the TeamsAppRequest instance
      */
-    public ITeamsAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder implements ITeams
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsAppRequest instance
+     * @return the TeamsAppRequest instance
      */
-    public ITeamsAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TeamsAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ITeamsAppDefinitionCollectionRequestBuilder appDefinitions() {
+    public TeamsAppDefinitionCollectionRequestBuilder appDefinitions() {
         return new TeamsAppDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions"), getClient(), null);
     }
 
-    public ITeamsAppDefinitionRequestBuilder appDefinitions(final String id) {
+    public TeamsAppDefinitionRequestBuilder appDefinitions(final String id) {
         return new TeamsAppDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions") + "/" + id, getClient(), null);
     }
 }

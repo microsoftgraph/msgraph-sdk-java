@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.MobileAppCategory;
 /**
  * The class for the Mobile App Category Collection Reference Request.
  */
-public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionRequest<MobileAppCategoryCollectionResponse, IMobileAppCategoryCollectionPage> implements IMobileAppCategoryCollectionReferenceRequest {
+public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionRequest<MobileAppCategoryCollectionResponse, MobileAppCategoryCollectionPage> {
 
     /**
      * The request builder for this collection of MobileAppCategory
@@ -33,7 +33,7 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public MobileAppCategoryCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, IMobileAppCategoryCollectionPage.class);
+        super(requestUrl, client, requestOptions, MobileAppCategoryCollectionResponse.class, MobileAppCategoryCollectionPage.class);
     }
 
     public void post(final MobileAppCategory newMobileAppCategory, final ICallback<? super MobileAppCategory> callback) {
@@ -57,7 +57,7 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionR
      * @param value the expand clause
      * @return the updated request
      */
-    public IMobileAppCategoryCollectionReferenceRequest expand(final String value) {
+    public MobileAppCategoryCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MobileAppCategoryCollectionReferenceRequest)this;
     }
@@ -68,7 +68,7 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionR
      * @param value the filter clause
      * @return the updated request
      */
-    public IMobileAppCategoryCollectionReferenceRequest filter(final String value) {
+    public MobileAppCategoryCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (MobileAppCategoryCollectionReferenceRequest)this;
     }
@@ -79,7 +79,7 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionR
      * @param value the sort clause
      * @return the updated request
      */
-    public IMobileAppCategoryCollectionReferenceRequest orderBy(final String value) {
+    public MobileAppCategoryCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (MobileAppCategoryCollectionReferenceRequest)this;
     }
@@ -90,7 +90,7 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionR
      * @param value the select clause
      * @return the updated request
      */
-    public IMobileAppCategoryCollectionReferenceRequest select(final String value) {
+    public MobileAppCategoryCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MobileAppCategoryCollectionReferenceRequest)this;
     }
@@ -101,7 +101,7 @@ public class MobileAppCategoryCollectionReferenceRequest extends BaseCollectionR
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IMobileAppCategoryCollectionReferenceRequest top(final int value) {
+    public MobileAppCategoryCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (MobileAppCategoryCollectionReferenceRequest)this;
     }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the License Details Request Builder.
  */
-public class LicenseDetailsRequestBuilder extends BaseRequestBuilder implements ILicenseDetailsRequestBuilder {
+public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the LicenseDetails
@@ -35,9 +35,9 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ILicenseDetailsRequest instance
+     * @return the LicenseDetailsRequest instance
      */
-    public ILicenseDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public LicenseDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ILicenseDetailsRequest instance
+     * @return the LicenseDetailsRequest instance
      */
-    public ILicenseDetailsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LicenseDetailsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.LicenseDetailsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

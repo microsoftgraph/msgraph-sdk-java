@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRemoteLockRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRemoteLockRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Remote Lock Request Builder.
  */
-public class ManagedDeviceRemoteLockRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceRemoteLockRequestBuilder {
+public class ManagedDeviceRemoteLockRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceRemoteLock
@@ -30,22 +29,22 @@ public class ManagedDeviceRemoteLockRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IManagedDeviceRemoteLockRequest
+     * Creates the ManagedDeviceRemoteLockRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceRemoteLockRequest instance
+     * @return the ManagedDeviceRemoteLockRequest instance
      */
-    public IManagedDeviceRemoteLockRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceRemoteLockRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceRemoteLockRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceRemoteLockRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceRemoteLockRequest instance
+     * @return the ManagedDeviceRemoteLockRequest instance
      */
-    public IManagedDeviceRemoteLockRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceRemoteLockRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceRemoteLockRequest request = new ManagedDeviceRemoteLockRequest(
                 getRequestUrl(),
                 getClient(),

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DriveItemVersion;
-import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRespons
 /**
  * The class for the Drive Item Version Collection Page.
  */
-public class DriveItemVersionCollectionPage extends BaseCollectionPage<DriveItemVersion, IDriveItemVersionCollectionRequestBuilder> implements IDriveItemVersionCollectionPage {
+public class DriveItemVersionCollectionPage extends BaseCollectionPage<DriveItemVersion, DriveItemVersionCollectionRequestBuilder> {
 
     /**
      * A collection page for DriveItemVersion
@@ -22,7 +22,7 @@ public class DriveItemVersionCollectionPage extends BaseCollectionPage<DriveItem
      * @param response the serialized DriveItemVersionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DriveItemVersionCollectionPage(final DriveItemVersionCollectionResponse response, final IDriveItemVersionCollectionRequestBuilder builder) {
+    public DriveItemVersionCollectionPage(final DriveItemVersionCollectionResponse response, final DriveItemVersionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

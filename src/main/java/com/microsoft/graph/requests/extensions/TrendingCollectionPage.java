@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Trending;
-import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TrendingCollectionPage;
 import com.microsoft.graph.requests.extensions.TrendingCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TrendingCollectionResponse;
 /**
  * The class for the Trending Collection Page.
  */
-public class TrendingCollectionPage extends BaseCollectionPage<Trending, ITrendingCollectionRequestBuilder> implements ITrendingCollectionPage {
+public class TrendingCollectionPage extends BaseCollectionPage<Trending, TrendingCollectionRequestBuilder> {
 
     /**
      * A collection page for Trending
@@ -22,7 +22,7 @@ public class TrendingCollectionPage extends BaseCollectionPage<Trending, ITrendi
      * @param response the serialized TrendingCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TrendingCollectionPage(final TrendingCollectionResponse response, final ITrendingCollectionRequestBuilder builder) {
+    public TrendingCollectionPage(final TrendingCollectionResponse response, final TrendingCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

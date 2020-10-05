@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.RecentNotebook;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionPage;
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Notebook Get Recent Notebooks Collection Page.
  */
-public class NotebookGetRecentNotebooksCollectionPage extends BaseCollectionPage<RecentNotebook, INotebookGetRecentNotebooksCollectionRequestBuilder> implements INotebookGetRecentNotebooksCollectionPage {
+public class NotebookGetRecentNotebooksCollectionPage extends BaseCollectionPage<RecentNotebook, NotebookGetRecentNotebooksCollectionRequestBuilder> {
 
     /**
      * A collection page for RecentNotebook.
@@ -33,7 +33,7 @@ public class NotebookGetRecentNotebooksCollectionPage extends BaseCollectionPage
      * @param response The serialized NotebookGetRecentNotebooksCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public NotebookGetRecentNotebooksCollectionPage(final NotebookGetRecentNotebooksCollectionResponse response, final INotebookGetRecentNotebooksCollectionRequestBuilder builder) {
+    public NotebookGetRecentNotebooksCollectionPage(final NotebookGetRecentNotebooksCollectionResponse response, final NotebookGetRecentNotebooksCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

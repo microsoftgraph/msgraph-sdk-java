@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Apple Push Notification Certificate Request Builder.
  */
-public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder implements IApplePushNotificationCertificateRequestBuilder {
+public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ApplePushNotificationCertificate
@@ -35,9 +35,9 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IApplePushNotificationCertificateRequest instance
+     * @return the ApplePushNotificationCertificateRequest instance
      */
-    public IApplePushNotificationCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplePushNotificationCertificateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,15 +45,15 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IApplePushNotificationCertificateRequest instance
+     * @return the ApplePushNotificationCertificateRequest instance
      */
-    public IApplePushNotificationCertificateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplePushNotificationCertificateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ApplePushNotificationCertificateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder downloadApplePushNotificationCertificateSigningRequest() {
+    public ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder downloadApplePushNotificationCertificateSigningRequest() {
         return new ApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.downloadApplePushNotificationCertificateSigningRequest"), getClient(), null);
     }
 }

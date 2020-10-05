@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.EducationSchool;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.EducationSchoolCollectionResponse
 /**
  * The class for the Education School Collection Page.
  */
-public class EducationSchoolCollectionPage extends BaseCollectionPage<EducationSchool, IEducationSchoolCollectionRequestBuilder> implements IEducationSchoolCollectionPage {
+public class EducationSchoolCollectionPage extends BaseCollectionPage<EducationSchool, EducationSchoolCollectionRequestBuilder> {
 
     /**
      * A collection page for EducationSchool
@@ -22,7 +22,7 @@ public class EducationSchoolCollectionPage extends BaseCollectionPage<EducationS
      * @param response the serialized EducationSchoolCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EducationSchoolCollectionPage(final EducationSchoolCollectionResponse response, final IEducationSchoolCollectionRequestBuilder builder) {
+    public EducationSchoolCollectionPage(final EducationSchoolCollectionResponse response, final EducationSchoolCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

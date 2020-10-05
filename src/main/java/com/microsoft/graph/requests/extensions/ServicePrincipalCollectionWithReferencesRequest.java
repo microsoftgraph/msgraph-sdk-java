@@ -23,7 +23,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Service Principal Collection With References Request.
  */
-public class ServicePrincipalCollectionWithReferencesRequest extends BaseCollectionRequest<ServicePrincipalCollectionResponse, IServicePrincipalCollectionPage> implements IServicePrincipalCollectionWithReferencesRequest {
+public class ServicePrincipalCollectionWithReferencesRequest extends BaseCollectionRequest<ServicePrincipalCollectionResponse, ServicePrincipalCollectionPage> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -33,10 +33,10 @@ public class ServicePrincipalCollectionWithReferencesRequest extends BaseCollect
      * @param requestOptions the options for this request
      */
     public ServicePrincipalCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, IServicePrincipalCollectionPage.class);
+        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IServicePrincipalCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super ServicePrincipalCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -50,38 +50,38 @@ public class ServicePrincipalCollectionWithReferencesRequest extends BaseCollect
         });
     }
 
-    public IServicePrincipalCollectionWithReferencesPage get() throws ClientException {
+    public ServicePrincipalCollectionWithReferencesPage get() throws ClientException {
         final ServicePrincipalCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IServicePrincipalCollectionWithReferencesRequest expand(final String value) {
+    public ServicePrincipalCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IServicePrincipalCollectionWithReferencesRequest filter(final String value) {
+    public ServicePrincipalCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IServicePrincipalCollectionWithReferencesRequest orderBy(final String value) {
+    public ServicePrincipalCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IServicePrincipalCollectionWithReferencesRequest select(final String value) {
+    public ServicePrincipalCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IServicePrincipalCollectionWithReferencesRequest top(final int value) {
+    public ServicePrincipalCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IServicePrincipalCollectionWithReferencesPage buildFromResponse(final ServicePrincipalCollectionResponse response) {
-        final IServicePrincipalCollectionWithReferencesRequestBuilder builder;
+    public ServicePrincipalCollectionWithReferencesPage buildFromResponse(final ServicePrincipalCollectionResponse response) {
+        final ServicePrincipalCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ServicePrincipalCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

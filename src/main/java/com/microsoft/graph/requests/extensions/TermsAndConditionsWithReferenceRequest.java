@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import java.util.Arrays;
@@ -30,7 +26,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Terms And Conditions With Reference Request.
  */
-public class TermsAndConditionsWithReferenceRequest extends BaseRequest implements ITermsAndConditionsWithReferenceRequest {
+public class TermsAndConditionsWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the TermsAndConditions
@@ -86,9 +82,9 @@ public class TermsAndConditionsWithReferenceRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-    public ITermsAndConditionsWithReferenceRequest select(final String value) {
+    public TermsAndConditionsWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ITermsAndConditionsWithReferenceRequest)this;
+        return (TermsAndConditionsWithReferenceRequest)this;
     }
 
     /**
@@ -97,7 +93,7 @@ public class TermsAndConditionsWithReferenceRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-    public ITermsAndConditionsWithReferenceRequest expand(final String value) {
+    public TermsAndConditionsWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TermsAndConditionsWithReferenceRequest)this;
     }

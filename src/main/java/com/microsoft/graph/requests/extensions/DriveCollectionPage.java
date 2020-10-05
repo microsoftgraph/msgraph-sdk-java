@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Drive;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DriveCollectionResponse;
 /**
  * The class for the Drive Collection Page.
  */
-public class DriveCollectionPage extends BaseCollectionPage<Drive, IDriveCollectionRequestBuilder> implements IDriveCollectionPage {
+public class DriveCollectionPage extends BaseCollectionPage<Drive, DriveCollectionRequestBuilder> {
 
     /**
      * A collection page for Drive
@@ -22,7 +22,7 @@ public class DriveCollectionPage extends BaseCollectionPage<Drive, IDriveCollect
      * @param response the serialized DriveCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DriveCollectionPage(final DriveCollectionResponse response, final IDriveCollectionRequestBuilder builder) {
+    public DriveCollectionPage(final DriveCollectionResponse response, final DriveCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

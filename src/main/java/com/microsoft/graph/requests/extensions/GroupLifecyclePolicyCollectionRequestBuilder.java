@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequest;
+import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Group Lifecycle Policy Collection Request Builder.
  */
-public class GroupLifecyclePolicyCollectionRequestBuilder extends BaseRequestBuilder implements IGroupLifecyclePolicyCollectionRequestBuilder {
+public class GroupLifecyclePolicyCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of GroupLifecyclePolicy
@@ -41,7 +41,7 @@ public class GroupLifecyclePolicyCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IGroupLifecyclePolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupLifecyclePolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class GroupLifecyclePolicyCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IGroupLifecyclePolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupLifecyclePolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupLifecyclePolicyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IGroupLifecyclePolicyRequestBuilder byId(final String id) {
+    public GroupLifecyclePolicyRequestBuilder byId(final String id) {
         return new GroupLifecyclePolicyRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

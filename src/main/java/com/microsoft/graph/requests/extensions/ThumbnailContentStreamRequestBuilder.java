@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Thumbnail Content Stream Request Builder.
  */
-public class ThumbnailContentStreamRequestBuilder extends BaseRequestBuilder implements IThumbnailContentStreamRequestBuilder {
+public class ThumbnailContentStreamRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ThumbnailContentStream
@@ -35,9 +35,9 @@ public class ThumbnailContentStreamRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IThumbnailContentStreamRequest instance
+     * @return the ThumbnailContentStreamRequest instance
      */
-    public IThumbnailContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ThumbnailContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ThumbnailContentStreamRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IThumbnailContentStreamRequest instance
+     * @return the ThumbnailContentStreamRequest instance
      */
-    public IThumbnailContentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThumbnailContentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ThumbnailContentStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

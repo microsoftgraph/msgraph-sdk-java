@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFillClearRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFillClearRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Fill Clear Request.
  */
-public class WorkbookRangeFillClearRequest extends BaseRequest implements IWorkbookRangeFillClearRequest {
+public class WorkbookRangeFillClearRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeFillClear

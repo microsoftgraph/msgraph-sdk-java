@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Assignment Request Builder.
  */
-public class MobileAppAssignmentRequestBuilder extends BaseRequestBuilder implements IMobileAppAssignmentRequestBuilder {
+public class MobileAppAssignmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MobileAppAssignment
@@ -35,9 +35,9 @@ public class MobileAppAssignmentRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppAssignmentRequest instance
+     * @return the MobileAppAssignmentRequest instance
      */
-    public IMobileAppAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileAppAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class MobileAppAssignmentRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppAssignmentRequest instance
+     * @return the MobileAppAssignmentRequest instance
      */
-    public IMobileAppAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MobileAppAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

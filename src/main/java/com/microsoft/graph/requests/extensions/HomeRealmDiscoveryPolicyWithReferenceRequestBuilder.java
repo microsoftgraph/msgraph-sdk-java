@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy With Reference Request Builder.
  */
-public class HomeRealmDiscoveryPolicyWithReferenceRequestBuilder extends BaseRequestBuilder implements IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder {
+public class HomeRealmDiscoveryPolicyWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the HomeRealmDiscoveryPolicy
@@ -36,9 +36,9 @@ public class HomeRealmDiscoveryPolicyWithReferenceRequestBuilder extends BaseReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IHomeRealmDiscoveryPolicyWithReferenceRequest instance
+     * @return the HomeRealmDiscoveryPolicyWithReferenceRequest instance
      */
-    public IHomeRealmDiscoveryPolicyWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public HomeRealmDiscoveryPolicyWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,13 +46,13 @@ public class HomeRealmDiscoveryPolicyWithReferenceRequestBuilder extends BaseReq
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IHomeRealmDiscoveryPolicyWithReferenceRequest instance
+     * @return the HomeRealmDiscoveryPolicyWithReferenceRequest instance
      */
-    public IHomeRealmDiscoveryPolicyWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new HomeRealmDiscoveryPolicyWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IHomeRealmDiscoveryPolicyReferenceRequestBuilder reference(){
+    public HomeRealmDiscoveryPolicyReferenceRequestBuilder reference(){
         return new HomeRealmDiscoveryPolicyReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

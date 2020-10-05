@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Team General Configuration Request.
  */
-public class Windows10TeamGeneralConfigurationRequest extends BaseRequest implements IWindows10TeamGeneralConfigurationRequest {
+public class Windows10TeamGeneralConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the Windows10TeamGeneralConfiguration
@@ -138,7 +138,7 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10TeamGeneralConfigurationRequest select(final String value) {
+     public Windows10TeamGeneralConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (Windows10TeamGeneralConfigurationRequest)this;
      }
@@ -149,7 +149,7 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10TeamGeneralConfigurationRequest expand(final String value) {
+     public Windows10TeamGeneralConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (Windows10TeamGeneralConfigurationRequest)this;
      }

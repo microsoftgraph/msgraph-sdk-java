@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPowerRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsPowerRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Power Request Builder.
  */
-public class WorkbookFunctionsPowerRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsPowerRequestBuilder {
+public class WorkbookFunctionsPowerRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsPower
@@ -34,22 +33,22 @@ public class WorkbookFunctionsPowerRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsPowerRequest
+     * Creates the WorkbookFunctionsPowerRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPowerRequest instance
+     * @return the WorkbookFunctionsPowerRequest instance
      */
-    public IWorkbookFunctionsPowerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsPowerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsPowerRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsPowerRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPowerRequest instance
+     * @return the WorkbookFunctionsPowerRequest instance
      */
-    public IWorkbookFunctionsPowerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsPowerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsPowerRequest request = new WorkbookFunctionsPowerRequest(
                 getRequestUrl(),
                 getClient(),

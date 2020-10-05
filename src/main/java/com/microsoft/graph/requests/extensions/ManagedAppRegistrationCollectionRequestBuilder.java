@@ -12,10 +12,10 @@ import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionRequest;
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionRequest;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Registration Collection Request Builder.
  */
-public class ManagedAppRegistrationCollectionRequestBuilder extends BaseRequestBuilder implements IManagedAppRegistrationCollectionRequestBuilder {
+public class ManagedAppRegistrationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceAppManagement
@@ -43,7 +43,7 @@ public class ManagedAppRegistrationCollectionRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppRegistrationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppRegistrationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,17 +53,17 @@ public class ManagedAppRegistrationCollectionRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppRegistrationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppRegistrationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedAppRegistrationRequestBuilder byId(final String id) {
+    public ManagedAppRegistrationRequestBuilder byId(final String id) {
         return new ManagedAppRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder getUserIdsWithFlaggedAppRegistration() {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder getUserIdsWithFlaggedAppRegistration() {
         return new ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUserIdsWithFlaggedAppRegistration"), getClient(), null);
     }
 }

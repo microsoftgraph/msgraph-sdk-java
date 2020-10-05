@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCountBlankRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsCountBlankRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Count Blank Request Builder.
  */
-public class WorkbookFunctionsCountBlankRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsCountBlankRequestBuilder {
+public class WorkbookFunctionsCountBlankRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsCountBlank
@@ -32,22 +31,22 @@ public class WorkbookFunctionsCountBlankRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookFunctionsCountBlankRequest
+     * Creates the WorkbookFunctionsCountBlankRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCountBlankRequest instance
+     * @return the WorkbookFunctionsCountBlankRequest instance
      */
-    public IWorkbookFunctionsCountBlankRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsCountBlankRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsCountBlankRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsCountBlankRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCountBlankRequest instance
+     * @return the WorkbookFunctionsCountBlankRequest instance
      */
-    public IWorkbookFunctionsCountBlankRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsCountBlankRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCountBlankRequest request = new WorkbookFunctionsCountBlankRequest(
                 getRequestUrl(),
                 getClient(),

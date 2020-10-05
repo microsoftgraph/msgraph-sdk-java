@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Policy Device State Summary Request Builder.
  */
-public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequestBuilder implements IDeviceCompliancePolicyDeviceStateSummaryRequestBuilder {
+public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceCompliancePolicyDeviceStateSummary
@@ -35,9 +35,9 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceCompliancePolicyDeviceStateSummaryRequest instance
+     * @return the DeviceCompliancePolicyDeviceStateSummaryRequest instance
      */
-    public IDeviceCompliancePolicyDeviceStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceCompliancePolicyDeviceStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceCompliancePolicyDeviceStateSummaryRequest instance
+     * @return the DeviceCompliancePolicyDeviceStateSummaryRequest instance
      */
-    public IDeviceCompliancePolicyDeviceStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyDeviceStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceCompliancePolicyDeviceStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

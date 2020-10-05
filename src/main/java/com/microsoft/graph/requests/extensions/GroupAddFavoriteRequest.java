@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupAddFavoriteRequest;
 import com.microsoft.graph.requests.extensions.GroupAddFavoriteRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Add Favorite Request.
  */
-public class GroupAddFavoriteRequest extends BaseRequest implements IGroupAddFavoriteRequest {
+public class GroupAddFavoriteRequest extends BaseRequest {
 
     /**
      * The request for this GroupAddFavorite

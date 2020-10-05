@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRank_EqRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRank_EqRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Rank_Eq Request Builder.
  */
-public class WorkbookFunctionsRank_EqRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsRank_EqRequestBuilder {
+public class WorkbookFunctionsRank_EqRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsRank_Eq
@@ -36,22 +35,22 @@ public class WorkbookFunctionsRank_EqRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsRank_EqRequest
+     * Creates the WorkbookFunctionsRank_EqRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRank_EqRequest instance
+     * @return the WorkbookFunctionsRank_EqRequest instance
      */
-    public IWorkbookFunctionsRank_EqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsRank_EqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsRank_EqRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsRank_EqRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRank_EqRequest instance
+     * @return the WorkbookFunctionsRank_EqRequest instance
      */
-    public IWorkbookFunctionsRank_EqRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsRank_EqRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsRank_EqRequest request = new WorkbookFunctionsRank_EqRequest(
                 getRequestUrl(),
                 getClient(),

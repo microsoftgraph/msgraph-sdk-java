@@ -26,8 +26,8 @@ import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.UserCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.UserCollectionResponse;
 import com.microsoft.graph.models.extensions.User;
 import com.google.gson.JsonObject;
@@ -40,7 +40,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the User Collection With References Page.
  */
-public class UserCollectionWithReferencesPage extends BaseCollectionPage<User, IUserCollectionWithReferencesRequestBuilder> implements IUserCollectionWithReferencesPage {
+public class UserCollectionWithReferencesPage extends BaseCollectionPage<User, UserCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for User
@@ -48,7 +48,7 @@ public class UserCollectionWithReferencesPage extends BaseCollectionPage<User, I
      * @param response the serialized UserCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UserCollectionWithReferencesPage(final UserCollectionResponse response, final IUserCollectionWithReferencesRequestBuilder builder) {
+    public UserCollectionWithReferencesPage(final UserCollectionResponse response, final UserCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

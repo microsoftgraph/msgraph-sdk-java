@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Table Row Request Builder.
  */
-public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder implements IWorkbookTableRowRequestBuilder {
+public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookTableRow
@@ -36,9 +36,9 @@ public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookTableRowRequest instance
+     * @return the WorkbookTableRowRequest instance
      */
-    public IWorkbookTableRowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableRowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,15 +46,15 @@ public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookTableRowRequest instance
+     * @return the WorkbookTableRowRequest instance
      */
-    public IWorkbookTableRowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableRowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookTableRowRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IWorkbookTableRowRangeRequestBuilder range() {
+    public WorkbookTableRowRangeRequestBuilder range() {
         return new WorkbookTableRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 }

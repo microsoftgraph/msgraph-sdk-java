@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Site Collection Reference Request Builder.
  */
-public class SiteCollectionReferenceRequestBuilder extends BaseRequestBuilder implements ISiteCollectionReferenceRequestBuilder {
+public class SiteCollectionReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -40,7 +40,7 @@ public class SiteCollectionReferenceRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISiteCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SiteCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,7 +50,7 @@ public class SiteCollectionReferenceRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISiteCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SiteCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityFileCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityFileCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Office365Groups Activity File Counts Request Builder.
  */
-public class ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetOffice365GroupsActivityFileCountsRequestBuilder {
+public class ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetOffice365GroupsActivityFileCounts
@@ -32,22 +31,22 @@ public class ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder extend
     }
 
     /**
-     * Creates the IReportRootGetOffice365GroupsActivityFileCountsRequest
+     * Creates the ReportRootGetOffice365GroupsActivityFileCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOffice365GroupsActivityFileCountsRequest instance
+     * @return the ReportRootGetOffice365GroupsActivityFileCountsRequest instance
      */
-    public IReportRootGetOffice365GroupsActivityFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetOffice365GroupsActivityFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetOffice365GroupsActivityFileCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetOffice365GroupsActivityFileCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOffice365GroupsActivityFileCountsRequest instance
+     * @return the ReportRootGetOffice365GroupsActivityFileCountsRequest instance
      */
-    public IReportRootGetOffice365GroupsActivityFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetOffice365GroupsActivityFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOffice365GroupsActivityFileCountsRequest request = new ReportRootGetOffice365GroupsActivityFileCountsRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAveDevRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAveDevRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Ave Dev Request Builder.
  */
-public class WorkbookFunctionsAveDevRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsAveDevRequestBuilder {
+public class WorkbookFunctionsAveDevRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsAveDev
@@ -32,22 +31,22 @@ public class WorkbookFunctionsAveDevRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsAveDevRequest
+     * Creates the WorkbookFunctionsAveDevRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAveDevRequest instance
+     * @return the WorkbookFunctionsAveDevRequest instance
      */
-    public IWorkbookFunctionsAveDevRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsAveDevRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsAveDevRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsAveDevRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAveDevRequest instance
+     * @return the WorkbookFunctionsAveDevRequest instance
      */
-    public IWorkbookFunctionsAveDevRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsAveDevRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsAveDevRequest request = new WorkbookFunctionsAveDevRequest(
                 getRequestUrl(),
                 getClient(),

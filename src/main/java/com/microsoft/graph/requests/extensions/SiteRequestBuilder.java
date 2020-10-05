@@ -9,33 +9,19 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -47,7 +33,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Site Request Builder.
  */
-public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteRequestBuilder {
+public class SiteRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Site
@@ -64,9 +50,9 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISiteRequest instance
+     * @return the SiteRequest instance
      */
-    public ISiteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SiteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -74,9 +60,9 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISiteRequest instance
+     * @return the SiteRequest instance
      */
-    public ISiteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SiteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -85,99 +71,99 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder createdByUser() {
+    public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+    public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     /**
      * Gets the request builder for ItemAnalytics
      *
-     * @return the IItemAnalyticsWithReferenceRequestBuilder instance
+     * @return the ItemAnalyticsWithReferenceRequestBuilder instance
      */
-    public IItemAnalyticsWithReferenceRequestBuilder analytics() {
+    public ItemAnalyticsWithReferenceRequestBuilder analytics() {
         return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
-    public IColumnDefinitionCollectionRequestBuilder columns() {
+    public ColumnDefinitionCollectionRequestBuilder columns() {
         return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
-    public IColumnDefinitionRequestBuilder columns(final String id) {
+    public ColumnDefinitionRequestBuilder columns(final String id) {
         return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
-    public IContentTypeCollectionRequestBuilder contentTypes() {
+    public ContentTypeCollectionRequestBuilder contentTypes() {
         return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
     }
 
-    public IContentTypeRequestBuilder contentTypes(final String id) {
+    public ContentTypeRequestBuilder contentTypes(final String id) {
         return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Drive
      *
-     * @return the IDriveRequestBuilder instance
+     * @return the DriveRequestBuilder instance
      */
-    public IDriveRequestBuilder drive() {
+    public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
-    public IDriveCollectionRequestBuilder drives() {
+    public DriveCollectionRequestBuilder drives() {
         return new DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
     }
 
-    public IDriveRequestBuilder drives(final String id) {
+    public DriveRequestBuilder drives(final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
-    public IBaseItemCollectionRequestBuilder items() {
+    public BaseItemCollectionRequestBuilder items() {
         return new BaseItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
-    public IBaseItemRequestBuilder items(final String id) {
+    public BaseItemRequestBuilder items(final String id) {
         return new BaseItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
-    public IListCollectionRequestBuilder lists() {
+    public ListCollectionRequestBuilder lists() {
         return new ListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
     }
 
-    public IListRequestBuilder lists(final String id) {
+    public ListRequestBuilder lists(final String id) {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
     }
-    public ISiteCollectionRequestBuilder sites() {
+    public SiteCollectionRequestBuilder sites() {
         return new SiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sites"), getClient(), null);
     }
 
-    public ISiteRequestBuilder sites(final String id) {
+    public SiteRequestBuilder sites(final String id) {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Onenote
      *
-     * @return the IOnenoteRequestBuilder instance
+     * @return the OnenoteRequestBuilder instance
      */
-    public IOnenoteRequestBuilder onenote() {
+    public OnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
 
-    public ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
+    public SiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
         return new SiteGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
     }
 
-    public ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {
+    public SiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {
         return new SiteGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);
     }
 
-    public ISiteGetByPathRequestBuilder getByPath(final String path) {
+    public SiteGetByPathRequestBuilder getByPath(final String path) {
         return new SiteGetByPathRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByPath"), getClient(), null, path);
     }
 }

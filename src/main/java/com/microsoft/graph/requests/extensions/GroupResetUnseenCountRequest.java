@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupResetUnseenCountRequest;
 import com.microsoft.graph.requests.extensions.GroupResetUnseenCountRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Reset Unseen Count Request.
  */
-public class GroupResetUnseenCountRequest extends BaseRequest implements IGroupResetUnseenCountRequest {
+public class GroupResetUnseenCountRequest extends BaseRequest {
 
     /**
      * The request for this GroupResetUnseenCount

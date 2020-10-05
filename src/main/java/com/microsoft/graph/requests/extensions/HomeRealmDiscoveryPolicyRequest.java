@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Home Realm Discovery Policy Request.
  */
-public class HomeRealmDiscoveryPolicyRequest extends BaseRequest implements IHomeRealmDiscoveryPolicyRequest {
+public class HomeRealmDiscoveryPolicyRequest extends BaseRequest {
 	
     /**
      * The request for the HomeRealmDiscoveryPolicy
@@ -138,7 +138,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest implements IHom
      * @param value the select clause
      * @return the updated request
      */
-     public IHomeRealmDiscoveryPolicyRequest select(final String value) {
+     public HomeRealmDiscoveryPolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (HomeRealmDiscoveryPolicyRequest)this;
      }
@@ -149,7 +149,7 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest implements IHom
      * @param value the expand clause
      * @return the updated request
      */
-     public IHomeRealmDiscoveryPolicyRequest expand(final String value) {
+     public HomeRealmDiscoveryPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (HomeRealmDiscoveryPolicyRequest)this;
      }

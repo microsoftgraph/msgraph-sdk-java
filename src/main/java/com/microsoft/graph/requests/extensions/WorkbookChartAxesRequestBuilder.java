@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAxes;
-import com.microsoft.graph.requests.extensions.IWorkbookChartAxisRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartAxisRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -20,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Axes Request Builder.
  */
-public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder implements IWorkbookChartAxesRequestBuilder {
+public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookChartAxes
@@ -37,9 +36,9 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartAxesRequest instance
+     * @return the WorkbookChartAxesRequest instance
      */
-    public IWorkbookChartAxesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartAxesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +46,9 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartAxesRequest instance
+     * @return the WorkbookChartAxesRequest instance
      */
-    public IWorkbookChartAxesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAxesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartAxesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,27 +57,27 @@ public class WorkbookChartAxesRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Gets the request builder for WorkbookChartAxis
      *
-     * @return the IWorkbookChartAxisRequestBuilder instance
+     * @return the WorkbookChartAxisRequestBuilder instance
      */
-    public IWorkbookChartAxisRequestBuilder categoryAxis() {
+    public WorkbookChartAxisRequestBuilder categoryAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("categoryAxis"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartAxis
      *
-     * @return the IWorkbookChartAxisRequestBuilder instance
+     * @return the WorkbookChartAxisRequestBuilder instance
      */
-    public IWorkbookChartAxisRequestBuilder seriesAxis() {
+    public WorkbookChartAxisRequestBuilder seriesAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("seriesAxis"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartAxis
      *
-     * @return the IWorkbookChartAxisRequestBuilder instance
+     * @return the WorkbookChartAxisRequestBuilder instance
      */
-    public IWorkbookChartAxisRequestBuilder valueAxis() {
+    public WorkbookChartAxisRequestBuilder valueAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("valueAxis"), getClient(), null);
     }
 }

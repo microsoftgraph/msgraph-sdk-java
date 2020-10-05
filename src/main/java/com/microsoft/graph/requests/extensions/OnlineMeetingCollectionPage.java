@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
-import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionPage;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionResponse;
 /**
  * The class for the Online Meeting Collection Page.
  */
-public class OnlineMeetingCollectionPage extends BaseCollectionPage<OnlineMeeting, IOnlineMeetingCollectionRequestBuilder> implements IOnlineMeetingCollectionPage {
+public class OnlineMeetingCollectionPage extends BaseCollectionPage<OnlineMeeting, OnlineMeetingCollectionRequestBuilder> {
 
     /**
      * A collection page for OnlineMeeting
@@ -22,7 +22,7 @@ public class OnlineMeetingCollectionPage extends BaseCollectionPage<OnlineMeetin
      * @param response the serialized OnlineMeetingCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OnlineMeetingCollectionPage(final OnlineMeetingCollectionResponse response, final IOnlineMeetingCollectionRequestBuilder builder) {
+    public OnlineMeetingCollectionPage(final OnlineMeetingCollectionResponse response, final OnlineMeetingCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

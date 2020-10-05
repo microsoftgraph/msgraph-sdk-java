@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Setting State Device Summary Request.
  */
-public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISettingStateDeviceSummaryRequest {
+public class SettingStateDeviceSummaryRequest extends BaseRequest {
 	
     /**
      * The request for the SettingStateDeviceSummary
@@ -138,7 +138,7 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @param value the select clause
      * @return the updated request
      */
-     public ISettingStateDeviceSummaryRequest select(final String value) {
+     public SettingStateDeviceSummaryRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SettingStateDeviceSummaryRequest)this;
      }
@@ -149,7 +149,7 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @param value the expand clause
      * @return the updated request
      */
-     public ISettingStateDeviceSummaryRequest expand(final String value) {
+     public SettingStateDeviceSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SettingStateDeviceSummaryRequest)this;
      }

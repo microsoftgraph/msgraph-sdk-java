@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentTopFailuresRequest;
 import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentTopFailuresRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Managed Device Enrollment Top Failures Request Builder.
  */
-public class ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder {
+public class ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootManagedDeviceEnrollmentTopFailures
@@ -43,22 +42,22 @@ public class ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder extends 
     }
 
     /**
-     * Creates the IReportRootManagedDeviceEnrollmentTopFailuresRequest
+     * Creates the ReportRootManagedDeviceEnrollmentTopFailuresRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootManagedDeviceEnrollmentTopFailuresRequest instance
+     * @return the ReportRootManagedDeviceEnrollmentTopFailuresRequest instance
      */
-    public IReportRootManagedDeviceEnrollmentTopFailuresRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootManagedDeviceEnrollmentTopFailuresRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootManagedDeviceEnrollmentTopFailuresRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootManagedDeviceEnrollmentTopFailuresRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootManagedDeviceEnrollmentTopFailuresRequest instance
+     * @return the ReportRootManagedDeviceEnrollmentTopFailuresRequest instance
      */
-    public IReportRootManagedDeviceEnrollmentTopFailuresRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootManagedDeviceEnrollmentTopFailuresRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootManagedDeviceEnrollmentTopFailuresRequest request = new ReportRootManagedDeviceEnrollmentTopFailuresRequest(
                 getRequestUrl(),
                 getClient(),

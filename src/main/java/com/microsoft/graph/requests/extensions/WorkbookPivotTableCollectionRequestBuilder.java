@@ -12,10 +12,10 @@ import com.microsoft.graph.models.extensions.WorkbookPivotTable;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWorkbookPivotTableCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookPivotTableCollectionRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRefreshAllRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookPivotTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequest;
+import com.microsoft.graph.requests.extensions.WorkbookPivotTableRefreshAllRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Pivot Table Collection Request Builder.
  */
-public class WorkbookPivotTableCollectionRequestBuilder extends BaseRequestBuilder implements IWorkbookPivotTableCollectionRequestBuilder {
+public class WorkbookPivotTableCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of WorkbookWorksheet
@@ -43,7 +43,7 @@ public class WorkbookPivotTableCollectionRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookPivotTableCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookPivotTableCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,17 +53,17 @@ public class WorkbookPivotTableCollectionRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookPivotTableCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookPivotTableCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookPivotTableCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookPivotTableRequestBuilder byId(final String id) {
+    public WorkbookPivotTableRequestBuilder byId(final String id) {
         return new WorkbookPivotTableRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IWorkbookPivotTableRefreshAllRequestBuilder refreshAll() {
+    public WorkbookPivotTableRefreshAllRequestBuilder refreshAll() {
         return new WorkbookPivotTableRefreshAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refreshAll"), getClient(), null);
     }
 }

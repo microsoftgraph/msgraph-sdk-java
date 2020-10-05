@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ListItemVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IListItemVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemVersionCollectionRequest;
+import com.microsoft.graph.requests.extensions.ListItemVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListItemVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListItemVersionCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the List Item Version Collection Request Builder.
  */
-public class ListItemVersionCollectionRequestBuilder extends BaseRequestBuilder implements IListItemVersionCollectionRequestBuilder {
+public class ListItemVersionCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ListItem
@@ -42,7 +42,7 @@ public class ListItemVersionCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IListItemVersionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ListItemVersionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ListItemVersionCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IListItemVersionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemVersionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ListItemVersionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IListItemVersionRequestBuilder byId(final String id) {
+    public ListItemVersionRequestBuilder byId(final String id) {
         return new ListItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Worksheet Protection Request Builder.
  */
-public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilder implements IWorkbookWorksheetProtectionRequestBuilder {
+public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookWorksheetProtection
@@ -36,9 +36,9 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookWorksheetProtectionRequest instance
+     * @return the WorkbookWorksheetProtectionRequest instance
      */
-    public IWorkbookWorksheetProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookWorksheetProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,19 +46,19 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookWorksheetProtectionRequest instance
+     * @return the WorkbookWorksheetProtectionRequest instance
      */
-    public IWorkbookWorksheetProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookWorksheetProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IWorkbookWorksheetProtectionProtectRequestBuilder protect(final WorkbookWorksheetProtectionOptions options) {
+    public WorkbookWorksheetProtectionProtectRequestBuilder protect(final WorkbookWorksheetProtectionOptions options) {
         return new WorkbookWorksheetProtectionProtectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.protect"), getClient(), null, options);
     }
 
-    public IWorkbookWorksheetProtectionUnprotectRequestBuilder unprotect() {
+    public WorkbookWorksheetProtectionUnprotectRequestBuilder unprotect() {
         return new WorkbookWorksheetProtectionUnprotectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unprotect"), getClient(), null);
     }
 }

@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Managed Device Overview With Reference Request.
  */
-public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest implements IManagedDeviceOverviewWithReferenceRequest {
+public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the ManagedDeviceOverview
@@ -78,9 +78,9 @@ public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-    public IManagedDeviceOverviewWithReferenceRequest select(final String value) {
+    public ManagedDeviceOverviewWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IManagedDeviceOverviewWithReferenceRequest)this;
+        return (ManagedDeviceOverviewWithReferenceRequest)this;
     }
 
     /**
@@ -89,7 +89,7 @@ public class ManagedDeviceOverviewWithReferenceRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-    public IManagedDeviceOverviewWithReferenceRequest expand(final String value) {
+    public ManagedDeviceOverviewWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedDeviceOverviewWithReferenceRequest)this;
     }

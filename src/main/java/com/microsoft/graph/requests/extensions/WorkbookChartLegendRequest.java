@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartLegend;
-import com.microsoft.graph.requests.extensions.IWorkbookChartLegendFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartLegendFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Legend Request.
  */
-public class WorkbookChartLegendRequest extends BaseRequest implements IWorkbookChartLegendRequest {
+public class WorkbookChartLegendRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookChartLegend
@@ -140,7 +139,7 @@ public class WorkbookChartLegendRequest extends BaseRequest implements IWorkbook
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartLegendRequest select(final String value) {
+     public WorkbookChartLegendRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookChartLegendRequest)this;
      }
@@ -151,7 +150,7 @@ public class WorkbookChartLegendRequest extends BaseRequest implements IWorkbook
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartLegendRequest expand(final String value) {
+     public WorkbookChartLegendRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookChartLegendRequest)this;
      }

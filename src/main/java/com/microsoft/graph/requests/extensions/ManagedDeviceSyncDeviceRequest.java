@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceSyncDeviceRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceSyncDeviceRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Sync Device Request.
  */
-public class ManagedDeviceSyncDeviceRequest extends BaseRequest implements IManagedDeviceSyncDeviceRequest {
+public class ManagedDeviceSyncDeviceRequest extends BaseRequest {
 
     /**
      * The request for this ManagedDeviceSyncDevice

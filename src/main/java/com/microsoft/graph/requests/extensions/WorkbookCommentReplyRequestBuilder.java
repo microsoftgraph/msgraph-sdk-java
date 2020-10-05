@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Comment Reply Request Builder.
  */
-public class WorkbookCommentReplyRequestBuilder extends BaseRequestBuilder implements IWorkbookCommentReplyRequestBuilder {
+public class WorkbookCommentReplyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookCommentReply
@@ -35,9 +35,9 @@ public class WorkbookCommentReplyRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookCommentReplyRequest instance
+     * @return the WorkbookCommentReplyRequest instance
      */
-    public IWorkbookCommentReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookCommentReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class WorkbookCommentReplyRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookCommentReplyRequest instance
+     * @return the WorkbookCommentReplyRequest instance
      */
-    public IWorkbookCommentReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookCommentReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookCommentReplyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

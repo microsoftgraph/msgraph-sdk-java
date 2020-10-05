@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Endpoint Request Builder.
  */
-public class EndpointRequestBuilder extends BaseRequestBuilder implements IEndpointRequestBuilder {
+public class EndpointRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Endpoint
@@ -35,9 +35,9 @@ public class EndpointRequestBuilder extends BaseRequestBuilder implements IEndpo
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEndpointRequest instance
+     * @return the EndpointRequest instance
      */
-    public IEndpointRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EndpointRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class EndpointRequestBuilder extends BaseRequestBuilder implements IEndpo
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEndpointRequest instance
+     * @return the EndpointRequest instance
      */
-    public IEndpointRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EndpointRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EndpointRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

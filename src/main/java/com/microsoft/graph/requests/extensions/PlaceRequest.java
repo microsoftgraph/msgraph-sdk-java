@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Place Request.
  */
-public class PlaceRequest extends BaseRequest implements IPlaceRequest {
+public class PlaceRequest extends BaseRequest {
 	
     /**
      * The request for the Place
@@ -153,7 +153,7 @@ public class PlaceRequest extends BaseRequest implements IPlaceRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IPlaceRequest select(final String value) {
+     public PlaceRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PlaceRequest)this;
      }
@@ -164,7 +164,7 @@ public class PlaceRequest extends BaseRequest implements IPlaceRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IPlaceRequest expand(final String value) {
+     public PlaceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PlaceRequest)this;
      }

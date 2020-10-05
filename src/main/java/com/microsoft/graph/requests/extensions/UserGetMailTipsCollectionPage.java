@@ -13,7 +13,7 @@ import java.util.EnumSet;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionPage;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionResponse;
 import com.google.gson.JsonObject;
@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the User Get Mail Tips Collection Page.
  */
-public class UserGetMailTipsCollectionPage extends BaseCollectionPage<MailTips, IUserGetMailTipsCollectionRequestBuilder> implements IUserGetMailTipsCollectionPage {
+public class UserGetMailTipsCollectionPage extends BaseCollectionPage<MailTips, UserGetMailTipsCollectionRequestBuilder> {
 
     /**
      * A collection page for MailTips.
@@ -35,7 +35,7 @@ public class UserGetMailTipsCollectionPage extends BaseCollectionPage<MailTips, 
      * @param response The serialized UserGetMailTipsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserGetMailTipsCollectionPage(final UserGetMailTipsCollectionResponse response, final IUserGetMailTipsCollectionRequestBuilder builder) {
+    public UserGetMailTipsCollectionPage(final UserGetMailTipsCollectionResponse response, final UserGetMailTipsCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

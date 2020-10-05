@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceSyncDeviceRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceSyncDeviceRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Sync Device Request Builder.
  */
-public class ManagedDeviceSyncDeviceRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceSyncDeviceRequestBuilder {
+public class ManagedDeviceSyncDeviceRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceSyncDevice
@@ -30,22 +29,22 @@ public class ManagedDeviceSyncDeviceRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IManagedDeviceSyncDeviceRequest
+     * Creates the ManagedDeviceSyncDeviceRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceSyncDeviceRequest instance
+     * @return the ManagedDeviceSyncDeviceRequest instance
      */
-    public IManagedDeviceSyncDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceSyncDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceSyncDeviceRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceSyncDeviceRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceSyncDeviceRequest instance
+     * @return the ManagedDeviceSyncDeviceRequest instance
      */
-    public IManagedDeviceSyncDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceSyncDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceSyncDeviceRequest request = new ManagedDeviceSyncDeviceRequest(
                 getRequestUrl(),
                 getClient(),

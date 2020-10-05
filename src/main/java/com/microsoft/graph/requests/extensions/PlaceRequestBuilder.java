@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Place Request Builder.
  */
-public class PlaceRequestBuilder extends BaseRequestBuilder implements IPlaceRequestBuilder {
+public class PlaceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Place
@@ -35,9 +35,9 @@ public class PlaceRequestBuilder extends BaseRequestBuilder implements IPlaceReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlaceRequest instance
+     * @return the PlaceRequest instance
      */
-    public IPlaceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlaceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class PlaceRequestBuilder extends BaseRequestBuilder implements IPlaceReq
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlaceRequest instance
+     * @return the PlaceRequest instance
      */
-    public IPlaceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlaceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlaceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

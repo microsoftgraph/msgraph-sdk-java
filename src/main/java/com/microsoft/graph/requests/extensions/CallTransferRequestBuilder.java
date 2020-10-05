@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallTransferRequest;
 import com.microsoft.graph.requests.extensions.CallTransferRequest;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Transfer Request Builder.
  */
-public class CallTransferRequestBuilder extends BaseActionRequestBuilder implements ICallTransferRequestBuilder {
+public class CallTransferRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallTransfer
@@ -32,22 +31,22 @@ public class CallTransferRequestBuilder extends BaseActionRequestBuilder impleme
     }
 
     /**
-     * Creates the ICallTransferRequest
+     * Creates the CallTransferRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallTransferRequest instance
+     * @return the CallTransferRequest instance
      */
-    public ICallTransferRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallTransferRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallTransferRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallTransferRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallTransferRequest instance
+     * @return the CallTransferRequest instance
      */
-    public ICallTransferRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallTransferRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallTransferRequest request = new CallTransferRequest(
                 getRequestUrl(),
                 getClient(),

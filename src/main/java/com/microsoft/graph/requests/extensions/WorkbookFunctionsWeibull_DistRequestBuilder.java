@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsWeibull_DistRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsWeibull_DistRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Weibull_Dist Request Builder.
  */
-public class WorkbookFunctionsWeibull_DistRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsWeibull_DistRequestBuilder {
+public class WorkbookFunctionsWeibull_DistRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsWeibull_Dist
@@ -38,22 +37,22 @@ public class WorkbookFunctionsWeibull_DistRequestBuilder extends BaseActionReque
     }
 
     /**
-     * Creates the IWorkbookFunctionsWeibull_DistRequest
+     * Creates the WorkbookFunctionsWeibull_DistRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsWeibull_DistRequest instance
+     * @return the WorkbookFunctionsWeibull_DistRequest instance
      */
-    public IWorkbookFunctionsWeibull_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsWeibull_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsWeibull_DistRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsWeibull_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsWeibull_DistRequest instance
+     * @return the WorkbookFunctionsWeibull_DistRequest instance
      */
-    public IWorkbookFunctionsWeibull_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsWeibull_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsWeibull_DistRequest request = new WorkbookFunctionsWeibull_DistRequest(
                 getRequestUrl(),
                 getClient(),

@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy Reference Request.
  */
-public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest implements IHomeRealmDiscoveryPolicyReferenceRequest {
+public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest {
 
     /**
      * The request for the HomeRealmDiscoveryPolicy
@@ -48,7 +48,7 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-    public IHomeRealmDiscoveryPolicyReferenceRequest select(final String value) {
+    public HomeRealmDiscoveryPolicyReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (HomeRealmDiscoveryPolicyReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class HomeRealmDiscoveryPolicyReferenceRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-    public IHomeRealmDiscoveryPolicyReferenceRequest expand(final String value) {
+    public HomeRealmDiscoveryPolicyReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (HomeRealmDiscoveryPolicyReferenceRequest)this;
     }

@@ -9,15 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IListItemVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemVersionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.FieldValueSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -30,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the List Item Request.
  */
-public class ListItemRequest extends BaseRequest implements IListItemRequest {
+public class ListItemRequest extends BaseRequest {
 	
     /**
      * The request for the ListItem
@@ -149,7 +144,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IListItemRequest select(final String value) {
+     public ListItemRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ListItemRequest)this;
      }
@@ -160,7 +155,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IListItemRequest expand(final String value) {
+     public ListItemRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ListItemRequest)this;
      }

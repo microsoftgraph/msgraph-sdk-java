@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Shift Preferences Request Builder.
  */
-public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder implements IShiftPreferencesRequestBuilder {
+public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ShiftPreferences
@@ -35,9 +35,9 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IShiftPreferencesRequest instance
+     * @return the ShiftPreferencesRequest instance
      */
-    public IShiftPreferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ShiftPreferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IShiftPreferencesRequest instance
+     * @return the ShiftPreferencesRequest instance
      */
-    public IShiftPreferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ShiftPreferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ShiftPreferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

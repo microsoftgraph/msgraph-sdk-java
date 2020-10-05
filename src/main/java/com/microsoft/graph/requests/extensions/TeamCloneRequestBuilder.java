@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITeamCloneRequest;
 import com.microsoft.graph.requests.extensions.TeamCloneRequest;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
@@ -18,7 +17,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Team Clone Request Builder.
  */
-public class TeamCloneRequestBuilder extends BaseActionRequestBuilder implements ITeamCloneRequestBuilder {
+public class TeamCloneRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this TeamClone
@@ -44,22 +43,22 @@ public class TeamCloneRequestBuilder extends BaseActionRequestBuilder implements
     }
 
     /**
-     * Creates the ITeamCloneRequest
+     * Creates the TeamCloneRequest
      *
      * @param requestOptions the options for the request
-     * @return the ITeamCloneRequest instance
+     * @return the TeamCloneRequest instance
      */
-    public ITeamCloneRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamCloneRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ITeamCloneRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the TeamCloneRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ITeamCloneRequest instance
+     * @return the TeamCloneRequest instance
      */
-    public ITeamCloneRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamCloneRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TeamCloneRequest request = new TeamCloneRequest(
                 getRequestUrl(),
                 getClient(),

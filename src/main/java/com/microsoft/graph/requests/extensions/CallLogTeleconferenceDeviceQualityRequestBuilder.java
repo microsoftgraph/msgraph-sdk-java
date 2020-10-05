@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallLogTeleconferenceDeviceQualityRequest;
 import com.microsoft.graph.requests.extensions.CallLogTeleconferenceDeviceQualityRequest;
 import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Log Teleconference Device Quality Request Builder.
  */
-public class CallLogTeleconferenceDeviceQualityRequestBuilder extends BaseActionRequestBuilder implements ICallLogTeleconferenceDeviceQualityRequestBuilder {
+public class CallLogTeleconferenceDeviceQualityRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallLogTeleconferenceDeviceQuality
@@ -32,22 +31,22 @@ public class CallLogTeleconferenceDeviceQualityRequestBuilder extends BaseAction
     }
 
     /**
-     * Creates the ICallLogTeleconferenceDeviceQualityRequest
+     * Creates the CallLogTeleconferenceDeviceQualityRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallLogTeleconferenceDeviceQualityRequest instance
+     * @return the CallLogTeleconferenceDeviceQualityRequest instance
      */
-    public ICallLogTeleconferenceDeviceQualityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallLogTeleconferenceDeviceQualityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallLogTeleconferenceDeviceQualityRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallLogTeleconferenceDeviceQualityRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallLogTeleconferenceDeviceQualityRequest instance
+     * @return the CallLogTeleconferenceDeviceQualityRequest instance
      */
-    public ICallLogTeleconferenceDeviceQualityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallLogTeleconferenceDeviceQualityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallLogTeleconferenceDeviceQualityRequest request = new CallLogTeleconferenceDeviceQualityRequest(
                 getRequestUrl(),
                 getClient(),

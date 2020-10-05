@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mail Assessment Request Request Builder.
  */
-public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder implements IMailAssessmentRequestRequestBuilder {
+public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MailAssessmentRequest
@@ -35,9 +35,9 @@ public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMailAssessmentRequestRequest instance
+     * @return the MailAssessmentRequestRequest instance
      */
-    public IMailAssessmentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MailAssessmentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,18 +45,18 @@ public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMailAssessmentRequestRequest instance
+     * @return the MailAssessmentRequestRequest instance
      */
-    public IMailAssessmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailAssessmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MailAssessmentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IThreatAssessmentResultCollectionRequestBuilder results() {
+    public ThreatAssessmentResultCollectionRequestBuilder results() {
         return new ThreatAssessmentResultCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("results"), getClient(), null);
     }
 
-    public IThreatAssessmentResultRequestBuilder results(final String id) {
+    public ThreatAssessmentResultRequestBuilder results(final String id) {
         return new ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);
     }
 }

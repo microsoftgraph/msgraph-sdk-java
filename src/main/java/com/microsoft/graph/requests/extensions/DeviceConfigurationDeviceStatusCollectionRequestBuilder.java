@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Configuration Device Status Collection Request Builder.
  */
-public class DeviceConfigurationDeviceStatusCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceConfigurationDeviceStatusCollectionRequestBuilder {
+public class DeviceConfigurationDeviceStatusCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceConfiguration
@@ -42,7 +42,7 @@ public class DeviceConfigurationDeviceStatusCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceConfigurationDeviceStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceConfigurationDeviceStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DeviceConfigurationDeviceStatusCollectionRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceConfigurationDeviceStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationDeviceStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceConfigurationDeviceStatusCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceConfigurationDeviceStatusRequestBuilder byId(final String id) {
+    public DeviceConfigurationDeviceStatusRequestBuilder byId(final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

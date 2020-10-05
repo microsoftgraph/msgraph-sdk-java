@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams App Definition With Reference Request Builder.
  */
-public class TeamsAppDefinitionWithReferenceRequestBuilder extends BaseRequestBuilder implements ITeamsAppDefinitionWithReferenceRequestBuilder {
+public class TeamsAppDefinitionWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TeamsAppDefinition
@@ -36,9 +36,9 @@ public class TeamsAppDefinitionWithReferenceRequestBuilder extends BaseRequestBu
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsAppDefinitionWithReferenceRequest instance
+     * @return the TeamsAppDefinitionWithReferenceRequest instance
      */
-    public ITeamsAppDefinitionWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsAppDefinitionWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,13 +46,13 @@ public class TeamsAppDefinitionWithReferenceRequestBuilder extends BaseRequestBu
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the ITeamsAppDefinitionWithReferenceRequest instance
+     * @return the TeamsAppDefinitionWithReferenceRequest instance
      */
-    public ITeamsAppDefinitionWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppDefinitionWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsAppDefinitionWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITeamsAppDefinitionReferenceRequestBuilder reference(){
+    public TeamsAppDefinitionReferenceRequestBuilder reference(){
         return new TeamsAppDefinitionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

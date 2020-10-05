@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Group;
-import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.GroupCollectionResponse;
 /**
  * The class for the Group Collection Page.
  */
-public class GroupCollectionPage extends BaseCollectionPage<Group, IGroupCollectionRequestBuilder> implements IGroupCollectionPage {
+public class GroupCollectionPage extends BaseCollectionPage<Group, GroupCollectionRequestBuilder> {
 
     /**
      * A collection page for Group
@@ -22,7 +22,7 @@ public class GroupCollectionPage extends BaseCollectionPage<Group, IGroupCollect
      * @param response the serialized GroupCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public GroupCollectionPage(final GroupCollectionResponse response, final IGroupCollectionRequestBuilder builder) {
+    public GroupCollectionPage(final GroupCollectionResponse response, final GroupCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

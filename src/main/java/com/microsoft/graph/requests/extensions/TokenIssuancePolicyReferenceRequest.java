@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Issuance Policy Reference Request.
  */
-public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements ITokenIssuancePolicyReferenceRequest {
+public class TokenIssuancePolicyReferenceRequest extends BaseRequest {
 
     /**
      * The request for the TokenIssuancePolicy
@@ -48,7 +48,7 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-    public ITokenIssuancePolicyReferenceRequest select(final String value) {
+    public TokenIssuancePolicyReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TokenIssuancePolicyReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-    public ITokenIssuancePolicyReferenceRequest expand(final String value) {
+    public TokenIssuancePolicyReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TokenIssuancePolicyReferenceRequest)this;
     }

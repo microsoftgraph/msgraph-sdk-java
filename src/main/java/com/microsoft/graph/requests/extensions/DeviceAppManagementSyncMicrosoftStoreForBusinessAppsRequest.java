@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device App Management Sync Microsoft Store For Business Apps Request.
  */
-public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest extends BaseRequest implements IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest {
+public class DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest extends BaseRequest {
 
     /**
      * The request for this DeviceAppManagementSyncMicrosoftStoreForBusinessApps

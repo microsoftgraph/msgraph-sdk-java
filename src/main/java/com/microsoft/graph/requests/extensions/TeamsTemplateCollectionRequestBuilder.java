@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.TeamsTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequest;
+import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams Template Collection Request Builder.
  */
-public class TeamsTemplateCollectionRequestBuilder extends BaseRequestBuilder implements ITeamsTemplateCollectionRequestBuilder {
+public class TeamsTemplateCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of TeamsTemplate
@@ -41,7 +41,7 @@ public class TeamsTemplateCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamsTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class TeamsTemplateCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamsTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsTemplateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITeamsTemplateRequestBuilder byId(final String id) {
+    public TeamsTemplateRequestBuilder byId(final String id) {
         return new TeamsTemplateRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

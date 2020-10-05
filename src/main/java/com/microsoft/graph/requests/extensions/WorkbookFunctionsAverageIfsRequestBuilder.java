@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAverageIfsRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAverageIfsRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Average Ifs Request Builder.
  */
-public class WorkbookFunctionsAverageIfsRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsAverageIfsRequestBuilder {
+public class WorkbookFunctionsAverageIfsRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsAverageIfs
@@ -34,22 +33,22 @@ public class WorkbookFunctionsAverageIfsRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookFunctionsAverageIfsRequest
+     * Creates the WorkbookFunctionsAverageIfsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAverageIfsRequest instance
+     * @return the WorkbookFunctionsAverageIfsRequest instance
      */
-    public IWorkbookFunctionsAverageIfsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsAverageIfsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsAverageIfsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsAverageIfsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAverageIfsRequest instance
+     * @return the WorkbookFunctionsAverageIfsRequest instance
      */
-    public IWorkbookFunctionsAverageIfsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsAverageIfsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsAverageIfsRequest request = new WorkbookFunctionsAverageIfsRequest(
                 getRequestUrl(),
                 getClient(),

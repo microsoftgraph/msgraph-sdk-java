@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.MobileLobApp;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMobileLobAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileLobAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileLobAppCollectionRequest;
+import com.microsoft.graph.requests.extensions.MobileLobAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileLobAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileLobAppCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile Lob App Collection Request Builder.
  */
-public class MobileLobAppCollectionRequestBuilder extends BaseRequestBuilder implements IMobileLobAppCollectionRequestBuilder {
+public class MobileLobAppCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceAppManagement
@@ -42,7 +42,7 @@ public class MobileLobAppCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMobileLobAppCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileLobAppCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class MobileLobAppCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMobileLobAppCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileLobAppCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileLobAppCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMobileLobAppRequestBuilder byId(final String id) {
+    public MobileLobAppRequestBuilder byId(final String id) {
         return new MobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

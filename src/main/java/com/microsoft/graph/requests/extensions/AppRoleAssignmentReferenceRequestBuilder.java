@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the App Role Assignment Reference Request Builder.
  */
-public class AppRoleAssignmentReferenceRequestBuilder extends BaseRequestBuilder implements IAppRoleAssignmentReferenceRequestBuilder {
+public class AppRoleAssignmentReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the AppRoleAssignment
@@ -37,9 +37,9 @@ public class AppRoleAssignmentReferenceRequestBuilder extends BaseRequestBuilder
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The IAppRoleAssignmentReferenceRequest instance
+     * @return The AppRoleAssignmentReferenceRequest instance
      */
-    public IAppRoleAssignmentReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AppRoleAssignmentReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class AppRoleAssignmentReferenceRequestBuilder extends BaseRequestBuilder
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAppRoleAssignmentReferenceRequest instance
+     * @return the AppRoleAssignmentReferenceRequest instance
      */
-    public IAppRoleAssignmentReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AppRoleAssignmentReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

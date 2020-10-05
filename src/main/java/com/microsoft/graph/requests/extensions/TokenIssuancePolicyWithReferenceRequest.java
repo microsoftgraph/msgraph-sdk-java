@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Token Issuance Policy With Reference Request.
  */
-public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest implements ITokenIssuancePolicyWithReferenceRequest {
+public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the TokenIssuancePolicy
@@ -78,9 +78,9 @@ public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-    public ITokenIssuancePolicyWithReferenceRequest select(final String value) {
+    public TokenIssuancePolicyWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ITokenIssuancePolicyWithReferenceRequest)this;
+        return (TokenIssuancePolicyWithReferenceRequest)this;
     }
 
     /**
@@ -89,7 +89,7 @@ public class TokenIssuancePolicyWithReferenceRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-    public ITokenIssuancePolicyWithReferenceRequest expand(final String value) {
+    public TokenIssuancePolicyWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TokenIssuancePolicyWithReferenceRequest)this;
     }

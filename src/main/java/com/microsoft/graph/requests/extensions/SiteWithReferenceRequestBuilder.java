@@ -9,33 +9,19 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -48,7 +34,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Site With Reference Request Builder.
  */
-public class SiteWithReferenceRequestBuilder extends BaseRequestBuilder implements ISiteWithReferenceRequestBuilder {
+public class SiteWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Site
@@ -65,9 +51,9 @@ public class SiteWithReferenceRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISiteWithReferenceRequest instance
+     * @return the SiteWithReferenceRequest instance
      */
-    public ISiteWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SiteWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -75,13 +61,13 @@ public class SiteWithReferenceRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the ISiteWithReferenceRequest instance
+     * @return the SiteWithReferenceRequest instance
      */
-    public ISiteWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SiteWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISiteReferenceRequestBuilder reference(){
+    public SiteReferenceRequestBuilder reference(){
         return new SiteReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SwapShiftsChangeRequest;
-import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionPage;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollection
 /**
  * The class for the Swap Shifts Change Request Collection Page.
  */
-public class SwapShiftsChangeRequestCollectionPage extends BaseCollectionPage<SwapShiftsChangeRequest, ISwapShiftsChangeRequestCollectionRequestBuilder> implements ISwapShiftsChangeRequestCollectionPage {
+public class SwapShiftsChangeRequestCollectionPage extends BaseCollectionPage<SwapShiftsChangeRequest, SwapShiftsChangeRequestCollectionRequestBuilder> {
 
     /**
      * A collection page for SwapShiftsChangeRequest
@@ -22,7 +22,7 @@ public class SwapShiftsChangeRequestCollectionPage extends BaseCollectionPage<Sw
      * @param response the serialized SwapShiftsChangeRequestCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SwapShiftsChangeRequestCollectionPage(final SwapShiftsChangeRequestCollectionResponse response, final ISwapShiftsChangeRequestCollectionRequestBuilder builder) {
+    public SwapShiftsChangeRequestCollectionPage(final SwapShiftsChangeRequestCollectionResponse response, final SwapShiftsChangeRequestCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

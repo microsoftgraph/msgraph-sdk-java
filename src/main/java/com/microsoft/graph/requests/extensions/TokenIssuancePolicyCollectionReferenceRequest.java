@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 /**
  * The class for the Token Issuance Policy Collection Reference Request.
  */
-public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectionRequest<TokenIssuancePolicyCollectionResponse, ITokenIssuancePolicyCollectionPage> implements ITokenIssuancePolicyCollectionReferenceRequest {
+public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectionRequest<TokenIssuancePolicyCollectionResponse, TokenIssuancePolicyCollectionPage> {
 
     /**
      * The request builder for this collection of TokenIssuancePolicy
@@ -33,7 +33,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param requestOptions the options for this request
      */
     public TokenIssuancePolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, ITokenIssuancePolicyCollectionPage.class);
+        super(requestUrl, client, requestOptions, TokenIssuancePolicyCollectionResponse.class, TokenIssuancePolicyCollectionPage.class);
     }
 
     public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<? super TokenIssuancePolicy> callback) {
@@ -57,7 +57,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public ITokenIssuancePolicyCollectionReferenceRequest expand(final String value) {
+    public TokenIssuancePolicyCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TokenIssuancePolicyCollectionReferenceRequest)this;
     }
@@ -68,7 +68,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public ITokenIssuancePolicyCollectionReferenceRequest filter(final String value) {
+    public TokenIssuancePolicyCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (TokenIssuancePolicyCollectionReferenceRequest)this;
     }
@@ -79,7 +79,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the sort clause
      * @return the updated request
      */
-    public ITokenIssuancePolicyCollectionReferenceRequest orderBy(final String value) {
+    public TokenIssuancePolicyCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (TokenIssuancePolicyCollectionReferenceRequest)this;
     }
@@ -90,7 +90,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public ITokenIssuancePolicyCollectionReferenceRequest select(final String value) {
+    public TokenIssuancePolicyCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TokenIssuancePolicyCollectionReferenceRequest)this;
     }
@@ -101,7 +101,7 @@ public class TokenIssuancePolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
-    public ITokenIssuancePolicyCollectionReferenceRequest top(final int value) {
+    public TokenIssuancePolicyCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (TokenIssuancePolicyCollectionReferenceRequest)this;
     }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessActivityUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessActivityUserDetailRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Skype For Business Activity User Detail Request Builder.
  */
-public class ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder {
+public class ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetSkypeForBusinessActivityUserDetail
@@ -45,22 +44,22 @@ public class ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder exten
     }
 
     /**
-     * Creates the IReportRootGetSkypeForBusinessActivityUserDetailRequest
+     * Creates the ReportRootGetSkypeForBusinessActivityUserDetailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSkypeForBusinessActivityUserDetailRequest instance
+     * @return the ReportRootGetSkypeForBusinessActivityUserDetailRequest instance
      */
-    public IReportRootGetSkypeForBusinessActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetSkypeForBusinessActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetSkypeForBusinessActivityUserDetailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetSkypeForBusinessActivityUserDetailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSkypeForBusinessActivityUserDetailRequest instance
+     * @return the ReportRootGetSkypeForBusinessActivityUserDetailRequest instance
      */
-    public IReportRootGetSkypeForBusinessActivityUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetSkypeForBusinessActivityUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetSkypeForBusinessActivityUserDetailRequest request = new ReportRootGetSkypeForBusinessActivityUserDetailRequest(
                 getRequestUrl(),
                 getClient(),

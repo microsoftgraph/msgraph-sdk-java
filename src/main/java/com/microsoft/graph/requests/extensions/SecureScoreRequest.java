@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Secure Score Request.
  */
-public class SecureScoreRequest extends BaseRequest implements ISecureScoreRequest {
+public class SecureScoreRequest extends BaseRequest {
 	
     /**
      * The request for the SecureScore
@@ -138,7 +138,7 @@ public class SecureScoreRequest extends BaseRequest implements ISecureScoreReque
      * @param value the select clause
      * @return the updated request
      */
-     public ISecureScoreRequest select(final String value) {
+     public SecureScoreRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SecureScoreRequest)this;
      }
@@ -149,7 +149,7 @@ public class SecureScoreRequest extends BaseRequest implements ISecureScoreReque
      * @param value the expand clause
      * @return the updated request
      */
-     public ISecureScoreRequest expand(final String value) {
+     public SecureScoreRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SecureScoreRequest)this;
      }

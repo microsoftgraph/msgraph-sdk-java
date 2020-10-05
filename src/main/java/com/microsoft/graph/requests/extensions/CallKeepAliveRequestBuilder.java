@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallKeepAliveRequest;
 import com.microsoft.graph.requests.extensions.CallKeepAliveRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Keep Alive Request Builder.
  */
-public class CallKeepAliveRequestBuilder extends BaseActionRequestBuilder implements ICallKeepAliveRequestBuilder {
+public class CallKeepAliveRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallKeepAlive
@@ -30,22 +29,22 @@ public class CallKeepAliveRequestBuilder extends BaseActionRequestBuilder implem
     }
 
     /**
-     * Creates the ICallKeepAliveRequest
+     * Creates the CallKeepAliveRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallKeepAliveRequest instance
+     * @return the CallKeepAliveRequest instance
      */
-    public ICallKeepAliveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallKeepAliveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallKeepAliveRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallKeepAliveRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallKeepAliveRequest instance
+     * @return the CallKeepAliveRequest instance
      */
-    public ICallKeepAliveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallKeepAliveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallKeepAliveRequest request = new CallKeepAliveRequest(
                 getRequestUrl(),
                 getClient(),

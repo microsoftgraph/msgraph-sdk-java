@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMirrRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsMirrRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Mirr Request Builder.
  */
-public class WorkbookFunctionsMirrRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsMirrRequestBuilder {
+public class WorkbookFunctionsMirrRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsMirr
@@ -36,22 +35,22 @@ public class WorkbookFunctionsMirrRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsMirrRequest
+     * Creates the WorkbookFunctionsMirrRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMirrRequest instance
+     * @return the WorkbookFunctionsMirrRequest instance
      */
-    public IWorkbookFunctionsMirrRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsMirrRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsMirrRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsMirrRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMirrRequest instance
+     * @return the WorkbookFunctionsMirrRequest instance
      */
-    public IWorkbookFunctionsMirrRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsMirrRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsMirrRequest request = new WorkbookFunctionsMirrRequest(
                 getRequestUrl(),
                 getClient(),

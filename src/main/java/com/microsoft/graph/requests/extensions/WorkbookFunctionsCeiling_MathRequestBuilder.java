@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCeiling_MathRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsCeiling_MathRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Ceiling_Math Request Builder.
  */
-public class WorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsCeiling_MathRequestBuilder {
+public class WorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsCeiling_Math
@@ -36,22 +35,22 @@ public class WorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionReque
     }
 
     /**
-     * Creates the IWorkbookFunctionsCeiling_MathRequest
+     * Creates the WorkbookFunctionsCeiling_MathRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCeiling_MathRequest instance
+     * @return the WorkbookFunctionsCeiling_MathRequest instance
      */
-    public IWorkbookFunctionsCeiling_MathRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsCeiling_MathRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsCeiling_MathRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsCeiling_MathRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCeiling_MathRequest instance
+     * @return the WorkbookFunctionsCeiling_MathRequest instance
      */
-    public IWorkbookFunctionsCeiling_MathRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsCeiling_MathRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCeiling_MathRequest request = new WorkbookFunctionsCeiling_MathRequest(
                 getRequestUrl(),
                 getClient(),

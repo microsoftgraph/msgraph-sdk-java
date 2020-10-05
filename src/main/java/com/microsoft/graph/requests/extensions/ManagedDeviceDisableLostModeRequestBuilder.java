@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceDisableLostModeRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceDisableLostModeRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Disable Lost Mode Request Builder.
  */
-public class ManagedDeviceDisableLostModeRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceDisableLostModeRequestBuilder {
+public class ManagedDeviceDisableLostModeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceDisableLostMode
@@ -30,22 +29,22 @@ public class ManagedDeviceDisableLostModeRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IManagedDeviceDisableLostModeRequest
+     * Creates the ManagedDeviceDisableLostModeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceDisableLostModeRequest instance
+     * @return the ManagedDeviceDisableLostModeRequest instance
      */
-    public IManagedDeviceDisableLostModeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceDisableLostModeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceDisableLostModeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceDisableLostModeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceDisableLostModeRequest instance
+     * @return the ManagedDeviceDisableLostModeRequest instance
      */
-    public IManagedDeviceDisableLostModeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceDisableLostModeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceDisableLostModeRequest request = new ManagedDeviceDisableLostModeRequest(
                 getRequestUrl(),
                 getClient(),

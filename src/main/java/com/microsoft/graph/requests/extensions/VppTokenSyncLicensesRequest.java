@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.VppToken;
-import com.microsoft.graph.requests.extensions.IVppTokenSyncLicensesRequest;
 import com.microsoft.graph.requests.extensions.VppTokenSyncLicensesRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Vpp Token Sync Licenses Request.
  */
-public class VppTokenSyncLicensesRequest extends BaseRequest implements IVppTokenSyncLicensesRequest {
+public class VppTokenSyncLicensesRequest extends BaseRequest {
 
     /**
      * The request for this VppTokenSyncLicenses
@@ -57,7 +56,7 @@ public class VppTokenSyncLicensesRequest extends BaseRequest implements IVppToke
      * @param value the select clause
      * @return the updated request
      */
-    public IVppTokenSyncLicensesRequest select(final String value) {
+    public VppTokenSyncLicensesRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (VppTokenSyncLicensesRequest)this;
     }
@@ -68,7 +67,7 @@ public class VppTokenSyncLicensesRequest extends BaseRequest implements IVppToke
      * @param value the expand clause
      * @return the updated request
      */
-    public IVppTokenSyncLicensesRequest expand(final String value) {
+    public VppTokenSyncLicensesRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (VppTokenSyncLicensesRequest)this;
     }

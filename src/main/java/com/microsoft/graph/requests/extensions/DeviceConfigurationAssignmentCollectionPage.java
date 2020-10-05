@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentColl
 /**
  * The class for the Device Configuration Assignment Collection Page.
  */
-public class DeviceConfigurationAssignmentCollectionPage extends BaseCollectionPage<DeviceConfigurationAssignment, IDeviceConfigurationAssignmentCollectionRequestBuilder> implements IDeviceConfigurationAssignmentCollectionPage {
+public class DeviceConfigurationAssignmentCollectionPage extends BaseCollectionPage<DeviceConfigurationAssignment, DeviceConfigurationAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceConfigurationAssignment
@@ -22,7 +22,7 @@ public class DeviceConfigurationAssignmentCollectionPage extends BaseCollectionP
      * @param response the serialized DeviceConfigurationAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceConfigurationAssignmentCollectionPage(final DeviceConfigurationAssignmentCollectionResponse response, final IDeviceConfigurationAssignmentCollectionRequestBuilder builder) {
+    public DeviceConfigurationAssignmentCollectionPage(final DeviceConfigurationAssignmentCollectionResponse response, final DeviceConfigurationAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

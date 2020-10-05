@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionPage;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRespo
 /**
  * The class for the Administrative Unit Collection Page.
  */
-public class AdministrativeUnitCollectionPage extends BaseCollectionPage<AdministrativeUnit, IAdministrativeUnitCollectionRequestBuilder> implements IAdministrativeUnitCollectionPage {
+public class AdministrativeUnitCollectionPage extends BaseCollectionPage<AdministrativeUnit, AdministrativeUnitCollectionRequestBuilder> {
 
     /**
      * A collection page for AdministrativeUnit
@@ -22,7 +22,7 @@ public class AdministrativeUnitCollectionPage extends BaseCollectionPage<Adminis
      * @param response the serialized AdministrativeUnitCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AdministrativeUnitCollectionPage(final AdministrativeUnitCollectionResponse response, final IAdministrativeUnitCollectionRequestBuilder builder) {
+    public AdministrativeUnitCollectionPage(final AdministrativeUnitCollectionResponse response, final AdministrativeUnitCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

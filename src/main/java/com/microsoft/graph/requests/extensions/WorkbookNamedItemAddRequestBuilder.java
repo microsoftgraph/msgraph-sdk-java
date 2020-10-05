@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookNamedItemAddRequest;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemAddRequest;
 import com.microsoft.graph.models.extensions.WorkbookNamedItem;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Named Item Add Request Builder.
  */
-public class WorkbookNamedItemAddRequestBuilder extends BaseActionRequestBuilder implements IWorkbookNamedItemAddRequestBuilder {
+public class WorkbookNamedItemAddRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookNamedItemAdd
@@ -36,22 +35,22 @@ public class WorkbookNamedItemAddRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookNamedItemAddRequest
+     * Creates the WorkbookNamedItemAddRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookNamedItemAddRequest instance
+     * @return the WorkbookNamedItemAddRequest instance
      */
-    public IWorkbookNamedItemAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookNamedItemAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookNamedItemAddRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookNamedItemAddRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookNamedItemAddRequest instance
+     * @return the WorkbookNamedItemAddRequest instance
      */
-    public IWorkbookNamedItemAddRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookNamedItemAddRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookNamedItemAddRequest request = new WorkbookNamedItemAddRequest(
                 getRequestUrl(),
                 getClient(),

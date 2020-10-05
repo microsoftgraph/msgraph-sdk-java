@@ -25,10 +25,10 @@ import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserCollectionRequest;
-import com.microsoft.graph.requests.extensions.IUserDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserCollectionRequest;
+import com.microsoft.graph.requests.extensions.UserDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -37,7 +37,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Collection Request Builder.
  */
-public class UserCollectionRequestBuilder extends BaseRequestBuilder implements IUserCollectionRequestBuilder {
+public class UserCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -56,7 +56,7 @@ public class UserCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -66,21 +66,21 @@ public class UserCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IUserRequestBuilder byId(final String id) {
+    public UserRequestBuilder byId(final String id) {
         return new UserRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IUserDeltaCollectionRequestBuilder delta() {
+    public UserDeltaCollectionRequestBuilder delta() {
         return new UserDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IUserDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public UserDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new UserDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

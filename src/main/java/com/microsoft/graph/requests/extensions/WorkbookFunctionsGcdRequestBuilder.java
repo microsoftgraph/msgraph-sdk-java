@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGcdRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsGcdRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Gcd Request Builder.
  */
-public class WorkbookFunctionsGcdRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsGcdRequestBuilder {
+public class WorkbookFunctionsGcdRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsGcd
@@ -32,22 +31,22 @@ public class WorkbookFunctionsGcdRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookFunctionsGcdRequest
+     * Creates the WorkbookFunctionsGcdRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGcdRequest instance
+     * @return the WorkbookFunctionsGcdRequest instance
      */
-    public IWorkbookFunctionsGcdRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsGcdRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsGcdRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsGcdRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGcdRequest instance
+     * @return the WorkbookFunctionsGcdRequest instance
      */
-    public IWorkbookFunctionsGcdRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsGcdRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsGcdRequest request = new WorkbookFunctionsGcdRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMaxARequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsMaxARequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Max ARequest Builder.
  */
-public class WorkbookFunctionsMaxARequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsMaxARequestBuilder {
+public class WorkbookFunctionsMaxARequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsMaxA
@@ -32,22 +31,22 @@ public class WorkbookFunctionsMaxARequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsMaxARequest
+     * Creates the WorkbookFunctionsMaxARequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMaxARequest instance
+     * @return the WorkbookFunctionsMaxARequest instance
      */
-    public IWorkbookFunctionsMaxARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsMaxARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsMaxARequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsMaxARequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMaxARequest instance
+     * @return the WorkbookFunctionsMaxARequest instance
      */
-    public IWorkbookFunctionsMaxARequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsMaxARequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsMaxARequest request = new WorkbookFunctionsMaxARequest(
                 getRequestUrl(),
                 getClient(),

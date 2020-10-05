@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Collection With References Request Builder.
  */
-public class ManagedDeviceCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements IManagedDeviceCollectionWithReferencesRequestBuilder {
+public class ManagedDeviceCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DetectedApp
@@ -40,7 +40,7 @@ public class ManagedDeviceCollectionWithReferencesRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedDeviceCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,15 +50,15 @@ public class ManagedDeviceCollectionWithReferencesRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedDeviceCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedDeviceWithReferenceRequestBuilder byId(final String id) {
+    public ManagedDeviceWithReferenceRequestBuilder byId(final String id) {
         return new ManagedDeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IManagedDeviceCollectionReferenceRequestBuilder references(){
+    public ManagedDeviceCollectionReferenceRequestBuilder references(){
         return new ManagedDeviceCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

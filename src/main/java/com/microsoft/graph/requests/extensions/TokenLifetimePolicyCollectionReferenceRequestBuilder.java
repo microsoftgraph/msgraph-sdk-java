@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Lifetime Policy Collection Reference Request Builder.
  */
-public class TokenLifetimePolicyCollectionReferenceRequestBuilder extends BaseRequestBuilder implements ITokenLifetimePolicyCollectionReferenceRequestBuilder {
+public class TokenLifetimePolicyCollectionReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -39,7 +39,7 @@ public class TokenLifetimePolicyCollectionReferenceRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITokenLifetimePolicyCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TokenLifetimePolicyCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +49,7 @@ public class TokenLifetimePolicyCollectionReferenceRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITokenLifetimePolicyCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenLifetimePolicyCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TokenLifetimePolicyCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeRowsBelowRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeRowsBelowRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.models.extensions.WorkbookRange;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Rows Below Request Builder.
  */
-public class WorkbookRangeRowsBelowRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookRangeRowsBelowRequestBuilder {
+public class WorkbookRangeRowsBelowRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeRowsBelow
@@ -43,22 +42,22 @@ public class WorkbookRangeRowsBelowRequestBuilder extends BaseFunctionRequestBui
     }
 
     /**
-     * Creates the IWorkbookRangeRowsBelowRequest
+     * Creates the WorkbookRangeRowsBelowRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeRowsBelowRequest instance
+     * @return the WorkbookRangeRowsBelowRequest instance
      */
-    public IWorkbookRangeRowsBelowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeRowsBelowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeRowsBelowRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeRowsBelowRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeRowsBelowRequest instance
+     * @return the WorkbookRangeRowsBelowRequest instance
      */
-    public IWorkbookRangeRowsBelowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeRowsBelowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeRowsBelowRequest request = new WorkbookRangeRowsBelowRequest(
                 getRequestUrl(),
                 getClient(),
@@ -75,27 +74,27 @@ public class WorkbookRangeRowsBelowRequestBuilder extends BaseFunctionRequestBui
     /**
      * Gets the request builder for WorkbookRangeFormat
      *
-     * @return the IWorkbookRangeFormatRequestBuilder instance
+     * @return the WorkbookRangeFormatRequestBuilder instance
      */
-    public IWorkbookRangeFormatRequestBuilder format() {
+    public WorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeSort
      *
-     * @return the IWorkbookRangeSortRequestBuilder instance
+     * @return the WorkbookRangeSortRequestBuilder instance
      */
-    public IWorkbookRangeSortRequestBuilder sort() {
+    public WorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Information Protection App Locker File Request Builder.
  */
-public class WindowsInformationProtectionAppLockerFileRequestBuilder extends BaseRequestBuilder implements IWindowsInformationProtectionAppLockerFileRequestBuilder {
+public class WindowsInformationProtectionAppLockerFileRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WindowsInformationProtectionAppLockerFile
@@ -35,9 +35,9 @@ public class WindowsInformationProtectionAppLockerFileRequestBuilder extends Bas
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsInformationProtectionAppLockerFileRequest instance
+     * @return the WindowsInformationProtectionAppLockerFileRequest instance
      */
-    public IWindowsInformationProtectionAppLockerFileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WindowsInformationProtectionAppLockerFileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class WindowsInformationProtectionAppLockerFileRequestBuilder extends Bas
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsInformationProtectionAppLockerFileRequest instance
+     * @return the WindowsInformationProtectionAppLockerFileRequest instance
      */
-    public IWindowsInformationProtectionAppLockerFileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionAppLockerFileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

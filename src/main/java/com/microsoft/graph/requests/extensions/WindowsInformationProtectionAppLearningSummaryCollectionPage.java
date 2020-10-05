@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLearningSummary;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLe
 /**
  * The class for the Windows Information Protection App Learning Summary Collection Page.
  */
-public class WindowsInformationProtectionAppLearningSummaryCollectionPage extends BaseCollectionPage<WindowsInformationProtectionAppLearningSummary, IWindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder> implements IWindowsInformationProtectionAppLearningSummaryCollectionPage {
+public class WindowsInformationProtectionAppLearningSummaryCollectionPage extends BaseCollectionPage<WindowsInformationProtectionAppLearningSummary, WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder> {
 
     /**
      * A collection page for WindowsInformationProtectionAppLearningSummary
@@ -22,7 +22,7 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionPage extend
      * @param response the serialized WindowsInformationProtectionAppLearningSummaryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WindowsInformationProtectionAppLearningSummaryCollectionPage(final WindowsInformationProtectionAppLearningSummaryCollectionResponse response, final IWindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder builder) {
+    public WindowsInformationProtectionAppLearningSummaryCollectionPage(final WindowsInformationProtectionAppLearningSummaryCollectionResponse response, final WindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

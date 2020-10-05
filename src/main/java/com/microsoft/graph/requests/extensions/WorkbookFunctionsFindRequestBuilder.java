@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFindRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFindRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Find Request Builder.
  */
-public class WorkbookFunctionsFindRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsFindRequestBuilder {
+public class WorkbookFunctionsFindRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsFind
@@ -36,22 +35,22 @@ public class WorkbookFunctionsFindRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsFindRequest
+     * Creates the WorkbookFunctionsFindRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFindRequest instance
+     * @return the WorkbookFunctionsFindRequest instance
      */
-    public IWorkbookFunctionsFindRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsFindRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsFindRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsFindRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFindRequest instance
+     * @return the WorkbookFunctionsFindRequest instance
      */
-    public IWorkbookFunctionsFindRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsFindRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsFindRequest request = new WorkbookFunctionsFindRequest(
                 getRequestUrl(),
                 getClient(),

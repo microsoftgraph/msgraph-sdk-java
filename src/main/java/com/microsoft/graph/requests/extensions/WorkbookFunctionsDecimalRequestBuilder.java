@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDecimalRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsDecimalRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Decimal Request Builder.
  */
-public class WorkbookFunctionsDecimalRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsDecimalRequestBuilder {
+public class WorkbookFunctionsDecimalRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsDecimal
@@ -34,22 +33,22 @@ public class WorkbookFunctionsDecimalRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsDecimalRequest
+     * Creates the WorkbookFunctionsDecimalRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDecimalRequest instance
+     * @return the WorkbookFunctionsDecimalRequest instance
      */
-    public IWorkbookFunctionsDecimalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsDecimalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsDecimalRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsDecimalRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDecimalRequest instance
+     * @return the WorkbookFunctionsDecimalRequest instance
      */
-    public IWorkbookFunctionsDecimalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsDecimalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDecimalRequest request = new WorkbookFunctionsDecimalRequest(
                 getRequestUrl(),
                 getClient(),

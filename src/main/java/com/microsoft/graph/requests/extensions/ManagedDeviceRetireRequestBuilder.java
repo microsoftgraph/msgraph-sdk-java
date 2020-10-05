@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRetireRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRetireRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Retire Request Builder.
  */
-public class ManagedDeviceRetireRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceRetireRequestBuilder {
+public class ManagedDeviceRetireRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceRetire
@@ -30,22 +29,22 @@ public class ManagedDeviceRetireRequestBuilder extends BaseActionRequestBuilder 
     }
 
     /**
-     * Creates the IManagedDeviceRetireRequest
+     * Creates the ManagedDeviceRetireRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceRetireRequest instance
+     * @return the ManagedDeviceRetireRequest instance
      */
-    public IManagedDeviceRetireRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceRetireRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceRetireRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceRetireRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceRetireRequest instance
+     * @return the ManagedDeviceRetireRequest instance
      */
-    public IManagedDeviceRetireRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceRetireRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceRetireRequest request = new ManagedDeviceRetireRequest(
                 getRequestUrl(),
                 getClient(),

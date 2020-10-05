@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Certificate Based Auth Configuration Reference Request.
  */
-public class CertificateBasedAuthConfigurationReferenceRequest extends BaseRequest implements ICertificateBasedAuthConfigurationReferenceRequest {
+public class CertificateBasedAuthConfigurationReferenceRequest extends BaseRequest {
 
     /**
      * The request for the CertificateBasedAuthConfiguration
@@ -48,7 +48,7 @@ public class CertificateBasedAuthConfigurationReferenceRequest extends BaseReque
      * @param value the select clause
      * @return the updated request
      */
-    public ICertificateBasedAuthConfigurationReferenceRequest select(final String value) {
+    public CertificateBasedAuthConfigurationReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (CertificateBasedAuthConfigurationReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class CertificateBasedAuthConfigurationReferenceRequest extends BaseReque
      * @param value the expand clause
      * @return the updated request
      */
-    public ICertificateBasedAuthConfigurationReferenceRequest expand(final String value) {
+    public CertificateBasedAuthConfigurationReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (CertificateBasedAuthConfigurationReferenceRequest)this;
     }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Schedule Change Request Request Builder.
  */
-public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder implements IScheduleChangeRequestRequestBuilder {
+public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ScheduleChangeRequest
@@ -35,9 +35,9 @@ public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IScheduleChangeRequestRequest instance
+     * @return the ScheduleChangeRequestRequest instance
      */
-    public IScheduleChangeRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ScheduleChangeRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,19 +45,19 @@ public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IScheduleChangeRequestRequest instance
+     * @return the ScheduleChangeRequestRequest instance
      */
-    public IScheduleChangeRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ScheduleChangeRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ScheduleChangeRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IScheduleChangeRequestDeclineRequestBuilder decline(final String message) {
+    public ScheduleChangeRequestDeclineRequestBuilder decline(final String message) {
         return new ScheduleChangeRequestDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, message);
     }
 
-    public IScheduleChangeRequestApproveRequestBuilder approve(final String message) {
+    public ScheduleChangeRequestApproveRequestBuilder approve(final String message) {
         return new ScheduleChangeRequestApproveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.approve"), getClient(), null, message);
     }
 }

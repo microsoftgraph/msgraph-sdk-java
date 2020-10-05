@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTbillPriceRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsTbillPriceRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Tbill Price Request Builder.
  */
-public class WorkbookFunctionsTbillPriceRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsTbillPriceRequestBuilder {
+public class WorkbookFunctionsTbillPriceRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsTbillPrice
@@ -36,22 +35,22 @@ public class WorkbookFunctionsTbillPriceRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookFunctionsTbillPriceRequest
+     * Creates the WorkbookFunctionsTbillPriceRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTbillPriceRequest instance
+     * @return the WorkbookFunctionsTbillPriceRequest instance
      */
-    public IWorkbookFunctionsTbillPriceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsTbillPriceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsTbillPriceRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsTbillPriceRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTbillPriceRequest instance
+     * @return the WorkbookFunctionsTbillPriceRequest instance
      */
-    public IWorkbookFunctionsTbillPriceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsTbillPriceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsTbillPriceRequest request = new WorkbookFunctionsTbillPriceRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMidbRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsMidbRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Midb Request Builder.
  */
-public class WorkbookFunctionsMidbRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsMidbRequestBuilder {
+public class WorkbookFunctionsMidbRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsMidb
@@ -36,22 +35,22 @@ public class WorkbookFunctionsMidbRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsMidbRequest
+     * Creates the WorkbookFunctionsMidbRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMidbRequest instance
+     * @return the WorkbookFunctionsMidbRequest instance
      */
-    public IWorkbookFunctionsMidbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsMidbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsMidbRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsMidbRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMidbRequest instance
+     * @return the WorkbookFunctionsMidbRequest instance
      */
-    public IWorkbookFunctionsMidbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsMidbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsMidbRequest request = new WorkbookFunctionsMidbRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsNonTextRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsNonTextRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Is Non Text Request Builder.
  */
-public class WorkbookFunctionsIsNonTextRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsIsNonTextRequestBuilder {
+public class WorkbookFunctionsIsNonTextRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsIsNonText
@@ -32,22 +31,22 @@ public class WorkbookFunctionsIsNonTextRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsNonTextRequest
+     * Creates the WorkbookFunctionsIsNonTextRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsNonTextRequest instance
+     * @return the WorkbookFunctionsIsNonTextRequest instance
      */
-    public IWorkbookFunctionsIsNonTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsIsNonTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsNonTextRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsIsNonTextRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsNonTextRequest instance
+     * @return the WorkbookFunctionsIsNonTextRequest instance
      */
-    public IWorkbookFunctionsIsNonTextRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsIsNonTextRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIsNonTextRequest request = new WorkbookFunctionsIsNonTextRequest(
                 getRequestUrl(),
                 getClient(),

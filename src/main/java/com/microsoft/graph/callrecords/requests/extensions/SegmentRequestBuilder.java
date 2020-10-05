@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Segment Request Builder.
  */
-public class SegmentRequestBuilder extends BaseRequestBuilder implements ISegmentRequestBuilder {
+public class SegmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Segment
@@ -35,9 +35,9 @@ public class SegmentRequestBuilder extends BaseRequestBuilder implements ISegmen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISegmentRequest instance
+     * @return the SegmentRequest instance
      */
-    public ISegmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SegmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class SegmentRequestBuilder extends BaseRequestBuilder implements ISegmen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISegmentRequest instance
+     * @return the SegmentRequest instance
      */
-    public ISegmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SegmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.callrecords.requests.extensions.SegmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

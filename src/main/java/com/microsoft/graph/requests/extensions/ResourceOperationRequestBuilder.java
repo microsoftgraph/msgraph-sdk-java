@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Resource Operation Request Builder.
  */
-public class ResourceOperationRequestBuilder extends BaseRequestBuilder implements IResourceOperationRequestBuilder {
+public class ResourceOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ResourceOperation
@@ -35,9 +35,9 @@ public class ResourceOperationRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IResourceOperationRequest instance
+     * @return the ResourceOperationRequest instance
      */
-    public IResourceOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ResourceOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ResourceOperationRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IResourceOperationRequest instance
+     * @return the ResourceOperationRequest instance
      */
-    public IResourceOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ResourceOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ResourceOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

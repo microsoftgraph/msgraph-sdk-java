@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.OrgContact;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOrgContactDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrgContactDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrgContactDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.OrgContactDeltaCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Org Contact Delta Collection Request.
  */
-public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgContactDeltaCollectionResponse, IOrgContactDeltaCollectionPage> implements IOrgContactDeltaCollectionRequest {
+public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgContactDeltaCollectionResponse, OrgContactDeltaCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param requestOptions the options for this request
      */
     public OrgContactDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContactDeltaCollectionResponse.class, IOrgContactDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, OrgContactDeltaCollectionResponse.class, OrgContactDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IOrgContactDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super OrgContactDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
         });
     }
 
-    public IOrgContactDeltaCollectionPage get() throws ClientException {
+    public OrgContactDeltaCollectionPage get() throws ClientException {
         final OrgContactDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IOrgContactDeltaCollectionPage buildFromResponse(final OrgContactDeltaCollectionResponse response) {
-        final IOrgContactDeltaCollectionRequestBuilder builder;
+    public OrgContactDeltaCollectionPage buildFromResponse(final OrgContactDeltaCollectionResponse response) {
+        final OrgContactDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new OrgContactDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IOrgContactDeltaCollectionPage page = new OrgContactDeltaCollectionPage(response, builder);
+        final OrgContactDeltaCollectionPage page = new OrgContactDeltaCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param value the select clause
      * @return the updated request
      */
-    public IOrgContactDeltaCollectionRequest select(final String value) {
+    public OrgContactDeltaCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IOrgContactDeltaCollectionRequest)this;
+        return (OrgContactDeltaCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IOrgContactDeltaCollectionRequest top(final int value) {
+    public OrgContactDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IOrgContactDeltaCollectionRequest)this;
+        return (OrgContactDeltaCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param value the expand clause
      * @return the updated request
      */
-    public IOrgContactDeltaCollectionRequest expand(final String value) {
+    public OrgContactDeltaCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IOrgContactDeltaCollectionRequest)this;
+        return (OrgContactDeltaCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param value the filter clause
      * @return the updated request
      */
-    public IOrgContactDeltaCollectionRequest filter(final String value) {
+    public OrgContactDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IOrgContactDeltaCollectionRequest)this;
+        return (OrgContactDeltaCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
      * @param value the order by clause
      * @return the updated request
      */
-    public IOrgContactDeltaCollectionRequest orderBy(final String value) {
+    public OrgContactDeltaCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IOrgContactDeltaCollectionRequest)this;
+        return (OrgContactDeltaCollectionRequest)this;
     }
 
 }

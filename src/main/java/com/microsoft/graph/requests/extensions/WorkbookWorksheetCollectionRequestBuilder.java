@@ -13,10 +13,10 @@ import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetCollectionRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetAddRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionRequest;
+import com.microsoft.graph.requests.extensions.WorkbookWorksheetAddRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Worksheet Collection Request Builder.
  */
-public class WorkbookWorksheetCollectionRequestBuilder extends BaseRequestBuilder implements IWorkbookWorksheetCollectionRequestBuilder {
+public class WorkbookWorksheetCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Workbook
@@ -44,7 +44,7 @@ public class WorkbookWorksheetCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookWorksheetCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookWorksheetCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,17 +54,17 @@ public class WorkbookWorksheetCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookWorksheetCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookWorksheetCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookWorksheetCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookWorksheetRequestBuilder byId(final String id) {
+    public WorkbookWorksheetRequestBuilder byId(final String id) {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IWorkbookWorksheetAddRequestBuilder add(final String name) {
+    public WorkbookWorksheetAddRequestBuilder add(final String name) {
         return new WorkbookWorksheetAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, name);
     }
 }

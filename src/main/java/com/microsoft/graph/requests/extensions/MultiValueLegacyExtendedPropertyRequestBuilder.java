@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Multi Value Legacy Extended Property Request Builder.
  */
-public class MultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequestBuilder implements IMultiValueLegacyExtendedPropertyRequestBuilder {
+public class MultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MultiValueLegacyExtendedProperty
@@ -35,9 +35,9 @@ public class MultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequestB
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMultiValueLegacyExtendedPropertyRequest instance
+     * @return the MultiValueLegacyExtendedPropertyRequest instance
      */
-    public IMultiValueLegacyExtendedPropertyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MultiValueLegacyExtendedPropertyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class MultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequestB
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMultiValueLegacyExtendedPropertyRequest instance
+     * @return the MultiValueLegacyExtendedPropertyRequest instance
      */
-    public IMultiValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MultiValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

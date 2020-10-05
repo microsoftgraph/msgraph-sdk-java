@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Domain;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
 import java.util.Arrays;
@@ -26,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Domain Request Builder.
  */
-public class DomainRequestBuilder extends BaseRequestBuilder implements IDomainRequestBuilder {
+public class DomainRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Domain
@@ -43,9 +39,9 @@ public class DomainRequestBuilder extends BaseRequestBuilder implements IDomainR
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDomainRequest instance
+     * @return the DomainRequest instance
      */
-    public IDomainRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DomainRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,40 +49,40 @@ public class DomainRequestBuilder extends BaseRequestBuilder implements IDomainR
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDomainRequest instance
+     * @return the DomainRequest instance
      */
-    public IDomainRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DomainRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences() {
+    public DirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder domainNameReferences(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder domainNameReferences(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences") + "/" + id, getClient(), null);
     }
-    public IDomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords() {
+    public DomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords() {
         return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords"), getClient(), null);
     }
 
-    public IDomainDnsRecordRequestBuilder serviceConfigurationRecords(final String id) {
+    public DomainDnsRecordRequestBuilder serviceConfigurationRecords(final String id) {
         return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords") + "/" + id, getClient(), null);
     }
-    public IDomainDnsRecordCollectionRequestBuilder verificationDnsRecords() {
+    public DomainDnsRecordCollectionRequestBuilder verificationDnsRecords() {
         return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords"), getClient(), null);
     }
 
-    public IDomainDnsRecordRequestBuilder verificationDnsRecords(final String id) {
+    public DomainDnsRecordRequestBuilder verificationDnsRecords(final String id) {
         return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords") + "/" + id, getClient(), null);
     }
 
-    public IDomainForceDeleteRequestBuilder forceDelete(final Boolean disableUserAccounts) {
+    public DomainForceDeleteRequestBuilder forceDelete(final Boolean disableUserAccounts) {
         return new DomainForceDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forceDelete"), getClient(), null, disableUserAccounts);
     }
 
-    public IDomainVerifyRequestBuilder verify() {
+    public DomainVerifyRequestBuilder verify() {
         return new DomainVerifyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.verify"), getClient(), null);
     }
 }

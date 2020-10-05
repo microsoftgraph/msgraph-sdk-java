@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeOffsetRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeOffsetRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Offset Range Request.
  */
-public class WorkbookRangeOffsetRangeRequest extends BaseRequest implements IWorkbookRangeOffsetRangeRequest {
+public class WorkbookRangeOffsetRangeRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeOffsetRange
@@ -97,7 +96,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest implements IWor
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeOffsetRangeRequest select(final String value) {
+    public WorkbookRangeOffsetRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeOffsetRangeRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest implements IWor
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeOffsetRangeRequest expand(final String value) {
+    public WorkbookRangeOffsetRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeOffsetRangeRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest implements IWor
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeOffsetRangeRequest filter(final String value) {
+    public WorkbookRangeOffsetRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeOffsetRangeRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookRangeOffsetRangeRequest extends BaseRequest implements IWor
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeOffsetRangeRequest orderBy(final String value) {
+    public WorkbookRangeOffsetRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeOffsetRangeRequest)this;
     }

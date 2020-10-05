@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageStorageRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveUsageStorageRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get One Drive Usage Storage Request Builder.
  */
-public class ReportRootGetOneDriveUsageStorageRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetOneDriveUsageStorageRequestBuilder {
+public class ReportRootGetOneDriveUsageStorageRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetOneDriveUsageStorage
@@ -32,22 +31,22 @@ public class ReportRootGetOneDriveUsageStorageRequestBuilder extends BaseFunctio
     }
 
     /**
-     * Creates the IReportRootGetOneDriveUsageStorageRequest
+     * Creates the ReportRootGetOneDriveUsageStorageRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOneDriveUsageStorageRequest instance
+     * @return the ReportRootGetOneDriveUsageStorageRequest instance
      */
-    public IReportRootGetOneDriveUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetOneDriveUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetOneDriveUsageStorageRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetOneDriveUsageStorageRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOneDriveUsageStorageRequest instance
+     * @return the ReportRootGetOneDriveUsageStorageRequest instance
      */
-    public IReportRootGetOneDriveUsageStorageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetOneDriveUsageStorageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOneDriveUsageStorageRequest request = new ReportRootGetOneDriveUsageStorageRequest(
                 getRequestUrl(),
                 getClient(),

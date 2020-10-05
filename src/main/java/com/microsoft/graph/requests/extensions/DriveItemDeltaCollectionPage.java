@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Drive Item Delta Collection Page.
  */
-public class DriveItemDeltaCollectionPage extends BaseCollectionPage<DriveItem, IDriveItemDeltaCollectionRequestBuilder> implements IDriveItemDeltaCollectionPage {
+public class DriveItemDeltaCollectionPage extends BaseCollectionPage<DriveItem, DriveItemDeltaCollectionRequestBuilder> {
 
     /**
      * The opaque link to query delta after the 
@@ -39,7 +39,7 @@ public class DriveItemDeltaCollectionPage extends BaseCollectionPage<DriveItem, 
      * @param response The serialized DriveItemDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemDeltaCollectionPage(final DriveItemDeltaCollectionResponse response, final IDriveItemDeltaCollectionRequestBuilder builder) {
+    public DriveItemDeltaCollectionPage(final DriveItemDeltaCollectionResponse response, final DriveItemDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Offer Shift Request Request Builder.
  */
-public class OfferShiftRequestRequestBuilder extends BaseRequestBuilder implements IOfferShiftRequestRequestBuilder {
+public class OfferShiftRequestRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OfferShiftRequest
@@ -35,9 +35,9 @@ public class OfferShiftRequestRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOfferShiftRequestRequest instance
+     * @return the OfferShiftRequestRequest instance
      */
-    public IOfferShiftRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OfferShiftRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class OfferShiftRequestRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOfferShiftRequestRequest instance
+     * @return the OfferShiftRequestRequest instance
      */
-    public IOfferShiftRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OfferShiftRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OfferShiftRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

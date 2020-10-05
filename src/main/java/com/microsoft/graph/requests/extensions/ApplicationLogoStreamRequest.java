@@ -20,7 +20,7 @@ import java.io.InputStream;
 /**
  * The class for the Application Logo Stream Request.
  */
-public class ApplicationLogoStreamRequest extends BaseStreamRequest<Application> implements IApplicationLogoStreamRequest {
+public class ApplicationLogoStreamRequest extends BaseStreamRequest<Application> {
 
     /**
      * The request for the ApplicationLogoStream

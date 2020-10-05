@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequest;
+import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Assignment Collection Request Builder.
  */
-public class MobileAppAssignmentCollectionRequestBuilder extends BaseRequestBuilder implements IMobileAppAssignmentCollectionRequestBuilder {
+public class MobileAppAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of MobileApp
@@ -42,7 +42,7 @@ public class MobileAppAssignmentCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMobileAppAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileAppAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class MobileAppAssignmentCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMobileAppAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileAppAssignmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMobileAppAssignmentRequestBuilder byId(final String id) {
+    public MobileAppAssignmentRequestBuilder byId(final String id) {
         return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Vpp Token Request.
  */
-public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
+public class VppTokenRequest extends BaseRequest {
 	
     /**
      * The request for the VppToken
@@ -138,7 +138,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IVppTokenRequest select(final String value) {
+     public VppTokenRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (VppTokenRequest)this;
      }
@@ -149,7 +149,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IVppTokenRequest expand(final String value) {
+     public VppTokenRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (VppTokenRequest)this;
      }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRefreshRequest;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableRefreshRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Pivot Table Refresh Request.
  */
-public class WorkbookPivotTableRefreshRequest extends BaseRequest implements IWorkbookPivotTableRefreshRequest {
+public class WorkbookPivotTableRefreshRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookPivotTableRefresh

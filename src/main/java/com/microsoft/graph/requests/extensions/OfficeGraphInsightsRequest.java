@@ -8,16 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeGraphInsights;
-import com.microsoft.graph.requests.extensions.ISharedInsightCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISharedInsightRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedInsightRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrendingRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrendingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUsedInsightRequestBuilder;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UsedInsightRequestBuilder;
 import java.util.Arrays;
@@ -31,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Office Graph Insights Request.
  */
-public class OfficeGraphInsightsRequest extends BaseRequest implements IOfficeGraphInsightsRequest {
+public class OfficeGraphInsightsRequest extends BaseRequest {
 	
     /**
      * The request for the OfficeGraphInsights
@@ -150,7 +144,7 @@ public class OfficeGraphInsightsRequest extends BaseRequest implements IOfficeGr
      * @param value the select clause
      * @return the updated request
      */
-     public IOfficeGraphInsightsRequest select(final String value) {
+     public OfficeGraphInsightsRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OfficeGraphInsightsRequest)this;
      }
@@ -161,7 +155,7 @@ public class OfficeGraphInsightsRequest extends BaseRequest implements IOfficeGr
      * @param value the expand clause
      * @return the updated request
      */
-     public IOfficeGraphInsightsRequest expand(final String value) {
+     public OfficeGraphInsightsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OfficeGraphInsightsRequest)this;
      }

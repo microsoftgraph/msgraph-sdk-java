@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSubstituteRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSubstituteRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Substitute Request Builder.
  */
-public class WorkbookFunctionsSubstituteRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSubstituteRequestBuilder {
+public class WorkbookFunctionsSubstituteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSubstitute
@@ -38,22 +37,22 @@ public class WorkbookFunctionsSubstituteRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookFunctionsSubstituteRequest
+     * Creates the WorkbookFunctionsSubstituteRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSubstituteRequest instance
+     * @return the WorkbookFunctionsSubstituteRequest instance
      */
-    public IWorkbookFunctionsSubstituteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSubstituteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSubstituteRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSubstituteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSubstituteRequest instance
+     * @return the WorkbookFunctionsSubstituteRequest instance
      */
-    public IWorkbookFunctionsSubstituteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSubstituteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSubstituteRequest request = new WorkbookFunctionsSubstituteRequest(
                 getRequestUrl(),
                 getClient(),

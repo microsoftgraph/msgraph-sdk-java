@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationRequestBuilder;
 import java.util.Arrays;
@@ -30,7 +26,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Managed App Registration With Reference Request.
  */
-public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest implements IManagedAppRegistrationWithReferenceRequest {
+public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the ManagedAppRegistration
@@ -86,9 +82,9 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-    public IManagedAppRegistrationWithReferenceRequest select(final String value) {
+    public ManagedAppRegistrationWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IManagedAppRegistrationWithReferenceRequest)this;
+        return (ManagedAppRegistrationWithReferenceRequest)this;
     }
 
     /**
@@ -97,7 +93,7 @@ public class ManagedAppRegistrationWithReferenceRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-    public IManagedAppRegistrationWithReferenceRequest expand(final String value) {
+    public ManagedAppRegistrationWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedAppRegistrationWithReferenceRequest)this;
     }

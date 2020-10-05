@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.BaseItem;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -20,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Base Item Request Builder.
  */
-public class BaseItemRequestBuilder extends BaseRequestBuilder implements IBaseItemRequestBuilder {
+public class BaseItemRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the BaseItem
@@ -37,9 +36,9 @@ public class BaseItemRequestBuilder extends BaseRequestBuilder implements IBaseI
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IBaseItemRequest instance
+     * @return the BaseItemRequest instance
      */
-    public IBaseItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public BaseItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +46,9 @@ public class BaseItemRequestBuilder extends BaseRequestBuilder implements IBaseI
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IBaseItemRequest instance
+     * @return the BaseItemRequest instance
      */
-    public IBaseItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BaseItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.BaseItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,18 +57,18 @@ public class BaseItemRequestBuilder extends BaseRequestBuilder implements IBaseI
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder createdByUser() {
+    public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+    public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 }

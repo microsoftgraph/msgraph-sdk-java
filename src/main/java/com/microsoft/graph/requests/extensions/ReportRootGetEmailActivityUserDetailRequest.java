@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetEmailActivityUserDetailRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Email Activity User Detail Request.
  */
-public class ReportRootGetEmailActivityUserDetailRequest extends BaseRequest implements IReportRootGetEmailActivityUserDetailRequest {
+public class ReportRootGetEmailActivityUserDetailRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetEmailActivityUserDetail
@@ -97,7 +96,7 @@ public class ReportRootGetEmailActivityUserDetailRequest extends BaseRequest imp
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetEmailActivityUserDetailRequest select(final String value) {
+    public ReportRootGetEmailActivityUserDetailRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetEmailActivityUserDetailRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetEmailActivityUserDetailRequest extends BaseRequest imp
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetEmailActivityUserDetailRequest expand(final String value) {
+    public ReportRootGetEmailActivityUserDetailRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetEmailActivityUserDetailRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetEmailActivityUserDetailRequest extends BaseRequest imp
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetEmailActivityUserDetailRequest filter(final String value) {
+    public ReportRootGetEmailActivityUserDetailRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetEmailActivityUserDetailRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetEmailActivityUserDetailRequest extends BaseRequest imp
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetEmailActivityUserDetailRequest orderBy(final String value) {
+    public ReportRootGetEmailActivityUserDetailRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetEmailActivityUserDetailRequest)this;
     }

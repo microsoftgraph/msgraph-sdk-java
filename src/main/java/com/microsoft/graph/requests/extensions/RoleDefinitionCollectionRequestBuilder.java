@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.RoleDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleDefinitionCollectionRequest;
+import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Role Definition Collection Request Builder.
  */
-public class RoleDefinitionCollectionRequestBuilder extends BaseRequestBuilder implements IRoleDefinitionCollectionRequestBuilder {
+public class RoleDefinitionCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class RoleDefinitionCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IRoleDefinitionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public RoleDefinitionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class RoleDefinitionCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IRoleDefinitionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleDefinitionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RoleDefinitionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IRoleDefinitionRequestBuilder byId(final String id) {
+    public RoleDefinitionRequestBuilder byId(final String id) {
         return new RoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

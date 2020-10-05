@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DriveItem;
-import com.microsoft.graph.requests.extensions.IDriveItemFollowRequest;
 import com.microsoft.graph.requests.extensions.DriveItemFollowRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Follow Request.
  */
-public class DriveItemFollowRequest extends BaseRequest implements IDriveItemFollowRequest {
+public class DriveItemFollowRequest extends BaseRequest {
 
     /**
      * The request for this DriveItemFollow
@@ -57,7 +56,7 @@ public class DriveItemFollowRequest extends BaseRequest implements IDriveItemFol
      * @param value the select clause
      * @return the updated request
      */
-    public IDriveItemFollowRequest select(final String value) {
+    public DriveItemFollowRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DriveItemFollowRequest)this;
     }
@@ -68,7 +67,7 @@ public class DriveItemFollowRequest extends BaseRequest implements IDriveItemFol
      * @param value the expand clause
      * @return the updated request
      */
-    public IDriveItemFollowRequest expand(final String value) {
+    public DriveItemFollowRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DriveItemFollowRequest)this;
     }

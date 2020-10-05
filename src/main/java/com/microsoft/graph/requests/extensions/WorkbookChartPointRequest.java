@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartPoint;
-import com.microsoft.graph.requests.extensions.IWorkbookChartPointFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Point Request.
  */
-public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookChartPointRequest {
+public class WorkbookChartPointRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookChartPoint
@@ -140,7 +139,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartPointRequest select(final String value) {
+     public WorkbookChartPointRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookChartPointRequest)this;
      }
@@ -151,7 +150,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartPointRequest expand(final String value) {
+     public WorkbookChartPointRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookChartPointRequest)this;
      }

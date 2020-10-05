@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMailFolderMoveRequest;
 import com.microsoft.graph.requests.extensions.MailFolderMoveRequest;
 import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Mail Folder Move Request Builder.
  */
-public class MailFolderMoveRequestBuilder extends BaseActionRequestBuilder implements IMailFolderMoveRequestBuilder {
+public class MailFolderMoveRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MailFolderMove
@@ -32,22 +31,22 @@ public class MailFolderMoveRequestBuilder extends BaseActionRequestBuilder imple
     }
 
     /**
-     * Creates the IMailFolderMoveRequest
+     * Creates the MailFolderMoveRequest
      *
      * @param requestOptions the options for the request
-     * @return the IMailFolderMoveRequest instance
+     * @return the MailFolderMoveRequest instance
      */
-    public IMailFolderMoveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MailFolderMoveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IMailFolderMoveRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the MailFolderMoveRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IMailFolderMoveRequest instance
+     * @return the MailFolderMoveRequest instance
      */
-    public IMailFolderMoveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailFolderMoveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MailFolderMoveRequest request = new MailFolderMoveRequest(
                 getRequestUrl(),
                 getClient(),

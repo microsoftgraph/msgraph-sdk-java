@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleDefinition;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Role Definition With Reference Request Builder.
  */
-public class RoleDefinitionWithReferenceRequestBuilder extends BaseRequestBuilder implements IRoleDefinitionWithReferenceRequestBuilder {
+public class RoleDefinitionWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the RoleDefinition
@@ -40,9 +38,9 @@ public class RoleDefinitionWithReferenceRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IRoleDefinitionWithReferenceRequest instance
+     * @return the RoleDefinitionWithReferenceRequest instance
      */
-    public IRoleDefinitionWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public RoleDefinitionWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,13 +48,13 @@ public class RoleDefinitionWithReferenceRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IRoleDefinitionWithReferenceRequest instance
+     * @return the RoleDefinitionWithReferenceRequest instance
      */
-    public IRoleDefinitionWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleDefinitionWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RoleDefinitionWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IRoleDefinitionReferenceRequestBuilder reference(){
+    public RoleDefinitionReferenceRequestBuilder reference(){
         return new RoleDefinitionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

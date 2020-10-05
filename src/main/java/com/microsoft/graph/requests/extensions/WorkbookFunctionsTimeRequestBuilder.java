@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTimeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsTimeRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Time Request Builder.
  */
-public class WorkbookFunctionsTimeRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsTimeRequestBuilder {
+public class WorkbookFunctionsTimeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsTime
@@ -36,22 +35,22 @@ public class WorkbookFunctionsTimeRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsTimeRequest
+     * Creates the WorkbookFunctionsTimeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTimeRequest instance
+     * @return the WorkbookFunctionsTimeRequest instance
      */
-    public IWorkbookFunctionsTimeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsTimeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsTimeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsTimeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTimeRequest instance
+     * @return the WorkbookFunctionsTimeRequest instance
      */
-    public IWorkbookFunctionsTimeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsTimeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsTimeRequest request = new WorkbookFunctionsTimeRequest(
                 getRequestUrl(),
                 getClient(),

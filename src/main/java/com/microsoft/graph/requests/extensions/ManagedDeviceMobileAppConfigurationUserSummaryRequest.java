@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Mobile App Configuration User Summary Request.
  */
-public class ManagedDeviceMobileAppConfigurationUserSummaryRequest extends BaseRequest implements IManagedDeviceMobileAppConfigurationUserSummaryRequest {
+public class ManagedDeviceMobileAppConfigurationUserSummaryRequest extends BaseRequest {
 	
     /**
      * The request for the ManagedDeviceMobileAppConfigurationUserSummary
@@ -138,7 +138,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummaryRequest extends BaseR
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedDeviceMobileAppConfigurationUserSummaryRequest select(final String value) {
+     public ManagedDeviceMobileAppConfigurationUserSummaryRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedDeviceMobileAppConfigurationUserSummaryRequest)this;
      }
@@ -149,7 +149,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummaryRequest extends BaseR
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedDeviceMobileAppConfigurationUserSummaryRequest expand(final String value) {
+     public ManagedDeviceMobileAppConfigurationUserSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedDeviceMobileAppConfigurationUserSummaryRequest)this;
      }

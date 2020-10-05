@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Person Request Builder.
  */
-public class PersonRequestBuilder extends BaseRequestBuilder implements IPersonRequestBuilder {
+public class PersonRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Person
@@ -35,9 +35,9 @@ public class PersonRequestBuilder extends BaseRequestBuilder implements IPersonR
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPersonRequest instance
+     * @return the PersonRequest instance
      */
-    public IPersonRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PersonRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class PersonRequestBuilder extends BaseRequestBuilder implements IPersonR
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPersonRequest instance
+     * @return the PersonRequest instance
      */
-    public IPersonRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PersonRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

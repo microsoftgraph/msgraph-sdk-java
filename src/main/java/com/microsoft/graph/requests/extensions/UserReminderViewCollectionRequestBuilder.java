@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.Reminder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserReminderViewCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserReminderViewCollectionRequest;
+import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the User Reminder View Collection Request Builder.
  */
-public class UserReminderViewCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IUserReminderViewCollectionRequestBuilder {
+public class UserReminderViewCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -50,7 +49,7 @@ public class UserReminderViewCollectionRequestBuilder extends BaseFunctionReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserReminderViewCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserReminderViewCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -60,7 +59,7 @@ public class UserReminderViewCollectionRequestBuilder extends BaseFunctionReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserReminderViewCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserReminderViewCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserReminderViewCollectionRequest request = new UserReminderViewCollectionRequest(
                 getRequestUrl(),
                 getClient(),

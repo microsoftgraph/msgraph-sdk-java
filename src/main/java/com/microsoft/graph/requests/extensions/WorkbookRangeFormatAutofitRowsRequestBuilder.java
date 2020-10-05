@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatAutofitRowsRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFormatAutofitRowsRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Format Autofit Rows Request Builder.
  */
-public class WorkbookRangeFormatAutofitRowsRequestBuilder extends BaseActionRequestBuilder implements IWorkbookRangeFormatAutofitRowsRequestBuilder {
+public class WorkbookRangeFormatAutofitRowsRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeFormatAutofitRows
@@ -30,22 +29,22 @@ public class WorkbookRangeFormatAutofitRowsRequestBuilder extends BaseActionRequ
     }
 
     /**
-     * Creates the IWorkbookRangeFormatAutofitRowsRequest
+     * Creates the WorkbookRangeFormatAutofitRowsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeFormatAutofitRowsRequest instance
+     * @return the WorkbookRangeFormatAutofitRowsRequest instance
      */
-    public IWorkbookRangeFormatAutofitRowsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeFormatAutofitRowsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeFormatAutofitRowsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeFormatAutofitRowsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeFormatAutofitRowsRequest instance
+     * @return the WorkbookRangeFormatAutofitRowsRequest instance
      */
-    public IWorkbookRangeFormatAutofitRowsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeFormatAutofitRowsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeFormatAutofitRowsRequest request = new WorkbookRangeFormatAutofitRowsRequest(
                 getRequestUrl(),
                 getClient(),

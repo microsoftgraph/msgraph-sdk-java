@@ -8,20 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContactFolder;
-import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactFolderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
@@ -35,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Contact Folder Request.
  */
-public class ContactFolderRequest extends BaseRequest implements IContactFolderRequest {
+public class ContactFolderRequest extends BaseRequest {
 	
     /**
      * The request for the ContactFolder
@@ -154,7 +146,7 @@ public class ContactFolderRequest extends BaseRequest implements IContactFolderR
      * @param value the select clause
      * @return the updated request
      */
-     public IContactFolderRequest select(final String value) {
+     public ContactFolderRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ContactFolderRequest)this;
      }
@@ -165,7 +157,7 @@ public class ContactFolderRequest extends BaseRequest implements IContactFolderR
      * @param value the expand clause
      * @return the updated request
      */
-     public IContactFolderRequest expand(final String value) {
+     public ContactFolderRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ContactFolderRequest)this;
      }

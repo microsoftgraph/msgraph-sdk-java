@@ -13,10 +13,10 @@ import com.microsoft.graph.models.extensions.Recipient;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageCollectionRequest;
-import com.microsoft.graph.requests.extensions.IMessageDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageCollectionRequest;
+import com.microsoft.graph.requests.extensions.MessageDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Message Collection Request Builder.
  */
-public class MessageCollectionRequestBuilder extends BaseRequestBuilder implements IMessageCollectionRequestBuilder {
+public class MessageCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of MailFolder
@@ -44,7 +44,7 @@ public class MessageCollectionRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMessageCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MessageCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,21 +54,21 @@ public class MessageCollectionRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMessageCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MessageCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMessageRequestBuilder byId(final String id) {
+    public MessageRequestBuilder byId(final String id) {
         return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IMessageDeltaCollectionRequestBuilder delta() {
+    public MessageDeltaCollectionRequestBuilder delta() {
         return new MessageDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IMessageDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public MessageDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new MessageDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

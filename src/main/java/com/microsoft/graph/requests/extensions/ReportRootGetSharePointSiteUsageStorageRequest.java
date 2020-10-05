@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageStorageRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageStorageRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Share Point Site Usage Storage Request.
  */
-public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest implements IReportRootGetSharePointSiteUsageStorageRequest {
+public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetSharePointSiteUsageStorage
@@ -97,7 +96,7 @@ public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest 
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetSharePointSiteUsageStorageRequest select(final String value) {
+    public ReportRootGetSharePointSiteUsageStorageRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetSharePointSiteUsageStorageRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest 
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetSharePointSiteUsageStorageRequest expand(final String value) {
+    public ReportRootGetSharePointSiteUsageStorageRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetSharePointSiteUsageStorageRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest 
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetSharePointSiteUsageStorageRequest filter(final String value) {
+    public ReportRootGetSharePointSiteUsageStorageRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetSharePointSiteUsageStorageRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetSharePointSiteUsageStorageRequest extends BaseRequest 
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetSharePointSiteUsageStorageRequest orderBy(final String value) {
+    public ReportRootGetSharePointSiteUsageStorageRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetSharePointSiteUsageStorageRequest)this;
     }

@@ -8,11 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartSeries;
-import com.microsoft.graph.requests.extensions.IWorkbookChartPointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartPointRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Series Request.
  */
-public class WorkbookChartSeriesRequest extends BaseRequest implements IWorkbookChartSeriesRequest {
+public class WorkbookChartSeriesRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookChartSeries
@@ -144,7 +141,7 @@ public class WorkbookChartSeriesRequest extends BaseRequest implements IWorkbook
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartSeriesRequest select(final String value) {
+     public WorkbookChartSeriesRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookChartSeriesRequest)this;
      }
@@ -155,7 +152,7 @@ public class WorkbookChartSeriesRequest extends BaseRequest implements IWorkbook
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartSeriesRequest expand(final String value) {
+     public WorkbookChartSeriesRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookChartSeriesRequest)this;
      }

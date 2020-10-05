@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.ContactFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IContactFolderDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderDeltaCollectionRequest;
+import com.microsoft.graph.requests.extensions.ContactFolderDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactFolderDeltaCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Contact Folder Delta Collection Request Builder.
  */
-public class ContactFolderDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IContactFolderDeltaCollectionRequestBuilder {
+public class ContactFolderDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of ContactFolder
@@ -42,7 +41,7 @@ public class ContactFolderDeltaCollectionRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IContactFolderDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ContactFolderDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class ContactFolderDeltaCollectionRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IContactFolderDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContactFolderDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ContactFolderDeltaCollectionRequest request = new ContactFolderDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

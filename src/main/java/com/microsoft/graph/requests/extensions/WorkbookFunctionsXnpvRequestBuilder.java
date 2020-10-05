@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsXnpvRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsXnpvRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Xnpv Request Builder.
  */
-public class WorkbookFunctionsXnpvRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsXnpvRequestBuilder {
+public class WorkbookFunctionsXnpvRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsXnpv
@@ -36,22 +35,22 @@ public class WorkbookFunctionsXnpvRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsXnpvRequest
+     * Creates the WorkbookFunctionsXnpvRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsXnpvRequest instance
+     * @return the WorkbookFunctionsXnpvRequest instance
      */
-    public IWorkbookFunctionsXnpvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsXnpvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsXnpvRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsXnpvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsXnpvRequest instance
+     * @return the WorkbookFunctionsXnpvRequest instance
      */
-    public IWorkbookFunctionsXnpvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsXnpvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsXnpvRequest request = new WorkbookFunctionsXnpvRequest(
                 getRequestUrl(),
                 getClient(),

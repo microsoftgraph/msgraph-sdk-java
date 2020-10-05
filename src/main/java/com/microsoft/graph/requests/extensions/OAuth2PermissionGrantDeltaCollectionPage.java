@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the OAuth2Permission Grant Delta Collection Page.
  */
-public class OAuth2PermissionGrantDeltaCollectionPage extends BaseCollectionPage<OAuth2PermissionGrant, IOAuth2PermissionGrantDeltaCollectionRequestBuilder> implements IOAuth2PermissionGrantDeltaCollectionPage {
+public class OAuth2PermissionGrantDeltaCollectionPage extends BaseCollectionPage<OAuth2PermissionGrant, OAuth2PermissionGrantDeltaCollectionRequestBuilder> {
 
     /**
      * The opaque link to query delta after the 
@@ -39,7 +39,7 @@ public class OAuth2PermissionGrantDeltaCollectionPage extends BaseCollectionPage
      * @param response The serialized OAuth2PermissionGrantDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public OAuth2PermissionGrantDeltaCollectionPage(final OAuth2PermissionGrantDeltaCollectionResponse response, final IOAuth2PermissionGrantDeltaCollectionRequestBuilder builder) {
+    public OAuth2PermissionGrantDeltaCollectionPage(final OAuth2PermissionGrantDeltaCollectionResponse response, final OAuth2PermissionGrantDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {

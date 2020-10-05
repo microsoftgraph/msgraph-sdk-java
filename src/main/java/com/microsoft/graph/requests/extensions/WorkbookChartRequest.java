@@ -8,21 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChart;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartAxesRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartAxesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartDataLabelsRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartDataLabelsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartAreaFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartAreaFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartLegendRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartLegendRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartTitleRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartTitleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -35,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Request.
  */
-public class WorkbookChartRequest extends BaseRequest implements IWorkbookChartRequest {
+public class WorkbookChartRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookChart
@@ -154,7 +146,7 @@ public class WorkbookChartRequest extends BaseRequest implements IWorkbookChartR
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartRequest select(final String value) {
+     public WorkbookChartRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookChartRequest)this;
      }
@@ -165,7 +157,7 @@ public class WorkbookChartRequest extends BaseRequest implements IWorkbookChartR
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartRequest expand(final String value) {
+     public WorkbookChartRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookChartRequest)this;
      }

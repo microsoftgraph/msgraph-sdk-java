@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.Site;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISiteAddCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteAddCollectionRequest;
+import com.microsoft.graph.requests.extensions.SiteAddCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Site Add Collection Request Builder.
  */
-public class SiteAddCollectionRequestBuilder extends BaseActionRequestBuilder implements ISiteAddCollectionRequestBuilder {
+public class SiteAddCollectionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this collection of Site
@@ -46,7 +45,7 @@ public class SiteAddCollectionRequestBuilder extends BaseActionRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISiteAddCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SiteAddCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,7 +55,7 @@ public class SiteAddCollectionRequestBuilder extends BaseActionRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISiteAddCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteAddCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SiteAddCollectionRequest request = new SiteAddCollectionRequest(
                 getRequestUrl(),
                 getClient(),

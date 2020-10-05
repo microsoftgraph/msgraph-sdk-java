@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemPreviewRequest;
 import com.microsoft.graph.requests.extensions.DriveItemPreviewRequest;
 import com.microsoft.graph.models.extensions.ItemPreviewInfo;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Preview Request Builder.
  */
-public class DriveItemPreviewRequestBuilder extends BaseActionRequestBuilder implements IDriveItemPreviewRequestBuilder {
+public class DriveItemPreviewRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DriveItemPreview
@@ -34,22 +33,22 @@ public class DriveItemPreviewRequestBuilder extends BaseActionRequestBuilder imp
     }
 
     /**
-     * Creates the IDriveItemPreviewRequest
+     * Creates the DriveItemPreviewRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemPreviewRequest instance
+     * @return the DriveItemPreviewRequest instance
      */
-    public IDriveItemPreviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemPreviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDriveItemPreviewRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DriveItemPreviewRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemPreviewRequest instance
+     * @return the DriveItemPreviewRequest instance
      */
-    public IDriveItemPreviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemPreviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemPreviewRequest request = new DriveItemPreviewRequest(
                 getRequestUrl(),
                 getClient(),

@@ -13,9 +13,9 @@ import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorSyn
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Management Exchange Connector Collection Request Builder.
  */
-public class DeviceManagementExchangeConnectorCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceManagementExchangeConnectorCollectionRequestBuilder {
+public class DeviceManagementExchangeConnectorCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -43,7 +43,7 @@ public class DeviceManagementExchangeConnectorCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceManagementExchangeConnectorCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceManagementExchangeConnectorCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,11 +53,11 @@ public class DeviceManagementExchangeConnectorCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceManagementExchangeConnectorCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementExchangeConnectorCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementExchangeConnectorCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceManagementExchangeConnectorRequestBuilder byId(final String id) {
+    public DeviceManagementExchangeConnectorRequestBuilder byId(final String id) {
         return new DeviceManagementExchangeConnectorRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

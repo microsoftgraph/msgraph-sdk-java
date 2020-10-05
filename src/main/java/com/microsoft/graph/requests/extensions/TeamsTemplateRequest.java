@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams Template Request.
  */
-public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateRequest {
+public class TeamsTemplateRequest extends BaseRequest {
 	
     /**
      * The request for the TeamsTemplate
@@ -138,7 +138,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamsTemplateRequest select(final String value) {
+     public TeamsTemplateRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TeamsTemplateRequest)this;
      }
@@ -149,7 +149,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamsTemplateRequest expand(final String value) {
+     public TeamsTemplateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TeamsTemplateRequest)this;
      }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IParticipantMuteRequest;
 import com.microsoft.graph.requests.extensions.ParticipantMuteRequest;
 import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Participant Mute Request Builder.
  */
-public class ParticipantMuteRequestBuilder extends BaseActionRequestBuilder implements IParticipantMuteRequestBuilder {
+public class ParticipantMuteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ParticipantMute
@@ -32,22 +31,22 @@ public class ParticipantMuteRequestBuilder extends BaseActionRequestBuilder impl
     }
 
     /**
-     * Creates the IParticipantMuteRequest
+     * Creates the ParticipantMuteRequest
      *
      * @param requestOptions the options for the request
-     * @return the IParticipantMuteRequest instance
+     * @return the ParticipantMuteRequest instance
      */
-    public IParticipantMuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ParticipantMuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IParticipantMuteRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ParticipantMuteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IParticipantMuteRequest instance
+     * @return the ParticipantMuteRequest instance
      */
-    public IParticipantMuteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ParticipantMuteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ParticipantMuteRequest request = new ParticipantMuteRequest(
                 getRequestUrl(),
                 getClient(),

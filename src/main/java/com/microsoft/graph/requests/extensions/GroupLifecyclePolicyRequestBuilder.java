@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Lifecycle Policy Request Builder.
  */
-public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder implements IGroupLifecyclePolicyRequestBuilder {
+public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the GroupLifecyclePolicy
@@ -35,9 +35,9 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGroupLifecyclePolicyRequest instance
+     * @return the GroupLifecyclePolicyRequest instance
      */
-    public IGroupLifecyclePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupLifecyclePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,19 +45,19 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGroupLifecyclePolicyRequest instance
+     * @return the GroupLifecyclePolicyRequest instance
      */
-    public IGroupLifecyclePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupLifecyclePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IGroupLifecyclePolicyAddGroupRequestBuilder addGroup(final String groupId) {
+    public GroupLifecyclePolicyAddGroupRequestBuilder addGroup(final String groupId) {
         return new GroupLifecyclePolicyAddGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addGroup"), getClient(), null, groupId);
     }
 
-    public IGroupLifecyclePolicyRemoveGroupRequestBuilder removeGroup(final String groupId) {
+    public GroupLifecyclePolicyRemoveGroupRequestBuilder removeGroup(final String groupId) {
         return new GroupLifecyclePolicyRemoveGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeGroup"), getClient(), null, groupId);
     }
 }

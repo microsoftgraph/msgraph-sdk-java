@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Skype For Business Peer To Peer Activity User Counts Request Builder.
  */
-public class ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder {
+public class ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetSkypeForBusinessPeerToPeerActivityUserCounts
@@ -32,22 +31,22 @@ public class ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBui
     }
 
     /**
-     * Creates the IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest
+     * Creates the ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest instance
+     * @return the ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest instance
      */
-    public IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest instance
+     * @return the ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest instance
      */
-    public IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest request = new ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest(
                 getRequestUrl(),
                 getClient(),

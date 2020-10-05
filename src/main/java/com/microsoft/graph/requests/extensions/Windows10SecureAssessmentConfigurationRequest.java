@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Secure Assessment Configuration Request.
  */
-public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest implements IWindows10SecureAssessmentConfigurationRequest {
+public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the Windows10SecureAssessmentConfiguration
@@ -138,7 +138,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10SecureAssessmentConfigurationRequest select(final String value) {
+     public Windows10SecureAssessmentConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (Windows10SecureAssessmentConfigurationRequest)this;
      }
@@ -149,7 +149,7 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10SecureAssessmentConfigurationRequest expand(final String value) {
+     public Windows10SecureAssessmentConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (Windows10SecureAssessmentConfigurationRequest)this;
      }

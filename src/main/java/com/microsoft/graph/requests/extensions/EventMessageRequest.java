@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EventMessage;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Event Message Request.
  */
-public class EventMessageRequest extends BaseRequest implements IEventMessageRequest {
+public class EventMessageRequest extends BaseRequest {
 	
     /**
      * The request for the EventMessage
@@ -155,7 +154,7 @@ public class EventMessageRequest extends BaseRequest implements IEventMessageReq
      * @param value the select clause
      * @return the updated request
      */
-     public IEventMessageRequest select(final String value) {
+     public EventMessageRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (EventMessageRequest)this;
      }
@@ -166,7 +165,7 @@ public class EventMessageRequest extends BaseRequest implements IEventMessageReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IEventMessageRequest expand(final String value) {
+     public EventMessageRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (EventMessageRequest)this;
      }

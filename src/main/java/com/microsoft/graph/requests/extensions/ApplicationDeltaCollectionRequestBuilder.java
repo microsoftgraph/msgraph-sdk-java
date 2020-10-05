@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.Application;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IApplicationDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationDeltaCollectionRequest;
+import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Application Delta Collection Request Builder.
  */
-public class ApplicationDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IApplicationDeltaCollectionRequestBuilder {
+public class ApplicationDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of Application
@@ -42,7 +41,7 @@ public class ApplicationDeltaCollectionRequestBuilder extends BaseFunctionReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IApplicationDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplicationDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class ApplicationDeltaCollectionRequestBuilder extends BaseFunctionReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IApplicationDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ApplicationDeltaCollectionRequest request = new ApplicationDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

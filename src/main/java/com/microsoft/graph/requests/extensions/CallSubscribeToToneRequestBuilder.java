@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallSubscribeToToneRequest;
 import com.microsoft.graph.requests.extensions.CallSubscribeToToneRequest;
 import com.microsoft.graph.models.extensions.SubscribeToToneOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Subscribe To Tone Request Builder.
  */
-public class CallSubscribeToToneRequestBuilder extends BaseActionRequestBuilder implements ICallSubscribeToToneRequestBuilder {
+public class CallSubscribeToToneRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallSubscribeToTone
@@ -32,22 +31,22 @@ public class CallSubscribeToToneRequestBuilder extends BaseActionRequestBuilder 
     }
 
     /**
-     * Creates the ICallSubscribeToToneRequest
+     * Creates the CallSubscribeToToneRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallSubscribeToToneRequest instance
+     * @return the CallSubscribeToToneRequest instance
      */
-    public ICallSubscribeToToneRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallSubscribeToToneRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallSubscribeToToneRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallSubscribeToToneRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallSubscribeToToneRequest instance
+     * @return the CallSubscribeToToneRequest instance
      */
-    public ICallSubscribeToToneRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallSubscribeToToneRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallSubscribeToToneRequest request = new CallSubscribeToToneRequest(
                 getRequestUrl(),
                 getClient(),

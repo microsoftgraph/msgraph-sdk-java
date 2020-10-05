@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Skype For Business Device Usage User Counts Request Builder.
  */
-public class ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder {
+public class ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetSkypeForBusinessDeviceUsageUserCounts
@@ -32,22 +31,22 @@ public class ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder ex
     }
 
     /**
-     * Creates the IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest
+     * Creates the ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest instance
+     * @return the ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest instance
      */
-    public IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest instance
+     * @return the ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest instance
      */
-    public IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest request = new ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest(
                 getRequestUrl(),
                 getClient(),

@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.callrecords.models.extensions.CallRecord;
-import com.microsoft.graph.callrecords.requests.extensions.ISessionCollectionRequestBuilder;
-import com.microsoft.graph.callrecords.requests.extensions.ISessionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SessionRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Call Record Request.
  */
-public class CallRecordRequest extends BaseRequest implements ICallRecordRequest {
+public class CallRecordRequest extends BaseRequest {
 	
     /**
      * The request for the CallRecord
@@ -142,7 +140,7 @@ public class CallRecordRequest extends BaseRequest implements ICallRecordRequest
      * @param value the select clause
      * @return the updated request
      */
-     public ICallRecordRequest select(final String value) {
+     public CallRecordRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (CallRecordRequest)this;
      }
@@ -153,7 +151,7 @@ public class CallRecordRequest extends BaseRequest implements ICallRecordRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public ICallRecordRequest expand(final String value) {
+     public CallRecordRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (CallRecordRequest)this;
      }

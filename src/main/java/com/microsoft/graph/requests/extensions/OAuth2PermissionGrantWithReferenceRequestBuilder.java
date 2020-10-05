@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the OAuth2Permission Grant With Reference Request Builder.
  */
-public class OAuth2PermissionGrantWithReferenceRequestBuilder extends BaseRequestBuilder implements IOAuth2PermissionGrantWithReferenceRequestBuilder {
+public class OAuth2PermissionGrantWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OAuth2PermissionGrant
@@ -36,9 +36,9 @@ public class OAuth2PermissionGrantWithReferenceRequestBuilder extends BaseReques
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOAuth2PermissionGrantWithReferenceRequest instance
+     * @return the OAuth2PermissionGrantWithReferenceRequest instance
      */
-    public IOAuth2PermissionGrantWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OAuth2PermissionGrantWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,13 +46,13 @@ public class OAuth2PermissionGrantWithReferenceRequestBuilder extends BaseReques
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IOAuth2PermissionGrantWithReferenceRequest instance
+     * @return the OAuth2PermissionGrantWithReferenceRequest instance
      */
-    public IOAuth2PermissionGrantWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OAuth2PermissionGrantWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOAuth2PermissionGrantReferenceRequestBuilder reference(){
+    public OAuth2PermissionGrantReferenceRequestBuilder reference(){
         return new OAuth2PermissionGrantReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

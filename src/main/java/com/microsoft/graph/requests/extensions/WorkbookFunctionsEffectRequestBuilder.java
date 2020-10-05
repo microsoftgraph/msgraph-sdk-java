@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsEffectRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsEffectRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Effect Request Builder.
  */
-public class WorkbookFunctionsEffectRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsEffectRequestBuilder {
+public class WorkbookFunctionsEffectRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsEffect
@@ -34,22 +33,22 @@ public class WorkbookFunctionsEffectRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsEffectRequest
+     * Creates the WorkbookFunctionsEffectRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsEffectRequest instance
+     * @return the WorkbookFunctionsEffectRequest instance
      */
-    public IWorkbookFunctionsEffectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsEffectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsEffectRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsEffectRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsEffectRequest instance
+     * @return the WorkbookFunctionsEffectRequest instance
      */
-    public IWorkbookFunctionsEffectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsEffectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsEffectRequest request = new WorkbookFunctionsEffectRequest(
                 getRequestUrl(),
                 getClient(),

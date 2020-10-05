@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Play Prompt Operation Request.
  */
-public class PlayPromptOperationRequest extends BaseRequest implements IPlayPromptOperationRequest {
+public class PlayPromptOperationRequest extends BaseRequest {
 	
     /**
      * The request for the PlayPromptOperation
@@ -138,7 +138,7 @@ public class PlayPromptOperationRequest extends BaseRequest implements IPlayProm
      * @param value the select clause
      * @return the updated request
      */
-     public IPlayPromptOperationRequest select(final String value) {
+     public PlayPromptOperationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PlayPromptOperationRequest)this;
      }
@@ -149,7 +149,7 @@ public class PlayPromptOperationRequest extends BaseRequest implements IPlayProm
      * @param value the expand clause
      * @return the updated request
      */
-     public IPlayPromptOperationRequest expand(final String value) {
+     public PlayPromptOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PlayPromptOperationRequest)this;
      }

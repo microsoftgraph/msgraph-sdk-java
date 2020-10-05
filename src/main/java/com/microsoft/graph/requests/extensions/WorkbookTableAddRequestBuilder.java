@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableAddRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableAddRequest;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Add Request Builder.
  */
-public class WorkbookTableAddRequestBuilder extends BaseActionRequestBuilder implements IWorkbookTableAddRequestBuilder {
+public class WorkbookTableAddRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableAdd
@@ -34,22 +33,22 @@ public class WorkbookTableAddRequestBuilder extends BaseActionRequestBuilder imp
     }
 
     /**
-     * Creates the IWorkbookTableAddRequest
+     * Creates the WorkbookTableAddRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableAddRequest instance
+     * @return the WorkbookTableAddRequest instance
      */
-    public IWorkbookTableAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableAddRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableAddRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableAddRequest instance
+     * @return the WorkbookTableAddRequest instance
      */
-    public IWorkbookTableAddRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableAddRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableAddRequest request = new WorkbookTableAddRequest(
                 getRequestUrl(),
                 getClient(),

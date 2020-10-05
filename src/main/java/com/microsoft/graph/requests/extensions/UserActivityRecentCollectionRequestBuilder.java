@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.UserActivity;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserActivityRecentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserActivityRecentCollectionRequest;
+import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserActivityRecentCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the User Activity Recent Collection Request Builder.
  */
-public class UserActivityRecentCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IUserActivityRecentCollectionRequestBuilder {
+public class UserActivityRecentCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of UserActivity
@@ -42,7 +41,7 @@ public class UserActivityRecentCollectionRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserActivityRecentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserActivityRecentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class UserActivityRecentCollectionRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserActivityRecentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserActivityRecentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserActivityRecentCollectionRequest request = new UserActivityRecentCollectionRequest(
                 getRequestUrl(),
                 getClient(),

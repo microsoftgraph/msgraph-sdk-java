@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile Threat Defense Connector Request Builder.
  */
-public class MobileThreatDefenseConnectorRequestBuilder extends BaseRequestBuilder implements IMobileThreatDefenseConnectorRequestBuilder {
+public class MobileThreatDefenseConnectorRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MobileThreatDefenseConnector
@@ -35,9 +35,9 @@ public class MobileThreatDefenseConnectorRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMobileThreatDefenseConnectorRequest instance
+     * @return the MobileThreatDefenseConnectorRequest instance
      */
-    public IMobileThreatDefenseConnectorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileThreatDefenseConnectorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class MobileThreatDefenseConnectorRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMobileThreatDefenseConnectorRequest instance
+     * @return the MobileThreatDefenseConnectorRequest instance
      */
-    public IMobileThreatDefenseConnectorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileThreatDefenseConnectorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

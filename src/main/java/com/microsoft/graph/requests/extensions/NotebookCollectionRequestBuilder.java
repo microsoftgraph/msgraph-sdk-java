@@ -15,11 +15,11 @@ import com.microsoft.graph.models.extensions.RecentNotebook;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.INotebookCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotebookCollectionRequest;
-import com.microsoft.graph.requests.extensions.INotebookGetNotebookFromWebUrlRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.NotebookCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
+import com.microsoft.graph.requests.extensions.NotebookCollectionRequest;
+import com.microsoft.graph.requests.extensions.NotebookGetNotebookFromWebUrlRequestBuilder;
+import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -28,7 +28,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Notebook Collection Request Builder.
  */
-public class NotebookCollectionRequestBuilder extends BaseRequestBuilder implements INotebookCollectionRequestBuilder {
+public class NotebookCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Onenote
@@ -47,7 +47,7 @@ public class NotebookCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public INotebookCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public NotebookCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -57,21 +57,21 @@ public class NotebookCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public INotebookCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotebookCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new NotebookCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public INotebookRequestBuilder byId(final String id) {
+    public NotebookRequestBuilder byId(final String id) {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public INotebookGetNotebookFromWebUrlRequestBuilder getNotebookFromWebUrl(final String webUrl) {
+    public NotebookGetNotebookFromWebUrlRequestBuilder getNotebookFromWebUrl(final String webUrl) {
         return new NotebookGetNotebookFromWebUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getNotebookFromWebUrl"), getClient(), null, webUrl);
     }
 
-    public INotebookGetRecentNotebooksCollectionRequestBuilder getRecentNotebooks(final Boolean includePersonalNotebooks) {
+    public NotebookGetRecentNotebooksCollectionRequestBuilder getRecentNotebooks(final Boolean includePersonalNotebooks) {
         return new NotebookGetRecentNotebooksCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRecentNotebooks"), getClient(), null, includePersonalNotebooks);
     }
 }

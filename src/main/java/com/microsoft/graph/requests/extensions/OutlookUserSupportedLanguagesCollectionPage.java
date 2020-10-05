@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.LocaleInfo;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOutlookUserSupportedLanguagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionPage;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Outlook User Supported Languages Collection Page.
  */
-public class OutlookUserSupportedLanguagesCollectionPage extends BaseCollectionPage<LocaleInfo, IOutlookUserSupportedLanguagesCollectionRequestBuilder> implements IOutlookUserSupportedLanguagesCollectionPage {
+public class OutlookUserSupportedLanguagesCollectionPage extends BaseCollectionPage<LocaleInfo, OutlookUserSupportedLanguagesCollectionRequestBuilder> {
 
     /**
      * A collection page for LocaleInfo.
@@ -33,7 +33,7 @@ public class OutlookUserSupportedLanguagesCollectionPage extends BaseCollectionP
      * @param response The serialized OutlookUserSupportedLanguagesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public OutlookUserSupportedLanguagesCollectionPage(final OutlookUserSupportedLanguagesCollectionResponse response, final IOutlookUserSupportedLanguagesCollectionRequestBuilder builder) {
+    public OutlookUserSupportedLanguagesCollectionPage(final OutlookUserSupportedLanguagesCollectionResponse response, final OutlookUserSupportedLanguagesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

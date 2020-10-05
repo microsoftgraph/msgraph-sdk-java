@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Enrollment Platform Restrictions Configuration Request.
  */
-public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends BaseRequest implements IDeviceEnrollmentPlatformRestrictionsConfigurationRequest {
+public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the DeviceEnrollmentPlatformRestrictionsConfiguration
@@ -138,7 +138,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceEnrollmentPlatformRestrictionsConfigurationRequest select(final String value) {
+     public DeviceEnrollmentPlatformRestrictionsConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceEnrollmentPlatformRestrictionsConfigurationRequest)this;
      }
@@ -149,7 +149,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceEnrollmentPlatformRestrictionsConfigurationRequest expand(final String value) {
+     public DeviceEnrollmentPlatformRestrictionsConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceEnrollmentPlatformRestrictionsConfigurationRequest)this;
      }

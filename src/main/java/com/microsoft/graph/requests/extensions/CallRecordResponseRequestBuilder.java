@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallRecordResponseRequest;
 import com.microsoft.graph.requests.extensions.CallRecordResponseRequest;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.models.extensions.RecordOperation;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Record Response Request Builder.
  */
-public class CallRecordResponseRequestBuilder extends BaseActionRequestBuilder implements ICallRecordResponseRequestBuilder {
+public class CallRecordResponseRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallRecordResponse
@@ -47,22 +46,22 @@ public class CallRecordResponseRequestBuilder extends BaseActionRequestBuilder i
     }
 
     /**
-     * Creates the ICallRecordResponseRequest
+     * Creates the CallRecordResponseRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallRecordResponseRequest instance
+     * @return the CallRecordResponseRequest instance
      */
-    public ICallRecordResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallRecordResponseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallRecordResponseRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallRecordResponseRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallRecordResponseRequest instance
+     * @return the CallRecordResponseRequest instance
      */
-    public ICallRecordResponseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallRecordResponseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallRecordResponseRequest request = new CallRecordResponseRequest(
                 getRequestUrl(),
                 getClient(),

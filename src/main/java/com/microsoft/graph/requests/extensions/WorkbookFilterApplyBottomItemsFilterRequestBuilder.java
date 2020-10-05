@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyBottomItemsFilterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyBottomItemsFilterRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Filter Apply Bottom Items Filter Request Builder.
  */
-public class WorkbookFilterApplyBottomItemsFilterRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFilterApplyBottomItemsFilterRequestBuilder {
+public class WorkbookFilterApplyBottomItemsFilterRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFilterApplyBottomItemsFilter
@@ -32,22 +31,22 @@ public class WorkbookFilterApplyBottomItemsFilterRequestBuilder extends BaseActi
     }
 
     /**
-     * Creates the IWorkbookFilterApplyBottomItemsFilterRequest
+     * Creates the WorkbookFilterApplyBottomItemsFilterRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyBottomItemsFilterRequest instance
+     * @return the WorkbookFilterApplyBottomItemsFilterRequest instance
      */
-    public IWorkbookFilterApplyBottomItemsFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFilterApplyBottomItemsFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFilterApplyBottomItemsFilterRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFilterApplyBottomItemsFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyBottomItemsFilterRequest instance
+     * @return the WorkbookFilterApplyBottomItemsFilterRequest instance
      */
-    public IWorkbookFilterApplyBottomItemsFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterApplyBottomItemsFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyBottomItemsFilterRequest request = new WorkbookFilterApplyBottomItemsFilterRequest(
                 getRequestUrl(),
                 getClient(),

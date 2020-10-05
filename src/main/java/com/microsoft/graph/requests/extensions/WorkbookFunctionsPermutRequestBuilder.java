@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPermutRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsPermutRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Permut Request Builder.
  */
-public class WorkbookFunctionsPermutRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsPermutRequestBuilder {
+public class WorkbookFunctionsPermutRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsPermut
@@ -34,22 +33,22 @@ public class WorkbookFunctionsPermutRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsPermutRequest
+     * Creates the WorkbookFunctionsPermutRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPermutRequest instance
+     * @return the WorkbookFunctionsPermutRequest instance
      */
-    public IWorkbookFunctionsPermutRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsPermutRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsPermutRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsPermutRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPermutRequest instance
+     * @return the WorkbookFunctionsPermutRequest instance
      */
-    public IWorkbookFunctionsPermutRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsPermutRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsPermutRequest request = new WorkbookFunctionsPermutRequest(
                 getRequestUrl(),
                 getClient(),

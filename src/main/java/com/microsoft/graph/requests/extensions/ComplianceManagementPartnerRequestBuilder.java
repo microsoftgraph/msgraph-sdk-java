@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Compliance Management Partner Request Builder.
  */
-public class ComplianceManagementPartnerRequestBuilder extends BaseRequestBuilder implements IComplianceManagementPartnerRequestBuilder {
+public class ComplianceManagementPartnerRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ComplianceManagementPartner
@@ -35,9 +35,9 @@ public class ComplianceManagementPartnerRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IComplianceManagementPartnerRequest instance
+     * @return the ComplianceManagementPartnerRequest instance
      */
-    public IComplianceManagementPartnerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ComplianceManagementPartnerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ComplianceManagementPartnerRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IComplianceManagementPartnerRequest instance
+     * @return the ComplianceManagementPartnerRequest instance
      */
-    public IComplianceManagementPartnerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ComplianceManagementPartnerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ComplianceManagementPartnerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

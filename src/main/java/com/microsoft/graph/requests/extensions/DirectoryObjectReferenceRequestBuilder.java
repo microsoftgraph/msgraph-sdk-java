@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Object Reference Request Builder.
  */
-public class DirectoryObjectReferenceRequestBuilder extends BaseRequestBuilder implements IDirectoryObjectReferenceRequestBuilder {
+public class DirectoryObjectReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DirectoryObject
@@ -38,9 +38,9 @@ public class DirectoryObjectReferenceRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The IDirectoryObjectReferenceRequest instance
+     * @return The DirectoryObjectReferenceRequest instance
      */
-    public IDirectoryObjectReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryObjectReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +48,9 @@ public class DirectoryObjectReferenceRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDirectoryObjectReferenceRequest instance
+     * @return the DirectoryObjectReferenceRequest instance
      */
-    public IDirectoryObjectReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryObjectReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

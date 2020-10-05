@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityPagesRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityPagesRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Share Point Activity Pages Request Builder.
  */
-public class ReportRootGetSharePointActivityPagesRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetSharePointActivityPagesRequestBuilder {
+public class ReportRootGetSharePointActivityPagesRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetSharePointActivityPages
@@ -32,22 +31,22 @@ public class ReportRootGetSharePointActivityPagesRequestBuilder extends BaseFunc
     }
 
     /**
-     * Creates the IReportRootGetSharePointActivityPagesRequest
+     * Creates the ReportRootGetSharePointActivityPagesRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSharePointActivityPagesRequest instance
+     * @return the ReportRootGetSharePointActivityPagesRequest instance
      */
-    public IReportRootGetSharePointActivityPagesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetSharePointActivityPagesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetSharePointActivityPagesRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetSharePointActivityPagesRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSharePointActivityPagesRequest instance
+     * @return the ReportRootGetSharePointActivityPagesRequest instance
      */
-    public IReportRootGetSharePointActivityPagesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetSharePointActivityPagesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetSharePointActivityPagesRequest request = new ReportRootGetSharePointActivityPagesRequest(
                 getRequestUrl(),
                 getClient(),

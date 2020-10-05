@@ -9,15 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -30,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device With Reference Request Builder.
  */
-public class ManagedDeviceWithReferenceRequestBuilder extends BaseRequestBuilder implements IManagedDeviceWithReferenceRequestBuilder {
+public class ManagedDeviceWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedDevice
@@ -47,9 +42,9 @@ public class ManagedDeviceWithReferenceRequestBuilder extends BaseRequestBuilder
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceWithReferenceRequest instance
+     * @return the ManagedDeviceWithReferenceRequest instance
      */
-    public IManagedDeviceWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -57,13 +52,13 @@ public class ManagedDeviceWithReferenceRequestBuilder extends BaseRequestBuilder
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceWithReferenceRequest instance
+     * @return the ManagedDeviceWithReferenceRequest instance
      */
-    public IManagedDeviceWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedDeviceReferenceRequestBuilder reference(){
+    public ManagedDeviceReferenceRequestBuilder reference(){
         return new ManagedDeviceReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

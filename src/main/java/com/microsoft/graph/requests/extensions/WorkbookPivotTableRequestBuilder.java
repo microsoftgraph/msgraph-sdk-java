@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookPivotTable;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -20,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Pivot Table Request Builder.
  */
-public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder implements IWorkbookPivotTableRequestBuilder {
+public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookPivotTable
@@ -37,9 +36,9 @@ public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookPivotTableRequest instance
+     * @return the WorkbookPivotTableRequest instance
      */
-    public IWorkbookPivotTableRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookPivotTableRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +46,9 @@ public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookPivotTableRequest instance
+     * @return the WorkbookPivotTableRequest instance
      */
-    public IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookPivotTableRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookPivotTableRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,13 +57,13 @@ public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
-    public IWorkbookPivotTableRefreshRequestBuilder refresh() {
+    public WorkbookPivotTableRefreshRequestBuilder refresh() {
         return new WorkbookPivotTableRefreshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refresh"), getClient(), null);
     }
 }

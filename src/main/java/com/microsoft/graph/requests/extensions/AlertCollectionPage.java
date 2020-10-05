@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Alert;
-import com.microsoft.graph.requests.extensions.IAlertCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.AlertCollectionPage;
 import com.microsoft.graph.requests.extensions.AlertCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.AlertCollectionResponse;
 /**
  * The class for the Alert Collection Page.
  */
-public class AlertCollectionPage extends BaseCollectionPage<Alert, IAlertCollectionRequestBuilder> implements IAlertCollectionPage {
+public class AlertCollectionPage extends BaseCollectionPage<Alert, AlertCollectionRequestBuilder> {
 
     /**
      * A collection page for Alert
@@ -22,7 +22,7 @@ public class AlertCollectionPage extends BaseCollectionPage<Alert, IAlertCollect
      * @param response the serialized AlertCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AlertCollectionPage(final AlertCollectionResponse response, final IAlertCollectionRequestBuilder builder) {
+    public AlertCollectionPage(final AlertCollectionResponse response, final AlertCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

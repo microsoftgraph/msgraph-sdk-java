@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Named Location Request Builder.
  */
-public class NamedLocationRequestBuilder extends BaseRequestBuilder implements INamedLocationRequestBuilder {
+public class NamedLocationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the NamedLocation
@@ -35,9 +35,9 @@ public class NamedLocationRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the INamedLocationRequest instance
+     * @return the NamedLocationRequest instance
      */
-    public INamedLocationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public NamedLocationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class NamedLocationRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the INamedLocationRequest instance
+     * @return the NamedLocationRequest instance
      */
-    public INamedLocationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NamedLocationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.NamedLocationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

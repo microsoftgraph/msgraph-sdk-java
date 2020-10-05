@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Remote Assistance Partner Request Builder.
  */
-public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder implements IRemoteAssistancePartnerRequestBuilder {
+public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the RemoteAssistancePartner
@@ -35,9 +35,9 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IRemoteAssistancePartnerRequest instance
+     * @return the RemoteAssistancePartnerRequest instance
      */
-    public IRemoteAssistancePartnerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public RemoteAssistancePartnerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,19 +45,19 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IRemoteAssistancePartnerRequest instance
+     * @return the RemoteAssistancePartnerRequest instance
      */
-    public IRemoteAssistancePartnerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RemoteAssistancePartnerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.RemoteAssistancePartnerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IRemoteAssistancePartnerBeginOnboardingRequestBuilder beginOnboarding() {
+    public RemoteAssistancePartnerBeginOnboardingRequestBuilder beginOnboarding() {
         return new RemoteAssistancePartnerBeginOnboardingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beginOnboarding"), getClient(), null);
     }
 
-    public IRemoteAssistancePartnerDisconnectRequestBuilder disconnect() {
+    public RemoteAssistancePartnerDisconnectRequestBuilder disconnect() {
         return new RemoteAssistancePartnerDisconnectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disconnect"), getClient(), null);
     }
 }

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.SwapShiftsChangeRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestCollectionRequest;
+import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Swap Shifts Change Request Collection Request Builder.
  */
-public class SwapShiftsChangeRequestCollectionRequestBuilder extends BaseRequestBuilder implements ISwapShiftsChangeRequestCollectionRequestBuilder {
+public class SwapShiftsChangeRequestCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Schedule
@@ -42,7 +42,7 @@ public class SwapShiftsChangeRequestCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISwapShiftsChangeRequestCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SwapShiftsChangeRequestCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class SwapShiftsChangeRequestCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISwapShiftsChangeRequestCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SwapShiftsChangeRequestCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SwapShiftsChangeRequestCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISwapShiftsChangeRequestRequestBuilder byId(final String id) {
+    public SwapShiftsChangeRequestRequestBuilder byId(final String id) {
         return new SwapShiftsChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

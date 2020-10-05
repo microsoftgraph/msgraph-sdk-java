@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Subscribe To Tone Operation Request Builder.
  */
-public class SubscribeToToneOperationRequestBuilder extends BaseRequestBuilder implements ISubscribeToToneOperationRequestBuilder {
+public class SubscribeToToneOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SubscribeToToneOperation
@@ -35,9 +35,9 @@ public class SubscribeToToneOperationRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISubscribeToToneOperationRequest instance
+     * @return the SubscribeToToneOperationRequest instance
      */
-    public ISubscribeToToneOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SubscribeToToneOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class SubscribeToToneOperationRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISubscribeToToneOperationRequest instance
+     * @return the SubscribeToToneOperationRequest instance
      */
-    public ISubscribeToToneOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SubscribeToToneOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SubscribeToToneOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

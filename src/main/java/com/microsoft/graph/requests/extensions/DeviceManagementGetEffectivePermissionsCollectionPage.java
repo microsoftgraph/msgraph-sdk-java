@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.RolePermission;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Management Get Effective Permissions Collection Page.
  */
-public class DeviceManagementGetEffectivePermissionsCollectionPage extends BaseCollectionPage<RolePermission, IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder> implements IDeviceManagementGetEffectivePermissionsCollectionPage {
+public class DeviceManagementGetEffectivePermissionsCollectionPage extends BaseCollectionPage<RolePermission, DeviceManagementGetEffectivePermissionsCollectionRequestBuilder> {
 
     /**
      * A collection page for RolePermission.
@@ -33,7 +33,7 @@ public class DeviceManagementGetEffectivePermissionsCollectionPage extends BaseC
      * @param response The serialized DeviceManagementGetEffectivePermissionsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DeviceManagementGetEffectivePermissionsCollectionPage(final DeviceManagementGetEffectivePermissionsCollectionResponse response, final IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder) {
+    public DeviceManagementGetEffectivePermissionsCollectionPage(final DeviceManagementGetEffectivePermissionsCollectionResponse response, final DeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

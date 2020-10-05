@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserRevokeSignInSessionsRequest;
 import com.microsoft.graph.requests.extensions.UserRevokeSignInSessionsRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the User Revoke Sign In Sessions Request Builder.
  */
-public class UserRevokeSignInSessionsRequestBuilder extends BaseActionRequestBuilder implements IUserRevokeSignInSessionsRequestBuilder {
+public class UserRevokeSignInSessionsRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this UserRevokeSignInSessions
@@ -30,22 +29,22 @@ public class UserRevokeSignInSessionsRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IUserRevokeSignInSessionsRequest
+     * Creates the UserRevokeSignInSessionsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IUserRevokeSignInSessionsRequest instance
+     * @return the UserRevokeSignInSessionsRequest instance
      */
-    public IUserRevokeSignInSessionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserRevokeSignInSessionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IUserRevokeSignInSessionsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the UserRevokeSignInSessionsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IUserRevokeSignInSessionsRequest instance
+     * @return the UserRevokeSignInSessionsRequest instance
      */
-    public IUserRevokeSignInSessionsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserRevokeSignInSessionsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserRevokeSignInSessionsRequest request = new UserRevokeSignInSessionsRequest(
                 getRequestUrl(),
                 getClient(),

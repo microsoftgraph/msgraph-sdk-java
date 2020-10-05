@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActivationsUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActivationsUserCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Office365Activations User Counts Request Builder.
  */
-public class ReportRootGetOffice365ActivationsUserCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetOffice365ActivationsUserCountsRequestBuilder {
+public class ReportRootGetOffice365ActivationsUserCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetOffice365ActivationsUserCounts
@@ -30,22 +29,22 @@ public class ReportRootGetOffice365ActivationsUserCountsRequestBuilder extends B
     }
 
     /**
-     * Creates the IReportRootGetOffice365ActivationsUserCountsRequest
+     * Creates the ReportRootGetOffice365ActivationsUserCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOffice365ActivationsUserCountsRequest instance
+     * @return the ReportRootGetOffice365ActivationsUserCountsRequest instance
      */
-    public IReportRootGetOffice365ActivationsUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetOffice365ActivationsUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetOffice365ActivationsUserCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetOffice365ActivationsUserCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOffice365ActivationsUserCountsRequest instance
+     * @return the ReportRootGetOffice365ActivationsUserCountsRequest instance
      */
-    public IReportRootGetOffice365ActivationsUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetOffice365ActivationsUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOffice365ActivationsUserCountsRequest request = new ReportRootGetOffice365ActivationsUserCountsRequest(
                 getRequestUrl(),
                 getClient(),

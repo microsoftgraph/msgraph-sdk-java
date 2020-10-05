@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsApp;
-import com.microsoft.graph.requests.extensions.ITeamsAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TeamsAppCollectionResponse;
 /**
  * The class for the Teams App Collection Page.
  */
-public class TeamsAppCollectionPage extends BaseCollectionPage<TeamsApp, ITeamsAppCollectionRequestBuilder> implements ITeamsAppCollectionPage {
+public class TeamsAppCollectionPage extends BaseCollectionPage<TeamsApp, TeamsAppCollectionRequestBuilder> {
 
     /**
      * A collection page for TeamsApp
@@ -22,7 +22,7 @@ public class TeamsAppCollectionPage extends BaseCollectionPage<TeamsApp, ITeamsA
      * @param response the serialized TeamsAppCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsAppCollectionPage(final TeamsAppCollectionResponse response, final ITeamsAppCollectionRequestBuilder builder) {
+    public TeamsAppCollectionPage(final TeamsAppCollectionResponse response, final TeamsAppCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

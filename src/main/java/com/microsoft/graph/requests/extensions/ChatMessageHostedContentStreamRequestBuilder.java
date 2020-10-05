@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Chat Message Hosted Content Stream Request Builder.
  */
-public class ChatMessageHostedContentStreamRequestBuilder extends BaseRequestBuilder implements IChatMessageHostedContentStreamRequestBuilder {
+public class ChatMessageHostedContentStreamRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ChatMessageHostedContent
@@ -35,9 +35,9 @@ public class ChatMessageHostedContentStreamRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IChatMessageHostedContentStreamRequest instance
+     * @return the ChatMessageHostedContentStreamRequest instance
      */
-    public IChatMessageHostedContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ChatMessageHostedContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ChatMessageHostedContentStreamRequestBuilder extends BaseRequestBui
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IChatMessageHostedContentStreamRequest instance
+     * @return the ChatMessageHostedContentStreamRequest instance
      */
-    public IChatMessageHostedContentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatMessageHostedContentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ChatMessageHostedContentStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

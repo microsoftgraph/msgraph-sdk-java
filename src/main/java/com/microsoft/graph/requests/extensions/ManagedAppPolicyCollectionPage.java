@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRespons
 /**
  * The class for the Managed App Policy Collection Page.
  */
-public class ManagedAppPolicyCollectionPage extends BaseCollectionPage<ManagedAppPolicy, IManagedAppPolicyCollectionRequestBuilder> implements IManagedAppPolicyCollectionPage {
+public class ManagedAppPolicyCollectionPage extends BaseCollectionPage<ManagedAppPolicy, ManagedAppPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedAppPolicy
@@ -22,7 +22,7 @@ public class ManagedAppPolicyCollectionPage extends BaseCollectionPage<ManagedAp
      * @param response the serialized ManagedAppPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedAppPolicyCollectionPage(final ManagedAppPolicyCollectionResponse response, final IManagedAppPolicyCollectionRequestBuilder builder) {
+    public ManagedAppPolicyCollectionPage(final ManagedAppPolicyCollectionResponse response, final ManagedAppPolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

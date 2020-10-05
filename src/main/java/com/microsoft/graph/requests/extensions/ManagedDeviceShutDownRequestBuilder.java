@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceShutDownRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceShutDownRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Shut Down Request Builder.
  */
-public class ManagedDeviceShutDownRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceShutDownRequestBuilder {
+public class ManagedDeviceShutDownRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceShutDown
@@ -30,22 +29,22 @@ public class ManagedDeviceShutDownRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IManagedDeviceShutDownRequest
+     * Creates the ManagedDeviceShutDownRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceShutDownRequest instance
+     * @return the ManagedDeviceShutDownRequest instance
      */
-    public IManagedDeviceShutDownRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceShutDownRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceShutDownRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceShutDownRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceShutDownRequest instance
+     * @return the ManagedDeviceShutDownRequest instance
      */
-    public IManagedDeviceShutDownRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceShutDownRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceShutDownRequest request = new ManagedDeviceShutDownRequest(
                 getRequestUrl(),
                 getClient(),

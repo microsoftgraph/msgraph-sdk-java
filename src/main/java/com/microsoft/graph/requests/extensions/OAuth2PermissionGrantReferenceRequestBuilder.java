@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the OAuth2Permission Grant Reference Request Builder.
  */
-public class OAuth2PermissionGrantReferenceRequestBuilder extends BaseRequestBuilder implements IOAuth2PermissionGrantReferenceRequestBuilder {
+public class OAuth2PermissionGrantReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OAuth2PermissionGrant
@@ -37,9 +37,9 @@ public class OAuth2PermissionGrantReferenceRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The IOAuth2PermissionGrantReferenceRequest instance
+     * @return The OAuth2PermissionGrantReferenceRequest instance
      */
-    public IOAuth2PermissionGrantReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OAuth2PermissionGrantReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class OAuth2PermissionGrantReferenceRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOAuth2PermissionGrantReferenceRequest instance
+     * @return the OAuth2PermissionGrantReferenceRequest instance
      */
-    public IOAuth2PermissionGrantReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OAuth2PermissionGrantReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

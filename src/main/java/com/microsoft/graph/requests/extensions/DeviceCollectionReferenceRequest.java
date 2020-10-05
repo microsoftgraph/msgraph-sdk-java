@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.Device;
 /**
  * The class for the Device Collection Reference Request.
  */
-public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<DeviceCollectionResponse, IDeviceCollectionPage> implements IDeviceCollectionReferenceRequest {
+public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<DeviceCollectionResponse, DeviceCollectionPage> {
 
     /**
      * The request builder for this collection of Device
@@ -33,7 +33,7 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param requestOptions the options for this request
      */
     public DeviceCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, IDeviceCollectionPage.class);
+        super(requestUrl, client, requestOptions, DeviceCollectionResponse.class, DeviceCollectionPage.class);
     }
 
     public void post(final Device newDevice, final ICallback<? super Device> callback) {
@@ -57,7 +57,7 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param value the expand clause
      * @return the updated request
      */
-    public IDeviceCollectionReferenceRequest expand(final String value) {
+    public DeviceCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceCollectionReferenceRequest)this;
     }
@@ -68,7 +68,7 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param value the filter clause
      * @return the updated request
      */
-    public IDeviceCollectionReferenceRequest filter(final String value) {
+    public DeviceCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceCollectionReferenceRequest)this;
     }
@@ -79,7 +79,7 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param value the sort clause
      * @return the updated request
      */
-    public IDeviceCollectionReferenceRequest orderBy(final String value) {
+    public DeviceCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceCollectionReferenceRequest)this;
     }
@@ -90,7 +90,7 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param value the select clause
      * @return the updated request
      */
-    public IDeviceCollectionReferenceRequest select(final String value) {
+    public DeviceCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceCollectionReferenceRequest)this;
     }
@@ -101,7 +101,7 @@ public class DeviceCollectionReferenceRequest extends BaseCollectionRequest<Devi
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IDeviceCollectionReferenceRequest top(final int value) {
+    public DeviceCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (DeviceCollectionReferenceRequest)this;
     }

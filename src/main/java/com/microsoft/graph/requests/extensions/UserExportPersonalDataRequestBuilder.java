@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserExportPersonalDataRequest;
 import com.microsoft.graph.requests.extensions.UserExportPersonalDataRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the User Export Personal Data Request Builder.
  */
-public class UserExportPersonalDataRequestBuilder extends BaseActionRequestBuilder implements IUserExportPersonalDataRequestBuilder {
+public class UserExportPersonalDataRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this UserExportPersonalData
@@ -32,22 +31,22 @@ public class UserExportPersonalDataRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IUserExportPersonalDataRequest
+     * Creates the UserExportPersonalDataRequest
      *
      * @param requestOptions the options for the request
-     * @return the IUserExportPersonalDataRequest instance
+     * @return the UserExportPersonalDataRequest instance
      */
-    public IUserExportPersonalDataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserExportPersonalDataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IUserExportPersonalDataRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the UserExportPersonalDataRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IUserExportPersonalDataRequest instance
+     * @return the UserExportPersonalDataRequest instance
      */
-    public IUserExportPersonalDataRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExportPersonalDataRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserExportPersonalDataRequest request = new UserExportPersonalDataRequest(
                 getRequestUrl(),
                 getClient(),

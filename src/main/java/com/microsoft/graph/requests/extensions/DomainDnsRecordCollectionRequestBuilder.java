@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.DomainDnsRecord;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequest;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Domain Dns Record Collection Request Builder.
  */
-public class DomainDnsRecordCollectionRequestBuilder extends BaseRequestBuilder implements IDomainDnsRecordCollectionRequestBuilder {
+public class DomainDnsRecordCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DomainDnsRecord
@@ -41,7 +41,7 @@ public class DomainDnsRecordCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDomainDnsRecordCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DomainDnsRecordCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class DomainDnsRecordCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDomainDnsRecordCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainDnsRecordCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DomainDnsRecordCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDomainDnsRecordRequestBuilder byId(final String id) {
+    public DomainDnsRecordRequestBuilder byId(final String id) {
         return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

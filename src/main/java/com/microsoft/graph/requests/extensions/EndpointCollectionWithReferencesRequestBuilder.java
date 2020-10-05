@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Endpoint Collection With References Request Builder.
  */
-public class EndpointCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements IEndpointCollectionWithReferencesRequestBuilder {
+public class EndpointCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -39,7 +39,7 @@ public class EndpointCollectionWithReferencesRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEndpointCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EndpointCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,15 +49,15 @@ public class EndpointCollectionWithReferencesRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEndpointCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EndpointCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EndpointCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IEndpointWithReferenceRequestBuilder byId(final String id) {
+    public EndpointWithReferenceRequestBuilder byId(final String id) {
         return new EndpointWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IEndpointCollectionReferenceRequestBuilder references(){
+    public EndpointCollectionReferenceRequestBuilder references(){
         return new EndpointCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

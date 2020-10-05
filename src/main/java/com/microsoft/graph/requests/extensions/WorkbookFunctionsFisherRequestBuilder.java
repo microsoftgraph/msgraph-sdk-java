@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFisherRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFisherRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Fisher Request Builder.
  */
-public class WorkbookFunctionsFisherRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsFisherRequestBuilder {
+public class WorkbookFunctionsFisherRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsFisher
@@ -32,22 +31,22 @@ public class WorkbookFunctionsFisherRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsFisherRequest
+     * Creates the WorkbookFunctionsFisherRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFisherRequest instance
+     * @return the WorkbookFunctionsFisherRequest instance
      */
-    public IWorkbookFunctionsFisherRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsFisherRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsFisherRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsFisherRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFisherRequest instance
+     * @return the WorkbookFunctionsFisherRequest instance
      */
-    public IWorkbookFunctionsFisherRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsFisherRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsFisherRequest request = new WorkbookFunctionsFisherRequest(
                 getRequestUrl(),
                 getClient(),

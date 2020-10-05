@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DeviceInstallState;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceInstallStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Install State Collection Request Builder.
  */
-public class DeviceInstallStateCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceInstallStateCollectionRequestBuilder {
+public class DeviceInstallStateCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of UserInstallStateSummary
@@ -42,7 +42,7 @@ public class DeviceInstallStateCollectionRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceInstallStateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceInstallStateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DeviceInstallStateCollectionRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceInstallStateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceInstallStateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceInstallStateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceInstallStateRequestBuilder byId(final String id) {
+    public DeviceInstallStateRequestBuilder byId(final String id) {
         return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

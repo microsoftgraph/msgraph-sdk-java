@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Device Configuration Assign Collection Request Builder.
  */
-public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActionRequestBuilder implements IDeviceConfigurationAssignCollectionRequestBuilder {
+public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceConfiguration
@@ -46,7 +45,7 @@ public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActio
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceConfigurationAssignCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceConfigurationAssignCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,7 +55,7 @@ public class DeviceConfigurationAssignCollectionRequestBuilder extends BaseActio
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceConfigurationAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceConfigurationAssignCollectionRequest request = new DeviceConfigurationAssignCollectionRequest(
                 getRequestUrl(),
                 getClient(),

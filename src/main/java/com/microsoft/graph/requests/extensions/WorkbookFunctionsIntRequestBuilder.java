@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIntRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsIntRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Int Request Builder.
  */
-public class WorkbookFunctionsIntRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsIntRequestBuilder {
+public class WorkbookFunctionsIntRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsInt
@@ -32,22 +31,22 @@ public class WorkbookFunctionsIntRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookFunctionsIntRequest
+     * Creates the WorkbookFunctionsIntRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIntRequest instance
+     * @return the WorkbookFunctionsIntRequest instance
      */
-    public IWorkbookFunctionsIntRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsIntRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsIntRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsIntRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIntRequest instance
+     * @return the WorkbookFunctionsIntRequest instance
      */
-    public IWorkbookFunctionsIntRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsIntRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIntRequest request = new WorkbookFunctionsIntRequest(
                 getRequestUrl(),
                 getClient(),

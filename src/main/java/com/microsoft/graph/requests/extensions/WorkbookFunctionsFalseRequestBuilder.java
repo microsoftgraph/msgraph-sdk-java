@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFalseRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFalseRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions False Request Builder.
  */
-public class WorkbookFunctionsFalseRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsFalseRequestBuilder {
+public class WorkbookFunctionsFalseRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsFalse
@@ -30,22 +29,22 @@ public class WorkbookFunctionsFalseRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsFalseRequest
+     * Creates the WorkbookFunctionsFalseRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFalseRequest instance
+     * @return the WorkbookFunctionsFalseRequest instance
      */
-    public IWorkbookFunctionsFalseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsFalseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsFalseRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsFalseRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFalseRequest instance
+     * @return the WorkbookFunctionsFalseRequest instance
      */
-    public IWorkbookFunctionsFalseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsFalseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsFalseRequest request = new WorkbookFunctionsFalseRequest(
                 getRequestUrl(),
                 getClient(),

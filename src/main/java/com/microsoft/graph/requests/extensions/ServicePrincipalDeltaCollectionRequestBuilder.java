@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IServicePrincipalDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IServicePrincipalDeltaCollectionRequest;
+import com.microsoft.graph.requests.extensions.ServicePrincipalDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalDeltaCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Service Principal Delta Collection Request Builder.
  */
-public class ServicePrincipalDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IServicePrincipalDeltaCollectionRequestBuilder {
+public class ServicePrincipalDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -42,7 +41,7 @@ public class ServicePrincipalDeltaCollectionRequestBuilder extends BaseFunctionR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IServicePrincipalDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ServicePrincipalDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class ServicePrincipalDeltaCollectionRequestBuilder extends BaseFunctionR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IServicePrincipalDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ServicePrincipalDeltaCollectionRequest request = new ServicePrincipalDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

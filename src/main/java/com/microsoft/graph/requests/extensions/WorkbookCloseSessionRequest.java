@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookCloseSessionRequest;
 import com.microsoft.graph.requests.extensions.WorkbookCloseSessionRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Close Session Request.
  */
-public class WorkbookCloseSessionRequest extends BaseRequest implements IWorkbookCloseSessionRequest {
+public class WorkbookCloseSessionRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookCloseSession

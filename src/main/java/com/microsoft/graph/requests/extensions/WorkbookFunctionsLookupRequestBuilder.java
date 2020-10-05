@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLookupRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsLookupRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Lookup Request Builder.
  */
-public class WorkbookFunctionsLookupRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsLookupRequestBuilder {
+public class WorkbookFunctionsLookupRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsLookup
@@ -36,22 +35,22 @@ public class WorkbookFunctionsLookupRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsLookupRequest
+     * Creates the WorkbookFunctionsLookupRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLookupRequest instance
+     * @return the WorkbookFunctionsLookupRequest instance
      */
-    public IWorkbookFunctionsLookupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsLookupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsLookupRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsLookupRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLookupRequest instance
+     * @return the WorkbookFunctionsLookupRequest instance
      */
-    public IWorkbookFunctionsLookupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsLookupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsLookupRequest request = new WorkbookFunctionsLookupRequest(
                 getRequestUrl(),
                 getClient(),

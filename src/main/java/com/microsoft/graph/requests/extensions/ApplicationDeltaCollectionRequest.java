@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.Application;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IApplicationDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.ApplicationDeltaCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Application Delta Collection Request.
  */
-public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<ApplicationDeltaCollectionResponse, IApplicationDeltaCollectionPage> implements IApplicationDeltaCollectionRequest {
+public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<ApplicationDeltaCollectionResponse, ApplicationDeltaCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param requestOptions the options for this request
      */
     public ApplicationDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ApplicationDeltaCollectionResponse.class, IApplicationDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, ApplicationDeltaCollectionResponse.class, ApplicationDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IApplicationDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super ApplicationDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
         });
     }
 
-    public IApplicationDeltaCollectionPage get() throws ClientException {
+    public ApplicationDeltaCollectionPage get() throws ClientException {
         final ApplicationDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IApplicationDeltaCollectionPage buildFromResponse(final ApplicationDeltaCollectionResponse response) {
-        final IApplicationDeltaCollectionRequestBuilder builder;
+    public ApplicationDeltaCollectionPage buildFromResponse(final ApplicationDeltaCollectionResponse response) {
+        final ApplicationDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ApplicationDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IApplicationDeltaCollectionPage page = new ApplicationDeltaCollectionPage(response, builder);
+        final ApplicationDeltaCollectionPage page = new ApplicationDeltaCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param value the select clause
      * @return the updated request
      */
-    public IApplicationDeltaCollectionRequest select(final String value) {
+    public ApplicationDeltaCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IApplicationDeltaCollectionRequest)this;
+        return (ApplicationDeltaCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IApplicationDeltaCollectionRequest top(final int value) {
+    public ApplicationDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IApplicationDeltaCollectionRequest)this;
+        return (ApplicationDeltaCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param value the expand clause
      * @return the updated request
      */
-    public IApplicationDeltaCollectionRequest expand(final String value) {
+    public ApplicationDeltaCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IApplicationDeltaCollectionRequest)this;
+        return (ApplicationDeltaCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param value the filter clause
      * @return the updated request
      */
-    public IApplicationDeltaCollectionRequest filter(final String value) {
+    public ApplicationDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IApplicationDeltaCollectionRequest)this;
+        return (ApplicationDeltaCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class ApplicationDeltaCollectionRequest extends BaseCollectionRequest<App
      * @param value the order by clause
      * @return the updated request
      */
-    public IApplicationDeltaCollectionRequest orderBy(final String value) {
+    public ApplicationDeltaCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IApplicationDeltaCollectionRequest)this;
+        return (ApplicationDeltaCollectionRequest)this;
     }
 
 }

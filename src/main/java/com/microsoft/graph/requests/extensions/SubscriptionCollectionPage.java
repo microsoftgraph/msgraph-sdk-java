@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Subscription;
-import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionPage;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SubscriptionCollectionResponse;
 /**
  * The class for the Subscription Collection Page.
  */
-public class SubscriptionCollectionPage extends BaseCollectionPage<Subscription, ISubscriptionCollectionRequestBuilder> implements ISubscriptionCollectionPage {
+public class SubscriptionCollectionPage extends BaseCollectionPage<Subscription, SubscriptionCollectionRequestBuilder> {
 
     /**
      * A collection page for Subscription
@@ -22,7 +22,7 @@ public class SubscriptionCollectionPage extends BaseCollectionPage<Subscription,
      * @param response the serialized SubscriptionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SubscriptionCollectionPage(final SubscriptionCollectionResponse response, final ISubscriptionCollectionRequestBuilder builder) {
+    public SubscriptionCollectionPage(final SubscriptionCollectionResponse response, final SubscriptionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

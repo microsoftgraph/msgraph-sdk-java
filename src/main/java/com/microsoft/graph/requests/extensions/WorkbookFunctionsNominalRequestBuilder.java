@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNominalRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsNominalRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Nominal Request Builder.
  */
-public class WorkbookFunctionsNominalRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsNominalRequestBuilder {
+public class WorkbookFunctionsNominalRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsNominal
@@ -34,22 +33,22 @@ public class WorkbookFunctionsNominalRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsNominalRequest
+     * Creates the WorkbookFunctionsNominalRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNominalRequest instance
+     * @return the WorkbookFunctionsNominalRequest instance
      */
-    public IWorkbookFunctionsNominalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsNominalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsNominalRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsNominalRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNominalRequest instance
+     * @return the WorkbookFunctionsNominalRequest instance
      */
-    public IWorkbookFunctionsNominalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsNominalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsNominalRequest request = new WorkbookFunctionsNominalRequest(
                 getRequestUrl(),
                 getClient(),

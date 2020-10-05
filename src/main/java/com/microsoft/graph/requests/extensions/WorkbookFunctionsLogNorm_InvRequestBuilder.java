@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLogNorm_InvRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsLogNorm_InvRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Log Norm_Inv Request Builder.
  */
-public class WorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsLogNorm_InvRequestBuilder {
+public class WorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsLogNorm_Inv
@@ -36,22 +35,22 @@ public class WorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IWorkbookFunctionsLogNorm_InvRequest
+     * Creates the WorkbookFunctionsLogNorm_InvRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLogNorm_InvRequest instance
+     * @return the WorkbookFunctionsLogNorm_InvRequest instance
      */
-    public IWorkbookFunctionsLogNorm_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsLogNorm_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsLogNorm_InvRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsLogNorm_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLogNorm_InvRequest instance
+     * @return the WorkbookFunctionsLogNorm_InvRequest instance
      */
-    public IWorkbookFunctionsLogNorm_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsLogNorm_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsLogNorm_InvRequest request = new WorkbookFunctionsLogNorm_InvRequest(
                 getRequestUrl(),
                 getClient(),

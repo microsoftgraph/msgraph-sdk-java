@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.OrgContact;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOrgContactCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrgContactCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.OrgContactCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrgContactCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionResponse;
 import com.microsoft.graph.models.extensions.OrgContact;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Org Contact Collection With References Page.
  */
-public class OrgContactCollectionWithReferencesPage extends BaseCollectionPage<OrgContact, IOrgContactCollectionWithReferencesRequestBuilder> implements IOrgContactCollectionWithReferencesPage {
+public class OrgContactCollectionWithReferencesPage extends BaseCollectionPage<OrgContact, OrgContactCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for OrgContact
@@ -34,7 +34,7 @@ public class OrgContactCollectionWithReferencesPage extends BaseCollectionPage<O
      * @param response the serialized OrgContactCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OrgContactCollectionWithReferencesPage(final OrgContactCollectionResponse response, final IOrgContactCollectionWithReferencesRequestBuilder builder) {
+    public OrgContactCollectionWithReferencesPage(final OrgContactCollectionResponse response, final OrgContactCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

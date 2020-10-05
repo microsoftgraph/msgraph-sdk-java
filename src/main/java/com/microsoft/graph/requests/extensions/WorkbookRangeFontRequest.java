@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Font Request.
  */
-public class WorkbookRangeFontRequest extends BaseRequest implements IWorkbookRangeFontRequest {
+public class WorkbookRangeFontRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookRangeFont
@@ -138,7 +138,7 @@ public class WorkbookRangeFontRequest extends BaseRequest implements IWorkbookRa
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookRangeFontRequest select(final String value) {
+     public WorkbookRangeFontRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookRangeFontRequest)this;
      }
@@ -149,7 +149,7 @@ public class WorkbookRangeFontRequest extends BaseRequest implements IWorkbookRa
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookRangeFontRequest expand(final String value) {
+     public WorkbookRangeFontRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookRangeFontRequest)this;
      }

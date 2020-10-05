@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 /**
  * The class for the Certificate Based Auth Configuration Collection Reference Request.
  */
-public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends BaseCollectionRequest<CertificateBasedAuthConfigurationCollectionResponse, ICertificateBasedAuthConfigurationCollectionPage> implements ICertificateBasedAuthConfigurationCollectionReferenceRequest {
+public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends BaseCollectionRequest<CertificateBasedAuthConfigurationCollectionResponse, CertificateBasedAuthConfigurationCollectionPage> {
 
     /**
      * The request builder for this collection of CertificateBasedAuthConfiguration
@@ -33,7 +33,7 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
      * @param requestOptions the options for this request
      */
     public CertificateBasedAuthConfigurationCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, ICertificateBasedAuthConfigurationCollectionPage.class);
+        super(requestUrl, client, requestOptions, CertificateBasedAuthConfigurationCollectionResponse.class, CertificateBasedAuthConfigurationCollectionPage.class);
     }
 
     public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<? super CertificateBasedAuthConfiguration> callback) {
@@ -57,7 +57,7 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
      * @param value the expand clause
      * @return the updated request
      */
-    public ICertificateBasedAuthConfigurationCollectionReferenceRequest expand(final String value) {
+    public CertificateBasedAuthConfigurationCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (CertificateBasedAuthConfigurationCollectionReferenceRequest)this;
     }
@@ -68,7 +68,7 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
      * @param value the filter clause
      * @return the updated request
      */
-    public ICertificateBasedAuthConfigurationCollectionReferenceRequest filter(final String value) {
+    public CertificateBasedAuthConfigurationCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (CertificateBasedAuthConfigurationCollectionReferenceRequest)this;
     }
@@ -79,7 +79,7 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
      * @param value the sort clause
      * @return the updated request
      */
-    public ICertificateBasedAuthConfigurationCollectionReferenceRequest orderBy(final String value) {
+    public CertificateBasedAuthConfigurationCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (CertificateBasedAuthConfigurationCollectionReferenceRequest)this;
     }
@@ -90,7 +90,7 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
      * @param value the select clause
      * @return the updated request
      */
-    public ICertificateBasedAuthConfigurationCollectionReferenceRequest select(final String value) {
+    public CertificateBasedAuthConfigurationCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (CertificateBasedAuthConfigurationCollectionReferenceRequest)this;
     }
@@ -101,7 +101,7 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
      * @param value the max number of items to return
      * @return the updated request
      */
-    public ICertificateBasedAuthConfigurationCollectionReferenceRequest top(final int value) {
+    public CertificateBasedAuthConfigurationCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (CertificateBasedAuthConfigurationCollectionReferenceRequest)this;
     }

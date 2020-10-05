@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRandRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRandRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Rand Request Builder.
  */
-public class WorkbookFunctionsRandRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsRandRequestBuilder {
+public class WorkbookFunctionsRandRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsRand
@@ -30,22 +29,22 @@ public class WorkbookFunctionsRandRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsRandRequest
+     * Creates the WorkbookFunctionsRandRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRandRequest instance
+     * @return the WorkbookFunctionsRandRequest instance
      */
-    public IWorkbookFunctionsRandRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsRandRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsRandRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsRandRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRandRequest instance
+     * @return the WorkbookFunctionsRandRequest instance
      */
-    public IWorkbookFunctionsRandRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsRandRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsRandRequest request = new WorkbookFunctionsRandRequest(
                 getRequestUrl(),
                 getClient(),

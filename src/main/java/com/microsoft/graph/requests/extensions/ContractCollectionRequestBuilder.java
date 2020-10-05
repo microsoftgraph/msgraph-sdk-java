@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.Contract;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IContractCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContractRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContractCollectionRequest;
+import com.microsoft.graph.requests.extensions.ContractCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContractRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContractCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Contract Collection Request Builder.
  */
-public class ContractCollectionRequestBuilder extends BaseRequestBuilder implements IContractCollectionRequestBuilder {
+public class ContractCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Contract
@@ -41,7 +41,7 @@ public class ContractCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IContractCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ContractCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class ContractCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IContractCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContractCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ContractCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IContractRequestBuilder byId(final String id) {
+    public ContractRequestBuilder byId(final String id) {
         return new ContractRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

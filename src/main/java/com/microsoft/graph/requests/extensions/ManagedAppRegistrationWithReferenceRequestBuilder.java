@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Registration With Reference Request Builder.
  */
-public class ManagedAppRegistrationWithReferenceRequestBuilder extends BaseRequestBuilder implements IManagedAppRegistrationWithReferenceRequestBuilder {
+public class ManagedAppRegistrationWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedAppRegistration
@@ -44,9 +40,9 @@ public class ManagedAppRegistrationWithReferenceRequestBuilder extends BaseReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppRegistrationWithReferenceRequest instance
+     * @return the ManagedAppRegistrationWithReferenceRequest instance
      */
-    public IManagedAppRegistrationWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppRegistrationWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,13 +50,13 @@ public class ManagedAppRegistrationWithReferenceRequestBuilder extends BaseReque
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IManagedAppRegistrationWithReferenceRequest instance
+     * @return the ManagedAppRegistrationWithReferenceRequest instance
      */
-    public IManagedAppRegistrationWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppRegistrationWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedAppRegistrationReferenceRequestBuilder reference(){
+    public ManagedAppRegistrationReferenceRequestBuilder reference(){
         return new ManagedAppRegistrationReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

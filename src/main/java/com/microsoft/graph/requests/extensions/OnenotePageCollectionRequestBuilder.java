@@ -15,9 +15,9 @@ import com.microsoft.graph.models.extensions.OnenotePagePreview;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequest;
+import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenotePageRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Onenote Page Collection Request Builder.
  */
-public class OnenotePageCollectionRequestBuilder extends BaseRequestBuilder implements IOnenotePageCollectionRequestBuilder {
+public class OnenotePageCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of OnenoteSection
@@ -45,7 +45,7 @@ public class OnenotePageCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOnenotePageCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenotePageCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,11 +55,11 @@ public class OnenotePageCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOnenotePageCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenotePageCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OnenotePageCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOnenotePageRequestBuilder byId(final String id) {
+    public OnenotePageRequestBuilder byId(final String id) {
         return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

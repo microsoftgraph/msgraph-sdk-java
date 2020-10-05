@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the App Role Assignment Collection With References Page.
  */
-public class AppRoleAssignmentCollectionWithReferencesPage extends BaseCollectionPage<AppRoleAssignment, IAppRoleAssignmentCollectionWithReferencesRequestBuilder> implements IAppRoleAssignmentCollectionWithReferencesPage {
+public class AppRoleAssignmentCollectionWithReferencesPage extends BaseCollectionPage<AppRoleAssignment, AppRoleAssignmentCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for AppRoleAssignment
@@ -34,7 +34,7 @@ public class AppRoleAssignmentCollectionWithReferencesPage extends BaseCollectio
      * @param response the serialized AppRoleAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AppRoleAssignmentCollectionWithReferencesPage(final AppRoleAssignmentCollectionResponse response, final IAppRoleAssignmentCollectionWithReferencesRequestBuilder builder) {
+    public AppRoleAssignmentCollectionWithReferencesPage(final AppRoleAssignmentCollectionResponse response, final AppRoleAssignmentCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

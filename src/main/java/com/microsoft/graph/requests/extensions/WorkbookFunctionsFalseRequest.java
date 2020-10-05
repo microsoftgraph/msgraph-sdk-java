@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFalseRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFalseRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Functions False Request.
  */
-public class WorkbookFunctionsFalseRequest extends BaseRequest implements IWorkbookFunctionsFalseRequest {
+public class WorkbookFunctionsFalseRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookFunctionsFalse
@@ -57,7 +56,7 @@ public class WorkbookFunctionsFalseRequest extends BaseRequest implements IWorkb
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookFunctionsFalseRequest select(final String value) {
+    public WorkbookFunctionsFalseRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsFalseRequest)this;
     }
@@ -68,7 +67,7 @@ public class WorkbookFunctionsFalseRequest extends BaseRequest implements IWorkb
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookFunctionsFalseRequest expand(final String value) {
+    public WorkbookFunctionsFalseRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsFalseRequest)this;
     }

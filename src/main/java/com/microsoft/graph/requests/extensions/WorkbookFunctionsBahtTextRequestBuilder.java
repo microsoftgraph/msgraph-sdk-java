@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBahtTextRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsBahtTextRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Baht Text Request Builder.
  */
-public class WorkbookFunctionsBahtTextRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsBahtTextRequestBuilder {
+public class WorkbookFunctionsBahtTextRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsBahtText
@@ -32,22 +31,22 @@ public class WorkbookFunctionsBahtTextRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsBahtTextRequest
+     * Creates the WorkbookFunctionsBahtTextRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBahtTextRequest instance
+     * @return the WorkbookFunctionsBahtTextRequest instance
      */
-    public IWorkbookFunctionsBahtTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsBahtTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsBahtTextRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsBahtTextRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBahtTextRequest instance
+     * @return the WorkbookFunctionsBahtTextRequest instance
      */
-    public IWorkbookFunctionsBahtTextRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsBahtTextRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBahtTextRequest request = new WorkbookFunctionsBahtTextRequest(
                 getRequestUrl(),
                 getClient(),

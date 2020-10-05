@@ -19,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Exchange Connector Request Builder.
  */
-public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequestBuilder implements IDeviceManagementExchangeConnectorRequestBuilder {
+public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceManagementExchangeConnector
@@ -36,9 +36,9 @@ public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequest
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementExchangeConnectorRequest instance
+     * @return the DeviceManagementExchangeConnectorRequest instance
      */
-    public IDeviceManagementExchangeConnectorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceManagementExchangeConnectorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,15 +46,15 @@ public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequest
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementExchangeConnectorRequest instance
+     * @return the DeviceManagementExchangeConnectorRequest instance
      */
-    public IDeviceManagementExchangeConnectorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementExchangeConnectorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IDeviceManagementExchangeConnectorSyncRequestBuilder sync(final DeviceManagementExchangeConnectorSyncType syncType) {
+    public DeviceManagementExchangeConnectorSyncRequestBuilder sync(final DeviceManagementExchangeConnectorSyncType syncType) {
         return new DeviceManagementExchangeConnectorSyncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sync"), getClient(), null, syncType);
     }
 }

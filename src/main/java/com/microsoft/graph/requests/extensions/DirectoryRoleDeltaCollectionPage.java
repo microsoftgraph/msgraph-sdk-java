@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.DirectoryRole;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryRoleDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryRoleDeltaCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Directory Role Delta Collection Page.
  */
-public class DirectoryRoleDeltaCollectionPage extends BaseCollectionPage<DirectoryRole, IDirectoryRoleDeltaCollectionRequestBuilder> implements IDirectoryRoleDeltaCollectionPage {
+public class DirectoryRoleDeltaCollectionPage extends BaseCollectionPage<DirectoryRole, DirectoryRoleDeltaCollectionRequestBuilder> {
 
     /**
      * The opaque link to query delta after the 
@@ -39,7 +39,7 @@ public class DirectoryRoleDeltaCollectionPage extends BaseCollectionPage<Directo
      * @param response The serialized DirectoryRoleDeltaCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DirectoryRoleDeltaCollectionPage(final DirectoryRoleDeltaCollectionResponse response, final IDirectoryRoleDeltaCollectionRequestBuilder builder) {
+    public DirectoryRoleDeltaCollectionPage(final DirectoryRoleDeltaCollectionResponse response, final DirectoryRoleDeltaCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
 
         if (response.getRawObject().get("@odata.deltaLink") != null) {

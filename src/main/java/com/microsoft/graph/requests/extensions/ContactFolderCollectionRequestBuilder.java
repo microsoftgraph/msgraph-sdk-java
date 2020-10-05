@@ -11,10 +11,10 @@ import com.microsoft.graph.models.extensions.ContactFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequest;
-import com.microsoft.graph.requests.extensions.IContactFolderDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequest;
+import com.microsoft.graph.requests.extensions.ContactFolderDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Contact Folder Collection Request Builder.
  */
-public class ContactFolderCollectionRequestBuilder extends BaseRequestBuilder implements IContactFolderCollectionRequestBuilder {
+public class ContactFolderCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ContactFolder
@@ -42,7 +42,7 @@ public class ContactFolderCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IContactFolderCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ContactFolderCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,21 +52,21 @@ public class ContactFolderCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IContactFolderCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContactFolderCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ContactFolderCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IContactFolderRequestBuilder byId(final String id) {
+    public ContactFolderRequestBuilder byId(final String id) {
         return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IContactFolderDeltaCollectionRequestBuilder delta() {
+    public ContactFolderDeltaCollectionRequestBuilder delta() {
         return new ContactFolderDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IContactFolderDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public ContactFolderDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new ContactFolderDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

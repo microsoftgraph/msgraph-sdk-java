@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionUnprotectRequest;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionUnprotectRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Worksheet Protection Unprotect Request Builder.
  */
-public class WorkbookWorksheetProtectionUnprotectRequestBuilder extends BaseActionRequestBuilder implements IWorkbookWorksheetProtectionUnprotectRequestBuilder {
+public class WorkbookWorksheetProtectionUnprotectRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookWorksheetProtectionUnprotect
@@ -30,22 +29,22 @@ public class WorkbookWorksheetProtectionUnprotectRequestBuilder extends BaseActi
     }
 
     /**
-     * Creates the IWorkbookWorksheetProtectionUnprotectRequest
+     * Creates the WorkbookWorksheetProtectionUnprotectRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookWorksheetProtectionUnprotectRequest instance
+     * @return the WorkbookWorksheetProtectionUnprotectRequest instance
      */
-    public IWorkbookWorksheetProtectionUnprotectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookWorksheetProtectionUnprotectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookWorksheetProtectionUnprotectRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookWorksheetProtectionUnprotectRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookWorksheetProtectionUnprotectRequest instance
+     * @return the WorkbookWorksheetProtectionUnprotectRequest instance
      */
-    public IWorkbookWorksheetProtectionUnprotectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookWorksheetProtectionUnprotectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookWorksheetProtectionUnprotectRequest request = new WorkbookWorksheetProtectionUnprotectRequest(
                 getRequestUrl(),
                 getClient(),

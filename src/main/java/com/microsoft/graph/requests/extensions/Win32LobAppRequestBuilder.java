@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Win32Lob App Request Builder.
  */
-public class Win32LobAppRequestBuilder extends BaseRequestBuilder implements IWin32LobAppRequestBuilder {
+public class Win32LobAppRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Win32LobApp
@@ -35,9 +35,9 @@ public class Win32LobAppRequestBuilder extends BaseRequestBuilder implements IWi
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWin32LobAppRequest instance
+     * @return the Win32LobAppRequest instance
      */
-    public IWin32LobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public Win32LobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,32 +45,32 @@ public class Win32LobAppRequestBuilder extends BaseRequestBuilder implements IWi
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWin32LobAppRequest instance
+     * @return the Win32LobAppRequest instance
      */
-    public IWin32LobAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Win32LobAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.Win32LobAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
+    public MobileAppAssignmentCollectionRequestBuilder assignments() {
         return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
+    public MobileAppAssignmentRequestBuilder assignments(final String id) {
         return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public IMobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+    public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
-    public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
+    public MobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
-    public IMobileAppContentCollectionRequestBuilder contentVersions() {
+    public MobileAppContentCollectionRequestBuilder contentVersions() {
         return new MobileAppContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions"), getClient(), null);
     }
 
-    public IMobileAppContentRequestBuilder contentVersions(final String id) {
+    public MobileAppContentRequestBuilder contentVersions(final String id) {
         return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
     }
 }

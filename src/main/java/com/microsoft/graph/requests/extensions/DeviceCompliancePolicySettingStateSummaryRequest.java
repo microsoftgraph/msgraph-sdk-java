@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingStateSummary;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance Policy Setting State Summary Request.
  */
-public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseRequest implements IDeviceCompliancePolicySettingStateSummaryRequest {
+public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseRequest {
 	
     /**
      * The request for the DeviceCompliancePolicySettingStateSummary
@@ -142,7 +140,7 @@ public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseReques
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceCompliancePolicySettingStateSummaryRequest select(final String value) {
+     public DeviceCompliancePolicySettingStateSummaryRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceCompliancePolicySettingStateSummaryRequest)this;
      }
@@ -153,7 +151,7 @@ public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseReques
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceCompliancePolicySettingStateSummaryRequest expand(final String value) {
+     public DeviceCompliancePolicySettingStateSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceCompliancePolicySettingStateSummaryRequest)this;
      }

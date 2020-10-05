@@ -13,9 +13,9 @@ import com.microsoft.graph.models.extensions.Recipient;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IPostCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPostCollectionRequest;
+import com.microsoft.graph.requests.extensions.PostCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PostRequestBuilder;
+import com.microsoft.graph.requests.extensions.PostCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Post Collection Request Builder.
  */
-public class PostCollectionRequestBuilder extends BaseRequestBuilder implements IPostCollectionRequestBuilder {
+public class PostCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ConversationThread
@@ -43,7 +43,7 @@ public class PostCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPostCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PostCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,11 +53,11 @@ public class PostCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPostCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PostCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PostCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPostRequestBuilder byId(final String id) {
+    public PostRequestBuilder byId(final String id) {
         return new PostRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

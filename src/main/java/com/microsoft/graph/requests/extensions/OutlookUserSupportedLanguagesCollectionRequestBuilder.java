@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.LocaleInfo;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOutlookUserSupportedLanguagesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookUserSupportedLanguagesCollectionRequest;
+import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Outlook User Supported Languages Collection Request Builder.
  */
-public class OutlookUserSupportedLanguagesCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IOutlookUserSupportedLanguagesCollectionRequestBuilder {
+public class OutlookUserSupportedLanguagesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of OutlookUser
@@ -42,7 +41,7 @@ public class OutlookUserSupportedLanguagesCollectionRequestBuilder extends BaseF
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOutlookUserSupportedLanguagesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OutlookUserSupportedLanguagesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class OutlookUserSupportedLanguagesCollectionRequestBuilder extends BaseF
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOutlookUserSupportedLanguagesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookUserSupportedLanguagesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         OutlookUserSupportedLanguagesCollectionRequest request = new OutlookUserSupportedLanguagesCollectionRequest(
                 getRequestUrl(),
                 getClient(),

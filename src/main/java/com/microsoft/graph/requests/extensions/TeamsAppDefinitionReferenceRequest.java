@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams App Definition Reference Request.
  */
-public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements ITeamsAppDefinitionReferenceRequest {
+public class TeamsAppDefinitionReferenceRequest extends BaseRequest {
 
     /**
      * The request for the TeamsAppDefinition
@@ -48,7 +48,7 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-    public ITeamsAppDefinitionReferenceRequest select(final String value) {
+    public TeamsAppDefinitionReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TeamsAppDefinitionReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class TeamsAppDefinitionReferenceRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-    public ITeamsAppDefinitionReferenceRequest expand(final String value) {
+    public TeamsAppDefinitionReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamsAppDefinitionReferenceRequest)this;
     }

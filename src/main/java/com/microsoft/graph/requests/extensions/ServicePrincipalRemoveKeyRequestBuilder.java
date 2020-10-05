@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IServicePrincipalRemoveKeyRequest;
 import com.microsoft.graph.requests.extensions.ServicePrincipalRemoveKeyRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Service Principal Remove Key Request Builder.
  */
-public class ServicePrincipalRemoveKeyRequestBuilder extends BaseActionRequestBuilder implements IServicePrincipalRemoveKeyRequestBuilder {
+public class ServicePrincipalRemoveKeyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ServicePrincipalRemoveKey
@@ -34,22 +33,22 @@ public class ServicePrincipalRemoveKeyRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IServicePrincipalRemoveKeyRequest
+     * Creates the ServicePrincipalRemoveKeyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IServicePrincipalRemoveKeyRequest instance
+     * @return the ServicePrincipalRemoveKeyRequest instance
      */
-    public IServicePrincipalRemoveKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ServicePrincipalRemoveKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IServicePrincipalRemoveKeyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ServicePrincipalRemoveKeyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IServicePrincipalRemoveKeyRequest instance
+     * @return the ServicePrincipalRemoveKeyRequest instance
      */
-    public IServicePrincipalRemoveKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalRemoveKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ServicePrincipalRemoveKeyRequest request = new ServicePrincipalRemoveKeyRequest(
                 getRequestUrl(),
                 getClient(),

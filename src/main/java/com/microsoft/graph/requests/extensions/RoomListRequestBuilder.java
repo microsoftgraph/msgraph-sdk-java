@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoomList;
-import com.microsoft.graph.requests.extensions.IRoomCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoomRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Room List Request Builder.
  */
-public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomListRequestBuilder {
+public class RoomListRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the RoomList
@@ -39,9 +37,9 @@ public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomL
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IRoomListRequest instance
+     * @return the RoomListRequest instance
      */
-    public IRoomListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public RoomListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomL
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IRoomListRequest instance
+     * @return the RoomListRequest instance
      */
-    public IRoomListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoomListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.RoomListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IRoomCollectionRequestBuilder rooms() {
+    public RoomCollectionRequestBuilder rooms() {
         return new RoomCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rooms"), getClient(), null);
     }
 
-    public IRoomRequestBuilder rooms(final String id) {
+    public RoomRequestBuilder rooms(final String id) {
         return new RoomRequestBuilder(getRequestUrlWithAdditionalSegment("rooms") + "/" + id, getClient(), null);
     }
 }

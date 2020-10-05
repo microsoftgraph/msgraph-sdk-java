@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookCommentReply;
-import com.microsoft.graph.requests.extensions.IWorkbookCommentReplyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionRes
 /**
  * The class for the Workbook Comment Reply Collection Page.
  */
-public class WorkbookCommentReplyCollectionPage extends BaseCollectionPage<WorkbookCommentReply, IWorkbookCommentReplyCollectionRequestBuilder> implements IWorkbookCommentReplyCollectionPage {
+public class WorkbookCommentReplyCollectionPage extends BaseCollectionPage<WorkbookCommentReply, WorkbookCommentReplyCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookCommentReply
@@ -22,7 +22,7 @@ public class WorkbookCommentReplyCollectionPage extends BaseCollectionPage<Workb
      * @param response the serialized WorkbookCommentReplyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookCommentReplyCollectionPage(final WorkbookCommentReplyCollectionResponse response, final IWorkbookCommentReplyCollectionRequestBuilder builder) {
+    public WorkbookCommentReplyCollectionPage(final WorkbookCommentReplyCollectionResponse response, final WorkbookCommentReplyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

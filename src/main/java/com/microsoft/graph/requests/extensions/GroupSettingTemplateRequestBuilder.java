@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Setting Template Request Builder.
  */
-public class GroupSettingTemplateRequestBuilder extends BaseRequestBuilder implements IGroupSettingTemplateRequestBuilder {
+public class GroupSettingTemplateRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the GroupSettingTemplate
@@ -35,9 +35,9 @@ public class GroupSettingTemplateRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGroupSettingTemplateRequest instance
+     * @return the GroupSettingTemplateRequest instance
      */
-    public IGroupSettingTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupSettingTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class GroupSettingTemplateRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGroupSettingTemplateRequest instance
+     * @return the GroupSettingTemplateRequest instance
      */
-    public IGroupSettingTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupSettingTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GroupSettingTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

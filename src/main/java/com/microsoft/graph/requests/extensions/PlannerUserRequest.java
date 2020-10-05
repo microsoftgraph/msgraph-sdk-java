@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerUser;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Planner User Request.
  */
-public class PlannerUserRequest extends BaseRequest implements IPlannerUserRequest {
+public class PlannerUserRequest extends BaseRequest {
 	
     /**
      * The request for the PlannerUser
@@ -146,7 +142,7 @@ public class PlannerUserRequest extends BaseRequest implements IPlannerUserReque
      * @param value the select clause
      * @return the updated request
      */
-     public IPlannerUserRequest select(final String value) {
+     public PlannerUserRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PlannerUserRequest)this;
      }
@@ -157,7 +153,7 @@ public class PlannerUserRequest extends BaseRequest implements IPlannerUserReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IPlannerUserRequest expand(final String value) {
+     public PlannerUserRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PlannerUserRequest)this;
      }

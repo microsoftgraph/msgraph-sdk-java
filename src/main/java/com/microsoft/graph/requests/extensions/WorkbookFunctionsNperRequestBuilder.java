@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNperRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsNperRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Nper Request Builder.
  */
-public class WorkbookFunctionsNperRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsNperRequestBuilder {
+public class WorkbookFunctionsNperRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsNper
@@ -40,22 +39,22 @@ public class WorkbookFunctionsNperRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsNperRequest
+     * Creates the WorkbookFunctionsNperRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNperRequest instance
+     * @return the WorkbookFunctionsNperRequest instance
      */
-    public IWorkbookFunctionsNperRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsNperRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsNperRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsNperRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNperRequest instance
+     * @return the WorkbookFunctionsNperRequest instance
      */
-    public IWorkbookFunctionsNperRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsNperRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsNperRequest request = new WorkbookFunctionsNperRequest(
                 getRequestUrl(),
                 getClient(),

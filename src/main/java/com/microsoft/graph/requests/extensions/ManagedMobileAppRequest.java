@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Mobile App Request.
  */
-public class ManagedMobileAppRequest extends BaseRequest implements IManagedMobileAppRequest {
+public class ManagedMobileAppRequest extends BaseRequest {
 	
     /**
      * The request for the ManagedMobileApp
@@ -138,7 +138,7 @@ public class ManagedMobileAppRequest extends BaseRequest implements IManagedMobi
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedMobileAppRequest select(final String value) {
+     public ManagedMobileAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedMobileAppRequest)this;
      }
@@ -149,7 +149,7 @@ public class ManagedMobileAppRequest extends BaseRequest implements IManagedMobi
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedMobileAppRequest expand(final String value) {
+     public ManagedMobileAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedMobileAppRequest)this;
      }

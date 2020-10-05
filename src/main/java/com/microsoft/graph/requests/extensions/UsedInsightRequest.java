@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UsedInsight;
-import com.microsoft.graph.requests.extensions.IEntityRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Used Insight Request.
  */
-public class UsedInsightRequest extends BaseRequest implements IUsedInsightRequest {
+public class UsedInsightRequest extends BaseRequest {
 	
     /**
      * The request for the UsedInsight
@@ -140,7 +139,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @param value the select clause
      * @return the updated request
      */
-     public IUsedInsightRequest select(final String value) {
+     public UsedInsightRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (UsedInsightRequest)this;
      }
@@ -151,7 +150,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IUsedInsightRequest expand(final String value) {
+     public UsedInsightRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (UsedInsightRequest)this;
      }

@@ -20,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Sort Request.
  */
-public class WorkbookTableSortRequest extends BaseRequest implements IWorkbookTableSortRequest {
+public class WorkbookTableSortRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookTableSort
@@ -139,7 +139,7 @@ public class WorkbookTableSortRequest extends BaseRequest implements IWorkbookTa
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookTableSortRequest select(final String value) {
+     public WorkbookTableSortRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookTableSortRequest)this;
      }
@@ -150,7 +150,7 @@ public class WorkbookTableSortRequest extends BaseRequest implements IWorkbookTa
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookTableSortRequest expand(final String value) {
+     public WorkbookTableSortRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookTableSortRequest)this;
      }

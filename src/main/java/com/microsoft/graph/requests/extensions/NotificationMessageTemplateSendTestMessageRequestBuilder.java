@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.INotificationMessageTemplateSendTestMessageRequest;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateSendTestMessageRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Notification Message Template Send Test Message Request Builder.
  */
-public class NotificationMessageTemplateSendTestMessageRequestBuilder extends BaseActionRequestBuilder implements INotificationMessageTemplateSendTestMessageRequestBuilder {
+public class NotificationMessageTemplateSendTestMessageRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this NotificationMessageTemplateSendTestMessage
@@ -30,22 +29,22 @@ public class NotificationMessageTemplateSendTestMessageRequestBuilder extends Ba
     }
 
     /**
-     * Creates the INotificationMessageTemplateSendTestMessageRequest
+     * Creates the NotificationMessageTemplateSendTestMessageRequest
      *
      * @param requestOptions the options for the request
-     * @return the INotificationMessageTemplateSendTestMessageRequest instance
+     * @return the NotificationMessageTemplateSendTestMessageRequest instance
      */
-    public INotificationMessageTemplateSendTestMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public NotificationMessageTemplateSendTestMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the INotificationMessageTemplateSendTestMessageRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the NotificationMessageTemplateSendTestMessageRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the INotificationMessageTemplateSendTestMessageRequest instance
+     * @return the NotificationMessageTemplateSendTestMessageRequest instance
      */
-    public INotificationMessageTemplateSendTestMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotificationMessageTemplateSendTestMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         NotificationMessageTemplateSendTestMessageRequest request = new NotificationMessageTemplateSendTestMessageRequest(
                 getRequestUrl(),
                 getClient(),

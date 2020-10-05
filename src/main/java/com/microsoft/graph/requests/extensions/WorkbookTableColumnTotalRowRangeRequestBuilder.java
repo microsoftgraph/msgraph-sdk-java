@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnTotalRowRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnTotalRowRangeRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Column Total Row Range Request Builder.
  */
-public class WorkbookTableColumnTotalRowRangeRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookTableColumnTotalRowRangeRequestBuilder {
+public class WorkbookTableColumnTotalRowRangeRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableColumnTotalRowRange
@@ -30,22 +29,22 @@ public class WorkbookTableColumnTotalRowRangeRequestBuilder extends BaseFunction
     }
 
     /**
-     * Creates the IWorkbookTableColumnTotalRowRangeRequest
+     * Creates the WorkbookTableColumnTotalRowRangeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableColumnTotalRowRangeRequest instance
+     * @return the WorkbookTableColumnTotalRowRangeRequest instance
      */
-    public IWorkbookTableColumnTotalRowRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableColumnTotalRowRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableColumnTotalRowRangeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableColumnTotalRowRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableColumnTotalRowRangeRequest instance
+     * @return the WorkbookTableColumnTotalRowRangeRequest instance
      */
-    public IWorkbookTableColumnTotalRowRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnTotalRowRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableColumnTotalRowRangeRequest request = new WorkbookTableColumnTotalRowRangeRequest(
                 getRequestUrl(),
                 getClient(),
@@ -62,27 +61,27 @@ public class WorkbookTableColumnTotalRowRangeRequestBuilder extends BaseFunction
     /**
      * Gets the request builder for WorkbookRangeFormat
      *
-     * @return the IWorkbookRangeFormatRequestBuilder instance
+     * @return the WorkbookRangeFormatRequestBuilder instance
      */
-    public IWorkbookRangeFormatRequestBuilder format() {
+    public WorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeSort
      *
-     * @return the IWorkbookRangeSortRequestBuilder instance
+     * @return the WorkbookRangeSortRequestBuilder instance
      */
-    public IWorkbookRangeSortRequestBuilder sort() {
+    public WorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

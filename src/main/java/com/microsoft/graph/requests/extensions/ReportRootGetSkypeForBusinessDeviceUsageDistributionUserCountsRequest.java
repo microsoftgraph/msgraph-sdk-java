@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Skype For Business Device Usage Distribution User Counts Request.
  */
-public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest extends BaseRequest implements IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest {
+public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCounts
@@ -97,7 +96,7 @@ public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsReque
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest select(final String value) {
+    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsReque
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest expand(final String value) {
+    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsReque
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest filter(final String value) {
+    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsReque
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest orderBy(final String value) {
+    public ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequest)this;
     }

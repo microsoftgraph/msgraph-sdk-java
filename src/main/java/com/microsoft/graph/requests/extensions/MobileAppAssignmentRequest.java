@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Assignment Request.
  */
-public class MobileAppAssignmentRequest extends BaseRequest implements IMobileAppAssignmentRequest {
+public class MobileAppAssignmentRequest extends BaseRequest {
 	
     /**
      * The request for the MobileAppAssignment
@@ -138,7 +138,7 @@ public class MobileAppAssignmentRequest extends BaseRequest implements IMobileAp
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileAppAssignmentRequest select(final String value) {
+     public MobileAppAssignmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MobileAppAssignmentRequest)this;
      }
@@ -149,7 +149,7 @@ public class MobileAppAssignmentRequest extends BaseRequest implements IMobileAp
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileAppAssignmentRequest expand(final String value) {
+     public MobileAppAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MobileAppAssignmentRequest)this;
      }

@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Lifetime Policy Reference Request.
  */
-public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements ITokenLifetimePolicyReferenceRequest {
+public class TokenLifetimePolicyReferenceRequest extends BaseRequest {
 
     /**
      * The request for the TokenLifetimePolicy
@@ -48,7 +48,7 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-    public ITokenLifetimePolicyReferenceRequest select(final String value) {
+    public TokenLifetimePolicyReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TokenLifetimePolicyReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class TokenLifetimePolicyReferenceRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-    public ITokenLifetimePolicyReferenceRequest expand(final String value) {
+    public TokenLifetimePolicyReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TokenLifetimePolicyReferenceRequest)this;
     }

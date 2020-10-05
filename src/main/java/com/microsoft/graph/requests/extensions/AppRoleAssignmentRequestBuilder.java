@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the App Role Assignment Request Builder.
  */
-public class AppRoleAssignmentRequestBuilder extends BaseRequestBuilder implements IAppRoleAssignmentRequestBuilder {
+public class AppRoleAssignmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the AppRoleAssignment
@@ -35,9 +35,9 @@ public class AppRoleAssignmentRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAppRoleAssignmentRequest instance
+     * @return the AppRoleAssignmentRequest instance
      */
-    public IAppRoleAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AppRoleAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class AppRoleAssignmentRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAppRoleAssignmentRequest instance
+     * @return the AppRoleAssignmentRequest instance
      */
-    public IAppRoleAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AppRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

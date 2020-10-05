@@ -8,13 +8,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerTask;
-import com.microsoft.graph.requests.extensions.IPlannerAssignedToTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerAssignedToTaskBoardTaskFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerBucketTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketTaskBoardTaskFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerProgressTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerProgressTaskBoardTaskFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -26,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Task Request Builder.
  */
-public class PlannerTaskRequestBuilder extends BaseRequestBuilder implements IPlannerTaskRequestBuilder {
+public class PlannerTaskRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the PlannerTask
@@ -43,9 +39,9 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder implements IPl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerTaskRequest instance
+     * @return the PlannerTaskRequest instance
      */
-    public IPlannerTaskRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlannerTaskRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,9 +49,9 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder implements IPl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerTaskRequest instance
+     * @return the PlannerTaskRequest instance
      */
-    public IPlannerTaskRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerTaskRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerTaskRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -64,36 +60,36 @@ public class PlannerTaskRequestBuilder extends BaseRequestBuilder implements IPl
     /**
      * Gets the request builder for PlannerAssignedToTaskBoardTaskFormat
      *
-     * @return the IPlannerAssignedToTaskBoardTaskFormatRequestBuilder instance
+     * @return the PlannerAssignedToTaskBoardTaskFormatRequestBuilder instance
      */
-    public IPlannerAssignedToTaskBoardTaskFormatRequestBuilder assignedToTaskBoardFormat() {
+    public PlannerAssignedToTaskBoardTaskFormatRequestBuilder assignedToTaskBoardFormat() {
         return new PlannerAssignedToTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("assignedToTaskBoardFormat"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PlannerBucketTaskBoardTaskFormat
      *
-     * @return the IPlannerBucketTaskBoardTaskFormatRequestBuilder instance
+     * @return the PlannerBucketTaskBoardTaskFormatRequestBuilder instance
      */
-    public IPlannerBucketTaskBoardTaskFormatRequestBuilder bucketTaskBoardFormat() {
+    public PlannerBucketTaskBoardTaskFormatRequestBuilder bucketTaskBoardFormat() {
         return new PlannerBucketTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("bucketTaskBoardFormat"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PlannerTaskDetails
      *
-     * @return the IPlannerTaskDetailsRequestBuilder instance
+     * @return the PlannerTaskDetailsRequestBuilder instance
      */
-    public IPlannerTaskDetailsRequestBuilder details() {
+    public PlannerTaskDetailsRequestBuilder details() {
         return new PlannerTaskDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("details"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PlannerProgressTaskBoardTaskFormat
      *
-     * @return the IPlannerProgressTaskBoardTaskFormatRequestBuilder instance
+     * @return the PlannerProgressTaskBoardTaskFormatRequestBuilder instance
      */
-    public IPlannerProgressTaskBoardTaskFormatRequestBuilder progressTaskBoardFormat() {
+    public PlannerProgressTaskBoardTaskFormatRequestBuilder progressTaskBoardFormat() {
         return new PlannerProgressTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("progressTaskBoardFormat"), getClient(), null);
     }
 }

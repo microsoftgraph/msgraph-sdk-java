@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed EBook Assignment Request.
  */
-public class ManagedEBookAssignmentRequest extends BaseRequest implements IManagedEBookAssignmentRequest {
+public class ManagedEBookAssignmentRequest extends BaseRequest {
 	
     /**
      * The request for the ManagedEBookAssignment
@@ -153,7 +153,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedEBookAssignmentRequest select(final String value) {
+     public ManagedEBookAssignmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedEBookAssignmentRequest)this;
      }
@@ -164,7 +164,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedEBookAssignmentRequest expand(final String value) {
+     public ManagedEBookAssignmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedEBookAssignmentRequest)this;
      }

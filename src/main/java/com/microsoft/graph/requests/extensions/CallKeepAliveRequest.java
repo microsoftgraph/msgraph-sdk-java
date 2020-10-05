@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallKeepAliveRequest;
 import com.microsoft.graph.requests.extensions.CallKeepAliveRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Call Keep Alive Request.
  */
-public class CallKeepAliveRequest extends BaseRequest implements ICallKeepAliveRequest {
+public class CallKeepAliveRequest extends BaseRequest {
 
     /**
      * The request for this CallKeepAlive

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Function Result Request.
  */
-public class WorkbookFunctionResultRequest extends BaseRequest implements IWorkbookFunctionResultRequest {
+public class WorkbookFunctionResultRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookFunctionResult
@@ -138,7 +138,7 @@ public class WorkbookFunctionResultRequest extends BaseRequest implements IWorkb
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookFunctionResultRequest select(final String value) {
+     public WorkbookFunctionResultRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookFunctionResultRequest)this;
      }
@@ -149,7 +149,7 @@ public class WorkbookFunctionResultRequest extends BaseRequest implements IWorkb
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookFunctionResultRequest expand(final String value) {
+     public WorkbookFunctionResultRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookFunctionResultRequest)this;
      }

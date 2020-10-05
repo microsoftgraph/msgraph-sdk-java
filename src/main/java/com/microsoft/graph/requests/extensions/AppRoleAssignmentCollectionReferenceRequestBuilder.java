@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the App Role Assignment Collection Reference Request Builder.
  */
-public class AppRoleAssignmentCollectionReferenceRequestBuilder extends BaseRequestBuilder implements IAppRoleAssignmentCollectionReferenceRequestBuilder {
+public class AppRoleAssignmentCollectionReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -39,7 +39,7 @@ public class AppRoleAssignmentCollectionReferenceRequestBuilder extends BaseRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAppRoleAssignmentCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AppRoleAssignmentCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +49,7 @@ public class AppRoleAssignmentCollectionReferenceRequestBuilder extends BaseRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAppRoleAssignmentCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AppRoleAssignmentCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

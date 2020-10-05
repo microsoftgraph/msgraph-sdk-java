@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEventDismissReminderRequest;
 import com.microsoft.graph.requests.extensions.EventDismissReminderRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Event Dismiss Reminder Request Builder.
  */
-public class EventDismissReminderRequestBuilder extends BaseActionRequestBuilder implements IEventDismissReminderRequestBuilder {
+public class EventDismissReminderRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this EventDismissReminder
@@ -30,22 +29,22 @@ public class EventDismissReminderRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IEventDismissReminderRequest
+     * Creates the EventDismissReminderRequest
      *
      * @param requestOptions the options for the request
-     * @return the IEventDismissReminderRequest instance
+     * @return the EventDismissReminderRequest instance
      */
-    public IEventDismissReminderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EventDismissReminderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IEventDismissReminderRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the EventDismissReminderRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IEventDismissReminderRequest instance
+     * @return the EventDismissReminderRequest instance
      */
-    public IEventDismissReminderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventDismissReminderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         EventDismissReminderRequest request = new EventDismissReminderRequest(
                 getRequestUrl(),
                 getClient(),

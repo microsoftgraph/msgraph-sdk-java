@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.Person;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IPersonCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPersonRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPersonCollectionRequest;
+import com.microsoft.graph.requests.extensions.PersonCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Person Collection Request Builder.
  */
-public class PersonCollectionRequestBuilder extends BaseRequestBuilder implements IPersonCollectionRequestBuilder {
+public class PersonCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -42,7 +42,7 @@ public class PersonCollectionRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPersonCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PersonCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class PersonCollectionRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPersonCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PersonCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPersonRequestBuilder byId(final String id) {
+    public PersonRequestBuilder byId(final String id) {
         return new PersonRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

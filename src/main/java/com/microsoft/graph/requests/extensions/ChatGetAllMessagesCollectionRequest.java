@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IChatGetAllMessagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Chat Get All Messages Collection Request.
  */
-public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<ChatGetAllMessagesCollectionResponse, IChatGetAllMessagesCollectionPage> implements IChatGetAllMessagesCollectionRequest {
+public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<ChatGetAllMessagesCollectionResponse, ChatGetAllMessagesCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param requestOptions the options for this request
      */
     public ChatGetAllMessagesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ChatGetAllMessagesCollectionResponse.class, IChatGetAllMessagesCollectionPage.class);
+        super(requestUrl, client, requestOptions, ChatGetAllMessagesCollectionResponse.class, ChatGetAllMessagesCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IChatGetAllMessagesCollectionPage> callback) {
+    public void get(final ICallback<? super ChatGetAllMessagesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
         });
     }
 
-    public IChatGetAllMessagesCollectionPage get() throws ClientException {
+    public ChatGetAllMessagesCollectionPage get() throws ClientException {
         final ChatGetAllMessagesCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IChatGetAllMessagesCollectionPage buildFromResponse(final ChatGetAllMessagesCollectionResponse response) {
-        final IChatGetAllMessagesCollectionRequestBuilder builder;
+    public ChatGetAllMessagesCollectionPage buildFromResponse(final ChatGetAllMessagesCollectionResponse response) {
+        final ChatGetAllMessagesCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ChatGetAllMessagesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IChatGetAllMessagesCollectionPage page = new ChatGetAllMessagesCollectionPage(response, builder);
+        final ChatGetAllMessagesCollectionPage page = new ChatGetAllMessagesCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param value the select clause
      * @return the updated request
      */
-    public IChatGetAllMessagesCollectionRequest select(final String value) {
+    public ChatGetAllMessagesCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IChatGetAllMessagesCollectionRequest)this;
+        return (ChatGetAllMessagesCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IChatGetAllMessagesCollectionRequest top(final int value) {
+    public ChatGetAllMessagesCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IChatGetAllMessagesCollectionRequest)this;
+        return (ChatGetAllMessagesCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param value the expand clause
      * @return the updated request
      */
-    public IChatGetAllMessagesCollectionRequest expand(final String value) {
+    public ChatGetAllMessagesCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IChatGetAllMessagesCollectionRequest)this;
+        return (ChatGetAllMessagesCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param value the filter clause
      * @return the updated request
      */
-    public IChatGetAllMessagesCollectionRequest filter(final String value) {
+    public ChatGetAllMessagesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IChatGetAllMessagesCollectionRequest)this;
+        return (ChatGetAllMessagesCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class ChatGetAllMessagesCollectionRequest extends BaseCollectionRequest<C
      * @param value the order by clause
      * @return the updated request
      */
-    public IChatGetAllMessagesCollectionRequest orderBy(final String value) {
+    public ChatGetAllMessagesCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IChatGetAllMessagesCollectionRequest)this;
+        return (ChatGetAllMessagesCollectionRequest)this;
     }
 
 }

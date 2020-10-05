@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeLastRowRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeLastRowRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Last Row Request.
  */
-public class WorkbookRangeLastRowRequest extends BaseRequest implements IWorkbookRangeLastRowRequest {
+public class WorkbookRangeLastRowRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeLastRow
@@ -97,7 +96,7 @@ public class WorkbookRangeLastRowRequest extends BaseRequest implements IWorkboo
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeLastRowRequest select(final String value) {
+    public WorkbookRangeLastRowRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeLastRowRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookRangeLastRowRequest extends BaseRequest implements IWorkboo
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeLastRowRequest expand(final String value) {
+    public WorkbookRangeLastRowRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeLastRowRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookRangeLastRowRequest extends BaseRequest implements IWorkboo
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeLastRowRequest filter(final String value) {
+    public WorkbookRangeLastRowRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeLastRowRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookRangeLastRowRequest extends BaseRequest implements IWorkboo
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeLastRowRequest orderBy(final String value) {
+    public WorkbookRangeLastRowRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeLastRowRequest)this;
     }

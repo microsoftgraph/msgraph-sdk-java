@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsEoMonthRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsEoMonthRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Eo Month Request Builder.
  */
-public class WorkbookFunctionsEoMonthRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsEoMonthRequestBuilder {
+public class WorkbookFunctionsEoMonthRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsEoMonth
@@ -34,22 +33,22 @@ public class WorkbookFunctionsEoMonthRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsEoMonthRequest
+     * Creates the WorkbookFunctionsEoMonthRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsEoMonthRequest instance
+     * @return the WorkbookFunctionsEoMonthRequest instance
      */
-    public IWorkbookFunctionsEoMonthRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsEoMonthRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsEoMonthRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsEoMonthRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsEoMonthRequest instance
+     * @return the WorkbookFunctionsEoMonthRequest instance
      */
-    public IWorkbookFunctionsEoMonthRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsEoMonthRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsEoMonthRequest request = new WorkbookFunctionsEoMonthRequest(
                 getRequestUrl(),
                 getClient(),

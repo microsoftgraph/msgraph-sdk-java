@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDminRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsDminRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Dmin Request Builder.
  */
-public class WorkbookFunctionsDminRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsDminRequestBuilder {
+public class WorkbookFunctionsDminRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsDmin
@@ -36,22 +35,22 @@ public class WorkbookFunctionsDminRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsDminRequest
+     * Creates the WorkbookFunctionsDminRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDminRequest instance
+     * @return the WorkbookFunctionsDminRequest instance
      */
-    public IWorkbookFunctionsDminRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsDminRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsDminRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsDminRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDminRequest instance
+     * @return the WorkbookFunctionsDminRequest instance
      */
-    public IWorkbookFunctionsDminRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsDminRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDminRequest request = new WorkbookFunctionsDminRequest(
                 getRequestUrl(),
                 getClient(),

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SiteCollectionResponse;
 /**
  * The class for the Site Collection Page.
  */
-public class SiteCollectionPage extends BaseCollectionPage<Site, ISiteCollectionRequestBuilder> implements ISiteCollectionPage {
+public class SiteCollectionPage extends BaseCollectionPage<Site, SiteCollectionRequestBuilder> {
 
     /**
      * A collection page for Site
@@ -22,7 +22,7 @@ public class SiteCollectionPage extends BaseCollectionPage<Site, ISiteCollection
      * @param response the serialized SiteCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SiteCollectionPage(final SiteCollectionResponse response, final ISiteCollectionRequestBuilder builder) {
+    public SiteCollectionPage(final SiteCollectionResponse response, final SiteCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ResourceOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IResourceOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IResourceOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IResourceOperationCollectionRequest;
+import com.microsoft.graph.requests.extensions.ResourceOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ResourceOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ResourceOperationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Resource Operation Collection Request Builder.
  */
-public class ResourceOperationCollectionRequestBuilder extends BaseRequestBuilder implements IResourceOperationCollectionRequestBuilder {
+public class ResourceOperationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class ResourceOperationCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IResourceOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ResourceOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ResourceOperationCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IResourceOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ResourceOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ResourceOperationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IResourceOperationRequestBuilder byId(final String id) {
+    public ResourceOperationRequestBuilder byId(final String id) {
         return new ResourceOperationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Category Reference Request Builder.
  */
-public class MobileAppCategoryReferenceRequestBuilder extends BaseRequestBuilder implements IMobileAppCategoryReferenceRequestBuilder {
+public class MobileAppCategoryReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MobileAppCategory
@@ -37,9 +37,9 @@ public class MobileAppCategoryReferenceRequestBuilder extends BaseRequestBuilder
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The IMobileAppCategoryReferenceRequest instance
+     * @return The MobileAppCategoryReferenceRequest instance
      */
-    public IMobileAppCategoryReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileAppCategoryReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class MobileAppCategoryReferenceRequestBuilder extends BaseRequestBuilder
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppCategoryReferenceRequest instance
+     * @return the MobileAppCategoryReferenceRequest instance
      */
-    public IMobileAppCategoryReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppCategoryReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileAppCategoryReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

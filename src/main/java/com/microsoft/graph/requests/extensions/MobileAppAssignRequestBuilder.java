@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignRequest;
 import com.microsoft.graph.requests.extensions.MobileAppAssignRequest;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Mobile App Assign Request Builder.
  */
-public class MobileAppAssignRequestBuilder extends BaseActionRequestBuilder implements IMobileAppAssignRequestBuilder {
+public class MobileAppAssignRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MobileAppAssign
@@ -32,22 +31,22 @@ public class MobileAppAssignRequestBuilder extends BaseActionRequestBuilder impl
     }
 
     /**
-     * Creates the IMobileAppAssignRequest
+     * Creates the MobileAppAssignRequest
      *
      * @param requestOptions the options for the request
-     * @return the IMobileAppAssignRequest instance
+     * @return the MobileAppAssignRequest instance
      */
-    public IMobileAppAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileAppAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IMobileAppAssignRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the MobileAppAssignRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IMobileAppAssignRequest instance
+     * @return the MobileAppAssignRequest instance
      */
-    public IMobileAppAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MobileAppAssignRequest request = new MobileAppAssignRequest(
                 getRequestUrl(),
                 getClient(),

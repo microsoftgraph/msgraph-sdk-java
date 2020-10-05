@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionResp
 /**
  * The class for the Mobile App Assignment Collection Page.
  */
-public class MobileAppAssignmentCollectionPage extends BaseCollectionPage<MobileAppAssignment, IMobileAppAssignmentCollectionRequestBuilder> implements IMobileAppAssignmentCollectionPage {
+public class MobileAppAssignmentCollectionPage extends BaseCollectionPage<MobileAppAssignment, MobileAppAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for MobileAppAssignment
@@ -22,7 +22,7 @@ public class MobileAppAssignmentCollectionPage extends BaseCollectionPage<Mobile
      * @param response the serialized MobileAppAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MobileAppAssignmentCollectionPage(final MobileAppAssignmentCollectionResponse response, final IMobileAppAssignmentCollectionRequestBuilder builder) {
+    public MobileAppAssignmentCollectionPage(final MobileAppAssignmentCollectionResponse response, final MobileAppAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

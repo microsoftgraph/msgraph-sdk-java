@@ -21,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Online Meeting Request.
  */
-public class OnlineMeetingRequest extends BaseRequest implements IOnlineMeetingRequest {
+public class OnlineMeetingRequest extends BaseRequest {
 	
     /**
      * The request for the OnlineMeeting
@@ -140,7 +140,7 @@ public class OnlineMeetingRequest extends BaseRequest implements IOnlineMeetingR
      * @param value the select clause
      * @return the updated request
      */
-     public IOnlineMeetingRequest select(final String value) {
+     public OnlineMeetingRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OnlineMeetingRequest)this;
      }
@@ -151,7 +151,7 @@ public class OnlineMeetingRequest extends BaseRequest implements IOnlineMeetingR
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnlineMeetingRequest expand(final String value) {
+     public OnlineMeetingRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OnlineMeetingRequest)this;
      }

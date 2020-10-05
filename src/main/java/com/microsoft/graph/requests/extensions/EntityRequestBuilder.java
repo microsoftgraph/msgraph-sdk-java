@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Entity Request Builder.
  */
-public class EntityRequestBuilder extends BaseRequestBuilder implements IEntityRequestBuilder {
+public class EntityRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Entity
@@ -35,9 +35,9 @@ public class EntityRequestBuilder extends BaseRequestBuilder implements IEntityR
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEntityRequest instance
+     * @return the EntityRequest instance
      */
-    public IEntityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EntityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class EntityRequestBuilder extends BaseRequestBuilder implements IEntityR
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEntityRequest instance
+     * @return the EntityRequest instance
      */
-    public IEntityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EntityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EntityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

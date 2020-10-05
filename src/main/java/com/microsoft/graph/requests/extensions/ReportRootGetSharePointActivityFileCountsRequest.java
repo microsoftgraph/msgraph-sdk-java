@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityFileCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityFileCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Share Point Activity File Counts Request.
  */
-public class ReportRootGetSharePointActivityFileCountsRequest extends BaseRequest implements IReportRootGetSharePointActivityFileCountsRequest {
+public class ReportRootGetSharePointActivityFileCountsRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetSharePointActivityFileCounts
@@ -97,7 +96,7 @@ public class ReportRootGetSharePointActivityFileCountsRequest extends BaseReques
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityFileCountsRequest select(final String value) {
+    public ReportRootGetSharePointActivityFileCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetSharePointActivityFileCountsRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetSharePointActivityFileCountsRequest extends BaseReques
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityFileCountsRequest expand(final String value) {
+    public ReportRootGetSharePointActivityFileCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetSharePointActivityFileCountsRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetSharePointActivityFileCountsRequest extends BaseReques
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityFileCountsRequest filter(final String value) {
+    public ReportRootGetSharePointActivityFileCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetSharePointActivityFileCountsRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetSharePointActivityFileCountsRequest extends BaseReques
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityFileCountsRequest orderBy(final String value) {
+    public ReportRootGetSharePointActivityFileCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetSharePointActivityFileCountsRequest)this;
     }

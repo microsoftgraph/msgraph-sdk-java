@@ -8,13 +8,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerTask;
-import com.microsoft.graph.requests.extensions.IPlannerAssignedToTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerAssignedToTaskBoardTaskFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerBucketTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketTaskBoardTaskFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerProgressTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerProgressTaskBoardTaskFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Planner Task Request.
  */
-public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskRequest {
+public class PlannerTaskRequest extends BaseRequest {
 	
     /**
      * The request for the PlannerTask
@@ -146,7 +142,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @param value the select clause
      * @return the updated request
      */
-     public IPlannerTaskRequest select(final String value) {
+     public PlannerTaskRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PlannerTaskRequest)this;
      }
@@ -157,7 +153,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IPlannerTaskRequest expand(final String value) {
+     public PlannerTaskRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PlannerTaskRequest)this;
      }

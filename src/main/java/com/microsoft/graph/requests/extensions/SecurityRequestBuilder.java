@@ -8,16 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Security;
-import com.microsoft.graph.requests.extensions.IAlertCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAlertRequestBuilder;
 import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AlertRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreRequestBuilder;
 import java.util.Arrays;
@@ -30,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Security Request Builder.
  */
-public class SecurityRequestBuilder extends BaseRequestBuilder implements ISecurityRequestBuilder {
+public class SecurityRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Security
@@ -47,9 +41,9 @@ public class SecurityRequestBuilder extends BaseRequestBuilder implements ISecur
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityRequest instance
+     * @return the SecurityRequest instance
      */
-    public ISecurityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SecurityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -57,32 +51,32 @@ public class SecurityRequestBuilder extends BaseRequestBuilder implements ISecur
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityRequest instance
+     * @return the SecurityRequest instance
      */
-    public ISecurityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SecurityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAlertCollectionRequestBuilder alerts() {
+    public AlertCollectionRequestBuilder alerts() {
         return new AlertCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("alerts"), getClient(), null);
     }
 
-    public IAlertRequestBuilder alerts(final String id) {
+    public AlertRequestBuilder alerts(final String id) {
         return new AlertRequestBuilder(getRequestUrlWithAdditionalSegment("alerts") + "/" + id, getClient(), null);
     }
-    public ISecureScoreControlProfileCollectionRequestBuilder secureScoreControlProfiles() {
+    public SecureScoreControlProfileCollectionRequestBuilder secureScoreControlProfiles() {
         return new SecureScoreControlProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles"), getClient(), null);
     }
 
-    public ISecureScoreControlProfileRequestBuilder secureScoreControlProfiles(final String id) {
+    public SecureScoreControlProfileRequestBuilder secureScoreControlProfiles(final String id) {
         return new SecureScoreControlProfileRequestBuilder(getRequestUrlWithAdditionalSegment("secureScoreControlProfiles") + "/" + id, getClient(), null);
     }
-    public ISecureScoreCollectionRequestBuilder secureScores() {
+    public SecureScoreCollectionRequestBuilder secureScores() {
         return new SecureScoreCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores"), getClient(), null);
     }
 
-    public ISecureScoreRequestBuilder secureScores(final String id) {
+    public SecureScoreRequestBuilder secureScores(final String id) {
         return new SecureScoreRequestBuilder(getRequestUrlWithAdditionalSegment("secureScores") + "/" + id, getClient(), null);
     }
 }

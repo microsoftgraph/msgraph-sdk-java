@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRetireRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRetireRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Retire Request.
  */
-public class ManagedDeviceRetireRequest extends BaseRequest implements IManagedDeviceRetireRequest {
+public class ManagedDeviceRetireRequest extends BaseRequest {
 
     /**
      * The request for this ManagedDeviceRetire

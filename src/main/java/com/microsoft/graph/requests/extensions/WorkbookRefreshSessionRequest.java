@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRefreshSessionRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRefreshSessionRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Refresh Session Request.
  */
-public class WorkbookRefreshSessionRequest extends BaseRequest implements IWorkbookRefreshSessionRequest {
+public class WorkbookRefreshSessionRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRefreshSession

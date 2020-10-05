@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Status Request Builder.
  */
-public class ManagedAppStatusRequestBuilder extends BaseRequestBuilder implements IManagedAppStatusRequestBuilder {
+public class ManagedAppStatusRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedAppStatus
@@ -35,9 +35,9 @@ public class ManagedAppStatusRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppStatusRequest instance
+     * @return the ManagedAppStatusRequest instance
      */
-    public IManagedAppStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ManagedAppStatusRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppStatusRequest instance
+     * @return the ManagedAppStatusRequest instance
      */
-    public IManagedAppStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedAppStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

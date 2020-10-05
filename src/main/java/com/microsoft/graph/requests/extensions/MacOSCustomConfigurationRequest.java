@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSCustom Configuration Request.
  */
-public class MacOSCustomConfigurationRequest extends BaseRequest implements IMacOSCustomConfigurationRequest {
+public class MacOSCustomConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the MacOSCustomConfiguration
@@ -138,7 +138,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest implements IMac
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSCustomConfigurationRequest select(final String value) {
+     public MacOSCustomConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MacOSCustomConfigurationRequest)this;
      }
@@ -149,7 +149,7 @@ public class MacOSCustomConfigurationRequest extends BaseRequest implements IMac
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSCustomConfigurationRequest expand(final String value) {
+     public MacOSCustomConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MacOSCustomConfigurationRequest)this;
      }

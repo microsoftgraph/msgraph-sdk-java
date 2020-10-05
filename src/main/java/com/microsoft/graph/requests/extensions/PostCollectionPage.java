@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Post;
-import com.microsoft.graph.requests.extensions.IPostCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PostCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.PostCollectionPage;
 import com.microsoft.graph.requests.extensions.PostCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.PostCollectionResponse;
 /**
  * The class for the Post Collection Page.
  */
-public class PostCollectionPage extends BaseCollectionPage<Post, IPostCollectionRequestBuilder> implements IPostCollectionPage {
+public class PostCollectionPage extends BaseCollectionPage<Post, PostCollectionRequestBuilder> {
 
     /**
      * A collection page for Post
@@ -22,7 +22,7 @@ public class PostCollectionPage extends BaseCollectionPage<Post, IPostCollection
      * @param response the serialized PostCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PostCollectionPage(final PostCollectionResponse response, final IPostCollectionRequestBuilder builder) {
+    public PostCollectionPage(final PostCollectionResponse response, final PostCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

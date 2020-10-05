@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationDeviceActivityRequest;
 import com.microsoft.graph.requests.extensions.ReportRootDeviceConfigurationDeviceActivityRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Device Configuration Device Activity Request Builder.
  */
-public class ReportRootDeviceConfigurationDeviceActivityRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootDeviceConfigurationDeviceActivityRequestBuilder {
+public class ReportRootDeviceConfigurationDeviceActivityRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootDeviceConfigurationDeviceActivity
@@ -30,22 +29,22 @@ public class ReportRootDeviceConfigurationDeviceActivityRequestBuilder extends B
     }
 
     /**
-     * Creates the IReportRootDeviceConfigurationDeviceActivityRequest
+     * Creates the ReportRootDeviceConfigurationDeviceActivityRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootDeviceConfigurationDeviceActivityRequest instance
+     * @return the ReportRootDeviceConfigurationDeviceActivityRequest instance
      */
-    public IReportRootDeviceConfigurationDeviceActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootDeviceConfigurationDeviceActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootDeviceConfigurationDeviceActivityRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootDeviceConfigurationDeviceActivityRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootDeviceConfigurationDeviceActivityRequest instance
+     * @return the ReportRootDeviceConfigurationDeviceActivityRequest instance
      */
-    public IReportRootDeviceConfigurationDeviceActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootDeviceConfigurationDeviceActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootDeviceConfigurationDeviceActivityRequest request = new ReportRootDeviceConfigurationDeviceActivityRequest(
                 getRequestUrl(),
                 getClient(),

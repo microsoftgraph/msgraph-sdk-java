@@ -15,9 +15,9 @@ import com.microsoft.graph.models.generated.CalendarRoleType;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarCollectionRequest;
+import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Calendar Collection Request Builder.
  */
-public class CalendarCollectionRequestBuilder extends BaseRequestBuilder implements ICalendarCollectionRequestBuilder {
+public class CalendarCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of CalendarGroup
@@ -45,7 +45,7 @@ public class CalendarCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICalendarCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CalendarCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,11 +55,11 @@ public class CalendarCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICalendarCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CalendarCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ICalendarRequestBuilder byId(final String id) {
+    public CalendarRequestBuilder byId(final String id) {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionPage;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfiguration
 /**
  * The class for the Certificate Based Auth Configuration Collection Page.
  */
-public class CertificateBasedAuthConfigurationCollectionPage extends BaseCollectionPage<CertificateBasedAuthConfiguration, ICertificateBasedAuthConfigurationCollectionRequestBuilder> implements ICertificateBasedAuthConfigurationCollectionPage {
+public class CertificateBasedAuthConfigurationCollectionPage extends BaseCollectionPage<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationCollectionRequestBuilder> {
 
     /**
      * A collection page for CertificateBasedAuthConfiguration
@@ -22,7 +22,7 @@ public class CertificateBasedAuthConfigurationCollectionPage extends BaseCollect
      * @param response the serialized CertificateBasedAuthConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public CertificateBasedAuthConfigurationCollectionPage(final CertificateBasedAuthConfigurationCollectionResponse response, final ICertificateBasedAuthConfigurationCollectionRequestBuilder builder) {
+    public CertificateBasedAuthConfigurationCollectionPage(final CertificateBasedAuthConfigurationCollectionResponse response, final CertificateBasedAuthConfigurationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

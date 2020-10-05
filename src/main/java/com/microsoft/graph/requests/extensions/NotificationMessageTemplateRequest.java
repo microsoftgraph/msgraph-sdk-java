@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
-import com.microsoft.graph.requests.extensions.ILocalizedNotificationMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILocalizedNotificationMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LocalizedNotificationMessageRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Notification Message Template Request.
  */
-public class NotificationMessageTemplateRequest extends BaseRequest implements INotificationMessageTemplateRequest {
+public class NotificationMessageTemplateRequest extends BaseRequest {
 	
     /**
      * The request for the NotificationMessageTemplate
@@ -142,7 +140,7 @@ public class NotificationMessageTemplateRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public INotificationMessageTemplateRequest select(final String value) {
+     public NotificationMessageTemplateRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (NotificationMessageTemplateRequest)this;
      }
@@ -153,7 +151,7 @@ public class NotificationMessageTemplateRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public INotificationMessageTemplateRequest expand(final String value) {
+     public NotificationMessageTemplateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (NotificationMessageTemplateRequest)this;
      }

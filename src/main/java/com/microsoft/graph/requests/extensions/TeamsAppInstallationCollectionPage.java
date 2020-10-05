@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsAppInstallation;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRes
 /**
  * The class for the Teams App Installation Collection Page.
  */
-public class TeamsAppInstallationCollectionPage extends BaseCollectionPage<TeamsAppInstallation, ITeamsAppInstallationCollectionRequestBuilder> implements ITeamsAppInstallationCollectionPage {
+public class TeamsAppInstallationCollectionPage extends BaseCollectionPage<TeamsAppInstallation, TeamsAppInstallationCollectionRequestBuilder> {
 
     /**
      * A collection page for TeamsAppInstallation
@@ -22,7 +22,7 @@ public class TeamsAppInstallationCollectionPage extends BaseCollectionPage<Teams
      * @param response the serialized TeamsAppInstallationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsAppInstallationCollectionPage(final TeamsAppInstallationCollectionResponse response, final ITeamsAppInstallationCollectionRequestBuilder builder) {
+    public TeamsAppInstallationCollectionPage(final TeamsAppInstallationCollectionResponse response, final TeamsAppInstallationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

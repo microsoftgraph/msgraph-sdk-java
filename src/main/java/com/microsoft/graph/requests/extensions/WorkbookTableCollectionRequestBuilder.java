@@ -13,12 +13,12 @@ import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookTableAddRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableCountRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableItemAtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableCollectionRequest;
+import com.microsoft.graph.requests.extensions.WorkbookTableAddRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableCountRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableItemAtRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -27,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Table Collection Request Builder.
  */
-public class WorkbookTableCollectionRequestBuilder extends BaseRequestBuilder implements IWorkbookTableCollectionRequestBuilder {
+public class WorkbookTableCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of WorkbookWorksheet
@@ -46,7 +46,7 @@ public class WorkbookTableCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookTableCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,25 +56,25 @@ public class WorkbookTableCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookTableCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookTableCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookTableRequestBuilder byId(final String id) {
+    public WorkbookTableRequestBuilder byId(final String id) {
         return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IWorkbookTableAddRequestBuilder add(final String address, final Boolean hasHeaders) {
+    public WorkbookTableAddRequestBuilder add(final String address, final Boolean hasHeaders) {
         return new WorkbookTableAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, address, hasHeaders);
     }
 
-    public IWorkbookTableCountRequestBuilder count() {
+    public WorkbookTableCountRequestBuilder count() {
         return new WorkbookTableCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 
-    public IWorkbookTableItemAtRequestBuilder itemAt(final Integer index) {
+    public WorkbookTableItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookTableItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

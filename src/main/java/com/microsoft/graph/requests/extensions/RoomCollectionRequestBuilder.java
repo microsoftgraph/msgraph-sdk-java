@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.Room;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IRoomCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoomRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoomCollectionRequest;
+import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoomRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoomCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Room Collection Request Builder.
  */
-public class RoomCollectionRequestBuilder extends BaseRequestBuilder implements IRoomCollectionRequestBuilder {
+public class RoomCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of RoomList
@@ -42,7 +42,7 @@ public class RoomCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IRoomCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public RoomCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class RoomCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IRoomCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoomCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RoomCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IRoomRequestBuilder byId(final String id) {
+    public RoomRequestBuilder byId(final String id) {
         return new RoomRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

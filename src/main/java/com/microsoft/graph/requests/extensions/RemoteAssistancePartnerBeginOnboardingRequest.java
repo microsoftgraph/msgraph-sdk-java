@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerBeginOnboardingRequest;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerBeginOnboardingRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Remote Assistance Partner Begin Onboarding Request.
  */
-public class RemoteAssistancePartnerBeginOnboardingRequest extends BaseRequest implements IRemoteAssistancePartnerBeginOnboardingRequest {
+public class RemoteAssistancePartnerBeginOnboardingRequest extends BaseRequest {
 
     /**
      * The request for this RemoteAssistancePartnerBeginOnboarding

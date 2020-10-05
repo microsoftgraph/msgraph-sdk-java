@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the OAuth2Permission Grant Collection With References Request.
  */
-public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCollectionRequest<OAuth2PermissionGrantCollectionResponse, IOAuth2PermissionGrantCollectionPage> implements IOAuth2PermissionGrantCollectionWithReferencesRequest {
+public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCollectionRequest<OAuth2PermissionGrantCollectionResponse, OAuth2PermissionGrantCollectionPage> {
 
     /**
      * The request builder for this collection of OAuth2PermissionGrant
@@ -32,10 +32,10 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
      * @param requestOptions the options for this request
      */
     public OAuth2PermissionGrantCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, IOAuth2PermissionGrantCollectionPage.class);
+        super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, OAuth2PermissionGrantCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IOAuth2PermissionGrantCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super OAuth2PermissionGrantCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
         });
     }
 
-    public IOAuth2PermissionGrantCollectionWithReferencesPage get() throws ClientException {
+    public OAuth2PermissionGrantCollectionWithReferencesPage get() throws ClientException {
         final OAuth2PermissionGrantCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IOAuth2PermissionGrantCollectionWithReferencesRequest expand(final String value) {
+    public OAuth2PermissionGrantCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IOAuth2PermissionGrantCollectionWithReferencesRequest filter(final String value) {
+    public OAuth2PermissionGrantCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IOAuth2PermissionGrantCollectionWithReferencesRequest orderBy(final String value) {
+    public OAuth2PermissionGrantCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IOAuth2PermissionGrantCollectionWithReferencesRequest select(final String value) {
+    public OAuth2PermissionGrantCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IOAuth2PermissionGrantCollectionWithReferencesRequest top(final int value) {
+    public OAuth2PermissionGrantCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IOAuth2PermissionGrantCollectionWithReferencesPage buildFromResponse(final OAuth2PermissionGrantCollectionResponse response) {
-        final IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder builder;
+    public OAuth2PermissionGrantCollectionWithReferencesPage buildFromResponse(final OAuth2PermissionGrantCollectionResponse response) {
+        final OAuth2PermissionGrantCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new OAuth2PermissionGrantCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

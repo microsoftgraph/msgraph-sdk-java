@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.Device;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Collection Request Builder.
  */
-public class DeviceCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceCollectionRequestBuilder {
+public class DeviceCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Device
@@ -41,7 +41,7 @@ public class DeviceCollectionRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class DeviceCollectionRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceRequestBuilder byId(final String id) {
+    public DeviceRequestBuilder byId(final String id) {
         return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

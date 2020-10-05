@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsF_DistRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsF_DistRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions F_Dist Request Builder.
  */
-public class WorkbookFunctionsF_DistRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsF_DistRequestBuilder {
+public class WorkbookFunctionsF_DistRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsF_Dist
@@ -38,22 +37,22 @@ public class WorkbookFunctionsF_DistRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsF_DistRequest
+     * Creates the WorkbookFunctionsF_DistRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsF_DistRequest instance
+     * @return the WorkbookFunctionsF_DistRequest instance
      */
-    public IWorkbookFunctionsF_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsF_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsF_DistRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsF_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsF_DistRequest instance
+     * @return the WorkbookFunctionsF_DistRequest instance
      */
-    public IWorkbookFunctionsF_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsF_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsF_DistRequest request = new WorkbookFunctionsF_DistRequest(
                 getRequestUrl(),
                 getClient(),

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.BaseItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IBaseItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemCollectionRequest;
+import com.microsoft.graph.requests.extensions.BaseItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.BaseItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.BaseItemCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Base Item Collection Request Builder.
  */
-public class BaseItemCollectionRequestBuilder extends BaseRequestBuilder implements IBaseItemCollectionRequestBuilder {
+public class BaseItemCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Site
@@ -42,7 +42,7 @@ public class BaseItemCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IBaseItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public BaseItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class BaseItemCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IBaseItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BaseItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new BaseItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IBaseItemRequestBuilder byId(final String id) {
+    public BaseItemRequestBuilder byId(final String id) {
         return new BaseItemRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

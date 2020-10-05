@@ -11,20 +11,12 @@ import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.models.extensions.ScheduleInformation;
 import com.microsoft.graph.models.generated.CalendarRoleType;
-import com.microsoft.graph.requests.extensions.ICalendarPermissionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarPermissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
@@ -38,7 +30,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Calendar Request.
  */
-public class CalendarRequest extends BaseRequest implements ICalendarRequest {
+public class CalendarRequest extends BaseRequest {
 	
     /**
      * The request for the Calendar
@@ -157,7 +149,7 @@ public class CalendarRequest extends BaseRequest implements ICalendarRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ICalendarRequest select(final String value) {
+     public CalendarRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (CalendarRequest)this;
      }
@@ -168,7 +160,7 @@ public class CalendarRequest extends BaseRequest implements ICalendarRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ICalendarRequest expand(final String value) {
+     public CalendarRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (CalendarRequest)this;
      }

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequest;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Multi Value Legacy Extended Property Collection Request Builder.
  */
-public class MultiValueLegacyExtendedPropertyCollectionRequestBuilder extends BaseRequestBuilder implements IMultiValueLegacyExtendedPropertyCollectionRequestBuilder {
+public class MultiValueLegacyExtendedPropertyCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Post
@@ -42,7 +42,7 @@ public class MultiValueLegacyExtendedPropertyCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMultiValueLegacyExtendedPropertyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MultiValueLegacyExtendedPropertyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class MultiValueLegacyExtendedPropertyCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMultiValueLegacyExtendedPropertyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MultiValueLegacyExtendedPropertyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MultiValueLegacyExtendedPropertyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMultiValueLegacyExtendedPropertyRequestBuilder byId(final String id) {
+    public MultiValueLegacyExtendedPropertyRequestBuilder byId(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

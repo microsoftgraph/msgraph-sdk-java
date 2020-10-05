@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsReplaceRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsReplaceRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Replace Request Builder.
  */
-public class WorkbookFunctionsReplaceRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsReplaceRequestBuilder {
+public class WorkbookFunctionsReplaceRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsReplace
@@ -38,22 +37,22 @@ public class WorkbookFunctionsReplaceRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsReplaceRequest
+     * Creates the WorkbookFunctionsReplaceRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsReplaceRequest instance
+     * @return the WorkbookFunctionsReplaceRequest instance
      */
-    public IWorkbookFunctionsReplaceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsReplaceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsReplaceRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsReplaceRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsReplaceRequest instance
+     * @return the WorkbookFunctionsReplaceRequest instance
      */
-    public IWorkbookFunctionsReplaceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsReplaceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsReplaceRequest request = new WorkbookFunctionsReplaceRequest(
                 getRequestUrl(),
                 getClient(),

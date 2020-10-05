@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyIconFilterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyIconFilterRequest;
 import com.microsoft.graph.models.extensions.WorkbookIcon;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Filter Apply Icon Filter Request Builder.
  */
-public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFilterApplyIconFilterRequestBuilder {
+public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFilterApplyIconFilter
@@ -32,22 +31,22 @@ public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseActionReque
     }
 
     /**
-     * Creates the IWorkbookFilterApplyIconFilterRequest
+     * Creates the WorkbookFilterApplyIconFilterRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyIconFilterRequest instance
+     * @return the WorkbookFilterApplyIconFilterRequest instance
      */
-    public IWorkbookFilterApplyIconFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFilterApplyIconFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFilterApplyIconFilterRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFilterApplyIconFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyIconFilterRequest instance
+     * @return the WorkbookFilterApplyIconFilterRequest instance
      */
-    public IWorkbookFilterApplyIconFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterApplyIconFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyIconFilterRequest request = new WorkbookFilterApplyIconFilterRequest(
                 getRequestUrl(),
                 getClient(),

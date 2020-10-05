@@ -8,15 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SectionGroup;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -29,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Section Group Request.
  */
-public class SectionGroupRequest extends BaseRequest implements ISectionGroupRequest {
+public class SectionGroupRequest extends BaseRequest {
 	
     /**
      * The request for the SectionGroup
@@ -148,7 +143,7 @@ public class SectionGroupRequest extends BaseRequest implements ISectionGroupReq
      * @param value the select clause
      * @return the updated request
      */
-     public ISectionGroupRequest select(final String value) {
+     public SectionGroupRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SectionGroupRequest)this;
      }
@@ -159,7 +154,7 @@ public class SectionGroupRequest extends BaseRequest implements ISectionGroupReq
      * @param value the expand clause
      * @return the updated request
      */
-     public ISectionGroupRequest expand(final String value) {
+     public SectionGroupRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SectionGroupRequest)this;
      }

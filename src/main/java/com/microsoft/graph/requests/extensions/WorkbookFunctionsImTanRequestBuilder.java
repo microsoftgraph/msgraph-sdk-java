@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImTanRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImTanRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Im Tan Request Builder.
  */
-public class WorkbookFunctionsImTanRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImTanRequestBuilder {
+public class WorkbookFunctionsImTanRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImTan
@@ -32,22 +31,22 @@ public class WorkbookFunctionsImTanRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsImTanRequest
+     * Creates the WorkbookFunctionsImTanRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImTanRequest instance
+     * @return the WorkbookFunctionsImTanRequest instance
      */
-    public IWorkbookFunctionsImTanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImTanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImTanRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImTanRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImTanRequest instance
+     * @return the WorkbookFunctionsImTanRequest instance
      */
-    public IWorkbookFunctionsImTanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImTanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImTanRequest request = new WorkbookFunctionsImTanRequest(
                 getRequestUrl(),
                 getClient(),

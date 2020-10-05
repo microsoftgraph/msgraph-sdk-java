@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSechRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSechRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Sech Request Builder.
  */
-public class WorkbookFunctionsSechRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSechRequestBuilder {
+public class WorkbookFunctionsSechRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSech
@@ -32,22 +31,22 @@ public class WorkbookFunctionsSechRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsSechRequest
+     * Creates the WorkbookFunctionsSechRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSechRequest instance
+     * @return the WorkbookFunctionsSechRequest instance
      */
-    public IWorkbookFunctionsSechRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSechRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSechRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSechRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSechRequest instance
+     * @return the WorkbookFunctionsSechRequest instance
      */
-    public IWorkbookFunctionsSechRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSechRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSechRequest request = new WorkbookFunctionsSechRequest(
                 getRequestUrl(),
                 getClient(),

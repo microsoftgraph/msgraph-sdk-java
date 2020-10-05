@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ColumnLink;
-import com.microsoft.graph.requests.extensions.IColumnLinkCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionPage;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ColumnLinkCollectionResponse;
 /**
  * The class for the Column Link Collection Page.
  */
-public class ColumnLinkCollectionPage extends BaseCollectionPage<ColumnLink, IColumnLinkCollectionRequestBuilder> implements IColumnLinkCollectionPage {
+public class ColumnLinkCollectionPage extends BaseCollectionPage<ColumnLink, ColumnLinkCollectionRequestBuilder> {
 
     /**
      * A collection page for ColumnLink
@@ -22,7 +22,7 @@ public class ColumnLinkCollectionPage extends BaseCollectionPage<ColumnLink, ICo
      * @param response the serialized ColumnLinkCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ColumnLinkCollectionPage(final ColumnLinkCollectionResponse response, final IColumnLinkCollectionRequestBuilder builder) {
+    public ColumnLinkCollectionPage(final ColumnLinkCollectionResponse response, final ColumnLinkCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppContent;
-import com.microsoft.graph.requests.extensions.IMobileAppContentFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppContentFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Content Request Builder.
  */
-public class MobileAppContentRequestBuilder extends BaseRequestBuilder implements IMobileAppContentRequestBuilder {
+public class MobileAppContentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MobileAppContent
@@ -39,9 +37,9 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppContentRequest instance
+     * @return the MobileAppContentRequest instance
      */
-    public IMobileAppContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileAppContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppContentRequest instance
+     * @return the MobileAppContentRequest instance
      */
-    public IMobileAppContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MobileAppContentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IMobileAppContentFileCollectionRequestBuilder files() {
+    public MobileAppContentFileCollectionRequestBuilder files() {
         return new MobileAppContentFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
     }
 
-    public IMobileAppContentFileRequestBuilder files(final String id) {
+    public MobileAppContentFileRequestBuilder files(final String id) {
         return new MobileAppContentFileRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
     }
 }

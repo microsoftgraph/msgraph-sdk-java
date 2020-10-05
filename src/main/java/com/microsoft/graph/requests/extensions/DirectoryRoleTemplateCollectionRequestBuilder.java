@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.DirectoryRoleTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateCollectionRequest;
+import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Role Template Collection Request Builder.
  */
-public class DirectoryRoleTemplateCollectionRequestBuilder extends BaseRequestBuilder implements IDirectoryRoleTemplateCollectionRequestBuilder {
+public class DirectoryRoleTemplateCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DirectoryRoleTemplate
@@ -41,7 +41,7 @@ public class DirectoryRoleTemplateCollectionRequestBuilder extends BaseRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryRoleTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryRoleTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class DirectoryRoleTemplateCollectionRequestBuilder extends BaseRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryRoleTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryRoleTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryRoleTemplateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDirectoryRoleTemplateRequestBuilder byId(final String id) {
+    public DirectoryRoleTemplateRequestBuilder byId(final String id) {
         return new DirectoryRoleTemplateRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

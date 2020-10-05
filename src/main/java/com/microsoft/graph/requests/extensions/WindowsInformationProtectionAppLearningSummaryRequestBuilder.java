@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Information Protection App Learning Summary Request Builder.
  */
-public class WindowsInformationProtectionAppLearningSummaryRequestBuilder extends BaseRequestBuilder implements IWindowsInformationProtectionAppLearningSummaryRequestBuilder {
+public class WindowsInformationProtectionAppLearningSummaryRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WindowsInformationProtectionAppLearningSummary
@@ -35,9 +35,9 @@ public class WindowsInformationProtectionAppLearningSummaryRequestBuilder extend
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsInformationProtectionAppLearningSummaryRequest instance
+     * @return the WindowsInformationProtectionAppLearningSummaryRequest instance
      */
-    public IWindowsInformationProtectionAppLearningSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WindowsInformationProtectionAppLearningSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class WindowsInformationProtectionAppLearningSummaryRequestBuilder extend
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsInformationProtectionAppLearningSummaryRequest instance
+     * @return the WindowsInformationProtectionAppLearningSummaryRequest instance
      */
-    public IWindowsInformationProtectionAppLearningSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionAppLearningSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

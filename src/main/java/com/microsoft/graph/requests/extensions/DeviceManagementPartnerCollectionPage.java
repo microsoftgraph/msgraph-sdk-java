@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceManagementPartner;
-import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollection
 /**
  * The class for the Device Management Partner Collection Page.
  */
-public class DeviceManagementPartnerCollectionPage extends BaseCollectionPage<DeviceManagementPartner, IDeviceManagementPartnerCollectionRequestBuilder> implements IDeviceManagementPartnerCollectionPage {
+public class DeviceManagementPartnerCollectionPage extends BaseCollectionPage<DeviceManagementPartner, DeviceManagementPartnerCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceManagementPartner
@@ -22,7 +22,7 @@ public class DeviceManagementPartnerCollectionPage extends BaseCollectionPage<De
      * @param response the serialized DeviceManagementPartnerCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceManagementPartnerCollectionPage(final DeviceManagementPartnerCollectionResponse response, final IDeviceManagementPartnerCollectionRequestBuilder builder) {
+    public DeviceManagementPartnerCollectionPage(final DeviceManagementPartnerCollectionResponse response, final DeviceManagementPartnerCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

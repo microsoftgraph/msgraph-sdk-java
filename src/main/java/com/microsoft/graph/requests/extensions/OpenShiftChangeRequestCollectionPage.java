@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OpenShiftChangeRequest;
-import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionPage;
 import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionR
 /**
  * The class for the Open Shift Change Request Collection Page.
  */
-public class OpenShiftChangeRequestCollectionPage extends BaseCollectionPage<OpenShiftChangeRequest, IOpenShiftChangeRequestCollectionRequestBuilder> implements IOpenShiftChangeRequestCollectionPage {
+public class OpenShiftChangeRequestCollectionPage extends BaseCollectionPage<OpenShiftChangeRequest, OpenShiftChangeRequestCollectionRequestBuilder> {
 
     /**
      * A collection page for OpenShiftChangeRequest
@@ -22,7 +22,7 @@ public class OpenShiftChangeRequestCollectionPage extends BaseCollectionPage<Ope
      * @param response the serialized OpenShiftChangeRequestCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OpenShiftChangeRequestCollectionPage(final OpenShiftChangeRequestCollectionResponse response, final IOpenShiftChangeRequestCollectionRequestBuilder builder) {
+    public OpenShiftChangeRequestCollectionPage(final OpenShiftChangeRequestCollectionResponse response, final OpenShiftChangeRequestCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DirectoryObject;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRestoreRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRestoreRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Object Restore Request.
  */
-public class DirectoryObjectRestoreRequest extends BaseRequest implements IDirectoryObjectRestoreRequest {
+public class DirectoryObjectRestoreRequest extends BaseRequest {
 
     /**
      * The request for this DirectoryObjectRestore
@@ -57,7 +56,7 @@ public class DirectoryObjectRestoreRequest extends BaseRequest implements IDirec
      * @param value the select clause
      * @return the updated request
      */
-    public IDirectoryObjectRestoreRequest select(final String value) {
+    public DirectoryObjectRestoreRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DirectoryObjectRestoreRequest)this;
     }
@@ -68,7 +67,7 @@ public class DirectoryObjectRestoreRequest extends BaseRequest implements IDirec
      * @param value the expand clause
      * @return the updated request
      */
-    public IDirectoryObjectRestoreRequest expand(final String value) {
+    public DirectoryObjectRestoreRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DirectoryObjectRestoreRequest)this;
     }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCombinRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsCombinRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Combin Request Builder.
  */
-public class WorkbookFunctionsCombinRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsCombinRequestBuilder {
+public class WorkbookFunctionsCombinRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsCombin
@@ -34,22 +33,22 @@ public class WorkbookFunctionsCombinRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsCombinRequest
+     * Creates the WorkbookFunctionsCombinRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCombinRequest instance
+     * @return the WorkbookFunctionsCombinRequest instance
      */
-    public IWorkbookFunctionsCombinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsCombinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsCombinRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsCombinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCombinRequest instance
+     * @return the WorkbookFunctionsCombinRequest instance
      */
-    public IWorkbookFunctionsCombinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsCombinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCombinRequest request = new WorkbookFunctionsCombinRequest(
                 getRequestUrl(),
                 getClient(),

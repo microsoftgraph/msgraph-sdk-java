@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Category Request Builder.
  */
-public class MobileAppCategoryRequestBuilder extends BaseRequestBuilder implements IMobileAppCategoryRequestBuilder {
+public class MobileAppCategoryRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MobileAppCategory
@@ -35,9 +35,9 @@ public class MobileAppCategoryRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppCategoryRequest instance
+     * @return the MobileAppCategoryRequest instance
      */
-    public IMobileAppCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileAppCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class MobileAppCategoryRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppCategoryRequest instance
+     * @return the MobileAppCategoryRequest instance
      */
-    public IMobileAppCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MobileAppCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

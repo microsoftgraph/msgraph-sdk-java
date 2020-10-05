@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAcothRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAcothRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Acoth Request Builder.
  */
-public class WorkbookFunctionsAcothRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsAcothRequestBuilder {
+public class WorkbookFunctionsAcothRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsAcoth
@@ -32,22 +31,22 @@ public class WorkbookFunctionsAcothRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsAcothRequest
+     * Creates the WorkbookFunctionsAcothRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAcothRequest instance
+     * @return the WorkbookFunctionsAcothRequest instance
      */
-    public IWorkbookFunctionsAcothRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsAcothRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsAcothRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsAcothRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAcothRequest instance
+     * @return the WorkbookFunctionsAcothRequest instance
      */
-    public IWorkbookFunctionsAcothRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsAcothRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsAcothRequest request = new WorkbookFunctionsAcothRequest(
                 getRequestUrl(),
                 getClient(),

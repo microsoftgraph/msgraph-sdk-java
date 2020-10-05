@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.List;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListCollectionRequest;
+import com.microsoft.graph.requests.extensions.ListCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the List Collection Request Builder.
  */
-public class ListCollectionRequestBuilder extends BaseRequestBuilder implements IListCollectionRequestBuilder {
+public class ListCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Site
@@ -42,7 +42,7 @@ public class ListCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IListCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ListCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ListCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IListCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ListCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IListRequestBuilder byId(final String id) {
+    public ListRequestBuilder byId(final String id) {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.EducationClass;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequest;
+import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationClassCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Education Class Collection Request Builder.
  */
-public class EducationClassCollectionRequestBuilder extends BaseRequestBuilder implements IEducationClassCollectionRequestBuilder {
+public class EducationClassCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of EducationRoot
@@ -42,7 +42,7 @@ public class EducationClassCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEducationClassCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EducationClassCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class EducationClassCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEducationClassCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationClassCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EducationClassCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IEducationClassRequestBuilder byId(final String id) {
+    public EducationClassRequestBuilder byId(final String id) {
         return new EducationClassRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

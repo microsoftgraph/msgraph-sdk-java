@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the OAuth2Permission Grant Delta Collection Request.
  */
-public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionRequest<OAuth2PermissionGrantDeltaCollectionResponse, IOAuth2PermissionGrantDeltaCollectionPage> implements IOAuth2PermissionGrantDeltaCollectionRequest {
+public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionRequest<OAuth2PermissionGrantDeltaCollectionResponse, OAuth2PermissionGrantDeltaCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public OAuth2PermissionGrantDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OAuth2PermissionGrantDeltaCollectionResponse.class, IOAuth2PermissionGrantDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, OAuth2PermissionGrantDeltaCollectionResponse.class, OAuth2PermissionGrantDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IOAuth2PermissionGrantDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super OAuth2PermissionGrantDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
         });
     }
 
-    public IOAuth2PermissionGrantDeltaCollectionPage get() throws ClientException {
+    public OAuth2PermissionGrantDeltaCollectionPage get() throws ClientException {
         final OAuth2PermissionGrantDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IOAuth2PermissionGrantDeltaCollectionPage buildFromResponse(final OAuth2PermissionGrantDeltaCollectionResponse response) {
-        final IOAuth2PermissionGrantDeltaCollectionRequestBuilder builder;
+    public OAuth2PermissionGrantDeltaCollectionPage buildFromResponse(final OAuth2PermissionGrantDeltaCollectionResponse response) {
+        final OAuth2PermissionGrantDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new OAuth2PermissionGrantDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IOAuth2PermissionGrantDeltaCollectionPage page = new OAuth2PermissionGrantDeltaCollectionPage(response, builder);
+        final OAuth2PermissionGrantDeltaCollectionPage page = new OAuth2PermissionGrantDeltaCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param value the select clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantDeltaCollectionRequest select(final String value) {
+    public OAuth2PermissionGrantDeltaCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IOAuth2PermissionGrantDeltaCollectionRequest)this;
+        return (OAuth2PermissionGrantDeltaCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IOAuth2PermissionGrantDeltaCollectionRequest top(final int value) {
+    public OAuth2PermissionGrantDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IOAuth2PermissionGrantDeltaCollectionRequest)this;
+        return (OAuth2PermissionGrantDeltaCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param value the expand clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantDeltaCollectionRequest expand(final String value) {
+    public OAuth2PermissionGrantDeltaCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IOAuth2PermissionGrantDeltaCollectionRequest)this;
+        return (OAuth2PermissionGrantDeltaCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param value the filter clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantDeltaCollectionRequest filter(final String value) {
+    public OAuth2PermissionGrantDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IOAuth2PermissionGrantDeltaCollectionRequest)this;
+        return (OAuth2PermissionGrantDeltaCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseCollectionR
      * @param value the order by clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantDeltaCollectionRequest orderBy(final String value) {
+    public OAuth2PermissionGrantDeltaCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IOAuth2PermissionGrantDeltaCollectionRequest)this;
+        return (OAuth2PermissionGrantDeltaCollectionRequest)this;
     }
 
 }

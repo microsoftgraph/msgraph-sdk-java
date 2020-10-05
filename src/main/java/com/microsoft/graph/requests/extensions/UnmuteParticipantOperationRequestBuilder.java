@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Unmute Participant Operation Request Builder.
  */
-public class UnmuteParticipantOperationRequestBuilder extends BaseRequestBuilder implements IUnmuteParticipantOperationRequestBuilder {
+public class UnmuteParticipantOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the UnmuteParticipantOperation
@@ -35,9 +35,9 @@ public class UnmuteParticipantOperationRequestBuilder extends BaseRequestBuilder
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUnmuteParticipantOperationRequest instance
+     * @return the UnmuteParticipantOperationRequest instance
      */
-    public IUnmuteParticipantOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UnmuteParticipantOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class UnmuteParticipantOperationRequestBuilder extends BaseRequestBuilder
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUnmuteParticipantOperationRequest instance
+     * @return the UnmuteParticipantOperationRequest instance
      */
-    public IUnmuteParticipantOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UnmuteParticipantOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UnmuteParticipantOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

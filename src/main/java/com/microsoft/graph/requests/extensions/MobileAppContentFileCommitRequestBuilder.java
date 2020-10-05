@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMobileAppContentFileCommitRequest;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileCommitRequest;
 import com.microsoft.graph.models.extensions.FileEncryptionInfo;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Mobile App Content File Commit Request Builder.
  */
-public class MobileAppContentFileCommitRequestBuilder extends BaseActionRequestBuilder implements IMobileAppContentFileCommitRequestBuilder {
+public class MobileAppContentFileCommitRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MobileAppContentFileCommit
@@ -32,22 +31,22 @@ public class MobileAppContentFileCommitRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IMobileAppContentFileCommitRequest
+     * Creates the MobileAppContentFileCommitRequest
      *
      * @param requestOptions the options for the request
-     * @return the IMobileAppContentFileCommitRequest instance
+     * @return the MobileAppContentFileCommitRequest instance
      */
-    public IMobileAppContentFileCommitRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileAppContentFileCommitRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IMobileAppContentFileCommitRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the MobileAppContentFileCommitRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IMobileAppContentFileCommitRequest instance
+     * @return the MobileAppContentFileCommitRequest instance
      */
-    public IMobileAppContentFileCommitRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppContentFileCommitRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MobileAppContentFileCommitRequest request = new MobileAppContentFileCommitRequest(
                 getRequestUrl(),
                 getClient(),

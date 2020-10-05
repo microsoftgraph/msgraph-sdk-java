@@ -12,7 +12,7 @@ import com.microsoft.graph.models.extensions.ConvertIdResult;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserTranslateExchangeIdsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionPage;
 import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionResponse;
 import com.microsoft.graph.models.extensions.UserTranslateExchangeIdsBody;
@@ -26,7 +26,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the User Translate Exchange Ids Collection Request.
  */
-public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionRequest<UserTranslateExchangeIdsCollectionResponse, IUserTranslateExchangeIdsCollectionPage> implements IUserTranslateExchangeIdsCollectionRequest {
+public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionRequest<UserTranslateExchangeIdsCollectionResponse, UserTranslateExchangeIdsCollectionPage> {
 
 
     protected final UserTranslateExchangeIdsBody body;
@@ -40,12 +40,12 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      * @param requestOptions the options for this request
      */
     public UserTranslateExchangeIdsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionResponse.class, IUserTranslateExchangeIdsCollectionPage.class);
+        super(requestUrl, client, requestOptions, UserTranslateExchangeIdsCollectionResponse.class, UserTranslateExchangeIdsCollectionPage.class);
         body = new UserTranslateExchangeIdsBody();
     }
 
 
-    public void post(final ICallback<? super IUserTranslateExchangeIdsCollectionPage> callback) {
+    public void post(final ICallback<? super UserTranslateExchangeIdsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -59,20 +59,20 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
         });
     }
 
-    public IUserTranslateExchangeIdsCollectionPage post() throws ClientException {
+    public UserTranslateExchangeIdsCollectionPage post() throws ClientException {
         final UserTranslateExchangeIdsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public IUserTranslateExchangeIdsCollectionPage buildFromResponse(final UserTranslateExchangeIdsCollectionResponse response) {
-        final IUserTranslateExchangeIdsCollectionRequestBuilder builder;
+    public UserTranslateExchangeIdsCollectionPage buildFromResponse(final UserTranslateExchangeIdsCollectionResponse response) {
+        final UserTranslateExchangeIdsCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new UserTranslateExchangeIdsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<String>) null, (ExchangeIdFormat) null, (ExchangeIdFormat) null);
         } else {
             builder = null;
         }
-        final IUserTranslateExchangeIdsCollectionPage page = new UserTranslateExchangeIdsCollectionPage(response, builder);
+        final UserTranslateExchangeIdsCollectionPage page = new UserTranslateExchangeIdsCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -83,9 +83,9 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      * @param value the select clause
      * @return the updated request
      */
-    public IUserTranslateExchangeIdsCollectionRequest select(final String value) {
+    public UserTranslateExchangeIdsCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IUserTranslateExchangeIdsCollectionRequest)this;
+        return (UserTranslateExchangeIdsCollectionRequest)this;
     }
 
     /**
@@ -94,9 +94,9 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IUserTranslateExchangeIdsCollectionRequest top(final int value) {
+    public UserTranslateExchangeIdsCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IUserTranslateExchangeIdsCollectionRequest)this;
+        return (UserTranslateExchangeIdsCollectionRequest)this;
     }
 
     /**
@@ -105,9 +105,9 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      * @param value the expand clause
      * @return the updated request
      */
-    public IUserTranslateExchangeIdsCollectionRequest expand(final String value) {
+    public UserTranslateExchangeIdsCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IUserTranslateExchangeIdsCollectionRequest)this;
+        return (UserTranslateExchangeIdsCollectionRequest)this;
     }
 
     /**
@@ -116,9 +116,9 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      * @param value the filter clause
      * @return the updated request
      */
-    public IUserTranslateExchangeIdsCollectionRequest filter(final String value) {
+    public UserTranslateExchangeIdsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IUserTranslateExchangeIdsCollectionRequest)this;
+        return (UserTranslateExchangeIdsCollectionRequest)this;
     }
 
     /**
@@ -127,9 +127,9 @@ public class UserTranslateExchangeIdsCollectionRequest extends BaseCollectionReq
      * @param value the order by clause
      * @return the updated request
      */
-    public IUserTranslateExchangeIdsCollectionRequest orderBy(final String value) {
+    public UserTranslateExchangeIdsCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IUserTranslateExchangeIdsCollectionRequest)this;
+        return (UserTranslateExchangeIdsCollectionRequest)this;
     }
 
 }

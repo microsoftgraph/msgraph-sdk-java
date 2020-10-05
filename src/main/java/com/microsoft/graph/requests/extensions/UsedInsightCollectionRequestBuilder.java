@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.UsedInsight;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUsedInsightRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequest;
+import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UsedInsightRequestBuilder;
+import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Used Insight Collection Request Builder.
  */
-public class UsedInsightCollectionRequestBuilder extends BaseRequestBuilder implements IUsedInsightCollectionRequestBuilder {
+public class UsedInsightCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of OfficeGraphInsights
@@ -42,7 +42,7 @@ public class UsedInsightCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUsedInsightCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UsedInsightCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class UsedInsightCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUsedInsightCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UsedInsightCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UsedInsightCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IUsedInsightRequestBuilder byId(final String id) {
+    public UsedInsightRequestBuilder byId(final String id) {
         return new UsedInsightRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

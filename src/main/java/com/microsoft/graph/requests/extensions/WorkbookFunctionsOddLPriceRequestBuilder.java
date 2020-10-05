@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOddLPriceRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsOddLPriceRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Odd LPrice Request Builder.
  */
-public class WorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsOddLPriceRequestBuilder {
+public class WorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsOddLPrice
@@ -46,22 +45,22 @@ public class WorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsOddLPriceRequest
+     * Creates the WorkbookFunctionsOddLPriceRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsOddLPriceRequest instance
+     * @return the WorkbookFunctionsOddLPriceRequest instance
      */
-    public IWorkbookFunctionsOddLPriceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsOddLPriceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsOddLPriceRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsOddLPriceRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsOddLPriceRequest instance
+     * @return the WorkbookFunctionsOddLPriceRequest instance
      */
-    public IWorkbookFunctionsOddLPriceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsOddLPriceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsOddLPriceRequest request = new WorkbookFunctionsOddLPriceRequest(
                 getRequestUrl(),
                 getClient(),

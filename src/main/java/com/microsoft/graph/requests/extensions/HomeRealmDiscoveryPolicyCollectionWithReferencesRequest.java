@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Home Realm Discovery Policy Collection With References Request.
  */
-public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends BaseCollectionRequest<HomeRealmDiscoveryPolicyCollectionResponse, IHomeRealmDiscoveryPolicyCollectionPage> implements IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest {
+public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends BaseCollectionRequest<HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of HomeRealmDiscoveryPolicy
@@ -32,10 +32,10 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends Bas
      * @param requestOptions the options for this request
      */
     public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, IHomeRealmDiscoveryPolicyCollectionPage.class);
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IHomeRealmDiscoveryPolicyCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super HomeRealmDiscoveryPolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequest extends Bas
         });
     }
 
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesPage get() throws ClientException {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesPage get() throws ClientException {
         final HomeRealmDiscoveryPolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest expand(final String value) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest filter(final String value) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest orderBy(final String value) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest select(final String value) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest top(final int value) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesPage buildFromResponse(final HomeRealmDiscoveryPolicyCollectionResponse response) {
-        final IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder builder;
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesPage buildFromResponse(final HomeRealmDiscoveryPolicyCollectionResponse response) {
+        final HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

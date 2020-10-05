@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionNetworkLearningSummary;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetwo
 /**
  * The class for the Windows Information Protection Network Learning Summary Collection Page.
  */
-public class WindowsInformationProtectionNetworkLearningSummaryCollectionPage extends BaseCollectionPage<WindowsInformationProtectionNetworkLearningSummary, IWindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder> implements IWindowsInformationProtectionNetworkLearningSummaryCollectionPage {
+public class WindowsInformationProtectionNetworkLearningSummaryCollectionPage extends BaseCollectionPage<WindowsInformationProtectionNetworkLearningSummary, WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder> {
 
     /**
      * A collection page for WindowsInformationProtectionNetworkLearningSummary
@@ -22,7 +22,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionPage ex
      * @param response the serialized WindowsInformationProtectionNetworkLearningSummaryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage(final WindowsInformationProtectionNetworkLearningSummaryCollectionResponse response, final IWindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder builder) {
+    public WindowsInformationProtectionNetworkLearningSummaryCollectionPage(final WindowsInformationProtectionNetworkLearningSummaryCollectionResponse response, final WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

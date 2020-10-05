@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 /**
  * The class for the Home Realm Discovery Policy Collection Reference Request.
  */
-public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseCollectionRequest<HomeRealmDiscoveryPolicyCollectionResponse, IHomeRealmDiscoveryPolicyCollectionPage> implements IHomeRealmDiscoveryPolicyCollectionReferenceRequest {
+public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseCollectionRequest<HomeRealmDiscoveryPolicyCollectionResponse, HomeRealmDiscoveryPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of HomeRealmDiscoveryPolicy
@@ -33,7 +33,7 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param requestOptions the options for this request
      */
     public HomeRealmDiscoveryPolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, IHomeRealmDiscoveryPolicyCollectionPage.class);
+        super(requestUrl, client, requestOptions, HomeRealmDiscoveryPolicyCollectionResponse.class, HomeRealmDiscoveryPolicyCollectionPage.class);
     }
 
     public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<? super HomeRealmDiscoveryPolicy> callback) {
@@ -57,7 +57,7 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param value the expand clause
      * @return the updated request
      */
-    public IHomeRealmDiscoveryPolicyCollectionReferenceRequest expand(final String value) {
+    public HomeRealmDiscoveryPolicyCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (HomeRealmDiscoveryPolicyCollectionReferenceRequest)this;
     }
@@ -68,7 +68,7 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param value the filter clause
      * @return the updated request
      */
-    public IHomeRealmDiscoveryPolicyCollectionReferenceRequest filter(final String value) {
+    public HomeRealmDiscoveryPolicyCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (HomeRealmDiscoveryPolicyCollectionReferenceRequest)this;
     }
@@ -79,7 +79,7 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param value the sort clause
      * @return the updated request
      */
-    public IHomeRealmDiscoveryPolicyCollectionReferenceRequest orderBy(final String value) {
+    public HomeRealmDiscoveryPolicyCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (HomeRealmDiscoveryPolicyCollectionReferenceRequest)this;
     }
@@ -90,7 +90,7 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param value the select clause
      * @return the updated request
      */
-    public IHomeRealmDiscoveryPolicyCollectionReferenceRequest select(final String value) {
+    public HomeRealmDiscoveryPolicyCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (HomeRealmDiscoveryPolicyCollectionReferenceRequest)this;
     }
@@ -101,7 +101,7 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IHomeRealmDiscoveryPolicyCollectionReferenceRequest top(final int value) {
+    public HomeRealmDiscoveryPolicyCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (HomeRealmDiscoveryPolicyCollectionReferenceRequest)this;
     }

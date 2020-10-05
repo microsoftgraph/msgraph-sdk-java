@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Secure Score Control Profile Request Builder.
  */
-public class SecureScoreControlProfileRequestBuilder extends BaseRequestBuilder implements ISecureScoreControlProfileRequestBuilder {
+public class SecureScoreControlProfileRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SecureScoreControlProfile
@@ -35,9 +35,9 @@ public class SecureScoreControlProfileRequestBuilder extends BaseRequestBuilder 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISecureScoreControlProfileRequest instance
+     * @return the SecureScoreControlProfileRequest instance
      */
-    public ISecureScoreControlProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SecureScoreControlProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class SecureScoreControlProfileRequestBuilder extends BaseRequestBuilder 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISecureScoreControlProfileRequest instance
+     * @return the SecureScoreControlProfileRequest instance
      */
-    public ISecureScoreControlProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecureScoreControlProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SecureScoreControlProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

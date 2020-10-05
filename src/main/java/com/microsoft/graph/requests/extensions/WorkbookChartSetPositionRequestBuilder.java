@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSetPositionRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartSetPositionRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Set Position Request Builder.
  */
-public class WorkbookChartSetPositionRequestBuilder extends BaseActionRequestBuilder implements IWorkbookChartSetPositionRequestBuilder {
+public class WorkbookChartSetPositionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartSetPosition
@@ -34,22 +33,22 @@ public class WorkbookChartSetPositionRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookChartSetPositionRequest
+     * Creates the WorkbookChartSetPositionRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartSetPositionRequest instance
+     * @return the WorkbookChartSetPositionRequest instance
      */
-    public IWorkbookChartSetPositionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartSetPositionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartSetPositionRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartSetPositionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartSetPositionRequest instance
+     * @return the WorkbookChartSetPositionRequest instance
      */
-    public IWorkbookChartSetPositionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSetPositionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartSetPositionRequest request = new WorkbookChartSetPositionRequest(
                 getRequestUrl(),
                 getClient(),

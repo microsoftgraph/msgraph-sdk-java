@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMailFolderCopyRequest;
 import com.microsoft.graph.requests.extensions.MailFolderCopyRequest;
 import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Mail Folder Copy Request Builder.
  */
-public class MailFolderCopyRequestBuilder extends BaseActionRequestBuilder implements IMailFolderCopyRequestBuilder {
+public class MailFolderCopyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MailFolderCopy
@@ -32,22 +31,22 @@ public class MailFolderCopyRequestBuilder extends BaseActionRequestBuilder imple
     }
 
     /**
-     * Creates the IMailFolderCopyRequest
+     * Creates the MailFolderCopyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IMailFolderCopyRequest instance
+     * @return the MailFolderCopyRequest instance
      */
-    public IMailFolderCopyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MailFolderCopyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IMailFolderCopyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the MailFolderCopyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IMailFolderCopyRequest instance
+     * @return the MailFolderCopyRequest instance
      */
-    public IMailFolderCopyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailFolderCopyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MailFolderCopyRequest request = new MailFolderCopyRequest(
                 getRequestUrl(),
                 getClient(),

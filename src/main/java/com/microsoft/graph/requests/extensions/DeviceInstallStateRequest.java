@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Install State Request.
  */
-public class DeviceInstallStateRequest extends BaseRequest implements IDeviceInstallStateRequest {
+public class DeviceInstallStateRequest extends BaseRequest {
 	
     /**
      * The request for the DeviceInstallState
@@ -138,7 +138,7 @@ public class DeviceInstallStateRequest extends BaseRequest implements IDeviceIns
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceInstallStateRequest select(final String value) {
+     public DeviceInstallStateRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceInstallStateRequest)this;
      }
@@ -149,7 +149,7 @@ public class DeviceInstallStateRequest extends BaseRequest implements IDeviceIns
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceInstallStateRequest expand(final String value) {
+     public DeviceInstallStateRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceInstallStateRequest)this;
      }

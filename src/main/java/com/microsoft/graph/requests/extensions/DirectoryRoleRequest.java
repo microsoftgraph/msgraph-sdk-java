@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryRole;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Role Request.
  */
-public class DirectoryRoleRequest extends BaseRequest implements IDirectoryRoleRequest {
+public class DirectoryRoleRequest extends BaseRequest {
 	
     /**
      * The request for the DirectoryRole
@@ -146,7 +142,7 @@ public class DirectoryRoleRequest extends BaseRequest implements IDirectoryRoleR
      * @param value the select clause
      * @return the updated request
      */
-     public IDirectoryRoleRequest select(final String value) {
+     public DirectoryRoleRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DirectoryRoleRequest)this;
      }
@@ -157,7 +153,7 @@ public class DirectoryRoleRequest extends BaseRequest implements IDirectoryRoleR
      * @param value the expand clause
      * @return the updated request
      */
-     public IDirectoryRoleRequest expand(final String value) {
+     public DirectoryRoleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DirectoryRoleRequest)this;
      }

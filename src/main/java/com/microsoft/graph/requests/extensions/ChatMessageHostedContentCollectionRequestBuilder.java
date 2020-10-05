@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ChatMessageHostedContent;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IChatMessageHostedContentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageHostedContentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageHostedContentCollectionRequest;
+import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageHostedContentRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Chat Message Hosted Content Collection Request Builder.
  */
-public class ChatMessageHostedContentCollectionRequestBuilder extends BaseRequestBuilder implements IChatMessageHostedContentCollectionRequestBuilder {
+public class ChatMessageHostedContentCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ChatMessage
@@ -42,7 +42,7 @@ public class ChatMessageHostedContentCollectionRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IChatMessageHostedContentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ChatMessageHostedContentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ChatMessageHostedContentCollectionRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IChatMessageHostedContentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatMessageHostedContentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ChatMessageHostedContentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IChatMessageHostedContentRequestBuilder byId(final String id) {
+    public ChatMessageHostedContentRequestBuilder byId(final String id) {
         return new ChatMessageHostedContentRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

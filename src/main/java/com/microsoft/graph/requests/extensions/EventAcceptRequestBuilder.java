@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEventAcceptRequest;
 import com.microsoft.graph.requests.extensions.EventAcceptRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Event Accept Request Builder.
  */
-public class EventAcceptRequestBuilder extends BaseActionRequestBuilder implements IEventAcceptRequestBuilder {
+public class EventAcceptRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this EventAccept
@@ -34,22 +33,22 @@ public class EventAcceptRequestBuilder extends BaseActionRequestBuilder implemen
     }
 
     /**
-     * Creates the IEventAcceptRequest
+     * Creates the EventAcceptRequest
      *
      * @param requestOptions the options for the request
-     * @return the IEventAcceptRequest instance
+     * @return the EventAcceptRequest instance
      */
-    public IEventAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EventAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IEventAcceptRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the EventAcceptRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IEventAcceptRequest instance
+     * @return the EventAcceptRequest instance
      */
-    public IEventAcceptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventAcceptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         EventAcceptRequest request = new EventAcceptRequest(
                 getRequestUrl(),
                 getClient(),

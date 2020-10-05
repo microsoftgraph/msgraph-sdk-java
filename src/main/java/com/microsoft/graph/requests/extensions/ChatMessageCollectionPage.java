@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
 /**
  * The class for the Chat Message Collection Page.
  */
-public class ChatMessageCollectionPage extends BaseCollectionPage<ChatMessage, IChatMessageCollectionRequestBuilder> implements IChatMessageCollectionPage {
+public class ChatMessageCollectionPage extends BaseCollectionPage<ChatMessage, ChatMessageCollectionRequestBuilder> {
 
     /**
      * A collection page for ChatMessage
@@ -22,7 +22,7 @@ public class ChatMessageCollectionPage extends BaseCollectionPage<ChatMessage, I
      * @param response the serialized ChatMessageCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ChatMessageCollectionPage(final ChatMessageCollectionResponse response, final IChatMessageCollectionRequestBuilder builder) {
+    public ChatMessageCollectionPage(final ChatMessageCollectionResponse response, final ChatMessageCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

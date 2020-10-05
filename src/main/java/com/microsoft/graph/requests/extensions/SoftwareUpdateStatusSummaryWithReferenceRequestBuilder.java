@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Software Update Status Summary With Reference Request Builder.
  */
-public class SoftwareUpdateStatusSummaryWithReferenceRequestBuilder extends BaseRequestBuilder implements ISoftwareUpdateStatusSummaryWithReferenceRequestBuilder {
+public class SoftwareUpdateStatusSummaryWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SoftwareUpdateStatusSummary
@@ -36,9 +36,9 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequestBuilder extends Base
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISoftwareUpdateStatusSummaryWithReferenceRequest instance
+     * @return the SoftwareUpdateStatusSummaryWithReferenceRequest instance
      */
-    public ISoftwareUpdateStatusSummaryWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SoftwareUpdateStatusSummaryWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,13 +46,13 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequestBuilder extends Base
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the ISoftwareUpdateStatusSummaryWithReferenceRequest instance
+     * @return the SoftwareUpdateStatusSummaryWithReferenceRequest instance
      */
-    public ISoftwareUpdateStatusSummaryWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SoftwareUpdateStatusSummaryWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SoftwareUpdateStatusSummaryWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISoftwareUpdateStatusSummaryReferenceRequestBuilder reference(){
+    public SoftwareUpdateStatusSummaryReferenceRequestBuilder reference(){
         return new SoftwareUpdateStatusSummaryReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

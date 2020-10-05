@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTrueRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsTrueRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions True Request Builder.
  */
-public class WorkbookFunctionsTrueRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsTrueRequestBuilder {
+public class WorkbookFunctionsTrueRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsTrue
@@ -30,22 +29,22 @@ public class WorkbookFunctionsTrueRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsTrueRequest
+     * Creates the WorkbookFunctionsTrueRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTrueRequest instance
+     * @return the WorkbookFunctionsTrueRequest instance
      */
-    public IWorkbookFunctionsTrueRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsTrueRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsTrueRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsTrueRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTrueRequest instance
+     * @return the WorkbookFunctionsTrueRequest instance
      */
-    public IWorkbookFunctionsTrueRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsTrueRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsTrueRequest request = new WorkbookFunctionsTrueRequest(
                 getRequestUrl(),
                 getClient(),

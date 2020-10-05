@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.StsPolicy;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sts Policy Request.
  */
-public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
+public class StsPolicyRequest extends BaseRequest {
 	
     /**
      * The request for the StsPolicy
@@ -157,7 +155,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IStsPolicyRequest select(final String value) {
+     public StsPolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (StsPolicyRequest)this;
      }
@@ -168,7 +166,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IStsPolicyRequest expand(final String value) {
+     public StsPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (StsPolicyRequest)this;
      }

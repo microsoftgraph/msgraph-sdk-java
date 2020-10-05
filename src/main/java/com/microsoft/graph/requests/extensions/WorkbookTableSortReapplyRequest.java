@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableSortReapplyRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableSortReapplyRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Sort Reapply Request.
  */
-public class WorkbookTableSortReapplyRequest extends BaseRequest implements IWorkbookTableSortReapplyRequest {
+public class WorkbookTableSortReapplyRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookTableSortReapply

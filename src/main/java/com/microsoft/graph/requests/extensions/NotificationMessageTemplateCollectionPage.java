@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
-import com.microsoft.graph.requests.extensions.INotificationMessageTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionPage;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollec
 /**
  * The class for the Notification Message Template Collection Page.
  */
-public class NotificationMessageTemplateCollectionPage extends BaseCollectionPage<NotificationMessageTemplate, INotificationMessageTemplateCollectionRequestBuilder> implements INotificationMessageTemplateCollectionPage {
+public class NotificationMessageTemplateCollectionPage extends BaseCollectionPage<NotificationMessageTemplate, NotificationMessageTemplateCollectionRequestBuilder> {
 
     /**
      * A collection page for NotificationMessageTemplate
@@ -22,7 +22,7 @@ public class NotificationMessageTemplateCollectionPage extends BaseCollectionPag
      * @param response the serialized NotificationMessageTemplateCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public NotificationMessageTemplateCollectionPage(final NotificationMessageTemplateCollectionResponse response, final INotificationMessageTemplateCollectionRequestBuilder builder) {
+    public NotificationMessageTemplateCollectionPage(final NotificationMessageTemplateCollectionResponse response, final NotificationMessageTemplateCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsTab;
-import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TeamsTabCollectionResponse;
 /**
  * The class for the Teams Tab Collection Page.
  */
-public class TeamsTabCollectionPage extends BaseCollectionPage<TeamsTab, ITeamsTabCollectionRequestBuilder> implements ITeamsTabCollectionPage {
+public class TeamsTabCollectionPage extends BaseCollectionPage<TeamsTab, TeamsTabCollectionRequestBuilder> {
 
     /**
      * A collection page for TeamsTab
@@ -22,7 +22,7 @@ public class TeamsTabCollectionPage extends BaseCollectionPage<TeamsTab, ITeamsT
      * @param response the serialized TeamsTabCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsTabCollectionPage(final TeamsTabCollectionResponse response, final ITeamsTabCollectionRequestBuilder builder) {
+    public TeamsTabCollectionPage(final TeamsTabCollectionResponse response, final TeamsTabCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

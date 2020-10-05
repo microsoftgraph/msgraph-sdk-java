@@ -11,12 +11,8 @@ import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.models.extensions.CopyNotebookModel;
 import com.microsoft.graph.models.extensions.RecentNotebook;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
@@ -30,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Notebook Request.
  */
-public class NotebookRequest extends BaseRequest implements INotebookRequest {
+public class NotebookRequest extends BaseRequest {
 	
     /**
      * The request for the Notebook
@@ -149,7 +145,7 @@ public class NotebookRequest extends BaseRequest implements INotebookRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public INotebookRequest select(final String value) {
+     public NotebookRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (NotebookRequest)this;
      }
@@ -160,7 +156,7 @@ public class NotebookRequest extends BaseRequest implements INotebookRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public INotebookRequest expand(final String value) {
+     public NotebookRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (NotebookRequest)this;
      }

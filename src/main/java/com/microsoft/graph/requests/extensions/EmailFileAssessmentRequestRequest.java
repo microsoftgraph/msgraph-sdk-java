@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Email File Assessment Request Request.
  */
-public class EmailFileAssessmentRequestRequest extends BaseRequest implements IEmailFileAssessmentRequestRequest {
+public class EmailFileAssessmentRequestRequest extends BaseRequest {
 	
     /**
      * The request for the EmailFileAssessmentRequest
@@ -138,7 +138,7 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest implements IE
      * @param value the select clause
      * @return the updated request
      */
-     public IEmailFileAssessmentRequestRequest select(final String value) {
+     public EmailFileAssessmentRequestRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (EmailFileAssessmentRequestRequest)this;
      }
@@ -149,7 +149,7 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest implements IE
      * @param value the expand clause
      * @return the updated request
      */
-     public IEmailFileAssessmentRequestRequest expand(final String value) {
+     public EmailFileAssessmentRequestRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (EmailFileAssessmentRequestRequest)this;
      }

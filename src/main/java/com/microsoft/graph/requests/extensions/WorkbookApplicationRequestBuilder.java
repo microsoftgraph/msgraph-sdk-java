@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Application Request Builder.
  */
-public class WorkbookApplicationRequestBuilder extends BaseRequestBuilder implements IWorkbookApplicationRequestBuilder {
+public class WorkbookApplicationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookApplication
@@ -35,9 +35,9 @@ public class WorkbookApplicationRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookApplicationRequest instance
+     * @return the WorkbookApplicationRequest instance
      */
-    public IWorkbookApplicationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookApplicationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,15 +45,15 @@ public class WorkbookApplicationRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookApplicationRequest instance
+     * @return the WorkbookApplicationRequest instance
      */
-    public IWorkbookApplicationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookApplicationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookApplicationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IWorkbookApplicationCalculateRequestBuilder calculate(final String calculationType) {
+    public WorkbookApplicationCalculateRequestBuilder calculate(final String calculationType) {
         return new WorkbookApplicationCalculateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.calculate"), getClient(), null, calculationType);
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsColumnsRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsColumnsRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Columns Request Builder.
  */
-public class WorkbookFunctionsColumnsRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsColumnsRequestBuilder {
+public class WorkbookFunctionsColumnsRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsColumns
@@ -32,22 +31,22 @@ public class WorkbookFunctionsColumnsRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsColumnsRequest
+     * Creates the WorkbookFunctionsColumnsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsColumnsRequest instance
+     * @return the WorkbookFunctionsColumnsRequest instance
      */
-    public IWorkbookFunctionsColumnsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsColumnsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsColumnsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsColumnsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsColumnsRequest instance
+     * @return the WorkbookFunctionsColumnsRequest instance
      */
-    public IWorkbookFunctionsColumnsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsColumnsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsColumnsRequest request = new WorkbookFunctionsColumnsRequest(
                 getRequestUrl(),
                 getClient(),

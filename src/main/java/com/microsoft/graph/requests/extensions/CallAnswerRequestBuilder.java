@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallAnswerRequest;
 import com.microsoft.graph.requests.extensions.CallAnswerRequest;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.generated.Modality;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Answer Request Builder.
  */
-public class CallAnswerRequestBuilder extends BaseActionRequestBuilder implements ICallAnswerRequestBuilder {
+public class CallAnswerRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallAnswer
@@ -37,22 +36,22 @@ public class CallAnswerRequestBuilder extends BaseActionRequestBuilder implement
     }
 
     /**
-     * Creates the ICallAnswerRequest
+     * Creates the CallAnswerRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallAnswerRequest instance
+     * @return the CallAnswerRequest instance
      */
-    public ICallAnswerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallAnswerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallAnswerRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallAnswerRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallAnswerRequest instance
+     * @return the CallAnswerRequest instance
      */
-    public ICallAnswerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallAnswerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallAnswerRequest request = new CallAnswerRequest(
                 getRequestUrl(),
                 getClient(),

@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Domain;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Domain Request.
  */
-public class DomainRequest extends BaseRequest implements IDomainRequest {
+public class DomainRequest extends BaseRequest {
 	
     /**
      * The request for the Domain
@@ -146,7 +142,7 @@ public class DomainRequest extends BaseRequest implements IDomainRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IDomainRequest select(final String value) {
+     public DomainRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DomainRequest)this;
      }
@@ -157,7 +153,7 @@ public class DomainRequest extends BaseRequest implements IDomainRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IDomainRequest expand(final String value) {
+     public DomainRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DomainRequest)this;
      }

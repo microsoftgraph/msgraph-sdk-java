@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.TermsAndConditions;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsCollectionRequest;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsRequestBuilder;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Terms And Conditions Collection Request Builder.
  */
-public class TermsAndConditionsCollectionRequestBuilder extends BaseRequestBuilder implements ITermsAndConditionsCollectionRequestBuilder {
+public class TermsAndConditionsCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class TermsAndConditionsCollectionRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITermsAndConditionsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TermsAndConditionsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class TermsAndConditionsCollectionRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITermsAndConditionsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TermsAndConditionsCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITermsAndConditionsRequestBuilder byId(final String id) {
+    public TermsAndConditionsRequestBuilder byId(final String id) {
         return new TermsAndConditionsRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

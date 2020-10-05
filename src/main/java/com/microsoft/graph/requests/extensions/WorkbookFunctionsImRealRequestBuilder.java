@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImRealRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImRealRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Im Real Request Builder.
  */
-public class WorkbookFunctionsImRealRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImRealRequestBuilder {
+public class WorkbookFunctionsImRealRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImReal
@@ -32,22 +31,22 @@ public class WorkbookFunctionsImRealRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsImRealRequest
+     * Creates the WorkbookFunctionsImRealRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImRealRequest instance
+     * @return the WorkbookFunctionsImRealRequest instance
      */
-    public IWorkbookFunctionsImRealRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImRealRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImRealRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImRealRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImRealRequest instance
+     * @return the WorkbookFunctionsImRealRequest instance
      */
-    public IWorkbookFunctionsImRealRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImRealRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImRealRequest request = new WorkbookFunctionsImRealRequest(
                 getRequestUrl(),
                 getClient(),

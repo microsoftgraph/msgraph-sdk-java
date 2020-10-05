@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISiteGetByPathRequest;
 import com.microsoft.graph.requests.extensions.SiteGetByPathRequest;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Site Get By Path Request Builder.
  */
-public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder implements ISiteGetByPathRequestBuilder {
+public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this SiteGetByPath
@@ -32,22 +31,22 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder impl
     }
 
     /**
-     * Creates the ISiteGetByPathRequest
+     * Creates the SiteGetByPathRequest
      *
      * @param requestOptions the options for the request
-     * @return the ISiteGetByPathRequest instance
+     * @return the SiteGetByPathRequest instance
      */
-    public ISiteGetByPathRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SiteGetByPathRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ISiteGetByPathRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the SiteGetByPathRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ISiteGetByPathRequest instance
+     * @return the SiteGetByPathRequest instance
      */
-    public ISiteGetByPathRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteGetByPathRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SiteGetByPathRequest request = new SiteGetByPathRequest(
                 getRequestUrl(),
                 getClient(),
@@ -64,87 +63,87 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder impl
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder createdByUser() {
+    public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+    public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     /**
      * Gets the request builder for ItemAnalytics
      *
-     * @return the IItemAnalyticsWithReferenceRequestBuilder instance
+     * @return the ItemAnalyticsWithReferenceRequestBuilder instance
      */
-    public IItemAnalyticsWithReferenceRequestBuilder analytics() {
+    public ItemAnalyticsWithReferenceRequestBuilder analytics() {
         return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
-    public IColumnDefinitionCollectionRequestBuilder columns() {
+    public ColumnDefinitionCollectionRequestBuilder columns() {
         return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
-    public IColumnDefinitionRequestBuilder columns(final String id) {
+    public ColumnDefinitionRequestBuilder columns(final String id) {
         return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
-    public IContentTypeCollectionRequestBuilder contentTypes() {
+    public ContentTypeCollectionRequestBuilder contentTypes() {
         return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
     }
 
-    public IContentTypeRequestBuilder contentTypes(final String id) {
+    public ContentTypeRequestBuilder contentTypes(final String id) {
         return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Drive
      *
-     * @return the IDriveRequestBuilder instance
+     * @return the DriveRequestBuilder instance
      */
-    public IDriveRequestBuilder drive() {
+    public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
-    public IDriveCollectionRequestBuilder drives() {
+    public DriveCollectionRequestBuilder drives() {
         return new DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
     }
 
-    public IDriveRequestBuilder drives(final String id) {
+    public DriveRequestBuilder drives(final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
-    public IBaseItemCollectionRequestBuilder items() {
+    public BaseItemCollectionRequestBuilder items() {
         return new BaseItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
-    public IBaseItemRequestBuilder items(final String id) {
+    public BaseItemRequestBuilder items(final String id) {
         return new BaseItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
-    public IListCollectionRequestBuilder lists() {
+    public ListCollectionRequestBuilder lists() {
         return new ListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
     }
 
-    public IListRequestBuilder lists(final String id) {
+    public ListRequestBuilder lists(final String id) {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
     }
-    public ISiteCollectionRequestBuilder sites() {
+    public SiteCollectionRequestBuilder sites() {
         return new SiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sites"), getClient(), null);
     }
 
-    public ISiteRequestBuilder sites(final String id) {
+    public SiteRequestBuilder sites(final String id) {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Onenote
      *
-     * @return the IOnenoteRequestBuilder instance
+     * @return the OnenoteRequestBuilder instance
      */
-    public IOnenoteRequestBuilder onenote() {
+    public OnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
 }

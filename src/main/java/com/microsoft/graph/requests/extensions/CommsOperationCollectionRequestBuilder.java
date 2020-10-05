@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.CommsOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ICommsOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICommsOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICommsOperationCollectionRequest;
+import com.microsoft.graph.requests.extensions.CommsOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CommsOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.CommsOperationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Comms Operation Collection Request Builder.
  */
-public class CommsOperationCollectionRequestBuilder extends BaseRequestBuilder implements ICommsOperationCollectionRequestBuilder {
+public class CommsOperationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Call
@@ -42,7 +42,7 @@ public class CommsOperationCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICommsOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CommsOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class CommsOperationCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICommsOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CommsOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CommsOperationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ICommsOperationRequestBuilder byId(final String id) {
+    public CommsOperationRequestBuilder byId(final String id) {
         return new CommsOperationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

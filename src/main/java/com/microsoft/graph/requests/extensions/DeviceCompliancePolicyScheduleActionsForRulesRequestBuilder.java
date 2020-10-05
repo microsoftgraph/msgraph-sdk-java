@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyScheduleActionsForRulesRequest;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyScheduleActionsForRulesRequest;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Device Compliance Policy Schedule Actions For Rules Request Builder.
  */
-public class DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder extends BaseActionRequestBuilder implements IDeviceCompliancePolicyScheduleActionsForRulesRequestBuilder {
+public class DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DeviceCompliancePolicyScheduleActionsForRules
@@ -32,22 +31,22 @@ public class DeviceCompliancePolicyScheduleActionsForRulesRequestBuilder extends
     }
 
     /**
-     * Creates the IDeviceCompliancePolicyScheduleActionsForRulesRequest
+     * Creates the DeviceCompliancePolicyScheduleActionsForRulesRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDeviceCompliancePolicyScheduleActionsForRulesRequest instance
+     * @return the DeviceCompliancePolicyScheduleActionsForRulesRequest instance
      */
-    public IDeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDeviceCompliancePolicyScheduleActionsForRulesRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DeviceCompliancePolicyScheduleActionsForRulesRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDeviceCompliancePolicyScheduleActionsForRulesRequest instance
+     * @return the DeviceCompliancePolicyScheduleActionsForRulesRequest instance
      */
-    public IDeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceCompliancePolicyScheduleActionsForRulesRequest request = new DeviceCompliancePolicyScheduleActionsForRulesRequest(
                 getRequestUrl(),
                 getClient(),

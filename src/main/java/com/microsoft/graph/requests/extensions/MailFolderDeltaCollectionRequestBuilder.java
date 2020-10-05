@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.MailFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMailFolderDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMailFolderDeltaCollectionRequest;
+import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Mail Folder Delta Collection Request Builder.
  */
-public class MailFolderDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IMailFolderDeltaCollectionRequestBuilder {
+public class MailFolderDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of MailFolder
@@ -42,7 +41,7 @@ public class MailFolderDeltaCollectionRequestBuilder extends BaseFunctionRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMailFolderDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MailFolderDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class MailFolderDeltaCollectionRequestBuilder extends BaseFunctionRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMailFolderDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailFolderDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MailFolderDeltaCollectionRequest request = new MailFolderDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Configuration Device Overview Request Builder.
  */
-public class DeviceConfigurationDeviceOverviewRequestBuilder extends BaseRequestBuilder implements IDeviceConfigurationDeviceOverviewRequestBuilder {
+public class DeviceConfigurationDeviceOverviewRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceConfigurationDeviceOverview
@@ -35,9 +35,9 @@ public class DeviceConfigurationDeviceOverviewRequestBuilder extends BaseRequest
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceConfigurationDeviceOverviewRequest instance
+     * @return the DeviceConfigurationDeviceOverviewRequest instance
      */
-    public IDeviceConfigurationDeviceOverviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceConfigurationDeviceOverviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DeviceConfigurationDeviceOverviewRequestBuilder extends BaseRequest
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceConfigurationDeviceOverviewRequest instance
+     * @return the DeviceConfigurationDeviceOverviewRequest instance
      */
-    public IDeviceConfigurationDeviceOverviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationDeviceOverviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceOverviewRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

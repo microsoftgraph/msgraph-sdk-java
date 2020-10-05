@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookNamedItemAddFormulaLocalRequest;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemAddFormulaLocalRequest;
 import com.microsoft.graph.models.extensions.WorkbookNamedItem;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Named Item Add Formula Local Request Builder.
  */
-public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRequestBuilder implements IWorkbookNamedItemAddFormulaLocalRequestBuilder {
+public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookNamedItemAddFormulaLocal
@@ -36,22 +35,22 @@ public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActionRe
     }
 
     /**
-     * Creates the IWorkbookNamedItemAddFormulaLocalRequest
+     * Creates the WorkbookNamedItemAddFormulaLocalRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookNamedItemAddFormulaLocalRequest instance
+     * @return the WorkbookNamedItemAddFormulaLocalRequest instance
      */
-    public IWorkbookNamedItemAddFormulaLocalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookNamedItemAddFormulaLocalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookNamedItemAddFormulaLocalRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookNamedItemAddFormulaLocalRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookNamedItemAddFormulaLocalRequest instance
+     * @return the WorkbookNamedItemAddFormulaLocalRequest instance
      */
-    public IWorkbookNamedItemAddFormulaLocalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookNamedItemAddFormulaLocalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookNamedItemAddFormulaLocalRequest request = new WorkbookNamedItemAddFormulaLocalRequest(
                 getRequestUrl(),
                 getClient(),

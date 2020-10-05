@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRefreshAllRequest;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableRefreshAllRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Pivot Table Refresh All Request Builder.
  */
-public class WorkbookPivotTableRefreshAllRequestBuilder extends BaseActionRequestBuilder implements IWorkbookPivotTableRefreshAllRequestBuilder {
+public class WorkbookPivotTableRefreshAllRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookPivotTableRefreshAll
@@ -30,22 +29,22 @@ public class WorkbookPivotTableRefreshAllRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IWorkbookPivotTableRefreshAllRequest
+     * Creates the WorkbookPivotTableRefreshAllRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookPivotTableRefreshAllRequest instance
+     * @return the WorkbookPivotTableRefreshAllRequest instance
      */
-    public IWorkbookPivotTableRefreshAllRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookPivotTableRefreshAllRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookPivotTableRefreshAllRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookPivotTableRefreshAllRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookPivotTableRefreshAllRequest instance
+     * @return the WorkbookPivotTableRefreshAllRequest instance
      */
-    public IWorkbookPivotTableRefreshAllRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookPivotTableRefreshAllRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookPivotTableRefreshAllRequest request = new WorkbookPivotTableRefreshAllRequest(
                 getRequestUrl(),
                 getClient(),

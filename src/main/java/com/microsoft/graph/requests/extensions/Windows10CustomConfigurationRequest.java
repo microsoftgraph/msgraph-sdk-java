@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Custom Configuration Request.
  */
-public class Windows10CustomConfigurationRequest extends BaseRequest implements IWindows10CustomConfigurationRequest {
+public class Windows10CustomConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the Windows10CustomConfiguration
@@ -138,7 +138,7 @@ public class Windows10CustomConfigurationRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10CustomConfigurationRequest select(final String value) {
+     public Windows10CustomConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (Windows10CustomConfigurationRequest)this;
      }
@@ -149,7 +149,7 @@ public class Windows10CustomConfigurationRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10CustomConfigurationRequest expand(final String value) {
+     public Windows10CustomConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (Windows10CustomConfigurationRequest)this;
      }

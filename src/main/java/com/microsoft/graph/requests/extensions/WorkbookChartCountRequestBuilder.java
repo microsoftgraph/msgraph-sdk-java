@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartCountRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartCountRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Count Request Builder.
  */
-public class WorkbookChartCountRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookChartCountRequestBuilder {
+public class WorkbookChartCountRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartCount
@@ -30,22 +29,22 @@ public class WorkbookChartCountRequestBuilder extends BaseFunctionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookChartCountRequest
+     * Creates the WorkbookChartCountRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartCountRequest instance
+     * @return the WorkbookChartCountRequest instance
      */
-    public IWorkbookChartCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartCountRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartCountRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartCountRequest instance
+     * @return the WorkbookChartCountRequest instance
      */
-    public IWorkbookChartCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartCountRequest request = new WorkbookChartCountRequest(
                 getRequestUrl(),
                 getClient(),

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.SecureScoreControlProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollectionRequest;
+import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreControlProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Secure Score Control Profile Collection Request Builder.
  */
-public class SecureScoreControlProfileCollectionRequestBuilder extends BaseRequestBuilder implements ISecureScoreControlProfileCollectionRequestBuilder {
+public class SecureScoreControlProfileCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Security
@@ -42,7 +42,7 @@ public class SecureScoreControlProfileCollectionRequestBuilder extends BaseReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISecureScoreControlProfileCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SecureScoreControlProfileCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class SecureScoreControlProfileCollectionRequestBuilder extends BaseReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISecureScoreControlProfileCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecureScoreControlProfileCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SecureScoreControlProfileCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISecureScoreControlProfileRequestBuilder byId(final String id) {
+    public SecureScoreControlProfileRequestBuilder byId(final String id) {
         return new SecureScoreControlProfileRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

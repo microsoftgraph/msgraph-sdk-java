@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Collection Reference Request Builder.
  */
-public class ManagedDeviceCollectionReferenceRequestBuilder extends BaseRequestBuilder implements IManagedDeviceCollectionReferenceRequestBuilder {
+public class ManagedDeviceCollectionReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DetectedApp
@@ -40,7 +40,7 @@ public class ManagedDeviceCollectionReferenceRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedDeviceCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,7 +50,7 @@ public class ManagedDeviceCollectionReferenceRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedDeviceCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

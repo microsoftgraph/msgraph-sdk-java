@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Named Location Request.
  */
-public class NamedLocationRequest extends BaseRequest implements INamedLocationRequest {
+public class NamedLocationRequest extends BaseRequest {
 	
     /**
      * The request for the NamedLocation
@@ -153,7 +153,7 @@ public class NamedLocationRequest extends BaseRequest implements INamedLocationR
      * @param value the select clause
      * @return the updated request
      */
-     public INamedLocationRequest select(final String value) {
+     public NamedLocationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (NamedLocationRequest)this;
      }
@@ -164,7 +164,7 @@ public class NamedLocationRequest extends BaseRequest implements INamedLocationR
      * @param value the expand clause
      * @return the updated request
      */
-     public INamedLocationRequest expand(final String value) {
+     public NamedLocationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (NamedLocationRequest)this;
      }

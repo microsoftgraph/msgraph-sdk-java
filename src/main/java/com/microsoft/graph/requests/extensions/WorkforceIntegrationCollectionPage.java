@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkforceIntegration;
-import com.microsoft.graph.requests.extensions.IWorkforceIntegrationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRes
 /**
  * The class for the Workforce Integration Collection Page.
  */
-public class WorkforceIntegrationCollectionPage extends BaseCollectionPage<WorkforceIntegration, IWorkforceIntegrationCollectionRequestBuilder> implements IWorkforceIntegrationCollectionPage {
+public class WorkforceIntegrationCollectionPage extends BaseCollectionPage<WorkforceIntegration, WorkforceIntegrationCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkforceIntegration
@@ -22,7 +22,7 @@ public class WorkforceIntegrationCollectionPage extends BaseCollectionPage<Workf
      * @param response the serialized WorkforceIntegrationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkforceIntegrationCollectionPage(final WorkforceIntegrationCollectionResponse response, final IWorkforceIntegrationCollectionRequestBuilder builder) {
+    public WorkforceIntegrationCollectionPage(final WorkforceIntegrationCollectionResponse response, final WorkforceIntegrationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

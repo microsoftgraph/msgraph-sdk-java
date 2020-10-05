@@ -20,7 +20,7 @@ import java.io.InputStream;
 /**
  * The class for the Profile Photo Stream Request.
  */
-public class ProfilePhotoStreamRequest extends BaseStreamRequest<ProfilePhoto> implements IProfilePhotoStreamRequest {
+public class ProfilePhotoStreamRequest extends BaseStreamRequest<ProfilePhoto> {
 
     /**
      * The request for the ProfilePhoto

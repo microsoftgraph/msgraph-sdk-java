@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OrgContact;
-import com.microsoft.graph.requests.extensions.IOrgContactCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrgContactCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionPage;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.OrgContactCollectionResponse;
 /**
  * The class for the Org Contact Collection Page.
  */
-public class OrgContactCollectionPage extends BaseCollectionPage<OrgContact, IOrgContactCollectionRequestBuilder> implements IOrgContactCollectionPage {
+public class OrgContactCollectionPage extends BaseCollectionPage<OrgContact, OrgContactCollectionRequestBuilder> {
 
     /**
      * A collection page for OrgContact
@@ -22,7 +22,7 @@ public class OrgContactCollectionPage extends BaseCollectionPage<OrgContact, IOr
      * @param response the serialized OrgContactCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OrgContactCollectionPage(final OrgContactCollectionResponse response, final IOrgContactCollectionRequestBuilder builder) {
+    public OrgContactCollectionPage(final OrgContactCollectionResponse response, final OrgContactCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

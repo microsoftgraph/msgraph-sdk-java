@@ -10,24 +10,14 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
@@ -41,7 +31,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Application With Reference Request Builder.
  */
-public class ApplicationWithReferenceRequestBuilder extends BaseRequestBuilder implements IApplicationWithReferenceRequestBuilder {
+public class ApplicationWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Application
@@ -58,9 +48,9 @@ public class ApplicationWithReferenceRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IApplicationWithReferenceRequest instance
+     * @return the ApplicationWithReferenceRequest instance
      */
-    public IApplicationWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplicationWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -68,13 +58,13 @@ public class ApplicationWithReferenceRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IApplicationWithReferenceRequest instance
+     * @return the ApplicationWithReferenceRequest instance
      */
-    public IApplicationWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ApplicationWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IApplicationReferenceRequestBuilder reference(){
+    public ApplicationReferenceRequestBuilder reference(){
         return new ApplicationReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

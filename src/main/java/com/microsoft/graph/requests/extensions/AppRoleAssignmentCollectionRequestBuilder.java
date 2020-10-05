@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequest;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the App Role Assignment Collection Request Builder.
  */
-public class AppRoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder implements IAppRoleAssignmentCollectionRequestBuilder {
+public class AppRoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -42,7 +42,7 @@ public class AppRoleAssignmentCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAppRoleAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AppRoleAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class AppRoleAssignmentCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAppRoleAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AppRoleAssignmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IAppRoleAssignmentRequestBuilder byId(final String id) {
+    public AppRoleAssignmentRequestBuilder byId(final String id) {
         return new AppRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

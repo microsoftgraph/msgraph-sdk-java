@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupSubscribeByMailRequest;
 import com.microsoft.graph.requests.extensions.GroupSubscribeByMailRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Group Subscribe By Mail Request Builder.
  */
-public class GroupSubscribeByMailRequestBuilder extends BaseActionRequestBuilder implements IGroupSubscribeByMailRequestBuilder {
+public class GroupSubscribeByMailRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupSubscribeByMail
@@ -30,22 +29,22 @@ public class GroupSubscribeByMailRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IGroupSubscribeByMailRequest
+     * Creates the GroupSubscribeByMailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IGroupSubscribeByMailRequest instance
+     * @return the GroupSubscribeByMailRequest instance
      */
-    public IGroupSubscribeByMailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupSubscribeByMailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IGroupSubscribeByMailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the GroupSubscribeByMailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IGroupSubscribeByMailRequest instance
+     * @return the GroupSubscribeByMailRequest instance
      */
-    public IGroupSubscribeByMailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupSubscribeByMailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupSubscribeByMailRequest request = new GroupSubscribeByMailRequest(
                 getRequestUrl(),
                 getClient(),

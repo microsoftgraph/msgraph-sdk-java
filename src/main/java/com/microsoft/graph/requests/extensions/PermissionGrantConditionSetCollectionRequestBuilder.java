@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.PermissionGrantConditionSet;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetCollectionRequest;
+import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Permission Grant Condition Set Collection Request Builder.
  */
-public class PermissionGrantConditionSetCollectionRequestBuilder extends BaseRequestBuilder implements IPermissionGrantConditionSetCollectionRequestBuilder {
+public class PermissionGrantConditionSetCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of PermissionGrantPolicy
@@ -42,7 +42,7 @@ public class PermissionGrantConditionSetCollectionRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPermissionGrantConditionSetCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PermissionGrantConditionSetCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class PermissionGrantConditionSetCollectionRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPermissionGrantConditionSetCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantConditionSetCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PermissionGrantConditionSetCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPermissionGrantConditionSetRequestBuilder byId(final String id) {
+    public PermissionGrantConditionSetRequestBuilder byId(final String id) {
         return new PermissionGrantConditionSetRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

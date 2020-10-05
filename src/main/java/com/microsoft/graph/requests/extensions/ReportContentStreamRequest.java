@@ -20,7 +20,7 @@ import java.io.InputStream;
 /**
  * The class for the Report Content Stream Request.
  */
-public class ReportContentStreamRequest extends BaseStreamRequest<Report> implements IReportContentStreamRequest {
+public class ReportContentStreamRequest extends BaseStreamRequest<Report> {
 
     /**
      * The request for the ReportContentStream

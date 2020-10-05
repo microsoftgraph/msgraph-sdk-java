@@ -23,7 +23,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Directory Object Collection With References Request.
  */
-public class DirectoryObjectCollectionWithReferencesRequest extends BaseCollectionRequest<DirectoryObjectCollectionResponse, IDirectoryObjectCollectionPage> implements IDirectoryObjectCollectionWithReferencesRequest {
+public class DirectoryObjectCollectionWithReferencesRequest extends BaseCollectionRequest<DirectoryObjectCollectionResponse, DirectoryObjectCollectionPage> {
 
     /**
      * The request builder for this collection of DirectoryObject
@@ -33,10 +33,10 @@ public class DirectoryObjectCollectionWithReferencesRequest extends BaseCollecti
      * @param requestOptions the options for this request
      */
     public DirectoryObjectCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, IDirectoryObjectCollectionPage.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectCollectionResponse.class, DirectoryObjectCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IDirectoryObjectCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super DirectoryObjectCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -50,38 +50,38 @@ public class DirectoryObjectCollectionWithReferencesRequest extends BaseCollecti
         });
     }
 
-    public IDirectoryObjectCollectionWithReferencesPage get() throws ClientException {
+    public DirectoryObjectCollectionWithReferencesPage get() throws ClientException {
         final DirectoryObjectCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IDirectoryObjectCollectionWithReferencesRequest expand(final String value) {
+    public DirectoryObjectCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IDirectoryObjectCollectionWithReferencesRequest filter(final String value) {
+    public DirectoryObjectCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IDirectoryObjectCollectionWithReferencesRequest orderBy(final String value) {
+    public DirectoryObjectCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IDirectoryObjectCollectionWithReferencesRequest select(final String value) {
+    public DirectoryObjectCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IDirectoryObjectCollectionWithReferencesRequest top(final int value) {
+    public DirectoryObjectCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IDirectoryObjectCollectionWithReferencesPage buildFromResponse(final DirectoryObjectCollectionResponse response) {
-        final IDirectoryObjectCollectionWithReferencesRequestBuilder builder;
+    public DirectoryObjectCollectionWithReferencesPage buildFromResponse(final DirectoryObjectCollectionResponse response) {
+        final DirectoryObjectCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DirectoryObjectCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

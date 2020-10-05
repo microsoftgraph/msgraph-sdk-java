@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Home Realm Discovery Policy Collection With References Request Builder.
  */
-public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder {
+public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -39,7 +39,7 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder exte
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,15 +49,15 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder exte
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new HomeRealmDiscoveryPolicyCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder byId(final String id) {
+    public HomeRealmDiscoveryPolicyWithReferenceRequestBuilder byId(final String id) {
         return new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IHomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder references(){
+    public HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder references(){
         return new HomeRealmDiscoveryPolicyCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

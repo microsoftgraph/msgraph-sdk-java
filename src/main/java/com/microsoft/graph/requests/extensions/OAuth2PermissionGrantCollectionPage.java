@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRe
 /**
  * The class for the OAuth2Permission Grant Collection Page.
  */
-public class OAuth2PermissionGrantCollectionPage extends BaseCollectionPage<OAuth2PermissionGrant, IOAuth2PermissionGrantCollectionRequestBuilder> implements IOAuth2PermissionGrantCollectionPage {
+public class OAuth2PermissionGrantCollectionPage extends BaseCollectionPage<OAuth2PermissionGrant, OAuth2PermissionGrantCollectionRequestBuilder> {
 
     /**
      * A collection page for OAuth2PermissionGrant
@@ -22,7 +22,7 @@ public class OAuth2PermissionGrantCollectionPage extends BaseCollectionPage<OAut
      * @param response the serialized OAuth2PermissionGrantCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OAuth2PermissionGrantCollectionPage(final OAuth2PermissionGrantCollectionResponse response, final IOAuth2PermissionGrantCollectionRequestBuilder builder) {
+    public OAuth2PermissionGrantCollectionPage(final OAuth2PermissionGrantCollectionResponse response, final OAuth2PermissionGrantCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

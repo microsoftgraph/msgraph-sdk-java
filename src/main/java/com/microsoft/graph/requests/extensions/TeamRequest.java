@@ -12,27 +12,16 @@ import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScheduleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTemplateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -45,7 +34,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Team Request.
  */
-public class TeamRequest extends BaseRequest implements ITeamRequest {
+public class TeamRequest extends BaseRequest {
 	
     /**
      * The request for the Team
@@ -164,7 +153,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamRequest select(final String value) {
+     public TeamRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TeamRequest)this;
      }
@@ -175,7 +164,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamRequest expand(final String value) {
+     public TeamRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TeamRequest)this;
      }

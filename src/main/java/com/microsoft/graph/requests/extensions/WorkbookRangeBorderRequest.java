@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Border Request.
  */
-public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbookRangeBorderRequest {
+public class WorkbookRangeBorderRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookRangeBorder
@@ -138,7 +138,7 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookRangeBorderRequest select(final String value) {
+     public WorkbookRangeBorderRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookRangeBorderRequest)this;
      }
@@ -149,7 +149,7 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookRangeBorderRequest expand(final String value) {
+     public WorkbookRangeBorderRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookRangeBorderRequest)this;
      }

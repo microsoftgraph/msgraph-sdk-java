@@ -13,9 +13,9 @@ import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationCollectionRequest;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Mobile App Configuration Collection Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationCollectionRequestBuilder extends BaseRequestBuilder implements IManagedDeviceMobileAppConfigurationCollectionRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceAppManagement
@@ -43,7 +43,7 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceMobileAppConfigurationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,11 +53,11 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceMobileAppConfigurationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedDeviceMobileAppConfigurationRequestBuilder byId(final String id) {
+    public ManagedDeviceMobileAppConfigurationRequestBuilder byId(final String id) {
         return new ManagedDeviceMobileAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

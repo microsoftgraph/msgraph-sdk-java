@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerDeviceUsageUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetYammerDeviceUsageUserDetailRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Yammer Device Usage User Detail Request Builder.
  */
-public class ReportRootGetYammerDeviceUsageUserDetailRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetYammerDeviceUsageUserDetailRequestBuilder {
+public class ReportRootGetYammerDeviceUsageUserDetailRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetYammerDeviceUsageUserDetail
@@ -45,22 +44,22 @@ public class ReportRootGetYammerDeviceUsageUserDetailRequestBuilder extends Base
     }
 
     /**
-     * Creates the IReportRootGetYammerDeviceUsageUserDetailRequest
+     * Creates the ReportRootGetYammerDeviceUsageUserDetailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetYammerDeviceUsageUserDetailRequest instance
+     * @return the ReportRootGetYammerDeviceUsageUserDetailRequest instance
      */
-    public IReportRootGetYammerDeviceUsageUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetYammerDeviceUsageUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetYammerDeviceUsageUserDetailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetYammerDeviceUsageUserDetailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetYammerDeviceUsageUserDetailRequest instance
+     * @return the ReportRootGetYammerDeviceUsageUserDetailRequest instance
      */
-    public IReportRootGetYammerDeviceUsageUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetYammerDeviceUsageUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetYammerDeviceUsageUserDetailRequest request = new ReportRootGetYammerDeviceUsageUserDetailRequest(
                 getRequestUrl(),
                 getClient(),

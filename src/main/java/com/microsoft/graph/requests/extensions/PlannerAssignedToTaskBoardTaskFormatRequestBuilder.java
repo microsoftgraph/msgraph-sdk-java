@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Assigned To Task Board Task Format Request Builder.
  */
-public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder implements IPlannerAssignedToTaskBoardTaskFormatRequestBuilder {
+public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the PlannerAssignedToTaskBoardTaskFormat
@@ -35,9 +35,9 @@ public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequ
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerAssignedToTaskBoardTaskFormatRequest instance
+     * @return the PlannerAssignedToTaskBoardTaskFormatRequest instance
      */
-    public IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequ
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerAssignedToTaskBoardTaskFormatRequest instance
+     * @return the PlannerAssignedToTaskBoardTaskFormatRequest instance
      */
-    public IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerAssignedToTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

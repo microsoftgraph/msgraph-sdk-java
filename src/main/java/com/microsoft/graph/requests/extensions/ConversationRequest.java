@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Conversation;
-import com.microsoft.graph.requests.extensions.IConversationThreadCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationThreadRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationThreadRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Conversation Request.
  */
-public class ConversationRequest extends BaseRequest implements IConversationRequest {
+public class ConversationRequest extends BaseRequest {
 	
     /**
      * The request for the Conversation
@@ -142,7 +140,7 @@ public class ConversationRequest extends BaseRequest implements IConversationReq
      * @param value the select clause
      * @return the updated request
      */
-     public IConversationRequest select(final String value) {
+     public ConversationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ConversationRequest)this;
      }
@@ -153,7 +151,7 @@ public class ConversationRequest extends BaseRequest implements IConversationReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IConversationRequest expand(final String value) {
+     public ConversationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ConversationRequest)this;
      }

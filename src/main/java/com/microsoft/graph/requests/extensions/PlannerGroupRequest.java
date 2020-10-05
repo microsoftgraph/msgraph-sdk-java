@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerGroup;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Planner Group Request.
  */
-public class PlannerGroupRequest extends BaseRequest implements IPlannerGroupRequest {
+public class PlannerGroupRequest extends BaseRequest {
 	
     /**
      * The request for the PlannerGroup
@@ -142,7 +140,7 @@ public class PlannerGroupRequest extends BaseRequest implements IPlannerGroupReq
      * @param value the select clause
      * @return the updated request
      */
-     public IPlannerGroupRequest select(final String value) {
+     public PlannerGroupRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PlannerGroupRequest)this;
      }
@@ -153,7 +151,7 @@ public class PlannerGroupRequest extends BaseRequest implements IPlannerGroupReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IPlannerGroupRequest expand(final String value) {
+     public PlannerGroupRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PlannerGroupRequest)this;
      }
