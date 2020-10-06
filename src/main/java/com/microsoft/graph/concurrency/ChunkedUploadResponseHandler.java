@@ -27,9 +27,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
-import com.google.common.base.Charsets;
-import com.google.common.io.ByteSource;
-
 import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.core.Constants;
 import com.microsoft.graph.http.GraphServiceException;
@@ -108,13 +105,7 @@ public class ChunkedUploadResponseHandler<UploadType>
 			if(contentType != null
 				&& contentType.contains(Constants.JSON_CONTENT_TYPE)) {
 				try (final InputStream in = new BufferedInputStream(response.body().byteStream())) {
-					final ByteSource byteSource = new ByteSource() {
-						@Override
-						public InputStream openStream() throws IOException {
-							return in;
-						}
-					};
-					final String rawJson = byteSource.asCharSource(Charsets.UTF_8).read();
+					final String rawJson = CoreHttpProvider.streamToString(in);
 					final UploadSession session = serializer.deserializeObject(rawJson, UploadSession.class);
 					if(session == null || session.nextExpectedRanges == null) {
 						logger.logDebug("Upload session is completed (ODSP), uploaded item returned.");
