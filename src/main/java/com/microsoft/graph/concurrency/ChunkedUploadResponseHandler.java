@@ -27,6 +27,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
+import com.google.common.base.Charsets;
+import com.google.common.io.ByteSource;
+
 import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.core.Constants;
 import com.microsoft.graph.http.GraphServiceException;
@@ -91,23 +94,27 @@ public class ChunkedUploadResponseHandler<UploadType>
 			final Response response,
 			final ISerializer serializer,
 			final ILogger logger) throws Exception {
-		InputStream in = null;
-		try {
-			if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
-				logger.logDebug("Receiving error during upload, see detail on result error");
+		if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
+			logger.logDebug("Receiving error during upload, see detail on result error");
 
-				return new ChunkedUploadResult<UploadType>(
-						GraphServiceException.createFromResponse(request, null, serializer,
-							response, logger));
-			} else if (response.code() >= HttpResponseCode.HTTP_OK
-					&& response.code() < HttpResponseCode.HTTP_MULTIPLE_CHOICES) {
-				final Map<String, String> headers = responseHeadersHelper.getResponseHeadersAsMapStringString(response);
-				final String contentType = headers.get(Constants.CONTENT_TYPE_HEADER_NAME);
-				final String location = headers.get("Location");
-				if(contentType != null
-					&& contentType.contains(Constants.JSON_CONTENT_TYPE)) {
-					in = new BufferedInputStream(response.body().byteStream());
-					final String rawJson = DefaultHttpProvider.streamToString(in);
+			return new ChunkedUploadResult<UploadType>(
+					GraphServiceException.createFromResponse(request, null, serializer,
+						response, logger));
+		} else if (response.code() >= HttpResponseCode.HTTP_OK
+				&& response.code() < HttpResponseCode.HTTP_MULTIPLE_CHOICES) {
+			final Map<String, String> headers = responseHeadersHelper.getResponseHeadersAsMapStringString(response);
+			final String contentType = headers.get(Constants.CONTENT_TYPE_HEADER_NAME);
+			final String location = headers.get("Location");
+			if(contentType != null
+				&& contentType.contains(Constants.JSON_CONTENT_TYPE)) {
+				try (final InputStream in = new BufferedInputStream(response.body().byteStream())) {
+					final ByteSource byteSource = new ByteSource() {
+						@Override
+						public InputStream openStream() throws IOException {
+							return in;
+						}
+					};
+					final String rawJson = byteSource.asCharSource(Charsets.UTF_8).read();
 					final UploadSession session = serializer.deserializeObject(rawJson, UploadSession.class);
 					if(session == null || session.nextExpectedRanges == null) {
 						logger.logDebug("Upload session is completed (ODSP), uploaded item returned.");
@@ -117,20 +124,12 @@ public class ChunkedUploadResponseHandler<UploadType>
 						logger.logDebug("Chunk bytes has been accepted by the server.");
 						return new ChunkedUploadResult<UploadType>(session);
 					}
-				} else if(location != null) {
-					logger.logDebug("Upload session is completed (Outlook), uploaded item returned.");
-					return new ChunkedUploadResult<UploadType>(this.deserializeTypeClass.getDeclaredConstructor().newInstance());
-				} else {
-					logger.logDebug("Upload session returned an unexpected response");
 				}
-			}
-		} finally {
-			if (in != null) {
-				try{
-					in.close();
-				} catch(IOException e) {
-					logger.logError(e.getMessage(), e);
-				}
+			} else if(location != null) {
+				logger.logDebug("Upload session is completed (Outlook), uploaded item returned.");
+				return new ChunkedUploadResult<UploadType>(this.deserializeTypeClass.getDeclaredConstructor().newInstance());
+			} else {
+				logger.logDebug("Upload session returned an unexpected response");
 			}
 		}
 		return new ChunkedUploadResult<UploadType>(new ClientException("Received an unexpected response from the service, response code: " + response.code(), null));
