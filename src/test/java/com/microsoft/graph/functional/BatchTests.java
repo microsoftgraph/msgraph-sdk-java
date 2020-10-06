@@ -9,7 +9,7 @@ import com.microsoft.graph.content.MSBatchRequestContent;
 import com.microsoft.graph.content.MSBatchResponseContent;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.httpcore.HttpClients;
-import com.microsoft.graph.models.extensions.IGraphServiceClient;
+import com.microsoft.graph.core.IGraphServiceClient;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.UserRequest;
 

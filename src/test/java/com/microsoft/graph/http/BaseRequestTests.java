@@ -24,17 +24,16 @@ import okhttp3.ResponseBody;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-//import com.microsoft.graph.BuildConfig;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.MockBaseClient;
 import com.microsoft.graph.logger.MockLogger;
-import com.microsoft.graph.models.extensions.IGraphServiceClient;
+import com.microsoft.graph.core.IGraphServiceClient;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.requests.extensions.GraphServiceClient;
+import com.microsoft.graph.core.GraphServiceClient;
 import com.microsoft.graph.serializer.MockSerializer;
 
 /**

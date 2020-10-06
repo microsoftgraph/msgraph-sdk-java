@@ -1,4 +1,4 @@
-package com.microsoft.graph.requests.extensions;
+package com.microsoft.graph.core;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -16,6 +16,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.core.IGraphServiceClient;
+import com.microsoft.graph.core.GraphServiceClient;
 import com.microsoft.graph.core.DefaultConnectionConfig;
 import com.microsoft.graph.core.IConnectionConfig;
 import com.microsoft.graph.http.CoreHttpProvider;
@@ -26,7 +28,6 @@ import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.LoggerLevel;
-import com.microsoft.graph.models.extensions.IGraphServiceClient;
 import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.serializer.ISerializer;
 
