@@ -9,12 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtection;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileRequestBuilder;
 import java.util.Arrays;
@@ -28,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Information Protection Request.
  */
-public class WindowsInformationProtectionRequest extends BaseRequest implements IWindowsInformationProtectionRequest {
+public class WindowsInformationProtectionRequest extends BaseRequest {
 	
     /**
      * The request for the WindowsInformationProtection
@@ -162,7 +158,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsInformationProtectionRequest select(final String value) {
+     public WindowsInformationProtectionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WindowsInformationProtectionRequest)this;
      }
@@ -173,7 +169,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsInformationProtectionRequest expand(final String value) {
+     public WindowsInformationProtectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WindowsInformationProtectionRequest)this;
      }

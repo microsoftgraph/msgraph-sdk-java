@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeSortApplyRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeSortApplyRequest;
 import com.microsoft.graph.models.extensions.WorkbookSortField;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Sort Apply Request Builder.
  */
-public class WorkbookRangeSortApplyRequestBuilder extends BaseActionRequestBuilder implements IWorkbookRangeSortApplyRequestBuilder {
+public class WorkbookRangeSortApplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeSortApply
@@ -40,22 +39,22 @@ public class WorkbookRangeSortApplyRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookRangeSortApplyRequest
+     * Creates the WorkbookRangeSortApplyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeSortApplyRequest instance
+     * @return the WorkbookRangeSortApplyRequest instance
      */
-    public IWorkbookRangeSortApplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeSortApplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeSortApplyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeSortApplyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeSortApplyRequest instance
+     * @return the WorkbookRangeSortApplyRequest instance
      */
-    public IWorkbookRangeSortApplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeSortApplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeSortApplyRequest request = new WorkbookRangeSortApplyRequest(
                 getRequestUrl(),
                 getClient(),

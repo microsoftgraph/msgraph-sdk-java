@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPriceMatRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsPriceMatRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Price Mat Request Builder.
  */
-public class WorkbookFunctionsPriceMatRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsPriceMatRequestBuilder {
+public class WorkbookFunctionsPriceMatRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsPriceMat
@@ -42,22 +41,22 @@ public class WorkbookFunctionsPriceMatRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsPriceMatRequest
+     * Creates the WorkbookFunctionsPriceMatRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPriceMatRequest instance
+     * @return the WorkbookFunctionsPriceMatRequest instance
      */
-    public IWorkbookFunctionsPriceMatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsPriceMatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsPriceMatRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsPriceMatRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPriceMatRequest instance
+     * @return the WorkbookFunctionsPriceMatRequest instance
      */
-    public IWorkbookFunctionsPriceMatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsPriceMatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsPriceMatRequest request = new WorkbookFunctionsPriceMatRequest(
                 getRequestUrl(),
                 getClient(),

@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Org Contact Collection With References Request.
  */
-public class OrgContactCollectionWithReferencesRequest extends BaseCollectionRequest<OrgContactCollectionResponse, IOrgContactCollectionPage> implements IOrgContactCollectionWithReferencesRequest {
+public class OrgContactCollectionWithReferencesRequest extends BaseCollectionRequest<OrgContactCollectionResponse, OrgContactCollectionPage> {
 
     /**
      * The request builder for this collection of OrgContact
@@ -32,10 +32,10 @@ public class OrgContactCollectionWithReferencesRequest extends BaseCollectionReq
      * @param requestOptions the options for this request
      */
     public OrgContactCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, IOrgContactCollectionPage.class);
+        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IOrgContactCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super OrgContactCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class OrgContactCollectionWithReferencesRequest extends BaseCollectionReq
         });
     }
 
-    public IOrgContactCollectionWithReferencesPage get() throws ClientException {
+    public OrgContactCollectionWithReferencesPage get() throws ClientException {
         final OrgContactCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IOrgContactCollectionWithReferencesRequest expand(final String value) {
+    public OrgContactCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IOrgContactCollectionWithReferencesRequest filter(final String value) {
+    public OrgContactCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IOrgContactCollectionWithReferencesRequest orderBy(final String value) {
+    public OrgContactCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IOrgContactCollectionWithReferencesRequest select(final String value) {
+    public OrgContactCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IOrgContactCollectionWithReferencesRequest top(final int value) {
+    public OrgContactCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IOrgContactCollectionWithReferencesPage buildFromResponse(final OrgContactCollectionResponse response) {
-        final IOrgContactCollectionWithReferencesRequestBuilder builder;
+    public OrgContactCollectionWithReferencesPage buildFromResponse(final OrgContactCollectionResponse response) {
+        final OrgContactCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new OrgContactCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

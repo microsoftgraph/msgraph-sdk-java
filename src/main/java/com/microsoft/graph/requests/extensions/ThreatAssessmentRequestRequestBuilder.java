@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentResultCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentResultRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Threat Assessment Request Request Builder.
  */
-public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder implements IThreatAssessmentRequestRequestBuilder {
+public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ThreatAssessmentRequest
@@ -39,9 +37,9 @@ public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IThreatAssessmentRequestRequest instance
+     * @return the ThreatAssessmentRequestRequest instance
      */
-    public IThreatAssessmentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ThreatAssessmentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class ThreatAssessmentRequestRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IThreatAssessmentRequestRequest instance
+     * @return the ThreatAssessmentRequestRequest instance
      */
-    public IThreatAssessmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThreatAssessmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IThreatAssessmentResultCollectionRequestBuilder results() {
+    public ThreatAssessmentResultCollectionRequestBuilder results() {
         return new ThreatAssessmentResultCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("results"), getClient(), null);
     }
 
-    public IThreatAssessmentResultRequestBuilder results(final String id) {
+    public ThreatAssessmentResultRequestBuilder results(final String id) {
         return new ThreatAssessmentResultRequestBuilder(getRequestUrlWithAdditionalSegment("results") + "/" + id, getClient(), null);
     }
 }

@@ -11,8 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Managed App Registration Get User Ids With Flagged App Registration Collection Request Builder.
  */
-public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder {
+public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of ManagedAppRegistration
@@ -42,7 +41,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectio
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest request = new ManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest(
                 getRequestUrl(),
                 getClient(),

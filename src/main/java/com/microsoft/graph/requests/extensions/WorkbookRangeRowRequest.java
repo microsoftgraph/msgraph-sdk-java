@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeRowRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeRowRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Row Request.
  */
-public class WorkbookRangeRowRequest extends BaseRequest implements IWorkbookRangeRowRequest {
+public class WorkbookRangeRowRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeRow
@@ -97,7 +96,7 @@ public class WorkbookRangeRowRequest extends BaseRequest implements IWorkbookRan
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeRowRequest select(final String value) {
+    public WorkbookRangeRowRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeRowRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookRangeRowRequest extends BaseRequest implements IWorkbookRan
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeRowRequest expand(final String value) {
+    public WorkbookRangeRowRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeRowRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookRangeRowRequest extends BaseRequest implements IWorkbookRan
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeRowRequest filter(final String value) {
+    public WorkbookRangeRowRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeRowRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookRangeRowRequest extends BaseRequest implements IWorkbookRan
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeRowRequest orderBy(final String value) {
+    public WorkbookRangeRowRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeRowRequest)this;
     }

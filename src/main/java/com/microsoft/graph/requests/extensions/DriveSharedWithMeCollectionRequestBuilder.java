@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveSharedWithMeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveSharedWithMeCollectionRequest;
+import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Drive Shared With Me Collection Request Builder.
  */
-public class DriveSharedWithMeCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IDriveSharedWithMeCollectionRequestBuilder {
+public class DriveSharedWithMeCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of Drive
@@ -42,7 +41,7 @@ public class DriveSharedWithMeCollectionRequestBuilder extends BaseFunctionReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveSharedWithMeCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveSharedWithMeCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class DriveSharedWithMeCollectionRequestBuilder extends BaseFunctionReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveSharedWithMeCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveSharedWithMeCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveSharedWithMeCollectionRequest request = new DriveSharedWithMeCollectionRequest(
                 getRequestUrl(),
                 getClient(),

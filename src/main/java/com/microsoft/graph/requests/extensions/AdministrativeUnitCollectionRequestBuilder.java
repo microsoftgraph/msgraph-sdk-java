@@ -12,10 +12,10 @@ import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequest;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitRequestBuilder;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequest;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Administrative Unit Collection Request Builder.
  */
-public class AdministrativeUnitCollectionRequestBuilder extends BaseRequestBuilder implements IAdministrativeUnitCollectionRequestBuilder {
+public class AdministrativeUnitCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Directory
@@ -43,7 +43,7 @@ public class AdministrativeUnitCollectionRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAdministrativeUnitCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AdministrativeUnitCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,21 +53,21 @@ public class AdministrativeUnitCollectionRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAdministrativeUnitCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AdministrativeUnitCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AdministrativeUnitCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IAdministrativeUnitRequestBuilder byId(final String id) {
+    public AdministrativeUnitRequestBuilder byId(final String id) {
         return new AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IAdministrativeUnitDeltaCollectionRequestBuilder delta() {
+    public AdministrativeUnitDeltaCollectionRequestBuilder delta() {
         return new AdministrativeUnitDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IAdministrativeUnitDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public AdministrativeUnitDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new AdministrativeUnitDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

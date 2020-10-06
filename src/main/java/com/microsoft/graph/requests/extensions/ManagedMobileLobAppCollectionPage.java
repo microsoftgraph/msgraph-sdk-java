@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedMobileLobApp;
-import com.microsoft.graph.requests.extensions.IManagedMobileLobAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedMobileLobAppCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedMobileLobAppCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedMobileLobAppCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ManagedMobileLobAppCollectionResp
 /**
  * The class for the Managed Mobile Lob App Collection Page.
  */
-public class ManagedMobileLobAppCollectionPage extends BaseCollectionPage<ManagedMobileLobApp, IManagedMobileLobAppCollectionRequestBuilder> implements IManagedMobileLobAppCollectionPage {
+public class ManagedMobileLobAppCollectionPage extends BaseCollectionPage<ManagedMobileLobApp, ManagedMobileLobAppCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedMobileLobApp
@@ -22,7 +22,7 @@ public class ManagedMobileLobAppCollectionPage extends BaseCollectionPage<Manage
      * @param response the serialized ManagedMobileLobAppCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedMobileLobAppCollectionPage(final ManagedMobileLobAppCollectionResponse response, final IManagedMobileLobAppCollectionRequestBuilder builder) {
+    public ManagedMobileLobAppCollectionPage(final ManagedMobileLobAppCollectionResponse response, final ManagedMobileLobAppCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.MessageRule;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRuleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequest;
+import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Message Rule Collection Request Builder.
  */
-public class MessageRuleCollectionRequestBuilder extends BaseRequestBuilder implements IMessageRuleCollectionRequestBuilder {
+public class MessageRuleCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of MailFolder
@@ -42,7 +42,7 @@ public class MessageRuleCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMessageRuleCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MessageRuleCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class MessageRuleCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMessageRuleCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageRuleCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MessageRuleCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMessageRuleRequestBuilder byId(final String id) {
+    public MessageRuleRequestBuilder byId(final String id) {
         return new MessageRuleRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSecondRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSecondRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Second Request Builder.
  */
-public class WorkbookFunctionsSecondRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSecondRequestBuilder {
+public class WorkbookFunctionsSecondRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSecond
@@ -32,22 +31,22 @@ public class WorkbookFunctionsSecondRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsSecondRequest
+     * Creates the WorkbookFunctionsSecondRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSecondRequest instance
+     * @return the WorkbookFunctionsSecondRequest instance
      */
-    public IWorkbookFunctionsSecondRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSecondRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSecondRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSecondRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSecondRequest instance
+     * @return the WorkbookFunctionsSecondRequest instance
      */
-    public IWorkbookFunctionsSecondRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSecondRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSecondRequest request = new WorkbookFunctionsSecondRequest(
                 getRequestUrl(),
                 getClient(),

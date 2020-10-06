@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest;
 import com.microsoft.graph.requests.extensions.DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Device Management Verify Windows Enrollment Auto Discovery Request Builder.
  */
-public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder extends BaseFunctionRequestBuilder implements IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder {
+public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this DeviceManagementVerifyWindowsEnrollmentAutoDiscovery
@@ -32,22 +31,22 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBuilder 
     }
 
     /**
-     * Creates the IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest
+     * Creates the DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest instance
+     * @return the DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest instance
      */
-    public IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest instance
+     * @return the DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest instance
      */
-    public IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest request = new DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest(
                 getRequestUrl(),
                 getClient(),

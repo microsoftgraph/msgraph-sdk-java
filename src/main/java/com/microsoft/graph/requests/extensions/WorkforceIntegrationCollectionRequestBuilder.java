@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.WorkforceIntegration;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWorkforceIntegrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkforceIntegrationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkforceIntegrationCollectionRequest;
+import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkforceIntegrationRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workforce Integration Collection Request Builder.
  */
-public class WorkforceIntegrationCollectionRequestBuilder extends BaseRequestBuilder implements IWorkforceIntegrationCollectionRequestBuilder {
+public class WorkforceIntegrationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Teamwork
@@ -42,7 +42,7 @@ public class WorkforceIntegrationCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkforceIntegrationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkforceIntegrationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class WorkforceIntegrationCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkforceIntegrationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkforceIntegrationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkforceIntegrationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkforceIntegrationRequestBuilder byId(final String id) {
+    public WorkforceIntegrationRequestBuilder byId(final String id) {
         return new WorkforceIntegrationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

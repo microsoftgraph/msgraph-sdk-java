@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.Trending;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrendingRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrendingCollectionRequest;
+import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrendingRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrendingCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Trending Collection Request Builder.
  */
-public class TrendingCollectionRequestBuilder extends BaseRequestBuilder implements ITrendingCollectionRequestBuilder {
+public class TrendingCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of OfficeGraphInsights
@@ -42,7 +42,7 @@ public class TrendingCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITrendingCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TrendingCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class TrendingCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITrendingCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TrendingCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TrendingCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITrendingRequestBuilder byId(final String id) {
+    public TrendingRequestBuilder byId(final String id) {
         return new TrendingRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

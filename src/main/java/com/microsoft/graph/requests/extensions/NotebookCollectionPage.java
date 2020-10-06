@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Notebook;
-import com.microsoft.graph.requests.extensions.INotebookCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.NotebookCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.NotebookCollectionPage;
 import com.microsoft.graph.requests.extensions.NotebookCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.NotebookCollectionResponse;
 /**
  * The class for the Notebook Collection Page.
  */
-public class NotebookCollectionPage extends BaseCollectionPage<Notebook, INotebookCollectionRequestBuilder> implements INotebookCollectionPage {
+public class NotebookCollectionPage extends BaseCollectionPage<Notebook, NotebookCollectionRequestBuilder> {
 
     /**
      * A collection page for Notebook
@@ -22,7 +22,7 @@ public class NotebookCollectionPage extends BaseCollectionPage<Notebook, INotebo
      * @param response the serialized NotebookCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public NotebookCollectionPage(final NotebookCollectionResponse response, final INotebookCollectionRequestBuilder builder) {
+    public NotebookCollectionPage(final NotebookCollectionResponse response, final NotebookCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

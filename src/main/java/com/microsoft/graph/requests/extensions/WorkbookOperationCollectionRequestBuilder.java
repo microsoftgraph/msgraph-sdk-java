@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.WorkbookOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequest;
+import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Operation Collection Request Builder.
  */
-public class WorkbookOperationCollectionRequestBuilder extends BaseRequestBuilder implements IWorkbookOperationCollectionRequestBuilder {
+public class WorkbookOperationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Workbook
@@ -42,7 +42,7 @@ public class WorkbookOperationCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class WorkbookOperationCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookOperationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookOperationRequestBuilder byId(final String id) {
+    public WorkbookOperationRequestBuilder byId(final String id) {
         return new WorkbookOperationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

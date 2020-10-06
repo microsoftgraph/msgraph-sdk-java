@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.OpenShift;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOpenShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftCollectionRequest;
+import com.microsoft.graph.requests.extensions.OpenShiftCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OpenShiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.OpenShiftCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Open Shift Collection Request Builder.
  */
-public class OpenShiftCollectionRequestBuilder extends BaseRequestBuilder implements IOpenShiftCollectionRequestBuilder {
+public class OpenShiftCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Schedule
@@ -42,7 +42,7 @@ public class OpenShiftCollectionRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOpenShiftCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OpenShiftCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class OpenShiftCollectionRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOpenShiftCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OpenShiftCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OpenShiftCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOpenShiftRequestBuilder byId(final String id) {
+    public OpenShiftRequestBuilder byId(final String id) {
         return new OpenShiftRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

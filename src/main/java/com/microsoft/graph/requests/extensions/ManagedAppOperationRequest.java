@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Operation Request.
  */
-public class ManagedAppOperationRequest extends BaseRequest implements IManagedAppOperationRequest {
+public class ManagedAppOperationRequest extends BaseRequest {
 	
     /**
      * The request for the ManagedAppOperation
@@ -138,7 +138,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedAppOperationRequest select(final String value) {
+     public ManagedAppOperationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedAppOperationRequest)this;
      }
@@ -149,7 +149,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedAppOperationRequest expand(final String value) {
+     public ManagedAppOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedAppOperationRequest)this;
      }

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Entity Schema Object Model Request Builder.
  */
-public class OnenoteEntitySchemaObjectModelRequestBuilder extends BaseRequestBuilder implements IOnenoteEntitySchemaObjectModelRequestBuilder {
+public class OnenoteEntitySchemaObjectModelRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OnenoteEntitySchemaObjectModel
@@ -35,9 +35,9 @@ public class OnenoteEntitySchemaObjectModelRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnenoteEntitySchemaObjectModelRequest instance
+     * @return the OnenoteEntitySchemaObjectModelRequest instance
      */
-    public IOnenoteEntitySchemaObjectModelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenoteEntitySchemaObjectModelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class OnenoteEntitySchemaObjectModelRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnenoteEntitySchemaObjectModelRequest instance
+     * @return the OnenoteEntitySchemaObjectModelRequest instance
      */
-    public IOnenoteEntitySchemaObjectModelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteEntitySchemaObjectModelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnenoteEntitySchemaObjectModelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

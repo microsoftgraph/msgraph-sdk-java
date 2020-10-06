@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.SectionGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequest;
+import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Section Group Collection Request Builder.
  */
-public class SectionGroupCollectionRequestBuilder extends BaseRequestBuilder implements ISectionGroupCollectionRequestBuilder {
+public class SectionGroupCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of SectionGroup
@@ -41,7 +41,7 @@ public class SectionGroupCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISectionGroupCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SectionGroupCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class SectionGroupCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISectionGroupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SectionGroupCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SectionGroupCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISectionGroupRequestBuilder byId(final String id) {
+    public SectionGroupRequestBuilder byId(final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

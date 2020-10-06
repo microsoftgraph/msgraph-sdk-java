@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Configuration Device State Summary Request Builder.
  */
-public class DeviceConfigurationDeviceStateSummaryRequestBuilder extends BaseRequestBuilder implements IDeviceConfigurationDeviceStateSummaryRequestBuilder {
+public class DeviceConfigurationDeviceStateSummaryRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceConfigurationDeviceStateSummary
@@ -35,9 +35,9 @@ public class DeviceConfigurationDeviceStateSummaryRequestBuilder extends BaseReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceConfigurationDeviceStateSummaryRequest instance
+     * @return the DeviceConfigurationDeviceStateSummaryRequest instance
      */
-    public IDeviceConfigurationDeviceStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceConfigurationDeviceStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DeviceConfigurationDeviceStateSummaryRequestBuilder extends BaseReq
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceConfigurationDeviceStateSummaryRequest instance
+     * @return the DeviceConfigurationDeviceStateSummaryRequest instance
      */
-    public IDeviceConfigurationDeviceStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationDeviceStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

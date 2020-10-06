@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Subscribed Sku Request Builder.
  */
-public class SubscribedSkuRequestBuilder extends BaseRequestBuilder implements ISubscribedSkuRequestBuilder {
+public class SubscribedSkuRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SubscribedSku
@@ -35,9 +35,9 @@ public class SubscribedSkuRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISubscribedSkuRequest instance
+     * @return the SubscribedSkuRequest instance
      */
-    public ISubscribedSkuRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SubscribedSkuRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class SubscribedSkuRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISubscribedSkuRequest instance
+     * @return the SubscribedSkuRequest instance
      */
-    public ISubscribedSkuRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SubscribedSkuRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SubscribedSkuRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

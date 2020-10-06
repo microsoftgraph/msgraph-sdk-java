@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppProtectionAssignRequest;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppProtectionAssignRequest;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Targeted Managed App Protection Assign Request Builder.
  */
-public class TargetedManagedAppProtectionAssignRequestBuilder extends BaseActionRequestBuilder implements ITargetedManagedAppProtectionAssignRequestBuilder {
+public class TargetedManagedAppProtectionAssignRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this TargetedManagedAppProtectionAssign
@@ -32,22 +31,22 @@ public class TargetedManagedAppProtectionAssignRequestBuilder extends BaseAction
     }
 
     /**
-     * Creates the ITargetedManagedAppProtectionAssignRequest
+     * Creates the TargetedManagedAppProtectionAssignRequest
      *
      * @param requestOptions the options for the request
-     * @return the ITargetedManagedAppProtectionAssignRequest instance
+     * @return the TargetedManagedAppProtectionAssignRequest instance
      */
-    public ITargetedManagedAppProtectionAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TargetedManagedAppProtectionAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ITargetedManagedAppProtectionAssignRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the TargetedManagedAppProtectionAssignRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ITargetedManagedAppProtectionAssignRequest instance
+     * @return the TargetedManagedAppProtectionAssignRequest instance
      */
-    public ITargetedManagedAppProtectionAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppProtectionAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TargetedManagedAppProtectionAssignRequest request = new TargetedManagedAppProtectionAssignRequest(
                 getRequestUrl(),
                 getClient(),

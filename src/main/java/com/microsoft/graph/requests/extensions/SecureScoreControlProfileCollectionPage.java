@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SecureScoreControlProfile;
-import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionPage;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollecti
 /**
  * The class for the Secure Score Control Profile Collection Page.
  */
-public class SecureScoreControlProfileCollectionPage extends BaseCollectionPage<SecureScoreControlProfile, ISecureScoreControlProfileCollectionRequestBuilder> implements ISecureScoreControlProfileCollectionPage {
+public class SecureScoreControlProfileCollectionPage extends BaseCollectionPage<SecureScoreControlProfile, SecureScoreControlProfileCollectionRequestBuilder> {
 
     /**
      * A collection page for SecureScoreControlProfile
@@ -22,7 +22,7 @@ public class SecureScoreControlProfileCollectionPage extends BaseCollectionPage<
      * @param response the serialized SecureScoreControlProfileCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SecureScoreControlProfileCollectionPage(final SecureScoreControlProfileCollectionResponse response, final ISecureScoreControlProfileCollectionRequestBuilder builder) {
+    public SecureScoreControlProfileCollectionPage(final SecureScoreControlProfileCollectionResponse response, final SecureScoreControlProfileCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

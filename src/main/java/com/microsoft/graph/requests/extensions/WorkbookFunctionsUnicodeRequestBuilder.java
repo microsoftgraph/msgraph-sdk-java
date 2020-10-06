@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsUnicodeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsUnicodeRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Unicode Request Builder.
  */
-public class WorkbookFunctionsUnicodeRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsUnicodeRequestBuilder {
+public class WorkbookFunctionsUnicodeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsUnicode
@@ -32,22 +31,22 @@ public class WorkbookFunctionsUnicodeRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsUnicodeRequest
+     * Creates the WorkbookFunctionsUnicodeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsUnicodeRequest instance
+     * @return the WorkbookFunctionsUnicodeRequest instance
      */
-    public IWorkbookFunctionsUnicodeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsUnicodeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsUnicodeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsUnicodeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsUnicodeRequest instance
+     * @return the WorkbookFunctionsUnicodeRequest instance
      */
-    public IWorkbookFunctionsUnicodeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsUnicodeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsUnicodeRequest request = new WorkbookFunctionsUnicodeRequest(
                 getRequestUrl(),
                 getClient(),

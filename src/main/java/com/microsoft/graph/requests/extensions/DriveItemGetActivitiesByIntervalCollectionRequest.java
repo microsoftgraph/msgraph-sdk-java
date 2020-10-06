@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Drive Item Get Activities By Interval Collection Request.
  */
-public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseCollectionRequest<DriveItemGetActivitiesByIntervalCollectionResponse, IDriveItemGetActivitiesByIntervalCollectionPage> implements IDriveItemGetActivitiesByIntervalCollectionRequest {
+public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseCollectionRequest<DriveItemGetActivitiesByIntervalCollectionResponse, DriveItemGetActivitiesByIntervalCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseColle
      * @param requestOptions the options for this request
      */
     public DriveItemGetActivitiesByIntervalCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItemGetActivitiesByIntervalCollectionResponse.class, IDriveItemGetActivitiesByIntervalCollectionPage.class);
+        super(requestUrl, client, requestOptions, DriveItemGetActivitiesByIntervalCollectionResponse.class, DriveItemGetActivitiesByIntervalCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IDriveItemGetActivitiesByIntervalCollectionPage> callback) {
+    public void get(final ICallback<? super DriveItemGetActivitiesByIntervalCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseColle
         });
     }
 
-    public IDriveItemGetActivitiesByIntervalCollectionPage get() throws ClientException {
+    public DriveItemGetActivitiesByIntervalCollectionPage get() throws ClientException {
         final DriveItemGetActivitiesByIntervalCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IDriveItemGetActivitiesByIntervalCollectionPage buildFromResponse(final DriveItemGetActivitiesByIntervalCollectionResponse response) {
-        final IDriveItemGetActivitiesByIntervalCollectionRequestBuilder builder;
+    public DriveItemGetActivitiesByIntervalCollectionPage buildFromResponse(final DriveItemGetActivitiesByIntervalCollectionResponse response) {
+        final DriveItemGetActivitiesByIntervalCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DriveItemGetActivitiesByIntervalCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IDriveItemGetActivitiesByIntervalCollectionPage page = new DriveItemGetActivitiesByIntervalCollectionPage(response, builder);
+        final DriveItemGetActivitiesByIntervalCollectionPage page = new DriveItemGetActivitiesByIntervalCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseColle
      * @param value the select clause
      * @return the updated request
      */
-    public IDriveItemGetActivitiesByIntervalCollectionRequest select(final String value) {
+    public DriveItemGetActivitiesByIntervalCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IDriveItemGetActivitiesByIntervalCollectionRequest)this;
+        return (DriveItemGetActivitiesByIntervalCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseColle
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IDriveItemGetActivitiesByIntervalCollectionRequest top(final int value) {
+    public DriveItemGetActivitiesByIntervalCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IDriveItemGetActivitiesByIntervalCollectionRequest)this;
+        return (DriveItemGetActivitiesByIntervalCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseColle
      * @param value the expand clause
      * @return the updated request
      */
-    public IDriveItemGetActivitiesByIntervalCollectionRequest expand(final String value) {
+    public DriveItemGetActivitiesByIntervalCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IDriveItemGetActivitiesByIntervalCollectionRequest)this;
+        return (DriveItemGetActivitiesByIntervalCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseColle
      * @param value the filter clause
      * @return the updated request
      */
-    public IDriveItemGetActivitiesByIntervalCollectionRequest filter(final String value) {
+    public DriveItemGetActivitiesByIntervalCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDriveItemGetActivitiesByIntervalCollectionRequest)this;
+        return (DriveItemGetActivitiesByIntervalCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class DriveItemGetActivitiesByIntervalCollectionRequest extends BaseColle
      * @param value the order by clause
      * @return the updated request
      */
-    public IDriveItemGetActivitiesByIntervalCollectionRequest orderBy(final String value) {
+    public DriveItemGetActivitiesByIntervalCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IDriveItemGetActivitiesByIntervalCollectionRequest)this;
+        return (DriveItemGetActivitiesByIntervalCollectionRequest)this;
     }
 
 }

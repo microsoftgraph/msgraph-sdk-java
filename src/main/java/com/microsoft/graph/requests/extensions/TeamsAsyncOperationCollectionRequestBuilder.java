@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequest;
+import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAsyncOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams Async Operation Collection Request Builder.
  */
-public class TeamsAsyncOperationCollectionRequestBuilder extends BaseRequestBuilder implements ITeamsAsyncOperationCollectionRequestBuilder {
+public class TeamsAsyncOperationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Team
@@ -42,7 +42,7 @@ public class TeamsAsyncOperationCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamsAsyncOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsAsyncOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class TeamsAsyncOperationCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamsAsyncOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAsyncOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsAsyncOperationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITeamsAsyncOperationRequestBuilder byId(final String id) {
+    public TeamsAsyncOperationRequestBuilder byId(final String id) {
         return new TeamsAsyncOperationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

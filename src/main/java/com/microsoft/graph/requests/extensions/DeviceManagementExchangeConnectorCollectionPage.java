@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnector;
-import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnector
 /**
  * The class for the Device Management Exchange Connector Collection Page.
  */
-public class DeviceManagementExchangeConnectorCollectionPage extends BaseCollectionPage<DeviceManagementExchangeConnector, IDeviceManagementExchangeConnectorCollectionRequestBuilder> implements IDeviceManagementExchangeConnectorCollectionPage {
+public class DeviceManagementExchangeConnectorCollectionPage extends BaseCollectionPage<DeviceManagementExchangeConnector, DeviceManagementExchangeConnectorCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceManagementExchangeConnector
@@ -22,7 +22,7 @@ public class DeviceManagementExchangeConnectorCollectionPage extends BaseCollect
      * @param response the serialized DeviceManagementExchangeConnectorCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceManagementExchangeConnectorCollectionPage(final DeviceManagementExchangeConnectorCollectionResponse response, final IDeviceManagementExchangeConnectorCollectionRequestBuilder builder) {
+    public DeviceManagementExchangeConnectorCollectionPage(final DeviceManagementExchangeConnectorCollectionResponse response, final DeviceManagementExchangeConnectorCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

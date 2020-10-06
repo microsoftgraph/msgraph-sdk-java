@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMessageReplyRequest;
 import com.microsoft.graph.requests.extensions.MessageReplyRequest;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Message Reply Request Builder.
  */
-public class MessageReplyRequestBuilder extends BaseActionRequestBuilder implements IMessageReplyRequestBuilder {
+public class MessageReplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageReply
@@ -34,22 +33,22 @@ public class MessageReplyRequestBuilder extends BaseActionRequestBuilder impleme
     }
 
     /**
-     * Creates the IMessageReplyRequest
+     * Creates the MessageReplyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IMessageReplyRequest instance
+     * @return the MessageReplyRequest instance
      */
-    public IMessageReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MessageReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IMessageReplyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the MessageReplyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IMessageReplyRequest instance
+     * @return the MessageReplyRequest instance
      */
-    public IMessageReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MessageReplyRequest request = new MessageReplyRequest(
                 getRequestUrl(),
                 getClient(),

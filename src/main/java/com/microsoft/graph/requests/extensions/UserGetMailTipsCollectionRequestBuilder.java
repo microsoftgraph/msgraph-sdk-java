@@ -13,8 +13,7 @@ import java.util.EnumSet;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequest;
+import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -25,7 +24,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the User Get Mail Tips Collection Request Builder.
  */
-public class UserGetMailTipsCollectionRequestBuilder extends BaseActionRequestBuilder implements IUserGetMailTipsCollectionRequestBuilder {
+public class UserGetMailTipsCollectionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -52,7 +51,7 @@ public class UserGetMailTipsCollectionRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserGetMailTipsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserGetMailTipsCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -62,7 +61,7 @@ public class UserGetMailTipsCollectionRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserGetMailTipsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserGetMailTipsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserGetMailTipsCollectionRequest request = new UserGetMailTipsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

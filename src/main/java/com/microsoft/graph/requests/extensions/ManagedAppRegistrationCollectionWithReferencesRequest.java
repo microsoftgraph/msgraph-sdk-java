@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Managed App Registration Collection With References Request.
  */
-public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseCollectionRequest<ManagedAppRegistrationCollectionResponse, IManagedAppRegistrationCollectionPage> implements IManagedAppRegistrationCollectionWithReferencesRequest {
+public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseCollectionRequest<ManagedAppRegistrationCollectionResponse, ManagedAppRegistrationCollectionPage> {
 
     /**
      * The request builder for this collection of ManagedAppRegistration
@@ -32,10 +32,10 @@ public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseC
      * @param requestOptions the options for this request
      */
     public ManagedAppRegistrationCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, IManagedAppRegistrationCollectionPage.class);
+        super(requestUrl, client, requestOptions, ManagedAppRegistrationCollectionResponse.class, ManagedAppRegistrationCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IManagedAppRegistrationCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super ManagedAppRegistrationCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class ManagedAppRegistrationCollectionWithReferencesRequest extends BaseC
         });
     }
 
-    public IManagedAppRegistrationCollectionWithReferencesPage get() throws ClientException {
+    public ManagedAppRegistrationCollectionWithReferencesPage get() throws ClientException {
         final ManagedAppRegistrationCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IManagedAppRegistrationCollectionWithReferencesRequest expand(final String value) {
+    public ManagedAppRegistrationCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IManagedAppRegistrationCollectionWithReferencesRequest filter(final String value) {
+    public ManagedAppRegistrationCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IManagedAppRegistrationCollectionWithReferencesRequest orderBy(final String value) {
+    public ManagedAppRegistrationCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IManagedAppRegistrationCollectionWithReferencesRequest select(final String value) {
+    public ManagedAppRegistrationCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IManagedAppRegistrationCollectionWithReferencesRequest top(final int value) {
+    public ManagedAppRegistrationCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IManagedAppRegistrationCollectionWithReferencesPage buildFromResponse(final ManagedAppRegistrationCollectionResponse response) {
-        final IManagedAppRegistrationCollectionWithReferencesRequestBuilder builder;
+    public ManagedAppRegistrationCollectionWithReferencesPage buildFromResponse(final ManagedAppRegistrationCollectionResponse response) {
+        final ManagedAppRegistrationCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ManagedAppRegistrationCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

@@ -12,7 +12,7 @@ import com.microsoft.graph.models.extensions.ScheduleInformation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ICalendarGetScheduleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionResponse;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Calendar Get Schedule Collection Page.
  */
-public class CalendarGetScheduleCollectionPage extends BaseCollectionPage<ScheduleInformation, ICalendarGetScheduleCollectionRequestBuilder> implements ICalendarGetScheduleCollectionPage {
+public class CalendarGetScheduleCollectionPage extends BaseCollectionPage<ScheduleInformation, CalendarGetScheduleCollectionRequestBuilder> {
 
     /**
      * A collection page for ScheduleInformation.
@@ -34,7 +34,7 @@ public class CalendarGetScheduleCollectionPage extends BaseCollectionPage<Schedu
      * @param response The serialized CalendarGetScheduleCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public CalendarGetScheduleCollectionPage(final CalendarGetScheduleCollectionResponse response, final ICalendarGetScheduleCollectionRequestBuilder builder) {
+    public CalendarGetScheduleCollectionPage(final CalendarGetScheduleCollectionResponse response, final CalendarGetScheduleCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

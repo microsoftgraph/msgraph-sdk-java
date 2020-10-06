@@ -8,16 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AuditLogRoot;
-import com.microsoft.graph.requests.extensions.IDirectoryAuditCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryAuditRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryAuditRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RestrictedSignInRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SignInRequestBuilder;
 import java.util.Arrays;
@@ -31,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Audit Log Root Request.
  */
-public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootRequest {
+public class AuditLogRootRequest extends BaseRequest {
 	
     /**
      * The request for the AuditLogRoot
@@ -150,7 +144,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @param value the select clause
      * @return the updated request
      */
-     public IAuditLogRootRequest select(final String value) {
+     public AuditLogRootRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (AuditLogRootRequest)this;
      }
@@ -161,7 +155,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IAuditLogRootRequest expand(final String value) {
+     public AuditLogRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (AuditLogRootRequest)this;
      }

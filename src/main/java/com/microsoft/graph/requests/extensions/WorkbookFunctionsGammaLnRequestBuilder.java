@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGammaLnRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsGammaLnRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Gamma Ln Request Builder.
  */
-public class WorkbookFunctionsGammaLnRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsGammaLnRequestBuilder {
+public class WorkbookFunctionsGammaLnRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsGammaLn
@@ -32,22 +31,22 @@ public class WorkbookFunctionsGammaLnRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsGammaLnRequest
+     * Creates the WorkbookFunctionsGammaLnRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGammaLnRequest instance
+     * @return the WorkbookFunctionsGammaLnRequest instance
      */
-    public IWorkbookFunctionsGammaLnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsGammaLnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsGammaLnRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsGammaLnRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGammaLnRequest instance
+     * @return the WorkbookFunctionsGammaLnRequest instance
      */
-    public IWorkbookFunctionsGammaLnRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsGammaLnRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsGammaLnRequest request = new WorkbookFunctionsGammaLnRequest(
                 getRequestUrl(),
                 getClient(),

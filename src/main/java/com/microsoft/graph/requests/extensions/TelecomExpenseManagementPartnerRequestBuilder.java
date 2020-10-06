@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Telecom Expense Management Partner Request Builder.
  */
-public class TelecomExpenseManagementPartnerRequestBuilder extends BaseRequestBuilder implements ITelecomExpenseManagementPartnerRequestBuilder {
+public class TelecomExpenseManagementPartnerRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TelecomExpenseManagementPartner
@@ -35,9 +35,9 @@ public class TelecomExpenseManagementPartnerRequestBuilder extends BaseRequestBu
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITelecomExpenseManagementPartnerRequest instance
+     * @return the TelecomExpenseManagementPartnerRequest instance
      */
-    public ITelecomExpenseManagementPartnerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TelecomExpenseManagementPartnerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class TelecomExpenseManagementPartnerRequestBuilder extends BaseRequestBu
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITelecomExpenseManagementPartnerRequest instance
+     * @return the TelecomExpenseManagementPartnerRequest instance
      */
-    public ITelecomExpenseManagementPartnerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TelecomExpenseManagementPartnerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

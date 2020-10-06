@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionPolicy;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolic
 /**
  * The class for the Windows Information Protection Policy Collection Page.
  */
-public class WindowsInformationProtectionPolicyCollectionPage extends BaseCollectionPage<WindowsInformationProtectionPolicy, IWindowsInformationProtectionPolicyCollectionRequestBuilder> implements IWindowsInformationProtectionPolicyCollectionPage {
+public class WindowsInformationProtectionPolicyCollectionPage extends BaseCollectionPage<WindowsInformationProtectionPolicy, WindowsInformationProtectionPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for WindowsInformationProtectionPolicy
@@ -22,7 +22,7 @@ public class WindowsInformationProtectionPolicyCollectionPage extends BaseCollec
      * @param response the serialized WindowsInformationProtectionPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WindowsInformationProtectionPolicyCollectionPage(final WindowsInformationProtectionPolicyCollectionResponse response, final IWindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
+    public WindowsInformationProtectionPolicyCollectionPage(final WindowsInformationProtectionPolicyCollectionResponse response, final WindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

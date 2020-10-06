@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Skype For Business Participant Activity Minute Counts Request.
  */
-public class ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest extends BaseRequest implements IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest {
+public class ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetSkypeForBusinessParticipantActivityMinuteCounts
@@ -97,7 +96,7 @@ public class ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest select(final String value) {
+    public ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest expand(final String value) {
+    public ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest filter(final String value) {
+    public ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest orderBy(final String value) {
+    public ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequest)this;
     }

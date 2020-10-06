@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Registration Collection Reference Request Builder.
  */
-public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends BaseRequestBuilder implements IManagedAppRegistrationCollectionReferenceRequestBuilder {
+public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -39,7 +39,7 @@ public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppRegistrationCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppRegistrationCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +49,7 @@ public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppRegistrationCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppRegistrationCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

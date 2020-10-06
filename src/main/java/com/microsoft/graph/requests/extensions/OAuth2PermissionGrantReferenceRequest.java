@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the OAuth2Permission Grant Reference Request.
  */
-public class OAuth2PermissionGrantReferenceRequest extends BaseRequest implements IOAuth2PermissionGrantReferenceRequest {
+public class OAuth2PermissionGrantReferenceRequest extends BaseRequest {
 
     /**
      * The request for the OAuth2PermissionGrant
@@ -48,7 +48,7 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantReferenceRequest select(final String value) {
+    public OAuth2PermissionGrantReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OAuth2PermissionGrantReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantReferenceRequest expand(final String value) {
+    public OAuth2PermissionGrantReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OAuth2PermissionGrantReferenceRequest)this;
     }

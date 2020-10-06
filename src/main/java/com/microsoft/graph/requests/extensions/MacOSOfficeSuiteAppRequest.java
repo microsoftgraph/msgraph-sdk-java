@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSOffice Suite App Request.
  */
-public class MacOSOfficeSuiteAppRequest extends BaseRequest implements IMacOSOfficeSuiteAppRequest {
+public class MacOSOfficeSuiteAppRequest extends BaseRequest {
 	
     /**
      * The request for the MacOSOfficeSuiteApp
@@ -138,7 +138,7 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest implements IMacOSOff
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSOfficeSuiteAppRequest select(final String value) {
+     public MacOSOfficeSuiteAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MacOSOfficeSuiteAppRequest)this;
      }
@@ -149,7 +149,7 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest implements IMacOSOff
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSOfficeSuiteAppRequest expand(final String value) {
+     public MacOSOfficeSuiteAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MacOSOfficeSuiteAppRequest)this;
      }

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.VppToken;
-import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.VppTokenCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionPage;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.VppTokenCollectionResponse;
 /**
  * The class for the Vpp Token Collection Page.
  */
-public class VppTokenCollectionPage extends BaseCollectionPage<VppToken, IVppTokenCollectionRequestBuilder> implements IVppTokenCollectionPage {
+public class VppTokenCollectionPage extends BaseCollectionPage<VppToken, VppTokenCollectionRequestBuilder> {
 
     /**
      * A collection page for VppToken
@@ -22,7 +22,7 @@ public class VppTokenCollectionPage extends BaseCollectionPage<VppToken, IVppTok
      * @param response the serialized VppTokenCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public VppTokenCollectionPage(final VppTokenCollectionResponse response, final IVppTokenCollectionRequestBuilder builder) {
+    public VppTokenCollectionPage(final VppTokenCollectionResponse response, final VppTokenCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

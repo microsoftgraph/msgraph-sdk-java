@@ -8,16 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import java.util.Arrays;
@@ -31,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Administrative Unit Request.
  */
-public class AdministrativeUnitRequest extends BaseRequest implements IAdministrativeUnitRequest {
+public class AdministrativeUnitRequest extends BaseRequest {
 	
     /**
      * The request for the AdministrativeUnit
@@ -150,7 +144,7 @@ public class AdministrativeUnitRequest extends BaseRequest implements IAdministr
      * @param value the select clause
      * @return the updated request
      */
-     public IAdministrativeUnitRequest select(final String value) {
+     public AdministrativeUnitRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (AdministrativeUnitRequest)this;
      }
@@ -161,7 +155,7 @@ public class AdministrativeUnitRequest extends BaseRequest implements IAdministr
      * @param value the expand clause
      * @return the updated request
      */
-     public IAdministrativeUnitRequest expand(final String value) {
+     public AdministrativeUnitRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (AdministrativeUnitRequest)this;
      }

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.RemoteAssistancePartner;
-import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionPage;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollection
 /**
  * The class for the Remote Assistance Partner Collection Page.
  */
-public class RemoteAssistancePartnerCollectionPage extends BaseCollectionPage<RemoteAssistancePartner, IRemoteAssistancePartnerCollectionRequestBuilder> implements IRemoteAssistancePartnerCollectionPage {
+public class RemoteAssistancePartnerCollectionPage extends BaseCollectionPage<RemoteAssistancePartner, RemoteAssistancePartnerCollectionRequestBuilder> {
 
     /**
      * A collection page for RemoteAssistancePartner
@@ -22,7 +22,7 @@ public class RemoteAssistancePartnerCollectionPage extends BaseCollectionPage<Re
      * @param response the serialized RemoteAssistancePartnerCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public RemoteAssistancePartnerCollectionPage(final RemoteAssistancePartnerCollectionResponse response, final IRemoteAssistancePartnerCollectionRequestBuilder builder) {
+    public RemoteAssistancePartnerCollectionPage(final RemoteAssistancePartnerCollectionResponse response, final RemoteAssistancePartnerCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

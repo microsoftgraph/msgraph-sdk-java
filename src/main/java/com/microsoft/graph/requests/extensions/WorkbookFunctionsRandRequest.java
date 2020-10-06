@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRandRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRandRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Functions Rand Request.
  */
-public class WorkbookFunctionsRandRequest extends BaseRequest implements IWorkbookFunctionsRandRequest {
+public class WorkbookFunctionsRandRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookFunctionsRand
@@ -57,7 +56,7 @@ public class WorkbookFunctionsRandRequest extends BaseRequest implements IWorkbo
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookFunctionsRandRequest select(final String value) {
+    public WorkbookFunctionsRandRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsRandRequest)this;
     }
@@ -68,7 +67,7 @@ public class WorkbookFunctionsRandRequest extends BaseRequest implements IWorkbo
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookFunctionsRandRequest expand(final String value) {
+    public WorkbookFunctionsRandRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsRandRequest)this;
     }

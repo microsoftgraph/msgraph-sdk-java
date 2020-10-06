@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsEvenRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsEvenRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Is Even Request Builder.
  */
-public class WorkbookFunctionsIsEvenRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsIsEvenRequestBuilder {
+public class WorkbookFunctionsIsEvenRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsIsEven
@@ -32,22 +31,22 @@ public class WorkbookFunctionsIsEvenRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsEvenRequest
+     * Creates the WorkbookFunctionsIsEvenRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsEvenRequest instance
+     * @return the WorkbookFunctionsIsEvenRequest instance
      */
-    public IWorkbookFunctionsIsEvenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsIsEvenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsEvenRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsIsEvenRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsEvenRequest instance
+     * @return the WorkbookFunctionsIsEvenRequest instance
      */
-    public IWorkbookFunctionsIsEvenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsIsEvenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIsEvenRequest request = new WorkbookFunctionsIsEvenRequest(
                 getRequestUrl(),
                 getClient(),

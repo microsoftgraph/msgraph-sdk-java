@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 /**
  * The class for the OAuth2Permission Grant Collection Reference Request.
  */
-public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollectionRequest<OAuth2PermissionGrantCollectionResponse, IOAuth2PermissionGrantCollectionPage> implements IOAuth2PermissionGrantCollectionReferenceRequest {
+public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollectionRequest<OAuth2PermissionGrantCollectionResponse, OAuth2PermissionGrantCollectionPage> {
 
     /**
      * The request builder for this collection of OAuth2PermissionGrant
@@ -33,7 +33,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param requestOptions the options for this request
      */
     public OAuth2PermissionGrantCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, IOAuth2PermissionGrantCollectionPage.class);
+        super(requestUrl, client, requestOptions, OAuth2PermissionGrantCollectionResponse.class, OAuth2PermissionGrantCollectionPage.class);
     }
 
     public void post(final OAuth2PermissionGrant newOAuth2PermissionGrant, final ICallback<? super OAuth2PermissionGrant> callback) {
@@ -57,7 +57,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param value the expand clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantCollectionReferenceRequest expand(final String value) {
+    public OAuth2PermissionGrantCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OAuth2PermissionGrantCollectionReferenceRequest)this;
     }
@@ -68,7 +68,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param value the filter clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantCollectionReferenceRequest filter(final String value) {
+    public OAuth2PermissionGrantCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (OAuth2PermissionGrantCollectionReferenceRequest)this;
     }
@@ -79,7 +79,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param value the sort clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantCollectionReferenceRequest orderBy(final String value) {
+    public OAuth2PermissionGrantCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OAuth2PermissionGrantCollectionReferenceRequest)this;
     }
@@ -90,7 +90,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param value the select clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantCollectionReferenceRequest select(final String value) {
+    public OAuth2PermissionGrantCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OAuth2PermissionGrantCollectionReferenceRequest)this;
     }
@@ -101,7 +101,7 @@ public class OAuth2PermissionGrantCollectionReferenceRequest extends BaseCollect
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IOAuth2PermissionGrantCollectionReferenceRequest top(final int value) {
+    public OAuth2PermissionGrantCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (OAuth2PermissionGrantCollectionReferenceRequest)this;
     }

@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Category Reference Request.
  */
-public class MobileAppCategoryReferenceRequest extends BaseRequest implements IMobileAppCategoryReferenceRequest {
+public class MobileAppCategoryReferenceRequest extends BaseRequest {
 
     /**
      * The request for the MobileAppCategory
@@ -48,7 +48,7 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
      * @param value the select clause
      * @return the updated request
      */
-    public IMobileAppCategoryReferenceRequest select(final String value) {
+    public MobileAppCategoryReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (MobileAppCategoryReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class MobileAppCategoryReferenceRequest extends BaseRequest implements IM
      * @param value the expand clause
      * @return the updated request
      */
-    public IMobileAppCategoryReferenceRequest expand(final String value) {
+    public MobileAppCategoryReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (MobileAppCategoryReferenceRequest)this;
     }

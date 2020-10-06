@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResp
 /**
  * The class for the Token Lifetime Policy Collection Page.
  */
-public class TokenLifetimePolicyCollectionPage extends BaseCollectionPage<TokenLifetimePolicy, ITokenLifetimePolicyCollectionRequestBuilder> implements ITokenLifetimePolicyCollectionPage {
+public class TokenLifetimePolicyCollectionPage extends BaseCollectionPage<TokenLifetimePolicy, TokenLifetimePolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for TokenLifetimePolicy
@@ -22,7 +22,7 @@ public class TokenLifetimePolicyCollectionPage extends BaseCollectionPage<TokenL
      * @param response the serialized TokenLifetimePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TokenLifetimePolicyCollectionPage(final TokenLifetimePolicyCollectionResponse response, final ITokenLifetimePolicyCollectionRequestBuilder builder) {
+    public TokenLifetimePolicyCollectionPage(final TokenLifetimePolicyCollectionResponse response, final TokenLifetimePolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

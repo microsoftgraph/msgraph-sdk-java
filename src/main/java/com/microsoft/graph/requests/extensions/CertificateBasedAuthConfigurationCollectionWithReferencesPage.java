@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionResponse;
 import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Certificate Based Auth Configuration Collection With References Page.
  */
-public class CertificateBasedAuthConfigurationCollectionWithReferencesPage extends BaseCollectionPage<CertificateBasedAuthConfiguration, ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder> implements ICertificateBasedAuthConfigurationCollectionWithReferencesPage {
+public class CertificateBasedAuthConfigurationCollectionWithReferencesPage extends BaseCollectionPage<CertificateBasedAuthConfiguration, CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for CertificateBasedAuthConfiguration
@@ -34,7 +34,7 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesPage exten
      * @param response the serialized CertificateBasedAuthConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public CertificateBasedAuthConfigurationCollectionWithReferencesPage(final CertificateBasedAuthConfigurationCollectionResponse response, final ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder builder) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesPage(final CertificateBasedAuthConfigurationCollectionResponse response, final CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemCheckinRequest;
 import com.microsoft.graph.requests.extensions.DriveItemCheckinRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Checkin Request Builder.
  */
-public class DriveItemCheckinRequestBuilder extends BaseActionRequestBuilder implements IDriveItemCheckinRequestBuilder {
+public class DriveItemCheckinRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DriveItemCheckin
@@ -34,22 +33,22 @@ public class DriveItemCheckinRequestBuilder extends BaseActionRequestBuilder imp
     }
 
     /**
-     * Creates the IDriveItemCheckinRequest
+     * Creates the DriveItemCheckinRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemCheckinRequest instance
+     * @return the DriveItemCheckinRequest instance
      */
-    public IDriveItemCheckinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemCheckinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDriveItemCheckinRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DriveItemCheckinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemCheckinRequest instance
+     * @return the DriveItemCheckinRequest instance
      */
-    public IDriveItemCheckinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemCheckinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemCheckinRequest request = new DriveItemCheckinRequest(
                 getRequestUrl(),
                 getClient(),

@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContentType;
-import com.microsoft.graph.requests.extensions.IColumnLinkCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnLinkRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnLinkRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Content Type Request.
  */
-public class ContentTypeRequest extends BaseRequest implements IContentTypeRequest {
+public class ContentTypeRequest extends BaseRequest {
 	
     /**
      * The request for the ContentType
@@ -142,7 +140,7 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @param value the select clause
      * @return the updated request
      */
-     public IContentTypeRequest select(final String value) {
+     public ContentTypeRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ContentTypeRequest)this;
      }
@@ -153,7 +151,7 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IContentTypeRequest expand(final String value) {
+     public ContentTypeRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ContentTypeRequest)this;
      }

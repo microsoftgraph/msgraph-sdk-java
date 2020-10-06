@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Teamwork;
-import com.microsoft.graph.requests.extensions.IWorkforceIntegrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkforceIntegrationRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkforceIntegrationRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teamwork Request.
  */
-public class TeamworkRequest extends BaseRequest implements ITeamworkRequest {
+public class TeamworkRequest extends BaseRequest {
 	
     /**
      * The request for the Teamwork
@@ -142,7 +140,7 @@ public class TeamworkRequest extends BaseRequest implements ITeamworkRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamworkRequest select(final String value) {
+     public TeamworkRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TeamworkRequest)this;
      }
@@ -153,7 +151,7 @@ public class TeamworkRequest extends BaseRequest implements ITeamworkRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamworkRequest expand(final String value) {
+     public TeamworkRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TeamworkRequest)this;
      }

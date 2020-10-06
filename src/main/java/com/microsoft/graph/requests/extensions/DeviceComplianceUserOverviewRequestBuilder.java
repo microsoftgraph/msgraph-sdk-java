@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance User Overview Request Builder.
  */
-public class DeviceComplianceUserOverviewRequestBuilder extends BaseRequestBuilder implements IDeviceComplianceUserOverviewRequestBuilder {
+public class DeviceComplianceUserOverviewRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceComplianceUserOverview
@@ -35,9 +35,9 @@ public class DeviceComplianceUserOverviewRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceComplianceUserOverviewRequest instance
+     * @return the DeviceComplianceUserOverviewRequest instance
      */
-    public IDeviceComplianceUserOverviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceComplianceUserOverviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DeviceComplianceUserOverviewRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceComplianceUserOverviewRequest instance
+     * @return the DeviceComplianceUserOverviewRequest instance
      */
-    public IDeviceComplianceUserOverviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceUserOverviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceComplianceUserOverviewRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

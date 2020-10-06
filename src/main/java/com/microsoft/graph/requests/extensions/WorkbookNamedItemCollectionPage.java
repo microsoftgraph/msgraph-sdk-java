@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookNamedItem;
-import com.microsoft.graph.requests.extensions.IWorkbookNamedItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionRespon
 /**
  * The class for the Workbook Named Item Collection Page.
  */
-public class WorkbookNamedItemCollectionPage extends BaseCollectionPage<WorkbookNamedItem, IWorkbookNamedItemCollectionRequestBuilder> implements IWorkbookNamedItemCollectionPage {
+public class WorkbookNamedItemCollectionPage extends BaseCollectionPage<WorkbookNamedItem, WorkbookNamedItemCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookNamedItem
@@ -22,7 +22,7 @@ public class WorkbookNamedItemCollectionPage extends BaseCollectionPage<Workbook
      * @param response the serialized WorkbookNamedItemCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookNamedItemCollectionPage(final WorkbookNamedItemCollectionResponse response, final IWorkbookNamedItemCollectionRequestBuilder builder) {
+    public WorkbookNamedItemCollectionPage(final WorkbookNamedItemCollectionResponse response, final WorkbookNamedItemCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

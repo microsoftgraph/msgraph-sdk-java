@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MailFolder;
-import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MailFolderCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionPage;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.MailFolderCollectionResponse;
 /**
  * The class for the Mail Folder Collection Page.
  */
-public class MailFolderCollectionPage extends BaseCollectionPage<MailFolder, IMailFolderCollectionRequestBuilder> implements IMailFolderCollectionPage {
+public class MailFolderCollectionPage extends BaseCollectionPage<MailFolder, MailFolderCollectionRequestBuilder> {
 
     /**
      * A collection page for MailFolder
@@ -22,7 +22,7 @@ public class MailFolderCollectionPage extends BaseCollectionPage<MailFolder, IMa
      * @param response the serialized MailFolderCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MailFolderCollectionPage(final MailFolderCollectionResponse response, final IMailFolderCollectionRequestBuilder builder) {
+    public MailFolderCollectionPage(final MailFolderCollectionResponse response, final MailFolderCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

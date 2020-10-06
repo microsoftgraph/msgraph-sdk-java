@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMinuteRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsMinuteRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Minute Request Builder.
  */
-public class WorkbookFunctionsMinuteRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsMinuteRequestBuilder {
+public class WorkbookFunctionsMinuteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsMinute
@@ -32,22 +31,22 @@ public class WorkbookFunctionsMinuteRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsMinuteRequest
+     * Creates the WorkbookFunctionsMinuteRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMinuteRequest instance
+     * @return the WorkbookFunctionsMinuteRequest instance
      */
-    public IWorkbookFunctionsMinuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsMinuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsMinuteRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsMinuteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMinuteRequest instance
+     * @return the WorkbookFunctionsMinuteRequest instance
      */
-    public IWorkbookFunctionsMinuteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsMinuteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsMinuteRequest request = new WorkbookFunctionsMinuteRequest(
                 getRequestUrl(),
                 getClient(),

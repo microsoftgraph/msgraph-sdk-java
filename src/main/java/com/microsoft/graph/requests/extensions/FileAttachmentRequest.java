@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the File Attachment Request.
  */
-public class FileAttachmentRequest extends BaseRequest implements IFileAttachmentRequest {
+public class FileAttachmentRequest extends BaseRequest {
 	
     /**
      * The request for the FileAttachment
@@ -138,7 +138,7 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @param value the select clause
      * @return the updated request
      */
-     public IFileAttachmentRequest select(final String value) {
+     public FileAttachmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (FileAttachmentRequest)this;
      }
@@ -149,7 +149,7 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @param value the expand clause
      * @return the updated request
      */
-     public IFileAttachmentRequest expand(final String value) {
+     public FileAttachmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (FileAttachmentRequest)this;
      }

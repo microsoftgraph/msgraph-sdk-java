@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Remote Assistance Partner Request.
  */
-public class RemoteAssistancePartnerRequest extends BaseRequest implements IRemoteAssistancePartnerRequest {
+public class RemoteAssistancePartnerRequest extends BaseRequest {
 	
     /**
      * The request for the RemoteAssistancePartner
@@ -138,7 +138,7 @@ public class RemoteAssistancePartnerRequest extends BaseRequest implements IRemo
      * @param value the select clause
      * @return the updated request
      */
-     public IRemoteAssistancePartnerRequest select(final String value) {
+     public RemoteAssistancePartnerRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (RemoteAssistancePartnerRequest)this;
      }
@@ -149,7 +149,7 @@ public class RemoteAssistancePartnerRequest extends BaseRequest implements IRemo
      * @param value the expand clause
      * @return the updated request
      */
-     public IRemoteAssistancePartnerRequest expand(final String value) {
+     public RemoteAssistancePartnerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (RemoteAssistancePartnerRequest)this;
      }

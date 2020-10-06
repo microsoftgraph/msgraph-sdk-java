@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceComplianceDeviceStatus;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusColle
 /**
  * The class for the Device Compliance Device Status Collection Page.
  */
-public class DeviceComplianceDeviceStatusCollectionPage extends BaseCollectionPage<DeviceComplianceDeviceStatus, IDeviceComplianceDeviceStatusCollectionRequestBuilder> implements IDeviceComplianceDeviceStatusCollectionPage {
+public class DeviceComplianceDeviceStatusCollectionPage extends BaseCollectionPage<DeviceComplianceDeviceStatus, DeviceComplianceDeviceStatusCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceComplianceDeviceStatus
@@ -22,7 +22,7 @@ public class DeviceComplianceDeviceStatusCollectionPage extends BaseCollectionPa
      * @param response the serialized DeviceComplianceDeviceStatusCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceComplianceDeviceStatusCollectionPage(final DeviceComplianceDeviceStatusCollectionResponse response, final IDeviceComplianceDeviceStatusCollectionRequestBuilder builder) {
+    public DeviceComplianceDeviceStatusCollectionPage(final DeviceComplianceDeviceStatusCollectionResponse response, final DeviceComplianceDeviceStatusCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -12,7 +12,7 @@ import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionResponse;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Drive Item Invite Collection Page.
  */
-public class DriveItemInviteCollectionPage extends BaseCollectionPage<Permission, IDriveItemInviteCollectionRequestBuilder> implements IDriveItemInviteCollectionPage {
+public class DriveItemInviteCollectionPage extends BaseCollectionPage<Permission, DriveItemInviteCollectionRequestBuilder> {
 
     /**
      * A collection page for Permission.
@@ -34,7 +34,7 @@ public class DriveItemInviteCollectionPage extends BaseCollectionPage<Permission
      * @param response The serialized DriveItemInviteCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemInviteCollectionPage(final DriveItemInviteCollectionResponse response, final IDriveItemInviteCollectionRequestBuilder builder) {
+    public DriveItemInviteCollectionPage(final DriveItemInviteCollectionResponse response, final DriveItemInviteCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

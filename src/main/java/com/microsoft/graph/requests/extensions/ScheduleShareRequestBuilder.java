@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IScheduleShareRequest;
 import com.microsoft.graph.requests.extensions.ScheduleShareRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Schedule Share Request Builder.
  */
-public class ScheduleShareRequestBuilder extends BaseActionRequestBuilder implements IScheduleShareRequestBuilder {
+public class ScheduleShareRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ScheduleShare
@@ -36,22 +35,22 @@ public class ScheduleShareRequestBuilder extends BaseActionRequestBuilder implem
     }
 
     /**
-     * Creates the IScheduleShareRequest
+     * Creates the ScheduleShareRequest
      *
      * @param requestOptions the options for the request
-     * @return the IScheduleShareRequest instance
+     * @return the ScheduleShareRequest instance
      */
-    public IScheduleShareRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ScheduleShareRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IScheduleShareRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ScheduleShareRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IScheduleShareRequest instance
+     * @return the ScheduleShareRequest instance
      */
-    public IScheduleShareRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ScheduleShareRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ScheduleShareRequest request = new ScheduleShareRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRequestRemoteAssistanceRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRequestRemoteAssistanceRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Request Remote Assistance Request Builder.
  */
-public class ManagedDeviceRequestRemoteAssistanceRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceRequestRemoteAssistanceRequestBuilder {
+public class ManagedDeviceRequestRemoteAssistanceRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceRequestRemoteAssistance
@@ -30,22 +29,22 @@ public class ManagedDeviceRequestRemoteAssistanceRequestBuilder extends BaseActi
     }
 
     /**
-     * Creates the IManagedDeviceRequestRemoteAssistanceRequest
+     * Creates the ManagedDeviceRequestRemoteAssistanceRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceRequestRemoteAssistanceRequest instance
+     * @return the ManagedDeviceRequestRemoteAssistanceRequest instance
      */
-    public IManagedDeviceRequestRemoteAssistanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceRequestRemoteAssistanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceRequestRemoteAssistanceRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceRequestRemoteAssistanceRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceRequestRemoteAssistanceRequest instance
+     * @return the ManagedDeviceRequestRemoteAssistanceRequest instance
      */
-    public IManagedDeviceRequestRemoteAssistanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceRequestRemoteAssistanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceRequestRemoteAssistanceRequest request = new ManagedDeviceRequestRemoteAssistanceRequest(
                 getRequestUrl(),
                 getClient(),

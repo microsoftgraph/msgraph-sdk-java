@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrgContact;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Org Contact Request.
  */
-public class OrgContactRequest extends BaseRequest implements IOrgContactRequest {
+public class OrgContactRequest extends BaseRequest {
 	
     /**
      * The request for the OrgContact
@@ -142,7 +140,7 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IOrgContactRequest select(final String value) {
+     public OrgContactRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OrgContactRequest)this;
      }
@@ -153,7 +151,7 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IOrgContactRequest expand(final String value) {
+     public OrgContactRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OrgContactRequest)this;
      }

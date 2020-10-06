@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the On Premises Conditional Access Settings Request Builder.
  */
-public class OnPremisesConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder implements IOnPremisesConditionalAccessSettingsRequestBuilder {
+public class OnPremisesConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OnPremisesConditionalAccessSettings
@@ -35,9 +35,9 @@ public class OnPremisesConditionalAccessSettingsRequestBuilder extends BaseReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnPremisesConditionalAccessSettingsRequest instance
+     * @return the OnPremisesConditionalAccessSettingsRequest instance
      */
-    public IOnPremisesConditionalAccessSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnPremisesConditionalAccessSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class OnPremisesConditionalAccessSettingsRequestBuilder extends BaseReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnPremisesConditionalAccessSettingsRequest instance
+     * @return the OnPremisesConditionalAccessSettingsRequest instance
      */
-    public IOnPremisesConditionalAccessSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnPremisesConditionalAccessSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnPremisesConditionalAccessSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

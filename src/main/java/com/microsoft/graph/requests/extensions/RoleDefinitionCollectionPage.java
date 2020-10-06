@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.RoleDefinition;
-import com.microsoft.graph.requests.extensions.IRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionPage;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionResponse;
 /**
  * The class for the Role Definition Collection Page.
  */
-public class RoleDefinitionCollectionPage extends BaseCollectionPage<RoleDefinition, IRoleDefinitionCollectionRequestBuilder> implements IRoleDefinitionCollectionPage {
+public class RoleDefinitionCollectionPage extends BaseCollectionPage<RoleDefinition, RoleDefinitionCollectionRequestBuilder> {
 
     /**
      * A collection page for RoleDefinition
@@ -22,7 +22,7 @@ public class RoleDefinitionCollectionPage extends BaseCollectionPage<RoleDefinit
      * @param response the serialized RoleDefinitionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public RoleDefinitionCollectionPage(final RoleDefinitionCollectionResponse response, final IRoleDefinitionCollectionRequestBuilder builder) {
+    public RoleDefinitionCollectionPage(final RoleDefinitionCollectionResponse response, final RoleDefinitionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

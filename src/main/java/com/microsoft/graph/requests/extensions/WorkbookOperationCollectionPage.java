@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookOperation;
-import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRespon
 /**
  * The class for the Workbook Operation Collection Page.
  */
-public class WorkbookOperationCollectionPage extends BaseCollectionPage<WorkbookOperation, IWorkbookOperationCollectionRequestBuilder> implements IWorkbookOperationCollectionPage {
+public class WorkbookOperationCollectionPage extends BaseCollectionPage<WorkbookOperation, WorkbookOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookOperation
@@ -22,7 +22,7 @@ public class WorkbookOperationCollectionPage extends BaseCollectionPage<Workbook
      * @param response the serialized WorkbookOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookOperationCollectionPage(final WorkbookOperationCollectionResponse response, final IWorkbookOperationCollectionRequestBuilder builder) {
+    public WorkbookOperationCollectionPage(final WorkbookOperationCollectionResponse response, final WorkbookOperationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

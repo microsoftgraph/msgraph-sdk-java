@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IApplicationRemovePasswordRequest;
 import com.microsoft.graph.requests.extensions.ApplicationRemovePasswordRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Application Remove Password Request Builder.
  */
-public class ApplicationRemovePasswordRequestBuilder extends BaseActionRequestBuilder implements IApplicationRemovePasswordRequestBuilder {
+public class ApplicationRemovePasswordRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ApplicationRemovePassword
@@ -32,22 +31,22 @@ public class ApplicationRemovePasswordRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IApplicationRemovePasswordRequest
+     * Creates the ApplicationRemovePasswordRequest
      *
      * @param requestOptions the options for the request
-     * @return the IApplicationRemovePasswordRequest instance
+     * @return the ApplicationRemovePasswordRequest instance
      */
-    public IApplicationRemovePasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplicationRemovePasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IApplicationRemovePasswordRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ApplicationRemovePasswordRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IApplicationRemovePasswordRequest instance
+     * @return the ApplicationRemovePasswordRequest instance
      */
-    public IApplicationRemovePasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationRemovePasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ApplicationRemovePasswordRequest request = new ApplicationRemovePasswordRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMessageCopyRequest;
 import com.microsoft.graph.requests.extensions.MessageCopyRequest;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Message Copy Request Builder.
  */
-public class MessageCopyRequestBuilder extends BaseActionRequestBuilder implements IMessageCopyRequestBuilder {
+public class MessageCopyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageCopy
@@ -32,22 +31,22 @@ public class MessageCopyRequestBuilder extends BaseActionRequestBuilder implemen
     }
 
     /**
-     * Creates the IMessageCopyRequest
+     * Creates the MessageCopyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IMessageCopyRequest instance
+     * @return the MessageCopyRequest instance
      */
-    public IMessageCopyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MessageCopyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IMessageCopyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the MessageCopyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IMessageCopyRequest instance
+     * @return the MessageCopyRequest instance
      */
-    public IMessageCopyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageCopyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MessageCopyRequest request = new MessageCopyRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartItemRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartItemRequest;
 import com.microsoft.graph.models.extensions.WorkbookChart;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Item Request Builder.
  */
-public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookChartItemRequestBuilder {
+public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartItem
@@ -32,22 +31,22 @@ public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder 
     }
 
     /**
-     * Creates the IWorkbookChartItemRequest
+     * Creates the WorkbookChartItemRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartItemRequest instance
+     * @return the WorkbookChartItemRequest instance
      */
-    public IWorkbookChartItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartItemRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartItemRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartItemRequest instance
+     * @return the WorkbookChartItemRequest instance
      */
-    public IWorkbookChartItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartItemRequest request = new WorkbookChartItemRequest(
                 getRequestUrl(),
                 getClient(),
@@ -64,61 +63,61 @@ public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder 
     /**
      * Gets the request builder for WorkbookChartAxes
      *
-     * @return the IWorkbookChartAxesRequestBuilder instance
+     * @return the WorkbookChartAxesRequestBuilder instance
      */
-    public IWorkbookChartAxesRequestBuilder axes() {
+    public WorkbookChartAxesRequestBuilder axes() {
         return new WorkbookChartAxesRequestBuilder(getRequestUrlWithAdditionalSegment("axes"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartDataLabels
      *
-     * @return the IWorkbookChartDataLabelsRequestBuilder instance
+     * @return the WorkbookChartDataLabelsRequestBuilder instance
      */
-    public IWorkbookChartDataLabelsRequestBuilder dataLabels() {
+    public WorkbookChartDataLabelsRequestBuilder dataLabels() {
         return new WorkbookChartDataLabelsRequestBuilder(getRequestUrlWithAdditionalSegment("dataLabels"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartAreaFormat
      *
-     * @return the IWorkbookChartAreaFormatRequestBuilder instance
+     * @return the WorkbookChartAreaFormatRequestBuilder instance
      */
-    public IWorkbookChartAreaFormatRequestBuilder format() {
+    public WorkbookChartAreaFormatRequestBuilder format() {
         return new WorkbookChartAreaFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartLegend
      *
-     * @return the IWorkbookChartLegendRequestBuilder instance
+     * @return the WorkbookChartLegendRequestBuilder instance
      */
-    public IWorkbookChartLegendRequestBuilder legend() {
+    public WorkbookChartLegendRequestBuilder legend() {
         return new WorkbookChartLegendRequestBuilder(getRequestUrlWithAdditionalSegment("legend"), getClient(), null);
     }
-    public IWorkbookChartSeriesCollectionRequestBuilder series() {
+    public WorkbookChartSeriesCollectionRequestBuilder series() {
         return new WorkbookChartSeriesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("series"), getClient(), null);
     }
 
-    public IWorkbookChartSeriesRequestBuilder series(final String id) {
+    public WorkbookChartSeriesRequestBuilder series(final String id) {
         return new WorkbookChartSeriesRequestBuilder(getRequestUrlWithAdditionalSegment("series") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartTitle
      *
-     * @return the IWorkbookChartTitleRequestBuilder instance
+     * @return the WorkbookChartTitleRequestBuilder instance
      */
-    public IWorkbookChartTitleRequestBuilder title() {
+    public WorkbookChartTitleRequestBuilder title() {
         return new WorkbookChartTitleRequestBuilder(getRequestUrlWithAdditionalSegment("title"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsVdbRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsVdbRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Vdb Request Builder.
  */
-public class WorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsVdbRequestBuilder {
+public class WorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsVdb
@@ -44,22 +43,22 @@ public class WorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookFunctionsVdbRequest
+     * Creates the WorkbookFunctionsVdbRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsVdbRequest instance
+     * @return the WorkbookFunctionsVdbRequest instance
      */
-    public IWorkbookFunctionsVdbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsVdbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsVdbRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsVdbRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsVdbRequest instance
+     * @return the WorkbookFunctionsVdbRequest instance
      */
-    public IWorkbookFunctionsVdbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsVdbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsVdbRequest request = new WorkbookFunctionsVdbRequest(
                 getRequestUrl(),
                 getClient(),

@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.Message;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMessageDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageDeltaCollectionRequest;
+import com.microsoft.graph.requests.extensions.MessageDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageDeltaCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Message Delta Collection Request Builder.
  */
-public class MessageDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IMessageDeltaCollectionRequestBuilder {
+public class MessageDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of Message
@@ -42,7 +41,7 @@ public class MessageDeltaCollectionRequestBuilder extends BaseFunctionRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMessageDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MessageDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class MessageDeltaCollectionRequestBuilder extends BaseFunctionRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMessageDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MessageDeltaCollectionRequest request = new MessageDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

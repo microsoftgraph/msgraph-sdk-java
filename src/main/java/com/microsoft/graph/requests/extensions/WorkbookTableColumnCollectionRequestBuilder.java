@@ -13,12 +13,12 @@ import com.microsoft.graph.models.extensions.WorkbookRange;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnCollectionRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnAddRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnCountRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnItemAtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableColumnRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableColumnCollectionRequest;
+import com.microsoft.graph.requests.extensions.WorkbookTableColumnAddRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableColumnCountRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableColumnItemAtRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -27,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Table Column Collection Request Builder.
  */
-public class WorkbookTableColumnCollectionRequestBuilder extends BaseRequestBuilder implements IWorkbookTableColumnCollectionRequestBuilder {
+public class WorkbookTableColumnCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of WorkbookTable
@@ -46,7 +46,7 @@ public class WorkbookTableColumnCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookTableColumnCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableColumnCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,25 +56,25 @@ public class WorkbookTableColumnCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookTableColumnCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookTableColumnCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookTableColumnRequestBuilder byId(final String id) {
+    public WorkbookTableColumnRequestBuilder byId(final String id) {
         return new WorkbookTableColumnRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IWorkbookTableColumnAddRequestBuilder add(final Integer index, final com.google.gson.JsonElement values, final String name) {
+    public WorkbookTableColumnAddRequestBuilder add(final Integer index, final com.google.gson.JsonElement values, final String name) {
         return new WorkbookTableColumnAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, index, values, name);
     }
 
-    public IWorkbookTableColumnCountRequestBuilder count() {
+    public WorkbookTableColumnCountRequestBuilder count() {
         return new WorkbookTableColumnCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 
-    public IWorkbookTableColumnItemAtRequestBuilder itemAt(final Integer index) {
+    public WorkbookTableColumnItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookTableColumnItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

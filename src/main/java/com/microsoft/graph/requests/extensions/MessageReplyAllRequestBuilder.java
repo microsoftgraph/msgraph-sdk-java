@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMessageReplyAllRequest;
 import com.microsoft.graph.requests.extensions.MessageReplyAllRequest;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Message Reply All Request Builder.
  */
-public class MessageReplyAllRequestBuilder extends BaseActionRequestBuilder implements IMessageReplyAllRequestBuilder {
+public class MessageReplyAllRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageReplyAll
@@ -34,22 +33,22 @@ public class MessageReplyAllRequestBuilder extends BaseActionRequestBuilder impl
     }
 
     /**
-     * Creates the IMessageReplyAllRequest
+     * Creates the MessageReplyAllRequest
      *
      * @param requestOptions the options for the request
-     * @return the IMessageReplyAllRequest instance
+     * @return the MessageReplyAllRequest instance
      */
-    public IMessageReplyAllRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MessageReplyAllRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IMessageReplyAllRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the MessageReplyAllRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IMessageReplyAllRequest instance
+     * @return the MessageReplyAllRequest instance
      */
-    public IMessageReplyAllRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageReplyAllRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MessageReplyAllRequest request = new MessageReplyAllRequest(
                 getRequestUrl(),
                 getClient(),

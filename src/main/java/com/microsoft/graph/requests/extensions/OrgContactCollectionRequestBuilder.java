@@ -11,10 +11,10 @@ import com.microsoft.graph.models.extensions.OrgContact;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOrgContactCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrgContactRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrgContactCollectionRequest;
-import com.microsoft.graph.requests.extensions.IOrgContactDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrgContactCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrgContactRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrgContactCollectionRequest;
+import com.microsoft.graph.requests.extensions.OrgContactDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Org Contact Collection Request Builder.
  */
-public class OrgContactCollectionRequestBuilder extends BaseRequestBuilder implements IOrgContactCollectionRequestBuilder {
+public class OrgContactCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of OrgContact
@@ -42,7 +42,7 @@ public class OrgContactCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOrgContactCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OrgContactCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,21 +52,21 @@ public class OrgContactCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOrgContactCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OrgContactCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOrgContactRequestBuilder byId(final String id) {
+    public OrgContactRequestBuilder byId(final String id) {
         return new OrgContactRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IOrgContactDeltaCollectionRequestBuilder delta() {
+    public OrgContactDeltaCollectionRequestBuilder delta() {
         return new OrgContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IOrgContactDeltaCollectionRequestBuilder delta(final String deltaLink) {
+	public OrgContactDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new OrgContactDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

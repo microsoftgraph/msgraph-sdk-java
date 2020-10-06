@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookTableRow;
-import com.microsoft.graph.requests.extensions.IWorkbookTableRowCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WorkbookTableRowCollectionRespons
 /**
  * The class for the Workbook Table Row Collection Page.
  */
-public class WorkbookTableRowCollectionPage extends BaseCollectionPage<WorkbookTableRow, IWorkbookTableRowCollectionRequestBuilder> implements IWorkbookTableRowCollectionPage {
+public class WorkbookTableRowCollectionPage extends BaseCollectionPage<WorkbookTableRow, WorkbookTableRowCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookTableRow
@@ -22,7 +22,7 @@ public class WorkbookTableRowCollectionPage extends BaseCollectionPage<WorkbookT
      * @param response the serialized WorkbookTableRowCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookTableRowCollectionPage(final WorkbookTableRowCollectionResponse response, final IWorkbookTableRowCollectionRequestBuilder builder) {
+    public WorkbookTableRowCollectionPage(final WorkbookTableRowCollectionResponse response, final WorkbookTableRowCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

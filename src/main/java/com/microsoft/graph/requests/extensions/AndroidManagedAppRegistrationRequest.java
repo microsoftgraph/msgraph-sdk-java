@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Managed App Registration Request.
  */
-public class AndroidManagedAppRegistrationRequest extends BaseRequest implements IAndroidManagedAppRegistrationRequest {
+public class AndroidManagedAppRegistrationRequest extends BaseRequest {
 	
     /**
      * The request for the AndroidManagedAppRegistration
@@ -138,7 +138,7 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidManagedAppRegistrationRequest select(final String value) {
+     public AndroidManagedAppRegistrationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (AndroidManagedAppRegistrationRequest)this;
      }
@@ -149,7 +149,7 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidManagedAppRegistrationRequest expand(final String value) {
+     public AndroidManagedAppRegistrationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (AndroidManagedAppRegistrationRequest)this;
      }

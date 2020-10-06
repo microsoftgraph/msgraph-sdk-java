@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionFo
 /**
  * The class for the Device Compliance Scheduled Action For Rule Collection Page.
  */
-public class DeviceComplianceScheduledActionForRuleCollectionPage extends BaseCollectionPage<DeviceComplianceScheduledActionForRule, IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder> implements IDeviceComplianceScheduledActionForRuleCollectionPage {
+public class DeviceComplianceScheduledActionForRuleCollectionPage extends BaseCollectionPage<DeviceComplianceScheduledActionForRule, DeviceComplianceScheduledActionForRuleCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceComplianceScheduledActionForRule
@@ -22,7 +22,7 @@ public class DeviceComplianceScheduledActionForRuleCollectionPage extends BaseCo
      * @param response the serialized DeviceComplianceScheduledActionForRuleCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceComplianceScheduledActionForRuleCollectionPage(final DeviceComplianceScheduledActionForRuleCollectionResponse response, final IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder builder) {
+    public DeviceComplianceScheduledActionForRuleCollectionPage(final DeviceComplianceScheduledActionForRuleCollectionResponse response, final DeviceComplianceScheduledActionForRuleCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

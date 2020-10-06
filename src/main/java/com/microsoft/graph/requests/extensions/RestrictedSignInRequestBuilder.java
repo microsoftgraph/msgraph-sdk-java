@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Restricted Sign In Request Builder.
  */
-public class RestrictedSignInRequestBuilder extends BaseRequestBuilder implements IRestrictedSignInRequestBuilder {
+public class RestrictedSignInRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the RestrictedSignIn
@@ -35,9 +35,9 @@ public class RestrictedSignInRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IRestrictedSignInRequest instance
+     * @return the RestrictedSignInRequest instance
      */
-    public IRestrictedSignInRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public RestrictedSignInRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class RestrictedSignInRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IRestrictedSignInRequest instance
+     * @return the RestrictedSignInRequest instance
      */
-    public IRestrictedSignInRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RestrictedSignInRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.RestrictedSignInRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

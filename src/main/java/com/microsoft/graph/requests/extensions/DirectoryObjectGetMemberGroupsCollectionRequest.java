@@ -11,7 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetMemberGroupsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionResponse;
 import com.microsoft.graph.models.extensions.DirectoryObjectGetMemberGroupsBody;
@@ -25,7 +25,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Directory Object Get Member Groups Collection Request.
  */
-public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollectionRequest<DirectoryObjectGetMemberGroupsCollectionResponse, IDirectoryObjectGetMemberGroupsCollectionPage> implements IDirectoryObjectGetMemberGroupsCollectionRequest {
+public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollectionRequest<DirectoryObjectGetMemberGroupsCollectionResponse, DirectoryObjectGetMemberGroupsCollectionPage> {
 
 
     protected final DirectoryObjectGetMemberGroupsBody body;
@@ -39,12 +39,12 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param requestOptions the options for this request
      */
     public DirectoryObjectGetMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionResponse.class, IDirectoryObjectGetMemberGroupsCollectionPage.class);
+        super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionResponse.class, DirectoryObjectGetMemberGroupsCollectionPage.class);
         body = new DirectoryObjectGetMemberGroupsBody();
     }
 
 
-    public void post(final ICallback<? super IDirectoryObjectGetMemberGroupsCollectionPage> callback) {
+    public void post(final ICallback<? super DirectoryObjectGetMemberGroupsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,20 +58,20 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
         });
     }
 
-    public IDirectoryObjectGetMemberGroupsCollectionPage post() throws ClientException {
+    public DirectoryObjectGetMemberGroupsCollectionPage post() throws ClientException {
         final DirectoryObjectGetMemberGroupsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public IDirectoryObjectGetMemberGroupsCollectionPage buildFromResponse(final DirectoryObjectGetMemberGroupsCollectionResponse response) {
-        final IDirectoryObjectGetMemberGroupsCollectionRequestBuilder builder;
+    public DirectoryObjectGetMemberGroupsCollectionPage buildFromResponse(final DirectoryObjectGetMemberGroupsCollectionResponse response) {
+        final DirectoryObjectGetMemberGroupsCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DirectoryObjectGetMemberGroupsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (Boolean) null);
         } else {
             builder = null;
         }
-        final IDirectoryObjectGetMemberGroupsCollectionPage page = new DirectoryObjectGetMemberGroupsCollectionPage(response, builder);
+        final DirectoryObjectGetMemberGroupsCollectionPage page = new DirectoryObjectGetMemberGroupsCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -82,9 +82,9 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param value the select clause
      * @return the updated request
      */
-    public IDirectoryObjectGetMemberGroupsCollectionRequest select(final String value) {
+    public DirectoryObjectGetMemberGroupsCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IDirectoryObjectGetMemberGroupsCollectionRequest)this;
+        return (DirectoryObjectGetMemberGroupsCollectionRequest)this;
     }
 
     /**
@@ -93,9 +93,9 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IDirectoryObjectGetMemberGroupsCollectionRequest top(final int value) {
+    public DirectoryObjectGetMemberGroupsCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IDirectoryObjectGetMemberGroupsCollectionRequest)this;
+        return (DirectoryObjectGetMemberGroupsCollectionRequest)this;
     }
 
     /**
@@ -104,9 +104,9 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param value the expand clause
      * @return the updated request
      */
-    public IDirectoryObjectGetMemberGroupsCollectionRequest expand(final String value) {
+    public DirectoryObjectGetMemberGroupsCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IDirectoryObjectGetMemberGroupsCollectionRequest)this;
+        return (DirectoryObjectGetMemberGroupsCollectionRequest)this;
     }
 
     /**
@@ -115,9 +115,9 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param value the filter clause
      * @return the updated request
      */
-    public IDirectoryObjectGetMemberGroupsCollectionRequest filter(final String value) {
+    public DirectoryObjectGetMemberGroupsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDirectoryObjectGetMemberGroupsCollectionRequest)this;
+        return (DirectoryObjectGetMemberGroupsCollectionRequest)this;
     }
 
     /**
@@ -126,9 +126,9 @@ public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollect
      * @param value the order by clause
      * @return the updated request
      */
-    public IDirectoryObjectGetMemberGroupsCollectionRequest orderBy(final String value) {
+    public DirectoryObjectGetMemberGroupsCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IDirectoryObjectGetMemberGroupsCollectionRequest)this;
+        return (DirectoryObjectGetMemberGroupsCollectionRequest)this;
     }
 
 }

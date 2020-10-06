@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.InferenceClassificationOverride;
-import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionPage;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCo
 /**
  * The class for the Inference Classification Override Collection Page.
  */
-public class InferenceClassificationOverrideCollectionPage extends BaseCollectionPage<InferenceClassificationOverride, IInferenceClassificationOverrideCollectionRequestBuilder> implements IInferenceClassificationOverrideCollectionPage {
+public class InferenceClassificationOverrideCollectionPage extends BaseCollectionPage<InferenceClassificationOverride, InferenceClassificationOverrideCollectionRequestBuilder> {
 
     /**
      * A collection page for InferenceClassificationOverride
@@ -22,7 +22,7 @@ public class InferenceClassificationOverrideCollectionPage extends BaseCollectio
      * @param response the serialized InferenceClassificationOverrideCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public InferenceClassificationOverrideCollectionPage(final InferenceClassificationOverrideCollectionResponse response, final IInferenceClassificationOverrideCollectionRequestBuilder builder) {
+    public InferenceClassificationOverrideCollectionPage(final InferenceClassificationOverrideCollectionResponse response, final InferenceClassificationOverrideCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

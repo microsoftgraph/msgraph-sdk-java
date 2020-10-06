@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.TeamsTab;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequest;
+import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams Tab Collection Request Builder.
  */
-public class TeamsTabCollectionRequestBuilder extends BaseRequestBuilder implements ITeamsTabCollectionRequestBuilder {
+public class TeamsTabCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Channel
@@ -42,7 +42,7 @@ public class TeamsTabCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamsTabCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsTabCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class TeamsTabCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamsTabCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTabCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsTabCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITeamsTabRequestBuilder byId(final String id) {
+    public TeamsTabRequestBuilder byId(final String id) {
         return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

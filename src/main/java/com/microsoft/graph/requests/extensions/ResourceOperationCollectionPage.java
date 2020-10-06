@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ResourceOperation;
-import com.microsoft.graph.requests.extensions.IResourceOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ResourceOperationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ResourceOperationCollectionRespon
 /**
  * The class for the Resource Operation Collection Page.
  */
-public class ResourceOperationCollectionPage extends BaseCollectionPage<ResourceOperation, IResourceOperationCollectionRequestBuilder> implements IResourceOperationCollectionPage {
+public class ResourceOperationCollectionPage extends BaseCollectionPage<ResourceOperation, ResourceOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for ResourceOperation
@@ -22,7 +22,7 @@ public class ResourceOperationCollectionPage extends BaseCollectionPage<Resource
      * @param response the serialized ResourceOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ResourceOperationCollectionPage(final ResourceOperationCollectionResponse response, final IResourceOperationCollectionRequestBuilder builder) {
+    public ResourceOperationCollectionPage(final ResourceOperationCollectionResponse response, final ResourceOperationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

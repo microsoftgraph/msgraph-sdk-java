@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the OAuth2Permission Grant With Reference Request.
  */
-public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest implements IOAuth2PermissionGrantWithReferenceRequest {
+public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the OAuth2PermissionGrant
@@ -78,9 +78,9 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantWithReferenceRequest select(final String value) {
+    public OAuth2PermissionGrantWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IOAuth2PermissionGrantWithReferenceRequest)this;
+        return (OAuth2PermissionGrantWithReferenceRequest)this;
     }
 
     /**
@@ -89,7 +89,7 @@ public class OAuth2PermissionGrantWithReferenceRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-    public IOAuth2PermissionGrantWithReferenceRequest expand(final String value) {
+    public OAuth2PermissionGrantWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OAuth2PermissionGrantWithReferenceRequest)this;
     }

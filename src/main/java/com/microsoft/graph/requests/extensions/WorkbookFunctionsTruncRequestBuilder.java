@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTruncRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsTruncRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Trunc Request Builder.
  */
-public class WorkbookFunctionsTruncRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsTruncRequestBuilder {
+public class WorkbookFunctionsTruncRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsTrunc
@@ -34,22 +33,22 @@ public class WorkbookFunctionsTruncRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsTruncRequest
+     * Creates the WorkbookFunctionsTruncRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTruncRequest instance
+     * @return the WorkbookFunctionsTruncRequest instance
      */
-    public IWorkbookFunctionsTruncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsTruncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsTruncRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsTruncRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTruncRequest instance
+     * @return the WorkbookFunctionsTruncRequest instance
      */
-    public IWorkbookFunctionsTruncRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsTruncRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsTruncRequest request = new WorkbookFunctionsTruncRequest(
                 getRequestUrl(),
                 getClient(),

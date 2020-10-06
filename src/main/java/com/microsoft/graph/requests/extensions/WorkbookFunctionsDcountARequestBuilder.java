@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDcountARequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsDcountARequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Dcount ARequest Builder.
  */
-public class WorkbookFunctionsDcountARequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsDcountARequestBuilder {
+public class WorkbookFunctionsDcountARequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsDcountA
@@ -36,22 +35,22 @@ public class WorkbookFunctionsDcountARequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsDcountARequest
+     * Creates the WorkbookFunctionsDcountARequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDcountARequest instance
+     * @return the WorkbookFunctionsDcountARequest instance
      */
-    public IWorkbookFunctionsDcountARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsDcountARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsDcountARequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsDcountARequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDcountARequest instance
+     * @return the WorkbookFunctionsDcountARequest instance
      */
-    public IWorkbookFunctionsDcountARequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsDcountARequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDcountARequest request = new WorkbookFunctionsDcountARequest(
                 getRequestUrl(),
                 getClient(),

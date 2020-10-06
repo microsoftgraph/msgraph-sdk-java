@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the File Attachment Stream Request Builder.
  */
-public class FileAttachmentStreamRequestBuilder extends BaseRequestBuilder implements IFileAttachmentStreamRequestBuilder {
+public class FileAttachmentStreamRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the FileAttachment
@@ -35,9 +35,9 @@ public class FileAttachmentStreamRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IFileAttachmentStreamRequest instance
+     * @return the FileAttachmentStreamRequest instance
      */
-    public IFileAttachmentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public FileAttachmentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class FileAttachmentStreamRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IFileAttachmentStreamRequest instance
+     * @return the FileAttachmentStreamRequest instance
      */
-    public IFileAttachmentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FileAttachmentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new FileAttachmentStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

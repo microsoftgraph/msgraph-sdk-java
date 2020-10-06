@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceWindowsDefenderUpdateSignaturesRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceWindowsDefenderUpdateSignaturesRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Windows Defender Update Signatures Request Builder.
  */
-public class ManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder {
+public class ManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceWindowsDefenderUpdateSignatures
@@ -30,22 +29,22 @@ public class ManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder extends 
     }
 
     /**
-     * Creates the IManagedDeviceWindowsDefenderUpdateSignaturesRequest
+     * Creates the ManagedDeviceWindowsDefenderUpdateSignaturesRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceWindowsDefenderUpdateSignaturesRequest instance
+     * @return the ManagedDeviceWindowsDefenderUpdateSignaturesRequest instance
      */
-    public IManagedDeviceWindowsDefenderUpdateSignaturesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceWindowsDefenderUpdateSignaturesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceWindowsDefenderUpdateSignaturesRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceWindowsDefenderUpdateSignaturesRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceWindowsDefenderUpdateSignaturesRequest instance
+     * @return the ManagedDeviceWindowsDefenderUpdateSignaturesRequest instance
      */
-    public IManagedDeviceWindowsDefenderUpdateSignaturesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceWindowsDefenderUpdateSignaturesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceWindowsDefenderUpdateSignaturesRequest request = new ManagedDeviceWindowsDefenderUpdateSignaturesRequest(
                 getRequestUrl(),
                 getClient(),

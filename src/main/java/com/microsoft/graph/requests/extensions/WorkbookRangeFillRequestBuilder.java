@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Fill Request Builder.
  */
-public class WorkbookRangeFillRequestBuilder extends BaseRequestBuilder implements IWorkbookRangeFillRequestBuilder {
+public class WorkbookRangeFillRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookRangeFill
@@ -35,9 +35,9 @@ public class WorkbookRangeFillRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookRangeFillRequest instance
+     * @return the WorkbookRangeFillRequest instance
      */
-    public IWorkbookRangeFillRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeFillRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,15 +45,15 @@ public class WorkbookRangeFillRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookRangeFillRequest instance
+     * @return the WorkbookRangeFillRequest instance
      */
-    public IWorkbookRangeFillRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeFillRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookRangeFillRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IWorkbookRangeFillClearRequestBuilder clear() {
+    public WorkbookRangeFillClearRequestBuilder clear() {
         return new WorkbookRangeFillClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 }

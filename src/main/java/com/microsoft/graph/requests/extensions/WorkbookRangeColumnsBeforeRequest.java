@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeColumnsBeforeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeColumnsBeforeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Columns Before Request.
  */
-public class WorkbookRangeColumnsBeforeRequest extends BaseRequest implements IWorkbookRangeColumnsBeforeRequest {
+public class WorkbookRangeColumnsBeforeRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeColumnsBefore
@@ -97,7 +96,7 @@ public class WorkbookRangeColumnsBeforeRequest extends BaseRequest implements IW
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeColumnsBeforeRequest select(final String value) {
+    public WorkbookRangeColumnsBeforeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeColumnsBeforeRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookRangeColumnsBeforeRequest extends BaseRequest implements IW
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeColumnsBeforeRequest expand(final String value) {
+    public WorkbookRangeColumnsBeforeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeColumnsBeforeRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookRangeColumnsBeforeRequest extends BaseRequest implements IW
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeColumnsBeforeRequest filter(final String value) {
+    public WorkbookRangeColumnsBeforeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeColumnsBeforeRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookRangeColumnsBeforeRequest extends BaseRequest implements IW
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeColumnsBeforeRequest orderBy(final String value) {
+    public WorkbookRangeColumnsBeforeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeColumnsBeforeRequest)this;
     }

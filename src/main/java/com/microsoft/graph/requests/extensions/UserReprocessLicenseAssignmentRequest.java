@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.requests.extensions.IUserReprocessLicenseAssignmentRequest;
 import com.microsoft.graph.requests.extensions.UserReprocessLicenseAssignmentRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Reprocess License Assignment Request.
  */
-public class UserReprocessLicenseAssignmentRequest extends BaseRequest implements IUserReprocessLicenseAssignmentRequest {
+public class UserReprocessLicenseAssignmentRequest extends BaseRequest {
 
     /**
      * The request for this UserReprocessLicenseAssignment
@@ -57,7 +56,7 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-    public IUserReprocessLicenseAssignmentRequest select(final String value) {
+    public UserReprocessLicenseAssignmentRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserReprocessLicenseAssignmentRequest)this;
     }
@@ -68,7 +67,7 @@ public class UserReprocessLicenseAssignmentRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-    public IUserReprocessLicenseAssignmentRequest expand(final String value) {
+    public UserReprocessLicenseAssignmentRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserReprocessLicenseAssignmentRequest)this;
     }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IListItemVersionRestoreVersionRequest;
 import com.microsoft.graph.requests.extensions.ListItemVersionRestoreVersionRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the List Item Version Restore Version Request.
  */
-public class ListItemVersionRestoreVersionRequest extends BaseRequest implements IListItemVersionRestoreVersionRequest {
+public class ListItemVersionRestoreVersionRequest extends BaseRequest {
 
     /**
      * The request for this ListItemVersionRestoreVersion

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCoupDayBsRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsCoupDayBsRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Coup Day Bs Request Builder.
  */
-public class WorkbookFunctionsCoupDayBsRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsCoupDayBsRequestBuilder {
+public class WorkbookFunctionsCoupDayBsRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsCoupDayBs
@@ -38,22 +37,22 @@ public class WorkbookFunctionsCoupDayBsRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsCoupDayBsRequest
+     * Creates the WorkbookFunctionsCoupDayBsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCoupDayBsRequest instance
+     * @return the WorkbookFunctionsCoupDayBsRequest instance
      */
-    public IWorkbookFunctionsCoupDayBsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsCoupDayBsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsCoupDayBsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsCoupDayBsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCoupDayBsRequest instance
+     * @return the WorkbookFunctionsCoupDayBsRequest instance
      */
-    public IWorkbookFunctionsCoupDayBsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsCoupDayBsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCoupDayBsRequest request = new WorkbookFunctionsCoupDayBsRequest(
                 getRequestUrl(),
                 getClient(),

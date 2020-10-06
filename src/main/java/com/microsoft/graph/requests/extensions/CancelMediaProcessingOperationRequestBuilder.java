@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Cancel Media Processing Operation Request Builder.
  */
-public class CancelMediaProcessingOperationRequestBuilder extends BaseRequestBuilder implements ICancelMediaProcessingOperationRequestBuilder {
+public class CancelMediaProcessingOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the CancelMediaProcessingOperation
@@ -35,9 +35,9 @@ public class CancelMediaProcessingOperationRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICancelMediaProcessingOperationRequest instance
+     * @return the CancelMediaProcessingOperationRequest instance
      */
-    public ICancelMediaProcessingOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CancelMediaProcessingOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class CancelMediaProcessingOperationRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICancelMediaProcessingOperationRequest instance
+     * @return the CancelMediaProcessingOperationRequest instance
      */
-    public ICancelMediaProcessingOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CancelMediaProcessingOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CancelMediaProcessingOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFactDoubleRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFactDoubleRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Fact Double Request Builder.
  */
-public class WorkbookFunctionsFactDoubleRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsFactDoubleRequestBuilder {
+public class WorkbookFunctionsFactDoubleRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsFactDouble
@@ -32,22 +31,22 @@ public class WorkbookFunctionsFactDoubleRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookFunctionsFactDoubleRequest
+     * Creates the WorkbookFunctionsFactDoubleRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFactDoubleRequest instance
+     * @return the WorkbookFunctionsFactDoubleRequest instance
      */
-    public IWorkbookFunctionsFactDoubleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsFactDoubleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsFactDoubleRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsFactDoubleRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFactDoubleRequest instance
+     * @return the WorkbookFunctionsFactDoubleRequest instance
      */
-    public IWorkbookFunctionsFactDoubleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsFactDoubleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsFactDoubleRequest request = new WorkbookFunctionsFactDoubleRequest(
                 getRequestUrl(),
                 getClient(),

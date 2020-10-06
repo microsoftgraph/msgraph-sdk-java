@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.IdentityProvider;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequest;
+import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityProviderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Identity Provider Collection Request Builder.
  */
-public class IdentityProviderCollectionRequestBuilder extends BaseRequestBuilder implements IIdentityProviderCollectionRequestBuilder {
+public class IdentityProviderCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of IdentityProvider
@@ -41,7 +41,7 @@ public class IdentityProviderCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IIdentityProviderCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public IdentityProviderCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class IdentityProviderCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IIdentityProviderCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityProviderCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IdentityProviderCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IIdentityProviderRequestBuilder byId(final String id) {
+    public IdentityProviderRequestBuilder byId(final String id) {
         return new IdentityProviderRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

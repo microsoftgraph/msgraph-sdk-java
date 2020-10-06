@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITeamGetAllMessagesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamGetAllMessagesCollectionRequest;
+import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Team Get All Messages Collection Request Builder.
  */
-public class TeamGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequestBuilder implements ITeamGetAllMessagesCollectionRequestBuilder {
+public class TeamGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of Team
@@ -42,7 +41,7 @@ public class TeamGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamGetAllMessagesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamGetAllMessagesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class TeamGetAllMessagesCollectionRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamGetAllMessagesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamGetAllMessagesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TeamGetAllMessagesCollectionRequest request = new TeamGetAllMessagesCollectionRequest(
                 getRequestUrl(),
                 getClient(),

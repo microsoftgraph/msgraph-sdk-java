@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Endpoint Collection Reference Request Builder.
  */
-public class EndpointCollectionReferenceRequestBuilder extends BaseRequestBuilder implements IEndpointCollectionReferenceRequestBuilder {
+public class EndpointCollectionReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -39,7 +39,7 @@ public class EndpointCollectionReferenceRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEndpointCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EndpointCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +49,7 @@ public class EndpointCollectionReferenceRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEndpointCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EndpointCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EndpointCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

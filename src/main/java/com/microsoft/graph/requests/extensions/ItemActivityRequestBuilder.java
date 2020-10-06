@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivity;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -20,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Activity Request Builder.
  */
-public class ItemActivityRequestBuilder extends BaseRequestBuilder implements IItemActivityRequestBuilder {
+public class ItemActivityRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ItemActivity
@@ -37,9 +36,9 @@ public class ItemActivityRequestBuilder extends BaseRequestBuilder implements II
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IItemActivityRequest instance
+     * @return the ItemActivityRequest instance
      */
-    public IItemActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ItemActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +46,9 @@ public class ItemActivityRequestBuilder extends BaseRequestBuilder implements II
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IItemActivityRequest instance
+     * @return the ItemActivityRequest instance
      */
-    public IItemActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ItemActivityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,9 +57,9 @@ public class ItemActivityRequestBuilder extends BaseRequestBuilder implements II
     /**
      * Gets the request builder for DriveItem
      *
-     * @return the IDriveItemRequestBuilder instance
+     * @return the DriveItemRequestBuilder instance
      */
-    public IDriveItemRequestBuilder driveItem() {
+    public DriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
 }

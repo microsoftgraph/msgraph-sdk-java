@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRank_AvgRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRank_AvgRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Rank_Avg Request Builder.
  */
-public class WorkbookFunctionsRank_AvgRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsRank_AvgRequestBuilder {
+public class WorkbookFunctionsRank_AvgRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsRank_Avg
@@ -36,22 +35,22 @@ public class WorkbookFunctionsRank_AvgRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsRank_AvgRequest
+     * Creates the WorkbookFunctionsRank_AvgRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRank_AvgRequest instance
+     * @return the WorkbookFunctionsRank_AvgRequest instance
      */
-    public IWorkbookFunctionsRank_AvgRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsRank_AvgRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsRank_AvgRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsRank_AvgRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsRank_AvgRequest instance
+     * @return the WorkbookFunctionsRank_AvgRequest instance
      */
-    public IWorkbookFunctionsRank_AvgRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsRank_AvgRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsRank_AvgRequest request = new WorkbookFunctionsRank_AvgRequest(
                 getRequestUrl(),
                 getClient(),

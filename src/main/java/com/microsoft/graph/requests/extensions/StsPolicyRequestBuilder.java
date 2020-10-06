@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.StsPolicy;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Sts Policy Request Builder.
  */
-public class StsPolicyRequestBuilder extends BaseRequestBuilder implements IStsPolicyRequestBuilder {
+public class StsPolicyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the StsPolicy
@@ -39,9 +37,9 @@ public class StsPolicyRequestBuilder extends BaseRequestBuilder implements IStsP
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IStsPolicyRequest instance
+     * @return the StsPolicyRequest instance
      */
-    public IStsPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public StsPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class StsPolicyRequestBuilder extends BaseRequestBuilder implements IStsP
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IStsPolicyRequest instance
+     * @return the StsPolicyRequest instance
      */
-    public IStsPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public StsPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.StsPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
+    public DirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
     }
 }

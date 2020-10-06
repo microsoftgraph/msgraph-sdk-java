@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnlineMeetingCreateOrGetRequest;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCreateOrGetRequest;
 import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
@@ -18,7 +17,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Online Meeting Create Or Get Request Builder.
  */
-public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBuilder implements IOnlineMeetingCreateOrGetRequestBuilder {
+public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this OnlineMeetingCreateOrGet
@@ -44,22 +43,22 @@ public class OnlineMeetingCreateOrGetRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IOnlineMeetingCreateOrGetRequest
+     * Creates the OnlineMeetingCreateOrGetRequest
      *
      * @param requestOptions the options for the request
-     * @return the IOnlineMeetingCreateOrGetRequest instance
+     * @return the OnlineMeetingCreateOrGetRequest instance
      */
-    public IOnlineMeetingCreateOrGetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnlineMeetingCreateOrGetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IOnlineMeetingCreateOrGetRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the OnlineMeetingCreateOrGetRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IOnlineMeetingCreateOrGetRequest instance
+     * @return the OnlineMeetingCreateOrGetRequest instance
      */
-    public IOnlineMeetingCreateOrGetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnlineMeetingCreateOrGetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         OnlineMeetingCreateOrGetRequest request = new OnlineMeetingCreateOrGetRequest(
                 getRequestUrl(),
                 getClient(),

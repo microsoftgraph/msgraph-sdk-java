@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEv
 /**
  * The class for the Device Management Troubleshooting Event Collection Page.
  */
-public class DeviceManagementTroubleshootingEventCollectionPage extends BaseCollectionPage<DeviceManagementTroubleshootingEvent, IDeviceManagementTroubleshootingEventCollectionRequestBuilder> implements IDeviceManagementTroubleshootingEventCollectionPage {
+public class DeviceManagementTroubleshootingEventCollectionPage extends BaseCollectionPage<DeviceManagementTroubleshootingEvent, DeviceManagementTroubleshootingEventCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceManagementTroubleshootingEvent
@@ -22,7 +22,7 @@ public class DeviceManagementTroubleshootingEventCollectionPage extends BaseColl
      * @param response the serialized DeviceManagementTroubleshootingEventCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceManagementTroubleshootingEventCollectionPage(final DeviceManagementTroubleshootingEventCollectionResponse response, final IDeviceManagementTroubleshootingEventCollectionRequestBuilder builder) {
+    public DeviceManagementTroubleshootingEventCollectionPage(final DeviceManagementTroubleshootingEventCollectionResponse response, final DeviceManagementTroubleshootingEventCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

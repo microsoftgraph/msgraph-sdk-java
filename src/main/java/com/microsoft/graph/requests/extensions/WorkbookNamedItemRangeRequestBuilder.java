@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemRangeRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Named Item Range Request Builder.
  */
-public class WorkbookNamedItemRangeRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookNamedItemRangeRequestBuilder {
+public class WorkbookNamedItemRangeRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookNamedItemRange
@@ -30,22 +29,22 @@ public class WorkbookNamedItemRangeRequestBuilder extends BaseFunctionRequestBui
     }
 
     /**
-     * Creates the IWorkbookNamedItemRangeRequest
+     * Creates the WorkbookNamedItemRangeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookNamedItemRangeRequest instance
+     * @return the WorkbookNamedItemRangeRequest instance
      */
-    public IWorkbookNamedItemRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookNamedItemRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookNamedItemRangeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookNamedItemRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookNamedItemRangeRequest instance
+     * @return the WorkbookNamedItemRangeRequest instance
      */
-    public IWorkbookNamedItemRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookNamedItemRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookNamedItemRangeRequest request = new WorkbookNamedItemRangeRequest(
                 getRequestUrl(),
                 getClient(),
@@ -62,27 +61,27 @@ public class WorkbookNamedItemRangeRequestBuilder extends BaseFunctionRequestBui
     /**
      * Gets the request builder for WorkbookRangeFormat
      *
-     * @return the IWorkbookRangeFormatRequestBuilder instance
+     * @return the WorkbookRangeFormatRequestBuilder instance
      */
-    public IWorkbookRangeFormatRequestBuilder format() {
+    public WorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeSort
      *
-     * @return the IWorkbookRangeSortRequestBuilder instance
+     * @return the WorkbookRangeSortRequestBuilder instance
      */
-    public IWorkbookRangeSortRequestBuilder sort() {
+    public WorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

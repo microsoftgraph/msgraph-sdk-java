@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEventDeclineRequest;
 import com.microsoft.graph.requests.extensions.EventDeclineRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Event Decline Request Builder.
  */
-public class EventDeclineRequestBuilder extends BaseActionRequestBuilder implements IEventDeclineRequestBuilder {
+public class EventDeclineRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this EventDecline
@@ -34,22 +33,22 @@ public class EventDeclineRequestBuilder extends BaseActionRequestBuilder impleme
     }
 
     /**
-     * Creates the IEventDeclineRequest
+     * Creates the EventDeclineRequest
      *
      * @param requestOptions the options for the request
-     * @return the IEventDeclineRequest instance
+     * @return the EventDeclineRequest instance
      */
-    public IEventDeclineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EventDeclineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IEventDeclineRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the EventDeclineRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IEventDeclineRequest instance
+     * @return the EventDeclineRequest instance
      */
-    public IEventDeclineRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventDeclineRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         EventDeclineRequest request = new EventDeclineRequest(
                 getRequestUrl(),
                 getClient(),

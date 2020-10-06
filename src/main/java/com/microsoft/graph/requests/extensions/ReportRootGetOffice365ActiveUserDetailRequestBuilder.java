@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActiveUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActiveUserDetailRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Office365Active User Detail Request Builder.
  */
-public class ReportRootGetOffice365ActiveUserDetailRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetOffice365ActiveUserDetailRequestBuilder {
+public class ReportRootGetOffice365ActiveUserDetailRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetOffice365ActiveUserDetail
@@ -45,22 +44,22 @@ public class ReportRootGetOffice365ActiveUserDetailRequestBuilder extends BaseFu
     }
 
     /**
-     * Creates the IReportRootGetOffice365ActiveUserDetailRequest
+     * Creates the ReportRootGetOffice365ActiveUserDetailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOffice365ActiveUserDetailRequest instance
+     * @return the ReportRootGetOffice365ActiveUserDetailRequest instance
      */
-    public IReportRootGetOffice365ActiveUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetOffice365ActiveUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetOffice365ActiveUserDetailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetOffice365ActiveUserDetailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOffice365ActiveUserDetailRequest instance
+     * @return the ReportRootGetOffice365ActiveUserDetailRequest instance
      */
-    public IReportRootGetOffice365ActiveUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetOffice365ActiveUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOffice365ActiveUserDetailRequest request = new ReportRootGetOffice365ActiveUserDetailRequest(
                 getRequestUrl(),
                 getClient(),

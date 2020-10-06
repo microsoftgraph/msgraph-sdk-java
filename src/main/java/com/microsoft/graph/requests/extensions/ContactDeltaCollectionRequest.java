@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.Contact;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IContactDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.ContactDeltaCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Contact Delta Collection Request.
  */
-public class ContactDeltaCollectionRequest extends BaseCollectionRequest<ContactDeltaCollectionResponse, IContactDeltaCollectionPage> implements IContactDeltaCollectionRequest {
+public class ContactDeltaCollectionRequest extends BaseCollectionRequest<ContactDeltaCollectionResponse, ContactDeltaCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class ContactDeltaCollectionRequest extends BaseCollectionRequest<Contact
      * @param requestOptions the options for this request
      */
     public ContactDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContactDeltaCollectionResponse.class, IContactDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions, ContactDeltaCollectionResponse.class, ContactDeltaCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IContactDeltaCollectionPage> callback) {
+    public void get(final ICallback<? super ContactDeltaCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class ContactDeltaCollectionRequest extends BaseCollectionRequest<Contact
         });
     }
 
-    public IContactDeltaCollectionPage get() throws ClientException {
+    public ContactDeltaCollectionPage get() throws ClientException {
         final ContactDeltaCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IContactDeltaCollectionPage buildFromResponse(final ContactDeltaCollectionResponse response) {
-        final IContactDeltaCollectionRequestBuilder builder;
+    public ContactDeltaCollectionPage buildFromResponse(final ContactDeltaCollectionResponse response) {
+        final ContactDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ContactDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IContactDeltaCollectionPage page = new ContactDeltaCollectionPage(response, builder);
+        final ContactDeltaCollectionPage page = new ContactDeltaCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class ContactDeltaCollectionRequest extends BaseCollectionRequest<Contact
      * @param value the select clause
      * @return the updated request
      */
-    public IContactDeltaCollectionRequest select(final String value) {
+    public ContactDeltaCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IContactDeltaCollectionRequest)this;
+        return (ContactDeltaCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class ContactDeltaCollectionRequest extends BaseCollectionRequest<Contact
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IContactDeltaCollectionRequest top(final int value) {
+    public ContactDeltaCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IContactDeltaCollectionRequest)this;
+        return (ContactDeltaCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class ContactDeltaCollectionRequest extends BaseCollectionRequest<Contact
      * @param value the expand clause
      * @return the updated request
      */
-    public IContactDeltaCollectionRequest expand(final String value) {
+    public ContactDeltaCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IContactDeltaCollectionRequest)this;
+        return (ContactDeltaCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class ContactDeltaCollectionRequest extends BaseCollectionRequest<Contact
      * @param value the filter clause
      * @return the updated request
      */
-    public IContactDeltaCollectionRequest filter(final String value) {
+    public ContactDeltaCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IContactDeltaCollectionRequest)this;
+        return (ContactDeltaCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class ContactDeltaCollectionRequest extends BaseCollectionRequest<Contact
      * @param value the order by clause
      * @return the updated request
      */
-    public IContactDeltaCollectionRequest orderBy(final String value) {
+    public ContactDeltaCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IContactDeltaCollectionRequest)this;
+        return (ContactDeltaCollectionRequest)this;
     }
 
 }

@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams Template Reference Request.
  */
-public class TeamsTemplateReferenceRequest extends BaseRequest implements ITeamsTemplateReferenceRequest {
+public class TeamsTemplateReferenceRequest extends BaseRequest {
 
     /**
      * The request for the TeamsTemplate
@@ -48,7 +48,7 @@ public class TeamsTemplateReferenceRequest extends BaseRequest implements ITeams
      * @param value the select clause
      * @return the updated request
      */
-    public ITeamsTemplateReferenceRequest select(final String value) {
+    public TeamsTemplateReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TeamsTemplateReferenceRequest)this;
     }
@@ -59,7 +59,7 @@ public class TeamsTemplateReferenceRequest extends BaseRequest implements ITeams
      * @param value the expand clause
      * @return the updated request
      */
-    public ITeamsTemplateReferenceRequest expand(final String value) {
+    public TeamsTemplateReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (TeamsTemplateReferenceRequest)this;
     }

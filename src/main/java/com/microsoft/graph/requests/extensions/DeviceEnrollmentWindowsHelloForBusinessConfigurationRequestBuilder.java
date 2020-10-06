@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Enrollment Windows Hello For Business Configuration Request Builder.
  */
-public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder extends BaseRequestBuilder implements IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder {
+public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceEnrollmentWindowsHelloForBusinessConfiguration
@@ -35,9 +35,9 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest instance
+     * @return the DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest instance
      */
-    public IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,18 +45,18 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBuilder 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest instance
+     * @return the DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest instance
      */
-    public IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IEnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
+    public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IEnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
+    public EnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

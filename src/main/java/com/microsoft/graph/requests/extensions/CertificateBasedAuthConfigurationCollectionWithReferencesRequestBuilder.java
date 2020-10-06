@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Certificate Based Auth Configuration Collection With References Request Builder.
  */
-public class CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder {
+public class CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Organization
@@ -39,7 +39,7 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,15 +49,15 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CertificateBasedAuthConfigurationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CertificateBasedAuthConfigurationCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ICertificateBasedAuthConfigurationWithReferenceRequestBuilder byId(final String id) {
+    public CertificateBasedAuthConfigurationWithReferenceRequestBuilder byId(final String id) {
         return new CertificateBasedAuthConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public ICertificateBasedAuthConfigurationCollectionReferenceRequestBuilder references(){
+    public CertificateBasedAuthConfigurationCollectionReferenceRequestBuilder references(){
         return new CertificateBasedAuthConfigurationCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

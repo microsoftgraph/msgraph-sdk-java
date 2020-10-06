@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsReceivedRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsReceivedRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Received Request Builder.
  */
-public class WorkbookFunctionsReceivedRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsReceivedRequestBuilder {
+public class WorkbookFunctionsReceivedRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsReceived
@@ -40,22 +39,22 @@ public class WorkbookFunctionsReceivedRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsReceivedRequest
+     * Creates the WorkbookFunctionsReceivedRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsReceivedRequest instance
+     * @return the WorkbookFunctionsReceivedRequest instance
      */
-    public IWorkbookFunctionsReceivedRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsReceivedRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsReceivedRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsReceivedRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsReceivedRequest instance
+     * @return the WorkbookFunctionsReceivedRequest instance
      */
-    public IWorkbookFunctionsReceivedRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsReceivedRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsReceivedRequest request = new WorkbookFunctionsReceivedRequest(
                 getRequestUrl(),
                 getClient(),

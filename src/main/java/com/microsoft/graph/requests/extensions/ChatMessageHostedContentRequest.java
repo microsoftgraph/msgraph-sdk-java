@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Chat Message Hosted Content Request.
  */
-public class ChatMessageHostedContentRequest extends BaseRequest implements IChatMessageHostedContentRequest {
+public class ChatMessageHostedContentRequest extends BaseRequest {
 	
     /**
      * The request for the ChatMessageHostedContent
@@ -138,7 +138,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest implements ICha
      * @param value the select clause
      * @return the updated request
      */
-     public IChatMessageHostedContentRequest select(final String value) {
+     public ChatMessageHostedContentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ChatMessageHostedContentRequest)this;
      }
@@ -149,7 +149,7 @@ public class ChatMessageHostedContentRequest extends BaseRequest implements ICha
      * @param value the expand clause
      * @return the updated request
      */
-     public IChatMessageHostedContentRequest expand(final String value) {
+     public ChatMessageHostedContentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ChatMessageHostedContentRequest)this;
      }

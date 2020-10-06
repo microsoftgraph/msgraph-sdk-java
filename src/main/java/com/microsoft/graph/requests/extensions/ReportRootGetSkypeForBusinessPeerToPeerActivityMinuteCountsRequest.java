@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Skype For Business Peer To Peer Activity Minute Counts Request.
  */
-public class ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest extends BaseRequest implements IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest {
+public class ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCounts
@@ -97,7 +96,7 @@ public class ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest 
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest select(final String value) {
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest 
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest expand(final String value) {
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest 
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest filter(final String value) {
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest 
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest orderBy(final String value) {
+    public ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequest)this;
     }

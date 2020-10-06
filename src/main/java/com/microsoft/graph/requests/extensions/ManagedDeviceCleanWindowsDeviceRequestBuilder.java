@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCleanWindowsDeviceRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCleanWindowsDeviceRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Clean Windows Device Request Builder.
  */
-public class ManagedDeviceCleanWindowsDeviceRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceCleanWindowsDeviceRequestBuilder {
+public class ManagedDeviceCleanWindowsDeviceRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceCleanWindowsDevice
@@ -32,22 +31,22 @@ public class ManagedDeviceCleanWindowsDeviceRequestBuilder extends BaseActionReq
     }
 
     /**
-     * Creates the IManagedDeviceCleanWindowsDeviceRequest
+     * Creates the ManagedDeviceCleanWindowsDeviceRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceCleanWindowsDeviceRequest instance
+     * @return the ManagedDeviceCleanWindowsDeviceRequest instance
      */
-    public IManagedDeviceCleanWindowsDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceCleanWindowsDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceCleanWindowsDeviceRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceCleanWindowsDeviceRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceCleanWindowsDeviceRequest instance
+     * @return the ManagedDeviceCleanWindowsDeviceRequest instance
      */
-    public IManagedDeviceCleanWindowsDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceCleanWindowsDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceCleanWindowsDeviceRequest request = new ManagedDeviceCleanWindowsDeviceRequest(
                 getRequestUrl(),
                 getClient(),

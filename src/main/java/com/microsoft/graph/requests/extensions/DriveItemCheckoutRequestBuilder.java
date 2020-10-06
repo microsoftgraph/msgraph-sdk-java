@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemCheckoutRequest;
 import com.microsoft.graph.requests.extensions.DriveItemCheckoutRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Checkout Request Builder.
  */
-public class DriveItemCheckoutRequestBuilder extends BaseActionRequestBuilder implements IDriveItemCheckoutRequestBuilder {
+public class DriveItemCheckoutRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DriveItemCheckout
@@ -30,22 +29,22 @@ public class DriveItemCheckoutRequestBuilder extends BaseActionRequestBuilder im
     }
 
     /**
-     * Creates the IDriveItemCheckoutRequest
+     * Creates the DriveItemCheckoutRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemCheckoutRequest instance
+     * @return the DriveItemCheckoutRequest instance
      */
-    public IDriveItemCheckoutRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemCheckoutRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDriveItemCheckoutRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DriveItemCheckoutRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemCheckoutRequest instance
+     * @return the DriveItemCheckoutRequest instance
      */
-    public IDriveItemCheckoutRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemCheckoutRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemCheckoutRequest request = new DriveItemCheckoutRequest(
                 getRequestUrl(),
                 getClient(),

@@ -8,16 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudCommunications;
-import com.microsoft.graph.requests.extensions.ICallCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICallRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallRequestBuilder;
-import com.microsoft.graph.callrecords.requests.extensions.ICallRecordCollectionRequestBuilder;
-import com.microsoft.graph.callrecords.requests.extensions.ICallRecordRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.CallRecordRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingRequestBuilder;
 import java.util.Arrays;
@@ -31,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Cloud Communications Request.
  */
-public class CloudCommunicationsRequest extends BaseRequest implements ICloudCommunicationsRequest {
+public class CloudCommunicationsRequest extends BaseRequest {
 	
     /**
      * The request for the CloudCommunications
@@ -150,7 +144,7 @@ public class CloudCommunicationsRequest extends BaseRequest implements ICloudCom
      * @param value the select clause
      * @return the updated request
      */
-     public ICloudCommunicationsRequest select(final String value) {
+     public CloudCommunicationsRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (CloudCommunicationsRequest)this;
      }
@@ -161,7 +155,7 @@ public class CloudCommunicationsRequest extends BaseRequest implements ICloudCom
      * @param value the expand clause
      * @return the updated request
      */
-     public ICloudCommunicationsRequest expand(final String value) {
+     public CloudCommunicationsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (CloudCommunicationsRequest)this;
      }

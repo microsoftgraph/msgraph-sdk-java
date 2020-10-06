@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAcceptanceStatus;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionPage;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatu
 /**
  * The class for the Terms And Conditions Acceptance Status Collection Page.
  */
-public class TermsAndConditionsAcceptanceStatusCollectionPage extends BaseCollectionPage<TermsAndConditionsAcceptanceStatus, ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder> implements ITermsAndConditionsAcceptanceStatusCollectionPage {
+public class TermsAndConditionsAcceptanceStatusCollectionPage extends BaseCollectionPage<TermsAndConditionsAcceptanceStatus, TermsAndConditionsAcceptanceStatusCollectionRequestBuilder> {
 
     /**
      * A collection page for TermsAndConditionsAcceptanceStatus
@@ -22,7 +22,7 @@ public class TermsAndConditionsAcceptanceStatusCollectionPage extends BaseCollec
      * @param response the serialized TermsAndConditionsAcceptanceStatusCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TermsAndConditionsAcceptanceStatusCollectionPage(final TermsAndConditionsAcceptanceStatusCollectionResponse response, final ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder builder) {
+    public TermsAndConditionsAcceptanceStatusCollectionPage(final TermsAndConditionsAcceptanceStatusCollectionResponse response, final TermsAndConditionsAcceptanceStatusCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

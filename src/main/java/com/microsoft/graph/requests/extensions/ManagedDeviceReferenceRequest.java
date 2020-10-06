@@ -9,15 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -32,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Reference Request.
  */
-public class ManagedDeviceReferenceRequest extends BaseRequest implements IManagedDeviceReferenceRequest {
+public class ManagedDeviceReferenceRequest extends BaseRequest {
 
     /**
      * The request for the ManagedDevice
@@ -59,7 +54,7 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
      * @param value the select clause
      * @return the updated request
      */
-    public IManagedDeviceReferenceRequest select(final String value) {
+    public ManagedDeviceReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ManagedDeviceReferenceRequest)this;
     }
@@ -70,7 +65,7 @@ public class ManagedDeviceReferenceRequest extends BaseRequest implements IManag
      * @param value the expand clause
      * @return the updated request
      */
-    public IManagedDeviceReferenceRequest expand(final String value) {
+    public ManagedDeviceReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedDeviceReferenceRequest)this;
     }

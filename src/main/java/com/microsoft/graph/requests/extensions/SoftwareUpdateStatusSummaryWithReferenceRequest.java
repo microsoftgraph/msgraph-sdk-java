@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Software Update Status Summary With Reference Request.
  */
-public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest implements ISoftwareUpdateStatusSummaryWithReferenceRequest {
+public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the SoftwareUpdateStatusSummary
@@ -78,9 +78,9 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-    public ISoftwareUpdateStatusSummaryWithReferenceRequest select(final String value) {
+    public SoftwareUpdateStatusSummaryWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ISoftwareUpdateStatusSummaryWithReferenceRequest)this;
+        return (SoftwareUpdateStatusSummaryWithReferenceRequest)this;
     }
 
     /**
@@ -89,7 +89,7 @@ public class SoftwareUpdateStatusSummaryWithReferenceRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-    public ISoftwareUpdateStatusSummaryWithReferenceRequest expand(final String value) {
+    public SoftwareUpdateStatusSummaryWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SoftwareUpdateStatusSummaryWithReferenceRequest)this;
     }

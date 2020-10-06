@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedEBookAssignRequest;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignRequest;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed EBook Assign Request Builder.
  */
-public class ManagedEBookAssignRequestBuilder extends BaseActionRequestBuilder implements IManagedEBookAssignRequestBuilder {
+public class ManagedEBookAssignRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedEBookAssign
@@ -32,22 +31,22 @@ public class ManagedEBookAssignRequestBuilder extends BaseActionRequestBuilder i
     }
 
     /**
-     * Creates the IManagedEBookAssignRequest
+     * Creates the ManagedEBookAssignRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedEBookAssignRequest instance
+     * @return the ManagedEBookAssignRequest instance
      */
-    public IManagedEBookAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedEBookAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedEBookAssignRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedEBookAssignRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedEBookAssignRequest instance
+     * @return the ManagedEBookAssignRequest instance
      */
-    public IManagedEBookAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedEBookAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedEBookAssignRequest request = new ManagedEBookAssignRequest(
                 getRequestUrl(),
                 getClient(),

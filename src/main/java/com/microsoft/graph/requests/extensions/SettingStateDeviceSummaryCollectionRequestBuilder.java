@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequest;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Setting State Device Summary Collection Request Builder.
  */
-public class SettingStateDeviceSummaryCollectionRequestBuilder extends BaseRequestBuilder implements ISettingStateDeviceSummaryCollectionRequestBuilder {
+public class SettingStateDeviceSummaryCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceConfiguration
@@ -42,7 +42,7 @@ public class SettingStateDeviceSummaryCollectionRequestBuilder extends BaseReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISettingStateDeviceSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SettingStateDeviceSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class SettingStateDeviceSummaryCollectionRequestBuilder extends BaseReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISettingStateDeviceSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SettingStateDeviceSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SettingStateDeviceSummaryCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISettingStateDeviceSummaryRequestBuilder byId(final String id) {
+    public SettingStateDeviceSummaryRequestBuilder byId(final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

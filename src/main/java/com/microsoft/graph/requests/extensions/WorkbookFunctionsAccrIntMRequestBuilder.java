@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAccrIntMRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAccrIntMRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Accr Int MRequest Builder.
  */
-public class WorkbookFunctionsAccrIntMRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsAccrIntMRequestBuilder {
+public class WorkbookFunctionsAccrIntMRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsAccrIntM
@@ -40,22 +39,22 @@ public class WorkbookFunctionsAccrIntMRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsAccrIntMRequest
+     * Creates the WorkbookFunctionsAccrIntMRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAccrIntMRequest instance
+     * @return the WorkbookFunctionsAccrIntMRequest instance
      */
-    public IWorkbookFunctionsAccrIntMRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsAccrIntMRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsAccrIntMRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsAccrIntMRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAccrIntMRequest instance
+     * @return the WorkbookFunctionsAccrIntMRequest instance
      */
-    public IWorkbookFunctionsAccrIntMRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsAccrIntMRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsAccrIntMRequest request = new WorkbookFunctionsAccrIntMRequest(
                 getRequestUrl(),
                 getClient(),

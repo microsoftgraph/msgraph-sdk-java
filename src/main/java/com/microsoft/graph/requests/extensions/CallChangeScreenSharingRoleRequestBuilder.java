@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallChangeScreenSharingRoleRequest;
 import com.microsoft.graph.requests.extensions.CallChangeScreenSharingRoleRequest;
 import com.microsoft.graph.models.generated.ScreenSharingRole;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Change Screen Sharing Role Request Builder.
  */
-public class CallChangeScreenSharingRoleRequestBuilder extends BaseActionRequestBuilder implements ICallChangeScreenSharingRoleRequestBuilder {
+public class CallChangeScreenSharingRoleRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallChangeScreenSharingRole
@@ -32,22 +31,22 @@ public class CallChangeScreenSharingRoleRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the ICallChangeScreenSharingRoleRequest
+     * Creates the CallChangeScreenSharingRoleRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallChangeScreenSharingRoleRequest instance
+     * @return the CallChangeScreenSharingRoleRequest instance
      */
-    public ICallChangeScreenSharingRoleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallChangeScreenSharingRoleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallChangeScreenSharingRoleRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallChangeScreenSharingRoleRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallChangeScreenSharingRoleRequest instance
+     * @return the CallChangeScreenSharingRoleRequest instance
      */
-    public ICallChangeScreenSharingRoleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallChangeScreenSharingRoleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallChangeScreenSharingRoleRequest request = new CallChangeScreenSharingRoleRequest(
                 getRequestUrl(),
                 getClient(),

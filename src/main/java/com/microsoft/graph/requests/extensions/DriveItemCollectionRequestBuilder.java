@@ -18,9 +18,9 @@ import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequest;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -29,7 +29,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Drive Item Collection Request Builder.
  */
-public class DriveItemCollectionRequestBuilder extends BaseRequestBuilder implements IDriveItemCollectionRequestBuilder {
+public class DriveItemCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DriveItem
@@ -48,7 +48,7 @@ public class DriveItemCollectionRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -58,15 +58,15 @@ public class DriveItemCollectionRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DriveItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDriveItemRequestBuilder byId(final String id) {
+    public DriveItemRequestBuilder byId(final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IDriveItemRequestBuilder appRoot() {
+    public DriveItemRequestBuilder appRoot() {
     	return new DriveItemRequestBuilder(this.getRequestUrlWithAdditionalSegment("approot"), this.getClient(), null);
     }
 

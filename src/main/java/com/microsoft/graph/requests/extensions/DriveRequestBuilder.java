@@ -9,11 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItem;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Drive Request Builder.
  */
-public class DriveRequestBuilder extends BaseRequestBuilder implements IDriveRequestBuilder {
+public class DriveRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Drive
@@ -42,9 +39,9 @@ public class DriveRequestBuilder extends BaseRequestBuilder implements IDriveReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDriveRequest instance
+     * @return the DriveRequest instance
      */
-    public IDriveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,9 +49,9 @@ public class DriveRequestBuilder extends BaseRequestBuilder implements IDriveReq
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDriveRequest instance
+     * @return the DriveRequest instance
      */
-    public IDriveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DriveRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,69 +60,69 @@ public class DriveRequestBuilder extends BaseRequestBuilder implements IDriveReq
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder createdByUser() {
+    public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+    public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
-    public IDriveItemCollectionRequestBuilder following() {
+    public DriveItemCollectionRequestBuilder following() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("following"), getClient(), null);
     }
 
-    public IDriveItemRequestBuilder following(final String id) {
+    public DriveItemRequestBuilder following(final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("following") + "/" + id, getClient(), null);
     }
-    public IDriveItemCollectionRequestBuilder items() {
+    public DriveItemCollectionRequestBuilder items() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
-    public IDriveItemRequestBuilder items(final String id) {
+    public DriveItemRequestBuilder items(final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for List
      *
-     * @return the IListRequestBuilder instance
+     * @return the ListRequestBuilder instance
      */
-    public IListRequestBuilder list() {
+    public ListRequestBuilder list() {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
     }
 
     /**
      * Gets the request builder for DriveItem
      *
-     * @return the IDriveItemRequestBuilder instance
+     * @return the DriveItemRequestBuilder instance
      */
-    public IDriveItemRequestBuilder root() {
+    public DriveItemRequestBuilder root() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
     }
-    public IDriveItemCollectionRequestBuilder special() {
+    public DriveItemCollectionRequestBuilder special() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("special"), getClient(), null);
     }
 
-    public IDriveItemRequestBuilder special(final String id) {
+    public DriveItemRequestBuilder special(final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("special") + "/" + id, getClient(), null);
     }
 
-    public IDriveSearchCollectionRequestBuilder search(final String q) {
+    public DriveSearchCollectionRequestBuilder search(final String q) {
         return new DriveSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
     }
 
-    public IDriveRecentCollectionRequestBuilder recent() {
+    public DriveRecentCollectionRequestBuilder recent() {
         return new DriveRecentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recent"), getClient(), null);
     }
 
-    public IDriveSharedWithMeCollectionRequestBuilder sharedWithMe() {
+    public DriveSharedWithMeCollectionRequestBuilder sharedWithMe() {
         return new DriveSharedWithMeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sharedWithMe"), getClient(), null);
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBinom_InvRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsBinom_InvRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Binom_Inv Request Builder.
  */
-public class WorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsBinom_InvRequestBuilder {
+public class WorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsBinom_Inv
@@ -36,22 +35,22 @@ public class WorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsBinom_InvRequest
+     * Creates the WorkbookFunctionsBinom_InvRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBinom_InvRequest instance
+     * @return the WorkbookFunctionsBinom_InvRequest instance
      */
-    public IWorkbookFunctionsBinom_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsBinom_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsBinom_InvRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsBinom_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBinom_InvRequest instance
+     * @return the WorkbookFunctionsBinom_InvRequest instance
      */
-    public IWorkbookFunctionsBinom_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsBinom_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBinom_InvRequest request = new WorkbookFunctionsBinom_InvRequest(
                 getRequestUrl(),
                 getClient(),

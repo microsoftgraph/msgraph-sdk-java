@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed Device Overview Reference Request Builder.
  */
-public class ManagedDeviceOverviewReferenceRequestBuilder extends BaseRequestBuilder implements IManagedDeviceOverviewReferenceRequestBuilder {
+public class ManagedDeviceOverviewReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedDeviceOverview
@@ -37,9 +37,9 @@ public class ManagedDeviceOverviewReferenceRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The IManagedDeviceOverviewReferenceRequest instance
+     * @return The ManagedDeviceOverviewReferenceRequest instance
      */
-    public IManagedDeviceOverviewReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceOverviewReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class ManagedDeviceOverviewReferenceRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceOverviewReferenceRequest instance
+     * @return the ManagedDeviceOverviewReferenceRequest instance
      */
-    public IManagedDeviceOverviewReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceOverviewReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceOverviewReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

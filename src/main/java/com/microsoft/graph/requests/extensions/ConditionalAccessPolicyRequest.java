@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Conditional Access Policy Request.
  */
-public class ConditionalAccessPolicyRequest extends BaseRequest implements IConditionalAccessPolicyRequest {
+public class ConditionalAccessPolicyRequest extends BaseRequest {
 	
     /**
      * The request for the ConditionalAccessPolicy
@@ -138,7 +138,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @param value the select clause
      * @return the updated request
      */
-     public IConditionalAccessPolicyRequest select(final String value) {
+     public ConditionalAccessPolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ConditionalAccessPolicyRequest)this;
      }
@@ -149,7 +149,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @param value the expand clause
      * @return the updated request
      */
-     public IConditionalAccessPolicyRequest expand(final String value) {
+     public ConditionalAccessPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ConditionalAccessPolicyRequest)this;
      }

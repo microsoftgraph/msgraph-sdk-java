@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCeiling_PreciseRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsCeiling_PreciseRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Ceiling_Precise Request Builder.
  */
-public class WorkbookFunctionsCeiling_PreciseRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsCeiling_PreciseRequestBuilder {
+public class WorkbookFunctionsCeiling_PreciseRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsCeiling_Precise
@@ -34,22 +33,22 @@ public class WorkbookFunctionsCeiling_PreciseRequestBuilder extends BaseActionRe
     }
 
     /**
-     * Creates the IWorkbookFunctionsCeiling_PreciseRequest
+     * Creates the WorkbookFunctionsCeiling_PreciseRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCeiling_PreciseRequest instance
+     * @return the WorkbookFunctionsCeiling_PreciseRequest instance
      */
-    public IWorkbookFunctionsCeiling_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsCeiling_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsCeiling_PreciseRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsCeiling_PreciseRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsCeiling_PreciseRequest instance
+     * @return the WorkbookFunctionsCeiling_PreciseRequest instance
      */
-    public IWorkbookFunctionsCeiling_PreciseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsCeiling_PreciseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsCeiling_PreciseRequest request = new WorkbookFunctionsCeiling_PreciseRequest(
                 getRequestUrl(),
                 getClient(),

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.INotificationMessageTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotificationMessageTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotificationMessageTemplateCollectionRequest;
+import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.NotificationMessageTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Notification Message Template Collection Request Builder.
  */
-public class NotificationMessageTemplateCollectionRequestBuilder extends BaseRequestBuilder implements INotificationMessageTemplateCollectionRequestBuilder {
+public class NotificationMessageTemplateCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class NotificationMessageTemplateCollectionRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public INotificationMessageTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public NotificationMessageTemplateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class NotificationMessageTemplateCollectionRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public INotificationMessageTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotificationMessageTemplateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new NotificationMessageTemplateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public INotificationMessageTemplateRequestBuilder byId(final String id) {
+    public NotificationMessageTemplateRequestBuilder byId(final String id) {
         return new NotificationMessageTemplateRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

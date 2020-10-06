@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import java.util.Arrays;
@@ -26,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Terms And Conditions Request Builder.
  */
-public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder implements ITermsAndConditionsRequestBuilder {
+public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TermsAndConditions
@@ -43,9 +39,9 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITermsAndConditionsRequest instance
+     * @return the TermsAndConditionsRequest instance
      */
-    public ITermsAndConditionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TermsAndConditionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,25 +49,25 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITermsAndConditionsRequest instance
+     * @return the TermsAndConditionsRequest instance
      */
-    public ITermsAndConditionsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TermsAndConditionsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder acceptanceStatuses() {
+    public TermsAndConditionsAcceptanceStatusCollectionRequestBuilder acceptanceStatuses() {
         return new TermsAndConditionsAcceptanceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses"), getClient(), null);
     }
 
-    public ITermsAndConditionsAcceptanceStatusRequestBuilder acceptanceStatuses(final String id) {
+    public TermsAndConditionsAcceptanceStatusRequestBuilder acceptanceStatuses(final String id) {
         return new TermsAndConditionsAcceptanceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses") + "/" + id, getClient(), null);
     }
-    public ITermsAndConditionsAssignmentCollectionRequestBuilder assignments() {
+    public TermsAndConditionsAssignmentCollectionRequestBuilder assignments() {
         return new TermsAndConditionsAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public ITermsAndConditionsAssignmentRequestBuilder assignments(final String id) {
+    public TermsAndConditionsAssignmentRequestBuilder assignments(final String id) {
         return new TermsAndConditionsAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

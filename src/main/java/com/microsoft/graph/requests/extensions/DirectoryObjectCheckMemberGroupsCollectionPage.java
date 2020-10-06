@@ -11,7 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Directory Object Check Member Groups Collection Page.
  */
-public class DirectoryObjectCheckMemberGroupsCollectionPage extends BaseCollectionPage<String, IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder> implements IDirectoryObjectCheckMemberGroupsCollectionPage {
+public class DirectoryObjectCheckMemberGroupsCollectionPage extends BaseCollectionPage<String, DirectoryObjectCheckMemberGroupsCollectionRequestBuilder> {
 
     /**
      * A collection page for String.
@@ -33,7 +33,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionPage extends BaseCollecti
      * @param response The serialized DirectoryObjectCheckMemberGroupsCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DirectoryObjectCheckMemberGroupsCollectionPage(final DirectoryObjectCheckMemberGroupsCollectionResponse response, final IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder builder) {
+    public DirectoryObjectCheckMemberGroupsCollectionPage(final DirectoryObjectCheckMemberGroupsCollectionResponse response, final DirectoryObjectCheckMemberGroupsCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

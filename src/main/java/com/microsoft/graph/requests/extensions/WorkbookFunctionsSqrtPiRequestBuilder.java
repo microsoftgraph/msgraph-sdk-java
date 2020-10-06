@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSqrtPiRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSqrtPiRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Sqrt Pi Request Builder.
  */
-public class WorkbookFunctionsSqrtPiRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSqrtPiRequestBuilder {
+public class WorkbookFunctionsSqrtPiRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSqrtPi
@@ -32,22 +31,22 @@ public class WorkbookFunctionsSqrtPiRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsSqrtPiRequest
+     * Creates the WorkbookFunctionsSqrtPiRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSqrtPiRequest instance
+     * @return the WorkbookFunctionsSqrtPiRequest instance
      */
-    public IWorkbookFunctionsSqrtPiRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSqrtPiRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSqrtPiRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSqrtPiRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSqrtPiRequest instance
+     * @return the WorkbookFunctionsSqrtPiRequest instance
      */
-    public IWorkbookFunctionsSqrtPiRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSqrtPiRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSqrtPiRequest request = new WorkbookFunctionsSqrtPiRequest(
                 getRequestUrl(),
                 getClient(),

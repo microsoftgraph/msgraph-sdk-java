@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserActivity;
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemRequestBuilder;
 import java.util.Arrays;
@@ -25,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Activity Reference Request.
  */
-public class UserActivityReferenceRequest extends BaseRequest implements IUserActivityReferenceRequest {
+public class UserActivityReferenceRequest extends BaseRequest {
 
     /**
      * The request for the UserActivity
@@ -52,7 +50,7 @@ public class UserActivityReferenceRequest extends BaseRequest implements IUserAc
      * @param value the select clause
      * @return the updated request
      */
-    public IUserActivityReferenceRequest select(final String value) {
+    public UserActivityReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (UserActivityReferenceRequest)this;
     }
@@ -63,7 +61,7 @@ public class UserActivityReferenceRequest extends BaseRequest implements IUserAc
      * @param value the expand clause
      * @return the updated request
      */
-    public IUserActivityReferenceRequest expand(final String value) {
+    public UserActivityReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (UserActivityReferenceRequest)this;
     }

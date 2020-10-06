@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookPivotTable;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Pivot Table Request.
  */
-public class WorkbookPivotTableRequest extends BaseRequest implements IWorkbookPivotTableRequest {
+public class WorkbookPivotTableRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookPivotTable
@@ -140,7 +139,7 @@ public class WorkbookPivotTableRequest extends BaseRequest implements IWorkbookP
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookPivotTableRequest select(final String value) {
+     public WorkbookPivotTableRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookPivotTableRequest)this;
      }
@@ -151,7 +150,7 @@ public class WorkbookPivotTableRequest extends BaseRequest implements IWorkbookP
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookPivotTableRequest expand(final String value) {
+     public WorkbookPivotTableRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookPivotTableRequest)this;
      }

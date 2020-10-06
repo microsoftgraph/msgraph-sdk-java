@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnDataBodyRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnDataBodyRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Data Body Range Request.
  */
-public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest implements IWorkbookTableColumnDataBodyRangeRequest {
+public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookTableColumnDataBodyRange
@@ -97,7 +96,7 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookTableColumnDataBodyRangeRequest select(final String value) {
+    public WorkbookTableColumnDataBodyRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookTableColumnDataBodyRangeRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookTableColumnDataBodyRangeRequest expand(final String value) {
+    public WorkbookTableColumnDataBodyRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookTableColumnDataBodyRangeRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest impleme
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookTableColumnDataBodyRangeRequest filter(final String value) {
+    public WorkbookTableColumnDataBodyRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookTableColumnDataBodyRangeRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookTableColumnDataBodyRangeRequest extends BaseRequest impleme
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookTableColumnDataBodyRangeRequest orderBy(final String value) {
+    public WorkbookTableColumnDataBodyRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookTableColumnDataBodyRangeRequest)this;
     }

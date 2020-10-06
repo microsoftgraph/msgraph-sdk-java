@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageDetailRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Share Point Site Usage Detail Request Builder.
  */
-public class ReportRootGetSharePointSiteUsageDetailRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetSharePointSiteUsageDetailRequestBuilder {
+public class ReportRootGetSharePointSiteUsageDetailRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetSharePointSiteUsageDetail
@@ -45,22 +44,22 @@ public class ReportRootGetSharePointSiteUsageDetailRequestBuilder extends BaseFu
     }
 
     /**
-     * Creates the IReportRootGetSharePointSiteUsageDetailRequest
+     * Creates the ReportRootGetSharePointSiteUsageDetailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSharePointSiteUsageDetailRequest instance
+     * @return the ReportRootGetSharePointSiteUsageDetailRequest instance
      */
-    public IReportRootGetSharePointSiteUsageDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetSharePointSiteUsageDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetSharePointSiteUsageDetailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetSharePointSiteUsageDetailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetSharePointSiteUsageDetailRequest instance
+     * @return the ReportRootGetSharePointSiteUsageDetailRequest instance
      */
-    public IReportRootGetSharePointSiteUsageDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetSharePointSiteUsageDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetSharePointSiteUsageDetailRequest request = new ReportRootGetSharePointSiteUsageDetailRequest(
                 getRequestUrl(),
                 getClient(),

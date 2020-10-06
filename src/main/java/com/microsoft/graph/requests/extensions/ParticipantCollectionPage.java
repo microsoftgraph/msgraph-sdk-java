@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Participant;
-import com.microsoft.graph.requests.extensions.IParticipantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ParticipantCollectionPage;
 import com.microsoft.graph.requests.extensions.ParticipantCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ParticipantCollectionResponse;
 /**
  * The class for the Participant Collection Page.
  */
-public class ParticipantCollectionPage extends BaseCollectionPage<Participant, IParticipantCollectionRequestBuilder> implements IParticipantCollectionPage {
+public class ParticipantCollectionPage extends BaseCollectionPage<Participant, ParticipantCollectionRequestBuilder> {
 
     /**
      * A collection page for Participant
@@ -22,7 +22,7 @@ public class ParticipantCollectionPage extends BaseCollectionPage<Participant, I
      * @param response the serialized ParticipantCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ParticipantCollectionPage(final ParticipantCollectionResponse response, final IParticipantCollectionRequestBuilder builder) {
+    public ParticipantCollectionPage(final ParticipantCollectionResponse response, final ParticipantCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

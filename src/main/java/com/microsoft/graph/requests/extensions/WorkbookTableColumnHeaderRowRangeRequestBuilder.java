@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnHeaderRowRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnHeaderRowRangeRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Column Header Row Range Request Builder.
  */
-public class WorkbookTableColumnHeaderRowRangeRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookTableColumnHeaderRowRangeRequestBuilder {
+public class WorkbookTableColumnHeaderRowRangeRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableColumnHeaderRowRange
@@ -30,22 +29,22 @@ public class WorkbookTableColumnHeaderRowRangeRequestBuilder extends BaseFunctio
     }
 
     /**
-     * Creates the IWorkbookTableColumnHeaderRowRangeRequest
+     * Creates the WorkbookTableColumnHeaderRowRangeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableColumnHeaderRowRangeRequest instance
+     * @return the WorkbookTableColumnHeaderRowRangeRequest instance
      */
-    public IWorkbookTableColumnHeaderRowRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableColumnHeaderRowRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableColumnHeaderRowRangeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableColumnHeaderRowRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableColumnHeaderRowRangeRequest instance
+     * @return the WorkbookTableColumnHeaderRowRangeRequest instance
      */
-    public IWorkbookTableColumnHeaderRowRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnHeaderRowRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableColumnHeaderRowRangeRequest request = new WorkbookTableColumnHeaderRowRangeRequest(
                 getRequestUrl(),
                 getClient(),
@@ -62,27 +61,27 @@ public class WorkbookTableColumnHeaderRowRangeRequestBuilder extends BaseFunctio
     /**
      * Gets the request builder for WorkbookRangeFormat
      *
-     * @return the IWorkbookRangeFormatRequestBuilder instance
+     * @return the WorkbookRangeFormatRequestBuilder instance
      */
-    public IWorkbookRangeFormatRequestBuilder format() {
+    public WorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeSort
      *
-     * @return the IWorkbookRangeSortRequestBuilder instance
+     * @return the WorkbookRangeSortRequestBuilder instance
      */
-    public IWorkbookRangeSortRequestBuilder sort() {
+    public WorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyDynamicFilterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyDynamicFilterRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Filter Apply Dynamic Filter Request Builder.
  */
-public class WorkbookFilterApplyDynamicFilterRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFilterApplyDynamicFilterRequestBuilder {
+public class WorkbookFilterApplyDynamicFilterRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFilterApplyDynamicFilter
@@ -32,22 +31,22 @@ public class WorkbookFilterApplyDynamicFilterRequestBuilder extends BaseActionRe
     }
 
     /**
-     * Creates the IWorkbookFilterApplyDynamicFilterRequest
+     * Creates the WorkbookFilterApplyDynamicFilterRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyDynamicFilterRequest instance
+     * @return the WorkbookFilterApplyDynamicFilterRequest instance
      */
-    public IWorkbookFilterApplyDynamicFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFilterApplyDynamicFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFilterApplyDynamicFilterRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFilterApplyDynamicFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyDynamicFilterRequest instance
+     * @return the WorkbookFilterApplyDynamicFilterRequest instance
      */
-    public IWorkbookFilterApplyDynamicFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterApplyDynamicFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyDynamicFilterRequest request = new WorkbookFilterApplyDynamicFilterRequest(
                 getRequestUrl(),
                 getClient(),

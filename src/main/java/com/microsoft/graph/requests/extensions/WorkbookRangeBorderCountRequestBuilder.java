@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCountRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCountRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Border Count Request Builder.
  */
-public class WorkbookRangeBorderCountRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookRangeBorderCountRequestBuilder {
+public class WorkbookRangeBorderCountRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeBorderCount
@@ -30,22 +29,22 @@ public class WorkbookRangeBorderCountRequestBuilder extends BaseFunctionRequestB
     }
 
     /**
-     * Creates the IWorkbookRangeBorderCountRequest
+     * Creates the WorkbookRangeBorderCountRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeBorderCountRequest instance
+     * @return the WorkbookRangeBorderCountRequest instance
      */
-    public IWorkbookRangeBorderCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeBorderCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeBorderCountRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeBorderCountRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeBorderCountRequest instance
+     * @return the WorkbookRangeBorderCountRequest instance
      */
-    public IWorkbookRangeBorderCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeBorderCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeBorderCountRequest request = new WorkbookRangeBorderCountRequest(
                 getRequestUrl(),
                 getClient(),

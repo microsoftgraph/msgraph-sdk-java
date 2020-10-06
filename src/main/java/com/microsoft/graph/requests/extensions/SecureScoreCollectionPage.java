@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SecureScore;
-import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionPage;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SecureScoreCollectionResponse;
 /**
  * The class for the Secure Score Collection Page.
  */
-public class SecureScoreCollectionPage extends BaseCollectionPage<SecureScore, ISecureScoreCollectionRequestBuilder> implements ISecureScoreCollectionPage {
+public class SecureScoreCollectionPage extends BaseCollectionPage<SecureScore, SecureScoreCollectionRequestBuilder> {
 
     /**
      * A collection page for SecureScore
@@ -22,7 +22,7 @@ public class SecureScoreCollectionPage extends BaseCollectionPage<SecureScore, I
      * @param response the serialized SecureScoreCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SecureScoreCollectionPage(final SecureScoreCollectionResponse response, final ISecureScoreCollectionRequestBuilder builder) {
+    public SecureScoreCollectionPage(final SecureScoreCollectionResponse response, final SecureScoreCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

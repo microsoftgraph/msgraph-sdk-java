@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Domain Dns Record Request.
  */
-public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRecordRequest {
+public class DomainDnsRecordRequest extends BaseRequest {
 	
     /**
      * The request for the DomainDnsRecord
@@ -153,7 +153,7 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @param value the select clause
      * @return the updated request
      */
-     public IDomainDnsRecordRequest select(final String value) {
+     public DomainDnsRecordRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DomainDnsRecordRequest)this;
      }
@@ -164,7 +164,7 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @param value the expand clause
      * @return the updated request
      */
-     public IDomainDnsRecordRequest expand(final String value) {
+     public DomainDnsRecordRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DomainDnsRecordRequest)this;
      }

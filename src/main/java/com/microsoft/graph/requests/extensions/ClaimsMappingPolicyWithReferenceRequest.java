@@ -22,7 +22,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Claims Mapping Policy With Reference Request.
  */
-public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest implements IClaimsMappingPolicyWithReferenceRequest {
+public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the ClaimsMappingPolicy
@@ -78,9 +78,9 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-    public IClaimsMappingPolicyWithReferenceRequest select(final String value) {
+    public ClaimsMappingPolicyWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IClaimsMappingPolicyWithReferenceRequest)this;
+        return (ClaimsMappingPolicyWithReferenceRequest)this;
     }
 
     /**
@@ -89,7 +89,7 @@ public class ClaimsMappingPolicyWithReferenceRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-    public IClaimsMappingPolicyWithReferenceRequest expand(final String value) {
+    public ClaimsMappingPolicyWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ClaimsMappingPolicyWithReferenceRequest)this;
     }

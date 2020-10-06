@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyValuesFilterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyValuesFilterRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Filter Apply Values Filter Request Builder.
  */
-public class WorkbookFilterApplyValuesFilterRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFilterApplyValuesFilterRequestBuilder {
+public class WorkbookFilterApplyValuesFilterRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFilterApplyValuesFilter
@@ -32,22 +31,22 @@ public class WorkbookFilterApplyValuesFilterRequestBuilder extends BaseActionReq
     }
 
     /**
-     * Creates the IWorkbookFilterApplyValuesFilterRequest
+     * Creates the WorkbookFilterApplyValuesFilterRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyValuesFilterRequest instance
+     * @return the WorkbookFilterApplyValuesFilterRequest instance
      */
-    public IWorkbookFilterApplyValuesFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFilterApplyValuesFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFilterApplyValuesFilterRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFilterApplyValuesFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyValuesFilterRequest instance
+     * @return the WorkbookFilterApplyValuesFilterRequest instance
      */
-    public IWorkbookFilterApplyValuesFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterApplyValuesFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyValuesFilterRequest request = new WorkbookFilterApplyValuesFilterRequest(
                 getRequestUrl(),
                 getClient(),

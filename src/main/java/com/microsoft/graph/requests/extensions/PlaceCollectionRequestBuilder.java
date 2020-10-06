@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.Place;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IPlaceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlaceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlaceCollectionRequest;
+import com.microsoft.graph.requests.extensions.PlaceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlaceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlaceCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Place Collection Request Builder.
  */
-public class PlaceCollectionRequestBuilder extends BaseRequestBuilder implements IPlaceCollectionRequestBuilder {
+public class PlaceCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Place
@@ -41,7 +41,7 @@ public class PlaceCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPlaceCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlaceCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class PlaceCollectionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPlaceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlaceCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlaceCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPlaceRequestBuilder byId(final String id) {
+    public PlaceRequestBuilder byId(final String id) {
         return new PlaceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

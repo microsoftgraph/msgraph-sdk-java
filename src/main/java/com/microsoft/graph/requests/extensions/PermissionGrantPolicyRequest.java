@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
-import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionGrantConditionSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantConditionSetRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Permission Grant Policy Request.
  */
-public class PermissionGrantPolicyRequest extends BaseRequest implements IPermissionGrantPolicyRequest {
+public class PermissionGrantPolicyRequest extends BaseRequest {
 	
     /**
      * The request for the PermissionGrantPolicy
@@ -142,7 +140,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest implements IPermis
      * @param value the select clause
      * @return the updated request
      */
-     public IPermissionGrantPolicyRequest select(final String value) {
+     public PermissionGrantPolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PermissionGrantPolicyRequest)this;
      }
@@ -153,7 +151,7 @@ public class PermissionGrantPolicyRequest extends BaseRequest implements IPermis
      * @param value the expand clause
      * @return the updated request
      */
-     public IPermissionGrantPolicyRequest expand(final String value) {
+     public PermissionGrantPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PermissionGrantPolicyRequest)this;
      }

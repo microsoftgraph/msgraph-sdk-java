@@ -8,19 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Channel;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -33,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Channel Request.
  */
-public class ChannelRequest extends BaseRequest implements IChannelRequest {
+public class ChannelRequest extends BaseRequest {
 	
     /**
      * The request for the Channel
@@ -152,7 +145,7 @@ public class ChannelRequest extends BaseRequest implements IChannelRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IChannelRequest select(final String value) {
+     public ChannelRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ChannelRequest)this;
      }
@@ -163,7 +156,7 @@ public class ChannelRequest extends BaseRequest implements IChannelRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IChannelRequest expand(final String value) {
+     public ChannelRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ChannelRequest)this;
      }

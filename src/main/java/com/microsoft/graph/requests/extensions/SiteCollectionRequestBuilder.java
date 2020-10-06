@@ -12,11 +12,11 @@ import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequest;
-import com.microsoft.graph.requests.extensions.ISiteAddCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRemoveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteCollectionRequest;
+import com.microsoft.graph.requests.extensions.SiteAddCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteRemoveCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Site Collection Request Builder.
  */
-public class SiteCollectionRequestBuilder extends BaseRequestBuilder implements ISiteCollectionRequestBuilder {
+public class SiteCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Site
@@ -44,7 +44,7 @@ public class SiteCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISiteCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SiteCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,21 +54,21 @@ public class SiteCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISiteCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SiteCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISiteRequestBuilder byId(final String id) {
+    public SiteRequestBuilder byId(final String id) {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public ISiteAddCollectionRequestBuilder add(final java.util.List<Site> value) {
+    public SiteAddCollectionRequestBuilder add(final java.util.List<Site> value) {
         return new SiteAddCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, value);
     }
 
-    public ISiteRemoveCollectionRequestBuilder remove(final java.util.List<Site> value) {
+    public SiteRemoveCollectionRequestBuilder remove(final java.util.List<Site> value) {
         return new SiteRemoveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remove"), getClient(), null, value);
     }
 }

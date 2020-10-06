@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mute Participant Operation Request Builder.
  */
-public class MuteParticipantOperationRequestBuilder extends BaseRequestBuilder implements IMuteParticipantOperationRequestBuilder {
+public class MuteParticipantOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the MuteParticipantOperation
@@ -35,9 +35,9 @@ public class MuteParticipantOperationRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMuteParticipantOperationRequest instance
+     * @return the MuteParticipantOperationRequest instance
      */
-    public IMuteParticipantOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MuteParticipantOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class MuteParticipantOperationRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMuteParticipantOperationRequest instance
+     * @return the MuteParticipantOperationRequest instance
      */
-    public IMuteParticipantOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MuteParticipantOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MuteParticipantOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

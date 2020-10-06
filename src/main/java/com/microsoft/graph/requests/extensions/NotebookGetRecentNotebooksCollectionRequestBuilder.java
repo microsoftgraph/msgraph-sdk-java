@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.RecentNotebook;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollectionRequest;
+import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookGetRecentNotebooksCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Notebook Get Recent Notebooks Collection Request Builder.
  */
-public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunctionRequestBuilder implements INotebookGetRecentNotebooksCollectionRequestBuilder {
+public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of Notebook
@@ -46,7 +45,7 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunc
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public INotebookGetRecentNotebooksCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public NotebookGetRecentNotebooksCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,7 +55,7 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseFunc
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public INotebookGetRecentNotebooksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotebookGetRecentNotebooksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         NotebookGetRecentNotebooksCollectionRequest request = new NotebookGetRecentNotebooksCollectionRequest(
                 getRequestUrl(),
                 getClient(),

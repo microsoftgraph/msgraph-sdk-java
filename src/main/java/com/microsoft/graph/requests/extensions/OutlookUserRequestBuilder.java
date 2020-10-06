@@ -11,8 +11,6 @@ import com.microsoft.graph.models.extensions.OutlookUser;
 import com.microsoft.graph.models.extensions.LocaleInfo;
 import com.microsoft.graph.models.extensions.TimeZoneInformation;
 import com.microsoft.graph.models.generated.TimeZoneStandard;
-import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryRequestBuilder;
 import java.util.Arrays;
@@ -25,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Outlook User Request Builder.
  */
-public class OutlookUserRequestBuilder extends BaseRequestBuilder implements IOutlookUserRequestBuilder {
+public class OutlookUserRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OutlookUser
@@ -42,9 +40,9 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder implements IOu
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOutlookUserRequest instance
+     * @return the OutlookUserRequest instance
      */
-    public IOutlookUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OutlookUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,30 +50,30 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder implements IOu
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOutlookUserRequest instance
+     * @return the OutlookUserRequest instance
      */
-    public IOutlookUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OutlookUserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IOutlookCategoryCollectionRequestBuilder masterCategories() {
+    public OutlookCategoryCollectionRequestBuilder masterCategories() {
         return new OutlookCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories"), getClient(), null);
     }
 
-    public IOutlookCategoryRequestBuilder masterCategories(final String id) {
+    public OutlookCategoryRequestBuilder masterCategories(final String id) {
         return new OutlookCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("masterCategories") + "/" + id, getClient(), null);
     }
 
-    public IOutlookUserSupportedLanguagesCollectionRequestBuilder supportedLanguages() {
+    public OutlookUserSupportedLanguagesCollectionRequestBuilder supportedLanguages() {
         return new OutlookUserSupportedLanguagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.supportedLanguages"), getClient(), null);
     }
 
-    public IOutlookUserSupportedTimeZonesCollectionRequestBuilder supportedTimeZones() {
+    public OutlookUserSupportedTimeZonesCollectionRequestBuilder supportedTimeZones() {
         return new OutlookUserSupportedTimeZonesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.supportedTimeZones"), getClient(), null);
     }
 
-    public IOutlookUserSupportedTimeZonesCollectionRequestBuilder supportedTimeZones(final TimeZoneStandard timeZoneStandard) {
+    public OutlookUserSupportedTimeZonesCollectionRequestBuilder supportedTimeZones(final TimeZoneStandard timeZoneStandard) {
         return new OutlookUserSupportedTimeZonesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.supportedTimeZones"), getClient(), null, timeZoneStandard);
     }
 }

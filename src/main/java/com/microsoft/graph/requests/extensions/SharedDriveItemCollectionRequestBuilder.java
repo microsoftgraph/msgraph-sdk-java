@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.SharedDriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISharedDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISharedDriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISharedDriveItemCollectionRequest;
+import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Shared Drive Item Collection Request Builder.
  */
-public class SharedDriveItemCollectionRequestBuilder extends BaseRequestBuilder implements ISharedDriveItemCollectionRequestBuilder {
+public class SharedDriveItemCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of SharedDriveItem
@@ -41,7 +41,7 @@ public class SharedDriveItemCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISharedDriveItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SharedDriveItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class SharedDriveItemCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISharedDriveItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharedDriveItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SharedDriveItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISharedDriveItemRequestBuilder byId(final String id) {
+    public SharedDriveItemRequestBuilder byId(final String id) {
         return new SharedDriveItemRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

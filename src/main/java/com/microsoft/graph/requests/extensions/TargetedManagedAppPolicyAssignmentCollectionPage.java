@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmen
 /**
  * The class for the Targeted Managed App Policy Assignment Collection Page.
  */
-public class TargetedManagedAppPolicyAssignmentCollectionPage extends BaseCollectionPage<TargetedManagedAppPolicyAssignment, ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder> implements ITargetedManagedAppPolicyAssignmentCollectionPage {
+public class TargetedManagedAppPolicyAssignmentCollectionPage extends BaseCollectionPage<TargetedManagedAppPolicyAssignment, TargetedManagedAppPolicyAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for TargetedManagedAppPolicyAssignment
@@ -22,7 +22,7 @@ public class TargetedManagedAppPolicyAssignmentCollectionPage extends BaseCollec
      * @param response the serialized TargetedManagedAppPolicyAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TargetedManagedAppPolicyAssignmentCollectionPage(final TargetedManagedAppPolicyAssignmentCollectionResponse response, final ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder builder) {
+    public TargetedManagedAppPolicyAssignmentCollectionPage(final TargetedManagedAppPolicyAssignmentCollectionResponse response, final TargetedManagedAppPolicyAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.Site;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISiteAddCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteAddCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteAddCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Site Add Collection Page.
  */
-public class SiteAddCollectionPage extends BaseCollectionPage<Site, ISiteAddCollectionRequestBuilder> implements ISiteAddCollectionPage {
+public class SiteAddCollectionPage extends BaseCollectionPage<Site, SiteAddCollectionRequestBuilder> {
 
     /**
      * A collection page for Site.
@@ -33,7 +33,7 @@ public class SiteAddCollectionPage extends BaseCollectionPage<Site, ISiteAddColl
      * @param response The serialized SiteAddCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public SiteAddCollectionPage(final SiteAddCollectionResponse response, final ISiteAddCollectionRequestBuilder builder) {
+    public SiteAddCollectionPage(final SiteAddCollectionResponse response, final SiteAddCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

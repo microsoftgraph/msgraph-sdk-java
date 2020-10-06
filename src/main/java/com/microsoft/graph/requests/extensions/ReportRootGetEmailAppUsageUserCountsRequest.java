@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetEmailAppUsageUserCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Email App Usage User Counts Request.
  */
-public class ReportRootGetEmailAppUsageUserCountsRequest extends BaseRequest implements IReportRootGetEmailAppUsageUserCountsRequest {
+public class ReportRootGetEmailAppUsageUserCountsRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetEmailAppUsageUserCounts
@@ -97,7 +96,7 @@ public class ReportRootGetEmailAppUsageUserCountsRequest extends BaseRequest imp
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetEmailAppUsageUserCountsRequest select(final String value) {
+    public ReportRootGetEmailAppUsageUserCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetEmailAppUsageUserCountsRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetEmailAppUsageUserCountsRequest extends BaseRequest imp
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetEmailAppUsageUserCountsRequest expand(final String value) {
+    public ReportRootGetEmailAppUsageUserCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetEmailAppUsageUserCountsRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetEmailAppUsageUserCountsRequest extends BaseRequest imp
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetEmailAppUsageUserCountsRequest filter(final String value) {
+    public ReportRootGetEmailAppUsageUserCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetEmailAppUsageUserCountsRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetEmailAppUsageUserCountsRequest extends BaseRequest imp
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetEmailAppUsageUserCountsRequest orderBy(final String value) {
+    public ReportRootGetEmailAppUsageUserCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetEmailAppUsageUserCountsRequest)this;
     }

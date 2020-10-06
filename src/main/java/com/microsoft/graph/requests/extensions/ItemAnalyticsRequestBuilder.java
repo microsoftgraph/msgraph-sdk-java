@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemAnalytics;
-import com.microsoft.graph.requests.extensions.IItemActivityStatCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Analytics Request Builder.
  */
-public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements IItemAnalyticsRequestBuilder {
+public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ItemAnalytics
@@ -39,9 +37,9 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IItemAnalyticsRequest instance
+     * @return the ItemAnalyticsRequest instance
      */
-    public IItemAnalyticsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ItemAnalyticsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,9 +47,9 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IItemAnalyticsRequest instance
+     * @return the ItemAnalyticsRequest instance
      */
-    public IItemAnalyticsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemAnalyticsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ItemAnalyticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -60,25 +58,25 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Gets the request builder for ItemActivityStat
      *
-     * @return the IItemActivityStatWithReferenceRequestBuilder instance
+     * @return the ItemActivityStatWithReferenceRequestBuilder instance
      */
-    public IItemActivityStatWithReferenceRequestBuilder allTime() {
+    public ItemActivityStatWithReferenceRequestBuilder allTime() {
         return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allTime"), getClient(), null);
     }
-    public IItemActivityStatCollectionRequestBuilder itemActivityStats() {
+    public ItemActivityStatCollectionRequestBuilder itemActivityStats() {
         return new ItemActivityStatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats"), getClient(), null);
     }
 
-    public IItemActivityStatRequestBuilder itemActivityStats(final String id) {
+    public ItemActivityStatRequestBuilder itemActivityStats(final String id) {
         return new ItemActivityStatRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ItemActivityStat
      *
-     * @return the IItemActivityStatWithReferenceRequestBuilder instance
+     * @return the ItemActivityStatWithReferenceRequestBuilder instance
      */
-    public IItemActivityStatWithReferenceRequestBuilder lastSevenDays() {
+    public ItemActivityStatWithReferenceRequestBuilder lastSevenDays() {
         return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastSevenDays"), getClient(), null);
     }
 }

@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Device;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import java.util.Arrays;
@@ -30,7 +26,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Device With Reference Request.
  */
-public class DeviceWithReferenceRequest extends BaseRequest implements IDeviceWithReferenceRequest {
+public class DeviceWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the Device
@@ -86,9 +82,9 @@ public class DeviceWithReferenceRequest extends BaseRequest implements IDeviceWi
      * @param value the select clause
      * @return the updated request
      */
-    public IDeviceWithReferenceRequest select(final String value) {
+    public DeviceWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IDeviceWithReferenceRequest)this;
+        return (DeviceWithReferenceRequest)this;
     }
 
     /**
@@ -97,7 +93,7 @@ public class DeviceWithReferenceRequest extends BaseRequest implements IDeviceWi
      * @param value the expand clause
      * @return the updated request
      */
-    public IDeviceWithReferenceRequest expand(final String value) {
+    public DeviceWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceWithReferenceRequest)this;
     }

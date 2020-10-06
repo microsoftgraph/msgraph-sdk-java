@@ -12,13 +12,13 @@ import com.microsoft.graph.models.extensions.WorkbookChart;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWorkbookChartCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartCollectionRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookChartAddRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartCountRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartItemAtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartCollectionRequest;
+import com.microsoft.graph.requests.extensions.WorkbookChartAddRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartCountRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartItemAtRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -27,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Chart Collection Request Builder.
  */
-public class WorkbookChartCollectionRequestBuilder extends BaseRequestBuilder implements IWorkbookChartCollectionRequestBuilder {
+public class WorkbookChartCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of WorkbookWorksheet
@@ -46,7 +46,7 @@ public class WorkbookChartCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookChartCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,29 +56,29 @@ public class WorkbookChartCollectionRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookChartCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookChartCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookChartRequestBuilder byId(final String id) {
+    public WorkbookChartRequestBuilder byId(final String id) {
         return new WorkbookChartRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IWorkbookChartAddRequestBuilder add(final String type, final com.google.gson.JsonElement sourceData, final String seriesBy) {
+    public WorkbookChartAddRequestBuilder add(final String type, final com.google.gson.JsonElement sourceData, final String seriesBy) {
         return new WorkbookChartAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, type, sourceData, seriesBy);
     }
 
-    public IWorkbookChartCountRequestBuilder count() {
+    public WorkbookChartCountRequestBuilder count() {
         return new WorkbookChartCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 
-    public IWorkbookChartItemRequestBuilder item(final String name) {
+    public WorkbookChartItemRequestBuilder item(final String name) {
         return new WorkbookChartItemRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.item"), getClient(), null, name);
     }
 
-    public IWorkbookChartItemAtRequestBuilder itemAt(final Integer index) {
+    public WorkbookChartItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookChartItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Policy Deployment Summary Request.
  */
-public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest implements IManagedAppPolicyDeploymentSummaryRequest {
+public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest {
 	
     /**
      * The request for the ManagedAppPolicyDeploymentSummary
@@ -138,7 +138,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedAppPolicyDeploymentSummaryRequest select(final String value) {
+     public ManagedAppPolicyDeploymentSummaryRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedAppPolicyDeploymentSummaryRequest)this;
      }
@@ -149,7 +149,7 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedAppPolicyDeploymentSummaryRequest expand(final String value) {
+     public ManagedAppPolicyDeploymentSummaryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedAppPolicyDeploymentSummaryRequest)this;
      }

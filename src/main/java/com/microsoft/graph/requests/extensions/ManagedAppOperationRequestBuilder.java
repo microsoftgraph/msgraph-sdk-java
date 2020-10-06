@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Operation Request Builder.
  */
-public class ManagedAppOperationRequestBuilder extends BaseRequestBuilder implements IManagedAppOperationRequestBuilder {
+public class ManagedAppOperationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedAppOperation
@@ -35,9 +35,9 @@ public class ManagedAppOperationRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppOperationRequest instance
+     * @return the ManagedAppOperationRequest instance
      */
-    public IManagedAppOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ManagedAppOperationRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppOperationRequest instance
+     * @return the ManagedAppOperationRequest instance
      */
-    public IManagedAppOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedAppOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

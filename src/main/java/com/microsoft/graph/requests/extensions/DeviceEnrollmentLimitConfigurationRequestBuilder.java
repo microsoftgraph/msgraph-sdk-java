@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Enrollment Limit Configuration Request Builder.
  */
-public class DeviceEnrollmentLimitConfigurationRequestBuilder extends BaseRequestBuilder implements IDeviceEnrollmentLimitConfigurationRequestBuilder {
+public class DeviceEnrollmentLimitConfigurationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceEnrollmentLimitConfiguration
@@ -35,9 +35,9 @@ public class DeviceEnrollmentLimitConfigurationRequestBuilder extends BaseReques
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceEnrollmentLimitConfigurationRequest instance
+     * @return the DeviceEnrollmentLimitConfigurationRequest instance
      */
-    public IDeviceEnrollmentLimitConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceEnrollmentLimitConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,18 +45,18 @@ public class DeviceEnrollmentLimitConfigurationRequestBuilder extends BaseReques
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceEnrollmentLimitConfigurationRequest instance
+     * @return the DeviceEnrollmentLimitConfigurationRequest instance
      */
-    public IDeviceEnrollmentLimitConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentLimitConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceEnrollmentLimitConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IEnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
+    public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IEnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
+    public EnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

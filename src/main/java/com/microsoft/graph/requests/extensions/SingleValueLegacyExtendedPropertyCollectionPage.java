@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedProperty
 /**
  * The class for the Single Value Legacy Extended Property Collection Page.
  */
-public class SingleValueLegacyExtendedPropertyCollectionPage extends BaseCollectionPage<SingleValueLegacyExtendedProperty, ISingleValueLegacyExtendedPropertyCollectionRequestBuilder> implements ISingleValueLegacyExtendedPropertyCollectionPage {
+public class SingleValueLegacyExtendedPropertyCollectionPage extends BaseCollectionPage<SingleValueLegacyExtendedProperty, SingleValueLegacyExtendedPropertyCollectionRequestBuilder> {
 
     /**
      * A collection page for SingleValueLegacyExtendedProperty
@@ -22,7 +22,7 @@ public class SingleValueLegacyExtendedPropertyCollectionPage extends BaseCollect
      * @param response the serialized SingleValueLegacyExtendedPropertyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SingleValueLegacyExtendedPropertyCollectionPage(final SingleValueLegacyExtendedPropertyCollectionResponse response, final ISingleValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
+    public SingleValueLegacyExtendedPropertyCollectionPage(final SingleValueLegacyExtendedPropertyCollectionResponse response, final SingleValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

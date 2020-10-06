@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.WorkbookComment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequest;
+import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookCommentRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Comment Collection Request Builder.
  */
-public class WorkbookCommentCollectionRequestBuilder extends BaseRequestBuilder implements IWorkbookCommentCollectionRequestBuilder {
+public class WorkbookCommentCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Workbook
@@ -42,7 +42,7 @@ public class WorkbookCommentCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookCommentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookCommentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class WorkbookCommentCollectionRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookCommentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookCommentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookCommentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookCommentRequestBuilder byId(final String id) {
+    public WorkbookCommentRequestBuilder byId(final String id) {
         return new WorkbookCommentRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

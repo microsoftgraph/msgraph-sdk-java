@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.PlannerTask;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequest;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Planner Task Collection Request Builder.
  */
-public class PlannerTaskCollectionRequestBuilder extends BaseRequestBuilder implements IPlannerTaskCollectionRequestBuilder {
+public class PlannerTaskCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of PlannerPlan
@@ -42,7 +42,7 @@ public class PlannerTaskCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPlannerTaskCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PlannerTaskCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class PlannerTaskCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPlannerTaskCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerTaskCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlannerTaskCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPlannerTaskRequestBuilder byId(final String id) {
+    public PlannerTaskRequestBuilder byId(final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

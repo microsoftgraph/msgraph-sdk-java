@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserWipeManagedAppRegistrationsByDeviceTagRequest;
 import com.microsoft.graph.requests.extensions.UserWipeManagedAppRegistrationsByDeviceTagRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the User Wipe Managed App Registrations By Device Tag Request Builder.
  */
-public class UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseActionRequestBuilder implements IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder {
+public class UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this UserWipeManagedAppRegistrationsByDeviceTag
@@ -32,22 +31,22 @@ public class UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder extends Ba
     }
 
     /**
-     * Creates the IUserWipeManagedAppRegistrationsByDeviceTagRequest
+     * Creates the UserWipeManagedAppRegistrationsByDeviceTagRequest
      *
      * @param requestOptions the options for the request
-     * @return the IUserWipeManagedAppRegistrationsByDeviceTagRequest instance
+     * @return the UserWipeManagedAppRegistrationsByDeviceTagRequest instance
      */
-    public IUserWipeManagedAppRegistrationsByDeviceTagRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserWipeManagedAppRegistrationsByDeviceTagRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IUserWipeManagedAppRegistrationsByDeviceTagRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the UserWipeManagedAppRegistrationsByDeviceTagRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IUserWipeManagedAppRegistrationsByDeviceTagRequest instance
+     * @return the UserWipeManagedAppRegistrationsByDeviceTagRequest instance
      */
-    public IUserWipeManagedAppRegistrationsByDeviceTagRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserWipeManagedAppRegistrationsByDeviceTagRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserWipeManagedAppRegistrationsByDeviceTagRequest request = new UserWipeManagedAppRegistrationsByDeviceTagRequest(
                 getRequestUrl(),
                 getClient(),

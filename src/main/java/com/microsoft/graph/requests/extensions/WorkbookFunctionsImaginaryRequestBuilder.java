@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImaginaryRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImaginaryRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Imaginary Request Builder.
  */
-public class WorkbookFunctionsImaginaryRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImaginaryRequestBuilder {
+public class WorkbookFunctionsImaginaryRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImaginary
@@ -32,22 +31,22 @@ public class WorkbookFunctionsImaginaryRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsImaginaryRequest
+     * Creates the WorkbookFunctionsImaginaryRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImaginaryRequest instance
+     * @return the WorkbookFunctionsImaginaryRequest instance
      */
-    public IWorkbookFunctionsImaginaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImaginaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImaginaryRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImaginaryRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImaginaryRequest instance
+     * @return the WorkbookFunctionsImaginaryRequest instance
      */
-    public IWorkbookFunctionsImaginaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImaginaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImaginaryRequest request = new WorkbookFunctionsImaginaryRequest(
                 getRequestUrl(),
                 getClient(),

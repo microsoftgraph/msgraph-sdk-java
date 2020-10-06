@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IVppTokenSyncLicensesRequest;
 import com.microsoft.graph.requests.extensions.VppTokenSyncLicensesRequest;
 import com.microsoft.graph.models.extensions.VppToken;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Vpp Token Sync Licenses Request Builder.
  */
-public class VppTokenSyncLicensesRequestBuilder extends BaseActionRequestBuilder implements IVppTokenSyncLicensesRequestBuilder {
+public class VppTokenSyncLicensesRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this VppTokenSyncLicenses
@@ -30,22 +29,22 @@ public class VppTokenSyncLicensesRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IVppTokenSyncLicensesRequest
+     * Creates the VppTokenSyncLicensesRequest
      *
      * @param requestOptions the options for the request
-     * @return the IVppTokenSyncLicensesRequest instance
+     * @return the VppTokenSyncLicensesRequest instance
      */
-    public IVppTokenSyncLicensesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public VppTokenSyncLicensesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IVppTokenSyncLicensesRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the VppTokenSyncLicensesRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IVppTokenSyncLicensesRequest instance
+     * @return the VppTokenSyncLicensesRequest instance
      */
-    public IVppTokenSyncLicensesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public VppTokenSyncLicensesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         VppTokenSyncLicensesRequest request = new VppTokenSyncLicensesRequest(
                 getRequestUrl(),
                 getClient(),

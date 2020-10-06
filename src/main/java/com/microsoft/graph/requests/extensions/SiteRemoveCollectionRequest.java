@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.Site;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISiteRemoveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteRemoveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteRemoveCollectionResponse;
 import com.microsoft.graph.models.extensions.SiteRemoveBody;
@@ -25,7 +25,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Site Remove Collection Request.
  */
-public class SiteRemoveCollectionRequest extends BaseCollectionRequest<SiteRemoveCollectionResponse, ISiteRemoveCollectionPage> implements ISiteRemoveCollectionRequest {
+public class SiteRemoveCollectionRequest extends BaseCollectionRequest<SiteRemoveCollectionResponse, SiteRemoveCollectionPage> {
 
 
     protected final SiteRemoveBody body;
@@ -39,12 +39,12 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<SiteRemov
      * @param requestOptions the options for this request
      */
     public SiteRemoveCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SiteRemoveCollectionResponse.class, ISiteRemoveCollectionPage.class);
+        super(requestUrl, client, requestOptions, SiteRemoveCollectionResponse.class, SiteRemoveCollectionPage.class);
         body = new SiteRemoveBody();
     }
 
 
-    public void post(final ICallback<? super ISiteRemoveCollectionPage> callback) {
+    public void post(final ICallback<? super SiteRemoveCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,20 +58,20 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<SiteRemov
         });
     }
 
-    public ISiteRemoveCollectionPage post() throws ClientException {
+    public SiteRemoveCollectionPage post() throws ClientException {
         final SiteRemoveCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public ISiteRemoveCollectionPage buildFromResponse(final SiteRemoveCollectionResponse response) {
-        final ISiteRemoveCollectionRequestBuilder builder;
+    public SiteRemoveCollectionPage buildFromResponse(final SiteRemoveCollectionResponse response) {
+        final SiteRemoveCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SiteRemoveCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<Site>) null);
         } else {
             builder = null;
         }
-        final ISiteRemoveCollectionPage page = new SiteRemoveCollectionPage(response, builder);
+        final SiteRemoveCollectionPage page = new SiteRemoveCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -82,9 +82,9 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<SiteRemov
      * @param value the select clause
      * @return the updated request
      */
-    public ISiteRemoveCollectionRequest select(final String value) {
+    public SiteRemoveCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ISiteRemoveCollectionRequest)this;
+        return (SiteRemoveCollectionRequest)this;
     }
 
     /**
@@ -93,9 +93,9 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<SiteRemov
      * @param value the max number of items to return
      * @return the updated request
      */
-    public ISiteRemoveCollectionRequest top(final int value) {
+    public SiteRemoveCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ISiteRemoveCollectionRequest)this;
+        return (SiteRemoveCollectionRequest)this;
     }
 
     /**
@@ -104,9 +104,9 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<SiteRemov
      * @param value the expand clause
      * @return the updated request
      */
-    public ISiteRemoveCollectionRequest expand(final String value) {
+    public SiteRemoveCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ISiteRemoveCollectionRequest)this;
+        return (SiteRemoveCollectionRequest)this;
     }
 
     /**
@@ -115,9 +115,9 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<SiteRemov
      * @param value the filter clause
      * @return the updated request
      */
-    public ISiteRemoveCollectionRequest filter(final String value) {
+    public SiteRemoveCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ISiteRemoveCollectionRequest)this;
+        return (SiteRemoveCollectionRequest)this;
     }
 
     /**
@@ -126,9 +126,9 @@ public class SiteRemoveCollectionRequest extends BaseCollectionRequest<SiteRemov
      * @param value the order by clause
      * @return the updated request
      */
-    public ISiteRemoveCollectionRequest orderBy(final String value) {
+    public SiteRemoveCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ISiteRemoveCollectionRequest)this;
+        return (SiteRemoveCollectionRequest)this;
     }
 
 }

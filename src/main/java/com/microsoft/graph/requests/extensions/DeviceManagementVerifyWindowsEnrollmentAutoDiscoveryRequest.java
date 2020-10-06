@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest;
 import com.microsoft.graph.requests.extensions.DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Verify Windows Enrollment Auto Discovery Request.
  */
-public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends BaseRequest implements IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest {
+public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends BaseRequest {
 
     /**
      * The request for this DeviceManagementVerifyWindowsEnrollmentAutoDiscovery
@@ -56,7 +55,7 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      * @param value the select clause
      * @return the updated request
      */
-    public IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest select(final String value) {
+    public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest)this;
     }
@@ -67,7 +66,7 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      * @param value the expand clause
      * @return the updated request
      */
-    public IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest expand(final String value) {
+    public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest)this;
     }
@@ -78,7 +77,7 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      * @param value the filter clause
      * @return the updated request
      */
-    public IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest filter(final String value) {
+    public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest)this;
     }
@@ -89,7 +88,7 @@ public class DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest extends
      * @param value the order by clause
      * @return the updated request
      */
-    public IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest orderBy(final String value) {
+    public DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest)this;
     }

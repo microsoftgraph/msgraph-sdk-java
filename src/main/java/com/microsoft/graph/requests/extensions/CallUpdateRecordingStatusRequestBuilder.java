@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallUpdateRecordingStatusRequest;
 import com.microsoft.graph.requests.extensions.CallUpdateRecordingStatusRequest;
 import com.microsoft.graph.models.generated.RecordingStatus;
 import com.microsoft.graph.models.extensions.UpdateRecordingStatusOperation;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Update Recording Status Request Builder.
  */
-public class CallUpdateRecordingStatusRequestBuilder extends BaseActionRequestBuilder implements ICallUpdateRecordingStatusRequestBuilder {
+public class CallUpdateRecordingStatusRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallUpdateRecordingStatus
@@ -35,22 +34,22 @@ public class CallUpdateRecordingStatusRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the ICallUpdateRecordingStatusRequest
+     * Creates the CallUpdateRecordingStatusRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallUpdateRecordingStatusRequest instance
+     * @return the CallUpdateRecordingStatusRequest instance
      */
-    public ICallUpdateRecordingStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallUpdateRecordingStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallUpdateRecordingStatusRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallUpdateRecordingStatusRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallUpdateRecordingStatusRequest instance
+     * @return the CallUpdateRecordingStatusRequest instance
      */
-    public ICallUpdateRecordingStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallUpdateRecordingStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallUpdateRecordingStatusRequest request = new CallUpdateRecordingStatusRequest(
                 getRequestUrl(),
                 getClient(),

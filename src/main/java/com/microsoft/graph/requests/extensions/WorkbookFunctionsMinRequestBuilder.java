@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMinRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsMinRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Min Request Builder.
  */
-public class WorkbookFunctionsMinRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsMinRequestBuilder {
+public class WorkbookFunctionsMinRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsMin
@@ -32,22 +31,22 @@ public class WorkbookFunctionsMinRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookFunctionsMinRequest
+     * Creates the WorkbookFunctionsMinRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMinRequest instance
+     * @return the WorkbookFunctionsMinRequest instance
      */
-    public IWorkbookFunctionsMinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsMinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsMinRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsMinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMinRequest instance
+     * @return the WorkbookFunctionsMinRequest instance
      */
-    public IWorkbookFunctionsMinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsMinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsMinRequest request = new WorkbookFunctionsMinRequest(
                 getRequestUrl(),
                 getClient(),

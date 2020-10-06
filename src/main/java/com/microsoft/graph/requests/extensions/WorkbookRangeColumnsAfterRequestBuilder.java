@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeColumnsAfterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeColumnsAfterRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.models.extensions.WorkbookRange;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Columns After Request Builder.
  */
-public class WorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookRangeColumnsAfterRequestBuilder {
+public class WorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeColumnsAfter
@@ -43,22 +42,22 @@ public class WorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionRequest
     }
 
     /**
-     * Creates the IWorkbookRangeColumnsAfterRequest
+     * Creates the WorkbookRangeColumnsAfterRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeColumnsAfterRequest instance
+     * @return the WorkbookRangeColumnsAfterRequest instance
      */
-    public IWorkbookRangeColumnsAfterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeColumnsAfterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeColumnsAfterRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeColumnsAfterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeColumnsAfterRequest instance
+     * @return the WorkbookRangeColumnsAfterRequest instance
      */
-    public IWorkbookRangeColumnsAfterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeColumnsAfterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeColumnsAfterRequest request = new WorkbookRangeColumnsAfterRequest(
                 getRequestUrl(),
                 getClient(),
@@ -75,27 +74,27 @@ public class WorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionRequest
     /**
      * Gets the request builder for WorkbookRangeFormat
      *
-     * @return the IWorkbookRangeFormatRequestBuilder instance
+     * @return the WorkbookRangeFormatRequestBuilder instance
      */
-    public IWorkbookRangeFormatRequestBuilder format() {
+    public WorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeSort
      *
-     * @return the IWorkbookRangeSortRequestBuilder instance
+     * @return the WorkbookRangeSortRequestBuilder instance
      */
-    public IWorkbookRangeSortRequestBuilder sort() {
+    public WorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.WindowsInformationProtectionNetwork
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionNetworkLearningSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Windows Information Protection Network Learning Summary Collection Request Builder.
  */
-public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder extends BaseRequestBuilder implements IWindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder {
+public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WindowsInformationProtectionNetworkLearningSummaryCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionNetworkLearningSummaryCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsInformationProtectionNetworkLearningSummaryCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWindowsInformationProtectionNetworkLearningSummaryRequestBuilder byId(final String id) {
+    public WindowsInformationProtectionNetworkLearningSummaryRequestBuilder byId(final String id) {
         return new WindowsInformationProtectionNetworkLearningSummaryRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

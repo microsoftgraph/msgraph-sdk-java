@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Activity Based Timeout Policy Request.
  */
-public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IActivityBasedTimeoutPolicyRequest {
+public class ActivityBasedTimeoutPolicyRequest extends BaseRequest {
 	
     /**
      * The request for the ActivityBasedTimeoutPolicy
@@ -138,7 +138,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @param value the select clause
      * @return the updated request
      */
-     public IActivityBasedTimeoutPolicyRequest select(final String value) {
+     public ActivityBasedTimeoutPolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ActivityBasedTimeoutPolicyRequest)this;
      }
@@ -149,7 +149,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @param value the expand clause
      * @return the updated request
      */
-     public IActivityBasedTimeoutPolicyRequest expand(final String value) {
+     public ActivityBasedTimeoutPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ActivityBasedTimeoutPolicyRequest)this;
      }

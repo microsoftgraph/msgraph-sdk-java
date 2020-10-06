@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemRestoreRequest;
 import com.microsoft.graph.requests.extensions.DriveItemRestoreRequest;
 import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.models.extensions.DriveItem;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Restore Request Builder.
  */
-public class DriveItemRestoreRequestBuilder extends BaseActionRequestBuilder implements IDriveItemRestoreRequestBuilder {
+public class DriveItemRestoreRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DriveItemRestore
@@ -35,22 +34,22 @@ public class DriveItemRestoreRequestBuilder extends BaseActionRequestBuilder imp
     }
 
     /**
-     * Creates the IDriveItemRestoreRequest
+     * Creates the DriveItemRestoreRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemRestoreRequest instance
+     * @return the DriveItemRestoreRequest instance
      */
-    public IDriveItemRestoreRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemRestoreRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDriveItemRestoreRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DriveItemRestoreRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemRestoreRequest instance
+     * @return the DriveItemRestoreRequest instance
      */
-    public IDriveItemRestoreRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemRestoreRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemRestoreRequest request = new DriveItemRestoreRequest(
                 getRequestUrl(),
                 getClient(),

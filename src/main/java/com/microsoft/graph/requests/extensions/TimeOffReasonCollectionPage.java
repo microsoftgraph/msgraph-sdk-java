@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TimeOffReason;
-import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionPage;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionResponse;
 /**
  * The class for the Time Off Reason Collection Page.
  */
-public class TimeOffReasonCollectionPage extends BaseCollectionPage<TimeOffReason, ITimeOffReasonCollectionRequestBuilder> implements ITimeOffReasonCollectionPage {
+public class TimeOffReasonCollectionPage extends BaseCollectionPage<TimeOffReason, TimeOffReasonCollectionRequestBuilder> {
 
     /**
      * A collection page for TimeOffReason
@@ -22,7 +22,7 @@ public class TimeOffReasonCollectionPage extends BaseCollectionPage<TimeOffReaso
      * @param response the serialized TimeOffReasonCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TimeOffReasonCollectionPage(final TimeOffReasonCollectionResponse response, final ITimeOffReasonCollectionRequestBuilder builder) {
+    public TimeOffReasonCollectionPage(final TimeOffReasonCollectionResponse response, final TimeOffReasonCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

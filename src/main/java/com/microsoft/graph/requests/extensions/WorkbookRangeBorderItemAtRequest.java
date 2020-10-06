@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderItemAtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderItemAtRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Border Item At Request.
  */
-public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWorkbookRangeBorderItemAtRequest {
+public class WorkbookRangeBorderItemAtRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeBorderItemAt
@@ -97,7 +96,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeBorderItemAtRequest select(final String value) {
+    public WorkbookRangeBorderItemAtRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeBorderItemAtRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeBorderItemAtRequest expand(final String value) {
+    public WorkbookRangeBorderItemAtRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeBorderItemAtRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeBorderItemAtRequest filter(final String value) {
+    public WorkbookRangeBorderItemAtRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeBorderItemAtRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeBorderItemAtRequest orderBy(final String value) {
+    public WorkbookRangeBorderItemAtRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeBorderItemAtRequest)this;
     }

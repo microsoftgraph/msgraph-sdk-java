@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device And App Management Role Definition Request Builder.
  */
-public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequestBuilder implements IDeviceAndAppManagementRoleDefinitionRequestBuilder {
+public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceAndAppManagementRoleDefinition
@@ -35,9 +35,9 @@ public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequ
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceAndAppManagementRoleDefinitionRequest instance
+     * @return the DeviceAndAppManagementRoleDefinitionRequest instance
      */
-    public IDeviceAndAppManagementRoleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceAndAppManagementRoleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,18 +45,18 @@ public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequ
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceAndAppManagementRoleDefinitionRequest instance
+     * @return the DeviceAndAppManagementRoleDefinitionRequest instance
      */
-    public IDeviceAndAppManagementRoleDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAndAppManagementRoleDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IRoleAssignmentCollectionRequestBuilder roleAssignments() {
+    public RoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new RoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
-    public IRoleAssignmentRequestBuilder roleAssignments(final String id) {
+    public RoleAssignmentRequestBuilder roleAssignments(final String id) {
         return new RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
 }

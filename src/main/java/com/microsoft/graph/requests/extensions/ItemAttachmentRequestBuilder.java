@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemAttachment;
-import com.microsoft.graph.requests.extensions.IOutlookItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -20,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Attachment Request Builder.
  */
-public class ItemAttachmentRequestBuilder extends BaseRequestBuilder implements IItemAttachmentRequestBuilder {
+public class ItemAttachmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ItemAttachment
@@ -37,9 +36,9 @@ public class ItemAttachmentRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IItemAttachmentRequest instance
+     * @return the ItemAttachmentRequest instance
      */
-    public IItemAttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ItemAttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +46,9 @@ public class ItemAttachmentRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IItemAttachmentRequest instance
+     * @return the ItemAttachmentRequest instance
      */
-    public IItemAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ItemAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,9 +57,9 @@ public class ItemAttachmentRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Gets the request builder for OutlookItem
      *
-     * @return the IOutlookItemRequestBuilder instance
+     * @return the OutlookItemRequestBuilder instance
      */
-    public IOutlookItemRequestBuilder item() {
+    public OutlookItemRequestBuilder item() {
         return new OutlookItemRequestBuilder(getRequestUrlWithAdditionalSegment("item"), getClient(), null);
     }
 }

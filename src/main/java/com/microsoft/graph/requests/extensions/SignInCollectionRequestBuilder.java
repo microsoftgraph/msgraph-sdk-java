@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.SignIn;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISignInRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISignInCollectionRequest;
+import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SignInRequestBuilder;
+import com.microsoft.graph.requests.extensions.SignInCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Sign In Collection Request Builder.
  */
-public class SignInCollectionRequestBuilder extends BaseRequestBuilder implements ISignInCollectionRequestBuilder {
+public class SignInCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of AuditLogRoot
@@ -42,7 +42,7 @@ public class SignInCollectionRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISignInCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SignInCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class SignInCollectionRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISignInCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SignInCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SignInCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ISignInRequestBuilder byId(final String id) {
+    public SignInRequestBuilder byId(final String id) {
         return new SignInRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

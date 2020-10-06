@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImDivRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImDivRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Im Div Request Builder.
  */
-public class WorkbookFunctionsImDivRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImDivRequestBuilder {
+public class WorkbookFunctionsImDivRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImDiv
@@ -34,22 +33,22 @@ public class WorkbookFunctionsImDivRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsImDivRequest
+     * Creates the WorkbookFunctionsImDivRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImDivRequest instance
+     * @return the WorkbookFunctionsImDivRequest instance
      */
-    public IWorkbookFunctionsImDivRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImDivRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImDivRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImDivRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImDivRequest instance
+     * @return the WorkbookFunctionsImDivRequest instance
      */
-    public IWorkbookFunctionsImDivRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImDivRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImDivRequest request = new WorkbookFunctionsImDivRequest(
                 getRequestUrl(),
                 getClient(),

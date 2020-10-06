@@ -8,19 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Channel;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -32,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Channel Request Builder.
  */
-public class ChannelRequestBuilder extends BaseRequestBuilder implements IChannelRequestBuilder {
+public class ChannelRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Channel
@@ -49,9 +42,9 @@ public class ChannelRequestBuilder extends BaseRequestBuilder implements IChanne
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IChannelRequest instance
+     * @return the ChannelRequest instance
      */
-    public IChannelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ChannelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -59,9 +52,9 @@ public class ChannelRequestBuilder extends BaseRequestBuilder implements IChanne
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IChannelRequest instance
+     * @return the ChannelRequest instance
      */
-    public IChannelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChannelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ChannelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -70,30 +63,30 @@ public class ChannelRequestBuilder extends BaseRequestBuilder implements IChanne
     /**
      * Gets the request builder for DriveItem
      *
-     * @return the IDriveItemRequestBuilder instance
+     * @return the DriveItemRequestBuilder instance
      */
-    public IDriveItemRequestBuilder filesFolder() {
+    public DriveItemRequestBuilder filesFolder() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("filesFolder"), getClient(), null);
     }
-    public IConversationMemberCollectionRequestBuilder members() {
+    public ConversationMemberCollectionRequestBuilder members() {
         return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
-    public IConversationMemberRequestBuilder members(final String id) {
+    public ConversationMemberRequestBuilder members(final String id) {
         return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
-    public IChatMessageCollectionRequestBuilder messages() {
+    public ChatMessageCollectionRequestBuilder messages() {
         return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
-    public IChatMessageRequestBuilder messages(final String id) {
+    public ChatMessageRequestBuilder messages(final String id) {
         return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
-    public ITeamsTabCollectionRequestBuilder tabs() {
+    public TeamsTabCollectionRequestBuilder tabs() {
         return new TeamsTabCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tabs"), getClient(), null);
     }
 
-    public ITeamsTabRequestBuilder tabs(final String id) {
+    public TeamsTabRequestBuilder tabs(final String id) {
         return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);
     }
 }

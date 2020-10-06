@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserGetManagedAppDiagnosticStatusesCollectionRequest;
+import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppDiagnosticStatusesCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the User Get Managed App Diagnostic Statuses Collection Request Builder.
  */
-public class UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder {
+public class UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -42,7 +41,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserGetManagedAppDiagnosticStatusesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserGetManagedAppDiagnosticStatusesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserGetManagedAppDiagnosticStatusesCollectionRequest request = new UserGetManagedAppDiagnosticStatusesCollectionRequest(
                 getRequestUrl(),
                 getClient(),

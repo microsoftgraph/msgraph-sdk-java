@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTbillEqRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsTbillEqRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Tbill Eq Request Builder.
  */
-public class WorkbookFunctionsTbillEqRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsTbillEqRequestBuilder {
+public class WorkbookFunctionsTbillEqRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsTbillEq
@@ -36,22 +35,22 @@ public class WorkbookFunctionsTbillEqRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsTbillEqRequest
+     * Creates the WorkbookFunctionsTbillEqRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTbillEqRequest instance
+     * @return the WorkbookFunctionsTbillEqRequest instance
      */
-    public IWorkbookFunctionsTbillEqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsTbillEqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsTbillEqRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsTbillEqRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTbillEqRequest instance
+     * @return the WorkbookFunctionsTbillEqRequest instance
      */
-    public IWorkbookFunctionsTbillEqRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsTbillEqRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsTbillEqRequest request = new WorkbookFunctionsTbillEqRequest(
                 getRequestUrl(),
                 getClient(),

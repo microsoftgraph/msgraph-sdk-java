@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Reference Attachment Request.
  */
-public class ReferenceAttachmentRequest extends BaseRequest implements IReferenceAttachmentRequest {
+public class ReferenceAttachmentRequest extends BaseRequest {
 	
     /**
      * The request for the ReferenceAttachment
@@ -138,7 +138,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @param value the select clause
      * @return the updated request
      */
-     public IReferenceAttachmentRequest select(final String value) {
+     public ReferenceAttachmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ReferenceAttachmentRequest)this;
      }
@@ -149,7 +149,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @param value the expand clause
      * @return the updated request
      */
-     public IReferenceAttachmentRequest expand(final String value) {
+     public ReferenceAttachmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ReferenceAttachmentRequest)this;
      }

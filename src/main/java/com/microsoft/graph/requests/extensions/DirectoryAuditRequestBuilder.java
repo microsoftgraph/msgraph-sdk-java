@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Directory Audit Request Builder.
  */
-public class DirectoryAuditRequestBuilder extends BaseRequestBuilder implements IDirectoryAuditRequestBuilder {
+public class DirectoryAuditRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DirectoryAudit
@@ -35,9 +35,9 @@ public class DirectoryAuditRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDirectoryAuditRequest instance
+     * @return the DirectoryAuditRequest instance
      */
-    public IDirectoryAuditRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryAuditRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DirectoryAuditRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDirectoryAuditRequest instance
+     * @return the DirectoryAuditRequest instance
      */
-    public IDirectoryAuditRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryAuditRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DirectoryAuditRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

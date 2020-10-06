@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionPage;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCo
 /**
  * The class for the Targeted Managed App Configuration Collection Page.
  */
-public class TargetedManagedAppConfigurationCollectionPage extends BaseCollectionPage<TargetedManagedAppConfiguration, ITargetedManagedAppConfigurationCollectionRequestBuilder> implements ITargetedManagedAppConfigurationCollectionPage {
+public class TargetedManagedAppConfigurationCollectionPage extends BaseCollectionPage<TargetedManagedAppConfiguration, TargetedManagedAppConfigurationCollectionRequestBuilder> {
 
     /**
      * A collection page for TargetedManagedAppConfiguration
@@ -22,7 +22,7 @@ public class TargetedManagedAppConfigurationCollectionPage extends BaseCollectio
      * @param response the serialized TargetedManagedAppConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TargetedManagedAppConfigurationCollectionPage(final TargetedManagedAppConfigurationCollectionResponse response, final ITargetedManagedAppConfigurationCollectionRequestBuilder builder) {
+    public TargetedManagedAppConfigurationCollectionPage(final TargetedManagedAppConfigurationCollectionResponse response, final TargetedManagedAppConfigurationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableRowItemAtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableRowItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookTableRow;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Row Item At Request Builder.
  */
-public class WorkbookTableRowItemAtRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookTableRowItemAtRequestBuilder {
+public class WorkbookTableRowItemAtRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableRowItemAt
@@ -32,22 +31,22 @@ public class WorkbookTableRowItemAtRequestBuilder extends BaseFunctionRequestBui
     }
 
     /**
-     * Creates the IWorkbookTableRowItemAtRequest
+     * Creates the WorkbookTableRowItemAtRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableRowItemAtRequest instance
+     * @return the WorkbookTableRowItemAtRequest instance
      */
-    public IWorkbookTableRowItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableRowItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableRowItemAtRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableRowItemAtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableRowItemAtRequest instance
+     * @return the WorkbookTableRowItemAtRequest instance
      */
-    public IWorkbookTableRowItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableRowItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableRowItemAtRequest request = new WorkbookTableRowItemAtRequest(
                 getRequestUrl(),
                 getClient(),

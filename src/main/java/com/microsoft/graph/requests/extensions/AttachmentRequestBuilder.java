@@ -20,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Attachment Request Builder.
  */
-public class AttachmentRequestBuilder extends BaseRequestBuilder implements IAttachmentRequestBuilder {
+public class AttachmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Attachment
@@ -37,9 +37,9 @@ public class AttachmentRequestBuilder extends BaseRequestBuilder implements IAtt
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAttachmentRequest instance
+     * @return the AttachmentRequest instance
      */
-    public IAttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class AttachmentRequestBuilder extends BaseRequestBuilder implements IAtt
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAttachmentRequest instance
+     * @return the AttachmentRequest instance
      */
-    public IAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

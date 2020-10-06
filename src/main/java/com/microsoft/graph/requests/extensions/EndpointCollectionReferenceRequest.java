@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.Endpoint;
 /**
  * The class for the Endpoint Collection Reference Request.
  */
-public class EndpointCollectionReferenceRequest extends BaseCollectionRequest<EndpointCollectionResponse, IEndpointCollectionPage> implements IEndpointCollectionReferenceRequest {
+public class EndpointCollectionReferenceRequest extends BaseCollectionRequest<EndpointCollectionResponse, EndpointCollectionPage> {
 
     /**
      * The request builder for this collection of Endpoint
@@ -33,7 +33,7 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionRequest<En
      * @param requestOptions the options for this request
      */
     public EndpointCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, IEndpointCollectionPage.class);
+        super(requestUrl, client, requestOptions, EndpointCollectionResponse.class, EndpointCollectionPage.class);
     }
 
     /**
@@ -42,7 +42,7 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionRequest<En
      * @param value the expand clause
      * @return the updated request
      */
-    public IEndpointCollectionReferenceRequest expand(final String value) {
+    public EndpointCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EndpointCollectionReferenceRequest)this;
     }
@@ -53,7 +53,7 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionRequest<En
      * @param value the filter clause
      * @return the updated request
      */
-    public IEndpointCollectionReferenceRequest filter(final String value) {
+    public EndpointCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (EndpointCollectionReferenceRequest)this;
     }
@@ -64,7 +64,7 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionRequest<En
      * @param value the sort clause
      * @return the updated request
      */
-    public IEndpointCollectionReferenceRequest orderBy(final String value) {
+    public EndpointCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (EndpointCollectionReferenceRequest)this;
     }
@@ -75,7 +75,7 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionRequest<En
      * @param value the select clause
      * @return the updated request
      */
-    public IEndpointCollectionReferenceRequest select(final String value) {
+    public EndpointCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EndpointCollectionReferenceRequest)this;
     }
@@ -86,7 +86,7 @@ public class EndpointCollectionReferenceRequest extends BaseCollectionRequest<En
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IEndpointCollectionReferenceRequest top(final int value) {
+    public EndpointCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (EndpointCollectionReferenceRequest)this;
     }

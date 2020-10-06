@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mobile App Category Collection With References Request Builder.
  */
-public class MobileAppCategoryCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements IMobileAppCategoryCollectionWithReferencesRequestBuilder {
+public class MobileAppCategoryCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of MobileApp
@@ -39,7 +39,7 @@ public class MobileAppCategoryCollectionWithReferencesRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMobileAppCategoryCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MobileAppCategoryCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,15 +49,15 @@ public class MobileAppCategoryCollectionWithReferencesRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMobileAppCategoryCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppCategoryCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileAppCategoryCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMobileAppCategoryWithReferenceRequestBuilder byId(final String id) {
+    public MobileAppCategoryWithReferenceRequestBuilder byId(final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IMobileAppCategoryCollectionReferenceRequestBuilder references(){
+    public MobileAppCategoryCollectionReferenceRequestBuilder references(){
         return new MobileAppCategoryCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

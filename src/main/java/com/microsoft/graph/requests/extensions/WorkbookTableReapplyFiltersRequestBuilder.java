@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableReapplyFiltersRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableReapplyFiltersRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Reapply Filters Request Builder.
  */
-public class WorkbookTableReapplyFiltersRequestBuilder extends BaseActionRequestBuilder implements IWorkbookTableReapplyFiltersRequestBuilder {
+public class WorkbookTableReapplyFiltersRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableReapplyFilters
@@ -30,22 +29,22 @@ public class WorkbookTableReapplyFiltersRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookTableReapplyFiltersRequest
+     * Creates the WorkbookTableReapplyFiltersRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableReapplyFiltersRequest instance
+     * @return the WorkbookTableReapplyFiltersRequest instance
      */
-    public IWorkbookTableReapplyFiltersRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableReapplyFiltersRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableReapplyFiltersRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableReapplyFiltersRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableReapplyFiltersRequest instance
+     * @return the WorkbookTableReapplyFiltersRequest instance
      */
-    public IWorkbookTableReapplyFiltersRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableReapplyFiltersRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableReapplyFiltersRequest request = new WorkbookTableReapplyFiltersRequest(
                 getRequestUrl(),
                 getClient(),

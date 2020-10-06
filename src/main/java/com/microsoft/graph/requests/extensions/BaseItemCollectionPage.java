@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.BaseItem;
-import com.microsoft.graph.requests.extensions.IBaseItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.BaseItemCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionPage;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.BaseItemCollectionResponse;
 /**
  * The class for the Base Item Collection Page.
  */
-public class BaseItemCollectionPage extends BaseCollectionPage<BaseItem, IBaseItemCollectionRequestBuilder> implements IBaseItemCollectionPage {
+public class BaseItemCollectionPage extends BaseCollectionPage<BaseItem, BaseItemCollectionRequestBuilder> {
 
     /**
      * A collection page for BaseItem
@@ -22,7 +22,7 @@ public class BaseItemCollectionPage extends BaseCollectionPage<BaseItem, IBaseIt
      * @param response the serialized BaseItemCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public BaseItemCollectionPage(final BaseItemCollectionResponse response, final IBaseItemCollectionRequestBuilder builder) {
+    public BaseItemCollectionPage(final BaseItemCollectionResponse response, final BaseItemCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

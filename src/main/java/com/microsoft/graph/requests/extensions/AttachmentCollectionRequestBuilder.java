@@ -14,10 +14,10 @@ import com.microsoft.graph.models.extensions.UploadSession;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequest;
-import com.microsoft.graph.requests.extensions.IAttachmentCreateUploadSessionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionRequest;
+import com.microsoft.graph.requests.extensions.AttachmentCreateUploadSessionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -26,7 +26,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Attachment Collection Request Builder.
  */
-public class AttachmentCollectionRequestBuilder extends BaseRequestBuilder implements IAttachmentCollectionRequestBuilder {
+public class AttachmentCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Post
@@ -45,7 +45,7 @@ public class AttachmentCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAttachmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AttachmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,17 +55,17 @@ public class AttachmentCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAttachmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AttachmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AttachmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IAttachmentRequestBuilder byId(final String id) {
+    public AttachmentRequestBuilder byId(final String id) {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IAttachmentCreateUploadSessionRequestBuilder createUploadSession(final AttachmentItem attachmentItem) {
+    public AttachmentCreateUploadSessionRequestBuilder createUploadSession(final AttachmentItem attachmentItem) {
         return new AttachmentCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, attachmentItem);
     }
 }

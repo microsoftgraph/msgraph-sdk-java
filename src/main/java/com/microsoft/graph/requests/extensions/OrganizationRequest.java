@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Organization;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Organization Request.
  */
-public class OrganizationRequest extends BaseRequest implements IOrganizationRequest {
+public class OrganizationRequest extends BaseRequest {
 	
     /**
      * The request for the Organization
@@ -146,7 +142,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @param value the select clause
      * @return the updated request
      */
-     public IOrganizationRequest select(final String value) {
+     public OrganizationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OrganizationRequest)this;
      }
@@ -157,7 +153,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IOrganizationRequest expand(final String value) {
+     public OrganizationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OrganizationRequest)this;
      }

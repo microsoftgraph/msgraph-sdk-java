@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallRejectRequest;
 import com.microsoft.graph.requests.extensions.CallRejectRequest;
 import com.microsoft.graph.models.generated.RejectReason;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Reject Request Builder.
  */
-public class CallRejectRequestBuilder extends BaseActionRequestBuilder implements ICallRejectRequestBuilder {
+public class CallRejectRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallReject
@@ -34,22 +33,22 @@ public class CallRejectRequestBuilder extends BaseActionRequestBuilder implement
     }
 
     /**
-     * Creates the ICallRejectRequest
+     * Creates the CallRejectRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallRejectRequest instance
+     * @return the CallRejectRequest instance
      */
-    public ICallRejectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallRejectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallRejectRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallRejectRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallRejectRequest instance
+     * @return the CallRejectRequest instance
      */
-    public ICallRejectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallRejectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallRejectRequest request = new CallRejectRequest(
                 getRequestUrl(),
                 getClient(),

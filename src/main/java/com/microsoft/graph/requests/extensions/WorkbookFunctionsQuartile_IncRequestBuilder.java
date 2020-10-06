@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsQuartile_IncRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsQuartile_IncRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Quartile_Inc Request Builder.
  */
-public class WorkbookFunctionsQuartile_IncRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsQuartile_IncRequestBuilder {
+public class WorkbookFunctionsQuartile_IncRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsQuartile_Inc
@@ -34,22 +33,22 @@ public class WorkbookFunctionsQuartile_IncRequestBuilder extends BaseActionReque
     }
 
     /**
-     * Creates the IWorkbookFunctionsQuartile_IncRequest
+     * Creates the WorkbookFunctionsQuartile_IncRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsQuartile_IncRequest instance
+     * @return the WorkbookFunctionsQuartile_IncRequest instance
      */
-    public IWorkbookFunctionsQuartile_IncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsQuartile_IncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsQuartile_IncRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsQuartile_IncRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsQuartile_IncRequest instance
+     * @return the WorkbookFunctionsQuartile_IncRequest instance
      */
-    public IWorkbookFunctionsQuartile_IncRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsQuartile_IncRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsQuartile_IncRequest request = new WorkbookFunctionsQuartile_IncRequest(
                 getRequestUrl(),
                 getClient(),

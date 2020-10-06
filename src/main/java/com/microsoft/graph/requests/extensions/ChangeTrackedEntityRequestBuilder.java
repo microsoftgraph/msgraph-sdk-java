@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Change Tracked Entity Request Builder.
  */
-public class ChangeTrackedEntityRequestBuilder extends BaseRequestBuilder implements IChangeTrackedEntityRequestBuilder {
+public class ChangeTrackedEntityRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ChangeTrackedEntity
@@ -35,9 +35,9 @@ public class ChangeTrackedEntityRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IChangeTrackedEntityRequest instance
+     * @return the ChangeTrackedEntityRequest instance
      */
-    public IChangeTrackedEntityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ChangeTrackedEntityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ChangeTrackedEntityRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IChangeTrackedEntityRequest instance
+     * @return the ChangeTrackedEntityRequest instance
      */
-    public IChangeTrackedEntityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChangeTrackedEntityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ChangeTrackedEntityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

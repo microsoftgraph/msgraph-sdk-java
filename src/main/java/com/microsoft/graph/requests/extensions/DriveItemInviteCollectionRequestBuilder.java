@@ -12,8 +12,7 @@ import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequest;
+import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -24,7 +23,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Drive Item Invite Collection Request Builder.
  */
-public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBuilder implements IDriveItemInviteCollectionRequestBuilder {
+public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this collection of DriveItem
@@ -71,7 +70,7 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveItemInviteCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemInviteCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -81,7 +80,7 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveItemInviteCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemInviteCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemInviteCollectionRequest request = new DriveItemInviteCollectionRequest(
                 getRequestUrl(),
                 getClient(),

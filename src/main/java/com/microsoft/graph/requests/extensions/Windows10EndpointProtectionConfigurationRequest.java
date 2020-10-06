@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Endpoint Protection Configuration Request.
  */
-public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest implements IWindows10EndpointProtectionConfigurationRequest {
+public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the Windows10EndpointProtectionConfiguration
@@ -138,7 +138,7 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10EndpointProtectionConfigurationRequest select(final String value) {
+     public Windows10EndpointProtectionConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (Windows10EndpointProtectionConfigurationRequest)this;
      }
@@ -149,7 +149,7 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10EndpointProtectionConfigurationRequest expand(final String value) {
+     public Windows10EndpointProtectionConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (Windows10EndpointProtectionConfigurationRequest)this;
      }

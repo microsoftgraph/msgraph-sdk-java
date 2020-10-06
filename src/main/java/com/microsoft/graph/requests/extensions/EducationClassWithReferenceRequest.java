@@ -8,15 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationClass;
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -32,7 +27,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Education Class With Reference Request.
  */
-public class EducationClassWithReferenceRequest extends BaseRequest implements IEducationClassWithReferenceRequest {
+public class EducationClassWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the EducationClass
@@ -88,9 +83,9 @@ public class EducationClassWithReferenceRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-    public IEducationClassWithReferenceRequest select(final String value) {
+    public EducationClassWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IEducationClassWithReferenceRequest)this;
+        return (EducationClassWithReferenceRequest)this;
     }
 
     /**
@@ -99,7 +94,7 @@ public class EducationClassWithReferenceRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-    public IEducationClassWithReferenceRequest expand(final String value) {
+    public EducationClassWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EducationClassWithReferenceRequest)this;
     }

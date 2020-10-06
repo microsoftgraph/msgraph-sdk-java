@@ -9,11 +9,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeSortRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeSortRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Request Builder.
  */
-public class WorkbookRangeRequestBuilder extends BaseRequestBuilder implements IWorkbookRangeRequestBuilder {
+public class WorkbookRangeRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookRange
@@ -42,9 +39,9 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookRangeRequest instance
+     * @return the WorkbookRangeRequest instance
      */
-    public IWorkbookRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,9 +49,9 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookRangeRequest instance
+     * @return the WorkbookRangeRequest instance
      */
-    public IWorkbookRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookRangeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,139 +60,139 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Gets the request builder for WorkbookRangeFormat
      *
-     * @return the IWorkbookRangeFormatRequestBuilder instance
+     * @return the WorkbookRangeFormatRequestBuilder instance
      */
-    public IWorkbookRangeFormatRequestBuilder format() {
+    public WorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeSort
      *
-     * @return the IWorkbookRangeSortRequestBuilder instance
+     * @return the WorkbookRangeSortRequestBuilder instance
      */
-    public IWorkbookRangeSortRequestBuilder sort() {
+    public WorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
-    public IWorkbookRangeClearRequestBuilder clear(final String applyTo) {
+    public WorkbookRangeClearRequestBuilder clear(final String applyTo) {
         return new WorkbookRangeClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null, applyTo);
     }
 
-    public IWorkbookRangeDeleteRequestBuilder delete(final String shift) {
+    public WorkbookRangeDeleteRequestBuilder delete(final String shift) {
         return new WorkbookRangeDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delete"), getClient(), null, shift);
     }
 
-    public IWorkbookRangeInsertRequestBuilder insert(final String shift) {
+    public WorkbookRangeInsertRequestBuilder insert(final String shift) {
         return new WorkbookRangeInsertRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.insert"), getClient(), null, shift);
     }
 
-    public IWorkbookRangeMergeRequestBuilder merge(final Boolean across) {
+    public WorkbookRangeMergeRequestBuilder merge(final Boolean across) {
         return new WorkbookRangeMergeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.merge"), getClient(), null, across);
     }
 
-    public IWorkbookRangeUnmergeRequestBuilder unmerge() {
+    public WorkbookRangeUnmergeRequestBuilder unmerge() {
         return new WorkbookRangeUnmergeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unmerge"), getClient(), null);
     }
 
-    public IWorkbookRangeBoundingRectRequestBuilder boundingRect(final String anotherRange) {
+    public WorkbookRangeBoundingRectRequestBuilder boundingRect(final String anotherRange) {
         return new WorkbookRangeBoundingRectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.boundingRect"), getClient(), null, anotherRange);
     }
 
-    public IWorkbookRangeCellRequestBuilder cell(final Integer row, final Integer column) {
+    public WorkbookRangeCellRequestBuilder cell(final Integer row, final Integer column) {
         return new WorkbookRangeCellRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cell"), getClient(), null, row, column);
     }
 
-    public IWorkbookRangeColumnRequestBuilder column(final Integer column) {
+    public WorkbookRangeColumnRequestBuilder column(final Integer column) {
         return new WorkbookRangeColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.column"), getClient(), null, column);
     }
 
-    public IWorkbookRangeColumnsAfterRequestBuilder columnsAfter() {
+    public WorkbookRangeColumnsAfterRequestBuilder columnsAfter() {
         return new WorkbookRangeColumnsAfterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsAfter"), getClient(), null);
     }
 
-    public IWorkbookRangeColumnsAfterRequestBuilder columnsAfter(final Integer count) {
+    public WorkbookRangeColumnsAfterRequestBuilder columnsAfter(final Integer count) {
         return new WorkbookRangeColumnsAfterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsAfter"), getClient(), null, count);
     }
 
-    public IWorkbookRangeColumnsBeforeRequestBuilder columnsBefore() {
+    public WorkbookRangeColumnsBeforeRequestBuilder columnsBefore() {
         return new WorkbookRangeColumnsBeforeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsBefore"), getClient(), null);
     }
 
-    public IWorkbookRangeColumnsBeforeRequestBuilder columnsBefore(final Integer count) {
+    public WorkbookRangeColumnsBeforeRequestBuilder columnsBefore(final Integer count) {
         return new WorkbookRangeColumnsBeforeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsBefore"), getClient(), null, count);
     }
 
-    public IWorkbookRangeEntireColumnRequestBuilder entireColumn() {
+    public WorkbookRangeEntireColumnRequestBuilder entireColumn() {
         return new WorkbookRangeEntireColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.entireColumn"), getClient(), null);
     }
 
-    public IWorkbookRangeEntireRowRequestBuilder entireRow() {
+    public WorkbookRangeEntireRowRequestBuilder entireRow() {
         return new WorkbookRangeEntireRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.entireRow"), getClient(), null);
     }
 
-    public IWorkbookRangeIntersectionRequestBuilder intersection(final String anotherRange) {
+    public WorkbookRangeIntersectionRequestBuilder intersection(final String anotherRange) {
         return new WorkbookRangeIntersectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.intersection"), getClient(), null, anotherRange);
     }
 
-    public IWorkbookRangeLastCellRequestBuilder lastCell() {
+    public WorkbookRangeLastCellRequestBuilder lastCell() {
         return new WorkbookRangeLastCellRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastCell"), getClient(), null);
     }
 
-    public IWorkbookRangeLastColumnRequestBuilder lastColumn() {
+    public WorkbookRangeLastColumnRequestBuilder lastColumn() {
         return new WorkbookRangeLastColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastColumn"), getClient(), null);
     }
 
-    public IWorkbookRangeLastRowRequestBuilder lastRow() {
+    public WorkbookRangeLastRowRequestBuilder lastRow() {
         return new WorkbookRangeLastRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastRow"), getClient(), null);
     }
 
-    public IWorkbookRangeOffsetRangeRequestBuilder offsetRange(final Integer rowOffset, final Integer columnOffset) {
+    public WorkbookRangeOffsetRangeRequestBuilder offsetRange(final Integer rowOffset, final Integer columnOffset) {
         return new WorkbookRangeOffsetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.offsetRange"), getClient(), null, rowOffset, columnOffset);
     }
 
-    public IWorkbookRangeResizedRangeRequestBuilder resizedRange(final Integer deltaRows, final Integer deltaColumns) {
+    public WorkbookRangeResizedRangeRequestBuilder resizedRange(final Integer deltaRows, final Integer deltaColumns) {
         return new WorkbookRangeResizedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resizedRange"), getClient(), null, deltaRows, deltaColumns);
     }
 
-    public IWorkbookRangeRowRequestBuilder row(final Integer row) {
+    public WorkbookRangeRowRequestBuilder row(final Integer row) {
         return new WorkbookRangeRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.row"), getClient(), null, row);
     }
 
-    public IWorkbookRangeRowsAboveRequestBuilder rowsAbove() {
+    public WorkbookRangeRowsAboveRequestBuilder rowsAbove() {
         return new WorkbookRangeRowsAboveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsAbove"), getClient(), null);
     }
 
-    public IWorkbookRangeRowsAboveRequestBuilder rowsAbove(final Integer count) {
+    public WorkbookRangeRowsAboveRequestBuilder rowsAbove(final Integer count) {
         return new WorkbookRangeRowsAboveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsAbove"), getClient(), null, count);
     }
 
-    public IWorkbookRangeRowsBelowRequestBuilder rowsBelow() {
+    public WorkbookRangeRowsBelowRequestBuilder rowsBelow() {
         return new WorkbookRangeRowsBelowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsBelow"), getClient(), null);
     }
 
-    public IWorkbookRangeRowsBelowRequestBuilder rowsBelow(final Integer count) {
+    public WorkbookRangeRowsBelowRequestBuilder rowsBelow(final Integer count) {
         return new WorkbookRangeRowsBelowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsBelow"), getClient(), null, count);
     }
 
-    public IWorkbookRangeUsedRangeRequestBuilder usedRange() {
+    public WorkbookRangeUsedRangeRequestBuilder usedRange() {
         return new WorkbookRangeUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null);
     }
 
-    public IWorkbookRangeUsedRangeRequestBuilder usedRange(final Boolean valuesOnly) {
+    public WorkbookRangeUsedRangeRequestBuilder usedRange(final Boolean valuesOnly) {
         return new WorkbookRangeUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null, valuesOnly);
     }
 
-    public IWorkbookRangeVisibleViewRequestBuilder visibleView() {
+    public WorkbookRangeVisibleViewRequestBuilder visibleView() {
         return new WorkbookRangeVisibleViewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.visibleView"), getClient(), null);
     }
 }

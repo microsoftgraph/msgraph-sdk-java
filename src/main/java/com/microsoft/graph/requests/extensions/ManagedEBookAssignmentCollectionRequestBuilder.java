@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollectionRequest;
+import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed EBook Assignment Collection Request Builder.
  */
-public class ManagedEBookAssignmentCollectionRequestBuilder extends BaseRequestBuilder implements IManagedEBookAssignmentCollectionRequestBuilder {
+public class ManagedEBookAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ManagedEBook
@@ -42,7 +42,7 @@ public class ManagedEBookAssignmentCollectionRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedEBookAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedEBookAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ManagedEBookAssignmentCollectionRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedEBookAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedEBookAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedEBookAssignmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedEBookAssignmentRequestBuilder byId(final String id) {
+    public ManagedEBookAssignmentRequestBuilder byId(final String id) {
         return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

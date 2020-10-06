@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTrimMeanRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsTrimMeanRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Trim Mean Request Builder.
  */
-public class WorkbookFunctionsTrimMeanRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsTrimMeanRequestBuilder {
+public class WorkbookFunctionsTrimMeanRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsTrimMean
@@ -34,22 +33,22 @@ public class WorkbookFunctionsTrimMeanRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsTrimMeanRequest
+     * Creates the WorkbookFunctionsTrimMeanRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTrimMeanRequest instance
+     * @return the WorkbookFunctionsTrimMeanRequest instance
      */
-    public IWorkbookFunctionsTrimMeanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsTrimMeanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsTrimMeanRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsTrimMeanRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTrimMeanRequest instance
+     * @return the WorkbookFunctionsTrimMeanRequest instance
      */
-    public IWorkbookFunctionsTrimMeanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsTrimMeanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsTrimMeanRequest request = new WorkbookFunctionsTrimMeanRequest(
                 getRequestUrl(),
                 getClient(),

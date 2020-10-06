@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentFailureDetailsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Managed Device Enrollment Failure Details Request.
  */
-public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends BaseRequest implements IReportRootManagedDeviceEnrollmentFailureDetailsRequest {
+public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootManagedDeviceEnrollmentFailureDetails
@@ -57,7 +56,7 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootManagedDeviceEnrollmentFailureDetailsRequest select(final String value) {
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootManagedDeviceEnrollmentFailureDetailsRequest)this;
     }
@@ -68,7 +67,7 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootManagedDeviceEnrollmentFailureDetailsRequest expand(final String value) {
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootManagedDeviceEnrollmentFailureDetailsRequest)this;
     }
@@ -79,7 +78,7 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootManagedDeviceEnrollmentFailureDetailsRequest filter(final String value) {
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootManagedDeviceEnrollmentFailureDetailsRequest)this;
     }
@@ -90,7 +89,7 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequest extends Base
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootManagedDeviceEnrollmentFailureDetailsRequest orderBy(final String value) {
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootManagedDeviceEnrollmentFailureDetailsRequest)this;
     }

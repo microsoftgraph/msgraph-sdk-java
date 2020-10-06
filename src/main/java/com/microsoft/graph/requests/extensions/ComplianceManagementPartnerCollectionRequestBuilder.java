@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ComplianceManagementPartner;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerCollectionRequest;
+import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerRequestBuilder;
+import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Compliance Management Partner Collection Request Builder.
  */
-public class ComplianceManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder implements IComplianceManagementPartnerCollectionRequestBuilder {
+public class ComplianceManagementPartnerCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class ComplianceManagementPartnerCollectionRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IComplianceManagementPartnerCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ComplianceManagementPartnerCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ComplianceManagementPartnerCollectionRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IComplianceManagementPartnerCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ComplianceManagementPartnerCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ComplianceManagementPartnerCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IComplianceManagementPartnerRequestBuilder byId(final String id) {
+    public ComplianceManagementPartnerRequestBuilder byId(final String id) {
         return new ComplianceManagementPartnerRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

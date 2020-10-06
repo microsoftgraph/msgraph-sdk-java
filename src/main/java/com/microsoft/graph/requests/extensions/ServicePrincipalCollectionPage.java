@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
-import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionPage;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRespons
 /**
  * The class for the Service Principal Collection Page.
  */
-public class ServicePrincipalCollectionPage extends BaseCollectionPage<ServicePrincipal, IServicePrincipalCollectionRequestBuilder> implements IServicePrincipalCollectionPage {
+public class ServicePrincipalCollectionPage extends BaseCollectionPage<ServicePrincipal, ServicePrincipalCollectionRequestBuilder> {
 
     /**
      * A collection page for ServicePrincipal
@@ -22,7 +22,7 @@ public class ServicePrincipalCollectionPage extends BaseCollectionPage<ServicePr
      * @param response the serialized ServicePrincipalCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ServicePrincipalCollectionPage(final ServicePrincipalCollectionResponse response, final IServicePrincipalCollectionRequestBuilder builder) {
+    public ServicePrincipalCollectionPage(final ServicePrincipalCollectionResponse response, final ServicePrincipalCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

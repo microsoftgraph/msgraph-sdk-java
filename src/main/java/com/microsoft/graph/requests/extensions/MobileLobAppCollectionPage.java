@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MobileLobApp;
-import com.microsoft.graph.requests.extensions.IMobileLobAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileLobAppCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileLobAppCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileLobAppCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.MobileLobAppCollectionResponse;
 /**
  * The class for the Mobile Lob App Collection Page.
  */
-public class MobileLobAppCollectionPage extends BaseCollectionPage<MobileLobApp, IMobileLobAppCollectionRequestBuilder> implements IMobileLobAppCollectionPage {
+public class MobileLobAppCollectionPage extends BaseCollectionPage<MobileLobApp, MobileLobAppCollectionRequestBuilder> {
 
     /**
      * A collection page for MobileLobApp
@@ -22,7 +22,7 @@ public class MobileLobAppCollectionPage extends BaseCollectionPage<MobileLobApp,
      * @param response the serialized MobileLobAppCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MobileLobAppCollectionPage(final MobileLobAppCollectionResponse response, final IMobileLobAppCollectionRequestBuilder builder) {
+    public MobileLobAppCollectionPage(final MobileLobAppCollectionResponse response, final MobileLobAppCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

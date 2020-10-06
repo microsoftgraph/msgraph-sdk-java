@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Directory Object Get Available Extension Properties Collection Page.
  */
-public class DirectoryObjectGetAvailableExtensionPropertiesCollectionPage extends BaseCollectionPage<ExtensionProperty, IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder> implements IDirectoryObjectGetAvailableExtensionPropertiesCollectionPage {
+public class DirectoryObjectGetAvailableExtensionPropertiesCollectionPage extends BaseCollectionPage<ExtensionProperty, DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder> {
 
     /**
      * A collection page for ExtensionProperty.
@@ -33,7 +33,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionPage extend
      * @param response The serialized DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DirectoryObjectGetAvailableExtensionPropertiesCollectionPage(final DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse response, final IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder builder) {
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionPage(final DirectoryObjectGetAvailableExtensionPropertiesCollectionResponse response, final DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

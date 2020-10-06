@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CalendarGroup;
-import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Calendar Group Request.
  */
-public class CalendarGroupRequest extends BaseRequest implements ICalendarGroupRequest {
+public class CalendarGroupRequest extends BaseRequest {
 	
     /**
      * The request for the CalendarGroup
@@ -142,7 +140,7 @@ public class CalendarGroupRequest extends BaseRequest implements ICalendarGroupR
      * @param value the select clause
      * @return the updated request
      */
-     public ICalendarGroupRequest select(final String value) {
+     public CalendarGroupRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (CalendarGroupRequest)this;
      }
@@ -153,7 +151,7 @@ public class CalendarGroupRequest extends BaseRequest implements ICalendarGroupR
      * @param value the expand clause
      * @return the updated request
      */
-     public ICalendarGroupRequest expand(final String value) {
+     public CalendarGroupRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (CalendarGroupRequest)this;
      }

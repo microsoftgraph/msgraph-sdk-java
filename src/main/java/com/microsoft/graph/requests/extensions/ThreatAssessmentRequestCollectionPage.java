@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ThreatAssessmentRequest;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionPage;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollection
 /**
  * The class for the Threat Assessment Request Collection Page.
  */
-public class ThreatAssessmentRequestCollectionPage extends BaseCollectionPage<ThreatAssessmentRequest, IThreatAssessmentRequestCollectionRequestBuilder> implements IThreatAssessmentRequestCollectionPage {
+public class ThreatAssessmentRequestCollectionPage extends BaseCollectionPage<ThreatAssessmentRequest, ThreatAssessmentRequestCollectionRequestBuilder> {
 
     /**
      * A collection page for ThreatAssessmentRequest
@@ -22,7 +22,7 @@ public class ThreatAssessmentRequestCollectionPage extends BaseCollectionPage<Th
      * @param response the serialized ThreatAssessmentRequestCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ThreatAssessmentRequestCollectionPage(final ThreatAssessmentRequestCollectionResponse response, final IThreatAssessmentRequestCollectionRequestBuilder builder) {
+    public ThreatAssessmentRequestCollectionPage(final ThreatAssessmentRequestCollectionResponse response, final ThreatAssessmentRequestCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

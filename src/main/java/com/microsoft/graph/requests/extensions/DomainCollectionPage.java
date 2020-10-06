@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Domain;
-import com.microsoft.graph.requests.extensions.IDomainCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DomainCollectionPage;
 import com.microsoft.graph.requests.extensions.DomainCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DomainCollectionResponse;
 /**
  * The class for the Domain Collection Page.
  */
-public class DomainCollectionPage extends BaseCollectionPage<Domain, IDomainCollectionRequestBuilder> implements IDomainCollectionPage {
+public class DomainCollectionPage extends BaseCollectionPage<Domain, DomainCollectionRequestBuilder> {
 
     /**
      * A collection page for Domain
@@ -22,7 +22,7 @@ public class DomainCollectionPage extends BaseCollectionPage<Domain, IDomainColl
      * @param response the serialized DomainCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DomainCollectionPage(final DomainCollectionResponse response, final IDomainCollectionRequestBuilder builder) {
+    public DomainCollectionPage(final DomainCollectionResponse response, final DomainCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

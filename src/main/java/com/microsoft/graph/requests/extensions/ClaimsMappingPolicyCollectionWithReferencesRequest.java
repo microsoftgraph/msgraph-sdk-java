@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Claims Mapping Policy Collection With References Request.
  */
-public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseCollectionRequest<ClaimsMappingPolicyCollectionResponse, IClaimsMappingPolicyCollectionPage> implements IClaimsMappingPolicyCollectionWithReferencesRequest {
+public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseCollectionRequest<ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of ClaimsMappingPolicy
@@ -32,10 +32,10 @@ public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseColl
      * @param requestOptions the options for this request
      */
     public ClaimsMappingPolicyCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, IClaimsMappingPolicyCollectionPage.class);
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super IClaimsMappingPolicyCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super ClaimsMappingPolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseColl
         });
     }
 
-    public IClaimsMappingPolicyCollectionWithReferencesPage get() throws ClientException {
+    public ClaimsMappingPolicyCollectionWithReferencesPage get() throws ClientException {
         final ClaimsMappingPolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public IClaimsMappingPolicyCollectionWithReferencesRequest expand(final String value) {
+    public ClaimsMappingPolicyCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public IClaimsMappingPolicyCollectionWithReferencesRequest filter(final String value) {
+    public ClaimsMappingPolicyCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public IClaimsMappingPolicyCollectionWithReferencesRequest orderBy(final String value) {
+    public ClaimsMappingPolicyCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public IClaimsMappingPolicyCollectionWithReferencesRequest select(final String value) {
+    public ClaimsMappingPolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public IClaimsMappingPolicyCollectionWithReferencesRequest top(final int value) {
+    public ClaimsMappingPolicyCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public IClaimsMappingPolicyCollectionWithReferencesPage buildFromResponse(final ClaimsMappingPolicyCollectionResponse response) {
-        final IClaimsMappingPolicyCollectionWithReferencesRequestBuilder builder;
+    public ClaimsMappingPolicyCollectionWithReferencesPage buildFromResponse(final ClaimsMappingPolicyCollectionResponse response) {
+        final ClaimsMappingPolicyCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new ClaimsMappingPolicyCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

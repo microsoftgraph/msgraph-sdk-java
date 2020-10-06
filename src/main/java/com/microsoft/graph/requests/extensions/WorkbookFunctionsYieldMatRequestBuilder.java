@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsYieldMatRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsYieldMatRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Yield Mat Request Builder.
  */
-public class WorkbookFunctionsYieldMatRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsYieldMatRequestBuilder {
+public class WorkbookFunctionsYieldMatRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsYieldMat
@@ -42,22 +41,22 @@ public class WorkbookFunctionsYieldMatRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsYieldMatRequest
+     * Creates the WorkbookFunctionsYieldMatRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsYieldMatRequest instance
+     * @return the WorkbookFunctionsYieldMatRequest instance
      */
-    public IWorkbookFunctionsYieldMatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsYieldMatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsYieldMatRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsYieldMatRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsYieldMatRequest instance
+     * @return the WorkbookFunctionsYieldMatRequest instance
      */
-    public IWorkbookFunctionsYieldMatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsYieldMatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsYieldMatRequest request = new WorkbookFunctionsYieldMatRequest(
                 getRequestUrl(),
                 getClient(),

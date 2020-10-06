@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Lifetime Policy Reference Request Builder.
  */
-public class TokenLifetimePolicyReferenceRequestBuilder extends BaseRequestBuilder implements ITokenLifetimePolicyReferenceRequestBuilder {
+public class TokenLifetimePolicyReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TokenLifetimePolicy
@@ -37,9 +37,9 @@ public class TokenLifetimePolicyReferenceRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The ITokenLifetimePolicyReferenceRequest instance
+     * @return The TokenLifetimePolicyReferenceRequest instance
      */
-    public ITokenLifetimePolicyReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TokenLifetimePolicyReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class TokenLifetimePolicyReferenceRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITokenLifetimePolicyReferenceRequest instance
+     * @return the TokenLifetimePolicyReferenceRequest instance
      */
-    public ITokenLifetimePolicyReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenLifetimePolicyReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TokenLifetimePolicyReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConversationThread;
 import com.microsoft.graph.models.extensions.Post;
-import com.microsoft.graph.requests.extensions.IPostCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
 import com.microsoft.graph.requests.extensions.PostCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PostRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Conversation Thread Request Builder.
  */
-public class ConversationThreadRequestBuilder extends BaseRequestBuilder implements IConversationThreadRequestBuilder {
+public class ConversationThreadRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ConversationThread
@@ -40,9 +38,9 @@ public class ConversationThreadRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IConversationThreadRequest instance
+     * @return the ConversationThreadRequest instance
      */
-    public IConversationThreadRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ConversationThreadRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,22 +48,22 @@ public class ConversationThreadRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IConversationThreadRequest instance
+     * @return the ConversationThreadRequest instance
      */
-    public IConversationThreadRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConversationThreadRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ConversationThreadRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IPostCollectionRequestBuilder posts() {
+    public PostCollectionRequestBuilder posts() {
         return new PostCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("posts"), getClient(), null);
     }
 
-    public IPostRequestBuilder posts(final String id) {
+    public PostRequestBuilder posts(final String id) {
         return new PostRequestBuilder(getRequestUrlWithAdditionalSegment("posts") + "/" + id, getClient(), null);
     }
 
-    public IConversationThreadReplyRequestBuilder reply(final Post post) {
+    public ConversationThreadReplyRequestBuilder reply(final Post post) {
         return new ConversationThreadReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, post);
     }
 }

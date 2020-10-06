@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnItemAtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Column Item At Request Builder.
  */
-public class WorkbookTableColumnItemAtRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookTableColumnItemAtRequestBuilder {
+public class WorkbookTableColumnItemAtRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableColumnItemAt
@@ -32,22 +31,22 @@ public class WorkbookTableColumnItemAtRequestBuilder extends BaseFunctionRequest
     }
 
     /**
-     * Creates the IWorkbookTableColumnItemAtRequest
+     * Creates the WorkbookTableColumnItemAtRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableColumnItemAtRequest instance
+     * @return the WorkbookTableColumnItemAtRequest instance
      */
-    public IWorkbookTableColumnItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableColumnItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableColumnItemAtRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableColumnItemAtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableColumnItemAtRequest instance
+     * @return the WorkbookTableColumnItemAtRequest instance
      */
-    public IWorkbookTableColumnItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableColumnItemAtRequest request = new WorkbookTableColumnItemAtRequest(
                 getRequestUrl(),
                 getClient(),
@@ -64,9 +63,9 @@ public class WorkbookTableColumnItemAtRequestBuilder extends BaseFunctionRequest
     /**
      * Gets the request builder for WorkbookFilter
      *
-     * @return the IWorkbookFilterRequestBuilder instance
+     * @return the WorkbookFilterRequestBuilder instance
      */
-    public IWorkbookFilterRequestBuilder filter() {
+    public WorkbookFilterRequestBuilder filter() {
         return new WorkbookFilterRequestBuilder(getRequestUrlWithAdditionalSegment("filter"), getClient(), null);
     }
 }

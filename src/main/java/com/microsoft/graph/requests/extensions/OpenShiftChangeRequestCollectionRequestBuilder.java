@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.OpenShiftChangeRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestCollectionRequest;
+import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Open Shift Change Request Collection Request Builder.
  */
-public class OpenShiftChangeRequestCollectionRequestBuilder extends BaseRequestBuilder implements IOpenShiftChangeRequestCollectionRequestBuilder {
+public class OpenShiftChangeRequestCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Schedule
@@ -42,7 +42,7 @@ public class OpenShiftChangeRequestCollectionRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOpenShiftChangeRequestCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OpenShiftChangeRequestCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class OpenShiftChangeRequestCollectionRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOpenShiftChangeRequestCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OpenShiftChangeRequestCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OpenShiftChangeRequestCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOpenShiftChangeRequestRequestBuilder byId(final String id) {
+    public OpenShiftChangeRequestRequestBuilder byId(final String id) {
         return new OpenShiftChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

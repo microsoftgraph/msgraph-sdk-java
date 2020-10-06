@@ -8,15 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationClass;
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education Class Request Builder.
  */
-public class EducationClassRequestBuilder extends BaseRequestBuilder implements IEducationClassRequestBuilder {
+public class EducationClassRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the EducationClass
@@ -45,9 +40,9 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEducationClassRequest instance
+     * @return the EducationClassRequest instance
      */
-    public IEducationClassRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EducationClassRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,9 +50,9 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEducationClassRequest instance
+     * @return the EducationClassRequest instance
      */
-    public IEducationClassRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationClassRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EducationClassRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -66,30 +61,30 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Gets the request builder for Group
      *
-     * @return the IGroupWithReferenceRequestBuilder instance
+     * @return the GroupWithReferenceRequestBuilder instance
      */
-    public IGroupWithReferenceRequestBuilder group() {
+    public GroupWithReferenceRequestBuilder group() {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
     }
-    public IEducationUserCollectionWithReferencesRequestBuilder members() {
+    public EducationUserCollectionWithReferencesRequestBuilder members() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
-    public IEducationUserWithReferenceRequestBuilder members(final String id) {
+    public EducationUserWithReferenceRequestBuilder members(final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
-    public IEducationSchoolCollectionWithReferencesRequestBuilder schools() {
+    public EducationSchoolCollectionWithReferencesRequestBuilder schools() {
         return new EducationSchoolCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
     }
 
-    public IEducationSchoolWithReferenceRequestBuilder schools(final String id) {
+    public EducationSchoolWithReferenceRequestBuilder schools(final String id) {
         return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
     }
-    public IEducationUserCollectionWithReferencesRequestBuilder teachers() {
+    public EducationUserCollectionWithReferencesRequestBuilder teachers() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("teachers"), getClient(), null);
     }
 
-    public IEducationUserWithReferenceRequestBuilder teachers(final String id) {
+    public EducationUserWithReferenceRequestBuilder teachers(final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teachers") + "/" + id, getClient(), null);
     }
 }

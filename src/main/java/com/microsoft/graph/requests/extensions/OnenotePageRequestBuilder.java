@@ -11,9 +11,7 @@ import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.models.extensions.OnenotePagePreview;
-import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Page Request Builder.
  */
-public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOnenotePageRequestBuilder {
+public class OnenotePageRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OnenotePage
@@ -42,9 +40,9 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOn
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnenotePageRequest instance
+     * @return the OnenotePageRequest instance
      */
-    public IOnenotePageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenotePageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,9 +50,9 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOn
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnenotePageRequest instance
+     * @return the OnenotePageRequest instance
      */
-    public IOnenotePageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenotePageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnenotePageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,34 +61,34 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOn
     /**
      * Gets the request builder for Notebook
      *
-     * @return the INotebookRequestBuilder instance
+     * @return the NotebookRequestBuilder instance
      */
-    public INotebookRequestBuilder parentNotebook() {
+    public NotebookRequestBuilder parentNotebook() {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
     /**
      * Gets the request builder for OnenoteSection
      *
-     * @return the IOnenoteSectionRequestBuilder instance
+     * @return the OnenoteSectionRequestBuilder instance
      */
-    public IOnenoteSectionRequestBuilder parentSection() {
+    public OnenoteSectionRequestBuilder parentSection() {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("parentSection"), getClient(), null);
     }
 
-    public IOnenotePageContentStreamRequestBuilder content() {
+    public OnenotePageContentStreamRequestBuilder content() {
         return new OnenotePageContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
-    public IOnenotePageCopyToSectionRequestBuilder copyToSection(final String id, final String groupId, final String siteCollectionId, final String siteId) {
+    public OnenotePageCopyToSectionRequestBuilder copyToSection(final String id, final String groupId, final String siteCollectionId, final String siteId) {
         return new OnenotePageCopyToSectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSection"), getClient(), null, id, groupId, siteCollectionId, siteId);
     }
 
-    public IOnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands) {
+    public OnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands) {
         return new OnenotePageOnenotePatchContentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenotePatchContent"), getClient(), null, commands);
     }
 
-    public IOnenotePagePreviewRequestBuilder preview() {
+    public OnenotePagePreviewRequestBuilder preview() {
         return new OnenotePagePreviewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.preview"), getClient(), null);
     }
 }

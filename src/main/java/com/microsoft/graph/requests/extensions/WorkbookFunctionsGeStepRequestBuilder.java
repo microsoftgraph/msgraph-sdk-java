@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGeStepRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsGeStepRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Ge Step Request Builder.
  */
-public class WorkbookFunctionsGeStepRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsGeStepRequestBuilder {
+public class WorkbookFunctionsGeStepRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsGeStep
@@ -34,22 +33,22 @@ public class WorkbookFunctionsGeStepRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsGeStepRequest
+     * Creates the WorkbookFunctionsGeStepRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGeStepRequest instance
+     * @return the WorkbookFunctionsGeStepRequest instance
      */
-    public IWorkbookFunctionsGeStepRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsGeStepRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsGeStepRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsGeStepRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGeStepRequest instance
+     * @return the WorkbookFunctionsGeStepRequest instance
      */
-    public IWorkbookFunctionsGeStepRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsGeStepRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsGeStepRequest request = new WorkbookFunctionsGeStepRequest(
                 getRequestUrl(),
                 getClient(),

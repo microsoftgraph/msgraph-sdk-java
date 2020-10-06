@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupUnsubscribeByMailRequest;
 import com.microsoft.graph.requests.extensions.GroupUnsubscribeByMailRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Unsubscribe By Mail Request.
  */
-public class GroupUnsubscribeByMailRequest extends BaseRequest implements IGroupUnsubscribeByMailRequest {
+public class GroupUnsubscribeByMailRequest extends BaseRequest {
 
     /**
      * The request for this GroupUnsubscribeByMail

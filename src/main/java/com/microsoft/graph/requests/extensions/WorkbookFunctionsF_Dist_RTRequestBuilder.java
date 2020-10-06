@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsF_Dist_RTRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsF_Dist_RTRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions F_Dist_RTRequest Builder.
  */
-public class WorkbookFunctionsF_Dist_RTRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsF_Dist_RTRequestBuilder {
+public class WorkbookFunctionsF_Dist_RTRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsF_Dist_RT
@@ -36,22 +35,22 @@ public class WorkbookFunctionsF_Dist_RTRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsF_Dist_RTRequest
+     * Creates the WorkbookFunctionsF_Dist_RTRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsF_Dist_RTRequest instance
+     * @return the WorkbookFunctionsF_Dist_RTRequest instance
      */
-    public IWorkbookFunctionsF_Dist_RTRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsF_Dist_RTRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsF_Dist_RTRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsF_Dist_RTRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsF_Dist_RTRequest instance
+     * @return the WorkbookFunctionsF_Dist_RTRequest instance
      */
-    public IWorkbookFunctionsF_Dist_RTRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsF_Dist_RTRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsF_Dist_RTRequest request = new WorkbookFunctionsF_Dist_RTRequest(
                 getRequestUrl(),
                 getClient(),

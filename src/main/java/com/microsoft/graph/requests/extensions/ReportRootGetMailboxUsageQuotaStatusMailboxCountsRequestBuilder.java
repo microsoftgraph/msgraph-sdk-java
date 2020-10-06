@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Mailbox Usage Quota Status Mailbox Counts Request Builder.
  */
-public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder {
+public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetMailboxUsageQuotaStatusMailboxCounts
@@ -32,22 +31,22 @@ public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder ext
     }
 
     /**
-     * Creates the IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest
+     * Creates the ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest instance
+     * @return the ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest instance
      */
-    public IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest instance
+     * @return the ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest instance
      */
-    public IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest request = new ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest(
                 getRequestUrl(),
                 getClient(),

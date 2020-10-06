@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.OnenoteOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequest;
+import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Onenote Operation Collection Request Builder.
  */
-public class OnenoteOperationCollectionRequestBuilder extends BaseRequestBuilder implements IOnenoteOperationCollectionRequestBuilder {
+public class OnenoteOperationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Onenote
@@ -42,7 +42,7 @@ public class OnenoteOperationCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOnenoteOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenoteOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class OnenoteOperationCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOnenoteOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OnenoteOperationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOnenoteOperationRequestBuilder byId(final String id) {
+    public OnenoteOperationRequestBuilder byId(final String id) {
         return new OnenoteOperationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

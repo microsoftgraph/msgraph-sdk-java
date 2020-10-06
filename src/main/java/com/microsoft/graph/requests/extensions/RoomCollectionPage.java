@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Room;
-import com.microsoft.graph.requests.extensions.IRoomCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.RoomCollectionPage;
 import com.microsoft.graph.requests.extensions.RoomCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.RoomCollectionResponse;
 /**
  * The class for the Room Collection Page.
  */
-public class RoomCollectionPage extends BaseCollectionPage<Room, IRoomCollectionRequestBuilder> implements IRoomCollectionPage {
+public class RoomCollectionPage extends BaseCollectionPage<Room, RoomCollectionRequestBuilder> {
 
     /**
      * A collection page for Room
@@ -22,7 +22,7 @@ public class RoomCollectionPage extends BaseCollectionPage<Room, IRoomCollection
      * @param response the serialized RoomCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public RoomCollectionPage(final RoomCollectionResponse response, final IRoomCollectionRequestBuilder builder) {
+    public RoomCollectionPage(final RoomCollectionResponse response, final RoomCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

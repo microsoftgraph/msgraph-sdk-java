@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAmorDegrcRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAmorDegrcRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Amor Degrc Request Builder.
  */
-public class WorkbookFunctionsAmorDegrcRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsAmorDegrcRequestBuilder {
+public class WorkbookFunctionsAmorDegrcRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsAmorDegrc
@@ -44,22 +43,22 @@ public class WorkbookFunctionsAmorDegrcRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsAmorDegrcRequest
+     * Creates the WorkbookFunctionsAmorDegrcRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAmorDegrcRequest instance
+     * @return the WorkbookFunctionsAmorDegrcRequest instance
      */
-    public IWorkbookFunctionsAmorDegrcRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsAmorDegrcRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsAmorDegrcRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsAmorDegrcRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAmorDegrcRequest instance
+     * @return the WorkbookFunctionsAmorDegrcRequest instance
      */
-    public IWorkbookFunctionsAmorDegrcRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsAmorDegrcRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsAmorDegrcRequest request = new WorkbookFunctionsAmorDegrcRequest(
                 getRequestUrl(),
                 getClient(),

@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the App Role Assignment With Reference Request Builder.
  */
-public class AppRoleAssignmentWithReferenceRequestBuilder extends BaseRequestBuilder implements IAppRoleAssignmentWithReferenceRequestBuilder {
+public class AppRoleAssignmentWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the AppRoleAssignment
@@ -36,9 +36,9 @@ public class AppRoleAssignmentWithReferenceRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAppRoleAssignmentWithReferenceRequest instance
+     * @return the AppRoleAssignmentWithReferenceRequest instance
      */
-    public IAppRoleAssignmentWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AppRoleAssignmentWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,13 +46,13 @@ public class AppRoleAssignmentWithReferenceRequestBuilder extends BaseRequestBui
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IAppRoleAssignmentWithReferenceRequest instance
+     * @return the AppRoleAssignmentWithReferenceRequest instance
      */
-    public IAppRoleAssignmentWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AppRoleAssignmentWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IAppRoleAssignmentReferenceRequestBuilder reference(){
+    public AppRoleAssignmentReferenceRequestBuilder reference(){
         return new AppRoleAssignmentReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

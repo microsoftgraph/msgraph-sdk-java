@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TargetedManagedAppProtection;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Targeted Managed App Protection Request Builder.
  */
-public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuilder implements ITargetedManagedAppProtectionRequestBuilder {
+public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TargetedManagedAppProtection
@@ -40,9 +38,9 @@ public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITargetedManagedAppProtectionRequest instance
+     * @return the TargetedManagedAppProtectionRequest instance
      */
-    public ITargetedManagedAppProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TargetedManagedAppProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,22 +48,22 @@ public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITargetedManagedAppProtectionRequest instance
+     * @return the TargetedManagedAppProtectionRequest instance
      */
-    public ITargetedManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TargetedManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
+    public TargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
         return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id) {
+    public TargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id) {
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
-    public ITargetedManagedAppProtectionAssignRequestBuilder assign(final java.util.List<TargetedManagedAppPolicyAssignment> assignments) {
+    public TargetedManagedAppProtectionAssignRequestBuilder assign(final java.util.List<TargetedManagedAppPolicyAssignment> assignments) {
         return new TargetedManagedAppProtectionAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 }

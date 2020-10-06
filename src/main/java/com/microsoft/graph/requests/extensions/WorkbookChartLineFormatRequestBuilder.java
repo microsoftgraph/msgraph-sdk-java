@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Line Format Request Builder.
  */
-public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder implements IWorkbookChartLineFormatRequestBuilder {
+public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookChartLineFormat
@@ -35,9 +35,9 @@ public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartLineFormatRequest instance
+     * @return the WorkbookChartLineFormatRequest instance
      */
-    public IWorkbookChartLineFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartLineFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,15 +45,15 @@ public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartLineFormatRequest instance
+     * @return the WorkbookChartLineFormatRequest instance
      */
-    public IWorkbookChartLineFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartLineFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartLineFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IWorkbookChartLineFormatClearRequestBuilder clear() {
+    public WorkbookChartLineFormatClearRequestBuilder clear() {
         return new WorkbookChartLineFormatClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 }

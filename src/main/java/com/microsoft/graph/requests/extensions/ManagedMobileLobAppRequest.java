@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedMobileLobApp;
-import com.microsoft.graph.requests.extensions.IMobileAppContentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppContentRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Mobile Lob App Request.
  */
-public class ManagedMobileLobAppRequest extends BaseRequest implements IManagedMobileLobAppRequest {
+public class ManagedMobileLobAppRequest extends BaseRequest {
 	
     /**
      * The request for the ManagedMobileLobApp
@@ -157,7 +155,7 @@ public class ManagedMobileLobAppRequest extends BaseRequest implements IManagedM
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedMobileLobAppRequest select(final String value) {
+     public ManagedMobileLobAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ManagedMobileLobAppRequest)this;
      }
@@ -168,7 +166,7 @@ public class ManagedMobileLobAppRequest extends BaseRequest implements IManagedM
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedMobileLobAppRequest expand(final String value) {
+     public ManagedMobileLobAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ManagedMobileLobAppRequest)this;
      }

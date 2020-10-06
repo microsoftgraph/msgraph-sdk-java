@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DirectoryRole;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionResponse;
 /**
  * The class for the Directory Role Collection Page.
  */
-public class DirectoryRoleCollectionPage extends BaseCollectionPage<DirectoryRole, IDirectoryRoleCollectionRequestBuilder> implements IDirectoryRoleCollectionPage {
+public class DirectoryRoleCollectionPage extends BaseCollectionPage<DirectoryRole, DirectoryRoleCollectionRequestBuilder> {
 
     /**
      * A collection page for DirectoryRole
@@ -22,7 +22,7 @@ public class DirectoryRoleCollectionPage extends BaseCollectionPage<DirectoryRol
      * @param response the serialized DirectoryRoleCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DirectoryRoleCollectionPage(final DirectoryRoleCollectionResponse response, final IDirectoryRoleCollectionRequestBuilder builder) {
+    public DirectoryRoleCollectionPage(final DirectoryRoleCollectionResponse response, final DirectoryRoleCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

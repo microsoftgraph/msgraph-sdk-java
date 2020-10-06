@@ -9,13 +9,9 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
-import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Section Request Builder.
  */
-public class OnenoteSectionRequestBuilder extends BaseRequestBuilder implements IOnenoteSectionRequestBuilder {
+public class OnenoteSectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OnenoteSection
@@ -44,9 +40,9 @@ public class OnenoteSectionRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnenoteSectionRequest instance
+     * @return the OnenoteSectionRequest instance
      */
-    public IOnenoteSectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenoteSectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,44 +50,44 @@ public class OnenoteSectionRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnenoteSectionRequest instance
+     * @return the OnenoteSectionRequest instance
      */
-    public IOnenoteSectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteSectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnenoteSectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IOnenotePageCollectionRequestBuilder pages() {
+    public OnenotePageCollectionRequestBuilder pages() {
         return new OnenotePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
     }
 
-    public IOnenotePageRequestBuilder pages(final String id) {
+    public OnenotePageRequestBuilder pages(final String id) {
         return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Notebook
      *
-     * @return the INotebookRequestBuilder instance
+     * @return the NotebookRequestBuilder instance
      */
-    public INotebookRequestBuilder parentNotebook() {
+    public NotebookRequestBuilder parentNotebook() {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
     /**
      * Gets the request builder for SectionGroup
      *
-     * @return the ISectionGroupRequestBuilder instance
+     * @return the SectionGroupRequestBuilder instance
      */
-    public ISectionGroupRequestBuilder parentSectionGroup() {
+    public SectionGroupRequestBuilder parentSectionGroup() {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);
     }
 
-    public IOnenoteSectionCopyToNotebookRequestBuilder copyToNotebook(final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId) {
+    public OnenoteSectionCopyToNotebookRequestBuilder copyToNotebook(final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId) {
         return new OnenoteSectionCopyToNotebookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToNotebook"), getClient(), null, id, groupId, renameAs, siteCollectionId, siteId);
     }
 
-    public IOnenoteSectionCopyToSectionGroupRequestBuilder copyToSectionGroup(final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId) {
+    public OnenoteSectionCopyToSectionGroupRequestBuilder copyToSectionGroup(final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId) {
         return new OnenoteSectionCopyToSectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSectionGroup"), getClient(), null, id, groupId, renameAs, siteCollectionId, siteId);
     }
 }

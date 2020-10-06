@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ThumbnailSet;
-import com.microsoft.graph.requests.extensions.IThumbnailSetCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionPage;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionResponse;
 /**
  * The class for the Thumbnail Set Collection Page.
  */
-public class ThumbnailSetCollectionPage extends BaseCollectionPage<ThumbnailSet, IThumbnailSetCollectionRequestBuilder> implements IThumbnailSetCollectionPage {
+public class ThumbnailSetCollectionPage extends BaseCollectionPage<ThumbnailSet, ThumbnailSetCollectionRequestBuilder> {
 
     /**
      * A collection page for ThumbnailSet
@@ -22,7 +22,7 @@ public class ThumbnailSetCollectionPage extends BaseCollectionPage<ThumbnailSet,
      * @param response the serialized ThumbnailSetCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ThumbnailSetCollectionPage(final ThumbnailSetCollectionResponse response, final IThumbnailSetCollectionRequestBuilder builder) {
+    public ThumbnailSetCollectionPage(final ThumbnailSetCollectionResponse response, final ThumbnailSetCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

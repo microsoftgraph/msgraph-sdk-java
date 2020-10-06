@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterClearRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterClearRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Filter Clear Request Builder.
  */
-public class WorkbookFilterClearRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFilterClearRequestBuilder {
+public class WorkbookFilterClearRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFilterClear
@@ -30,22 +29,22 @@ public class WorkbookFilterClearRequestBuilder extends BaseActionRequestBuilder 
     }
 
     /**
-     * Creates the IWorkbookFilterClearRequest
+     * Creates the WorkbookFilterClearRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterClearRequest instance
+     * @return the WorkbookFilterClearRequest instance
      */
-    public IWorkbookFilterClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFilterClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFilterClearRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFilterClearRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterClearRequest instance
+     * @return the WorkbookFilterClearRequest instance
      */
-    public IWorkbookFilterClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterClearRequest request = new WorkbookFilterClearRequest(
                 getRequestUrl(),
                 getClient(),

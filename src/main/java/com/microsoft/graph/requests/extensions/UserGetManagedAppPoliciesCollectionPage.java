@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IUserGetManagedAppPoliciesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionPage;
 import com.microsoft.graph.requests.extensions.UserGetManagedAppPoliciesCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the User Get Managed App Policies Collection Page.
  */
-public class UserGetManagedAppPoliciesCollectionPage extends BaseCollectionPage<ManagedAppPolicy, IUserGetManagedAppPoliciesCollectionRequestBuilder> implements IUserGetManagedAppPoliciesCollectionPage {
+public class UserGetManagedAppPoliciesCollectionPage extends BaseCollectionPage<ManagedAppPolicy, UserGetManagedAppPoliciesCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedAppPolicy.
@@ -33,7 +33,7 @@ public class UserGetManagedAppPoliciesCollectionPage extends BaseCollectionPage<
      * @param response The serialized UserGetManagedAppPoliciesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public UserGetManagedAppPoliciesCollectionPage(final UserGetManagedAppPoliciesCollectionResponse response, final IUserGetManagedAppPoliciesCollectionRequestBuilder builder) {
+    public UserGetManagedAppPoliciesCollectionPage(final UserGetManagedAppPoliciesCollectionResponse response, final UserGetManagedAppPoliciesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

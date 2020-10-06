@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemCreateLinkRequest;
 import com.microsoft.graph.requests.extensions.DriveItemCreateLinkRequest;
 import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Create Link Request Builder.
  */
-public class DriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder implements IDriveItemCreateLinkRequestBuilder {
+public class DriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DriveItemCreateLink
@@ -40,22 +39,22 @@ public class DriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder 
     }
 
     /**
-     * Creates the IDriveItemCreateLinkRequest
+     * Creates the DriveItemCreateLinkRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemCreateLinkRequest instance
+     * @return the DriveItemCreateLinkRequest instance
      */
-    public IDriveItemCreateLinkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemCreateLinkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDriveItemCreateLinkRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DriveItemCreateLinkRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemCreateLinkRequest instance
+     * @return the DriveItemCreateLinkRequest instance
      */
-    public IDriveItemCreateLinkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemCreateLinkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemCreateLinkRequest request = new DriveItemCreateLinkRequest(
                 getRequestUrl(),
                 getClient(),

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ManagedAppOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionRequest;
+import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Operation Collection Request Builder.
  */
-public class ManagedAppOperationCollectionRequestBuilder extends BaseRequestBuilder implements IManagedAppOperationCollectionRequestBuilder {
+public class ManagedAppOperationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ManagedAppRegistration
@@ -42,7 +42,7 @@ public class ManagedAppOperationCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppOperationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ManagedAppOperationCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppOperationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppOperationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedAppOperationRequestBuilder byId(final String id) {
+    public ManagedAppOperationRequestBuilder byId(final String id) {
         return new ManagedAppOperationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

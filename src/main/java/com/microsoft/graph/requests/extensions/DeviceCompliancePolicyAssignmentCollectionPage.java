@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentC
 /**
  * The class for the Device Compliance Policy Assignment Collection Page.
  */
-public class DeviceCompliancePolicyAssignmentCollectionPage extends BaseCollectionPage<DeviceCompliancePolicyAssignment, IDeviceCompliancePolicyAssignmentCollectionRequestBuilder> implements IDeviceCompliancePolicyAssignmentCollectionPage {
+public class DeviceCompliancePolicyAssignmentCollectionPage extends BaseCollectionPage<DeviceCompliancePolicyAssignment, DeviceCompliancePolicyAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceCompliancePolicyAssignment
@@ -22,7 +22,7 @@ public class DeviceCompliancePolicyAssignmentCollectionPage extends BaseCollecti
      * @param response the serialized DeviceCompliancePolicyAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceCompliancePolicyAssignmentCollectionPage(final DeviceCompliancePolicyAssignmentCollectionResponse response, final IDeviceCompliancePolicyAssignmentCollectionRequestBuilder builder) {
+    public DeviceCompliancePolicyAssignmentCollectionPage(final DeviceCompliancePolicyAssignmentCollectionResponse response, final DeviceCompliancePolicyAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

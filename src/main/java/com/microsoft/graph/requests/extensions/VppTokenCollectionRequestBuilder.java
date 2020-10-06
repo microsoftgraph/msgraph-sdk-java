@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.VppToken;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IVppTokenRequestBuilder;
-import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequest;
+import com.microsoft.graph.requests.extensions.VppTokenCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.VppTokenRequestBuilder;
+import com.microsoft.graph.requests.extensions.VppTokenCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Vpp Token Collection Request Builder.
  */
-public class VppTokenCollectionRequestBuilder extends BaseRequestBuilder implements IVppTokenCollectionRequestBuilder {
+public class VppTokenCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceAppManagement
@@ -42,7 +42,7 @@ public class VppTokenCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IVppTokenCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public VppTokenCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class VppTokenCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IVppTokenCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public VppTokenCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new VppTokenCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IVppTokenRequestBuilder byId(final String id) {
+    public VppTokenRequestBuilder byId(final String id) {
         return new VppTokenRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

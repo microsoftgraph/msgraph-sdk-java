@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAxisTitle;
-import com.microsoft.graph.requests.extensions.IWorkbookChartAxisTitleFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartAxisTitleFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -20,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Axis Title Request Builder.
  */
-public class WorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder implements IWorkbookChartAxisTitleRequestBuilder {
+public class WorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookChartAxisTitle
@@ -37,9 +36,9 @@ public class WorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartAxisTitleRequest instance
+     * @return the WorkbookChartAxisTitleRequest instance
      */
-    public IWorkbookChartAxisTitleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartAxisTitleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +46,9 @@ public class WorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartAxisTitleRequest instance
+     * @return the WorkbookChartAxisTitleRequest instance
      */
-    public IWorkbookChartAxisTitleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAxisTitleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartAxisTitleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,9 +57,9 @@ public class WorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder imp
     /**
      * Gets the request builder for WorkbookChartAxisTitleFormat
      *
-     * @return the IWorkbookChartAxisTitleFormatRequestBuilder instance
+     * @return the WorkbookChartAxisTitleFormatRequestBuilder instance
      */
-    public IWorkbookChartAxisTitleFormatRequestBuilder format() {
+    public WorkbookChartAxisTitleFormatRequestBuilder format() {
         return new WorkbookChartAxisTitleFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

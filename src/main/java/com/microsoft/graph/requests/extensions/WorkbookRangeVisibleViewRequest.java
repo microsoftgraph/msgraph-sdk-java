@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeVisibleViewRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeVisibleViewRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Visible View Request.
  */
-public class WorkbookRangeVisibleViewRequest extends BaseRequest implements IWorkbookRangeVisibleViewRequest {
+public class WorkbookRangeVisibleViewRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeVisibleView
@@ -97,7 +96,7 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest implements IWor
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeVisibleViewRequest select(final String value) {
+    public WorkbookRangeVisibleViewRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeVisibleViewRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest implements IWor
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeVisibleViewRequest expand(final String value) {
+    public WorkbookRangeVisibleViewRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeVisibleViewRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest implements IWor
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeVisibleViewRequest filter(final String value) {
+    public WorkbookRangeVisibleViewRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeVisibleViewRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookRangeVisibleViewRequest extends BaseRequest implements IWor
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeVisibleViewRequest orderBy(final String value) {
+    public WorkbookRangeVisibleViewRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeVisibleViewRequest)this;
     }

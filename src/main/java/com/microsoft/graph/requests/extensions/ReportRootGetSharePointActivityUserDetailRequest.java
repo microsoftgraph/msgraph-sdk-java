@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityUserDetailRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Share Point Activity User Detail Request.
  */
-public class ReportRootGetSharePointActivityUserDetailRequest extends BaseRequest implements IReportRootGetSharePointActivityUserDetailRequest {
+public class ReportRootGetSharePointActivityUserDetailRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetSharePointActivityUserDetail
@@ -97,7 +96,7 @@ public class ReportRootGetSharePointActivityUserDetailRequest extends BaseReques
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityUserDetailRequest select(final String value) {
+    public ReportRootGetSharePointActivityUserDetailRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetSharePointActivityUserDetailRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetSharePointActivityUserDetailRequest extends BaseReques
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityUserDetailRequest expand(final String value) {
+    public ReportRootGetSharePointActivityUserDetailRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetSharePointActivityUserDetailRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetSharePointActivityUserDetailRequest extends BaseReques
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityUserDetailRequest filter(final String value) {
+    public ReportRootGetSharePointActivityUserDetailRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetSharePointActivityUserDetailRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetSharePointActivityUserDetailRequest extends BaseReques
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetSharePointActivityUserDetailRequest orderBy(final String value) {
+    public ReportRootGetSharePointActivityUserDetailRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetSharePointActivityUserDetailRequest)this;
     }

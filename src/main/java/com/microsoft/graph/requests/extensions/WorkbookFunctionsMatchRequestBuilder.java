@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMatchRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsMatchRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Match Request Builder.
  */
-public class WorkbookFunctionsMatchRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsMatchRequestBuilder {
+public class WorkbookFunctionsMatchRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsMatch
@@ -36,22 +35,22 @@ public class WorkbookFunctionsMatchRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsMatchRequest
+     * Creates the WorkbookFunctionsMatchRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMatchRequest instance
+     * @return the WorkbookFunctionsMatchRequest instance
      */
-    public IWorkbookFunctionsMatchRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsMatchRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsMatchRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsMatchRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsMatchRequest instance
+     * @return the WorkbookFunctionsMatchRequest instance
      */
-    public IWorkbookFunctionsMatchRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsMatchRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsMatchRequest request = new WorkbookFunctionsMatchRequest(
                 getRequestUrl(),
                 getClient(),

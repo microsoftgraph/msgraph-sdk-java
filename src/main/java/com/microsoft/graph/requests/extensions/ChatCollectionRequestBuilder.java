@@ -12,10 +12,10 @@ import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IChatCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatCollectionRequest;
-import com.microsoft.graph.requests.extensions.IChatGetAllMessagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatCollectionRequest;
+import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Chat Collection Request Builder.
  */
-public class ChatCollectionRequestBuilder extends BaseRequestBuilder implements IChatCollectionRequestBuilder {
+public class ChatCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Chat
@@ -43,7 +43,7 @@ public class ChatCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IChatCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ChatCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,17 +53,17 @@ public class ChatCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IChatCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ChatCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IChatRequestBuilder byId(final String id) {
+    public ChatRequestBuilder byId(final String id) {
         return new ChatRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IChatGetAllMessagesCollectionRequestBuilder getAllMessages() {
+    public ChatGetAllMessagesCollectionRequestBuilder getAllMessages() {
         return new ChatGetAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllMessages"), getClient(), null);
     }
 }

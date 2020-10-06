@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsChiSq_InvRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsChiSq_InvRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Chi Sq_Inv Request Builder.
  */
-public class WorkbookFunctionsChiSq_InvRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsChiSq_InvRequestBuilder {
+public class WorkbookFunctionsChiSq_InvRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsChiSq_Inv
@@ -34,22 +33,22 @@ public class WorkbookFunctionsChiSq_InvRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsChiSq_InvRequest
+     * Creates the WorkbookFunctionsChiSq_InvRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsChiSq_InvRequest instance
+     * @return the WorkbookFunctionsChiSq_InvRequest instance
      */
-    public IWorkbookFunctionsChiSq_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsChiSq_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsChiSq_InvRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsChiSq_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsChiSq_InvRequest instance
+     * @return the WorkbookFunctionsChiSq_InvRequest instance
      */
-    public IWorkbookFunctionsChiSq_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsChiSq_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsChiSq_InvRequest request = new WorkbookFunctionsChiSq_InvRequest(
                 getRequestUrl(),
                 getClient(),

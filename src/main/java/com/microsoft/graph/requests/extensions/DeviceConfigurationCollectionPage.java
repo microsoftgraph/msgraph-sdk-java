@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionResp
 /**
  * The class for the Device Configuration Collection Page.
  */
-public class DeviceConfigurationCollectionPage extends BaseCollectionPage<DeviceConfiguration, IDeviceConfigurationCollectionRequestBuilder> implements IDeviceConfigurationCollectionPage {
+public class DeviceConfigurationCollectionPage extends BaseCollectionPage<DeviceConfiguration, DeviceConfigurationCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceConfiguration
@@ -22,7 +22,7 @@ public class DeviceConfigurationCollectionPage extends BaseCollectionPage<Device
      * @param response the serialized DeviceConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceConfigurationCollectionPage(final DeviceConfigurationCollectionResponse response, final IDeviceConfigurationCollectionRequestBuilder builder) {
+    public DeviceConfigurationCollectionPage(final DeviceConfigurationCollectionResponse response, final DeviceConfigurationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

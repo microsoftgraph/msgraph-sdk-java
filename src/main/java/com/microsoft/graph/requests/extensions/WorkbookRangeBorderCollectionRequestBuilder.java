@@ -12,11 +12,11 @@ import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCollectionRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCountRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderItemAtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeBorderRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequest;
+import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCountRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeBorderItemAtRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Workbook Range Border Collection Request Builder.
  */
-public class WorkbookRangeBorderCollectionRequestBuilder extends BaseRequestBuilder implements IWorkbookRangeBorderCollectionRequestBuilder {
+public class WorkbookRangeBorderCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of WorkbookRangeFormat
@@ -44,7 +44,7 @@ public class WorkbookRangeBorderCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookRangeBorderCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeBorderCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,21 +54,21 @@ public class WorkbookRangeBorderCollectionRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWorkbookRangeBorderCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeBorderCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookRangeBorderCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookRangeBorderRequestBuilder byId(final String id) {
+    public WorkbookRangeBorderRequestBuilder byId(final String id) {
         return new WorkbookRangeBorderRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IWorkbookRangeBorderCountRequestBuilder count() {
+    public WorkbookRangeBorderCountRequestBuilder count() {
         return new WorkbookRangeBorderCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 
-    public IWorkbookRangeBorderItemAtRequestBuilder itemAt(final Integer index) {
+    public WorkbookRangeBorderItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookRangeBorderItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

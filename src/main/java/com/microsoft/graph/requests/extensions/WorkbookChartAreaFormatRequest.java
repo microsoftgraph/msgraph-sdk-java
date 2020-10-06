@@ -8,9 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAreaFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Area Format Request.
  */
-public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWorkbookChartAreaFormatRequest {
+public class WorkbookChartAreaFormatRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookChartAreaFormat
@@ -142,7 +140,7 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartAreaFormatRequest select(final String value) {
+     public WorkbookChartAreaFormatRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookChartAreaFormatRequest)this;
      }
@@ -153,7 +151,7 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartAreaFormatRequest expand(final String value) {
+     public WorkbookChartAreaFormatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookChartAreaFormatRequest)this;
      }

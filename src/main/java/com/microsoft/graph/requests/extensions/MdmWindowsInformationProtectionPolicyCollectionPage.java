@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPolicy;
-import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPo
 /**
  * The class for the Mdm Windows Information Protection Policy Collection Page.
  */
-public class MdmWindowsInformationProtectionPolicyCollectionPage extends BaseCollectionPage<MdmWindowsInformationProtectionPolicy, IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder> implements IMdmWindowsInformationProtectionPolicyCollectionPage {
+public class MdmWindowsInformationProtectionPolicyCollectionPage extends BaseCollectionPage<MdmWindowsInformationProtectionPolicy, MdmWindowsInformationProtectionPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for MdmWindowsInformationProtectionPolicy
@@ -22,7 +22,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionPage extends BaseCol
      * @param response the serialized MdmWindowsInformationProtectionPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MdmWindowsInformationProtectionPolicyCollectionPage(final MdmWindowsInformationProtectionPolicyCollectionResponse response, final IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
+    public MdmWindowsInformationProtectionPolicyCollectionPage(final MdmWindowsInformationProtectionPolicyCollectionResponse response, final MdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

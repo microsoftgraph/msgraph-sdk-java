@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.OnenoteResource;
-import com.microsoft.graph.requests.extensions.IOnenoteResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionPage;
 import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionResponse
 /**
  * The class for the Onenote Resource Collection Page.
  */
-public class OnenoteResourceCollectionPage extends BaseCollectionPage<OnenoteResource, IOnenoteResourceCollectionRequestBuilder> implements IOnenoteResourceCollectionPage {
+public class OnenoteResourceCollectionPage extends BaseCollectionPage<OnenoteResource, OnenoteResourceCollectionRequestBuilder> {
 
     /**
      * A collection page for OnenoteResource
@@ -22,7 +22,7 @@ public class OnenoteResourceCollectionPage extends BaseCollectionPage<OnenoteRes
      * @param response the serialized OnenoteResourceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OnenoteResourceCollectionPage(final OnenoteResourceCollectionResponse response, final IOnenoteResourceCollectionRequestBuilder builder) {
+    public OnenoteResourceCollectionPage(final OnenoteResourceCollectionResponse response, final OnenoteResourceCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

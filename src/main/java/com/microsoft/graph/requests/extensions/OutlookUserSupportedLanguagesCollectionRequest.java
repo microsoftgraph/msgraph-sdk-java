@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.LocaleInfo;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOutlookUserSupportedLanguagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionPage;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedLanguagesCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Outlook User Supported Languages Collection Request.
  */
-public class OutlookUserSupportedLanguagesCollectionRequest extends BaseCollectionRequest<OutlookUserSupportedLanguagesCollectionResponse, IOutlookUserSupportedLanguagesCollectionPage> implements IOutlookUserSupportedLanguagesCollectionRequest {
+public class OutlookUserSupportedLanguagesCollectionRequest extends BaseCollectionRequest<OutlookUserSupportedLanguagesCollectionResponse, OutlookUserSupportedLanguagesCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class OutlookUserSupportedLanguagesCollectionRequest extends BaseCollecti
      * @param requestOptions the options for this request
      */
     public OutlookUserSupportedLanguagesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OutlookUserSupportedLanguagesCollectionResponse.class, IOutlookUserSupportedLanguagesCollectionPage.class);
+        super(requestUrl, client, requestOptions, OutlookUserSupportedLanguagesCollectionResponse.class, OutlookUserSupportedLanguagesCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IOutlookUserSupportedLanguagesCollectionPage> callback) {
+    public void get(final ICallback<? super OutlookUserSupportedLanguagesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class OutlookUserSupportedLanguagesCollectionRequest extends BaseCollecti
         });
     }
 
-    public IOutlookUserSupportedLanguagesCollectionPage get() throws ClientException {
+    public OutlookUserSupportedLanguagesCollectionPage get() throws ClientException {
         final OutlookUserSupportedLanguagesCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IOutlookUserSupportedLanguagesCollectionPage buildFromResponse(final OutlookUserSupportedLanguagesCollectionResponse response) {
-        final IOutlookUserSupportedLanguagesCollectionRequestBuilder builder;
+    public OutlookUserSupportedLanguagesCollectionPage buildFromResponse(final OutlookUserSupportedLanguagesCollectionResponse response) {
+        final OutlookUserSupportedLanguagesCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new OutlookUserSupportedLanguagesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final IOutlookUserSupportedLanguagesCollectionPage page = new OutlookUserSupportedLanguagesCollectionPage(response, builder);
+        final OutlookUserSupportedLanguagesCollectionPage page = new OutlookUserSupportedLanguagesCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class OutlookUserSupportedLanguagesCollectionRequest extends BaseCollecti
      * @param value the select clause
      * @return the updated request
      */
-    public IOutlookUserSupportedLanguagesCollectionRequest select(final String value) {
+    public OutlookUserSupportedLanguagesCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IOutlookUserSupportedLanguagesCollectionRequest)this;
+        return (OutlookUserSupportedLanguagesCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class OutlookUserSupportedLanguagesCollectionRequest extends BaseCollecti
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IOutlookUserSupportedLanguagesCollectionRequest top(final int value) {
+    public OutlookUserSupportedLanguagesCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IOutlookUserSupportedLanguagesCollectionRequest)this;
+        return (OutlookUserSupportedLanguagesCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class OutlookUserSupportedLanguagesCollectionRequest extends BaseCollecti
      * @param value the expand clause
      * @return the updated request
      */
-    public IOutlookUserSupportedLanguagesCollectionRequest expand(final String value) {
+    public OutlookUserSupportedLanguagesCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IOutlookUserSupportedLanguagesCollectionRequest)this;
+        return (OutlookUserSupportedLanguagesCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class OutlookUserSupportedLanguagesCollectionRequest extends BaseCollecti
      * @param value the filter clause
      * @return the updated request
      */
-    public IOutlookUserSupportedLanguagesCollectionRequest filter(final String value) {
+    public OutlookUserSupportedLanguagesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IOutlookUserSupportedLanguagesCollectionRequest)this;
+        return (OutlookUserSupportedLanguagesCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class OutlookUserSupportedLanguagesCollectionRequest extends BaseCollecti
      * @param value the order by clause
      * @return the updated request
      */
-    public IOutlookUserSupportedLanguagesCollectionRequest orderBy(final String value) {
+    public OutlookUserSupportedLanguagesCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IOutlookUserSupportedLanguagesCollectionRequest)this;
+        return (OutlookUserSupportedLanguagesCollectionRequest)this;
     }
 
 }

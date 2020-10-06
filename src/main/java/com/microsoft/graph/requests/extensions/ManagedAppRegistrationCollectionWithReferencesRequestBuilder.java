@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Managed App Registration Collection With References Request Builder.
  */
-public class ManagedAppRegistrationCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements IManagedAppRegistrationCollectionWithReferencesRequestBuilder {
+public class ManagedAppRegistrationCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of User
@@ -39,7 +39,7 @@ public class ManagedAppRegistrationCollectionWithReferencesRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppRegistrationCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppRegistrationCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,15 +49,15 @@ public class ManagedAppRegistrationCollectionWithReferencesRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IManagedAppRegistrationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppRegistrationCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IManagedAppRegistrationWithReferenceRequestBuilder byId(final String id) {
+    public ManagedAppRegistrationWithReferenceRequestBuilder byId(final String id) {
         return new ManagedAppRegistrationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IManagedAppRegistrationCollectionReferenceRequestBuilder references(){
+    public ManagedAppRegistrationCollectionReferenceRequestBuilder references(){
         return new ManagedAppRegistrationCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

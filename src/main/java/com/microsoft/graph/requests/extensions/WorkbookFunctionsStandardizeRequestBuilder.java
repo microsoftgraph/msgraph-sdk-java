@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsStandardizeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsStandardizeRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Standardize Request Builder.
  */
-public class WorkbookFunctionsStandardizeRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsStandardizeRequestBuilder {
+public class WorkbookFunctionsStandardizeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsStandardize
@@ -36,22 +35,22 @@ public class WorkbookFunctionsStandardizeRequestBuilder extends BaseActionReques
     }
 
     /**
-     * Creates the IWorkbookFunctionsStandardizeRequest
+     * Creates the WorkbookFunctionsStandardizeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsStandardizeRequest instance
+     * @return the WorkbookFunctionsStandardizeRequest instance
      */
-    public IWorkbookFunctionsStandardizeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsStandardizeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsStandardizeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsStandardizeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsStandardizeRequest instance
+     * @return the WorkbookFunctionsStandardizeRequest instance
      */
-    public IWorkbookFunctionsStandardizeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsStandardizeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsStandardizeRequest request = new WorkbookFunctionsStandardizeRequest(
                 getRequestUrl(),
                 getClient(),

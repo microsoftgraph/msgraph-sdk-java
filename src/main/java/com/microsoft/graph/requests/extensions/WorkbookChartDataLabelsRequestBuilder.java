@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartDataLabels;
-import com.microsoft.graph.requests.extensions.IWorkbookChartDataLabelFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartDataLabelFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -20,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Data Labels Request Builder.
  */
-public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder implements IWorkbookChartDataLabelsRequestBuilder {
+public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookChartDataLabels
@@ -37,9 +36,9 @@ public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartDataLabelsRequest instance
+     * @return the WorkbookChartDataLabelsRequest instance
      */
-    public IWorkbookChartDataLabelsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartDataLabelsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +46,9 @@ public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartDataLabelsRequest instance
+     * @return the WorkbookChartDataLabelsRequest instance
      */
-    public IWorkbookChartDataLabelsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartDataLabelsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartDataLabelsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,9 +57,9 @@ public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder im
     /**
      * Gets the request builder for WorkbookChartDataLabelFormat
      *
-     * @return the IWorkbookChartDataLabelFormatRequestBuilder instance
+     * @return the WorkbookChartDataLabelFormatRequestBuilder instance
      */
-    public IWorkbookChartDataLabelFormatRequestBuilder format() {
+    public WorkbookChartDataLabelFormatRequestBuilder format() {
         return new WorkbookChartDataLabelFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

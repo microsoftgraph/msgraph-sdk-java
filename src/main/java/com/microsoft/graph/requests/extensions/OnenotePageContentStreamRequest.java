@@ -20,7 +20,7 @@ import java.io.InputStream;
 /**
  * The class for the Onenote Page Content Stream Request.
  */
-public class OnenotePageContentStreamRequest extends BaseStreamRequest<OnenotePage> implements IOnenotePageContentStreamRequest {
+public class OnenotePageContentStreamRequest extends BaseStreamRequest<OnenotePage> {
 
     /**
      * The request for the OnenotePageContentStream

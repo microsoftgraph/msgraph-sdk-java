@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBeta_InvRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsBeta_InvRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Beta_Inv Request Builder.
  */
-public class WorkbookFunctionsBeta_InvRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsBeta_InvRequestBuilder {
+public class WorkbookFunctionsBeta_InvRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsBeta_Inv
@@ -40,22 +39,22 @@ public class WorkbookFunctionsBeta_InvRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsBeta_InvRequest
+     * Creates the WorkbookFunctionsBeta_InvRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBeta_InvRequest instance
+     * @return the WorkbookFunctionsBeta_InvRequest instance
      */
-    public IWorkbookFunctionsBeta_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsBeta_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsBeta_InvRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsBeta_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBeta_InvRequest instance
+     * @return the WorkbookFunctionsBeta_InvRequest instance
      */
-    public IWorkbookFunctionsBeta_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsBeta_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBeta_InvRequest request = new WorkbookFunctionsBeta_InvRequest(
                 getRequestUrl(),
                 getClient(),

@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessActivityCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessActivityCountsRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Skype For Business Activity Counts Request.
  */
-public class ReportRootGetSkypeForBusinessActivityCountsRequest extends BaseRequest implements IReportRootGetSkypeForBusinessActivityCountsRequest {
+public class ReportRootGetSkypeForBusinessActivityCountsRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetSkypeForBusinessActivityCounts
@@ -97,7 +96,7 @@ public class ReportRootGetSkypeForBusinessActivityCountsRequest extends BaseRequ
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessActivityCountsRequest select(final String value) {
+    public ReportRootGetSkypeForBusinessActivityCountsRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetSkypeForBusinessActivityCountsRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetSkypeForBusinessActivityCountsRequest extends BaseRequ
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessActivityCountsRequest expand(final String value) {
+    public ReportRootGetSkypeForBusinessActivityCountsRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetSkypeForBusinessActivityCountsRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetSkypeForBusinessActivityCountsRequest extends BaseRequ
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessActivityCountsRequest filter(final String value) {
+    public ReportRootGetSkypeForBusinessActivityCountsRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetSkypeForBusinessActivityCountsRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetSkypeForBusinessActivityCountsRequest extends BaseRequ
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetSkypeForBusinessActivityCountsRequest orderBy(final String value) {
+    public ReportRootGetSkypeForBusinessActivityCountsRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetSkypeForBusinessActivityCountsRequest)this;
     }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLenbRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsLenbRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Lenb Request Builder.
  */
-public class WorkbookFunctionsLenbRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsLenbRequestBuilder {
+public class WorkbookFunctionsLenbRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsLenb
@@ -32,22 +31,22 @@ public class WorkbookFunctionsLenbRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsLenbRequest
+     * Creates the WorkbookFunctionsLenbRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLenbRequest instance
+     * @return the WorkbookFunctionsLenbRequest instance
      */
-    public IWorkbookFunctionsLenbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsLenbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsLenbRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsLenbRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsLenbRequest instance
+     * @return the WorkbookFunctionsLenbRequest instance
      */
-    public IWorkbookFunctionsLenbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsLenbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsLenbRequest request = new WorkbookFunctionsLenbRequest(
                 getRequestUrl(),
                 getClient(),

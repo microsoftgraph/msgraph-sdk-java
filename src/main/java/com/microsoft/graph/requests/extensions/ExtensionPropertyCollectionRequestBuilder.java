@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequest;
+import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Extension Property Collection Request Builder.
  */
-public class ExtensionPropertyCollectionRequestBuilder extends BaseRequestBuilder implements IExtensionPropertyCollectionRequestBuilder {
+public class ExtensionPropertyCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Application
@@ -42,7 +42,7 @@ public class ExtensionPropertyCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IExtensionPropertyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ExtensionPropertyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ExtensionPropertyCollectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IExtensionPropertyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExtensionPropertyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ExtensionPropertyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IExtensionPropertyRequestBuilder byId(final String id) {
+    public ExtensionPropertyRequestBuilder byId(final String id) {
         return new ExtensionPropertyRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

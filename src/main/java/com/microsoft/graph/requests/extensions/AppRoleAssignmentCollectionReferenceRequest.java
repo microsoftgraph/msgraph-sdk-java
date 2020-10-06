@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.AppRoleAssignment;
 /**
  * The class for the App Role Assignment Collection Reference Request.
  */
-public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionRequest<AppRoleAssignmentCollectionResponse, IAppRoleAssignmentCollectionPage> implements IAppRoleAssignmentCollectionReferenceRequest {
+public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionRequest<AppRoleAssignmentCollectionResponse, AppRoleAssignmentCollectionPage> {
 
     /**
      * The request builder for this collection of AppRoleAssignment
@@ -33,7 +33,7 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param requestOptions the options for this request
      */
     public AppRoleAssignmentCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, IAppRoleAssignmentCollectionPage.class);
+        super(requestUrl, client, requestOptions, AppRoleAssignmentCollectionResponse.class, AppRoleAssignmentCollectionPage.class);
     }
 
     public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<? super AppRoleAssignment> callback) {
@@ -57,7 +57,7 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param value the expand clause
      * @return the updated request
      */
-    public IAppRoleAssignmentCollectionReferenceRequest expand(final String value) {
+    public AppRoleAssignmentCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (AppRoleAssignmentCollectionReferenceRequest)this;
     }
@@ -68,7 +68,7 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param value the filter clause
      * @return the updated request
      */
-    public IAppRoleAssignmentCollectionReferenceRequest filter(final String value) {
+    public AppRoleAssignmentCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (AppRoleAssignmentCollectionReferenceRequest)this;
     }
@@ -79,7 +79,7 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param value the sort clause
      * @return the updated request
      */
-    public IAppRoleAssignmentCollectionReferenceRequest orderBy(final String value) {
+    public AppRoleAssignmentCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (AppRoleAssignmentCollectionReferenceRequest)this;
     }
@@ -90,7 +90,7 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param value the select clause
      * @return the updated request
      */
-    public IAppRoleAssignmentCollectionReferenceRequest select(final String value) {
+    public AppRoleAssignmentCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (AppRoleAssignmentCollectionReferenceRequest)this;
     }
@@ -101,7 +101,7 @@ public class AppRoleAssignmentCollectionReferenceRequest extends BaseCollectionR
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IAppRoleAssignmentCollectionReferenceRequest top(final int value) {
+    public AppRoleAssignmentCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (AppRoleAssignmentCollectionReferenceRequest)this;
     }

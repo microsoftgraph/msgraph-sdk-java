@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.ExtensionProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequest;
+import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Directory Object Get Available Extension Properties Collection Request Builder.
  */
-public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder extends BaseActionRequestBuilder implements IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder {
+public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this collection of DirectoryObject
@@ -46,7 +45,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,7 +55,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuil
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest request = new DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest(
                 getRequestUrl(),
                 getClient(),

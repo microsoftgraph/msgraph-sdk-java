@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartLineFormatClearRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatClearRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Line Format Clear Request.
  */
-public class WorkbookChartLineFormatClearRequest extends BaseRequest implements IWorkbookChartLineFormatClearRequest {
+public class WorkbookChartLineFormatClearRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookChartLineFormatClear

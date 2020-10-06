@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSmallRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSmallRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Small Request Builder.
  */
-public class WorkbookFunctionsSmallRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSmallRequestBuilder {
+public class WorkbookFunctionsSmallRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSmall
@@ -34,22 +33,22 @@ public class WorkbookFunctionsSmallRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsSmallRequest
+     * Creates the WorkbookFunctionsSmallRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSmallRequest instance
+     * @return the WorkbookFunctionsSmallRequest instance
      */
-    public IWorkbookFunctionsSmallRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSmallRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSmallRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSmallRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSmallRequest instance
+     * @return the WorkbookFunctionsSmallRequest instance
      */
-    public IWorkbookFunctionsSmallRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSmallRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSmallRequest request = new WorkbookFunctionsSmallRequest(
                 getRequestUrl(),
                 getClient(),

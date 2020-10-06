@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentFailureDetailsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Managed Device Enrollment Failure Details Request Builder.
  */
-public class ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder {
+public class ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootManagedDeviceEnrollmentFailureDetails
@@ -49,22 +48,22 @@ public class ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder exten
     }
 
     /**
-     * Creates the IReportRootManagedDeviceEnrollmentFailureDetailsRequest
+     * Creates the ReportRootManagedDeviceEnrollmentFailureDetailsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootManagedDeviceEnrollmentFailureDetailsRequest instance
+     * @return the ReportRootManagedDeviceEnrollmentFailureDetailsRequest instance
      */
-    public IReportRootManagedDeviceEnrollmentFailureDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootManagedDeviceEnrollmentFailureDetailsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootManagedDeviceEnrollmentFailureDetailsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootManagedDeviceEnrollmentFailureDetailsRequest instance
+     * @return the ReportRootManagedDeviceEnrollmentFailureDetailsRequest instance
      */
-    public IReportRootManagedDeviceEnrollmentFailureDetailsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootManagedDeviceEnrollmentFailureDetailsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootManagedDeviceEnrollmentFailureDetailsRequest request = new ReportRootManagedDeviceEnrollmentFailureDetailsRequest(
                 getRequestUrl(),
                 getClient(),

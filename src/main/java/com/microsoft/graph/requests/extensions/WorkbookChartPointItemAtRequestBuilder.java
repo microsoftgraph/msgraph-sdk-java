@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartPointItemAtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookChartPoint;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Point Item At Request Builder.
  */
-public class WorkbookChartPointItemAtRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookChartPointItemAtRequestBuilder {
+public class WorkbookChartPointItemAtRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartPointItemAt
@@ -32,22 +31,22 @@ public class WorkbookChartPointItemAtRequestBuilder extends BaseFunctionRequestB
     }
 
     /**
-     * Creates the IWorkbookChartPointItemAtRequest
+     * Creates the WorkbookChartPointItemAtRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartPointItemAtRequest instance
+     * @return the WorkbookChartPointItemAtRequest instance
      */
-    public IWorkbookChartPointItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartPointItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartPointItemAtRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartPointItemAtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartPointItemAtRequest instance
+     * @return the WorkbookChartPointItemAtRequest instance
      */
-    public IWorkbookChartPointItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartPointItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartPointItemAtRequest request = new WorkbookChartPointItemAtRequest(
                 getRequestUrl(),
                 getClient(),
@@ -64,9 +63,9 @@ public class WorkbookChartPointItemAtRequestBuilder extends BaseFunctionRequestB
     /**
      * Gets the request builder for WorkbookChartPointFormat
      *
-     * @return the IWorkbookChartPointFormatRequestBuilder instance
+     * @return the WorkbookChartPointFormatRequestBuilder instance
      */
-    public IWorkbookChartPointFormatRequestBuilder format() {
+    public WorkbookChartPointFormatRequestBuilder format() {
         return new WorkbookChartPointFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

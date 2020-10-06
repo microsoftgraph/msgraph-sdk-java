@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillClearRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillClearRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Fill Clear Request.
  */
-public class WorkbookChartFillClearRequest extends BaseRequest implements IWorkbookChartFillClearRequest {
+public class WorkbookChartFillClearRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookChartFillClear

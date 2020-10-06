@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.ScopedRoleMembership;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequest;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Scoped Role Membership Collection Request Builder.
  */
-public class ScopedRoleMembershipCollectionRequestBuilder extends BaseRequestBuilder implements IScopedRoleMembershipCollectionRequestBuilder {
+public class ScopedRoleMembershipCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ScopedRoleMembership
@@ -41,7 +41,7 @@ public class ScopedRoleMembershipCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IScopedRoleMembershipCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ScopedRoleMembershipCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class ScopedRoleMembershipCollectionRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IScopedRoleMembershipCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ScopedRoleMembershipCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ScopedRoleMembershipCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IScopedRoleMembershipRequestBuilder byId(final String id) {
+    public ScopedRoleMembershipRequestBuilder byId(final String id) {
         return new ScopedRoleMembershipRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

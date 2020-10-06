@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsError_TypeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsError_TypeRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Error_Type Request Builder.
  */
-public class WorkbookFunctionsError_TypeRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsError_TypeRequestBuilder {
+public class WorkbookFunctionsError_TypeRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsError_Type
@@ -32,22 +31,22 @@ public class WorkbookFunctionsError_TypeRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookFunctionsError_TypeRequest
+     * Creates the WorkbookFunctionsError_TypeRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsError_TypeRequest instance
+     * @return the WorkbookFunctionsError_TypeRequest instance
      */
-    public IWorkbookFunctionsError_TypeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsError_TypeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsError_TypeRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsError_TypeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsError_TypeRequest instance
+     * @return the WorkbookFunctionsError_TypeRequest instance
      */
-    public IWorkbookFunctionsError_TypeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsError_TypeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsError_TypeRequest request = new WorkbookFunctionsError_TypeRequest(
                 getRequestUrl(),
                 getClient(),

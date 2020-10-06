@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Onenote Entity Hierarchy Model Request Builder.
  */
-public class OnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBuilder implements IOnenoteEntityHierarchyModelRequestBuilder {
+public class OnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OnenoteEntityHierarchyModel
@@ -35,9 +35,9 @@ public class OnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnenoteEntityHierarchyModelRequest instance
+     * @return the OnenoteEntityHierarchyModelRequest instance
      */
-    public IOnenoteEntityHierarchyModelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenoteEntityHierarchyModelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class OnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnenoteEntityHierarchyModelRequest instance
+     * @return the OnenoteEntityHierarchyModelRequest instance
      */
-    public IOnenoteEntityHierarchyModelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteEntityHierarchyModelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnenoteEntityHierarchyModelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

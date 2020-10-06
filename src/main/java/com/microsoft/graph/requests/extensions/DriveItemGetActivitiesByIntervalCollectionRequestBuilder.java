@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequest;
+import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Drive Item Get Activities By Interval Collection Request Builder.
  */
-public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IDriveItemGetActivitiesByIntervalCollectionRequestBuilder {
+public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of DriveItem
@@ -64,7 +63,7 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveItemGetActivitiesByIntervalCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemGetActivitiesByIntervalCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -74,7 +73,7 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveItemGetActivitiesByIntervalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemGetActivitiesByIntervalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemGetActivitiesByIntervalCollectionRequest request = new DriveItemGetActivitiesByIntervalCollectionRequest(
                 getRequestUrl(),
                 getClient(),

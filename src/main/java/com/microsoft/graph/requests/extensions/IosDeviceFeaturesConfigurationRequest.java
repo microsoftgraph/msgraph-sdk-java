@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Device Features Configuration Request.
  */
-public class IosDeviceFeaturesConfigurationRequest extends BaseRequest implements IIosDeviceFeaturesConfigurationRequest {
+public class IosDeviceFeaturesConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the IosDeviceFeaturesConfiguration
@@ -138,7 +138,7 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IIosDeviceFeaturesConfigurationRequest select(final String value) {
+     public IosDeviceFeaturesConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (IosDeviceFeaturesConfigurationRequest)this;
      }
@@ -149,7 +149,7 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosDeviceFeaturesConfigurationRequest expand(final String value) {
+     public IosDeviceFeaturesConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (IosDeviceFeaturesConfigurationRequest)this;
      }

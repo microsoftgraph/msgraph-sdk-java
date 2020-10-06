@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ColumnDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequest;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Column Definition Collection Request Builder.
  */
-public class ColumnDefinitionCollectionRequestBuilder extends BaseRequestBuilder implements IColumnDefinitionCollectionRequestBuilder {
+public class ColumnDefinitionCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of List
@@ -42,7 +42,7 @@ public class ColumnDefinitionCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IColumnDefinitionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ColumnDefinitionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ColumnDefinitionCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IColumnDefinitionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ColumnDefinitionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ColumnDefinitionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IColumnDefinitionRequestBuilder byId(final String id) {
+    public ColumnDefinitionRequestBuilder byId(final String id) {
         return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBin2DecRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsBin2DecRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Bin2Dec Request Builder.
  */
-public class WorkbookFunctionsBin2DecRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsBin2DecRequestBuilder {
+public class WorkbookFunctionsBin2DecRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsBin2Dec
@@ -32,22 +31,22 @@ public class WorkbookFunctionsBin2DecRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsBin2DecRequest
+     * Creates the WorkbookFunctionsBin2DecRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBin2DecRequest instance
+     * @return the WorkbookFunctionsBin2DecRequest instance
      */
-    public IWorkbookFunctionsBin2DecRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsBin2DecRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsBin2DecRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsBin2DecRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBin2DecRequest instance
+     * @return the WorkbookFunctionsBin2DecRequest instance
      */
-    public IWorkbookFunctionsBin2DecRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsBin2DecRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBin2DecRequest request = new WorkbookFunctionsBin2DecRequest(
                 getRequestUrl(),
                 getClient(),

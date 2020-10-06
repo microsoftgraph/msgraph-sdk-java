@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleDefinition;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Role Definition Request Builder.
  */
-public class RoleDefinitionRequestBuilder extends BaseRequestBuilder implements IRoleDefinitionRequestBuilder {
+public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the RoleDefinition
@@ -39,9 +37,9 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IRoleDefinitionRequest instance
+     * @return the RoleDefinitionRequest instance
      */
-    public IRoleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public RoleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IRoleDefinitionRequest instance
+     * @return the RoleDefinitionRequest instance
      */
-    public IRoleDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.RoleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IRoleAssignmentCollectionRequestBuilder roleAssignments() {
+    public RoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new RoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
-    public IRoleAssignmentRequestBuilder roleAssignments(final String id) {
+    public RoleAssignmentRequestBuilder roleAssignments(final String id) {
         return new RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
 }

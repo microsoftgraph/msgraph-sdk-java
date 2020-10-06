@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEventSnoozeReminderRequest;
 import com.microsoft.graph.requests.extensions.EventSnoozeReminderRequest;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Event Snooze Reminder Request Builder.
  */
-public class EventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder implements IEventSnoozeReminderRequestBuilder {
+public class EventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this EventSnoozeReminder
@@ -32,22 +31,22 @@ public class EventSnoozeReminderRequestBuilder extends BaseActionRequestBuilder 
     }
 
     /**
-     * Creates the IEventSnoozeReminderRequest
+     * Creates the EventSnoozeReminderRequest
      *
      * @param requestOptions the options for the request
-     * @return the IEventSnoozeReminderRequest instance
+     * @return the EventSnoozeReminderRequest instance
      */
-    public IEventSnoozeReminderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EventSnoozeReminderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IEventSnoozeReminderRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the EventSnoozeReminderRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IEventSnoozeReminderRequest instance
+     * @return the EventSnoozeReminderRequest instance
      */
-    public IEventSnoozeReminderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EventSnoozeReminderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         EventSnoozeReminderRequest request = new EventSnoozeReminderRequest(
                 getRequestUrl(),
                 getClient(),

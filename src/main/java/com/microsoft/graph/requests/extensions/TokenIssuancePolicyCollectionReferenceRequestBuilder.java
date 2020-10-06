@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Issuance Policy Collection Reference Request Builder.
  */
-public class TokenIssuancePolicyCollectionReferenceRequestBuilder extends BaseRequestBuilder implements ITokenIssuancePolicyCollectionReferenceRequestBuilder {
+public class TokenIssuancePolicyCollectionReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -39,7 +39,7 @@ public class TokenIssuancePolicyCollectionReferenceRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITokenIssuancePolicyCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TokenIssuancePolicyCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,7 +49,7 @@ public class TokenIssuancePolicyCollectionReferenceRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITokenIssuancePolicyCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TokenIssuancePolicyCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

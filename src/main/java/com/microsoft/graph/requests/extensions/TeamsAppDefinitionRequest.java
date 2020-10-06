@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams App Definition Request.
  */
-public class TeamsAppDefinitionRequest extends BaseRequest implements ITeamsAppDefinitionRequest {
+public class TeamsAppDefinitionRequest extends BaseRequest {
 	
     /**
      * The request for the TeamsAppDefinition
@@ -138,7 +138,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest implements ITeamsAppD
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamsAppDefinitionRequest select(final String value) {
+     public TeamsAppDefinitionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TeamsAppDefinitionRequest)this;
      }
@@ -149,7 +149,7 @@ public class TeamsAppDefinitionRequest extends BaseRequest implements ITeamsAppD
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamsAppDefinitionRequest expand(final String value) {
+     public TeamsAppDefinitionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TeamsAppDefinitionRequest)this;
      }

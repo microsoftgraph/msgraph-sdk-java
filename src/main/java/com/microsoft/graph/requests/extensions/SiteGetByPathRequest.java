@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Site;
-import com.microsoft.graph.requests.extensions.ISiteGetByPathRequest;
 import com.microsoft.graph.requests.extensions.SiteGetByPathRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Site Get By Path Request.
  */
-public class SiteGetByPathRequest extends BaseRequest implements ISiteGetByPathRequest {
+public class SiteGetByPathRequest extends BaseRequest {
 
     /**
      * The request for this SiteGetByPath
@@ -97,7 +96,7 @@ public class SiteGetByPathRequest extends BaseRequest implements ISiteGetByPathR
      * @param value the select clause
      * @return the updated request
      */
-    public ISiteGetByPathRequest select(final String value) {
+    public SiteGetByPathRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SiteGetByPathRequest)this;
     }
@@ -108,7 +107,7 @@ public class SiteGetByPathRequest extends BaseRequest implements ISiteGetByPathR
      * @param value the expand clause
      * @return the updated request
      */
-    public ISiteGetByPathRequest expand(final String value) {
+    public SiteGetByPathRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (SiteGetByPathRequest)this;
     }
@@ -119,7 +118,7 @@ public class SiteGetByPathRequest extends BaseRequest implements ISiteGetByPathR
      * @param value the filter clause
      * @return the updated request
      */
-    public ISiteGetByPathRequest filter(final String value) {
+    public SiteGetByPathRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (SiteGetByPathRequest)this;
     }
@@ -130,7 +129,7 @@ public class SiteGetByPathRequest extends BaseRequest implements ISiteGetByPathR
      * @param value the order by clause
      * @return the updated request
      */
-    public ISiteGetByPathRequest orderBy(final String value) {
+    public SiteGetByPathRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (SiteGetByPathRequest)this;
     }

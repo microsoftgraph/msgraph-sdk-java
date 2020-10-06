@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBitxorRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsBitxorRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Bitxor Request Builder.
  */
-public class WorkbookFunctionsBitxorRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsBitxorRequestBuilder {
+public class WorkbookFunctionsBitxorRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsBitxor
@@ -34,22 +33,22 @@ public class WorkbookFunctionsBitxorRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsBitxorRequest
+     * Creates the WorkbookFunctionsBitxorRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBitxorRequest instance
+     * @return the WorkbookFunctionsBitxorRequest instance
      */
-    public IWorkbookFunctionsBitxorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsBitxorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsBitxorRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsBitxorRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBitxorRequest instance
+     * @return the WorkbookFunctionsBitxorRequest instance
      */
-    public IWorkbookFunctionsBitxorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsBitxorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBitxorRequest request = new WorkbookFunctionsBitxorRequest(
                 getRequestUrl(),
                 getClient(),

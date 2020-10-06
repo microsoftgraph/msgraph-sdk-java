@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtection;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Information Protection Request.
  */
-public class InformationProtectionRequest extends BaseRequest implements IInformationProtectionRequest {
+public class InformationProtectionRequest extends BaseRequest {
 	
     /**
      * The request for the InformationProtection
@@ -142,7 +140,7 @@ public class InformationProtectionRequest extends BaseRequest implements IInform
      * @param value the select clause
      * @return the updated request
      */
-     public IInformationProtectionRequest select(final String value) {
+     public InformationProtectionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (InformationProtectionRequest)this;
      }
@@ -153,7 +151,7 @@ public class InformationProtectionRequest extends BaseRequest implements IInform
      * @param value the expand clause
      * @return the updated request
      */
-     public IInformationProtectionRequest expand(final String value) {
+     public InformationProtectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (InformationProtectionRequest)this;
      }

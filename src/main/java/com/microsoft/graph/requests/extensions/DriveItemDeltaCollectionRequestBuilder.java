@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequest;
+import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Drive Item Delta Collection Request Builder.
  */
-public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IDriveItemDeltaCollectionRequestBuilder {
+public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of DriveItem
@@ -56,7 +55,7 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveItemDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -66,7 +65,7 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequestB
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDriveItemDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemDeltaCollectionRequest request = new DriveItemDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

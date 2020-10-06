@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Directory;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Request.
  */
-public class DirectoryRequest extends BaseRequest implements IDirectoryRequest {
+public class DirectoryRequest extends BaseRequest {
 	
     /**
      * The request for the Directory
@@ -146,7 +142,7 @@ public class DirectoryRequest extends BaseRequest implements IDirectoryRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IDirectoryRequest select(final String value) {
+     public DirectoryRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DirectoryRequest)this;
      }
@@ -157,7 +153,7 @@ public class DirectoryRequest extends BaseRequest implements IDirectoryRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IDirectoryRequest expand(final String value) {
+     public DirectoryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DirectoryRequest)this;
      }

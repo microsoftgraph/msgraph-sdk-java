@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOrganizationSetMobileDeviceManagementAuthorityRequest;
 import com.microsoft.graph.requests.extensions.OrganizationSetMobileDeviceManagementAuthorityRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Organization Set Mobile Device Management Authority Request.
  */
-public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseRequest implements IOrganizationSetMobileDeviceManagementAuthorityRequest {
+public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseRequest {
 
     /**
      * The request for this OrganizationSetMobileDeviceManagementAuthority
@@ -56,7 +55,7 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseR
      * @param value the select clause
      * @return the updated request
      */
-    public IOrganizationSetMobileDeviceManagementAuthorityRequest select(final String value) {
+    public OrganizationSetMobileDeviceManagementAuthorityRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OrganizationSetMobileDeviceManagementAuthorityRequest)this;
     }
@@ -67,7 +66,7 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequest extends BaseR
      * @param value the expand clause
      * @return the updated request
      */
-    public IOrganizationSetMobileDeviceManagementAuthorityRequest expand(final String value) {
+    public OrganizationSetMobileDeviceManagementAuthorityRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OrganizationSetMobileDeviceManagementAuthorityRequest)this;
     }

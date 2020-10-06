@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSumSqRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSumSqRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Sum Sq Request Builder.
  */
-public class WorkbookFunctionsSumSqRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSumSqRequestBuilder {
+public class WorkbookFunctionsSumSqRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSumSq
@@ -32,22 +31,22 @@ public class WorkbookFunctionsSumSqRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsSumSqRequest
+     * Creates the WorkbookFunctionsSumSqRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSumSqRequest instance
+     * @return the WorkbookFunctionsSumSqRequest instance
      */
-    public IWorkbookFunctionsSumSqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSumSqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSumSqRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSumSqRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSumSqRequest instance
+     * @return the WorkbookFunctionsSumSqRequest instance
      */
-    public IWorkbookFunctionsSumSqRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSumSqRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSumSqRequest request = new WorkbookFunctionsSumSqRequest(
                 getRequestUrl(),
                 getClient(),

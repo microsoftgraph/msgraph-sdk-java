@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeUnmergeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeUnmergeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Unmerge Request.
  */
-public class WorkbookRangeUnmergeRequest extends BaseRequest implements IWorkbookRangeUnmergeRequest {
+public class WorkbookRangeUnmergeRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeUnmerge

@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Comms Operation Request.
  */
-public class CommsOperationRequest extends BaseRequest implements ICommsOperationRequest {
+public class CommsOperationRequest extends BaseRequest {
 	
     /**
      * The request for the CommsOperation
@@ -153,7 +153,7 @@ public class CommsOperationRequest extends BaseRequest implements ICommsOperatio
      * @param value the select clause
      * @return the updated request
      */
-     public ICommsOperationRequest select(final String value) {
+     public CommsOperationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (CommsOperationRequest)this;
      }
@@ -164,7 +164,7 @@ public class CommsOperationRequest extends BaseRequest implements ICommsOperatio
      * @param value the expand clause
      * @return the updated request
      */
-     public ICommsOperationRequest expand(final String value) {
+     public CommsOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (CommsOperationRequest)this;
      }

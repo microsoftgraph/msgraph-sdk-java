@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSeriesSumRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSeriesSumRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Series Sum Request Builder.
  */
-public class WorkbookFunctionsSeriesSumRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSeriesSumRequestBuilder {
+public class WorkbookFunctionsSeriesSumRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSeriesSum
@@ -38,22 +37,22 @@ public class WorkbookFunctionsSeriesSumRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsSeriesSumRequest
+     * Creates the WorkbookFunctionsSeriesSumRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSeriesSumRequest instance
+     * @return the WorkbookFunctionsSeriesSumRequest instance
      */
-    public IWorkbookFunctionsSeriesSumRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSeriesSumRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSeriesSumRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSeriesSumRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSeriesSumRequest instance
+     * @return the WorkbookFunctionsSeriesSumRequest instance
      */
-    public IWorkbookFunctionsSeriesSumRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSeriesSumRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSeriesSumRequest request = new WorkbookFunctionsSeriesSumRequest(
                 getRequestUrl(),
                 getClient(),

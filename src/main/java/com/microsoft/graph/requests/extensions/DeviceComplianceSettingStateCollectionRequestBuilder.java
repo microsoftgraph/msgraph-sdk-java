@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DeviceComplianceSettingState;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Compliance Setting State Collection Request Builder.
  */
-public class DeviceComplianceSettingStateCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceComplianceSettingStateCollectionRequestBuilder {
+public class DeviceComplianceSettingStateCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceCompliancePolicySettingStateSummary
@@ -42,7 +42,7 @@ public class DeviceComplianceSettingStateCollectionRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceComplianceSettingStateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceComplianceSettingStateCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DeviceComplianceSettingStateCollectionRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceComplianceSettingStateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceSettingStateCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceComplianceSettingStateCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceComplianceSettingStateRequestBuilder byId(final String id) {
+    public DeviceComplianceSettingStateRequestBuilder byId(final String id) {
         return new DeviceComplianceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

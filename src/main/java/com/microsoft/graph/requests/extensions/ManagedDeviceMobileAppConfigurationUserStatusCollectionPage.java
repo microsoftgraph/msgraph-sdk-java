@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserStatus;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurati
 /**
  * The class for the Managed Device Mobile App Configuration User Status Collection Page.
  */
-public class ManagedDeviceMobileAppConfigurationUserStatusCollectionPage extends BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus, IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder> implements IManagedDeviceMobileAppConfigurationUserStatusCollectionPage {
+public class ManagedDeviceMobileAppConfigurationUserStatusCollectionPage extends BaseCollectionPage<ManagedDeviceMobileAppConfigurationUserStatus, ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedDeviceMobileAppConfigurationUserStatus
@@ -22,7 +22,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusCollectionPage extends
      * @param response the serialized ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(final ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse response, final IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder builder) {
+    public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage(final ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse response, final ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

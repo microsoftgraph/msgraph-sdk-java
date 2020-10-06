@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeClearRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeClearRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Clear Request Builder.
  */
-public class WorkbookRangeClearRequestBuilder extends BaseActionRequestBuilder implements IWorkbookRangeClearRequestBuilder {
+public class WorkbookRangeClearRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeClear
@@ -32,22 +31,22 @@ public class WorkbookRangeClearRequestBuilder extends BaseActionRequestBuilder i
     }
 
     /**
-     * Creates the IWorkbookRangeClearRequest
+     * Creates the WorkbookRangeClearRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeClearRequest instance
+     * @return the WorkbookRangeClearRequest instance
      */
-    public IWorkbookRangeClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeClearRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeClearRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeClearRequest instance
+     * @return the WorkbookRangeClearRequest instance
      */
-    public IWorkbookRangeClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeClearRequest request = new WorkbookRangeClearRequest(
                 getRequestUrl(),
                 getClient(),

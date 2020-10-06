@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
-import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionResp
 /**
  * The class for the Teams Async Operation Collection Page.
  */
-public class TeamsAsyncOperationCollectionPage extends BaseCollectionPage<TeamsAsyncOperation, ITeamsAsyncOperationCollectionRequestBuilder> implements ITeamsAsyncOperationCollectionPage {
+public class TeamsAsyncOperationCollectionPage extends BaseCollectionPage<TeamsAsyncOperation, TeamsAsyncOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for TeamsAsyncOperation
@@ -22,7 +22,7 @@ public class TeamsAsyncOperationCollectionPage extends BaseCollectionPage<TeamsA
      * @param response the serialized TeamsAsyncOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamsAsyncOperationCollectionPage(final TeamsAsyncOperationCollectionResponse response, final ITeamsAsyncOperationCollectionRequestBuilder builder) {
+    public TeamsAsyncOperationCollectionPage(final TeamsAsyncOperationCollectionResponse response, final TeamsAsyncOperationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

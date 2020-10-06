@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallCancelMediaProcessingRequest;
 import com.microsoft.graph.requests.extensions.CallCancelMediaProcessingRequest;
 import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Cancel Media Processing Request Builder.
  */
-public class CallCancelMediaProcessingRequestBuilder extends BaseActionRequestBuilder implements ICallCancelMediaProcessingRequestBuilder {
+public class CallCancelMediaProcessingRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallCancelMediaProcessing
@@ -32,22 +31,22 @@ public class CallCancelMediaProcessingRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the ICallCancelMediaProcessingRequest
+     * Creates the CallCancelMediaProcessingRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallCancelMediaProcessingRequest instance
+     * @return the CallCancelMediaProcessingRequest instance
      */
-    public ICallCancelMediaProcessingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallCancelMediaProcessingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallCancelMediaProcessingRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallCancelMediaProcessingRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallCancelMediaProcessingRequest instance
+     * @return the CallCancelMediaProcessingRequest instance
      */
-    public ICallCancelMediaProcessingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallCancelMediaProcessingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallCancelMediaProcessingRequest request = new CallCancelMediaProcessingRequest(
                 getRequestUrl(),
                 getClient(),

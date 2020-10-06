@@ -11,7 +11,7 @@ import com.microsoft.graph.models.generated.CalendarRoleType;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ICalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarAllowedCalendarSharingRolesCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Calendar Allowed Calendar Sharing Roles Collection Page.
  */
-public class CalendarAllowedCalendarSharingRolesCollectionPage extends BaseCollectionPage<CalendarRoleType, ICalendarAllowedCalendarSharingRolesCollectionRequestBuilder> implements ICalendarAllowedCalendarSharingRolesCollectionPage {
+public class CalendarAllowedCalendarSharingRolesCollectionPage extends BaseCollectionPage<CalendarRoleType, CalendarAllowedCalendarSharingRolesCollectionRequestBuilder> {
 
     /**
      * A collection page for CalendarRoleType.
@@ -33,7 +33,7 @@ public class CalendarAllowedCalendarSharingRolesCollectionPage extends BaseColle
      * @param response The serialized CalendarAllowedCalendarSharingRolesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public CalendarAllowedCalendarSharingRolesCollectionPage(final CalendarAllowedCalendarSharingRolesCollectionResponse response, final ICalendarAllowedCalendarSharingRolesCollectionRequestBuilder builder) {
+    public CalendarAllowedCalendarSharingRolesCollectionPage(final CalendarAllowedCalendarSharingRolesCollectionResponse response, final CalendarAllowedCalendarSharingRolesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

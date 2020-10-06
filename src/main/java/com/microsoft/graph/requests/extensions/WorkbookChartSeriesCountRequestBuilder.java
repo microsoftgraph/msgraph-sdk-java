@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCountRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCountRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Series Count Request Builder.
  */
-public class WorkbookChartSeriesCountRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookChartSeriesCountRequestBuilder {
+public class WorkbookChartSeriesCountRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartSeriesCount
@@ -30,22 +29,22 @@ public class WorkbookChartSeriesCountRequestBuilder extends BaseFunctionRequestB
     }
 
     /**
-     * Creates the IWorkbookChartSeriesCountRequest
+     * Creates the WorkbookChartSeriesCountRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartSeriesCountRequest instance
+     * @return the WorkbookChartSeriesCountRequest instance
      */
-    public IWorkbookChartSeriesCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartSeriesCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartSeriesCountRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartSeriesCountRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartSeriesCountRequest instance
+     * @return the WorkbookChartSeriesCountRequest instance
      */
-    public IWorkbookChartSeriesCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSeriesCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartSeriesCountRequest request = new WorkbookChartSeriesCountRequest(
                 getRequestUrl(),
                 getClient(),

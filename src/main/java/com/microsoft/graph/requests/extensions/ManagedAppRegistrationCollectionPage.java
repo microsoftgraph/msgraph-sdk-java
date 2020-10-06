@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionR
 /**
  * The class for the Managed App Registration Collection Page.
  */
-public class ManagedAppRegistrationCollectionPage extends BaseCollectionPage<ManagedAppRegistration, IManagedAppRegistrationCollectionRequestBuilder> implements IManagedAppRegistrationCollectionPage {
+public class ManagedAppRegistrationCollectionPage extends BaseCollectionPage<ManagedAppRegistration, ManagedAppRegistrationCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedAppRegistration
@@ -22,7 +22,7 @@ public class ManagedAppRegistrationCollectionPage extends BaseCollectionPage<Man
      * @param response the serialized ManagedAppRegistrationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedAppRegistrationCollectionPage(final ManagedAppRegistrationCollectionResponse response, final IManagedAppRegistrationCollectionRequestBuilder builder) {
+    public ManagedAppRegistrationCollectionPage(final ManagedAppRegistrationCollectionResponse response, final ManagedAppRegistrationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

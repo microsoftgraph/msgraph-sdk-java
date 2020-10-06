@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Report Content Stream Request Builder.
  */
-public class ReportContentStreamRequestBuilder extends BaseRequestBuilder implements IReportContentStreamRequestBuilder {
+public class ReportContentStreamRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ReportContentStream
@@ -35,9 +35,9 @@ public class ReportContentStreamRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IReportContentStreamRequest instance
+     * @return the ReportContentStreamRequest instance
      */
-    public IReportContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ReportContentStreamRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IReportContentStreamRequest instance
+     * @return the ReportContentStreamRequest instance
      */
-    public IReportContentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportContentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ReportContentStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

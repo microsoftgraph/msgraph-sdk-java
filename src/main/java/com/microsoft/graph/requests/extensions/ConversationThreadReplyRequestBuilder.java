@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IConversationThreadReplyRequest;
 import com.microsoft.graph.requests.extensions.ConversationThreadReplyRequest;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Conversation Thread Reply Request Builder.
  */
-public class ConversationThreadReplyRequestBuilder extends BaseActionRequestBuilder implements IConversationThreadReplyRequestBuilder {
+public class ConversationThreadReplyRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ConversationThreadReply
@@ -32,22 +31,22 @@ public class ConversationThreadReplyRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IConversationThreadReplyRequest
+     * Creates the ConversationThreadReplyRequest
      *
      * @param requestOptions the options for the request
-     * @return the IConversationThreadReplyRequest instance
+     * @return the ConversationThreadReplyRequest instance
      */
-    public IConversationThreadReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ConversationThreadReplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IConversationThreadReplyRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ConversationThreadReplyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IConversationThreadReplyRequest instance
+     * @return the ConversationThreadReplyRequest instance
      */
-    public IConversationThreadReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConversationThreadReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ConversationThreadReplyRequest request = new ConversationThreadReplyRequest(
                 getRequestUrl(),
                 getClient(),

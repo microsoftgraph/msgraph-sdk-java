@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Field Value Set Request Builder.
  */
-public class FieldValueSetRequestBuilder extends BaseRequestBuilder implements IFieldValueSetRequestBuilder {
+public class FieldValueSetRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the FieldValueSet
@@ -35,9 +35,9 @@ public class FieldValueSetRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IFieldValueSetRequest instance
+     * @return the FieldValueSetRequest instance
      */
-    public IFieldValueSetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public FieldValueSetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class FieldValueSetRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IFieldValueSetRequest instance
+     * @return the FieldValueSetRequest instance
      */
-    public IFieldValueSetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FieldValueSetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.FieldValueSetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

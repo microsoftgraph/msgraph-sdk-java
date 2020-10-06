@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsConfidence_TRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsConfidence_TRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Confidence_TRequest Builder.
  */
-public class WorkbookFunctionsConfidence_TRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsConfidence_TRequestBuilder {
+public class WorkbookFunctionsConfidence_TRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsConfidence_T
@@ -36,22 +35,22 @@ public class WorkbookFunctionsConfidence_TRequestBuilder extends BaseActionReque
     }
 
     /**
-     * Creates the IWorkbookFunctionsConfidence_TRequest
+     * Creates the WorkbookFunctionsConfidence_TRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsConfidence_TRequest instance
+     * @return the WorkbookFunctionsConfidence_TRequest instance
      */
-    public IWorkbookFunctionsConfidence_TRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsConfidence_TRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsConfidence_TRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsConfidence_TRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsConfidence_TRequest instance
+     * @return the WorkbookFunctionsConfidence_TRequest instance
      */
-    public IWorkbookFunctionsConfidence_TRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsConfidence_TRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsConfidence_TRequest request = new WorkbookFunctionsConfidence_TRequest(
                 getRequestUrl(),
                 getClient(),

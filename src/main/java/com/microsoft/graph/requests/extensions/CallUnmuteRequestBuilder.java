@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallUnmuteRequest;
 import com.microsoft.graph.requests.extensions.CallUnmuteRequest;
 import com.microsoft.graph.models.extensions.UnmuteParticipantOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Call Unmute Request Builder.
  */
-public class CallUnmuteRequestBuilder extends BaseActionRequestBuilder implements ICallUnmuteRequestBuilder {
+public class CallUnmuteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this CallUnmute
@@ -32,22 +31,22 @@ public class CallUnmuteRequestBuilder extends BaseActionRequestBuilder implement
     }
 
     /**
-     * Creates the ICallUnmuteRequest
+     * Creates the CallUnmuteRequest
      *
      * @param requestOptions the options for the request
-     * @return the ICallUnmuteRequest instance
+     * @return the CallUnmuteRequest instance
      */
-    public ICallUnmuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CallUnmuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ICallUnmuteRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the CallUnmuteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ICallUnmuteRequest instance
+     * @return the CallUnmuteRequest instance
      */
-    public ICallUnmuteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallUnmuteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CallUnmuteRequest request = new CallUnmuteRequest(
                 getRequestUrl(),
                 getClient(),

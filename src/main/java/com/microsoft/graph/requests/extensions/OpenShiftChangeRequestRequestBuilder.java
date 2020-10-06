@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Open Shift Change Request Request Builder.
  */
-public class OpenShiftChangeRequestRequestBuilder extends BaseRequestBuilder implements IOpenShiftChangeRequestRequestBuilder {
+public class OpenShiftChangeRequestRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the OpenShiftChangeRequest
@@ -35,9 +35,9 @@ public class OpenShiftChangeRequestRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOpenShiftChangeRequestRequest instance
+     * @return the OpenShiftChangeRequestRequest instance
      */
-    public IOpenShiftChangeRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OpenShiftChangeRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class OpenShiftChangeRequestRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOpenShiftChangeRequestRequest instance
+     * @return the OpenShiftChangeRequestRequest instance
      */
-    public IOpenShiftChangeRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OpenShiftChangeRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OpenShiftChangeRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

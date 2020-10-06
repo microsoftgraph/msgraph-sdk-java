@@ -8,23 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.List;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -36,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the List Request Builder.
  */
-public class ListRequestBuilder extends BaseRequestBuilder implements IListRequestBuilder {
+public class ListRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the List
@@ -53,9 +44,9 @@ public class ListRequestBuilder extends BaseRequestBuilder implements IListReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IListRequest instance
+     * @return the ListRequest instance
      */
-    public IListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -63,9 +54,9 @@ public class ListRequestBuilder extends BaseRequestBuilder implements IListReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IListRequest instance
+     * @return the ListRequest instance
      */
-    public IListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -74,55 +65,55 @@ public class ListRequestBuilder extends BaseRequestBuilder implements IListReque
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder createdByUser() {
+    public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+    public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
-    public IColumnDefinitionCollectionRequestBuilder columns() {
+    public ColumnDefinitionCollectionRequestBuilder columns() {
         return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
-    public IColumnDefinitionRequestBuilder columns(final String id) {
+    public ColumnDefinitionRequestBuilder columns(final String id) {
         return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
-    public IContentTypeCollectionRequestBuilder contentTypes() {
+    public ContentTypeCollectionRequestBuilder contentTypes() {
         return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
     }
 
-    public IContentTypeRequestBuilder contentTypes(final String id) {
+    public ContentTypeRequestBuilder contentTypes(final String id) {
         return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Drive
      *
-     * @return the IDriveRequestBuilder instance
+     * @return the DriveRequestBuilder instance
      */
-    public IDriveRequestBuilder drive() {
+    public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
-    public IListItemCollectionRequestBuilder items() {
+    public ListItemCollectionRequestBuilder items() {
         return new ListItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
-    public IListItemRequestBuilder items(final String id) {
+    public ListItemRequestBuilder items(final String id) {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
-    public ISubscriptionCollectionRequestBuilder subscriptions() {
+    public SubscriptionCollectionRequestBuilder subscriptions() {
         return new SubscriptionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions"), getClient(), null);
     }
 
-    public ISubscriptionRequestBuilder subscriptions(final String id) {
+    public SubscriptionRequestBuilder subscriptions(final String id) {
         return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
     }
 }

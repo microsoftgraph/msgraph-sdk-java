@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Range Request.
  */
-public class WorkbookTableColumnRangeRequest extends BaseRequest implements IWorkbookTableColumnRangeRequest {
+public class WorkbookTableColumnRangeRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookTableColumnRange
@@ -97,7 +96,7 @@ public class WorkbookTableColumnRangeRequest extends BaseRequest implements IWor
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookTableColumnRangeRequest select(final String value) {
+    public WorkbookTableColumnRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookTableColumnRangeRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookTableColumnRangeRequest extends BaseRequest implements IWor
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookTableColumnRangeRequest expand(final String value) {
+    public WorkbookTableColumnRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookTableColumnRangeRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookTableColumnRangeRequest extends BaseRequest implements IWor
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookTableColumnRangeRequest filter(final String value) {
+    public WorkbookTableColumnRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookTableColumnRangeRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookTableColumnRangeRequest extends BaseRequest implements IWor
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookTableColumnRangeRequest orderBy(final String value) {
+    public WorkbookTableColumnRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookTableColumnRangeRequest)this;
     }

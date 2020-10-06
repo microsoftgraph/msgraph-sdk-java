@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveItemSearchCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemSearchCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemSearchCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemSearchCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Drive Item Search Collection Page.
  */
-public class DriveItemSearchCollectionPage extends BaseCollectionPage<DriveItem, IDriveItemSearchCollectionRequestBuilder> implements IDriveItemSearchCollectionPage {
+public class DriveItemSearchCollectionPage extends BaseCollectionPage<DriveItem, DriveItemSearchCollectionRequestBuilder> {
 
     /**
      * A collection page for DriveItem.
@@ -33,7 +33,7 @@ public class DriveItemSearchCollectionPage extends BaseCollectionPage<DriveItem,
      * @param response The serialized DriveItemSearchCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemSearchCollectionPage(final DriveItemSearchCollectionResponse response, final IDriveItemSearchCollectionRequestBuilder builder) {
+    public DriveItemSearchCollectionPage(final DriveItemSearchCollectionResponse response, final DriveItemSearchCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

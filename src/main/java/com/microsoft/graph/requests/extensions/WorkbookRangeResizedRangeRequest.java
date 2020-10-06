@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeResizedRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeResizedRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Resized Range Request.
  */
-public class WorkbookRangeResizedRangeRequest extends BaseRequest implements IWorkbookRangeResizedRangeRequest {
+public class WorkbookRangeResizedRangeRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeResizedRange
@@ -97,7 +96,7 @@ public class WorkbookRangeResizedRangeRequest extends BaseRequest implements IWo
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeResizedRangeRequest select(final String value) {
+    public WorkbookRangeResizedRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeResizedRangeRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookRangeResizedRangeRequest extends BaseRequest implements IWo
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeResizedRangeRequest expand(final String value) {
+    public WorkbookRangeResizedRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeResizedRangeRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookRangeResizedRangeRequest extends BaseRequest implements IWo
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeResizedRangeRequest filter(final String value) {
+    public WorkbookRangeResizedRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeResizedRangeRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookRangeResizedRangeRequest extends BaseRequest implements IWo
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeResizedRangeRequest orderBy(final String value) {
+    public WorkbookRangeResizedRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeResizedRangeRequest)this;
     }

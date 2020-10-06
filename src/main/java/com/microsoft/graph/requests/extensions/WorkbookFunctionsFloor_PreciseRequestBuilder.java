@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFloor_PreciseRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFloor_PreciseRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Floor_Precise Request Builder.
  */
-public class WorkbookFunctionsFloor_PreciseRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsFloor_PreciseRequestBuilder {
+public class WorkbookFunctionsFloor_PreciseRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsFloor_Precise
@@ -34,22 +33,22 @@ public class WorkbookFunctionsFloor_PreciseRequestBuilder extends BaseActionRequ
     }
 
     /**
-     * Creates the IWorkbookFunctionsFloor_PreciseRequest
+     * Creates the WorkbookFunctionsFloor_PreciseRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFloor_PreciseRequest instance
+     * @return the WorkbookFunctionsFloor_PreciseRequest instance
      */
-    public IWorkbookFunctionsFloor_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsFloor_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsFloor_PreciseRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsFloor_PreciseRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFloor_PreciseRequest instance
+     * @return the WorkbookFunctionsFloor_PreciseRequest instance
      */
-    public IWorkbookFunctionsFloor_PreciseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsFloor_PreciseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsFloor_PreciseRequest request = new WorkbookFunctionsFloor_PreciseRequest(
                 getRequestUrl(),
                 getClient(),

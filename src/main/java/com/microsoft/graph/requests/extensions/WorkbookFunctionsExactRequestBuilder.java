@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsExactRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsExactRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Exact Request Builder.
  */
-public class WorkbookFunctionsExactRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsExactRequestBuilder {
+public class WorkbookFunctionsExactRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsExact
@@ -34,22 +33,22 @@ public class WorkbookFunctionsExactRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsExactRequest
+     * Creates the WorkbookFunctionsExactRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsExactRequest instance
+     * @return the WorkbookFunctionsExactRequest instance
      */
-    public IWorkbookFunctionsExactRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsExactRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsExactRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsExactRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsExactRequest instance
+     * @return the WorkbookFunctionsExactRequest instance
      */
-    public IWorkbookFunctionsExactRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsExactRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsExactRequest request = new WorkbookFunctionsExactRequest(
                 getRequestUrl(),
                 getClient(),

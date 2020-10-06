@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Microsoft Store For Business App Request.
  */
-public class MicrosoftStoreForBusinessAppRequest extends BaseRequest implements IMicrosoftStoreForBusinessAppRequest {
+public class MicrosoftStoreForBusinessAppRequest extends BaseRequest {
 	
     /**
      * The request for the MicrosoftStoreForBusinessApp
@@ -138,7 +138,7 @@ public class MicrosoftStoreForBusinessAppRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IMicrosoftStoreForBusinessAppRequest select(final String value) {
+     public MicrosoftStoreForBusinessAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MicrosoftStoreForBusinessAppRequest)this;
      }
@@ -149,7 +149,7 @@ public class MicrosoftStoreForBusinessAppRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IMicrosoftStoreForBusinessAppRequest expand(final String value) {
+     public MicrosoftStoreForBusinessAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MicrosoftStoreForBusinessAppRequest)this;
      }

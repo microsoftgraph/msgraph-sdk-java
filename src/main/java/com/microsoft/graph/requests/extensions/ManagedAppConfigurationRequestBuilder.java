@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Configuration Request Builder.
  */
-public class ManagedAppConfigurationRequestBuilder extends BaseRequestBuilder implements IManagedAppConfigurationRequestBuilder {
+public class ManagedAppConfigurationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ManagedAppConfiguration
@@ -35,9 +35,9 @@ public class ManagedAppConfigurationRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppConfigurationRequest instance
+     * @return the ManagedAppConfigurationRequest instance
      */
-    public IManagedAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ManagedAppConfigurationRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppConfigurationRequest instance
+     * @return the ManagedAppConfigurationRequest instance
      */
-    public IManagedAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

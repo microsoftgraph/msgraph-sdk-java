@@ -12,7 +12,7 @@ import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IPermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionResponse;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Permission Grant Collection Page.
  */
-public class PermissionGrantCollectionPage extends BaseCollectionPage<Permission, IPermissionGrantCollectionRequestBuilder> implements IPermissionGrantCollectionPage {
+public class PermissionGrantCollectionPage extends BaseCollectionPage<Permission, PermissionGrantCollectionRequestBuilder> {
 
     /**
      * A collection page for Permission.
@@ -34,7 +34,7 @@ public class PermissionGrantCollectionPage extends BaseCollectionPage<Permission
      * @param response The serialized PermissionGrantCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public PermissionGrantCollectionPage(final PermissionGrantCollectionResponse response, final IPermissionGrantCollectionRequestBuilder builder) {
+    public PermissionGrantCollectionPage(final PermissionGrantCollectionResponse response, final PermissionGrantCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

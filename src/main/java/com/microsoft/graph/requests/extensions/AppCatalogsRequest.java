@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppCatalogs;
-import com.microsoft.graph.requests.extensions.ITeamsAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the App Catalogs Request.
  */
-public class AppCatalogsRequest extends BaseRequest implements IAppCatalogsRequest {
+public class AppCatalogsRequest extends BaseRequest {
 	
     /**
      * The request for the AppCatalogs
@@ -142,7 +140,7 @@ public class AppCatalogsRequest extends BaseRequest implements IAppCatalogsReque
      * @param value the select clause
      * @return the updated request
      */
-     public IAppCatalogsRequest select(final String value) {
+     public AppCatalogsRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (AppCatalogsRequest)this;
      }
@@ -153,7 +151,7 @@ public class AppCatalogsRequest extends BaseRequest implements IAppCatalogsReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IAppCatalogsRequest expand(final String value) {
+     public AppCatalogsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (AppCatalogsRequest)this;
      }

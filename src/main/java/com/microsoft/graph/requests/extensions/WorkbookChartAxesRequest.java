@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAxes;
-import com.microsoft.graph.requests.extensions.IWorkbookChartAxisRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartAxisRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Axes Request.
  */
-public class WorkbookChartAxesRequest extends BaseRequest implements IWorkbookChartAxesRequest {
+public class WorkbookChartAxesRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookChartAxes
@@ -140,7 +139,7 @@ public class WorkbookChartAxesRequest extends BaseRequest implements IWorkbookCh
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartAxesRequest select(final String value) {
+     public WorkbookChartAxesRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookChartAxesRequest)this;
      }
@@ -151,7 +150,7 @@ public class WorkbookChartAxesRequest extends BaseRequest implements IWorkbookCh
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartAxesRequest expand(final String value) {
+     public WorkbookChartAxesRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookChartAxesRequest)this;
      }

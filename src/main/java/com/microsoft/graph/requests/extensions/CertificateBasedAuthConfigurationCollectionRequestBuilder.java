@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequest;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Certificate Based Auth Configuration Collection Request Builder.
  */
-public class CertificateBasedAuthConfigurationCollectionRequestBuilder extends BaseRequestBuilder implements ICertificateBasedAuthConfigurationCollectionRequestBuilder {
+public class CertificateBasedAuthConfigurationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of CertificateBasedAuthConfiguration
@@ -41,7 +41,7 @@ public class CertificateBasedAuthConfigurationCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICertificateBasedAuthConfigurationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CertificateBasedAuthConfigurationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class CertificateBasedAuthConfigurationCollectionRequestBuilder extends B
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICertificateBasedAuthConfigurationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CertificateBasedAuthConfigurationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CertificateBasedAuthConfigurationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ICertificateBasedAuthConfigurationRequestBuilder byId(final String id) {
+    public CertificateBasedAuthConfigurationRequestBuilder byId(final String id) {
         return new CertificateBasedAuthConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

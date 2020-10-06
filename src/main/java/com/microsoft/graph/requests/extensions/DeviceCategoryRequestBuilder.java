@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Category Request Builder.
  */
-public class DeviceCategoryRequestBuilder extends BaseRequestBuilder implements IDeviceCategoryRequestBuilder {
+public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceCategory
@@ -35,9 +35,9 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceCategoryRequest instance
+     * @return the DeviceCategoryRequest instance
      */
-    public IDeviceCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceCategoryRequest instance
+     * @return the DeviceCategoryRequest instance
      */
-    public IDeviceCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

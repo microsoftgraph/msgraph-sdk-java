@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITeamGetAllMessagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Team Get All Messages Collection Request.
  */
-public class TeamGetAllMessagesCollectionRequest extends BaseCollectionRequest<TeamGetAllMessagesCollectionResponse, ITeamGetAllMessagesCollectionPage> implements ITeamGetAllMessagesCollectionRequest {
+public class TeamGetAllMessagesCollectionRequest extends BaseCollectionRequest<TeamGetAllMessagesCollectionResponse, TeamGetAllMessagesCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class TeamGetAllMessagesCollectionRequest extends BaseCollectionRequest<T
      * @param requestOptions the options for this request
      */
     public TeamGetAllMessagesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TeamGetAllMessagesCollectionResponse.class, ITeamGetAllMessagesCollectionPage.class);
+        super(requestUrl, client, requestOptions, TeamGetAllMessagesCollectionResponse.class, TeamGetAllMessagesCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super ITeamGetAllMessagesCollectionPage> callback) {
+    public void get(final ICallback<? super TeamGetAllMessagesCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class TeamGetAllMessagesCollectionRequest extends BaseCollectionRequest<T
         });
     }
 
-    public ITeamGetAllMessagesCollectionPage get() throws ClientException {
+    public TeamGetAllMessagesCollectionPage get() throws ClientException {
         final TeamGetAllMessagesCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public ITeamGetAllMessagesCollectionPage buildFromResponse(final TeamGetAllMessagesCollectionResponse response) {
-        final ITeamGetAllMessagesCollectionRequestBuilder builder;
+    public TeamGetAllMessagesCollectionPage buildFromResponse(final TeamGetAllMessagesCollectionResponse response) {
+        final TeamGetAllMessagesCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TeamGetAllMessagesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }
-        final ITeamGetAllMessagesCollectionPage page = new TeamGetAllMessagesCollectionPage(response, builder);
+        final TeamGetAllMessagesCollectionPage page = new TeamGetAllMessagesCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class TeamGetAllMessagesCollectionRequest extends BaseCollectionRequest<T
      * @param value the select clause
      * @return the updated request
      */
-    public ITeamGetAllMessagesCollectionRequest select(final String value) {
+    public TeamGetAllMessagesCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ITeamGetAllMessagesCollectionRequest)this;
+        return (TeamGetAllMessagesCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class TeamGetAllMessagesCollectionRequest extends BaseCollectionRequest<T
      * @param value the max number of items to return
      * @return the updated request
      */
-    public ITeamGetAllMessagesCollectionRequest top(final int value) {
+    public TeamGetAllMessagesCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (ITeamGetAllMessagesCollectionRequest)this;
+        return (TeamGetAllMessagesCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class TeamGetAllMessagesCollectionRequest extends BaseCollectionRequest<T
      * @param value the expand clause
      * @return the updated request
      */
-    public ITeamGetAllMessagesCollectionRequest expand(final String value) {
+    public TeamGetAllMessagesCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ITeamGetAllMessagesCollectionRequest)this;
+        return (TeamGetAllMessagesCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class TeamGetAllMessagesCollectionRequest extends BaseCollectionRequest<T
      * @param value the filter clause
      * @return the updated request
      */
-    public ITeamGetAllMessagesCollectionRequest filter(final String value) {
+    public TeamGetAllMessagesCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ITeamGetAllMessagesCollectionRequest)this;
+        return (TeamGetAllMessagesCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class TeamGetAllMessagesCollectionRequest extends BaseCollectionRequest<T
      * @param value the order by clause
      * @return the updated request
      */
-    public ITeamGetAllMessagesCollectionRequest orderBy(final String value) {
+    public TeamGetAllMessagesCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (ITeamGetAllMessagesCollectionRequest)this;
+        return (TeamGetAllMessagesCollectionRequest)this;
     }
 
 }

@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Org Contact Collection With References Request Builder.
  */
-public class OrgContactCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements IOrgContactCollectionWithReferencesRequestBuilder {
+public class OrgContactCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -39,7 +39,7 @@ public class OrgContactCollectionWithReferencesRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOrgContactCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OrgContactCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,15 +49,15 @@ public class OrgContactCollectionWithReferencesRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOrgContactCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OrgContactCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOrgContactWithReferenceRequestBuilder byId(final String id) {
+    public OrgContactWithReferenceRequestBuilder byId(final String id) {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IOrgContactCollectionReferenceRequestBuilder references(){
+    public OrgContactCollectionReferenceRequestBuilder references(){
         return new OrgContactCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

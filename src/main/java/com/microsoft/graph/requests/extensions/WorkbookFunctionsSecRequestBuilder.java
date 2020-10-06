@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSecRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSecRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Sec Request Builder.
  */
-public class WorkbookFunctionsSecRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSecRequestBuilder {
+public class WorkbookFunctionsSecRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSec
@@ -32,22 +31,22 @@ public class WorkbookFunctionsSecRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookFunctionsSecRequest
+     * Creates the WorkbookFunctionsSecRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSecRequest instance
+     * @return the WorkbookFunctionsSecRequest instance
      */
-    public IWorkbookFunctionsSecRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSecRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSecRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSecRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSecRequest instance
+     * @return the WorkbookFunctionsSecRequest instance
      */
-    public IWorkbookFunctionsSecRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSecRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSecRequest request = new WorkbookFunctionsSecRequest(
                 getRequestUrl(),
                 getClient(),

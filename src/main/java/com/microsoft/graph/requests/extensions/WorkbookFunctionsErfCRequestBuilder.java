@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsErfCRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsErfCRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Erf CRequest Builder.
  */
-public class WorkbookFunctionsErfCRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsErfCRequestBuilder {
+public class WorkbookFunctionsErfCRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsErfC
@@ -32,22 +31,22 @@ public class WorkbookFunctionsErfCRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsErfCRequest
+     * Creates the WorkbookFunctionsErfCRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsErfCRequest instance
+     * @return the WorkbookFunctionsErfCRequest instance
      */
-    public IWorkbookFunctionsErfCRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsErfCRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsErfCRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsErfCRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsErfCRequest instance
+     * @return the WorkbookFunctionsErfCRequest instance
      */
-    public IWorkbookFunctionsErfCRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsErfCRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsErfCRequest request = new WorkbookFunctionsErfCRequest(
                 getRequestUrl(),
                 getClient(),

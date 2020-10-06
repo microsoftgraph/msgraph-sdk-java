@@ -8,16 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Security;
-import com.microsoft.graph.requests.extensions.IAlertCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAlertRequestBuilder;
 import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AlertRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreRequestBuilder;
 import java.util.Arrays;
@@ -31,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Security Request.
  */
-public class SecurityRequest extends BaseRequest implements ISecurityRequest {
+public class SecurityRequest extends BaseRequest {
 	
     /**
      * The request for the Security
@@ -150,7 +144,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ISecurityRequest select(final String value) {
+     public SecurityRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SecurityRequest)this;
      }
@@ -161,7 +155,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ISecurityRequest expand(final String value) {
+     public SecurityRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SecurityRequest)this;
      }

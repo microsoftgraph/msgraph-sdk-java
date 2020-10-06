@@ -11,9 +11,9 @@ import com.microsoft.graph.models.extensions.Invitation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IInvitationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInvitationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInvitationCollectionRequest;
+import com.microsoft.graph.requests.extensions.InvitationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.InvitationRequestBuilder;
+import com.microsoft.graph.requests.extensions.InvitationCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Invitation Collection Request Builder.
  */
-public class InvitationCollectionRequestBuilder extends BaseRequestBuilder implements IInvitationCollectionRequestBuilder {
+public class InvitationCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Invitation
@@ -41,7 +41,7 @@ public class InvitationCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IInvitationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public InvitationCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,11 +51,11 @@ public class InvitationCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IInvitationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InvitationCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new InvitationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IInvitationRequestBuilder byId(final String id) {
+    public InvitationRequestBuilder byId(final String id) {
         return new InvitationRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

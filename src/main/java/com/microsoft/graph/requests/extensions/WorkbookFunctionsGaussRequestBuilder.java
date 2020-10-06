@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGaussRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsGaussRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Gauss Request Builder.
  */
-public class WorkbookFunctionsGaussRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsGaussRequestBuilder {
+public class WorkbookFunctionsGaussRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsGauss
@@ -32,22 +31,22 @@ public class WorkbookFunctionsGaussRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsGaussRequest
+     * Creates the WorkbookFunctionsGaussRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGaussRequest instance
+     * @return the WorkbookFunctionsGaussRequest instance
      */
-    public IWorkbookFunctionsGaussRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsGaussRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsGaussRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsGaussRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGaussRequest instance
+     * @return the WorkbookFunctionsGaussRequest instance
      */
-    public IWorkbookFunctionsGaussRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsGaussRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsGaussRequest request = new WorkbookFunctionsGaussRequest(
                 getRequestUrl(),
                 getClient(),

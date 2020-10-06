@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGeoMeanRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsGeoMeanRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Geo Mean Request Builder.
  */
-public class WorkbookFunctionsGeoMeanRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsGeoMeanRequestBuilder {
+public class WorkbookFunctionsGeoMeanRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsGeoMean
@@ -32,22 +31,22 @@ public class WorkbookFunctionsGeoMeanRequestBuilder extends BaseActionRequestBui
     }
 
     /**
-     * Creates the IWorkbookFunctionsGeoMeanRequest
+     * Creates the WorkbookFunctionsGeoMeanRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGeoMeanRequest instance
+     * @return the WorkbookFunctionsGeoMeanRequest instance
      */
-    public IWorkbookFunctionsGeoMeanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsGeoMeanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsGeoMeanRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsGeoMeanRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsGeoMeanRequest instance
+     * @return the WorkbookFunctionsGeoMeanRequest instance
      */
-    public IWorkbookFunctionsGeoMeanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsGeoMeanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsGeoMeanRequest request = new WorkbookFunctionsGeoMeanRequest(
                 getRequestUrl(),
                 getClient(),

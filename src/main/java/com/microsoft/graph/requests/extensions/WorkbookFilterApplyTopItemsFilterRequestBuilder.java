@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyTopItemsFilterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyTopItemsFilterRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Filter Apply Top Items Filter Request Builder.
  */
-public class WorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFilterApplyTopItemsFilterRequestBuilder {
+public class WorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFilterApplyTopItemsFilter
@@ -32,22 +31,22 @@ public class WorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseActionR
     }
 
     /**
-     * Creates the IWorkbookFilterApplyTopItemsFilterRequest
+     * Creates the WorkbookFilterApplyTopItemsFilterRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyTopItemsFilterRequest instance
+     * @return the WorkbookFilterApplyTopItemsFilterRequest instance
      */
-    public IWorkbookFilterApplyTopItemsFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFilterApplyTopItemsFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFilterApplyTopItemsFilterRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFilterApplyTopItemsFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFilterApplyTopItemsFilterRequest instance
+     * @return the WorkbookFilterApplyTopItemsFilterRequest instance
      */
-    public IWorkbookFilterApplyTopItemsFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterApplyTopItemsFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFilterApplyTopItemsFilterRequest request = new WorkbookFilterApplyTopItemsFilterRequest(
                 getRequestUrl(),
                 getClient(),

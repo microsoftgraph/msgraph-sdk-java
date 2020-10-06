@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDbRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsDbRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Db Request Builder.
  */
-public class WorkbookFunctionsDbRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsDbRequestBuilder {
+public class WorkbookFunctionsDbRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsDb
@@ -40,22 +39,22 @@ public class WorkbookFunctionsDbRequestBuilder extends BaseActionRequestBuilder 
     }
 
     /**
-     * Creates the IWorkbookFunctionsDbRequest
+     * Creates the WorkbookFunctionsDbRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDbRequest instance
+     * @return the WorkbookFunctionsDbRequest instance
      */
-    public IWorkbookFunctionsDbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsDbRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsDbRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsDbRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDbRequest instance
+     * @return the WorkbookFunctionsDbRequest instance
      */
-    public IWorkbookFunctionsDbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsDbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDbRequest request = new WorkbookFunctionsDbRequest(
                 getRequestUrl(),
                 getClient(),

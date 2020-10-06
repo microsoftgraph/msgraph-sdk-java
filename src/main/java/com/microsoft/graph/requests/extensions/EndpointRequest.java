@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Endpoint Request.
  */
-public class EndpointRequest extends BaseRequest implements IEndpointRequest {
+public class EndpointRequest extends BaseRequest {
 	
     /**
      * The request for the Endpoint
@@ -138,7 +138,7 @@ public class EndpointRequest extends BaseRequest implements IEndpointRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IEndpointRequest select(final String value) {
+     public EndpointRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (EndpointRequest)this;
      }
@@ -149,7 +149,7 @@ public class EndpointRequest extends BaseRequest implements IEndpointRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IEndpointRequest expand(final String value) {
+     public EndpointRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (EndpointRequest)this;
      }

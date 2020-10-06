@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEventDismissReminderRequest;
 import com.microsoft.graph.requests.extensions.EventDismissReminderRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Event Dismiss Reminder Request.
  */
-public class EventDismissReminderRequest extends BaseRequest implements IEventDismissReminderRequest {
+public class EventDismissReminderRequest extends BaseRequest {
 
     /**
      * The request for this EventDismissReminder

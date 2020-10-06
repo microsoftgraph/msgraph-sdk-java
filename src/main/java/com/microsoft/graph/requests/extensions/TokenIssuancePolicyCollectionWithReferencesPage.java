@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Token Issuance Policy Collection With References Page.
  */
-public class TokenIssuancePolicyCollectionWithReferencesPage extends BaseCollectionPage<TokenIssuancePolicy, ITokenIssuancePolicyCollectionWithReferencesRequestBuilder> implements ITokenIssuancePolicyCollectionWithReferencesPage {
+public class TokenIssuancePolicyCollectionWithReferencesPage extends BaseCollectionPage<TokenIssuancePolicy, TokenIssuancePolicyCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for TokenIssuancePolicy
@@ -34,7 +34,7 @@ public class TokenIssuancePolicyCollectionWithReferencesPage extends BaseCollect
      * @param response the serialized TokenIssuancePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TokenIssuancePolicyCollectionWithReferencesPage(final TokenIssuancePolicyCollectionResponse response, final ITokenIssuancePolicyCollectionWithReferencesRequestBuilder builder) {
+    public TokenIssuancePolicyCollectionWithReferencesPage(final TokenIssuancePolicyCollectionResponse response, final TokenIssuancePolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

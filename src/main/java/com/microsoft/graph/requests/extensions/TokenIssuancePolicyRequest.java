@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Token Issuance Policy Request.
  */
-public class TokenIssuancePolicyRequest extends BaseRequest implements ITokenIssuancePolicyRequest {
+public class TokenIssuancePolicyRequest extends BaseRequest {
 	
     /**
      * The request for the TokenIssuancePolicy
@@ -138,7 +138,7 @@ public class TokenIssuancePolicyRequest extends BaseRequest implements ITokenIss
      * @param value the select clause
      * @return the updated request
      */
-     public ITokenIssuancePolicyRequest select(final String value) {
+     public TokenIssuancePolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TokenIssuancePolicyRequest)this;
      }
@@ -149,7 +149,7 @@ public class TokenIssuancePolicyRequest extends BaseRequest implements ITokenIss
      * @param value the expand clause
      * @return the updated request
      */
-     public ITokenIssuancePolicyRequest expand(final String value) {
+     public TokenIssuancePolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TokenIssuancePolicyRequest)this;
      }

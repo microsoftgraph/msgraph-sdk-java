@@ -23,7 +23,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Site Collection With References Request.
  */
-public class SiteCollectionWithReferencesRequest extends BaseCollectionRequest<SiteCollectionResponse, ISiteCollectionPage> implements ISiteCollectionWithReferencesRequest {
+public class SiteCollectionWithReferencesRequest extends BaseCollectionRequest<SiteCollectionResponse, SiteCollectionPage> {
 
     /**
      * The request builder for this collection of Site
@@ -33,10 +33,10 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionRequest<S
      * @param requestOptions the options for this request
      */
     public SiteCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, SiteCollectionResponse.class, ISiteCollectionPage.class);
+        super(requestUrl, client, requestOptions, SiteCollectionResponse.class, SiteCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ISiteCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super SiteCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -50,38 +50,38 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionRequest<S
         });
     }
 
-    public ISiteCollectionWithReferencesPage get() throws ClientException {
+    public SiteCollectionWithReferencesPage get() throws ClientException {
         final SiteCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public ISiteCollectionWithReferencesRequest expand(final String value) {
+    public SiteCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public ISiteCollectionWithReferencesRequest filter(final String value) {
+    public SiteCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public ISiteCollectionWithReferencesRequest orderBy(final String value) {
+    public SiteCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public ISiteCollectionWithReferencesRequest select(final String value) {
+    public SiteCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public ISiteCollectionWithReferencesRequest top(final int value) {
+    public SiteCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public ISiteCollectionWithReferencesPage buildFromResponse(final SiteCollectionResponse response) {
-        final ISiteCollectionWithReferencesRequestBuilder builder;
+    public SiteCollectionWithReferencesPage buildFromResponse(final SiteCollectionResponse response) {
+        final SiteCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new SiteCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

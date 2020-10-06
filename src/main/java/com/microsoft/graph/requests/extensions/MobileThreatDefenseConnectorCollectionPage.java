@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MobileThreatDefenseConnector;
-import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorColle
 /**
  * The class for the Mobile Threat Defense Connector Collection Page.
  */
-public class MobileThreatDefenseConnectorCollectionPage extends BaseCollectionPage<MobileThreatDefenseConnector, IMobileThreatDefenseConnectorCollectionRequestBuilder> implements IMobileThreatDefenseConnectorCollectionPage {
+public class MobileThreatDefenseConnectorCollectionPage extends BaseCollectionPage<MobileThreatDefenseConnector, MobileThreatDefenseConnectorCollectionRequestBuilder> {
 
     /**
      * A collection page for MobileThreatDefenseConnector
@@ -22,7 +22,7 @@ public class MobileThreatDefenseConnectorCollectionPage extends BaseCollectionPa
      * @param response the serialized MobileThreatDefenseConnectorCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MobileThreatDefenseConnectorCollectionPage(final MobileThreatDefenseConnectorCollectionResponse response, final IMobileThreatDefenseConnectorCollectionRequestBuilder builder) {
+    public MobileThreatDefenseConnectorCollectionPage(final MobileThreatDefenseConnectorCollectionResponse response, final MobileThreatDefenseConnectorCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

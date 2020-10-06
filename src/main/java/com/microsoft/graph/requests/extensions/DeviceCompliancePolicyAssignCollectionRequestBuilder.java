@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Device Compliance Policy Assign Collection Request Builder.
  */
-public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseActionRequestBuilder implements IDeviceCompliancePolicyAssignCollectionRequestBuilder {
+public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceCompliancePolicy
@@ -46,7 +45,7 @@ public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseAc
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceCompliancePolicyAssignCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceCompliancePolicyAssignCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,7 +55,7 @@ public class DeviceCompliancePolicyAssignCollectionRequestBuilder extends BaseAc
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceCompliancePolicyAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyAssignCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceCompliancePolicyAssignCollectionRequest request = new DeviceCompliancePolicyAssignCollectionRequest(
                 getRequestUrl(),
                 getClient(),

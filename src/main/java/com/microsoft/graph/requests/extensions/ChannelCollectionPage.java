@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Channel;
-import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ChannelCollectionPage;
 import com.microsoft.graph.requests.extensions.ChannelCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ChannelCollectionResponse;
 /**
  * The class for the Channel Collection Page.
  */
-public class ChannelCollectionPage extends BaseCollectionPage<Channel, IChannelCollectionRequestBuilder> implements IChannelCollectionPage {
+public class ChannelCollectionPage extends BaseCollectionPage<Channel, ChannelCollectionRequestBuilder> {
 
     /**
      * A collection page for Channel
@@ -22,7 +22,7 @@ public class ChannelCollectionPage extends BaseCollectionPage<Channel, IChannelC
      * @param response the serialized ChannelCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ChannelCollectionPage(final ChannelCollectionResponse response, final IChannelCollectionRequestBuilder builder) {
+    public ChannelCollectionPage(final ChannelCollectionResponse response, final ChannelCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

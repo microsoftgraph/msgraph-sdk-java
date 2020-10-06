@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityDetailRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.models.extensions.Report;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Office365Groups Activity Detail Request Builder.
  */
-public class ReportRootGetOffice365GroupsActivityDetailRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetOffice365GroupsActivityDetailRequestBuilder {
+public class ReportRootGetOffice365GroupsActivityDetailRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetOffice365GroupsActivityDetail
@@ -45,22 +44,22 @@ public class ReportRootGetOffice365GroupsActivityDetailRequestBuilder extends Ba
     }
 
     /**
-     * Creates the IReportRootGetOffice365GroupsActivityDetailRequest
+     * Creates the ReportRootGetOffice365GroupsActivityDetailRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOffice365GroupsActivityDetailRequest instance
+     * @return the ReportRootGetOffice365GroupsActivityDetailRequest instance
      */
-    public IReportRootGetOffice365GroupsActivityDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetOffice365GroupsActivityDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetOffice365GroupsActivityDetailRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetOffice365GroupsActivityDetailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOffice365GroupsActivityDetailRequest instance
+     * @return the ReportRootGetOffice365GroupsActivityDetailRequest instance
      */
-    public IReportRootGetOffice365GroupsActivityDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetOffice365GroupsActivityDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOffice365GroupsActivityDetailRequest request = new ReportRootGetOffice365GroupsActivityDetailRequest(
                 getRequestUrl(),
                 getClient(),

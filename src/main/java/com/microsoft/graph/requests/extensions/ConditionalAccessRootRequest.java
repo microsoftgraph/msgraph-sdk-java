@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
-import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INamedLocationRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Conditional Access Root Request.
  */
-public class ConditionalAccessRootRequest extends BaseRequest implements IConditionalAccessRootRequest {
+public class ConditionalAccessRootRequest extends BaseRequest {
 	
     /**
      * The request for the ConditionalAccessRoot
@@ -146,7 +142,7 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @param value the select clause
      * @return the updated request
      */
-     public IConditionalAccessRootRequest select(final String value) {
+     public ConditionalAccessRootRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ConditionalAccessRootRequest)this;
      }
@@ -157,7 +153,7 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @param value the expand clause
      * @return the updated request
      */
-     public IConditionalAccessRootRequest expand(final String value) {
+     public ConditionalAccessRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ConditionalAccessRootRequest)this;
      }

@@ -8,16 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AuditLogRoot;
-import com.microsoft.graph.requests.extensions.IDirectoryAuditCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryAuditRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryAuditRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RestrictedSignInRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SignInRequestBuilder;
 import java.util.Arrays;
@@ -30,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Audit Log Root Request Builder.
  */
-public class AuditLogRootRequestBuilder extends BaseRequestBuilder implements IAuditLogRootRequestBuilder {
+public class AuditLogRootRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the AuditLogRoot
@@ -47,9 +41,9 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder implements IA
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAuditLogRootRequest instance
+     * @return the AuditLogRootRequest instance
      */
-    public IAuditLogRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AuditLogRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -57,32 +51,32 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder implements IA
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAuditLogRootRequest instance
+     * @return the AuditLogRootRequest instance
      */
-    public IAuditLogRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AuditLogRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AuditLogRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDirectoryAuditCollectionRequestBuilder directoryAudits() {
+    public DirectoryAuditCollectionRequestBuilder directoryAudits() {
         return new DirectoryAuditCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits"), getClient(), null);
     }
 
-    public IDirectoryAuditRequestBuilder directoryAudits(final String id) {
+    public DirectoryAuditRequestBuilder directoryAudits(final String id) {
         return new DirectoryAuditRequestBuilder(getRequestUrlWithAdditionalSegment("directoryAudits") + "/" + id, getClient(), null);
     }
-    public IRestrictedSignInCollectionRequestBuilder restrictedSignIns() {
+    public RestrictedSignInCollectionRequestBuilder restrictedSignIns() {
         return new RestrictedSignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns"), getClient(), null);
     }
 
-    public IRestrictedSignInRequestBuilder restrictedSignIns(final String id) {
+    public RestrictedSignInRequestBuilder restrictedSignIns(final String id) {
         return new RestrictedSignInRequestBuilder(getRequestUrlWithAdditionalSegment("restrictedSignIns") + "/" + id, getClient(), null);
     }
-    public ISignInCollectionRequestBuilder signIns() {
+    public SignInCollectionRequestBuilder signIns() {
         return new SignInCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("signIns"), getClient(), null);
     }
 
-    public ISignInRequestBuilder signIns(final String id) {
+    public SignInRequestBuilder signIns(final String id) {
         return new SignInRequestBuilder(getRequestUrlWithAdditionalSegment("signIns") + "/" + id, getClient(), null);
     }
 }

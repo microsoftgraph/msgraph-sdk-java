@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLock
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileCollectionRequest;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Windows Information Protection App Locker File Collection Request Builder.
  */
-public class WindowsInformationProtectionAppLockerFileCollectionRequestBuilder extends BaseRequestBuilder implements IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder {
+public class WindowsInformationProtectionAppLockerFileCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of WindowsInformationProtection
@@ -42,7 +42,7 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequestBuilder e
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWindowsInformationProtectionAppLockerFileCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WindowsInformationProtectionAppLockerFileCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequestBuilder e
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IWindowsInformationProtectionAppLockerFileCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionAppLockerFileCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsInformationProtectionAppLockerFileCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWindowsInformationProtectionAppLockerFileRequestBuilder byId(final String id) {
+    public WindowsInformationProtectionAppLockerFileRequestBuilder byId(final String id) {
         return new WindowsInformationProtectionAppLockerFileRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

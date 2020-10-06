@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNorm_S_InvRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsNorm_S_InvRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Norm_S_Inv Request Builder.
  */
-public class WorkbookFunctionsNorm_S_InvRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsNorm_S_InvRequestBuilder {
+public class WorkbookFunctionsNorm_S_InvRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsNorm_S_Inv
@@ -32,22 +31,22 @@ public class WorkbookFunctionsNorm_S_InvRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookFunctionsNorm_S_InvRequest
+     * Creates the WorkbookFunctionsNorm_S_InvRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNorm_S_InvRequest instance
+     * @return the WorkbookFunctionsNorm_S_InvRequest instance
      */
-    public IWorkbookFunctionsNorm_S_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsNorm_S_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsNorm_S_InvRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsNorm_S_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsNorm_S_InvRequest instance
+     * @return the WorkbookFunctionsNorm_S_InvRequest instance
      */
-    public IWorkbookFunctionsNorm_S_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsNorm_S_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsNorm_S_InvRequest request = new WorkbookFunctionsNorm_S_InvRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Logout Shared Apple Device Active User Request Builder.
  */
-public class ManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder {
+public class ManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceLogoutSharedAppleDeviceActiveUser
@@ -30,22 +29,22 @@ public class ManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder extend
     }
 
     /**
-     * Creates the IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest
+     * Creates the ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest instance
+     * @return the ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest instance
      */
-    public IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest instance
+     * @return the ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest instance
      */
-    public IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest request = new ManagedDeviceLogoutSharedAppleDeviceActiveUserRequest(
                 getRequestUrl(),
                 getClient(),

@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Activity Based Timeout Policy Request Builder.
  */
-public class ActivityBasedTimeoutPolicyRequestBuilder extends BaseRequestBuilder implements IActivityBasedTimeoutPolicyRequestBuilder {
+public class ActivityBasedTimeoutPolicyRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ActivityBasedTimeoutPolicy
@@ -35,9 +35,9 @@ public class ActivityBasedTimeoutPolicyRequestBuilder extends BaseRequestBuilder
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IActivityBasedTimeoutPolicyRequest instance
+     * @return the ActivityBasedTimeoutPolicyRequest instance
      */
-    public IActivityBasedTimeoutPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ActivityBasedTimeoutPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,18 +45,18 @@ public class ActivityBasedTimeoutPolicyRequestBuilder extends BaseRequestBuilder
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IActivityBasedTimeoutPolicyRequest instance
+     * @return the ActivityBasedTimeoutPolicyRequest instance
      */
-    public IActivityBasedTimeoutPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActivityBasedTimeoutPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
+    public DirectoryObjectCollectionWithReferencesRequestBuilder appliesTo() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder appliesTo(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appliesTo") + "/" + id, getClient(), null);
     }
 }

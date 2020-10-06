@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSignRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSignRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Sign Request Builder.
  */
-public class WorkbookFunctionsSignRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSignRequestBuilder {
+public class WorkbookFunctionsSignRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSign
@@ -32,22 +31,22 @@ public class WorkbookFunctionsSignRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsSignRequest
+     * Creates the WorkbookFunctionsSignRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSignRequest instance
+     * @return the WorkbookFunctionsSignRequest instance
      */
-    public IWorkbookFunctionsSignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSignRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSignRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSignRequest instance
+     * @return the WorkbookFunctionsSignRequest instance
      */
-    public IWorkbookFunctionsSignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSignRequest request = new WorkbookFunctionsSignRequest(
                 getRequestUrl(),
                 getClient(),

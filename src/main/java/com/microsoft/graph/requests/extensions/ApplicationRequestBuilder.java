@@ -10,24 +10,14 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
@@ -40,7 +30,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Application Request Builder.
  */
-public class ApplicationRequestBuilder extends BaseRequestBuilder implements IApplicationRequestBuilder {
+public class ApplicationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Application
@@ -57,9 +47,9 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IApplicationRequest instance
+     * @return the ApplicationRequest instance
      */
-    public IApplicationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplicationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -67,9 +57,9 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IApplicationRequest instance
+     * @return the ApplicationRequest instance
      */
-    public IApplicationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ApplicationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -78,92 +68,92 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
     /**
      * Gets the request builder for DirectoryObject
      *
-     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
+     * @return the DirectoryObjectWithReferenceRequestBuilder instance
      */
-    public IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf() {
+    public DirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf() {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdOnBehalfOf"), getClient(), null);
     }
-    public IExtensionPropertyCollectionRequestBuilder extensionProperties() {
+    public ExtensionPropertyCollectionRequestBuilder extensionProperties() {
         return new ExtensionPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensionProperties"), getClient(), null);
     }
 
-    public IExtensionPropertyRequestBuilder extensionProperties(final String id) {
+    public ExtensionPropertyRequestBuilder extensionProperties(final String id) {
         return new ExtensionPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("extensionProperties") + "/" + id, getClient(), null);
     }
-    public IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder homeRealmDiscoveryPolicies() {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder homeRealmDiscoveryPolicies() {
         return new HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies"), getClient(), null);
     }
 
-    public IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder homeRealmDiscoveryPolicies(final String id) {
+    public HomeRealmDiscoveryPolicyWithReferenceRequestBuilder homeRealmDiscoveryPolicies(final String id) {
         return new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder owners() {
+    public DirectoryObjectCollectionWithReferencesRequestBuilder owners() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder owners(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder owners(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
     }
-    public IAppRoleAssignmentCollectionWithReferencesRequestBuilder ownersAsAppRoleAssignment() {
+    public AppRoleAssignmentCollectionWithReferencesRequestBuilder ownersAsAppRoleAssignment() {
         return new AppRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
 
-    public IAppRoleAssignmentWithReferenceRequestBuilder ownersAsAppRoleAssignment(final String id) {
+    public AppRoleAssignmentWithReferenceRequestBuilder ownersAsAppRoleAssignment(final String id) {
         return new AppRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
-    public IEndpointCollectionWithReferencesRequestBuilder ownersAsEndpoint() {
+    public EndpointCollectionWithReferencesRequestBuilder ownersAsEndpoint() {
         return new EndpointCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.endpoint", getClient(), null);
     }
 
-    public IEndpointWithReferenceRequestBuilder ownersAsEndpoint(final String id) {
+    public EndpointWithReferenceRequestBuilder ownersAsEndpoint(final String id) {
         return new EndpointWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
     }
-    public IServicePrincipalCollectionWithReferencesRequestBuilder ownersAsServicePrincipal() {
+    public ServicePrincipalCollectionWithReferencesRequestBuilder ownersAsServicePrincipal() {
         return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
-    public IServicePrincipalWithReferenceRequestBuilder ownersAsServicePrincipal(final String id) {
+    public ServicePrincipalWithReferenceRequestBuilder ownersAsServicePrincipal(final String id) {
         return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
-    public IUserCollectionWithReferencesRequestBuilder ownersAsUser() {
+    public UserCollectionWithReferencesRequestBuilder ownersAsUser() {
         return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/microsoft.graph.user", getClient(), null);
     }
 
-    public IUserWithReferenceRequestBuilder ownersAsUser(final String id) {
+    public UserWithReferenceRequestBuilder ownersAsUser(final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
-    public ITokenIssuancePolicyCollectionWithReferencesRequestBuilder tokenIssuancePolicies() {
+    public TokenIssuancePolicyCollectionWithReferencesRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies"), getClient(), null);
     }
 
-    public ITokenIssuancePolicyWithReferenceRequestBuilder tokenIssuancePolicies(final String id) {
+    public TokenIssuancePolicyWithReferenceRequestBuilder tokenIssuancePolicies(final String id) {
         return new TokenIssuancePolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies") + "/" + id, getClient(), null);
     }
-    public ITokenLifetimePolicyCollectionWithReferencesRequestBuilder tokenLifetimePolicies() {
+    public TokenLifetimePolicyCollectionWithReferencesRequestBuilder tokenLifetimePolicies() {
         return new TokenLifetimePolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies"), getClient(), null);
     }
 
-    public ITokenLifetimePolicyWithReferenceRequestBuilder tokenLifetimePolicies(final String id) {
+    public TokenLifetimePolicyWithReferenceRequestBuilder tokenLifetimePolicies(final String id) {
         return new TokenLifetimePolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies") + "/" + id, getClient(), null);
     }
 
-    public IApplicationLogoStreamRequestBuilder logo() {
+    public ApplicationLogoStreamRequestBuilder logo() {
         return new ApplicationLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("logo"), getClient(), null);
     }
 
-    public IApplicationAddKeyRequestBuilder addKey(final KeyCredential keyCredential, final PasswordCredential passwordCredential, final String proof) {
+    public ApplicationAddKeyRequestBuilder addKey(final KeyCredential keyCredential, final PasswordCredential passwordCredential, final String proof) {
         return new ApplicationAddKeyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addKey"), getClient(), null, keyCredential, passwordCredential, proof);
     }
 
-    public IApplicationAddPasswordRequestBuilder addPassword(final PasswordCredential passwordCredential) {
+    public ApplicationAddPasswordRequestBuilder addPassword(final PasswordCredential passwordCredential) {
         return new ApplicationAddPasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addPassword"), getClient(), null, passwordCredential);
     }
 
-    public IApplicationRemoveKeyRequestBuilder removeKey(final java.util.UUID keyId, final String proof) {
+    public ApplicationRemoveKeyRequestBuilder removeKey(final java.util.UUID keyId, final String proof) {
         return new ApplicationRemoveKeyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeKey"), getClient(), null, keyId, proof);
     }
 
-    public IApplicationRemovePasswordRequestBuilder removePassword(final java.util.UUID keyId) {
+    public ApplicationRemovePasswordRequestBuilder removePassword(final java.util.UUID keyId) {
         return new ApplicationRemovePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removePassword"), getClient(), null, keyId);
     }
 }

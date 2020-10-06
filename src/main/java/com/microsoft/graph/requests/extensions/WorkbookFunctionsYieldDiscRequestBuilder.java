@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsYieldDiscRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsYieldDiscRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Yield Disc Request Builder.
  */
-public class WorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsYieldDiscRequestBuilder {
+public class WorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsYieldDisc
@@ -40,22 +39,22 @@ public class WorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsYieldDiscRequest
+     * Creates the WorkbookFunctionsYieldDiscRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsYieldDiscRequest instance
+     * @return the WorkbookFunctionsYieldDiscRequest instance
      */
-    public IWorkbookFunctionsYieldDiscRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsYieldDiscRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsYieldDiscRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsYieldDiscRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsYieldDiscRequest instance
+     * @return the WorkbookFunctionsYieldDiscRequest instance
      */
-    public IWorkbookFunctionsYieldDiscRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsYieldDiscRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsYieldDiscRequest request = new WorkbookFunctionsYieldDiscRequest(
                 getRequestUrl(),
                 getClient(),

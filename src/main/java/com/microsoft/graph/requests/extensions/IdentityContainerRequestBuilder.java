@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
-import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessRootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -20,7 +19,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Identity Container Request Builder.
  */
-public class IdentityContainerRequestBuilder extends BaseRequestBuilder implements IIdentityContainerRequestBuilder {
+public class IdentityContainerRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the IdentityContainer
@@ -37,9 +36,9 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IIdentityContainerRequest instance
+     * @return the IdentityContainerRequest instance
      */
-    public IIdentityContainerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public IdentityContainerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +46,9 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IIdentityContainerRequest instance
+     * @return the IdentityContainerRequest instance
      */
-    public IIdentityContainerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityContainerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IdentityContainerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -58,9 +57,9 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Gets the request builder for ConditionalAccessRoot
      *
-     * @return the IConditionalAccessRootRequestBuilder instance
+     * @return the ConditionalAccessRootRequestBuilder instance
      */
-    public IConditionalAccessRootRequestBuilder conditionalAccess() {
+    public ConditionalAccessRootRequestBuilder conditionalAccess() {
         return new ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
     }
 }

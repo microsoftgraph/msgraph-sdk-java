@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ConversationMember;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequest;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Conversation Member Collection Request Builder.
  */
-public class ConversationMemberCollectionRequestBuilder extends BaseRequestBuilder implements IConversationMemberCollectionRequestBuilder {
+public class ConversationMemberCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Channel
@@ -42,7 +42,7 @@ public class ConversationMemberCollectionRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IConversationMemberCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ConversationMemberCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ConversationMemberCollectionRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IConversationMemberCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConversationMemberCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ConversationMemberCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IConversationMemberRequestBuilder byId(final String id) {
+    public ConversationMemberRequestBuilder byId(final String id) {
         return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

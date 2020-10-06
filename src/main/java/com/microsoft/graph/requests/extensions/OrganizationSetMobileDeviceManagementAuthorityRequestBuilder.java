@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOrganizationSetMobileDeviceManagementAuthorityRequest;
 import com.microsoft.graph.requests.extensions.OrganizationSetMobileDeviceManagementAuthorityRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Organization Set Mobile Device Management Authority Request Builder.
  */
-public class OrganizationSetMobileDeviceManagementAuthorityRequestBuilder extends BaseActionRequestBuilder implements IOrganizationSetMobileDeviceManagementAuthorityRequestBuilder {
+public class OrganizationSetMobileDeviceManagementAuthorityRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this OrganizationSetMobileDeviceManagementAuthority
@@ -30,22 +29,22 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequestBuilder extend
     }
 
     /**
-     * Creates the IOrganizationSetMobileDeviceManagementAuthorityRequest
+     * Creates the OrganizationSetMobileDeviceManagementAuthorityRequest
      *
      * @param requestOptions the options for the request
-     * @return the IOrganizationSetMobileDeviceManagementAuthorityRequest instance
+     * @return the OrganizationSetMobileDeviceManagementAuthorityRequest instance
      */
-    public IOrganizationSetMobileDeviceManagementAuthorityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OrganizationSetMobileDeviceManagementAuthorityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IOrganizationSetMobileDeviceManagementAuthorityRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the OrganizationSetMobileDeviceManagementAuthorityRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IOrganizationSetMobileDeviceManagementAuthorityRequest instance
+     * @return the OrganizationSetMobileDeviceManagementAuthorityRequest instance
      */
-    public IOrganizationSetMobileDeviceManagementAuthorityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrganizationSetMobileDeviceManagementAuthorityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         OrganizationSetMobileDeviceManagementAuthorityRequest request = new OrganizationSetMobileDeviceManagementAuthorityRequest(
                 getRequestUrl(),
                 getClient(),

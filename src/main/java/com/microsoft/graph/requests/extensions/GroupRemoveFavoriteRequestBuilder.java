@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupRemoveFavoriteRequest;
 import com.microsoft.graph.requests.extensions.GroupRemoveFavoriteRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Group Remove Favorite Request Builder.
  */
-public class GroupRemoveFavoriteRequestBuilder extends BaseActionRequestBuilder implements IGroupRemoveFavoriteRequestBuilder {
+public class GroupRemoveFavoriteRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this GroupRemoveFavorite
@@ -30,22 +29,22 @@ public class GroupRemoveFavoriteRequestBuilder extends BaseActionRequestBuilder 
     }
 
     /**
-     * Creates the IGroupRemoveFavoriteRequest
+     * Creates the GroupRemoveFavoriteRequest
      *
      * @param requestOptions the options for the request
-     * @return the IGroupRemoveFavoriteRequest instance
+     * @return the GroupRemoveFavoriteRequest instance
      */
-    public IGroupRemoveFavoriteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public GroupRemoveFavoriteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IGroupRemoveFavoriteRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the GroupRemoveFavoriteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IGroupRemoveFavoriteRequest instance
+     * @return the GroupRemoveFavoriteRequest instance
      */
-    public IGroupRemoveFavoriteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupRemoveFavoriteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         GroupRemoveFavoriteRequest request = new GroupRemoveFavoriteRequest(
                 getRequestUrl(),
                 getClient(),

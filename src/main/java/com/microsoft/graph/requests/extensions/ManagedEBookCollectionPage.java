@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ManagedEBook;
-import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ManagedEBookCollectionResponse;
 /**
  * The class for the Managed EBook Collection Page.
  */
-public class ManagedEBookCollectionPage extends BaseCollectionPage<ManagedEBook, IManagedEBookCollectionRequestBuilder> implements IManagedEBookCollectionPage {
+public class ManagedEBookCollectionPage extends BaseCollectionPage<ManagedEBook, ManagedEBookCollectionRequestBuilder> {
 
     /**
      * A collection page for ManagedEBook
@@ -22,7 +22,7 @@ public class ManagedEBookCollectionPage extends BaseCollectionPage<ManagedEBook,
      * @param response the serialized ManagedEBookCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedEBookCollectionPage(final ManagedEBookCollectionResponse response, final IManagedEBookCollectionRequestBuilder builder) {
+    public ManagedEBookCollectionPage(final ManagedEBookCollectionResponse response, final ManagedEBookCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

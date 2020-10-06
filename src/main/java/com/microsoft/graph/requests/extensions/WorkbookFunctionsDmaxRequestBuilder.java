@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDmaxRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsDmaxRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Dmax Request Builder.
  */
-public class WorkbookFunctionsDmaxRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsDmaxRequestBuilder {
+public class WorkbookFunctionsDmaxRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsDmax
@@ -36,22 +35,22 @@ public class WorkbookFunctionsDmaxRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsDmaxRequest
+     * Creates the WorkbookFunctionsDmaxRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDmaxRequest instance
+     * @return the WorkbookFunctionsDmaxRequest instance
      */
-    public IWorkbookFunctionsDmaxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsDmaxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsDmaxRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsDmaxRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDmaxRequest instance
+     * @return the WorkbookFunctionsDmaxRequest instance
      */
-    public IWorkbookFunctionsDmaxRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsDmaxRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDmaxRequest request = new WorkbookFunctionsDmaxRequest(
                 getRequestUrl(),
                 getClient(),

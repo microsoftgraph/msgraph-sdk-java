@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.MobileAppCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Mobile App Category Collection With References Page.
  */
-public class MobileAppCategoryCollectionWithReferencesPage extends BaseCollectionPage<MobileAppCategory, IMobileAppCategoryCollectionWithReferencesRequestBuilder> implements IMobileAppCategoryCollectionWithReferencesPage {
+public class MobileAppCategoryCollectionWithReferencesPage extends BaseCollectionPage<MobileAppCategory, MobileAppCategoryCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for MobileAppCategory
@@ -34,7 +34,7 @@ public class MobileAppCategoryCollectionWithReferencesPage extends BaseCollectio
      * @param response the serialized MobileAppCategoryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MobileAppCategoryCollectionWithReferencesPage(final MobileAppCategoryCollectionResponse response, final IMobileAppCategoryCollectionWithReferencesRequestBuilder builder) {
+    public MobileAppCategoryCollectionWithReferencesPage(final MobileAppCategoryCollectionResponse response, final MobileAppCategoryCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

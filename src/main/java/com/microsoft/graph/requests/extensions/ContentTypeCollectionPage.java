@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ContentType;
-import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionPage;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ContentTypeCollectionResponse;
 /**
  * The class for the Content Type Collection Page.
  */
-public class ContentTypeCollectionPage extends BaseCollectionPage<ContentType, IContentTypeCollectionRequestBuilder> implements IContentTypeCollectionPage {
+public class ContentTypeCollectionPage extends BaseCollectionPage<ContentType, ContentTypeCollectionRequestBuilder> {
 
     /**
      * A collection page for ContentType
@@ -22,7 +22,7 @@ public class ContentTypeCollectionPage extends BaseCollectionPage<ContentType, I
      * @param response the serialized ContentTypeCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ContentTypeCollectionPage(final ContentTypeCollectionResponse response, final IContentTypeCollectionRequestBuilder builder) {
+    public ContentTypeCollectionPage(final ContentTypeCollectionResponse response, final ContentTypeCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

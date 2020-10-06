@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSinRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSinRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Sin Request Builder.
  */
-public class WorkbookFunctionsSinRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSinRequestBuilder {
+public class WorkbookFunctionsSinRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSin
@@ -32,22 +31,22 @@ public class WorkbookFunctionsSinRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookFunctionsSinRequest
+     * Creates the WorkbookFunctionsSinRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSinRequest instance
+     * @return the WorkbookFunctionsSinRequest instance
      */
-    public IWorkbookFunctionsSinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSinRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSinRequest instance
+     * @return the WorkbookFunctionsSinRequest instance
      */
-    public IWorkbookFunctionsSinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSinRequest request = new WorkbookFunctionsSinRequest(
                 getRequestUrl(),
                 getClient(),

@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DataPolicyOperation;
-import com.microsoft.graph.requests.extensions.IDataPolicyOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionResp
 /**
  * The class for the Data Policy Operation Collection Page.
  */
-public class DataPolicyOperationCollectionPage extends BaseCollectionPage<DataPolicyOperation, IDataPolicyOperationCollectionRequestBuilder> implements IDataPolicyOperationCollectionPage {
+public class DataPolicyOperationCollectionPage extends BaseCollectionPage<DataPolicyOperation, DataPolicyOperationCollectionRequestBuilder> {
 
     /**
      * A collection page for DataPolicyOperation
@@ -22,7 +22,7 @@ public class DataPolicyOperationCollectionPage extends BaseCollectionPage<DataPo
      * @param response the serialized DataPolicyOperationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DataPolicyOperationCollectionPage(final DataPolicyOperationCollectionResponse response, final IDataPolicyOperationCollectionRequestBuilder builder) {
+    public DataPolicyOperationCollectionPage(final DataPolicyOperationCollectionResponse response, final DataPolicyOperationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the App Role Assignment Collection With References Request Builder.
  */
-public class AppRoleAssignmentCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements IAppRoleAssignmentCollectionWithReferencesRequestBuilder {
+public class AppRoleAssignmentCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -39,7 +39,7 @@ public class AppRoleAssignmentCollectionWithReferencesRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAppRoleAssignmentCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AppRoleAssignmentCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,15 +49,15 @@ public class AppRoleAssignmentCollectionWithReferencesRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IAppRoleAssignmentCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppRoleAssignmentCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AppRoleAssignmentCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IAppRoleAssignmentWithReferenceRequestBuilder byId(final String id) {
+    public AppRoleAssignmentWithReferenceRequestBuilder byId(final String id) {
         return new AppRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IAppRoleAssignmentCollectionReferenceRequestBuilder references(){
+    public AppRoleAssignmentCollectionReferenceRequestBuilder references(){
         return new AppRoleAssignmentCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

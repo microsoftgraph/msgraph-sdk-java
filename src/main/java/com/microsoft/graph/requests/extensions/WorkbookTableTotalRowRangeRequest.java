@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookTableTotalRowRangeRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableTotalRowRangeRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Total Row Range Request.
  */
-public class WorkbookTableTotalRowRangeRequest extends BaseRequest implements IWorkbookTableTotalRowRangeRequest {
+public class WorkbookTableTotalRowRangeRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookTableTotalRowRange
@@ -97,7 +96,7 @@ public class WorkbookTableTotalRowRangeRequest extends BaseRequest implements IW
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookTableTotalRowRangeRequest select(final String value) {
+    public WorkbookTableTotalRowRangeRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookTableTotalRowRangeRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookTableTotalRowRangeRequest extends BaseRequest implements IW
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookTableTotalRowRangeRequest expand(final String value) {
+    public WorkbookTableTotalRowRangeRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookTableTotalRowRangeRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookTableTotalRowRangeRequest extends BaseRequest implements IW
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookTableTotalRowRangeRequest filter(final String value) {
+    public WorkbookTableTotalRowRangeRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookTableTotalRowRangeRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookTableTotalRowRangeRequest extends BaseRequest implements IW
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookTableTotalRowRangeRequest orderBy(final String value) {
+    public WorkbookTableTotalRowRangeRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookTableTotalRowRangeRequest)this;
     }

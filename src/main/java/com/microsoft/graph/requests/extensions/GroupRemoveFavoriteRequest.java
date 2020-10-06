@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IGroupRemoveFavoriteRequest;
 import com.microsoft.graph.requests.extensions.GroupRemoveFavoriteRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Remove Favorite Request.
  */
-public class GroupRemoveFavoriteRequest extends BaseRequest implements IGroupRemoveFavoriteRequest {
+public class GroupRemoveFavoriteRequest extends BaseRequest {
 
     /**
      * The request for this GroupRemoveFavorite

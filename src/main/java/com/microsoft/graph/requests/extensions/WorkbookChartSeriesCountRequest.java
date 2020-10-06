@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCountRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCountRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Series Count Request.
  */
-public class WorkbookChartSeriesCountRequest extends BaseRequest implements IWorkbookChartSeriesCountRequest {
+public class WorkbookChartSeriesCountRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookChartSeriesCount
@@ -56,7 +55,7 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest implements IWor
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookChartSeriesCountRequest select(final String value) {
+    public WorkbookChartSeriesCountRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookChartSeriesCountRequest)this;
     }
@@ -67,7 +66,7 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest implements IWor
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookChartSeriesCountRequest expand(final String value) {
+    public WorkbookChartSeriesCountRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookChartSeriesCountRequest)this;
     }
@@ -78,7 +77,7 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest implements IWor
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookChartSeriesCountRequest filter(final String value) {
+    public WorkbookChartSeriesCountRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookChartSeriesCountRequest)this;
     }
@@ -89,7 +88,7 @@ public class WorkbookChartSeriesCountRequest extends BaseRequest implements IWor
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookChartSeriesCountRequest orderBy(final String value) {
+    public WorkbookChartSeriesCountRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookChartSeriesCountRequest)this;
     }

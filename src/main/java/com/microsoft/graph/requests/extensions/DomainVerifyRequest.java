@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Domain;
-import com.microsoft.graph.requests.extensions.IDomainVerifyRequest;
 import com.microsoft.graph.requests.extensions.DomainVerifyRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Domain Verify Request.
  */
-public class DomainVerifyRequest extends BaseRequest implements IDomainVerifyRequest {
+public class DomainVerifyRequest extends BaseRequest {
 
     /**
      * The request for this DomainVerify
@@ -57,7 +56,7 @@ public class DomainVerifyRequest extends BaseRequest implements IDomainVerifyReq
      * @param value the select clause
      * @return the updated request
      */
-    public IDomainVerifyRequest select(final String value) {
+    public DomainVerifyRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DomainVerifyRequest)this;
     }
@@ -68,7 +67,7 @@ public class DomainVerifyRequest extends BaseRequest implements IDomainVerifyReq
      * @param value the expand clause
      * @return the updated request
      */
-    public IDomainVerifyRequest expand(final String value) {
+    public DomainVerifyRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DomainVerifyRequest)this;
     }

@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Device;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Request.
  */
-public class DeviceRequest extends BaseRequest implements IDeviceRequest {
+public class DeviceRequest extends BaseRequest {
 	
     /**
      * The request for the Device
@@ -146,7 +142,7 @@ public class DeviceRequest extends BaseRequest implements IDeviceRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceRequest select(final String value) {
+     public DeviceRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceRequest)this;
      }
@@ -157,7 +153,7 @@ public class DeviceRequest extends BaseRequest implements IDeviceRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceRequest expand(final String value) {
+     public DeviceRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceRequest)this;
      }

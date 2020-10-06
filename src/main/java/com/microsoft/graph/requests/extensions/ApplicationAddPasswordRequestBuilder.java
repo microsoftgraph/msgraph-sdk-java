@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IApplicationAddPasswordRequest;
 import com.microsoft.graph.requests.extensions.ApplicationAddPasswordRequest;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Application Add Password Request Builder.
  */
-public class ApplicationAddPasswordRequestBuilder extends BaseActionRequestBuilder implements IApplicationAddPasswordRequestBuilder {
+public class ApplicationAddPasswordRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ApplicationAddPassword
@@ -32,22 +31,22 @@ public class ApplicationAddPasswordRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IApplicationAddPasswordRequest
+     * Creates the ApplicationAddPasswordRequest
      *
      * @param requestOptions the options for the request
-     * @return the IApplicationAddPasswordRequest instance
+     * @return the ApplicationAddPasswordRequest instance
      */
-    public IApplicationAddPasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplicationAddPasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IApplicationAddPasswordRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ApplicationAddPasswordRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IApplicationAddPasswordRequest instance
+     * @return the ApplicationAddPasswordRequest instance
      */
-    public IApplicationAddPasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationAddPasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ApplicationAddPasswordRequest request = new ApplicationAddPasswordRequest(
                 getRequestUrl(),
                 getClient(),

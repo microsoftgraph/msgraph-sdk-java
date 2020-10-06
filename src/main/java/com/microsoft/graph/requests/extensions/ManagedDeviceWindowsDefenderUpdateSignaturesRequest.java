@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceWindowsDefenderUpdateSignaturesRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceWindowsDefenderUpdateSignaturesRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Windows Defender Update Signatures Request.
  */
-public class ManagedDeviceWindowsDefenderUpdateSignaturesRequest extends BaseRequest implements IManagedDeviceWindowsDefenderUpdateSignaturesRequest {
+public class ManagedDeviceWindowsDefenderUpdateSignaturesRequest extends BaseRequest {
 
     /**
      * The request for this ManagedDeviceWindowsDefenderUpdateSignatures

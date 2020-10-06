@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.IosUpdateDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusCollectionRequest;
+import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Ios Update Device Status Collection Request Builder.
  */
-public class IosUpdateDeviceStatusCollectionRequestBuilder extends BaseRequestBuilder implements IIosUpdateDeviceStatusCollectionRequestBuilder {
+public class IosUpdateDeviceStatusCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class IosUpdateDeviceStatusCollectionRequestBuilder extends BaseRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IIosUpdateDeviceStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public IosUpdateDeviceStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class IosUpdateDeviceStatusCollectionRequestBuilder extends BaseRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IIosUpdateDeviceStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosUpdateDeviceStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IosUpdateDeviceStatusCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IIosUpdateDeviceStatusRequestBuilder byId(final String id) {
+    public IosUpdateDeviceStatusRequestBuilder byId(final String id) {
         return new IosUpdateDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerBeginOnboardingRequest;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerBeginOnboardingRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Remote Assistance Partner Begin Onboarding Request Builder.
  */
-public class RemoteAssistancePartnerBeginOnboardingRequestBuilder extends BaseActionRequestBuilder implements IRemoteAssistancePartnerBeginOnboardingRequestBuilder {
+public class RemoteAssistancePartnerBeginOnboardingRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this RemoteAssistancePartnerBeginOnboarding
@@ -30,22 +29,22 @@ public class RemoteAssistancePartnerBeginOnboardingRequestBuilder extends BaseAc
     }
 
     /**
-     * Creates the IRemoteAssistancePartnerBeginOnboardingRequest
+     * Creates the RemoteAssistancePartnerBeginOnboardingRequest
      *
      * @param requestOptions the options for the request
-     * @return the IRemoteAssistancePartnerBeginOnboardingRequest instance
+     * @return the RemoteAssistancePartnerBeginOnboardingRequest instance
      */
-    public IRemoteAssistancePartnerBeginOnboardingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public RemoteAssistancePartnerBeginOnboardingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IRemoteAssistancePartnerBeginOnboardingRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the RemoteAssistancePartnerBeginOnboardingRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IRemoteAssistancePartnerBeginOnboardingRequest instance
+     * @return the RemoteAssistancePartnerBeginOnboardingRequest instance
      */
-    public IRemoteAssistancePartnerBeginOnboardingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RemoteAssistancePartnerBeginOnboardingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         RemoteAssistancePartnerBeginOnboardingRequest request = new RemoteAssistancePartnerBeginOnboardingRequest(
                 getRequestUrl(),
                 getClient(),

@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPoli
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyCollectionRequest;
+import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Mdm Windows Information Protection Policy Collection Request Builder.
  */
-public class MdmWindowsInformationProtectionPolicyCollectionRequestBuilder extends BaseRequestBuilder implements IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder {
+public class MdmWindowsInformationProtectionPolicyCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceAppManagement
@@ -42,7 +42,7 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequestBuilder exten
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMdmWindowsInformationProtectionPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MdmWindowsInformationProtectionPolicyCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequestBuilder exten
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IMdmWindowsInformationProtectionPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MdmWindowsInformationProtectionPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MdmWindowsInformationProtectionPolicyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMdmWindowsInformationProtectionPolicyRequestBuilder byId(final String id) {
+    public MdmWindowsInformationProtectionPolicyRequestBuilder byId(final String id) {
         return new MdmWindowsInformationProtectionPolicyRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

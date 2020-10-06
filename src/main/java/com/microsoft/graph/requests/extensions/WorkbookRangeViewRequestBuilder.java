@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeViewCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeViewRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range View Request Builder.
  */
-public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder implements IWorkbookRangeViewRequestBuilder {
+public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the WorkbookRangeView
@@ -40,9 +38,9 @@ public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookRangeViewRequest instance
+     * @return the WorkbookRangeViewRequest instance
      */
-    public IWorkbookRangeViewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeViewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,22 +48,22 @@ public class WorkbookRangeViewRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookRangeViewRequest instance
+     * @return the WorkbookRangeViewRequest instance
      */
-    public IWorkbookRangeViewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeViewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookRangeViewRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IWorkbookRangeViewCollectionRequestBuilder rows() {
+    public WorkbookRangeViewCollectionRequestBuilder rows() {
         return new WorkbookRangeViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
-    public IWorkbookRangeViewRequestBuilder rows(final String id) {
+    public WorkbookRangeViewRequestBuilder rows(final String id) {
         return new WorkbookRangeViewRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
     }
 
-    public IWorkbookRangeViewRangeRequestBuilder range() {
+    public WorkbookRangeViewRangeRequestBuilder range() {
         return new WorkbookRangeViewRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 }

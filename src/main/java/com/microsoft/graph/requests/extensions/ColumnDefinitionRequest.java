@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Column Definition Request.
  */
-public class ColumnDefinitionRequest extends BaseRequest implements IColumnDefinitionRequest {
+public class ColumnDefinitionRequest extends BaseRequest {
 	
     /**
      * The request for the ColumnDefinition
@@ -138,7 +138,7 @@ public class ColumnDefinitionRequest extends BaseRequest implements IColumnDefin
      * @param value the select clause
      * @return the updated request
      */
-     public IColumnDefinitionRequest select(final String value) {
+     public ColumnDefinitionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ColumnDefinitionRequest)this;
      }
@@ -149,7 +149,7 @@ public class ColumnDefinitionRequest extends BaseRequest implements IColumnDefin
      * @param value the expand clause
      * @return the updated request
      */
-     public IColumnDefinitionRequest expand(final String value) {
+     public ColumnDefinitionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ColumnDefinitionRequest)this;
      }

@@ -8,28 +8,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Onenote;
-import com.microsoft.graph.requests.extensions.INotebookCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
@@ -43,7 +31,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Request.
  */
-public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
+public class OnenoteRequest extends BaseRequest {
 	
     /**
      * The request for the Onenote
@@ -162,7 +150,7 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IOnenoteRequest select(final String value) {
+     public OnenoteRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OnenoteRequest)this;
      }
@@ -173,7 +161,7 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnenoteRequest expand(final String value) {
+     public OnenoteRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OnenoteRequest)this;
      }

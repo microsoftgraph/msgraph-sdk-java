@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBitandRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsBitandRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Bitand Request Builder.
  */
-public class WorkbookFunctionsBitandRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsBitandRequestBuilder {
+public class WorkbookFunctionsBitandRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsBitand
@@ -34,22 +33,22 @@ public class WorkbookFunctionsBitandRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsBitandRequest
+     * Creates the WorkbookFunctionsBitandRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBitandRequest instance
+     * @return the WorkbookFunctionsBitandRequest instance
      */
-    public IWorkbookFunctionsBitandRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsBitandRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsBitandRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsBitandRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsBitandRequest instance
+     * @return the WorkbookFunctionsBitandRequest instance
      */
-    public IWorkbookFunctionsBitandRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsBitandRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsBitandRequest request = new WorkbookFunctionsBitandRequest(
                 getRequestUrl(),
                 getClient(),

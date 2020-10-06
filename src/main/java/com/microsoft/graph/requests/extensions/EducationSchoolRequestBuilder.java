@@ -8,12 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSchool;
-import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
 import java.util.Arrays;
@@ -26,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education School Request Builder.
  */
-public class EducationSchoolRequestBuilder extends BaseRequestBuilder implements IEducationSchoolRequestBuilder {
+public class EducationSchoolRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the EducationSchool
@@ -43,9 +39,9 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEducationSchoolRequest instance
+     * @return the EducationSchoolRequest instance
      */
-    public IEducationSchoolRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EducationSchoolRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,25 +49,25 @@ public class EducationSchoolRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEducationSchoolRequest instance
+     * @return the EducationSchoolRequest instance
      */
-    public IEducationSchoolRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationSchoolRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EducationSchoolRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IEducationClassCollectionWithReferencesRequestBuilder classes() {
+    public EducationClassCollectionWithReferencesRequestBuilder classes() {
         return new EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
     }
 
-    public IEducationClassWithReferenceRequestBuilder classes(final String id) {
+    public EducationClassWithReferenceRequestBuilder classes(final String id) {
         return new EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
     }
-    public IEducationUserCollectionWithReferencesRequestBuilder users() {
+    public EducationUserCollectionWithReferencesRequestBuilder users() {
         return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
 
-    public IEducationUserWithReferenceRequestBuilder users(final String id) {
+    public EducationUserWithReferenceRequestBuilder users(final String id) {
         return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
     }
 }

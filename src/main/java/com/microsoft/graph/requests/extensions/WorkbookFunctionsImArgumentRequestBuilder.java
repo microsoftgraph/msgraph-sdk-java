@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImArgumentRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImArgumentRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Im Argument Request Builder.
  */
-public class WorkbookFunctionsImArgumentRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImArgumentRequestBuilder {
+public class WorkbookFunctionsImArgumentRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImArgument
@@ -32,22 +31,22 @@ public class WorkbookFunctionsImArgumentRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookFunctionsImArgumentRequest
+     * Creates the WorkbookFunctionsImArgumentRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImArgumentRequest instance
+     * @return the WorkbookFunctionsImArgumentRequest instance
      */
-    public IWorkbookFunctionsImArgumentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImArgumentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImArgumentRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImArgumentRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImArgumentRequest instance
+     * @return the WorkbookFunctionsImArgumentRequest instance
      */
-    public IWorkbookFunctionsImArgumentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImArgumentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImArgumentRequest request = new WorkbookFunctionsImArgumentRequest(
                 getRequestUrl(),
                 getClient(),

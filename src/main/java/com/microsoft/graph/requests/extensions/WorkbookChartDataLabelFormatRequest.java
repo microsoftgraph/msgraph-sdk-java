@@ -8,9 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartDataLabelFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Data Label Format Request.
  */
-public class WorkbookChartDataLabelFormatRequest extends BaseRequest implements IWorkbookChartDataLabelFormatRequest {
+public class WorkbookChartDataLabelFormatRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookChartDataLabelFormat
@@ -142,7 +140,7 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartDataLabelFormatRequest select(final String value) {
+     public WorkbookChartDataLabelFormatRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookChartDataLabelFormatRequest)this;
      }
@@ -153,7 +151,7 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartDataLabelFormatRequest expand(final String value) {
+     public WorkbookChartDataLabelFormatRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookChartDataLabelFormatRequest)this;
      }

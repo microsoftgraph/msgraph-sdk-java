@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ItemActivity;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IItemActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityCollectionRequest;
+import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Item Activity Collection Request Builder.
  */
-public class ItemActivityCollectionRequestBuilder extends BaseRequestBuilder implements IItemActivityCollectionRequestBuilder {
+public class ItemActivityCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ItemActivityStat
@@ -42,7 +42,7 @@ public class ItemActivityCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IItemActivityCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ItemActivityCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ItemActivityCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IItemActivityCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ItemActivityCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IItemActivityRequestBuilder byId(final String id) {
+    public ItemActivityRequestBuilder byId(final String id) {
         return new ItemActivityRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

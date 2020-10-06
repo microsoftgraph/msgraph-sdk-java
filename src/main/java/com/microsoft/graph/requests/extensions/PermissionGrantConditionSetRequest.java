@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Permission Grant Condition Set Request.
  */
-public class PermissionGrantConditionSetRequest extends BaseRequest implements IPermissionGrantConditionSetRequest {
+public class PermissionGrantConditionSetRequest extends BaseRequest {
 	
     /**
      * The request for the PermissionGrantConditionSet
@@ -138,7 +138,7 @@ public class PermissionGrantConditionSetRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IPermissionGrantConditionSetRequest select(final String value) {
+     public PermissionGrantConditionSetRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PermissionGrantConditionSetRequest)this;
      }
@@ -149,7 +149,7 @@ public class PermissionGrantConditionSetRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IPermissionGrantConditionSetRequest expand(final String value) {
+     public PermissionGrantConditionSetRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PermissionGrantConditionSetRequest)this;
      }

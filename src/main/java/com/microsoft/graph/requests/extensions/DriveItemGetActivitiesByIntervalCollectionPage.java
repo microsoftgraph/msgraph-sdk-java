@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Drive Item Get Activities By Interval Collection Page.
  */
-public class DriveItemGetActivitiesByIntervalCollectionPage extends BaseCollectionPage<ItemActivityStat, IDriveItemGetActivitiesByIntervalCollectionRequestBuilder> implements IDriveItemGetActivitiesByIntervalCollectionPage {
+public class DriveItemGetActivitiesByIntervalCollectionPage extends BaseCollectionPage<ItemActivityStat, DriveItemGetActivitiesByIntervalCollectionRequestBuilder> {
 
     /**
      * A collection page for ItemActivityStat.
@@ -33,7 +33,7 @@ public class DriveItemGetActivitiesByIntervalCollectionPage extends BaseCollecti
      * @param response The serialized DriveItemGetActivitiesByIntervalCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public DriveItemGetActivitiesByIntervalCollectionPage(final DriveItemGetActivitiesByIntervalCollectionResponse response, final IDriveItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
+    public DriveItemGetActivitiesByIntervalCollectionPage(final DriveItemGetActivitiesByIntervalCollectionResponse response, final DriveItemGetActivitiesByIntervalCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

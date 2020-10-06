@@ -22,7 +22,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Token Lifetime Policy Collection With References Request.
  */
-public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseCollectionRequest<TokenLifetimePolicyCollectionResponse, ITokenLifetimePolicyCollectionPage> implements ITokenLifetimePolicyCollectionWithReferencesRequest {
+public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseCollectionRequest<TokenLifetimePolicyCollectionResponse, TokenLifetimePolicyCollectionPage> {
 
     /**
      * The request builder for this collection of TokenLifetimePolicy
@@ -32,10 +32,10 @@ public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseColl
      * @param requestOptions the options for this request
      */
     public TokenLifetimePolicyCollectionWithReferencesRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, ITokenLifetimePolicyCollectionPage.class);
+        super(requestUrl, client, requestOptions, TokenLifetimePolicyCollectionResponse.class, TokenLifetimePolicyCollectionPage.class);
     }
 
-    public void get(final ICallback<? super ITokenLifetimePolicyCollectionWithReferencesPage> callback) {
+    public void get(final ICallback<? super TokenLifetimePolicyCollectionWithReferencesPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -49,38 +49,38 @@ public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseColl
         });
     }
 
-    public ITokenLifetimePolicyCollectionWithReferencesPage get() throws ClientException {
+    public TokenLifetimePolicyCollectionWithReferencesPage get() throws ClientException {
         final TokenLifetimePolicyCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
-    public ITokenLifetimePolicyCollectionWithReferencesRequest expand(final String value) {
+    public TokenLifetimePolicyCollectionWithReferencesRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return this;
     }
 
-    public ITokenLifetimePolicyCollectionWithReferencesRequest filter(final String value) {
+    public TokenLifetimePolicyCollectionWithReferencesRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return this;
     }
 
-    public ITokenLifetimePolicyCollectionWithReferencesRequest orderBy(final String value) {
+    public TokenLifetimePolicyCollectionWithReferencesRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return this;
     }
 
-    public ITokenLifetimePolicyCollectionWithReferencesRequest select(final String value) {
+    public TokenLifetimePolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return this;
     }
 
-    public ITokenLifetimePolicyCollectionWithReferencesRequest top(final int value) {
+    public TokenLifetimePolicyCollectionWithReferencesRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return this;
     }
 
-    public ITokenLifetimePolicyCollectionWithReferencesPage buildFromResponse(final TokenLifetimePolicyCollectionResponse response) {
-        final ITokenLifetimePolicyCollectionWithReferencesRequestBuilder builder;
+    public TokenLifetimePolicyCollectionWithReferencesPage buildFromResponse(final TokenLifetimePolicyCollectionResponse response) {
+        final TokenLifetimePolicyCollectionWithReferencesRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new TokenLifetimePolicyCollectionWithReferencesRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {

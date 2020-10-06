@@ -15,10 +15,10 @@ import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamCollectionRequest;
-import com.microsoft.graph.requests.extensions.ITeamGetAllMessagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamCollectionRequest;
+import com.microsoft.graph.requests.extensions.TeamGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -27,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Team Collection Request Builder.
  */
-public class TeamCollectionRequestBuilder extends BaseRequestBuilder implements ITeamCollectionRequestBuilder {
+public class TeamCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Team
@@ -46,7 +46,7 @@ public class TeamCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,17 +56,17 @@ public class TeamCollectionRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ITeamCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITeamRequestBuilder byId(final String id) {
+    public TeamRequestBuilder byId(final String id) {
         return new TeamRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public ITeamGetAllMessagesCollectionRequestBuilder getAllMessages() {
+    public TeamGetAllMessagesCollectionRequestBuilder getAllMessages() {
         return new TeamGetAllMessagesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllMessages"), getClient(), null);
     }
 }

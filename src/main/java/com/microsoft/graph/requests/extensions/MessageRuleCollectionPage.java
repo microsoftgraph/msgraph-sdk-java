@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.MessageRule;
-import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.MessageRuleCollectionPage;
 import com.microsoft.graph.requests.extensions.MessageRuleCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.MessageRuleCollectionResponse;
 /**
  * The class for the Message Rule Collection Page.
  */
-public class MessageRuleCollectionPage extends BaseCollectionPage<MessageRule, IMessageRuleCollectionRequestBuilder> implements IMessageRuleCollectionPage {
+public class MessageRuleCollectionPage extends BaseCollectionPage<MessageRule, MessageRuleCollectionRequestBuilder> {
 
     /**
      * A collection page for MessageRule
@@ -22,7 +22,7 @@ public class MessageRuleCollectionPage extends BaseCollectionPage<MessageRule, I
      * @param response the serialized MessageRuleCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public MessageRuleCollectionPage(final MessageRuleCollectionResponse response, final IMessageRuleCollectionRequestBuilder builder) {
+    public MessageRuleCollectionPage(final MessageRuleCollectionResponse response, final MessageRuleCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

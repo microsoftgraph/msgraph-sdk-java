@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDriveItemVersionRestoreVersionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemVersionRestoreVersionRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Drive Item Version Restore Version Request Builder.
  */
-public class DriveItemVersionRestoreVersionRequestBuilder extends BaseActionRequestBuilder implements IDriveItemVersionRestoreVersionRequestBuilder {
+public class DriveItemVersionRestoreVersionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this DriveItemVersionRestoreVersion
@@ -30,22 +29,22 @@ public class DriveItemVersionRestoreVersionRequestBuilder extends BaseActionRequ
     }
 
     /**
-     * Creates the IDriveItemVersionRestoreVersionRequest
+     * Creates the DriveItemVersionRestoreVersionRequest
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemVersionRestoreVersionRequest instance
+     * @return the DriveItemVersionRestoreVersionRequest instance
      */
-    public IDriveItemVersionRestoreVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemVersionRestoreVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IDriveItemVersionRestoreVersionRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the DriveItemVersionRestoreVersionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IDriveItemVersionRestoreVersionRequest instance
+     * @return the DriveItemVersionRestoreVersionRequest instance
      */
-    public IDriveItemVersionRestoreVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemVersionRestoreVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemVersionRestoreVersionRequest request = new DriveItemVersionRestoreVersionRequest(
                 getRequestUrl(),
                 getClient(),

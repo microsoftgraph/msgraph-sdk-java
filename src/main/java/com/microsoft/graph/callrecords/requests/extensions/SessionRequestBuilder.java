@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.callrecords.models.extensions.Session;
-import com.microsoft.graph.callrecords.requests.extensions.ISegmentCollectionRequestBuilder;
-import com.microsoft.graph.callrecords.requests.extensions.ISegmentRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Session Request Builder.
  */
-public class SessionRequestBuilder extends BaseRequestBuilder implements ISessionRequestBuilder {
+public class SessionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the Session
@@ -39,9 +37,9 @@ public class SessionRequestBuilder extends BaseRequestBuilder implements ISessio
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISessionRequest instance
+     * @return the SessionRequest instance
      */
-    public ISessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class SessionRequestBuilder extends BaseRequestBuilder implements ISessio
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISessionRequest instance
+     * @return the SessionRequest instance
      */
-    public ISessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.callrecords.requests.extensions.SessionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ISegmentCollectionRequestBuilder segments() {
+    public SegmentCollectionRequestBuilder segments() {
         return new SegmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("segments"), getClient(), null);
     }
 
-    public ISegmentRequestBuilder segments(final String id) {
+    public SegmentRequestBuilder segments(final String id) {
         return new SegmentRequestBuilder(getRequestUrlWithAdditionalSegment("segments") + "/" + id, getClient(), null);
     }
 }

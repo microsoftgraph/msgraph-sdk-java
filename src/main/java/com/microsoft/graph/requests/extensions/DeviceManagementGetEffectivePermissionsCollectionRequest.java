@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.RolePermission;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementGetEffectivePermissionsCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
@@ -24,7 +24,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Device Management Get Effective Permissions Collection Request.
  */
-public class DeviceManagementGetEffectivePermissionsCollectionRequest extends BaseCollectionRequest<DeviceManagementGetEffectivePermissionsCollectionResponse, IDeviceManagementGetEffectivePermissionsCollectionPage> implements IDeviceManagementGetEffectivePermissionsCollectionRequest {
+public class DeviceManagementGetEffectivePermissionsCollectionRequest extends BaseCollectionRequest<DeviceManagementGetEffectivePermissionsCollectionResponse, DeviceManagementGetEffectivePermissionsCollectionPage> {
 
 
     /**
@@ -35,11 +35,11 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      * @param requestOptions the options for this request
      */
     public DeviceManagementGetEffectivePermissionsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionResponse.class, IDeviceManagementGetEffectivePermissionsCollectionPage.class);
+        super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionResponse.class, DeviceManagementGetEffectivePermissionsCollectionPage.class);
     }
 
 
-    public void get(final ICallback<? super IDeviceManagementGetEffectivePermissionsCollectionPage> callback) {
+    public void get(final ICallback<? super DeviceManagementGetEffectivePermissionsCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -53,20 +53,20 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
         });
     }
 
-    public IDeviceManagementGetEffectivePermissionsCollectionPage get() throws ClientException {
+    public DeviceManagementGetEffectivePermissionsCollectionPage get() throws ClientException {
         final DeviceManagementGetEffectivePermissionsCollectionResponse response = send();
         return buildFromResponse(response);
     }
 
 
-    public IDeviceManagementGetEffectivePermissionsCollectionPage buildFromResponse(final DeviceManagementGetEffectivePermissionsCollectionResponse response) {
-        final IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder;
+    public DeviceManagementGetEffectivePermissionsCollectionPage buildFromResponse(final DeviceManagementGetEffectivePermissionsCollectionResponse response) {
+        final DeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (String) null);
         } else {
             builder = null;
         }
-        final IDeviceManagementGetEffectivePermissionsCollectionPage page = new DeviceManagementGetEffectivePermissionsCollectionPage(response, builder);
+        final DeviceManagementGetEffectivePermissionsCollectionPage page = new DeviceManagementGetEffectivePermissionsCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -77,9 +77,9 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      * @param value the select clause
      * @return the updated request
      */
-    public IDeviceManagementGetEffectivePermissionsCollectionRequest select(final String value) {
+    public DeviceManagementGetEffectivePermissionsCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IDeviceManagementGetEffectivePermissionsCollectionRequest)this;
+        return (DeviceManagementGetEffectivePermissionsCollectionRequest)this;
     }
 
     /**
@@ -88,9 +88,9 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IDeviceManagementGetEffectivePermissionsCollectionRequest top(final int value) {
+    public DeviceManagementGetEffectivePermissionsCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IDeviceManagementGetEffectivePermissionsCollectionRequest)this;
+        return (DeviceManagementGetEffectivePermissionsCollectionRequest)this;
     }
 
     /**
@@ -99,9 +99,9 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      * @param value the expand clause
      * @return the updated request
      */
-    public IDeviceManagementGetEffectivePermissionsCollectionRequest expand(final String value) {
+    public DeviceManagementGetEffectivePermissionsCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IDeviceManagementGetEffectivePermissionsCollectionRequest)this;
+        return (DeviceManagementGetEffectivePermissionsCollectionRequest)this;
     }
 
     /**
@@ -110,9 +110,9 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      * @param value the filter clause
      * @return the updated request
      */
-    public IDeviceManagementGetEffectivePermissionsCollectionRequest filter(final String value) {
+    public DeviceManagementGetEffectivePermissionsCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDeviceManagementGetEffectivePermissionsCollectionRequest)this;
+        return (DeviceManagementGetEffectivePermissionsCollectionRequest)this;
     }
 
     /**
@@ -121,9 +121,9 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequest extends Ba
      * @param value the order by clause
      * @return the updated request
      */
-    public IDeviceManagementGetEffectivePermissionsCollectionRequest orderBy(final String value) {
+    public DeviceManagementGetEffectivePermissionsCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IDeviceManagementGetEffectivePermissionsCollectionRequest)this;
+        return (DeviceManagementGetEffectivePermissionsCollectionRequest)this;
     }
 
 }

@@ -12,8 +12,7 @@ import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IPermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionGrantCollectionRequest;
+import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -24,7 +23,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Permission Grant Collection Request Builder.
  */
-public class PermissionGrantCollectionRequestBuilder extends BaseActionRequestBuilder implements IPermissionGrantCollectionRequestBuilder {
+public class PermissionGrantCollectionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this collection of Permission
@@ -51,7 +50,7 @@ public class PermissionGrantCollectionRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPermissionGrantCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PermissionGrantCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -61,7 +60,7 @@ public class PermissionGrantCollectionRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IPermissionGrantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PermissionGrantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         PermissionGrantCollectionRequest request = new PermissionGrantCollectionRequest(
                 getRequestUrl(),
                 getClient(),

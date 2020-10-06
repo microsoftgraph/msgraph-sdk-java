@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserSettings;
-import com.microsoft.graph.requests.extensions.IShiftPreferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShiftPreferencesRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Settings Request.
  */
-public class UserSettingsRequest extends BaseRequest implements IUserSettingsRequest {
+public class UserSettingsRequest extends BaseRequest {
 	
     /**
      * The request for the UserSettings
@@ -140,7 +139,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @param value the select clause
      * @return the updated request
      */
-     public IUserSettingsRequest select(final String value) {
+     public UserSettingsRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (UserSettingsRequest)this;
      }
@@ -151,7 +150,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserSettingsRequest expand(final String value) {
+     public UserSettingsRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (UserSettingsRequest)this;
      }

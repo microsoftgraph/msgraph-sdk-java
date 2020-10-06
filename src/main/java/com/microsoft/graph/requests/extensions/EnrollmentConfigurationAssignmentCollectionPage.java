@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignment
 /**
  * The class for the Enrollment Configuration Assignment Collection Page.
  */
-public class EnrollmentConfigurationAssignmentCollectionPage extends BaseCollectionPage<EnrollmentConfigurationAssignment, IEnrollmentConfigurationAssignmentCollectionRequestBuilder> implements IEnrollmentConfigurationAssignmentCollectionPage {
+public class EnrollmentConfigurationAssignmentCollectionPage extends BaseCollectionPage<EnrollmentConfigurationAssignment, EnrollmentConfigurationAssignmentCollectionRequestBuilder> {
 
     /**
      * A collection page for EnrollmentConfigurationAssignment
@@ -22,7 +22,7 @@ public class EnrollmentConfigurationAssignmentCollectionPage extends BaseCollect
      * @param response the serialized EnrollmentConfigurationAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EnrollmentConfigurationAssignmentCollectionPage(final EnrollmentConfigurationAssignmentCollectionResponse response, final IEnrollmentConfigurationAssignmentCollectionRequestBuilder builder) {
+    public EnrollmentConfigurationAssignmentCollectionPage(final EnrollmentConfigurationAssignmentCollectionResponse response, final EnrollmentConfigurationAssignmentCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsApp;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams App Request.
  */
-public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
+public class TeamsAppRequest extends BaseRequest {
 	
     /**
      * The request for the TeamsApp
@@ -142,7 +140,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamsAppRequest select(final String value) {
+     public TeamsAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (TeamsAppRequest)this;
      }
@@ -153,7 +151,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamsAppRequest expand(final String value) {
+     public TeamsAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (TeamsAppRequest)this;
      }

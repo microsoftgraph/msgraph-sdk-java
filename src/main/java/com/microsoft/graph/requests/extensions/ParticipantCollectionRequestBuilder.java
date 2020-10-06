@@ -15,10 +15,10 @@ import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IParticipantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IParticipantRequestBuilder;
-import com.microsoft.graph.requests.extensions.IParticipantCollectionRequest;
-import com.microsoft.graph.requests.extensions.IParticipantInviteRequestBuilder;
+import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ParticipantRequestBuilder;
+import com.microsoft.graph.requests.extensions.ParticipantCollectionRequest;
+import com.microsoft.graph.requests.extensions.ParticipantInviteRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -27,7 +27,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Participant Collection Request Builder.
  */
-public class ParticipantCollectionRequestBuilder extends BaseRequestBuilder implements IParticipantCollectionRequestBuilder {
+public class ParticipantCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Call
@@ -46,7 +46,7 @@ public class ParticipantCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IParticipantCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ParticipantCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,17 +56,17 @@ public class ParticipantCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IParticipantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ParticipantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ParticipantCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IParticipantRequestBuilder byId(final String id) {
+    public ParticipantRequestBuilder byId(final String id) {
         return new ParticipantRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
 
 
-    public IParticipantInviteRequestBuilder invite(final java.util.List<InvitationParticipantInfo> participants, final String clientContext) {
+    public ParticipantInviteRequestBuilder invite(final java.util.List<InvitationParticipantInfo> participants, final String clientContext) {
         return new ParticipantInviteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, participants, clientContext);
     }
 }

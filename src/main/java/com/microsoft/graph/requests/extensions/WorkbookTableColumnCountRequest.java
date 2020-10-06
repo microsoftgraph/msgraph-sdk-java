@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnCountRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCountRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Count Request.
  */
-public class WorkbookTableColumnCountRequest extends BaseRequest implements IWorkbookTableColumnCountRequest {
+public class WorkbookTableColumnCountRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookTableColumnCount
@@ -56,7 +55,7 @@ public class WorkbookTableColumnCountRequest extends BaseRequest implements IWor
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookTableColumnCountRequest select(final String value) {
+    public WorkbookTableColumnCountRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookTableColumnCountRequest)this;
     }
@@ -67,7 +66,7 @@ public class WorkbookTableColumnCountRequest extends BaseRequest implements IWor
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookTableColumnCountRequest expand(final String value) {
+    public WorkbookTableColumnCountRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookTableColumnCountRequest)this;
     }
@@ -78,7 +77,7 @@ public class WorkbookTableColumnCountRequest extends BaseRequest implements IWor
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookTableColumnCountRequest filter(final String value) {
+    public WorkbookTableColumnCountRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookTableColumnCountRequest)this;
     }
@@ -89,7 +88,7 @@ public class WorkbookTableColumnCountRequest extends BaseRequest implements IWor
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookTableColumnCountRequest orderBy(final String value) {
+    public WorkbookTableColumnCountRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookTableColumnCountRequest)this;
     }

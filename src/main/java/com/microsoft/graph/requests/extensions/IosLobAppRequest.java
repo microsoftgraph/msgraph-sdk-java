@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Lob App Request.
  */
-public class IosLobAppRequest extends BaseRequest implements IIosLobAppRequest {
+public class IosLobAppRequest extends BaseRequest {
 	
     /**
      * The request for the IosLobApp
@@ -138,7 +138,7 @@ public class IosLobAppRequest extends BaseRequest implements IIosLobAppRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IIosLobAppRequest select(final String value) {
+     public IosLobAppRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (IosLobAppRequest)this;
      }
@@ -149,7 +149,7 @@ public class IosLobAppRequest extends BaseRequest implements IIosLobAppRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosLobAppRequest expand(final String value) {
+     public IosLobAppRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (IosLobAppRequest)this;
      }

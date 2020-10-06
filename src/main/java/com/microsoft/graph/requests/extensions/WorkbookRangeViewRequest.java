@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeViewCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeViewRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeViewRequestBuilder;
 import java.util.Arrays;
@@ -24,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range View Request.
  */
-public class WorkbookRangeViewRequest extends BaseRequest implements IWorkbookRangeViewRequest {
+public class WorkbookRangeViewRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookRangeView
@@ -143,7 +141,7 @@ public class WorkbookRangeViewRequest extends BaseRequest implements IWorkbookRa
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookRangeViewRequest select(final String value) {
+     public WorkbookRangeViewRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookRangeViewRequest)this;
      }
@@ -154,7 +152,7 @@ public class WorkbookRangeViewRequest extends BaseRequest implements IWorkbookRa
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookRangeViewRequest expand(final String value) {
+     public WorkbookRangeViewRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookRangeViewRequest)this;
      }

@@ -20,7 +20,7 @@ import java.io.InputStream;
 /**
  * The class for the Thumbnail Content Stream Request.
  */
-public class ThumbnailContentStreamRequest extends BaseStreamRequest<Thumbnail> implements IThumbnailContentStreamRequest {
+public class ThumbnailContentStreamRequest extends BaseStreamRequest<Thumbnail> {
 
     /**
      * The request for the ThumbnailContentStream

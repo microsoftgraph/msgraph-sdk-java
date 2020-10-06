@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceActionItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceActionItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceActionItemRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance Scheduled Action For Rule Request.
  */
-public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest implements IDeviceComplianceScheduledActionForRuleRequest {
+public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest {
 	
     /**
      * The request for the DeviceComplianceScheduledActionForRule
@@ -142,7 +140,7 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceComplianceScheduledActionForRuleRequest select(final String value) {
+     public DeviceComplianceScheduledActionForRuleRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceComplianceScheduledActionForRuleRequest)this;
      }
@@ -153,7 +151,7 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceComplianceScheduledActionForRuleRequest expand(final String value) {
+     public DeviceComplianceScheduledActionForRuleRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceComplianceScheduledActionForRuleRequest)this;
      }

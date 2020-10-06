@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsKurtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsKurtRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Kurt Request Builder.
  */
-public class WorkbookFunctionsKurtRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsKurtRequestBuilder {
+public class WorkbookFunctionsKurtRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsKurt
@@ -32,22 +31,22 @@ public class WorkbookFunctionsKurtRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsKurtRequest
+     * Creates the WorkbookFunctionsKurtRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsKurtRequest instance
+     * @return the WorkbookFunctionsKurtRequest instance
      */
-    public IWorkbookFunctionsKurtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsKurtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsKurtRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsKurtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsKurtRequest instance
+     * @return the WorkbookFunctionsKurtRequest instance
      */
-    public IWorkbookFunctionsKurtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsKurtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsKurtRequest request = new WorkbookFunctionsKurtRequest(
                 getRequestUrl(),
                 getClient(),

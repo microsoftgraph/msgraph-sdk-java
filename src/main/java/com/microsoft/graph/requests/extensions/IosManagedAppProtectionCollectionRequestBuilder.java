@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.IosManagedAppProtection;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectionRequest;
+import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosManagedAppProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Ios Managed App Protection Collection Request Builder.
  */
-public class IosManagedAppProtectionCollectionRequestBuilder extends BaseRequestBuilder implements IIosManagedAppProtectionCollectionRequestBuilder {
+public class IosManagedAppProtectionCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceAppManagement
@@ -42,7 +42,7 @@ public class IosManagedAppProtectionCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IIosManagedAppProtectionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public IosManagedAppProtectionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class IosManagedAppProtectionCollectionRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IIosManagedAppProtectionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosManagedAppProtectionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IosManagedAppProtectionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IIosManagedAppProtectionRequestBuilder byId(final String id) {
+    public IosManagedAppProtectionRequestBuilder byId(final String id) {
         return new IosManagedAppProtectionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

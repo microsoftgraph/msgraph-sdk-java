@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIpmtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsIpmtRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Ipmt Request Builder.
  */
-public class WorkbookFunctionsIpmtRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsIpmtRequestBuilder {
+public class WorkbookFunctionsIpmtRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsIpmt
@@ -42,22 +41,22 @@ public class WorkbookFunctionsIpmtRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsIpmtRequest
+     * Creates the WorkbookFunctionsIpmtRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIpmtRequest instance
+     * @return the WorkbookFunctionsIpmtRequest instance
      */
-    public IWorkbookFunctionsIpmtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsIpmtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsIpmtRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsIpmtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIpmtRequest instance
+     * @return the WorkbookFunctionsIpmtRequest instance
      */
-    public IWorkbookFunctionsIpmtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsIpmtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIpmtRequest request = new WorkbookFunctionsIpmtRequest(
                 getRequestUrl(),
                 getClient(),

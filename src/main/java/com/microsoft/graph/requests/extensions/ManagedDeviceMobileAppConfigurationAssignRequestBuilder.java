@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignRequest;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Mobile App Configuration Assign Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationAssignRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceMobileAppConfigurationAssignRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationAssignRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceMobileAppConfigurationAssign
@@ -32,22 +31,22 @@ public class ManagedDeviceMobileAppConfigurationAssignRequestBuilder extends Bas
     }
 
     /**
-     * Creates the IManagedDeviceMobileAppConfigurationAssignRequest
+     * Creates the ManagedDeviceMobileAppConfigurationAssignRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceMobileAppConfigurationAssignRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationAssignRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceMobileAppConfigurationAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceMobileAppConfigurationAssignRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceMobileAppConfigurationAssignRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceMobileAppConfigurationAssignRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationAssignRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceMobileAppConfigurationAssignRequest request = new ManagedDeviceMobileAppConfigurationAssignRequest(
                 getRequestUrl(),
                 getClient(),

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableItemAtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableItemAtRequest;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Item At Request Builder.
  */
-public class WorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookTableItemAtRequestBuilder {
+public class WorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableItemAt
@@ -32,22 +31,22 @@ public class WorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookTableItemAtRequest
+     * Creates the WorkbookTableItemAtRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableItemAtRequest instance
+     * @return the WorkbookTableItemAtRequest instance
      */
-    public IWorkbookTableItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableItemAtRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableItemAtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableItemAtRequest instance
+     * @return the WorkbookTableItemAtRequest instance
      */
-    public IWorkbookTableItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableItemAtRequest request = new WorkbookTableItemAtRequest(
                 getRequestUrl(),
                 getClient(),
@@ -60,36 +59,36 @@ public class WorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBuilde
 
         return request;
     }
-    public IWorkbookTableColumnCollectionRequestBuilder columns() {
+    public WorkbookTableColumnCollectionRequestBuilder columns() {
         return new WorkbookTableColumnCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
-    public IWorkbookTableColumnRequestBuilder columns(final String id) {
+    public WorkbookTableColumnRequestBuilder columns(final String id) {
         return new WorkbookTableColumnRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
-    public IWorkbookTableRowCollectionRequestBuilder rows() {
+    public WorkbookTableRowCollectionRequestBuilder rows() {
         return new WorkbookTableRowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
-    public IWorkbookTableRowRequestBuilder rows(final String id) {
+    public WorkbookTableRowRequestBuilder rows(final String id) {
         return new WorkbookTableRowRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookTableSort
      *
-     * @return the IWorkbookTableSortRequestBuilder instance
+     * @return the WorkbookTableSortRequestBuilder instance
      */
-    public IWorkbookTableSortRequestBuilder sort() {
+    public WorkbookTableSortRequestBuilder sort() {
         return new WorkbookTableSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

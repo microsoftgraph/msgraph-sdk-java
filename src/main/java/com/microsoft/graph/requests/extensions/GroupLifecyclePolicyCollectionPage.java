@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
-import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRes
 /**
  * The class for the Group Lifecycle Policy Collection Page.
  */
-public class GroupLifecyclePolicyCollectionPage extends BaseCollectionPage<GroupLifecyclePolicy, IGroupLifecyclePolicyCollectionRequestBuilder> implements IGroupLifecyclePolicyCollectionPage {
+public class GroupLifecyclePolicyCollectionPage extends BaseCollectionPage<GroupLifecyclePolicy, GroupLifecyclePolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for GroupLifecyclePolicy
@@ -22,7 +22,7 @@ public class GroupLifecyclePolicyCollectionPage extends BaseCollectionPage<Group
      * @param response the serialized GroupLifecyclePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public GroupLifecyclePolicyCollectionPage(final GroupLifecyclePolicyCollectionResponse response, final IGroupLifecyclePolicyCollectionRequestBuilder builder) {
+    public GroupLifecyclePolicyCollectionPage(final GroupLifecyclePolicyCollectionResponse response, final GroupLifecyclePolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 /**
  * The class for the Claims Mapping Policy Collection Reference Request.
  */
-public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectionRequest<ClaimsMappingPolicyCollectionResponse, IClaimsMappingPolicyCollectionPage> implements IClaimsMappingPolicyCollectionReferenceRequest {
+public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectionRequest<ClaimsMappingPolicyCollectionResponse, ClaimsMappingPolicyCollectionPage> {
 
     /**
      * The request builder for this collection of ClaimsMappingPolicy
@@ -33,7 +33,7 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param requestOptions the options for this request
      */
     public ClaimsMappingPolicyCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, IClaimsMappingPolicyCollectionPage.class);
+        super(requestUrl, client, requestOptions, ClaimsMappingPolicyCollectionResponse.class, ClaimsMappingPolicyCollectionPage.class);
     }
 
     public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<? super ClaimsMappingPolicy> callback) {
@@ -57,7 +57,7 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the expand clause
      * @return the updated request
      */
-    public IClaimsMappingPolicyCollectionReferenceRequest expand(final String value) {
+    public ClaimsMappingPolicyCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ClaimsMappingPolicyCollectionReferenceRequest)this;
     }
@@ -68,7 +68,7 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the filter clause
      * @return the updated request
      */
-    public IClaimsMappingPolicyCollectionReferenceRequest filter(final String value) {
+    public ClaimsMappingPolicyCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ClaimsMappingPolicyCollectionReferenceRequest)this;
     }
@@ -79,7 +79,7 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the sort clause
      * @return the updated request
      */
-    public IClaimsMappingPolicyCollectionReferenceRequest orderBy(final String value) {
+    public ClaimsMappingPolicyCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ClaimsMappingPolicyCollectionReferenceRequest)this;
     }
@@ -90,7 +90,7 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the select clause
      * @return the updated request
      */
-    public IClaimsMappingPolicyCollectionReferenceRequest select(final String value) {
+    public ClaimsMappingPolicyCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ClaimsMappingPolicyCollectionReferenceRequest)this;
     }
@@ -101,7 +101,7 @@ public class ClaimsMappingPolicyCollectionReferenceRequest extends BaseCollectio
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IClaimsMappingPolicyCollectionReferenceRequest top(final int value) {
+    public ClaimsMappingPolicyCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ClaimsMappingPolicyCollectionReferenceRequest)this;
     }

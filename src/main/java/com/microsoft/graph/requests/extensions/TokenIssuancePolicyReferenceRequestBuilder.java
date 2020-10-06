@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Token Issuance Policy Reference Request Builder.
  */
-public class TokenIssuancePolicyReferenceRequestBuilder extends BaseRequestBuilder implements ITokenIssuancePolicyReferenceRequestBuilder {
+public class TokenIssuancePolicyReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TokenIssuancePolicy
@@ -37,9 +37,9 @@ public class TokenIssuancePolicyReferenceRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return The ITokenIssuancePolicyReferenceRequest instance
+     * @return The TokenIssuancePolicyReferenceRequest instance
      */
-    public ITokenIssuancePolicyReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TokenIssuancePolicyReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +47,9 @@ public class TokenIssuancePolicyReferenceRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITokenIssuancePolicyReferenceRequest instance
+     * @return the TokenIssuancePolicyReferenceRequest instance
      */
-    public ITokenIssuancePolicyReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TokenIssuancePolicyReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TokenIssuancePolicyReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

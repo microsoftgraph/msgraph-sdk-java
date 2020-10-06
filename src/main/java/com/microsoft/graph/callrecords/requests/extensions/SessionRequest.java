@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.callrecords.models.extensions.Session;
-import com.microsoft.graph.callrecords.requests.extensions.ISegmentCollectionRequestBuilder;
-import com.microsoft.graph.callrecords.requests.extensions.ISegmentRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Session Request.
  */
-public class SessionRequest extends BaseRequest implements ISessionRequest {
+public class SessionRequest extends BaseRequest {
 	
     /**
      * The request for the Session
@@ -142,7 +140,7 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ISessionRequest select(final String value) {
+     public SessionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (SessionRequest)this;
      }
@@ -153,7 +151,7 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ISessionRequest expand(final String value) {
+     public SessionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (SessionRequest)this;
      }

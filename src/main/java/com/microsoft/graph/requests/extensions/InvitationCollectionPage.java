@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Invitation;
-import com.microsoft.graph.requests.extensions.IInvitationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.InvitationCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.InvitationCollectionPage;
 import com.microsoft.graph.requests.extensions.InvitationCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.InvitationCollectionResponse;
 /**
  * The class for the Invitation Collection Page.
  */
-public class InvitationCollectionPage extends BaseCollectionPage<Invitation, IInvitationCollectionRequestBuilder> implements IInvitationCollectionPage {
+public class InvitationCollectionPage extends BaseCollectionPage<Invitation, InvitationCollectionRequestBuilder> {
 
     /**
      * A collection page for Invitation
@@ -22,7 +22,7 @@ public class InvitationCollectionPage extends BaseCollectionPage<Invitation, IIn
      * @param response the serialized InvitationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public InvitationCollectionPage(final InvitationCollectionResponse response, final IInvitationCollectionRequestBuilder builder) {
+    public InvitationCollectionPage(final InvitationCollectionResponse response, final InvitationCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

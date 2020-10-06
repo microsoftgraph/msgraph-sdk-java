@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationAssignRequest;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationAssignRequest;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Targeted Managed App Configuration Assign Request Builder.
  */
-public class TargetedManagedAppConfigurationAssignRequestBuilder extends BaseActionRequestBuilder implements ITargetedManagedAppConfigurationAssignRequestBuilder {
+public class TargetedManagedAppConfigurationAssignRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this TargetedManagedAppConfigurationAssign
@@ -32,22 +31,22 @@ public class TargetedManagedAppConfigurationAssignRequestBuilder extends BaseAct
     }
 
     /**
-     * Creates the ITargetedManagedAppConfigurationAssignRequest
+     * Creates the TargetedManagedAppConfigurationAssignRequest
      *
      * @param requestOptions the options for the request
-     * @return the ITargetedManagedAppConfigurationAssignRequest instance
+     * @return the TargetedManagedAppConfigurationAssignRequest instance
      */
-    public ITargetedManagedAppConfigurationAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TargetedManagedAppConfigurationAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the ITargetedManagedAppConfigurationAssignRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the TargetedManagedAppConfigurationAssignRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the ITargetedManagedAppConfigurationAssignRequest instance
+     * @return the TargetedManagedAppConfigurationAssignRequest instance
      */
-    public ITargetedManagedAppConfigurationAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppConfigurationAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         TargetedManagedAppConfigurationAssignRequest request = new TargetedManagedAppConfigurationAssignRequest(
                 getRequestUrl(),
                 getClient(),

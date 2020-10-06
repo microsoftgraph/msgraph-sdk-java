@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationDeviceActivityRequest;
 import com.microsoft.graph.requests.extensions.ReportRootDeviceConfigurationDeviceActivityRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Device Configuration Device Activity Request.
  */
-public class ReportRootDeviceConfigurationDeviceActivityRequest extends BaseRequest implements IReportRootDeviceConfigurationDeviceActivityRequest {
+public class ReportRootDeviceConfigurationDeviceActivityRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootDeviceConfigurationDeviceActivity
@@ -97,7 +96,7 @@ public class ReportRootDeviceConfigurationDeviceActivityRequest extends BaseRequ
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootDeviceConfigurationDeviceActivityRequest select(final String value) {
+    public ReportRootDeviceConfigurationDeviceActivityRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootDeviceConfigurationDeviceActivityRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootDeviceConfigurationDeviceActivityRequest extends BaseRequ
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootDeviceConfigurationDeviceActivityRequest expand(final String value) {
+    public ReportRootDeviceConfigurationDeviceActivityRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootDeviceConfigurationDeviceActivityRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootDeviceConfigurationDeviceActivityRequest extends BaseRequ
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootDeviceConfigurationDeviceActivityRequest filter(final String value) {
+    public ReportRootDeviceConfigurationDeviceActivityRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootDeviceConfigurationDeviceActivityRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootDeviceConfigurationDeviceActivityRequest extends BaseRequ
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootDeviceConfigurationDeviceActivityRequest orderBy(final String value) {
+    public ReportRootDeviceConfigurationDeviceActivityRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootDeviceConfigurationDeviceActivityRequest)this;
     }

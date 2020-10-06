@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Enterprise Modern App Management Configuration Request.
  */
-public class Windows10EnterpriseModernAppManagementConfigurationRequest extends BaseRequest implements IWindows10EnterpriseModernAppManagementConfigurationRequest {
+public class Windows10EnterpriseModernAppManagementConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the Windows10EnterpriseModernAppManagementConfiguration
@@ -138,7 +138,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10EnterpriseModernAppManagementConfigurationRequest select(final String value) {
+     public Windows10EnterpriseModernAppManagementConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (Windows10EnterpriseModernAppManagementConfigurationRequest)this;
      }
@@ -149,7 +149,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10EnterpriseModernAppManagementConfigurationRequest expand(final String value) {
+     public Windows10EnterpriseModernAppManagementConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (Windows10EnterpriseModernAppManagementConfigurationRequest)this;
      }

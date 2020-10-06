@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTrimRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsTrimRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Trim Request Builder.
  */
-public class WorkbookFunctionsTrimRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsTrimRequestBuilder {
+public class WorkbookFunctionsTrimRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsTrim
@@ -32,22 +31,22 @@ public class WorkbookFunctionsTrimRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsTrimRequest
+     * Creates the WorkbookFunctionsTrimRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTrimRequest instance
+     * @return the WorkbookFunctionsTrimRequest instance
      */
-    public IWorkbookFunctionsTrimRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsTrimRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsTrimRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsTrimRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsTrimRequest instance
+     * @return the WorkbookFunctionsTrimRequest instance
      */
-    public IWorkbookFunctionsTrimRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsTrimRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsTrimRequest request = new WorkbookFunctionsTrimRequest(
                 getRequestUrl(),
                 getClient(),

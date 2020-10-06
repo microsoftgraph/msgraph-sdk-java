@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Identity Provider Request Builder.
  */
-public class IdentityProviderRequestBuilder extends BaseRequestBuilder implements IIdentityProviderRequestBuilder {
+public class IdentityProviderRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the IdentityProvider
@@ -35,9 +35,9 @@ public class IdentityProviderRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IIdentityProviderRequest instance
+     * @return the IdentityProviderRequest instance
      */
-    public IIdentityProviderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public IdentityProviderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class IdentityProviderRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IIdentityProviderRequest instance
+     * @return the IdentityProviderRequest instance
      */
-    public IIdentityProviderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityProviderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IdentityProviderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

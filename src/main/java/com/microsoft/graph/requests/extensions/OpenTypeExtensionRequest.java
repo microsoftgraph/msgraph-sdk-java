@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Open Type Extension Request.
  */
-public class OpenTypeExtensionRequest extends BaseRequest implements IOpenTypeExtensionRequest {
+public class OpenTypeExtensionRequest extends BaseRequest {
 	
     /**
      * The request for the OpenTypeExtension
@@ -138,7 +138,7 @@ public class OpenTypeExtensionRequest extends BaseRequest implements IOpenTypeEx
      * @param value the select clause
      * @return the updated request
      */
-     public IOpenTypeExtensionRequest select(final String value) {
+     public OpenTypeExtensionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (OpenTypeExtensionRequest)this;
      }
@@ -149,7 +149,7 @@ public class OpenTypeExtensionRequest extends BaseRequest implements IOpenTypeEx
      * @param value the expand clause
      * @return the updated request
      */
-     public IOpenTypeExtensionRequest expand(final String value) {
+     public OpenTypeExtensionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (OpenTypeExtensionRequest)this;
      }

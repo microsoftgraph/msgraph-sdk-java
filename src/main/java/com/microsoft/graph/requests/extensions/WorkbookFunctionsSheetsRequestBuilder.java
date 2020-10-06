@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSheetsRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSheetsRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Sheets Request Builder.
  */
-public class WorkbookFunctionsSheetsRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSheetsRequestBuilder {
+public class WorkbookFunctionsSheetsRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSheets
@@ -32,22 +31,22 @@ public class WorkbookFunctionsSheetsRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsSheetsRequest
+     * Creates the WorkbookFunctionsSheetsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSheetsRequest instance
+     * @return the WorkbookFunctionsSheetsRequest instance
      */
-    public IWorkbookFunctionsSheetsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSheetsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSheetsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSheetsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSheetsRequest instance
+     * @return the WorkbookFunctionsSheetsRequest instance
      */
-    public IWorkbookFunctionsSheetsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSheetsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSheetsRequest request = new WorkbookFunctionsSheetsRequest(
                 getRequestUrl(),
                 getClient(),

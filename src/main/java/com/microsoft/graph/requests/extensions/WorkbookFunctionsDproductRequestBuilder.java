@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDproductRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsDproductRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Dproduct Request Builder.
  */
-public class WorkbookFunctionsDproductRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsDproductRequestBuilder {
+public class WorkbookFunctionsDproductRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsDproduct
@@ -36,22 +35,22 @@ public class WorkbookFunctionsDproductRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsDproductRequest
+     * Creates the WorkbookFunctionsDproductRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDproductRequest instance
+     * @return the WorkbookFunctionsDproductRequest instance
      */
-    public IWorkbookFunctionsDproductRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsDproductRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsDproductRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsDproductRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsDproductRequest instance
+     * @return the WorkbookFunctionsDproductRequest instance
      */
-    public IWorkbookFunctionsDproductRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsDproductRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsDproductRequest request = new WorkbookFunctionsDproductRequest(
                 getRequestUrl(),
                 getClient(),

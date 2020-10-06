@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.ThumbnailSet;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IThumbnailSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThumbnailSetCollectionRequest;
+import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThumbnailSetRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Thumbnail Set Collection Request Builder.
  */
-public class ThumbnailSetCollectionRequestBuilder extends BaseRequestBuilder implements IThumbnailSetCollectionRequestBuilder {
+public class ThumbnailSetCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DriveItem
@@ -42,7 +42,7 @@ public class ThumbnailSetCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IThumbnailSetCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ThumbnailSetCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ThumbnailSetCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IThumbnailSetCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThumbnailSetCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ThumbnailSetCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IThumbnailSetRequestBuilder byId(final String id) {
+    public ThumbnailSetRequestBuilder byId(final String id) {
         return new ThumbnailSetRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

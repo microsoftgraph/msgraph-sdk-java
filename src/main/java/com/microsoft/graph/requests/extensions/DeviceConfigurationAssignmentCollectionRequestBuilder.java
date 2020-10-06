@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device Configuration Assignment Collection Request Builder.
  */
-public class DeviceConfigurationAssignmentCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceConfigurationAssignmentCollectionRequestBuilder {
+public class DeviceConfigurationAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceConfiguration
@@ -42,7 +42,7 @@ public class DeviceConfigurationAssignmentCollectionRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceConfigurationAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceConfigurationAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DeviceConfigurationAssignmentCollectionRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceConfigurationAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceConfigurationAssignmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceConfigurationAssignmentRequestBuilder byId(final String id) {
+    public DeviceConfigurationAssignmentRequestBuilder byId(final String id) {
         return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

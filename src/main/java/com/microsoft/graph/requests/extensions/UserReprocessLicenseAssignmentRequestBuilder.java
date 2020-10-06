@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserReprocessLicenseAssignmentRequest;
 import com.microsoft.graph.requests.extensions.UserReprocessLicenseAssignmentRequest;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the User Reprocess License Assignment Request Builder.
  */
-public class UserReprocessLicenseAssignmentRequestBuilder extends BaseActionRequestBuilder implements IUserReprocessLicenseAssignmentRequestBuilder {
+public class UserReprocessLicenseAssignmentRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this UserReprocessLicenseAssignment
@@ -30,22 +29,22 @@ public class UserReprocessLicenseAssignmentRequestBuilder extends BaseActionRequ
     }
 
     /**
-     * Creates the IUserReprocessLicenseAssignmentRequest
+     * Creates the UserReprocessLicenseAssignmentRequest
      *
      * @param requestOptions the options for the request
-     * @return the IUserReprocessLicenseAssignmentRequest instance
+     * @return the UserReprocessLicenseAssignmentRequest instance
      */
-    public IUserReprocessLicenseAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserReprocessLicenseAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IUserReprocessLicenseAssignmentRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the UserReprocessLicenseAssignmentRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IUserReprocessLicenseAssignmentRequest instance
+     * @return the UserReprocessLicenseAssignmentRequest instance
      */
-    public IUserReprocessLicenseAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserReprocessLicenseAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserReprocessLicenseAssignmentRequest request = new UserReprocessLicenseAssignmentRequest(
                 getRequestUrl(),
                 getClient(),

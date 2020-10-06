@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUserFindMeetingTimesRequest;
 import com.microsoft.graph.requests.extensions.UserFindMeetingTimesRequest;
 import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.LocationConstraint;
@@ -19,7 +18,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the User Find Meeting Times Request Builder.
  */
-public class UserFindMeetingTimesRequestBuilder extends BaseActionRequestBuilder implements IUserFindMeetingTimesRequestBuilder {
+public class UserFindMeetingTimesRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this UserFindMeetingTimes
@@ -49,22 +48,22 @@ public class UserFindMeetingTimesRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IUserFindMeetingTimesRequest
+     * Creates the UserFindMeetingTimesRequest
      *
      * @param requestOptions the options for the request
-     * @return the IUserFindMeetingTimesRequest instance
+     * @return the UserFindMeetingTimesRequest instance
      */
-    public IUserFindMeetingTimesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserFindMeetingTimesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IUserFindMeetingTimesRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the UserFindMeetingTimesRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IUserFindMeetingTimesRequest instance
+     * @return the UserFindMeetingTimesRequest instance
      */
-    public IUserFindMeetingTimesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserFindMeetingTimesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserFindMeetingTimesRequest request = new UserFindMeetingTimesRequest(
                 getRequestUrl(),
                 getClient(),

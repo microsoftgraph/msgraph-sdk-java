@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookChart;
-import com.microsoft.graph.requests.extensions.IWorkbookChartItemRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartItemRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Item Request.
  */
-public class WorkbookChartItemRequest extends BaseRequest implements IWorkbookChartItemRequest {
+public class WorkbookChartItemRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookChartItem
@@ -97,7 +96,7 @@ public class WorkbookChartItemRequest extends BaseRequest implements IWorkbookCh
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookChartItemRequest select(final String value) {
+    public WorkbookChartItemRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookChartItemRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookChartItemRequest extends BaseRequest implements IWorkbookCh
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookChartItemRequest expand(final String value) {
+    public WorkbookChartItemRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookChartItemRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookChartItemRequest extends BaseRequest implements IWorkbookCh
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookChartItemRequest filter(final String value) {
+    public WorkbookChartItemRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookChartItemRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookChartItemRequest extends BaseRequest implements IWorkbookCh
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookChartItemRequest orderBy(final String value) {
+    public WorkbookChartItemRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookChartItemRequest)this;
     }

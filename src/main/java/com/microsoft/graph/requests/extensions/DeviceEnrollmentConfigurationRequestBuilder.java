@@ -9,8 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Enrollment Configuration Request Builder.
  */
-public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuilder implements IDeviceEnrollmentConfigurationRequestBuilder {
+public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceEnrollmentConfiguration
@@ -40,9 +38,9 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceEnrollmentConfigurationRequest instance
+     * @return the DeviceEnrollmentConfigurationRequest instance
      */
-    public IDeviceEnrollmentConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceEnrollmentConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,26 +48,26 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceEnrollmentConfigurationRequest instance
+     * @return the DeviceEnrollmentConfigurationRequest instance
      */
-    public IDeviceEnrollmentConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IEnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
+    public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IEnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
+    public EnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
-    public IDeviceEnrollmentConfigurationAssignRequestBuilder assign(final java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments) {
+    public DeviceEnrollmentConfigurationAssignRequestBuilder assign(final java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments) {
         return new DeviceEnrollmentConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, enrollmentConfigurationAssignments);
     }
 
-    public IDeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(final Integer priority) {
+    public DeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(final Integer priority) {
         return new DeviceEnrollmentConfigurationSetPriorityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPriority"), getClient(), null, priority);
     }
 }

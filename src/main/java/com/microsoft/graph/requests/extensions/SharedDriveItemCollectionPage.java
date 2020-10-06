@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.SharedDriveItem;
-import com.microsoft.graph.requests.extensions.ISharedDriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionPage;
 import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionResponse
 /**
  * The class for the Shared Drive Item Collection Page.
  */
-public class SharedDriveItemCollectionPage extends BaseCollectionPage<SharedDriveItem, ISharedDriveItemCollectionRequestBuilder> implements ISharedDriveItemCollectionPage {
+public class SharedDriveItemCollectionPage extends BaseCollectionPage<SharedDriveItem, SharedDriveItemCollectionRequestBuilder> {
 
     /**
      * A collection page for SharedDriveItem
@@ -22,7 +22,7 @@ public class SharedDriveItemCollectionPage extends BaseCollectionPage<SharedDriv
      * @param response the serialized SharedDriveItemCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SharedDriveItemCollectionPage(final SharedDriveItemCollectionResponse response, final ISharedDriveItemCollectionRequestBuilder builder) {
+    public SharedDriveItemCollectionPage(final SharedDriveItemCollectionResponse response, final SharedDriveItemCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

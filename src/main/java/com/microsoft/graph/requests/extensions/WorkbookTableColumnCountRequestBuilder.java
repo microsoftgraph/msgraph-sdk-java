@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookTableColumnCountRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnCountRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Table Column Count Request Builder.
  */
-public class WorkbookTableColumnCountRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookTableColumnCountRequestBuilder {
+public class WorkbookTableColumnCountRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookTableColumnCount
@@ -30,22 +29,22 @@ public class WorkbookTableColumnCountRequestBuilder extends BaseFunctionRequestB
     }
 
     /**
-     * Creates the IWorkbookTableColumnCountRequest
+     * Creates the WorkbookTableColumnCountRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableColumnCountRequest instance
+     * @return the WorkbookTableColumnCountRequest instance
      */
-    public IWorkbookTableColumnCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookTableColumnCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookTableColumnCountRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookTableColumnCountRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookTableColumnCountRequest instance
+     * @return the WorkbookTableColumnCountRequest instance
      */
-    public IWorkbookTableColumnCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookTableColumnCountRequest request = new WorkbookTableColumnCountRequest(
                 getRequestUrl(),
                 getClient(),

@@ -13,9 +13,9 @@ import com.microsoft.graph.models.extensions.OnenoteOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequest;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Onenote Section Collection Request Builder.
  */
-public class OnenoteSectionCollectionRequestBuilder extends BaseRequestBuilder implements IOnenoteSectionCollectionRequestBuilder {
+public class OnenoteSectionCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of SectionGroup
@@ -43,7 +43,7 @@ public class OnenoteSectionCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOnenoteSectionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenoteSectionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -53,11 +53,11 @@ public class OnenoteSectionCollectionRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOnenoteSectionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteSectionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OnenoteSectionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOnenoteSectionRequestBuilder byId(final String id) {
+    public OnenoteSectionRequestBuilder byId(final String id) {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

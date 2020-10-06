@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.Extension;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequest;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Extension Collection Request Builder.
  */
-public class ExtensionCollectionRequestBuilder extends BaseRequestBuilder implements IExtensionCollectionRequestBuilder {
+public class ExtensionCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of Post
@@ -42,7 +42,7 @@ public class ExtensionCollectionRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IExtensionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ExtensionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class ExtensionCollectionRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IExtensionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExtensionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ExtensionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IExtensionRequestBuilder byId(final String id) {
+    public ExtensionRequestBuilder byId(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

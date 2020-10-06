@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserActivity;
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityHistoryItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the User Activity With Reference Request Builder.
  */
-public class UserActivityWithReferenceRequestBuilder extends BaseRequestBuilder implements IUserActivityWithReferenceRequestBuilder {
+public class UserActivityWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the UserActivity
@@ -40,9 +38,9 @@ public class UserActivityWithReferenceRequestBuilder extends BaseRequestBuilder 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserActivityWithReferenceRequest instance
+     * @return the UserActivityWithReferenceRequest instance
      */
-    public IUserActivityWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public UserActivityWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,13 +48,13 @@ public class UserActivityWithReferenceRequestBuilder extends BaseRequestBuilder 
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IUserActivityWithReferenceRequest instance
+     * @return the UserActivityWithReferenceRequest instance
      */
-    public IUserActivityWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserActivityWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserActivityWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IUserActivityReferenceRequestBuilder reference(){
+    public UserActivityReferenceRequestBuilder reference(){
         return new UserActivityReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

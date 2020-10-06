@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ListItemVersion;
-import com.microsoft.graph.requests.extensions.IFieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.FieldValueSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the List Item Version Request.
  */
-public class ListItemVersionRequest extends BaseRequest implements IListItemVersionRequest {
+public class ListItemVersionRequest extends BaseRequest {
 	
     /**
      * The request for the ListItemVersion
@@ -140,7 +139,7 @@ public class ListItemVersionRequest extends BaseRequest implements IListItemVers
      * @param value the select clause
      * @return the updated request
      */
-     public IListItemVersionRequest select(final String value) {
+     public ListItemVersionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ListItemVersionRequest)this;
      }
@@ -151,7 +150,7 @@ public class ListItemVersionRequest extends BaseRequest implements IListItemVers
      * @param value the expand clause
      * @return the updated request
      */
-     public IListItemVersionRequest expand(final String value) {
+     public ListItemVersionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ListItemVersionRequest)this;
      }

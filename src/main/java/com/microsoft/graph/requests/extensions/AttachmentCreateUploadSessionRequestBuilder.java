@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IAttachmentCreateUploadSessionRequest;
 import com.microsoft.graph.requests.extensions.AttachmentCreateUploadSessionRequest;
 import com.microsoft.graph.models.extensions.AttachmentItem;
 import com.microsoft.graph.models.extensions.UploadSession;
@@ -17,7 +16,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Attachment Create Upload Session Request Builder.
  */
-public class AttachmentCreateUploadSessionRequestBuilder extends BaseActionRequestBuilder implements IAttachmentCreateUploadSessionRequestBuilder {
+public class AttachmentCreateUploadSessionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this AttachmentCreateUploadSession
@@ -33,22 +32,22 @@ public class AttachmentCreateUploadSessionRequestBuilder extends BaseActionReque
     }
 
     /**
-     * Creates the IAttachmentCreateUploadSessionRequest
+     * Creates the AttachmentCreateUploadSessionRequest
      *
      * @param requestOptions the options for the request
-     * @return the IAttachmentCreateUploadSessionRequest instance
+     * @return the AttachmentCreateUploadSessionRequest instance
      */
-    public IAttachmentCreateUploadSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public AttachmentCreateUploadSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IAttachmentCreateUploadSessionRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the AttachmentCreateUploadSessionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IAttachmentCreateUploadSessionRequest instance
+     * @return the AttachmentCreateUploadSessionRequest instance
      */
-    public IAttachmentCreateUploadSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AttachmentCreateUploadSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         AttachmentCreateUploadSessionRequest request = new AttachmentCreateUploadSessionRequest(
                 getRequestUrl(),
                 getClient(),

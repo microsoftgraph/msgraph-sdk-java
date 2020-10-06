@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemAttachment;
-import com.microsoft.graph.requests.extensions.IOutlookItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Attachment Request.
  */
-public class ItemAttachmentRequest extends BaseRequest implements IItemAttachmentRequest {
+public class ItemAttachmentRequest extends BaseRequest {
 	
     /**
      * The request for the ItemAttachment
@@ -140,7 +139,7 @@ public class ItemAttachmentRequest extends BaseRequest implements IItemAttachmen
      * @param value the select clause
      * @return the updated request
      */
-     public IItemAttachmentRequest select(final String value) {
+     public ItemAttachmentRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ItemAttachmentRequest)this;
      }
@@ -151,7 +150,7 @@ public class ItemAttachmentRequest extends BaseRequest implements IItemAttachmen
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemAttachmentRequest expand(final String value) {
+     public ItemAttachmentRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ItemAttachmentRequest)this;
      }

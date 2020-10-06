@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsTextRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsTextRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Is Text Request Builder.
  */
-public class WorkbookFunctionsIsTextRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsIsTextRequestBuilder {
+public class WorkbookFunctionsIsTextRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsIsText
@@ -32,22 +31,22 @@ public class WorkbookFunctionsIsTextRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsTextRequest
+     * Creates the WorkbookFunctionsIsTextRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsTextRequest instance
+     * @return the WorkbookFunctionsIsTextRequest instance
      */
-    public IWorkbookFunctionsIsTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsIsTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsTextRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsIsTextRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsTextRequest instance
+     * @return the WorkbookFunctionsIsTextRequest instance
      */
-    public IWorkbookFunctionsIsTextRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsIsTextRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIsTextRequest request = new WorkbookFunctionsIsTextRequest(
                 getRequestUrl(),
                 getClient(),

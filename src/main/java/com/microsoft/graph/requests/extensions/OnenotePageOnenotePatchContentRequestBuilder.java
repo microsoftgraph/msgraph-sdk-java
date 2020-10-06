@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnenotePageOnenotePatchContentRequest;
 import com.microsoft.graph.requests.extensions.OnenotePageOnenotePatchContentRequest;
 import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Onenote Page Onenote Patch Content Request Builder.
  */
-public class OnenotePageOnenotePatchContentRequestBuilder extends BaseActionRequestBuilder implements IOnenotePageOnenotePatchContentRequestBuilder {
+public class OnenotePageOnenotePatchContentRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this OnenotePageOnenotePatchContent
@@ -32,22 +31,22 @@ public class OnenotePageOnenotePatchContentRequestBuilder extends BaseActionRequ
     }
 
     /**
-     * Creates the IOnenotePageOnenotePatchContentRequest
+     * Creates the OnenotePageOnenotePatchContentRequest
      *
      * @param requestOptions the options for the request
-     * @return the IOnenotePageOnenotePatchContentRequest instance
+     * @return the OnenotePageOnenotePatchContentRequest instance
      */
-    public IOnenotePageOnenotePatchContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OnenotePageOnenotePatchContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IOnenotePageOnenotePatchContentRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the OnenotePageOnenotePatchContentRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IOnenotePageOnenotePatchContentRequest instance
+     * @return the OnenotePageOnenotePatchContentRequest instance
      */
-    public IOnenotePageOnenotePatchContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenotePageOnenotePatchContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         OnenotePageOnenotePatchContentRequest request = new OnenotePageOnenotePatchContentRequest(
                 getRequestUrl(),
                 getClient(),

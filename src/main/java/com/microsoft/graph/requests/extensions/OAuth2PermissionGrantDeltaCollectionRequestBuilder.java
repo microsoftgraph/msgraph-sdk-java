@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantDeltaCollectionRequest;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the OAuth2Permission Grant Delta Collection Request Builder.
  */
-public class OAuth2PermissionGrantDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder implements IOAuth2PermissionGrantDeltaCollectionRequestBuilder {
+public class OAuth2PermissionGrantDeltaCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of OAuth2PermissionGrant
@@ -42,7 +41,7 @@ public class OAuth2PermissionGrantDeltaCollectionRequestBuilder extends BaseFunc
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOAuth2PermissionGrantDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public OAuth2PermissionGrantDeltaCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,7 +51,7 @@ public class OAuth2PermissionGrantDeltaCollectionRequestBuilder extends BaseFunc
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IOAuth2PermissionGrantDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OAuth2PermissionGrantDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         OAuth2PermissionGrantDeltaCollectionRequest request = new OAuth2PermissionGrantDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

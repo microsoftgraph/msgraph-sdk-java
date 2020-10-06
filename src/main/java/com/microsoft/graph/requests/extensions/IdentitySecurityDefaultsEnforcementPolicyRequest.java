@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Identity Security Defaults Enforcement Policy Request.
  */
-public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseRequest implements IIdentitySecurityDefaultsEnforcementPolicyRequest {
+public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseRequest {
 	
     /**
      * The request for the IdentitySecurityDefaultsEnforcementPolicy
@@ -138,7 +138,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * @param value the select clause
      * @return the updated request
      */
-     public IIdentitySecurityDefaultsEnforcementPolicyRequest select(final String value) {
+     public IdentitySecurityDefaultsEnforcementPolicyRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (IdentitySecurityDefaultsEnforcementPolicyRequest)this;
      }
@@ -149,7 +149,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequest extends BaseReques
      * @param value the expand clause
      * @return the updated request
      */
-     public IIdentitySecurityDefaultsEnforcementPolicyRequest expand(final String value) {
+     public IdentitySecurityDefaultsEnforcementPolicyRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (IdentitySecurityDefaultsEnforcementPolicyRequest)this;
      }

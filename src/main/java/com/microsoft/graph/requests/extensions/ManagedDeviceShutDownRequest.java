@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceShutDownRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceShutDownRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Shut Down Request.
  */
-public class ManagedDeviceShutDownRequest extends BaseRequest implements IManagedDeviceShutDownRequest {
+public class ManagedDeviceShutDownRequest extends BaseRequest {
 
     /**
      * The request for this ManagedDeviceShutDown

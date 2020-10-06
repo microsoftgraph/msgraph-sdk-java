@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsQuotientRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsQuotientRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Quotient Request Builder.
  */
-public class WorkbookFunctionsQuotientRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsQuotientRequestBuilder {
+public class WorkbookFunctionsQuotientRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsQuotient
@@ -34,22 +33,22 @@ public class WorkbookFunctionsQuotientRequestBuilder extends BaseActionRequestBu
     }
 
     /**
-     * Creates the IWorkbookFunctionsQuotientRequest
+     * Creates the WorkbookFunctionsQuotientRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsQuotientRequest instance
+     * @return the WorkbookFunctionsQuotientRequest instance
      */
-    public IWorkbookFunctionsQuotientRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsQuotientRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsQuotientRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsQuotientRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsQuotientRequest instance
+     * @return the WorkbookFunctionsQuotientRequest instance
      */
-    public IWorkbookFunctionsQuotientRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsQuotientRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsQuotientRequest request = new WorkbookFunctionsQuotientRequest(
                 getRequestUrl(),
                 getClient(),

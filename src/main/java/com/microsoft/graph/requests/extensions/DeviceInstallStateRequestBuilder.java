@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Install State Request Builder.
  */
-public class DeviceInstallStateRequestBuilder extends BaseRequestBuilder implements IDeviceInstallStateRequestBuilder {
+public class DeviceInstallStateRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DeviceInstallState
@@ -35,9 +35,9 @@ public class DeviceInstallStateRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceInstallStateRequest instance
+     * @return the DeviceInstallStateRequest instance
      */
-    public IDeviceInstallStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceInstallStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DeviceInstallStateRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceInstallStateRequest instance
+     * @return the DeviceInstallStateRequest instance
      */
-    public IDeviceInstallStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceInstallStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceInstallStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

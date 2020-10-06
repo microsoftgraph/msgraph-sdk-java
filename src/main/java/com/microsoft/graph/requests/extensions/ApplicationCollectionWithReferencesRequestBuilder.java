@@ -22,7 +22,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Application Collection With References Request Builder.
  */
-public class ApplicationCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements IApplicationCollectionWithReferencesRequestBuilder {
+public class ApplicationCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -41,7 +41,7 @@ public class ApplicationCollectionWithReferencesRequestBuilder extends BaseReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IApplicationCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ApplicationCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -51,15 +51,15 @@ public class ApplicationCollectionWithReferencesRequestBuilder extends BaseReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IApplicationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ApplicationCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IApplicationWithReferenceRequestBuilder byId(final String id) {
+    public ApplicationWithReferenceRequestBuilder byId(final String id) {
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IApplicationCollectionReferenceRequestBuilder references(){
+    public ApplicationCollectionReferenceRequestBuilder references(){
         return new ApplicationCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

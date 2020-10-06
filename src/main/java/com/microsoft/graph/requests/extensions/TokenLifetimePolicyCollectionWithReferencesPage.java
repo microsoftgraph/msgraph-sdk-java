@@ -12,8 +12,8 @@ import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Token Lifetime Policy Collection With References Page.
  */
-public class TokenLifetimePolicyCollectionWithReferencesPage extends BaseCollectionPage<TokenLifetimePolicy, ITokenLifetimePolicyCollectionWithReferencesRequestBuilder> implements ITokenLifetimePolicyCollectionWithReferencesPage {
+public class TokenLifetimePolicyCollectionWithReferencesPage extends BaseCollectionPage<TokenLifetimePolicy, TokenLifetimePolicyCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for TokenLifetimePolicy
@@ -34,7 +34,7 @@ public class TokenLifetimePolicyCollectionWithReferencesPage extends BaseCollect
      * @param response the serialized TokenLifetimePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TokenLifetimePolicyCollectionWithReferencesPage(final TokenLifetimePolicyCollectionResponse response, final ITokenLifetimePolicyCollectionWithReferencesRequestBuilder builder) {
+    public TokenLifetimePolicyCollectionWithReferencesPage(final TokenLifetimePolicyCollectionResponse response, final TokenLifetimePolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

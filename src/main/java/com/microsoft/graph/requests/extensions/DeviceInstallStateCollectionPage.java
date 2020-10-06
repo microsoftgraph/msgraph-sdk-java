@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.DeviceInstallState;
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRespo
 /**
  * The class for the Device Install State Collection Page.
  */
-public class DeviceInstallStateCollectionPage extends BaseCollectionPage<DeviceInstallState, IDeviceInstallStateCollectionRequestBuilder> implements IDeviceInstallStateCollectionPage {
+public class DeviceInstallStateCollectionPage extends BaseCollectionPage<DeviceInstallState, DeviceInstallStateCollectionRequestBuilder> {
 
     /**
      * A collection page for DeviceInstallState
@@ -22,7 +22,7 @@ public class DeviceInstallStateCollectionPage extends BaseCollectionPage<DeviceI
      * @param response the serialized DeviceInstallStateCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceInstallStateCollectionPage(final DeviceInstallStateCollectionResponse response, final IDeviceInstallStateCollectionRequestBuilder builder) {
+    public DeviceInstallStateCollectionPage(final DeviceInstallStateCollectionResponse response, final DeviceInstallStateCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

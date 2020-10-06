@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.IosManagedAppProtection;
-import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionPage;
 import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollection
 /**
  * The class for the Ios Managed App Protection Collection Page.
  */
-public class IosManagedAppProtectionCollectionPage extends BaseCollectionPage<IosManagedAppProtection, IIosManagedAppProtectionCollectionRequestBuilder> implements IIosManagedAppProtectionCollectionPage {
+public class IosManagedAppProtectionCollectionPage extends BaseCollectionPage<IosManagedAppProtection, IosManagedAppProtectionCollectionRequestBuilder> {
 
     /**
      * A collection page for IosManagedAppProtection
@@ -22,7 +22,7 @@ public class IosManagedAppProtectionCollectionPage extends BaseCollectionPage<Io
      * @param response the serialized IosManagedAppProtectionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public IosManagedAppProtectionCollectionPage(final IosManagedAppProtectionCollectionResponse response, final IIosManagedAppProtectionCollectionRequestBuilder builder) {
+    public IosManagedAppProtectionCollectionPage(final IosManagedAppProtectionCollectionResponse response, final IosManagedAppProtectionCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

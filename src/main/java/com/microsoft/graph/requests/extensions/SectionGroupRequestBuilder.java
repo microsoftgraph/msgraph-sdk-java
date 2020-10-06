@@ -8,15 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SectionGroup;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Section Group Request Builder.
  */
-public class SectionGroupRequestBuilder extends BaseRequestBuilder implements ISectionGroupRequestBuilder {
+public class SectionGroupRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the SectionGroup
@@ -45,9 +40,9 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder implements IS
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISectionGroupRequest instance
+     * @return the SectionGroupRequest instance
      */
-    public ISectionGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SectionGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,9 +50,9 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder implements IS
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISectionGroupRequest instance
+     * @return the SectionGroupRequest instance
      */
-    public ISectionGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SectionGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SectionGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -66,32 +61,32 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder implements IS
     /**
      * Gets the request builder for Notebook
      *
-     * @return the INotebookRequestBuilder instance
+     * @return the NotebookRequestBuilder instance
      */
-    public INotebookRequestBuilder parentNotebook() {
+    public NotebookRequestBuilder parentNotebook() {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
     /**
      * Gets the request builder for SectionGroup
      *
-     * @return the ISectionGroupRequestBuilder instance
+     * @return the SectionGroupRequestBuilder instance
      */
-    public ISectionGroupRequestBuilder parentSectionGroup() {
+    public SectionGroupRequestBuilder parentSectionGroup() {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);
     }
-    public ISectionGroupCollectionRequestBuilder sectionGroups() {
+    public SectionGroupCollectionRequestBuilder sectionGroups() {
         return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
 
-    public ISectionGroupRequestBuilder sectionGroups(final String id) {
+    public SectionGroupRequestBuilder sectionGroups(final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
-    public IOnenoteSectionCollectionRequestBuilder sections() {
+    public OnenoteSectionCollectionRequestBuilder sections() {
         return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
     }
 
-    public IOnenoteSectionRequestBuilder sections(final String id) {
+    public OnenoteSectionRequestBuilder sections(final String id) {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }
 }

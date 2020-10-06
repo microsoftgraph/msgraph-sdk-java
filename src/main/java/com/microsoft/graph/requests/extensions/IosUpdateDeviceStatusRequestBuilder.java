@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Update Device Status Request Builder.
  */
-public class IosUpdateDeviceStatusRequestBuilder extends BaseRequestBuilder implements IIosUpdateDeviceStatusRequestBuilder {
+public class IosUpdateDeviceStatusRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the IosUpdateDeviceStatus
@@ -35,9 +35,9 @@ public class IosUpdateDeviceStatusRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IIosUpdateDeviceStatusRequest instance
+     * @return the IosUpdateDeviceStatusRequest instance
      */
-    public IIosUpdateDeviceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public IosUpdateDeviceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class IosUpdateDeviceStatusRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IIosUpdateDeviceStatusRequest instance
+     * @return the IosUpdateDeviceStatusRequest instance
      */
-    public IIosUpdateDeviceStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosUpdateDeviceStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSqrtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsSqrtRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Sqrt Request Builder.
  */
-public class WorkbookFunctionsSqrtRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsSqrtRequestBuilder {
+public class WorkbookFunctionsSqrtRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsSqrt
@@ -32,22 +31,22 @@ public class WorkbookFunctionsSqrtRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsSqrtRequest
+     * Creates the WorkbookFunctionsSqrtRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSqrtRequest instance
+     * @return the WorkbookFunctionsSqrtRequest instance
      */
-    public IWorkbookFunctionsSqrtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsSqrtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsSqrtRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsSqrtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsSqrtRequest instance
+     * @return the WorkbookFunctionsSqrtRequest instance
      */
-    public IWorkbookFunctionsSqrtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsSqrtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsSqrtRequest request = new WorkbookFunctionsSqrtRequest(
                 getRequestUrl(),
                 getClient(),

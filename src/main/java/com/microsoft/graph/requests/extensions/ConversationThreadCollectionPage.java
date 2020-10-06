@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ConversationThread;
-import com.microsoft.graph.requests.extensions.IConversationThreadCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionPage;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ConversationThreadCollectionRespo
 /**
  * The class for the Conversation Thread Collection Page.
  */
-public class ConversationThreadCollectionPage extends BaseCollectionPage<ConversationThread, IConversationThreadCollectionRequestBuilder> implements IConversationThreadCollectionPage {
+public class ConversationThreadCollectionPage extends BaseCollectionPage<ConversationThread, ConversationThreadCollectionRequestBuilder> {
 
     /**
      * A collection page for ConversationThread
@@ -22,7 +22,7 @@ public class ConversationThreadCollectionPage extends BaseCollectionPage<Convers
      * @param response the serialized ConversationThreadCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ConversationThreadCollectionPage(final ConversationThreadCollectionResponse response, final IConversationThreadCollectionRequestBuilder builder) {
+    public ConversationThreadCollectionPage(final ConversationThreadCollectionResponse response, final ConversationThreadCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

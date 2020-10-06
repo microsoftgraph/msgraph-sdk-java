@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookPivotTable;
-import com.microsoft.graph.requests.extensions.IWorkbookPivotTableCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRespo
 /**
  * The class for the Workbook Pivot Table Collection Page.
  */
-public class WorkbookPivotTableCollectionPage extends BaseCollectionPage<WorkbookPivotTable, IWorkbookPivotTableCollectionRequestBuilder> implements IWorkbookPivotTableCollectionPage {
+public class WorkbookPivotTableCollectionPage extends BaseCollectionPage<WorkbookPivotTable, WorkbookPivotTableCollectionRequestBuilder> {
 
     /**
      * A collection page for WorkbookPivotTable
@@ -22,7 +22,7 @@ public class WorkbookPivotTableCollectionPage extends BaseCollectionPage<Workboo
      * @param response the serialized WorkbookPivotTableCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WorkbookPivotTableCollectionPage(final WorkbookPivotTableCollectionResponse response, final IWorkbookPivotTableCollectionRequestBuilder builder) {
+    public WorkbookPivotTableCollectionPage(final WorkbookPivotTableCollectionResponse response, final WorkbookPivotTableCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

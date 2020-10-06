@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Scoped Role Membership Request Builder.
  */
-public class ScopedRoleMembershipRequestBuilder extends BaseRequestBuilder implements IScopedRoleMembershipRequestBuilder {
+public class ScopedRoleMembershipRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ScopedRoleMembership
@@ -35,9 +35,9 @@ public class ScopedRoleMembershipRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IScopedRoleMembershipRequest instance
+     * @return the ScopedRoleMembershipRequest instance
      */
-    public IScopedRoleMembershipRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ScopedRoleMembershipRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ScopedRoleMembershipRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IScopedRoleMembershipRequest instance
+     * @return the ScopedRoleMembershipRequest instance
      */
-    public IScopedRoleMembershipRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ScopedRoleMembershipRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

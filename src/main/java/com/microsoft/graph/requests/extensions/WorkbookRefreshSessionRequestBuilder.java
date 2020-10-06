@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRefreshSessionRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRefreshSessionRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Refresh Session Request Builder.
  */
-public class WorkbookRefreshSessionRequestBuilder extends BaseActionRequestBuilder implements IWorkbookRefreshSessionRequestBuilder {
+public class WorkbookRefreshSessionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRefreshSession
@@ -30,22 +29,22 @@ public class WorkbookRefreshSessionRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookRefreshSessionRequest
+     * Creates the WorkbookRefreshSessionRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRefreshSessionRequest instance
+     * @return the WorkbookRefreshSessionRequest instance
      */
-    public IWorkbookRefreshSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRefreshSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRefreshSessionRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRefreshSessionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRefreshSessionRequest instance
+     * @return the WorkbookRefreshSessionRequest instance
      */
-    public IWorkbookRefreshSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRefreshSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRefreshSessionRequest request = new WorkbookRefreshSessionRequest(
                 getRequestUrl(),
                 getClient(),

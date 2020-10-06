@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPercentRank_IncRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsPercentRank_IncRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Percent Rank_Inc Request Builder.
  */
-public class WorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsPercentRank_IncRequestBuilder {
+public class WorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsPercentRank_Inc
@@ -36,22 +35,22 @@ public class WorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActionRe
     }
 
     /**
-     * Creates the IWorkbookFunctionsPercentRank_IncRequest
+     * Creates the WorkbookFunctionsPercentRank_IncRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPercentRank_IncRequest instance
+     * @return the WorkbookFunctionsPercentRank_IncRequest instance
      */
-    public IWorkbookFunctionsPercentRank_IncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsPercentRank_IncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsPercentRank_IncRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsPercentRank_IncRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPercentRank_IncRequest instance
+     * @return the WorkbookFunctionsPercentRank_IncRequest instance
      */
-    public IWorkbookFunctionsPercentRank_IncRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsPercentRank_IncRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsPercentRank_IncRequest request = new WorkbookFunctionsPercentRank_IncRequest(
                 getRequestUrl(),
                 getClient(),

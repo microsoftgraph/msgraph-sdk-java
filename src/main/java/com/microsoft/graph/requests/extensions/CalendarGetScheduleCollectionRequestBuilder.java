@@ -12,8 +12,7 @@ import com.microsoft.graph.models.extensions.ScheduleInformation;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ICalendarGetScheduleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarGetScheduleCollectionRequest;
+import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -24,7 +23,7 @@ import com.microsoft.graph.core.BaseActionRequestBuilder;
 /**
  * The class for the Calendar Get Schedule Collection Request Builder.
  */
-public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionRequestBuilder implements ICalendarGetScheduleCollectionRequestBuilder {
+public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this collection of Calendar
@@ -59,7 +58,7 @@ public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICalendarGetScheduleCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public CalendarGetScheduleCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -69,7 +68,7 @@ public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ICalendarGetScheduleCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarGetScheduleCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CalendarGetScheduleCollectionRequest request = new CalendarGetScheduleCollectionRequest(
                 getRequestUrl(),
                 getClient(),

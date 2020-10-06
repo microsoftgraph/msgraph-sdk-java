@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Drive Item Version Content Stream Request Builder.
  */
-public class DriveItemVersionContentStreamRequestBuilder extends BaseRequestBuilder implements IDriveItemVersionContentStreamRequestBuilder {
+public class DriveItemVersionContentStreamRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DriveItemVersionContentStream
@@ -35,9 +35,9 @@ public class DriveItemVersionContentStreamRequestBuilder extends BaseRequestBuil
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDriveItemVersionContentStreamRequest instance
+     * @return the DriveItemVersionContentStreamRequest instance
      */
-    public IDriveItemVersionContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemVersionContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class DriveItemVersionContentStreamRequestBuilder extends BaseRequestBuil
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the IDriveItemVersionContentStreamRequest instance
+     * @return the DriveItemVersionContentStreamRequest instance
      */
-    public IDriveItemVersionContentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemVersionContentStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DriveItemVersionContentStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

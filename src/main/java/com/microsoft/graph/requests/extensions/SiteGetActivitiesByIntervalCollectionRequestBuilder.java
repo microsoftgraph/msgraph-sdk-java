@@ -11,8 +11,7 @@ import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISiteGetActivitiesByIntervalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteGetActivitiesByIntervalCollectionRequest;
+import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionRequest;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -23,7 +22,7 @@ import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 /**
  * The class for the Site Get Activities By Interval Collection Request Builder.
  */
-public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFunctionRequestBuilder implements ISiteGetActivitiesByIntervalCollectionRequestBuilder {
+public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this collection of Site
@@ -64,7 +63,7 @@ public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFun
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISiteGetActivitiesByIntervalCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public SiteGetActivitiesByIntervalCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -74,7 +73,7 @@ public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFun
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public ISiteGetActivitiesByIntervalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteGetActivitiesByIntervalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SiteGetActivitiesByIntervalCollectionRequest request = new SiteGetActivitiesByIntervalCollectionRequest(
                 getRequestUrl(),
                 getClient(),

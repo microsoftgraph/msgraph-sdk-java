@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImSubRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsImSubRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Im Sub Request Builder.
  */
-public class WorkbookFunctionsImSubRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsImSubRequestBuilder {
+public class WorkbookFunctionsImSubRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsImSub
@@ -34,22 +33,22 @@ public class WorkbookFunctionsImSubRequestBuilder extends BaseActionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookFunctionsImSubRequest
+     * Creates the WorkbookFunctionsImSubRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImSubRequest instance
+     * @return the WorkbookFunctionsImSubRequest instance
      */
-    public IWorkbookFunctionsImSubRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsImSubRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsImSubRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsImSubRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsImSubRequest instance
+     * @return the WorkbookFunctionsImSubRequest instance
      */
-    public IWorkbookFunctionsImSubRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsImSubRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsImSubRequest request = new WorkbookFunctionsImSubRequest(
                 getRequestUrl(),
                 getClient(),

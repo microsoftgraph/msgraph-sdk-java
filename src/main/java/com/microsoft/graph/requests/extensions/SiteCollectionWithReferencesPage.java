@@ -13,8 +13,8 @@ import com.microsoft.graph.models.extensions.ItemActivityStat;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.ISiteCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.SiteCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.SiteCollectionResponse;
 import com.microsoft.graph.models.extensions.Site;
 import com.google.gson.JsonObject;
@@ -27,7 +27,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Site Collection With References Page.
  */
-public class SiteCollectionWithReferencesPage extends BaseCollectionPage<Site, ISiteCollectionWithReferencesRequestBuilder> implements ISiteCollectionWithReferencesPage {
+public class SiteCollectionWithReferencesPage extends BaseCollectionPage<Site, SiteCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for Site
@@ -35,7 +35,7 @@ public class SiteCollectionWithReferencesPage extends BaseCollectionPage<Site, I
      * @param response the serialized SiteCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public SiteCollectionWithReferencesPage(final SiteCollectionResponse response, final ISiteCollectionWithReferencesRequestBuilder builder) {
+    public SiteCollectionWithReferencesPage(final SiteCollectionResponse response, final SiteCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

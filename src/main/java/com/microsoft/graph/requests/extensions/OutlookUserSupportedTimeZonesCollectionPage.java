@@ -12,7 +12,7 @@ import com.microsoft.graph.models.generated.TimeZoneStandard;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IOutlookUserSupportedTimeZonesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionPage;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionResponse;
 import com.google.gson.JsonObject;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Outlook User Supported Time Zones Collection Page.
  */
-public class OutlookUserSupportedTimeZonesCollectionPage extends BaseCollectionPage<TimeZoneInformation, IOutlookUserSupportedTimeZonesCollectionRequestBuilder> implements IOutlookUserSupportedTimeZonesCollectionPage {
+public class OutlookUserSupportedTimeZonesCollectionPage extends BaseCollectionPage<TimeZoneInformation, OutlookUserSupportedTimeZonesCollectionRequestBuilder> {
 
     /**
      * A collection page for TimeZoneInformation.
@@ -34,7 +34,7 @@ public class OutlookUserSupportedTimeZonesCollectionPage extends BaseCollectionP
      * @param response The serialized OutlookUserSupportedTimeZonesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public OutlookUserSupportedTimeZonesCollectionPage(final OutlookUserSupportedTimeZonesCollectionResponse response, final IOutlookUserSupportedTimeZonesCollectionRequestBuilder builder) {
+    public OutlookUserSupportedTimeZonesCollectionPage(final OutlookUserSupportedTimeZonesCollectionResponse response, final OutlookUserSupportedTimeZonesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

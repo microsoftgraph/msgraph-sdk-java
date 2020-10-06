@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceDeleteUserFromSharedAppleDeviceRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceDeleteUserFromSharedAppleDeviceRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Managed Device Delete User From Shared Apple Device Request Builder.
  */
-public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder extends BaseActionRequestBuilder implements IManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder {
+public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this ManagedDeviceDeleteUserFromSharedAppleDevice
@@ -32,22 +31,22 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder extends 
     }
 
     /**
-     * Creates the IManagedDeviceDeleteUserFromSharedAppleDeviceRequest
+     * Creates the ManagedDeviceDeleteUserFromSharedAppleDeviceRequest
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceDeleteUserFromSharedAppleDeviceRequest instance
+     * @return the ManagedDeviceDeleteUserFromSharedAppleDeviceRequest instance
      */
-    public IManagedDeviceDeleteUserFromSharedAppleDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ManagedDeviceDeleteUserFromSharedAppleDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IManagedDeviceDeleteUserFromSharedAppleDeviceRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ManagedDeviceDeleteUserFromSharedAppleDeviceRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IManagedDeviceDeleteUserFromSharedAppleDeviceRequest instance
+     * @return the ManagedDeviceDeleteUserFromSharedAppleDeviceRequest instance
      */
-    public IManagedDeviceDeleteUserFromSharedAppleDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceDeleteUserFromSharedAppleDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ManagedDeviceDeleteUserFromSharedAppleDeviceRequest request = new ManagedDeviceDeleteUserFromSharedAppleDeviceRequest(
                 getRequestUrl(),
                 getClient(),

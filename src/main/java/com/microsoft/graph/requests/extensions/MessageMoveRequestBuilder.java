@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMessageMoveRequest;
 import com.microsoft.graph.requests.extensions.MessageMoveRequest;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Message Move Request Builder.
  */
-public class MessageMoveRequestBuilder extends BaseActionRequestBuilder implements IMessageMoveRequestBuilder {
+public class MessageMoveRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageMove
@@ -32,22 +31,22 @@ public class MessageMoveRequestBuilder extends BaseActionRequestBuilder implemen
     }
 
     /**
-     * Creates the IMessageMoveRequest
+     * Creates the MessageMoveRequest
      *
      * @param requestOptions the options for the request
-     * @return the IMessageMoveRequest instance
+     * @return the MessageMoveRequest instance
      */
-    public IMessageMoveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MessageMoveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IMessageMoveRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the MessageMoveRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IMessageMoveRequest instance
+     * @return the MessageMoveRequest instance
      */
-    public IMessageMoveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageMoveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MessageMoveRequest request = new MessageMoveRequest(
                 getRequestUrl(),
                 getClient(),

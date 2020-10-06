@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSetDataRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartSetDataRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Set Data Request Builder.
  */
-public class WorkbookChartSetDataRequestBuilder extends BaseActionRequestBuilder implements IWorkbookChartSetDataRequestBuilder {
+public class WorkbookChartSetDataRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartSetData
@@ -34,22 +33,22 @@ public class WorkbookChartSetDataRequestBuilder extends BaseActionRequestBuilder
     }
 
     /**
-     * Creates the IWorkbookChartSetDataRequest
+     * Creates the WorkbookChartSetDataRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartSetDataRequest instance
+     * @return the WorkbookChartSetDataRequest instance
      */
-    public IWorkbookChartSetDataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartSetDataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartSetDataRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartSetDataRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartSetDataRequest instance
+     * @return the WorkbookChartSetDataRequest instance
      */
-    public IWorkbookChartSetDataRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSetDataRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartSetDataRequest request = new WorkbookChartSetDataRequest(
                 getRequestUrl(),
                 getClient(),

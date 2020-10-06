@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IChatGetAllMessagesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatGetAllMessagesCollectionResponse;
 import com.google.gson.JsonObject;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Chat Get All Messages Collection Page.
  */
-public class ChatGetAllMessagesCollectionPage extends BaseCollectionPage<ChatMessage, IChatGetAllMessagesCollectionRequestBuilder> implements IChatGetAllMessagesCollectionPage {
+public class ChatGetAllMessagesCollectionPage extends BaseCollectionPage<ChatMessage, ChatGetAllMessagesCollectionRequestBuilder> {
 
     /**
      * A collection page for ChatMessage.
@@ -33,7 +33,7 @@ public class ChatGetAllMessagesCollectionPage extends BaseCollectionPage<ChatMes
      * @param response The serialized ChatGetAllMessagesCollectionResponse from the service
      * @param builder The request builder for the next collection page
      */
-    public ChatGetAllMessagesCollectionPage(final ChatGetAllMessagesCollectionResponse response, final IChatGetAllMessagesCollectionRequestBuilder builder) {
+    public ChatGetAllMessagesCollectionPage(final ChatGetAllMessagesCollectionResponse response, final ChatGetAllMessagesCollectionRequestBuilder builder) {
        super(response.value, builder, response.additionalDataManager());
     }
 }

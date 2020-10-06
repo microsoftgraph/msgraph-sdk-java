@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMessageSendRequest;
 import com.microsoft.graph.requests.extensions.MessageSendRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Message Send Request Builder.
  */
-public class MessageSendRequestBuilder extends BaseActionRequestBuilder implements IMessageSendRequestBuilder {
+public class MessageSendRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this MessageSend
@@ -30,22 +29,22 @@ public class MessageSendRequestBuilder extends BaseActionRequestBuilder implemen
     }
 
     /**
-     * Creates the IMessageSendRequest
+     * Creates the MessageSendRequest
      *
      * @param requestOptions the options for the request
-     * @return the IMessageSendRequest instance
+     * @return the MessageSendRequest instance
      */
-    public IMessageSendRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public MessageSendRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IMessageSendRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the MessageSendRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IMessageSendRequest instance
+     * @return the MessageSendRequest instance
      */
-    public IMessageSendRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageSendRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         MessageSendRequest request = new MessageSendRequest(
                 getRequestUrl(),
                 getClient(),

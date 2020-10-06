@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TelecomExpenseManagementPartner;
-import com.microsoft.graph.requests.extensions.ITelecomExpenseManagementPartnerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCo
 /**
  * The class for the Telecom Expense Management Partner Collection Page.
  */
-public class TelecomExpenseManagementPartnerCollectionPage extends BaseCollectionPage<TelecomExpenseManagementPartner, ITelecomExpenseManagementPartnerCollectionRequestBuilder> implements ITelecomExpenseManagementPartnerCollectionPage {
+public class TelecomExpenseManagementPartnerCollectionPage extends BaseCollectionPage<TelecomExpenseManagementPartner, TelecomExpenseManagementPartnerCollectionRequestBuilder> {
 
     /**
      * A collection page for TelecomExpenseManagementPartner
@@ -22,7 +22,7 @@ public class TelecomExpenseManagementPartnerCollectionPage extends BaseCollectio
      * @param response the serialized TelecomExpenseManagementPartnerCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TelecomExpenseManagementPartnerCollectionPage(final TelecomExpenseManagementPartnerCollectionResponse response, final ITelecomExpenseManagementPartnerCollectionRequestBuilder builder) {
+    public TelecomExpenseManagementPartnerCollectionPage(final TelecomExpenseManagementPartnerCollectionResponse response, final TelecomExpenseManagementPartnerCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IManagedDeviceLocateDeviceRequest;
 import com.microsoft.graph.requests.extensions.ManagedDeviceLocateDeviceRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Locate Device Request.
  */
-public class ManagedDeviceLocateDeviceRequest extends BaseRequest implements IManagedDeviceLocateDeviceRequest {
+public class ManagedDeviceLocateDeviceRequest extends BaseRequest {
 
     /**
      * The request for this ManagedDeviceLocateDevice

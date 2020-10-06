@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Drive Item Version Request Builder.
  */
-public class DriveItemVersionRequestBuilder extends BaseRequestBuilder implements IDriveItemVersionRequestBuilder {
+public class DriveItemVersionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the DriveItemVersion
@@ -35,9 +35,9 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDriveItemVersionRequest instance
+     * @return the DriveItemVersionRequest instance
      */
-    public IDriveItemVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DriveItemVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,19 +45,19 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDriveItemVersionRequest instance
+     * @return the DriveItemVersionRequest instance
      */
-    public IDriveItemVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DriveItemVersionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IDriveItemVersionContentStreamRequestBuilder content() {
+    public DriveItemVersionContentStreamRequestBuilder content() {
         return new DriveItemVersionContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
-    public IDriveItemVersionRestoreVersionRequestBuilder restoreVersion() {
+    public DriveItemVersionRestoreVersionRequestBuilder restoreVersion() {
         return new DriveItemVersionRestoreVersionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreVersion"), getClient(), null);
     }
 }

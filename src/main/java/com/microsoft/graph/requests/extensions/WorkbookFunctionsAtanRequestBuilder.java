@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAtanRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsAtanRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Atan Request Builder.
  */
-public class WorkbookFunctionsAtanRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsAtanRequestBuilder {
+public class WorkbookFunctionsAtanRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsAtan
@@ -32,22 +31,22 @@ public class WorkbookFunctionsAtanRequestBuilder extends BaseActionRequestBuilde
     }
 
     /**
-     * Creates the IWorkbookFunctionsAtanRequest
+     * Creates the WorkbookFunctionsAtanRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAtanRequest instance
+     * @return the WorkbookFunctionsAtanRequest instance
      */
-    public IWorkbookFunctionsAtanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsAtanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsAtanRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsAtanRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsAtanRequest instance
+     * @return the WorkbookFunctionsAtanRequest instance
      */
-    public IWorkbookFunctionsAtanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsAtanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsAtanRequest request = new WorkbookFunctionsAtanRequest(
                 getRequestUrl(),
                 getClient(),

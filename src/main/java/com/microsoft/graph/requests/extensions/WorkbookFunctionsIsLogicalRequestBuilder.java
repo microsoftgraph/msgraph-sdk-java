@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsLogicalRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsLogicalRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Is Logical Request Builder.
  */
-public class WorkbookFunctionsIsLogicalRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsIsLogicalRequestBuilder {
+public class WorkbookFunctionsIsLogicalRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsIsLogical
@@ -32,22 +31,22 @@ public class WorkbookFunctionsIsLogicalRequestBuilder extends BaseActionRequestB
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsLogicalRequest
+     * Creates the WorkbookFunctionsIsLogicalRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsLogicalRequest instance
+     * @return the WorkbookFunctionsIsLogicalRequest instance
      */
-    public IWorkbookFunctionsIsLogicalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsIsLogicalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsIsLogicalRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsIsLogicalRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsIsLogicalRequest instance
+     * @return the WorkbookFunctionsIsLogicalRequest instance
      */
-    public IWorkbookFunctionsIsLogicalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsIsLogicalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsIsLogicalRequest request = new WorkbookFunctionsIsLogicalRequest(
                 getRequestUrl(),
                 getClient(),

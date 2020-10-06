@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActiveUserCountsRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActiveUserCountsRequest;
 import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Report Root Get Office365Active User Counts Request Builder.
  */
-public class ReportRootGetOffice365ActiveUserCountsRequestBuilder extends BaseFunctionRequestBuilder implements IReportRootGetOffice365ActiveUserCountsRequestBuilder {
+public class ReportRootGetOffice365ActiveUserCountsRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this ReportRootGetOffice365ActiveUserCounts
@@ -32,22 +31,22 @@ public class ReportRootGetOffice365ActiveUserCountsRequestBuilder extends BaseFu
     }
 
     /**
-     * Creates the IReportRootGetOffice365ActiveUserCountsRequest
+     * Creates the ReportRootGetOffice365ActiveUserCountsRequest
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOffice365ActiveUserCountsRequest instance
+     * @return the ReportRootGetOffice365ActiveUserCountsRequest instance
      */
-    public IReportRootGetOffice365ActiveUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReportRootGetOffice365ActiveUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IReportRootGetOffice365ActiveUserCountsRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the ReportRootGetOffice365ActiveUserCountsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IReportRootGetOffice365ActiveUserCountsRequest instance
+     * @return the ReportRootGetOffice365ActiveUserCountsRequest instance
      */
-    public IReportRootGetOffice365ActiveUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootGetOffice365ActiveUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ReportRootGetOffice365ActiveUserCountsRequest request = new ReportRootGetOffice365ActiveUserCountsRequest(
                 getRequestUrl(),
                 getClient(),

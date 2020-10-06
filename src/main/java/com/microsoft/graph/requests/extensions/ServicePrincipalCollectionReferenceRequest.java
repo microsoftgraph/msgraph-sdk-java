@@ -24,7 +24,7 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 /**
  * The class for the Service Principal Collection Reference Request.
  */
-public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRequest<ServicePrincipalCollectionResponse, IServicePrincipalCollectionPage> implements IServicePrincipalCollectionReferenceRequest {
+public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRequest<ServicePrincipalCollectionResponse, ServicePrincipalCollectionPage> {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -34,7 +34,7 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param requestOptions the options for this request
      */
     public ServicePrincipalCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, IServicePrincipalCollectionPage.class);
+        super(requestUrl, client, requestOptions, ServicePrincipalCollectionResponse.class, ServicePrincipalCollectionPage.class);
     }
 
     public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
@@ -58,7 +58,7 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param value the expand clause
      * @return the updated request
      */
-    public IServicePrincipalCollectionReferenceRequest expand(final String value) {
+    public ServicePrincipalCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ServicePrincipalCollectionReferenceRequest)this;
     }
@@ -69,7 +69,7 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param value the filter clause
      * @return the updated request
      */
-    public IServicePrincipalCollectionReferenceRequest filter(final String value) {
+    public ServicePrincipalCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ServicePrincipalCollectionReferenceRequest)this;
     }
@@ -80,7 +80,7 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param value the sort clause
      * @return the updated request
      */
-    public IServicePrincipalCollectionReferenceRequest orderBy(final String value) {
+    public ServicePrincipalCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ServicePrincipalCollectionReferenceRequest)this;
     }
@@ -91,7 +91,7 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param value the select clause
      * @return the updated request
      */
-    public IServicePrincipalCollectionReferenceRequest select(final String value) {
+    public ServicePrincipalCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ServicePrincipalCollectionReferenceRequest)this;
     }
@@ -102,7 +102,7 @@ public class ServicePrincipalCollectionReferenceRequest extends BaseCollectionRe
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IServicePrincipalCollectionReferenceRequest top(final int value) {
+    public ServicePrincipalCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (ServicePrincipalCollectionReferenceRequest)this;
     }

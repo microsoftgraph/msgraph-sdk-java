@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.Report;
-import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetMailboxUsageDetailRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Get Mailbox Usage Detail Request.
  */
-public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest implements IReportRootGetMailboxUsageDetailRequest {
+public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest {
 
     /**
      * The request for this ReportRootGetMailboxUsageDetail
@@ -97,7 +96,7 @@ public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-    public IReportRootGetMailboxUsageDetailRequest select(final String value) {
+    public ReportRootGetMailboxUsageDetailRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ReportRootGetMailboxUsageDetailRequest)this;
     }
@@ -108,7 +107,7 @@ public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-    public IReportRootGetMailboxUsageDetailRequest expand(final String value) {
+    public ReportRootGetMailboxUsageDetailRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ReportRootGetMailboxUsageDetailRequest)this;
     }
@@ -119,7 +118,7 @@ public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest implemen
      * @param value the filter clause
      * @return the updated request
      */
-    public IReportRootGetMailboxUsageDetailRequest filter(final String value) {
+    public ReportRootGetMailboxUsageDetailRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (ReportRootGetMailboxUsageDetailRequest)this;
     }
@@ -130,7 +129,7 @@ public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest implemen
      * @param value the order by clause
      * @return the updated request
      */
-    public IReportRootGetMailboxUsageDetailRequest orderBy(final String value) {
+    public ReportRootGetMailboxUsageDetailRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (ReportRootGetMailboxUsageDetailRequest)this;
     }

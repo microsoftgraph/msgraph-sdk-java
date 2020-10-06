@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Format Protection Request.
  */
-public class WorkbookFormatProtectionRequest extends BaseRequest implements IWorkbookFormatProtectionRequest {
+public class WorkbookFormatProtectionRequest extends BaseRequest {
 	
     /**
      * The request for the WorkbookFormatProtection
@@ -138,7 +138,7 @@ public class WorkbookFormatProtectionRequest extends BaseRequest implements IWor
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookFormatProtectionRequest select(final String value) {
+     public WorkbookFormatProtectionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (WorkbookFormatProtectionRequest)this;
      }
@@ -149,7 +149,7 @@ public class WorkbookFormatProtectionRequest extends BaseRequest implements IWor
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookFormatProtectionRequest expand(final String value) {
+     public WorkbookFormatProtectionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (WorkbookFormatProtectionRequest)this;
      }

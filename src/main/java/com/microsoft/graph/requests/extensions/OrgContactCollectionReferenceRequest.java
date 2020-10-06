@@ -23,7 +23,7 @@ import com.microsoft.graph.models.extensions.OrgContact;
 /**
  * The class for the Org Contact Collection Reference Request.
  */
-public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<OrgContactCollectionResponse, IOrgContactCollectionPage> implements IOrgContactCollectionReferenceRequest {
+public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<OrgContactCollectionResponse, OrgContactCollectionPage> {
 
     /**
      * The request builder for this collection of OrgContact
@@ -33,7 +33,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param requestOptions the options for this request
      */
     public OrgContactCollectionReferenceRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, IOrgContactCollectionPage.class);
+        super(requestUrl, client, requestOptions, OrgContactCollectionResponse.class, OrgContactCollectionPage.class);
     }
 
     public void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {
@@ -57,7 +57,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param value the expand clause
      * @return the updated request
      */
-    public IOrgContactCollectionReferenceRequest expand(final String value) {
+    public OrgContactCollectionReferenceRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OrgContactCollectionReferenceRequest)this;
     }
@@ -68,7 +68,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param value the filter clause
      * @return the updated request
      */
-    public IOrgContactCollectionReferenceRequest filter(final String value) {
+    public OrgContactCollectionReferenceRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (OrgContactCollectionReferenceRequest)this;
     }
@@ -79,7 +79,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param value the sort clause
      * @return the updated request
      */
-    public IOrgContactCollectionReferenceRequest orderBy(final String value) {
+    public OrgContactCollectionReferenceRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (OrgContactCollectionReferenceRequest)this;
     }
@@ -90,7 +90,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param value the select clause
      * @return the updated request
      */
-    public IOrgContactCollectionReferenceRequest select(final String value) {
+    public OrgContactCollectionReferenceRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OrgContactCollectionReferenceRequest)this;
     }
@@ -101,7 +101,7 @@ public class OrgContactCollectionReferenceRequest extends BaseCollectionRequest<
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IOrgContactCollectionReferenceRequest top(final int value) {
+    public OrgContactCollectionReferenceRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (OrgContactCollectionReferenceRequest)this;
     }

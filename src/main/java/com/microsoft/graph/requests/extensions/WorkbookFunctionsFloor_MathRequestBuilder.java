@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFloor_MathRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFloor_MathRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Floor_Math Request Builder.
  */
-public class WorkbookFunctionsFloor_MathRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsFloor_MathRequestBuilder {
+public class WorkbookFunctionsFloor_MathRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsFloor_Math
@@ -36,22 +35,22 @@ public class WorkbookFunctionsFloor_MathRequestBuilder extends BaseActionRequest
     }
 
     /**
-     * Creates the IWorkbookFunctionsFloor_MathRequest
+     * Creates the WorkbookFunctionsFloor_MathRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFloor_MathRequest instance
+     * @return the WorkbookFunctionsFloor_MathRequest instance
      */
-    public IWorkbookFunctionsFloor_MathRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsFloor_MathRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsFloor_MathRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsFloor_MathRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsFloor_MathRequest instance
+     * @return the WorkbookFunctionsFloor_MathRequest instance
      */
-    public IWorkbookFunctionsFloor_MathRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsFloor_MathRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsFloor_MathRequest request = new WorkbookFunctionsFloor_MathRequest(
                 getRequestUrl(),
                 getClient(),

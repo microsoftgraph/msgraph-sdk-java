@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignmen
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentCollectionRequest;
+import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Device And App Management Role Assignment Collection Request Builder.
  */
-public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder implements IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder {
+public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of DeviceManagement
@@ -42,7 +42,7 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceAndAppManagementRoleAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DeviceAndAppManagementRoleAssignmentCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDeviceAndAppManagementRoleAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAndAppManagementRoleAssignmentCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceAndAppManagementRoleAssignmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDeviceAndAppManagementRoleAssignmentRequestBuilder byId(final String id) {
+    public DeviceAndAppManagementRoleAssignmentRequestBuilder byId(final String id) {
         return new DeviceAndAppManagementRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

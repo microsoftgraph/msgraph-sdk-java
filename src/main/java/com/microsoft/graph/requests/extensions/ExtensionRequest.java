@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Extension Request.
  */
-public class ExtensionRequest extends BaseRequest implements IExtensionRequest {
+public class ExtensionRequest extends BaseRequest {
 	
     /**
      * The request for the Extension
@@ -153,7 +153,7 @@ public class ExtensionRequest extends BaseRequest implements IExtensionRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IExtensionRequest select(final String value) {
+     public ExtensionRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (ExtensionRequest)this;
      }
@@ -164,7 +164,7 @@ public class ExtensionRequest extends BaseRequest implements IExtensionRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IExtensionRequest expand(final String value) {
+     public ExtensionRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (ExtensionRequest)this;
      }

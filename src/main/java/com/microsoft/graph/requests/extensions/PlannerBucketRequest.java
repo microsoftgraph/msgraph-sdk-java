@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerBucket;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Planner Bucket Request.
  */
-public class PlannerBucketRequest extends BaseRequest implements IPlannerBucketRequest {
+public class PlannerBucketRequest extends BaseRequest {
 	
     /**
      * The request for the PlannerBucket
@@ -142,7 +140,7 @@ public class PlannerBucketRequest extends BaseRequest implements IPlannerBucketR
      * @param value the select clause
      * @return the updated request
      */
-     public IPlannerBucketRequest select(final String value) {
+     public PlannerBucketRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (PlannerBucketRequest)this;
      }
@@ -153,7 +151,7 @@ public class PlannerBucketRequest extends BaseRequest implements IPlannerBucketR
      * @param value the expand clause
      * @return the updated request
      */
-     public IPlannerBucketRequest expand(final String value) {
+     public PlannerBucketRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (PlannerBucketRequest)this;
      }

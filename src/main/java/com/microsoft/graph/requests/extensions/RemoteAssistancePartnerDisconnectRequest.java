@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerDisconnectRequest;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerDisconnectRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -18,7 +17,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Remote Assistance Partner Disconnect Request.
  */
-public class RemoteAssistancePartnerDisconnectRequest extends BaseRequest implements IRemoteAssistancePartnerDisconnectRequest {
+public class RemoteAssistancePartnerDisconnectRequest extends BaseRequest {
 
     /**
      * The request for this RemoteAssistancePartnerDisconnect

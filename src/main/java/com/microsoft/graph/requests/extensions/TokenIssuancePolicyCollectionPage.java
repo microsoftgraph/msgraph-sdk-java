@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResp
 /**
  * The class for the Token Issuance Policy Collection Page.
  */
-public class TokenIssuancePolicyCollectionPage extends BaseCollectionPage<TokenIssuancePolicy, ITokenIssuancePolicyCollectionRequestBuilder> implements ITokenIssuancePolicyCollectionPage {
+public class TokenIssuancePolicyCollectionPage extends BaseCollectionPage<TokenIssuancePolicy, TokenIssuancePolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for TokenIssuancePolicy
@@ -22,7 +22,7 @@ public class TokenIssuancePolicyCollectionPage extends BaseCollectionPage<TokenI
      * @param response the serialized TokenIssuancePolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TokenIssuancePolicyCollectionPage(final TokenIssuancePolicyCollectionResponse response, final ITokenIssuancePolicyCollectionRequestBuilder builder) {
+    public TokenIssuancePolicyCollectionPage(final TokenIssuancePolicyCollectionResponse response, final TokenIssuancePolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

@@ -10,24 +10,14 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Application;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
-import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
@@ -44,7 +34,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Application With Reference Request.
  */
-public class ApplicationWithReferenceRequest extends BaseRequest implements IApplicationWithReferenceRequest {
+public class ApplicationWithReferenceRequest extends BaseRequest {
 
     /**
      * The request for the Application
@@ -100,9 +90,9 @@ public class ApplicationWithReferenceRequest extends BaseRequest implements IApp
      * @param value the select clause
      * @return the updated request
      */
-    public IApplicationWithReferenceRequest select(final String value) {
+    public ApplicationWithReferenceRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IApplicationWithReferenceRequest)this;
+        return (ApplicationWithReferenceRequest)this;
     }
 
     /**
@@ -111,7 +101,7 @@ public class ApplicationWithReferenceRequest extends BaseRequest implements IApp
      * @param value the expand clause
      * @return the updated request
      */
-    public IApplicationWithReferenceRequest expand(final String value) {
+    public ApplicationWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ApplicationWithReferenceRequest)this;
     }

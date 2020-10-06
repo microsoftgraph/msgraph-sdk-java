@@ -21,7 +21,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Directory Object Collection With References Request Builder.
  */
-public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements IDirectoryObjectCollectionWithReferencesRequestBuilder {
+public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -40,7 +40,7 @@ public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryObjectCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public DirectoryObjectCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,15 +50,15 @@ public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IDirectoryObjectCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryObjectCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryObjectCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder byId(final String id) {
+    public DirectoryObjectWithReferenceRequestBuilder byId(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IDirectoryObjectCollectionReferenceRequestBuilder references(){
+    public DirectoryObjectCollectionReferenceRequestBuilder references(){
         return new DirectoryObjectCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

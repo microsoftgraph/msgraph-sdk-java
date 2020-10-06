@@ -20,7 +20,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Education School Collection With References Request Builder.
  */
-public class EducationSchoolCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements IEducationSchoolCollectionWithReferencesRequestBuilder {
+public class EducationSchoolCollectionWithReferencesRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of EducationUser
@@ -39,7 +39,7 @@ public class EducationSchoolCollectionWithReferencesRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEducationSchoolCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EducationSchoolCollectionWithReferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,15 +49,15 @@ public class EducationSchoolCollectionWithReferencesRequestBuilder extends BaseR
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEducationSchoolCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationSchoolCollectionWithReferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EducationSchoolCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IEducationSchoolWithReferenceRequestBuilder byId(final String id) {
+    public EducationSchoolWithReferenceRequestBuilder byId(final String id) {
         return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IEducationSchoolCollectionReferenceRequestBuilder references(){
+    public EducationSchoolCollectionReferenceRequestBuilder references(){
         return new EducationSchoolCollectionReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 }

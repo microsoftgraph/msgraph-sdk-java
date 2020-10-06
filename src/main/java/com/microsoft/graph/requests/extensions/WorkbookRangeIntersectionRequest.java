@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeIntersectionRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeIntersectionRequest;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -19,7 +18,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Intersection Request.
  */
-public class WorkbookRangeIntersectionRequest extends BaseRequest implements IWorkbookRangeIntersectionRequest {
+public class WorkbookRangeIntersectionRequest extends BaseRequest {
 
     /**
      * The request for this WorkbookRangeIntersection
@@ -97,7 +96,7 @@ public class WorkbookRangeIntersectionRequest extends BaseRequest implements IWo
      * @param value the select clause
      * @return the updated request
      */
-    public IWorkbookRangeIntersectionRequest select(final String value) {
+    public WorkbookRangeIntersectionRequest select(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookRangeIntersectionRequest)this;
     }
@@ -108,7 +107,7 @@ public class WorkbookRangeIntersectionRequest extends BaseRequest implements IWo
      * @param value the expand clause
      * @return the updated request
      */
-    public IWorkbookRangeIntersectionRequest expand(final String value) {
+    public WorkbookRangeIntersectionRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookRangeIntersectionRequest)this;
     }
@@ -119,7 +118,7 @@ public class WorkbookRangeIntersectionRequest extends BaseRequest implements IWo
      * @param value the filter clause
      * @return the updated request
      */
-    public IWorkbookRangeIntersectionRequest filter(final String value) {
+    public WorkbookRangeIntersectionRequest filter(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (WorkbookRangeIntersectionRequest)this;
     }
@@ -130,7 +129,7 @@ public class WorkbookRangeIntersectionRequest extends BaseRequest implements IWo
      * @param value the order by clause
      * @return the updated request
      */
-    public IWorkbookRangeIntersectionRequest orderBy(final String value) {
+    public WorkbookRangeIntersectionRequest orderBy(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$orderby", value));
         return (WorkbookRangeIntersectionRequest)this;
     }

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPercentile_ExcRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsPercentile_ExcRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Percentile_Exc Request Builder.
  */
-public class WorkbookFunctionsPercentile_ExcRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsPercentile_ExcRequestBuilder {
+public class WorkbookFunctionsPercentile_ExcRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsPercentile_Exc
@@ -34,22 +33,22 @@ public class WorkbookFunctionsPercentile_ExcRequestBuilder extends BaseActionReq
     }
 
     /**
-     * Creates the IWorkbookFunctionsPercentile_ExcRequest
+     * Creates the WorkbookFunctionsPercentile_ExcRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPercentile_ExcRequest instance
+     * @return the WorkbookFunctionsPercentile_ExcRequest instance
      */
-    public IWorkbookFunctionsPercentile_ExcRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsPercentile_ExcRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsPercentile_ExcRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsPercentile_ExcRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsPercentile_ExcRequest instance
+     * @return the WorkbookFunctionsPercentile_ExcRequest instance
      */
-    public IWorkbookFunctionsPercentile_ExcRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsPercentile_ExcRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsPercentile_ExcRequest request = new WorkbookFunctionsPercentile_ExcRequest(
                 getRequestUrl(),
                 getClient(),

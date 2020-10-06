@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Teams Template With Reference Request Builder.
  */
-public class TeamsTemplateWithReferenceRequestBuilder extends BaseRequestBuilder implements ITeamsTemplateWithReferenceRequestBuilder {
+public class TeamsTemplateWithReferenceRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the TeamsTemplate
@@ -36,9 +36,9 @@ public class TeamsTemplateWithReferenceRequestBuilder extends BaseRequestBuilder
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsTemplateWithReferenceRequest instance
+     * @return the TeamsTemplateWithReferenceRequest instance
      */
-    public ITeamsTemplateWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public TeamsTemplateWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,13 +46,13 @@ public class TeamsTemplateWithReferenceRequestBuilder extends BaseRequestBuilder
      * Creates the request with specific options instead of the existing options
 	 *
      * @param requestOptions the options for this request
-     * @return the ITeamsTemplateWithReferenceRequest instance
+     * @return the TeamsTemplateWithReferenceRequest instance
      */
-    public ITeamsTemplateWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTemplateWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsTemplateWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ITeamsTemplateReferenceRequestBuilder reference(){
+    public TeamsTemplateReferenceRequestBuilder reference(){
         return new TeamsTemplateReferenceRequestBuilder(getRequestUrl() + "/$ref", getClient(), getOptions());
     }
 

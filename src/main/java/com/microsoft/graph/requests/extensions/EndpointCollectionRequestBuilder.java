@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.Endpoint;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointCollectionRequest;
+import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
+import com.microsoft.graph.requests.extensions.EndpointCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Endpoint Collection Request Builder.
  */
-public class EndpointCollectionRequestBuilder extends BaseRequestBuilder implements IEndpointCollectionRequestBuilder {
+public class EndpointCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of ServicePrincipal
@@ -42,7 +42,7 @@ public class EndpointCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEndpointCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public EndpointCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class EndpointCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IEndpointCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EndpointCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EndpointCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IEndpointRequestBuilder byId(final String id) {
+    public EndpointRequestBuilder byId(final String id) {
         return new EndpointRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

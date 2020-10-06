@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Vpp EBook Request Builder.
  */
-public class IosVppEBookRequestBuilder extends BaseRequestBuilder implements IIosVppEBookRequestBuilder {
+public class IosVppEBookRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the IosVppEBook
@@ -35,9 +35,9 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder implements IIo
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IIosVppEBookRequest instance
+     * @return the IosVppEBookRequest instance
      */
-    public IIosVppEBookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public IosVppEBookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,41 +45,41 @@ public class IosVppEBookRequestBuilder extends BaseRequestBuilder implements IIo
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IIosVppEBookRequest instance
+     * @return the IosVppEBookRequest instance
      */
-    public IIosVppEBookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosVppEBookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IosVppEBookRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IManagedEBookAssignmentCollectionRequestBuilder assignments() {
+    public ManagedEBookAssignmentCollectionRequestBuilder assignments() {
         return new ManagedEBookAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IManagedEBookAssignmentRequestBuilder assignments(final String id) {
+    public ManagedEBookAssignmentRequestBuilder assignments(final String id) {
         return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public IDeviceInstallStateCollectionRequestBuilder deviceStates() {
+    public DeviceInstallStateCollectionRequestBuilder deviceStates() {
         return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
-    public IDeviceInstallStateRequestBuilder deviceStates(final String id) {
+    public DeviceInstallStateRequestBuilder deviceStates(final String id) {
         return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for EBookInstallSummary
      *
-     * @return the IEBookInstallSummaryRequestBuilder instance
+     * @return the EBookInstallSummaryRequestBuilder instance
      */
-    public IEBookInstallSummaryRequestBuilder installSummary() {
+    public EBookInstallSummaryRequestBuilder installSummary() {
         return new EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
     }
-    public IUserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
+    public UserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
         return new UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);
     }
 
-    public IUserInstallStateSummaryRequestBuilder userStateSummary(final String id) {
+    public UserInstallStateSummaryRequestBuilder userStateSummary(final String id) {
         return new UserInstallStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary") + "/" + id, getClient(), null);
     }
 }

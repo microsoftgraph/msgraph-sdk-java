@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillSetSolidColorRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillSetSolidColorRequest;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Chart Fill Set Solid Color Request Builder.
  */
-public class WorkbookChartFillSetSolidColorRequestBuilder extends BaseActionRequestBuilder implements IWorkbookChartFillSetSolidColorRequestBuilder {
+public class WorkbookChartFillSetSolidColorRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookChartFillSetSolidColor
@@ -32,22 +31,22 @@ public class WorkbookChartFillSetSolidColorRequestBuilder extends BaseActionRequ
     }
 
     /**
-     * Creates the IWorkbookChartFillSetSolidColorRequest
+     * Creates the WorkbookChartFillSetSolidColorRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartFillSetSolidColorRequest instance
+     * @return the WorkbookChartFillSetSolidColorRequest instance
      */
-    public IWorkbookChartFillSetSolidColorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookChartFillSetSolidColorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookChartFillSetSolidColorRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookChartFillSetSolidColorRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookChartFillSetSolidColorRequest instance
+     * @return the WorkbookChartFillSetSolidColorRequest instance
      */
-    public IWorkbookChartFillSetSolidColorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartFillSetSolidColorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookChartFillSetSolidColorRequest request = new WorkbookChartFillSetSolidColorRequest(
                 getRequestUrl(),
                 getClient(),

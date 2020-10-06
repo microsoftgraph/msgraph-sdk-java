@@ -8,8 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InferenceClassification;
-import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideRequestBuilder;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideRequestBuilder;
 import java.util.Arrays;
@@ -22,7 +20,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Inference Classification Request Builder.
  */
-public class InferenceClassificationRequestBuilder extends BaseRequestBuilder implements IInferenceClassificationRequestBuilder {
+public class InferenceClassificationRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the InferenceClassification
@@ -39,9 +37,9 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IInferenceClassificationRequest instance
+     * @return the InferenceClassificationRequest instance
      */
-    public IInferenceClassificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public InferenceClassificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,18 +47,18 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IInferenceClassificationRequest instance
+     * @return the InferenceClassificationRequest instance
      */
-    public IInferenceClassificationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InferenceClassificationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.InferenceClassificationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IInferenceClassificationOverrideCollectionRequestBuilder overrides() {
+    public InferenceClassificationOverrideCollectionRequestBuilder overrides() {
         return new InferenceClassificationOverrideCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("overrides"), getClient(), null);
     }
 
-    public IInferenceClassificationOverrideRequestBuilder overrides(final String id) {
+    public InferenceClassificationOverrideRequestBuilder overrides(final String id) {
         return new InferenceClassificationOverrideRequestBuilder(getRequestUrlWithAdditionalSegment("overrides") + "/" + id, getClient(), null);
     }
 }

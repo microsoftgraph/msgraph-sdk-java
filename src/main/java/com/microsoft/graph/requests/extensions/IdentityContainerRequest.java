@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
-import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessRootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -21,7 +20,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Identity Container Request.
  */
-public class IdentityContainerRequest extends BaseRequest implements IIdentityContainerRequest {
+public class IdentityContainerRequest extends BaseRequest {
 	
     /**
      * The request for the IdentityContainer
@@ -140,7 +139,7 @@ public class IdentityContainerRequest extends BaseRequest implements IIdentityCo
      * @param value the select clause
      * @return the updated request
      */
-     public IIdentityContainerRequest select(final String value) {
+     public IdentityContainerRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (IdentityContainerRequest)this;
      }
@@ -151,7 +150,7 @@ public class IdentityContainerRequest extends BaseRequest implements IIdentityCo
      * @param value the expand clause
      * @return the updated request
      */
-     public IIdentityContainerRequest expand(final String value) {
+     public IdentityContainerRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (IdentityContainerRequest)this;
      }

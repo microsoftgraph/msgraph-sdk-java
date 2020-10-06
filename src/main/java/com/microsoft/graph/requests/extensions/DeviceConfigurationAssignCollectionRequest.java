@@ -11,7 +11,7 @@ import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignCollectionResponse;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignBody;
@@ -25,7 +25,7 @@ import com.microsoft.graph.concurrency.IExecutors;
 /**
  * The class for the Device Configuration Assign Collection Request.
  */
-public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRequest<DeviceConfigurationAssignCollectionResponse, IDeviceConfigurationAssignCollectionPage> implements IDeviceConfigurationAssignCollectionRequest {
+public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRequest<DeviceConfigurationAssignCollectionResponse, DeviceConfigurationAssignCollectionPage> {
 
 
     protected final DeviceConfigurationAssignBody body;
@@ -39,12 +39,12 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRe
      * @param requestOptions the options for this request
      */
     public DeviceConfigurationAssignCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceConfigurationAssignCollectionResponse.class, IDeviceConfigurationAssignCollectionPage.class);
+        super(requestUrl, client, requestOptions, DeviceConfigurationAssignCollectionResponse.class, DeviceConfigurationAssignCollectionPage.class);
         body = new DeviceConfigurationAssignBody();
     }
 
 
-    public void post(final ICallback<? super IDeviceConfigurationAssignCollectionPage> callback) {
+    public void post(final ICallback<? super DeviceConfigurationAssignCollectionPage> callback) {
         final IExecutors executors = getBaseRequest().getClient().getExecutors();
         executors.performOnBackground(new Runnable() {
            @Override
@@ -58,20 +58,20 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRe
         });
     }
 
-    public IDeviceConfigurationAssignCollectionPage post() throws ClientException {
+    public DeviceConfigurationAssignCollectionPage post() throws ClientException {
         final DeviceConfigurationAssignCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 
 
-    public IDeviceConfigurationAssignCollectionPage buildFromResponse(final DeviceConfigurationAssignCollectionResponse response) {
-        final IDeviceConfigurationAssignCollectionRequestBuilder builder;
+    public DeviceConfigurationAssignCollectionPage buildFromResponse(final DeviceConfigurationAssignCollectionResponse response) {
+        final DeviceConfigurationAssignCollectionRequestBuilder builder;
         if (response.nextLink != null) {
             builder = new DeviceConfigurationAssignCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (java.util.List<DeviceConfigurationAssignment>) null);
         } else {
             builder = null;
         }
-        final IDeviceConfigurationAssignCollectionPage page = new DeviceConfigurationAssignCollectionPage(response, builder);
+        final DeviceConfigurationAssignCollectionPage page = new DeviceConfigurationAssignCollectionPage(response, builder);
         page.setRawObject(response.getSerializer(), response.getRawObject());
         return page;
     }
@@ -82,9 +82,9 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRe
      * @param value the select clause
      * @return the updated request
      */
-    public IDeviceConfigurationAssignCollectionRequest select(final String value) {
+    public DeviceConfigurationAssignCollectionRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IDeviceConfigurationAssignCollectionRequest)this;
+        return (DeviceConfigurationAssignCollectionRequest)this;
     }
 
     /**
@@ -93,9 +93,9 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRe
      * @param value the max number of items to return
      * @return the updated request
      */
-    public IDeviceConfigurationAssignCollectionRequest top(final int value) {
+    public DeviceConfigurationAssignCollectionRequest top(final int value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
-        return (IDeviceConfigurationAssignCollectionRequest)this;
+        return (DeviceConfigurationAssignCollectionRequest)this;
     }
 
     /**
@@ -104,9 +104,9 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRe
      * @param value the expand clause
      * @return the updated request
      */
-    public IDeviceConfigurationAssignCollectionRequest expand(final String value) {
+    public DeviceConfigurationAssignCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (IDeviceConfigurationAssignCollectionRequest)this;
+        return (DeviceConfigurationAssignCollectionRequest)this;
     }
 
     /**
@@ -115,9 +115,9 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRe
      * @param value the filter clause
      * @return the updated request
      */
-    public IDeviceConfigurationAssignCollectionRequest filter(final String value) {
+    public DeviceConfigurationAssignCollectionRequest filter(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDeviceConfigurationAssignCollectionRequest)this;
+        return (DeviceConfigurationAssignCollectionRequest)this;
     }
 
     /**
@@ -126,9 +126,9 @@ public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRe
      * @param value the order by clause
      * @return the updated request
      */
-    public IDeviceConfigurationAssignCollectionRequest orderBy(final String value) {
+    public DeviceConfigurationAssignCollectionRequest orderBy(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$orderby", value));
-        return (IDeviceConfigurationAssignCollectionRequest)this;
+        return (DeviceConfigurationAssignCollectionRequest)this;
     }
 
 }

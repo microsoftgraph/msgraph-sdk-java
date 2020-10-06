@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Policy Base Request Builder.
  */
-public class PolicyBaseRequestBuilder extends BaseRequestBuilder implements IPolicyBaseRequestBuilder {
+public class PolicyBaseRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the PolicyBase
@@ -35,9 +35,9 @@ public class PolicyBaseRequestBuilder extends BaseRequestBuilder implements IPol
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPolicyBaseRequest instance
+     * @return the PolicyBaseRequest instance
      */
-    public IPolicyBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public PolicyBaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class PolicyBaseRequestBuilder extends BaseRequestBuilder implements IPol
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPolicyBaseRequest instance
+     * @return the PolicyBaseRequest instance
      */
-    public IPolicyBaseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PolicyBaseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PolicyBaseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

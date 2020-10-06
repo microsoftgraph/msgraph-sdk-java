@@ -12,9 +12,9 @@ import com.microsoft.graph.models.extensions.RestrictedSignIn;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.requests.extensions.IRestrictedSignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInCollectionRequest;
+import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RestrictedSignInRequestBuilder;
+import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequest;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Restricted Sign In Collection Request Builder.
  */
-public class RestrictedSignInCollectionRequestBuilder extends BaseRequestBuilder implements IRestrictedSignInCollectionRequestBuilder {
+public class RestrictedSignInCollectionRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for this collection of AuditLogRoot
@@ -42,7 +42,7 @@ public class RestrictedSignInCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IRestrictedSignInCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public RestrictedSignInCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,11 +52,11 @@ public class RestrictedSignInCollectionRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IRestrictedSignInCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RestrictedSignInCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RestrictedSignInCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IRestrictedSignInRequestBuilder byId(final String id) {
+    public RestrictedSignInRequestBuilder byId(final String id) {
         return new RestrictedSignInRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 

@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFunctionsProperRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsProperRequest;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Functions Proper Request Builder.
  */
-public class WorkbookFunctionsProperRequestBuilder extends BaseActionRequestBuilder implements IWorkbookFunctionsProperRequestBuilder {
+public class WorkbookFunctionsProperRequestBuilder extends BaseActionRequestBuilder {
 
     /**
      * The request builder for this WorkbookFunctionsProper
@@ -32,22 +31,22 @@ public class WorkbookFunctionsProperRequestBuilder extends BaseActionRequestBuil
     }
 
     /**
-     * Creates the IWorkbookFunctionsProperRequest
+     * Creates the WorkbookFunctionsProperRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsProperRequest instance
+     * @return the WorkbookFunctionsProperRequest instance
      */
-    public IWorkbookFunctionsProperRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookFunctionsProperRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookFunctionsProperRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookFunctionsProperRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookFunctionsProperRequest instance
+     * @return the WorkbookFunctionsProperRequest instance
      */
-    public IWorkbookFunctionsProperRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsProperRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookFunctionsProperRequest request = new WorkbookFunctionsProperRequest(
                 getRequestUrl(),
                 getClient(),

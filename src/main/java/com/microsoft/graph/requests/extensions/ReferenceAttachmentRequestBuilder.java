@@ -18,7 +18,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Reference Attachment Request Builder.
  */
-public class ReferenceAttachmentRequestBuilder extends BaseRequestBuilder implements IReferenceAttachmentRequestBuilder {
+public class ReferenceAttachmentRequestBuilder extends BaseRequestBuilder {
 
     /**
      * The request builder for the ReferenceAttachment
@@ -35,9 +35,9 @@ public class ReferenceAttachmentRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IReferenceAttachmentRequest instance
+     * @return the ReferenceAttachmentRequest instance
      */
-    public IReferenceAttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public ReferenceAttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -45,9 +45,9 @@ public class ReferenceAttachmentRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IReferenceAttachmentRequest instance
+     * @return the ReferenceAttachmentRequest instance
      */
-    public IReferenceAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReferenceAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ReferenceAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

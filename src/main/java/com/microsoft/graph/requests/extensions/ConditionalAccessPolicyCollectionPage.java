@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionResponse;
@@ -14,7 +14,7 @@ import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollection
 /**
  * The class for the Conditional Access Policy Collection Page.
  */
-public class ConditionalAccessPolicyCollectionPage extends BaseCollectionPage<ConditionalAccessPolicy, IConditionalAccessPolicyCollectionRequestBuilder> implements IConditionalAccessPolicyCollectionPage {
+public class ConditionalAccessPolicyCollectionPage extends BaseCollectionPage<ConditionalAccessPolicy, ConditionalAccessPolicyCollectionRequestBuilder> {
 
     /**
      * A collection page for ConditionalAccessPolicy
@@ -22,7 +22,7 @@ public class ConditionalAccessPolicyCollectionPage extends BaseCollectionPage<Co
      * @param response the serialized ConditionalAccessPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ConditionalAccessPolicyCollectionPage(final ConditionalAccessPolicyCollectionResponse response, final IConditionalAccessPolicyCollectionRequestBuilder builder) {
+    public ConditionalAccessPolicyCollectionPage(final ConditionalAccessPolicyCollectionResponse response, final ConditionalAccessPolicyCollectionRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
     }
 }

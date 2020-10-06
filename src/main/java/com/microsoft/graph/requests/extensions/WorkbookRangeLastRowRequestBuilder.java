@@ -3,7 +3,6 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeLastRowRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeLastRowRequest;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
@@ -16,7 +15,7 @@ import com.google.gson.JsonElement;
 /**
  * The class for the Workbook Range Last Row Request Builder.
  */
-public class WorkbookRangeLastRowRequestBuilder extends BaseFunctionRequestBuilder implements IWorkbookRangeLastRowRequestBuilder {
+public class WorkbookRangeLastRowRequestBuilder extends BaseFunctionRequestBuilder {
 
     /**
      * The request builder for this WorkbookRangeLastRow
@@ -30,22 +29,22 @@ public class WorkbookRangeLastRowRequestBuilder extends BaseFunctionRequestBuild
     }
 
     /**
-     * Creates the IWorkbookRangeLastRowRequest
+     * Creates the WorkbookRangeLastRowRequest
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeLastRowRequest instance
+     * @return the WorkbookRangeLastRowRequest instance
      */
-    public IWorkbookRangeLastRowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    public WorkbookRangeLastRowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
     /**
-     * Creates the IWorkbookRangeLastRowRequest with specific requestOptions instead of the existing requestOptions
+     * Creates the WorkbookRangeLastRowRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return the IWorkbookRangeLastRowRequest instance
+     * @return the WorkbookRangeLastRowRequest instance
      */
-    public IWorkbookRangeLastRowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeLastRowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         WorkbookRangeLastRowRequest request = new WorkbookRangeLastRowRequest(
                 getRequestUrl(),
                 getClient(),
@@ -62,27 +61,27 @@ public class WorkbookRangeLastRowRequestBuilder extends BaseFunctionRequestBuild
     /**
      * Gets the request builder for WorkbookRangeFormat
      *
-     * @return the IWorkbookRangeFormatRequestBuilder instance
+     * @return the WorkbookRangeFormatRequestBuilder instance
      */
-    public IWorkbookRangeFormatRequestBuilder format() {
+    public WorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeSort
      *
-     * @return the IWorkbookRangeSortRequestBuilder instance
+     * @return the WorkbookRangeSortRequestBuilder instance
      */
-    public IWorkbookRangeSortRequestBuilder sort() {
+    public WorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet
      *
-     * @return the IWorkbookWorksheetRequestBuilder instance
+     * @return the WorkbookWorksheetRequestBuilder instance
      */
-    public IWorkbookWorksheetRequestBuilder worksheet() {
+    public WorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 }

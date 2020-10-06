@@ -9,25 +9,15 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceOverviewRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserOverviewRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -40,7 +30,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Configuration Request.
  */
-public class DeviceConfigurationRequest extends BaseRequest implements IDeviceConfigurationRequest {
+public class DeviceConfigurationRequest extends BaseRequest {
 	
     /**
      * The request for the DeviceConfiguration
@@ -174,7 +164,7 @@ public class DeviceConfigurationRequest extends BaseRequest implements IDeviceCo
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceConfigurationRequest select(final String value) {
+     public DeviceConfigurationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (DeviceConfigurationRequest)this;
      }
@@ -185,7 +175,7 @@ public class DeviceConfigurationRequest extends BaseRequest implements IDeviceCo
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceConfigurationRequest expand(final String value) {
+     public DeviceConfigurationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (DeviceConfigurationRequest)this;
      }

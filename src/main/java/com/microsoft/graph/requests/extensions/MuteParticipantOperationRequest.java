@@ -19,7 +19,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mute Participant Operation Request.
  */
-public class MuteParticipantOperationRequest extends BaseRequest implements IMuteParticipantOperationRequest {
+public class MuteParticipantOperationRequest extends BaseRequest {
 	
     /**
      * The request for the MuteParticipantOperation
@@ -138,7 +138,7 @@ public class MuteParticipantOperationRequest extends BaseRequest implements IMut
      * @param value the select clause
      * @return the updated request
      */
-     public IMuteParticipantOperationRequest select(final String value) {
+     public MuteParticipantOperationRequest select(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
          return (MuteParticipantOperationRequest)this;
      }
@@ -149,7 +149,7 @@ public class MuteParticipantOperationRequest extends BaseRequest implements IMut
      * @param value the expand clause
      * @return the updated request
      */
-     public IMuteParticipantOperationRequest expand(final String value) {
+     public MuteParticipantOperationRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
          return (MuteParticipantOperationRequest)this;
      }
