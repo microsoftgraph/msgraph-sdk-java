@@ -239,18 +239,19 @@ public class Multipart {
      * @return The byte[]
      * @throws IOException Throws an exception if the output stream cannot be written to
      */
-    private byte[] getByteArray(InputStream in) throws IOException {
-            ByteArrayOutputStream buffer = new ByteArrayOutputStream();
-            int nRead;
-            byte[] data = new byte[16384];
-            try {
-                while ((nRead = in.read(data, 0, data.length)) != -1) {
-                    buffer.write(data, 0, nRead);
-                }
-            } finally {
-                in.close();
-            }
-            buffer.flush();
-            return buffer.toByteArray();
+    private byte[] getByteArray(final InputStream in) throws IOException {
+		try (final ByteArrayOutputStream buffer = new ByteArrayOutputStream()){
+			int nRead;
+			byte[] data = new byte[16384];
+			try {
+				while ((nRead = in.read(data, 0, data.length)) != -1) {
+					buffer.write(data, 0, nRead);
+				}
+			} finally {
+				in.close();
+			}
+			buffer.flush();
+			return buffer.toByteArray();
+		}
     }
 }
