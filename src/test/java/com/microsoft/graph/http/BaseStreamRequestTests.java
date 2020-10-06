@@ -24,7 +24,6 @@ import okhttp3.ResponseBody;
 
 import static org.mockito.Mockito.*;
 
-import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.ClientException;
@@ -37,12 +36,10 @@ import com.microsoft.graph.serializer.MockSerializer;
  */
 public class BaseStreamRequestTests {
 
-    private MockAuthenticationProvider mAuthenticationProvider;
     private MockBaseClient mBaseClient;
 
     @Before
     public void setUp() throws Exception {
-        mAuthenticationProvider = new MockAuthenticationProvider();
         mBaseClient = new MockBaseClient();
     }
 
@@ -60,14 +57,12 @@ public class BaseStreamRequestTests {
 
         final OkHttpClient mockClient = getMockClient(response);
         CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
-                mAuthenticationProvider,
                 new MockExecutors(),
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);
         final BaseStreamRequest<String> request = new BaseStreamRequest<String>("https://a.b.c/", mBaseClient,null, null){};
         request.send();
-        assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
     @Test
@@ -84,7 +79,6 @@ public class BaseStreamRequestTests {
 
         final OkHttpClient mockClient = getMockClient(response);
         CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
-                mAuthenticationProvider,
                 new MockExecutors(),
                 new MockLogger(),
                 mockClient);
@@ -106,7 +100,6 @@ public class BaseStreamRequestTests {
         request.send(callback);
         assertTrue(success.get());
         assertFalse(failure.get());
-        assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
     @Test
@@ -123,7 +116,6 @@ public class BaseStreamRequestTests {
 
         final OkHttpClient mockClient = getMockClient(response);
         CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
-                mAuthenticationProvider,
                 new MockExecutors(),
                 new MockLogger(),
                 mockClient);
@@ -145,7 +137,6 @@ public class BaseStreamRequestTests {
         request.send(new byte[]{1, 2, 3, 4},callback);
         assertTrue(success.get());
         assertFalse(failure.get());
-        assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
     @Test
@@ -163,14 +154,12 @@ public class BaseStreamRequestTests {
         final OkHttpClient mockClient = getMockClient(response);
         
         CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
-                mAuthenticationProvider,
                 new MockExecutors(),
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);
         final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c/", mBaseClient,null, InputStream.class){};
         request.send(new byte[]{1, 2, 3, 4});
-        assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
     @Test

@@ -8,6 +8,8 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import okhttp3.OkHttpClient;
+
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.http.IHttpProvider;
@@ -46,15 +48,14 @@ public class BaseClientTests {
         mLogger = new MockLogger();
         mSerializer = new MockSerializer(null, "");
         mHttpProvider = new CoreHttpProvider(mSerializer,
-            mAuthenticationProvider,
             mExecutors,
-            mLogger);
+            mLogger,
+            new OkHttpClient.Builder().build());
 	}
 
 	@Test
 	public void testNotNull() {
         assertNotNull(baseClient);
-        assertNotNull(mAuthenticationProvider);
         assertNotNull(mExecutors);
         assertNotNull(mHttpProvider);
         assertNotNull(mLogger);
@@ -74,7 +75,6 @@ public class BaseClientTests {
 
 	@Test
     public void testValidateSuccess() throws Exception {
-        baseClient.setAuthenticationProvider(mAuthenticationProvider);
         baseClient.setExecutors(mExecutors);
         baseClient.setHttpProvider(mHttpProvider);
         baseClient.setSerializer(mSerializer);

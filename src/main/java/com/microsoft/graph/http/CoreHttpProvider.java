@@ -45,7 +45,6 @@ import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.Constants;
 import com.microsoft.graph.core.DefaultConnectionConfig;
-import com.microsoft.graph.core.IClientConfig;
 import com.microsoft.graph.core.IConnectionConfig;
 import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
@@ -89,25 +88,12 @@ public class CoreHttpProvider implements IHttpProvider {
 	/**
 	 * The connection config
 	 */
-	private IConnectionConfig connectionConfig;
+	private IConnectionConfig connectionConfig = new DefaultConnectionConfig();
 
 	/**
 	 * The OkHttpClient that handles all requests
 	 */
 	private OkHttpClient corehttpClient;
-
-	/**
-	 * Creates the CoreHttpProvider
-	 *
-	 * @param serializer             the serializer
-	 * @param executors              the executors
-	 * @param logger                 the logger for diagnostic information
-	 */
-	public CoreHttpProvider(final ISerializer serializer,
-			final IExecutors executors,
-			final ILogger logger) {
-		this(serializer, executors, logger, null);
-	}
 
 	/**
 	 * Creates the CoreHttpProvider
@@ -121,22 +107,41 @@ public class CoreHttpProvider implements IHttpProvider {
 			final IExecutors executors,
 			final ILogger logger,
 			final OkHttpClient httpClient) {
-		this.serializer = serializer;
-		this.executors = executors;
-		this.logger = logger;
-		this.corehttpClient = httpClient;
+		if (httpClient == null) {
+			throw new NullPointerException("httpClient");
+		} else if(serializer == null) {
+			throw new NullPointerException("serializer");
+		} else if(executors == null) {
+			throw new NullPointerException("executors");
+		} else if(logger == null) {
+			throw new NullPointerException("logger");
+		} else {
+			this.serializer = serializer;
+			this.executors = executors;
+			this.logger = logger;
+			this.corehttpClient = httpClient;
+		}
 	}
 
 	/**
 	 * Creates the DefaultHttpProvider
 	 *
-	 * @param clientConfig           the client configuration to use for the provider
+	 * @param serializer             the serializer
+	 * @param executors              the executors
+	 * @param logger                 the logger for diagnostic information
 	 * @param httpClient             the http client to execute the requests with
+	 * @param connectionConfig       the connection configuration
 	 */
-	public CoreHttpProvider(final IClientConfig clientConfig,
-			final OkHttpClient httpClient) {
-		this(clientConfig.getSerializer(), clientConfig.getExecutors(), clientConfig.getLogger());
-		this.corehttpClient = httpClient;
+	public CoreHttpProvider(final ISerializer serializer,
+			final IExecutors executors,
+			final ILogger logger,
+			final OkHttpClient httpClient,
+			final IConnectionConfig connectionConfig) {
+		this(serializer, executors, logger, httpClient);
+		if(connectionConfig == null) {
+			throw new NullPointerException("connectionConfig");
+		}
+		this.connectionConfig = connectionConfig;
 	}
 
 	/**
@@ -247,19 +252,15 @@ public class CoreHttpProvider implements IHttpProvider {
 		final URL requestUrl = request.getRequestUrl();
 		logger.logDebug("Starting to send request, URL " + requestUrl.toString());
 
-		if(this.connectionConfig == null) {
-			this.connectionConfig = new DefaultConnectionConfig();
-		}
-		
 		// Request level middleware options
-		RedirectOptions redirectOptions = new RedirectOptions(request.getMaxRedirects() > 0? request.getMaxRedirects() : this.connectionConfig.getMaxRedirects(),
+		final RedirectOptions redirectOptions = new RedirectOptions(request.getMaxRedirects() > 0? request.getMaxRedirects() : this.connectionConfig.getMaxRedirects(),
 				request.getShouldRedirect() != null? request.getShouldRedirect() : this.connectionConfig.getShouldRedirect());
-		RetryOptions retryOptions = new RetryOptions(request.getShouldRetry() != null? request.getShouldRetry() : this.connectionConfig.getShouldRetry(),
+		final RetryOptions retryOptions = new RetryOptions(request.getShouldRetry() != null? request.getShouldRetry() : this.connectionConfig.getShouldRetry(),
 				request.getMaxRetries() > 0? request.getMaxRetries() : this.connectionConfig.getMaxRetries(),
 				request.getDelay() > 0? request.getDelay() : this.connectionConfig.getDelay());
 
-		Request coreHttpRequest = convertIHttpRequestToOkHttpRequest(request);
-		Request.Builder corehttpRequestBuilder = coreHttpRequest
+		final Request coreHttpRequest = convertIHttpRequestToOkHttpRequest(request);
+		final Request.Builder corehttpRequestBuilder = coreHttpRequest
 				.newBuilder()
 				.tag(RedirectOptions.class, redirectOptions)
 				.tag(RetryOptions.class, retryOptions);
@@ -267,7 +268,7 @@ public class CoreHttpProvider implements IHttpProvider {
 		String contenttype = null;
 
 		logger.logDebug("Request Method " + request.getHttpMethod().toString());
-		List<HeaderOption> requestHeaders = request.getHeaders();
+		final List<HeaderOption> requestHeaders = request.getHeaders();
 
 		for(HeaderOption headerOption : requestHeaders) {
 			if(headerOption.getName().equalsIgnoreCase(Constants.CONTENT_TYPE_HEADER_NAME)) {
@@ -329,21 +330,21 @@ public class CoreHttpProvider implements IHttpProvider {
 				}
 				@Override
 				public void writeTo(BufferedSink sink) throws IOException {
-					OutputStream out = sink.outputStream();
 					int writtenSoFar = 0;
-					BufferedOutputStream bos = new BufferedOutputStream(out);
-					int toWrite;
-					do {
-						toWrite = Math.min(defaultBufferSize, bytesToWrite.length - writtenSoFar);
-						bos.write(bytesToWrite, writtenSoFar, toWrite);
-						writtenSoFar = writtenSoFar + toWrite;
-						if (progress != null) {
-							executors.performOnForeground(writtenSoFar, bytesToWrite.length,
-									progress);
+					try (final OutputStream out = sink.outputStream()) {
+						try (final BufferedOutputStream bos = new BufferedOutputStream(out)){
+							int toWrite;
+							do {
+								toWrite = Math.min(defaultBufferSize, bytesToWrite.length - writtenSoFar);
+								bos.write(bytesToWrite, writtenSoFar, toWrite);
+								writtenSoFar = writtenSoFar + toWrite;
+								if (progress != null) {
+									executors.performOnForeground(writtenSoFar, bytesToWrite.length,
+											progress);
+								}
+							} while (toWrite > 0);
 						}
-					} while (toWrite > 0);
-					bos.close();
-					out.close();
+					}
 				}
 
 				@Override
@@ -379,23 +380,6 @@ public class CoreHttpProvider implements IHttpProvider {
 					throws ClientException {
 
 		try {
-			if(this.connectionConfig == null) {
-				this.connectionConfig = new DefaultConnectionConfig();
-			}
-			if(this.corehttpClient == null) {
-				final ICoreAuthenticationProvider authProvider = new ICoreAuthenticationProvider() {
-					@Override
-					public Request authenticateRequest(Request request) {
-						return request;
-					}
-				};
-				this.corehttpClient = HttpClients
-									.createDefault(authProvider)
-									.newBuilder()
-									.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS)
-									.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS)
-									.build();
-			}
 			Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
 			Response response = corehttpClient.newCall(coreHttpRequest).execute();
 			InputStream in = null;
@@ -557,15 +541,10 @@ public class CoreHttpProvider implements IHttpProvider {
 	public static String streamToString(final InputStream input) {
 		final String httpStreamEncoding = "UTF-8";
 		final String endOfFile = "\\A";
-		final Scanner scanner = new Scanner(input, httpStreamEncoding);
-		String scannerString = "";
-		try {
+		try (final Scanner scanner = new Scanner(input, httpStreamEncoding)) {
 			scanner.useDelimiter(endOfFile);
-			scannerString = scanner.next();
-		} finally {
-			scanner.close();
+			return scanner.next();
 		}
-		return scannerString;
 	}
 
 	/**
@@ -594,25 +573,14 @@ public class CoreHttpProvider implements IHttpProvider {
 	public IExecutors getExecutors() {
 		return executors;
 	}
-
+	
 	/**
+	 * INTERNAL METHOD, DO NOT USE
 	 * Get connection config for read and connect timeout in requests
 	 *
 	 * @return Connection configuration to be used for timeout values
 	 */
-	public IConnectionConfig getConnectionConfig() {
-		if(this.connectionConfig == null) {
-			this.connectionConfig = new DefaultConnectionConfig();
-		}
+	public IConnectionConfig getConnectionConfigInternal() {
 		return connectionConfig;
-	}
-
-	/**
-	 * Set connection config for read and connect timeout in requests
-	 *
-	 * @param connectionConfig Connection configuration to be used for timeout values
-	 */
-	public void setConnectionConfig(IConnectionConfig connectionConfig) {
-		this.connectionConfig = connectionConfig;
 	}
 }

@@ -26,7 +26,6 @@ import okhttp3.ResponseBody;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.MockBaseClient;
 import com.microsoft.graph.logger.MockLogger;
@@ -40,13 +39,11 @@ import com.microsoft.graph.serializer.MockSerializer;
  */
 public class BaseCollectionRequestTests {
 
-    private MockAuthenticationProvider mAuthenticationProvider;
     private MockBaseClient mBaseClient;
     private BaseCollectionRequest<JsonObject, String> mRequest;
 
     @Before
     public void setUp() throws Exception {
-        mAuthenticationProvider = new MockAuthenticationProvider();
         mBaseClient = new MockBaseClient();
         final Response response = new Response.Builder()
                 .request(new Request.Builder().url("https://a.b.c").build())
@@ -62,7 +59,6 @@ public class BaseCollectionRequestTests {
         final JsonObject result = new JsonObject();
         result.add("id", new JsonPrimitive("zzz"));
         CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(result, ""),
-                mAuthenticationProvider,
                 new MockExecutors(),
                 new MockLogger(),
                 mockClient);

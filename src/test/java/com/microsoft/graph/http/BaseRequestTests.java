@@ -25,30 +25,28 @@ import okhttp3.ResponseBody;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 //import com.microsoft.graph.BuildConfig;
-import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.MockBaseClient;
 import com.microsoft.graph.logger.MockLogger;
+import com.microsoft.graph.models.extensions.IGraphServiceClient;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
+import com.microsoft.graph.requests.extensions.GraphServiceClient;
 import com.microsoft.graph.serializer.MockSerializer;
 
 /**
  * Test cases for {@see BaseRequest}
  */
 public class BaseRequestTests {
-    private MockAuthenticationProvider mAuthenticationProvider;
-    private MockBaseClient mBaseClient;
+    private IGraphServiceClient mBaseClient;
     private BaseRequest mRequest;
     private JsonObject callbackJsonObject;
 
     @Before
     public void setUp() throws Exception {
-        mAuthenticationProvider = new MockAuthenticationProvider();
-        mBaseClient = new MockBaseClient();
         final Response response = new Response.Builder()
                 .request(new Request.Builder().url("https://a.b.c").build())
                 .protocol(Protocol.HTTP_1_1)
@@ -62,32 +60,29 @@ public class BaseRequestTests {
         final OkHttpClient mockClient = BaseStreamRequestTests.getMockClient(response);
         final JsonObject result = new JsonObject();
         result.add("id", new JsonPrimitive("zzz"));
-        CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(result, ""),
-                mAuthenticationProvider,
-                new MockExecutors(),
-                new MockLogger(),
-                mockClient);
-        mBaseClient.setHttpProvider(mProvider);
-        mRequest = new BaseRequest("https://a.b.c/", mBaseClient, null,null){};
+        mBaseClient = GraphServiceClient.builder()
+                .httpClient(mockClient)
+                .buildClient();
+        mRequest = new BaseRequest("https://a.b.c/", mBaseClient, null,JsonObject.class){};
     }
 
     @Test
     public void testSend() {
-        JsonObject result = mRequest.send(HttpMethod.GET, null);
+        final JsonObject result = mRequest.send(HttpMethod.GET, null);
         assertNotNull(result);
         assertEquals("zzz", result.get("id").getAsString());
     }
 
     @Test
-    public void testSendWithCallback() {
+    public void testSendWithCallback() throws InterruptedException {
         final AtomicBoolean success = new AtomicBoolean(false);
         final AtomicBoolean failure = new AtomicBoolean(false);
 
-		ICallback<Object> callback = new ICallback<Object>() {
+		final ICallback<JsonObject> callback = new ICallback<JsonObject>() {
             @Override
-            public void success(Object o) {
+            public void success(JsonObject o) {
                 success.set(true);
-                callbackJsonObject = (JsonObject)o;
+                callbackJsonObject = o;
             }
 
             @Override
@@ -96,6 +91,7 @@ public class BaseRequestTests {
             }
         };
         mRequest.send(HttpMethod.GET, callback,null);
+        Thread.sleep(1000L); // running on different threads can make it so the asserts get called before the callback
         assertTrue(success.get());
         assertFalse(failure.get());
         assertNotNull(callbackJsonObject);
