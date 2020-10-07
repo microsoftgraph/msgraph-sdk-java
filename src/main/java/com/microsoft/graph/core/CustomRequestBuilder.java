@@ -1,4 +1,4 @@
-package com.microsoft.graph.requests.extensions;
+package com.microsoft.graph.core;
 
 import java.util.List;
 

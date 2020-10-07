@@ -6,7 +6,7 @@ package com.microsoft.graph.core;
 
 import com.google.gson.JsonObject;
 import com.microsoft.graph.models.extensions.IBaseGraphServiceClient;
-import com.microsoft.graph.requests.extensions.CustomRequestBuilder;
+import com.microsoft.graph.core.CustomRequestBuilder;
 
 /**
  * The interface for the Graph Service Client.

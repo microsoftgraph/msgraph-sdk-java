@@ -19,7 +19,7 @@ import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.requests.extensions.CustomRequestBuilder;
+import com.microsoft.graph.core.CustomRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseGraphServiceClient;
 
 import okhttp3.OkHttpClient;
