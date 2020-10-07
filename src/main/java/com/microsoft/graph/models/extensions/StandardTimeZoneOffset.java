@@ -62,7 +62,7 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
      */
     @SerializedName("time")
     @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay time;
+    public com.microsoft.graph.core.TimeOfDay time;
 
     /**
      * The Year.

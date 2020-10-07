@@ -29,7 +29,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      */
     @SerializedName("activeHoursEnd")
     @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay activeHoursEnd;
+    public com.microsoft.graph.core.TimeOfDay activeHoursEnd;
 
     /**
      * The Active Hours Start.
@@ -37,7 +37,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      */
     @SerializedName("activeHoursStart")
     @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay activeHoursStart;
+    public com.microsoft.graph.core.TimeOfDay activeHoursStart;
 
     /**
      * The Scheduled Install Days.

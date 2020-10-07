@@ -45,7 +45,7 @@ public class EducationTerm implements IJsonBackedObject {
      */
     @SerializedName("endDate")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly endDate;
+    public com.microsoft.graph.core.DateOnly endDate;
 
     /**
      * The External Id.
@@ -61,7 +61,7 @@ public class EducationTerm implements IJsonBackedObject {
      */
     @SerializedName("startDate")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly startDate;
+    public com.microsoft.graph.core.DateOnly startDate;
 
 
     /**

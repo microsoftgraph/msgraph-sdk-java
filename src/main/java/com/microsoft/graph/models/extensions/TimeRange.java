@@ -37,7 +37,7 @@ public class TimeRange implements IJsonBackedObject {
      */
     @SerializedName("endTime")
     @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay endTime;
+    public com.microsoft.graph.core.TimeOfDay endTime;
 
     /**
      * The Start Time.
@@ -45,7 +45,7 @@ public class TimeRange implements IJsonBackedObject {
      */
     @SerializedName("startTime")
     @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay startTime;
+    public com.microsoft.graph.core.TimeOfDay startTime;
 
 
     /**

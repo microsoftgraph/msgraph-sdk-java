@@ -357,7 +357,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      */
     @SerializedName("defenderScheduledQuickScanTime")
     @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay defenderScheduledQuickScanTime;
+    public com.microsoft.graph.core.TimeOfDay defenderScheduledQuickScanTime;
 
     /**
      * The Defender Scheduled Scan Time.
@@ -365,7 +365,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      */
     @SerializedName("defenderScheduledScanTime")
     @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay defenderScheduledScanTime;
+    public com.microsoft.graph.core.TimeOfDay defenderScheduledScanTime;
 
     /**
      * The Defender Signature Update Interval In Hours.

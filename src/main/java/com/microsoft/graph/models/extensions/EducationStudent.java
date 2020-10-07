@@ -38,7 +38,7 @@ public class EducationStudent implements IJsonBackedObject {
      */
     @SerializedName("birthDate")
     @Expose
-    public com.microsoft.graph.models.extensions.DateOnly birthDate;
+    public com.microsoft.graph.core.DateOnly birthDate;
 
     /**
      * The External Id.
