@@ -88,7 +88,7 @@ steps:
       $extensionsAndGeneratedDirectories = Get-ChildItem $mainDir -Include extensions,generated -Recurse -Directory
 
       # this list should be updated if a new hand-crafted extension is added to one of the extensions/ directories
-      $filesThatShouldNotBeDeleted = "UploadSession.java","DateOnly.java","TimeOfDay.java","Multipart.java","ChunkedUploadRequest.java","ChunkedUploadResult.java","CustomRequestBuilder.java"
+      $filesThatShouldNotBeDeleted = "DateOnly.java","TimeOfDay.java","Multipart.java","CustomRequestBuilder.java"
       foreach ($directory in $extensionsAndGeneratedDirectories)
       {
           Remove-Item $directory.FullName -Recurse -Force -Exclude $filesThatShouldNotBeDeleted

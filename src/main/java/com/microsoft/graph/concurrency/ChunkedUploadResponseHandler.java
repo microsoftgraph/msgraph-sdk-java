@@ -37,7 +37,7 @@ import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.http.IStatefulResponseHandler;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.models.extensions.UploadSession;
-import com.microsoft.graph.requests.extensions.ChunkedUploadResult;
+import com.microsoft.graph.concurrency.ChunkedUploadResult;
 import com.microsoft.graph.serializer.ISerializer;
 
 import okhttp3.Response;
