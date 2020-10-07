@@ -1,4 +1,4 @@
-package com.microsoft.graph.models.extensions;
+package com.microsoft.graph.core;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;

@@ -87,11 +87,9 @@ steps:
       $mainDir = Join-Path $env:repoDir "\src\main\"
       $extensionsAndGeneratedDirectories = Get-ChildItem $mainDir -Include extensions,generated -Recurse -Directory
 
-      # this list should be updated if a new hand-crafted extension is added to one of the extensions/ directories
-      $filesThatShouldNotBeDeleted = "DateOnly.java","TimeOfDay.java","Multipart.java"
       foreach ($directory in $extensionsAndGeneratedDirectories)
       {
-          Remove-Item $directory.FullName -Recurse -Force -Exclude $filesThatShouldNotBeDeleted
+          Remove-Item $directory.FullName -Recurse -Force
       }
       Write-Host "Removed the existing generated files in the repo's main directory: $mainDir" -ForegroundColor Green
   enabled: true # The old GUI pipeline wasn't doing this. I recall that there was a reason
