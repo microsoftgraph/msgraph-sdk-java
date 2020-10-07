@@ -22,8 +22,14 @@
 
 package com.microsoft.graph.http;
 
+import com.microsoft.graph.concurrency.IProgressCallback;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
+
+import okhttp3.Request;
 
 import java.net.URL;
 import java.util.List;
@@ -82,5 +88,107 @@ public interface IHttpRequest {
      * @return the value of useCaches
      */
     boolean getUseCaches();
+    
+    /**
+     * Sets the max redirects
+     * 
+     * @param maxRedirects Max redirects that a request can take
+     */
+    void setMaxRedirects(int maxRedirects);
+    
+    /**
+     * Gets the max redirects
+     * 
+     * @return Max redirects that a request can take
+     */
+    int getMaxRedirects();
+    
+    /**
+     * Sets the should redirect callback
+     * 
+     * @param shouldRedirect Callback called before doing a redirect
+     */
+    void setShouldRedirect(IShouldRedirect shouldRedirect);
+    
+    /**
+     * Gets the should redirect callback
+     * 
+     * @return Callback which is called before redirect
+     */
+    IShouldRedirect getShouldRedirect();
+    
+    /**
+     * Sets the should retry callback
+     * 
+     * @param shouldretry The callback called before retry
+     */
+    void setShouldRetry(IShouldRetry shouldretry);
+    
+    /**
+     * Gets the should retry callback
+     * 
+     * @return Callback called before retry
+     */
+    IShouldRetry getShouldRetry();
+    
+    /**
+     * Sets the max retries
+     * 
+     * @param maxRetries Max retries for a request
+     */
+    void setMaxRetries(int maxRetries);
+    
+    /**
+     * Gets max retries 
+     * 
+     * @return Max retries for a request
+     */
+    int getMaxRetries();
+    
+    /**
+     * Sets the delay in seconds between retires
+     * 
+     * @param delay Delay in seconds between retries
+     */
+    void setDelay(long delay);
+    
+    /**
+     * Gets delay between retries
+     * 
+     * @return Delay between retries in seconds
+     */
+    long getDelay();
+
+    /**
+     * Sets the HTTP method and returns the current request
+     *
+     * @param httpMethod the HTTP method
+     * @return the current request
+     */
+    IHttpRequest withHttpMethod(final HttpMethod httpMethod);
+    
+    /**
+     * Returns the Request object to be executed
+     * @return the Request object to be executed
+     */
+    Request getHttpRequest() throws ClientException;
+
+    /**
+     * Returns the Request object to be executed
+     * @param serializedObject the object to serialize at the body of the request
+     * @param <requestBodyType> the type of the serialized object
+     * @return the Request object to be executed
+     */
+    <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException;
+
+    /**
+     * Returns the Request object to be executed
+     * @param serializedObject the object to serialize at the body of the request
+     * @param progress the progress callback
+     * @param <requestBodyType> the type of the serialized object
+     * @param <responseType> the type of the response object
+     * @return the Request object to be executed
+     */
+    <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException;
 }
 

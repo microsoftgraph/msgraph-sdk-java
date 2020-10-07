@@ -54,6 +54,15 @@ public interface IClientConfig {
     IHttpProvider getHttpProvider();
 
     /**
+     * Gets the HTTP provider
+     * 
+     * @param httpClient the http client to pass to the http provider when building it
+     * @param <T1> the http client type
+     * @return the HTTP provider
+     */
+    <T1> IHttpProvider getHttpProvider(final T1 httpClient);
+
+    /**
      * Gets the logger
      * 
      * @return the logger

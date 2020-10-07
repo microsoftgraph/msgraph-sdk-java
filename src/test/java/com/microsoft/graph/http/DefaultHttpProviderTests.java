@@ -344,7 +344,7 @@ public class DefaultHttpProviderTests {
         };
         mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
 
-        for (final int ignored : codes) {
+        for (@SuppressWarnings("unused") final int ignored : codes) {
             DriveItem result = mProvider.send(new MockHttpRequest(), DriveItem.class, null);
             currentCode.incrementAndGet();
             assertNull(result);

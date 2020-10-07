@@ -82,7 +82,7 @@ public class ChunkedUploadProvider<UploadType> {
     /**
      * The stream size
      */
-    private final int streamSize;
+    private final long streamSize;
 
     /**
      * The upload response handler
@@ -92,7 +92,7 @@ public class ChunkedUploadProvider<UploadType> {
     /**
      * The counter for how many bytes have been read from input stream
      */
-    private int readSoFar;
+    private long readSoFar;
 
     /**
      * Creates the ChunkedUploadProvider
@@ -106,7 +106,7 @@ public class ChunkedUploadProvider<UploadType> {
     public ChunkedUploadProvider(final UploadSession uploadSession,
                                  final IGraphServiceClient client,
                                  final InputStream inputStream,
-                                 final int streamSize,
+                                 final long streamSize,
                                  final Class<UploadType> uploadTypeClass) {
         if (uploadSession == null) {
             throw new InvalidParameterException("Upload session is null.");
@@ -168,14 +168,20 @@ public class ChunkedUploadProvider<UploadType> {
         byte[] buffer = new byte[chunkSize];
 
         while (this.readSoFar < this.streamSize) {
-            int read = this.inputStream.read(buffer);
+            int buffRead = 0;
 
-            if (read == -1) {
-                break;
+            // inner loop is to work-around the case where read buffer size is limited to less than chunk size by a global setting
+            while (buffRead < chunkSize) {
+                int read = 0;
+                read = this.inputStream.read(buffer, buffRead, chunkSize - buffRead);
+                if (read == -1) {
+                    break;
+                }
+                buffRead += read;
             }
 
             ChunkedUploadRequest request =
-                    new ChunkedUploadRequest(this.uploadUrl, this.client, options, buffer, read,
+                    new ChunkedUploadRequest(this.uploadUrl, this.client, options, buffer, buffRead,
                             maxRetry, this.readSoFar, this.streamSize);
             ChunkedUploadResult<UploadType> result = request.upload(this.responseHandler);
 
@@ -190,7 +196,7 @@ public class ChunkedUploadProvider<UploadType> {
                 break;
             }
 
-            this.readSoFar += read;
+            this.readSoFar += buffRead;
         }
     }
     

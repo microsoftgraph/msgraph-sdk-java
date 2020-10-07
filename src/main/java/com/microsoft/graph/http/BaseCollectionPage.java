@@ -73,6 +73,18 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
     }
 
     /**
+     * Creates the collection page
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     * @param responseAdditionalData the additional data returned by the response
+     */
+    public BaseCollectionPage(final List<T1> pageContents, final T2 nextRequestBuilder, final AdditionalDataManager responseAdditionalData) {
+        this(pageContents, nextRequestBuilder);
+        this.additionalDataManager().putAll(responseAdditionalData);
+    }
+
+    /**
      * Gets the next page request builder
      *
      * @return the next page request builder

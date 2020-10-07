@@ -7,16 +7,16 @@ import java.lang.reflect.Method;
 
 import org.junit.Test;
 
-import com.microsoft.graph.requests.extensions.IThumbnailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThumbnailRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThumbnailSetRequestBuilder;
 
 public class IThumbnailSetRequestBuilderTests {
 
 	@Test
 	public void testGetThumbnailSize() throws Exception {
-        final Method getThumbnailSize = IThumbnailSetRequestBuilder.class.getDeclaredMethod("getThumbnailSize", String.class);
+        final Method getThumbnailSize = ThumbnailSetRequestBuilder.class.getDeclaredMethod("getThumbnailSize", String.class);
         assertNotNull(getThumbnailSize);
-        assertEquals(IThumbnailRequestBuilder.class, getThumbnailSize.getReturnType());
+        assertEquals(ThumbnailRequestBuilder.class, getThumbnailSize.getReturnType());
     }
 	
 }

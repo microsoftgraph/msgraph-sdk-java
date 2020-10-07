@@ -4,18 +4,6 @@
 
 package com.microsoft.graph.models.generated;
 
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
-
-import java.util.Arrays;
-import java.util.EnumSet;
 
 /**
  * The Enum Compliance Status.
@@ -50,6 +38,10 @@ public enum ComplianceStatus
     * conflict
     */
     CONFLICT,
+    /**
+    * not Assigned
+    */
+    NOT_ASSIGNED,
     /**
     * For ComplianceStatus values that were not expected from the service
     */

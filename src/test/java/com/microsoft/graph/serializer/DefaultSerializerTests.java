@@ -2,8 +2,7 @@ package com.microsoft.graph.serializer;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -15,9 +14,12 @@ import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.DateOnly;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.FileAttachment;
+import com.microsoft.graph.models.extensions.RecurrenceRange;
 import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.models.generated.BaseRecurrenceRange;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
+import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
+import com.microsoft.graph.models.extensions.UploadSession;
+import org.junit.Test;
 
 public class DefaultSerializerTests {
 
@@ -26,7 +28,7 @@ public class DefaultSerializerTests {
      *
      * @throws Exception If there is an exception during the test
      */
-	@Test
+    @Test
     public void testDriveDeserialization() throws Exception {
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
         String source = "{\"@odata.context\":\"https://graph.microsoft.com/v1.0/$metadata#drives/$entity\",\"id\":\"8bf6ae90006c4a4c\",\"driveType\":\"personal\",\"owner\":{\"user\":{\"displayName\":\"Peter\",\"id\":\"8bf6ae90006c4a4c\"}},\"quota\":{\"deleted\":1485718314,\"remaining\":983887466461,\"state\":\"normal\",\"total\":1142461300736,\"used\":158573834275}}";
@@ -36,6 +38,43 @@ public class DefaultSerializerTests {
         assertEquals(Long.valueOf(983887466461L), result.quota.remaining);
         assertEquals("8bf6ae90006c4a4c", result.id);
 
+    }
+
+    /**
+     * Make sure that deserializing a DriveItems also deserializes child additionalData
+     *
+     * @throws Exception If there is an exception during the test
+     */
+    @Test
+    public void testDriveItemChildAdditionalDataDeserialization() throws Exception {
+        final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        String source = "{\n"
+                + "    \"@odata.context\": \"https://graph.microsoft.com/v1.0/$metadata#users('02008492-3fec-4ce4-bb54-980ad856856f')/drive/root/children\",\n"
+                + "    \"value\": [\n"
+                + "        {\n"
+                + "            \"createdBy\": {\n"
+                + "                \"user\": {\n"
+                + "                    \"email\": \"the@email.com\",\n"
+                + "                    \"id\": \"02008492-3fec-4ce4-bb54-980ad856856f\",\n"
+                + "                    \"displayName\": \"John Doe\"\n"
+                + "                }\n"
+                + "            }\n"
+                + "        }\n"
+                + "    ]\n"
+                + "}";
+
+        DriveItemDeltaCollectionResponse result = serializer
+                .deserializeObject(source, DriveItemDeltaCollectionResponse.class);
+        assertNotNull(result);
+        assertNotNull(result.value);
+        assertEquals(1, result.value.size());
+        assertNotNull(result.value.get(0));
+        assertNotNull(result.value.get(0).createdBy);
+        assertNotNull(result.value.get(0).createdBy.user);
+        assertNotNull(result.value.get(0).createdBy.user.additionalDataManager());
+        assertNotNull(result.value.get(0).createdBy.user.additionalDataManager().get("email"));
+        assertEquals("the@email.com",
+                result.value.get(0).createdBy.user.additionalDataManager().get("email").getAsString());
     }
 
 	@Test
@@ -48,7 +87,7 @@ public class DefaultSerializerTests {
                 "    \"recurrenceTimeZone\": \"China Standard Time\",\n" +
                 "    \"numberOfOccurrences\": 0\n" +
                 "}";
-        BaseRecurrenceRange baseRecurrenceRange = serializer.deserializeObject(source, BaseRecurrenceRange.class);
+        RecurrenceRange baseRecurrenceRange = serializer.deserializeObject(source, RecurrenceRange.class);
         assertNotNull(source);
         assertEquals(RecurrenceRangeType.NO_END, baseRecurrenceRange.type);
         assertEquals("2016-04-27", baseRecurrenceRange.startDate.toString());
@@ -59,9 +98,9 @@ public class DefaultSerializerTests {
 
 	@Test
     public void testRecurrenceRangeSerialization() throws Exception {
-        final String expected = "{\"type\":\"endDate\",\"startDate\":\"2016-04-25\",\"endDate\":\"2016-05-25\",\"recurrenceTimeZone\":\"PST\",\"numberOfOccurrences\":4}";
+        final String expected = "{\"endDate\":\"2016-05-25\",\"numberOfOccurrences\":4,\"recurrenceTimeZone\":\"PST\",\"startDate\":\"2016-04-25\",\"type\":\"endDate\"}";
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
-        BaseRecurrenceRange brr = new BaseRecurrenceRange();
+        RecurrenceRange brr = new RecurrenceRange();
         brr.type = RecurrenceRangeType.END_DATE;
         brr.startDate = new DateOnly(2016, 4, 25);
         brr.endDate = new DateOnly(2016, 5, 25);
@@ -90,14 +129,14 @@ public class DefaultSerializerTests {
     @Test
 	public void testDeserializeDerivedType() throws Exception {
 		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
-		String source = "{\"@odata.context\": \"/attachments/$entity\",\"@odata.type\": \"#microsoft.graph.fileAttachment\",\"id\": \"AAMkAGQ0MjBmNWVkLTYxZjUtNDRmYi05Y2NiLTBlYjIwNzJjNmM1NgBGAAAAAAC6ff7latYeQqu_gLrhSAIhBwCF7iGjpaOmRqVwbZc-xXzwAAAAAAEMAACF7iGjpaOmRqVwbZc-xXzwAABQStA0AAABEgAQAFbGmeisbjtLnQdp7kC_9Fk=\",\"lastModifiedDateTime\": \"2018-01-23T21:50:22Z\",\"name\": \"Test Book.xlsx\",\"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\"size\": 8457,\"isInline\": false,\"contentId\": null,\"contentLocation\": null,\"contentBytes\": \"bytedata\"}";
-		Attachment result = serializer.deserializeObject(source, Attachment.class);
+		final String source = "{\"@odata.context\": \"/attachments/$entity\",\"@odata.type\": \"#microsoft.graph.fileAttachment\",\"id\": \"AAMkAGQ0MjBmNWVkLTYxZjUtNDRmYi05Y2NiLTBlYjIwNzJjNmM1NgBGAAAAAAC6ff7latYeQqu_gLrhSAIhBwCF7iGjpaOmRqVwbZc-xXzwAAAAAAEMAACF7iGjpaOmRqVwbZc-xXzwAABQStA0AAABEgAQAFbGmeisbjtLnQdp7kC_9Fk=\",\"lastModifiedDateTime\": \"2018-01-23T21:50:22Z\",\"name\": \"Test Book.xlsx\",\"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\"size\": 8457,\"isInline\": false,\"contentId\": null,\"contentLocation\": null,\"contentBytes\": \"bytedata\"}";
+		final Attachment result = serializer.deserializeObject(source, Attachment.class);
 		
 		assert(result instanceof FileAttachment);
 		
-		FileAttachment fileAttachment = (FileAttachment) result;
+		final FileAttachment fileAttachment = (FileAttachment) result;
 		assertNotNull(fileAttachment.contentBytes);
-		JsonObject o = fileAttachment.getRawObject();
+		final JsonObject o = fileAttachment.getRawObject();
 		assertNotNull(o);
 		assertEquals("#microsoft.graph.fileAttachment", o. get("@odata.type").getAsString());
 	}
@@ -115,6 +154,15 @@ public class DefaultSerializerTests {
         HasVoidMember t2 = serializer.deserializeObject(json, HasVoidMember.class);
         assertEquals(t.x, t2.x);
         assertEquals(t.y, t2.y);
+    }
+    @Test
+    public void testDeserializerWhenCasingRespondedByServiceIsWrong() {
+		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        final String source = "{\"@odata.context\": \"https://outlook.office.com/api/v2.0/$metadata#Users('e45f52f5-f2dd-4359-abc5-e74f2960b831')/Messages/AAMkAGQ0MjBmNWVkLTYxZjUtNDRmYi05Y2NiLTBlYjIwNzJjNmM1NgBGAAAAAAC6ff7latYeQqu_gLrhSAIhBwCF7iGjpaOmRqVwbZc-xXzwAAAAAAEMAACF7iGjpaOmRqVwbZc-xXzwAABQStA0AAABEgAQAFbGmeisbjtLnQdp7kC_9Fk=/AttachmentSessions/$entity\",\"ExpirationDateTime\": \"2020-10-06T14:23:42.1027521Z\",\"NextExpectedRanges\": [\"5242880\"]}";
+        final UploadSession result = serializer.deserializeObject(source, UploadSession.class);
+        assertNotNull(result);
+        assertNotNull(result.nextExpectedRanges);
+        assertTrue(result.nextExpectedRanges.size() > 0);
     }
   
   public static final class HasVoidMember {

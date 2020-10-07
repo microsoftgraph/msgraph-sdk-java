@@ -27,49 +27,125 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.microsoft.graph.concurrency.IProgressCallback;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
+import com.microsoft.graph.httpcore.middlewareoption.RedirectOptions;
+import com.microsoft.graph.httpcore.middlewareoption.RetryOptions;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
+
+import okhttp3.Request;
 
 /**
  * Mock request for {@see IHttpRequest}
  */
 class MockRequest implements IHttpRequest {
 
-    @Override
-    public URL getRequestUrl() {
-        try {
-            return new URL("http://localhost");
-        } catch (final MalformedURLException ignored) {
-        }
-        return null;
-    }
+	@Override
+	public URL getRequestUrl() {
+		try {
+			return new URL("http://localhost");
+		} catch (final MalformedURLException ignored) {
+		}
+		return null;
+	}
 
-    @Override
-    public HttpMethod getHttpMethod() {
-        return HttpMethod.GET;
-    }
+	@Override
+	public HttpMethod getHttpMethod() {
+		return HttpMethod.GET;
+	}
 
-    @Override
-    public List<HeaderOption> getHeaders() {
-        return new ArrayList<>();
-    }
+	@Override
+	public List<HeaderOption> getHeaders() {
+		return new ArrayList<>();
+	}
 
-    @Override
-    public List<Option> getOptions() {
-        return new ArrayList<>();
-    }
+	@Override
+	public List<Option> getOptions() {
+		return new ArrayList<>();
+	}
 
-    @Override
-    public void addHeader(final String header, final String value) {
-    }
+	@Override
+	public void addHeader(final String header, final String value) {
+	}
 
-    @Override
-    public void setUseCaches(boolean useCaches) {
-        // Don't set it for Mock request.
-    }
+	@Override
+	public void setUseCaches(boolean useCaches) {
+		// Don't set it for Mock request.
+	}
 
-    @Override
-    public boolean getUseCaches() {
-        return false;
-    }
+	@Override
+	public boolean getUseCaches() {
+		return false;
+	}
+
+	@Override
+	public void setMaxRedirects(int maxRedirects) {
+	}
+
+	@Override
+	public int getMaxRedirects() {
+		return RedirectOptions.DEFAULT_MAX_REDIRECTS;
+	}
+
+	@Override
+	public void setShouldRedirect(IShouldRedirect shouldRedirect) {
+	}
+
+	@Override
+	public IShouldRedirect getShouldRedirect() {
+		return RedirectOptions.DEFAULT_SHOULD_REDIRECT;
+	}
+
+	@Override
+	public void setShouldRetry(IShouldRetry shouldretry) {
+	}
+
+	@Override
+	public IShouldRetry getShouldRetry() {
+		return RetryOptions.DEFAULT_SHOULD_RETRY;
+	}
+
+	@Override
+	public void setMaxRetries(int maxRetries) {
+	}
+
+	@Override
+	public int getMaxRetries() {
+		return RetryOptions.DEFAULT_MAX_RETRIES;
+	}
+
+	@Override
+	public void setDelay(long delay) {
+	}
+
+	@Override
+	public long getDelay() {
+		return RetryOptions.DEFAULT_DELAY;
+	}
+
+	@Override
+	public IHttpRequest withHttpMethod(HttpMethod httpMethod) {
+		return this;
+	}
+
+	@Override
+	public Request getHttpRequest() throws ClientException {
+		return getHttpRequest(null);
+	}
+
+	@Override
+	public <requestBodyType> Request getHttpRequest(requestBodyType serializedObject) throws ClientException {
+		return getHttpRequest(serializedObject, null);
+	}
+
+	@Override
+	public <requestBodyType, responseType> Request getHttpRequest(requestBodyType serializedObject,
+			IProgressCallback<responseType> progress) throws ClientException {
+		final Request.Builder requestBuilder = new Request.Builder();
+		return requestBuilder.build();
+	
+	}
 }

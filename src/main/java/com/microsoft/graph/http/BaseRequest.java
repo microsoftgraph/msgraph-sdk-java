@@ -22,11 +22,19 @@
 
 package com.microsoft.graph.http;
 
-import java.net.URI;
-import javax.ws.rs.core.UriBuilder;
+import okhttp3.HttpUrl;
+import okhttp3.Request;
+import okhttp3.HttpUrl.Builder;
 
 import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.concurrency.IProgressCallback;
+import com.microsoft.graph.content.MSBatchRequestContent;
+import com.microsoft.graph.content.MSBatchRequestStep;
 import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
+import com.microsoft.graph.httpcore.middlewareoption.RedirectOptions;
+import com.microsoft.graph.httpcore.middlewareoption.RetryOptions;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.ClientException;
@@ -37,9 +45,11 @@ import com.microsoft.graph.options.Option;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * An HTTP request
@@ -54,7 +64,7 @@ public abstract class BaseRequest implements IHttpRequest {
     /**
      * The request stats header value format string
      */
-    public static final String REQUEST_STATS_HEADER_VALUE_FORMAT_STRING = "graph-java-v%s";
+    public static final String REQUEST_STATS_HEADER_VALUE_FORMAT_STRING = "graph-java/v%s";
 
     /**
      * The HTTP method for this request
@@ -95,6 +105,31 @@ public abstract class BaseRequest implements IHttpRequest {
      * Value to pass to setUseCaches in connection
      */
     private boolean useCaches;
+    
+    /**
+     * MaxRedirects of every request
+     */
+    private int maxRedirects = RedirectOptions.DEFAULT_MAX_REDIRECTS;
+    
+    /**
+     * ShouldRedirect callback for every request
+     */
+    private IShouldRedirect shouldRedirect = RedirectOptions.DEFAULT_SHOULD_REDIRECT;
+    
+    /**
+     * Max redirects for every request
+     */
+    private int maxRetries = RetryOptions.DEFAULT_MAX_RETRIES;
+    
+    /**
+     * Delay in seconds for every request
+     */
+    private long delay = RetryOptions.DEFAULT_DELAY;
+    
+    /**
+     * Callback before doing a retry
+     */
+    private IShouldRetry shouldRetry = RetryOptions.DEFAULT_SHOULD_RETRY;
 
     /**
      * Creates the request
@@ -143,11 +178,10 @@ public abstract class BaseRequest implements IHttpRequest {
     @Override
     public URL getRequestUrl() {
         String requestUrl = addFunctionParameters();
-        URI baseUrl = URI.create(requestUrl);
-        final UriBuilder uriBuilder = UriBuilder.fromUri(baseUrl);
+        final Builder uriBuilder = HttpUrl.parse(requestUrl).newBuilder();
 
         for (final QueryOption option : queryOptions) {
-        	uriBuilder.queryParam(option.getName(), option.getValue().toString());
+        	uriBuilder.addQueryParameter(option.getName(), option.getValue().toString());
         }
 
         try {
@@ -160,6 +194,40 @@ public abstract class BaseRequest implements IHttpRequest {
         	}
         }
 		return null;
+    }
+
+    /**
+     * Returns the Request object to be executed
+     * @return the Request object to be executed
+     */
+    @Override
+    public Request getHttpRequest() throws ClientException {
+        return getHttpRequest(null);
+    }
+
+    /**
+     * Returns the Request object to be executed
+     * @param serializedObject the object to serialize at the body of the request
+     * @param <requestBodyType> the type of the serialized object
+     * @return the Request object to be executed
+     */
+    @Override
+    public <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException {
+        return getHttpRequest(serializedObject, null);
+    }
+
+    /**
+     * Returns the Request object to be executed
+     * @param serializedObject the object to serialize at the body of the request
+     * @param progress the progress callback
+     * @param <requestBodyType> the type of the serialized object
+     * @param <responseType> the type of the response object
+     * @return the Request object to be executed
+     */
+    @SuppressWarnings("unchecked")
+    @Override
+    public <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException {
+        return client.getHttpProvider().getHttpRequest(this, (Class<responseType>) responseClass, serializedObject, progress);
     }
 
     private String addFunctionParameters() {
@@ -336,6 +404,17 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
+     * Sets the HTTP method and returns the current request
+     *
+     * @param httpMethod the HTTP method
+     * @return the current request
+     */
+    public IHttpRequest withHttpMethod(final HttpMethod httpMethod) {
+        method = httpMethod;
+        return this;
+    }
+
+    /**
      * Gets the client
      *
      * @return the client
@@ -351,5 +430,95 @@ public abstract class BaseRequest implements IHttpRequest {
      */
 	public Class<?> getResponseType() {
         return responseClass;
+    }
+	
+	   /**
+     * Sets the max redirects
+     * 
+     * @param maxRedirects Max redirects that a request can take
+     */
+    public void setMaxRedirects(int maxRedirects) {
+    	this.maxRedirects = maxRedirects;
+    }
+    
+    /**
+     * Gets the max redirects
+     * 
+     * @return Max redirects that a request can take
+     */
+    public int getMaxRedirects() {
+    	return maxRedirects;
+    }
+    
+    /**
+     * Sets the should redirect callback
+     * 
+     * @param shouldRedirect Callback called before doing a redirect
+     */
+    public void setShouldRedirect(IShouldRedirect shouldRedirect) {
+    	this.shouldRedirect = shouldRedirect;
+    }
+    
+    /**
+     * Gets the should redirect callback
+     * 
+     * @return Callback which is called before redirect
+     */
+    public IShouldRedirect getShouldRedirect() {
+    	return shouldRedirect;
+    }
+    
+    /**
+     * Sets the should retry callback
+     * 
+     * @param shouldretry The callback called before retry
+     */
+    public void setShouldRetry(IShouldRetry shouldretry) {
+    	this.shouldRetry = shouldretry;
+    }
+    
+    /**
+     * Gets the should retry callback
+     * 
+     * @return Callback called before retry
+     */
+    public IShouldRetry getShouldRetry() {
+    	return shouldRetry;
+    }
+    
+    /**
+     * Sets the max retries
+     * 
+     * @param maxRetries Max retries for a request
+     */
+    public void setMaxRetries(int maxRetries) {
+    	this.maxRetries = maxRetries;
+    }
+    
+    /**
+     * Gets max retries 
+     * 
+     * @return Max retries for a request
+     */
+    public int getMaxRetries() {
+    	return maxRetries;
+    }
+    
+    /**
+     * Sets the delay in seconds between retires
+     * 
+     * @param delay Delay in seconds between retries
+     */
+    public void setDelay(long delay) {
+    	this.delay = delay;
+    }
+    
+    /**
+     * Gets delay between retries
+     * 
+     * @return Delay between retries in seconds
+     */
+    public long getDelay() {
+    	return delay;
     }
 }

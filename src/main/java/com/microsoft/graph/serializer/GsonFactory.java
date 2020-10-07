@@ -31,9 +31,11 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.models.extensions.DateOnly;
 
+import com.microsoft.graph.models.extensions.TimeOfDay;
 import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.util.Calendar;
@@ -209,6 +211,38 @@ final class GsonFactory {
                 }
             }
         };
+        
+        final JsonSerializer<BaseCollectionPage<?,?>> collectionPageSerializer = new JsonSerializer<BaseCollectionPage<?,?>>() {
+            @Override
+            public JsonElement serialize(final BaseCollectionPage<?,?> src,
+                                         final Type typeOfSrc,
+                                         final JsonSerializationContext context) {
+            	return CollectionPageSerializer.serialize(src, logger);
+            }
+        };
+
+        final JsonDeserializer<BaseCollectionPage<?,?>> collectionPageDeserializer = new JsonDeserializer<BaseCollectionPage<?,?>>() {
+            @Override
+            public BaseCollectionPage<?,?> deserialize(final JsonElement json,
+                                        final Type typeOfT,
+                                        final JsonDeserializationContext context) throws JsonParseException {
+                return CollectionPageSerializer.deserialize(json, typeOfT, logger);
+            }
+        };
+        
+        final JsonDeserializer<TimeOfDay> timeOfDayJsonDeserializer = new JsonDeserializer<TimeOfDay>() {
+            @Override
+            public TimeOfDay deserialize(final JsonElement json,
+                    final Type typeOfT,
+                    final JsonDeserializationContext context) throws JsonParseException {
+                try {
+                    return TimeOfDay.parse(json.getAsString());
+                } catch (Exception e) {
+                    return null;
+                }
+            }
+        };
+
         return new GsonBuilder()
                 .excludeFieldsWithoutExposeAnnotation()
                 .registerTypeAdapter(Calendar.class, calendarJsonSerializer)
@@ -223,6 +257,9 @@ final class GsonFactory {
                 .registerTypeAdapter(EnumSet.class, enumSetJsonDeserializer)
                 .registerTypeAdapter(Duration.class, durationJsonSerializer)
                 .registerTypeAdapter(Duration.class, durationJsonDeserializer)
+                .registerTypeHierarchyAdapter(BaseCollectionPage.class, collectionPageSerializer)
+                .registerTypeHierarchyAdapter(BaseCollectionPage.class, collectionPageDeserializer)
+                .registerTypeAdapter(TimeOfDay.class, timeOfDayJsonDeserializer)
                 .registerTypeAdapterFactory(new FallbackTypeAdapterFactory(logger))
                 .create();
     }

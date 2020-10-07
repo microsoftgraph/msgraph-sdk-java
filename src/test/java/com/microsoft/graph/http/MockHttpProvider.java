@@ -8,12 +8,17 @@ import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
+import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.core.DefaultConnectionConfig;
+import com.microsoft.graph.core.IConnectionConfig;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.MockLogger;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.MockSerializer;
+
+import okhttp3.Request;
 
 /**
  * Mock for {@see IHttpProvider}
@@ -25,6 +30,7 @@ public class MockHttpProvider implements IHttpProvider {
     private final IExecutors mExecutors;
     private final ILogger mLogger;
     private IConnectionFactory mConnectionFactory;
+    private IConnectionConfig connectionConfig;
 
     @Override
     public ISerializer getSerializer() {
@@ -53,7 +59,7 @@ public class MockHttpProvider implements IHttpProvider {
 
     @Override
     public <Result, BodyType> void send(IHttpRequest request,
-                                        ICallback<Result> callback,
+                                        ICallback<? super Result> callback,
                                         Class<Result> resultClass,
                                         BodyType serializable) {
         Result result = null;
@@ -62,7 +68,7 @@ public class MockHttpProvider implements IHttpProvider {
             if(connection.getResponseCode() == 200) {
                 if(connection.getHeaders().containsKey("Content-Type")) {
                     if (connection.getHeaders().get("Content-Type").equals("application/json")){
-                        JsonObject jsonObject = new JsonParser().parse(connection.getResponseMessage()).getAsJsonObject();
+                        JsonObject jsonObject = JsonParser.parseString(connection.getResponseMessage()).getAsJsonObject();
                         result = (Result) jsonObject;
                     }else if (connection.getHeaders().get("Content-Type").equals("application/octet-stream")) {
                         result = (Result) new BufferedInputStream(connection.getInputStream());
@@ -86,7 +92,7 @@ public class MockHttpProvider implements IHttpProvider {
             if(connection.getResponseCode() == 200) {
                 if(connection.getHeaders().containsKey("Content-Type")) {
                     if (connection.getHeaders().get("Content-Type").equals("application/json")){
-                        JsonObject jsonObject = new JsonParser().parse(connection.getResponseMessage()).getAsJsonObject();
+                        JsonObject jsonObject = JsonParser.parseString(connection.getResponseMessage()).getAsJsonObject();
                         return (Result) jsonObject;
                     }else if (connection.getHeaders().get("Content-Type").equals("application/octet-stream")) {
                         return (Result) new BufferedInputStream(connection.getInputStream());
@@ -109,4 +115,21 @@ public class MockHttpProvider implements IHttpProvider {
     void setConnectionFactory(final IConnectionFactory factory) {
         mConnectionFactory = factory;
     }
+    
+    public IConnectionConfig getConnectionConfig() {
+    	if(this.connectionConfig == null) {
+    		this.connectionConfig = new DefaultConnectionConfig();
+    	}
+    	return this.connectionConfig;
+    }
+    
+    public void setConnectionConfig(IConnectionConfig connectionConfig) {
+    	this.connectionConfig = connectionConfig;
+    }
+
+	@Override
+	public <Result, BodyType> Request getHttpRequest(IHttpRequest request, Class<Result> resultClass,
+			BodyType serializable, IProgressCallback<? super Result> progress) throws ClientException {
+		return null;
+	}
 }
