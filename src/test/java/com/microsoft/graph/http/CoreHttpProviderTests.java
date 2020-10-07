@@ -12,9 +12,10 @@ import java.util.Map;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import okhttp3.OkHttpClient;
+
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.LoggerLevel;
@@ -26,7 +27,6 @@ import com.microsoft.graph.serializer.MockSerializer;
 @Ignore
 public class CoreHttpProviderTests {
 	
-	private MockAuthenticationProvider mAuthenticationProvider;
     private CoreHttpProvider mProvider;
 
     @Test
@@ -39,7 +39,7 @@ public class CoreHttpProviderTests {
         toSerialize.error.message = expectedMessage;
         toSerialize.error.innererror = null;
 
-        setDefaultHttpProvider(toSerialize);
+        setCoreHttpProvider(toSerialize);
         try {
             mProvider.send(new MockHttpRequest(), DriveItem.class, null);
             fail("Expected exception in previous statement");
@@ -58,17 +58,17 @@ public class CoreHttpProviderTests {
         toSerialize.error.code = expectedErrorCode.toString();
         toSerialize.error.message = expectedMessage;
         toSerialize.error.innererror = null;
-        JsonObject raw = new JsonObject();
+        final JsonObject raw = new JsonObject();
         raw.add("response", new JsonPrimitive("The raw request was invalid"));
         toSerialize.rawObject = raw;
 
-        MockLogger logger = new MockLogger();
+        final MockLogger logger = new MockLogger();
         logger.setLoggingLevel(LoggerLevel.DEBUG);
 
         mProvider = new CoreHttpProvider(new MockSerializer(toSerialize, ""),
-                mAuthenticationProvider = new MockAuthenticationProvider(),
                 new MockExecutors(),
-                logger);
+                logger,
+                new OkHttpClient.Builder().build());
         
         try {
             mProvider.send(new MockHttpRequest(), DriveItem.class, null);
@@ -82,19 +82,19 @@ public class CoreHttpProviderTests {
     @Test
     public void testHasHeaderReturnsTrue() {
         HeaderOption h = new HeaderOption("name", "value");
-        assertTrue(DefaultHttpProvider.hasHeader(Arrays.asList(h), "name"));
+        assertTrue(CoreHttpProvider.hasHeader(Arrays.asList(h), "name"));
     }
     
     @Test
     public void testHasHeaderReturnsTrueWhenDifferentCase() {
         HeaderOption h = new HeaderOption("name", "value");
-        assertTrue(DefaultHttpProvider.hasHeader(Arrays.asList(h), "NAME"));
+        assertTrue(CoreHttpProvider.hasHeader(Arrays.asList(h), "NAME"));
     }
     
     @Test
     public void testHasHeaderReturnsFalse() {
         HeaderOption h = new HeaderOption("name", "value");
-        assertFalse(DefaultHttpProvider.hasHeader(Arrays.asList(h), "blah"));
+        assertFalse(CoreHttpProvider.hasHeader(Arrays.asList(h), "blah"));
     }
     
 
@@ -102,11 +102,11 @@ public class CoreHttpProviderTests {
      * Configures the http provider for test cases
      * @param toSerialize The object to serialize
      */
-    private void setDefaultHttpProvider(final Object toSerialize) {
+    private void setCoreHttpProvider(final Object toSerialize) {
         mProvider = new CoreHttpProvider(new MockSerializer(toSerialize, ""),
-                mAuthenticationProvider = new MockAuthenticationProvider(),
                 new MockExecutors(),
-                new MockLogger());
+                new MockLogger(),
+                new OkHttpClient.Builder().build());
     }
 
 }

@@ -37,7 +37,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      */
     @SerializedName(value = "scheduledInstallTime", alternate = {"ScheduledInstallTime"})
     @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay scheduledInstallTime;
+    public com.microsoft.graph.core.TimeOfDay scheduledInstallTime;
 
 
     /**

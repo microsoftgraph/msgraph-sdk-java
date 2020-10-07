@@ -118,7 +118,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
      */
     @SerializedName(value = "maintenanceStartTime", alternate = {"MaintenanceStartTime"})
     @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay maintenanceStartTime;
+    public com.microsoft.graph.core.TimeOfDay maintenanceStartTime;
 
 
     /**

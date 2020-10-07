@@ -1,4 +1,4 @@
-package com.microsoft.graph.models.extensions;
+package com.microsoft.graph.core;
 
 
 import java.math.BigDecimal;
@@ -34,7 +34,7 @@ public class TimeOfDay {
      */
     public static TimeOfDay parse(final String timeStr) throws ParseException {
         // break the date up into its constituent parts
-        String[] timeInfo = timeStr.split(":");
+        final String[] timeInfo = timeStr.split(":");
 
         // validate the split date string
         final int expectedLength = 3;
@@ -50,9 +50,9 @@ public class TimeOfDay {
         final int indSecond = 2;
 
         // unpack this array
-        int hour = Integer.parseInt(timeInfo[indHour]);
-        int minute = Integer.parseInt(timeInfo[indMinute]);
-        int second = new BigDecimal(timeInfo[indSecond]).intValue();
+        final int hour = Integer.parseInt(timeInfo[indHour]);
+        final int minute = Integer.parseInt(timeInfo[indMinute]);
+        final int second = new BigDecimal(timeInfo[indSecond]).intValue();
 
         return new TimeOfDay(hour, minute, second);
     }

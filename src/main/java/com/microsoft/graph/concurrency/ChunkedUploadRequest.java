@@ -2,7 +2,7 @@
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.requests.extensions;
+package com.microsoft.graph.concurrency;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import com.microsoft.graph.concurrency.ChunkedUploadResponseHandler;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
-import com.microsoft.graph.models.extensions.IGraphServiceClient;
+import com.microsoft.graph.core.IGraphServiceClient;
 import com.microsoft.graph.options.Option;
 
 /**

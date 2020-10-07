@@ -1,6 +1,5 @@
 package com.microsoft.graph.core;
 
-import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.logger.ILogger;
@@ -10,17 +9,11 @@ public class MockBaseClient implements IBaseClient {
 
 	private static final String DEFAULT_GRAPH_ENDPOINT = "https://graph.microsoft.com/v1.0";
     private String mEndpoint;
-    private IAuthenticationProvider mAuthenticationProvider;
     private IExecutors mExecutors;
     private IHttpProvider mHttpProvider;
     private ILogger mLogger;
     private ISerializer mSerializer;
 	
-    @Override
-    public IAuthenticationProvider getAuthenticationProvider() {
-        return mAuthenticationProvider;
-    }
-
     @Override
     public String getServiceRoot() {
         if(mEndpoint == null) {
@@ -65,10 +58,6 @@ public class MockBaseClient implements IBaseClient {
 
     public void setExecutors(final IExecutors executors) {
         mExecutors = executors;
-    }
-
-    public void setAuthenticationProvider(final IAuthenticationProvider authenticationProvider) {
-        mAuthenticationProvider = authenticationProvider;
     }
 
     public void setHttpProvider(final IHttpProvider httpProvider) {

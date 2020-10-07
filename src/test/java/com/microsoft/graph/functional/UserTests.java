@@ -24,7 +24,7 @@ import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.Group;
-import com.microsoft.graph.models.extensions.IGraphServiceClient;
+import com.microsoft.graph.core.IGraphServiceClient;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.options.HeaderOption;

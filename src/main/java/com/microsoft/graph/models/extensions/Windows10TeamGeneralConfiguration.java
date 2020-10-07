@@ -78,7 +78,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      */
     @SerializedName(value = "maintenanceWindowStartTime", alternate = {"MaintenanceWindowStartTime"})
     @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay maintenanceWindowStartTime;
+    public com.microsoft.graph.core.TimeOfDay maintenanceWindowStartTime;
 
     /**
      * The Miracast Blocked.
