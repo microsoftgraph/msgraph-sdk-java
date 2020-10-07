@@ -1,4 +1,4 @@
-package com.microsoft.graph.models.extensions;
+package com.microsoft.graph.core;
 
 import static org.junit.Assert.assertEquals;
 

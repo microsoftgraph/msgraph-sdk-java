@@ -14,7 +14,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.Attachment;
-import com.microsoft.graph.models.extensions.DateOnly;
+import com.microsoft.graph.core.DateOnly;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.FileAttachment;
 import com.microsoft.graph.models.extensions.RecurrenceRange;

@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.microsoft.graph.models.extensions.DateOnly;
+import com.microsoft.graph.core.DateOnly;
 
 public class DateOnlyTests {
 
