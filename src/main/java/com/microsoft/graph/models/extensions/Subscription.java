@@ -26,7 +26,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Application Id.
      * Identifier of the application used to create the subscription. Read-only.
      */
-    @SerializedName("applicationId")
+    @SerializedName(value = "applicationId", alternate = {"ApplicationId"})
     @Expose
     public String applicationId;
 
@@ -34,7 +34,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Change Type.
      * Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
      */
-    @SerializedName("changeType")
+    @SerializedName(value = "changeType", alternate = {"ChangeType"})
     @Expose
     public String changeType;
 
@@ -42,7 +42,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Client State.
      * Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
      */
-    @SerializedName("clientState")
+    @SerializedName(value = "clientState", alternate = {"ClientState"})
     @Expose
     public String clientState;
 
@@ -50,7 +50,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Creator Id.
      * Identifier of the user or service principal that created the subscription. If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of. If the app used application permissions, this field contains the id of the service principal corresponding to the app. Read-only.
      */
-    @SerializedName("creatorId")
+    @SerializedName(value = "creatorId", alternate = {"CreatorId"})
     @Expose
     public String creatorId;
 
@@ -58,7 +58,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Encryption Certificate.
      * A base64-encoded representation of a certificate with a public key used to encrypt resource data in change notifications. Optional. Required when includeResourceData is true.
      */
-    @SerializedName("encryptionCertificate")
+    @SerializedName(value = "encryptionCertificate", alternate = {"EncryptionCertificate"})
     @Expose
     public String encryptionCertificate;
 
@@ -66,7 +66,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Encryption Certificate Id.
      * A custom app-provided identifier to help identify the certificate needed to decrypt resource data. Optional.
      */
-    @SerializedName("encryptionCertificateId")
+    @SerializedName(value = "encryptionCertificateId", alternate = {"EncryptionCertificateId"})
     @Expose
     public String encryptionCertificateId;
 
@@ -74,7 +74,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Expiration Date Time.
      * Required. Specifies the date and time when the webhook subscription expires. The time is in UTC, and can be an amount of time from subscription creation that varies for the resource subscribed to.  See the table below for maximum supported subscription length of time.
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -82,7 +82,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Include Resource Data.
      * When set to true, change notifications include resource data (such as content of a chat message). Optional.
      */
-    @SerializedName("includeResourceData")
+    @SerializedName(value = "includeResourceData", alternate = {"IncludeResourceData"})
     @Expose
     public Boolean includeResourceData;
 
@@ -90,7 +90,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Latest Supported Tls Version.
      * 
      */
-    @SerializedName("latestSupportedTlsVersion")
+    @SerializedName(value = "latestSupportedTlsVersion", alternate = {"LatestSupportedTlsVersion"})
     @Expose
     public String latestSupportedTlsVersion;
 
@@ -98,7 +98,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Lifecycle Notification Url.
      * 
      */
-    @SerializedName("lifecycleNotificationUrl")
+    @SerializedName(value = "lifecycleNotificationUrl", alternate = {"LifecycleNotificationUrl"})
     @Expose
     public String lifecycleNotificationUrl;
 
@@ -106,7 +106,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Notification Url.
      * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
      */
-    @SerializedName("notificationUrl")
+    @SerializedName(value = "notificationUrl", alternate = {"NotificationUrl"})
     @Expose
     public String notificationUrl;
 
@@ -114,7 +114,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
      * The Resource.
      * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
      */
-    @SerializedName("resource")
+    @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
     public String resource;
 

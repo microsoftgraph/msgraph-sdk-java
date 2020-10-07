@@ -35,7 +35,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Android Count.
      * Number of android device count.
      */
-    @SerializedName("androidCount")
+    @SerializedName(value = "androidCount", alternate = {"AndroidCount"})
     @Expose
     public Integer androidCount;
 
@@ -43,7 +43,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Ios Count.
      * Number of iOS device count.
      */
-    @SerializedName("iosCount")
+    @SerializedName(value = "iosCount", alternate = {"IosCount"})
     @Expose
     public Integer iosCount;
 
@@ -51,7 +51,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Mac OSCount.
      * Number of Mac OS X device count.
      */
-    @SerializedName("macOSCount")
+    @SerializedName(value = "macOSCount", alternate = {"MacOSCount"})
     @Expose
     public Integer macOSCount;
 
@@ -59,7 +59,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Unknown Count.
      * Number of unknown device count.
      */
-    @SerializedName("unknownCount")
+    @SerializedName(value = "unknownCount", alternate = {"UnknownCount"})
     @Expose
     public Integer unknownCount;
 
@@ -67,7 +67,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Windows Count.
      * Number of Windows device count.
      */
-    @SerializedName("windowsCount")
+    @SerializedName(value = "windowsCount", alternate = {"WindowsCount"})
     @Expose
     public Integer windowsCount;
 
@@ -75,7 +75,7 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
      * The Windows Mobile Count.
      * Number of Windows mobile device count.
      */
-    @SerializedName("windowsMobileCount")
+    @SerializedName(value = "windowsMobileCount", alternate = {"WindowsMobileCount"})
     @Expose
     public Integer windowsMobileCount;
 

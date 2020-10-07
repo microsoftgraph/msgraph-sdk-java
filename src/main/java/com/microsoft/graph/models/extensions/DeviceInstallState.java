@@ -27,7 +27,7 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
      * The Device Id.
      * Device Id.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -35,7 +35,7 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
      * The Device Name.
      * Device name.
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -43,7 +43,7 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
      * The Error Code.
      * The error code for install failures.
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public String errorCode;
 
@@ -51,7 +51,7 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
      * The Install State.
      * The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
      */
-    @SerializedName("installState")
+    @SerializedName(value = "installState", alternate = {"InstallState"})
     @Expose
     public InstallState installState;
 
@@ -59,7 +59,7 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
      * The Last Sync Date Time.
      * Last sync date and time.
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -67,7 +67,7 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
      * The Os Description.
      * OS Description.
      */
-    @SerializedName("osDescription")
+    @SerializedName(value = "osDescription", alternate = {"OsDescription"})
     @Expose
     public String osDescription;
 
@@ -75,7 +75,7 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
      * The Os Version.
      * OS Version.
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 
@@ -83,7 +83,7 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
      * The User Name.
      * Device User Name.
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 

@@ -26,7 +26,7 @@ public class TelecomExpenseManagementPartner extends Entity implements IJsonBack
      * The App Authorized.
      * Whether the partner's AAD app has been authorized to access Intune.
      */
-    @SerializedName("appAuthorized")
+    @SerializedName(value = "appAuthorized", alternate = {"AppAuthorized"})
     @Expose
     public Boolean appAuthorized;
 
@@ -34,7 +34,7 @@ public class TelecomExpenseManagementPartner extends Entity implements IJsonBack
      * The Display Name.
      * Display name of the TEM partner.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -42,7 +42,7 @@ public class TelecomExpenseManagementPartner extends Entity implements IJsonBack
      * The Enabled.
      * Whether Intune's connection to the TEM service is currently enabled or disabled.
      */
-    @SerializedName("enabled")
+    @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Boolean enabled;
 
@@ -50,7 +50,7 @@ public class TelecomExpenseManagementPartner extends Entity implements IJsonBack
      * The Last Connection Date Time.
      * Timestamp of the last request sent to Intune by the TEM partner.
      */
-    @SerializedName("lastConnectionDateTime")
+    @SerializedName(value = "lastConnectionDateTime", alternate = {"LastConnectionDateTime"})
     @Expose
     public java.util.Calendar lastConnectionDateTime;
 
@@ -58,7 +58,7 @@ public class TelecomExpenseManagementPartner extends Entity implements IJsonBack
      * The Url.
      * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 

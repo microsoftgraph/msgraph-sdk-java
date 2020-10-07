@@ -22,7 +22,7 @@ public class MailFolderMoveBody {
      * The destination Id.
      * 
      */
-    @SerializedName("destinationId")
+    @SerializedName(value = "destinationId", alternate = {"DestinationId"})
     @Expose
     public String destinationId;
 

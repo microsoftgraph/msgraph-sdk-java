@@ -27,7 +27,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
      * The Email.
      * The email address of the user.
      */
-    @SerializedName("email")
+    @SerializedName(value = "email", alternate = {"Email"})
     @Expose
     public String email;
 
@@ -35,7 +35,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
      * The User Id.
      * The guid of the user.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -43,7 +43,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
      * The User.
      * 
      */
-    @SerializedName("user")
+    @SerializedName(value = "user", alternate = {"User"})
     @Expose
     public User user;
 

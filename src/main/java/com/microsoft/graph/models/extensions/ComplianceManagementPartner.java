@@ -28,7 +28,7 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
      * The Android Enrollment Assignments.
      * User groups which enroll Android devices through partner.
      */
-    @SerializedName("androidEnrollmentAssignments")
+    @SerializedName(value = "androidEnrollmentAssignments", alternate = {"AndroidEnrollmentAssignments"})
     @Expose
     public java.util.List<ComplianceManagementPartnerAssignment> androidEnrollmentAssignments;
 
@@ -36,7 +36,7 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
      * The Android Onboarded.
      * Partner onboarded for Android devices.
      */
-    @SerializedName("androidOnboarded")
+    @SerializedName(value = "androidOnboarded", alternate = {"AndroidOnboarded"})
     @Expose
     public Boolean androidOnboarded;
 
@@ -44,7 +44,7 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
      * The Display Name.
      * Partner display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -52,7 +52,7 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
      * The Ios Enrollment Assignments.
      * User groups which enroll ios devices through partner.
      */
-    @SerializedName("iosEnrollmentAssignments")
+    @SerializedName(value = "iosEnrollmentAssignments", alternate = {"IosEnrollmentAssignments"})
     @Expose
     public java.util.List<ComplianceManagementPartnerAssignment> iosEnrollmentAssignments;
 
@@ -60,7 +60,7 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
      * The Ios Onboarded.
      * Partner onboarded for ios devices.
      */
-    @SerializedName("iosOnboarded")
+    @SerializedName(value = "iosOnboarded", alternate = {"IosOnboarded"})
     @Expose
     public Boolean iosOnboarded;
 
@@ -68,7 +68,7 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
      * The Last Heartbeat Date Time.
      * Timestamp of last heartbeat after admin onboarded to the compliance management partner
      */
-    @SerializedName("lastHeartbeatDateTime")
+    @SerializedName(value = "lastHeartbeatDateTime", alternate = {"LastHeartbeatDateTime"})
     @Expose
     public java.util.Calendar lastHeartbeatDateTime;
 
@@ -76,7 +76,7 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
      * The Mac Os Enrollment Assignments.
      * User groups which enroll Mac devices through partner.
      */
-    @SerializedName("macOsEnrollmentAssignments")
+    @SerializedName(value = "macOsEnrollmentAssignments", alternate = {"MacOsEnrollmentAssignments"})
     @Expose
     public java.util.List<ComplianceManagementPartnerAssignment> macOsEnrollmentAssignments;
 
@@ -84,7 +84,7 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
      * The Mac Os Onboarded.
      * Partner onboarded for Mac devices.
      */
-    @SerializedName("macOsOnboarded")
+    @SerializedName(value = "macOsOnboarded", alternate = {"MacOsOnboarded"})
     @Expose
     public Boolean macOsOnboarded;
 
@@ -92,7 +92,7 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
      * The Partner State.
      * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
      */
-    @SerializedName("partnerState")
+    @SerializedName(value = "partnerState", alternate = {"PartnerState"})
     @Expose
     public DeviceManagementPartnerTenantState partnerState;
 

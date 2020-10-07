@@ -27,7 +27,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * The Encoded Setting Xml.
      * mdm app configuration Base64 binary.
      */
-    @SerializedName("encodedSettingXml")
+    @SerializedName(value = "encodedSettingXml", alternate = {"EncodedSettingXml"})
     @Expose
     public byte[] encodedSettingXml;
 
@@ -35,7 +35,7 @@ public class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfigurati
      * The Settings.
      * app configuration setting items.
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public java.util.List<AppConfigurationSettingItem> settings;
 

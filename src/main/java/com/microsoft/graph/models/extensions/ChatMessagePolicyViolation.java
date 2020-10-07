@@ -39,7 +39,7 @@ public class ChatMessagePolicyViolation implements IJsonBackedObject {
      * The Dlp Action.
      * 
      */
-    @SerializedName("dlpAction")
+    @SerializedName(value = "dlpAction", alternate = {"DlpAction"})
     @Expose
     public EnumSet<ChatMessagePolicyViolationDlpActionTypes> dlpAction;
 
@@ -47,7 +47,7 @@ public class ChatMessagePolicyViolation implements IJsonBackedObject {
      * The Justification Text.
      * 
      */
-    @SerializedName("justificationText")
+    @SerializedName(value = "justificationText", alternate = {"JustificationText"})
     @Expose
     public String justificationText;
 
@@ -55,7 +55,7 @@ public class ChatMessagePolicyViolation implements IJsonBackedObject {
      * The Policy Tip.
      * 
      */
-    @SerializedName("policyTip")
+    @SerializedName(value = "policyTip", alternate = {"PolicyTip"})
     @Expose
     public ChatMessagePolicyViolationPolicyTip policyTip;
 
@@ -63,7 +63,7 @@ public class ChatMessagePolicyViolation implements IJsonBackedObject {
      * The User Action.
      * 
      */
-    @SerializedName("userAction")
+    @SerializedName(value = "userAction", alternate = {"UserAction"})
     @Expose
     public EnumSet<ChatMessagePolicyViolationUserActionTypes> userAction;
 
@@ -71,7 +71,7 @@ public class ChatMessagePolicyViolation implements IJsonBackedObject {
      * The Verdict Details.
      * 
      */
-    @SerializedName("verdictDetails")
+    @SerializedName(value = "verdictDetails", alternate = {"VerdictDetails"})
     @Expose
     public EnumSet<ChatMessagePolicyViolationVerdictDetailsTypes> verdictDetails;
 

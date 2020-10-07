@@ -38,7 +38,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Created By.
      * 
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public String createdBy;
 
@@ -46,7 +46,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Created By Identity.
      * 
      */
-    @SerializedName("createdByIdentity")
+    @SerializedName(value = "createdByIdentity", alternate = {"CreatedByIdentity"})
     @Expose
     public IdentitySet createdByIdentity;
 
@@ -54,7 +54,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Created Time.
      * 
      */
-    @SerializedName("createdTime")
+    @SerializedName(value = "createdTime", alternate = {"CreatedTime"})
     @Expose
     public java.util.Calendar createdTime;
 
@@ -62,7 +62,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -70,7 +70,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Is Default.
      * 
      */
-    @SerializedName("isDefault")
+    @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
     public Boolean isDefault;
 
@@ -78,7 +78,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Is Shared.
      * 
      */
-    @SerializedName("isShared")
+    @SerializedName(value = "isShared", alternate = {"IsShared"})
     @Expose
     public Boolean isShared;
 
@@ -86,7 +86,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Last Modified By.
      * 
      */
-    @SerializedName("lastModifiedBy")
+    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
     public String lastModifiedBy;
 
@@ -94,7 +94,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Last Modified By Identity.
      * 
      */
-    @SerializedName("lastModifiedByIdentity")
+    @SerializedName(value = "lastModifiedByIdentity", alternate = {"LastModifiedByIdentity"})
     @Expose
     public IdentitySet lastModifiedByIdentity;
 
@@ -102,7 +102,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Last Modified Time.
      * 
      */
-    @SerializedName("lastModifiedTime")
+    @SerializedName(value = "lastModifiedTime", alternate = {"LastModifiedTime"})
     @Expose
     public java.util.Calendar lastModifiedTime;
 
@@ -110,7 +110,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Links.
      * 
      */
-    @SerializedName("links")
+    @SerializedName(value = "links", alternate = {"Links"})
     @Expose
     public NotebookLinks links;
 
@@ -118,7 +118,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -126,7 +126,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Section Groups Url.
      * 
      */
-    @SerializedName("sectionGroupsUrl")
+    @SerializedName(value = "sectionGroupsUrl", alternate = {"SectionGroupsUrl"})
     @Expose
     public String sectionGroupsUrl;
 
@@ -134,7 +134,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Sections Url.
      * 
      */
-    @SerializedName("sectionsUrl")
+    @SerializedName(value = "sectionsUrl", alternate = {"SectionsUrl"})
     @Expose
     public String sectionsUrl;
 
@@ -142,7 +142,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The Self.
      * 
      */
-    @SerializedName("self")
+    @SerializedName(value = "self", alternate = {"Self"})
     @Expose
     public String self;
 
@@ -150,7 +150,7 @@ public class CopyNotebookModel implements IJsonBackedObject {
      * The User Role.
      * 
      */
-    @SerializedName("userRole")
+    @SerializedName(value = "userRole", alternate = {"UserRole"})
     @Expose
     public OnenoteUserRole userRole;
 

@@ -26,7 +26,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * The Display Name.
      * The friendly name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * The File.
      * File as a byte array
      */
-    @SerializedName("file")
+    @SerializedName(value = "file", alternate = {"File"})
     @Expose
     public byte[] file;
 
@@ -42,7 +42,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * The File Hash.
      * SHA256 hash of the file
      */
-    @SerializedName("fileHash")
+    @SerializedName(value = "fileHash", alternate = {"FileHash"})
     @Expose
     public String fileHash;
 
@@ -50,7 +50,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * The Version.
      * Version of the entity.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

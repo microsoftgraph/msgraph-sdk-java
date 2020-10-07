@@ -26,7 +26,7 @@ public class ResourceOperation extends Entity implements IJsonBackedObject {
      * The Action Name.
      * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
      */
-    @SerializedName("actionName")
+    @SerializedName(value = "actionName", alternate = {"ActionName"})
     @Expose
     public String actionName;
 
@@ -34,7 +34,7 @@ public class ResourceOperation extends Entity implements IJsonBackedObject {
      * The Description.
      * Description of the resource operation. The description is used in mouse-over text for the operation when shown in the Azure Portal.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -42,7 +42,7 @@ public class ResourceOperation extends Entity implements IJsonBackedObject {
      * The Resource Name.
      * Name of the Resource this operation is performed on.
      */
-    @SerializedName("resourceName")
+    @SerializedName(value = "resourceName", alternate = {"ResourceName"})
     @Expose
     public String resourceName;
 

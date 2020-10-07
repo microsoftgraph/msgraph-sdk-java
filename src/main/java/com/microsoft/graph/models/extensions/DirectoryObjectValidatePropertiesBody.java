@@ -22,7 +22,7 @@ public class DirectoryObjectValidatePropertiesBody {
      * The entity Type.
      * 
      */
-    @SerializedName("entityType")
+    @SerializedName(value = "entityType", alternate = {"EntityType"})
     @Expose
     public String entityType;
 
@@ -30,7 +30,7 @@ public class DirectoryObjectValidatePropertiesBody {
      * The display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -38,7 +38,7 @@ public class DirectoryObjectValidatePropertiesBody {
      * The mail Nickname.
      * 
      */
-    @SerializedName("mailNickname")
+    @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
     public String mailNickname;
 
@@ -46,7 +46,7 @@ public class DirectoryObjectValidatePropertiesBody {
      * The on Behalf Of User Id.
      * 
      */
-    @SerializedName("onBehalfOfUserId")
+    @SerializedName(value = "onBehalfOfUserId", alternate = {"OnBehalfOfUserId"})
     @Expose
     public java.util.UUID onBehalfOfUserId;
 

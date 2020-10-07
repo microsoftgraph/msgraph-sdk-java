@@ -22,7 +22,7 @@ public class WorkbookFunctionsDbBody {
      * The cost.
      * 
      */
-    @SerializedName("cost")
+    @SerializedName(value = "cost", alternate = {"Cost"})
     @Expose
     public com.google.gson.JsonElement cost;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsDbBody {
      * The salvage.
      * 
      */
-    @SerializedName("salvage")
+    @SerializedName(value = "salvage", alternate = {"Salvage"})
     @Expose
     public com.google.gson.JsonElement salvage;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsDbBody {
      * The life.
      * 
      */
-    @SerializedName("life")
+    @SerializedName(value = "life", alternate = {"Life"})
     @Expose
     public com.google.gson.JsonElement life;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsDbBody {
      * The period.
      * 
      */
-    @SerializedName("period")
+    @SerializedName(value = "period", alternate = {"Period"})
     @Expose
     public com.google.gson.JsonElement period;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsDbBody {
      * The month.
      * 
      */
-    @SerializedName("month")
+    @SerializedName(value = "month", alternate = {"Month"})
     @Expose
     public com.google.gson.JsonElement month;
 

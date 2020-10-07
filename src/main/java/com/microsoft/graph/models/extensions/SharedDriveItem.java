@@ -33,7 +33,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
      * The Owner.
      * Information about the owner of the shared item being referenced.
      */
-    @SerializedName("owner")
+    @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
     public IdentitySet owner;
 
@@ -41,7 +41,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
      * The Drive Item.
      * Used to access the underlying driveItem
      */
-    @SerializedName("driveItem")
+    @SerializedName(value = "driveItem", alternate = {"DriveItem"})
     @Expose
     public DriveItem driveItem;
 
@@ -49,7 +49,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
      * The Items.
      * All driveItems contained in the sharing root. This collection cannot be enumerated.
      */
-    @SerializedName("items")
+    @SerializedName(value = "items", alternate = {"Items"})
     @Expose
     public DriveItemCollectionPage items;
 
@@ -57,7 +57,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
      * The List.
      * Used to access the underlying list
      */
-    @SerializedName("list")
+    @SerializedName(value = "list", alternate = {"List"})
     @Expose
     public List list;
 
@@ -65,7 +65,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
      * The List Item.
      * Used to access the underlying listItem
      */
-    @SerializedName("listItem")
+    @SerializedName(value = "listItem", alternate = {"ListItem"})
     @Expose
     public ListItem listItem;
 
@@ -73,7 +73,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
      * The Permission.
      * Used to access the permission representing the underlying sharing link
      */
-    @SerializedName("permission")
+    @SerializedName(value = "permission", alternate = {"Permission"})
     @Expose
     public Permission permission;
 
@@ -81,7 +81,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
      * The Root.
      * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
      */
-    @SerializedName("root")
+    @SerializedName(value = "root", alternate = {"Root"})
     @Expose
     public DriveItem root;
 
@@ -89,7 +89,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
      * The Site.
      * Used to access the underlying site
      */
-    @SerializedName("site")
+    @SerializedName(value = "site", alternate = {"Site"})
     @Expose
     public Site site;
 

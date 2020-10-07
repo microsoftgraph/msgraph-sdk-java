@@ -22,7 +22,7 @@ public class WorkbookFunctionsYieldMatBody {
      * The settlement.
      * 
      */
-    @SerializedName("settlement")
+    @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
     public com.google.gson.JsonElement settlement;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsYieldMatBody {
      * The maturity.
      * 
      */
-    @SerializedName("maturity")
+    @SerializedName(value = "maturity", alternate = {"Maturity"})
     @Expose
     public com.google.gson.JsonElement maturity;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsYieldMatBody {
      * The issue.
      * 
      */
-    @SerializedName("issue")
+    @SerializedName(value = "issue", alternate = {"Issue"})
     @Expose
     public com.google.gson.JsonElement issue;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsYieldMatBody {
      * The rate.
      * 
      */
-    @SerializedName("rate")
+    @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
     public com.google.gson.JsonElement rate;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsYieldMatBody {
      * The pr.
      * 
      */
-    @SerializedName("pr")
+    @SerializedName(value = "pr", alternate = {"Pr"})
     @Expose
     public com.google.gson.JsonElement pr;
 
@@ -62,7 +62,7 @@ public class WorkbookFunctionsYieldMatBody {
      * The basis.
      * 
      */
-    @SerializedName("basis")
+    @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
     public com.google.gson.JsonElement basis;
 

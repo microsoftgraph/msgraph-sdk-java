@@ -22,7 +22,7 @@ public class ApplicationAddPasswordBody {
      * The password Credential.
      * 
      */
-    @SerializedName("passwordCredential")
+    @SerializedName(value = "passwordCredential", alternate = {"PasswordCredential"})
     @Expose
     public PasswordCredential passwordCredential;
 

@@ -34,7 +34,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Active Checklist Item Count.
      * Number of checklist items with value set to false, representing incomplete items.
      */
-    @SerializedName("activeChecklistItemCount")
+    @SerializedName(value = "activeChecklistItemCount", alternate = {"ActiveChecklistItemCount"})
     @Expose
     public Integer activeChecklistItemCount;
 
@@ -42,7 +42,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Applied Categories.
      * The categories to which the task has been applied. See applied Categories for possible values.
      */
-    @SerializedName("appliedCategories")
+    @SerializedName(value = "appliedCategories", alternate = {"AppliedCategories"})
     @Expose
     public PlannerAppliedCategories appliedCategories;
 
@@ -50,7 +50,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Assignee Priority.
      * Hint used to order items of this type in a list view. The format is defined as outlined here.
      */
-    @SerializedName("assigneePriority")
+    @SerializedName(value = "assigneePriority", alternate = {"AssigneePriority"})
     @Expose
     public String assigneePriority;
 
@@ -58,7 +58,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The set of assignees the task is assigned to.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public PlannerAssignments assignments;
 
@@ -66,7 +66,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Bucket Id.
      * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
      */
-    @SerializedName("bucketId")
+    @SerializedName(value = "bucketId", alternate = {"BucketId"})
     @Expose
     public String bucketId;
 
@@ -74,7 +74,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Checklist Item Count.
      * Number of checklist items that are present on the task.
      */
-    @SerializedName("checklistItemCount")
+    @SerializedName(value = "checklistItemCount", alternate = {"ChecklistItemCount"})
     @Expose
     public Integer checklistItemCount;
 
@@ -82,7 +82,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Completed By.
      * Identity of the user that completed the task.
      */
-    @SerializedName("completedBy")
+    @SerializedName(value = "completedBy", alternate = {"CompletedBy"})
     @Expose
     public IdentitySet completedBy;
 
@@ -90,7 +90,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Completed Date Time.
      * Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("completedDateTime")
+    @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
     public java.util.Calendar completedDateTime;
 
@@ -98,7 +98,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Conversation Thread Id.
      * Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
      */
-    @SerializedName("conversationThreadId")
+    @SerializedName(value = "conversationThreadId", alternate = {"ConversationThreadId"})
     @Expose
     public String conversationThreadId;
 
@@ -106,7 +106,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Created By.
      * Identity of the user that created the task.
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public IdentitySet createdBy;
 
@@ -114,7 +114,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -122,7 +122,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Due Date Time.
      * Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("dueDateTime")
+    @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
     public java.util.Calendar dueDateTime;
 
@@ -130,7 +130,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Has Description.
      * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
      */
-    @SerializedName("hasDescription")
+    @SerializedName(value = "hasDescription", alternate = {"HasDescription"})
     @Expose
     public Boolean hasDescription;
 
@@ -138,7 +138,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Order Hint.
      * Hint used to order items of this type in a list view. The format is defined as outlined here.
      */
-    @SerializedName("orderHint")
+    @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose
     public String orderHint;
 
@@ -146,7 +146,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Percent Complete.
      * Percentage of task completion. When set to 100, the task is considered completed.
      */
-    @SerializedName("percentComplete")
+    @SerializedName(value = "percentComplete", alternate = {"PercentComplete"})
     @Expose
     public Integer percentComplete;
 
@@ -154,7 +154,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Plan Id.
      * Plan ID to which the task belongs.
      */
-    @SerializedName("planId")
+    @SerializedName(value = "planId", alternate = {"PlanId"})
     @Expose
     public String planId;
 
@@ -162,7 +162,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Preview Type.
      * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      */
-    @SerializedName("previewType")
+    @SerializedName(value = "previewType", alternate = {"PreviewType"})
     @Expose
     public PlannerPreviewType previewType;
 
@@ -170,7 +170,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Reference Count.
      * Number of external references that exist on the task.
      */
-    @SerializedName("referenceCount")
+    @SerializedName(value = "referenceCount", alternate = {"ReferenceCount"})
     @Expose
     public Integer referenceCount;
 
@@ -178,7 +178,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Start Date Time.
      * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -186,7 +186,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Title.
      * Title of the task.
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public String title;
 
@@ -194,7 +194,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Assigned To Task Board Format.
      * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
      */
-    @SerializedName("assignedToTaskBoardFormat")
+    @SerializedName(value = "assignedToTaskBoardFormat", alternate = {"AssignedToTaskBoardFormat"})
     @Expose
     public PlannerAssignedToTaskBoardTaskFormat assignedToTaskBoardFormat;
 
@@ -202,7 +202,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Bucket Task Board Format.
      * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      */
-    @SerializedName("bucketTaskBoardFormat")
+    @SerializedName(value = "bucketTaskBoardFormat", alternate = {"BucketTaskBoardFormat"})
     @Expose
     public PlannerBucketTaskBoardTaskFormat bucketTaskBoardFormat;
 
@@ -210,7 +210,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Details.
      * Read-only. Nullable. Additional details about the task.
      */
-    @SerializedName("details")
+    @SerializedName(value = "details", alternate = {"Details"})
     @Expose
     public PlannerTaskDetails details;
 
@@ -218,7 +218,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
      * The Progress Task Board Format.
      * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      */
-    @SerializedName("progressTaskBoardFormat")
+    @SerializedName(value = "progressTaskBoardFormat", alternate = {"ProgressTaskBoardFormat"})
     @Expose
     public PlannerProgressTaskBoardTaskFormat progressTaskBoardFormat;
 

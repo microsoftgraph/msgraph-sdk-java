@@ -22,7 +22,7 @@ public class GroupLifecyclePolicyRemoveGroupBody {
      * The group Id.
      * 
      */
-    @SerializedName("groupId")
+    @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
     public String groupId;
 

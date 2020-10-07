@@ -24,7 +24,7 @@ public class UserGetMailTipsBody {
      * The email Addresses.
      * 
      */
-    @SerializedName("emailAddresses")
+    @SerializedName(value = "emailAddresses", alternate = {"EmailAddresses"})
     @Expose
     public java.util.List<String> emailAddresses;
 
@@ -32,7 +32,7 @@ public class UserGetMailTipsBody {
      * The mail Tips Options.
      * 
      */
-    @SerializedName("mailTipsOptions")
+    @SerializedName(value = "mailTipsOptions", alternate = {"MailTipsOptions"})
     @Expose
     public EnumSet<MailTipsType> mailTipsOptions;
 

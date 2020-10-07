@@ -22,7 +22,7 @@ public class WorkbookFunctionsSumIfsBody {
      * The sum Range.
      * 
      */
-    @SerializedName("sumRange")
+    @SerializedName(value = "sumRange", alternate = {"SumRange"})
     @Expose
     public com.google.gson.JsonElement sumRange;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsSumIfsBody {
      * The values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 

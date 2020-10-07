@@ -22,7 +22,7 @@ public class WorkbookWorksheetAddBody {
      * The name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

@@ -37,7 +37,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The Current Value.
      * Current value of setting on device
      */
-    @SerializedName("currentValue")
+    @SerializedName(value = "currentValue", alternate = {"CurrentValue"})
     @Expose
     public String currentValue;
 
@@ -45,7 +45,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The Error Code.
      * Error code for the setting
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public Long errorCode;
 
@@ -53,7 +53,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The Error Description.
      * Error description
      */
-    @SerializedName("errorDescription")
+    @SerializedName(value = "errorDescription", alternate = {"ErrorDescription"})
     @Expose
     public String errorDescription;
 
@@ -61,7 +61,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The Instance Display Name.
      * Name of setting instance that is being reported.
      */
-    @SerializedName("instanceDisplayName")
+    @SerializedName(value = "instanceDisplayName", alternate = {"InstanceDisplayName"})
     @Expose
     public String instanceDisplayName;
 
@@ -69,7 +69,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The Setting.
      * The setting that is being reported
      */
-    @SerializedName("setting")
+    @SerializedName(value = "setting", alternate = {"Setting"})
     @Expose
     public String setting;
 
@@ -77,7 +77,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The Setting Name.
      * Localized/user friendly setting name that is being reported
      */
-    @SerializedName("settingName")
+    @SerializedName(value = "settingName", alternate = {"SettingName"})
     @Expose
     public String settingName;
 
@@ -85,7 +85,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The Sources.
      * Contributing policies
      */
-    @SerializedName("sources")
+    @SerializedName(value = "sources", alternate = {"Sources"})
     @Expose
     public java.util.List<SettingSource> sources;
 
@@ -93,7 +93,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The State.
      * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ComplianceStatus state;
 
@@ -101,7 +101,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The User Email.
      * UserEmail
      */
-    @SerializedName("userEmail")
+    @SerializedName(value = "userEmail", alternate = {"UserEmail"})
     @Expose
     public String userEmail;
 
@@ -109,7 +109,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The User Id.
      * UserId
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -117,7 +117,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The User Name.
      * UserName
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 
@@ -125,7 +125,7 @@ public class DeviceCompliancePolicySettingState implements IJsonBackedObject {
      * The User Principal Name.
      * UserPrincipalName.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

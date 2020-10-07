@@ -22,7 +22,7 @@ public class WorkbookFunctionsGamma_InvBody {
      * The probability.
      * 
      */
-    @SerializedName("probability")
+    @SerializedName(value = "probability", alternate = {"Probability"})
     @Expose
     public com.google.gson.JsonElement probability;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsGamma_InvBody {
      * The alpha.
      * 
      */
-    @SerializedName("alpha")
+    @SerializedName(value = "alpha", alternate = {"Alpha"})
     @Expose
     public com.google.gson.JsonElement alpha;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsGamma_InvBody {
      * The beta.
      * 
      */
-    @SerializedName("beta")
+    @SerializedName(value = "beta", alternate = {"Beta"})
     @Expose
     public com.google.gson.JsonElement beta;
 

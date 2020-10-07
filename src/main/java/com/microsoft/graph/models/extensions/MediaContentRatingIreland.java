@@ -37,7 +37,7 @@ public class MediaContentRatingIreland implements IJsonBackedObject {
      * The Movie Rating.
      * Movies rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove12, agesAbove15, agesAbove16, adults.
      */
-    @SerializedName("movieRating")
+    @SerializedName(value = "movieRating", alternate = {"MovieRating"})
     @Expose
     public RatingIrelandMoviesType movieRating;
 
@@ -45,7 +45,7 @@ public class MediaContentRatingIreland implements IJsonBackedObject {
      * The Tv Rating.
      * TV rating selected for Ireland. Possible values are: allAllowed, allBlocked, general, children, youngAdults, parentalSupervision, mature.
      */
-    @SerializedName("tvRating")
+    @SerializedName(value = "tvRating", alternate = {"TvRating"})
     @Expose
     public RatingIrelandTelevisionType tvRating;
 

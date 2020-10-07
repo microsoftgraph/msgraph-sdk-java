@@ -22,7 +22,7 @@ public class NotebookGetNotebookFromWebUrlBody {
      * The web Url.
      * 
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

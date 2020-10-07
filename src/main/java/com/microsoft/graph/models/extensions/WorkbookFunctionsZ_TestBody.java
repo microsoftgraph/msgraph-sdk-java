@@ -22,7 +22,7 @@ public class WorkbookFunctionsZ_TestBody {
      * The array.
      * 
      */
-    @SerializedName("array")
+    @SerializedName(value = "array", alternate = {"Array"})
     @Expose
     public com.google.gson.JsonElement array;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsZ_TestBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsZ_TestBody {
      * The sigma.
      * 
      */
-    @SerializedName("sigma")
+    @SerializedName(value = "sigma", alternate = {"Sigma"})
     @Expose
     public com.google.gson.JsonElement sigma;
 

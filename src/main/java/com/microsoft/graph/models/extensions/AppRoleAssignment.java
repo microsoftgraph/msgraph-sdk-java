@@ -26,7 +26,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
      * The App Role Id.
      * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create. Does not support $filter.
      */
-    @SerializedName("appRoleId")
+    @SerializedName(value = "appRoleId", alternate = {"AppRoleId"})
     @Expose
     public java.util.UUID appRoleId;
 
@@ -34,7 +34,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -42,7 +42,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
      * The Principal Display Name.
      * The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
      */
-    @SerializedName("principalDisplayName")
+    @SerializedName(value = "principalDisplayName", alternate = {"PrincipalDisplayName"})
     @Expose
     public String principalDisplayName;
 
@@ -50,7 +50,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
      * The Principal Id.
      * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create. Does not support $filter.
      */
-    @SerializedName("principalId")
+    @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
     public java.util.UUID principalId;
 
@@ -58,7 +58,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
      * The Principal Type.
      * The type of the assigned principal. This can either be 'User', 'Group' or 'ServicePrincipal'. Read-only. Does not support $filter.
      */
-    @SerializedName("principalType")
+    @SerializedName(value = "principalType", alternate = {"PrincipalType"})
     @Expose
     public String principalType;
 
@@ -66,7 +66,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
      * The Resource Display Name.
      * The display name of the resource app's service principal to which the assignment is made. Does not support $filter.
      */
-    @SerializedName("resourceDisplayName")
+    @SerializedName(value = "resourceDisplayName", alternate = {"ResourceDisplayName"})
     @Expose
     public String resourceDisplayName;
 
@@ -74,7 +74,7 @@ public class AppRoleAssignment extends DirectoryObject implements IJsonBackedObj
      * The Resource Id.
      * The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
      */
-    @SerializedName("resourceId")
+    @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
     public java.util.UUID resourceId;
 

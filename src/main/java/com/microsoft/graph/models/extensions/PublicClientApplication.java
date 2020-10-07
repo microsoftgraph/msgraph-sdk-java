@@ -35,7 +35,7 @@ public class PublicClientApplication implements IJsonBackedObject {
      * The Redirect Uris.
      * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      */
-    @SerializedName("redirectUris")
+    @SerializedName(value = "redirectUris", alternate = {"RedirectUris"})
     @Expose
     public java.util.List<String> redirectUris;
 

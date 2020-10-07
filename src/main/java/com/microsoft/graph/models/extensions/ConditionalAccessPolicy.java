@@ -30,7 +30,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
      * The Conditions.
      * Specifies the rules that must be met for the policy to apply. Required.
      */
-    @SerializedName("conditions")
+    @SerializedName(value = "conditions", alternate = {"Conditions"})
     @Expose
     public ConditionalAccessConditionSet conditions;
 
@@ -38,7 +38,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
      * The Created Date Time.
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Readonly.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -46,7 +46,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -54,7 +54,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
      * The Display Name.
      * Specifies a display name for the conditionalAccessPolicy object.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -62,7 +62,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
      * The Grant Controls.
      * Specifies the grant controls that must be fulfilled to pass the policy.
      */
-    @SerializedName("grantControls")
+    @SerializedName(value = "grantControls", alternate = {"GrantControls"})
     @Expose
     public ConditionalAccessGrantControls grantControls;
 
@@ -70,7 +70,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
      * The Modified Date Time.
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Readonly.
      */
-    @SerializedName("modifiedDateTime")
+    @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
     public java.util.Calendar modifiedDateTime;
 
@@ -78,7 +78,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
      * The Session Controls.
      * Specifies the session controls that are enforced after sign-in.
      */
-    @SerializedName("sessionControls")
+    @SerializedName(value = "sessionControls", alternate = {"SessionControls"})
     @Expose
     public ConditionalAccessSessionControls sessionControls;
 
@@ -86,7 +86,7 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
      * The State.
      * Specifies the state of the conditionalAccessPolicy object. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ConditionalAccessPolicyState state;
 

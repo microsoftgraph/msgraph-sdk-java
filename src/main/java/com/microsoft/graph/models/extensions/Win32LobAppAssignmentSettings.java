@@ -29,7 +29,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * The Install Time Settings.
      * The install time settings to apply for this app assignment.
      */
-    @SerializedName("installTimeSettings")
+    @SerializedName(value = "installTimeSettings", alternate = {"InstallTimeSettings"})
     @Expose
     public MobileAppInstallTimeSettings installTimeSettings;
 
@@ -37,7 +37,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * The Notifications.
      * The notification status for this app assignment. Possible values are: showAll, showReboot, hideAll.
      */
-    @SerializedName("notifications")
+    @SerializedName(value = "notifications", alternate = {"Notifications"})
     @Expose
     public Win32LobAppNotification notifications;
 
@@ -45,7 +45,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * The Restart Settings.
      * The reboot settings to apply for this app assignment.
      */
-    @SerializedName("restartSettings")
+    @SerializedName(value = "restartSettings", alternate = {"RestartSettings"})
     @Expose
     public Win32LobAppRestartSettings restartSettings;
 

@@ -32,7 +32,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      * The Calls.
      * 
      */
-    @SerializedName("calls")
+    @SerializedName(value = "calls", alternate = {"Calls"})
     @Expose
     public CallCollectionPage calls;
 
@@ -40,7 +40,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      * The Call Records.
      * 
      */
-    @SerializedName("callRecords")
+    @SerializedName(value = "callRecords", alternate = {"CallRecords"})
     @Expose
     public CallRecordCollectionPage callRecords;
 
@@ -48,7 +48,7 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      * The Online Meetings.
      * 
      */
-    @SerializedName("onlineMeetings")
+    @SerializedName(value = "onlineMeetings", alternate = {"OnlineMeetings"})
     @Expose
     public OnlineMeetingCollectionPage onlineMeetings;
 

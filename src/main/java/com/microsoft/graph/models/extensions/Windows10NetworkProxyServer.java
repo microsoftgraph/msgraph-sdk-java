@@ -35,7 +35,7 @@ public class Windows10NetworkProxyServer implements IJsonBackedObject {
      * The Address.
      * Address to the proxy server. Specify an address in the format &amp;lt;server&amp;gt;[:&amp;lt;port&amp;gt;]
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public String address;
 
@@ -43,7 +43,7 @@ public class Windows10NetworkProxyServer implements IJsonBackedObject {
      * The Exceptions.
      * Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with what is specified in this node.
      */
-    @SerializedName("exceptions")
+    @SerializedName(value = "exceptions", alternate = {"Exceptions"})
     @Expose
     public java.util.List<String> exceptions;
 
@@ -51,7 +51,7 @@ public class Windows10NetworkProxyServer implements IJsonBackedObject {
      * The Use For Local Addresses.
      * Specifies whether the proxy server should be used for local (intranet) addresses.
      */
-    @SerializedName("useForLocalAddresses")
+    @SerializedName(value = "useForLocalAddresses", alternate = {"UseForLocalAddresses"})
     @Expose
     public Boolean useForLocalAddresses;
 

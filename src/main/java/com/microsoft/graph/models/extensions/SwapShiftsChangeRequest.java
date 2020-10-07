@@ -26,7 +26,7 @@ public class SwapShiftsChangeRequest extends OfferShiftRequest implements IJsonB
      * The Recipient Shift Id.
      * ShiftId for the recipient user with whom the request is to swap.
      */
-    @SerializedName("recipientShiftId")
+    @SerializedName(value = "recipientShiftId", alternate = {"RecipientShiftId"})
     @Expose
     public String recipientShiftId;
 

@@ -22,7 +22,7 @@ public class WorkbookFunctionsOddFYieldBody {
      * The settlement.
      * 
      */
-    @SerializedName("settlement")
+    @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
     public com.google.gson.JsonElement settlement;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsOddFYieldBody {
      * The maturity.
      * 
      */
-    @SerializedName("maturity")
+    @SerializedName(value = "maturity", alternate = {"Maturity"})
     @Expose
     public com.google.gson.JsonElement maturity;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsOddFYieldBody {
      * The issue.
      * 
      */
-    @SerializedName("issue")
+    @SerializedName(value = "issue", alternate = {"Issue"})
     @Expose
     public com.google.gson.JsonElement issue;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsOddFYieldBody {
      * The first Coupon.
      * 
      */
-    @SerializedName("firstCoupon")
+    @SerializedName(value = "firstCoupon", alternate = {"FirstCoupon"})
     @Expose
     public com.google.gson.JsonElement firstCoupon;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsOddFYieldBody {
      * The rate.
      * 
      */
-    @SerializedName("rate")
+    @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
     public com.google.gson.JsonElement rate;
 
@@ -62,7 +62,7 @@ public class WorkbookFunctionsOddFYieldBody {
      * The pr.
      * 
      */
-    @SerializedName("pr")
+    @SerializedName(value = "pr", alternate = {"Pr"})
     @Expose
     public com.google.gson.JsonElement pr;
 
@@ -70,7 +70,7 @@ public class WorkbookFunctionsOddFYieldBody {
      * The redemption.
      * 
      */
-    @SerializedName("redemption")
+    @SerializedName(value = "redemption", alternate = {"Redemption"})
     @Expose
     public com.google.gson.JsonElement redemption;
 
@@ -78,7 +78,7 @@ public class WorkbookFunctionsOddFYieldBody {
      * The frequency.
      * 
      */
-    @SerializedName("frequency")
+    @SerializedName(value = "frequency", alternate = {"Frequency"})
     @Expose
     public com.google.gson.JsonElement frequency;
 
@@ -86,7 +86,7 @@ public class WorkbookFunctionsOddFYieldBody {
      * The basis.
      * 
      */
-    @SerializedName("basis")
+    @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
     public com.google.gson.JsonElement basis;
 

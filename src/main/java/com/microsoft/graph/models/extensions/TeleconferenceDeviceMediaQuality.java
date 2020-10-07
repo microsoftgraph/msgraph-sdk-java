@@ -35,7 +35,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Average Inbound Jitter.
      * The average inbound stream network jitter.
      */
-    @SerializedName("averageInboundJitter")
+    @SerializedName(value = "averageInboundJitter", alternate = {"AverageInboundJitter"})
     @Expose
     public javax.xml.datatype.Duration averageInboundJitter;
 
@@ -43,7 +43,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Average Inbound Packet Loss Rate In Percentage.
      * The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      */
-    @SerializedName("averageInboundPacketLossRateInPercentage")
+    @SerializedName(value = "averageInboundPacketLossRateInPercentage", alternate = {"AverageInboundPacketLossRateInPercentage"})
     @Expose
     public Double averageInboundPacketLossRateInPercentage;
 
@@ -51,7 +51,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Average Inbound Round Trip Delay.
      * The average inbound stream network round trip delay.
      */
-    @SerializedName("averageInboundRoundTripDelay")
+    @SerializedName(value = "averageInboundRoundTripDelay", alternate = {"AverageInboundRoundTripDelay"})
     @Expose
     public javax.xml.datatype.Duration averageInboundRoundTripDelay;
 
@@ -59,7 +59,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Average Outbound Jitter.
      * The average outbound stream network jitter.
      */
-    @SerializedName("averageOutboundJitter")
+    @SerializedName(value = "averageOutboundJitter", alternate = {"AverageOutboundJitter"})
     @Expose
     public javax.xml.datatype.Duration averageOutboundJitter;
 
@@ -67,7 +67,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Average Outbound Packet Loss Rate In Percentage.
      * The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      */
-    @SerializedName("averageOutboundPacketLossRateInPercentage")
+    @SerializedName(value = "averageOutboundPacketLossRateInPercentage", alternate = {"AverageOutboundPacketLossRateInPercentage"})
     @Expose
     public Double averageOutboundPacketLossRateInPercentage;
 
@@ -75,7 +75,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Average Outbound Round Trip Delay.
      * The average outbound stream network round trip delay.
      */
-    @SerializedName("averageOutboundRoundTripDelay")
+    @SerializedName(value = "averageOutboundRoundTripDelay", alternate = {"AverageOutboundRoundTripDelay"})
     @Expose
     public javax.xml.datatype.Duration averageOutboundRoundTripDelay;
 
@@ -83,7 +83,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Channel Index.
      * The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3.
      */
-    @SerializedName("channelIndex")
+    @SerializedName(value = "channelIndex", alternate = {"ChannelIndex"})
     @Expose
     public Integer channelIndex;
 
@@ -91,7 +91,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Inbound Packets.
      * The total number of the inbound packets.
      */
-    @SerializedName("inboundPackets")
+    @SerializedName(value = "inboundPackets", alternate = {"InboundPackets"})
     @Expose
     public Long inboundPackets;
 
@@ -99,7 +99,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Local IPAddress.
      * the local IP address for the media session.
      */
-    @SerializedName("localIPAddress")
+    @SerializedName(value = "localIPAddress", alternate = {"LocalIPAddress"})
     @Expose
     public String localIPAddress;
 
@@ -107,7 +107,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Local Port.
      * The local media port.
      */
-    @SerializedName("localPort")
+    @SerializedName(value = "localPort", alternate = {"LocalPort"})
     @Expose
     public Integer localPort;
 
@@ -115,7 +115,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Maximum Inbound Jitter.
      * The maximum inbound stream network jitter.
      */
-    @SerializedName("maximumInboundJitter")
+    @SerializedName(value = "maximumInboundJitter", alternate = {"MaximumInboundJitter"})
     @Expose
     public javax.xml.datatype.Duration maximumInboundJitter;
 
@@ -123,7 +123,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Maximum Inbound Packet Loss Rate In Percentage.
      * The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      */
-    @SerializedName("maximumInboundPacketLossRateInPercentage")
+    @SerializedName(value = "maximumInboundPacketLossRateInPercentage", alternate = {"MaximumInboundPacketLossRateInPercentage"})
     @Expose
     public Double maximumInboundPacketLossRateInPercentage;
 
@@ -131,7 +131,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Maximum Inbound Round Trip Delay.
      * The maximum inbound stream network round trip delay.
      */
-    @SerializedName("maximumInboundRoundTripDelay")
+    @SerializedName(value = "maximumInboundRoundTripDelay", alternate = {"MaximumInboundRoundTripDelay"})
     @Expose
     public javax.xml.datatype.Duration maximumInboundRoundTripDelay;
 
@@ -139,7 +139,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Maximum Outbound Jitter.
      * The maximum outbound stream network jitter.
      */
-    @SerializedName("maximumOutboundJitter")
+    @SerializedName(value = "maximumOutboundJitter", alternate = {"MaximumOutboundJitter"})
     @Expose
     public javax.xml.datatype.Duration maximumOutboundJitter;
 
@@ -147,7 +147,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Maximum Outbound Packet Loss Rate In Percentage.
      * The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
      */
-    @SerializedName("maximumOutboundPacketLossRateInPercentage")
+    @SerializedName(value = "maximumOutboundPacketLossRateInPercentage", alternate = {"MaximumOutboundPacketLossRateInPercentage"})
     @Expose
     public Double maximumOutboundPacketLossRateInPercentage;
 
@@ -155,7 +155,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Maximum Outbound Round Trip Delay.
      * The maximum outbound stream network round trip delay.
      */
-    @SerializedName("maximumOutboundRoundTripDelay")
+    @SerializedName(value = "maximumOutboundRoundTripDelay", alternate = {"MaximumOutboundRoundTripDelay"})
     @Expose
     public javax.xml.datatype.Duration maximumOutboundRoundTripDelay;
 
@@ -163,7 +163,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Media Duration.
      * The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations.
      */
-    @SerializedName("mediaDuration")
+    @SerializedName(value = "mediaDuration", alternate = {"MediaDuration"})
     @Expose
     public javax.xml.datatype.Duration mediaDuration;
 
@@ -171,7 +171,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Network Link Speed In Bytes.
      * The network link speed in bytes
      */
-    @SerializedName("networkLinkSpeedInBytes")
+    @SerializedName(value = "networkLinkSpeedInBytes", alternate = {"NetworkLinkSpeedInBytes"})
     @Expose
     public Long networkLinkSpeedInBytes;
 
@@ -179,7 +179,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Outbound Packets.
      * The total number of the outbound packets.
      */
-    @SerializedName("outboundPackets")
+    @SerializedName(value = "outboundPackets", alternate = {"OutboundPackets"})
     @Expose
     public Long outboundPackets;
 
@@ -187,7 +187,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Remote IPAddress.
      * The remote IP address for the media session.
      */
-    @SerializedName("remoteIPAddress")
+    @SerializedName(value = "remoteIPAddress", alternate = {"RemoteIPAddress"})
     @Expose
     public String remoteIPAddress;
 
@@ -195,7 +195,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
      * The Remote Port.
      * The remote media port.
      */
-    @SerializedName("remotePort")
+    @SerializedName(value = "remotePort", alternate = {"RemotePort"})
     @Expose
     public Integer remotePort;
 

@@ -22,7 +22,7 @@ public class WorkbookChartSetPositionBody {
      * The start Cell.
      * 
      */
-    @SerializedName("startCell")
+    @SerializedName(value = "startCell", alternate = {"StartCell"})
     @Expose
     public com.google.gson.JsonElement startCell;
 
@@ -30,7 +30,7 @@ public class WorkbookChartSetPositionBody {
      * The end Cell.
      * 
      */
-    @SerializedName("endCell")
+    @SerializedName(value = "endCell", alternate = {"EndCell"})
     @Expose
     public com.google.gson.JsonElement endCell;
 

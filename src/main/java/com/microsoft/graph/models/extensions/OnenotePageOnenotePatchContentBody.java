@@ -22,7 +22,7 @@ public class OnenotePageOnenotePatchContentBody {
      * The commands.
      * 
      */
-    @SerializedName("commands")
+    @SerializedName(value = "commands", alternate = {"Commands"})
     @Expose
     public java.util.List<OnenotePatchContentCommand> commands;
 

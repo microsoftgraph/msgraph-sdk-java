@@ -22,7 +22,7 @@ public class WorkbookFunctionsReptBody {
      * The text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public com.google.gson.JsonElement text;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsReptBody {
      * The number Times.
      * 
      */
-    @SerializedName("numberTimes")
+    @SerializedName(value = "numberTimes", alternate = {"NumberTimes"})
     @Expose
     public com.google.gson.JsonElement numberTimes;
 

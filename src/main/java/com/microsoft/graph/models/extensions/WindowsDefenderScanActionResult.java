@@ -26,7 +26,7 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
      * The Scan Type.
      * Scan type either full scan or quick scan
      */
-    @SerializedName("scanType")
+    @SerializedName(value = "scanType", alternate = {"ScanType"})
     @Expose
     public String scanType;
 

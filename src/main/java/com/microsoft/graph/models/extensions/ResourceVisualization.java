@@ -35,7 +35,7 @@ public class ResourceVisualization implements IJsonBackedObject {
      * The Container Display Name.
      * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
      */
-    @SerializedName("containerDisplayName")
+    @SerializedName(value = "containerDisplayName", alternate = {"ContainerDisplayName"})
     @Expose
     public String containerDisplayName;
 
@@ -43,7 +43,7 @@ public class ResourceVisualization implements IJsonBackedObject {
      * The Container Type.
      * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
      */
-    @SerializedName("containerType")
+    @SerializedName(value = "containerType", alternate = {"ContainerType"})
     @Expose
     public String containerType;
 
@@ -51,7 +51,7 @@ public class ResourceVisualization implements IJsonBackedObject {
      * The Container Web Url.
      * A path leading to the folder in which the item is stored.
      */
-    @SerializedName("containerWebUrl")
+    @SerializedName(value = "containerWebUrl", alternate = {"ContainerWebUrl"})
     @Expose
     public String containerWebUrl;
 
@@ -59,7 +59,7 @@ public class ResourceVisualization implements IJsonBackedObject {
      * The Media Type.
      * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
      */
-    @SerializedName("mediaType")
+    @SerializedName(value = "mediaType", alternate = {"MediaType"})
     @Expose
     public String mediaType;
 
@@ -67,7 +67,7 @@ public class ResourceVisualization implements IJsonBackedObject {
      * The Preview Image Url.
      * A URL leading to the preview image for the item.
      */
-    @SerializedName("previewImageUrl")
+    @SerializedName(value = "previewImageUrl", alternate = {"PreviewImageUrl"})
     @Expose
     public String previewImageUrl;
 
@@ -75,7 +75,7 @@ public class ResourceVisualization implements IJsonBackedObject {
      * The Preview Text.
      * A preview text for the item.
      */
-    @SerializedName("previewText")
+    @SerializedName(value = "previewText", alternate = {"PreviewText"})
     @Expose
     public String previewText;
 
@@ -83,7 +83,7 @@ public class ResourceVisualization implements IJsonBackedObject {
      * The Title.
      * The item's title text.
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public String title;
 
@@ -91,7 +91,7 @@ public class ResourceVisualization implements IJsonBackedObject {
      * The Type.
      * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 

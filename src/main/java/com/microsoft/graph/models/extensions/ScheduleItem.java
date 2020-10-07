@@ -37,7 +37,7 @@ public class ScheduleItem implements IJsonBackedObject {
      * The End.
      * The date, time, and time zone that the corresponding event ends.
      */
-    @SerializedName("end")
+    @SerializedName(value = "end", alternate = {"End"})
     @Expose
     public DateTimeTimeZone end;
 
@@ -45,7 +45,7 @@ public class ScheduleItem implements IJsonBackedObject {
      * The Is Private.
      * The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional.
      */
-    @SerializedName("isPrivate")
+    @SerializedName(value = "isPrivate", alternate = {"IsPrivate"})
     @Expose
     public Boolean isPrivate;
 
@@ -53,7 +53,7 @@ public class ScheduleItem implements IJsonBackedObject {
      * The Location.
      * The location where the corresponding event is held or attended from. Optional.
      */
-    @SerializedName("location")
+    @SerializedName(value = "location", alternate = {"Location"})
     @Expose
     public String location;
 
@@ -61,7 +61,7 @@ public class ScheduleItem implements IJsonBackedObject {
      * The Start.
      * The date, time, and time zone that the corresponding event starts.
      */
-    @SerializedName("start")
+    @SerializedName(value = "start", alternate = {"Start"})
     @Expose
     public DateTimeTimeZone start;
 
@@ -69,7 +69,7 @@ public class ScheduleItem implements IJsonBackedObject {
      * The Status.
      * The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public FreeBusyStatus status;
 
@@ -77,7 +77,7 @@ public class ScheduleItem implements IJsonBackedObject {
      * The Subject.
      * The corresponding event's subject line. Optional.
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 

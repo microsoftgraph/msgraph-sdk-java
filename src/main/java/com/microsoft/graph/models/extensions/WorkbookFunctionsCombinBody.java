@@ -22,7 +22,7 @@ public class WorkbookFunctionsCombinBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsCombinBody {
      * The number Chosen.
      * 
      */
-    @SerializedName("numberChosen")
+    @SerializedName(value = "numberChosen", alternate = {"NumberChosen"})
     @Expose
     public com.google.gson.JsonElement numberChosen;
 

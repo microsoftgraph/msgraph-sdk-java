@@ -35,7 +35,7 @@ public class PendingContentUpdate implements IJsonBackedObject {
      * The Queued Date Time.
      * Date and time the pending binary operation was queued in UTC time. Read-only.
      */
-    @SerializedName("queuedDateTime")
+    @SerializedName(value = "queuedDateTime", alternate = {"QueuedDateTime"})
     @Expose
     public java.util.Calendar queuedDateTime;
 

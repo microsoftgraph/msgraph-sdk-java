@@ -26,7 +26,7 @@ public class Contract extends DirectoryObject implements IJsonBackedObject {
      * The Contract Type.
      * Type of contract.Possible values are: SyndicationPartner - Partner that exclusively resells and manages O365 and Intune for this customer. They resell and support their customers. BreadthPartner - Partner has the ability to provide administrative support for this customer. However, the partner is not allowed to resell to the customer.ResellerPartner - Partner that is similar to a syndication partner, except that the partner doesn’t have exclusive access to a tenant. In the syndication case, the customer cannot buy additional direct subscriptions from Microsoft or from other partners.
      */
-    @SerializedName("contractType")
+    @SerializedName(value = "contractType", alternate = {"ContractType"})
     @Expose
     public String contractType;
 
@@ -34,7 +34,7 @@ public class Contract extends DirectoryObject implements IJsonBackedObject {
      * The Customer Id.
      * The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
      */
-    @SerializedName("customerId")
+    @SerializedName(value = "customerId", alternate = {"CustomerId"})
     @Expose
     public java.util.UUID customerId;
 
@@ -42,7 +42,7 @@ public class Contract extends DirectoryObject implements IJsonBackedObject {
      * The Default Domain Name.
      * A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
      */
-    @SerializedName("defaultDomainName")
+    @SerializedName(value = "defaultDomainName", alternate = {"DefaultDomainName"})
     @Expose
     public String defaultDomainName;
 
@@ -50,7 +50,7 @@ public class Contract extends DirectoryObject implements IJsonBackedObject {
      * The Display Name.
      * A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

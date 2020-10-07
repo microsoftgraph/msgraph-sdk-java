@@ -22,7 +22,7 @@ public class WorkbookFunctionsLogBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsLogBody {
      * The base.
      * 
      */
-    @SerializedName("base")
+    @SerializedName(value = "base", alternate = {"Base"})
     @Expose
     public com.google.gson.JsonElement base;
 

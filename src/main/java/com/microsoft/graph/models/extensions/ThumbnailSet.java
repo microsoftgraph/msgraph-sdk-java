@@ -27,7 +27,7 @@ public class ThumbnailSet extends Entity implements IJsonBackedObject {
      * The Large.
      * A 1920x1920 scaled thumbnail.
      */
-    @SerializedName("large")
+    @SerializedName(value = "large", alternate = {"Large"})
     @Expose
     public Thumbnail large;
 
@@ -35,7 +35,7 @@ public class ThumbnailSet extends Entity implements IJsonBackedObject {
      * The Medium.
      * A 176x176 scaled thumbnail.
      */
-    @SerializedName("medium")
+    @SerializedName(value = "medium", alternate = {"Medium"})
     @Expose
     public Thumbnail medium;
 
@@ -43,7 +43,7 @@ public class ThumbnailSet extends Entity implements IJsonBackedObject {
      * The Small.
      * A 48x48 cropped thumbnail.
      */
-    @SerializedName("small")
+    @SerializedName(value = "small", alternate = {"Small"})
     @Expose
     public Thumbnail small;
 
@@ -51,7 +51,7 @@ public class ThumbnailSet extends Entity implements IJsonBackedObject {
      * The Source.
      * A custom thumbnail image or the original image used to generate other thumbnails.
      */
-    @SerializedName("source")
+    @SerializedName(value = "source", alternate = {"Source"})
     @Expose
     public Thumbnail source;
 

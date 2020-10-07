@@ -27,7 +27,7 @@ public class ListItemVersion extends BaseItemVersion implements IJsonBackedObjec
      * The Fields.
      * A collection of the fields and values for this version of the list item.
      */
-    @SerializedName("fields")
+    @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose
     public FieldValueSet fields;
 

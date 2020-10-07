@@ -22,7 +22,7 @@ public class WorkbookCreateSessionBody {
      * The persist Changes.
      * 
      */
-    @SerializedName("persistChanges")
+    @SerializedName(value = "persistChanges", alternate = {"PersistChanges"})
     @Expose
     public Boolean persistChanges;
 

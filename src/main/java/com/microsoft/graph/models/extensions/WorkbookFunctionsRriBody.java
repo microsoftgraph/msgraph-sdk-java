@@ -22,7 +22,7 @@ public class WorkbookFunctionsRriBody {
      * The nper.
      * 
      */
-    @SerializedName("nper")
+    @SerializedName(value = "nper", alternate = {"Nper"})
     @Expose
     public com.google.gson.JsonElement nper;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsRriBody {
      * The pv.
      * 
      */
-    @SerializedName("pv")
+    @SerializedName(value = "pv", alternate = {"Pv"})
     @Expose
     public com.google.gson.JsonElement pv;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsRriBody {
      * The fv.
      * 
      */
-    @SerializedName("fv")
+    @SerializedName(value = "fv", alternate = {"Fv"})
     @Expose
     public com.google.gson.JsonElement fv;
 

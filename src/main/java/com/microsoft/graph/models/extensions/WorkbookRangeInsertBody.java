@@ -22,7 +22,7 @@ public class WorkbookRangeInsertBody {
      * The shift.
      * 
      */
-    @SerializedName("shift")
+    @SerializedName(value = "shift", alternate = {"Shift"})
     @Expose
     public String shift;
 

@@ -22,7 +22,7 @@ public class WorkbookFunctionsLenbBody {
      * The text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public com.google.gson.JsonElement text;
 

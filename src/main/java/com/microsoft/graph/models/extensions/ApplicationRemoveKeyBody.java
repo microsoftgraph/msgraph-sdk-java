@@ -22,7 +22,7 @@ public class ApplicationRemoveKeyBody {
      * The key Id.
      * 
      */
-    @SerializedName("keyId")
+    @SerializedName(value = "keyId", alternate = {"KeyId"})
     @Expose
     public java.util.UUID keyId;
 
@@ -30,7 +30,7 @@ public class ApplicationRemoveKeyBody {
      * The proof.
      * 
      */
-    @SerializedName("proof")
+    @SerializedName(value = "proof", alternate = {"Proof"})
     @Expose
     public String proof;
 

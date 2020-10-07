@@ -36,7 +36,7 @@ public class DeviceActionResult implements IJsonBackedObject {
      * The Action Name.
      * Action name
      */
-    @SerializedName("actionName")
+    @SerializedName(value = "actionName", alternate = {"ActionName"})
     @Expose
     public String actionName;
 
@@ -44,7 +44,7 @@ public class DeviceActionResult implements IJsonBackedObject {
      * The Action State.
      * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
      */
-    @SerializedName("actionState")
+    @SerializedName(value = "actionState", alternate = {"ActionState"})
     @Expose
     public ActionState actionState;
 
@@ -52,7 +52,7 @@ public class DeviceActionResult implements IJsonBackedObject {
      * The Last Updated Date Time.
      * Time the action state was last updated
      */
-    @SerializedName("lastUpdatedDateTime")
+    @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
     public java.util.Calendar lastUpdatedDateTime;
 
@@ -60,7 +60,7 @@ public class DeviceActionResult implements IJsonBackedObject {
      * The Start Date Time.
      * Time the action was initiated
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 

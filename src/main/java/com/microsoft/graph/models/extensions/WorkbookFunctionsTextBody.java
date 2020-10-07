@@ -22,7 +22,7 @@ public class WorkbookFunctionsTextBody {
      * The value.
      * 
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public com.google.gson.JsonElement value;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsTextBody {
      * The format Text.
      * 
      */
-    @SerializedName("formatText")
+    @SerializedName(value = "formatText", alternate = {"FormatText"})
     @Expose
     public com.google.gson.JsonElement formatText;
 

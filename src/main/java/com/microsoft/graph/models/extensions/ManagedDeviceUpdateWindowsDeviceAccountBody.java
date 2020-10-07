@@ -22,7 +22,7 @@ public class ManagedDeviceUpdateWindowsDeviceAccountBody {
      * The update Windows Device Account Action Parameter.
      * 
      */
-    @SerializedName("updateWindowsDeviceAccountActionParameter")
+    @SerializedName(value = "updateWindowsDeviceAccountActionParameter", alternate = {"UpdateWindowsDeviceAccountActionParameter"})
     @Expose
     public UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter;
 

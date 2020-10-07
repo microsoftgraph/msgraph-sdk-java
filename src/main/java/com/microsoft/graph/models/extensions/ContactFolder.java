@@ -34,7 +34,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The folder's display name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -42,7 +42,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
      * The Parent Folder Id.
      * The ID of the folder's parent folder.
      */
-    @SerializedName("parentFolderId")
+    @SerializedName(value = "parentFolderId", alternate = {"ParentFolderId"})
     @Expose
     public String parentFolderId;
 
@@ -50,7 +50,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
      * The Child Folders.
      * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      */
-    @SerializedName("childFolders")
+    @SerializedName(value = "childFolders", alternate = {"ChildFolders"})
     @Expose
     public ContactFolderCollectionPage childFolders;
 
@@ -58,7 +58,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
      * The Contacts.
      * The contacts in the folder. Navigation property. Read-only. Nullable.
      */
-    @SerializedName("contacts")
+    @SerializedName(value = "contacts", alternate = {"Contacts"})
     @Expose
     public ContactCollectionPage contacts;
 
@@ -66,7 +66,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
      */
-    @SerializedName("multiValueExtendedProperties")
+    @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
@@ -74,7 +74,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
      */
-    @SerializedName("singleValueExtendedProperties")
+    @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 

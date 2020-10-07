@@ -29,7 +29,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Compliant App List Type.
      * List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
      */
-    @SerializedName("compliantAppListType")
+    @SerializedName(value = "compliantAppListType", alternate = {"CompliantAppListType"})
     @Expose
     public AppListType compliantAppListType;
 
@@ -37,7 +37,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Compliant Apps List.
      * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      */
-    @SerializedName("compliantAppsList")
+    @SerializedName(value = "compliantAppsList", alternate = {"CompliantAppsList"})
     @Expose
     public java.util.List<AppListItem> compliantAppsList;
 
@@ -45,7 +45,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Email In Domain Suffixes.
      * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
      */
-    @SerializedName("emailInDomainSuffixes")
+    @SerializedName(value = "emailInDomainSuffixes", alternate = {"EmailInDomainSuffixes"})
     @Expose
     public java.util.List<String> emailInDomainSuffixes;
 
@@ -53,7 +53,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Password Block Simple.
      * Block simple passwords.
      */
-    @SerializedName("passwordBlockSimple")
+    @SerializedName(value = "passwordBlockSimple", alternate = {"PasswordBlockSimple"})
     @Expose
     public Boolean passwordBlockSimple;
 
@@ -61,7 +61,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Password Expiration Days.
      * Number of days before the password expires.
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -69,7 +69,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Password Minimum Character Set Count.
      * Number of character sets a password must contain. Valid values 0 to 4
      */
-    @SerializedName("passwordMinimumCharacterSetCount")
+    @SerializedName(value = "passwordMinimumCharacterSetCount", alternate = {"PasswordMinimumCharacterSetCount"})
     @Expose
     public Integer passwordMinimumCharacterSetCount;
 
@@ -77,7 +77,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Password Minimum Length.
      * Minimum length of passwords.
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -85,7 +85,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Password Minutes Of Inactivity Before Lock.
      * Minutes of inactivity required before a password is required.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeLock")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeLock", alternate = {"PasswordMinutesOfInactivityBeforeLock"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeLock;
 
@@ -93,7 +93,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Password Minutes Of Inactivity Before Screen Timeout.
      * Minutes of inactivity required before the screen times out.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeScreenTimeout")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeScreenTimeout", alternate = {"PasswordMinutesOfInactivityBeforeScreenTimeout"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeScreenTimeout;
 
@@ -101,7 +101,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Password Previous Password Block Count.
      * Number of previous passwords to block.
      */
-    @SerializedName("passwordPreviousPasswordBlockCount")
+    @SerializedName(value = "passwordPreviousPasswordBlockCount", alternate = {"PasswordPreviousPasswordBlockCount"})
     @Expose
     public Integer passwordPreviousPasswordBlockCount;
 
@@ -109,7 +109,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Password Required.
      * Whether or not to require a password.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName(value = "passwordRequired", alternate = {"PasswordRequired"})
     @Expose
     public Boolean passwordRequired;
 
@@ -117,7 +117,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * The Password Required Type.
      * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public RequiredPasswordType passwordRequiredType;
 

@@ -26,7 +26,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      * The Active Hours End.
      * Active Hours End
      */
-    @SerializedName("activeHoursEnd")
+    @SerializedName(value = "activeHoursEnd", alternate = {"ActiveHoursEnd"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay activeHoursEnd;
 
@@ -34,7 +34,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      * The Active Hours Start.
      * Active Hours Start
      */
-    @SerializedName("activeHoursStart")
+    @SerializedName(value = "activeHoursStart", alternate = {"ActiveHoursStart"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay activeHoursStart;
 

@@ -35,7 +35,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
      * The Encryption Key.
      * The key used to encrypt the file content.
      */
-    @SerializedName("encryptionKey")
+    @SerializedName(value = "encryptionKey", alternate = {"EncryptionKey"})
     @Expose
     public byte[] encryptionKey;
 
@@ -43,7 +43,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
      * The File Digest.
      * The file digest prior to encryption.
      */
-    @SerializedName("fileDigest")
+    @SerializedName(value = "fileDigest", alternate = {"FileDigest"})
     @Expose
     public byte[] fileDigest;
 
@@ -51,7 +51,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
      * The File Digest Algorithm.
      * The file digest algorithm.
      */
-    @SerializedName("fileDigestAlgorithm")
+    @SerializedName(value = "fileDigestAlgorithm", alternate = {"FileDigestAlgorithm"})
     @Expose
     public String fileDigestAlgorithm;
 
@@ -59,7 +59,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
      * The Initialization Vector.
      * The initialization vector used for the encryption algorithm.
      */
-    @SerializedName("initializationVector")
+    @SerializedName(value = "initializationVector", alternate = {"InitializationVector"})
     @Expose
     public byte[] initializationVector;
 
@@ -67,7 +67,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
      * The Mac.
      * The hash of the encrypted file content + IV (content hash).
      */
-    @SerializedName("mac")
+    @SerializedName(value = "mac", alternate = {"Mac"})
     @Expose
     public byte[] mac;
 
@@ -75,7 +75,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
      * The Mac Key.
      * The key used to get mac.
      */
-    @SerializedName("macKey")
+    @SerializedName(value = "macKey", alternate = {"MacKey"})
     @Expose
     public byte[] macKey;
 
@@ -83,7 +83,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
      * The Profile Identifier.
      * The profile identifier.
      */
-    @SerializedName("profileIdentifier")
+    @SerializedName(value = "profileIdentifier", alternate = {"ProfileIdentifier"})
     @Expose
     public String profileIdentifier;
 

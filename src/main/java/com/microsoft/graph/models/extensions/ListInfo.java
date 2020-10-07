@@ -35,7 +35,7 @@ public class ListInfo implements IJsonBackedObject {
      * The Content Types Enabled.
      * If true, indicates that content types are enabled for this list.
      */
-    @SerializedName("contentTypesEnabled")
+    @SerializedName(value = "contentTypesEnabled", alternate = {"ContentTypesEnabled"})
     @Expose
     public Boolean contentTypesEnabled;
 
@@ -43,7 +43,7 @@ public class ListInfo implements IJsonBackedObject {
      * The Hidden.
      * If true, indicates that the list is not normally visible in the SharePoint user experience.
      */
-    @SerializedName("hidden")
+    @SerializedName(value = "hidden", alternate = {"Hidden"})
     @Expose
     public Boolean hidden;
 
@@ -51,7 +51,7 @@ public class ListInfo implements IJsonBackedObject {
      * The Template.
      * An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
      */
-    @SerializedName("template")
+    @SerializedName(value = "template", alternate = {"Template"})
     @Expose
     public String template;
 

@@ -22,7 +22,7 @@ public class WorkbookFunctionsTruncBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsTruncBody {
      * The num Digits.
      * 
      */
-    @SerializedName("numDigits")
+    @SerializedName(value = "numDigits", alternate = {"NumDigits"})
     @Expose
     public com.google.gson.JsonElement numDigits;
 

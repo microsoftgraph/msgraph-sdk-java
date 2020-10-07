@@ -22,7 +22,7 @@ public class WorkbookFunctionsStandardizeBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsStandardizeBody {
      * The mean.
      * 
      */
-    @SerializedName("mean")
+    @SerializedName(value = "mean", alternate = {"Mean"})
     @Expose
     public com.google.gson.JsonElement mean;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsStandardizeBody {
      * The standard Dev.
      * 
      */
-    @SerializedName("standardDev")
+    @SerializedName(value = "standardDev", alternate = {"StandardDev"})
     @Expose
     public com.google.gson.JsonElement standardDev;
 

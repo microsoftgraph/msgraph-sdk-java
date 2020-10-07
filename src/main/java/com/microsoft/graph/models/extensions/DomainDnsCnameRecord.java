@@ -26,7 +26,7 @@ public class DomainDnsCnameRecord extends DomainDnsRecord implements IJsonBacked
      * The Canonical Name.
      * The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
      */
-    @SerializedName("canonicalName")
+    @SerializedName(value = "canonicalName", alternate = {"CanonicalName"})
     @Expose
     public String canonicalName;
 

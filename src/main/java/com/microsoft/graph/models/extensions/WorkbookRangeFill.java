@@ -26,7 +26,7 @@ public class WorkbookRangeFill extends Entity implements IJsonBackedObject {
      * The Color.
      * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange')
      */
-    @SerializedName("color")
+    @SerializedName(value = "color", alternate = {"Color"})
     @Expose
     public String color;
 

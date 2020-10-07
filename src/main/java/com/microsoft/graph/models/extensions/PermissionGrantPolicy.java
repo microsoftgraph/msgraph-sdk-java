@@ -28,7 +28,7 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
      * The Excludes.
      * 
      */
-    @SerializedName("excludes")
+    @SerializedName(value = "excludes", alternate = {"Excludes"})
     @Expose
     public PermissionGrantConditionSetCollectionPage excludes;
 
@@ -36,7 +36,7 @@ public class PermissionGrantPolicy extends PolicyBase implements IJsonBackedObje
      * The Includes.
      * 
      */
-    @SerializedName("includes")
+    @SerializedName(value = "includes", alternate = {"Includes"})
     @Expose
     public PermissionGrantConditionSetCollectionPage includes;
 

@@ -28,7 +28,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
      * The Has Attachments.
      * Indicates whether any of the posts within this Conversation has at least one attachment.
      */
-    @SerializedName("hasAttachments")
+    @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
     public Boolean hasAttachments;
 
@@ -36,7 +36,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
      * The Last Delivered Date Time.
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("lastDeliveredDateTime")
+    @SerializedName(value = "lastDeliveredDateTime", alternate = {"LastDeliveredDateTime"})
     @Expose
     public java.util.Calendar lastDeliveredDateTime;
 
@@ -44,7 +44,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
      * The Preview.
      * A short summary from the body of the latest post in this converstaion.
      */
-    @SerializedName("preview")
+    @SerializedName(value = "preview", alternate = {"Preview"})
     @Expose
     public String preview;
 
@@ -52,7 +52,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
      * The Topic.
      * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
      */
-    @SerializedName("topic")
+    @SerializedName(value = "topic", alternate = {"Topic"})
     @Expose
     public String topic;
 
@@ -60,7 +60,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
      * The Unique Senders.
      * All the users that sent a message to this Conversation.
      */
-    @SerializedName("uniqueSenders")
+    @SerializedName(value = "uniqueSenders", alternate = {"UniqueSenders"})
     @Expose
     public java.util.List<String> uniqueSenders;
 
@@ -68,7 +68,7 @@ public class Conversation extends Entity implements IJsonBackedObject {
      * The Threads.
      * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      */
-    @SerializedName("threads")
+    @SerializedName(value = "threads", alternate = {"Threads"})
     @Expose
     public ConversationThreadCollectionPage threads;
 

@@ -22,7 +22,7 @@ public class SiteAddBody {
      * The value.
      * 
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public java.util.List<Site> value;
 

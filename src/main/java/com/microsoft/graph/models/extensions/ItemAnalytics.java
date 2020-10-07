@@ -28,7 +28,7 @@ public class ItemAnalytics extends Entity implements IJsonBackedObject {
      * The All Time.
      * 
      */
-    @SerializedName("allTime")
+    @SerializedName(value = "allTime", alternate = {"AllTime"})
     @Expose
     public ItemActivityStat allTime;
 
@@ -36,7 +36,7 @@ public class ItemAnalytics extends Entity implements IJsonBackedObject {
      * The Item Activity Stats.
      * 
      */
-    @SerializedName("itemActivityStats")
+    @SerializedName(value = "itemActivityStats", alternate = {"ItemActivityStats"})
     @Expose
     public ItemActivityStatCollectionPage itemActivityStats;
 
@@ -44,7 +44,7 @@ public class ItemAnalytics extends Entity implements IJsonBackedObject {
      * The Last Seven Days.
      * 
      */
-    @SerializedName("lastSevenDays")
+    @SerializedName(value = "lastSevenDays", alternate = {"LastSevenDays"})
     @Expose
     public ItemActivityStat lastSevenDays;
 

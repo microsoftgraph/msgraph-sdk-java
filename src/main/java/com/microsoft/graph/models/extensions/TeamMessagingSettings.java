@@ -35,7 +35,7 @@ public class TeamMessagingSettings implements IJsonBackedObject {
      * The Allow Channel Mentions.
      * If set to true, @channel mentions are allowed.
      */
-    @SerializedName("allowChannelMentions")
+    @SerializedName(value = "allowChannelMentions", alternate = {"AllowChannelMentions"})
     @Expose
     public Boolean allowChannelMentions;
 
@@ -43,7 +43,7 @@ public class TeamMessagingSettings implements IJsonBackedObject {
      * The Allow Owner Delete Messages.
      * If set to true, owners can delete any message.
      */
-    @SerializedName("allowOwnerDeleteMessages")
+    @SerializedName(value = "allowOwnerDeleteMessages", alternate = {"AllowOwnerDeleteMessages"})
     @Expose
     public Boolean allowOwnerDeleteMessages;
 
@@ -51,7 +51,7 @@ public class TeamMessagingSettings implements IJsonBackedObject {
      * The Allow Team Mentions.
      * If set to true, @team mentions are allowed.
      */
-    @SerializedName("allowTeamMentions")
+    @SerializedName(value = "allowTeamMentions", alternate = {"AllowTeamMentions"})
     @Expose
     public Boolean allowTeamMentions;
 
@@ -59,7 +59,7 @@ public class TeamMessagingSettings implements IJsonBackedObject {
      * The Allow User Delete Messages.
      * If set to true, users can delete their messages.
      */
-    @SerializedName("allowUserDeleteMessages")
+    @SerializedName(value = "allowUserDeleteMessages", alternate = {"AllowUserDeleteMessages"})
     @Expose
     public Boolean allowUserDeleteMessages;
 
@@ -67,7 +67,7 @@ public class TeamMessagingSettings implements IJsonBackedObject {
      * The Allow User Edit Messages.
      * If set to true, users can edit their messages.
      */
-    @SerializedName("allowUserEditMessages")
+    @SerializedName(value = "allowUserEditMessages", alternate = {"AllowUserEditMessages"})
     @Expose
     public Boolean allowUserEditMessages;
 

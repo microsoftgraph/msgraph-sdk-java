@@ -22,7 +22,7 @@ public class WorkbookFunctionsQuotientBody {
      * The numerator.
      * 
      */
-    @SerializedName("numerator")
+    @SerializedName(value = "numerator", alternate = {"Numerator"})
     @Expose
     public com.google.gson.JsonElement numerator;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsQuotientBody {
      * The denominator.
      * 
      */
-    @SerializedName("denominator")
+    @SerializedName(value = "denominator", alternate = {"Denominator"})
     @Expose
     public com.google.gson.JsonElement denominator;
 

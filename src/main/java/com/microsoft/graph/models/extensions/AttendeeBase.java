@@ -27,7 +27,7 @@ public class AttendeeBase extends Recipient implements IJsonBackedObject {
      * The Type.
      * The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public AttendeeType type;
 

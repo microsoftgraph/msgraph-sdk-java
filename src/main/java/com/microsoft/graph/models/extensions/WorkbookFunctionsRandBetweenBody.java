@@ -22,7 +22,7 @@ public class WorkbookFunctionsRandBetweenBody {
      * The bottom.
      * 
      */
-    @SerializedName("bottom")
+    @SerializedName(value = "bottom", alternate = {"Bottom"})
     @Expose
     public com.google.gson.JsonElement bottom;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsRandBetweenBody {
      * The top.
      * 
      */
-    @SerializedName("top")
+    @SerializedName(value = "top", alternate = {"Top"})
     @Expose
     public com.google.gson.JsonElement top;
 

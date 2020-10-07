@@ -22,7 +22,7 @@ public class WorkbookFunctionsComplexBody {
      * The real Num.
      * 
      */
-    @SerializedName("realNum")
+    @SerializedName(value = "realNum", alternate = {"RealNum"})
     @Expose
     public com.google.gson.JsonElement realNum;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsComplexBody {
      * The i Num.
      * 
      */
-    @SerializedName("iNum")
+    @SerializedName(value = "iNum", alternate = {"INum"})
     @Expose
     public com.google.gson.JsonElement iNum;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsComplexBody {
      * The suffix.
      * 
      */
-    @SerializedName("suffix")
+    @SerializedName(value = "suffix", alternate = {"Suffix"})
     @Expose
     public com.google.gson.JsonElement suffix;
 

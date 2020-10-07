@@ -26,7 +26,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
      * The Name Target.
      * Value to use when configuring the Target property of the SRV record at the DNS host.
      */
-    @SerializedName("nameTarget")
+    @SerializedName(value = "nameTarget", alternate = {"NameTarget"})
     @Expose
     public String nameTarget;
 
@@ -34,7 +34,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
      * The Port.
      * Value to use when configuring the port property of the SRV record at the DNS host.
      */
-    @SerializedName("port")
+    @SerializedName(value = "port", alternate = {"Port"})
     @Expose
     public Integer port;
 
@@ -42,7 +42,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
      * The Priority.
      * Value to use when configuring the priority property of the SRV record at the DNS host.
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Integer priority;
 
@@ -50,7 +50,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
      * The Protocol.
      * Value to use when configuring the protocol property of the SRV record at the DNS host.
      */
-    @SerializedName("protocol")
+    @SerializedName(value = "protocol", alternate = {"Protocol"})
     @Expose
     public String protocol;
 
@@ -58,7 +58,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
      * The Service.
      * Value to use when configuring the service property of the SRV record at the DNS host.
      */
-    @SerializedName("service")
+    @SerializedName(value = "service", alternate = {"Service"})
     @Expose
     public String service;
 
@@ -66,7 +66,7 @@ public class DomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedOb
      * The Weight.
      * Value to use when configuring the weight property of the SRV record at the DNS host.
      */
-    @SerializedName("weight")
+    @SerializedName(value = "weight", alternate = {"Weight"})
     @Expose
     public Integer weight;
 

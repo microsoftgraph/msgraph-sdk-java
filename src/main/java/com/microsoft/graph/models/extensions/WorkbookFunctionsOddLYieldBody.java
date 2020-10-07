@@ -22,7 +22,7 @@ public class WorkbookFunctionsOddLYieldBody {
      * The settlement.
      * 
      */
-    @SerializedName("settlement")
+    @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
     public com.google.gson.JsonElement settlement;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsOddLYieldBody {
      * The maturity.
      * 
      */
-    @SerializedName("maturity")
+    @SerializedName(value = "maturity", alternate = {"Maturity"})
     @Expose
     public com.google.gson.JsonElement maturity;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsOddLYieldBody {
      * The last Interest.
      * 
      */
-    @SerializedName("lastInterest")
+    @SerializedName(value = "lastInterest", alternate = {"LastInterest"})
     @Expose
     public com.google.gson.JsonElement lastInterest;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsOddLYieldBody {
      * The rate.
      * 
      */
-    @SerializedName("rate")
+    @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
     public com.google.gson.JsonElement rate;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsOddLYieldBody {
      * The pr.
      * 
      */
-    @SerializedName("pr")
+    @SerializedName(value = "pr", alternate = {"Pr"})
     @Expose
     public com.google.gson.JsonElement pr;
 
@@ -62,7 +62,7 @@ public class WorkbookFunctionsOddLYieldBody {
      * The redemption.
      * 
      */
-    @SerializedName("redemption")
+    @SerializedName(value = "redemption", alternate = {"Redemption"})
     @Expose
     public com.google.gson.JsonElement redemption;
 
@@ -70,7 +70,7 @@ public class WorkbookFunctionsOddLYieldBody {
      * The frequency.
      * 
      */
-    @SerializedName("frequency")
+    @SerializedName(value = "frequency", alternate = {"Frequency"})
     @Expose
     public com.google.gson.JsonElement frequency;
 
@@ -78,7 +78,7 @@ public class WorkbookFunctionsOddLYieldBody {
      * The basis.
      * 
      */
-    @SerializedName("basis")
+    @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
     public com.google.gson.JsonElement basis;
 

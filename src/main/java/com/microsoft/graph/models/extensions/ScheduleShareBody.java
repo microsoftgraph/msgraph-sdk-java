@@ -22,7 +22,7 @@ public class ScheduleShareBody {
      * The notify Team.
      * 
      */
-    @SerializedName("notifyTeam")
+    @SerializedName(value = "notifyTeam", alternate = {"NotifyTeam"})
     @Expose
     public Boolean notifyTeam;
 
@@ -30,7 +30,7 @@ public class ScheduleShareBody {
      * The start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -38,7 +38,7 @@ public class ScheduleShareBody {
      * The end Date Time.
      * 
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 

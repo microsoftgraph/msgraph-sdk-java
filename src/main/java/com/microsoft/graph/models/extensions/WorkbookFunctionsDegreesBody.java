@@ -22,7 +22,7 @@ public class WorkbookFunctionsDegreesBody {
      * The angle.
      * 
      */
-    @SerializedName("angle")
+    @SerializedName(value = "angle", alternate = {"Angle"})
     @Expose
     public com.google.gson.JsonElement angle;
 

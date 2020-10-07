@@ -26,7 +26,7 @@ public class UrlAssessmentRequest extends ThreatAssessmentRequest implements IJs
      * The Url.
      * The URL string.
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 

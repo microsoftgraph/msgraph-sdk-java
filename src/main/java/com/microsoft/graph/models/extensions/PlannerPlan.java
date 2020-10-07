@@ -32,7 +32,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
      * The Created By.
      * Read-only. The user who created the plan.
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public IdentitySet createdBy;
 
@@ -40,7 +40,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -48,7 +48,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
      * The Owner.
      * ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated.
      */
-    @SerializedName("owner")
+    @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
     public String owner;
 
@@ -56,7 +56,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
      * The Title.
      * Required. Title of the plan.
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public String title;
 
@@ -64,7 +64,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
      * The Buckets.
      * Read-only. Nullable. Collection of buckets in the plan.
      */
-    @SerializedName("buckets")
+    @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
     public PlannerBucketCollectionPage buckets;
 
@@ -72,7 +72,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
      * The Details.
      * Read-only. Nullable. Additional details about the plan.
      */
-    @SerializedName("details")
+    @SerializedName(value = "details", alternate = {"Details"})
     @Expose
     public PlannerPlanDetails details;
 
@@ -80,7 +80,7 @@ public class PlannerPlan extends Entity implements IJsonBackedObject {
      * The Tasks.
      * Read-only. Nullable. Collection of tasks in the plan.
      */
-    @SerializedName("tasks")
+    @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
     public PlannerTaskCollectionPage tasks;
 

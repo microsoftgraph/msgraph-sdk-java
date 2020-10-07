@@ -22,7 +22,7 @@ public class WorkbookFunctionsMroundBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsMroundBody {
      * The multiple.
      * 
      */
-    @SerializedName("multiple")
+    @SerializedName(value = "multiple", alternate = {"Multiple"})
     @Expose
     public com.google.gson.JsonElement multiple;
 

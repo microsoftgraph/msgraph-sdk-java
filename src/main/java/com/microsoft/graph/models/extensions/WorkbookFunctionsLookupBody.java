@@ -22,7 +22,7 @@ public class WorkbookFunctionsLookupBody {
      * The lookup Value.
      * 
      */
-    @SerializedName("lookupValue")
+    @SerializedName(value = "lookupValue", alternate = {"LookupValue"})
     @Expose
     public com.google.gson.JsonElement lookupValue;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsLookupBody {
      * The lookup Vector.
      * 
      */
-    @SerializedName("lookupVector")
+    @SerializedName(value = "lookupVector", alternate = {"LookupVector"})
     @Expose
     public com.google.gson.JsonElement lookupVector;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsLookupBody {
      * The result Vector.
      * 
      */
-    @SerializedName("resultVector")
+    @SerializedName(value = "resultVector", alternate = {"ResultVector"})
     @Expose
     public com.google.gson.JsonElement resultVector;
 

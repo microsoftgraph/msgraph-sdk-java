@@ -28,7 +28,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
      * The Compliance Grace Period Expiration Date Time.
      * The DateTime when device compliance grace period expires
      */
-    @SerializedName("complianceGracePeriodExpirationDateTime")
+    @SerializedName(value = "complianceGracePeriodExpirationDateTime", alternate = {"ComplianceGracePeriodExpirationDateTime"})
     @Expose
     public java.util.Calendar complianceGracePeriodExpirationDateTime;
 
@@ -36,7 +36,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
      * The Device Display Name.
      * Device name of the DevicePolicyStatus.
      */
-    @SerializedName("deviceDisplayName")
+    @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
     public String deviceDisplayName;
 
@@ -44,7 +44,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
      * The Device Id.
      * The device id that is being reported.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -52,7 +52,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
      * The Device Model.
      * The device model that is being reported
      */
-    @SerializedName("deviceModel")
+    @SerializedName(value = "deviceModel", alternate = {"DeviceModel"})
     @Expose
     public String deviceModel;
 
@@ -60,7 +60,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
      * The Install Status.
      * The installation status of the policy report. Possible values are: success, available, idle, unknown, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError.
      */
-    @SerializedName("installStatus")
+    @SerializedName(value = "installStatus", alternate = {"InstallStatus"})
     @Expose
     public IosUpdatesInstallStatus installStatus;
 
@@ -68,7 +68,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
      * The Last Reported Date Time.
      * Last modified date time of the policy report.
      */
-    @SerializedName("lastReportedDateTime")
+    @SerializedName(value = "lastReportedDateTime", alternate = {"LastReportedDateTime"})
     @Expose
     public java.util.Calendar lastReportedDateTime;
 
@@ -76,7 +76,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
      * The Os Version.
      * The device version that is being reported.
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 
@@ -84,7 +84,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
      * The Status.
      * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public ComplianceStatus status;
 
@@ -92,7 +92,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
      * The User Id.
      * The User id that is being reported.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -100,7 +100,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
      * The User Name.
      * The User Name that is being reported
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 
@@ -108,7 +108,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
      * The User Principal Name.
      * UserPrincipalName.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

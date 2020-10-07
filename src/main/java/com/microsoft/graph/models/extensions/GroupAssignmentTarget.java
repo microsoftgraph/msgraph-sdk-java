@@ -26,7 +26,7 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
      * The Group Id.
      * The group Id that is the target of the assignment.
      */
-    @SerializedName("groupId")
+    @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
     public String groupId;
 

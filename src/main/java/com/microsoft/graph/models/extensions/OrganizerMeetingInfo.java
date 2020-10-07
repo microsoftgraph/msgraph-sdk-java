@@ -27,7 +27,7 @@ public class OrganizerMeetingInfo extends MeetingInfo implements IJsonBackedObje
      * The Organizer.
      * The organizer Azure Active Directory identity.
      */
-    @SerializedName("organizer")
+    @SerializedName(value = "organizer", alternate = {"Organizer"})
     @Expose
     public IdentitySet organizer;
 

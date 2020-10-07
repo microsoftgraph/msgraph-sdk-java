@@ -27,7 +27,7 @@ public class ShiftItem extends ScheduleEntity implements IJsonBackedObject {
      * The Activities.
      * An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required.
      */
-    @SerializedName("activities")
+    @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
     public java.util.List<ShiftActivity> activities;
 
@@ -35,7 +35,7 @@ public class ShiftItem extends ScheduleEntity implements IJsonBackedObject {
      * The Display Name.
      * The shift label of the shiftItem.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class ShiftItem extends ScheduleEntity implements IJsonBackedObject {
      * The Notes.
      * The shift notes for the shiftItem.
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public String notes;
 

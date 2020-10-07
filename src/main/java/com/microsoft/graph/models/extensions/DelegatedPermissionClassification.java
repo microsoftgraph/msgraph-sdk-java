@@ -27,7 +27,7 @@ public class DelegatedPermissionClassification extends Entity implements IJsonBa
      * The Classification.
      * 
      */
-    @SerializedName("classification")
+    @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
     public PermissionClassificationType classification;
 
@@ -35,7 +35,7 @@ public class DelegatedPermissionClassification extends Entity implements IJsonBa
      * The Permission Id.
      * 
      */
-    @SerializedName("permissionId")
+    @SerializedName(value = "permissionId", alternate = {"PermissionId"})
     @Expose
     public String permissionId;
 
@@ -43,7 +43,7 @@ public class DelegatedPermissionClassification extends Entity implements IJsonBa
      * The Permission Name.
      * 
      */
-    @SerializedName("permissionName")
+    @SerializedName(value = "permissionName", alternate = {"PermissionName"})
     @Expose
     public String permissionName;
 

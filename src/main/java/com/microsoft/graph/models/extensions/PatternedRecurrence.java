@@ -37,7 +37,7 @@ public class PatternedRecurrence implements IJsonBackedObject {
      * The Pattern.
      * The frequency of an event.
      */
-    @SerializedName("pattern")
+    @SerializedName(value = "pattern", alternate = {"Pattern"})
     @Expose
     public RecurrencePattern pattern;
 
@@ -45,7 +45,7 @@ public class PatternedRecurrence implements IJsonBackedObject {
      * The Range.
      * The duration of an event.
      */
-    @SerializedName("range")
+    @SerializedName(value = "range", alternate = {"Range"})
     @Expose
     public RecurrenceRange range;
 

@@ -31,7 +31,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
      * The Column Width.
      * Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
      */
-    @SerializedName("columnWidth")
+    @SerializedName(value = "columnWidth", alternate = {"ColumnWidth"})
     @Expose
     public Double columnWidth;
 
@@ -39,7 +39,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
      * The Horizontal Alignment.
      * Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
      */
-    @SerializedName("horizontalAlignment")
+    @SerializedName(value = "horizontalAlignment", alternate = {"HorizontalAlignment"})
     @Expose
     public String horizontalAlignment;
 
@@ -47,7 +47,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
      * The Row Height.
      * Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
      */
-    @SerializedName("rowHeight")
+    @SerializedName(value = "rowHeight", alternate = {"RowHeight"})
     @Expose
     public Double rowHeight;
 
@@ -55,7 +55,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
      * The Vertical Alignment.
      * Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
      */
-    @SerializedName("verticalAlignment")
+    @SerializedName(value = "verticalAlignment", alternate = {"VerticalAlignment"})
     @Expose
     public String verticalAlignment;
 
@@ -63,7 +63,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
      * The Wrap Text.
      * Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting
      */
-    @SerializedName("wrapText")
+    @SerializedName(value = "wrapText", alternate = {"WrapText"})
     @Expose
     public Boolean wrapText;
 
@@ -71,7 +71,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
      * The Borders.
      * Collection of border objects that apply to the overall range selected Read-only.
      */
-    @SerializedName("borders")
+    @SerializedName(value = "borders", alternate = {"Borders"})
     @Expose
     public WorkbookRangeBorderCollectionPage borders;
 
@@ -79,7 +79,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
      * The Fill.
      * Returns the fill object defined on the overall range. Read-only.
      */
-    @SerializedName("fill")
+    @SerializedName(value = "fill", alternate = {"Fill"})
     @Expose
     public WorkbookRangeFill fill;
 
@@ -87,7 +87,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
      * The Font.
      * Returns the font object defined on the overall range selected Read-only.
      */
-    @SerializedName("font")
+    @SerializedName(value = "font", alternate = {"Font"})
     @Expose
     public WorkbookRangeFont font;
 
@@ -95,7 +95,7 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
      * The Protection.
      * Returns the format protection object for a range. Read-only.
      */
-    @SerializedName("protection")
+    @SerializedName(value = "protection", alternate = {"Protection"})
     @Expose
     public WorkbookFormatProtection protection;
 

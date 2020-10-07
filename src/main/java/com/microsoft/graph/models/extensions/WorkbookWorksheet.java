@@ -35,7 +35,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Name.
      * The display name of the worksheet.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -43,7 +43,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Position.
      * The zero-based position of the worksheet within the workbook.
      */
-    @SerializedName("position")
+    @SerializedName(value = "position", alternate = {"Position"})
     @Expose
     public Integer position;
 
@@ -51,7 +51,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Visibility.
      * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      */
-    @SerializedName("visibility")
+    @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
     public String visibility;
 
@@ -59,7 +59,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Charts.
      * Returns collection of charts that are part of the worksheet. Read-only.
      */
-    @SerializedName("charts")
+    @SerializedName(value = "charts", alternate = {"Charts"})
     @Expose
     public WorkbookChartCollectionPage charts;
 
@@ -67,7 +67,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Names.
      * Returns collection of names that are associated with the worksheet. Read-only.
      */
-    @SerializedName("names")
+    @SerializedName(value = "names", alternate = {"Names"})
     @Expose
     public WorkbookNamedItemCollectionPage names;
 
@@ -75,7 +75,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Pivot Tables.
      * Collection of PivotTables that are part of the worksheet.
      */
-    @SerializedName("pivotTables")
+    @SerializedName(value = "pivotTables", alternate = {"PivotTables"})
     @Expose
     public WorkbookPivotTableCollectionPage pivotTables;
 
@@ -83,7 +83,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Protection.
      * Returns sheet protection object for a worksheet. Read-only.
      */
-    @SerializedName("protection")
+    @SerializedName(value = "protection", alternate = {"Protection"})
     @Expose
     public WorkbookWorksheetProtection protection;
 
@@ -91,7 +91,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Tables.
      * Collection of tables that are part of the worksheet. Read-only.
      */
-    @SerializedName("tables")
+    @SerializedName(value = "tables", alternate = {"Tables"})
     @Expose
     public WorkbookTableCollectionPage tables;
 

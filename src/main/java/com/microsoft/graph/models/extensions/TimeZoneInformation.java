@@ -35,7 +35,7 @@ public class TimeZoneInformation implements IJsonBackedObject {
      * The Alias.
      * An identifier for the time zone.
      */
-    @SerializedName("alias")
+    @SerializedName(value = "alias", alternate = {"Alias"})
     @Expose
     public String alias;
 
@@ -43,7 +43,7 @@ public class TimeZoneInformation implements IJsonBackedObject {
      * The Display Name.
      * A display string that represents the time zone.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

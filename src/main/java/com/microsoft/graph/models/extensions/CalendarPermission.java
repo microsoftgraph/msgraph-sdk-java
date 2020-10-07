@@ -28,7 +28,7 @@ public class CalendarPermission extends Entity implements IJsonBackedObject {
      * The Allowed Roles.
      * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
      */
-    @SerializedName("allowedRoles")
+    @SerializedName(value = "allowedRoles", alternate = {"AllowedRoles"})
     @Expose
     public java.util.List<CalendarRoleType> allowedRoles;
 
@@ -36,7 +36,7 @@ public class CalendarPermission extends Entity implements IJsonBackedObject {
      * The Email Address.
      * Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
      */
-    @SerializedName("emailAddress")
+    @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
     public EmailAddress emailAddress;
 
@@ -44,7 +44,7 @@ public class CalendarPermission extends Entity implements IJsonBackedObject {
      * The Is Inside Organization.
      * True if the user in context (sharee or delegate) is inside the same organization as the calendar owner.
      */
-    @SerializedName("isInsideOrganization")
+    @SerializedName(value = "isInsideOrganization", alternate = {"IsInsideOrganization"})
     @Expose
     public Boolean isInsideOrganization;
 
@@ -52,7 +52,7 @@ public class CalendarPermission extends Entity implements IJsonBackedObject {
      * The Is Removable.
      * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
      */
-    @SerializedName("isRemovable")
+    @SerializedName(value = "isRemovable", alternate = {"IsRemovable"})
     @Expose
     public Boolean isRemovable;
 
@@ -60,7 +60,7 @@ public class CalendarPermission extends Entity implements IJsonBackedObject {
      * The Role.
      * Current permission level of the calendar sharee or delegate.
      */
-    @SerializedName("role")
+    @SerializedName(value = "role", alternate = {"Role"})
     @Expose
     public CalendarRoleType role;
 

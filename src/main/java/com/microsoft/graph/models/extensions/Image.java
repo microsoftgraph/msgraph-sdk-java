@@ -35,7 +35,7 @@ public class Image implements IJsonBackedObject {
      * The Height.
      * Optional. Height of the image, in pixels. Read-only.
      */
-    @SerializedName("height")
+    @SerializedName(value = "height", alternate = {"Height"})
     @Expose
     public Integer height;
 
@@ -43,7 +43,7 @@ public class Image implements IJsonBackedObject {
      * The Width.
      * Optional. Width of the image, in pixels. Read-only.
      */
-    @SerializedName("width")
+    @SerializedName(value = "width", alternate = {"Width"})
     @Expose
     public Integer width;
 

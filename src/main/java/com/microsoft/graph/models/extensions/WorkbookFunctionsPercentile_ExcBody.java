@@ -22,7 +22,7 @@ public class WorkbookFunctionsPercentile_ExcBody {
      * The array.
      * 
      */
-    @SerializedName("array")
+    @SerializedName(value = "array", alternate = {"Array"})
     @Expose
     public com.google.gson.JsonElement array;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsPercentile_ExcBody {
      * The k.
      * 
      */
-    @SerializedName("k")
+    @SerializedName(value = "k", alternate = {"K"})
     @Expose
     public com.google.gson.JsonElement k;
 

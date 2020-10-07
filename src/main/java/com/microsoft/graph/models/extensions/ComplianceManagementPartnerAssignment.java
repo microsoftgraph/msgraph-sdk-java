@@ -36,7 +36,7 @@ public class ComplianceManagementPartnerAssignment implements IJsonBackedObject 
      * The Target.
      * Group assignment target.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

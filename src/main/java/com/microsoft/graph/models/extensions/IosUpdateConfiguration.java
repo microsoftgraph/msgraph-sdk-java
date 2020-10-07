@@ -27,7 +27,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Active Hours End.
      * Active Hours End (active hours mean the time window when updates install should not happen)
      */
-    @SerializedName("activeHoursEnd")
+    @SerializedName(value = "activeHoursEnd", alternate = {"ActiveHoursEnd"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay activeHoursEnd;
 
@@ -35,7 +35,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Active Hours Start.
      * Active Hours Start (active hours mean the time window when updates install should not happen)
      */
-    @SerializedName("activeHoursStart")
+    @SerializedName(value = "activeHoursStart", alternate = {"ActiveHoursStart"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay activeHoursStart;
 
@@ -43,7 +43,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Scheduled Install Days.
      * Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
      */
-    @SerializedName("scheduledInstallDays")
+    @SerializedName(value = "scheduledInstallDays", alternate = {"ScheduledInstallDays"})
     @Expose
     public java.util.List<DayOfWeek> scheduledInstallDays;
 
@@ -51,7 +51,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
      * The Utc Time Offset In Minutes.
      * UTC Time Offset indicated in minutes
      */
-    @SerializedName("utcTimeOffsetInMinutes")
+    @SerializedName(value = "utcTimeOffsetInMinutes", alternate = {"UtcTimeOffsetInMinutes"})
     @Expose
     public Integer utcTimeOffsetInMinutes;
 

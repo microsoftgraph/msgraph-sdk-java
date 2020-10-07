@@ -27,7 +27,7 @@ public class CalendarSharingMessage extends Message implements IJsonBackedObject
      * The Can Accept.
      * 
      */
-    @SerializedName("canAccept")
+    @SerializedName(value = "canAccept", alternate = {"CanAccept"})
     @Expose
     public Boolean canAccept;
 
@@ -35,7 +35,7 @@ public class CalendarSharingMessage extends Message implements IJsonBackedObject
      * The Sharing Message Action.
      * 
      */
-    @SerializedName("sharingMessageAction")
+    @SerializedName(value = "sharingMessageAction", alternate = {"SharingMessageAction"})
     @Expose
     public CalendarSharingMessageAction sharingMessageAction;
 
@@ -43,7 +43,7 @@ public class CalendarSharingMessage extends Message implements IJsonBackedObject
      * The Sharing Message Actions.
      * 
      */
-    @SerializedName("sharingMessageActions")
+    @SerializedName(value = "sharingMessageActions", alternate = {"SharingMessageActions"})
     @Expose
     public java.util.List<CalendarSharingMessageAction> sharingMessageActions;
 
@@ -51,7 +51,7 @@ public class CalendarSharingMessage extends Message implements IJsonBackedObject
      * The Suggested Calendar Name.
      * 
      */
-    @SerializedName("suggestedCalendarName")
+    @SerializedName(value = "suggestedCalendarName", alternate = {"SuggestedCalendarName"})
     @Expose
     public String suggestedCalendarName;
 

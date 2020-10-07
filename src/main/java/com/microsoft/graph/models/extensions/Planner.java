@@ -32,7 +32,7 @@ public class Planner extends Entity implements IJsonBackedObject {
      * The Buckets.
      * Read-only. Nullable. Returns a collection of the specified buckets
      */
-    @SerializedName("buckets")
+    @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
     public PlannerBucketCollectionPage buckets;
 
@@ -40,7 +40,7 @@ public class Planner extends Entity implements IJsonBackedObject {
      * The Plans.
      * Read-only. Nullable. Returns a collection of the specified plans
      */
-    @SerializedName("plans")
+    @SerializedName(value = "plans", alternate = {"Plans"})
     @Expose
     public PlannerPlanCollectionPage plans;
 
@@ -48,7 +48,7 @@ public class Planner extends Entity implements IJsonBackedObject {
      * The Tasks.
      * Read-only. Nullable. Returns a collection of the specified tasks
      */
-    @SerializedName("tasks")
+    @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
     public PlannerTaskCollectionPage tasks;
 

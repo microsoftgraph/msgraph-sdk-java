@@ -26,7 +26,7 @@ public class LocalizedNotificationMessage extends Entity implements IJsonBackedO
      * The Is Default.
      * Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
      */
-    @SerializedName("isDefault")
+    @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
     public Boolean isDefault;
 
@@ -34,7 +34,7 @@ public class LocalizedNotificationMessage extends Entity implements IJsonBackedO
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -42,7 +42,7 @@ public class LocalizedNotificationMessage extends Entity implements IJsonBackedO
      * The Locale.
      * The Locale for which this message is destined.
      */
-    @SerializedName("locale")
+    @SerializedName(value = "locale", alternate = {"Locale"})
     @Expose
     public String locale;
 
@@ -50,7 +50,7 @@ public class LocalizedNotificationMessage extends Entity implements IJsonBackedO
      * The Message Template.
      * The Message Template content.
      */
-    @SerializedName("messageTemplate")
+    @SerializedName(value = "messageTemplate", alternate = {"MessageTemplate"})
     @Expose
     public String messageTemplate;
 
@@ -58,7 +58,7 @@ public class LocalizedNotificationMessage extends Entity implements IJsonBackedO
      * The Subject.
      * The Message Template Subject.
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 

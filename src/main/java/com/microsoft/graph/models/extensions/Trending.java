@@ -28,7 +28,7 @@ public class Trending extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * 
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -36,7 +36,7 @@ public class Trending extends Entity implements IJsonBackedObject {
      * The Resource Reference.
      * Reference properties of the trending document, such as the url and type of the document.
      */
-    @SerializedName("resourceReference")
+    @SerializedName(value = "resourceReference", alternate = {"ResourceReference"})
     @Expose
     public ResourceReference resourceReference;
 
@@ -44,7 +44,7 @@ public class Trending extends Entity implements IJsonBackedObject {
      * The Resource Visualization.
      * Properties that you can use to visualize the document in your experience.
      */
-    @SerializedName("resourceVisualization")
+    @SerializedName(value = "resourceVisualization", alternate = {"ResourceVisualization"})
     @Expose
     public ResourceVisualization resourceVisualization;
 
@@ -52,7 +52,7 @@ public class Trending extends Entity implements IJsonBackedObject {
      * The Weight.
      * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
      */
-    @SerializedName("weight")
+    @SerializedName(value = "weight", alternate = {"Weight"})
     @Expose
     public Double weight;
 
@@ -60,7 +60,7 @@ public class Trending extends Entity implements IJsonBackedObject {
      * The Resource.
      * Used for navigating to the trending document.
      */
-    @SerializedName("resource")
+    @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
     public Entity resource;
 

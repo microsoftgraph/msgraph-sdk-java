@@ -22,7 +22,7 @@ public class WorkbookFunctionsReplaceBBody {
      * The old Text.
      * 
      */
-    @SerializedName("oldText")
+    @SerializedName(value = "oldText", alternate = {"OldText"})
     @Expose
     public com.google.gson.JsonElement oldText;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsReplaceBBody {
      * The start Num.
      * 
      */
-    @SerializedName("startNum")
+    @SerializedName(value = "startNum", alternate = {"StartNum"})
     @Expose
     public com.google.gson.JsonElement startNum;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsReplaceBBody {
      * The num Bytes.
      * 
      */
-    @SerializedName("numBytes")
+    @SerializedName(value = "numBytes", alternate = {"NumBytes"})
     @Expose
     public com.google.gson.JsonElement numBytes;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsReplaceBBody {
      * The new Text.
      * 
      */
-    @SerializedName("newText")
+    @SerializedName(value = "newText", alternate = {"NewText"})
     @Expose
     public com.google.gson.JsonElement newText;
 

@@ -22,7 +22,7 @@ public class WorkbookFilterApplyFontColorFilterBody {
      * The color.
      * 
      */
-    @SerializedName("color")
+    @SerializedName(value = "color", alternate = {"Color"})
     @Expose
     public String color;
 

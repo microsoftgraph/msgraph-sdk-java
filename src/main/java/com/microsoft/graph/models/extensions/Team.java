@@ -43,7 +43,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Classification.
      * An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
      */
-    @SerializedName("classification")
+    @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
     public String classification;
 
@@ -51,7 +51,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Description.
      * An optional description for the team.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -59,7 +59,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The name of the team.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -67,7 +67,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Fun Settings.
      * Settings to configure use of Giphy, memes, and stickers in the team.
      */
-    @SerializedName("funSettings")
+    @SerializedName(value = "funSettings", alternate = {"FunSettings"})
     @Expose
     public TeamFunSettings funSettings;
 
@@ -75,7 +75,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Guest Settings.
      * Settings to configure whether guests can create, update, or delete channels in the team.
      */
-    @SerializedName("guestSettings")
+    @SerializedName(value = "guestSettings", alternate = {"GuestSettings"})
     @Expose
     public TeamGuestSettings guestSettings;
 
@@ -83,7 +83,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Internal Id.
      * A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
      */
-    @SerializedName("internalId")
+    @SerializedName(value = "internalId", alternate = {"InternalId"})
     @Expose
     public String internalId;
 
@@ -91,7 +91,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Is Archived.
      * Whether this team is in read-only mode.
      */
-    @SerializedName("isArchived")
+    @SerializedName(value = "isArchived", alternate = {"IsArchived"})
     @Expose
     public Boolean isArchived;
 
@@ -99,7 +99,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Member Settings.
      * Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
      */
-    @SerializedName("memberSettings")
+    @SerializedName(value = "memberSettings", alternate = {"MemberSettings"})
     @Expose
     public TeamMemberSettings memberSettings;
 
@@ -107,7 +107,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Messaging Settings.
      * Settings to configure messaging and mentions in the team.
      */
-    @SerializedName("messagingSettings")
+    @SerializedName(value = "messagingSettings", alternate = {"MessagingSettings"})
     @Expose
     public TeamMessagingSettings messagingSettings;
 
@@ -115,7 +115,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Specialization.
      * Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
      */
-    @SerializedName("specialization")
+    @SerializedName(value = "specialization", alternate = {"Specialization"})
     @Expose
     public TeamSpecialization specialization;
 
@@ -123,7 +123,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Visibility.
      * The visibility of the group and team. Defaults to Public.
      */
-    @SerializedName("visibility")
+    @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
     public TeamVisibilityType visibility;
 
@@ -131,7 +131,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Web Url.
      * A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 
@@ -139,7 +139,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Schedule.
      * The schedule of shifts for this team.
      */
-    @SerializedName("schedule")
+    @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
     public Schedule schedule;
 
@@ -147,7 +147,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Channels.
      * The collection of channels &amp; messages associated with the team.
      */
-    @SerializedName("channels")
+    @SerializedName(value = "channels", alternate = {"Channels"})
     @Expose
     public ChannelCollectionPage channels;
 
@@ -155,7 +155,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Group.
      * 
      */
-    @SerializedName("group")
+    @SerializedName(value = "group", alternate = {"Group"})
     @Expose
     public Group group;
 
@@ -163,7 +163,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Installed Apps.
      * The apps installed in this team.
      */
-    @SerializedName("installedApps")
+    @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
     public TeamsAppInstallationCollectionPage installedApps;
 
@@ -171,7 +171,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Members.
      * Members and owners of the team.
      */
-    @SerializedName("members")
+    @SerializedName(value = "members", alternate = {"Members"})
     @Expose
     public ConversationMemberCollectionPage members;
 
@@ -179,7 +179,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Operations.
      * The async operations that ran or are running on this team.
      */
-    @SerializedName("operations")
+    @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
     public TeamsAsyncOperationCollectionPage operations;
 
@@ -187,7 +187,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Primary Channel.
      * The general channel for the team.
      */
-    @SerializedName("primaryChannel")
+    @SerializedName(value = "primaryChannel", alternate = {"PrimaryChannel"})
     @Expose
     public Channel primaryChannel;
 
@@ -195,7 +195,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Template.
      * The template this team was created from. See available templates.
      */
-    @SerializedName("template")
+    @SerializedName(value = "template", alternate = {"Template"})
     @Expose
     public TeamsTemplate template;
 

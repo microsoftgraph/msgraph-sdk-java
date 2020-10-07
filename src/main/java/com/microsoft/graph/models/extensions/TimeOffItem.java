@@ -26,7 +26,7 @@ public class TimeOffItem extends ScheduleEntity implements IJsonBackedObject {
      * The Time Off Reason Id.
      * ID of the timeOffReason for this timeOffItem. Required.
      */
-    @SerializedName("timeOffReasonId")
+    @SerializedName(value = "timeOffReasonId", alternate = {"TimeOffReasonId"})
     @Expose
     public String timeOffReasonId;
 

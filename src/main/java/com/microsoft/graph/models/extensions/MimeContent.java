@@ -35,7 +35,7 @@ public class MimeContent implements IJsonBackedObject {
      * The Type.
      * Indicates the content mime type.
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -43,7 +43,7 @@ public class MimeContent implements IJsonBackedObject {
      * The Value.
      * The byte array that contains the actual content.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public byte[] value;
 

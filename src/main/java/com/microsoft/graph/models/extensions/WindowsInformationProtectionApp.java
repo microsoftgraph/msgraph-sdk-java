@@ -35,7 +35,7 @@ public class WindowsInformationProtectionApp implements IJsonBackedObject {
      * The Denied.
      * If true, app is denied protection or exemption.
      */
-    @SerializedName("denied")
+    @SerializedName(value = "denied", alternate = {"Denied"})
     @Expose
     public Boolean denied;
 
@@ -43,7 +43,7 @@ public class WindowsInformationProtectionApp implements IJsonBackedObject {
      * The Description.
      * The app's description.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -51,7 +51,7 @@ public class WindowsInformationProtectionApp implements IJsonBackedObject {
      * The Display Name.
      * App display name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -59,7 +59,7 @@ public class WindowsInformationProtectionApp implements IJsonBackedObject {
      * The Product Name.
      * The product name.
      */
-    @SerializedName("productName")
+    @SerializedName(value = "productName", alternate = {"ProductName"})
     @Expose
     public String productName;
 
@@ -67,7 +67,7 @@ public class WindowsInformationProtectionApp implements IJsonBackedObject {
      * The Publisher Name.
      * The publisher name
      */
-    @SerializedName("publisherName")
+    @SerializedName(value = "publisherName", alternate = {"PublisherName"})
     @Expose
     public String publisherName;
 

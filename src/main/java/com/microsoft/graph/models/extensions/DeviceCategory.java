@@ -26,7 +26,7 @@ public class DeviceCategory extends Entity implements IJsonBackedObject {
      * The Description.
      * Optional description for the device category.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -34,7 +34,7 @@ public class DeviceCategory extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Display name for the device category.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

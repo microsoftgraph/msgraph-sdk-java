@@ -34,7 +34,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The Created Date Time.
      * DateTime the object was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -42,7 +42,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The Description.
      * Admin provided description of the Device Configuration.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -50,7 +50,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The Display Name.
      * Admin provided name of the device configuration.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -58,7 +58,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -66,7 +66,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The Targeted Mobile Apps.
      * the associated app.
      */
-    @SerializedName("targetedMobileApps")
+    @SerializedName(value = "targetedMobileApps", alternate = {"TargetedMobileApps"})
     @Expose
     public java.util.List<String> targetedMobileApps;
 
@@ -74,7 +74,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The Version.
      * Version of the device configuration.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 
@@ -82,7 +82,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The Assignments.
      * The list of group assignemenets for app configration.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage assignments;
 
@@ -90,7 +90,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The Device Statuses.
      * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      */
-    @SerializedName("deviceStatuses")
+    @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
 
@@ -98,7 +98,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The Device Status Summary.
      * App configuration device status summary.
      */
-    @SerializedName("deviceStatusSummary")
+    @SerializedName(value = "deviceStatusSummary", alternate = {"DeviceStatusSummary"})
     @Expose
     public ManagedDeviceMobileAppConfigurationDeviceSummary deviceStatusSummary;
 
@@ -106,7 +106,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The User Statuses.
      * List of ManagedDeviceMobileAppConfigurationUserStatus.
      */
-    @SerializedName("userStatuses")
+    @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage userStatuses;
 
@@ -114,7 +114,7 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The User Status Summary.
      * App configuration user status summary.
      */
-    @SerializedName("userStatusSummary")
+    @SerializedName(value = "userStatusSummary", alternate = {"UserStatusSummary"})
     @Expose
     public ManagedDeviceMobileAppConfigurationUserSummary userStatusSummary;
 

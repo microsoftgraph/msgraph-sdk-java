@@ -35,7 +35,7 @@ public class AverageComparativeScore implements IJsonBackedObject {
      * The Average Score.
      * Average score within specified basis.
      */
-    @SerializedName("averageScore")
+    @SerializedName(value = "averageScore", alternate = {"AverageScore"})
     @Expose
     public Double averageScore;
 
@@ -43,7 +43,7 @@ public class AverageComparativeScore implements IJsonBackedObject {
      * The Basis.
      * Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
      */
-    @SerializedName("basis")
+    @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
     public String basis;
 

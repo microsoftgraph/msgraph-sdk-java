@@ -37,7 +37,7 @@ public class WorkingHours implements IJsonBackedObject {
      * The Days Of Week.
      * The days of the week on which the user works.
      */
-    @SerializedName("daysOfWeek")
+    @SerializedName(value = "daysOfWeek", alternate = {"DaysOfWeek"})
     @Expose
     public java.util.List<DayOfWeek> daysOfWeek;
 
@@ -45,7 +45,7 @@ public class WorkingHours implements IJsonBackedObject {
      * The End Time.
      * The time of the day that the user stops working.
      */
-    @SerializedName("endTime")
+    @SerializedName(value = "endTime", alternate = {"EndTime"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay endTime;
 
@@ -53,7 +53,7 @@ public class WorkingHours implements IJsonBackedObject {
      * The Start Time.
      * The time of the day that the user starts working.
      */
-    @SerializedName("startTime")
+    @SerializedName(value = "startTime", alternate = {"StartTime"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay startTime;
 
@@ -61,7 +61,7 @@ public class WorkingHours implements IJsonBackedObject {
      * The Time Zone.
      * The time zone to which the working hours apply.
      */
-    @SerializedName("timeZone")
+    @SerializedName(value = "timeZone", alternate = {"TimeZone"})
     @Expose
     public TimeZoneBase timeZone;
 

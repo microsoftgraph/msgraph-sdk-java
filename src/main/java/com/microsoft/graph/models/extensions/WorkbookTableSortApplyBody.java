@@ -22,7 +22,7 @@ public class WorkbookTableSortApplyBody {
      * The fields.
      * 
      */
-    @SerializedName("fields")
+    @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose
     public java.util.List<WorkbookSortField> fields;
 
@@ -30,7 +30,7 @@ public class WorkbookTableSortApplyBody {
      * The match Case.
      * 
      */
-    @SerializedName("matchCase")
+    @SerializedName(value = "matchCase", alternate = {"MatchCase"})
     @Expose
     public Boolean matchCase;
 
@@ -38,7 +38,7 @@ public class WorkbookTableSortApplyBody {
      * The method.
      * 
      */
-    @SerializedName("method")
+    @SerializedName(value = "method", alternate = {"Method"})
     @Expose
     public String method;
 

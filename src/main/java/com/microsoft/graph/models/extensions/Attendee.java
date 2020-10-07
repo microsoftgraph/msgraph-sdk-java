@@ -28,7 +28,7 @@ public class Attendee extends AttendeeBase implements IJsonBackedObject {
      * The Proposed New Time.
      * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
      */
-    @SerializedName("proposedNewTime")
+    @SerializedName(value = "proposedNewTime", alternate = {"ProposedNewTime"})
     @Expose
     public TimeSlot proposedNewTime;
 
@@ -36,7 +36,7 @@ public class Attendee extends AttendeeBase implements IJsonBackedObject {
      * The Status.
      * The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public ResponseStatus status;
 

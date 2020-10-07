@@ -35,7 +35,7 @@ public class UserIdentity implements IJsonBackedObject {
      * The Display Name.
      * The identity's display name. Note that this may not always be available or up-to-date.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class UserIdentity implements IJsonBackedObject {
      * The Id.
      * Unique identifier for the identity.
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -51,7 +51,7 @@ public class UserIdentity implements IJsonBackedObject {
      * The Ip Address.
      * Indicates the client IP address used by user performing the activity (audit log only).
      */
-    @SerializedName("ipAddress")
+    @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
     public String ipAddress;
 
@@ -59,7 +59,7 @@ public class UserIdentity implements IJsonBackedObject {
      * The User Principal Name.
      * The userPrincipalName attribute of the user.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

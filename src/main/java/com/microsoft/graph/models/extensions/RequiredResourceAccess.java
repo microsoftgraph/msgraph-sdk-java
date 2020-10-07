@@ -36,7 +36,7 @@ public class RequiredResourceAccess implements IJsonBackedObject {
      * The Resource Access.
      * The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
      */
-    @SerializedName("resourceAccess")
+    @SerializedName(value = "resourceAccess", alternate = {"ResourceAccess"})
     @Expose
     public java.util.List<ResourceAccess> resourceAccess;
 
@@ -44,7 +44,7 @@ public class RequiredResourceAccess implements IJsonBackedObject {
      * The Resource App Id.
      * The unique identifier for the resource that the application requires access to.  This should be equal to the appId declared on the target resource application.
      */
-    @SerializedName("resourceAppId")
+    @SerializedName(value = "resourceAppId", alternate = {"ResourceAppId"})
     @Expose
     public String resourceAppId;
 

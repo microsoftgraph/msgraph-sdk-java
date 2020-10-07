@@ -26,7 +26,7 @@ public class DirectoryObject extends Entity implements IJsonBackedObject {
      * The Deleted Date Time.
      * 
      */
-    @SerializedName("deletedDateTime")
+    @SerializedName(value = "deletedDateTime", alternate = {"DeletedDateTime"})
     @Expose
     public java.util.Calendar deletedDateTime;
 

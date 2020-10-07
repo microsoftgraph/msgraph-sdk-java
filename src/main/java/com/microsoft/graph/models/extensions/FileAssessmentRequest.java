@@ -26,7 +26,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements IJ
      * The Content Data.
      * Base64 encoded file content. The file content cannot fetch back because it isn't stored.
      */
-    @SerializedName("contentData")
+    @SerializedName(value = "contentData", alternate = {"ContentData"})
     @Expose
     public String contentData;
 
@@ -34,7 +34,7 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements IJ
      * The File Name.
      * The file name.
      */
-    @SerializedName("fileName")
+    @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
     public String fileName;
 

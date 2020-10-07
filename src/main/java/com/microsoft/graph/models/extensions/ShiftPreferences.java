@@ -27,7 +27,7 @@ public class ShiftPreferences extends ChangeTrackedEntity implements IJsonBacked
      * The Availability.
      * Availability of the user to be scheduled for work and its recurrence pattern.
      */
-    @SerializedName("availability")
+    @SerializedName(value = "availability", alternate = {"Availability"})
     @Expose
     public java.util.List<ShiftAvailability> availability;
 

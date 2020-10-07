@@ -31,7 +31,7 @@ public class Session extends Entity implements IJsonBackedObject {
      * The Callee.
      * Endpoint that answered the session.
      */
-    @SerializedName("callee")
+    @SerializedName(value = "callee", alternate = {"Callee"})
     @Expose
     public Endpoint callee;
 
@@ -39,7 +39,7 @@ public class Session extends Entity implements IJsonBackedObject {
      * The Caller.
      * Endpoint that initiated the session.
      */
-    @SerializedName("caller")
+    @SerializedName(value = "caller", alternate = {"Caller"})
     @Expose
     public Endpoint caller;
 
@@ -47,7 +47,7 @@ public class Session extends Entity implements IJsonBackedObject {
      * The End Date Time.
      * UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -55,7 +55,7 @@ public class Session extends Entity implements IJsonBackedObject {
      * The Failure Info.
      * Failure information associated with the session if the session failed.
      */
-    @SerializedName("failureInfo")
+    @SerializedName(value = "failureInfo", alternate = {"FailureInfo"})
     @Expose
     public FailureInfo failureInfo;
 
@@ -63,7 +63,7 @@ public class Session extends Entity implements IJsonBackedObject {
      * The Modalities.
      * List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      */
-    @SerializedName("modalities")
+    @SerializedName(value = "modalities", alternate = {"Modalities"})
     @Expose
     public java.util.List<Modality> modalities;
 
@@ -71,7 +71,7 @@ public class Session extends Entity implements IJsonBackedObject {
      * The Start Date Time.
      * UTC fime when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -79,7 +79,7 @@ public class Session extends Entity implements IJsonBackedObject {
      * The Segments.
      * The list of segments involved in the session. Read-only. Nullable.
      */
-    @SerializedName("segments")
+    @SerializedName(value = "segments", alternate = {"Segments"})
     @Expose
     public SegmentCollectionPage segments;
 

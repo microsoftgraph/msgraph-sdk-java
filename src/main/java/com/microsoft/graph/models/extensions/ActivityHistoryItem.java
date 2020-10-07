@@ -28,7 +28,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
      * The Active Duration Seconds.
      * Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
      */
-    @SerializedName("activeDurationSeconds")
+    @SerializedName(value = "activeDurationSeconds", alternate = {"ActiveDurationSeconds"})
     @Expose
     public Integer activeDurationSeconds;
 
@@ -36,7 +36,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * Set by the server. DateTime in UTC when the object was created on the server.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -44,7 +44,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
      * The Expiration Date Time.
      * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -52,7 +52,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
      * The Last Active Date Time.
      * Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
      */
-    @SerializedName("lastActiveDateTime")
+    @SerializedName(value = "lastActiveDateTime", alternate = {"LastActiveDateTime"})
     @Expose
     public java.util.Calendar lastActiveDateTime;
 
@@ -60,7 +60,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * Set by the server. DateTime in UTC when the object was modified on the server.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -68,7 +68,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
      * The Started Date Time.
      * Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
      */
-    @SerializedName("startedDateTime")
+    @SerializedName(value = "startedDateTime", alternate = {"StartedDateTime"})
     @Expose
     public java.util.Calendar startedDateTime;
 
@@ -76,7 +76,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
      * The Status.
      * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public Status status;
 
@@ -84,7 +84,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
      * The User Timezone.
      * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
      */
-    @SerializedName("userTimezone")
+    @SerializedName(value = "userTimezone", alternate = {"UserTimezone"})
     @Expose
     public String userTimezone;
 
@@ -92,7 +92,7 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
      * The Activity.
      * Optional. NavigationProperty/Containment; navigation property to the associated activity.
      */
-    @SerializedName("activity")
+    @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
     public UserActivity activity;
 

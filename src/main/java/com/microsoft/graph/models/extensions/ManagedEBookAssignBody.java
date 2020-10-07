@@ -22,7 +22,7 @@ public class ManagedEBookAssignBody {
      * The managed EBook Assignments.
      * 
      */
-    @SerializedName("managedEBookAssignments")
+    @SerializedName(value = "managedEBookAssignments", alternate = {"ManagedEBookAssignments"})
     @Expose
     public java.util.List<ManagedEBookAssignment> managedEBookAssignments;
 

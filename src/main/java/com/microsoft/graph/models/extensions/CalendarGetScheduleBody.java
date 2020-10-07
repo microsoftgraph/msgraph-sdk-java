@@ -23,7 +23,7 @@ public class CalendarGetScheduleBody {
      * The schedules.
      * 
      */
-    @SerializedName("schedules")
+    @SerializedName(value = "schedules", alternate = {"Schedules"})
     @Expose
     public java.util.List<String> schedules;
 
@@ -31,7 +31,7 @@ public class CalendarGetScheduleBody {
      * The end Time.
      * 
      */
-    @SerializedName("endTime")
+    @SerializedName(value = "endTime", alternate = {"EndTime"})
     @Expose
     public DateTimeTimeZone endTime;
 
@@ -39,7 +39,7 @@ public class CalendarGetScheduleBody {
      * The start Time.
      * 
      */
-    @SerializedName("startTime")
+    @SerializedName(value = "startTime", alternate = {"StartTime"})
     @Expose
     public DateTimeTimeZone startTime;
 
@@ -47,7 +47,7 @@ public class CalendarGetScheduleBody {
      * The availability View Interval.
      * 
      */
-    @SerializedName("availabilityViewInterval")
+    @SerializedName(value = "availabilityViewInterval", alternate = {"AvailabilityViewInterval"})
     @Expose
     public Integer availabilityViewInterval;
 

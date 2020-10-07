@@ -22,7 +22,7 @@ public class WorkbookFunctionsFixedBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsFixedBody {
      * The decimals.
      * 
      */
-    @SerializedName("decimals")
+    @SerializedName(value = "decimals", alternate = {"Decimals"})
     @Expose
     public com.google.gson.JsonElement decimals;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsFixedBody {
      * The no Commas.
      * 
      */
-    @SerializedName("noCommas")
+    @SerializedName(value = "noCommas", alternate = {"NoCommas"})
     @Expose
     public com.google.gson.JsonElement noCommas;
 

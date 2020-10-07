@@ -29,7 +29,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Asset Tag Template.
      * Asset tag information for the device, displayed on the login window and lock screen.
      */
-    @SerializedName("assetTagTemplate")
+    @SerializedName(value = "assetTagTemplate", alternate = {"AssetTagTemplate"})
     @Expose
     public String assetTagTemplate;
 
@@ -37,7 +37,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Home Screen Dock Icons.
      * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("homeScreenDockIcons")
+    @SerializedName(value = "homeScreenDockIcons", alternate = {"HomeScreenDockIcons"})
     @Expose
     public java.util.List<IosHomeScreenItem> homeScreenDockIcons;
 
@@ -45,7 +45,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Home Screen Pages.
      * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("homeScreenPages")
+    @SerializedName(value = "homeScreenPages", alternate = {"HomeScreenPages"})
     @Expose
     public java.util.List<IosHomeScreenPage> homeScreenPages;
 
@@ -53,7 +53,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Lock Screen Footnote.
      * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
      */
-    @SerializedName("lockScreenFootnote")
+    @SerializedName(value = "lockScreenFootnote", alternate = {"LockScreenFootnote"})
     @Expose
     public String lockScreenFootnote;
 
@@ -61,7 +61,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * The Notification Settings.
      * Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("notificationSettings")
+    @SerializedName(value = "notificationSettings", alternate = {"NotificationSettings"})
     @Expose
     public java.util.List<IosNotificationSettings> notificationSettings;
 

@@ -29,7 +29,7 @@ public class DeviceCompliancePolicyState extends Entity implements IJsonBackedOb
      * The Display Name.
      * The name of the policy for this policyBase
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -37,7 +37,7 @@ public class DeviceCompliancePolicyState extends Entity implements IJsonBackedOb
      * The Platform Type.
      * Platform type that the policy applies to
      */
-    @SerializedName("platformType")
+    @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose
     public PolicyPlatformType platformType;
 
@@ -45,7 +45,7 @@ public class DeviceCompliancePolicyState extends Entity implements IJsonBackedOb
      * The Setting Count.
      * Count of how many setting a policy holds
      */
-    @SerializedName("settingCount")
+    @SerializedName(value = "settingCount", alternate = {"SettingCount"})
     @Expose
     public Integer settingCount;
 
@@ -53,7 +53,7 @@ public class DeviceCompliancePolicyState extends Entity implements IJsonBackedOb
      * The Setting States.
      * 
      */
-    @SerializedName("settingStates")
+    @SerializedName(value = "settingStates", alternate = {"SettingStates"})
     @Expose
     public java.util.List<DeviceCompliancePolicySettingState> settingStates;
 
@@ -61,7 +61,7 @@ public class DeviceCompliancePolicyState extends Entity implements IJsonBackedOb
      * The State.
      * The compliance state of the policy
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ComplianceStatus state;
 
@@ -69,7 +69,7 @@ public class DeviceCompliancePolicyState extends Entity implements IJsonBackedOb
      * The Version.
      * The version of the policy
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 

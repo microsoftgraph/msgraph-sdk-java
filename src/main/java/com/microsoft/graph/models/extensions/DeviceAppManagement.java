@@ -54,7 +54,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Is Enabled For Microsoft Store For Business.
      * Whether the account is enabled for syncing applications from the Microsoft Store for Business.
      */
-    @SerializedName("isEnabledForMicrosoftStoreForBusiness")
+    @SerializedName(value = "isEnabledForMicrosoftStoreForBusiness", alternate = {"IsEnabledForMicrosoftStoreForBusiness"})
     @Expose
     public Boolean isEnabledForMicrosoftStoreForBusiness;
 
@@ -62,7 +62,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Microsoft Store For Business Language.
      * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -&amp;lt;country/regioncode2&amp;gt;, where  is a lowercase two-letter code derived from ISO 639-1 and &amp;lt;country/regioncode2&amp;gt; is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
      */
-    @SerializedName("microsoftStoreForBusinessLanguage")
+    @SerializedName(value = "microsoftStoreForBusinessLanguage", alternate = {"MicrosoftStoreForBusinessLanguage"})
     @Expose
     public String microsoftStoreForBusinessLanguage;
 
@@ -70,7 +70,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Microsoft Store For Business Last Completed Application Sync Time.
      * The last time an application sync from the Microsoft Store for Business was completed.
      */
-    @SerializedName("microsoftStoreForBusinessLastCompletedApplicationSyncTime")
+    @SerializedName(value = "microsoftStoreForBusinessLastCompletedApplicationSyncTime", alternate = {"MicrosoftStoreForBusinessLastCompletedApplicationSyncTime"})
     @Expose
     public java.util.Calendar microsoftStoreForBusinessLastCompletedApplicationSyncTime;
 
@@ -78,7 +78,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Microsoft Store For Business Last Successful Sync Date Time.
      * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
      */
-    @SerializedName("microsoftStoreForBusinessLastSuccessfulSyncDateTime")
+    @SerializedName(value = "microsoftStoreForBusinessLastSuccessfulSyncDateTime", alternate = {"MicrosoftStoreForBusinessLastSuccessfulSyncDateTime"})
     @Expose
     public java.util.Calendar microsoftStoreForBusinessLastSuccessfulSyncDateTime;
 
@@ -86,7 +86,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Managed EBooks.
      * The Managed eBook.
      */
-    @SerializedName("managedEBooks")
+    @SerializedName(value = "managedEBooks", alternate = {"ManagedEBooks"})
     @Expose
     public ManagedEBookCollectionPage managedEBooks;
 
@@ -94,7 +94,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Mobile App Categories.
      * The mobile app categories.
      */
-    @SerializedName("mobileAppCategories")
+    @SerializedName(value = "mobileAppCategories", alternate = {"MobileAppCategories"})
     @Expose
     public MobileAppCategoryCollectionPage mobileAppCategories;
 
@@ -102,7 +102,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Mobile App Configurations.
      * The Managed Device Mobile Application Configurations.
      */
-    @SerializedName("mobileAppConfigurations")
+    @SerializedName(value = "mobileAppConfigurations", alternate = {"MobileAppConfigurations"})
     @Expose
     public ManagedDeviceMobileAppConfigurationCollectionPage mobileAppConfigurations;
 
@@ -110,7 +110,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Mobile Apps.
      * The mobile apps.
      */
-    @SerializedName("mobileApps")
+    @SerializedName(value = "mobileApps", alternate = {"MobileApps"})
     @Expose
     public MobileAppCollectionPage mobileApps;
 
@@ -118,7 +118,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Vpp Tokens.
      * List of Vpp tokens for this organization.
      */
-    @SerializedName("vppTokens")
+    @SerializedName(value = "vppTokens", alternate = {"VppTokens"})
     @Expose
     public VppTokenCollectionPage vppTokens;
 
@@ -126,7 +126,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Android Managed App Protections.
      * Android managed app policies.
      */
-    @SerializedName("androidManagedAppProtections")
+    @SerializedName(value = "androidManagedAppProtections", alternate = {"AndroidManagedAppProtections"})
     @Expose
     public AndroidManagedAppProtectionCollectionPage androidManagedAppProtections;
 
@@ -134,7 +134,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Default Managed App Protections.
      * Default managed app policies.
      */
-    @SerializedName("defaultManagedAppProtections")
+    @SerializedName(value = "defaultManagedAppProtections", alternate = {"DefaultManagedAppProtections"})
     @Expose
     public DefaultManagedAppProtectionCollectionPage defaultManagedAppProtections;
 
@@ -142,7 +142,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Ios Managed App Protections.
      * iOS managed app policies.
      */
-    @SerializedName("iosManagedAppProtections")
+    @SerializedName(value = "iosManagedAppProtections", alternate = {"IosManagedAppProtections"})
     @Expose
     public IosManagedAppProtectionCollectionPage iosManagedAppProtections;
 
@@ -150,7 +150,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Managed App Policies.
      * Managed app policies.
      */
-    @SerializedName("managedAppPolicies")
+    @SerializedName(value = "managedAppPolicies", alternate = {"ManagedAppPolicies"})
     @Expose
     public ManagedAppPolicyCollectionPage managedAppPolicies;
 
@@ -158,7 +158,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Managed App Registrations.
      * The managed app registrations.
      */
-    @SerializedName("managedAppRegistrations")
+    @SerializedName(value = "managedAppRegistrations", alternate = {"ManagedAppRegistrations"})
     @Expose
     public ManagedAppRegistrationCollectionPage managedAppRegistrations;
 
@@ -166,7 +166,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Managed App Statuses.
      * The managed app statuses.
      */
-    @SerializedName("managedAppStatuses")
+    @SerializedName(value = "managedAppStatuses", alternate = {"ManagedAppStatuses"})
     @Expose
     public ManagedAppStatusCollectionPage managedAppStatuses;
 
@@ -174,7 +174,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Mdm Windows Information Protection Policies.
      * Windows information protection for apps running on devices which are MDM enrolled.
      */
-    @SerializedName("mdmWindowsInformationProtectionPolicies")
+    @SerializedName(value = "mdmWindowsInformationProtectionPolicies", alternate = {"MdmWindowsInformationProtectionPolicies"})
     @Expose
     public MdmWindowsInformationProtectionPolicyCollectionPage mdmWindowsInformationProtectionPolicies;
 
@@ -182,7 +182,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Targeted Managed App Configurations.
      * Targeted managed app configurations.
      */
-    @SerializedName("targetedManagedAppConfigurations")
+    @SerializedName(value = "targetedManagedAppConfigurations", alternate = {"TargetedManagedAppConfigurations"})
     @Expose
     public TargetedManagedAppConfigurationCollectionPage targetedManagedAppConfigurations;
 
@@ -190,7 +190,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Windows Information Protection Policies.
      * Windows information protection for apps running on devices which are not MDM enrolled.
      */
-    @SerializedName("windowsInformationProtectionPolicies")
+    @SerializedName(value = "windowsInformationProtectionPolicies", alternate = {"WindowsInformationProtectionPolicies"})
     @Expose
     public WindowsInformationProtectionPolicyCollectionPage windowsInformationProtectionPolicies;
 

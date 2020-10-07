@@ -37,7 +37,7 @@ public class CallRoute implements IJsonBackedObject {
      * The Final.
      * The identity that was resolved to in the call.
      */
-    @SerializedName("final")
+    @SerializedName(value = "final", alternate = {"Final"})
     @Expose
     public IdentitySet msgraphFinal;
 
@@ -45,7 +45,7 @@ public class CallRoute implements IJsonBackedObject {
      * The Original.
      * The identity that was originally used in the call.
      */
-    @SerializedName("original")
+    @SerializedName(value = "original", alternate = {"Original"})
     @Expose
     public IdentitySet original;
 
@@ -53,7 +53,7 @@ public class CallRoute implements IJsonBackedObject {
      * The Routing Type.
      * Possible values are: forwarded, lookup, selfFork.
      */
-    @SerializedName("routingType")
+    @SerializedName(value = "routingType", alternate = {"RoutingType"})
     @Expose
     public RoutingType routingType;
 

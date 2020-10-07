@@ -32,7 +32,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
      * The End Date Time.
      * 
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public DateTimeTimeZone endDateTime;
 
@@ -40,7 +40,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
      * The Is All Day.
      * 
      */
-    @SerializedName("isAllDay")
+    @SerializedName(value = "isAllDay", alternate = {"IsAllDay"})
     @Expose
     public Boolean isAllDay;
 
@@ -48,7 +48,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
      * The Is Delegated.
      * True if this meeting request is accessible to a delegate, false otherwise. Default is false.
      */
-    @SerializedName("isDelegated")
+    @SerializedName(value = "isDelegated", alternate = {"IsDelegated"})
     @Expose
     public Boolean isDelegated;
 
@@ -56,7 +56,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
      * The Is Out Of Date.
      * 
      */
-    @SerializedName("isOutOfDate")
+    @SerializedName(value = "isOutOfDate", alternate = {"IsOutOfDate"})
     @Expose
     public Boolean isOutOfDate;
 
@@ -64,7 +64,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
      * The Location.
      * 
      */
-    @SerializedName("location")
+    @SerializedName(value = "location", alternate = {"Location"})
     @Expose
     public Location location;
 
@@ -72,7 +72,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
      * The Meeting Message Type.
      * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
      */
-    @SerializedName("meetingMessageType")
+    @SerializedName(value = "meetingMessageType", alternate = {"MeetingMessageType"})
     @Expose
     public MeetingMessageType meetingMessageType;
 
@@ -80,7 +80,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
      * The Recurrence.
      * 
      */
-    @SerializedName("recurrence")
+    @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
     public PatternedRecurrence recurrence;
 
@@ -88,7 +88,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
      * The Start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public DateTimeTimeZone startDateTime;
 
@@ -96,7 +96,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public EventType type;
 
@@ -104,7 +104,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
      * The Event.
      * The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
      */
-    @SerializedName("event")
+    @SerializedName(value = "event", alternate = {"Event"})
     @Expose
     public Event event;
 

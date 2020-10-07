@@ -29,7 +29,7 @@ public class WorkbookChartSeries extends Entity implements IJsonBackedObject {
      * The Name.
      * Represents the name of a series in a chart.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -37,7 +37,7 @@ public class WorkbookChartSeries extends Entity implements IJsonBackedObject {
      * The Format.
      * Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
      */
-    @SerializedName("format")
+    @SerializedName(value = "format", alternate = {"Format"})
     @Expose
     public WorkbookChartSeriesFormat format;
 
@@ -45,7 +45,7 @@ public class WorkbookChartSeries extends Entity implements IJsonBackedObject {
      * The Points.
      * Represents a collection of all points in the series. Read-only.
      */
-    @SerializedName("points")
+    @SerializedName(value = "points", alternate = {"Points"})
     @Expose
     public WorkbookChartPointCollectionPage points;
 

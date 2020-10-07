@@ -40,7 +40,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Bcc Recipients.
      * The Bcc: recipients for the message.
      */
-    @SerializedName("bccRecipients")
+    @SerializedName(value = "bccRecipients", alternate = {"BccRecipients"})
     @Expose
     public java.util.List<Recipient> bccRecipients;
 
@@ -48,7 +48,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Body.
      * The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
      */
-    @SerializedName("body")
+    @SerializedName(value = "body", alternate = {"Body"})
     @Expose
     public ItemBody body;
 
@@ -56,7 +56,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Body Preview.
      * The first 255 characters of the message body. It is in text format.
      */
-    @SerializedName("bodyPreview")
+    @SerializedName(value = "bodyPreview", alternate = {"BodyPreview"})
     @Expose
     public String bodyPreview;
 
@@ -64,7 +64,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Cc Recipients.
      * The Cc: recipients for the message.
      */
-    @SerializedName("ccRecipients")
+    @SerializedName(value = "ccRecipients", alternate = {"CcRecipients"})
     @Expose
     public java.util.List<Recipient> ccRecipients;
 
@@ -72,7 +72,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Conversation Id.
      * The ID of the conversation the email belongs to.
      */
-    @SerializedName("conversationId")
+    @SerializedName(value = "conversationId", alternate = {"ConversationId"})
     @Expose
     public String conversationId;
 
@@ -80,7 +80,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Conversation Index.
      * Indicates the position of the message within the conversation.
      */
-    @SerializedName("conversationIndex")
+    @SerializedName(value = "conversationIndex", alternate = {"ConversationIndex"})
     @Expose
     public byte[] conversationIndex;
 
@@ -88,7 +88,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Flag.
      * The flag value that indicates the status, start date, due date, or completion date for the message.
      */
-    @SerializedName("flag")
+    @SerializedName(value = "flag", alternate = {"Flag"})
     @Expose
     public FollowupFlag flag;
 
@@ -96,7 +96,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The From.
      * The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      */
-    @SerializedName("from")
+    @SerializedName(value = "from", alternate = {"From"})
     @Expose
     public Recipient from;
 
@@ -104,7 +104,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Has Attachments.
      * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as &amp;lt;IMG src='cid:image001.jpg@01D26CD8.6C05F070'&amp;gt;.
      */
-    @SerializedName("hasAttachments")
+    @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
     public Boolean hasAttachments;
 
@@ -112,7 +112,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Importance.
      * The importance of the message: Low, Normal, High.
      */
-    @SerializedName("importance")
+    @SerializedName(value = "importance", alternate = {"Importance"})
     @Expose
     public Importance importance;
 
@@ -120,7 +120,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Inference Classification.
      * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. The possible values are: focused or other.
      */
-    @SerializedName("inferenceClassification")
+    @SerializedName(value = "inferenceClassification", alternate = {"InferenceClassification"})
     @Expose
     public InferenceClassificationType inferenceClassification;
 
@@ -128,7 +128,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Internet Message Headers.
      * A collection of message headers defined by RFC5322. The set includes message headers indicating the network path taken by a message from the sender to the recipient. It can also contain custom message headers that hold app data for the message.  Returned only on applying a $select query option. Read-only.
      */
-    @SerializedName("internetMessageHeaders")
+    @SerializedName(value = "internetMessageHeaders", alternate = {"InternetMessageHeaders"})
     @Expose
     public java.util.List<InternetMessageHeader> internetMessageHeaders;
 
@@ -136,7 +136,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Internet Message Id.
      * The message ID in the format specified by RFC2822.
      */
-    @SerializedName("internetMessageId")
+    @SerializedName(value = "internetMessageId", alternate = {"InternetMessageId"})
     @Expose
     public String internetMessageId;
 
@@ -144,7 +144,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Is Delivery Receipt Requested.
      * Indicates whether a read receipt is requested for the message.
      */
-    @SerializedName("isDeliveryReceiptRequested")
+    @SerializedName(value = "isDeliveryReceiptRequested", alternate = {"IsDeliveryReceiptRequested"})
     @Expose
     public Boolean isDeliveryReceiptRequested;
 
@@ -152,7 +152,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Is Draft.
      * Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.
      */
-    @SerializedName("isDraft")
+    @SerializedName(value = "isDraft", alternate = {"IsDraft"})
     @Expose
     public Boolean isDraft;
 
@@ -160,7 +160,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Is Read.
      * Indicates whether the message has been read.
      */
-    @SerializedName("isRead")
+    @SerializedName(value = "isRead", alternate = {"IsRead"})
     @Expose
     public Boolean isRead;
 
@@ -168,7 +168,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Is Read Receipt Requested.
      * Indicates whether a read receipt is requested for the message.
      */
-    @SerializedName("isReadReceiptRequested")
+    @SerializedName(value = "isReadReceiptRequested", alternate = {"IsReadReceiptRequested"})
     @Expose
     public Boolean isReadReceiptRequested;
 
@@ -176,7 +176,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Parent Folder Id.
      * The unique identifier for the message's parent mailFolder.
      */
-    @SerializedName("parentFolderId")
+    @SerializedName(value = "parentFolderId", alternate = {"ParentFolderId"})
     @Expose
     public String parentFolderId;
 
@@ -184,7 +184,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Received Date Time.
      * The date and time the message was received.
      */
-    @SerializedName("receivedDateTime")
+    @SerializedName(value = "receivedDateTime", alternate = {"ReceivedDateTime"})
     @Expose
     public java.util.Calendar receivedDateTime;
 
@@ -192,7 +192,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Reply To.
      * The email addresses to use when replying.
      */
-    @SerializedName("replyTo")
+    @SerializedName(value = "replyTo", alternate = {"ReplyTo"})
     @Expose
     public java.util.List<Recipient> replyTo;
 
@@ -200,7 +200,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Sender.
      * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, for a shared calendar, or as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      */
-    @SerializedName("sender")
+    @SerializedName(value = "sender", alternate = {"Sender"})
     @Expose
     public Recipient sender;
 
@@ -208,7 +208,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Sent Date Time.
      * The date and time the message was sent.
      */
-    @SerializedName("sentDateTime")
+    @SerializedName(value = "sentDateTime", alternate = {"SentDateTime"})
     @Expose
     public java.util.Calendar sentDateTime;
 
@@ -216,7 +216,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Subject.
      * The subject of the message.
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 
@@ -224,7 +224,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The To Recipients.
      * The To: recipients for the message.
      */
-    @SerializedName("toRecipients")
+    @SerializedName(value = "toRecipients", alternate = {"ToRecipients"})
     @Expose
     public java.util.List<Recipient> toRecipients;
 
@@ -232,7 +232,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Unique Body.
      * The part of the body of the message that is unique to the current message. uniqueBody is not returned by default but can be retrieved for a given message by use of the ?$select=uniqueBody query. It can be in HTML or text format.
      */
-    @SerializedName("uniqueBody")
+    @SerializedName(value = "uniqueBody", alternate = {"UniqueBody"})
     @Expose
     public ItemBody uniqueBody;
 
@@ -240,7 +240,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Web Link.
      * The URL to open the message in Outlook Web App.You can append an ispopout argument to the end of the URL to change how the message is displayed. If ispopout is not present or if it is set to 1, then the message is shown in a popout window. If ispopout is set to 0, then the browser will show the message in the Outlook Web App review pane.The message will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
      */
-    @SerializedName("webLink")
+    @SerializedName(value = "webLink", alternate = {"WebLink"})
     @Expose
     public String webLink;
 
@@ -248,7 +248,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Attachments.
      * The fileAttachment and itemAttachment attachments for the message.
      */
-    @SerializedName("attachments")
+    @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
     public AttachmentCollectionPage attachments;
 
@@ -256,7 +256,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Extensions.
      * The collection of open extensions defined for the message. Nullable.
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public ExtensionCollectionPage extensions;
 
@@ -264,7 +264,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the message. Nullable.
      */
-    @SerializedName("multiValueExtendedProperties")
+    @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
@@ -272,7 +272,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the message. Nullable.
      */
-    @SerializedName("singleValueExtendedProperties")
+    @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 

@@ -26,7 +26,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements IJs
      * The Compliant Device Count.
      * Number of compliant devices
      */
-    @SerializedName("compliantDeviceCount")
+    @SerializedName(value = "compliantDeviceCount", alternate = {"CompliantDeviceCount"})
     @Expose
     public Integer compliantDeviceCount;
 
@@ -34,7 +34,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements IJs
      * The Conflict Device Count.
      * Number of conflict devices
      */
-    @SerializedName("conflictDeviceCount")
+    @SerializedName(value = "conflictDeviceCount", alternate = {"ConflictDeviceCount"})
     @Expose
     public Integer conflictDeviceCount;
 
@@ -42,7 +42,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements IJs
      * The Error Device Count.
      * Number of error devices
      */
-    @SerializedName("errorDeviceCount")
+    @SerializedName(value = "errorDeviceCount", alternate = {"ErrorDeviceCount"})
     @Expose
     public Integer errorDeviceCount;
 
@@ -50,7 +50,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements IJs
      * The Non Compliant Device Count.
      * Number of NonCompliant devices
      */
-    @SerializedName("nonCompliantDeviceCount")
+    @SerializedName(value = "nonCompliantDeviceCount", alternate = {"NonCompliantDeviceCount"})
     @Expose
     public Integer nonCompliantDeviceCount;
 
@@ -58,7 +58,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements IJs
      * The Not Applicable Device Count.
      * Number of not applicable devices
      */
-    @SerializedName("notApplicableDeviceCount")
+    @SerializedName(value = "notApplicableDeviceCount", alternate = {"NotApplicableDeviceCount"})
     @Expose
     public Integer notApplicableDeviceCount;
 
@@ -66,7 +66,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements IJs
      * The Remediated Device Count.
      * Number of remediated devices
      */
-    @SerializedName("remediatedDeviceCount")
+    @SerializedName(value = "remediatedDeviceCount", alternate = {"RemediatedDeviceCount"})
     @Expose
     public Integer remediatedDeviceCount;
 
@@ -74,7 +74,7 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements IJs
      * The Unknown Device Count.
      * Number of unknown devices
      */
-    @SerializedName("unknownDeviceCount")
+    @SerializedName(value = "unknownDeviceCount", alternate = {"UnknownDeviceCount"})
     @Expose
     public Integer unknownDeviceCount;
 

@@ -28,7 +28,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements IJsonB
      * The Check32Bit On64System.
      * A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
      */
-    @SerializedName("check32BitOn64System")
+    @SerializedName(value = "check32BitOn64System", alternate = {"Check32BitOn64System"})
     @Expose
     public Boolean check32BitOn64System;
 
@@ -36,7 +36,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements IJsonB
      * The Comparison Value.
      * The file or folder comparison value.
      */
-    @SerializedName("comparisonValue")
+    @SerializedName(value = "comparisonValue", alternate = {"ComparisonValue"})
     @Expose
     public String comparisonValue;
 
@@ -44,7 +44,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements IJsonB
      * The File Or Folder Name.
      * The file or folder name to look up.
      */
-    @SerializedName("fileOrFolderName")
+    @SerializedName(value = "fileOrFolderName", alternate = {"FileOrFolderName"})
     @Expose
     public String fileOrFolderName;
 
@@ -52,7 +52,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements IJsonB
      * The Operation Type.
      * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB.
      */
-    @SerializedName("operationType")
+    @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose
     public Win32LobAppFileSystemOperationType operationType;
 
@@ -60,7 +60,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements IJsonB
      * The Operator.
      * The operator for file or folder detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
      */
-    @SerializedName("operator")
+    @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
     public Win32LobAppRuleOperator operator;
 
@@ -68,7 +68,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements IJsonB
      * The Path.
      * The file or folder path to look up.
      */
-    @SerializedName("path")
+    @SerializedName(value = "path", alternate = {"Path"})
     @Expose
     public String path;
 

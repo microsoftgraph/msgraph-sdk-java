@@ -22,7 +22,7 @@ public class WorkbookFunctionsF_DistBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsF_DistBody {
      * The deg Freedom1.
      * 
      */
-    @SerializedName("degFreedom1")
+    @SerializedName(value = "degFreedom1", alternate = {"DegFreedom1"})
     @Expose
     public com.google.gson.JsonElement degFreedom1;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsF_DistBody {
      * The deg Freedom2.
      * 
      */
-    @SerializedName("degFreedom2")
+    @SerializedName(value = "degFreedom2", alternate = {"DegFreedom2"})
     @Expose
     public com.google.gson.JsonElement degFreedom2;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsF_DistBody {
      * The cumulative.
      * 
      */
-    @SerializedName("cumulative")
+    @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
     public com.google.gson.JsonElement cumulative;
 

@@ -22,7 +22,7 @@ public class WorkbookFunctionsFloor_MathBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsFloor_MathBody {
      * The significance.
      * 
      */
-    @SerializedName("significance")
+    @SerializedName(value = "significance", alternate = {"Significance"})
     @Expose
     public com.google.gson.JsonElement significance;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsFloor_MathBody {
      * The mode.
      * 
      */
-    @SerializedName("mode")
+    @SerializedName(value = "mode", alternate = {"Mode"})
     @Expose
     public com.google.gson.JsonElement mode;
 

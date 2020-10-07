@@ -43,7 +43,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Accounts Block Adding Non Microsoft Account Email.
      * Indicates whether or not to Block the user from adding email accounts to the device that are not associated with a Microsoft account.
      */
-    @SerializedName("accountsBlockAddingNonMicrosoftAccountEmail")
+    @SerializedName(value = "accountsBlockAddingNonMicrosoftAccountEmail", alternate = {"AccountsBlockAddingNonMicrosoftAccountEmail"})
     @Expose
     public Boolean accountsBlockAddingNonMicrosoftAccountEmail;
 
@@ -51,7 +51,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Anti Theft Mode Blocked.
      * Indicates whether or not to block the user from selecting an AntiTheft mode preference (Windows 10 Mobile only).
      */
-    @SerializedName("antiTheftModeBlocked")
+    @SerializedName(value = "antiTheftModeBlocked", alternate = {"AntiTheftModeBlocked"})
     @Expose
     public Boolean antiTheftModeBlocked;
 
@@ -59,7 +59,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Apps Allow Trusted Apps Sideloading.
      * Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.
      */
-    @SerializedName("appsAllowTrustedAppsSideloading")
+    @SerializedName(value = "appsAllowTrustedAppsSideloading", alternate = {"AppsAllowTrustedAppsSideloading"})
     @Expose
     public StateManagementSetting appsAllowTrustedAppsSideloading;
 
@@ -67,7 +67,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Apps Block Windows Store Originated Apps.
      * Indicates whether or not to disable the launch of all apps from Windows Store that came pre-installed or were downloaded.
      */
-    @SerializedName("appsBlockWindowsStoreOriginatedApps")
+    @SerializedName(value = "appsBlockWindowsStoreOriginatedApps", alternate = {"AppsBlockWindowsStoreOriginatedApps"})
     @Expose
     public Boolean appsBlockWindowsStoreOriginatedApps;
 
@@ -75,7 +75,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Bluetooth Allowed Services.
      * Specify a list of allowed Bluetooth services and profiles in hex formatted strings.
      */
-    @SerializedName("bluetoothAllowedServices")
+    @SerializedName(value = "bluetoothAllowedServices", alternate = {"BluetoothAllowedServices"})
     @Expose
     public java.util.List<String> bluetoothAllowedServices;
 
@@ -83,7 +83,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Bluetooth Block Advertising.
      * Whether or not to Block the user from using bluetooth advertising.
      */
-    @SerializedName("bluetoothBlockAdvertising")
+    @SerializedName(value = "bluetoothBlockAdvertising", alternate = {"BluetoothBlockAdvertising"})
     @Expose
     public Boolean bluetoothBlockAdvertising;
 
@@ -91,7 +91,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Bluetooth Block Discoverable Mode.
      * Whether or not to Block the user from using bluetooth discoverable mode.
      */
-    @SerializedName("bluetoothBlockDiscoverableMode")
+    @SerializedName(value = "bluetoothBlockDiscoverableMode", alternate = {"BluetoothBlockDiscoverableMode"})
     @Expose
     public Boolean bluetoothBlockDiscoverableMode;
 
@@ -99,7 +99,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Bluetooth Blocked.
      * Whether or not to Block the user from using bluetooth.
      */
-    @SerializedName("bluetoothBlocked")
+    @SerializedName(value = "bluetoothBlocked", alternate = {"BluetoothBlocked"})
     @Expose
     public Boolean bluetoothBlocked;
 
@@ -107,7 +107,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Bluetooth Block Pre Pairing.
      * Whether or not to block specific bundled Bluetooth peripherals to automatically pair with the host device.
      */
-    @SerializedName("bluetoothBlockPrePairing")
+    @SerializedName(value = "bluetoothBlockPrePairing", alternate = {"BluetoothBlockPrePairing"})
     @Expose
     public Boolean bluetoothBlockPrePairing;
 
@@ -115,7 +115,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Camera Blocked.
      * Whether or not to Block the user from accessing the camera of the device.
      */
-    @SerializedName("cameraBlocked")
+    @SerializedName(value = "cameraBlocked", alternate = {"CameraBlocked"})
     @Expose
     public Boolean cameraBlocked;
 
@@ -123,7 +123,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Cellular Block Data When Roaming.
      * Whether or not to Block the user from using data over cellular while roaming.
      */
-    @SerializedName("cellularBlockDataWhenRoaming")
+    @SerializedName(value = "cellularBlockDataWhenRoaming", alternate = {"CellularBlockDataWhenRoaming"})
     @Expose
     public Boolean cellularBlockDataWhenRoaming;
 
@@ -131,7 +131,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Cellular Block Vpn.
      * Whether or not to Block the user from using VPN over cellular.
      */
-    @SerializedName("cellularBlockVpn")
+    @SerializedName(value = "cellularBlockVpn", alternate = {"CellularBlockVpn"})
     @Expose
     public Boolean cellularBlockVpn;
 
@@ -139,7 +139,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Cellular Block Vpn When Roaming.
      * Whether or not to Block the user from using VPN when roaming over cellular.
      */
-    @SerializedName("cellularBlockVpnWhenRoaming")
+    @SerializedName(value = "cellularBlockVpnWhenRoaming", alternate = {"CellularBlockVpnWhenRoaming"})
     @Expose
     public Boolean cellularBlockVpnWhenRoaming;
 
@@ -147,7 +147,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Certificates Block Manual Root Certificate Installation.
      * Whether or not to Block the user from doing manual root certificate installation.
      */
-    @SerializedName("certificatesBlockManualRootCertificateInstallation")
+    @SerializedName(value = "certificatesBlockManualRootCertificateInstallation", alternate = {"CertificatesBlockManualRootCertificateInstallation"})
     @Expose
     public Boolean certificatesBlockManualRootCertificateInstallation;
 
@@ -155,7 +155,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Connected Devices Service Blocked.
      * Whether or not to block Connected Devices Service which enables discovery and connection to other devices, remote messaging, remote app sessions and other cross-device experiences.
      */
-    @SerializedName("connectedDevicesServiceBlocked")
+    @SerializedName(value = "connectedDevicesServiceBlocked", alternate = {"ConnectedDevicesServiceBlocked"})
     @Expose
     public Boolean connectedDevicesServiceBlocked;
 
@@ -163,7 +163,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Copy Paste Blocked.
      * Whether or not to Block the user from using copy paste.
      */
-    @SerializedName("copyPasteBlocked")
+    @SerializedName(value = "copyPasteBlocked", alternate = {"CopyPasteBlocked"})
     @Expose
     public Boolean copyPasteBlocked;
 
@@ -171,7 +171,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Cortana Blocked.
      * Whether or not to Block the user from using Cortana.
      */
-    @SerializedName("cortanaBlocked")
+    @SerializedName(value = "cortanaBlocked", alternate = {"CortanaBlocked"})
     @Expose
     public Boolean cortanaBlocked;
 
@@ -179,7 +179,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Block End User Access.
      * Whether or not to block end user access to Defender.
      */
-    @SerializedName("defenderBlockEndUserAccess")
+    @SerializedName(value = "defenderBlockEndUserAccess", alternate = {"DefenderBlockEndUserAccess"})
     @Expose
     public Boolean defenderBlockEndUserAccess;
 
@@ -187,7 +187,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Cloud Block Level.
      * Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance.
      */
-    @SerializedName("defenderCloudBlockLevel")
+    @SerializedName(value = "defenderCloudBlockLevel", alternate = {"DefenderCloudBlockLevel"})
     @Expose
     public DefenderCloudBlockLevelType defenderCloudBlockLevel;
 
@@ -195,7 +195,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Days Before Deleting Quarantined Malware.
      * Number of days before deleting quarantined malware. Valid values 0 to 90
      */
-    @SerializedName("defenderDaysBeforeDeletingQuarantinedMalware")
+    @SerializedName(value = "defenderDaysBeforeDeletingQuarantinedMalware", alternate = {"DefenderDaysBeforeDeletingQuarantinedMalware"})
     @Expose
     public Integer defenderDaysBeforeDeletingQuarantinedMalware;
 
@@ -203,7 +203,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Detected Malware Actions.
      * Gets or sets Defender’s actions to take on detected Malware per threat level.
      */
-    @SerializedName("defenderDetectedMalwareActions")
+    @SerializedName(value = "defenderDetectedMalwareActions", alternate = {"DefenderDetectedMalwareActions"})
     @Expose
     public DefenderDetectedMalwareActions defenderDetectedMalwareActions;
 
@@ -211,7 +211,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender File Extensions To Exclude.
      * File extensions to exclude from scans and real time protection.
      */
-    @SerializedName("defenderFileExtensionsToExclude")
+    @SerializedName(value = "defenderFileExtensionsToExclude", alternate = {"DefenderFileExtensionsToExclude"})
     @Expose
     public java.util.List<String> defenderFileExtensionsToExclude;
 
@@ -219,7 +219,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Files And Folders To Exclude.
      * Files and folder to exclude from scans and real time protection.
      */
-    @SerializedName("defenderFilesAndFoldersToExclude")
+    @SerializedName(value = "defenderFilesAndFoldersToExclude", alternate = {"DefenderFilesAndFoldersToExclude"})
     @Expose
     public java.util.List<String> defenderFilesAndFoldersToExclude;
 
@@ -227,7 +227,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Monitor File Activity.
      * Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
      */
-    @SerializedName("defenderMonitorFileActivity")
+    @SerializedName(value = "defenderMonitorFileActivity", alternate = {"DefenderMonitorFileActivity"})
     @Expose
     public DefenderMonitorFileActivity defenderMonitorFileActivity;
 
@@ -235,7 +235,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Processes To Exclude.
      * Processes to exclude from scans and real time protection.
      */
-    @SerializedName("defenderProcessesToExclude")
+    @SerializedName(value = "defenderProcessesToExclude", alternate = {"DefenderProcessesToExclude"})
     @Expose
     public java.util.List<String> defenderProcessesToExclude;
 
@@ -243,7 +243,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Prompt For Sample Submission.
      * The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
      */
-    @SerializedName("defenderPromptForSampleSubmission")
+    @SerializedName(value = "defenderPromptForSampleSubmission", alternate = {"DefenderPromptForSampleSubmission"})
     @Expose
     public DefenderPromptForSampleSubmission defenderPromptForSampleSubmission;
 
@@ -251,7 +251,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Require Behavior Monitoring.
      * Indicates whether or not to require behavior monitoring.
      */
-    @SerializedName("defenderRequireBehaviorMonitoring")
+    @SerializedName(value = "defenderRequireBehaviorMonitoring", alternate = {"DefenderRequireBehaviorMonitoring"})
     @Expose
     public Boolean defenderRequireBehaviorMonitoring;
 
@@ -259,7 +259,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Require Cloud Protection.
      * Indicates whether or not to require cloud protection.
      */
-    @SerializedName("defenderRequireCloudProtection")
+    @SerializedName(value = "defenderRequireCloudProtection", alternate = {"DefenderRequireCloudProtection"})
     @Expose
     public Boolean defenderRequireCloudProtection;
 
@@ -267,7 +267,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Require Network Inspection System.
      * Indicates whether or not to require network inspection system.
      */
-    @SerializedName("defenderRequireNetworkInspectionSystem")
+    @SerializedName(value = "defenderRequireNetworkInspectionSystem", alternate = {"DefenderRequireNetworkInspectionSystem"})
     @Expose
     public Boolean defenderRequireNetworkInspectionSystem;
 
@@ -275,7 +275,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Require Real Time Monitoring.
      * Indicates whether or not to require real time monitoring.
      */
-    @SerializedName("defenderRequireRealTimeMonitoring")
+    @SerializedName(value = "defenderRequireRealTimeMonitoring", alternate = {"DefenderRequireRealTimeMonitoring"})
     @Expose
     public Boolean defenderRequireRealTimeMonitoring;
 
@@ -283,7 +283,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Scan Archive Files.
      * Indicates whether or not to scan archive files.
      */
-    @SerializedName("defenderScanArchiveFiles")
+    @SerializedName(value = "defenderScanArchiveFiles", alternate = {"DefenderScanArchiveFiles"})
     @Expose
     public Boolean defenderScanArchiveFiles;
 
@@ -291,7 +291,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Scan Downloads.
      * Indicates whether or not to scan downloads.
      */
-    @SerializedName("defenderScanDownloads")
+    @SerializedName(value = "defenderScanDownloads", alternate = {"DefenderScanDownloads"})
     @Expose
     public Boolean defenderScanDownloads;
 
@@ -299,7 +299,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Scan Incoming Mail.
      * Indicates whether or not to scan incoming mail messages.
      */
-    @SerializedName("defenderScanIncomingMail")
+    @SerializedName(value = "defenderScanIncomingMail", alternate = {"DefenderScanIncomingMail"})
     @Expose
     public Boolean defenderScanIncomingMail;
 
@@ -307,7 +307,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Scan Mapped Network Drives During Full Scan.
      * Indicates whether or not to scan mapped network drives during full scan.
      */
-    @SerializedName("defenderScanMappedNetworkDrivesDuringFullScan")
+    @SerializedName(value = "defenderScanMappedNetworkDrivesDuringFullScan", alternate = {"DefenderScanMappedNetworkDrivesDuringFullScan"})
     @Expose
     public Boolean defenderScanMappedNetworkDrivesDuringFullScan;
 
@@ -315,7 +315,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Scan Max Cpu.
      * Max CPU usage percentage during scan. Valid values 0 to 100
      */
-    @SerializedName("defenderScanMaxCpu")
+    @SerializedName(value = "defenderScanMaxCpu", alternate = {"DefenderScanMaxCpu"})
     @Expose
     public Integer defenderScanMaxCpu;
 
@@ -323,7 +323,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Scan Network Files.
      * Indicates whether or not to scan files opened from a network folder.
      */
-    @SerializedName("defenderScanNetworkFiles")
+    @SerializedName(value = "defenderScanNetworkFiles", alternate = {"DefenderScanNetworkFiles"})
     @Expose
     public Boolean defenderScanNetworkFiles;
 
@@ -331,7 +331,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Scan Removable Drives During Full Scan.
      * Indicates whether or not to scan removable drives during full scan.
      */
-    @SerializedName("defenderScanRemovableDrivesDuringFullScan")
+    @SerializedName(value = "defenderScanRemovableDrivesDuringFullScan", alternate = {"DefenderScanRemovableDrivesDuringFullScan"})
     @Expose
     public Boolean defenderScanRemovableDrivesDuringFullScan;
 
@@ -339,7 +339,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Scan Scripts Loaded In Internet Explorer.
      * Indicates whether or not to scan scripts loaded in Internet Explorer browser.
      */
-    @SerializedName("defenderScanScriptsLoadedInInternetExplorer")
+    @SerializedName(value = "defenderScanScriptsLoadedInInternetExplorer", alternate = {"DefenderScanScriptsLoadedInInternetExplorer"})
     @Expose
     public Boolean defenderScanScriptsLoadedInInternetExplorer;
 
@@ -347,7 +347,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Scan Type.
      * The defender system scan type. Possible values are: userDefined, disabled, quick, full.
      */
-    @SerializedName("defenderScanType")
+    @SerializedName(value = "defenderScanType", alternate = {"DefenderScanType"})
     @Expose
     public DefenderScanType defenderScanType;
 
@@ -355,7 +355,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Scheduled Quick Scan Time.
      * The time to perform a daily quick scan.
      */
-    @SerializedName("defenderScheduledQuickScanTime")
+    @SerializedName(value = "defenderScheduledQuickScanTime", alternate = {"DefenderScheduledQuickScanTime"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay defenderScheduledQuickScanTime;
 
@@ -363,7 +363,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Scheduled Scan Time.
      * The defender time for the system scan.
      */
-    @SerializedName("defenderScheduledScanTime")
+    @SerializedName(value = "defenderScheduledScanTime", alternate = {"DefenderScheduledScanTime"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay defenderScheduledScanTime;
 
@@ -371,7 +371,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender Signature Update Interval In Hours.
      * The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24
      */
-    @SerializedName("defenderSignatureUpdateIntervalInHours")
+    @SerializedName(value = "defenderSignatureUpdateIntervalInHours", alternate = {"DefenderSignatureUpdateIntervalInHours"})
     @Expose
     public Integer defenderSignatureUpdateIntervalInHours;
 
@@ -379,7 +379,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Defender System Scan Schedule.
      * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
      */
-    @SerializedName("defenderSystemScanSchedule")
+    @SerializedName(value = "defenderSystemScanSchedule", alternate = {"DefenderSystemScanSchedule"})
     @Expose
     public WeeklySchedule defenderSystemScanSchedule;
 
@@ -387,7 +387,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Developer Unlock Setting.
      * Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
      */
-    @SerializedName("developerUnlockSetting")
+    @SerializedName(value = "developerUnlockSetting", alternate = {"DeveloperUnlockSetting"})
     @Expose
     public StateManagementSetting developerUnlockSetting;
 
@@ -395,7 +395,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Device Management Block Factory Reset On Mobile.
      * Indicates whether or not to Block the user from resetting their phone.
      */
-    @SerializedName("deviceManagementBlockFactoryResetOnMobile")
+    @SerializedName(value = "deviceManagementBlockFactoryResetOnMobile", alternate = {"DeviceManagementBlockFactoryResetOnMobile"})
     @Expose
     public Boolean deviceManagementBlockFactoryResetOnMobile;
 
@@ -403,7 +403,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Device Management Block Manual Unenroll.
      * Indicates whether or not to Block the user from doing manual un-enrollment from device management.
      */
-    @SerializedName("deviceManagementBlockManualUnenroll")
+    @SerializedName(value = "deviceManagementBlockManualUnenroll", alternate = {"DeviceManagementBlockManualUnenroll"})
     @Expose
     public Boolean deviceManagementBlockManualUnenroll;
 
@@ -411,7 +411,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Diagnostics Data Submission Mode.
      * Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.
      */
-    @SerializedName("diagnosticsDataSubmissionMode")
+    @SerializedName(value = "diagnosticsDataSubmissionMode", alternate = {"DiagnosticsDataSubmissionMode"})
     @Expose
     public DiagnosticDataSubmissionMode diagnosticsDataSubmissionMode;
 
@@ -419,7 +419,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Allow Start Pages Modification.
      * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
      */
-    @SerializedName("edgeAllowStartPagesModification")
+    @SerializedName(value = "edgeAllowStartPagesModification", alternate = {"EdgeAllowStartPagesModification"})
     @Expose
     public Boolean edgeAllowStartPagesModification;
 
@@ -427,7 +427,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Access To About Flags.
      * Indicates whether or not to prevent access to about flags on Edge browser.
      */
-    @SerializedName("edgeBlockAccessToAboutFlags")
+    @SerializedName(value = "edgeBlockAccessToAboutFlags", alternate = {"EdgeBlockAccessToAboutFlags"})
     @Expose
     public Boolean edgeBlockAccessToAboutFlags;
 
@@ -435,7 +435,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Address Bar Dropdown.
      * Block the address bar dropdown functionality in Microsoft Edge. Disable this settings to minimize network connections from Microsoft Edge to Microsoft services.
      */
-    @SerializedName("edgeBlockAddressBarDropdown")
+    @SerializedName(value = "edgeBlockAddressBarDropdown", alternate = {"EdgeBlockAddressBarDropdown"})
     @Expose
     public Boolean edgeBlockAddressBarDropdown;
 
@@ -443,7 +443,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Autofill.
      * Indicates whether or not to block auto fill.
      */
-    @SerializedName("edgeBlockAutofill")
+    @SerializedName(value = "edgeBlockAutofill", alternate = {"EdgeBlockAutofill"})
     @Expose
     public Boolean edgeBlockAutofill;
 
@@ -451,7 +451,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Compatibility List.
      * Block Microsoft compatibility list in Microsoft Edge. This list from Microsoft helps Edge properly display sites with known compatibility issues.
      */
-    @SerializedName("edgeBlockCompatibilityList")
+    @SerializedName(value = "edgeBlockCompatibilityList", alternate = {"EdgeBlockCompatibilityList"})
     @Expose
     public Boolean edgeBlockCompatibilityList;
 
@@ -459,7 +459,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Developer Tools.
      * Indicates whether or not to block developer tools in the Edge browser.
      */
-    @SerializedName("edgeBlockDeveloperTools")
+    @SerializedName(value = "edgeBlockDeveloperTools", alternate = {"EdgeBlockDeveloperTools"})
     @Expose
     public Boolean edgeBlockDeveloperTools;
 
@@ -467,7 +467,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Blocked.
      * Indicates whether or not to Block the user from using the Edge browser.
      */
-    @SerializedName("edgeBlocked")
+    @SerializedName(value = "edgeBlocked", alternate = {"EdgeBlocked"})
     @Expose
     public Boolean edgeBlocked;
 
@@ -475,7 +475,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Extensions.
      * Indicates whether or not to block extensions in the Edge browser.
      */
-    @SerializedName("edgeBlockExtensions")
+    @SerializedName(value = "edgeBlockExtensions", alternate = {"EdgeBlockExtensions"})
     @Expose
     public Boolean edgeBlockExtensions;
 
@@ -483,7 +483,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block In Private Browsing.
      * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
      */
-    @SerializedName("edgeBlockInPrivateBrowsing")
+    @SerializedName(value = "edgeBlockInPrivateBrowsing", alternate = {"EdgeBlockInPrivateBrowsing"})
     @Expose
     public Boolean edgeBlockInPrivateBrowsing;
 
@@ -491,7 +491,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Java Script.
      * Indicates whether or not to Block the user from using JavaScript.
      */
-    @SerializedName("edgeBlockJavaScript")
+    @SerializedName(value = "edgeBlockJavaScript", alternate = {"EdgeBlockJavaScript"})
     @Expose
     public Boolean edgeBlockJavaScript;
 
@@ -499,7 +499,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Live Tile Data Collection.
      * Block the collection of information by Microsoft for live tile creation when users pin a site to Start from Microsoft Edge.
      */
-    @SerializedName("edgeBlockLiveTileDataCollection")
+    @SerializedName(value = "edgeBlockLiveTileDataCollection", alternate = {"EdgeBlockLiveTileDataCollection"})
     @Expose
     public Boolean edgeBlockLiveTileDataCollection;
 
@@ -507,7 +507,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Password Manager.
      * Indicates whether or not to Block password manager.
      */
-    @SerializedName("edgeBlockPasswordManager")
+    @SerializedName(value = "edgeBlockPasswordManager", alternate = {"EdgeBlockPasswordManager"})
     @Expose
     public Boolean edgeBlockPasswordManager;
 
@@ -515,7 +515,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Popups.
      * Indicates whether or not to block popups.
      */
-    @SerializedName("edgeBlockPopups")
+    @SerializedName(value = "edgeBlockPopups", alternate = {"EdgeBlockPopups"})
     @Expose
     public Boolean edgeBlockPopups;
 
@@ -523,7 +523,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Search Suggestions.
      * Indicates whether or not to block the user from using the search suggestions in the address bar.
      */
-    @SerializedName("edgeBlockSearchSuggestions")
+    @SerializedName(value = "edgeBlockSearchSuggestions", alternate = {"EdgeBlockSearchSuggestions"})
     @Expose
     public Boolean edgeBlockSearchSuggestions;
 
@@ -531,7 +531,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Sending Do Not Track Header.
      * Indicates whether or not to Block the user from sending the do not track header.
      */
-    @SerializedName("edgeBlockSendingDoNotTrackHeader")
+    @SerializedName(value = "edgeBlockSendingDoNotTrackHeader", alternate = {"EdgeBlockSendingDoNotTrackHeader"})
     @Expose
     public Boolean edgeBlockSendingDoNotTrackHeader;
 
@@ -539,7 +539,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Block Sending Intranet Traffic To Internet Explorer.
      * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead.
      */
-    @SerializedName("edgeBlockSendingIntranetTrafficToInternetExplorer")
+    @SerializedName(value = "edgeBlockSendingIntranetTrafficToInternetExplorer", alternate = {"EdgeBlockSendingIntranetTrafficToInternetExplorer"})
     @Expose
     public Boolean edgeBlockSendingIntranetTrafficToInternetExplorer;
 
@@ -547,7 +547,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Clear Browsing Data On Exit.
      * Clear browsing data on exiting Microsoft Edge.
      */
-    @SerializedName("edgeClearBrowsingDataOnExit")
+    @SerializedName(value = "edgeClearBrowsingDataOnExit", alternate = {"EdgeClearBrowsingDataOnExit"})
     @Expose
     public Boolean edgeClearBrowsingDataOnExit;
 
@@ -555,7 +555,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Cookie Policy.
      * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
      */
-    @SerializedName("edgeCookiePolicy")
+    @SerializedName(value = "edgeCookiePolicy", alternate = {"EdgeCookiePolicy"})
     @Expose
     public EdgeCookiePolicy edgeCookiePolicy;
 
@@ -563,7 +563,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Disable First Run Page.
      * Block the Microsoft web page that opens on the first use of Microsoft Edge. This policy allows enterprises, like those enrolled in zero emissions configurations, to block this page.
      */
-    @SerializedName("edgeDisableFirstRunPage")
+    @SerializedName(value = "edgeDisableFirstRunPage", alternate = {"EdgeDisableFirstRunPage"})
     @Expose
     public Boolean edgeDisableFirstRunPage;
 
@@ -571,7 +571,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Enterprise Mode Site List Location.
      * Indicates the enterprise mode site list location. Could be a local file, local network or http location.
      */
-    @SerializedName("edgeEnterpriseModeSiteListLocation")
+    @SerializedName(value = "edgeEnterpriseModeSiteListLocation", alternate = {"EdgeEnterpriseModeSiteListLocation"})
     @Expose
     public String edgeEnterpriseModeSiteListLocation;
 
@@ -579,7 +579,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge First Run Url.
      * The first run URL for when Edge browser is opened for the first time.
      */
-    @SerializedName("edgeFirstRunUrl")
+    @SerializedName(value = "edgeFirstRunUrl", alternate = {"EdgeFirstRunUrl"})
     @Expose
     public String edgeFirstRunUrl;
 
@@ -587,7 +587,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Homepage Urls.
      * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
      */
-    @SerializedName("edgeHomepageUrls")
+    @SerializedName(value = "edgeHomepageUrls", alternate = {"EdgeHomepageUrls"})
     @Expose
     public java.util.List<String> edgeHomepageUrls;
 
@@ -595,7 +595,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Require Smart Screen.
      * Indicates whether or not to Require the user to use the smart screen filter.
      */
-    @SerializedName("edgeRequireSmartScreen")
+    @SerializedName(value = "edgeRequireSmartScreen", alternate = {"EdgeRequireSmartScreen"})
     @Expose
     public Boolean edgeRequireSmartScreen;
 
@@ -603,7 +603,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Search Engine.
      * Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their default search engine provided the AllowSearchEngineCustomization policy is not set.
      */
-    @SerializedName("edgeSearchEngine")
+    @SerializedName(value = "edgeSearchEngine", alternate = {"EdgeSearchEngine"})
     @Expose
     public EdgeSearchEngineBase edgeSearchEngine;
 
@@ -611,7 +611,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Send Intranet Traffic To Internet Explorer.
      * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer.
      */
-    @SerializedName("edgeSendIntranetTrafficToInternetExplorer")
+    @SerializedName(value = "edgeSendIntranetTrafficToInternetExplorer", alternate = {"EdgeSendIntranetTrafficToInternetExplorer"})
     @Expose
     public Boolean edgeSendIntranetTrafficToInternetExplorer;
 
@@ -619,7 +619,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Edge Sync Favorites With Internet Explorer.
      * Enable favorites sync between Internet Explorer and Microsoft Edge. Additions, deletions, modifications and order changes to favorites are shared between browsers.
      */
-    @SerializedName("edgeSyncFavoritesWithInternetExplorer")
+    @SerializedName(value = "edgeSyncFavoritesWithInternetExplorer", alternate = {"EdgeSyncFavoritesWithInternetExplorer"})
     @Expose
     public Boolean edgeSyncFavoritesWithInternetExplorer;
 
@@ -627,7 +627,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Enterprise Cloud Print Discovery End Point.
      * Endpoint for discovering cloud printers.
      */
-    @SerializedName("enterpriseCloudPrintDiscoveryEndPoint")
+    @SerializedName(value = "enterpriseCloudPrintDiscoveryEndPoint", alternate = {"EnterpriseCloudPrintDiscoveryEndPoint"})
     @Expose
     public String enterpriseCloudPrintDiscoveryEndPoint;
 
@@ -635,7 +635,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Enterprise Cloud Print Discovery Max Limit.
      * Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid values 1 to 65535
      */
-    @SerializedName("enterpriseCloudPrintDiscoveryMaxLimit")
+    @SerializedName(value = "enterpriseCloudPrintDiscoveryMaxLimit", alternate = {"EnterpriseCloudPrintDiscoveryMaxLimit"})
     @Expose
     public Integer enterpriseCloudPrintDiscoveryMaxLimit;
 
@@ -643,7 +643,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Enterprise Cloud Print Mopria Discovery Resource Identifier.
      * OAuth resource URI for printer discovery service as configured in Azure portal.
      */
-    @SerializedName("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier")
+    @SerializedName(value = "enterpriseCloudPrintMopriaDiscoveryResourceIdentifier", alternate = {"EnterpriseCloudPrintMopriaDiscoveryResourceIdentifier"})
     @Expose
     public String enterpriseCloudPrintMopriaDiscoveryResourceIdentifier;
 
@@ -651,7 +651,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Enterprise Cloud Print OAuth Authority.
      * Authentication endpoint for acquiring OAuth tokens.
      */
-    @SerializedName("enterpriseCloudPrintOAuthAuthority")
+    @SerializedName(value = "enterpriseCloudPrintOAuthAuthority", alternate = {"EnterpriseCloudPrintOAuthAuthority"})
     @Expose
     public String enterpriseCloudPrintOAuthAuthority;
 
@@ -659,7 +659,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Enterprise Cloud Print OAuth Client Identifier.
      * GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority.
      */
-    @SerializedName("enterpriseCloudPrintOAuthClientIdentifier")
+    @SerializedName(value = "enterpriseCloudPrintOAuthClientIdentifier", alternate = {"EnterpriseCloudPrintOAuthClientIdentifier"})
     @Expose
     public String enterpriseCloudPrintOAuthClientIdentifier;
 
@@ -667,7 +667,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Enterprise Cloud Print Resource Identifier.
      * OAuth resource URI for print service as configured in the Azure portal.
      */
-    @SerializedName("enterpriseCloudPrintResourceIdentifier")
+    @SerializedName(value = "enterpriseCloudPrintResourceIdentifier", alternate = {"EnterpriseCloudPrintResourceIdentifier"})
     @Expose
     public String enterpriseCloudPrintResourceIdentifier;
 
@@ -675,7 +675,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Experience Block Device Discovery.
      * Indicates whether or not to enable device discovery UX.
      */
-    @SerializedName("experienceBlockDeviceDiscovery")
+    @SerializedName(value = "experienceBlockDeviceDiscovery", alternate = {"ExperienceBlockDeviceDiscovery"})
     @Expose
     public Boolean experienceBlockDeviceDiscovery;
 
@@ -683,7 +683,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Experience Block Error Dialog When No SIM.
      * Indicates whether or not to allow the error dialog from displaying if no SIM card is detected.
      */
-    @SerializedName("experienceBlockErrorDialogWhenNoSIM")
+    @SerializedName(value = "experienceBlockErrorDialogWhenNoSIM", alternate = {"ExperienceBlockErrorDialogWhenNoSIM"})
     @Expose
     public Boolean experienceBlockErrorDialogWhenNoSIM;
 
@@ -691,7 +691,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Experience Block Task Switcher.
      * Indicates whether or not to enable task switching on the device.
      */
-    @SerializedName("experienceBlockTaskSwitcher")
+    @SerializedName(value = "experienceBlockTaskSwitcher", alternate = {"ExperienceBlockTaskSwitcher"})
     @Expose
     public Boolean experienceBlockTaskSwitcher;
 
@@ -699,7 +699,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Game Dvr Blocked.
      * Indicates whether or not to block DVR and broadcasting.
      */
-    @SerializedName("gameDvrBlocked")
+    @SerializedName(value = "gameDvrBlocked", alternate = {"GameDvrBlocked"})
     @Expose
     public Boolean gameDvrBlocked;
 
@@ -707,7 +707,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Internet Sharing Blocked.
      * Indicates whether or not to Block the user from using internet sharing.
      */
-    @SerializedName("internetSharingBlocked")
+    @SerializedName(value = "internetSharingBlocked", alternate = {"InternetSharingBlocked"})
     @Expose
     public Boolean internetSharingBlocked;
 
@@ -715,7 +715,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Location Services Blocked.
      * Indicates whether or not to Block the user from location services.
      */
-    @SerializedName("locationServicesBlocked")
+    @SerializedName(value = "locationServicesBlocked", alternate = {"LocationServicesBlocked"})
     @Expose
     public Boolean locationServicesBlocked;
 
@@ -723,7 +723,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Lock Screen Allow Timeout Configuration.
      * Specify whether to show a user-configurable setting to control the screen timeout while on the lock screen of Windows 10 Mobile devices. If this policy is set to Allow, the value set by lockScreenTimeoutInSeconds is ignored.
      */
-    @SerializedName("lockScreenAllowTimeoutConfiguration")
+    @SerializedName(value = "lockScreenAllowTimeoutConfiguration", alternate = {"LockScreenAllowTimeoutConfiguration"})
     @Expose
     public Boolean lockScreenAllowTimeoutConfiguration;
 
@@ -731,7 +731,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Lock Screen Block Action Center Notifications.
      * Indicates whether or not to block action center notifications over lock screen.
      */
-    @SerializedName("lockScreenBlockActionCenterNotifications")
+    @SerializedName(value = "lockScreenBlockActionCenterNotifications", alternate = {"LockScreenBlockActionCenterNotifications"})
     @Expose
     public Boolean lockScreenBlockActionCenterNotifications;
 
@@ -739,7 +739,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Lock Screen Block Cortana.
      * Indicates whether or not the user can interact with Cortana using speech while the system is locked.
      */
-    @SerializedName("lockScreenBlockCortana")
+    @SerializedName(value = "lockScreenBlockCortana", alternate = {"LockScreenBlockCortana"})
     @Expose
     public Boolean lockScreenBlockCortana;
 
@@ -747,7 +747,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Lock Screen Block Toast Notifications.
      * Indicates whether to allow toast notifications above the device lock screen.
      */
-    @SerializedName("lockScreenBlockToastNotifications")
+    @SerializedName(value = "lockScreenBlockToastNotifications", alternate = {"LockScreenBlockToastNotifications"})
     @Expose
     public Boolean lockScreenBlockToastNotifications;
 
@@ -755,7 +755,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Lock Screen Timeout In Seconds.
      * Set the duration (in seconds) from the screen locking to the screen turning off for Windows 10 Mobile devices. Supported values are 11-1800. Valid values 11 to 1800
      */
-    @SerializedName("lockScreenTimeoutInSeconds")
+    @SerializedName(value = "lockScreenTimeoutInSeconds", alternate = {"LockScreenTimeoutInSeconds"})
     @Expose
     public Integer lockScreenTimeoutInSeconds;
 
@@ -763,7 +763,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Logon Block Fast User Switching.
      * Disables the ability to quickly switch between users that are logged on simultaneously without logging off.
      */
-    @SerializedName("logonBlockFastUserSwitching")
+    @SerializedName(value = "logonBlockFastUserSwitching", alternate = {"LogonBlockFastUserSwitching"})
     @Expose
     public Boolean logonBlockFastUserSwitching;
 
@@ -771,7 +771,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Microsoft Account Blocked.
      * Indicates whether or not to Block a Microsoft account.
      */
-    @SerializedName("microsoftAccountBlocked")
+    @SerializedName(value = "microsoftAccountBlocked", alternate = {"MicrosoftAccountBlocked"})
     @Expose
     public Boolean microsoftAccountBlocked;
 
@@ -779,7 +779,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Microsoft Account Block Settings Sync.
      * Indicates whether or not to Block Microsoft account settings sync.
      */
-    @SerializedName("microsoftAccountBlockSettingsSync")
+    @SerializedName(value = "microsoftAccountBlockSettingsSync", alternate = {"MicrosoftAccountBlockSettingsSync"})
     @Expose
     public Boolean microsoftAccountBlockSettingsSync;
 
@@ -787,7 +787,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Network Proxy Apply Settings Device Wide.
      * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
      */
-    @SerializedName("networkProxyApplySettingsDeviceWide")
+    @SerializedName(value = "networkProxyApplySettingsDeviceWide", alternate = {"NetworkProxyApplySettingsDeviceWide"})
     @Expose
     public Boolean networkProxyApplySettingsDeviceWide;
 
@@ -795,7 +795,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Network Proxy Automatic Configuration Url.
      * Address to the proxy auto-config (PAC) script you want to use.
      */
-    @SerializedName("networkProxyAutomaticConfigurationUrl")
+    @SerializedName(value = "networkProxyAutomaticConfigurationUrl", alternate = {"NetworkProxyAutomaticConfigurationUrl"})
     @Expose
     public String networkProxyAutomaticConfigurationUrl;
 
@@ -803,7 +803,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Network Proxy Disable Auto Detect.
      * Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC) script.
      */
-    @SerializedName("networkProxyDisableAutoDetect")
+    @SerializedName(value = "networkProxyDisableAutoDetect", alternate = {"NetworkProxyDisableAutoDetect"})
     @Expose
     public Boolean networkProxyDisableAutoDetect;
 
@@ -811,7 +811,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Network Proxy Server.
      * Specifies manual proxy server settings.
      */
-    @SerializedName("networkProxyServer")
+    @SerializedName(value = "networkProxyServer", alternate = {"NetworkProxyServer"})
     @Expose
     public Windows10NetworkProxyServer networkProxyServer;
 
@@ -819,7 +819,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Nfc Blocked.
      * Indicates whether or not to Block the user from using near field communication.
      */
-    @SerializedName("nfcBlocked")
+    @SerializedName(value = "nfcBlocked", alternate = {"NfcBlocked"})
     @Expose
     public Boolean nfcBlocked;
 
@@ -827,7 +827,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The One Drive Disable File Sync.
      * Gets or sets a value allowing IT admins to prevent apps and features from working with files on OneDrive.
      */
-    @SerializedName("oneDriveDisableFileSync")
+    @SerializedName(value = "oneDriveDisableFileSync", alternate = {"OneDriveDisableFileSync"})
     @Expose
     public Boolean oneDriveDisableFileSync;
 
@@ -835,7 +835,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Password Block Simple.
      * Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
      */
-    @SerializedName("passwordBlockSimple")
+    @SerializedName(value = "passwordBlockSimple", alternate = {"PasswordBlockSimple"})
     @Expose
     public Boolean passwordBlockSimple;
 
@@ -843,7 +843,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Password Expiration Days.
      * The password expiration in days. Valid values 0 to 730
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -851,7 +851,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Password Minimum Character Set Count.
      * The number of character sets required in the password.
      */
-    @SerializedName("passwordMinimumCharacterSetCount")
+    @SerializedName(value = "passwordMinimumCharacterSetCount", alternate = {"PasswordMinimumCharacterSetCount"})
     @Expose
     public Integer passwordMinimumCharacterSetCount;
 
@@ -859,7 +859,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Password Minimum Length.
      * The minimum password length. Valid values 4 to 16
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -867,7 +867,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Password Minutes Of Inactivity Before Screen Timeout.
      * The minutes of inactivity before the screen times out.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeScreenTimeout")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeScreenTimeout", alternate = {"PasswordMinutesOfInactivityBeforeScreenTimeout"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeScreenTimeout;
 
@@ -875,7 +875,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Password Previous Password Block Count.
      * The number of previous passwords to prevent reuse of. Valid values 0 to 50
      */
-    @SerializedName("passwordPreviousPasswordBlockCount")
+    @SerializedName(value = "passwordPreviousPasswordBlockCount", alternate = {"PasswordPreviousPasswordBlockCount"})
     @Expose
     public Integer passwordPreviousPasswordBlockCount;
 
@@ -883,7 +883,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Password Required.
      * Indicates whether or not to require the user to have a password.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName(value = "passwordRequired", alternate = {"PasswordRequired"})
     @Expose
     public Boolean passwordRequired;
 
@@ -891,7 +891,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Password Required Type.
      * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public RequiredPasswordType passwordRequiredType;
 
@@ -899,7 +899,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Password Require When Resume From Idle State.
      * Indicates whether or not to require a password upon resuming from an idle state.
      */
-    @SerializedName("passwordRequireWhenResumeFromIdleState")
+    @SerializedName(value = "passwordRequireWhenResumeFromIdleState", alternate = {"PasswordRequireWhenResumeFromIdleState"})
     @Expose
     public Boolean passwordRequireWhenResumeFromIdleState;
 
@@ -907,7 +907,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Password Sign In Failure Count Before Factory Reset.
      * The number of sign in failures before factory reset. Valid values 0 to 999
      */
-    @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
+    @SerializedName(value = "passwordSignInFailureCountBeforeFactoryReset", alternate = {"PasswordSignInFailureCountBeforeFactoryReset"})
     @Expose
     public Integer passwordSignInFailureCountBeforeFactoryReset;
 
@@ -915,7 +915,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Personalization Desktop Image Url.
      * A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to used as the Desktop Image.
      */
-    @SerializedName("personalizationDesktopImageUrl")
+    @SerializedName(value = "personalizationDesktopImageUrl", alternate = {"PersonalizationDesktopImageUrl"})
     @Expose
     public String personalizationDesktopImageUrl;
 
@@ -923,7 +923,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Personalization Lock Screen Image Url.
      * A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a file Url to a local image on the file system that needs to be used as the Lock Screen Image.
      */
-    @SerializedName("personalizationLockScreenImageUrl")
+    @SerializedName(value = "personalizationLockScreenImageUrl", alternate = {"PersonalizationLockScreenImageUrl"})
     @Expose
     public String personalizationLockScreenImageUrl;
 
@@ -931,7 +931,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Privacy Advertising Id.
      * Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured, blocked, allowed.
      */
-    @SerializedName("privacyAdvertisingId")
+    @SerializedName(value = "privacyAdvertisingId", alternate = {"PrivacyAdvertisingId"})
     @Expose
     public StateManagementSetting privacyAdvertisingId;
 
@@ -939,7 +939,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Privacy Auto Accept Pairing And Consent Prompts.
      * Indicates whether or not to allow the automatic acceptance of the pairing and privacy user consent dialog when launching apps.
      */
-    @SerializedName("privacyAutoAcceptPairingAndConsentPrompts")
+    @SerializedName(value = "privacyAutoAcceptPairingAndConsentPrompts", alternate = {"PrivacyAutoAcceptPairingAndConsentPrompts"})
     @Expose
     public Boolean privacyAutoAcceptPairingAndConsentPrompts;
 
@@ -947,7 +947,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Privacy Block Input Personalization.
      * Indicates whether or not to block the usage of cloud based speech services for Cortana, Dictation, or Store applications.
      */
-    @SerializedName("privacyBlockInputPersonalization")
+    @SerializedName(value = "privacyBlockInputPersonalization", alternate = {"PrivacyBlockInputPersonalization"})
     @Expose
     public Boolean privacyBlockInputPersonalization;
 
@@ -955,7 +955,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Reset Protection Mode Blocked.
      * Indicates whether or not to Block the user from reset protection mode.
      */
-    @SerializedName("resetProtectionModeBlocked")
+    @SerializedName(value = "resetProtectionModeBlocked", alternate = {"ResetProtectionModeBlocked"})
     @Expose
     public Boolean resetProtectionModeBlocked;
 
@@ -963,7 +963,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Safe Search Filter.
      * Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
      */
-    @SerializedName("safeSearchFilter")
+    @SerializedName(value = "safeSearchFilter", alternate = {"SafeSearchFilter"})
     @Expose
     public SafeSearchFilterType safeSearchFilter;
 
@@ -971,7 +971,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Screen Capture Blocked.
      * Indicates whether or not to Block the user from taking Screenshots.
      */
-    @SerializedName("screenCaptureBlocked")
+    @SerializedName(value = "screenCaptureBlocked", alternate = {"ScreenCaptureBlocked"})
     @Expose
     public Boolean screenCaptureBlocked;
 
@@ -979,7 +979,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Search Block Diacritics.
      * Specifies if search can use diacritics.
      */
-    @SerializedName("searchBlockDiacritics")
+    @SerializedName(value = "searchBlockDiacritics", alternate = {"SearchBlockDiacritics"})
     @Expose
     public Boolean searchBlockDiacritics;
 
@@ -987,7 +987,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Search Disable Auto Language Detection.
      * Specifies whether to use automatic language detection when indexing content and properties.
      */
-    @SerializedName("searchDisableAutoLanguageDetection")
+    @SerializedName(value = "searchDisableAutoLanguageDetection", alternate = {"SearchDisableAutoLanguageDetection"})
     @Expose
     public Boolean searchDisableAutoLanguageDetection;
 
@@ -995,7 +995,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Search Disable Indexer Backoff.
      * Indicates whether or not to disable the search indexer backoff feature.
      */
-    @SerializedName("searchDisableIndexerBackoff")
+    @SerializedName(value = "searchDisableIndexerBackoff", alternate = {"SearchDisableIndexerBackoff"})
     @Expose
     public Boolean searchDisableIndexerBackoff;
 
@@ -1003,7 +1003,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Search Disable Indexing Encrypted Items.
      * Indicates whether or not to block indexing of WIP-protected items to prevent them from appearing in search results for Cortana or Explorer.
      */
-    @SerializedName("searchDisableIndexingEncryptedItems")
+    @SerializedName(value = "searchDisableIndexingEncryptedItems", alternate = {"SearchDisableIndexingEncryptedItems"})
     @Expose
     public Boolean searchDisableIndexingEncryptedItems;
 
@@ -1011,7 +1011,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Search Disable Indexing Removable Drive.
      * Indicates whether or not to allow users to add locations on removable drives to libraries and to be indexed.
      */
-    @SerializedName("searchDisableIndexingRemovableDrive")
+    @SerializedName(value = "searchDisableIndexingRemovableDrive", alternate = {"SearchDisableIndexingRemovableDrive"})
     @Expose
     public Boolean searchDisableIndexingRemovableDrive;
 
@@ -1019,7 +1019,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Search Enable Automatic Index Size Manangement.
      * Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops.
      */
-    @SerializedName("searchEnableAutomaticIndexSizeManangement")
+    @SerializedName(value = "searchEnableAutomaticIndexSizeManangement", alternate = {"SearchEnableAutomaticIndexSizeManangement"})
     @Expose
     public Boolean searchEnableAutomaticIndexSizeManangement;
 
@@ -1027,7 +1027,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Search Enable Remote Queries.
      * Indicates whether or not to block remote queries of this computer’s index.
      */
-    @SerializedName("searchEnableRemoteQueries")
+    @SerializedName(value = "searchEnableRemoteQueries", alternate = {"SearchEnableRemoteQueries"})
     @Expose
     public Boolean searchEnableRemoteQueries;
 
@@ -1035,7 +1035,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Accounts Page.
      * Indicates whether or not to block access to Accounts in Settings app.
      */
-    @SerializedName("settingsBlockAccountsPage")
+    @SerializedName(value = "settingsBlockAccountsPage", alternate = {"SettingsBlockAccountsPage"})
     @Expose
     public Boolean settingsBlockAccountsPage;
 
@@ -1043,7 +1043,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Add Provisioning Package.
      * Indicates whether or not to block the user from installing provisioning packages.
      */
-    @SerializedName("settingsBlockAddProvisioningPackage")
+    @SerializedName(value = "settingsBlockAddProvisioningPackage", alternate = {"SettingsBlockAddProvisioningPackage"})
     @Expose
     public Boolean settingsBlockAddProvisioningPackage;
 
@@ -1051,7 +1051,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Apps Page.
      * Indicates whether or not to block access to Apps in Settings app.
      */
-    @SerializedName("settingsBlockAppsPage")
+    @SerializedName(value = "settingsBlockAppsPage", alternate = {"SettingsBlockAppsPage"})
     @Expose
     public Boolean settingsBlockAppsPage;
 
@@ -1059,7 +1059,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Change Language.
      * Indicates whether or not to block the user from changing the language settings.
      */
-    @SerializedName("settingsBlockChangeLanguage")
+    @SerializedName(value = "settingsBlockChangeLanguage", alternate = {"SettingsBlockChangeLanguage"})
     @Expose
     public Boolean settingsBlockChangeLanguage;
 
@@ -1067,7 +1067,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Change Power Sleep.
      * Indicates whether or not to block the user from changing power and sleep settings.
      */
-    @SerializedName("settingsBlockChangePowerSleep")
+    @SerializedName(value = "settingsBlockChangePowerSleep", alternate = {"SettingsBlockChangePowerSleep"})
     @Expose
     public Boolean settingsBlockChangePowerSleep;
 
@@ -1075,7 +1075,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Change Region.
      * Indicates whether or not to block the user from changing the region settings.
      */
-    @SerializedName("settingsBlockChangeRegion")
+    @SerializedName(value = "settingsBlockChangeRegion", alternate = {"SettingsBlockChangeRegion"})
     @Expose
     public Boolean settingsBlockChangeRegion;
 
@@ -1083,7 +1083,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Change System Time.
      * Indicates whether or not to block the user from changing date and time settings.
      */
-    @SerializedName("settingsBlockChangeSystemTime")
+    @SerializedName(value = "settingsBlockChangeSystemTime", alternate = {"SettingsBlockChangeSystemTime"})
     @Expose
     public Boolean settingsBlockChangeSystemTime;
 
@@ -1091,7 +1091,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Devices Page.
      * Indicates whether or not to block access to Devices in Settings app.
      */
-    @SerializedName("settingsBlockDevicesPage")
+    @SerializedName(value = "settingsBlockDevicesPage", alternate = {"SettingsBlockDevicesPage"})
     @Expose
     public Boolean settingsBlockDevicesPage;
 
@@ -1099,7 +1099,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Ease Of Access Page.
      * Indicates whether or not to block access to Ease of Access in Settings app.
      */
-    @SerializedName("settingsBlockEaseOfAccessPage")
+    @SerializedName(value = "settingsBlockEaseOfAccessPage", alternate = {"SettingsBlockEaseOfAccessPage"})
     @Expose
     public Boolean settingsBlockEaseOfAccessPage;
 
@@ -1107,7 +1107,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Edit Device Name.
      * Indicates whether or not to block the user from editing the device name.
      */
-    @SerializedName("settingsBlockEditDeviceName")
+    @SerializedName(value = "settingsBlockEditDeviceName", alternate = {"SettingsBlockEditDeviceName"})
     @Expose
     public Boolean settingsBlockEditDeviceName;
 
@@ -1115,7 +1115,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Gaming Page.
      * Indicates whether or not to block access to Gaming in Settings app.
      */
-    @SerializedName("settingsBlockGamingPage")
+    @SerializedName(value = "settingsBlockGamingPage", alternate = {"SettingsBlockGamingPage"})
     @Expose
     public Boolean settingsBlockGamingPage;
 
@@ -1123,7 +1123,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Network Internet Page.
      * Indicates whether or not to block access to Network &amp; Internet in Settings app.
      */
-    @SerializedName("settingsBlockNetworkInternetPage")
+    @SerializedName(value = "settingsBlockNetworkInternetPage", alternate = {"SettingsBlockNetworkInternetPage"})
     @Expose
     public Boolean settingsBlockNetworkInternetPage;
 
@@ -1131,7 +1131,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Personalization Page.
      * Indicates whether or not to block access to Personalization in Settings app.
      */
-    @SerializedName("settingsBlockPersonalizationPage")
+    @SerializedName(value = "settingsBlockPersonalizationPage", alternate = {"SettingsBlockPersonalizationPage"})
     @Expose
     public Boolean settingsBlockPersonalizationPage;
 
@@ -1139,7 +1139,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Privacy Page.
      * Indicates whether or not to block access to Privacy in Settings app.
      */
-    @SerializedName("settingsBlockPrivacyPage")
+    @SerializedName(value = "settingsBlockPrivacyPage", alternate = {"SettingsBlockPrivacyPage"})
     @Expose
     public Boolean settingsBlockPrivacyPage;
 
@@ -1147,7 +1147,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Remove Provisioning Package.
      * Indicates whether or not to block the runtime configuration agent from removing provisioning packages.
      */
-    @SerializedName("settingsBlockRemoveProvisioningPackage")
+    @SerializedName(value = "settingsBlockRemoveProvisioningPackage", alternate = {"SettingsBlockRemoveProvisioningPackage"})
     @Expose
     public Boolean settingsBlockRemoveProvisioningPackage;
 
@@ -1155,7 +1155,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Settings App.
      * Indicates whether or not to block access to Settings app.
      */
-    @SerializedName("settingsBlockSettingsApp")
+    @SerializedName(value = "settingsBlockSettingsApp", alternate = {"SettingsBlockSettingsApp"})
     @Expose
     public Boolean settingsBlockSettingsApp;
 
@@ -1163,7 +1163,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block System Page.
      * Indicates whether or not to block access to System in Settings app.
      */
-    @SerializedName("settingsBlockSystemPage")
+    @SerializedName(value = "settingsBlockSystemPage", alternate = {"SettingsBlockSystemPage"})
     @Expose
     public Boolean settingsBlockSystemPage;
 
@@ -1171,7 +1171,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Time Language Page.
      * Indicates whether or not to block access to Time &amp; Language in Settings app.
      */
-    @SerializedName("settingsBlockTimeLanguagePage")
+    @SerializedName(value = "settingsBlockTimeLanguagePage", alternate = {"SettingsBlockTimeLanguagePage"})
     @Expose
     public Boolean settingsBlockTimeLanguagePage;
 
@@ -1179,7 +1179,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Settings Block Update Security Page.
      * Indicates whether or not to block access to Update &amp; Security in Settings app.
      */
-    @SerializedName("settingsBlockUpdateSecurityPage")
+    @SerializedName(value = "settingsBlockUpdateSecurityPage", alternate = {"SettingsBlockUpdateSecurityPage"})
     @Expose
     public Boolean settingsBlockUpdateSecurityPage;
 
@@ -1187,7 +1187,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Shared User App Data Allowed.
      * Indicates whether or not to block multiple users of the same app to share data.
      */
-    @SerializedName("sharedUserAppDataAllowed")
+    @SerializedName(value = "sharedUserAppDataAllowed", alternate = {"SharedUserAppDataAllowed"})
     @Expose
     public Boolean sharedUserAppDataAllowed;
 
@@ -1195,7 +1195,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Smart Screen Block Prompt Override.
      * Indicates whether or not users can override SmartScreen Filter warnings about potentially malicious websites.
      */
-    @SerializedName("smartScreenBlockPromptOverride")
+    @SerializedName(value = "smartScreenBlockPromptOverride", alternate = {"SmartScreenBlockPromptOverride"})
     @Expose
     public Boolean smartScreenBlockPromptOverride;
 
@@ -1203,7 +1203,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Smart Screen Block Prompt Override For Files.
      * Indicates whether or not users can override the SmartScreen Filter warnings about downloading unverified files
      */
-    @SerializedName("smartScreenBlockPromptOverrideForFiles")
+    @SerializedName(value = "smartScreenBlockPromptOverrideForFiles", alternate = {"SmartScreenBlockPromptOverrideForFiles"})
     @Expose
     public Boolean smartScreenBlockPromptOverrideForFiles;
 
@@ -1211,7 +1211,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Smart Screen Enable App Install Control.
      * Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
      */
-    @SerializedName("smartScreenEnableAppInstallControl")
+    @SerializedName(value = "smartScreenEnableAppInstallControl", alternate = {"SmartScreenEnableAppInstallControl"})
     @Expose
     public Boolean smartScreenEnableAppInstallControl;
 
@@ -1219,7 +1219,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Block Unpinning Apps From Taskbar.
      * Indicates whether or not to block the user from unpinning apps from taskbar.
      */
-    @SerializedName("startBlockUnpinningAppsFromTaskbar")
+    @SerializedName(value = "startBlockUnpinningAppsFromTaskbar", alternate = {"StartBlockUnpinningAppsFromTaskbar"})
     @Expose
     public Boolean startBlockUnpinningAppsFromTaskbar;
 
@@ -1227,7 +1227,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu App List Visibility.
      * Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp.
      */
-    @SerializedName("startMenuAppListVisibility")
+    @SerializedName(value = "startMenuAppListVisibility", alternate = {"StartMenuAppListVisibility"})
     @Expose
     public EnumSet<WindowsStartMenuAppListVisibilityType> startMenuAppListVisibility;
 
@@ -1235,7 +1235,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Change Account Settings.
      * Enabling this policy hides the change account setting from appearing in the user tile in the start menu.
      */
-    @SerializedName("startMenuHideChangeAccountSettings")
+    @SerializedName(value = "startMenuHideChangeAccountSettings", alternate = {"StartMenuHideChangeAccountSettings"})
     @Expose
     public Boolean startMenuHideChangeAccountSettings;
 
@@ -1243,7 +1243,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Frequently Used Apps.
      * Enabling this policy hides the most used apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
      */
-    @SerializedName("startMenuHideFrequentlyUsedApps")
+    @SerializedName(value = "startMenuHideFrequentlyUsedApps", alternate = {"StartMenuHideFrequentlyUsedApps"})
     @Expose
     public Boolean startMenuHideFrequentlyUsedApps;
 
@@ -1251,7 +1251,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Hibernate.
      * Enabling this policy hides hibernate from appearing in the power button in the start menu.
      */
-    @SerializedName("startMenuHideHibernate")
+    @SerializedName(value = "startMenuHideHibernate", alternate = {"StartMenuHideHibernate"})
     @Expose
     public Boolean startMenuHideHibernate;
 
@@ -1259,7 +1259,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Lock.
      * Enabling this policy hides lock from appearing in the user tile in the start menu.
      */
-    @SerializedName("startMenuHideLock")
+    @SerializedName(value = "startMenuHideLock", alternate = {"StartMenuHideLock"})
     @Expose
     public Boolean startMenuHideLock;
 
@@ -1267,7 +1267,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Power Button.
      * Enabling this policy hides the power button from appearing in the start menu.
      */
-    @SerializedName("startMenuHidePowerButton")
+    @SerializedName(value = "startMenuHidePowerButton", alternate = {"StartMenuHidePowerButton"})
     @Expose
     public Boolean startMenuHidePowerButton;
 
@@ -1275,7 +1275,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Recent Jump Lists.
      * Enabling this policy hides recent jump lists from appearing on the start menu/taskbar and disables the corresponding toggle in the Settings app.
      */
-    @SerializedName("startMenuHideRecentJumpLists")
+    @SerializedName(value = "startMenuHideRecentJumpLists", alternate = {"StartMenuHideRecentJumpLists"})
     @Expose
     public Boolean startMenuHideRecentJumpLists;
 
@@ -1283,7 +1283,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Recently Added Apps.
      * Enabling this policy hides recently added apps from appearing on the start menu and disables the corresponding toggle in the Settings app.
      */
-    @SerializedName("startMenuHideRecentlyAddedApps")
+    @SerializedName(value = "startMenuHideRecentlyAddedApps", alternate = {"StartMenuHideRecentlyAddedApps"})
     @Expose
     public Boolean startMenuHideRecentlyAddedApps;
 
@@ -1291,7 +1291,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Restart Options.
      * Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.
      */
-    @SerializedName("startMenuHideRestartOptions")
+    @SerializedName(value = "startMenuHideRestartOptions", alternate = {"StartMenuHideRestartOptions"})
     @Expose
     public Boolean startMenuHideRestartOptions;
 
@@ -1299,7 +1299,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Shut Down.
      * Enabling this policy hides shut down/update and shut down from appearing in the power button in the start menu.
      */
-    @SerializedName("startMenuHideShutDown")
+    @SerializedName(value = "startMenuHideShutDown", alternate = {"StartMenuHideShutDown"})
     @Expose
     public Boolean startMenuHideShutDown;
 
@@ -1307,7 +1307,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Sign Out.
      * Enabling this policy hides sign out from appearing in the user tile in the start menu.
      */
-    @SerializedName("startMenuHideSignOut")
+    @SerializedName(value = "startMenuHideSignOut", alternate = {"StartMenuHideSignOut"})
     @Expose
     public Boolean startMenuHideSignOut;
 
@@ -1315,7 +1315,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Sleep.
      * Enabling this policy hides sleep from appearing in the power button in the start menu.
      */
-    @SerializedName("startMenuHideSleep")
+    @SerializedName(value = "startMenuHideSleep", alternate = {"StartMenuHideSleep"})
     @Expose
     public Boolean startMenuHideSleep;
 
@@ -1323,7 +1323,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide Switch Account.
      * Enabling this policy hides switch account from appearing in the user tile in the start menu.
      */
-    @SerializedName("startMenuHideSwitchAccount")
+    @SerializedName(value = "startMenuHideSwitchAccount", alternate = {"StartMenuHideSwitchAccount"})
     @Expose
     public Boolean startMenuHideSwitchAccount;
 
@@ -1331,7 +1331,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Hide User Tile.
      * Enabling this policy hides the user tile from appearing in the start menu.
      */
-    @SerializedName("startMenuHideUserTile")
+    @SerializedName(value = "startMenuHideUserTile", alternate = {"StartMenuHideUserTile"})
     @Expose
     public Boolean startMenuHideUserTile;
 
@@ -1339,7 +1339,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Layout Edge Assets Xml.
      * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
      */
-    @SerializedName("startMenuLayoutEdgeAssetsXml")
+    @SerializedName(value = "startMenuLayoutEdgeAssetsXml", alternate = {"StartMenuLayoutEdgeAssetsXml"})
     @Expose
     public byte[] startMenuLayoutEdgeAssetsXml;
 
@@ -1347,7 +1347,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Layout Xml.
      * Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.
      */
-    @SerializedName("startMenuLayoutXml")
+    @SerializedName(value = "startMenuLayoutXml", alternate = {"StartMenuLayoutXml"})
     @Expose
     public byte[] startMenuLayoutXml;
 
@@ -1355,7 +1355,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Mode.
      * Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.
      */
-    @SerializedName("startMenuMode")
+    @SerializedName(value = "startMenuMode", alternate = {"StartMenuMode"})
     @Expose
     public WindowsStartMenuModeType startMenuMode;
 
@@ -1363,7 +1363,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Pinned Folder Documents.
      * Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
      */
-    @SerializedName("startMenuPinnedFolderDocuments")
+    @SerializedName(value = "startMenuPinnedFolderDocuments", alternate = {"StartMenuPinnedFolderDocuments"})
     @Expose
     public VisibilitySetting startMenuPinnedFolderDocuments;
 
@@ -1371,7 +1371,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Pinned Folder Downloads.
      * Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
      */
-    @SerializedName("startMenuPinnedFolderDownloads")
+    @SerializedName(value = "startMenuPinnedFolderDownloads", alternate = {"StartMenuPinnedFolderDownloads"})
     @Expose
     public VisibilitySetting startMenuPinnedFolderDownloads;
 
@@ -1379,7 +1379,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Pinned Folder File Explorer.
      * Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured, hide, show.
      */
-    @SerializedName("startMenuPinnedFolderFileExplorer")
+    @SerializedName(value = "startMenuPinnedFolderFileExplorer", alternate = {"StartMenuPinnedFolderFileExplorer"})
     @Expose
     public VisibilitySetting startMenuPinnedFolderFileExplorer;
 
@@ -1387,7 +1387,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Pinned Folder Home Group.
      * Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
      */
-    @SerializedName("startMenuPinnedFolderHomeGroup")
+    @SerializedName(value = "startMenuPinnedFolderHomeGroup", alternate = {"StartMenuPinnedFolderHomeGroup"})
     @Expose
     public VisibilitySetting startMenuPinnedFolderHomeGroup;
 
@@ -1395,7 +1395,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Pinned Folder Music.
      * Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
      */
-    @SerializedName("startMenuPinnedFolderMusic")
+    @SerializedName(value = "startMenuPinnedFolderMusic", alternate = {"StartMenuPinnedFolderMusic"})
     @Expose
     public VisibilitySetting startMenuPinnedFolderMusic;
 
@@ -1403,7 +1403,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Pinned Folder Network.
      * Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
      */
-    @SerializedName("startMenuPinnedFolderNetwork")
+    @SerializedName(value = "startMenuPinnedFolderNetwork", alternate = {"StartMenuPinnedFolderNetwork"})
     @Expose
     public VisibilitySetting startMenuPinnedFolderNetwork;
 
@@ -1411,7 +1411,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Pinned Folder Personal Folder.
      * Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
      */
-    @SerializedName("startMenuPinnedFolderPersonalFolder")
+    @SerializedName(value = "startMenuPinnedFolderPersonalFolder", alternate = {"StartMenuPinnedFolderPersonalFolder"})
     @Expose
     public VisibilitySetting startMenuPinnedFolderPersonalFolder;
 
@@ -1419,7 +1419,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Pinned Folder Pictures.
      * Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
      */
-    @SerializedName("startMenuPinnedFolderPictures")
+    @SerializedName(value = "startMenuPinnedFolderPictures", alternate = {"StartMenuPinnedFolderPictures"})
     @Expose
     public VisibilitySetting startMenuPinnedFolderPictures;
 
@@ -1427,7 +1427,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Pinned Folder Settings.
      * Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
      */
-    @SerializedName("startMenuPinnedFolderSettings")
+    @SerializedName(value = "startMenuPinnedFolderSettings", alternate = {"StartMenuPinnedFolderSettings"})
     @Expose
     public VisibilitySetting startMenuPinnedFolderSettings;
 
@@ -1435,7 +1435,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Start Menu Pinned Folder Videos.
      * Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
      */
-    @SerializedName("startMenuPinnedFolderVideos")
+    @SerializedName(value = "startMenuPinnedFolderVideos", alternate = {"StartMenuPinnedFolderVideos"})
     @Expose
     public VisibilitySetting startMenuPinnedFolderVideos;
 
@@ -1443,7 +1443,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Storage Block Removable Storage.
      * Indicates whether or not to Block the user from using removable storage.
      */
-    @SerializedName("storageBlockRemovableStorage")
+    @SerializedName(value = "storageBlockRemovableStorage", alternate = {"StorageBlockRemovableStorage"})
     @Expose
     public Boolean storageBlockRemovableStorage;
 
@@ -1451,7 +1451,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Storage Require Mobile Device Encryption.
      * Indicating whether or not to require encryption on a mobile device.
      */
-    @SerializedName("storageRequireMobileDeviceEncryption")
+    @SerializedName(value = "storageRequireMobileDeviceEncryption", alternate = {"StorageRequireMobileDeviceEncryption"})
     @Expose
     public Boolean storageRequireMobileDeviceEncryption;
 
@@ -1459,7 +1459,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Storage Restrict App Data To System Volume.
      * Indicates whether application data is restricted to the system drive.
      */
-    @SerializedName("storageRestrictAppDataToSystemVolume")
+    @SerializedName(value = "storageRestrictAppDataToSystemVolume", alternate = {"StorageRestrictAppDataToSystemVolume"})
     @Expose
     public Boolean storageRestrictAppDataToSystemVolume;
 
@@ -1467,7 +1467,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Storage Restrict App Install To System Volume.
      * Indicates whether the installation of applications is restricted to the system drive.
      */
-    @SerializedName("storageRestrictAppInstallToSystemVolume")
+    @SerializedName(value = "storageRestrictAppInstallToSystemVolume", alternate = {"StorageRestrictAppInstallToSystemVolume"})
     @Expose
     public Boolean storageRestrictAppInstallToSystemVolume;
 
@@ -1475,7 +1475,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Tenant Lockdown Require Network During Out Of Box Experience.
      * Whether the device is required to connect to the network.
      */
-    @SerializedName("tenantLockdownRequireNetworkDuringOutOfBoxExperience")
+    @SerializedName(value = "tenantLockdownRequireNetworkDuringOutOfBoxExperience", alternate = {"TenantLockdownRequireNetworkDuringOutOfBoxExperience"})
     @Expose
     public Boolean tenantLockdownRequireNetworkDuringOutOfBoxExperience;
 
@@ -1483,7 +1483,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Usb Blocked.
      * Indicates whether or not to Block the user from USB connection.
      */
-    @SerializedName("usbBlocked")
+    @SerializedName(value = "usbBlocked", alternate = {"UsbBlocked"})
     @Expose
     public Boolean usbBlocked;
 
@@ -1491,7 +1491,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Voice Recording Blocked.
      * Indicates whether or not to Block the user from voice recording.
      */
-    @SerializedName("voiceRecordingBlocked")
+    @SerializedName(value = "voiceRecordingBlocked", alternate = {"VoiceRecordingBlocked"})
     @Expose
     public Boolean voiceRecordingBlocked;
 
@@ -1499,7 +1499,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Web Rtc Block Localhost Ip Address.
      * Indicates whether or not user's localhost IP address is displayed while making phone calls using the WebRTC
      */
-    @SerializedName("webRtcBlockLocalhostIpAddress")
+    @SerializedName(value = "webRtcBlockLocalhostIpAddress", alternate = {"WebRtcBlockLocalhostIpAddress"})
     @Expose
     public Boolean webRtcBlockLocalhostIpAddress;
 
@@ -1507,7 +1507,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Wi Fi Block Automatic Connect Hotspots.
      * Indicating whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
      */
-    @SerializedName("wiFiBlockAutomaticConnectHotspots")
+    @SerializedName(value = "wiFiBlockAutomaticConnectHotspots", alternate = {"WiFiBlockAutomaticConnectHotspots"})
     @Expose
     public Boolean wiFiBlockAutomaticConnectHotspots;
 
@@ -1515,7 +1515,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Wi Fi Blocked.
      * Indicates whether or not to Block the user from using Wi-Fi.
      */
-    @SerializedName("wiFiBlocked")
+    @SerializedName(value = "wiFiBlocked", alternate = {"WiFiBlocked"})
     @Expose
     public Boolean wiFiBlocked;
 
@@ -1523,7 +1523,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Wi Fi Block Manual Configuration.
      * Indicates whether or not to Block the user from using Wi-Fi manual configuration.
      */
-    @SerializedName("wiFiBlockManualConfiguration")
+    @SerializedName(value = "wiFiBlockManualConfiguration", alternate = {"WiFiBlockManualConfiguration"})
     @Expose
     public Boolean wiFiBlockManualConfiguration;
 
@@ -1531,7 +1531,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Wi Fi Scan Interval.
      * Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low frequency. Valid values 1 to 500
      */
-    @SerializedName("wiFiScanInterval")
+    @SerializedName(value = "wiFiScanInterval", alternate = {"WiFiScanInterval"})
     @Expose
     public Integer wiFiScanInterval;
 
@@ -1539,7 +1539,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Windows Spotlight Block Consumer Specific Features.
      * Allows IT admins to block experiences that are typically for consumers only, such as Start suggestions, Membership notifications, Post-OOBE app install and redirect tiles.
      */
-    @SerializedName("windowsSpotlightBlockConsumerSpecificFeatures")
+    @SerializedName(value = "windowsSpotlightBlockConsumerSpecificFeatures", alternate = {"WindowsSpotlightBlockConsumerSpecificFeatures"})
     @Expose
     public Boolean windowsSpotlightBlockConsumerSpecificFeatures;
 
@@ -1547,7 +1547,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Windows Spotlight Blocked.
      * Allows IT admins to turn off all Windows Spotlight features
      */
-    @SerializedName("windowsSpotlightBlocked")
+    @SerializedName(value = "windowsSpotlightBlocked", alternate = {"WindowsSpotlightBlocked"})
     @Expose
     public Boolean windowsSpotlightBlocked;
 
@@ -1555,7 +1555,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Windows Spotlight Block On Action Center.
      * Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce users to what is new or changed
      */
-    @SerializedName("windowsSpotlightBlockOnActionCenter")
+    @SerializedName(value = "windowsSpotlightBlockOnActionCenter", alternate = {"WindowsSpotlightBlockOnActionCenter"})
     @Expose
     public Boolean windowsSpotlightBlockOnActionCenter;
 
@@ -1563,7 +1563,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Windows Spotlight Block Tailored Experiences.
      * Block personalized content in Windows spotlight based on user’s device usage.
      */
-    @SerializedName("windowsSpotlightBlockTailoredExperiences")
+    @SerializedName(value = "windowsSpotlightBlockTailoredExperiences", alternate = {"WindowsSpotlightBlockTailoredExperiences"})
     @Expose
     public Boolean windowsSpotlightBlockTailoredExperiences;
 
@@ -1571,7 +1571,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Windows Spotlight Block Third Party Notifications.
      * Block third party content delivered via Windows Spotlight
      */
-    @SerializedName("windowsSpotlightBlockThirdPartyNotifications")
+    @SerializedName(value = "windowsSpotlightBlockThirdPartyNotifications", alternate = {"WindowsSpotlightBlockThirdPartyNotifications"})
     @Expose
     public Boolean windowsSpotlightBlockThirdPartyNotifications;
 
@@ -1579,7 +1579,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Windows Spotlight Block Welcome Experience.
      * Block Windows Spotlight Windows welcome experience
      */
-    @SerializedName("windowsSpotlightBlockWelcomeExperience")
+    @SerializedName(value = "windowsSpotlightBlockWelcomeExperience", alternate = {"WindowsSpotlightBlockWelcomeExperience"})
     @Expose
     public Boolean windowsSpotlightBlockWelcomeExperience;
 
@@ -1587,7 +1587,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Windows Spotlight Block Windows Tips.
      * Allows IT admins to turn off the popup of Windows Tips.
      */
-    @SerializedName("windowsSpotlightBlockWindowsTips")
+    @SerializedName(value = "windowsSpotlightBlockWindowsTips", alternate = {"WindowsSpotlightBlockWindowsTips"})
     @Expose
     public Boolean windowsSpotlightBlockWindowsTips;
 
@@ -1595,7 +1595,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Windows Spotlight Configure On Lock Screen.
      * Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.
      */
-    @SerializedName("windowsSpotlightConfigureOnLockScreen")
+    @SerializedName(value = "windowsSpotlightConfigureOnLockScreen", alternate = {"WindowsSpotlightConfigureOnLockScreen"})
     @Expose
     public WindowsSpotlightEnablementSettings windowsSpotlightConfigureOnLockScreen;
 
@@ -1603,7 +1603,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Windows Store Block Auto Update.
      * Indicates whether or not to block automatic update of apps from Windows Store.
      */
-    @SerializedName("windowsStoreBlockAutoUpdate")
+    @SerializedName(value = "windowsStoreBlockAutoUpdate", alternate = {"WindowsStoreBlockAutoUpdate"})
     @Expose
     public Boolean windowsStoreBlockAutoUpdate;
 
@@ -1611,7 +1611,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Windows Store Blocked.
      * Indicates whether or not to Block the user from using the Windows store.
      */
-    @SerializedName("windowsStoreBlocked")
+    @SerializedName(value = "windowsStoreBlocked", alternate = {"WindowsStoreBlocked"})
     @Expose
     public Boolean windowsStoreBlocked;
 
@@ -1619,7 +1619,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Windows Store Enable Private Store Only.
      * Indicates whether or not to enable Private Store Only.
      */
-    @SerializedName("windowsStoreEnablePrivateStoreOnly")
+    @SerializedName(value = "windowsStoreEnablePrivateStoreOnly", alternate = {"WindowsStoreEnablePrivateStoreOnly"})
     @Expose
     public Boolean windowsStoreEnablePrivateStoreOnly;
 
@@ -1627,7 +1627,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Wireless Display Block Projection To This Device.
      * Indicates whether or not to allow other devices from discovering this PC for projection.
      */
-    @SerializedName("wirelessDisplayBlockProjectionToThisDevice")
+    @SerializedName(value = "wirelessDisplayBlockProjectionToThisDevice", alternate = {"WirelessDisplayBlockProjectionToThisDevice"})
     @Expose
     public Boolean wirelessDisplayBlockProjectionToThisDevice;
 
@@ -1635,7 +1635,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Wireless Display Block User Input From Receiver.
      * Indicates whether or not to allow user input from wireless display receiver.
      */
-    @SerializedName("wirelessDisplayBlockUserInputFromReceiver")
+    @SerializedName(value = "wirelessDisplayBlockUserInputFromReceiver", alternate = {"WirelessDisplayBlockUserInputFromReceiver"})
     @Expose
     public Boolean wirelessDisplayBlockUserInputFromReceiver;
 
@@ -1643,7 +1643,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * The Wireless Display Require Pin For Pairing.
      * Indicates whether or not to require a PIN for new devices to initiate pairing.
      */
-    @SerializedName("wirelessDisplayRequirePinForPairing")
+    @SerializedName(value = "wirelessDisplayRequirePinForPairing", alternate = {"WirelessDisplayRequirePinForPairing"})
     @Expose
     public Boolean wirelessDisplayRequirePinForPairing;
 

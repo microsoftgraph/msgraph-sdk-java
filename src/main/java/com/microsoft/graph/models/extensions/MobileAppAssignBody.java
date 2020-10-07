@@ -22,7 +22,7 @@ public class MobileAppAssignBody {
      * The mobile App Assignments.
      * 
      */
-    @SerializedName("mobileAppAssignments")
+    @SerializedName(value = "mobileAppAssignments", alternate = {"MobileAppAssignments"})
     @Expose
     public java.util.List<MobileAppAssignment> mobileAppAssignments;
 

@@ -26,7 +26,7 @@ public class OmaSettingString extends OmaSetting implements IJsonBackedObject {
      * The Value.
      * Value.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

@@ -36,7 +36,7 @@ public class WorkbookFilterCriteria implements IJsonBackedObject {
      * The Color.
      * 
      */
-    @SerializedName("color")
+    @SerializedName(value = "color", alternate = {"Color"})
     @Expose
     public String color;
 
@@ -44,7 +44,7 @@ public class WorkbookFilterCriteria implements IJsonBackedObject {
      * The Criterion1.
      * 
      */
-    @SerializedName("criterion1")
+    @SerializedName(value = "criterion1", alternate = {"Criterion1"})
     @Expose
     public String criterion1;
 
@@ -52,7 +52,7 @@ public class WorkbookFilterCriteria implements IJsonBackedObject {
      * The Criterion2.
      * 
      */
-    @SerializedName("criterion2")
+    @SerializedName(value = "criterion2", alternate = {"Criterion2"})
     @Expose
     public String criterion2;
 
@@ -60,7 +60,7 @@ public class WorkbookFilterCriteria implements IJsonBackedObject {
      * The Dynamic Criteria.
      * 
      */
-    @SerializedName("dynamicCriteria")
+    @SerializedName(value = "dynamicCriteria", alternate = {"DynamicCriteria"})
     @Expose
     public String dynamicCriteria;
 
@@ -68,7 +68,7 @@ public class WorkbookFilterCriteria implements IJsonBackedObject {
      * The Filter On.
      * 
      */
-    @SerializedName("filterOn")
+    @SerializedName(value = "filterOn", alternate = {"FilterOn"})
     @Expose
     public String filterOn;
 
@@ -76,7 +76,7 @@ public class WorkbookFilterCriteria implements IJsonBackedObject {
      * The Icon.
      * 
      */
-    @SerializedName("icon")
+    @SerializedName(value = "icon", alternate = {"Icon"})
     @Expose
     public WorkbookIcon icon;
 
@@ -84,7 +84,7 @@ public class WorkbookFilterCriteria implements IJsonBackedObject {
      * The Operator.
      * 
      */
-    @SerializedName("operator")
+    @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
     public String operator;
 
@@ -92,7 +92,7 @@ public class WorkbookFilterCriteria implements IJsonBackedObject {
      * The Values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 

@@ -22,7 +22,7 @@ public class UserExportPersonalDataBody {
      * The storage Location.
      * 
      */
-    @SerializedName("storageLocation")
+    @SerializedName(value = "storageLocation", alternate = {"StorageLocation"})
     @Expose
     public String storageLocation;
 

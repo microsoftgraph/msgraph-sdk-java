@@ -22,7 +22,7 @@ public class WorkbookFunctionsModBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsModBody {
      * The divisor.
      * 
      */
-    @SerializedName("divisor")
+    @SerializedName(value = "divisor", alternate = {"Divisor"})
     @Expose
     public com.google.gson.JsonElement divisor;
 

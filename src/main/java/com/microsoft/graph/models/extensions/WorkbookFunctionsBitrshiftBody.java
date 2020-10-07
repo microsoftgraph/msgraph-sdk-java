@@ -22,7 +22,7 @@ public class WorkbookFunctionsBitrshiftBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsBitrshiftBody {
      * The shift Amount.
      * 
      */
-    @SerializedName("shiftAmount")
+    @SerializedName(value = "shiftAmount", alternate = {"ShiftAmount"})
     @Expose
     public com.google.gson.JsonElement shiftAmount;
 

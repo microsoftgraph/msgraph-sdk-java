@@ -22,7 +22,7 @@ public class WorkbookFunctionsNorm_S_DistBody {
      * The z.
      * 
      */
-    @SerializedName("z")
+    @SerializedName(value = "z", alternate = {"Z"})
     @Expose
     public com.google.gson.JsonElement z;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsNorm_S_DistBody {
      * The cumulative.
      * 
      */
-    @SerializedName("cumulative")
+    @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
     public com.google.gson.JsonElement cumulative;
 

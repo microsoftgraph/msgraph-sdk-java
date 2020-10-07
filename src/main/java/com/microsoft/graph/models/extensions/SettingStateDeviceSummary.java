@@ -26,7 +26,7 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
      * The Compliant Device Count.
      * Device Compliant count for the setting
      */
-    @SerializedName("compliantDeviceCount")
+    @SerializedName(value = "compliantDeviceCount", alternate = {"CompliantDeviceCount"})
     @Expose
     public Integer compliantDeviceCount;
 
@@ -34,7 +34,7 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
      * The Conflict Device Count.
      * Device conflict error count for the setting
      */
-    @SerializedName("conflictDeviceCount")
+    @SerializedName(value = "conflictDeviceCount", alternate = {"ConflictDeviceCount"})
     @Expose
     public Integer conflictDeviceCount;
 
@@ -42,7 +42,7 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
      * The Error Device Count.
      * Device error count for the setting
      */
-    @SerializedName("errorDeviceCount")
+    @SerializedName(value = "errorDeviceCount", alternate = {"ErrorDeviceCount"})
     @Expose
     public Integer errorDeviceCount;
 
@@ -50,7 +50,7 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
      * The Instance Path.
      * Name of the InstancePath for the setting
      */
-    @SerializedName("instancePath")
+    @SerializedName(value = "instancePath", alternate = {"InstancePath"})
     @Expose
     public String instancePath;
 
@@ -58,7 +58,7 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
      * The Non Compliant Device Count.
      * Device NonCompliant count for the setting
      */
-    @SerializedName("nonCompliantDeviceCount")
+    @SerializedName(value = "nonCompliantDeviceCount", alternate = {"NonCompliantDeviceCount"})
     @Expose
     public Integer nonCompliantDeviceCount;
 
@@ -66,7 +66,7 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
      * The Not Applicable Device Count.
      * Device Not Applicable count for the setting
      */
-    @SerializedName("notApplicableDeviceCount")
+    @SerializedName(value = "notApplicableDeviceCount", alternate = {"NotApplicableDeviceCount"})
     @Expose
     public Integer notApplicableDeviceCount;
 
@@ -74,7 +74,7 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
      * The Remediated Device Count.
      * Device Compliant count for the setting
      */
-    @SerializedName("remediatedDeviceCount")
+    @SerializedName(value = "remediatedDeviceCount", alternate = {"RemediatedDeviceCount"})
     @Expose
     public Integer remediatedDeviceCount;
 
@@ -82,7 +82,7 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
      * The Setting Name.
      * Name of the setting
      */
-    @SerializedName("settingName")
+    @SerializedName(value = "settingName", alternate = {"SettingName"})
     @Expose
     public String settingName;
 
@@ -90,7 +90,7 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
      * The Unknown Device Count.
      * Device Unkown count for the setting
      */
-    @SerializedName("unknownDeviceCount")
+    @SerializedName(value = "unknownDeviceCount", alternate = {"UnknownDeviceCount"})
     @Expose
     public Integer unknownDeviceCount;
 

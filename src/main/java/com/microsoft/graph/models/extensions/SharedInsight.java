@@ -29,7 +29,7 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
      * The Last Shared.
      * Details about the shared item. Read only.
      */
-    @SerializedName("lastShared")
+    @SerializedName(value = "lastShared", alternate = {"LastShared"})
     @Expose
     public SharingDetail lastShared;
 
@@ -37,7 +37,7 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
      * The Resource Reference.
      * Reference properties of the shared document, such as the url and type of the document. Read-only
      */
-    @SerializedName("resourceReference")
+    @SerializedName(value = "resourceReference", alternate = {"ResourceReference"})
     @Expose
     public ResourceReference resourceReference;
 
@@ -45,7 +45,7 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
      * The Resource Visualization.
      * Properties that you can use to visualize the document in your experience. Read-only
      */
-    @SerializedName("resourceVisualization")
+    @SerializedName(value = "resourceVisualization", alternate = {"ResourceVisualization"})
     @Expose
     public ResourceVisualization resourceVisualization;
 
@@ -53,7 +53,7 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
      * The Sharing History.
      * 
      */
-    @SerializedName("sharingHistory")
+    @SerializedName(value = "sharingHistory", alternate = {"SharingHistory"})
     @Expose
     public java.util.List<SharingDetail> sharingHistory;
 
@@ -61,7 +61,7 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
      * The Last Shared Method.
      * 
      */
-    @SerializedName("lastSharedMethod")
+    @SerializedName(value = "lastSharedMethod", alternate = {"LastSharedMethod"})
     @Expose
     public Entity lastSharedMethod;
 
@@ -69,7 +69,7 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
      * The Resource.
      * Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
      */
-    @SerializedName("resource")
+    @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
     public Entity resource;
 

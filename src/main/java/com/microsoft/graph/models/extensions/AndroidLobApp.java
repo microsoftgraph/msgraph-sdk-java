@@ -27,7 +27,7 @@ public class AndroidLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Minimum Supported Operating System.
      * The value for the minimum applicable operating system.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
     public AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
 
@@ -35,7 +35,7 @@ public class AndroidLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Package Id.
      * The package identifier.
      */
-    @SerializedName("packageId")
+    @SerializedName(value = "packageId", alternate = {"PackageId"})
     @Expose
     public String packageId;
 
@@ -43,7 +43,7 @@ public class AndroidLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Version Code.
      * The version code of Android Line of Business (LoB) app.
      */
-    @SerializedName("versionCode")
+    @SerializedName(value = "versionCode", alternate = {"VersionCode"})
     @Expose
     public String versionCode;
 
@@ -51,7 +51,7 @@ public class AndroidLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Version Name.
      * The version name of Android Line of Business (LoB) app.
      */
-    @SerializedName("versionName")
+    @SerializedName(value = "versionName", alternate = {"VersionName"})
     @Expose
     public String versionName;
 

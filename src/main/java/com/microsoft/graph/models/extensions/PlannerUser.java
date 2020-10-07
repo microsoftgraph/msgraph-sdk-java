@@ -30,7 +30,7 @@ public class PlannerUser extends Entity implements IJsonBackedObject {
      * The Plans.
      * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      */
-    @SerializedName("plans")
+    @SerializedName(value = "plans", alternate = {"Plans"})
     @Expose
     public PlannerPlanCollectionPage plans;
 
@@ -38,7 +38,7 @@ public class PlannerUser extends Entity implements IJsonBackedObject {
      * The Tasks.
      * Read-only. Nullable. Returns the plannerPlans shared with the user.
      */
-    @SerializedName("tasks")
+    @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
     public PlannerTaskCollectionPage tasks;
 

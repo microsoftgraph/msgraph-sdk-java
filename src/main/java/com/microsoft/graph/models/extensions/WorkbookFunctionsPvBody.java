@@ -22,7 +22,7 @@ public class WorkbookFunctionsPvBody {
      * The rate.
      * 
      */
-    @SerializedName("rate")
+    @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
     public com.google.gson.JsonElement rate;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsPvBody {
      * The nper.
      * 
      */
-    @SerializedName("nper")
+    @SerializedName(value = "nper", alternate = {"Nper"})
     @Expose
     public com.google.gson.JsonElement nper;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsPvBody {
      * The pmt.
      * 
      */
-    @SerializedName("pmt")
+    @SerializedName(value = "pmt", alternate = {"Pmt"})
     @Expose
     public com.google.gson.JsonElement pmt;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsPvBody {
      * The fv.
      * 
      */
-    @SerializedName("fv")
+    @SerializedName(value = "fv", alternate = {"Fv"})
     @Expose
     public com.google.gson.JsonElement fv;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsPvBody {
      * The type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public com.google.gson.JsonElement type;
 

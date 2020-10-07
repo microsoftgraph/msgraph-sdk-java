@@ -35,7 +35,7 @@ public class OmaSetting implements IJsonBackedObject {
      * The Description.
      * Description.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -43,7 +43,7 @@ public class OmaSetting implements IJsonBackedObject {
      * The Display Name.
      * Display Name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -51,7 +51,7 @@ public class OmaSetting implements IJsonBackedObject {
      * The Oma Uri.
      * OMA.
      */
-    @SerializedName("omaUri")
+    @SerializedName(value = "omaUri", alternate = {"OmaUri"})
     @Expose
     public String omaUri;
 

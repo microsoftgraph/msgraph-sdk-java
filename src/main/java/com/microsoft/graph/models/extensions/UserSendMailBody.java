@@ -22,7 +22,7 @@ public class UserSendMailBody {
      * The message.
      * 
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public Message message;
 
@@ -30,7 +30,7 @@ public class UserSendMailBody {
      * The save To Sent Items.
      * 
      */
-    @SerializedName("saveToSentItems")
+    @SerializedName(value = "saveToSentItems", alternate = {"SaveToSentItems"})
     @Expose
     public Boolean saveToSentItems;
 

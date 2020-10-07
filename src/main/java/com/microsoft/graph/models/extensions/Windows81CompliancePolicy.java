@@ -27,7 +27,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The Os Maximum Version.
      * Maximum Windows 8.1 version.
      */
-    @SerializedName("osMaximumVersion")
+    @SerializedName(value = "osMaximumVersion", alternate = {"OsMaximumVersion"})
     @Expose
     public String osMaximumVersion;
 
@@ -35,7 +35,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The Os Minimum Version.
      * Minimum Windows 8.1 version.
      */
-    @SerializedName("osMinimumVersion")
+    @SerializedName(value = "osMinimumVersion", alternate = {"OsMinimumVersion"})
     @Expose
     public String osMinimumVersion;
 
@@ -43,7 +43,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Block Simple.
      * Indicates whether or not to block simple password.
      */
-    @SerializedName("passwordBlockSimple")
+    @SerializedName(value = "passwordBlockSimple", alternate = {"PasswordBlockSimple"})
     @Expose
     public Boolean passwordBlockSimple;
 
@@ -51,7 +51,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Expiration Days.
      * Password expiration in days.
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -59,7 +59,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Minimum Character Set Count.
      * The number of character sets required in the password.
      */
-    @SerializedName("passwordMinimumCharacterSetCount")
+    @SerializedName(value = "passwordMinimumCharacterSetCount", alternate = {"PasswordMinimumCharacterSetCount"})
     @Expose
     public Integer passwordMinimumCharacterSetCount;
 
@@ -67,7 +67,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Minimum Length.
      * The minimum password length.
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -75,7 +75,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Minutes Of Inactivity Before Lock.
      * Minutes of inactivity before a password is required.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeLock")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeLock", alternate = {"PasswordMinutesOfInactivityBeforeLock"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeLock;
 
@@ -83,7 +83,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Previous Password Block Count.
      * The number of previous passwords to prevent re-use of. Valid values 0 to 24
      */
-    @SerializedName("passwordPreviousPasswordBlockCount")
+    @SerializedName(value = "passwordPreviousPasswordBlockCount", alternate = {"PasswordPreviousPasswordBlockCount"})
     @Expose
     public Integer passwordPreviousPasswordBlockCount;
 
@@ -91,7 +91,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Required.
      * Require a password to unlock Windows device.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName(value = "passwordRequired", alternate = {"PasswordRequired"})
     @Expose
     public Boolean passwordRequired;
 
@@ -99,7 +99,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The Password Required Type.
      * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public RequiredPasswordType passwordRequiredType;
 
@@ -107,7 +107,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
      * The Storage Require Encryption.
      * Indicates whether or not to require encryption on a windows 8.1 device.
      */
-    @SerializedName("storageRequireEncryption")
+    @SerializedName(value = "storageRequireEncryption", alternate = {"StorageRequireEncryption"})
     @Expose
     public Boolean storageRequireEncryption;
 

@@ -29,7 +29,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Apply Only To Windows Phone81.
      * Value indicating whether this policy only applies to Windows Phone 8.1. This property is read-only.
      */
-    @SerializedName("applyOnlyToWindowsPhone81")
+    @SerializedName(value = "applyOnlyToWindowsPhone81", alternate = {"ApplyOnlyToWindowsPhone81"})
     @Expose
     public Boolean applyOnlyToWindowsPhone81;
 
@@ -37,7 +37,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Apps Block Copy Paste.
      * Indicates whether or not to block copy paste.
      */
-    @SerializedName("appsBlockCopyPaste")
+    @SerializedName(value = "appsBlockCopyPaste", alternate = {"AppsBlockCopyPaste"})
     @Expose
     public Boolean appsBlockCopyPaste;
 
@@ -45,7 +45,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Bluetooth Blocked.
      * Indicates whether or not to block bluetooth.
      */
-    @SerializedName("bluetoothBlocked")
+    @SerializedName(value = "bluetoothBlocked", alternate = {"BluetoothBlocked"})
     @Expose
     public Boolean bluetoothBlocked;
 
@@ -53,7 +53,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Camera Blocked.
      * Indicates whether or not to block camera.
      */
-    @SerializedName("cameraBlocked")
+    @SerializedName(value = "cameraBlocked", alternate = {"CameraBlocked"})
     @Expose
     public Boolean cameraBlocked;
 
@@ -61,7 +61,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Cellular Block Wifi Tethering.
      * Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked.
      */
-    @SerializedName("cellularBlockWifiTethering")
+    @SerializedName(value = "cellularBlockWifiTethering", alternate = {"CellularBlockWifiTethering"})
     @Expose
     public Boolean cellularBlockWifiTethering;
 
@@ -69,7 +69,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Compliant App List Type.
      * List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
      */
-    @SerializedName("compliantAppListType")
+    @SerializedName(value = "compliantAppListType", alternate = {"CompliantAppListType"})
     @Expose
     public AppListType compliantAppListType;
 
@@ -77,7 +77,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Compliant Apps List.
      * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      */
-    @SerializedName("compliantAppsList")
+    @SerializedName(value = "compliantAppsList", alternate = {"CompliantAppsList"})
     @Expose
     public java.util.List<AppListItem> compliantAppsList;
 
@@ -85,7 +85,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Diagnostic Data Block Submission.
      * Indicates whether or not to block diagnostic data submission.
      */
-    @SerializedName("diagnosticDataBlockSubmission")
+    @SerializedName(value = "diagnosticDataBlockSubmission", alternate = {"DiagnosticDataBlockSubmission"})
     @Expose
     public Boolean diagnosticDataBlockSubmission;
 
@@ -93,7 +93,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Email Block Adding Accounts.
      * Indicates whether or not to block custom email accounts.
      */
-    @SerializedName("emailBlockAddingAccounts")
+    @SerializedName(value = "emailBlockAddingAccounts", alternate = {"EmailBlockAddingAccounts"})
     @Expose
     public Boolean emailBlockAddingAccounts;
 
@@ -101,7 +101,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Location Services Blocked.
      * Indicates whether or not to block location services.
      */
-    @SerializedName("locationServicesBlocked")
+    @SerializedName(value = "locationServicesBlocked", alternate = {"LocationServicesBlocked"})
     @Expose
     public Boolean locationServicesBlocked;
 
@@ -109,7 +109,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Microsoft Account Blocked.
      * Indicates whether or not to block using a Microsoft Account.
      */
-    @SerializedName("microsoftAccountBlocked")
+    @SerializedName(value = "microsoftAccountBlocked", alternate = {"MicrosoftAccountBlocked"})
     @Expose
     public Boolean microsoftAccountBlocked;
 
@@ -117,7 +117,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Nfc Blocked.
      * Indicates whether or not to block Near-Field Communication.
      */
-    @SerializedName("nfcBlocked")
+    @SerializedName(value = "nfcBlocked", alternate = {"NfcBlocked"})
     @Expose
     public Boolean nfcBlocked;
 
@@ -125,7 +125,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Password Block Simple.
      * Indicates whether or not to block syncing the calendar.
      */
-    @SerializedName("passwordBlockSimple")
+    @SerializedName(value = "passwordBlockSimple", alternate = {"PasswordBlockSimple"})
     @Expose
     public Boolean passwordBlockSimple;
 
@@ -133,7 +133,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Password Expiration Days.
      * Number of days before the password expires.
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -141,7 +141,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Password Minimum Character Set Count.
      * Number of character sets a password must contain.
      */
-    @SerializedName("passwordMinimumCharacterSetCount")
+    @SerializedName(value = "passwordMinimumCharacterSetCount", alternate = {"PasswordMinimumCharacterSetCount"})
     @Expose
     public Integer passwordMinimumCharacterSetCount;
 
@@ -149,7 +149,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Password Minimum Length.
      * Minimum length of passwords.
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -157,7 +157,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Password Minutes Of Inactivity Before Screen Timeout.
      * Minutes of inactivity before screen timeout.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeScreenTimeout")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeScreenTimeout", alternate = {"PasswordMinutesOfInactivityBeforeScreenTimeout"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeScreenTimeout;
 
@@ -165,7 +165,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Password Previous Password Block Count.
      * Number of previous passwords to block. Valid values 0 to 24
      */
-    @SerializedName("passwordPreviousPasswordBlockCount")
+    @SerializedName(value = "passwordPreviousPasswordBlockCount", alternate = {"PasswordPreviousPasswordBlockCount"})
     @Expose
     public Integer passwordPreviousPasswordBlockCount;
 
@@ -173,7 +173,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Password Required.
      * Indicates whether or not to require a password.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName(value = "passwordRequired", alternate = {"PasswordRequired"})
     @Expose
     public Boolean passwordRequired;
 
@@ -181,7 +181,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Password Required Type.
      * Password type that is required. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public RequiredPasswordType passwordRequiredType;
 
@@ -189,7 +189,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Password Sign In Failure Count Before Factory Reset.
      * Number of sign in failures allowed before factory reset.
      */
-    @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
+    @SerializedName(value = "passwordSignInFailureCountBeforeFactoryReset", alternate = {"PasswordSignInFailureCountBeforeFactoryReset"})
     @Expose
     public Integer passwordSignInFailureCountBeforeFactoryReset;
 
@@ -197,7 +197,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Screen Capture Blocked.
      * Indicates whether or not to block screenshots.
      */
-    @SerializedName("screenCaptureBlocked")
+    @SerializedName(value = "screenCaptureBlocked", alternate = {"ScreenCaptureBlocked"})
     @Expose
     public Boolean screenCaptureBlocked;
 
@@ -205,7 +205,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Storage Block Removable Storage.
      * Indicates whether or not to block removable storage.
      */
-    @SerializedName("storageBlockRemovableStorage")
+    @SerializedName(value = "storageBlockRemovableStorage", alternate = {"StorageBlockRemovableStorage"})
     @Expose
     public Boolean storageBlockRemovableStorage;
 
@@ -213,7 +213,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Storage Require Encryption.
      * Indicates whether or not to require encryption.
      */
-    @SerializedName("storageRequireEncryption")
+    @SerializedName(value = "storageRequireEncryption", alternate = {"StorageRequireEncryption"})
     @Expose
     public Boolean storageRequireEncryption;
 
@@ -221,7 +221,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Web Browser Blocked.
      * Indicates whether or not to block the web browser.
      */
-    @SerializedName("webBrowserBlocked")
+    @SerializedName(value = "webBrowserBlocked", alternate = {"WebBrowserBlocked"})
     @Expose
     public Boolean webBrowserBlocked;
 
@@ -229,7 +229,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Wifi Block Automatic Connect Hotspots.
      * Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
      */
-    @SerializedName("wifiBlockAutomaticConnectHotspots")
+    @SerializedName(value = "wifiBlockAutomaticConnectHotspots", alternate = {"WifiBlockAutomaticConnectHotspots"})
     @Expose
     public Boolean wifiBlockAutomaticConnectHotspots;
 
@@ -237,7 +237,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Wifi Blocked.
      * Indicates whether or not to block Wi-Fi.
      */
-    @SerializedName("wifiBlocked")
+    @SerializedName(value = "wifiBlocked", alternate = {"WifiBlocked"})
     @Expose
     public Boolean wifiBlocked;
 
@@ -245,7 +245,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Wifi Block Hotspot Reporting.
      * Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-Fi is blocked.
      */
-    @SerializedName("wifiBlockHotspotReporting")
+    @SerializedName(value = "wifiBlockHotspotReporting", alternate = {"WifiBlockHotspotReporting"})
     @Expose
     public Boolean wifiBlockHotspotReporting;
 
@@ -253,7 +253,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * The Windows Store Blocked.
      * Indicates whether or not to block the Windows Store.
      */
-    @SerializedName("windowsStoreBlocked")
+    @SerializedName(value = "windowsStoreBlocked", alternate = {"WindowsStoreBlocked"})
     @Expose
     public Boolean windowsStoreBlocked;
 

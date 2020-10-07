@@ -26,7 +26,7 @@ public class AndroidMobileAppIdentifier extends MobileAppIdentifier implements I
      * The Package Id.
      * The identifier for an app, as specified in the play store.
      */
-    @SerializedName("packageId")
+    @SerializedName(value = "packageId", alternate = {"PackageId"})
     @Expose
     public String packageId;
 

@@ -35,7 +35,7 @@ public class ContentTypeInfo implements IJsonBackedObject {
      * The Id.
      * The id of the content type.
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -43,7 +43,7 @@ public class ContentTypeInfo implements IJsonBackedObject {
      * The Name.
      * The name of the content type.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

@@ -32,7 +32,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
      * The Shared.
      * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      */
-    @SerializedName("shared")
+    @SerializedName(value = "shared", alternate = {"Shared"})
     @Expose
     public SharedInsightCollectionPage shared;
 
@@ -40,7 +40,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
      * The Trending.
      * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
      */
-    @SerializedName("trending")
+    @SerializedName(value = "trending", alternate = {"Trending"})
     @Expose
     public TrendingCollectionPage trending;
 
@@ -48,7 +48,7 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
      * The Used.
      * Calculated relationship identifying the latest documents viewed or modified by a user, including OneDrive for Business and SharePoint documents, ranked by recency of use.
      */
-    @SerializedName("used")
+    @SerializedName(value = "used", alternate = {"Used"})
     @Expose
     public UsedInsightCollectionPage used;
 

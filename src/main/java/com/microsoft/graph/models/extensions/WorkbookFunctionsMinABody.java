@@ -22,7 +22,7 @@ public class WorkbookFunctionsMinABody {
      * The values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 

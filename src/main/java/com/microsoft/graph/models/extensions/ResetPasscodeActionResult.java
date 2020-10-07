@@ -26,7 +26,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements IJs
      * The Passcode.
      * Newly generated passcode for the device
      */
-    @SerializedName("passcode")
+    @SerializedName(value = "passcode", alternate = {"Passcode"})
     @Expose
     public String passcode;
 

@@ -26,7 +26,7 @@ public class OmaSettingFloatingPoint extends OmaSetting implements IJsonBackedOb
      * The Value.
      * Value.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public float value;
 

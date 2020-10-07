@@ -29,7 +29,7 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
      * The Description.
      * Description of the Role definition.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -37,7 +37,7 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Display Name of the Role definition.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -45,7 +45,7 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
      * The Is Built In.
      * Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
      */
-    @SerializedName("isBuiltIn")
+    @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
     @Expose
     public Boolean isBuiltIn;
 
@@ -53,7 +53,7 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
      * The Role Permissions.
      * List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
      */
-    @SerializedName("rolePermissions")
+    @SerializedName(value = "rolePermissions", alternate = {"RolePermissions"})
     @Expose
     public java.util.List<RolePermission> rolePermissions;
 
@@ -61,7 +61,7 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
      * The Role Assignments.
      * List of Role assignments for this role definition.
      */
-    @SerializedName("roleAssignments")
+    @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
     public RoleAssignmentCollectionPage roleAssignments;
 

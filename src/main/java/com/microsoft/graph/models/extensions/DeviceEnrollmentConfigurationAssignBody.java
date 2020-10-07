@@ -22,7 +22,7 @@ public class DeviceEnrollmentConfigurationAssignBody {
      * The enrollment Configuration Assignments.
      * 
      */
-    @SerializedName("enrollmentConfigurationAssignments")
+    @SerializedName(value = "enrollmentConfigurationAssignments", alternate = {"EnrollmentConfigurationAssignments"})
     @Expose
     public java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments;
 

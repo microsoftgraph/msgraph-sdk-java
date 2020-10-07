@@ -22,7 +22,7 @@ public class WorkbookFunctionsImArgumentBody {
      * The inumber.
      * 
      */
-    @SerializedName("inumber")
+    @SerializedName(value = "inumber", alternate = {"Inumber"})
     @Expose
     public com.google.gson.JsonElement inumber;
 

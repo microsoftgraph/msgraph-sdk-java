@@ -22,7 +22,7 @@ public class WorkbookFunctionsExactBody {
      * The text1.
      * 
      */
-    @SerializedName("text1")
+    @SerializedName(value = "text1", alternate = {"Text1"})
     @Expose
     public com.google.gson.JsonElement text1;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsExactBody {
      * The text2.
      * 
      */
-    @SerializedName("text2")
+    @SerializedName(value = "text2", alternate = {"Text2"})
     @Expose
     public com.google.gson.JsonElement text2;
 

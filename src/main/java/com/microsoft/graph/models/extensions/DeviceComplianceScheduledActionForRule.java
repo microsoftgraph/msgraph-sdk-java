@@ -28,7 +28,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
      * The Rule Name.
      * Name of the rule which this scheduled action applies to.
      */
-    @SerializedName("ruleName")
+    @SerializedName(value = "ruleName", alternate = {"RuleName"})
     @Expose
     public String ruleName;
 
@@ -36,7 +36,7 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
      * The Scheduled Action Configurations.
      * The list of scheduled action configurations for this compliance policy.
      */
-    @SerializedName("scheduledActionConfigurations")
+    @SerializedName(value = "scheduledActionConfigurations", alternate = {"ScheduledActionConfigurations"})
     @Expose
     public DeviceComplianceActionItemCollectionPage scheduledActionConfigurations;
 

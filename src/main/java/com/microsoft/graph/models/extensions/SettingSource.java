@@ -35,7 +35,7 @@ public class SettingSource implements IJsonBackedObject {
      * The Display Name.
      * Not yet documented
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class SettingSource implements IJsonBackedObject {
      * The Id.
      * Not yet documented
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 

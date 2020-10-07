@@ -27,7 +27,7 @@ public class EnrollmentConfigurationAssignment extends Entity implements IJsonBa
      * The Target.
      * Not yet documented
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

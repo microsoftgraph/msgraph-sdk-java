@@ -22,7 +22,7 @@ public class OnenoteSectionCopyToNotebookBody {
      * The id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -30,7 +30,7 @@ public class OnenoteSectionCopyToNotebookBody {
      * The group Id.
      * 
      */
-    @SerializedName("groupId")
+    @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
     public String groupId;
 
@@ -38,7 +38,7 @@ public class OnenoteSectionCopyToNotebookBody {
      * The rename As.
      * 
      */
-    @SerializedName("renameAs")
+    @SerializedName(value = "renameAs", alternate = {"RenameAs"})
     @Expose
     public String renameAs;
 
@@ -46,7 +46,7 @@ public class OnenoteSectionCopyToNotebookBody {
      * The site Collection Id.
      * 
      */
-    @SerializedName("siteCollectionId")
+    @SerializedName(value = "siteCollectionId", alternate = {"SiteCollectionId"})
     @Expose
     public String siteCollectionId;
 
@@ -54,7 +54,7 @@ public class OnenoteSectionCopyToNotebookBody {
      * The site Id.
      * 
      */
-    @SerializedName("siteId")
+    @SerializedName(value = "siteId", alternate = {"SiteId"})
     @Expose
     public String siteId;
 

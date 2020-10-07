@@ -22,7 +22,7 @@ public class ManagedDeviceWindowsDefenderScanBody {
      * The quick Scan.
      * 
      */
-    @SerializedName("quickScan")
+    @SerializedName(value = "quickScan", alternate = {"QuickScan"})
     @Expose
     public Boolean quickScan;
 

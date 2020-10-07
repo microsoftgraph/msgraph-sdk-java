@@ -26,7 +26,7 @@ public class EBookInstallSummary extends Entity implements IJsonBackedObject {
      * The Failed Device Count.
      * Number of Devices that have failed to install this book.
      */
-    @SerializedName("failedDeviceCount")
+    @SerializedName(value = "failedDeviceCount", alternate = {"FailedDeviceCount"})
     @Expose
     public Integer failedDeviceCount;
 
@@ -34,7 +34,7 @@ public class EBookInstallSummary extends Entity implements IJsonBackedObject {
      * The Failed User Count.
      * Number of Users that have 1 or more device that failed to install this book.
      */
-    @SerializedName("failedUserCount")
+    @SerializedName(value = "failedUserCount", alternate = {"FailedUserCount"})
     @Expose
     public Integer failedUserCount;
 
@@ -42,7 +42,7 @@ public class EBookInstallSummary extends Entity implements IJsonBackedObject {
      * The Installed Device Count.
      * Number of Devices that have successfully installed this book.
      */
-    @SerializedName("installedDeviceCount")
+    @SerializedName(value = "installedDeviceCount", alternate = {"InstalledDeviceCount"})
     @Expose
     public Integer installedDeviceCount;
 
@@ -50,7 +50,7 @@ public class EBookInstallSummary extends Entity implements IJsonBackedObject {
      * The Installed User Count.
      * Number of Users whose devices have all succeeded to install this book.
      */
-    @SerializedName("installedUserCount")
+    @SerializedName(value = "installedUserCount", alternate = {"InstalledUserCount"})
     @Expose
     public Integer installedUserCount;
 
@@ -58,7 +58,7 @@ public class EBookInstallSummary extends Entity implements IJsonBackedObject {
      * The Not Installed Device Count.
      * Number of Devices that does not have this book installed.
      */
-    @SerializedName("notInstalledDeviceCount")
+    @SerializedName(value = "notInstalledDeviceCount", alternate = {"NotInstalledDeviceCount"})
     @Expose
     public Integer notInstalledDeviceCount;
 
@@ -66,7 +66,7 @@ public class EBookInstallSummary extends Entity implements IJsonBackedObject {
      * The Not Installed User Count.
      * Number of Users that did not install this book.
      */
-    @SerializedName("notInstalledUserCount")
+    @SerializedName(value = "notInstalledUserCount", alternate = {"NotInstalledUserCount"})
     @Expose
     public Integer notInstalledUserCount;
 

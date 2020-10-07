@@ -26,7 +26,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      * The Device Count.
      * Device Count
      */
-    @SerializedName("deviceCount")
+    @SerializedName(value = "deviceCount", alternate = {"DeviceCount"})
     @Expose
     public Integer deviceCount;
 
@@ -34,7 +34,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      * The Url.
      * Website url
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 

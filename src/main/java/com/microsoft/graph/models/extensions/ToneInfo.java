@@ -36,7 +36,7 @@ public class ToneInfo implements IJsonBackedObject {
      * The Sequence Id.
      * An incremental identifier used for ordering DTMF events.
      */
-    @SerializedName("sequenceId")
+    @SerializedName(value = "sequenceId", alternate = {"SequenceId"})
     @Expose
     public Long sequenceId;
 
@@ -44,7 +44,7 @@ public class ToneInfo implements IJsonBackedObject {
      * The Tone.
      * Possible values are: tone0, tone1, tone2, tone3, tone4, tone5, tone6, tone7, tone8, tone9, star, pound
      */
-    @SerializedName("tone")
+    @SerializedName(value = "tone", alternate = {"Tone"})
     @Expose
     public Tone tone;
 

@@ -26,7 +26,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * The Use Device Licensing.
      * Whether or not to use device licensing.
      */
-    @SerializedName("useDeviceLicensing")
+    @SerializedName(value = "useDeviceLicensing", alternate = {"UseDeviceLicensing"})
     @Expose
     public Boolean useDeviceLicensing;
 
@@ -34,7 +34,7 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * The Vpn Configuration Id.
      * The VPN Configuration Id to apply for this app.
      */
-    @SerializedName("vpnConfigurationId")
+    @SerializedName(value = "vpnConfigurationId", alternate = {"VpnConfigurationId"})
     @Expose
     public String vpnConfigurationId;
 

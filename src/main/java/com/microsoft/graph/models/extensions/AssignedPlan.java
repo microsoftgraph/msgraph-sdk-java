@@ -35,7 +35,7 @@ public class AssignedPlan implements IJsonBackedObject {
      * The Assigned Date Time.
      * The date and time at which the plan was assigned; for example: 2013-01-02T19:32:30Z. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("assignedDateTime")
+    @SerializedName(value = "assignedDateTime", alternate = {"AssignedDateTime"})
     @Expose
     public java.util.Calendar assignedDateTime;
 
@@ -43,7 +43,7 @@ public class AssignedPlan implements IJsonBackedObject {
      * The Capability Status.
      * For example, 'Enabled'.
      */
-    @SerializedName("capabilityStatus")
+    @SerializedName(value = "capabilityStatus", alternate = {"CapabilityStatus"})
     @Expose
     public String capabilityStatus;
 
@@ -51,7 +51,7 @@ public class AssignedPlan implements IJsonBackedObject {
      * The Service.
      * The name of the service; for example, 'Exchange'.
      */
-    @SerializedName("service")
+    @SerializedName(value = "service", alternate = {"Service"})
     @Expose
     public String service;
 
@@ -59,7 +59,7 @@ public class AssignedPlan implements IJsonBackedObject {
      * The Service Plan Id.
      * A GUID that identifies the service plan.
      */
-    @SerializedName("servicePlanId")
+    @SerializedName(value = "servicePlanId", alternate = {"ServicePlanId"})
     @Expose
     public java.util.UUID servicePlanId;
 

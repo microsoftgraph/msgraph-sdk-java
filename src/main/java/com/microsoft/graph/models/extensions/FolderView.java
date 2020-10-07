@@ -35,7 +35,7 @@ public class FolderView implements IJsonBackedObject {
      * The Sort By.
      * The method by which the folder should be sorted.
      */
-    @SerializedName("sortBy")
+    @SerializedName(value = "sortBy", alternate = {"SortBy"})
     @Expose
     public String sortBy;
 
@@ -43,7 +43,7 @@ public class FolderView implements IJsonBackedObject {
      * The Sort Order.
      * If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
      */
-    @SerializedName("sortOrder")
+    @SerializedName(value = "sortOrder", alternate = {"SortOrder"})
     @Expose
     public String sortOrder;
 
@@ -51,7 +51,7 @@ public class FolderView implements IJsonBackedObject {
      * The View Type.
      * The type of view that should be used to represent the folder.
      */
-    @SerializedName("viewType")
+    @SerializedName(value = "viewType", alternate = {"ViewType"})
     @Expose
     public String viewType;
 

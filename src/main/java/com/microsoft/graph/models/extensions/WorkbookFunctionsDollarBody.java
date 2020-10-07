@@ -22,7 +22,7 @@ public class WorkbookFunctionsDollarBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsDollarBody {
      * The decimals.
      * 
      */
-    @SerializedName("decimals")
+    @SerializedName(value = "decimals", alternate = {"Decimals"})
     @Expose
     public com.google.gson.JsonElement decimals;
 

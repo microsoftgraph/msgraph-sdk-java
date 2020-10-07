@@ -22,7 +22,7 @@ public class WorkbookFunctionsAtan2Body {
      * The x Num.
      * 
      */
-    @SerializedName("xNum")
+    @SerializedName(value = "xNum", alternate = {"XNum"})
     @Expose
     public com.google.gson.JsonElement xNum;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsAtan2Body {
      * The y Num.
      * 
      */
-    @SerializedName("yNum")
+    @SerializedName(value = "yNum", alternate = {"YNum"})
     @Expose
     public com.google.gson.JsonElement yNum;
 

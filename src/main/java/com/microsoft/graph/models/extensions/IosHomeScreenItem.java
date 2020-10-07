@@ -35,7 +35,7 @@ public class IosHomeScreenItem implements IJsonBackedObject {
      * The Display Name.
      * Name of the app
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

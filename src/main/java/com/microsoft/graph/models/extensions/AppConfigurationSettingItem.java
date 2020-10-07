@@ -36,7 +36,7 @@ public class AppConfigurationSettingItem implements IJsonBackedObject {
      * The App Config Key.
      * app configuration key.
      */
-    @SerializedName("appConfigKey")
+    @SerializedName(value = "appConfigKey", alternate = {"AppConfigKey"})
     @Expose
     public String appConfigKey;
 
@@ -44,7 +44,7 @@ public class AppConfigurationSettingItem implements IJsonBackedObject {
      * The App Config Key Type.
      * app configuration key type. Possible values are: stringType, integerType, realType, booleanType, tokenType.
      */
-    @SerializedName("appConfigKeyType")
+    @SerializedName(value = "appConfigKeyType", alternate = {"AppConfigKeyType"})
     @Expose
     public MdmAppConfigKeyType appConfigKeyType;
 
@@ -52,7 +52,7 @@ public class AppConfigurationSettingItem implements IJsonBackedObject {
      * The App Config Key Value.
      * app configuration key value.
      */
-    @SerializedName("appConfigKeyValue")
+    @SerializedName(value = "appConfigKeyValue", alternate = {"AppConfigKeyValue"})
     @Expose
     public String appConfigKeyValue;
 

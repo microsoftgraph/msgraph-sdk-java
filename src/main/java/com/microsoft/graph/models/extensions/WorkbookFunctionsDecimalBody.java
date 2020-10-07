@@ -22,7 +22,7 @@ public class WorkbookFunctionsDecimalBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsDecimalBody {
      * The radix.
      * 
      */
-    @SerializedName("radix")
+    @SerializedName(value = "radix", alternate = {"Radix"})
     @Expose
     public com.google.gson.JsonElement radix;
 

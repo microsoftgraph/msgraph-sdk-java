@@ -27,7 +27,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements IJson
      * The Product Code.
      * The product code of the app.
      */
-    @SerializedName("productCode")
+    @SerializedName(value = "productCode", alternate = {"ProductCode"})
     @Expose
     public String productCode;
 
@@ -35,7 +35,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements IJson
      * The Product Version.
      * The product version comparison value.
      */
-    @SerializedName("productVersion")
+    @SerializedName(value = "productVersion", alternate = {"ProductVersion"})
     @Expose
     public String productVersion;
 
@@ -43,7 +43,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements IJson
      * The Product Version Operator.
      * The product version comparison operator. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
      */
-    @SerializedName("productVersionOperator")
+    @SerializedName(value = "productVersionOperator", alternate = {"ProductVersionOperator"})
     @Expose
     public Win32LobAppRuleOperator productVersionOperator;
 

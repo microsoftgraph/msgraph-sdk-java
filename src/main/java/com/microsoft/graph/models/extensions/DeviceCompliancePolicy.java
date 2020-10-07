@@ -38,7 +38,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Created Date Time.
      * DateTime the object was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -46,7 +46,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Description.
      * Admin provided description of the Device Configuration.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -54,7 +54,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Display Name.
      * Admin provided name of the device configuration.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -62,7 +62,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -70,7 +70,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Version.
      * Version of the device configuration.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 
@@ -78,7 +78,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Assignments.
      * The collection of assignments for this compliance policy.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public DeviceCompliancePolicyAssignmentCollectionPage assignments;
 
@@ -86,7 +86,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Device Setting State Summaries.
      * Compliance Setting State Device Summary
      */
-    @SerializedName("deviceSettingStateSummaries")
+    @SerializedName(value = "deviceSettingStateSummaries", alternate = {"DeviceSettingStateSummaries"})
     @Expose
     public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
 
@@ -94,7 +94,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Device Statuses.
      * List of DeviceComplianceDeviceStatus.
      */
-    @SerializedName("deviceStatuses")
+    @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
     public DeviceComplianceDeviceStatusCollectionPage deviceStatuses;
 
@@ -102,7 +102,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Device Status Overview.
      * Device compliance devices status overview
      */
-    @SerializedName("deviceStatusOverview")
+    @SerializedName(value = "deviceStatusOverview", alternate = {"DeviceStatusOverview"})
     @Expose
     public DeviceComplianceDeviceOverview deviceStatusOverview;
 
@@ -110,7 +110,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Scheduled Actions For Rule.
      * The list of scheduled action for this rule
      */
-    @SerializedName("scheduledActionsForRule")
+    @SerializedName(value = "scheduledActionsForRule", alternate = {"ScheduledActionsForRule"})
     @Expose
     public DeviceComplianceScheduledActionForRuleCollectionPage scheduledActionsForRule;
 
@@ -118,7 +118,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The User Statuses.
      * List of DeviceComplianceUserStatus.
      */
-    @SerializedName("userStatuses")
+    @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
     public DeviceComplianceUserStatusCollectionPage userStatuses;
 
@@ -126,7 +126,7 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The User Status Overview.
      * Device compliance users status overview
      */
-    @SerializedName("userStatusOverview")
+    @SerializedName(value = "userStatusOverview", alternate = {"UserStatusOverview"})
     @Expose
     public DeviceComplianceUserOverview userStatusOverview;
 

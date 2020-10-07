@@ -22,7 +22,7 @@ public class WorkbookFunctionsMdurationBody {
      * The settlement.
      * 
      */
-    @SerializedName("settlement")
+    @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
     public com.google.gson.JsonElement settlement;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsMdurationBody {
      * The maturity.
      * 
      */
-    @SerializedName("maturity")
+    @SerializedName(value = "maturity", alternate = {"Maturity"})
     @Expose
     public com.google.gson.JsonElement maturity;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsMdurationBody {
      * The coupon.
      * 
      */
-    @SerializedName("coupon")
+    @SerializedName(value = "coupon", alternate = {"Coupon"})
     @Expose
     public com.google.gson.JsonElement coupon;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsMdurationBody {
      * The yld.
      * 
      */
-    @SerializedName("yld")
+    @SerializedName(value = "yld", alternate = {"Yld"})
     @Expose
     public com.google.gson.JsonElement yld;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsMdurationBody {
      * The frequency.
      * 
      */
-    @SerializedName("frequency")
+    @SerializedName(value = "frequency", alternate = {"Frequency"})
     @Expose
     public com.google.gson.JsonElement frequency;
 
@@ -62,7 +62,7 @@ public class WorkbookFunctionsMdurationBody {
      * The basis.
      * 
      */
-    @SerializedName("basis")
+    @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
     public com.google.gson.JsonElement basis;
 

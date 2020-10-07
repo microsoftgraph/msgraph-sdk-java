@@ -37,7 +37,7 @@ public class RecentNotebook implements IJsonBackedObject {
      * The Display Name.
      * The name of the notebook.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -45,7 +45,7 @@ public class RecentNotebook implements IJsonBackedObject {
      * The Last Accessed Time.
      * The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
-    @SerializedName("lastAccessedTime")
+    @SerializedName(value = "lastAccessedTime", alternate = {"LastAccessedTime"})
     @Expose
     public java.util.Calendar lastAccessedTime;
 
@@ -53,7 +53,7 @@ public class RecentNotebook implements IJsonBackedObject {
      * The Links.
      * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
      */
-    @SerializedName("links")
+    @SerializedName(value = "links", alternate = {"Links"})
     @Expose
     public RecentNotebookLinks links;
 
@@ -61,7 +61,7 @@ public class RecentNotebook implements IJsonBackedObject {
      * The Source Service.
      * The backend store where the Notebook resides, either OneDriveForBusiness or OneDrive.
      */
-    @SerializedName("sourceService")
+    @SerializedName(value = "sourceService", alternate = {"SourceService"})
     @Expose
     public OnenoteSourceService sourceService;
 

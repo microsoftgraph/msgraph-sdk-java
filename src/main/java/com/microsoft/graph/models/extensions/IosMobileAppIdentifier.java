@@ -26,7 +26,7 @@ public class IosMobileAppIdentifier extends MobileAppIdentifier implements IJson
      * The Bundle Id.
      * The identifier for an app, as specified in the app store.
      */
-    @SerializedName("bundleId")
+    @SerializedName(value = "bundleId", alternate = {"BundleId"})
     @Expose
     public String bundleId;
 

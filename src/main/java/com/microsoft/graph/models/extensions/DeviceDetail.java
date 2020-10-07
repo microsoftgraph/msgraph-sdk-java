@@ -35,7 +35,7 @@ public class DeviceDetail implements IJsonBackedObject {
      * The Browser.
      * Indicates the browser information of the used for signing in.
      */
-    @SerializedName("browser")
+    @SerializedName(value = "browser", alternate = {"Browser"})
     @Expose
     public String browser;
 
@@ -43,7 +43,7 @@ public class DeviceDetail implements IJsonBackedObject {
      * The Device Id.
      * Refers to the UniqueID of the device used for signing in.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -51,7 +51,7 @@ public class DeviceDetail implements IJsonBackedObject {
      * The Display Name.
      * Refers to the name of the device used for signing in.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -59,7 +59,7 @@ public class DeviceDetail implements IJsonBackedObject {
      * The Is Compliant.
      * Indicates whether the device is compliant.
      */
-    @SerializedName("isCompliant")
+    @SerializedName(value = "isCompliant", alternate = {"IsCompliant"})
     @Expose
     public Boolean isCompliant;
 
@@ -67,7 +67,7 @@ public class DeviceDetail implements IJsonBackedObject {
      * The Is Managed.
      * Indicates whether the device is managed.
      */
-    @SerializedName("isManaged")
+    @SerializedName(value = "isManaged", alternate = {"IsManaged"})
     @Expose
     public Boolean isManaged;
 
@@ -75,7 +75,7 @@ public class DeviceDetail implements IJsonBackedObject {
      * The Operating System.
      * Indicates the operating system name and version used for signing in.
      */
-    @SerializedName("operatingSystem")
+    @SerializedName(value = "operatingSystem", alternate = {"OperatingSystem"})
     @Expose
     public String operatingSystem;
 
@@ -83,7 +83,7 @@ public class DeviceDetail implements IJsonBackedObject {
      * The Trust Type.
      * Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
      */
-    @SerializedName("trustType")
+    @SerializedName(value = "trustType", alternate = {"TrustType"})
     @Expose
     public String trustType;
 

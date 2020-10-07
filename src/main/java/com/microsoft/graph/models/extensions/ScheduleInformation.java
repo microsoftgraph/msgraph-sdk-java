@@ -38,7 +38,7 @@ public class ScheduleInformation implements IJsonBackedObject {
      * The Availability View.
      * Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
      */
-    @SerializedName("availabilityView")
+    @SerializedName(value = "availabilityView", alternate = {"AvailabilityView"})
     @Expose
     public String availabilityView;
 
@@ -46,7 +46,7 @@ public class ScheduleInformation implements IJsonBackedObject {
      * The Error.
      * Error information from attempting to get the availability of the user, distribution list, or resource.
      */
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public FreeBusyError error;
 
@@ -54,7 +54,7 @@ public class ScheduleInformation implements IJsonBackedObject {
      * The Schedule Id.
      * An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
      */
-    @SerializedName("scheduleId")
+    @SerializedName(value = "scheduleId", alternate = {"ScheduleId"})
     @Expose
     public String scheduleId;
 
@@ -62,7 +62,7 @@ public class ScheduleInformation implements IJsonBackedObject {
      * The Schedule Items.
      * Contains the items that describe the availability of the user or resource.
      */
-    @SerializedName("scheduleItems")
+    @SerializedName(value = "scheduleItems", alternate = {"ScheduleItems"})
     @Expose
     public java.util.List<ScheduleItem> scheduleItems;
 
@@ -70,7 +70,7 @@ public class ScheduleInformation implements IJsonBackedObject {
      * The Working Hours.
      * The days of the week and hours in a specific time zone that the user works. These are set as part of the user's mailboxSettings.
      */
-    @SerializedName("workingHours")
+    @SerializedName(value = "workingHours", alternate = {"WorkingHours"})
     @Expose
     public WorkingHours workingHours;
 

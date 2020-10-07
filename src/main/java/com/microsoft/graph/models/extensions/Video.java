@@ -35,7 +35,7 @@ public class Video implements IJsonBackedObject {
      * The Audio Bits Per Sample.
      * Number of audio bits per sample.
      */
-    @SerializedName("audioBitsPerSample")
+    @SerializedName(value = "audioBitsPerSample", alternate = {"AudioBitsPerSample"})
     @Expose
     public Integer audioBitsPerSample;
 
@@ -43,7 +43,7 @@ public class Video implements IJsonBackedObject {
      * The Audio Channels.
      * Number of audio channels.
      */
-    @SerializedName("audioChannels")
+    @SerializedName(value = "audioChannels", alternate = {"AudioChannels"})
     @Expose
     public Integer audioChannels;
 
@@ -51,7 +51,7 @@ public class Video implements IJsonBackedObject {
      * The Audio Format.
      * Name of the audio format (AAC, MP3, etc.).
      */
-    @SerializedName("audioFormat")
+    @SerializedName(value = "audioFormat", alternate = {"AudioFormat"})
     @Expose
     public String audioFormat;
 
@@ -59,7 +59,7 @@ public class Video implements IJsonBackedObject {
      * The Audio Samples Per Second.
      * Number of audio samples per second.
      */
-    @SerializedName("audioSamplesPerSecond")
+    @SerializedName(value = "audioSamplesPerSecond", alternate = {"AudioSamplesPerSecond"})
     @Expose
     public Integer audioSamplesPerSecond;
 
@@ -67,7 +67,7 @@ public class Video implements IJsonBackedObject {
      * The Bitrate.
      * Bit rate of the video in bits per second.
      */
-    @SerializedName("bitrate")
+    @SerializedName(value = "bitrate", alternate = {"Bitrate"})
     @Expose
     public Integer bitrate;
 
@@ -75,7 +75,7 @@ public class Video implements IJsonBackedObject {
      * The Duration.
      * Duration of the file in milliseconds.
      */
-    @SerializedName("duration")
+    @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
     public Long duration;
 
@@ -83,7 +83,7 @@ public class Video implements IJsonBackedObject {
      * The Four CC.
      * 'Four character code' name of the video format.
      */
-    @SerializedName("fourCC")
+    @SerializedName(value = "fourCC", alternate = {"FourCC"})
     @Expose
     public String fourCC;
 
@@ -91,7 +91,7 @@ public class Video implements IJsonBackedObject {
      * The Frame Rate.
      * Frame rate of the video.
      */
-    @SerializedName("frameRate")
+    @SerializedName(value = "frameRate", alternate = {"FrameRate"})
     @Expose
     public Double frameRate;
 
@@ -99,7 +99,7 @@ public class Video implements IJsonBackedObject {
      * The Height.
      * Height of the video, in pixels.
      */
-    @SerializedName("height")
+    @SerializedName(value = "height", alternate = {"Height"})
     @Expose
     public Integer height;
 
@@ -107,7 +107,7 @@ public class Video implements IJsonBackedObject {
      * The Width.
      * Width of the video, in pixels.
      */
-    @SerializedName("width")
+    @SerializedName(value = "width", alternate = {"Width"})
     @Expose
     public Integer width;
 

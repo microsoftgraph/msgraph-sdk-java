@@ -28,7 +28,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * The Is Assigned.
      * Indicates if the policy is deployed to any inclusion groups or not.
      */
-    @SerializedName("isAssigned")
+    @SerializedName(value = "isAssigned", alternate = {"IsAssigned"})
     @Expose
     public Boolean isAssigned;
 
@@ -36,7 +36,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * The Assignments.
      * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 

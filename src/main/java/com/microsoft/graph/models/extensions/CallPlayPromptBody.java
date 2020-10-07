@@ -23,7 +23,7 @@ public class CallPlayPromptBody {
      * The prompts.
      * 
      */
-    @SerializedName("prompts")
+    @SerializedName(value = "prompts", alternate = {"Prompts"})
     @Expose
     public java.util.List<Prompt> prompts;
 
@@ -31,7 +31,7 @@ public class CallPlayPromptBody {
      * The client Context.
      * 
      */
-    @SerializedName("clientContext")
+    @SerializedName(value = "clientContext", alternate = {"ClientContext"})
     @Expose
     public String clientContext;
 

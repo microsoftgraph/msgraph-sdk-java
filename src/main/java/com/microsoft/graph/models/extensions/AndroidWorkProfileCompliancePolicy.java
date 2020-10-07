@@ -28,7 +28,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Device Threat Protection Enabled.
      * Require that devices have enabled device threat protection.
      */
-    @SerializedName("deviceThreatProtectionEnabled")
+    @SerializedName(value = "deviceThreatProtectionEnabled", alternate = {"DeviceThreatProtectionEnabled"})
     @Expose
     public Boolean deviceThreatProtectionEnabled;
 
@@ -36,7 +36,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Device Threat Protection Required Security Level.
      * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
      */
-    @SerializedName("deviceThreatProtectionRequiredSecurityLevel")
+    @SerializedName(value = "deviceThreatProtectionRequiredSecurityLevel", alternate = {"DeviceThreatProtectionRequiredSecurityLevel"})
     @Expose
     public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
 
@@ -44,7 +44,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Min Android Security Patch Level.
      * Minimum Android security patch level.
      */
-    @SerializedName("minAndroidSecurityPatchLevel")
+    @SerializedName(value = "minAndroidSecurityPatchLevel", alternate = {"MinAndroidSecurityPatchLevel"})
     @Expose
     public String minAndroidSecurityPatchLevel;
 
@@ -52,7 +52,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Os Maximum Version.
      * Maximum Android version.
      */
-    @SerializedName("osMaximumVersion")
+    @SerializedName(value = "osMaximumVersion", alternate = {"OsMaximumVersion"})
     @Expose
     public String osMaximumVersion;
 
@@ -60,7 +60,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Os Minimum Version.
      * Minimum Android version.
      */
-    @SerializedName("osMinimumVersion")
+    @SerializedName(value = "osMinimumVersion", alternate = {"OsMinimumVersion"})
     @Expose
     public String osMinimumVersion;
 
@@ -68,7 +68,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Expiration Days.
      * Number of days before the password expires. Valid values 1 to 365
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -76,7 +76,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Minimum Length.
      * Minimum password length. Valid values 4 to 16
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -84,7 +84,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Minutes Of Inactivity Before Lock.
      * Minutes of inactivity before a password is required.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeLock")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeLock", alternate = {"PasswordMinutesOfInactivityBeforeLock"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeLock;
 
@@ -92,7 +92,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Previous Password Block Count.
      * Number of previous passwords to block. Valid values 1 to 24
      */
-    @SerializedName("passwordPreviousPasswordBlockCount")
+    @SerializedName(value = "passwordPreviousPasswordBlockCount", alternate = {"PasswordPreviousPasswordBlockCount"})
     @Expose
     public Integer passwordPreviousPasswordBlockCount;
 
@@ -100,7 +100,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Required.
      * Require a password to unlock device.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName(value = "passwordRequired", alternate = {"PasswordRequired"})
     @Expose
     public Boolean passwordRequired;
 
@@ -108,7 +108,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Password Required Type.
      * Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public AndroidRequiredPasswordType passwordRequiredType;
 
@@ -116,7 +116,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Security Block Jailbroken Devices.
      * Devices must not be jailbroken or rooted.
      */
-    @SerializedName("securityBlockJailbrokenDevices")
+    @SerializedName(value = "securityBlockJailbrokenDevices", alternate = {"SecurityBlockJailbrokenDevices"})
     @Expose
     public Boolean securityBlockJailbrokenDevices;
 
@@ -124,7 +124,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Security Disable Usb Debugging.
      * Disable USB debugging on Android devices.
      */
-    @SerializedName("securityDisableUsbDebugging")
+    @SerializedName(value = "securityDisableUsbDebugging", alternate = {"SecurityDisableUsbDebugging"})
     @Expose
     public Boolean securityDisableUsbDebugging;
 
@@ -132,7 +132,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Security Prevent Install Apps From Unknown Sources.
      * Require that devices disallow installation of apps from unknown sources.
      */
-    @SerializedName("securityPreventInstallAppsFromUnknownSources")
+    @SerializedName(value = "securityPreventInstallAppsFromUnknownSources", alternate = {"SecurityPreventInstallAppsFromUnknownSources"})
     @Expose
     public Boolean securityPreventInstallAppsFromUnknownSources;
 
@@ -140,7 +140,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Security Require Company Portal App Integrity.
      * Require the device to pass the Company Portal client app runtime integrity check.
      */
-    @SerializedName("securityRequireCompanyPortalAppIntegrity")
+    @SerializedName(value = "securityRequireCompanyPortalAppIntegrity", alternate = {"SecurityRequireCompanyPortalAppIntegrity"})
     @Expose
     public Boolean securityRequireCompanyPortalAppIntegrity;
 
@@ -148,7 +148,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Security Require Google Play Services.
      * Require Google Play Services to be installed and enabled on the device.
      */
-    @SerializedName("securityRequireGooglePlayServices")
+    @SerializedName(value = "securityRequireGooglePlayServices", alternate = {"SecurityRequireGooglePlayServices"})
     @Expose
     public Boolean securityRequireGooglePlayServices;
 
@@ -156,7 +156,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Security Require Safety Net Attestation Basic Integrity.
      * Require the device to pass the SafetyNet basic integrity check.
      */
-    @SerializedName("securityRequireSafetyNetAttestationBasicIntegrity")
+    @SerializedName(value = "securityRequireSafetyNetAttestationBasicIntegrity", alternate = {"SecurityRequireSafetyNetAttestationBasicIntegrity"})
     @Expose
     public Boolean securityRequireSafetyNetAttestationBasicIntegrity;
 
@@ -164,7 +164,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Security Require Safety Net Attestation Certified Device.
      * Require the device to pass the SafetyNet certified device check.
      */
-    @SerializedName("securityRequireSafetyNetAttestationCertifiedDevice")
+    @SerializedName(value = "securityRequireSafetyNetAttestationCertifiedDevice", alternate = {"SecurityRequireSafetyNetAttestationCertifiedDevice"})
     @Expose
     public Boolean securityRequireSafetyNetAttestationCertifiedDevice;
 
@@ -172,7 +172,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Security Require Up To Date Security Providers.
      * Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
      */
-    @SerializedName("securityRequireUpToDateSecurityProviders")
+    @SerializedName(value = "securityRequireUpToDateSecurityProviders", alternate = {"SecurityRequireUpToDateSecurityProviders"})
     @Expose
     public Boolean securityRequireUpToDateSecurityProviders;
 
@@ -180,7 +180,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Security Require Verify Apps.
      * Require the Android Verify apps feature is turned on.
      */
-    @SerializedName("securityRequireVerifyApps")
+    @SerializedName(value = "securityRequireVerifyApps", alternate = {"SecurityRequireVerifyApps"})
     @Expose
     public Boolean securityRequireVerifyApps;
 
@@ -188,7 +188,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
      * The Storage Require Encryption.
      * Require encryption on Android devices.
      */
-    @SerializedName("storageRequireEncryption")
+    @SerializedName(value = "storageRequireEncryption", alternate = {"StorageRequireEncryption"})
     @Expose
     public Boolean storageRequireEncryption;
 

@@ -22,7 +22,7 @@ public class WorkbookTableAddBody {
      * The address.
      * 
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public String address;
 
@@ -30,7 +30,7 @@ public class WorkbookTableAddBody {
      * The has Headers.
      * 
      */
-    @SerializedName("hasHeaders")
+    @SerializedName(value = "hasHeaders", alternate = {"HasHeaders"})
     @Expose
     public Boolean hasHeaders;
 

@@ -27,7 +27,7 @@ public class DeviceComplianceActionItem extends Entity implements IJsonBackedObj
      * The Action Type.
      * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification.
      */
-    @SerializedName("actionType")
+    @SerializedName(value = "actionType", alternate = {"ActionType"})
     @Expose
     public DeviceComplianceActionType actionType;
 
@@ -35,7 +35,7 @@ public class DeviceComplianceActionItem extends Entity implements IJsonBackedObj
      * The Grace Period Hours.
      * Number of hours to wait till the action will be enforced. Valid values 0 to 8760
      */
-    @SerializedName("gracePeriodHours")
+    @SerializedName(value = "gracePeriodHours", alternate = {"GracePeriodHours"})
     @Expose
     public Integer gracePeriodHours;
 
@@ -43,7 +43,7 @@ public class DeviceComplianceActionItem extends Entity implements IJsonBackedObj
      * The Notification Message CCList.
      * A list of group IDs to speicify who to CC this notification message to.
      */
-    @SerializedName("notificationMessageCCList")
+    @SerializedName(value = "notificationMessageCCList", alternate = {"NotificationMessageCCList"})
     @Expose
     public java.util.List<String> notificationMessageCCList;
 
@@ -51,7 +51,7 @@ public class DeviceComplianceActionItem extends Entity implements IJsonBackedObj
      * The Notification Template Id.
      * What notification Message template to use
      */
-    @SerializedName("notificationTemplateId")
+    @SerializedName(value = "notificationTemplateId", alternate = {"NotificationTemplateId"})
     @Expose
     public String notificationTemplateId;
 

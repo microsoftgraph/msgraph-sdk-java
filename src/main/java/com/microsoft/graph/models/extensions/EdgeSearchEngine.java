@@ -27,7 +27,7 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements IJsonBacke
      * The Edge Search Engine Type.
      * Allows IT admins to set a predefined default search engine for MDM-Controlled devices. Possible values are: default, bing.
      */
-    @SerializedName("edgeSearchEngineType")
+    @SerializedName(value = "edgeSearchEngineType", alternate = {"EdgeSearchEngineType"})
     @Expose
     public EdgeSearchEngineType edgeSearchEngineType;
 

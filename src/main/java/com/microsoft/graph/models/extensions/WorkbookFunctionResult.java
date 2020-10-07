@@ -26,7 +26,7 @@ public class WorkbookFunctionResult extends Entity implements IJsonBackedObject 
      * The Error.
      * 
      */
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public String error;
 
@@ -34,7 +34,7 @@ public class WorkbookFunctionResult extends Entity implements IJsonBackedObject 
      * The Value.
      * 
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public com.google.gson.JsonElement value;
 

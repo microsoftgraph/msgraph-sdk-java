@@ -27,7 +27,7 @@ public class WorkbookChartAxisTitle extends Entity implements IJsonBackedObject 
      * The Text.
      * Represents the axis title.
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public String text;
 
@@ -35,7 +35,7 @@ public class WorkbookChartAxisTitle extends Entity implements IJsonBackedObject 
      * The Visible.
      * A boolean that specifies the visibility of an axis title.
      */
-    @SerializedName("visible")
+    @SerializedName(value = "visible", alternate = {"Visible"})
     @Expose
     public Boolean visible;
 
@@ -43,7 +43,7 @@ public class WorkbookChartAxisTitle extends Entity implements IJsonBackedObject 
      * The Format.
      * Represents the formatting of chart axis title. Read-only.
      */
-    @SerializedName("format")
+    @SerializedName(value = "format", alternate = {"Format"})
     @Expose
     public WorkbookChartAxisTitleFormat format;
 

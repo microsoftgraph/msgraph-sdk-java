@@ -35,7 +35,7 @@ public class TeamGuestSettings implements IJsonBackedObject {
      * The Allow Create Update Channels.
      * If set to true, guests can add and update channels.
      */
-    @SerializedName("allowCreateUpdateChannels")
+    @SerializedName(value = "allowCreateUpdateChannels", alternate = {"AllowCreateUpdateChannels"})
     @Expose
     public Boolean allowCreateUpdateChannels;
 
@@ -43,7 +43,7 @@ public class TeamGuestSettings implements IJsonBackedObject {
      * The Allow Delete Channels.
      * If set to true, guests can delete channels.
      */
-    @SerializedName("allowDeleteChannels")
+    @SerializedName(value = "allowDeleteChannels", alternate = {"AllowDeleteChannels"})
     @Expose
     public Boolean allowDeleteChannels;
 

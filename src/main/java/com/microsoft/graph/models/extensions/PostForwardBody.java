@@ -22,7 +22,7 @@ public class PostForwardBody {
      * The comment.
      * 
      */
-    @SerializedName("comment")
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
     public String comment;
 
@@ -30,7 +30,7 @@ public class PostForwardBody {
      * The to Recipients.
      * 
      */
-    @SerializedName("toRecipients")
+    @SerializedName(value = "toRecipients", alternate = {"ToRecipients"})
     @Expose
     public java.util.List<Recipient> toRecipients;
 

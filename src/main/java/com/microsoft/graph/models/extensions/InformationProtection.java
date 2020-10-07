@@ -28,7 +28,7 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      * The Threat Assessment Requests.
      * 
      */
-    @SerializedName("threatAssessmentRequests")
+    @SerializedName(value = "threatAssessmentRequests", alternate = {"ThreatAssessmentRequests"})
     @Expose
     public ThreatAssessmentRequestCollectionPage threatAssessmentRequests;
 

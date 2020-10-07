@@ -22,7 +22,7 @@ public class WorkbookFunctionsSeriesSumBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsSeriesSumBody {
      * The n.
      * 
      */
-    @SerializedName("n")
+    @SerializedName(value = "n", alternate = {"N"})
     @Expose
     public com.google.gson.JsonElement n;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsSeriesSumBody {
      * The m.
      * 
      */
-    @SerializedName("m")
+    @SerializedName(value = "m", alternate = {"M"})
     @Expose
     public com.google.gson.JsonElement m;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsSeriesSumBody {
      * The coefficients.
      * 
      */
-    @SerializedName("coefficients")
+    @SerializedName(value = "coefficients", alternate = {"Coefficients"})
     @Expose
     public com.google.gson.JsonElement coefficients;
 

@@ -26,7 +26,7 @@ public class TokenMeetingInfo extends MeetingInfo implements IJsonBackedObject {
      * The Token.
      * The token used to join the call.
      */
-    @SerializedName("token")
+    @SerializedName(value = "token", alternate = {"Token"})
     @Expose
     public String token;
 

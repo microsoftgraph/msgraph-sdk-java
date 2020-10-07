@@ -2,6 +2,7 @@ package com.microsoft.graph.serializer;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -17,6 +18,7 @@ import com.microsoft.graph.models.extensions.RecurrenceRange;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
+import com.microsoft.graph.models.extensions.UploadSession;
 import org.junit.Test;
 
 public class DefaultSerializerTests {
@@ -127,14 +129,14 @@ public class DefaultSerializerTests {
     @Test
 	public void testDeserializeDerivedType() throws Exception {
 		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
-		String source = "{\"@odata.context\": \"/attachments/$entity\",\"@odata.type\": \"#microsoft.graph.fileAttachment\",\"id\": \"AAMkAGQ0MjBmNWVkLTYxZjUtNDRmYi05Y2NiLTBlYjIwNzJjNmM1NgBGAAAAAAC6ff7latYeQqu_gLrhSAIhBwCF7iGjpaOmRqVwbZc-xXzwAAAAAAEMAACF7iGjpaOmRqVwbZc-xXzwAABQStA0AAABEgAQAFbGmeisbjtLnQdp7kC_9Fk=\",\"lastModifiedDateTime\": \"2018-01-23T21:50:22Z\",\"name\": \"Test Book.xlsx\",\"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\"size\": 8457,\"isInline\": false,\"contentId\": null,\"contentLocation\": null,\"contentBytes\": \"bytedata\"}";
-		Attachment result = serializer.deserializeObject(source, Attachment.class);
+		final String source = "{\"@odata.context\": \"/attachments/$entity\",\"@odata.type\": \"#microsoft.graph.fileAttachment\",\"id\": \"AAMkAGQ0MjBmNWVkLTYxZjUtNDRmYi05Y2NiLTBlYjIwNzJjNmM1NgBGAAAAAAC6ff7latYeQqu_gLrhSAIhBwCF7iGjpaOmRqVwbZc-xXzwAAAAAAEMAACF7iGjpaOmRqVwbZc-xXzwAABQStA0AAABEgAQAFbGmeisbjtLnQdp7kC_9Fk=\",\"lastModifiedDateTime\": \"2018-01-23T21:50:22Z\",\"name\": \"Test Book.xlsx\",\"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\"size\": 8457,\"isInline\": false,\"contentId\": null,\"contentLocation\": null,\"contentBytes\": \"bytedata\"}";
+		final Attachment result = serializer.deserializeObject(source, Attachment.class);
 		
 		assert(result instanceof FileAttachment);
 		
-		FileAttachment fileAttachment = (FileAttachment) result;
+		final FileAttachment fileAttachment = (FileAttachment) result;
 		assertNotNull(fileAttachment.contentBytes);
-		JsonObject o = fileAttachment.getRawObject();
+		final JsonObject o = fileAttachment.getRawObject();
 		assertNotNull(o);
 		assertEquals("#microsoft.graph.fileAttachment", o. get("@odata.type").getAsString());
 	}
@@ -152,6 +154,15 @@ public class DefaultSerializerTests {
         HasVoidMember t2 = serializer.deserializeObject(json, HasVoidMember.class);
         assertEquals(t.x, t2.x);
         assertEquals(t.y, t2.y);
+    }
+    @Test
+    public void testDeserializerWhenCasingRespondedByServiceIsWrong() {
+		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        final String source = "{\"@odata.context\": \"https://outlook.office.com/api/v2.0/$metadata#Users('e45f52f5-f2dd-4359-abc5-e74f2960b831')/Messages/AAMkAGQ0MjBmNWVkLTYxZjUtNDRmYi05Y2NiLTBlYjIwNzJjNmM1NgBGAAAAAAC6ff7latYeQqu_gLrhSAIhBwCF7iGjpaOmRqVwbZc-xXzwAAAAAAEMAACF7iGjpaOmRqVwbZc-xXzwAABQStA0AAABEgAQAFbGmeisbjtLnQdp7kC_9Fk=/AttachmentSessions/$entity\",\"ExpirationDateTime\": \"2020-10-06T14:23:42.1027521Z\",\"NextExpectedRanges\": [\"5242880\"]}";
+        final UploadSession result = serializer.deserializeObject(source, UploadSession.class);
+        assertNotNull(result);
+        assertNotNull(result.nextExpectedRanges);
+        assertTrue(result.nextExpectedRanges.size() > 0);
     }
   
   public static final class HasVoidMember {

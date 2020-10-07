@@ -35,7 +35,7 @@ public class ItemPreviewInfo implements IJsonBackedObject {
      * The Get Url.
      * 
      */
-    @SerializedName("getUrl")
+    @SerializedName(value = "getUrl", alternate = {"GetUrl"})
     @Expose
     public String getUrl;
 
@@ -43,7 +43,7 @@ public class ItemPreviewInfo implements IJsonBackedObject {
      * The Post Parameters.
      * 
      */
-    @SerializedName("postParameters")
+    @SerializedName(value = "postParameters", alternate = {"PostParameters"})
     @Expose
     public String postParameters;
 
@@ -51,7 +51,7 @@ public class ItemPreviewInfo implements IJsonBackedObject {
      * The Post Url.
      * 
      */
-    @SerializedName("postUrl")
+    @SerializedName(value = "postUrl", alternate = {"PostUrl"})
     @Expose
     public String postUrl;
 

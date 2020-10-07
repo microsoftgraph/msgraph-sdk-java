@@ -23,7 +23,7 @@ public class GroupAssignLicenseBody {
      * The add Licenses.
      * 
      */
-    @SerializedName("addLicenses")
+    @SerializedName(value = "addLicenses", alternate = {"AddLicenses"})
     @Expose
     public java.util.List<AssignedLicense> addLicenses;
 
@@ -31,7 +31,7 @@ public class GroupAssignLicenseBody {
      * The remove Licenses.
      * 
      */
-    @SerializedName("removeLicenses")
+    @SerializedName(value = "removeLicenses", alternate = {"RemoveLicenses"})
     @Expose
     public java.util.List<java.util.UUID> removeLicenses;
 

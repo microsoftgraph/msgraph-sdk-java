@@ -27,7 +27,7 @@ public class WorkbookWorksheetProtection extends Entity implements IJsonBackedOb
      * The Options.
      * Sheet protection options. Read-only.
      */
-    @SerializedName("options")
+    @SerializedName(value = "options", alternate = {"Options"})
     @Expose
     public WorkbookWorksheetProtectionOptions options;
 
@@ -35,7 +35,7 @@ public class WorkbookWorksheetProtection extends Entity implements IJsonBackedOb
      * The Protected.
      * Indicates if the worksheet is protected.  Read-only.
      */
-    @SerializedName("protected")
+    @SerializedName(value = "protected", alternate = {"Protected"})
     @Expose
     public Boolean msgraphProtected;
 

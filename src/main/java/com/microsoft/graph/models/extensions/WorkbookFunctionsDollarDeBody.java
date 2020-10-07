@@ -22,7 +22,7 @@ public class WorkbookFunctionsDollarDeBody {
      * The fractional Dollar.
      * 
      */
-    @SerializedName("fractionalDollar")
+    @SerializedName(value = "fractionalDollar", alternate = {"FractionalDollar"})
     @Expose
     public com.google.gson.JsonElement fractionalDollar;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsDollarDeBody {
      * The fraction.
      * 
      */
-    @SerializedName("fraction")
+    @SerializedName(value = "fraction", alternate = {"Fraction"})
     @Expose
     public com.google.gson.JsonElement fraction;
 

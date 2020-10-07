@@ -23,7 +23,7 @@ public class CallUpdateRecordingStatusBody {
      * The status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public RecordingStatus status;
 
@@ -31,7 +31,7 @@ public class CallUpdateRecordingStatusBody {
      * The client Context.
      * 
      */
-    @SerializedName("clientContext")
+    @SerializedName(value = "clientContext", alternate = {"ClientContext"})
     @Expose
     public String clientContext;
 
