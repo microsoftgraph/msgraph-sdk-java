@@ -124,7 +124,7 @@ public class CoreHttpProvider implements IHttpProvider {
 	}
 
 	/**
-	 * Creates the DefaultHttpProvider
+	 * Creates the CoreHttpProvider
 	 *
 	 * @param serializer             the serializer
 	 * @param executors              the executors
