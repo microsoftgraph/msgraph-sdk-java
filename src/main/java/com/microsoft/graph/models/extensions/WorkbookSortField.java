@@ -36,7 +36,7 @@ public class WorkbookSortField implements IJsonBackedObject {
      * The Ascending.
      * Represents whether the sorting is done in an ascending fashion.
      */
-    @SerializedName("ascending")
+    @SerializedName(value = "ascending", alternate = {"Ascending"})
     @Expose
     public Boolean ascending;
 
@@ -44,7 +44,7 @@ public class WorkbookSortField implements IJsonBackedObject {
      * The Color.
      * Represents the color that is the target of the condition if the sorting is on font or cell color.
      */
-    @SerializedName("color")
+    @SerializedName(value = "color", alternate = {"Color"})
     @Expose
     public String color;
 
@@ -52,7 +52,7 @@ public class WorkbookSortField implements IJsonBackedObject {
      * The Data Option.
      * Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
      */
-    @SerializedName("dataOption")
+    @SerializedName(value = "dataOption", alternate = {"DataOption"})
     @Expose
     public String dataOption;
 
@@ -60,7 +60,7 @@ public class WorkbookSortField implements IJsonBackedObject {
      * The Icon.
      * Represents the icon that is the target of the condition if the sorting is on the cell's icon.
      */
-    @SerializedName("icon")
+    @SerializedName(value = "icon", alternate = {"Icon"})
     @Expose
     public WorkbookIcon icon;
 
@@ -68,7 +68,7 @@ public class WorkbookSortField implements IJsonBackedObject {
      * The Key.
      * Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
      */
-    @SerializedName("key")
+    @SerializedName(value = "key", alternate = {"Key"})
     @Expose
     public Integer key;
 
@@ -76,7 +76,7 @@ public class WorkbookSortField implements IJsonBackedObject {
      * The Sort On.
      * Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
      */
-    @SerializedName("sortOn")
+    @SerializedName(value = "sortOn", alternate = {"SortOn"})
     @Expose
     public String sortOn;
 

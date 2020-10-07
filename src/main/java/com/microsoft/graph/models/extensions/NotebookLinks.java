@@ -36,7 +36,7 @@ public class NotebookLinks implements IJsonBackedObject {
      * The One Note Client Url.
      * Opens the notebook in the OneNote native client if it's installed.
      */
-    @SerializedName("oneNoteClientUrl")
+    @SerializedName(value = "oneNoteClientUrl", alternate = {"OneNoteClientUrl"})
     @Expose
     public ExternalLink oneNoteClientUrl;
 
@@ -44,7 +44,7 @@ public class NotebookLinks implements IJsonBackedObject {
      * The One Note Web Url.
      * Opens the notebook in OneNote on the web.
      */
-    @SerializedName("oneNoteWebUrl")
+    @SerializedName(value = "oneNoteWebUrl", alternate = {"OneNoteWebUrl"})
     @Expose
     public ExternalLink oneNoteWebUrl;
 

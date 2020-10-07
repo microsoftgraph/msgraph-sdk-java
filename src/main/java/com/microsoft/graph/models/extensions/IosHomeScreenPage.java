@@ -36,7 +36,7 @@ public class IosHomeScreenPage implements IJsonBackedObject {
      * The Display Name.
      * Name of the page
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class IosHomeScreenPage implements IJsonBackedObject {
      * The Icons.
      * A list of apps and folders to appear on a page. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("icons")
+    @SerializedName(value = "icons", alternate = {"Icons"})
     @Expose
     public java.util.List<IosHomeScreenItem> icons;
 

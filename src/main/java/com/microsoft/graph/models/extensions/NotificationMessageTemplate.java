@@ -29,7 +29,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
      * The Branding Options.
      * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
      */
-    @SerializedName("brandingOptions")
+    @SerializedName(value = "brandingOptions", alternate = {"BrandingOptions"})
     @Expose
     public EnumSet<NotificationTemplateBrandingOptions> brandingOptions;
 
@@ -37,7 +37,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
      * The Default Locale.
      * The default locale to fallback onto when the requested locale is not available.
      */
-    @SerializedName("defaultLocale")
+    @SerializedName(value = "defaultLocale", alternate = {"DefaultLocale"})
     @Expose
     public String defaultLocale;
 
@@ -45,7 +45,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
      * The Display Name.
      * Display name for the Notification Message Template.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -53,7 +53,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -61,7 +61,7 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
      * The Localized Notification Messages.
      * The list of localized messages for this Notification Message Template.
      */
-    @SerializedName("localizedNotificationMessages")
+    @SerializedName(value = "localizedNotificationMessages", alternate = {"LocalizedNotificationMessages"})
     @Expose
     public LocalizedNotificationMessageCollectionPage localizedNotificationMessages;
 

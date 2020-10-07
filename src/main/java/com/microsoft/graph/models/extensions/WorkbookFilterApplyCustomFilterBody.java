@@ -22,7 +22,7 @@ public class WorkbookFilterApplyCustomFilterBody {
      * The criteria1.
      * 
      */
-    @SerializedName("criteria1")
+    @SerializedName(value = "criteria1", alternate = {"Criteria1"})
     @Expose
     public String criteria1;
 
@@ -30,7 +30,7 @@ public class WorkbookFilterApplyCustomFilterBody {
      * The criteria2.
      * 
      */
-    @SerializedName("criteria2")
+    @SerializedName(value = "criteria2", alternate = {"Criteria2"})
     @Expose
     public String criteria2;
 
@@ -38,7 +38,7 @@ public class WorkbookFilterApplyCustomFilterBody {
      * The oper.
      * 
      */
-    @SerializedName("oper")
+    @SerializedName(value = "oper", alternate = {"Oper"})
     @Expose
     public String oper;
 

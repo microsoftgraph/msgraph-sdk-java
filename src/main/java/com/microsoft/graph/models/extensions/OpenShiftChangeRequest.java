@@ -26,7 +26,7 @@ public class OpenShiftChangeRequest extends ScheduleChangeRequest implements IJs
      * The Open Shift Id.
      * ID for the open shift.
      */
-    @SerializedName("openShiftId")
+    @SerializedName(value = "openShiftId", alternate = {"OpenShiftId"})
     @Expose
     public String openShiftId;
 

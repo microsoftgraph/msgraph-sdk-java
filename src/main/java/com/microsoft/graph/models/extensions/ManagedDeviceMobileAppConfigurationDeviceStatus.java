@@ -27,7 +27,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * The Compliance Grace Period Expiration Date Time.
      * The DateTime when device compliance grace period expires
      */
-    @SerializedName("complianceGracePeriodExpirationDateTime")
+    @SerializedName(value = "complianceGracePeriodExpirationDateTime", alternate = {"ComplianceGracePeriodExpirationDateTime"})
     @Expose
     public java.util.Calendar complianceGracePeriodExpirationDateTime;
 
@@ -35,7 +35,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * The Device Display Name.
      * Device name of the DevicePolicyStatus.
      */
-    @SerializedName("deviceDisplayName")
+    @SerializedName(value = "deviceDisplayName", alternate = {"DeviceDisplayName"})
     @Expose
     public String deviceDisplayName;
 
@@ -43,7 +43,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * The Device Model.
      * The device model that is being reported
      */
-    @SerializedName("deviceModel")
+    @SerializedName(value = "deviceModel", alternate = {"DeviceModel"})
     @Expose
     public String deviceModel;
 
@@ -51,7 +51,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * The Last Reported Date Time.
      * Last modified date time of the policy report.
      */
-    @SerializedName("lastReportedDateTime")
+    @SerializedName(value = "lastReportedDateTime", alternate = {"LastReportedDateTime"})
     @Expose
     public java.util.Calendar lastReportedDateTime;
 
@@ -59,7 +59,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * The Status.
      * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public ComplianceStatus status;
 
@@ -67,7 +67,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * The User Name.
      * The User Name that is being reported
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 
@@ -75,7 +75,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity impl
      * The User Principal Name.
      * UserPrincipalName.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

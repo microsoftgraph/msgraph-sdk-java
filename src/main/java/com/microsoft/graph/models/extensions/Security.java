@@ -32,7 +32,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Alerts.
      * Read-only. Nullable.
      */
-    @SerializedName("alerts")
+    @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose
     public AlertCollectionPage alerts;
 
@@ -40,7 +40,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Secure Score Control Profiles.
      * 
      */
-    @SerializedName("secureScoreControlProfiles")
+    @SerializedName(value = "secureScoreControlProfiles", alternate = {"SecureScoreControlProfiles"})
     @Expose
     public SecureScoreControlProfileCollectionPage secureScoreControlProfiles;
 
@@ -48,7 +48,7 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Secure Scores.
      * 
      */
-    @SerializedName("secureScores")
+    @SerializedName(value = "secureScores", alternate = {"SecureScores"})
     @Expose
     public SecureScoreCollectionPage secureScores;
 

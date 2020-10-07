@@ -26,7 +26,7 @@ public class IosHomeScreenApp extends IosHomeScreenItem implements IJsonBackedOb
      * The Bundle ID.
      * BundleID of app
      */
-    @SerializedName("bundleID")
+    @SerializedName(value = "bundleID", alternate = {"BundleID"})
     @Expose
     public String bundleID;
 

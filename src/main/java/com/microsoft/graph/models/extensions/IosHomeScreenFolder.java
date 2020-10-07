@@ -27,7 +27,7 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements IJsonBacke
      * The Pages.
      * Pages of Home Screen Layout Icons which must be Application Type. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("pages")
+    @SerializedName(value = "pages", alternate = {"Pages"})
     @Expose
     public java.util.List<IosHomeScreenFolderPage> pages;
 

@@ -41,7 +41,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
      * The Applications.
      * Applications and user actions included in and excluded from the policy. Required.
      */
-    @SerializedName("applications")
+    @SerializedName(value = "applications", alternate = {"Applications"})
     @Expose
     public ConditionalAccessApplications applications;
 
@@ -49,7 +49,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
      * The Client App Types.
      * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
      */
-    @SerializedName("clientAppTypes")
+    @SerializedName(value = "clientAppTypes", alternate = {"ClientAppTypes"})
     @Expose
     public java.util.List<ConditionalAccessClientApp> clientAppTypes;
 
@@ -57,7 +57,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
      * The Locations.
      * Locations included in and excluded from the policy.
      */
-    @SerializedName("locations")
+    @SerializedName(value = "locations", alternate = {"Locations"})
     @Expose
     public ConditionalAccessLocations locations;
 
@@ -65,7 +65,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
      * The Platforms.
      * Platforms included in and excluded from the policy.
      */
-    @SerializedName("platforms")
+    @SerializedName(value = "platforms", alternate = {"Platforms"})
     @Expose
     public ConditionalAccessPlatforms platforms;
 
@@ -73,7 +73,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
      * The Sign In Risk Levels.
      * Risk levels included in the policy. Possible values are: low, medium, high, none.
      */
-    @SerializedName("signInRiskLevels")
+    @SerializedName(value = "signInRiskLevels", alternate = {"SignInRiskLevels"})
     @Expose
     public java.util.List<RiskLevel> signInRiskLevels;
 
@@ -81,7 +81,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
      * The Users.
      * Users, groups, and roles included in and excluded from the policy. Required.
      */
-    @SerializedName("users")
+    @SerializedName(value = "users", alternate = {"Users"})
     @Expose
     public ConditionalAccessUsers users;
 

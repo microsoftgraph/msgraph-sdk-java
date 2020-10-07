@@ -32,7 +32,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Highlight First Column.
      * Indicates whether the first column contains special formatting.
      */
-    @SerializedName("highlightFirstColumn")
+    @SerializedName(value = "highlightFirstColumn", alternate = {"HighlightFirstColumn"})
     @Expose
     public Boolean highlightFirstColumn;
 
@@ -40,7 +40,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Highlight Last Column.
      * Indicates whether the last column contains special formatting.
      */
-    @SerializedName("highlightLastColumn")
+    @SerializedName(value = "highlightLastColumn", alternate = {"HighlightLastColumn"})
     @Expose
     public Boolean highlightLastColumn;
 
@@ -48,7 +48,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Legacy Id.
      * Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
      */
-    @SerializedName("legacyId")
+    @SerializedName(value = "legacyId", alternate = {"LegacyId"})
     @Expose
     public String legacyId;
 
@@ -56,7 +56,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Name.
      * Name of the table.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -64,7 +64,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Show Banded Columns.
      * Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
      */
-    @SerializedName("showBandedColumns")
+    @SerializedName(value = "showBandedColumns", alternate = {"ShowBandedColumns"})
     @Expose
     public Boolean showBandedColumns;
 
@@ -72,7 +72,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Show Banded Rows.
      * Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
      */
-    @SerializedName("showBandedRows")
+    @SerializedName(value = "showBandedRows", alternate = {"ShowBandedRows"})
     @Expose
     public Boolean showBandedRows;
 
@@ -80,7 +80,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Show Filter Button.
      * Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
      */
-    @SerializedName("showFilterButton")
+    @SerializedName(value = "showFilterButton", alternate = {"ShowFilterButton"})
     @Expose
     public Boolean showFilterButton;
 
@@ -88,7 +88,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Show Headers.
      * Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
      */
-    @SerializedName("showHeaders")
+    @SerializedName(value = "showHeaders", alternate = {"ShowHeaders"})
     @Expose
     public Boolean showHeaders;
 
@@ -96,7 +96,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Show Totals.
      * Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
      */
-    @SerializedName("showTotals")
+    @SerializedName(value = "showTotals", alternate = {"ShowTotals"})
     @Expose
     public Boolean showTotals;
 
@@ -104,7 +104,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Style.
      * Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      */
-    @SerializedName("style")
+    @SerializedName(value = "style", alternate = {"Style"})
     @Expose
     public String style;
 
@@ -112,7 +112,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Columns.
      * Represents a collection of all the columns in the table. Read-only.
      */
-    @SerializedName("columns")
+    @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
     public WorkbookTableColumnCollectionPage columns;
 
@@ -120,7 +120,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Rows.
      * Represents a collection of all the rows in the table. Read-only.
      */
-    @SerializedName("rows")
+    @SerializedName(value = "rows", alternate = {"Rows"})
     @Expose
     public WorkbookTableRowCollectionPage rows;
 
@@ -128,7 +128,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Sort.
      * Represents the sorting for the table. Read-only.
      */
-    @SerializedName("sort")
+    @SerializedName(value = "sort", alternate = {"Sort"})
     @Expose
     public WorkbookTableSort sort;
 
@@ -136,7 +136,7 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Worksheet.
      * The worksheet containing the current table. Read-only.
      */
-    @SerializedName("worksheet")
+    @SerializedName(value = "worksheet", alternate = {"Worksheet"})
     @Expose
     public WorkbookWorksheet worksheet;
 

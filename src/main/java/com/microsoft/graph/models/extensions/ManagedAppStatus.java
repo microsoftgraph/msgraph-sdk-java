@@ -26,7 +26,7 @@ public class ManagedAppStatus extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Friendly name of the status report.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class ManagedAppStatus extends Entity implements IJsonBackedObject {
      * The Version.
      * Version of the entity.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

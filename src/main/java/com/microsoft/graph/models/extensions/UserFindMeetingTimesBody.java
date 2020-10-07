@@ -25,7 +25,7 @@ public class UserFindMeetingTimesBody {
      * The attendees.
      * 
      */
-    @SerializedName("attendees")
+    @SerializedName(value = "attendees", alternate = {"Attendees"})
     @Expose
     public java.util.List<AttendeeBase> attendees;
 
@@ -33,7 +33,7 @@ public class UserFindMeetingTimesBody {
      * The location Constraint.
      * 
      */
-    @SerializedName("locationConstraint")
+    @SerializedName(value = "locationConstraint", alternate = {"LocationConstraint"})
     @Expose
     public LocationConstraint locationConstraint;
 
@@ -41,7 +41,7 @@ public class UserFindMeetingTimesBody {
      * The time Constraint.
      * 
      */
-    @SerializedName("timeConstraint")
+    @SerializedName(value = "timeConstraint", alternate = {"TimeConstraint"})
     @Expose
     public TimeConstraint timeConstraint;
 
@@ -49,7 +49,7 @@ public class UserFindMeetingTimesBody {
      * The meeting Duration.
      * 
      */
-    @SerializedName("meetingDuration")
+    @SerializedName(value = "meetingDuration", alternate = {"MeetingDuration"})
     @Expose
     public javax.xml.datatype.Duration meetingDuration;
 
@@ -57,7 +57,7 @@ public class UserFindMeetingTimesBody {
      * The max Candidates.
      * 
      */
-    @SerializedName("maxCandidates")
+    @SerializedName(value = "maxCandidates", alternate = {"MaxCandidates"})
     @Expose
     public Integer maxCandidates;
 
@@ -65,7 +65,7 @@ public class UserFindMeetingTimesBody {
      * The is Organizer Optional.
      * 
      */
-    @SerializedName("isOrganizerOptional")
+    @SerializedName(value = "isOrganizerOptional", alternate = {"IsOrganizerOptional"})
     @Expose
     public Boolean isOrganizerOptional;
 
@@ -73,7 +73,7 @@ public class UserFindMeetingTimesBody {
      * The return Suggestion Reasons.
      * 
      */
-    @SerializedName("returnSuggestionReasons")
+    @SerializedName(value = "returnSuggestionReasons", alternate = {"ReturnSuggestionReasons"})
     @Expose
     public Boolean returnSuggestionReasons;
 
@@ -81,7 +81,7 @@ public class UserFindMeetingTimesBody {
      * The minimum Attendee Percentage.
      * 
      */
-    @SerializedName("minimumAttendeePercentage")
+    @SerializedName(value = "minimumAttendeePercentage", alternate = {"MinimumAttendeePercentage"})
     @Expose
     public Double minimumAttendeePercentage;
 

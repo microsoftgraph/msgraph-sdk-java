@@ -22,7 +22,7 @@ public class DeviceManagementExchangeConnectorSyncBody {
      * The sync Type.
      * 
      */
-    @SerializedName("syncType")
+    @SerializedName(value = "syncType", alternate = {"SyncType"})
     @Expose
     public DeviceManagementExchangeConnectorSyncType syncType;
 

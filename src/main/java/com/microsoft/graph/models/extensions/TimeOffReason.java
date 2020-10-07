@@ -27,7 +27,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements IJsonBackedObj
      * The Display Name.
      * The name of the timeOffReason. Required.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -35,7 +35,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements IJsonBackedObj
      * The Icon Type.
      * Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
      */
-    @SerializedName("iconType")
+    @SerializedName(value = "iconType", alternate = {"IconType"})
     @Expose
     public TimeOffReasonIconType iconType;
 
@@ -43,7 +43,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements IJsonBackedObj
      * The Is Active.
      * Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
      */
-    @SerializedName("isActive")
+    @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
     public Boolean isActive;
 

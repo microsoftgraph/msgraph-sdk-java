@@ -22,7 +22,7 @@ public class WorkbookFunctionsDateBody {
      * The year.
      * 
      */
-    @SerializedName("year")
+    @SerializedName(value = "year", alternate = {"Year"})
     @Expose
     public com.google.gson.JsonElement year;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsDateBody {
      * The month.
      * 
      */
-    @SerializedName("month")
+    @SerializedName(value = "month", alternate = {"Month"})
     @Expose
     public com.google.gson.JsonElement month;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsDateBody {
      * The day.
      * 
      */
-    @SerializedName("day")
+    @SerializedName(value = "day", alternate = {"Day"})
     @Expose
     public com.google.gson.JsonElement day;
 

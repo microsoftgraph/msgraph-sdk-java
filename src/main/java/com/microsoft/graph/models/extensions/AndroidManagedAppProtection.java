@@ -29,7 +29,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * The Custom Browser Display Name.
      * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      */
-    @SerializedName("customBrowserDisplayName")
+    @SerializedName(value = "customBrowserDisplayName", alternate = {"CustomBrowserDisplayName"})
     @Expose
     public String customBrowserDisplayName;
 
@@ -37,7 +37,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * The Custom Browser Package Id.
      * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      */
-    @SerializedName("customBrowserPackageId")
+    @SerializedName(value = "customBrowserPackageId", alternate = {"CustomBrowserPackageId"})
     @Expose
     public String customBrowserPackageId;
 
@@ -45,7 +45,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * The Deployed App Count.
      * Count of apps to which the current policy is deployed.
      */
-    @SerializedName("deployedAppCount")
+    @SerializedName(value = "deployedAppCount", alternate = {"DeployedAppCount"})
     @Expose
     public Integer deployedAppCount;
 
@@ -53,7 +53,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * The Disable App Encryption If Device Encryption Is Enabled.
      * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
      */
-    @SerializedName("disableAppEncryptionIfDeviceEncryptionIsEnabled")
+    @SerializedName(value = "disableAppEncryptionIfDeviceEncryptionIsEnabled", alternate = {"DisableAppEncryptionIfDeviceEncryptionIsEnabled"})
     @Expose
     public Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
 
@@ -61,7 +61,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * The Encrypt App Data.
      * Indicates whether application data for managed apps should be encrypted
      */
-    @SerializedName("encryptAppData")
+    @SerializedName(value = "encryptAppData", alternate = {"EncryptAppData"})
     @Expose
     public Boolean encryptAppData;
 
@@ -69,7 +69,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * The Minimum Required Patch Version.
      * Define the oldest required Android security patch level a user can have to gain secure access to the app.
      */
-    @SerializedName("minimumRequiredPatchVersion")
+    @SerializedName(value = "minimumRequiredPatchVersion", alternate = {"MinimumRequiredPatchVersion"})
     @Expose
     public String minimumRequiredPatchVersion;
 
@@ -77,7 +77,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * The Minimum Warning Patch Version.
      * Define the oldest recommended Android security patch level a user can have for secure access to the app.
      */
-    @SerializedName("minimumWarningPatchVersion")
+    @SerializedName(value = "minimumWarningPatchVersion", alternate = {"MinimumWarningPatchVersion"})
     @Expose
     public String minimumWarningPatchVersion;
 
@@ -85,7 +85,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * The Screen Capture Blocked.
      * Indicates whether a managed user can take screen captures of managed apps
      */
-    @SerializedName("screenCaptureBlocked")
+    @SerializedName(value = "screenCaptureBlocked", alternate = {"ScreenCaptureBlocked"})
     @Expose
     public Boolean screenCaptureBlocked;
 
@@ -93,7 +93,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * The Apps.
      * List of apps to which the policy is deployed.
      */
-    @SerializedName("apps")
+    @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
     public ManagedMobileAppCollectionPage apps;
 
@@ -101,7 +101,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * The Deployment Summary.
      * Navigation property to deployment summary of the configuration.
      */
-    @SerializedName("deploymentSummary")
+    @SerializedName(value = "deploymentSummary", alternate = {"DeploymentSummary"})
     @Expose
     public ManagedAppPolicyDeploymentSummary deploymentSummary;
 

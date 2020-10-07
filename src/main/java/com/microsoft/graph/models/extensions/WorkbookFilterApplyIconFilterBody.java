@@ -22,7 +22,7 @@ public class WorkbookFilterApplyIconFilterBody {
      * The icon.
      * 
      */
-    @SerializedName("icon")
+    @SerializedName(value = "icon", alternate = {"Icon"})
     @Expose
     public WorkbookIcon icon;
 

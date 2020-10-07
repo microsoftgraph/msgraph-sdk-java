@@ -22,7 +22,7 @@ public class CallLogTeleconferenceDeviceQualityBody {
      * The quality.
      * 
      */
-    @SerializedName("quality")
+    @SerializedName(value = "quality", alternate = {"Quality"})
     @Expose
     public TeleconferenceDeviceQuality quality;
 

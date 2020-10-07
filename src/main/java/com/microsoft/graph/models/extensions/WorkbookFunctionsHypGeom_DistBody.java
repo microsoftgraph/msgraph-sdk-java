@@ -22,7 +22,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      * The sample S.
      * 
      */
-    @SerializedName("sampleS")
+    @SerializedName(value = "sampleS", alternate = {"SampleS"})
     @Expose
     public com.google.gson.JsonElement sampleS;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      * The number Sample.
      * 
      */
-    @SerializedName("numberSample")
+    @SerializedName(value = "numberSample", alternate = {"NumberSample"})
     @Expose
     public com.google.gson.JsonElement numberSample;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      * The population S.
      * 
      */
-    @SerializedName("populationS")
+    @SerializedName(value = "populationS", alternate = {"PopulationS"})
     @Expose
     public com.google.gson.JsonElement populationS;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      * The number Pop.
      * 
      */
-    @SerializedName("numberPop")
+    @SerializedName(value = "numberPop", alternate = {"NumberPop"})
     @Expose
     public com.google.gson.JsonElement numberPop;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsHypGeom_DistBody {
      * The cumulative.
      * 
      */
-    @SerializedName("cumulative")
+    @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
     public com.google.gson.JsonElement cumulative;
 

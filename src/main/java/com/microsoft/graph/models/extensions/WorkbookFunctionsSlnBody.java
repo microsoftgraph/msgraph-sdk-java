@@ -22,7 +22,7 @@ public class WorkbookFunctionsSlnBody {
      * The cost.
      * 
      */
-    @SerializedName("cost")
+    @SerializedName(value = "cost", alternate = {"Cost"})
     @Expose
     public com.google.gson.JsonElement cost;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsSlnBody {
      * The salvage.
      * 
      */
-    @SerializedName("salvage")
+    @SerializedName(value = "salvage", alternate = {"Salvage"})
     @Expose
     public com.google.gson.JsonElement salvage;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsSlnBody {
      * The life.
      * 
      */
-    @SerializedName("life")
+    @SerializedName(value = "life", alternate = {"Life"})
     @Expose
     public com.google.gson.JsonElement life;
 

@@ -22,7 +22,7 @@ public class DeviceEnrollmentConfigurationSetPriorityBody {
      * The priority.
      * 
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Integer priority;
 

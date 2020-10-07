@@ -22,7 +22,7 @@ public class WorkbookFunctionsRank_EqBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsRank_EqBody {
      * The ref.
      * 
      */
-    @SerializedName("ref")
+    @SerializedName(value = "ref", alternate = {"Ref"})
     @Expose
     public com.google.gson.JsonElement ref;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsRank_EqBody {
      * The order.
      * 
      */
-    @SerializedName("order")
+    @SerializedName(value = "order", alternate = {"Order"})
     @Expose
     public com.google.gson.JsonElement order;
 

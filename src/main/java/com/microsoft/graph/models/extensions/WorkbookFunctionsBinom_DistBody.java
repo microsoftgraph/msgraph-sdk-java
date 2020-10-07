@@ -22,7 +22,7 @@ public class WorkbookFunctionsBinom_DistBody {
      * The number S.
      * 
      */
-    @SerializedName("numberS")
+    @SerializedName(value = "numberS", alternate = {"NumberS"})
     @Expose
     public com.google.gson.JsonElement numberS;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsBinom_DistBody {
      * The trials.
      * 
      */
-    @SerializedName("trials")
+    @SerializedName(value = "trials", alternate = {"Trials"})
     @Expose
     public com.google.gson.JsonElement trials;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsBinom_DistBody {
      * The probability S.
      * 
      */
-    @SerializedName("probabilityS")
+    @SerializedName(value = "probabilityS", alternate = {"ProbabilityS"})
     @Expose
     public com.google.gson.JsonElement probabilityS;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsBinom_DistBody {
      * The cumulative.
      * 
      */
-    @SerializedName("cumulative")
+    @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
     public com.google.gson.JsonElement cumulative;
 

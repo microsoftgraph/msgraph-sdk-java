@@ -28,7 +28,7 @@ public class TeamsAppInstallation extends Entity implements IJsonBackedObject {
      * The Teams App.
      * The app that is installed.
      */
-    @SerializedName("teamsApp")
+    @SerializedName(value = "teamsApp", alternate = {"TeamsApp"})
     @Expose
     public TeamsApp teamsApp;
 
@@ -36,7 +36,7 @@ public class TeamsAppInstallation extends Entity implements IJsonBackedObject {
      * The Teams App Definition.
      * The details of this version of the app.
      */
-    @SerializedName("teamsAppDefinition")
+    @SerializedName(value = "teamsAppDefinition", alternate = {"TeamsAppDefinition"})
     @Expose
     public TeamsAppDefinition teamsAppDefinition;
 

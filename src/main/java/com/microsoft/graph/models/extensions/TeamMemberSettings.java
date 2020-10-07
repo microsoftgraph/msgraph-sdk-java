@@ -35,7 +35,7 @@ public class TeamMemberSettings implements IJsonBackedObject {
      * The Allow Add Remove Apps.
      * If set to true, members can add and remove apps.
      */
-    @SerializedName("allowAddRemoveApps")
+    @SerializedName(value = "allowAddRemoveApps", alternate = {"AllowAddRemoveApps"})
     @Expose
     public Boolean allowAddRemoveApps;
 
@@ -43,7 +43,7 @@ public class TeamMemberSettings implements IJsonBackedObject {
      * The Allow Create Private Channels.
      * If set to true, members can add and update private channels.
      */
-    @SerializedName("allowCreatePrivateChannels")
+    @SerializedName(value = "allowCreatePrivateChannels", alternate = {"AllowCreatePrivateChannels"})
     @Expose
     public Boolean allowCreatePrivateChannels;
 
@@ -51,7 +51,7 @@ public class TeamMemberSettings implements IJsonBackedObject {
      * The Allow Create Update Channels.
      * If set to true, members can add and update channels.
      */
-    @SerializedName("allowCreateUpdateChannels")
+    @SerializedName(value = "allowCreateUpdateChannels", alternate = {"AllowCreateUpdateChannels"})
     @Expose
     public Boolean allowCreateUpdateChannels;
 
@@ -59,7 +59,7 @@ public class TeamMemberSettings implements IJsonBackedObject {
      * The Allow Create Update Remove Connectors.
      * If set to true, members can add, update, and remove connectors.
      */
-    @SerializedName("allowCreateUpdateRemoveConnectors")
+    @SerializedName(value = "allowCreateUpdateRemoveConnectors", alternate = {"AllowCreateUpdateRemoveConnectors"})
     @Expose
     public Boolean allowCreateUpdateRemoveConnectors;
 
@@ -67,7 +67,7 @@ public class TeamMemberSettings implements IJsonBackedObject {
      * The Allow Create Update Remove Tabs.
      * If set to true, members can add, update, and remove tabs.
      */
-    @SerializedName("allowCreateUpdateRemoveTabs")
+    @SerializedName(value = "allowCreateUpdateRemoveTabs", alternate = {"AllowCreateUpdateRemoveTabs"})
     @Expose
     public Boolean allowCreateUpdateRemoveTabs;
 
@@ -75,7 +75,7 @@ public class TeamMemberSettings implements IJsonBackedObject {
      * The Allow Delete Channels.
      * If set to true, members can delete channels.
      */
-    @SerializedName("allowDeleteChannels")
+    @SerializedName(value = "allowDeleteChannels", alternate = {"AllowDeleteChannels"})
     @Expose
     public Boolean allowDeleteChannels;
 

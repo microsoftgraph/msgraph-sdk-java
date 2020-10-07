@@ -22,7 +22,7 @@ public class DirectoryObjectCheckMemberGroupsBody {
      * The group Ids.
      * 
      */
-    @SerializedName("groupIds")
+    @SerializedName(value = "groupIds", alternate = {"GroupIds"})
     @Expose
     public java.util.List<String> groupIds;
 

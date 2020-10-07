@@ -28,7 +28,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Device Threat Protection Enabled.
      * Require that devices have enabled device threat protection .
      */
-    @SerializedName("deviceThreatProtectionEnabled")
+    @SerializedName(value = "deviceThreatProtectionEnabled", alternate = {"DeviceThreatProtectionEnabled"})
     @Expose
     public Boolean deviceThreatProtectionEnabled;
 
@@ -36,7 +36,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Device Threat Protection Required Security Level.
      * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
      */
-    @SerializedName("deviceThreatProtectionRequiredSecurityLevel")
+    @SerializedName(value = "deviceThreatProtectionRequiredSecurityLevel", alternate = {"DeviceThreatProtectionRequiredSecurityLevel"})
     @Expose
     public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
 
@@ -44,7 +44,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Managed Email Profile Required.
      * Indicates whether or not to require a managed email profile.
      */
-    @SerializedName("managedEmailProfileRequired")
+    @SerializedName(value = "managedEmailProfileRequired", alternate = {"ManagedEmailProfileRequired"})
     @Expose
     public Boolean managedEmailProfileRequired;
 
@@ -52,7 +52,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Os Maximum Version.
      * Maximum IOS version.
      */
-    @SerializedName("osMaximumVersion")
+    @SerializedName(value = "osMaximumVersion", alternate = {"OsMaximumVersion"})
     @Expose
     public String osMaximumVersion;
 
@@ -60,7 +60,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Os Minimum Version.
      * Minimum IOS version.
      */
-    @SerializedName("osMinimumVersion")
+    @SerializedName(value = "osMinimumVersion", alternate = {"OsMinimumVersion"})
     @Expose
     public String osMinimumVersion;
 
@@ -68,7 +68,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Passcode Block Simple.
      * Indicates whether or not to block simple passcodes.
      */
-    @SerializedName("passcodeBlockSimple")
+    @SerializedName(value = "passcodeBlockSimple", alternate = {"PasscodeBlockSimple"})
     @Expose
     public Boolean passcodeBlockSimple;
 
@@ -76,7 +76,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Passcode Expiration Days.
      * Number of days before the passcode expires. Valid values 1 to 65535
      */
-    @SerializedName("passcodeExpirationDays")
+    @SerializedName(value = "passcodeExpirationDays", alternate = {"PasscodeExpirationDays"})
     @Expose
     public Integer passcodeExpirationDays;
 
@@ -84,7 +84,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Passcode Minimum Character Set Count.
      * The number of character sets required in the password.
      */
-    @SerializedName("passcodeMinimumCharacterSetCount")
+    @SerializedName(value = "passcodeMinimumCharacterSetCount", alternate = {"PasscodeMinimumCharacterSetCount"})
     @Expose
     public Integer passcodeMinimumCharacterSetCount;
 
@@ -92,7 +92,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Passcode Minimum Length.
      * Minimum length of passcode. Valid values 4 to 14
      */
-    @SerializedName("passcodeMinimumLength")
+    @SerializedName(value = "passcodeMinimumLength", alternate = {"PasscodeMinimumLength"})
     @Expose
     public Integer passcodeMinimumLength;
 
@@ -100,7 +100,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Passcode Minutes Of Inactivity Before Lock.
      * Minutes of inactivity before a passcode is required.
      */
-    @SerializedName("passcodeMinutesOfInactivityBeforeLock")
+    @SerializedName(value = "passcodeMinutesOfInactivityBeforeLock", alternate = {"PasscodeMinutesOfInactivityBeforeLock"})
     @Expose
     public Integer passcodeMinutesOfInactivityBeforeLock;
 
@@ -108,7 +108,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Passcode Previous Passcode Block Count.
      * Number of previous passcodes to block. Valid values 1 to 24
      */
-    @SerializedName("passcodePreviousPasscodeBlockCount")
+    @SerializedName(value = "passcodePreviousPasscodeBlockCount", alternate = {"PasscodePreviousPasscodeBlockCount"})
     @Expose
     public Integer passcodePreviousPasscodeBlockCount;
 
@@ -116,7 +116,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Passcode Required.
      * Indicates whether or not to require a passcode.
      */
-    @SerializedName("passcodeRequired")
+    @SerializedName(value = "passcodeRequired", alternate = {"PasscodeRequired"})
     @Expose
     public Boolean passcodeRequired;
 
@@ -124,7 +124,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Passcode Required Type.
      * The required passcode type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("passcodeRequiredType")
+    @SerializedName(value = "passcodeRequiredType", alternate = {"PasscodeRequiredType"})
     @Expose
     public RequiredPasswordType passcodeRequiredType;
 
@@ -132,7 +132,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
      * The Security Block Jailbroken Devices.
      * Devices must not be jailbroken or rooted.
      */
-    @SerializedName("securityBlockJailbrokenDevices")
+    @SerializedName(value = "securityBlockJailbrokenDevices", alternate = {"SecurityBlockJailbrokenDevices"})
     @Expose
     public Boolean securityBlockJailbrokenDevices;
 

@@ -39,7 +39,7 @@ public class MailboxSettings implements IJsonBackedObject {
      * The Archive Folder.
      * Folder ID of an archive folder for the user.
      */
-    @SerializedName("archiveFolder")
+    @SerializedName(value = "archiveFolder", alternate = {"ArchiveFolder"})
     @Expose
     public String archiveFolder;
 
@@ -47,7 +47,7 @@ public class MailboxSettings implements IJsonBackedObject {
      * The Automatic Replies Setting.
      * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
      */
-    @SerializedName("automaticRepliesSetting")
+    @SerializedName(value = "automaticRepliesSetting", alternate = {"AutomaticRepliesSetting"})
     @Expose
     public AutomaticRepliesSetting automaticRepliesSetting;
 
@@ -55,7 +55,7 @@ public class MailboxSettings implements IJsonBackedObject {
      * The Date Format.
      * The date format for the user's mailbox.
      */
-    @SerializedName("dateFormat")
+    @SerializedName(value = "dateFormat", alternate = {"DateFormat"})
     @Expose
     public String dateFormat;
 
@@ -63,7 +63,7 @@ public class MailboxSettings implements IJsonBackedObject {
      * The Delegate Meeting Message Delivery Options.
      * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
      */
-    @SerializedName("delegateMeetingMessageDeliveryOptions")
+    @SerializedName(value = "delegateMeetingMessageDeliveryOptions", alternate = {"DelegateMeetingMessageDeliveryOptions"})
     @Expose
     public DelegateMeetingMessageDeliveryOptions delegateMeetingMessageDeliveryOptions;
 
@@ -71,7 +71,7 @@ public class MailboxSettings implements IJsonBackedObject {
      * The Language.
      * The locale information for the user, including the preferred language and country/region.
      */
-    @SerializedName("language")
+    @SerializedName(value = "language", alternate = {"Language"})
     @Expose
     public LocaleInfo language;
 
@@ -79,7 +79,7 @@ public class MailboxSettings implements IJsonBackedObject {
      * The Time Format.
      * The time format for the user's mailbox.
      */
-    @SerializedName("timeFormat")
+    @SerializedName(value = "timeFormat", alternate = {"TimeFormat"})
     @Expose
     public String timeFormat;
 
@@ -87,7 +87,7 @@ public class MailboxSettings implements IJsonBackedObject {
      * The Time Zone.
      * The default time zone for the user's mailbox.
      */
-    @SerializedName("timeZone")
+    @SerializedName(value = "timeZone", alternate = {"TimeZone"})
     @Expose
     public String timeZone;
 
@@ -95,7 +95,7 @@ public class MailboxSettings implements IJsonBackedObject {
      * The Working Hours.
      * The days of the week and hours in a specific time zone that the user works.
      */
-    @SerializedName("workingHours")
+    @SerializedName(value = "workingHours", alternate = {"WorkingHours"})
     @Expose
     public WorkingHours workingHours;
 

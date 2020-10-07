@@ -29,7 +29,7 @@ public class MobileAppAssignment extends Entity implements IJsonBackedObject {
      * The Intent.
      * The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment.
      */
-    @SerializedName("intent")
+    @SerializedName(value = "intent", alternate = {"Intent"})
     @Expose
     public InstallIntent intent;
 
@@ -37,7 +37,7 @@ public class MobileAppAssignment extends Entity implements IJsonBackedObject {
      * The Settings.
      * The settings for target assignment defined by the admin.
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public MobileAppAssignmentSettings settings;
 
@@ -45,7 +45,7 @@ public class MobileAppAssignment extends Entity implements IJsonBackedObject {
      * The Target.
      * The target group assignment defined by the admin.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

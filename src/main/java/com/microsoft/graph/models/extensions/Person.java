@@ -31,7 +31,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Birthday.
      * The person's birthday.
      */
-    @SerializedName("birthday")
+    @SerializedName(value = "birthday", alternate = {"Birthday"})
     @Expose
     public String birthday;
 
@@ -39,7 +39,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Company Name.
      * The name of the person's company.
      */
-    @SerializedName("companyName")
+    @SerializedName(value = "companyName", alternate = {"CompanyName"})
     @Expose
     public String companyName;
 
@@ -47,7 +47,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Department.
      * The person's department.
      */
-    @SerializedName("department")
+    @SerializedName(value = "department", alternate = {"Department"})
     @Expose
     public String department;
 
@@ -55,7 +55,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The person's display name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -63,7 +63,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Given Name.
      * The person's given name.
      */
-    @SerializedName("givenName")
+    @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
     public String givenName;
 
@@ -71,7 +71,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Im Address.
      * The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
      */
-    @SerializedName("imAddress")
+    @SerializedName(value = "imAddress", alternate = {"ImAddress"})
     @Expose
     public String imAddress;
 
@@ -79,7 +79,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Is Favorite.
      * true if the user has flagged this person as a favorite.
      */
-    @SerializedName("isFavorite")
+    @SerializedName(value = "isFavorite", alternate = {"IsFavorite"})
     @Expose
     public Boolean isFavorite;
 
@@ -87,7 +87,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Job Title.
      * The person's job title.
      */
-    @SerializedName("jobTitle")
+    @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
     public String jobTitle;
 
@@ -95,7 +95,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Office Location.
      * The location of the person's office.
      */
-    @SerializedName("officeLocation")
+    @SerializedName(value = "officeLocation", alternate = {"OfficeLocation"})
     @Expose
     public String officeLocation;
 
@@ -103,7 +103,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Person Notes.
      * Free-form notes that the user has taken about this person.
      */
-    @SerializedName("personNotes")
+    @SerializedName(value = "personNotes", alternate = {"PersonNotes"})
     @Expose
     public String personNotes;
 
@@ -111,7 +111,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Person Type.
      * The type of person.
      */
-    @SerializedName("personType")
+    @SerializedName(value = "personType", alternate = {"PersonType"})
     @Expose
     public PersonType personType;
 
@@ -119,7 +119,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Phones.
      * The person's phone numbers.
      */
-    @SerializedName("phones")
+    @SerializedName(value = "phones", alternate = {"Phones"})
     @Expose
     public java.util.List<Phone> phones;
 
@@ -127,7 +127,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Postal Addresses.
      * The person's addresses.
      */
-    @SerializedName("postalAddresses")
+    @SerializedName(value = "postalAddresses", alternate = {"PostalAddresses"})
     @Expose
     public java.util.List<Location> postalAddresses;
 
@@ -135,7 +135,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Profession.
      * The person's profession.
      */
-    @SerializedName("profession")
+    @SerializedName(value = "profession", alternate = {"Profession"})
     @Expose
     public String profession;
 
@@ -143,7 +143,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Scored Email Addresses.
      * The person's email addresses.
      */
-    @SerializedName("scoredEmailAddresses")
+    @SerializedName(value = "scoredEmailAddresses", alternate = {"ScoredEmailAddresses"})
     @Expose
     public java.util.List<ScoredEmailAddress> scoredEmailAddresses;
 
@@ -151,7 +151,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Surname.
      * The person's surname.
      */
-    @SerializedName("surname")
+    @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose
     public String surname;
 
@@ -159,7 +159,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The User Principal Name.
      * The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -167,7 +167,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Websites.
      * The person's websites.
      */
-    @SerializedName("websites")
+    @SerializedName(value = "websites", alternate = {"Websites"})
     @Expose
     public java.util.List<Website> websites;
 
@@ -175,7 +175,7 @@ public class Person extends Entity implements IJsonBackedObject {
      * The Yomi Company.
      * The phonetic Japanese name of the person's company.
      */
-    @SerializedName("yomiCompany")
+    @SerializedName(value = "yomiCompany", alternate = {"YomiCompany"})
     @Expose
     public String yomiCompany;
 

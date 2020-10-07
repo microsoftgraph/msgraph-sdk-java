@@ -35,7 +35,7 @@ public class ResourceAction implements IJsonBackedObject {
      * The Allowed Resource Actions.
      * Allowed Actions
      */
-    @SerializedName("allowedResourceActions")
+    @SerializedName(value = "allowedResourceActions", alternate = {"AllowedResourceActions"})
     @Expose
     public java.util.List<String> allowedResourceActions;
 
@@ -43,7 +43,7 @@ public class ResourceAction implements IJsonBackedObject {
      * The Not Allowed Resource Actions.
      * Not Allowed Actions
      */
-    @SerializedName("notAllowedResourceActions")
+    @SerializedName(value = "notAllowedResourceActions", alternate = {"NotAllowedResourceActions"})
     @Expose
     public java.util.List<String> notAllowedResourceActions;
 

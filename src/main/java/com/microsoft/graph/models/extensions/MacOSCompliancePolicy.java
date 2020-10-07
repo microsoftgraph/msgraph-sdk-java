@@ -28,7 +28,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Device Threat Protection Enabled.
      * Require that devices have enabled device threat protection.
      */
-    @SerializedName("deviceThreatProtectionEnabled")
+    @SerializedName(value = "deviceThreatProtectionEnabled", alternate = {"DeviceThreatProtectionEnabled"})
     @Expose
     public Boolean deviceThreatProtectionEnabled;
 
@@ -36,7 +36,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Device Threat Protection Required Security Level.
      * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
      */
-    @SerializedName("deviceThreatProtectionRequiredSecurityLevel")
+    @SerializedName(value = "deviceThreatProtectionRequiredSecurityLevel", alternate = {"DeviceThreatProtectionRequiredSecurityLevel"})
     @Expose
     public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
 
@@ -44,7 +44,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Firewall Block All Incoming.
      * Corresponds to the 'Block all incoming connections' option.
      */
-    @SerializedName("firewallBlockAllIncoming")
+    @SerializedName(value = "firewallBlockAllIncoming", alternate = {"FirewallBlockAllIncoming"})
     @Expose
     public Boolean firewallBlockAllIncoming;
 
@@ -52,7 +52,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Firewall Enabled.
      * Whether the firewall should be enabled or not.
      */
-    @SerializedName("firewallEnabled")
+    @SerializedName(value = "firewallEnabled", alternate = {"FirewallEnabled"})
     @Expose
     public Boolean firewallEnabled;
 
@@ -60,7 +60,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Firewall Enable Stealth Mode.
      * Corresponds to 'Enable stealth mode.'
      */
-    @SerializedName("firewallEnableStealthMode")
+    @SerializedName(value = "firewallEnableStealthMode", alternate = {"FirewallEnableStealthMode"})
     @Expose
     public Boolean firewallEnableStealthMode;
 
@@ -68,7 +68,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Os Maximum Version.
      * Maximum MacOS version.
      */
-    @SerializedName("osMaximumVersion")
+    @SerializedName(value = "osMaximumVersion", alternate = {"OsMaximumVersion"})
     @Expose
     public String osMaximumVersion;
 
@@ -76,7 +76,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Os Minimum Version.
      * Minimum MacOS version.
      */
-    @SerializedName("osMinimumVersion")
+    @SerializedName(value = "osMinimumVersion", alternate = {"OsMinimumVersion"})
     @Expose
     public String osMinimumVersion;
 
@@ -84,7 +84,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Password Block Simple.
      * Indicates whether or not to block simple passwords.
      */
-    @SerializedName("passwordBlockSimple")
+    @SerializedName(value = "passwordBlockSimple", alternate = {"PasswordBlockSimple"})
     @Expose
     public Boolean passwordBlockSimple;
 
@@ -92,7 +92,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Password Expiration Days.
      * Number of days before the password expires. Valid values 1 to 65535
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -100,7 +100,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Password Minimum Character Set Count.
      * The number of character sets required in the password.
      */
-    @SerializedName("passwordMinimumCharacterSetCount")
+    @SerializedName(value = "passwordMinimumCharacterSetCount", alternate = {"PasswordMinimumCharacterSetCount"})
     @Expose
     public Integer passwordMinimumCharacterSetCount;
 
@@ -108,7 +108,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Password Minimum Length.
      * Minimum length of password. Valid values 4 to 14
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -116,7 +116,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Password Minutes Of Inactivity Before Lock.
      * Minutes of inactivity before a password is required.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeLock")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeLock", alternate = {"PasswordMinutesOfInactivityBeforeLock"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeLock;
 
@@ -124,7 +124,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Password Previous Password Block Count.
      * Number of previous passwords to block. Valid values 1 to 24
      */
-    @SerializedName("passwordPreviousPasswordBlockCount")
+    @SerializedName(value = "passwordPreviousPasswordBlockCount", alternate = {"PasswordPreviousPasswordBlockCount"})
     @Expose
     public Integer passwordPreviousPasswordBlockCount;
 
@@ -132,7 +132,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Password Required.
      * Whether or not to require a password.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName(value = "passwordRequired", alternate = {"PasswordRequired"})
     @Expose
     public Boolean passwordRequired;
 
@@ -140,7 +140,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Password Required Type.
      * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public RequiredPasswordType passwordRequiredType;
 
@@ -148,7 +148,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The Storage Require Encryption.
      * Require encryption on Mac OS devices.
      */
-    @SerializedName("storageRequireEncryption")
+    @SerializedName(value = "storageRequireEncryption", alternate = {"StorageRequireEncryption"})
     @Expose
     public Boolean storageRequireEncryption;
 
@@ -156,7 +156,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
      * The System Integrity Protection Enabled.
      * Require that devices have enabled system integrity protection.
      */
-    @SerializedName("systemIntegrityProtectionEnabled")
+    @SerializedName(value = "systemIntegrityProtectionEnabled", alternate = {"SystemIntegrityProtectionEnabled"})
     @Expose
     public Boolean systemIntegrityProtectionEnabled;
 

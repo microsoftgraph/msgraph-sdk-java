@@ -27,7 +27,7 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements IJsonBa
      * The Custom Settings.
      * A set of string key and string value pairs to be sent to apps for users to whom the configuration is scoped, unalterned by this service
      */
-    @SerializedName("customSettings")
+    @SerializedName(value = "customSettings", alternate = {"CustomSettings"})
     @Expose
     public java.util.List<KeyValuePair> customSettings;
 

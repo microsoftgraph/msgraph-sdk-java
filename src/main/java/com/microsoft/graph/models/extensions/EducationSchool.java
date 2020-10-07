@@ -32,7 +32,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The Address.
      * Address of the school.
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public PhysicalAddress address;
 
@@ -40,7 +40,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The Created By.
      * Entity who created the school.
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public IdentitySet createdBy;
 
@@ -48,7 +48,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The External Id.
      * ID of school in syncing system.
      */
-    @SerializedName("externalId")
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
     public String externalId;
 
@@ -56,7 +56,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The External Principal Id.
      * ID of principal in syncing system.
      */
-    @SerializedName("externalPrincipalId")
+    @SerializedName(value = "externalPrincipalId", alternate = {"ExternalPrincipalId"})
     @Expose
     public String externalPrincipalId;
 
@@ -64,7 +64,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The Fax.
      * 
      */
-    @SerializedName("fax")
+    @SerializedName(value = "fax", alternate = {"Fax"})
     @Expose
     public String fax;
 
@@ -72,7 +72,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The Highest Grade.
      * Highest grade taught.
      */
-    @SerializedName("highestGrade")
+    @SerializedName(value = "highestGrade", alternate = {"HighestGrade"})
     @Expose
     public String highestGrade;
 
@@ -80,7 +80,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The Lowest Grade.
      * Lowest grade taught.
      */
-    @SerializedName("lowestGrade")
+    @SerializedName(value = "lowestGrade", alternate = {"LowestGrade"})
     @Expose
     public String lowestGrade;
 
@@ -88,7 +88,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The Phone.
      * Phone number of school.
      */
-    @SerializedName("phone")
+    @SerializedName(value = "phone", alternate = {"Phone"})
     @Expose
     public String phone;
 
@@ -96,7 +96,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The Principal Email.
      * Email address of the principal.
      */
-    @SerializedName("principalEmail")
+    @SerializedName(value = "principalEmail", alternate = {"PrincipalEmail"})
     @Expose
     public String principalEmail;
 
@@ -104,7 +104,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The Principal Name.
      * Name of the principal.
      */
-    @SerializedName("principalName")
+    @SerializedName(value = "principalName", alternate = {"PrincipalName"})
     @Expose
     public String principalName;
 
@@ -112,7 +112,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
      * The School Number.
      * School Number.
      */
-    @SerializedName("schoolNumber")
+    @SerializedName(value = "schoolNumber", alternate = {"SchoolNumber"})
     @Expose
     public String schoolNumber;
 

@@ -35,7 +35,7 @@ public class DateTimeTimeZone implements IJsonBackedObject {
      * The Date Time.
      * A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000).
      */
-    @SerializedName("dateTime")
+    @SerializedName(value = "dateTime", alternate = {"DateTime"})
     @Expose
     public String dateTime;
 
@@ -43,7 +43,7 @@ public class DateTimeTimeZone implements IJsonBackedObject {
      * The Time Zone.
      * Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
      */
-    @SerializedName("timeZone")
+    @SerializedName(value = "timeZone", alternate = {"TimeZone"})
     @Expose
     public String timeZone;
 

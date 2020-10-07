@@ -35,7 +35,7 @@ public class ChatMessagePolicyViolationPolicyTip implements IJsonBackedObject {
      * The Compliance Url.
      * 
      */
-    @SerializedName("complianceUrl")
+    @SerializedName(value = "complianceUrl", alternate = {"ComplianceUrl"})
     @Expose
     public String complianceUrl;
 
@@ -43,7 +43,7 @@ public class ChatMessagePolicyViolationPolicyTip implements IJsonBackedObject {
      * The General Text.
      * 
      */
-    @SerializedName("generalText")
+    @SerializedName(value = "generalText", alternate = {"GeneralText"})
     @Expose
     public String generalText;
 
@@ -51,7 +51,7 @@ public class ChatMessagePolicyViolationPolicyTip implements IJsonBackedObject {
      * The Matched Condition Descriptions.
      * 
      */
-    @SerializedName("matchedConditionDescriptions")
+    @SerializedName(value = "matchedConditionDescriptions", alternate = {"MatchedConditionDescriptions"})
     @Expose
     public java.util.List<String> matchedConditionDescriptions;
 

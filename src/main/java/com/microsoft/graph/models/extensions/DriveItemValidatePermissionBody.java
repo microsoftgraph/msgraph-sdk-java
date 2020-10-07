@@ -22,7 +22,7 @@ public class DriveItemValidatePermissionBody {
      * The challenge Token.
      * 
      */
-    @SerializedName("challengeToken")
+    @SerializedName(value = "challengeToken", alternate = {"ChallengeToken"})
     @Expose
     public String challengeToken;
 
@@ -30,7 +30,7 @@ public class DriveItemValidatePermissionBody {
      * The password.
      * 
      */
-    @SerializedName("password")
+    @SerializedName(value = "password", alternate = {"Password"})
     @Expose
     public String password;
 

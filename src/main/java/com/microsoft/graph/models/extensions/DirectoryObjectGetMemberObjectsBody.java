@@ -22,7 +22,7 @@ public class DirectoryObjectGetMemberObjectsBody {
      * The security Enabled Only.
      * 
      */
-    @SerializedName("securityEnabledOnly")
+    @SerializedName(value = "securityEnabledOnly", alternate = {"SecurityEnabledOnly"})
     @Expose
     public Boolean securityEnabledOnly;
 

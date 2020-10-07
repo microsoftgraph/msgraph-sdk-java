@@ -35,7 +35,7 @@ public class AudioConferencing implements IJsonBackedObject {
      * The Conference Id.
      * 
      */
-    @SerializedName("conferenceId")
+    @SerializedName(value = "conferenceId", alternate = {"ConferenceId"})
     @Expose
     public String conferenceId;
 
@@ -43,7 +43,7 @@ public class AudioConferencing implements IJsonBackedObject {
      * The Dialin Url.
      * A URL to the externally-accessible web page that contains dial-in information.
      */
-    @SerializedName("dialinUrl")
+    @SerializedName(value = "dialinUrl", alternate = {"DialinUrl"})
     @Expose
     public String dialinUrl;
 
@@ -51,7 +51,7 @@ public class AudioConferencing implements IJsonBackedObject {
      * The Toll Free Number.
      * The toll-free number that connects to the Audio Conference Provider.
      */
-    @SerializedName("tollFreeNumber")
+    @SerializedName(value = "tollFreeNumber", alternate = {"TollFreeNumber"})
     @Expose
     public String tollFreeNumber;
 
@@ -59,7 +59,7 @@ public class AudioConferencing implements IJsonBackedObject {
      * The Toll Number.
      * The toll number that connects to the Audio Conference Provider.
      */
-    @SerializedName("tollNumber")
+    @SerializedName(value = "tollNumber", alternate = {"TollNumber"})
     @Expose
     public String tollNumber;
 

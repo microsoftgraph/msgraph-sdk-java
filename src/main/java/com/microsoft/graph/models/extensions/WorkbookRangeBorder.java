@@ -26,7 +26,7 @@ public class WorkbookRangeBorder extends Entity implements IJsonBackedObject {
      * The Color.
      * HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange').
      */
-    @SerializedName("color")
+    @SerializedName(value = "color", alternate = {"Color"})
     @Expose
     public String color;
 
@@ -34,7 +34,7 @@ public class WorkbookRangeBorder extends Entity implements IJsonBackedObject {
      * The Side Index.
      * Constant value that indicates the specific side of the border. The possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
      */
-    @SerializedName("sideIndex")
+    @SerializedName(value = "sideIndex", alternate = {"SideIndex"})
     @Expose
     public String sideIndex;
 
@@ -42,7 +42,7 @@ public class WorkbookRangeBorder extends Entity implements IJsonBackedObject {
      * The Style.
      * One of the constants of line style specifying the line style for the border. The possible values are: None, Continuous, Dash, DashDot, DashDotDot, Dot, Double, SlantDashDot.
      */
-    @SerializedName("style")
+    @SerializedName(value = "style", alternate = {"Style"})
     @Expose
     public String style;
 
@@ -50,7 +50,7 @@ public class WorkbookRangeBorder extends Entity implements IJsonBackedObject {
      * The Weight.
      * Specifies the weight of the border around a range. The possible values are: Hairline, Thin, Medium, Thick.
      */
-    @SerializedName("weight")
+    @SerializedName(value = "weight", alternate = {"Weight"})
     @Expose
     public String weight;
 

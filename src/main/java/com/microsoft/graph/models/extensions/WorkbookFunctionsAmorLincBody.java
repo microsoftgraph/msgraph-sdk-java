@@ -22,7 +22,7 @@ public class WorkbookFunctionsAmorLincBody {
      * The cost.
      * 
      */
-    @SerializedName("cost")
+    @SerializedName(value = "cost", alternate = {"Cost"})
     @Expose
     public com.google.gson.JsonElement cost;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsAmorLincBody {
      * The date Purchased.
      * 
      */
-    @SerializedName("datePurchased")
+    @SerializedName(value = "datePurchased", alternate = {"DatePurchased"})
     @Expose
     public com.google.gson.JsonElement datePurchased;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsAmorLincBody {
      * The first Period.
      * 
      */
-    @SerializedName("firstPeriod")
+    @SerializedName(value = "firstPeriod", alternate = {"FirstPeriod"})
     @Expose
     public com.google.gson.JsonElement firstPeriod;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsAmorLincBody {
      * The salvage.
      * 
      */
-    @SerializedName("salvage")
+    @SerializedName(value = "salvage", alternate = {"Salvage"})
     @Expose
     public com.google.gson.JsonElement salvage;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsAmorLincBody {
      * The period.
      * 
      */
-    @SerializedName("period")
+    @SerializedName(value = "period", alternate = {"Period"})
     @Expose
     public com.google.gson.JsonElement period;
 
@@ -62,7 +62,7 @@ public class WorkbookFunctionsAmorLincBody {
      * The rate.
      * 
      */
-    @SerializedName("rate")
+    @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
     public com.google.gson.JsonElement rate;
 
@@ -70,7 +70,7 @@ public class WorkbookFunctionsAmorLincBody {
      * The basis.
      * 
      */
-    @SerializedName("basis")
+    @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
     public com.google.gson.JsonElement basis;
 

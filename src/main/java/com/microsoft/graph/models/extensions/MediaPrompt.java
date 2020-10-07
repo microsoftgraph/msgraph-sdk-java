@@ -27,7 +27,7 @@ public class MediaPrompt extends Prompt implements IJsonBackedObject {
      * The Media Info.
      * The media information
      */
-    @SerializedName("mediaInfo")
+    @SerializedName(value = "mediaInfo", alternate = {"MediaInfo"})
     @Expose
     public MediaInfo mediaInfo;
 

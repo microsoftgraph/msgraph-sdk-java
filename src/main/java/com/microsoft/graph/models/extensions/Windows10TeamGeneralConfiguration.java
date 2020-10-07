@@ -28,7 +28,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Azure Operational Insights Block Telemetry.
      * Indicates whether or not to Block Azure Operational Insights.
      */
-    @SerializedName("azureOperationalInsightsBlockTelemetry")
+    @SerializedName(value = "azureOperationalInsightsBlockTelemetry", alternate = {"AzureOperationalInsightsBlockTelemetry"})
     @Expose
     public Boolean azureOperationalInsightsBlockTelemetry;
 
@@ -36,7 +36,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Azure Operational Insights Workspace Id.
      * The Azure Operational Insights workspace id.
      */
-    @SerializedName("azureOperationalInsightsWorkspaceId")
+    @SerializedName(value = "azureOperationalInsightsWorkspaceId", alternate = {"AzureOperationalInsightsWorkspaceId"})
     @Expose
     public String azureOperationalInsightsWorkspaceId;
 
@@ -44,7 +44,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Azure Operational Insights Workspace Key.
      * The Azure Operational Insights Workspace key.
      */
-    @SerializedName("azureOperationalInsightsWorkspaceKey")
+    @SerializedName(value = "azureOperationalInsightsWorkspaceKey", alternate = {"AzureOperationalInsightsWorkspaceKey"})
     @Expose
     public String azureOperationalInsightsWorkspaceKey;
 
@@ -52,7 +52,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Connect App Block Auto Launch.
      * Specifies whether to automatically launch the Connect app whenever a projection is initiated.
      */
-    @SerializedName("connectAppBlockAutoLaunch")
+    @SerializedName(value = "connectAppBlockAutoLaunch", alternate = {"ConnectAppBlockAutoLaunch"})
     @Expose
     public Boolean connectAppBlockAutoLaunch;
 
@@ -60,7 +60,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Maintenance Window Blocked.
      * Indicates whether or not to Block setting a maintenance window for device updates.
      */
-    @SerializedName("maintenanceWindowBlocked")
+    @SerializedName(value = "maintenanceWindowBlocked", alternate = {"MaintenanceWindowBlocked"})
     @Expose
     public Boolean maintenanceWindowBlocked;
 
@@ -68,7 +68,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Maintenance Window Duration In Hours.
      * Maintenance window duration for device updates. Valid values 0 to 5
      */
-    @SerializedName("maintenanceWindowDurationInHours")
+    @SerializedName(value = "maintenanceWindowDurationInHours", alternate = {"MaintenanceWindowDurationInHours"})
     @Expose
     public Integer maintenanceWindowDurationInHours;
 
@@ -76,7 +76,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Maintenance Window Start Time.
      * Maintenance window start time for device updates.
      */
-    @SerializedName("maintenanceWindowStartTime")
+    @SerializedName(value = "maintenanceWindowStartTime", alternate = {"MaintenanceWindowStartTime"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay maintenanceWindowStartTime;
 
@@ -84,7 +84,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Miracast Blocked.
      * Indicates whether or not to Block wireless projection.
      */
-    @SerializedName("miracastBlocked")
+    @SerializedName(value = "miracastBlocked", alternate = {"MiracastBlocked"})
     @Expose
     public Boolean miracastBlocked;
 
@@ -92,7 +92,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Miracast Channel.
      * The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
      */
-    @SerializedName("miracastChannel")
+    @SerializedName(value = "miracastChannel", alternate = {"MiracastChannel"})
     @Expose
     public MiracastChannel miracastChannel;
 
@@ -100,7 +100,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Miracast Require Pin.
      * Indicates whether or not to require a pin for wireless projection.
      */
-    @SerializedName("miracastRequirePin")
+    @SerializedName(value = "miracastRequirePin", alternate = {"MiracastRequirePin"})
     @Expose
     public Boolean miracastRequirePin;
 
@@ -108,7 +108,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Settings Block My Meetings And Files.
      * Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
      */
-    @SerializedName("settingsBlockMyMeetingsAndFiles")
+    @SerializedName(value = "settingsBlockMyMeetingsAndFiles", alternate = {"SettingsBlockMyMeetingsAndFiles"})
     @Expose
     public Boolean settingsBlockMyMeetingsAndFiles;
 
@@ -116,7 +116,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Settings Block Session Resume.
      * Specifies whether to allow the ability to resume a session when the session times out.
      */
-    @SerializedName("settingsBlockSessionResume")
+    @SerializedName(value = "settingsBlockSessionResume", alternate = {"SettingsBlockSessionResume"})
     @Expose
     public Boolean settingsBlockSessionResume;
 
@@ -124,7 +124,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Settings Block Signin Suggestions.
      * Specifies whether to disable auto-populating of the sign-in dialog with invitees from scheduled meetings.
      */
-    @SerializedName("settingsBlockSigninSuggestions")
+    @SerializedName(value = "settingsBlockSigninSuggestions", alternate = {"SettingsBlockSigninSuggestions"})
     @Expose
     public Boolean settingsBlockSigninSuggestions;
 
@@ -132,7 +132,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Settings Default Volume.
      * Specifies the default volume value for a new session. Permitted values are 0-100. The default is 45. Valid values 0 to 100
      */
-    @SerializedName("settingsDefaultVolume")
+    @SerializedName(value = "settingsDefaultVolume", alternate = {"SettingsDefaultVolume"})
     @Expose
     public Integer settingsDefaultVolume;
 
@@ -140,7 +140,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Settings Screen Timeout In Minutes.
      * Specifies the number of minutes until the Hub screen turns off.
      */
-    @SerializedName("settingsScreenTimeoutInMinutes")
+    @SerializedName(value = "settingsScreenTimeoutInMinutes", alternate = {"SettingsScreenTimeoutInMinutes"})
     @Expose
     public Integer settingsScreenTimeoutInMinutes;
 
@@ -148,7 +148,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Settings Session Timeout In Minutes.
      * Specifies the number of minutes until the session times out.
      */
-    @SerializedName("settingsSessionTimeoutInMinutes")
+    @SerializedName(value = "settingsSessionTimeoutInMinutes", alternate = {"SettingsSessionTimeoutInMinutes"})
     @Expose
     public Integer settingsSessionTimeoutInMinutes;
 
@@ -156,7 +156,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Settings Sleep Timeout In Minutes.
      * Specifies the number of minutes until the Hub enters sleep mode.
      */
-    @SerializedName("settingsSleepTimeoutInMinutes")
+    @SerializedName(value = "settingsSleepTimeoutInMinutes", alternate = {"SettingsSleepTimeoutInMinutes"})
     @Expose
     public Integer settingsSleepTimeoutInMinutes;
 
@@ -164,7 +164,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Welcome Screen Background Image Url.
      * The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
      */
-    @SerializedName("welcomeScreenBackgroundImageUrl")
+    @SerializedName(value = "welcomeScreenBackgroundImageUrl", alternate = {"WelcomeScreenBackgroundImageUrl"})
     @Expose
     public String welcomeScreenBackgroundImageUrl;
 
@@ -172,7 +172,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Welcome Screen Block Automatic Wake Up.
      * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
      */
-    @SerializedName("welcomeScreenBlockAutomaticWakeUp")
+    @SerializedName(value = "welcomeScreenBlockAutomaticWakeUp", alternate = {"WelcomeScreenBlockAutomaticWakeUp"})
     @Expose
     public Boolean welcomeScreenBlockAutomaticWakeUp;
 
@@ -180,7 +180,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
      * The Welcome Screen Meeting Information.
      * The welcome screen meeting information shown. Possible values are: userDefined, showOrganizerAndTimeOnly, showOrganizerAndTimeAndSubject.
      */
-    @SerializedName("welcomeScreenMeetingInformation")
+    @SerializedName(value = "welcomeScreenMeetingInformation", alternate = {"WelcomeScreenMeetingInformation"})
     @Expose
     public WelcomeScreenMeetingInformation welcomeScreenMeetingInformation;
 

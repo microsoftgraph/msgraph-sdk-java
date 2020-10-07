@@ -22,7 +22,7 @@ public class MobileAppContentFileCommitBody {
      * The file Encryption Info.
      * 
      */
-    @SerializedName("fileEncryptionInfo")
+    @SerializedName(value = "fileEncryptionInfo", alternate = {"FileEncryptionInfo"})
     @Expose
     public FileEncryptionInfo fileEncryptionInfo;
 

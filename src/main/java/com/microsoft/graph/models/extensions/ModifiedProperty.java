@@ -35,7 +35,7 @@ public class ModifiedProperty implements IJsonBackedObject {
      * The Display Name.
      * Indicates the property name of the target attribute that was changed.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class ModifiedProperty implements IJsonBackedObject {
      * The New Value.
      * Indicates the updated value for the propery.
      */
-    @SerializedName("newValue")
+    @SerializedName(value = "newValue", alternate = {"NewValue"})
     @Expose
     public String newValue;
 
@@ -51,7 +51,7 @@ public class ModifiedProperty implements IJsonBackedObject {
      * The Old Value.
      * Indicates the previous value (before the update) for the property.
      */
-    @SerializedName("oldValue")
+    @SerializedName(value = "oldValue", alternate = {"OldValue"})
     @Expose
     public String oldValue;
 

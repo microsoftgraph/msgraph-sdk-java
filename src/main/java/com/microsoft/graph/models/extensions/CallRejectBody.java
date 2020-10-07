@@ -22,7 +22,7 @@ public class CallRejectBody {
      * The reason.
      * 
      */
-    @SerializedName("reason")
+    @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
     public RejectReason reason;
 
@@ -30,7 +30,7 @@ public class CallRejectBody {
      * The callback Uri.
      * 
      */
-    @SerializedName("callbackUri")
+    @SerializedName(value = "callbackUri", alternate = {"CallbackUri"})
     @Expose
     public String callbackUri;
 

@@ -27,7 +27,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements IJsonBa
      * The Configuration Deployed User Count.
      * Not yet documented
      */
-    @SerializedName("configurationDeployedUserCount")
+    @SerializedName(value = "configurationDeployedUserCount", alternate = {"ConfigurationDeployedUserCount"})
     @Expose
     public Integer configurationDeployedUserCount;
 
@@ -35,7 +35,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements IJsonBa
      * The Configuration Deployment Summary Per App.
      * Not yet documented
      */
-    @SerializedName("configurationDeploymentSummaryPerApp")
+    @SerializedName(value = "configurationDeploymentSummaryPerApp", alternate = {"ConfigurationDeploymentSummaryPerApp"})
     @Expose
     public java.util.List<ManagedAppPolicyDeploymentSummaryPerApp> configurationDeploymentSummaryPerApp;
 
@@ -43,7 +43,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements IJsonBa
      * The Display Name.
      * Not yet documented
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -51,7 +51,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements IJsonBa
      * The Last Refresh Time.
      * Not yet documented
      */
-    @SerializedName("lastRefreshTime")
+    @SerializedName(value = "lastRefreshTime", alternate = {"LastRefreshTime"})
     @Expose
     public java.util.Calendar lastRefreshTime;
 
@@ -59,7 +59,7 @@ public class ManagedAppPolicyDeploymentSummary extends Entity implements IJsonBa
      * The Version.
      * Version of the entity.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

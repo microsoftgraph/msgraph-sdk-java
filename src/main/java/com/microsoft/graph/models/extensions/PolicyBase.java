@@ -26,7 +26,7 @@ public class PolicyBase extends DirectoryObject implements IJsonBackedObject {
      * The Description.
      * Description for this policy.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -34,7 +34,7 @@ public class PolicyBase extends DirectoryObject implements IJsonBackedObject {
      * The Display Name.
      * Display name for this policy.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

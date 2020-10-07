@@ -30,7 +30,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Apps Block Clipboard Sharing.
      * Indicates whether or not to block clipboard sharing to copy and paste between applications.
      */
-    @SerializedName("appsBlockClipboardSharing")
+    @SerializedName(value = "appsBlockClipboardSharing", alternate = {"AppsBlockClipboardSharing"})
     @Expose
     public Boolean appsBlockClipboardSharing;
 
@@ -38,7 +38,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Apps Block Copy Paste.
      * Indicates whether or not to block copy and paste within applications.
      */
-    @SerializedName("appsBlockCopyPaste")
+    @SerializedName(value = "appsBlockCopyPaste", alternate = {"AppsBlockCopyPaste"})
     @Expose
     public Boolean appsBlockCopyPaste;
 
@@ -46,7 +46,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Apps Block You Tube.
      * Indicates whether or not to block the YouTube app.
      */
-    @SerializedName("appsBlockYouTube")
+    @SerializedName(value = "appsBlockYouTube", alternate = {"AppsBlockYouTube"})
     @Expose
     public Boolean appsBlockYouTube;
 
@@ -54,7 +54,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Apps Hide List.
      * List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("appsHideList")
+    @SerializedName(value = "appsHideList", alternate = {"AppsHideList"})
     @Expose
     public java.util.List<AppListItem> appsHideList;
 
@@ -62,7 +62,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Apps Install Allow List.
      * List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("appsInstallAllowList")
+    @SerializedName(value = "appsInstallAllowList", alternate = {"AppsInstallAllowList"})
     @Expose
     public java.util.List<AppListItem> appsInstallAllowList;
 
@@ -70,7 +70,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Apps Launch Block List.
      * List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("appsLaunchBlockList")
+    @SerializedName(value = "appsLaunchBlockList", alternate = {"AppsLaunchBlockList"})
     @Expose
     public java.util.List<AppListItem> appsLaunchBlockList;
 
@@ -78,7 +78,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Bluetooth Blocked.
      * Indicates whether or not to block Bluetooth.
      */
-    @SerializedName("bluetoothBlocked")
+    @SerializedName(value = "bluetoothBlocked", alternate = {"BluetoothBlocked"})
     @Expose
     public Boolean bluetoothBlocked;
 
@@ -86,7 +86,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Camera Blocked.
      * Indicates whether or not to block the use of the camera.
      */
-    @SerializedName("cameraBlocked")
+    @SerializedName(value = "cameraBlocked", alternate = {"CameraBlocked"})
     @Expose
     public Boolean cameraBlocked;
 
@@ -94,7 +94,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Cellular Block Data Roaming.
      * Indicates whether or not to block data roaming.
      */
-    @SerializedName("cellularBlockDataRoaming")
+    @SerializedName(value = "cellularBlockDataRoaming", alternate = {"CellularBlockDataRoaming"})
     @Expose
     public Boolean cellularBlockDataRoaming;
 
@@ -102,7 +102,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Cellular Block Messaging.
      * Indicates whether or not to block SMS/MMS messaging.
      */
-    @SerializedName("cellularBlockMessaging")
+    @SerializedName(value = "cellularBlockMessaging", alternate = {"CellularBlockMessaging"})
     @Expose
     public Boolean cellularBlockMessaging;
 
@@ -110,7 +110,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Cellular Block Voice Roaming.
      * Indicates whether or not to block voice roaming.
      */
-    @SerializedName("cellularBlockVoiceRoaming")
+    @SerializedName(value = "cellularBlockVoiceRoaming", alternate = {"CellularBlockVoiceRoaming"})
     @Expose
     public Boolean cellularBlockVoiceRoaming;
 
@@ -118,7 +118,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Cellular Block Wi Fi Tethering.
      * Indicates whether or not to block syncing Wi-Fi tethering.
      */
-    @SerializedName("cellularBlockWiFiTethering")
+    @SerializedName(value = "cellularBlockWiFiTethering", alternate = {"CellularBlockWiFiTethering"})
     @Expose
     public Boolean cellularBlockWiFiTethering;
 
@@ -126,7 +126,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Compliant App List Type.
      * Type of list that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
      */
-    @SerializedName("compliantAppListType")
+    @SerializedName(value = "compliantAppListType", alternate = {"CompliantAppListType"})
     @Expose
     public AppListType compliantAppListType;
 
@@ -134,7 +134,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Compliant Apps List.
      * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      */
-    @SerializedName("compliantAppsList")
+    @SerializedName(value = "compliantAppsList", alternate = {"CompliantAppsList"})
     @Expose
     public java.util.List<AppListItem> compliantAppsList;
 
@@ -142,7 +142,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Device Sharing Allowed.
      * Indicates whether or not to allow device sharing mode.
      */
-    @SerializedName("deviceSharingAllowed")
+    @SerializedName(value = "deviceSharingAllowed", alternate = {"DeviceSharingAllowed"})
     @Expose
     public Boolean deviceSharingAllowed;
 
@@ -150,7 +150,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Diagnostic Data Block Submission.
      * Indicates whether or not to block diagnostic data submission.
      */
-    @SerializedName("diagnosticDataBlockSubmission")
+    @SerializedName(value = "diagnosticDataBlockSubmission", alternate = {"DiagnosticDataBlockSubmission"})
     @Expose
     public Boolean diagnosticDataBlockSubmission;
 
@@ -158,7 +158,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Factory Reset Blocked.
      * Indicates whether or not to block user performing a factory reset.
      */
-    @SerializedName("factoryResetBlocked")
+    @SerializedName(value = "factoryResetBlocked", alternate = {"FactoryResetBlocked"})
     @Expose
     public Boolean factoryResetBlocked;
 
@@ -166,7 +166,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Google Account Block Auto Sync.
      * Indicates whether or not to block Google account auto sync.
      */
-    @SerializedName("googleAccountBlockAutoSync")
+    @SerializedName(value = "googleAccountBlockAutoSync", alternate = {"GoogleAccountBlockAutoSync"})
     @Expose
     public Boolean googleAccountBlockAutoSync;
 
@@ -174,7 +174,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Google Play Store Blocked.
      * Indicates whether or not to block the Google Play store.
      */
-    @SerializedName("googlePlayStoreBlocked")
+    @SerializedName(value = "googlePlayStoreBlocked", alternate = {"GooglePlayStoreBlocked"})
     @Expose
     public Boolean googlePlayStoreBlocked;
 
@@ -182,7 +182,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Kiosk Mode Apps.
      * A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("kioskModeApps")
+    @SerializedName(value = "kioskModeApps", alternate = {"KioskModeApps"})
     @Expose
     public java.util.List<AppListItem> kioskModeApps;
 
@@ -190,7 +190,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Kiosk Mode Block Sleep Button.
      * Indicates whether or not to block the screen sleep button while in Kiosk Mode.
      */
-    @SerializedName("kioskModeBlockSleepButton")
+    @SerializedName(value = "kioskModeBlockSleepButton", alternate = {"KioskModeBlockSleepButton"})
     @Expose
     public Boolean kioskModeBlockSleepButton;
 
@@ -198,7 +198,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Kiosk Mode Block Volume Buttons.
      * Indicates whether or not to block the volume buttons while in Kiosk Mode.
      */
-    @SerializedName("kioskModeBlockVolumeButtons")
+    @SerializedName(value = "kioskModeBlockVolumeButtons", alternate = {"KioskModeBlockVolumeButtons"})
     @Expose
     public Boolean kioskModeBlockVolumeButtons;
 
@@ -206,7 +206,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Location Services Blocked.
      * Indicates whether or not to block location services.
      */
-    @SerializedName("locationServicesBlocked")
+    @SerializedName(value = "locationServicesBlocked", alternate = {"LocationServicesBlocked"})
     @Expose
     public Boolean locationServicesBlocked;
 
@@ -214,7 +214,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Nfc Blocked.
      * Indicates whether or not to block Near-Field Communication.
      */
-    @SerializedName("nfcBlocked")
+    @SerializedName(value = "nfcBlocked", alternate = {"NfcBlocked"})
     @Expose
     public Boolean nfcBlocked;
 
@@ -222,7 +222,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Password Block Fingerprint Unlock.
      * Indicates whether or not to block fingerprint unlock.
      */
-    @SerializedName("passwordBlockFingerprintUnlock")
+    @SerializedName(value = "passwordBlockFingerprintUnlock", alternate = {"PasswordBlockFingerprintUnlock"})
     @Expose
     public Boolean passwordBlockFingerprintUnlock;
 
@@ -230,7 +230,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Password Block Trust Agents.
      * Indicates whether or not to block Smart Lock and other trust agents.
      */
-    @SerializedName("passwordBlockTrustAgents")
+    @SerializedName(value = "passwordBlockTrustAgents", alternate = {"PasswordBlockTrustAgents"})
     @Expose
     public Boolean passwordBlockTrustAgents;
 
@@ -238,7 +238,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Password Expiration Days.
      * Number of days before the password expires. Valid values 1 to 365
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -246,7 +246,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Password Minimum Length.
      * Minimum length of passwords. Valid values 4 to 16
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -254,7 +254,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Password Minutes Of Inactivity Before Screen Timeout.
      * Minutes of inactivity before the screen times out.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeScreenTimeout")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeScreenTimeout", alternate = {"PasswordMinutesOfInactivityBeforeScreenTimeout"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeScreenTimeout;
 
@@ -262,7 +262,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Password Previous Password Block Count.
      * Number of previous passwords to block. Valid values 0 to 24
      */
-    @SerializedName("passwordPreviousPasswordBlockCount")
+    @SerializedName(value = "passwordPreviousPasswordBlockCount", alternate = {"PasswordPreviousPasswordBlockCount"})
     @Expose
     public Integer passwordPreviousPasswordBlockCount;
 
@@ -270,7 +270,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Password Required.
      * Indicates whether or not to require a password.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName(value = "passwordRequired", alternate = {"PasswordRequired"})
     @Expose
     public Boolean passwordRequired;
 
@@ -278,7 +278,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Password Required Type.
      * Type of password that is required. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public AndroidRequiredPasswordType passwordRequiredType;
 
@@ -286,7 +286,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Password Sign In Failure Count Before Factory Reset.
      * Number of sign in failures allowed before factory reset. Valid values 1 to 16
      */
-    @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
+    @SerializedName(value = "passwordSignInFailureCountBeforeFactoryReset", alternate = {"PasswordSignInFailureCountBeforeFactoryReset"})
     @Expose
     public Integer passwordSignInFailureCountBeforeFactoryReset;
 
@@ -294,7 +294,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Power Off Blocked.
      * Indicates whether or not to block powering off the device.
      */
-    @SerializedName("powerOffBlocked")
+    @SerializedName(value = "powerOffBlocked", alternate = {"PowerOffBlocked"})
     @Expose
     public Boolean powerOffBlocked;
 
@@ -302,7 +302,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Screen Capture Blocked.
      * Indicates whether or not to block screenshots.
      */
-    @SerializedName("screenCaptureBlocked")
+    @SerializedName(value = "screenCaptureBlocked", alternate = {"ScreenCaptureBlocked"})
     @Expose
     public Boolean screenCaptureBlocked;
 
@@ -310,7 +310,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Security Require Verify Apps.
      * Require the Android Verify apps feature is turned on.
      */
-    @SerializedName("securityRequireVerifyApps")
+    @SerializedName(value = "securityRequireVerifyApps", alternate = {"SecurityRequireVerifyApps"})
     @Expose
     public Boolean securityRequireVerifyApps;
 
@@ -318,7 +318,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Storage Block Google Backup.
      * Indicates whether or not to block Google Backup.
      */
-    @SerializedName("storageBlockGoogleBackup")
+    @SerializedName(value = "storageBlockGoogleBackup", alternate = {"StorageBlockGoogleBackup"})
     @Expose
     public Boolean storageBlockGoogleBackup;
 
@@ -326,7 +326,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Storage Block Removable Storage.
      * Indicates whether or not to block removable storage usage.
      */
-    @SerializedName("storageBlockRemovableStorage")
+    @SerializedName(value = "storageBlockRemovableStorage", alternate = {"StorageBlockRemovableStorage"})
     @Expose
     public Boolean storageBlockRemovableStorage;
 
@@ -334,7 +334,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Storage Require Device Encryption.
      * Indicates whether or not to require device encryption.
      */
-    @SerializedName("storageRequireDeviceEncryption")
+    @SerializedName(value = "storageRequireDeviceEncryption", alternate = {"StorageRequireDeviceEncryption"})
     @Expose
     public Boolean storageRequireDeviceEncryption;
 
@@ -342,7 +342,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Storage Require Removable Storage Encryption.
      * Indicates whether or not to require removable storage encryption.
      */
-    @SerializedName("storageRequireRemovableStorageEncryption")
+    @SerializedName(value = "storageRequireRemovableStorageEncryption", alternate = {"StorageRequireRemovableStorageEncryption"})
     @Expose
     public Boolean storageRequireRemovableStorageEncryption;
 
@@ -350,7 +350,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Voice Assistant Blocked.
      * Indicates whether or not to block the use of the Voice Assistant.
      */
-    @SerializedName("voiceAssistantBlocked")
+    @SerializedName(value = "voiceAssistantBlocked", alternate = {"VoiceAssistantBlocked"})
     @Expose
     public Boolean voiceAssistantBlocked;
 
@@ -358,7 +358,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Voice Dialing Blocked.
      * Indicates whether or not to block voice dialing.
      */
-    @SerializedName("voiceDialingBlocked")
+    @SerializedName(value = "voiceDialingBlocked", alternate = {"VoiceDialingBlocked"})
     @Expose
     public Boolean voiceDialingBlocked;
 
@@ -366,7 +366,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Web Browser Block Autofill.
      * Indicates whether or not to block the web browser's auto fill feature.
      */
-    @SerializedName("webBrowserBlockAutofill")
+    @SerializedName(value = "webBrowserBlockAutofill", alternate = {"WebBrowserBlockAutofill"})
     @Expose
     public Boolean webBrowserBlockAutofill;
 
@@ -374,7 +374,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Web Browser Blocked.
      * Indicates whether or not to block the web browser.
      */
-    @SerializedName("webBrowserBlocked")
+    @SerializedName(value = "webBrowserBlocked", alternate = {"WebBrowserBlocked"})
     @Expose
     public Boolean webBrowserBlocked;
 
@@ -382,7 +382,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Web Browser Block Java Script.
      * Indicates whether or not to block JavaScript within the web browser.
      */
-    @SerializedName("webBrowserBlockJavaScript")
+    @SerializedName(value = "webBrowserBlockJavaScript", alternate = {"WebBrowserBlockJavaScript"})
     @Expose
     public Boolean webBrowserBlockJavaScript;
 
@@ -390,7 +390,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Web Browser Block Popups.
      * Indicates whether or not to block popups within the web browser.
      */
-    @SerializedName("webBrowserBlockPopups")
+    @SerializedName(value = "webBrowserBlockPopups", alternate = {"WebBrowserBlockPopups"})
     @Expose
     public Boolean webBrowserBlockPopups;
 
@@ -398,7 +398,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Web Browser Cookie Settings.
      * Cookie settings within the web browser. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
      */
-    @SerializedName("webBrowserCookieSettings")
+    @SerializedName(value = "webBrowserCookieSettings", alternate = {"WebBrowserCookieSettings"})
     @Expose
     public WebBrowserCookieSettings webBrowserCookieSettings;
 
@@ -406,7 +406,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * The Wi Fi Blocked.
      * Indicates whether or not to block syncing Wi-Fi.
      */
-    @SerializedName("wiFiBlocked")
+    @SerializedName(value = "wiFiBlocked", alternate = {"WiFiBlocked"})
     @Expose
     public Boolean wiFiBlocked;
 

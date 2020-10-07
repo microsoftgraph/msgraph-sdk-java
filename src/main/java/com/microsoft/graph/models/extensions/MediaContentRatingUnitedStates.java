@@ -37,7 +37,7 @@ public class MediaContentRatingUnitedStates implements IJsonBackedObject {
      * The Movie Rating.
      * Movies rating selected for United States. Possible values are: allAllowed, allBlocked, general, parentalGuidance, parentalGuidance13, restricted, adults.
      */
-    @SerializedName("movieRating")
+    @SerializedName(value = "movieRating", alternate = {"MovieRating"})
     @Expose
     public RatingUnitedStatesMoviesType movieRating;
 
@@ -45,7 +45,7 @@ public class MediaContentRatingUnitedStates implements IJsonBackedObject {
      * The Tv Rating.
      * TV rating selected for United States. Possible values are: allAllowed, allBlocked, childrenAll, childrenAbove7, general, parentalGuidance, childrenAbove14, adults.
      */
-    @SerializedName("tvRating")
+    @SerializedName(value = "tvRating", alternate = {"TvRating"})
     @Expose
     public RatingUnitedStatesTelevisionType tvRating;
 

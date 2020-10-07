@@ -26,7 +26,7 @@ public class OmaSettingStringXml extends OmaSetting implements IJsonBackedObject
      * The File Name.
      * File name associated with the Value property (.xml).
      */
-    @SerializedName("fileName")
+    @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
     public String fileName;
 
@@ -34,7 +34,7 @@ public class OmaSettingStringXml extends OmaSetting implements IJsonBackedObject
      * The Value.
      * Value. (UTF8 encoded byte array)
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public byte[] value;
 

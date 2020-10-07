@@ -28,7 +28,7 @@ public class Place extends Entity implements IJsonBackedObject {
      * The Address.
      * The street address of the place.
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public PhysicalAddress address;
 
@@ -36,7 +36,7 @@ public class Place extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The name associated with the place.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class Place extends Entity implements IJsonBackedObject {
      * The Geo Coordinates.
      * Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
      */
-    @SerializedName("geoCoordinates")
+    @SerializedName(value = "geoCoordinates", alternate = {"GeoCoordinates"})
     @Expose
     public OutlookGeoCoordinates geoCoordinates;
 
@@ -52,7 +52,7 @@ public class Place extends Entity implements IJsonBackedObject {
      * The Phone.
      * The phone number of the place.
      */
-    @SerializedName("phone")
+    @SerializedName(value = "phone", alternate = {"Phone"})
     @Expose
     public String phone;
 

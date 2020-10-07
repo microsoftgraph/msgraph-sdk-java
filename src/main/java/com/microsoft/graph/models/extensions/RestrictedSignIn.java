@@ -26,7 +26,7 @@ public class RestrictedSignIn extends SignIn implements IJsonBackedObject {
      * The Target Tenant Id.
      * 
      */
-    @SerializedName("targetTenantId")
+    @SerializedName(value = "targetTenantId", alternate = {"TargetTenantId"})
     @Expose
     public java.util.UUID targetTenantId;
 

@@ -22,7 +22,7 @@ public class WorkbookFunctionsGamma_DistBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsGamma_DistBody {
      * The alpha.
      * 
      */
-    @SerializedName("alpha")
+    @SerializedName(value = "alpha", alternate = {"Alpha"})
     @Expose
     public com.google.gson.JsonElement alpha;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsGamma_DistBody {
      * The beta.
      * 
      */
-    @SerializedName("beta")
+    @SerializedName(value = "beta", alternate = {"Beta"})
     @Expose
     public com.google.gson.JsonElement beta;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsGamma_DistBody {
      * The cumulative.
      * 
      */
-    @SerializedName("cumulative")
+    @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
     public com.google.gson.JsonElement cumulative;
 

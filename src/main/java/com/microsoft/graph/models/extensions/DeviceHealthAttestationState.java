@@ -35,7 +35,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Attestation Identity Key.
      * TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
      */
-    @SerializedName("attestationIdentityKey")
+    @SerializedName(value = "attestationIdentityKey", alternate = {"AttestationIdentityKey"})
     @Expose
     public String attestationIdentityKey;
 
@@ -43,7 +43,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Bit Locker Status.
      * On or Off of BitLocker Drive Encryption
      */
-    @SerializedName("bitLockerStatus")
+    @SerializedName(value = "bitLockerStatus", alternate = {"BitLockerStatus"})
     @Expose
     public String bitLockerStatus;
 
@@ -51,7 +51,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Boot App Security Version.
      * The security version number of the Boot Application
      */
-    @SerializedName("bootAppSecurityVersion")
+    @SerializedName(value = "bootAppSecurityVersion", alternate = {"BootAppSecurityVersion"})
     @Expose
     public String bootAppSecurityVersion;
 
@@ -59,7 +59,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Boot Debugging.
      * When bootDebugging is enabled, the device is used in development and testing
      */
-    @SerializedName("bootDebugging")
+    @SerializedName(value = "bootDebugging", alternate = {"BootDebugging"})
     @Expose
     public String bootDebugging;
 
@@ -67,7 +67,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Boot Manager Security Version.
      * The security version number of the Boot Application
      */
-    @SerializedName("bootManagerSecurityVersion")
+    @SerializedName(value = "bootManagerSecurityVersion", alternate = {"BootManagerSecurityVersion"})
     @Expose
     public String bootManagerSecurityVersion;
 
@@ -75,7 +75,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Boot Manager Version.
      * The version of the Boot Manager
      */
-    @SerializedName("bootManagerVersion")
+    @SerializedName(value = "bootManagerVersion", alternate = {"BootManagerVersion"})
     @Expose
     public String bootManagerVersion;
 
@@ -83,7 +83,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Boot Revision List Info.
      * The Boot Revision List that was loaded during initial boot on the attested device
      */
-    @SerializedName("bootRevisionListInfo")
+    @SerializedName(value = "bootRevisionListInfo", alternate = {"BootRevisionListInfo"})
     @Expose
     public String bootRevisionListInfo;
 
@@ -91,7 +91,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Code Integrity.
      * When code integrity is enabled, code execution is restricted to integrity verified code
      */
-    @SerializedName("codeIntegrity")
+    @SerializedName(value = "codeIntegrity", alternate = {"CodeIntegrity"})
     @Expose
     public String codeIntegrity;
 
@@ -99,7 +99,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Code Integrity Check Version.
      * The version of the Boot Manager
      */
-    @SerializedName("codeIntegrityCheckVersion")
+    @SerializedName(value = "codeIntegrityCheckVersion", alternate = {"CodeIntegrityCheckVersion"})
     @Expose
     public String codeIntegrityCheckVersion;
 
@@ -107,7 +107,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Code Integrity Policy.
      * The Code Integrity policy that is controlling the security of the boot environment
      */
-    @SerializedName("codeIntegrityPolicy")
+    @SerializedName(value = "codeIntegrityPolicy", alternate = {"CodeIntegrityPolicy"})
     @Expose
     public String codeIntegrityPolicy;
 
@@ -115,7 +115,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Content Namespace Url.
      * The DHA report version. (Namespace version)
      */
-    @SerializedName("contentNamespaceUrl")
+    @SerializedName(value = "contentNamespaceUrl", alternate = {"ContentNamespaceUrl"})
     @Expose
     public String contentNamespaceUrl;
 
@@ -123,7 +123,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Content Version.
      * The HealthAttestation state schema version
      */
-    @SerializedName("contentVersion")
+    @SerializedName(value = "contentVersion", alternate = {"ContentVersion"})
     @Expose
     public String contentVersion;
 
@@ -131,7 +131,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Data Excution Policy.
      * DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
      */
-    @SerializedName("dataExcutionPolicy")
+    @SerializedName(value = "dataExcutionPolicy", alternate = {"DataExcutionPolicy"})
     @Expose
     public String dataExcutionPolicy;
 
@@ -139,7 +139,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Device Health Attestation Status.
      * The DHA report version. (Namespace version)
      */
-    @SerializedName("deviceHealthAttestationStatus")
+    @SerializedName(value = "deviceHealthAttestationStatus", alternate = {"DeviceHealthAttestationStatus"})
     @Expose
     public String deviceHealthAttestationStatus;
 
@@ -147,7 +147,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Early Launch Anti Malware Driver Protection.
      * ELAM provides protection for the computers in your network when they start up
      */
-    @SerializedName("earlyLaunchAntiMalwareDriverProtection")
+    @SerializedName(value = "earlyLaunchAntiMalwareDriverProtection", alternate = {"EarlyLaunchAntiMalwareDriverProtection"})
     @Expose
     public String earlyLaunchAntiMalwareDriverProtection;
 
@@ -155,7 +155,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Health Attestation Supported Status.
      * This attribute indicates if DHA is supported for the device
      */
-    @SerializedName("healthAttestationSupportedStatus")
+    @SerializedName(value = "healthAttestationSupportedStatus", alternate = {"HealthAttestationSupportedStatus"})
     @Expose
     public String healthAttestationSupportedStatus;
 
@@ -163,7 +163,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Health Status Mismatch Info.
      * This attribute appears if DHA-Service detects an integrity issue
      */
-    @SerializedName("healthStatusMismatchInfo")
+    @SerializedName(value = "healthStatusMismatchInfo", alternate = {"HealthStatusMismatchInfo"})
     @Expose
     public String healthStatusMismatchInfo;
 
@@ -171,7 +171,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Issued Date Time.
      * The DateTime when device was evaluated or issued to MDM
      */
-    @SerializedName("issuedDateTime")
+    @SerializedName(value = "issuedDateTime", alternate = {"IssuedDateTime"})
     @Expose
     public java.util.Calendar issuedDateTime;
 
@@ -179,7 +179,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Last Update Date Time.
      * The Timestamp of the last update.
      */
-    @SerializedName("lastUpdateDateTime")
+    @SerializedName(value = "lastUpdateDateTime", alternate = {"LastUpdateDateTime"})
     @Expose
     public String lastUpdateDateTime;
 
@@ -187,7 +187,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Operating System Kernel Debugging.
      * When operatingSystemKernelDebugging is enabled, the device is used in development and testing
      */
-    @SerializedName("operatingSystemKernelDebugging")
+    @SerializedName(value = "operatingSystemKernelDebugging", alternate = {"OperatingSystemKernelDebugging"})
     @Expose
     public String operatingSystemKernelDebugging;
 
@@ -195,7 +195,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Operating System Rev List Info.
      * The Operating System Revision List that was loaded during initial boot on the attested device
      */
-    @SerializedName("operatingSystemRevListInfo")
+    @SerializedName(value = "operatingSystemRevListInfo", alternate = {"OperatingSystemRevListInfo"})
     @Expose
     public String operatingSystemRevListInfo;
 
@@ -203,7 +203,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Pcr0.
      * The measurement that is captured in PCR[0]
      */
-    @SerializedName("pcr0")
+    @SerializedName(value = "pcr0", alternate = {"Pcr0"})
     @Expose
     public String pcr0;
 
@@ -211,7 +211,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Pcr Hash Algorithm.
      * Informational attribute that identifies the HASH algorithm that was used by TPM
      */
-    @SerializedName("pcrHashAlgorithm")
+    @SerializedName(value = "pcrHashAlgorithm", alternate = {"PcrHashAlgorithm"})
     @Expose
     public String pcrHashAlgorithm;
 
@@ -219,7 +219,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Reset Count.
      * The number of times a PC device has hibernated or resumed
      */
-    @SerializedName("resetCount")
+    @SerializedName(value = "resetCount", alternate = {"ResetCount"})
     @Expose
     public Long resetCount;
 
@@ -227,7 +227,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Restart Count.
      * The number of times a PC device has rebooted
      */
-    @SerializedName("restartCount")
+    @SerializedName(value = "restartCount", alternate = {"RestartCount"})
     @Expose
     public Long restartCount;
 
@@ -235,7 +235,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Safe Mode.
      * Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
      */
-    @SerializedName("safeMode")
+    @SerializedName(value = "safeMode", alternate = {"SafeMode"})
     @Expose
     public String safeMode;
 
@@ -243,7 +243,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Secure Boot.
      * When Secure Boot is enabled, the core components must have the correct cryptographic signatures
      */
-    @SerializedName("secureBoot")
+    @SerializedName(value = "secureBoot", alternate = {"SecureBoot"})
     @Expose
     public String secureBoot;
 
@@ -251,7 +251,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Secure Boot Configuration Policy Finger Print.
      * Fingerprint of the Custom Secure Boot Configuration Policy
      */
-    @SerializedName("secureBootConfigurationPolicyFingerPrint")
+    @SerializedName(value = "secureBootConfigurationPolicyFingerPrint", alternate = {"SecureBootConfigurationPolicyFingerPrint"})
     @Expose
     public String secureBootConfigurationPolicyFingerPrint;
 
@@ -259,7 +259,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Test Signing.
      * When test signing is allowed, the device does not enforce signature validation during boot
      */
-    @SerializedName("testSigning")
+    @SerializedName(value = "testSigning", alternate = {"TestSigning"})
     @Expose
     public String testSigning;
 
@@ -267,7 +267,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Tpm Version.
      * The security version number of the Boot Application
      */
-    @SerializedName("tpmVersion")
+    @SerializedName(value = "tpmVersion", alternate = {"TpmVersion"})
     @Expose
     public String tpmVersion;
 
@@ -275,7 +275,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Virtual Secure Mode.
      * VSM is a container that protects high value assets from a compromised kernel
      */
-    @SerializedName("virtualSecureMode")
+    @SerializedName(value = "virtualSecureMode", alternate = {"VirtualSecureMode"})
     @Expose
     public String virtualSecureMode;
 
@@ -283,7 +283,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
      * The Windows PE.
      * Operating system running with limited services that is used to prepare a computer for Windows
      */
-    @SerializedName("windowsPE")
+    @SerializedName(value = "windowsPE", alternate = {"WindowsPE"})
     @Expose
     public String windowsPE;
 

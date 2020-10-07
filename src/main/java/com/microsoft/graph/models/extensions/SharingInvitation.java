@@ -36,7 +36,7 @@ public class SharingInvitation implements IJsonBackedObject {
      * The Email.
      * The email address provided for the recipient of the sharing invitation. Read-only.
      */
-    @SerializedName("email")
+    @SerializedName(value = "email", alternate = {"Email"})
     @Expose
     public String email;
 
@@ -44,7 +44,7 @@ public class SharingInvitation implements IJsonBackedObject {
      * The Invited By.
      * Provides information about who sent the invitation that created this permission, if that information is available. Read-only.
      */
-    @SerializedName("invitedBy")
+    @SerializedName(value = "invitedBy", alternate = {"InvitedBy"})
     @Expose
     public IdentitySet invitedBy;
 
@@ -52,7 +52,7 @@ public class SharingInvitation implements IJsonBackedObject {
      * The Redeemed By.
      * 
      */
-    @SerializedName("redeemedBy")
+    @SerializedName(value = "redeemedBy", alternate = {"RedeemedBy"})
     @Expose
     public String redeemedBy;
 
@@ -60,7 +60,7 @@ public class SharingInvitation implements IJsonBackedObject {
      * The Sign In Required.
      * If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
      */
-    @SerializedName("signInRequired")
+    @SerializedName(value = "signInRequired", alternate = {"SignInRequired"})
     @Expose
     public Boolean signInRequired;
 

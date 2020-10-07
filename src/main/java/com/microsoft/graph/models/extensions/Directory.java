@@ -30,7 +30,7 @@ public class Directory extends Entity implements IJsonBackedObject {
      * The Administrative Units.
      * 
      */
-    @SerializedName("administrativeUnits")
+    @SerializedName(value = "administrativeUnits", alternate = {"AdministrativeUnits"})
     @Expose
     public AdministrativeUnitCollectionPage administrativeUnits;
 
@@ -38,7 +38,7 @@ public class Directory extends Entity implements IJsonBackedObject {
      * The Deleted Items.
      * Recently deleted items. Read-only. Nullable.
      */
-    @SerializedName("deletedItems")
+    @SerializedName(value = "deletedItems", alternate = {"DeletedItems"})
     @Expose
     public DirectoryObjectCollectionPage deletedItems;
 

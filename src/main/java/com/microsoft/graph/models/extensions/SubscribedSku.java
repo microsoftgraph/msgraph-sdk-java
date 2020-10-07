@@ -28,7 +28,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
      * The Applies To.
      * For example, 'User' or 'Company'.
      */
-    @SerializedName("appliesTo")
+    @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
     public String appliesTo;
 
@@ -36,7 +36,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
      * The Capability Status.
      * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      */
-    @SerializedName("capabilityStatus")
+    @SerializedName(value = "capabilityStatus", alternate = {"CapabilityStatus"})
     @Expose
     public String capabilityStatus;
 
@@ -44,7 +44,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
      * The Consumed Units.
      * The number of licenses that have been assigned.
      */
-    @SerializedName("consumedUnits")
+    @SerializedName(value = "consumedUnits", alternate = {"ConsumedUnits"})
     @Expose
     public Integer consumedUnits;
 
@@ -52,7 +52,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
      * The Prepaid Units.
      * Information about the number and status of prepaid licenses.
      */
-    @SerializedName("prepaidUnits")
+    @SerializedName(value = "prepaidUnits", alternate = {"PrepaidUnits"})
     @Expose
     public LicenseUnitsDetail prepaidUnits;
 
@@ -60,7 +60,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
      * The Service Plans.
      * Information about the service plans that are available with the SKU. Not nullable
      */
-    @SerializedName("servicePlans")
+    @SerializedName(value = "servicePlans", alternate = {"ServicePlans"})
     @Expose
     public java.util.List<ServicePlanInfo> servicePlans;
 
@@ -68,7 +68,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
      * The Sku Id.
      * The unique identifier (GUID) for the service SKU.
      */
-    @SerializedName("skuId")
+    @SerializedName(value = "skuId", alternate = {"SkuId"})
     @Expose
     public java.util.UUID skuId;
 
@@ -76,7 +76,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
      * The Sku Part Number.
      * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      */
-    @SerializedName("skuPartNumber")
+    @SerializedName(value = "skuPartNumber", alternate = {"SkuPartNumber"})
     @Expose
     public String skuPartNumber;
 

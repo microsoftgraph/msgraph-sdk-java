@@ -27,7 +27,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements IJsonBack
      * The License Type.
      * The app license type. Possible values are: offline, online.
      */
-    @SerializedName("licenseType")
+    @SerializedName(value = "licenseType", alternate = {"LicenseType"})
     @Expose
     public MicrosoftStoreForBusinessLicenseType licenseType;
 
@@ -35,7 +35,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements IJsonBack
      * The Package Identity Name.
      * The app package identifier
      */
-    @SerializedName("packageIdentityName")
+    @SerializedName(value = "packageIdentityName", alternate = {"PackageIdentityName"})
     @Expose
     public String packageIdentityName;
 
@@ -43,7 +43,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements IJsonBack
      * The Product Key.
      * The app product key
      */
-    @SerializedName("productKey")
+    @SerializedName(value = "productKey", alternate = {"ProductKey"})
     @Expose
     public String productKey;
 
@@ -51,7 +51,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements IJsonBack
      * The Total License Count.
      * The total number of Microsoft Store for Business licenses.
      */
-    @SerializedName("totalLicenseCount")
+    @SerializedName(value = "totalLicenseCount", alternate = {"TotalLicenseCount"})
     @Expose
     public Integer totalLicenseCount;
 
@@ -59,7 +59,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements IJsonBack
      * The Used License Count.
      * The number of Microsoft Store for Business licenses in use.
      */
-    @SerializedName("usedLicenseCount")
+    @SerializedName(value = "usedLicenseCount", alternate = {"UsedLicenseCount"})
     @Expose
     public Integer usedLicenseCount;
 

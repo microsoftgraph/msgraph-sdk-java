@@ -22,7 +22,7 @@ public class WorkbookFunctionsGeStepBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsGeStepBody {
      * The step.
      * 
      */
-    @SerializedName("step")
+    @SerializedName(value = "step", alternate = {"Step"})
     @Expose
     public com.google.gson.JsonElement step;
 

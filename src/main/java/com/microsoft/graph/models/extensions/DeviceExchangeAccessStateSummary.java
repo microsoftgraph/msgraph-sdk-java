@@ -35,7 +35,7 @@ public class DeviceExchangeAccessStateSummary implements IJsonBackedObject {
      * The Allowed Device Count.
      * Total count of devices with Exchange Access State: Allowed.
      */
-    @SerializedName("allowedDeviceCount")
+    @SerializedName(value = "allowedDeviceCount", alternate = {"AllowedDeviceCount"})
     @Expose
     public Integer allowedDeviceCount;
 
@@ -43,7 +43,7 @@ public class DeviceExchangeAccessStateSummary implements IJsonBackedObject {
      * The Blocked Device Count.
      * Total count of devices with Exchange Access State: Blocked.
      */
-    @SerializedName("blockedDeviceCount")
+    @SerializedName(value = "blockedDeviceCount", alternate = {"BlockedDeviceCount"})
     @Expose
     public Integer blockedDeviceCount;
 
@@ -51,7 +51,7 @@ public class DeviceExchangeAccessStateSummary implements IJsonBackedObject {
      * The Quarantined Device Count.
      * Total count of devices with Exchange Access State: Quarantined.
      */
-    @SerializedName("quarantinedDeviceCount")
+    @SerializedName(value = "quarantinedDeviceCount", alternate = {"QuarantinedDeviceCount"})
     @Expose
     public Integer quarantinedDeviceCount;
 
@@ -59,7 +59,7 @@ public class DeviceExchangeAccessStateSummary implements IJsonBackedObject {
      * The Unavailable Device Count.
      * Total count of devices for which no Exchange Access State could be found.
      */
-    @SerializedName("unavailableDeviceCount")
+    @SerializedName(value = "unavailableDeviceCount", alternate = {"UnavailableDeviceCount"})
     @Expose
     public Integer unavailableDeviceCount;
 
@@ -67,7 +67,7 @@ public class DeviceExchangeAccessStateSummary implements IJsonBackedObject {
      * The Unknown Device Count.
      * Total count of devices with Exchange Access State: Unknown.
      */
-    @SerializedName("unknownDeviceCount")
+    @SerializedName(value = "unknownDeviceCount", alternate = {"UnknownDeviceCount"})
     @Expose
     public Integer unknownDeviceCount;
 

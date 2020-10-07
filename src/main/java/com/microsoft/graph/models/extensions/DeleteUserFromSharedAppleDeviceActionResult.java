@@ -26,7 +26,7 @@ public class DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionRes
      * The User Principal Name.
      * User principal name of the user to be deleted
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

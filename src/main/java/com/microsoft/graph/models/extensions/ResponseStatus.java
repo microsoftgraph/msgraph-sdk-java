@@ -36,7 +36,7 @@ public class ResponseStatus implements IJsonBackedObject {
      * The Response.
      * The response type. The possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
      */
-    @SerializedName("response")
+    @SerializedName(value = "response", alternate = {"Response"})
     @Expose
     public ResponseType response;
 
@@ -44,7 +44,7 @@ public class ResponseStatus implements IJsonBackedObject {
      * The Time.
      * The date and time that the response was returned. It uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("time")
+    @SerializedName(value = "time", alternate = {"Time"})
     @Expose
     public java.util.Calendar time;
 

@@ -27,7 +27,7 @@ public class DeviceConfigurationAssignment extends Entity implements IJsonBacked
      * The Target.
      * The assignment target for the device configuration.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

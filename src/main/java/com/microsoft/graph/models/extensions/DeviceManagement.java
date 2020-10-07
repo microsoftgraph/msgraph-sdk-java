@@ -79,7 +79,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Intune Account Id.
      * Intune Account Id for given tenant
      */
-    @SerializedName("intuneAccountId")
+    @SerializedName(value = "intuneAccountId", alternate = {"IntuneAccountId"})
     @Expose
     public java.util.UUID intuneAccountId;
 
@@ -87,7 +87,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Settings.
      * Account level settings.
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public DeviceManagementSettings settings;
 
@@ -95,7 +95,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Intune Brand.
      * intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
      */
-    @SerializedName("intuneBrand")
+    @SerializedName(value = "intuneBrand", alternate = {"IntuneBrand"})
     @Expose
     public IntuneBrand intuneBrand;
 
@@ -103,7 +103,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Subscription State.
      * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
      */
-    @SerializedName("subscriptionState")
+    @SerializedName(value = "subscriptionState", alternate = {"SubscriptionState"})
     @Expose
     public DeviceManagementSubscriptionState subscriptionState;
 
@@ -111,7 +111,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Terms And Conditions.
      * The terms and conditions associated with device management of the company.
      */
-    @SerializedName("termsAndConditions")
+    @SerializedName(value = "termsAndConditions", alternate = {"TermsAndConditions"})
     @Expose
     public TermsAndConditionsCollectionPage termsAndConditions;
 
@@ -119,7 +119,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Device Compliance Policies.
      * The device compliance policies.
      */
-    @SerializedName("deviceCompliancePolicies")
+    @SerializedName(value = "deviceCompliancePolicies", alternate = {"DeviceCompliancePolicies"})
     @Expose
     public DeviceCompliancePolicyCollectionPage deviceCompliancePolicies;
 
@@ -127,7 +127,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Device Compliance Policy Device State Summary.
      * The device compliance state summary for this account.
      */
-    @SerializedName("deviceCompliancePolicyDeviceStateSummary")
+    @SerializedName(value = "deviceCompliancePolicyDeviceStateSummary", alternate = {"DeviceCompliancePolicyDeviceStateSummary"})
     @Expose
     public DeviceCompliancePolicyDeviceStateSummary deviceCompliancePolicyDeviceStateSummary;
 
@@ -135,7 +135,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Device Compliance Policy Setting State Summaries.
      * The summary states of compliance policy settings for this account.
      */
-    @SerializedName("deviceCompliancePolicySettingStateSummaries")
+    @SerializedName(value = "deviceCompliancePolicySettingStateSummaries", alternate = {"DeviceCompliancePolicySettingStateSummaries"})
     @Expose
     public DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
 
@@ -143,7 +143,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Device Configuration Device State Summaries.
      * The device configuration device state summary for this account.
      */
-    @SerializedName("deviceConfigurationDeviceStateSummaries")
+    @SerializedName(value = "deviceConfigurationDeviceStateSummaries", alternate = {"DeviceConfigurationDeviceStateSummaries"})
     @Expose
     public DeviceConfigurationDeviceStateSummary deviceConfigurationDeviceStateSummaries;
 
@@ -151,7 +151,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Device Configurations.
      * The device configurations.
      */
-    @SerializedName("deviceConfigurations")
+    @SerializedName(value = "deviceConfigurations", alternate = {"DeviceConfigurations"})
     @Expose
     public DeviceConfigurationCollectionPage deviceConfigurations;
 
@@ -159,7 +159,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Ios Update Statuses.
      * The IOS software update installation statuses for this account.
      */
-    @SerializedName("iosUpdateStatuses")
+    @SerializedName(value = "iosUpdateStatuses", alternate = {"IosUpdateStatuses"})
     @Expose
     public IosUpdateDeviceStatusCollectionPage iosUpdateStatuses;
 
@@ -167,7 +167,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Software Update Status Summary.
      * The software update status summary.
      */
-    @SerializedName("softwareUpdateStatusSummary")
+    @SerializedName(value = "softwareUpdateStatusSummary", alternate = {"SoftwareUpdateStatusSummary"})
     @Expose
     public SoftwareUpdateStatusSummary softwareUpdateStatusSummary;
 
@@ -175,7 +175,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Compliance Management Partners.
      * The list of Compliance Management Partners configured by the tenant.
      */
-    @SerializedName("complianceManagementPartners")
+    @SerializedName(value = "complianceManagementPartners", alternate = {"ComplianceManagementPartners"})
     @Expose
     public ComplianceManagementPartnerCollectionPage complianceManagementPartners;
 
@@ -183,7 +183,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Conditional Access Settings.
      * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      */
-    @SerializedName("conditionalAccessSettings")
+    @SerializedName(value = "conditionalAccessSettings", alternate = {"ConditionalAccessSettings"})
     @Expose
     public OnPremisesConditionalAccessSettings conditionalAccessSettings;
 
@@ -191,7 +191,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Device Categories.
      * The list of device categories with the tenant.
      */
-    @SerializedName("deviceCategories")
+    @SerializedName(value = "deviceCategories", alternate = {"DeviceCategories"})
     @Expose
     public DeviceCategoryCollectionPage deviceCategories;
 
@@ -199,7 +199,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Device Enrollment Configurations.
      * The list of device enrollment configurations
      */
-    @SerializedName("deviceEnrollmentConfigurations")
+    @SerializedName(value = "deviceEnrollmentConfigurations", alternate = {"DeviceEnrollmentConfigurations"})
     @Expose
     public DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
 
@@ -207,7 +207,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Device Management Partners.
      * The list of Device Management Partners configured by the tenant.
      */
-    @SerializedName("deviceManagementPartners")
+    @SerializedName(value = "deviceManagementPartners", alternate = {"DeviceManagementPartners"})
     @Expose
     public DeviceManagementPartnerCollectionPage deviceManagementPartners;
 
@@ -215,7 +215,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Exchange Connectors.
      * The list of Exchange Connectors configured by the tenant.
      */
-    @SerializedName("exchangeConnectors")
+    @SerializedName(value = "exchangeConnectors", alternate = {"ExchangeConnectors"})
     @Expose
     public DeviceManagementExchangeConnectorCollectionPage exchangeConnectors;
 
@@ -223,7 +223,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Mobile Threat Defense Connectors.
      * The list of Mobile threat Defense connectors configured by the tenant.
      */
-    @SerializedName("mobileThreatDefenseConnectors")
+    @SerializedName(value = "mobileThreatDefenseConnectors", alternate = {"MobileThreatDefenseConnectors"})
     @Expose
     public MobileThreatDefenseConnectorCollectionPage mobileThreatDefenseConnectors;
 
@@ -231,7 +231,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Apple Push Notification Certificate.
      * Apple push notification certificate.
      */
-    @SerializedName("applePushNotificationCertificate")
+    @SerializedName(value = "applePushNotificationCertificate", alternate = {"ApplePushNotificationCertificate"})
     @Expose
     public ApplePushNotificationCertificate applePushNotificationCertificate;
 
@@ -239,7 +239,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Detected Apps.
      * The list of detected apps associated with a device.
      */
-    @SerializedName("detectedApps")
+    @SerializedName(value = "detectedApps", alternate = {"DetectedApps"})
     @Expose
     public DetectedAppCollectionPage detectedApps;
 
@@ -247,7 +247,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Managed Device Overview.
      * Device overview
      */
-    @SerializedName("managedDeviceOverview")
+    @SerializedName(value = "managedDeviceOverview", alternate = {"ManagedDeviceOverview"})
     @Expose
     public ManagedDeviceOverview managedDeviceOverview;
 
@@ -255,7 +255,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Managed Devices.
      * The list of managed devices.
      */
-    @SerializedName("managedDevices")
+    @SerializedName(value = "managedDevices", alternate = {"ManagedDevices"})
     @Expose
     public ManagedDeviceCollectionPage managedDevices;
 
@@ -263,7 +263,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Notification Message Templates.
      * The Notification Message Templates.
      */
-    @SerializedName("notificationMessageTemplates")
+    @SerializedName(value = "notificationMessageTemplates", alternate = {"NotificationMessageTemplates"})
     @Expose
     public NotificationMessageTemplateCollectionPage notificationMessageTemplates;
 
@@ -271,7 +271,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Resource Operations.
      * The Resource Operations.
      */
-    @SerializedName("resourceOperations")
+    @SerializedName(value = "resourceOperations", alternate = {"ResourceOperations"})
     @Expose
     public ResourceOperationCollectionPage resourceOperations;
 
@@ -279,7 +279,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Role Assignments.
      * The Role Assignments.
      */
-    @SerializedName("roleAssignments")
+    @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
     public DeviceAndAppManagementRoleAssignmentCollectionPage roleAssignments;
 
@@ -287,7 +287,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Role Definitions.
      * The Role Definitions.
      */
-    @SerializedName("roleDefinitions")
+    @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
     public RoleDefinitionCollectionPage roleDefinitions;
 
@@ -295,7 +295,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Remote Assistance Partners.
      * The remote assist partners.
      */
-    @SerializedName("remoteAssistancePartners")
+    @SerializedName(value = "remoteAssistancePartners", alternate = {"RemoteAssistancePartners"})
     @Expose
     public RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
 
@@ -303,7 +303,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Telecom Expense Management Partners.
      * The telecom expense management partners.
      */
-    @SerializedName("telecomExpenseManagementPartners")
+    @SerializedName(value = "telecomExpenseManagementPartners", alternate = {"TelecomExpenseManagementPartners"})
     @Expose
     public TelecomExpenseManagementPartnerCollectionPage telecomExpenseManagementPartners;
 
@@ -311,7 +311,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Troubleshooting Events.
      * The list of troubleshooting events for the tenant.
      */
-    @SerializedName("troubleshootingEvents")
+    @SerializedName(value = "troubleshootingEvents", alternate = {"TroubleshootingEvents"})
     @Expose
     public DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
 
@@ -319,7 +319,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Windows Information Protection App Learning Summaries.
      * The windows information protection app learning summaries.
      */
-    @SerializedName("windowsInformationProtectionAppLearningSummaries")
+    @SerializedName(value = "windowsInformationProtectionAppLearningSummaries", alternate = {"WindowsInformationProtectionAppLearningSummaries"})
     @Expose
     public WindowsInformationProtectionAppLearningSummaryCollectionPage windowsInformationProtectionAppLearningSummaries;
 
@@ -327,7 +327,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Windows Information Protection Network Learning Summaries.
      * The windows information protection network learning summaries.
      */
-    @SerializedName("windowsInformationProtectionNetworkLearningSummaries")
+    @SerializedName(value = "windowsInformationProtectionNetworkLearningSummaries", alternate = {"WindowsInformationProtectionNetworkLearningSummaries"})
     @Expose
     public WindowsInformationProtectionNetworkLearningSummaryCollectionPage windowsInformationProtectionNetworkLearningSummaries;
 

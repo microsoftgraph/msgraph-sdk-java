@@ -35,7 +35,7 @@ public class HostSecurityState implements IJsonBackedObject {
      * The Fqdn.
      * Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
      */
-    @SerializedName("fqdn")
+    @SerializedName(value = "fqdn", alternate = {"Fqdn"})
     @Expose
     public String fqdn;
 
@@ -43,7 +43,7 @@ public class HostSecurityState implements IJsonBackedObject {
      * The Is Azure Ad Joined.
      * 
      */
-    @SerializedName("isAzureAdJoined")
+    @SerializedName(value = "isAzureAdJoined", alternate = {"IsAzureAdJoined"})
     @Expose
     public Boolean isAzureAdJoined;
 
@@ -51,7 +51,7 @@ public class HostSecurityState implements IJsonBackedObject {
      * The Is Azure Ad Registered.
      * 
      */
-    @SerializedName("isAzureAdRegistered")
+    @SerializedName(value = "isAzureAdRegistered", alternate = {"IsAzureAdRegistered"})
     @Expose
     public Boolean isAzureAdRegistered;
 
@@ -59,7 +59,7 @@ public class HostSecurityState implements IJsonBackedObject {
      * The Is Hybrid Azure Domain Joined.
      * True if the host is domain joined to an on-premises Active Directory domain.
      */
-    @SerializedName("isHybridAzureDomainJoined")
+    @SerializedName(value = "isHybridAzureDomainJoined", alternate = {"IsHybridAzureDomainJoined"})
     @Expose
     public Boolean isHybridAzureDomainJoined;
 
@@ -67,7 +67,7 @@ public class HostSecurityState implements IJsonBackedObject {
      * The Net Bios Name.
      * The local host name, without the DNS domain name.
      */
-    @SerializedName("netBiosName")
+    @SerializedName(value = "netBiosName", alternate = {"NetBiosName"})
     @Expose
     public String netBiosName;
 
@@ -75,7 +75,7 @@ public class HostSecurityState implements IJsonBackedObject {
      * The Os.
      * Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
      */
-    @SerializedName("os")
+    @SerializedName(value = "os", alternate = {"Os"})
     @Expose
     public String os;
 
@@ -83,7 +83,7 @@ public class HostSecurityState implements IJsonBackedObject {
      * The Private Ip Address.
      * Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
      */
-    @SerializedName("privateIpAddress")
+    @SerializedName(value = "privateIpAddress", alternate = {"PrivateIpAddress"})
     @Expose
     public String privateIpAddress;
 
@@ -91,7 +91,7 @@ public class HostSecurityState implements IJsonBackedObject {
      * The Public Ip Address.
      * Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
      */
-    @SerializedName("publicIpAddress")
+    @SerializedName(value = "publicIpAddress", alternate = {"PublicIpAddress"})
     @Expose
     public String publicIpAddress;
 
@@ -99,7 +99,7 @@ public class HostSecurityState implements IJsonBackedObject {
      * The Risk Score.
      * Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
      */
-    @SerializedName("riskScore")
+    @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose
     public String riskScore;
 

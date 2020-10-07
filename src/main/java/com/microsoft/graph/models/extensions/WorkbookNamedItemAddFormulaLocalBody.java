@@ -22,7 +22,7 @@ public class WorkbookNamedItemAddFormulaLocalBody {
      * The name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -30,7 +30,7 @@ public class WorkbookNamedItemAddFormulaLocalBody {
      * The formula.
      * 
      */
-    @SerializedName("formula")
+    @SerializedName(value = "formula", alternate = {"Formula"})
     @Expose
     public String formula;
 
@@ -38,7 +38,7 @@ public class WorkbookNamedItemAddFormulaLocalBody {
      * The comment.
      * 
      */
-    @SerializedName("comment")
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
     public String comment;
 

@@ -36,7 +36,7 @@ public class Win32LobAppMsiInformation implements IJsonBackedObject {
      * The Package Type.
      * The MSI package type. Possible values are: perMachine, perUser, dualPurpose.
      */
-    @SerializedName("packageType")
+    @SerializedName(value = "packageType", alternate = {"PackageType"})
     @Expose
     public Win32LobAppMsiPackageType packageType;
 
@@ -44,7 +44,7 @@ public class Win32LobAppMsiInformation implements IJsonBackedObject {
      * The Product Code.
      * The MSI product code.
      */
-    @SerializedName("productCode")
+    @SerializedName(value = "productCode", alternate = {"ProductCode"})
     @Expose
     public String productCode;
 
@@ -52,7 +52,7 @@ public class Win32LobAppMsiInformation implements IJsonBackedObject {
      * The Product Name.
      * The MSI product name.
      */
-    @SerializedName("productName")
+    @SerializedName(value = "productName", alternate = {"ProductName"})
     @Expose
     public String productName;
 
@@ -60,7 +60,7 @@ public class Win32LobAppMsiInformation implements IJsonBackedObject {
      * The Product Version.
      * The MSI product version.
      */
-    @SerializedName("productVersion")
+    @SerializedName(value = "productVersion", alternate = {"ProductVersion"})
     @Expose
     public String productVersion;
 
@@ -68,7 +68,7 @@ public class Win32LobAppMsiInformation implements IJsonBackedObject {
      * The Publisher.
      * The MSI publisher.
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 
@@ -76,7 +76,7 @@ public class Win32LobAppMsiInformation implements IJsonBackedObject {
      * The Requires Reboot.
      * Whether the MSI app requires the machine to reboot to complete installation.
      */
-    @SerializedName("requiresReboot")
+    @SerializedName(value = "requiresReboot", alternate = {"RequiresReboot"})
     @Expose
     public Boolean requiresReboot;
 
@@ -84,7 +84,7 @@ public class Win32LobAppMsiInformation implements IJsonBackedObject {
      * The Upgrade Code.
      * The MSI upgrade code.
      */
-    @SerializedName("upgradeCode")
+    @SerializedName(value = "upgradeCode", alternate = {"UpgradeCode"})
     @Expose
     public String upgradeCode;
 

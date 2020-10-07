@@ -26,7 +26,7 @@ public class WebApp extends MobileApp implements IJsonBackedObject {
      * The App Url.
      * The web app URL.
      */
-    @SerializedName("appUrl")
+    @SerializedName(value = "appUrl", alternate = {"AppUrl"})
     @Expose
     public String appUrl;
 
@@ -34,7 +34,7 @@ public class WebApp extends MobileApp implements IJsonBackedObject {
      * The Use Managed Browser.
      * Whether or not to use managed browser. This property is only applicable for Android and IOS.
      */
-    @SerializedName("useManagedBrowser")
+    @SerializedName(value = "useManagedBrowser", alternate = {"UseManagedBrowser"})
     @Expose
     public Boolean useManagedBrowser;
 

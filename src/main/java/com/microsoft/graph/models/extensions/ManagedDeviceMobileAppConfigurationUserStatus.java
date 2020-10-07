@@ -27,7 +27,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      * The Devices Count.
      * Devices count for that user.
      */
-    @SerializedName("devicesCount")
+    @SerializedName(value = "devicesCount", alternate = {"DevicesCount"})
     @Expose
     public Integer devicesCount;
 
@@ -35,7 +35,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      * The Last Reported Date Time.
      * Last modified date time of the policy report.
      */
-    @SerializedName("lastReportedDateTime")
+    @SerializedName(value = "lastReportedDateTime", alternate = {"LastReportedDateTime"})
     @Expose
     public java.util.Calendar lastReportedDateTime;
 
@@ -43,7 +43,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      * The Status.
      * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public ComplianceStatus status;
 
@@ -51,7 +51,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      * The User Display Name.
      * User name of the DevicePolicyStatus.
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -59,7 +59,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
      * The User Principal Name.
      * UserPrincipalName.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

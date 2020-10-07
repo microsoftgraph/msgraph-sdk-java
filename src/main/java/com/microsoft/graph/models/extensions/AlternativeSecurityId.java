@@ -35,7 +35,7 @@ public class AlternativeSecurityId implements IJsonBackedObject {
      * The Identity Provider.
      * For internal use only
      */
-    @SerializedName("identityProvider")
+    @SerializedName(value = "identityProvider", alternate = {"IdentityProvider"})
     @Expose
     public String identityProvider;
 
@@ -43,7 +43,7 @@ public class AlternativeSecurityId implements IJsonBackedObject {
      * The Key.
      * For internal use only
      */
-    @SerializedName("key")
+    @SerializedName(value = "key", alternate = {"Key"})
     @Expose
     public byte[] key;
 
@@ -51,7 +51,7 @@ public class AlternativeSecurityId implements IJsonBackedObject {
      * The Type.
      * For internal use only
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public Integer type;
 

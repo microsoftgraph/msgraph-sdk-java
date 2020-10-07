@@ -22,7 +22,7 @@ public class UserChangePasswordBody {
      * The current Password.
      * 
      */
-    @SerializedName("currentPassword")
+    @SerializedName(value = "currentPassword", alternate = {"CurrentPassword"})
     @Expose
     public String currentPassword;
 
@@ -30,7 +30,7 @@ public class UserChangePasswordBody {
      * The new Password.
      * 
      */
-    @SerializedName("newPassword")
+    @SerializedName(value = "newPassword", alternate = {"NewPassword"})
     @Expose
     public String newPassword;
 

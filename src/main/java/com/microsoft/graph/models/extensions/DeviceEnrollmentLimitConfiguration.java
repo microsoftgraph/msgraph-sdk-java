@@ -26,7 +26,7 @@ public class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfigur
      * The Limit.
      * Not yet documented
      */
-    @SerializedName("limit")
+    @SerializedName(value = "limit", alternate = {"Limit"})
     @Expose
     public Integer limit;
 

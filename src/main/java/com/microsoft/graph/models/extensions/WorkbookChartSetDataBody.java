@@ -22,7 +22,7 @@ public class WorkbookChartSetDataBody {
      * The source Data.
      * 
      */
-    @SerializedName("sourceData")
+    @SerializedName(value = "sourceData", alternate = {"SourceData"})
     @Expose
     public com.google.gson.JsonElement sourceData;
 
@@ -30,7 +30,7 @@ public class WorkbookChartSetDataBody {
      * The series By.
      * 
      */
-    @SerializedName("seriesBy")
+    @SerializedName(value = "seriesBy", alternate = {"SeriesBy"})
     @Expose
     public String seriesBy;
 

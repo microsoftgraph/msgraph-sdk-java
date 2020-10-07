@@ -26,7 +26,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The name of the app provided by the app developer.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Teams App Id.
      * The ID from the Teams app manifest.
      */
-    @SerializedName("teamsAppId")
+    @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
     @Expose
     public String teamsAppId;
 
@@ -42,7 +42,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
      * The Version.
      * The version number of the application.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

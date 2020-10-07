@@ -28,7 +28,7 @@ public class WorkbookChartTitleFormat extends Entity implements IJsonBackedObjec
      * The Fill.
      * Represents the fill format of an object, which includes background formatting information. Read-only.
      */
-    @SerializedName("fill")
+    @SerializedName(value = "fill", alternate = {"Fill"})
     @Expose
     public WorkbookChartFill fill;
 
@@ -36,7 +36,7 @@ public class WorkbookChartTitleFormat extends Entity implements IJsonBackedObjec
      * The Font.
      * Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
      */
-    @SerializedName("font")
+    @SerializedName(value = "font", alternate = {"Font"})
     @Expose
     public WorkbookChartFont font;
 

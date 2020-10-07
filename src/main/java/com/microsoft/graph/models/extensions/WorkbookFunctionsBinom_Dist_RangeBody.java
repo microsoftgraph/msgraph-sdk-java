@@ -22,7 +22,7 @@ public class WorkbookFunctionsBinom_Dist_RangeBody {
      * The trials.
      * 
      */
-    @SerializedName("trials")
+    @SerializedName(value = "trials", alternate = {"Trials"})
     @Expose
     public com.google.gson.JsonElement trials;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsBinom_Dist_RangeBody {
      * The probability S.
      * 
      */
-    @SerializedName("probabilityS")
+    @SerializedName(value = "probabilityS", alternate = {"ProbabilityS"})
     @Expose
     public com.google.gson.JsonElement probabilityS;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsBinom_Dist_RangeBody {
      * The number S.
      * 
      */
-    @SerializedName("numberS")
+    @SerializedName(value = "numberS", alternate = {"NumberS"})
     @Expose
     public com.google.gson.JsonElement numberS;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsBinom_Dist_RangeBody {
      * The number S2.
      * 
      */
-    @SerializedName("numberS2")
+    @SerializedName(value = "numberS2", alternate = {"NumberS2"})
     @Expose
     public com.google.gson.JsonElement numberS2;
 

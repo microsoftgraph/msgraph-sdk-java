@@ -26,7 +26,7 @@ public class SingleValueLegacyExtendedProperty extends Entity implements IJsonBa
      * The Value.
      * A property value.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

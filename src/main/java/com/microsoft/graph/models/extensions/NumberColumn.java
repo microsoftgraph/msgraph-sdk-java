@@ -35,7 +35,7 @@ public class NumberColumn implements IJsonBackedObject {
      * The Decimal Places.
      * How many decimal places to display. See below for information about the possible values.
      */
-    @SerializedName("decimalPlaces")
+    @SerializedName(value = "decimalPlaces", alternate = {"DecimalPlaces"})
     @Expose
     public String decimalPlaces;
 
@@ -43,7 +43,7 @@ public class NumberColumn implements IJsonBackedObject {
      * The Display As.
      * How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
      */
-    @SerializedName("displayAs")
+    @SerializedName(value = "displayAs", alternate = {"DisplayAs"})
     @Expose
     public String displayAs;
 
@@ -51,7 +51,7 @@ public class NumberColumn implements IJsonBackedObject {
      * The Maximum.
      * The maximum permitted value.
      */
-    @SerializedName("maximum")
+    @SerializedName(value = "maximum", alternate = {"Maximum"})
     @Expose
     public Double maximum;
 
@@ -59,7 +59,7 @@ public class NumberColumn implements IJsonBackedObject {
      * The Minimum.
      * The minimum permitted value.
      */
-    @SerializedName("minimum")
+    @SerializedName(value = "minimum", alternate = {"Minimum"})
     @Expose
     public Double minimum;
 

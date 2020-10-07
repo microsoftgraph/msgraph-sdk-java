@@ -22,7 +22,7 @@ public class WorkbookFunctionsBin2OctBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsBin2OctBody {
      * The places.
      * 
      */
-    @SerializedName("places")
+    @SerializedName(value = "places", alternate = {"Places"})
     @Expose
     public com.google.gson.JsonElement places;
 

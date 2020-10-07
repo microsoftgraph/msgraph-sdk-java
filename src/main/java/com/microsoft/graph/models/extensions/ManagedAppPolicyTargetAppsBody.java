@@ -22,7 +22,7 @@ public class ManagedAppPolicyTargetAppsBody {
      * The apps.
      * 
      */
-    @SerializedName("apps")
+    @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
     public java.util.List<ManagedMobileApp> apps;
 

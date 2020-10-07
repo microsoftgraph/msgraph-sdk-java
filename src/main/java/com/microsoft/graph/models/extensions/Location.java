@@ -39,7 +39,7 @@ public class Location implements IJsonBackedObject {
      * The Address.
      * The street address of the location.
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public PhysicalAddress address;
 
@@ -47,7 +47,7 @@ public class Location implements IJsonBackedObject {
      * The Coordinates.
      * The geographic coordinates and elevation of the location.
      */
-    @SerializedName("coordinates")
+    @SerializedName(value = "coordinates", alternate = {"Coordinates"})
     @Expose
     public OutlookGeoCoordinates coordinates;
 
@@ -55,7 +55,7 @@ public class Location implements IJsonBackedObject {
      * The Display Name.
      * The name associated with the location.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -63,7 +63,7 @@ public class Location implements IJsonBackedObject {
      * The Location Email Address.
      * Optional email address of the location.
      */
-    @SerializedName("locationEmailAddress")
+    @SerializedName(value = "locationEmailAddress", alternate = {"LocationEmailAddress"})
     @Expose
     public String locationEmailAddress;
 
@@ -71,7 +71,7 @@ public class Location implements IJsonBackedObject {
      * The Location Type.
      * The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      */
-    @SerializedName("locationType")
+    @SerializedName(value = "locationType", alternate = {"LocationType"})
     @Expose
     public LocationType locationType;
 
@@ -79,7 +79,7 @@ public class Location implements IJsonBackedObject {
      * The Location Uri.
      * Optional URI representing the location.
      */
-    @SerializedName("locationUri")
+    @SerializedName(value = "locationUri", alternate = {"LocationUri"})
     @Expose
     public String locationUri;
 
@@ -87,7 +87,7 @@ public class Location implements IJsonBackedObject {
      * The Unique Id.
      * For internal use only.
      */
-    @SerializedName("uniqueId")
+    @SerializedName(value = "uniqueId", alternate = {"UniqueId"})
     @Expose
     public String uniqueId;
 
@@ -95,7 +95,7 @@ public class Location implements IJsonBackedObject {
      * The Unique Id Type.
      * For internal use only.
      */
-    @SerializedName("uniqueIdType")
+    @SerializedName(value = "uniqueIdType", alternate = {"UniqueIdType"})
     @Expose
     public LocationUniqueIdType uniqueIdType;
 

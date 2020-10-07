@@ -22,7 +22,7 @@ public class ManagedDeviceWipeBody {
      * The keep Enrollment Data.
      * 
      */
-    @SerializedName("keepEnrollmentData")
+    @SerializedName(value = "keepEnrollmentData", alternate = {"KeepEnrollmentData"})
     @Expose
     public Boolean keepEnrollmentData;
 
@@ -30,7 +30,7 @@ public class ManagedDeviceWipeBody {
      * The keep User Data.
      * 
      */
-    @SerializedName("keepUserData")
+    @SerializedName(value = "keepUserData", alternate = {"KeepUserData"})
     @Expose
     public Boolean keepUserData;
 
@@ -38,7 +38,7 @@ public class ManagedDeviceWipeBody {
      * The mac Os Unlock Code.
      * 
      */
-    @SerializedName("macOsUnlockCode")
+    @SerializedName(value = "macOsUnlockCode", alternate = {"MacOsUnlockCode"})
     @Expose
     public String macOsUnlockCode;
 

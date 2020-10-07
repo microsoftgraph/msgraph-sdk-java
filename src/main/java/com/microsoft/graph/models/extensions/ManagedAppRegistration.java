@@ -32,7 +32,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The App Identifier.
      * The app package Identifier
      */
-    @SerializedName("appIdentifier")
+    @SerializedName(value = "appIdentifier", alternate = {"AppIdentifier"})
     @Expose
     public MobileAppIdentifier appIdentifier;
 
@@ -40,7 +40,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Application Version.
      * App version
      */
-    @SerializedName("applicationVersion")
+    @SerializedName(value = "applicationVersion", alternate = {"ApplicationVersion"})
     @Expose
     public String applicationVersion;
 
@@ -48,7 +48,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Created Date Time.
      * Date and time of creation
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -56,7 +56,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Device Name.
      * Host device name
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -64,7 +64,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Device Tag.
      * App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
      */
-    @SerializedName("deviceTag")
+    @SerializedName(value = "deviceTag", alternate = {"DeviceTag"})
     @Expose
     public String deviceTag;
 
@@ -72,7 +72,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Device Type.
      * Host device type
      */
-    @SerializedName("deviceType")
+    @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose
     public String deviceType;
 
@@ -80,7 +80,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Flagged Reasons.
      * Zero or more reasons an app registration is flagged. E.g. app running on rooted device
      */
-    @SerializedName("flaggedReasons")
+    @SerializedName(value = "flaggedReasons", alternate = {"FlaggedReasons"})
     @Expose
     public java.util.List<ManagedAppFlaggedReason> flaggedReasons;
 
@@ -88,7 +88,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Last Sync Date Time.
      * Date and time of last the app synced with management service.
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -96,7 +96,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Management Sdk Version.
      * App management SDK version
      */
-    @SerializedName("managementSdkVersion")
+    @SerializedName(value = "managementSdkVersion", alternate = {"ManagementSdkVersion"})
     @Expose
     public String managementSdkVersion;
 
@@ -104,7 +104,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Platform Version.
      * Operating System version
      */
-    @SerializedName("platformVersion")
+    @SerializedName(value = "platformVersion", alternate = {"PlatformVersion"})
     @Expose
     public String platformVersion;
 
@@ -112,7 +112,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The User Id.
      * The user Id to who this app registration belongs.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -120,7 +120,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Version.
      * Version of the entity.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 
@@ -128,7 +128,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Applied Policies.
      * Zero or more policys already applied on the registered app when it last synchronized with managment service.
      */
-    @SerializedName("appliedPolicies")
+    @SerializedName(value = "appliedPolicies", alternate = {"AppliedPolicies"})
     @Expose
     public ManagedAppPolicyCollectionPage appliedPolicies;
 
@@ -136,7 +136,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Intended Policies.
      * Zero or more policies admin intended for the app as of now.
      */
-    @SerializedName("intendedPolicies")
+    @SerializedName(value = "intendedPolicies", alternate = {"IntendedPolicies"})
     @Expose
     public ManagedAppPolicyCollectionPage intendedPolicies;
 
@@ -144,7 +144,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Operations.
      * Zero or more long running operations triggered on the app registration.
      */
-    @SerializedName("operations")
+    @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
     public ManagedAppOperationCollectionPage operations;
 

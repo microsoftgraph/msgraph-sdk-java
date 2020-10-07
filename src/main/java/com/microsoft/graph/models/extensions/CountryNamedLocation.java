@@ -26,7 +26,7 @@ public class CountryNamedLocation extends NamedLocation implements IJsonBackedOb
      * The Countries And Regions.
      * List of countries and/or regions in two-letter format specified by ISO 3166-2.
      */
-    @SerializedName("countriesAndRegions")
+    @SerializedName(value = "countriesAndRegions", alternate = {"CountriesAndRegions"})
     @Expose
     public java.util.List<String> countriesAndRegions;
 
@@ -34,7 +34,7 @@ public class CountryNamedLocation extends NamedLocation implements IJsonBackedOb
      * The Include Unknown Countries And Regions.
      * True if IP addresses that don't map to a country or region should be included in the named location.
      */
-    @SerializedName("includeUnknownCountriesAndRegions")
+    @SerializedName(value = "includeUnknownCountriesAndRegions", alternate = {"IncludeUnknownCountriesAndRegions"})
     @Expose
     public Boolean includeUnknownCountriesAndRegions;
 

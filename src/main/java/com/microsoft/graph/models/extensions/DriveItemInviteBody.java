@@ -23,7 +23,7 @@ public class DriveItemInviteBody {
      * The require Sign In.
      * 
      */
-    @SerializedName("requireSignIn")
+    @SerializedName(value = "requireSignIn", alternate = {"RequireSignIn"})
     @Expose
     public Boolean requireSignIn;
 
@@ -31,7 +31,7 @@ public class DriveItemInviteBody {
      * The roles.
      * 
      */
-    @SerializedName("roles")
+    @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose
     public java.util.List<String> roles;
 
@@ -39,7 +39,7 @@ public class DriveItemInviteBody {
      * The send Invitation.
      * 
      */
-    @SerializedName("sendInvitation")
+    @SerializedName(value = "sendInvitation", alternate = {"SendInvitation"})
     @Expose
     public Boolean sendInvitation;
 
@@ -47,7 +47,7 @@ public class DriveItemInviteBody {
      * The message.
      * 
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public String message;
 
@@ -55,7 +55,7 @@ public class DriveItemInviteBody {
      * The recipients.
      * 
      */
-    @SerializedName("recipients")
+    @SerializedName(value = "recipients", alternate = {"Recipients"})
     @Expose
     public java.util.List<DriveRecipient> recipients;
 
@@ -63,7 +63,7 @@ public class DriveItemInviteBody {
      * The expiration Date Time.
      * 
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public String expirationDateTime;
 
@@ -71,7 +71,7 @@ public class DriveItemInviteBody {
      * The password.
      * 
      */
-    @SerializedName("password")
+    @SerializedName(value = "password", alternate = {"Password"})
     @Expose
     public String password;
 

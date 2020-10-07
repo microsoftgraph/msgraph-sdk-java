@@ -29,7 +29,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * The Comparison Value.
      * The script output comparison value. Do not specify a value if the rule is used for detection.
      */
-    @SerializedName("comparisonValue")
+    @SerializedName(value = "comparisonValue", alternate = {"ComparisonValue"})
     @Expose
     public String comparisonValue;
 
@@ -37,7 +37,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * The Display Name.
      * The display name for the rule. Do not specify this value if the rule is used for detection.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -45,7 +45,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * The Enforce Signature Check.
      * A value indicating whether a signature check is enforced.
      */
-    @SerializedName("enforceSignatureCheck")
+    @SerializedName(value = "enforceSignatureCheck", alternate = {"EnforceSignatureCheck"})
     @Expose
     public Boolean enforceSignatureCheck;
 
@@ -53,7 +53,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * The Operation Type.
      * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection. Possible values are: notConfigured, string, dateTime, integer, float, version, boolean.
      */
-    @SerializedName("operationType")
+    @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose
     public Win32LobAppPowerShellScriptRuleOperationType operationType;
 
@@ -61,7 +61,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * The Operator.
      * The script output operator. Use NotConfigured (the default value) if the rule is used for detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
      */
-    @SerializedName("operator")
+    @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
     public Win32LobAppRuleOperator operator;
 
@@ -69,7 +69,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * The Run As32Bit.
      * A value indicating whether the script should run as 32-bit.
      */
-    @SerializedName("runAs32Bit")
+    @SerializedName(value = "runAs32Bit", alternate = {"RunAs32Bit"})
     @Expose
     public Boolean runAs32Bit;
 
@@ -77,7 +77,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * The Run As Account.
      * The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context.
      */
-    @SerializedName("runAsAccount")
+    @SerializedName(value = "runAsAccount", alternate = {"RunAsAccount"})
     @Expose
     public RunAsAccountType runAsAccount;
 
@@ -85,7 +85,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * The Script Content.
      * The base64-encoded script content.
      */
-    @SerializedName("scriptContent")
+    @SerializedName(value = "scriptContent", alternate = {"ScriptContent"})
     @Expose
     public String scriptContent;
 

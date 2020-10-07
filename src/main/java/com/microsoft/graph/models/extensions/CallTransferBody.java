@@ -22,7 +22,7 @@ public class CallTransferBody {
      * The transfer Target.
      * 
      */
-    @SerializedName("transferTarget")
+    @SerializedName(value = "transferTarget", alternate = {"TransferTarget"})
     @Expose
     public InvitationParticipantInfo transferTarget;
 

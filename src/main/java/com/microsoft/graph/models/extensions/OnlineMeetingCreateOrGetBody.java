@@ -24,7 +24,7 @@ public class OnlineMeetingCreateOrGetBody {
      * The chat Info.
      * 
      */
-    @SerializedName("chatInfo")
+    @SerializedName(value = "chatInfo", alternate = {"ChatInfo"})
     @Expose
     public ChatInfo chatInfo;
 
@@ -32,7 +32,7 @@ public class OnlineMeetingCreateOrGetBody {
      * The end Date Time.
      * 
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -40,7 +40,7 @@ public class OnlineMeetingCreateOrGetBody {
      * The external Id.
      * 
      */
-    @SerializedName("externalId")
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
     public String externalId;
 
@@ -48,7 +48,7 @@ public class OnlineMeetingCreateOrGetBody {
      * The participants.
      * 
      */
-    @SerializedName("participants")
+    @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
     public MeetingParticipants participants;
 
@@ -56,7 +56,7 @@ public class OnlineMeetingCreateOrGetBody {
      * The start Date Time.
      * 
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -64,7 +64,7 @@ public class OnlineMeetingCreateOrGetBody {
      * The subject.
      * 
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 

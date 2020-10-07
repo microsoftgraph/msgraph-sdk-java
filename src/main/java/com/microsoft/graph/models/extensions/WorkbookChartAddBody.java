@@ -22,7 +22,7 @@ public class WorkbookChartAddBody {
      * The type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -30,7 +30,7 @@ public class WorkbookChartAddBody {
      * The source Data.
      * 
      */
-    @SerializedName("sourceData")
+    @SerializedName(value = "sourceData", alternate = {"SourceData"})
     @Expose
     public com.google.gson.JsonElement sourceData;
 
@@ -38,7 +38,7 @@ public class WorkbookChartAddBody {
      * The series By.
      * 
      */
-    @SerializedName("seriesBy")
+    @SerializedName(value = "seriesBy", alternate = {"SeriesBy"})
     @Expose
     public String seriesBy;
 

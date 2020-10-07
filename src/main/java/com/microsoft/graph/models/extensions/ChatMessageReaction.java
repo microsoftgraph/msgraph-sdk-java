@@ -36,7 +36,7 @@ public class ChatMessageReaction implements IJsonBackedObject {
      * The Created Date Time.
      * 
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -44,7 +44,7 @@ public class ChatMessageReaction implements IJsonBackedObject {
      * The Reaction Type.
      * 
      */
-    @SerializedName("reactionType")
+    @SerializedName(value = "reactionType", alternate = {"ReactionType"})
     @Expose
     public String reactionType;
 
@@ -52,7 +52,7 @@ public class ChatMessageReaction implements IJsonBackedObject {
      * The User.
      * 
      */
-    @SerializedName("user")
+    @SerializedName(value = "user", alternate = {"User"})
     @Expose
     public IdentitySet user;
 

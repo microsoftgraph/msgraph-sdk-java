@@ -36,7 +36,7 @@ public class SharedPCAccountManagerPolicy implements IJsonBackedObject {
      * The Account Deletion Policy.
      * Configures when accounts are deleted. Possible values are: immediate, diskSpaceThreshold, diskSpaceThresholdOrInactiveThreshold.
      */
-    @SerializedName("accountDeletionPolicy")
+    @SerializedName(value = "accountDeletionPolicy", alternate = {"AccountDeletionPolicy"})
     @Expose
     public SharedPCAccountDeletionPolicyType accountDeletionPolicy;
 
@@ -44,7 +44,7 @@ public class SharedPCAccountManagerPolicy implements IJsonBackedObject {
      * The Cache Accounts Above Disk Free Percentage.
      * Sets the percentage of available disk space a PC should have before it stops deleting cached shared PC accounts. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
      */
-    @SerializedName("cacheAccountsAboveDiskFreePercentage")
+    @SerializedName(value = "cacheAccountsAboveDiskFreePercentage", alternate = {"CacheAccountsAboveDiskFreePercentage"})
     @Expose
     public Integer cacheAccountsAboveDiskFreePercentage;
 
@@ -52,7 +52,7 @@ public class SharedPCAccountManagerPolicy implements IJsonBackedObject {
      * The Inactive Threshold Days.
      * Specifies when the accounts will start being deleted when they have not been logged on during the specified period, given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold.
      */
-    @SerializedName("inactiveThresholdDays")
+    @SerializedName(value = "inactiveThresholdDays", alternate = {"InactiveThresholdDays"})
     @Expose
     public Integer inactiveThresholdDays;
 
@@ -60,7 +60,7 @@ public class SharedPCAccountManagerPolicy implements IJsonBackedObject {
      * The Remove Accounts Below Disk Free Percentage.
      * Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
      */
-    @SerializedName("removeAccountsBelowDiskFreePercentage")
+    @SerializedName(value = "removeAccountsBelowDiskFreePercentage", alternate = {"RemoveAccountsBelowDiskFreePercentage"})
     @Expose
     public Integer removeAccountsBelowDiskFreePercentage;
 

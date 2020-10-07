@@ -22,7 +22,7 @@ public class WorkbookFunctionsPdurationBody {
      * The rate.
      * 
      */
-    @SerializedName("rate")
+    @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
     public com.google.gson.JsonElement rate;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsPdurationBody {
      * The pv.
      * 
      */
-    @SerializedName("pv")
+    @SerializedName(value = "pv", alternate = {"Pv"})
     @Expose
     public com.google.gson.JsonElement pv;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsPdurationBody {
      * The fv.
      * 
      */
-    @SerializedName("fv")
+    @SerializedName(value = "fv", alternate = {"Fv"})
     @Expose
     public com.google.gson.JsonElement fv;
 

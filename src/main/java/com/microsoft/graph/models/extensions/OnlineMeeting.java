@@ -30,7 +30,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      * The Audio Conferencing.
      * The phone access (dial-in) information for an online meeting. Read-only.
      */
-    @SerializedName("audioConferencing")
+    @SerializedName(value = "audioConferencing", alternate = {"AudioConferencing"})
     @Expose
     public AudioConferencing audioConferencing;
 
@@ -38,7 +38,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      * The Chat Info.
      * The chat information associated with this online meeting.
      */
-    @SerializedName("chatInfo")
+    @SerializedName(value = "chatInfo", alternate = {"ChatInfo"})
     @Expose
     public ChatInfo chatInfo;
 
@@ -46,7 +46,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      * The Creation Date Time.
      * The meeting creation time in UTC. Read-only.
      */
-    @SerializedName("creationDateTime")
+    @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
     public java.util.Calendar creationDateTime;
 
@@ -54,7 +54,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      * The End Date Time.
      * The meeting end time in UTC.
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -62,7 +62,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      * The External Id.
      * 
      */
-    @SerializedName("externalId")
+    @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
     public String externalId;
 
@@ -70,7 +70,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      * The Join Information.
      * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
      */
-    @SerializedName("joinInformation")
+    @SerializedName(value = "joinInformation", alternate = {"JoinInformation"})
     @Expose
     public ItemBody joinInformation;
 
@@ -78,7 +78,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      * The Join Web Url.
      * The join URL of the online meeting. Read-only.
      */
-    @SerializedName("joinWebUrl")
+    @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
     @Expose
     public String joinWebUrl;
 
@@ -86,7 +86,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      * The Participants.
      * The participants associated with the online meeting.  This includes the organizer and the attendees.
      */
-    @SerializedName("participants")
+    @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
     public MeetingParticipants participants;
 
@@ -94,7 +94,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      * The Start Date Time.
      * The meeting start time in UTC.
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -102,7 +102,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      * The Subject.
      * The subject of the online meeting.
      */
-    @SerializedName("subject")
+    @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
     public String subject;
 
@@ -110,7 +110,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      * The Video Teleconference Id.
      * The video teleconferencing ID. Read-only.
      */
-    @SerializedName("videoTeleconferenceId")
+    @SerializedName(value = "videoTeleconferenceId", alternate = {"VideoTeleconferenceId"})
     @Expose
     public String videoTeleconferenceId;
 

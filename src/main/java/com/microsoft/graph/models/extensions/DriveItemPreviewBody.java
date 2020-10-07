@@ -22,7 +22,7 @@ public class DriveItemPreviewBody {
      * The page.
      * 
      */
-    @SerializedName("page")
+    @SerializedName(value = "page", alternate = {"Page"})
     @Expose
     public String page;
 
@@ -30,7 +30,7 @@ public class DriveItemPreviewBody {
      * The zoom.
      * 
      */
-    @SerializedName("zoom")
+    @SerializedName(value = "zoom", alternate = {"Zoom"})
     @Expose
     public Double zoom;
 

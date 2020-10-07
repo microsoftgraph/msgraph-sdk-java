@@ -26,7 +26,7 @@ public class IosVppEBook extends ManagedEBook implements IJsonBackedObject {
      * The Apple Id.
      * The Apple ID associated with Vpp token.
      */
-    @SerializedName("appleId")
+    @SerializedName(value = "appleId", alternate = {"AppleId"})
     @Expose
     public String appleId;
 
@@ -34,7 +34,7 @@ public class IosVppEBook extends ManagedEBook implements IJsonBackedObject {
      * The Genres.
      * Genres.
      */
-    @SerializedName("genres")
+    @SerializedName(value = "genres", alternate = {"Genres"})
     @Expose
     public java.util.List<String> genres;
 
@@ -42,7 +42,7 @@ public class IosVppEBook extends ManagedEBook implements IJsonBackedObject {
      * The Language.
      * Language.
      */
-    @SerializedName("language")
+    @SerializedName(value = "language", alternate = {"Language"})
     @Expose
     public String language;
 
@@ -50,7 +50,7 @@ public class IosVppEBook extends ManagedEBook implements IJsonBackedObject {
      * The Seller.
      * Seller.
      */
-    @SerializedName("seller")
+    @SerializedName(value = "seller", alternate = {"Seller"})
     @Expose
     public String seller;
 
@@ -58,7 +58,7 @@ public class IosVppEBook extends ManagedEBook implements IJsonBackedObject {
      * The Total License Count.
      * Total license count.
      */
-    @SerializedName("totalLicenseCount")
+    @SerializedName(value = "totalLicenseCount", alternate = {"TotalLicenseCount"})
     @Expose
     public Integer totalLicenseCount;
 
@@ -66,7 +66,7 @@ public class IosVppEBook extends ManagedEBook implements IJsonBackedObject {
      * The Used License Count.
      * Used license count.
      */
-    @SerializedName("usedLicenseCount")
+    @SerializedName(value = "usedLicenseCount", alternate = {"UsedLicenseCount"})
     @Expose
     public Integer usedLicenseCount;
 
@@ -74,7 +74,7 @@ public class IosVppEBook extends ManagedEBook implements IJsonBackedObject {
      * The Vpp Organization Name.
      * The Vpp token's organization name.
      */
-    @SerializedName("vppOrganizationName")
+    @SerializedName(value = "vppOrganizationName", alternate = {"VppOrganizationName"})
     @Expose
     public String vppOrganizationName;
 
@@ -82,7 +82,7 @@ public class IosVppEBook extends ManagedEBook implements IJsonBackedObject {
      * The Vpp Token Id.
      * The Vpp token ID.
      */
-    @SerializedName("vppTokenId")
+    @SerializedName(value = "vppTokenId", alternate = {"VppTokenId"})
     @Expose
     public java.util.UUID vppTokenId;
 

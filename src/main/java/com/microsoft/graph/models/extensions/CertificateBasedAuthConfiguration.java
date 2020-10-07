@@ -27,7 +27,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements IJsonBa
      * The Certificate Authorities.
      * Collection of certificate authorities which creates a trusted certificate chain.
      */
-    @SerializedName("certificateAuthorities")
+    @SerializedName(value = "certificateAuthorities", alternate = {"CertificateAuthorities"})
     @Expose
     public java.util.List<CertificateAuthority> certificateAuthorities;
 

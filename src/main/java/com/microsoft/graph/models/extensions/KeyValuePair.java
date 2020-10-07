@@ -35,7 +35,7 @@ public class KeyValuePair implements IJsonBackedObject {
      * The Name.
      * Name for this key-value pair
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -43,7 +43,7 @@ public class KeyValuePair implements IJsonBackedObject {
      * The Value.
      * Value for this key-value pair
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

@@ -22,7 +22,7 @@ public class ScheduleChangeRequestDeclineBody {
      * The message.
      * 
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public String message;
 

@@ -27,7 +27,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
      * The Completed Date Time.
      * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Null until the operation completes.
      */
-    @SerializedName("completedDateTime")
+    @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
     public java.util.Calendar completedDateTime;
 
@@ -35,7 +35,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
      * The Progress.
      * Specifies the progress of an operation.
      */
-    @SerializedName("progress")
+    @SerializedName(value = "progress", alternate = {"Progress"})
     @Expose
     public Double progress;
 
@@ -43,7 +43,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
      * The Status.
      * Possible values are: notStarted, running, complete, failed, unknownFutureValue.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public DataPolicyOperationStatus status;
 
@@ -51,7 +51,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
      * The Storage Location.
      * The URL location to where data is being exported for export requests.
      */
-    @SerializedName("storageLocation")
+    @SerializedName(value = "storageLocation", alternate = {"StorageLocation"})
     @Expose
     public String storageLocation;
 
@@ -59,7 +59,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
      * The Submitted Date Time.
      * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("submittedDateTime")
+    @SerializedName(value = "submittedDateTime", alternate = {"SubmittedDateTime"})
     @Expose
     public java.util.Calendar submittedDateTime;
 
@@ -67,7 +67,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
      * The User Id.
      * The id for the user on whom the operation is performed.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

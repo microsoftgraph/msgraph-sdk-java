@@ -35,7 +35,7 @@ public class SpecialFolder implements IJsonBackedObject {
      * The Name.
      * The unique identifier for this item in the /drive/special collection
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

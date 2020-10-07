@@ -36,7 +36,7 @@ public class FailureInfo implements IJsonBackedObject {
      * The Reason.
      * Classification of why a call or portion of a call failed.
      */
-    @SerializedName("reason")
+    @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
     public String reason;
 
@@ -44,7 +44,7 @@ public class FailureInfo implements IJsonBackedObject {
      * The Stage.
      * The stage when the failure occurred. Possible values are: unknown, callSetup, midcall, unknownFutureValue.
      */
-    @SerializedName("stage")
+    @SerializedName(value = "stage", alternate = {"Stage"})
     @Expose
     public FailureStage stage;
 

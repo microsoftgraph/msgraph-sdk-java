@@ -26,7 +26,7 @@ public class DomainDnsRecord extends Entity implements IJsonBackedObject {
      * The Is Optional.
      * If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain.
      */
-    @SerializedName("isOptional")
+    @SerializedName(value = "isOptional", alternate = {"IsOptional"})
     @Expose
     public Boolean isOptional;
 
@@ -34,7 +34,7 @@ public class DomainDnsRecord extends Entity implements IJsonBackedObject {
      * The Label.
      * Value used when configuring the name of the DNS record at the DNS host.
      */
-    @SerializedName("label")
+    @SerializedName(value = "label", alternate = {"Label"})
     @Expose
     public String label;
 
@@ -42,7 +42,7 @@ public class DomainDnsRecord extends Entity implements IJsonBackedObject {
      * The Record Type.
      * Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, TxtKey
      */
-    @SerializedName("recordType")
+    @SerializedName(value = "recordType", alternate = {"RecordType"})
     @Expose
     public String recordType;
 
@@ -50,7 +50,7 @@ public class DomainDnsRecord extends Entity implements IJsonBackedObject {
      * The Supported Service.
      * Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune
      */
-    @SerializedName("supportedService")
+    @SerializedName(value = "supportedService", alternate = {"SupportedService"})
     @Expose
     public String supportedService;
 
@@ -58,7 +58,7 @@ public class DomainDnsRecord extends Entity implements IJsonBackedObject {
      * The Ttl.
      * Value to use when configuring the time-to-live (ttl) property of the DNS record at the DNS host. Not nullable
      */
-    @SerializedName("ttl")
+    @SerializedName(value = "ttl", alternate = {"Ttl"})
     @Expose
     public Integer ttl;
 

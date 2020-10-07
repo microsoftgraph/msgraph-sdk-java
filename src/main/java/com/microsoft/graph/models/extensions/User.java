@@ -86,7 +86,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Account Enabled.
      * true if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
      */
-    @SerializedName("accountEnabled")
+    @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
     public Boolean accountEnabled;
 
@@ -94,7 +94,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Age Group.
      * Sets the age group of the user. Allowed values: null, minor, notAdult and adult. Refer to the legal age group property definitions for further information.
      */
-    @SerializedName("ageGroup")
+    @SerializedName(value = "ageGroup", alternate = {"AgeGroup"})
     @Expose
     public String ageGroup;
 
@@ -102,7 +102,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Assigned Licenses.
      * The licenses that are assigned to the user. Not nullable.
      */
-    @SerializedName("assignedLicenses")
+    @SerializedName(value = "assignedLicenses", alternate = {"AssignedLicenses"})
     @Expose
     public java.util.List<AssignedLicense> assignedLicenses;
 
@@ -110,7 +110,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Assigned Plans.
      * The plans that are assigned to the user. Read-only. Not nullable.
      */
-    @SerializedName("assignedPlans")
+    @SerializedName(value = "assignedPlans", alternate = {"AssignedPlans"})
     @Expose
     public java.util.List<AssignedPlan> assignedPlans;
 
@@ -118,7 +118,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Business Phones.
      * The telephone numbers for the user. NOTE: Although this is a string collection, only one number can be set for this property.
      */
-    @SerializedName("businessPhones")
+    @SerializedName(value = "businessPhones", alternate = {"BusinessPhones"})
     @Expose
     public java.util.List<String> businessPhones;
 
@@ -126,7 +126,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The City.
      * The city in which the user is located. Supports $filter.
      */
-    @SerializedName("city")
+    @SerializedName(value = "city", alternate = {"City"})
     @Expose
     public String city;
 
@@ -134,7 +134,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Company Name.
      * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
      */
-    @SerializedName("companyName")
+    @SerializedName(value = "companyName", alternate = {"CompanyName"})
     @Expose
     public String companyName;
 
@@ -142,7 +142,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Consent Provided For Minor.
      * Sets whether consent has been obtained for minors. Allowed values: null, granted, denied and notRequired. Refer to the legal age group property definitions for further information.
      */
-    @SerializedName("consentProvidedForMinor")
+    @SerializedName(value = "consentProvidedForMinor", alternate = {"ConsentProvidedForMinor"})
     @Expose
     public String consentProvidedForMinor;
 
@@ -150,7 +150,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Country.
      * The country/region in which the user is located; for example, 'US' or 'UK'. Supports $filter.
      */
-    @SerializedName("country")
+    @SerializedName(value = "country", alternate = {"Country"})
     @Expose
     public String country;
 
@@ -158,7 +158,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Created Date Time.
      * The created date of the user object.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -166,7 +166,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Creation Type.
      * Indicates whether the user account was created as a regular school or work account (null), an external account (Invitation), a local account for an Azure Active Directory B2C tenant (LocalAccount) or self-service sign-up using email verification (EmailVerified). Read-only.
      */
-    @SerializedName("creationType")
+    @SerializedName(value = "creationType", alternate = {"CreationType"})
     @Expose
     public String creationType;
 
@@ -174,7 +174,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Department.
      * The name for the department in which the user works. Supports $filter.
      */
-    @SerializedName("department")
+    @SerializedName(value = "department", alternate = {"Department"})
     @Expose
     public String department;
 
@@ -182,7 +182,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Display Name.
      * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -190,7 +190,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Employee Id.
      * The employee identifier assigned to the user by the organization. Supports $filter.
      */
-    @SerializedName("employeeId")
+    @SerializedName(value = "employeeId", alternate = {"EmployeeId"})
     @Expose
     public String employeeId;
 
@@ -198,7 +198,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The External User State.
      * For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status. For invited users, the state can be PendingAcceptance or Accepted, or null for all other users. Returned only on $select. Supports $filter with the supported values. For example: $filter=externalUserState eq 'PendingAcceptance'.
      */
-    @SerializedName("externalUserState")
+    @SerializedName(value = "externalUserState", alternate = {"ExternalUserState"})
     @Expose
     public String externalUserState;
 
@@ -206,7 +206,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The External User State Change Date Time.
      * Shows the timestamp for the latest change to the externalUserState property. Returned only on $select.
      */
-    @SerializedName("externalUserStateChangeDateTime")
+    @SerializedName(value = "externalUserStateChangeDateTime", alternate = {"ExternalUserStateChangeDateTime"})
     @Expose
     public java.util.Calendar externalUserStateChangeDateTime;
 
@@ -214,7 +214,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Fax Number.
      * The fax number of the user.
      */
-    @SerializedName("faxNumber")
+    @SerializedName(value = "faxNumber", alternate = {"FaxNumber"})
     @Expose
     public String faxNumber;
 
@@ -222,7 +222,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Given Name.
      * The given name (first name) of the user. Supports $filter.
      */
-    @SerializedName("givenName")
+    @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
     public String givenName;
 
@@ -230,7 +230,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Identities.
      * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter.
      */
-    @SerializedName("identities")
+    @SerializedName(value = "identities", alternate = {"Identities"})
     @Expose
     public java.util.List<ObjectIdentity> identities;
 
@@ -238,7 +238,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Im Addresses.
      * The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only.
      */
-    @SerializedName("imAddresses")
+    @SerializedName(value = "imAddresses", alternate = {"ImAddresses"})
     @Expose
     public java.util.List<String> imAddresses;
 
@@ -246,7 +246,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Is Resource Account.
      * Do not use – reserved for future use.
      */
-    @SerializedName("isResourceAccount")
+    @SerializedName(value = "isResourceAccount", alternate = {"IsResourceAccount"})
     @Expose
     public Boolean isResourceAccount;
 
@@ -254,7 +254,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Job Title.
      * The user’s job title. Supports $filter.
      */
-    @SerializedName("jobTitle")
+    @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
     public String jobTitle;
 
@@ -262,7 +262,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Last Password Change Date Time.
      * The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("lastPasswordChangeDateTime")
+    @SerializedName(value = "lastPasswordChangeDateTime", alternate = {"LastPasswordChangeDateTime"})
     @Expose
     public java.util.Calendar lastPasswordChangeDateTime;
 
@@ -270,7 +270,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Legal Age Group Classification.
      * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.)
      */
-    @SerializedName("legalAgeGroupClassification")
+    @SerializedName(value = "legalAgeGroupClassification", alternate = {"LegalAgeGroupClassification"})
     @Expose
     public String legalAgeGroupClassification;
 
@@ -278,7 +278,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The License Assignment States.
      * State of license assignments for this user. Read-only.
      */
-    @SerializedName("licenseAssignmentStates")
+    @SerializedName(value = "licenseAssignmentStates", alternate = {"LicenseAssignmentStates"})
     @Expose
     public java.util.List<LicenseAssignmentState> licenseAssignmentStates;
 
@@ -286,7 +286,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Mail.
      * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter.
      */
-    @SerializedName("mail")
+    @SerializedName(value = "mail", alternate = {"Mail"})
     @Expose
     public String mail;
 
@@ -294,7 +294,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Mail Nickname.
      * The mail alias for the user. This property must be specified when a user is created. Supports $filter.
      */
-    @SerializedName("mailNickname")
+    @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
     public String mailNickname;
 
@@ -302,7 +302,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Mobile Phone.
      * The primary cellular telephone number for the user.
      */
-    @SerializedName("mobilePhone")
+    @SerializedName(value = "mobilePhone", alternate = {"MobilePhone"})
     @Expose
     public String mobilePhone;
 
@@ -310,7 +310,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Office Location.
      * The office location in the user's place of business.
      */
-    @SerializedName("officeLocation")
+    @SerializedName(value = "officeLocation", alternate = {"OfficeLocation"})
     @Expose
     public String officeLocation;
 
@@ -318,7 +318,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Distinguished Name.
      * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
      */
-    @SerializedName("onPremisesDistinguishedName")
+    @SerializedName(value = "onPremisesDistinguishedName", alternate = {"OnPremisesDistinguishedName"})
     @Expose
     public String onPremisesDistinguishedName;
 
@@ -326,7 +326,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Domain Name.
      * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
      */
-    @SerializedName("onPremisesDomainName")
+    @SerializedName(value = "onPremisesDomainName", alternate = {"OnPremisesDomainName"})
     @Expose
     public String onPremisesDomainName;
 
@@ -334,7 +334,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Extension Attributes.
      * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15.
      */
-    @SerializedName("onPremisesExtensionAttributes")
+    @SerializedName(value = "onPremisesExtensionAttributes", alternate = {"OnPremisesExtensionAttributes"})
     @Expose
     public OnPremisesExtensionAttributes onPremisesExtensionAttributes;
 
@@ -342,7 +342,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Immutable Id.
      * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user’s userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Supports $filter.
      */
-    @SerializedName("onPremisesImmutableId")
+    @SerializedName(value = "onPremisesImmutableId", alternate = {"OnPremisesImmutableId"})
     @Expose
     public String onPremisesImmutableId;
 
@@ -350,7 +350,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Last Sync Date Time.
      * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
-    @SerializedName("onPremisesLastSyncDateTime")
+    @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
     public java.util.Calendar onPremisesLastSyncDateTime;
 
@@ -358,7 +358,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Provisioning Errors.
      * Errors when using Microsoft synchronization product during provisioning.
      */
-    @SerializedName("onPremisesProvisioningErrors")
+    @SerializedName(value = "onPremisesProvisioningErrors", alternate = {"OnPremisesProvisioningErrors"})
     @Expose
     public java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
 
@@ -366,7 +366,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Sam Account Name.
      * Contains the on-premises samAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
      */
-    @SerializedName("onPremisesSamAccountName")
+    @SerializedName(value = "onPremisesSamAccountName", alternate = {"OnPremisesSamAccountName"})
     @Expose
     public String onPremisesSamAccountName;
 
@@ -374,7 +374,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Security Identifier.
      * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only.
      */
-    @SerializedName("onPremisesSecurityIdentifier")
+    @SerializedName(value = "onPremisesSecurityIdentifier", alternate = {"OnPremisesSecurityIdentifier"})
     @Expose
     public String onPremisesSecurityIdentifier;
 
@@ -382,7 +382,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Sync Enabled.
      * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only
      */
-    @SerializedName("onPremisesSyncEnabled")
+    @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
     public Boolean onPremisesSyncEnabled;
 
@@ -390,7 +390,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The On Premises User Principal Name.
      * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
      */
-    @SerializedName("onPremisesUserPrincipalName")
+    @SerializedName(value = "onPremisesUserPrincipalName", alternate = {"OnPremisesUserPrincipalName"})
     @Expose
     public String onPremisesUserPrincipalName;
 
@@ -398,7 +398,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Other Mails.
      * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Supports $filter.
      */
-    @SerializedName("otherMails")
+    @SerializedName(value = "otherMails", alternate = {"OtherMails"})
     @Expose
     public java.util.List<String> otherMails;
 
@@ -406,7 +406,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Password Policies.
      * Specifies password policies for the user. This value is an enumeration with one possible value being 'DisableStrongPassword', which allows weaker passwords than the default policy to be specified. 'DisablePasswordExpiration' can also be specified. The two may be specified together; for example: 'DisablePasswordExpiration, DisableStrongPassword'.
      */
-    @SerializedName("passwordPolicies")
+    @SerializedName(value = "passwordPolicies", alternate = {"PasswordPolicies"})
     @Expose
     public String passwordPolicies;
 
@@ -414,7 +414,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Password Profile.
      * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      */
-    @SerializedName("passwordProfile")
+    @SerializedName(value = "passwordProfile", alternate = {"PasswordProfile"})
     @Expose
     public PasswordProfile passwordProfile;
 
@@ -422,7 +422,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Postal Code.
      * The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
      */
-    @SerializedName("postalCode")
+    @SerializedName(value = "postalCode", alternate = {"PostalCode"})
     @Expose
     public String postalCode;
 
@@ -430,7 +430,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Preferred Language.
      * The preferred language for the user. Should follow ISO 639-1 Code; for example 'en-US'.
      */
-    @SerializedName("preferredLanguage")
+    @SerializedName(value = "preferredLanguage", alternate = {"PreferredLanguage"})
     @Expose
     public String preferredLanguage;
 
@@ -438,7 +438,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Provisioned Plans.
      * The plans that are provisioned for the user. Read-only. Not nullable.
      */
-    @SerializedName("provisionedPlans")
+    @SerializedName(value = "provisionedPlans", alternate = {"ProvisionedPlans"})
     @Expose
     public java.util.List<ProvisionedPlan> provisionedPlans;
 
@@ -446,7 +446,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Proxy Addresses.
      * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'] The any operator is required for filter expressions on multi-valued properties. Read-only, Not nullable. Supports $filter.
      */
-    @SerializedName("proxyAddresses")
+    @SerializedName(value = "proxyAddresses", alternate = {"ProxyAddresses"})
     @Expose
     public java.util.List<String> proxyAddresses;
 
@@ -454,7 +454,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Show In Address List.
      * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
      */
-    @SerializedName("showInAddressList")
+    @SerializedName(value = "showInAddressList", alternate = {"ShowInAddressList"})
     @Expose
     public Boolean showInAddressList;
 
@@ -462,7 +462,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Sign In Sessions Valid From Date Time.
      * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
      */
-    @SerializedName("signInSessionsValidFromDateTime")
+    @SerializedName(value = "signInSessionsValidFromDateTime", alternate = {"SignInSessionsValidFromDateTime"})
     @Expose
     public java.util.Calendar signInSessionsValidFromDateTime;
 
@@ -470,7 +470,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The State.
      * The state or province in the user's address. Supports $filter.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public String state;
 
@@ -478,7 +478,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Street Address.
      * The street address of the user's place of business.
      */
-    @SerializedName("streetAddress")
+    @SerializedName(value = "streetAddress", alternate = {"StreetAddress"})
     @Expose
     public String streetAddress;
 
@@ -486,7 +486,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Surname.
      * The user's surname (family name or last name). Supports $filter.
      */
-    @SerializedName("surname")
+    @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose
     public String surname;
 
@@ -494,7 +494,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Usage Location.
      * A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: 'US', 'JP', and 'GB'. Not nullable. Supports $filter.
      */
-    @SerializedName("usageLocation")
+    @SerializedName(value = "usageLocation", alternate = {"UsageLocation"})
     @Expose
     public String usageLocation;
 
@@ -502,7 +502,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The User Principal Name.
      * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -510,7 +510,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The User Type.
      * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports $filter.
      */
-    @SerializedName("userType")
+    @SerializedName(value = "userType", alternate = {"UserType"})
     @Expose
     public String userType;
 
@@ -518,7 +518,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Mailbox Settings.
      * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale and time zone.
      */
-    @SerializedName("mailboxSettings")
+    @SerializedName(value = "mailboxSettings", alternate = {"MailboxSettings"})
     @Expose
     public MailboxSettings mailboxSettings;
 
@@ -526,7 +526,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Device Enrollment Limit.
      * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
      */
-    @SerializedName("deviceEnrollmentLimit")
+    @SerializedName(value = "deviceEnrollmentLimit", alternate = {"DeviceEnrollmentLimit"})
     @Expose
     public Integer deviceEnrollmentLimit;
 
@@ -534,7 +534,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The About Me.
      * A freeform text entry field for the user to describe themselves.
      */
-    @SerializedName("aboutMe")
+    @SerializedName(value = "aboutMe", alternate = {"AboutMe"})
     @Expose
     public String aboutMe;
 
@@ -542,7 +542,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Birthday.
      * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("birthday")
+    @SerializedName(value = "birthday", alternate = {"Birthday"})
     @Expose
     public java.util.Calendar birthday;
 
@@ -550,7 +550,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Hire Date.
      * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("hireDate")
+    @SerializedName(value = "hireDate", alternate = {"HireDate"})
     @Expose
     public java.util.Calendar hireDate;
 
@@ -558,7 +558,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Interests.
      * A list for the user to describe their interests.
      */
-    @SerializedName("interests")
+    @SerializedName(value = "interests", alternate = {"Interests"})
     @Expose
     public java.util.List<String> interests;
 
@@ -566,7 +566,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The My Site.
      * The URL for the user's personal site.
      */
-    @SerializedName("mySite")
+    @SerializedName(value = "mySite", alternate = {"MySite"})
     @Expose
     public String mySite;
 
@@ -574,7 +574,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Past Projects.
      * A list for the user to enumerate their past projects.
      */
-    @SerializedName("pastProjects")
+    @SerializedName(value = "pastProjects", alternate = {"PastProjects"})
     @Expose
     public java.util.List<String> pastProjects;
 
@@ -582,7 +582,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Preferred Name.
      * The preferred name for the user.
      */
-    @SerializedName("preferredName")
+    @SerializedName(value = "preferredName", alternate = {"PreferredName"})
     @Expose
     public String preferredName;
 
@@ -590,7 +590,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Responsibilities.
      * A list for the user to enumerate their responsibilities.
      */
-    @SerializedName("responsibilities")
+    @SerializedName(value = "responsibilities", alternate = {"Responsibilities"})
     @Expose
     public java.util.List<String> responsibilities;
 
@@ -598,7 +598,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Schools.
      * A list for the user to enumerate the schools they have attended.
      */
-    @SerializedName("schools")
+    @SerializedName(value = "schools", alternate = {"Schools"})
     @Expose
     public java.util.List<String> schools;
 
@@ -606,7 +606,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Skills.
      * A list for the user to enumerate their skills.
      */
-    @SerializedName("skills")
+    @SerializedName(value = "skills", alternate = {"Skills"})
     @Expose
     public java.util.List<String> skills;
 
@@ -614,7 +614,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The App Role Assignments.
      * 
      */
-    @SerializedName("appRoleAssignments")
+    @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
     public AppRoleAssignmentCollectionPage appRoleAssignments;
 
@@ -634,7 +634,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The License Details.
      * A collection of this user's license details. Read-only.
      */
-    @SerializedName("licenseDetails")
+    @SerializedName(value = "licenseDetails", alternate = {"LicenseDetails"})
     @Expose
     public LicenseDetailsCollectionPage licenseDetails;
 
@@ -642,7 +642,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Manager.
      * The user or contact that is this user’s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
      */
-    @SerializedName("manager")
+    @SerializedName(value = "manager", alternate = {"Manager"})
     @Expose
     public DirectoryObject manager;
 
@@ -680,7 +680,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Scoped Role Member Of.
      * 
      */
-    @SerializedName("scopedRoleMemberOf")
+    @SerializedName(value = "scopedRoleMemberOf", alternate = {"ScopedRoleMemberOf"})
     @Expose
     public ScopedRoleMembershipCollectionPage scopedRoleMemberOf;
 
@@ -694,7 +694,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Calendar.
      * The user's primary calendar. Read-only.
      */
-    @SerializedName("calendar")
+    @SerializedName(value = "calendar", alternate = {"Calendar"})
     @Expose
     public Calendar calendar;
 
@@ -702,7 +702,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Calendar Groups.
      * The user's calendar groups. Read-only. Nullable.
      */
-    @SerializedName("calendarGroups")
+    @SerializedName(value = "calendarGroups", alternate = {"CalendarGroups"})
     @Expose
     public CalendarGroupCollectionPage calendarGroups;
 
@@ -710,7 +710,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Calendars.
      * The user's calendars. Read-only. Nullable.
      */
-    @SerializedName("calendars")
+    @SerializedName(value = "calendars", alternate = {"Calendars"})
     @Expose
     public CalendarCollectionPage calendars;
 
@@ -718,7 +718,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Calendar View.
      * The calendar view for the calendar. Read-only. Nullable.
      */
-    @SerializedName("calendarView")
+    @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
     public EventCollectionPage calendarView;
 
@@ -726,7 +726,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Contact Folders.
      * The user's contacts folders. Read-only. Nullable.
      */
-    @SerializedName("contactFolders")
+    @SerializedName(value = "contactFolders", alternate = {"ContactFolders"})
     @Expose
     public ContactFolderCollectionPage contactFolders;
 
@@ -734,7 +734,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Contacts.
      * The user's contacts. Read-only. Nullable.
      */
-    @SerializedName("contacts")
+    @SerializedName(value = "contacts", alternate = {"Contacts"})
     @Expose
     public ContactCollectionPage contacts;
 
@@ -742,7 +742,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Events.
      * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      */
-    @SerializedName("events")
+    @SerializedName(value = "events", alternate = {"Events"})
     @Expose
     public EventCollectionPage events;
 
@@ -750,7 +750,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Inference Classification.
      * Relevance classification of the user's messages based on explicit designations which override inferred relevance or importance.
      */
-    @SerializedName("inferenceClassification")
+    @SerializedName(value = "inferenceClassification", alternate = {"InferenceClassification"})
     @Expose
     public InferenceClassification inferenceClassification;
 
@@ -758,7 +758,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Mail Folders.
      * The user's mail folders. Read-only. Nullable.
      */
-    @SerializedName("mailFolders")
+    @SerializedName(value = "mailFolders", alternate = {"MailFolders"})
     @Expose
     public MailFolderCollectionPage mailFolders;
 
@@ -766,7 +766,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Messages.
      * The messages in a mailbox or folder. Read-only. Nullable.
      */
-    @SerializedName("messages")
+    @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
     public MessageCollectionPage messages;
 
@@ -774,7 +774,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Outlook.
      * Read-only.
      */
-    @SerializedName("outlook")
+    @SerializedName(value = "outlook", alternate = {"Outlook"})
     @Expose
     public OutlookUser outlook;
 
@@ -782,7 +782,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The People.
      * People that are relevant to the user. Read-only. Nullable.
      */
-    @SerializedName("people")
+    @SerializedName(value = "people", alternate = {"People"})
     @Expose
     public PersonCollectionPage people;
 
@@ -790,7 +790,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Photo.
      * The user's profile photo. Read-only.
      */
-    @SerializedName("photo")
+    @SerializedName(value = "photo", alternate = {"Photo"})
     @Expose
     public ProfilePhoto photo;
 
@@ -798,7 +798,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Photos.
      * 
      */
-    @SerializedName("photos")
+    @SerializedName(value = "photos", alternate = {"Photos"})
     @Expose
     public ProfilePhotoCollectionPage photos;
 
@@ -806,7 +806,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Drive.
      * The user's OneDrive. Read-only.
      */
-    @SerializedName("drive")
+    @SerializedName(value = "drive", alternate = {"Drive"})
     @Expose
     public Drive drive;
 
@@ -814,7 +814,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Drives.
      * A collection of drives available for this user. Read-only.
      */
-    @SerializedName("drives")
+    @SerializedName(value = "drives", alternate = {"Drives"})
     @Expose
     public DriveCollectionPage drives;
 
@@ -828,7 +828,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Extensions.
      * The collection of open extensions defined for the user. Read-only. Nullable.
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public ExtensionCollectionPage extensions;
 
@@ -836,7 +836,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Managed Devices.
      * The managed devices associated with the user.
      */
-    @SerializedName("managedDevices")
+    @SerializedName(value = "managedDevices", alternate = {"ManagedDevices"})
     @Expose
     public ManagedDeviceCollectionPage managedDevices;
 
@@ -850,7 +850,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Device Management Troubleshooting Events.
      * The list of troubleshooting events for this user.
      */
-    @SerializedName("deviceManagementTroubleshootingEvents")
+    @SerializedName(value = "deviceManagementTroubleshootingEvents", alternate = {"DeviceManagementTroubleshootingEvents"})
     @Expose
     public DeviceManagementTroubleshootingEventCollectionPage deviceManagementTroubleshootingEvents;
 
@@ -858,7 +858,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Planner.
      * Entry-point to the Planner resource that might exist for a user. Read-only.
      */
-    @SerializedName("planner")
+    @SerializedName(value = "planner", alternate = {"Planner"})
     @Expose
     public PlannerUser planner;
 
@@ -866,7 +866,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Insights.
      * Read-only. Nullable.
      */
-    @SerializedName("insights")
+    @SerializedName(value = "insights", alternate = {"Insights"})
     @Expose
     public OfficeGraphInsights insights;
 
@@ -874,7 +874,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Settings.
      * 
      */
-    @SerializedName("settings")
+    @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
     public UserSettings settings;
 
@@ -882,7 +882,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Onenote.
      * Read-only.
      */
-    @SerializedName("onenote")
+    @SerializedName(value = "onenote", alternate = {"Onenote"})
     @Expose
     public Onenote onenote;
 
@@ -890,7 +890,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Activities.
      * The user's activities across devices. Read-only. Nullable.
      */
-    @SerializedName("activities")
+    @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
     public UserActivityCollectionPage activities;
 
@@ -898,7 +898,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Online Meetings.
      * 
      */
-    @SerializedName("onlineMeetings")
+    @SerializedName(value = "onlineMeetings", alternate = {"OnlineMeetings"})
     @Expose
     public OnlineMeetingCollectionPage onlineMeetings;
 
@@ -906,7 +906,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Joined Teams.
      * 
      */
-    @SerializedName("joinedTeams")
+    @SerializedName(value = "joinedTeams", alternate = {"JoinedTeams"})
     @Expose
     public TeamCollectionPage joinedTeams;
 

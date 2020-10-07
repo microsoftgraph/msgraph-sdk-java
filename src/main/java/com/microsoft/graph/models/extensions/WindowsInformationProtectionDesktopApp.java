@@ -26,7 +26,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      * The Binary Name.
      * The binary name.
      */
-    @SerializedName("binaryName")
+    @SerializedName(value = "binaryName", alternate = {"BinaryName"})
     @Expose
     public String binaryName;
 
@@ -34,7 +34,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      * The Binary Version High.
      * The high binary version.
      */
-    @SerializedName("binaryVersionHigh")
+    @SerializedName(value = "binaryVersionHigh", alternate = {"BinaryVersionHigh"})
     @Expose
     public String binaryVersionHigh;
 
@@ -42,7 +42,7 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
      * The Binary Version Low.
      * The lower binary version.
      */
-    @SerializedName("binaryVersionLow")
+    @SerializedName(value = "binaryVersionLow", alternate = {"BinaryVersionLow"})
     @Expose
     public String binaryVersionLow;
 

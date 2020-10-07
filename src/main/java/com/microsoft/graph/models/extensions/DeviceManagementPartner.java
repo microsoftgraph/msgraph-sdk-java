@@ -28,7 +28,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
      * The Display Name.
      * Partner display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -36,7 +36,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
      * The Is Configured.
      * Whether device management partner is configured or not
      */
-    @SerializedName("isConfigured")
+    @SerializedName(value = "isConfigured", alternate = {"IsConfigured"})
     @Expose
     public Boolean isConfigured;
 
@@ -44,7 +44,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
      * The Last Heartbeat Date Time.
      * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
      */
-    @SerializedName("lastHeartbeatDateTime")
+    @SerializedName(value = "lastHeartbeatDateTime", alternate = {"LastHeartbeatDateTime"})
     @Expose
     public java.util.Calendar lastHeartbeatDateTime;
 
@@ -52,7 +52,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
      * The Partner App Type.
      * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
      */
-    @SerializedName("partnerAppType")
+    @SerializedName(value = "partnerAppType", alternate = {"PartnerAppType"})
     @Expose
     public DeviceManagementPartnerAppType partnerAppType;
 
@@ -60,7 +60,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
      * The Partner State.
      * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
      */
-    @SerializedName("partnerState")
+    @SerializedName(value = "partnerState", alternate = {"PartnerState"})
     @Expose
     public DeviceManagementPartnerTenantState partnerState;
 
@@ -68,7 +68,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
      * The Single Tenant App Id.
      * Partner Single tenant App id
      */
-    @SerializedName("singleTenantAppId")
+    @SerializedName(value = "singleTenantAppId", alternate = {"SingleTenantAppId"})
     @Expose
     public String singleTenantAppId;
 
@@ -76,7 +76,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
      * The When Partner Devices Will Be Marked As Non Compliant Date Time.
      * DateTime in UTC when PartnerDevices will be marked as NonCompliant
      */
-    @SerializedName("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime")
+    @SerializedName(value = "whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", alternate = {"WhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime"})
     @Expose
     public java.util.Calendar whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime;
 
@@ -84,7 +84,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
      * The When Partner Devices Will Be Removed Date Time.
      * DateTime in UTC when PartnerDevices will be removed
      */
-    @SerializedName("whenPartnerDevicesWillBeRemovedDateTime")
+    @SerializedName(value = "whenPartnerDevicesWillBeRemovedDateTime", alternate = {"WhenPartnerDevicesWillBeRemovedDateTime"})
     @Expose
     public java.util.Calendar whenPartnerDevicesWillBeRemovedDateTime;
 

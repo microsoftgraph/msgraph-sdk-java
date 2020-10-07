@@ -35,7 +35,7 @@ public class WorkbookRangeReference implements IJsonBackedObject {
      * The Address.
      * 
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public String address;
 

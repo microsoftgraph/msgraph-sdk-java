@@ -22,7 +22,7 @@ public class WorkbookFunctionsHyperlinkBody {
      * The link Location.
      * 
      */
-    @SerializedName("linkLocation")
+    @SerializedName(value = "linkLocation", alternate = {"LinkLocation"})
     @Expose
     public com.google.gson.JsonElement linkLocation;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsHyperlinkBody {
      * The friendly Name.
      * 
      */
-    @SerializedName("friendlyName")
+    @SerializedName(value = "friendlyName", alternate = {"FriendlyName"})
     @Expose
     public com.google.gson.JsonElement friendlyName;
 

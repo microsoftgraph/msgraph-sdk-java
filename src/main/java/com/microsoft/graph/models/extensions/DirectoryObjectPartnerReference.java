@@ -26,7 +26,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * The Description.
      * Description of the object returned. Read-only.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -34,7 +34,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * The Display Name.
      * Name of directory object being returned, like group or application. Read-only.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -42,7 +42,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * The External Partner Tenant Id.
      * The tenant identifier for the partner tenant. Read-only.
      */
-    @SerializedName("externalPartnerTenantId")
+    @SerializedName(value = "externalPartnerTenantId", alternate = {"ExternalPartnerTenantId"})
     @Expose
     public java.util.UUID externalPartnerTenantId;
 
@@ -50,7 +50,7 @@ public class DirectoryObjectPartnerReference extends DirectoryObject implements 
      * The Object Type.
      * The type of the referenced object in the partner tenant. Read-only.
      */
-    @SerializedName("objectType")
+    @SerializedName(value = "objectType", alternate = {"ObjectType"})
     @Expose
     public String objectType;
 

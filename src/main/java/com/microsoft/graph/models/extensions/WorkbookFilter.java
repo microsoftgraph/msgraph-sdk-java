@@ -27,7 +27,7 @@ public class WorkbookFilter extends Entity implements IJsonBackedObject {
      * The Criteria.
      * The currently applied filter on the given column. Read-only.
      */
-    @SerializedName("criteria")
+    @SerializedName(value = "criteria", alternate = {"Criteria"})
     @Expose
     public WorkbookFilterCriteria criteria;
 

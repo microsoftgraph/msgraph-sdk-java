@@ -35,7 +35,7 @@ public class OperationError implements IJsonBackedObject {
      * The Code.
      * Operation error code.
      */
-    @SerializedName("code")
+    @SerializedName(value = "code", alternate = {"Code"})
     @Expose
     public String code;
 
@@ -43,7 +43,7 @@ public class OperationError implements IJsonBackedObject {
      * The Message.
      * Operation error message.
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public String message;
 

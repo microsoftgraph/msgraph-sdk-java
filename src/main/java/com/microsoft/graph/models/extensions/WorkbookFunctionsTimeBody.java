@@ -22,7 +22,7 @@ public class WorkbookFunctionsTimeBody {
      * The hour.
      * 
      */
-    @SerializedName("hour")
+    @SerializedName(value = "hour", alternate = {"Hour"})
     @Expose
     public com.google.gson.JsonElement hour;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsTimeBody {
      * The minute.
      * 
      */
-    @SerializedName("minute")
+    @SerializedName(value = "minute", alternate = {"Minute"})
     @Expose
     public com.google.gson.JsonElement minute;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsTimeBody {
      * The second.
      * 
      */
-    @SerializedName("second")
+    @SerializedName(value = "second", alternate = {"Second"})
     @Expose
     public com.google.gson.JsonElement second;
 

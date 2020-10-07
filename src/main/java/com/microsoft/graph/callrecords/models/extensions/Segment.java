@@ -29,7 +29,7 @@ public class Segment extends Entity implements IJsonBackedObject {
      * The Callee.
      * Endpoint that answered this segment.
      */
-    @SerializedName("callee")
+    @SerializedName(value = "callee", alternate = {"Callee"})
     @Expose
     public Endpoint callee;
 
@@ -37,7 +37,7 @@ public class Segment extends Entity implements IJsonBackedObject {
      * The Caller.
      * Endpoint that initiated this segment.
      */
-    @SerializedName("caller")
+    @SerializedName(value = "caller", alternate = {"Caller"})
     @Expose
     public Endpoint caller;
 
@@ -45,7 +45,7 @@ public class Segment extends Entity implements IJsonBackedObject {
      * The End Date Time.
      * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -53,7 +53,7 @@ public class Segment extends Entity implements IJsonBackedObject {
      * The Failure Info.
      * Failure information associated with the segment if it failed.
      */
-    @SerializedName("failureInfo")
+    @SerializedName(value = "failureInfo", alternate = {"FailureInfo"})
     @Expose
     public FailureInfo failureInfo;
 
@@ -61,7 +61,7 @@ public class Segment extends Entity implements IJsonBackedObject {
      * The Media.
      * Media associated with this segment.
      */
-    @SerializedName("media")
+    @SerializedName(value = "media", alternate = {"Media"})
     @Expose
     public java.util.List<Media> media;
 
@@ -69,7 +69,7 @@ public class Segment extends Entity implements IJsonBackedObject {
      * The Start Date Time.
      * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 

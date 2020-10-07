@@ -31,7 +31,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * The Deployed App Count.
      * Count of apps to which the current policy is deployed.
      */
-    @SerializedName("deployedAppCount")
+    @SerializedName(value = "deployedAppCount", alternate = {"DeployedAppCount"})
     @Expose
     public Integer deployedAppCount;
 
@@ -39,7 +39,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * The Is Assigned.
      * Indicates if the policy is deployed to any inclusion groups or not.
      */
-    @SerializedName("isAssigned")
+    @SerializedName(value = "isAssigned", alternate = {"IsAssigned"})
     @Expose
     public Boolean isAssigned;
 
@@ -47,7 +47,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * The Apps.
      * List of apps to which the policy is deployed.
      */
-    @SerializedName("apps")
+    @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
     public ManagedMobileAppCollectionPage apps;
 
@@ -55,7 +55,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * The Assignments.
      * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
@@ -63,7 +63,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * The Deployment Summary.
      * Navigation property to deployment summary of the configuration.
      */
-    @SerializedName("deploymentSummary")
+    @SerializedName(value = "deploymentSummary", alternate = {"DeploymentSummary"})
     @Expose
     public ManagedAppPolicyDeploymentSummary deploymentSummary;
 

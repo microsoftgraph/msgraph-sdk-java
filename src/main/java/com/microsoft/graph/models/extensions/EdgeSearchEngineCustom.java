@@ -26,7 +26,7 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements IJso
      * The Edge Search Engine Open Search Xml Url.
      * Points to a https link containing the OpenSearch xml file that contains, at minimum, the short name and the URL to the search Engine.
      */
-    @SerializedName("edgeSearchEngineOpenSearchXmlUrl")
+    @SerializedName(value = "edgeSearchEngineOpenSearchXmlUrl", alternate = {"EdgeSearchEngineOpenSearchXmlUrl"})
     @Expose
     public String edgeSearchEngineOpenSearchXmlUrl;
 

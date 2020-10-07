@@ -26,7 +26,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements IJsonBackedO
      * The Display Name.
      * The display name for the schedulingGroup. Required.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements IJsonBackedO
      * The Is Active.
      * Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
      */
-    @SerializedName("isActive")
+    @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
     public Boolean isActive;
 
@@ -42,7 +42,7 @@ public class SchedulingGroup extends ChangeTrackedEntity implements IJsonBackedO
      * The User Ids.
      * The list of user IDs that are a member of the schedulingGroup. Required.
      */
-    @SerializedName("userIds")
+    @SerializedName(value = "userIds", alternate = {"UserIds"})
     @Expose
     public java.util.List<String> userIds;
 

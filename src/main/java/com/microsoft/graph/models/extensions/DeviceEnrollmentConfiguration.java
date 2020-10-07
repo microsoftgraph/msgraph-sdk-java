@@ -28,7 +28,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
      * The Created Date Time.
      * Not yet documented
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -36,7 +36,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
      * The Description.
      * Not yet documented
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -44,7 +44,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
      * The Display Name.
      * Not yet documented
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -52,7 +52,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
      * The Last Modified Date Time.
      * Not yet documented
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -60,7 +60,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
      * The Priority.
      * Not yet documented
      */
-    @SerializedName("priority")
+    @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
     public Integer priority;
 
@@ -68,7 +68,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
      * The Version.
      * Not yet documented
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 
@@ -76,7 +76,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
      * The Assignments.
      * The list of group assignments for the device configuration profile.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public EnrollmentConfigurationAssignmentCollectionPage assignments;
 

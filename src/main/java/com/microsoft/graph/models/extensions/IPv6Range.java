@@ -26,7 +26,7 @@ public class IPv6Range extends IpRange implements IJsonBackedObject {
      * The Lower Address.
      * Lower address
      */
-    @SerializedName("lowerAddress")
+    @SerializedName(value = "lowerAddress", alternate = {"LowerAddress"})
     @Expose
     public String lowerAddress;
 
@@ -34,7 +34,7 @@ public class IPv6Range extends IpRange implements IJsonBackedObject {
      * The Upper Address.
      * Upper address
      */
-    @SerializedName("upperAddress")
+    @SerializedName(value = "upperAddress", alternate = {"UpperAddress"})
     @Expose
     public String upperAddress;
 

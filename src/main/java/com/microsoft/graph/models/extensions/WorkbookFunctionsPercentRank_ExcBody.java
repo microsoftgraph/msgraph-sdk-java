@@ -22,7 +22,7 @@ public class WorkbookFunctionsPercentRank_ExcBody {
      * The array.
      * 
      */
-    @SerializedName("array")
+    @SerializedName(value = "array", alternate = {"Array"})
     @Expose
     public com.google.gson.JsonElement array;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsPercentRank_ExcBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsPercentRank_ExcBody {
      * The significance.
      * 
      */
-    @SerializedName("significance")
+    @SerializedName(value = "significance", alternate = {"Significance"})
     @Expose
     public com.google.gson.JsonElement significance;
 

@@ -27,7 +27,7 @@ public class IpNamedLocation extends NamedLocation implements IJsonBackedObject 
      * The Ip Ranges.
      * List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596.
      */
-    @SerializedName("ipRanges")
+    @SerializedName(value = "ipRanges", alternate = {"IpRanges"})
     @Expose
     public java.util.List<IpRange> ipRanges;
 
@@ -35,7 +35,7 @@ public class IpNamedLocation extends NamedLocation implements IJsonBackedObject 
      * The Is Trusted.
      * True if this location is explicitly trusted.
      */
-    @SerializedName("isTrusted")
+    @SerializedName(value = "isTrusted", alternate = {"IsTrusted"})
     @Expose
     public Boolean isTrusted;
 

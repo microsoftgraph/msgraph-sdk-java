@@ -26,7 +26,7 @@ public class ColumnLink extends Entity implements IJsonBackedObject {
      * The Name.
      * The name of the column  in this content type.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

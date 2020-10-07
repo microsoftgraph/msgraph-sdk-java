@@ -22,7 +22,7 @@ public class WorkbookApplicationCalculateBody {
      * The calculation Type.
      * 
      */
-    @SerializedName("calculationType")
+    @SerializedName(value = "calculationType", alternate = {"CalculationType"})
     @Expose
     public String calculationType;
 

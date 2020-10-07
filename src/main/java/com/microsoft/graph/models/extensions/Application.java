@@ -46,7 +46,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Add Ins.
      * Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.
      */
-    @SerializedName("addIns")
+    @SerializedName(value = "addIns", alternate = {"AddIns"})
     @Expose
     public java.util.List<AddIn> addIns;
 
@@ -54,7 +54,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Api.
      * Specifies settings for an application that implements a web API.
      */
-    @SerializedName("api")
+    @SerializedName(value = "api", alternate = {"Api"})
     @Expose
     public ApiApplication api;
 
@@ -62,7 +62,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The App Id.
      * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
      */
-    @SerializedName("appId")
+    @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
     public String appId;
 
@@ -70,7 +70,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Application Template Id.
      * 
      */
-    @SerializedName("applicationTemplateId")
+    @SerializedName(value = "applicationTemplateId", alternate = {"ApplicationTemplateId"})
     @Expose
     public String applicationTemplateId;
 
@@ -78,7 +78,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The App Roles.
      * The collection of roles the application declares. With app role assignments, these roles can be assigned to users, groups, or other applications' service principals. Not nullable.
      */
-    @SerializedName("appRoles")
+    @SerializedName(value = "appRoles", alternate = {"AppRoles"})
     @Expose
     public java.util.List<AppRole> appRoles;
 
@@ -86,7 +86,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Created Date Time.
      * The date and time the application was registered. Read-only.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -94,7 +94,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -102,7 +102,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Display Name.
      * The display name for the application.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -110,7 +110,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Group Membership Claims.
      * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This will get all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of
      */
-    @SerializedName("groupMembershipClaims")
+    @SerializedName(value = "groupMembershipClaims", alternate = {"GroupMembershipClaims"})
     @Expose
     public String groupMembershipClaims;
 
@@ -118,7 +118,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Identifier Uris.
      * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
      */
-    @SerializedName("identifierUris")
+    @SerializedName(value = "identifierUris", alternate = {"IdentifierUris"})
     @Expose
     public java.util.List<String> identifierUris;
 
@@ -126,7 +126,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Info.
      * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
      */
-    @SerializedName("info")
+    @SerializedName(value = "info", alternate = {"Info"})
     @Expose
     public InformationalUrl info;
 
@@ -134,7 +134,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Is Device Only Auth Supported.
      * 
      */
-    @SerializedName("isDeviceOnlyAuthSupported")
+    @SerializedName(value = "isDeviceOnlyAuthSupported", alternate = {"IsDeviceOnlyAuthSupported"})
     @Expose
     public Boolean isDeviceOnlyAuthSupported;
 
@@ -142,7 +142,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Is Fallback Public Client.
      * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
      */
-    @SerializedName("isFallbackPublicClient")
+    @SerializedName(value = "isFallbackPublicClient", alternate = {"IsFallbackPublicClient"})
     @Expose
     public Boolean isFallbackPublicClient;
 
@@ -150,7 +150,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Key Credentials.
      * The collection of key credentials associated with the application Not nullable.
      */
-    @SerializedName("keyCredentials")
+    @SerializedName(value = "keyCredentials", alternate = {"KeyCredentials"})
     @Expose
     public java.util.List<KeyCredential> keyCredentials;
 
@@ -158,7 +158,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Notes.
      * 
      */
-    @SerializedName("notes")
+    @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
     public String notes;
 
@@ -166,7 +166,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Oauth2Require Post Response.
      * 
      */
-    @SerializedName("oauth2RequirePostResponse")
+    @SerializedName(value = "oauth2RequirePostResponse", alternate = {"Oauth2RequirePostResponse"})
     @Expose
     public Boolean oauth2RequirePostResponse;
 
@@ -174,7 +174,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Optional Claims.
      * Application developers can configure optional claims in their Azure AD apps to specify which claims they want in tokens sent to their application by the Microsoft security token service. See provide optional claims to your Azure AD app for more information.
      */
-    @SerializedName("optionalClaims")
+    @SerializedName(value = "optionalClaims", alternate = {"OptionalClaims"})
     @Expose
     public OptionalClaims optionalClaims;
 
@@ -182,7 +182,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Parental Control Settings.
      * Specifies parental control settings for an application.
      */
-    @SerializedName("parentalControlSettings")
+    @SerializedName(value = "parentalControlSettings", alternate = {"ParentalControlSettings"})
     @Expose
     public ParentalControlSettings parentalControlSettings;
 
@@ -190,7 +190,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Password Credentials.
      * The collection of password credentials associated with the application. Not nullable.
      */
-    @SerializedName("passwordCredentials")
+    @SerializedName(value = "passwordCredentials", alternate = {"PasswordCredentials"})
     @Expose
     public java.util.List<PasswordCredential> passwordCredentials;
 
@@ -198,7 +198,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Public Client.
      * Specifies settings for installed clients such as desktop or mobile devices.
      */
-    @SerializedName("publicClient")
+    @SerializedName(value = "publicClient", alternate = {"PublicClient"})
     @Expose
     public PublicClientApplication publicClient;
 
@@ -206,7 +206,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Publisher Domain.
      * The verified publisher domain for the application. Read-only.
      */
-    @SerializedName("publisherDomain")
+    @SerializedName(value = "publisherDomain", alternate = {"PublisherDomain"})
     @Expose
     public String publisherDomain;
 
@@ -214,7 +214,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Required Resource Access.
      * Specifies resources that this application requires access to and the set of OAuth permission scopes and application roles that it needs under each of those resources. This pre-configuration of required resource access drives the consent experience. Not nullable.
      */
-    @SerializedName("requiredResourceAccess")
+    @SerializedName(value = "requiredResourceAccess", alternate = {"RequiredResourceAccess"})
     @Expose
     public java.util.List<RequiredResourceAccess> requiredResourceAccess;
 
@@ -222,7 +222,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Sign In Audience.
      * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single tenant)AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant)AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.
      */
-    @SerializedName("signInAudience")
+    @SerializedName(value = "signInAudience", alternate = {"SignInAudience"})
     @Expose
     public String signInAudience;
 
@@ -230,7 +230,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Tags.
      * Custom strings that can be used to categorize and identify the application. Not nullable.
      */
-    @SerializedName("tags")
+    @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
     public java.util.List<String> tags;
 
@@ -238,7 +238,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Token Encryption Key Id.
      * Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
      */
-    @SerializedName("tokenEncryptionKeyId")
+    @SerializedName(value = "tokenEncryptionKeyId", alternate = {"TokenEncryptionKeyId"})
     @Expose
     public java.util.UUID tokenEncryptionKeyId;
 
@@ -246,7 +246,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Web.
      * Specifies settings for a web application.
      */
-    @SerializedName("web")
+    @SerializedName(value = "web", alternate = {"Web"})
     @Expose
     public WebApplication web;
 
@@ -254,7 +254,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Created On Behalf Of.
      * Read-only.
      */
-    @SerializedName("createdOnBehalfOf")
+    @SerializedName(value = "createdOnBehalfOf", alternate = {"CreatedOnBehalfOf"})
     @Expose
     public DirectoryObject createdOnBehalfOf;
 
@@ -262,7 +262,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Extension Properties.
      * Read-only. Nullable.
      */
-    @SerializedName("extensionProperties")
+    @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose
     public ExtensionPropertyCollectionPage extensionProperties;
 

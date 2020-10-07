@@ -36,7 +36,7 @@ public class PlannerChecklistItem implements IJsonBackedObject {
      * The Is Checked.
      * Value is true if the item is checked and false otherwise.
      */
-    @SerializedName("isChecked")
+    @SerializedName(value = "isChecked", alternate = {"IsChecked"})
     @Expose
     public Boolean isChecked;
 
@@ -44,7 +44,7 @@ public class PlannerChecklistItem implements IJsonBackedObject {
      * The Last Modified By.
      * Read-only. User ID by which this is last modified.
      */
-    @SerializedName("lastModifiedBy")
+    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
     public IdentitySet lastModifiedBy;
 
@@ -52,7 +52,7 @@ public class PlannerChecklistItem implements IJsonBackedObject {
      * The Last Modified Date Time.
      * Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -60,7 +60,7 @@ public class PlannerChecklistItem implements IJsonBackedObject {
      * The Order Hint.
      * Used to set the relative order of items in the checklist. The format is defined as outlined here.
      */
-    @SerializedName("orderHint")
+    @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose
     public String orderHint;
 
@@ -68,7 +68,7 @@ public class PlannerChecklistItem implements IJsonBackedObject {
      * The Title.
      * Title of the checklist item
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public String title;
 

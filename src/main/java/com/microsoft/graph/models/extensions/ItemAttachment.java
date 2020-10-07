@@ -27,7 +27,7 @@ public class ItemAttachment extends Attachment implements IJsonBackedObject {
      * The Item.
      * The attached message or event. Navigation property.
      */
-    @SerializedName("item")
+    @SerializedName(value = "item", alternate = {"Item"})
     @Expose
     public OutlookItem item;
 

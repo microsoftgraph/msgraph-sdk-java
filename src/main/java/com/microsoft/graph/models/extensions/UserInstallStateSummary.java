@@ -28,7 +28,7 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
      * The Failed Device Count.
      * Failed Device Count.
      */
-    @SerializedName("failedDeviceCount")
+    @SerializedName(value = "failedDeviceCount", alternate = {"FailedDeviceCount"})
     @Expose
     public Integer failedDeviceCount;
 
@@ -36,7 +36,7 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
      * The Installed Device Count.
      * Installed Device Count.
      */
-    @SerializedName("installedDeviceCount")
+    @SerializedName(value = "installedDeviceCount", alternate = {"InstalledDeviceCount"})
     @Expose
     public Integer installedDeviceCount;
 
@@ -44,7 +44,7 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
      * The Not Installed Device Count.
      * Not installed device count.
      */
-    @SerializedName("notInstalledDeviceCount")
+    @SerializedName(value = "notInstalledDeviceCount", alternate = {"NotInstalledDeviceCount"})
     @Expose
     public Integer notInstalledDeviceCount;
 
@@ -52,7 +52,7 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
      * The User Name.
      * User name.
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 
@@ -60,7 +60,7 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
      * The Device States.
      * The install state of the eBook.
      */
-    @SerializedName("deviceStates")
+    @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
     public DeviceInstallStateCollectionPage deviceStates;
 

@@ -37,7 +37,7 @@ public class Process implements IJsonBackedObject {
      * The Account Name.
      * User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
      */
-    @SerializedName("accountName")
+    @SerializedName(value = "accountName", alternate = {"AccountName"})
     @Expose
     public String accountName;
 
@@ -45,7 +45,7 @@ public class Process implements IJsonBackedObject {
      * The Command Line.
      * The full process invocation commandline including all parameters.
      */
-    @SerializedName("commandLine")
+    @SerializedName(value = "commandLine", alternate = {"CommandLine"})
     @Expose
     public String commandLine;
 
@@ -53,7 +53,7 @@ public class Process implements IJsonBackedObject {
      * The Created Date Time.
      * Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -61,7 +61,7 @@ public class Process implements IJsonBackedObject {
      * The File Hash.
      * Complex type containing file hashes (cryptographic and location-sensitive).
      */
-    @SerializedName("fileHash")
+    @SerializedName(value = "fileHash", alternate = {"FileHash"})
     @Expose
     public FileHash fileHash;
 
@@ -69,7 +69,7 @@ public class Process implements IJsonBackedObject {
      * The Integrity Level.
      * The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
      */
-    @SerializedName("integrityLevel")
+    @SerializedName(value = "integrityLevel", alternate = {"IntegrityLevel"})
     @Expose
     public ProcessIntegrityLevel integrityLevel;
 
@@ -77,7 +77,7 @@ public class Process implements IJsonBackedObject {
      * The Is Elevated.
      * True if the process is elevated.
      */
-    @SerializedName("isElevated")
+    @SerializedName(value = "isElevated", alternate = {"IsElevated"})
     @Expose
     public Boolean isElevated;
 
@@ -85,7 +85,7 @@ public class Process implements IJsonBackedObject {
      * The Name.
      * The name of the process' Image file.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -93,7 +93,7 @@ public class Process implements IJsonBackedObject {
      * The Parent Process Created Date Time.
      * DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
-    @SerializedName("parentProcessCreatedDateTime")
+    @SerializedName(value = "parentProcessCreatedDateTime", alternate = {"ParentProcessCreatedDateTime"})
     @Expose
     public java.util.Calendar parentProcessCreatedDateTime;
 
@@ -101,7 +101,7 @@ public class Process implements IJsonBackedObject {
      * The Parent Process Id.
      * The Process ID (PID) of the parent process.
      */
-    @SerializedName("parentProcessId")
+    @SerializedName(value = "parentProcessId", alternate = {"ParentProcessId"})
     @Expose
     public Integer parentProcessId;
 
@@ -109,7 +109,7 @@ public class Process implements IJsonBackedObject {
      * The Parent Process Name.
      * The name of the image file of the parent process.
      */
-    @SerializedName("parentProcessName")
+    @SerializedName(value = "parentProcessName", alternate = {"ParentProcessName"})
     @Expose
     public String parentProcessName;
 
@@ -117,7 +117,7 @@ public class Process implements IJsonBackedObject {
      * The Path.
      * Full path, including filename.
      */
-    @SerializedName("path")
+    @SerializedName(value = "path", alternate = {"Path"})
     @Expose
     public String path;
 
@@ -125,7 +125,7 @@ public class Process implements IJsonBackedObject {
      * The Process Id.
      * The Process ID (PID) of the process.
      */
-    @SerializedName("processId")
+    @SerializedName(value = "processId", alternate = {"ProcessId"})
     @Expose
     public Integer processId;
 

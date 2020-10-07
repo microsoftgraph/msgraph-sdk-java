@@ -27,7 +27,7 @@ public class DeviceCompliancePolicyAssignment extends Entity implements IJsonBac
      * The Target.
      * Target for the compliance policy assignment.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

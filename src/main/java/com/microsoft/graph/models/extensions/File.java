@@ -36,7 +36,7 @@ public class File implements IJsonBackedObject {
      * The Hashes.
      * Hashes of the file's binary content, if available. Read-only.
      */
-    @SerializedName("hashes")
+    @SerializedName(value = "hashes", alternate = {"Hashes"})
     @Expose
     public Hashes hashes;
 
@@ -44,7 +44,7 @@ public class File implements IJsonBackedObject {
      * The Mime Type.
      * The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
      */
-    @SerializedName("mimeType")
+    @SerializedName(value = "mimeType", alternate = {"MimeType"})
     @Expose
     public String mimeType;
 
@@ -52,7 +52,7 @@ public class File implements IJsonBackedObject {
      * The Processing Metadata.
      * 
      */
-    @SerializedName("processingMetadata")
+    @SerializedName(value = "processingMetadata", alternate = {"ProcessingMetadata"})
     @Expose
     public Boolean processingMetadata;
 

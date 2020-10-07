@@ -22,7 +22,7 @@ public class WorkbookFunctionsSubtotalBody {
      * The function Num.
      * 
      */
-    @SerializedName("functionNum")
+    @SerializedName(value = "functionNum", alternate = {"FunctionNum"})
     @Expose
     public com.google.gson.JsonElement functionNum;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsSubtotalBody {
      * The values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 

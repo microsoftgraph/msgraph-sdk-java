@@ -29,7 +29,7 @@ public class Participant extends Entity implements IJsonBackedObject {
      * The Info.
      * The participant of the participant.
      */
-    @SerializedName("info")
+    @SerializedName(value = "info", alternate = {"Info"})
     @Expose
     public ParticipantInfo info;
 
@@ -37,7 +37,7 @@ public class Participant extends Entity implements IJsonBackedObject {
      * The Is In Lobby.
      * true if the participant is in lobby.
      */
-    @SerializedName("isInLobby")
+    @SerializedName(value = "isInLobby", alternate = {"IsInLobby"})
     @Expose
     public Boolean isInLobby;
 
@@ -45,7 +45,7 @@ public class Participant extends Entity implements IJsonBackedObject {
      * The Is Muted.
      * true if the participant is muted (client or server muted).
      */
-    @SerializedName("isMuted")
+    @SerializedName(value = "isMuted", alternate = {"IsMuted"})
     @Expose
     public Boolean isMuted;
 
@@ -53,7 +53,7 @@ public class Participant extends Entity implements IJsonBackedObject {
      * The Media Streams.
      * The list of media streams.
      */
-    @SerializedName("mediaStreams")
+    @SerializedName(value = "mediaStreams", alternate = {"MediaStreams"})
     @Expose
     public java.util.List<MediaStream> mediaStreams;
 
@@ -61,7 +61,7 @@ public class Participant extends Entity implements IJsonBackedObject {
      * The Recording Info.
      * Information about whether the participant has recording capability.
      */
-    @SerializedName("recordingInfo")
+    @SerializedName(value = "recordingInfo", alternate = {"RecordingInfo"})
     @Expose
     public RecordingInfo recordingInfo;
 

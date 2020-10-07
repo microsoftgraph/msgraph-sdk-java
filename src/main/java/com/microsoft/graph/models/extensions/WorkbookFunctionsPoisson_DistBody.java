@@ -22,7 +22,7 @@ public class WorkbookFunctionsPoisson_DistBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsPoisson_DistBody {
      * The mean.
      * 
      */
-    @SerializedName("mean")
+    @SerializedName(value = "mean", alternate = {"Mean"})
     @Expose
     public com.google.gson.JsonElement mean;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsPoisson_DistBody {
      * The cumulative.
      * 
      */
-    @SerializedName("cumulative")
+    @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
     public com.google.gson.JsonElement cumulative;
 

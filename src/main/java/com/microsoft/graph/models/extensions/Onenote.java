@@ -38,7 +38,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      * The Notebooks.
      * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
      */
-    @SerializedName("notebooks")
+    @SerializedName(value = "notebooks", alternate = {"Notebooks"})
     @Expose
     public NotebookCollectionPage notebooks;
 
@@ -46,7 +46,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      * The Operations.
      * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      */
-    @SerializedName("operations")
+    @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
     public OnenoteOperationCollectionPage operations;
 
@@ -54,7 +54,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      * The Pages.
      * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      */
-    @SerializedName("pages")
+    @SerializedName(value = "pages", alternate = {"Pages"})
     @Expose
     public OnenotePageCollectionPage pages;
 
@@ -62,7 +62,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      * The Resources.
      * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      */
-    @SerializedName("resources")
+    @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
     public OnenoteResourceCollectionPage resources;
 
@@ -70,7 +70,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      * The Section Groups.
      * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      */
-    @SerializedName("sectionGroups")
+    @SerializedName(value = "sectionGroups", alternate = {"SectionGroups"})
     @Expose
     public SectionGroupCollectionPage sectionGroups;
 
@@ -78,7 +78,7 @@ public class Onenote extends Entity implements IJsonBackedObject {
      * The Sections.
      * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      */
-    @SerializedName("sections")
+    @SerializedName(value = "sections", alternate = {"Sections"})
     @Expose
     public OnenoteSectionCollectionPage sections;
 

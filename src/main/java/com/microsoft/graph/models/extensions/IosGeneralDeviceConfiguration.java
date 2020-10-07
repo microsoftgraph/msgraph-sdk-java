@@ -41,7 +41,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Account Block Modification.
      * Indicates whether or not to allow account modification when the device is in supervised mode.
      */
-    @SerializedName("accountBlockModification")
+    @SerializedName(value = "accountBlockModification", alternate = {"AccountBlockModification"})
     @Expose
     public Boolean accountBlockModification;
 
@@ -49,7 +49,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Activation Lock Allow When Supervised.
      * Indicates whether or not to allow activation lock when the device is in the supervised mode.
      */
-    @SerializedName("activationLockAllowWhenSupervised")
+    @SerializedName(value = "activationLockAllowWhenSupervised", alternate = {"ActivationLockAllowWhenSupervised"})
     @Expose
     public Boolean activationLockAllowWhenSupervised;
 
@@ -57,7 +57,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Air Drop Blocked.
      * Indicates whether or not to allow AirDrop when the device is in supervised mode.
      */
-    @SerializedName("airDropBlocked")
+    @SerializedName(value = "airDropBlocked", alternate = {"AirDropBlocked"})
     @Expose
     public Boolean airDropBlocked;
 
@@ -65,7 +65,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Air Drop Force Unmanaged Drop Target.
      * Indicates whether or not to cause AirDrop to be considered an unmanaged drop target (iOS 9.0 and later).
      */
-    @SerializedName("airDropForceUnmanagedDropTarget")
+    @SerializedName(value = "airDropForceUnmanagedDropTarget", alternate = {"AirDropForceUnmanagedDropTarget"})
     @Expose
     public Boolean airDropForceUnmanagedDropTarget;
 
@@ -73,7 +73,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Air Play Force Pairing Password For Outgoing Requests.
      * Indicates whether or not to enforce all devices receiving AirPlay requests from this device to use a pairing password.
      */
-    @SerializedName("airPlayForcePairingPasswordForOutgoingRequests")
+    @SerializedName(value = "airPlayForcePairingPasswordForOutgoingRequests", alternate = {"AirPlayForcePairingPasswordForOutgoingRequests"})
     @Expose
     public Boolean airPlayForcePairingPasswordForOutgoingRequests;
 
@@ -81,7 +81,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Apple News Blocked.
      * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
      */
-    @SerializedName("appleNewsBlocked")
+    @SerializedName(value = "appleNewsBlocked", alternate = {"AppleNewsBlocked"})
     @Expose
     public Boolean appleNewsBlocked;
 
@@ -89,7 +89,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Apple Watch Block Pairing.
      * Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
      */
-    @SerializedName("appleWatchBlockPairing")
+    @SerializedName(value = "appleWatchBlockPairing", alternate = {"AppleWatchBlockPairing"})
     @Expose
     public Boolean appleWatchBlockPairing;
 
@@ -97,7 +97,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Apple Watch Force Wrist Detection.
      * Indicates whether or not to force a paired Apple Watch to use Wrist Detection (iOS 8.2 and later).
      */
-    @SerializedName("appleWatchForceWristDetection")
+    @SerializedName(value = "appleWatchForceWristDetection", alternate = {"AppleWatchForceWristDetection"})
     @Expose
     public Boolean appleWatchForceWristDetection;
 
@@ -105,7 +105,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Apps Single App Mode List.
      * Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("appsSingleAppModeList")
+    @SerializedName(value = "appsSingleAppModeList", alternate = {"AppsSingleAppModeList"})
     @Expose
     public java.util.List<AppListItem> appsSingleAppModeList;
 
@@ -113,7 +113,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The App Store Block Automatic Downloads.
      * Indicates whether or not to block the automatic downloading of apps purchased on other devices when the device is in supervised mode (iOS 9.0 and later).
      */
-    @SerializedName("appStoreBlockAutomaticDownloads")
+    @SerializedName(value = "appStoreBlockAutomaticDownloads", alternate = {"AppStoreBlockAutomaticDownloads"})
     @Expose
     public Boolean appStoreBlockAutomaticDownloads;
 
@@ -121,7 +121,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The App Store Blocked.
      * Indicates whether or not to block the user from using the App Store.
      */
-    @SerializedName("appStoreBlocked")
+    @SerializedName(value = "appStoreBlocked", alternate = {"AppStoreBlocked"})
     @Expose
     public Boolean appStoreBlocked;
 
@@ -129,7 +129,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The App Store Block In App Purchases.
      * Indicates whether or not to block the user from making in app purchases.
      */
-    @SerializedName("appStoreBlockInAppPurchases")
+    @SerializedName(value = "appStoreBlockInAppPurchases", alternate = {"AppStoreBlockInAppPurchases"})
     @Expose
     public Boolean appStoreBlockInAppPurchases;
 
@@ -137,7 +137,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The App Store Block UIApp Installation.
      * Indicates whether or not to block the App Store app, not restricting installation through Host apps. Applies to supervised mode only (iOS 9.0 and later).
      */
-    @SerializedName("appStoreBlockUIAppInstallation")
+    @SerializedName(value = "appStoreBlockUIAppInstallation", alternate = {"AppStoreBlockUIAppInstallation"})
     @Expose
     public Boolean appStoreBlockUIAppInstallation;
 
@@ -145,7 +145,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The App Store Require Password.
      * Indicates whether or not to require a password when using the app store.
      */
-    @SerializedName("appStoreRequirePassword")
+    @SerializedName(value = "appStoreRequirePassword", alternate = {"AppStoreRequirePassword"})
     @Expose
     public Boolean appStoreRequirePassword;
 
@@ -153,7 +153,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Apps Visibility List.
      * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
      */
-    @SerializedName("appsVisibilityList")
+    @SerializedName(value = "appsVisibilityList", alternate = {"AppsVisibilityList"})
     @Expose
     public java.util.List<AppListItem> appsVisibilityList;
 
@@ -161,7 +161,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Apps Visibility List Type.
      * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
      */
-    @SerializedName("appsVisibilityListType")
+    @SerializedName(value = "appsVisibilityListType", alternate = {"AppsVisibilityListType"})
     @Expose
     public AppListType appsVisibilityListType;
 
@@ -169,7 +169,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Bluetooth Block Modification.
      * Indicates whether or not to allow modification of Bluetooth settings when the device is in supervised mode (iOS 10.0 and later).
      */
-    @SerializedName("bluetoothBlockModification")
+    @SerializedName(value = "bluetoothBlockModification", alternate = {"BluetoothBlockModification"})
     @Expose
     public Boolean bluetoothBlockModification;
 
@@ -177,7 +177,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Camera Blocked.
      * Indicates whether or not to block the user from accessing the camera of the device.
      */
-    @SerializedName("cameraBlocked")
+    @SerializedName(value = "cameraBlocked", alternate = {"CameraBlocked"})
     @Expose
     public Boolean cameraBlocked;
 
@@ -185,7 +185,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Cellular Block Data Roaming.
      * Indicates whether or not to block data roaming.
      */
-    @SerializedName("cellularBlockDataRoaming")
+    @SerializedName(value = "cellularBlockDataRoaming", alternate = {"CellularBlockDataRoaming"})
     @Expose
     public Boolean cellularBlockDataRoaming;
 
@@ -193,7 +193,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Cellular Block Global Background Fetch While Roaming.
      * Indicates whether or not to block global background fetch while roaming.
      */
-    @SerializedName("cellularBlockGlobalBackgroundFetchWhileRoaming")
+    @SerializedName(value = "cellularBlockGlobalBackgroundFetchWhileRoaming", alternate = {"CellularBlockGlobalBackgroundFetchWhileRoaming"})
     @Expose
     public Boolean cellularBlockGlobalBackgroundFetchWhileRoaming;
 
@@ -201,7 +201,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Cellular Block Per App Data Modification.
      * Indicates whether or not to allow changes to cellular app data usage settings when the device is in supervised mode.
      */
-    @SerializedName("cellularBlockPerAppDataModification")
+    @SerializedName(value = "cellularBlockPerAppDataModification", alternate = {"CellularBlockPerAppDataModification"})
     @Expose
     public Boolean cellularBlockPerAppDataModification;
 
@@ -209,7 +209,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Cellular Block Personal Hotspot.
      * Indicates whether or not to block Personal Hotspot.
      */
-    @SerializedName("cellularBlockPersonalHotspot")
+    @SerializedName(value = "cellularBlockPersonalHotspot", alternate = {"CellularBlockPersonalHotspot"})
     @Expose
     public Boolean cellularBlockPersonalHotspot;
 
@@ -217,7 +217,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Cellular Block Voice Roaming.
      * Indicates whether or not to block voice roaming.
      */
-    @SerializedName("cellularBlockVoiceRoaming")
+    @SerializedName(value = "cellularBlockVoiceRoaming", alternate = {"CellularBlockVoiceRoaming"})
     @Expose
     public Boolean cellularBlockVoiceRoaming;
 
@@ -225,7 +225,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Certificates Block Untrusted Tls Certificates.
      * Indicates whether or not to block untrusted TLS certificates.
      */
-    @SerializedName("certificatesBlockUntrustedTlsCertificates")
+    @SerializedName(value = "certificatesBlockUntrustedTlsCertificates", alternate = {"CertificatesBlockUntrustedTlsCertificates"})
     @Expose
     public Boolean certificatesBlockUntrustedTlsCertificates;
 
@@ -233,7 +233,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Classroom App Block Remote Screen Observation.
      * Indicates whether or not to allow remote screen observation by Classroom app when the device is in supervised mode (iOS 9.3 and later).
      */
-    @SerializedName("classroomAppBlockRemoteScreenObservation")
+    @SerializedName(value = "classroomAppBlockRemoteScreenObservation", alternate = {"ClassroomAppBlockRemoteScreenObservation"})
     @Expose
     public Boolean classroomAppBlockRemoteScreenObservation;
 
@@ -241,7 +241,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Classroom App Force Unprompted Screen Observation.
      * Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting when the device is in supervised mode.
      */
-    @SerializedName("classroomAppForceUnpromptedScreenObservation")
+    @SerializedName(value = "classroomAppForceUnpromptedScreenObservation", alternate = {"ClassroomAppForceUnpromptedScreenObservation"})
     @Expose
     public Boolean classroomAppForceUnpromptedScreenObservation;
 
@@ -249,7 +249,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Compliant App List Type.
      * List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
      */
-    @SerializedName("compliantAppListType")
+    @SerializedName(value = "compliantAppListType", alternate = {"CompliantAppListType"})
     @Expose
     public AppListType compliantAppListType;
 
@@ -257,7 +257,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Compliant Apps List.
      * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      */
-    @SerializedName("compliantAppsList")
+    @SerializedName(value = "compliantAppsList", alternate = {"CompliantAppsList"})
     @Expose
     public java.util.List<AppListItem> compliantAppsList;
 
@@ -265,7 +265,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Configuration Profile Block Changes.
      * Indicates whether or not to block the user from installing configuration profiles and certificates interactively when the device is in supervised mode.
      */
-    @SerializedName("configurationProfileBlockChanges")
+    @SerializedName(value = "configurationProfileBlockChanges", alternate = {"ConfigurationProfileBlockChanges"})
     @Expose
     public Boolean configurationProfileBlockChanges;
 
@@ -273,7 +273,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Definition Lookup Blocked.
      * Indicates whether or not to block definition lookup when the device is in supervised mode (iOS 8.1.3 and later ).
      */
-    @SerializedName("definitionLookupBlocked")
+    @SerializedName(value = "definitionLookupBlocked", alternate = {"DefinitionLookupBlocked"})
     @Expose
     public Boolean definitionLookupBlocked;
 
@@ -281,7 +281,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Device Block Enable Restrictions.
      * Indicates whether or not to allow the user to enables restrictions in the device settings when the device is in supervised mode.
      */
-    @SerializedName("deviceBlockEnableRestrictions")
+    @SerializedName(value = "deviceBlockEnableRestrictions", alternate = {"DeviceBlockEnableRestrictions"})
     @Expose
     public Boolean deviceBlockEnableRestrictions;
 
@@ -289,7 +289,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Device Block Erase Content And Settings.
      * Indicates whether or not to allow the use of the 'Erase all content and settings' option on the device when the device is in supervised mode.
      */
-    @SerializedName("deviceBlockEraseContentAndSettings")
+    @SerializedName(value = "deviceBlockEraseContentAndSettings", alternate = {"DeviceBlockEraseContentAndSettings"})
     @Expose
     public Boolean deviceBlockEraseContentAndSettings;
 
@@ -297,7 +297,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Device Block Name Modification.
      * Indicates whether or not to allow device name modification when the device is in supervised mode (iOS 9.0 and later).
      */
-    @SerializedName("deviceBlockNameModification")
+    @SerializedName(value = "deviceBlockNameModification", alternate = {"DeviceBlockNameModification"})
     @Expose
     public Boolean deviceBlockNameModification;
 
@@ -305,7 +305,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Diagnostic Data Block Submission.
      * Indicates whether or not to block diagnostic data submission.
      */
-    @SerializedName("diagnosticDataBlockSubmission")
+    @SerializedName(value = "diagnosticDataBlockSubmission", alternate = {"DiagnosticDataBlockSubmission"})
     @Expose
     public Boolean diagnosticDataBlockSubmission;
 
@@ -313,7 +313,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Diagnostic Data Block Submission Modification.
      * Indicates whether or not to allow diagnostics submission settings modification when the device is in supervised mode (iOS 9.3.2 and later).
      */
-    @SerializedName("diagnosticDataBlockSubmissionModification")
+    @SerializedName(value = "diagnosticDataBlockSubmissionModification", alternate = {"DiagnosticDataBlockSubmissionModification"})
     @Expose
     public Boolean diagnosticDataBlockSubmissionModification;
 
@@ -321,7 +321,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Documents Block Managed Documents In Unmanaged Apps.
      * Indicates whether or not to block the user from viewing managed documents in unmanaged apps.
      */
-    @SerializedName("documentsBlockManagedDocumentsInUnmanagedApps")
+    @SerializedName(value = "documentsBlockManagedDocumentsInUnmanagedApps", alternate = {"DocumentsBlockManagedDocumentsInUnmanagedApps"})
     @Expose
     public Boolean documentsBlockManagedDocumentsInUnmanagedApps;
 
@@ -329,7 +329,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Documents Block Unmanaged Documents In Managed Apps.
      * Indicates whether or not to block the user from viewing unmanaged documents in managed apps.
      */
-    @SerializedName("documentsBlockUnmanagedDocumentsInManagedApps")
+    @SerializedName(value = "documentsBlockUnmanagedDocumentsInManagedApps", alternate = {"DocumentsBlockUnmanagedDocumentsInManagedApps"})
     @Expose
     public Boolean documentsBlockUnmanagedDocumentsInManagedApps;
 
@@ -337,7 +337,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Email In Domain Suffixes.
      * An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
      */
-    @SerializedName("emailInDomainSuffixes")
+    @SerializedName(value = "emailInDomainSuffixes", alternate = {"EmailInDomainSuffixes"})
     @Expose
     public java.util.List<String> emailInDomainSuffixes;
 
@@ -345,7 +345,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Enterprise App Block Trust.
      * Indicates whether or not to block the user from trusting an enterprise app.
      */
-    @SerializedName("enterpriseAppBlockTrust")
+    @SerializedName(value = "enterpriseAppBlockTrust", alternate = {"EnterpriseAppBlockTrust"})
     @Expose
     public Boolean enterpriseAppBlockTrust;
 
@@ -353,7 +353,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Enterprise App Block Trust Modification.
      * Indicates whether or not to block the user from modifying the enterprise app trust settings.
      */
-    @SerializedName("enterpriseAppBlockTrustModification")
+    @SerializedName(value = "enterpriseAppBlockTrustModification", alternate = {"EnterpriseAppBlockTrustModification"})
     @Expose
     public Boolean enterpriseAppBlockTrustModification;
 
@@ -361,7 +361,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Face Time Blocked.
      * Indicates whether or not to block the user from using FaceTime.
      */
-    @SerializedName("faceTimeBlocked")
+    @SerializedName(value = "faceTimeBlocked", alternate = {"FaceTimeBlocked"})
     @Expose
     public Boolean faceTimeBlocked;
 
@@ -369,7 +369,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Find My Friends Blocked.
      * Indicates whether or not to block Find My Friends when the device is in supervised mode.
      */
-    @SerializedName("findMyFriendsBlocked")
+    @SerializedName(value = "findMyFriendsBlocked", alternate = {"FindMyFriendsBlocked"})
     @Expose
     public Boolean findMyFriendsBlocked;
 
@@ -377,7 +377,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Game Center Blocked.
      * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
      */
-    @SerializedName("gameCenterBlocked")
+    @SerializedName(value = "gameCenterBlocked", alternate = {"GameCenterBlocked"})
     @Expose
     public Boolean gameCenterBlocked;
 
@@ -385,7 +385,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Gaming Block Game Center Friends.
      * Indicates whether or not to block the user from having friends in Game Center.
      */
-    @SerializedName("gamingBlockGameCenterFriends")
+    @SerializedName(value = "gamingBlockGameCenterFriends", alternate = {"GamingBlockGameCenterFriends"})
     @Expose
     public Boolean gamingBlockGameCenterFriends;
 
@@ -393,7 +393,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Gaming Block Multiplayer.
      * Indicates whether or not to block the user from using multiplayer gaming.
      */
-    @SerializedName("gamingBlockMultiplayer")
+    @SerializedName(value = "gamingBlockMultiplayer", alternate = {"GamingBlockMultiplayer"})
     @Expose
     public Boolean gamingBlockMultiplayer;
 
@@ -401,7 +401,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Host Pairing Blocked.
      * indicates whether or not to allow host pairing to control the devices an iOS device can pair with when the iOS device is in supervised mode.
      */
-    @SerializedName("hostPairingBlocked")
+    @SerializedName(value = "hostPairingBlocked", alternate = {"HostPairingBlocked"})
     @Expose
     public Boolean hostPairingBlocked;
 
@@ -409,7 +409,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The IBooks Store Blocked.
      * Indicates whether or not to block the user from using the iBooks Store when the device is in supervised mode.
      */
-    @SerializedName("iBooksStoreBlocked")
+    @SerializedName(value = "iBooksStoreBlocked", alternate = {"IBooksStoreBlocked"})
     @Expose
     public Boolean iBooksStoreBlocked;
 
@@ -417,7 +417,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The IBooks Store Block Erotica.
      * Indicates whether or not to block the user from downloading media from the iBookstore that has been tagged as erotica.
      */
-    @SerializedName("iBooksStoreBlockErotica")
+    @SerializedName(value = "iBooksStoreBlockErotica", alternate = {"IBooksStoreBlockErotica"})
     @Expose
     public Boolean iBooksStoreBlockErotica;
 
@@ -425,7 +425,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The ICloud Block Activity Continuation.
      * Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
      */
-    @SerializedName("iCloudBlockActivityContinuation")
+    @SerializedName(value = "iCloudBlockActivityContinuation", alternate = {"ICloudBlockActivityContinuation"})
     @Expose
     public Boolean iCloudBlockActivityContinuation;
 
@@ -433,7 +433,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The ICloud Block Backup.
      * Indicates whether or not to block iCloud backup.
      */
-    @SerializedName("iCloudBlockBackup")
+    @SerializedName(value = "iCloudBlockBackup", alternate = {"ICloudBlockBackup"})
     @Expose
     public Boolean iCloudBlockBackup;
 
@@ -441,7 +441,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The ICloud Block Document Sync.
      * Indicates whether or not to block iCloud document sync.
      */
-    @SerializedName("iCloudBlockDocumentSync")
+    @SerializedName(value = "iCloudBlockDocumentSync", alternate = {"ICloudBlockDocumentSync"})
     @Expose
     public Boolean iCloudBlockDocumentSync;
 
@@ -449,7 +449,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The ICloud Block Managed Apps Sync.
      * Indicates whether or not to block Managed Apps Cloud Sync.
      */
-    @SerializedName("iCloudBlockManagedAppsSync")
+    @SerializedName(value = "iCloudBlockManagedAppsSync", alternate = {"ICloudBlockManagedAppsSync"})
     @Expose
     public Boolean iCloudBlockManagedAppsSync;
 
@@ -457,7 +457,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The ICloud Block Photo Library.
      * Indicates whether or not to block iCloud Photo Library.
      */
-    @SerializedName("iCloudBlockPhotoLibrary")
+    @SerializedName(value = "iCloudBlockPhotoLibrary", alternate = {"ICloudBlockPhotoLibrary"})
     @Expose
     public Boolean iCloudBlockPhotoLibrary;
 
@@ -465,7 +465,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The ICloud Block Photo Stream Sync.
      * Indicates whether or not to block iCloud Photo Stream Sync.
      */
-    @SerializedName("iCloudBlockPhotoStreamSync")
+    @SerializedName(value = "iCloudBlockPhotoStreamSync", alternate = {"ICloudBlockPhotoStreamSync"})
     @Expose
     public Boolean iCloudBlockPhotoStreamSync;
 
@@ -473,7 +473,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The ICloud Block Shared Photo Stream.
      * Indicates whether or not to block Shared Photo Stream.
      */
-    @SerializedName("iCloudBlockSharedPhotoStream")
+    @SerializedName(value = "iCloudBlockSharedPhotoStream", alternate = {"ICloudBlockSharedPhotoStream"})
     @Expose
     public Boolean iCloudBlockSharedPhotoStream;
 
@@ -481,7 +481,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The ICloud Require Encrypted Backup.
      * Indicates whether or not to require backups to iCloud be encrypted.
      */
-    @SerializedName("iCloudRequireEncryptedBackup")
+    @SerializedName(value = "iCloudRequireEncryptedBackup", alternate = {"ICloudRequireEncryptedBackup"})
     @Expose
     public Boolean iCloudRequireEncryptedBackup;
 
@@ -489,7 +489,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The ITunes Block Explicit Content.
      * Indicates whether or not to block the user from accessing explicit content in iTunes and the App Store.
      */
-    @SerializedName("iTunesBlockExplicitContent")
+    @SerializedName(value = "iTunesBlockExplicitContent", alternate = {"ITunesBlockExplicitContent"})
     @Expose
     public Boolean iTunesBlockExplicitContent;
 
@@ -497,7 +497,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The ITunes Block Music Service.
      * Indicates whether or not to block Music service and revert Music app to classic mode when the device is in supervised mode (iOS 9.3 and later and macOS 10.12 and later).
      */
-    @SerializedName("iTunesBlockMusicService")
+    @SerializedName(value = "iTunesBlockMusicService", alternate = {"ITunesBlockMusicService"})
     @Expose
     public Boolean iTunesBlockMusicService;
 
@@ -505,7 +505,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The ITunes Block Radio.
      * Indicates whether or not to block the user from using iTunes Radio when the device is in supervised mode (iOS 9.3 and later).
      */
-    @SerializedName("iTunesBlockRadio")
+    @SerializedName(value = "iTunesBlockRadio", alternate = {"ITunesBlockRadio"})
     @Expose
     public Boolean iTunesBlockRadio;
 
@@ -513,7 +513,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Keyboard Block Auto Correct.
      * Indicates whether or not to block keyboard auto-correction when the device is in supervised mode (iOS 8.1.3 and later).
      */
-    @SerializedName("keyboardBlockAutoCorrect")
+    @SerializedName(value = "keyboardBlockAutoCorrect", alternate = {"KeyboardBlockAutoCorrect"})
     @Expose
     public Boolean keyboardBlockAutoCorrect;
 
@@ -521,7 +521,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Keyboard Block Dictation.
      * Indicates whether or not to block the user from using dictation input when the device is in supervised mode.
      */
-    @SerializedName("keyboardBlockDictation")
+    @SerializedName(value = "keyboardBlockDictation", alternate = {"KeyboardBlockDictation"})
     @Expose
     public Boolean keyboardBlockDictation;
 
@@ -529,7 +529,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Keyboard Block Predictive.
      * Indicates whether or not to block predictive keyboards when device is in supervised mode (iOS 8.1.3 and later).
      */
-    @SerializedName("keyboardBlockPredictive")
+    @SerializedName(value = "keyboardBlockPredictive", alternate = {"KeyboardBlockPredictive"})
     @Expose
     public Boolean keyboardBlockPredictive;
 
@@ -537,7 +537,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Keyboard Block Shortcuts.
      * Indicates whether or not to block keyboard shortcuts when the device is in supervised mode (iOS 9.0 and later).
      */
-    @SerializedName("keyboardBlockShortcuts")
+    @SerializedName(value = "keyboardBlockShortcuts", alternate = {"KeyboardBlockShortcuts"})
     @Expose
     public Boolean keyboardBlockShortcuts;
 
@@ -545,7 +545,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Keyboard Block Spell Check.
      * Indicates whether or not to block keyboard spell-checking when the device is in supervised mode (iOS 8.1.3 and later).
      */
-    @SerializedName("keyboardBlockSpellCheck")
+    @SerializedName(value = "keyboardBlockSpellCheck", alternate = {"KeyboardBlockSpellCheck"})
     @Expose
     public Boolean keyboardBlockSpellCheck;
 
@@ -553,7 +553,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Allow Assistive Speak.
      * Indicates whether or not to allow assistive speak while in kiosk mode.
      */
-    @SerializedName("kioskModeAllowAssistiveSpeak")
+    @SerializedName(value = "kioskModeAllowAssistiveSpeak", alternate = {"KioskModeAllowAssistiveSpeak"})
     @Expose
     public Boolean kioskModeAllowAssistiveSpeak;
 
@@ -561,7 +561,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Allow Assistive Touch Settings.
      * Indicates whether or not to allow access to the Assistive Touch Settings while in kiosk mode.
      */
-    @SerializedName("kioskModeAllowAssistiveTouchSettings")
+    @SerializedName(value = "kioskModeAllowAssistiveTouchSettings", alternate = {"KioskModeAllowAssistiveTouchSettings"})
     @Expose
     public Boolean kioskModeAllowAssistiveTouchSettings;
 
@@ -569,7 +569,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Allow Auto Lock.
      * Indicates whether or not to allow device auto lock while in kiosk mode.
      */
-    @SerializedName("kioskModeAllowAutoLock")
+    @SerializedName(value = "kioskModeAllowAutoLock", alternate = {"KioskModeAllowAutoLock"})
     @Expose
     public Boolean kioskModeAllowAutoLock;
 
@@ -577,7 +577,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Allow Color Inversion Settings.
      * Indicates whether or not to allow access to the Color Inversion Settings while in kiosk mode.
      */
-    @SerializedName("kioskModeAllowColorInversionSettings")
+    @SerializedName(value = "kioskModeAllowColorInversionSettings", alternate = {"KioskModeAllowColorInversionSettings"})
     @Expose
     public Boolean kioskModeAllowColorInversionSettings;
 
@@ -585,7 +585,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Allow Ringer Switch.
      * Indicates whether or not to allow use of the ringer switch while in kiosk mode.
      */
-    @SerializedName("kioskModeAllowRingerSwitch")
+    @SerializedName(value = "kioskModeAllowRingerSwitch", alternate = {"KioskModeAllowRingerSwitch"})
     @Expose
     public Boolean kioskModeAllowRingerSwitch;
 
@@ -593,7 +593,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Allow Screen Rotation.
      * Indicates whether or not to allow screen rotation while in kiosk mode.
      */
-    @SerializedName("kioskModeAllowScreenRotation")
+    @SerializedName(value = "kioskModeAllowScreenRotation", alternate = {"KioskModeAllowScreenRotation"})
     @Expose
     public Boolean kioskModeAllowScreenRotation;
 
@@ -601,7 +601,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Allow Sleep Button.
      * Indicates whether or not to allow use of the sleep button while in kiosk mode.
      */
-    @SerializedName("kioskModeAllowSleepButton")
+    @SerializedName(value = "kioskModeAllowSleepButton", alternate = {"KioskModeAllowSleepButton"})
     @Expose
     public Boolean kioskModeAllowSleepButton;
 
@@ -609,7 +609,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Allow Touchscreen.
      * Indicates whether or not to allow use of the touchscreen while in kiosk mode.
      */
-    @SerializedName("kioskModeAllowTouchscreen")
+    @SerializedName(value = "kioskModeAllowTouchscreen", alternate = {"KioskModeAllowTouchscreen"})
     @Expose
     public Boolean kioskModeAllowTouchscreen;
 
@@ -617,7 +617,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Allow Voice Over Settings.
      * Indicates whether or not to allow access to the voice over settings while in kiosk mode.
      */
-    @SerializedName("kioskModeAllowVoiceOverSettings")
+    @SerializedName(value = "kioskModeAllowVoiceOverSettings", alternate = {"KioskModeAllowVoiceOverSettings"})
     @Expose
     public Boolean kioskModeAllowVoiceOverSettings;
 
@@ -625,7 +625,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Allow Volume Buttons.
      * Indicates whether or not to allow use of the volume buttons while in kiosk mode.
      */
-    @SerializedName("kioskModeAllowVolumeButtons")
+    @SerializedName(value = "kioskModeAllowVolumeButtons", alternate = {"KioskModeAllowVolumeButtons"})
     @Expose
     public Boolean kioskModeAllowVolumeButtons;
 
@@ -633,7 +633,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Allow Zoom Settings.
      * Indicates whether or not to allow access to the zoom settings while in kiosk mode.
      */
-    @SerializedName("kioskModeAllowZoomSettings")
+    @SerializedName(value = "kioskModeAllowZoomSettings", alternate = {"KioskModeAllowZoomSettings"})
     @Expose
     public Boolean kioskModeAllowZoomSettings;
 
@@ -641,7 +641,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode App Store Url.
      * URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
      */
-    @SerializedName("kioskModeAppStoreUrl")
+    @SerializedName(value = "kioskModeAppStoreUrl", alternate = {"KioskModeAppStoreUrl"})
     @Expose
     public String kioskModeAppStoreUrl;
 
@@ -649,7 +649,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Built In App Id.
      * ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
      */
-    @SerializedName("kioskModeBuiltInAppId")
+    @SerializedName(value = "kioskModeBuiltInAppId", alternate = {"KioskModeBuiltInAppId"})
     @Expose
     public String kioskModeBuiltInAppId;
 
@@ -657,7 +657,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Managed App Id.
      * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
      */
-    @SerializedName("kioskModeManagedAppId")
+    @SerializedName(value = "kioskModeManagedAppId", alternate = {"KioskModeManagedAppId"})
     @Expose
     public String kioskModeManagedAppId;
 
@@ -665,7 +665,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Require Assistive Touch.
      * Indicates whether or not to require assistive touch while in kiosk mode.
      */
-    @SerializedName("kioskModeRequireAssistiveTouch")
+    @SerializedName(value = "kioskModeRequireAssistiveTouch", alternate = {"KioskModeRequireAssistiveTouch"})
     @Expose
     public Boolean kioskModeRequireAssistiveTouch;
 
@@ -673,7 +673,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Require Color Inversion.
      * Indicates whether or not to require color inversion while in kiosk mode.
      */
-    @SerializedName("kioskModeRequireColorInversion")
+    @SerializedName(value = "kioskModeRequireColorInversion", alternate = {"KioskModeRequireColorInversion"})
     @Expose
     public Boolean kioskModeRequireColorInversion;
 
@@ -681,7 +681,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Require Mono Audio.
      * Indicates whether or not to require mono audio while in kiosk mode.
      */
-    @SerializedName("kioskModeRequireMonoAudio")
+    @SerializedName(value = "kioskModeRequireMonoAudio", alternate = {"KioskModeRequireMonoAudio"})
     @Expose
     public Boolean kioskModeRequireMonoAudio;
 
@@ -689,7 +689,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Require Voice Over.
      * Indicates whether or not to require voice over while in kiosk mode.
      */
-    @SerializedName("kioskModeRequireVoiceOver")
+    @SerializedName(value = "kioskModeRequireVoiceOver", alternate = {"KioskModeRequireVoiceOver"})
     @Expose
     public Boolean kioskModeRequireVoiceOver;
 
@@ -697,7 +697,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Kiosk Mode Require Zoom.
      * Indicates whether or not to require zoom while in kiosk mode.
      */
-    @SerializedName("kioskModeRequireZoom")
+    @SerializedName(value = "kioskModeRequireZoom", alternate = {"KioskModeRequireZoom"})
     @Expose
     public Boolean kioskModeRequireZoom;
 
@@ -705,7 +705,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Lock Screen Block Control Center.
      * Indicates whether or not to block the user from using control center on the lock screen.
      */
-    @SerializedName("lockScreenBlockControlCenter")
+    @SerializedName(value = "lockScreenBlockControlCenter", alternate = {"LockScreenBlockControlCenter"})
     @Expose
     public Boolean lockScreenBlockControlCenter;
 
@@ -713,7 +713,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Lock Screen Block Notification View.
      * Indicates whether or not to block the user from using the notification view on the lock screen.
      */
-    @SerializedName("lockScreenBlockNotificationView")
+    @SerializedName(value = "lockScreenBlockNotificationView", alternate = {"LockScreenBlockNotificationView"})
     @Expose
     public Boolean lockScreenBlockNotificationView;
 
@@ -721,7 +721,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Lock Screen Block Passbook.
      * Indicates whether or not to block the user from using passbook when the device is locked.
      */
-    @SerializedName("lockScreenBlockPassbook")
+    @SerializedName(value = "lockScreenBlockPassbook", alternate = {"LockScreenBlockPassbook"})
     @Expose
     public Boolean lockScreenBlockPassbook;
 
@@ -729,7 +729,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Lock Screen Block Today View.
      * Indicates whether or not to block the user from using the Today View on the lock screen.
      */
-    @SerializedName("lockScreenBlockTodayView")
+    @SerializedName(value = "lockScreenBlockTodayView", alternate = {"LockScreenBlockTodayView"})
     @Expose
     public Boolean lockScreenBlockTodayView;
 
@@ -737,7 +737,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Media Content Rating Apps.
      * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
      */
-    @SerializedName("mediaContentRatingApps")
+    @SerializedName(value = "mediaContentRatingApps", alternate = {"MediaContentRatingApps"})
     @Expose
     public RatingAppsType mediaContentRatingApps;
 
@@ -745,7 +745,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Media Content Rating Australia.
      * Media content rating settings for Australia
      */
-    @SerializedName("mediaContentRatingAustralia")
+    @SerializedName(value = "mediaContentRatingAustralia", alternate = {"MediaContentRatingAustralia"})
     @Expose
     public MediaContentRatingAustralia mediaContentRatingAustralia;
 
@@ -753,7 +753,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Media Content Rating Canada.
      * Media content rating settings for Canada
      */
-    @SerializedName("mediaContentRatingCanada")
+    @SerializedName(value = "mediaContentRatingCanada", alternate = {"MediaContentRatingCanada"})
     @Expose
     public MediaContentRatingCanada mediaContentRatingCanada;
 
@@ -761,7 +761,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Media Content Rating France.
      * Media content rating settings for France
      */
-    @SerializedName("mediaContentRatingFrance")
+    @SerializedName(value = "mediaContentRatingFrance", alternate = {"MediaContentRatingFrance"})
     @Expose
     public MediaContentRatingFrance mediaContentRatingFrance;
 
@@ -769,7 +769,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Media Content Rating Germany.
      * Media content rating settings for Germany
      */
-    @SerializedName("mediaContentRatingGermany")
+    @SerializedName(value = "mediaContentRatingGermany", alternate = {"MediaContentRatingGermany"})
     @Expose
     public MediaContentRatingGermany mediaContentRatingGermany;
 
@@ -777,7 +777,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Media Content Rating Ireland.
      * Media content rating settings for Ireland
      */
-    @SerializedName("mediaContentRatingIreland")
+    @SerializedName(value = "mediaContentRatingIreland", alternate = {"MediaContentRatingIreland"})
     @Expose
     public MediaContentRatingIreland mediaContentRatingIreland;
 
@@ -785,7 +785,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Media Content Rating Japan.
      * Media content rating settings for Japan
      */
-    @SerializedName("mediaContentRatingJapan")
+    @SerializedName(value = "mediaContentRatingJapan", alternate = {"MediaContentRatingJapan"})
     @Expose
     public MediaContentRatingJapan mediaContentRatingJapan;
 
@@ -793,7 +793,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Media Content Rating New Zealand.
      * Media content rating settings for New Zealand
      */
-    @SerializedName("mediaContentRatingNewZealand")
+    @SerializedName(value = "mediaContentRatingNewZealand", alternate = {"MediaContentRatingNewZealand"})
     @Expose
     public MediaContentRatingNewZealand mediaContentRatingNewZealand;
 
@@ -801,7 +801,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Media Content Rating United Kingdom.
      * Media content rating settings for United Kingdom
      */
-    @SerializedName("mediaContentRatingUnitedKingdom")
+    @SerializedName(value = "mediaContentRatingUnitedKingdom", alternate = {"MediaContentRatingUnitedKingdom"})
     @Expose
     public MediaContentRatingUnitedKingdom mediaContentRatingUnitedKingdom;
 
@@ -809,7 +809,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Media Content Rating United States.
      * Media content rating settings for United States
      */
-    @SerializedName("mediaContentRatingUnitedStates")
+    @SerializedName(value = "mediaContentRatingUnitedStates", alternate = {"MediaContentRatingUnitedStates"})
     @Expose
     public MediaContentRatingUnitedStates mediaContentRatingUnitedStates;
 
@@ -817,7 +817,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Messages Blocked.
      * Indicates whether or not to block the user from using the Messages app on the supervised device.
      */
-    @SerializedName("messagesBlocked")
+    @SerializedName(value = "messagesBlocked", alternate = {"MessagesBlocked"})
     @Expose
     public Boolean messagesBlocked;
 
@@ -825,7 +825,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Network Usage Rules.
      * List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
      */
-    @SerializedName("networkUsageRules")
+    @SerializedName(value = "networkUsageRules", alternate = {"NetworkUsageRules"})
     @Expose
     public java.util.List<IosNetworkUsageRule> networkUsageRules;
 
@@ -833,7 +833,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Notifications Block Settings Modification.
      * Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
      */
-    @SerializedName("notificationsBlockSettingsModification")
+    @SerializedName(value = "notificationsBlockSettingsModification", alternate = {"NotificationsBlockSettingsModification"})
     @Expose
     public Boolean notificationsBlockSettingsModification;
 
@@ -841,7 +841,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Block Fingerprint Modification.
      * Block modification of registered Touch ID fingerprints when in supervised mode.
      */
-    @SerializedName("passcodeBlockFingerprintModification")
+    @SerializedName(value = "passcodeBlockFingerprintModification", alternate = {"PasscodeBlockFingerprintModification"})
     @Expose
     public Boolean passcodeBlockFingerprintModification;
 
@@ -849,7 +849,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Block Fingerprint Unlock.
      * Indicates whether or not to block fingerprint unlock.
      */
-    @SerializedName("passcodeBlockFingerprintUnlock")
+    @SerializedName(value = "passcodeBlockFingerprintUnlock", alternate = {"PasscodeBlockFingerprintUnlock"})
     @Expose
     public Boolean passcodeBlockFingerprintUnlock;
 
@@ -857,7 +857,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Block Modification.
      * Indicates whether or not to allow passcode modification on the supervised device (iOS 9.0 and later).
      */
-    @SerializedName("passcodeBlockModification")
+    @SerializedName(value = "passcodeBlockModification", alternate = {"PasscodeBlockModification"})
     @Expose
     public Boolean passcodeBlockModification;
 
@@ -865,7 +865,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Block Simple.
      * Indicates whether or not to block simple passcodes.
      */
-    @SerializedName("passcodeBlockSimple")
+    @SerializedName(value = "passcodeBlockSimple", alternate = {"PasscodeBlockSimple"})
     @Expose
     public Boolean passcodeBlockSimple;
 
@@ -873,7 +873,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Expiration Days.
      * Number of days before the passcode expires. Valid values 1 to 65535
      */
-    @SerializedName("passcodeExpirationDays")
+    @SerializedName(value = "passcodeExpirationDays", alternate = {"PasscodeExpirationDays"})
     @Expose
     public Integer passcodeExpirationDays;
 
@@ -881,7 +881,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Minimum Character Set Count.
      * Number of character sets a passcode must contain. Valid values 0 to 4
      */
-    @SerializedName("passcodeMinimumCharacterSetCount")
+    @SerializedName(value = "passcodeMinimumCharacterSetCount", alternate = {"PasscodeMinimumCharacterSetCount"})
     @Expose
     public Integer passcodeMinimumCharacterSetCount;
 
@@ -889,7 +889,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Minimum Length.
      * Minimum length of passcode. Valid values 4 to 14
      */
-    @SerializedName("passcodeMinimumLength")
+    @SerializedName(value = "passcodeMinimumLength", alternate = {"PasscodeMinimumLength"})
     @Expose
     public Integer passcodeMinimumLength;
 
@@ -897,7 +897,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Minutes Of Inactivity Before Lock.
      * Minutes of inactivity before a passcode is required.
      */
-    @SerializedName("passcodeMinutesOfInactivityBeforeLock")
+    @SerializedName(value = "passcodeMinutesOfInactivityBeforeLock", alternate = {"PasscodeMinutesOfInactivityBeforeLock"})
     @Expose
     public Integer passcodeMinutesOfInactivityBeforeLock;
 
@@ -905,7 +905,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Minutes Of Inactivity Before Screen Timeout.
      * Minutes of inactivity before the screen times out.
      */
-    @SerializedName("passcodeMinutesOfInactivityBeforeScreenTimeout")
+    @SerializedName(value = "passcodeMinutesOfInactivityBeforeScreenTimeout", alternate = {"PasscodeMinutesOfInactivityBeforeScreenTimeout"})
     @Expose
     public Integer passcodeMinutesOfInactivityBeforeScreenTimeout;
 
@@ -913,7 +913,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Previous Passcode Block Count.
      * Number of previous passcodes to block. Valid values 1 to 24
      */
-    @SerializedName("passcodePreviousPasscodeBlockCount")
+    @SerializedName(value = "passcodePreviousPasscodeBlockCount", alternate = {"PasscodePreviousPasscodeBlockCount"})
     @Expose
     public Integer passcodePreviousPasscodeBlockCount;
 
@@ -921,7 +921,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Required.
      * Indicates whether or not to require a passcode.
      */
-    @SerializedName("passcodeRequired")
+    @SerializedName(value = "passcodeRequired", alternate = {"PasscodeRequired"})
     @Expose
     public Boolean passcodeRequired;
 
@@ -929,7 +929,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Required Type.
      * Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("passcodeRequiredType")
+    @SerializedName(value = "passcodeRequiredType", alternate = {"PasscodeRequiredType"})
     @Expose
     public RequiredPasswordType passcodeRequiredType;
 
@@ -937,7 +937,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Passcode Sign In Failure Count Before Wipe.
      * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
      */
-    @SerializedName("passcodeSignInFailureCountBeforeWipe")
+    @SerializedName(value = "passcodeSignInFailureCountBeforeWipe", alternate = {"PasscodeSignInFailureCountBeforeWipe"})
     @Expose
     public Integer passcodeSignInFailureCountBeforeWipe;
 
@@ -945,7 +945,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Podcasts Blocked.
      * Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
      */
-    @SerializedName("podcastsBlocked")
+    @SerializedName(value = "podcastsBlocked", alternate = {"PodcastsBlocked"})
     @Expose
     public Boolean podcastsBlocked;
 
@@ -953,7 +953,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Safari Block Autofill.
      * Indicates whether or not to block the user from using Auto fill in Safari.
      */
-    @SerializedName("safariBlockAutofill")
+    @SerializedName(value = "safariBlockAutofill", alternate = {"SafariBlockAutofill"})
     @Expose
     public Boolean safariBlockAutofill;
 
@@ -961,7 +961,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Safari Blocked.
      * Indicates whether or not to block the user from using Safari.
      */
-    @SerializedName("safariBlocked")
+    @SerializedName(value = "safariBlocked", alternate = {"SafariBlocked"})
     @Expose
     public Boolean safariBlocked;
 
@@ -969,7 +969,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Safari Block Java Script.
      * Indicates whether or not to block JavaScript in Safari.
      */
-    @SerializedName("safariBlockJavaScript")
+    @SerializedName(value = "safariBlockJavaScript", alternate = {"SafariBlockJavaScript"})
     @Expose
     public Boolean safariBlockJavaScript;
 
@@ -977,7 +977,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Safari Block Popups.
      * Indicates whether or not to block popups in Safari.
      */
-    @SerializedName("safariBlockPopups")
+    @SerializedName(value = "safariBlockPopups", alternate = {"SafariBlockPopups"})
     @Expose
     public Boolean safariBlockPopups;
 
@@ -985,7 +985,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Safari Cookie Settings.
      * Cookie settings for Safari. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
      */
-    @SerializedName("safariCookieSettings")
+    @SerializedName(value = "safariCookieSettings", alternate = {"SafariCookieSettings"})
     @Expose
     public WebBrowserCookieSettings safariCookieSettings;
 
@@ -993,7 +993,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Safari Managed Domains.
      * URLs matching the patterns listed here will be considered managed.
      */
-    @SerializedName("safariManagedDomains")
+    @SerializedName(value = "safariManagedDomains", alternate = {"SafariManagedDomains"})
     @Expose
     public java.util.List<String> safariManagedDomains;
 
@@ -1001,7 +1001,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Safari Password Auto Fill Domains.
      * Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised mode (iOS 9.3 and later).
      */
-    @SerializedName("safariPasswordAutoFillDomains")
+    @SerializedName(value = "safariPasswordAutoFillDomains", alternate = {"SafariPasswordAutoFillDomains"})
     @Expose
     public java.util.List<String> safariPasswordAutoFillDomains;
 
@@ -1009,7 +1009,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Safari Require Fraud Warning.
      * Indicates whether or not to require fraud warning in Safari.
      */
-    @SerializedName("safariRequireFraudWarning")
+    @SerializedName(value = "safariRequireFraudWarning", alternate = {"SafariRequireFraudWarning"})
     @Expose
     public Boolean safariRequireFraudWarning;
 
@@ -1017,7 +1017,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Screen Capture Blocked.
      * Indicates whether or not to block the user from taking Screenshots.
      */
-    @SerializedName("screenCaptureBlocked")
+    @SerializedName(value = "screenCaptureBlocked", alternate = {"ScreenCaptureBlocked"})
     @Expose
     public Boolean screenCaptureBlocked;
 
@@ -1025,7 +1025,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Siri Blocked.
      * Indicates whether or not to block the user from using Siri.
      */
-    @SerializedName("siriBlocked")
+    @SerializedName(value = "siriBlocked", alternate = {"SiriBlocked"})
     @Expose
     public Boolean siriBlocked;
 
@@ -1033,7 +1033,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Siri Blocked When Locked.
      * Indicates whether or not to block the user from using Siri when locked.
      */
-    @SerializedName("siriBlockedWhenLocked")
+    @SerializedName(value = "siriBlockedWhenLocked", alternate = {"SiriBlockedWhenLocked"})
     @Expose
     public Boolean siriBlockedWhenLocked;
 
@@ -1041,7 +1041,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Siri Block User Generated Content.
      * Indicates whether or not to block Siri from querying user-generated content when used on a supervised device.
      */
-    @SerializedName("siriBlockUserGeneratedContent")
+    @SerializedName(value = "siriBlockUserGeneratedContent", alternate = {"SiriBlockUserGeneratedContent"})
     @Expose
     public Boolean siriBlockUserGeneratedContent;
 
@@ -1049,7 +1049,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Siri Require Profanity Filter.
      * Indicates whether or not to prevent Siri from dictating, or speaking profane language on supervised device.
      */
-    @SerializedName("siriRequireProfanityFilter")
+    @SerializedName(value = "siriRequireProfanityFilter", alternate = {"SiriRequireProfanityFilter"})
     @Expose
     public Boolean siriRequireProfanityFilter;
 
@@ -1057,7 +1057,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Spotlight Block Internet Results.
      * Indicates whether or not to block Spotlight search from returning internet results on supervised device.
      */
-    @SerializedName("spotlightBlockInternetResults")
+    @SerializedName(value = "spotlightBlockInternetResults", alternate = {"SpotlightBlockInternetResults"})
     @Expose
     public Boolean spotlightBlockInternetResults;
 
@@ -1065,7 +1065,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Voice Dialing Blocked.
      * Indicates whether or not to block voice dialing.
      */
-    @SerializedName("voiceDialingBlocked")
+    @SerializedName(value = "voiceDialingBlocked", alternate = {"VoiceDialingBlocked"})
     @Expose
     public Boolean voiceDialingBlocked;
 
@@ -1073,7 +1073,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Wallpaper Block Modification.
      * Indicates whether or not to allow wallpaper modification on supervised device (iOS 9.0 and later) .
      */
-    @SerializedName("wallpaperBlockModification")
+    @SerializedName(value = "wallpaperBlockModification", alternate = {"WallpaperBlockModification"})
     @Expose
     public Boolean wallpaperBlockModification;
 
@@ -1081,7 +1081,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * The Wi Fi Connect Only To Configured Networks.
      * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode.
      */
-    @SerializedName("wiFiConnectOnlyToConfiguredNetworks")
+    @SerializedName(value = "wiFiConnectOnlyToConfiguredNetworks", alternate = {"WiFiConnectOnlyToConfiguredNetworks"})
     @Expose
     public Boolean wiFiConnectOnlyToConfiguredNetworks;
 

@@ -22,7 +22,7 @@ public class WorkbookFunctionsNorm_DistBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsNorm_DistBody {
      * The mean.
      * 
      */
-    @SerializedName("mean")
+    @SerializedName(value = "mean", alternate = {"Mean"})
     @Expose
     public com.google.gson.JsonElement mean;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsNorm_DistBody {
      * The standard Dev.
      * 
      */
-    @SerializedName("standardDev")
+    @SerializedName(value = "standardDev", alternate = {"StandardDev"})
     @Expose
     public com.google.gson.JsonElement standardDev;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsNorm_DistBody {
      * The cumulative.
      * 
      */
-    @SerializedName("cumulative")
+    @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
     public com.google.gson.JsonElement cumulative;
 

@@ -23,7 +23,7 @@ public class PermissionGrantBody {
      * The roles.
      * 
      */
-    @SerializedName("roles")
+    @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose
     public java.util.List<String> roles;
 
@@ -31,7 +31,7 @@ public class PermissionGrantBody {
      * The recipients.
      * 
      */
-    @SerializedName("recipients")
+    @SerializedName(value = "recipients", alternate = {"Recipients"})
     @Expose
     public java.util.List<DriveRecipient> recipients;
 

@@ -26,7 +26,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
      * The App Display Name.
      * Display name of the application object on which this extension property is defined. Read-only.
      */
-    @SerializedName("appDisplayName")
+    @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
     public String appDisplayName;
 
@@ -34,7 +34,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
      * The Data Type.
      * Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
      */
-    @SerializedName("dataType")
+    @SerializedName(value = "dataType", alternate = {"DataType"})
     @Expose
     public String dataType;
 
@@ -42,7 +42,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
      * The Is Synced From On Premises.
      * Indicates if this extension property was sycned from onpremises directory using Azure AD Connect. Read-only.
      */
-    @SerializedName("isSyncedFromOnPremises")
+    @SerializedName(value = "isSyncedFromOnPremises", alternate = {"IsSyncedFromOnPremises"})
     @Expose
     public Boolean isSyncedFromOnPremises;
 
@@ -50,7 +50,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
      * The Name.
      * Name of the extension property. Not nullable.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -58,7 +58,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
      * The Target Objects.
      * Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
      */
-    @SerializedName("targetObjects")
+    @SerializedName(value = "targetObjects", alternate = {"TargetObjects"})
     @Expose
     public java.util.List<String> targetObjects;
 

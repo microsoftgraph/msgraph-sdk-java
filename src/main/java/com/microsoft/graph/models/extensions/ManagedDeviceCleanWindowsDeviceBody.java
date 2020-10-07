@@ -22,7 +22,7 @@ public class ManagedDeviceCleanWindowsDeviceBody {
      * The keep User Data.
      * 
      */
-    @SerializedName("keepUserData")
+    @SerializedName(value = "keepUserData", alternate = {"KeepUserData"})
     @Expose
     public Boolean keepUserData;
 

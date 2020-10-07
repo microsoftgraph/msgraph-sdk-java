@@ -22,7 +22,7 @@ public class TeamArchiveBody {
      * The should Set Spo Site Read Only For Members.
      * 
      */
-    @SerializedName("shouldSetSpoSiteReadOnlyForMembers")
+    @SerializedName(value = "shouldSetSpoSiteReadOnlyForMembers", alternate = {"ShouldSetSpoSiteReadOnlyForMembers"})
     @Expose
     public Boolean shouldSetSpoSiteReadOnlyForMembers;
 

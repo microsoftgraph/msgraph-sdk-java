@@ -35,7 +35,7 @@ public class DateTimeColumn implements IJsonBackedObject {
      * The Display As.
      * How the value should be presented in the UX. Must be one of default, friendly, or standard. See below for more details. If unspecified, treated as default.
      */
-    @SerializedName("displayAs")
+    @SerializedName(value = "displayAs", alternate = {"DisplayAs"})
     @Expose
     public String displayAs;
 
@@ -43,7 +43,7 @@ public class DateTimeColumn implements IJsonBackedObject {
      * The Format.
      * Indicates whether the value should be presented as a date only or a date and time. Must be one of dateOnly or dateTime
      */
-    @SerializedName("format")
+    @SerializedName(value = "format", alternate = {"Format"})
     @Expose
     public String format;
 

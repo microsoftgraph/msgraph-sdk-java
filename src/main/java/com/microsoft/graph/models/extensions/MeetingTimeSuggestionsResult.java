@@ -36,7 +36,7 @@ public class MeetingTimeSuggestionsResult implements IJsonBackedObject {
      * The Empty Suggestions Reason.
      * A reason for not returning any meeting suggestions. The possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
      */
-    @SerializedName("emptySuggestionsReason")
+    @SerializedName(value = "emptySuggestionsReason", alternate = {"EmptySuggestionsReason"})
     @Expose
     public String emptySuggestionsReason;
 
@@ -44,7 +44,7 @@ public class MeetingTimeSuggestionsResult implements IJsonBackedObject {
      * The Meeting Time Suggestions.
      * An array of meeting suggestions.
      */
-    @SerializedName("meetingTimeSuggestions")
+    @SerializedName(value = "meetingTimeSuggestions", alternate = {"MeetingTimeSuggestions"})
     @Expose
     public java.util.List<MeetingTimeSuggestion> meetingTimeSuggestions;
 

@@ -26,7 +26,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * The Allow Sample Sharing.
      * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
      */
-    @SerializedName("allowSampleSharing")
+    @SerializedName(value = "allowSampleSharing", alternate = {"AllowSampleSharing"})
     @Expose
     public Boolean allowSampleSharing;
 
@@ -34,7 +34,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
      * The Enable Expedited Telemetry Reporting.
      * Expedite Windows Defender Advanced Threat Protection telemetry reporting frequency.
      */
-    @SerializedName("enableExpeditedTelemetryReporting")
+    @SerializedName(value = "enableExpeditedTelemetryReporting", alternate = {"EnableExpeditedTelemetryReporting"})
     @Expose
     public Boolean enableExpeditedTelemetryReporting;
 

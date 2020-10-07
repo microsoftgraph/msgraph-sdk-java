@@ -35,7 +35,7 @@ public class LicenseUnitsDetail implements IJsonBackedObject {
      * The Enabled.
      * The number of units that are enabled.
      */
-    @SerializedName("enabled")
+    @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Integer enabled;
 
@@ -43,7 +43,7 @@ public class LicenseUnitsDetail implements IJsonBackedObject {
      * The Suspended.
      * The number of units that are suspended.
      */
-    @SerializedName("suspended")
+    @SerializedName(value = "suspended", alternate = {"Suspended"})
     @Expose
     public Integer suspended;
 
@@ -51,7 +51,7 @@ public class LicenseUnitsDetail implements IJsonBackedObject {
      * The Warning.
      * The number of units that are in warning status.
      */
-    @SerializedName("warning")
+    @SerializedName(value = "warning", alternate = {"Warning"})
     @Expose
     public Integer warning;
 

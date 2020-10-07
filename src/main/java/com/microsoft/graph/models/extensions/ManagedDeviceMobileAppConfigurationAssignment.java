@@ -27,7 +27,7 @@ public class ManagedDeviceMobileAppConfigurationAssignment extends Entity implem
      * The Target.
      * Assignment target that the T&amp;C policy is assigned to.
      */
-    @SerializedName("target")
+    @SerializedName(value = "target", alternate = {"Target"})
     @Expose
     public DeviceAndAppManagementAssignmentTarget target;
 

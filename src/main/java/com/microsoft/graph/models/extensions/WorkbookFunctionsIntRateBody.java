@@ -22,7 +22,7 @@ public class WorkbookFunctionsIntRateBody {
      * The settlement.
      * 
      */
-    @SerializedName("settlement")
+    @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
     public com.google.gson.JsonElement settlement;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsIntRateBody {
      * The maturity.
      * 
      */
-    @SerializedName("maturity")
+    @SerializedName(value = "maturity", alternate = {"Maturity"})
     @Expose
     public com.google.gson.JsonElement maturity;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsIntRateBody {
      * The investment.
      * 
      */
-    @SerializedName("investment")
+    @SerializedName(value = "investment", alternate = {"Investment"})
     @Expose
     public com.google.gson.JsonElement investment;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsIntRateBody {
      * The redemption.
      * 
      */
-    @SerializedName("redemption")
+    @SerializedName(value = "redemption", alternate = {"Redemption"})
     @Expose
     public com.google.gson.JsonElement redemption;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsIntRateBody {
      * The basis.
      * 
      */
-    @SerializedName("basis")
+    @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
     public com.google.gson.JsonElement basis;
 

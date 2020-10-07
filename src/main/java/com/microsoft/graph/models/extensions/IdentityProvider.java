@@ -26,7 +26,7 @@ public class IdentityProvider extends Entity implements IJsonBackedObject {
      * The Client Id.
      * 
      */
-    @SerializedName("clientId")
+    @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose
     public String clientId;
 
@@ -34,7 +34,7 @@ public class IdentityProvider extends Entity implements IJsonBackedObject {
      * The Client Secret.
      * 
      */
-    @SerializedName("clientSecret")
+    @SerializedName(value = "clientSecret", alternate = {"ClientSecret"})
     @Expose
     public String clientSecret;
 
@@ -42,7 +42,7 @@ public class IdentityProvider extends Entity implements IJsonBackedObject {
      * The Name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -50,7 +50,7 @@ public class IdentityProvider extends Entity implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 

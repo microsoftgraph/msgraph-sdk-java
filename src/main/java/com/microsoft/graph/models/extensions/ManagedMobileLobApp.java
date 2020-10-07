@@ -28,7 +28,7 @@ public class ManagedMobileLobApp extends ManagedApp implements IJsonBackedObject
      * The Committed Content Version.
      * The internal committed content version.
      */
-    @SerializedName("committedContentVersion")
+    @SerializedName(value = "committedContentVersion", alternate = {"CommittedContentVersion"})
     @Expose
     public String committedContentVersion;
 
@@ -36,7 +36,7 @@ public class ManagedMobileLobApp extends ManagedApp implements IJsonBackedObject
      * The File Name.
      * The name of the main Lob application file.
      */
-    @SerializedName("fileName")
+    @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
     public String fileName;
 
@@ -44,7 +44,7 @@ public class ManagedMobileLobApp extends ManagedApp implements IJsonBackedObject
      * The Size.
      * The total size, including all uploaded files.
      */
-    @SerializedName("size")
+    @SerializedName(value = "size", alternate = {"Size"})
     @Expose
     public Long size;
 
@@ -52,7 +52,7 @@ public class ManagedMobileLobApp extends ManagedApp implements IJsonBackedObject
      * The Content Versions.
      * The list of content versions for this app.
      */
-    @SerializedName("contentVersions")
+    @SerializedName(value = "contentVersions", alternate = {"ContentVersions"})
     @Expose
     public MobileAppContentCollectionPage contentVersions;
 

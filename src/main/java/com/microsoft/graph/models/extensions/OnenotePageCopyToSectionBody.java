@@ -22,7 +22,7 @@ public class OnenotePageCopyToSectionBody {
      * The id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -30,7 +30,7 @@ public class OnenotePageCopyToSectionBody {
      * The group Id.
      * 
      */
-    @SerializedName("groupId")
+    @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
     public String groupId;
 
@@ -38,7 +38,7 @@ public class OnenotePageCopyToSectionBody {
      * The site Collection Id.
      * 
      */
-    @SerializedName("siteCollectionId")
+    @SerializedName(value = "siteCollectionId", alternate = {"SiteCollectionId"})
     @Expose
     public String siteCollectionId;
 
@@ -46,7 +46,7 @@ public class OnenotePageCopyToSectionBody {
      * The site Id.
      * 
      */
-    @SerializedName("siteId")
+    @SerializedName(value = "siteId", alternate = {"SiteId"})
     @Expose
     public String siteId;
 

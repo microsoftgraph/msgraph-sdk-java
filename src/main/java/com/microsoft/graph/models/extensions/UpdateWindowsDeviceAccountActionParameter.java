@@ -36,7 +36,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements IJsonBackedObj
      * The Calendar Sync Enabled.
      * Not yet documented
      */
-    @SerializedName("calendarSyncEnabled")
+    @SerializedName(value = "calendarSyncEnabled", alternate = {"CalendarSyncEnabled"})
     @Expose
     public Boolean calendarSyncEnabled;
 
@@ -44,7 +44,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements IJsonBackedObj
      * The Device Account.
      * Not yet documented
      */
-    @SerializedName("deviceAccount")
+    @SerializedName(value = "deviceAccount", alternate = {"DeviceAccount"})
     @Expose
     public WindowsDeviceAccount deviceAccount;
 
@@ -52,7 +52,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements IJsonBackedObj
      * The Device Account Email.
      * Not yet documented
      */
-    @SerializedName("deviceAccountEmail")
+    @SerializedName(value = "deviceAccountEmail", alternate = {"DeviceAccountEmail"})
     @Expose
     public String deviceAccountEmail;
 
@@ -60,7 +60,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements IJsonBackedObj
      * The Exchange Server.
      * Not yet documented
      */
-    @SerializedName("exchangeServer")
+    @SerializedName(value = "exchangeServer", alternate = {"ExchangeServer"})
     @Expose
     public String exchangeServer;
 
@@ -68,7 +68,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements IJsonBackedObj
      * The Password Rotation Enabled.
      * Not yet documented
      */
-    @SerializedName("passwordRotationEnabled")
+    @SerializedName(value = "passwordRotationEnabled", alternate = {"PasswordRotationEnabled"})
     @Expose
     public Boolean passwordRotationEnabled;
 
@@ -76,7 +76,7 @@ public class UpdateWindowsDeviceAccountActionParameter implements IJsonBackedObj
      * The Session Initiation Protocal Address.
      * Not yet documented
      */
-    @SerializedName("sessionInitiationProtocalAddress")
+    @SerializedName(value = "sessionInitiationProtocalAddress", alternate = {"SessionInitiationProtocalAddress"})
     @Expose
     public String sessionInitiationProtocalAddress;
 

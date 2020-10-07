@@ -22,7 +22,7 @@ public class WorkbookFunctionsConvertBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsConvertBody {
      * The from Unit.
      * 
      */
-    @SerializedName("fromUnit")
+    @SerializedName(value = "fromUnit", alternate = {"FromUnit"})
     @Expose
     public com.google.gson.JsonElement fromUnit;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsConvertBody {
      * The to Unit.
      * 
      */
-    @SerializedName("toUnit")
+    @SerializedName(value = "toUnit", alternate = {"ToUnit"})
     @Expose
     public com.google.gson.JsonElement toUnit;
 

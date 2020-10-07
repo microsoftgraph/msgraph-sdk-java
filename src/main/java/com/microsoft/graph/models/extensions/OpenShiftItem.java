@@ -26,7 +26,7 @@ public class OpenShiftItem extends ShiftItem implements IJsonBackedObject {
      * The Open Slot Count.
      * Count of the number of slots for the given open shift.
      */
-    @SerializedName("openSlotCount")
+    @SerializedName(value = "openSlotCount", alternate = {"OpenSlotCount"})
     @Expose
     public Integer openSlotCount;
 

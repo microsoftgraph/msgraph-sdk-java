@@ -29,7 +29,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Address.
      * Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only.
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public String address;
 
@@ -37,7 +37,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Address Local.
      * Represents range reference for the specified range in the language of the user. Read-only.
      */
-    @SerializedName("addressLocal")
+    @SerializedName(value = "addressLocal", alternate = {"AddressLocal"})
     @Expose
     public String addressLocal;
 
@@ -45,7 +45,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Cell Count.
      * Number of cells in the range. Read-only.
      */
-    @SerializedName("cellCount")
+    @SerializedName(value = "cellCount", alternate = {"CellCount"})
     @Expose
     public Integer cellCount;
 
@@ -53,7 +53,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Column Count.
      * Represents the total number of columns in the range. Read-only.
      */
-    @SerializedName("columnCount")
+    @SerializedName(value = "columnCount", alternate = {"ColumnCount"})
     @Expose
     public Integer columnCount;
 
@@ -61,7 +61,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Column Hidden.
      * Represents if all columns of the current range are hidden.
      */
-    @SerializedName("columnHidden")
+    @SerializedName(value = "columnHidden", alternate = {"ColumnHidden"})
     @Expose
     public Boolean columnHidden;
 
@@ -69,7 +69,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Column Index.
      * Represents the column number of the first cell in the range. Zero-indexed. Read-only.
      */
-    @SerializedName("columnIndex")
+    @SerializedName(value = "columnIndex", alternate = {"ColumnIndex"})
     @Expose
     public Integer columnIndex;
 
@@ -77,7 +77,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Formulas.
      * Represents the formula in A1-style notation.
      */
-    @SerializedName("formulas")
+    @SerializedName(value = "formulas", alternate = {"Formulas"})
     @Expose
     public com.google.gson.JsonElement formulas;
 
@@ -85,7 +85,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Formulas Local.
      * Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
      */
-    @SerializedName("formulasLocal")
+    @SerializedName(value = "formulasLocal", alternate = {"FormulasLocal"})
     @Expose
     public com.google.gson.JsonElement formulasLocal;
 
@@ -93,7 +93,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Formulas R1C1.
      * Represents the formula in R1C1-style notation.
      */
-    @SerializedName("formulasR1C1")
+    @SerializedName(value = "formulasR1C1", alternate = {"FormulasR1C1"})
     @Expose
     public com.google.gson.JsonElement formulasR1C1;
 
@@ -101,7 +101,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Hidden.
      * Represents if all cells of the current range are hidden. Read-only.
      */
-    @SerializedName("hidden")
+    @SerializedName(value = "hidden", alternate = {"Hidden"})
     @Expose
     public Boolean hidden;
 
@@ -109,7 +109,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Number Format.
      * Represents Excel's number format code for the given cell.
      */
-    @SerializedName("numberFormat")
+    @SerializedName(value = "numberFormat", alternate = {"NumberFormat"})
     @Expose
     public com.google.gson.JsonElement numberFormat;
 
@@ -117,7 +117,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Row Count.
      * Returns the total number of rows in the range. Read-only.
      */
-    @SerializedName("rowCount")
+    @SerializedName(value = "rowCount", alternate = {"RowCount"})
     @Expose
     public Integer rowCount;
 
@@ -125,7 +125,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Row Hidden.
      * Represents if all rows of the current range are hidden.
      */
-    @SerializedName("rowHidden")
+    @SerializedName(value = "rowHidden", alternate = {"RowHidden"})
     @Expose
     public Boolean rowHidden;
 
@@ -133,7 +133,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Row Index.
      * Returns the row number of the first cell in the range. Zero-indexed. Read-only.
      */
-    @SerializedName("rowIndex")
+    @SerializedName(value = "rowIndex", alternate = {"RowIndex"})
     @Expose
     public Integer rowIndex;
 
@@ -141,7 +141,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Text.
      * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public com.google.gson.JsonElement text;
 
@@ -149,7 +149,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Values.
      * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 
@@ -157,7 +157,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Value Types.
      * Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
      */
-    @SerializedName("valueTypes")
+    @SerializedName(value = "valueTypes", alternate = {"ValueTypes"})
     @Expose
     public com.google.gson.JsonElement valueTypes;
 
@@ -165,7 +165,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Format.
      * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
      */
-    @SerializedName("format")
+    @SerializedName(value = "format", alternate = {"Format"})
     @Expose
     public WorkbookRangeFormat format;
 
@@ -173,7 +173,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Sort.
      * The worksheet containing the current range. Read-only.
      */
-    @SerializedName("sort")
+    @SerializedName(value = "sort", alternate = {"Sort"})
     @Expose
     public WorkbookRangeSort sort;
 
@@ -181,7 +181,7 @@ public class WorkbookRange extends Entity implements IJsonBackedObject {
      * The Worksheet.
      * The worksheet containing the current range. Read-only.
      */
-    @SerializedName("worksheet")
+    @SerializedName(value = "worksheet", alternate = {"Worksheet"})
     @Expose
     public WorkbookWorksheet worksheet;
 

@@ -35,7 +35,7 @@ public class ImageInfo implements IJsonBackedObject {
      * The Add Image Query.
      * Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
      */
-    @SerializedName("addImageQuery")
+    @SerializedName(value = "addImageQuery", alternate = {"AddImageQuery"})
     @Expose
     public Boolean addImageQuery;
 
@@ -43,7 +43,7 @@ public class ImageInfo implements IJsonBackedObject {
      * The Alternate Text.
      * Optional; alt-text accessible content for the image
      */
-    @SerializedName("alternateText")
+    @SerializedName(value = "alternateText", alternate = {"AlternateText"})
     @Expose
     public String alternateText;
 
@@ -51,7 +51,7 @@ public class ImageInfo implements IJsonBackedObject {
      * The Alternative Text.
      * 
      */
-    @SerializedName("alternativeText")
+    @SerializedName(value = "alternativeText", alternate = {"AlternativeText"})
     @Expose
     public String alternativeText;
 
@@ -59,7 +59,7 @@ public class ImageInfo implements IJsonBackedObject {
      * The Icon Url.
      * Optional; URI that points to an icon which represents the application used to generate the activity
      */
-    @SerializedName("iconUrl")
+    @SerializedName(value = "iconUrl", alternate = {"IconUrl"})
     @Expose
     public String iconUrl;
 

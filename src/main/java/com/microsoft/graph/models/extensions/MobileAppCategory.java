@@ -26,7 +26,7 @@ public class MobileAppCategory extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The name of the app category.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class MobileAppCategory extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The date and time the mobileAppCategory was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 

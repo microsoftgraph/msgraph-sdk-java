@@ -22,7 +22,7 @@ public class WorkbookFunctionsFindBBody {
      * The find Text.
      * 
      */
-    @SerializedName("findText")
+    @SerializedName(value = "findText", alternate = {"FindText"})
     @Expose
     public com.google.gson.JsonElement findText;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsFindBBody {
      * The within Text.
      * 
      */
-    @SerializedName("withinText")
+    @SerializedName(value = "withinText", alternate = {"WithinText"})
     @Expose
     public com.google.gson.JsonElement withinText;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsFindBBody {
      * The start Num.
      * 
      */
-    @SerializedName("startNum")
+    @SerializedName(value = "startNum", alternate = {"StartNum"})
     @Expose
     public com.google.gson.JsonElement startNum;
 

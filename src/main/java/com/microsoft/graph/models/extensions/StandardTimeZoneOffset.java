@@ -36,7 +36,7 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
      * The Day Occurrence.
      * Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
      */
-    @SerializedName("dayOccurrence")
+    @SerializedName(value = "dayOccurrence", alternate = {"DayOccurrence"})
     @Expose
     public Integer dayOccurrence;
 
@@ -44,7 +44,7 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
      * The Day Of Week.
      * Represents the day of the week when the transition from daylight saving time to standard time.
      */
-    @SerializedName("dayOfWeek")
+    @SerializedName(value = "dayOfWeek", alternate = {"DayOfWeek"})
     @Expose
     public DayOfWeek dayOfWeek;
 
@@ -52,7 +52,7 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
      * The Month.
      * Represents the month of the year when the transition from daylight saving time to standard time occurs.
      */
-    @SerializedName("month")
+    @SerializedName(value = "month", alternate = {"Month"})
     @Expose
     public Integer month;
 
@@ -60,7 +60,7 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
      * The Time.
      * Represents the time of day when the transition from daylight saving time to standard time occurs.
      */
-    @SerializedName("time")
+    @SerializedName(value = "time", alternate = {"Time"})
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay time;
 
@@ -68,7 +68,7 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
      * The Year.
      * Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
      */
-    @SerializedName("year")
+    @SerializedName(value = "year", alternate = {"Year"})
     @Expose
     public Integer year;
 

@@ -28,7 +28,7 @@ public class WorkbookOperation extends Entity implements IJsonBackedObject {
      * The Error.
      * The error returned by the operation.
      */
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public WorkbookOperationError error;
 
@@ -36,7 +36,7 @@ public class WorkbookOperation extends Entity implements IJsonBackedObject {
      * The Resource Location.
      * The resource URI for the result.
      */
-    @SerializedName("resourceLocation")
+    @SerializedName(value = "resourceLocation", alternate = {"ResourceLocation"})
     @Expose
     public String resourceLocation;
 
@@ -44,7 +44,7 @@ public class WorkbookOperation extends Entity implements IJsonBackedObject {
      * The Status.
      * The current status of the operation. Possible values are: NotStarted, Running, Completed, Failed.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public WorkbookOperationStatus status;
 

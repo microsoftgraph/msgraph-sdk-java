@@ -22,7 +22,7 @@ public class GroupValidatePropertiesBody {
      * The display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -30,7 +30,7 @@ public class GroupValidatePropertiesBody {
      * The mail Nickname.
      * 
      */
-    @SerializedName("mailNickname")
+    @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
     public String mailNickname;
 
@@ -38,7 +38,7 @@ public class GroupValidatePropertiesBody {
      * The on Behalf Of User Id.
      * 
      */
-    @SerializedName("onBehalfOfUserId")
+    @SerializedName(value = "onBehalfOfUserId", alternate = {"OnBehalfOfUserId"})
     @Expose
     public java.util.UUID onBehalfOfUserId;
 

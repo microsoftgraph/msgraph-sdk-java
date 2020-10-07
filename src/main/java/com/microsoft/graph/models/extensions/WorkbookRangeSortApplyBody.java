@@ -22,7 +22,7 @@ public class WorkbookRangeSortApplyBody {
      * The fields.
      * 
      */
-    @SerializedName("fields")
+    @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose
     public java.util.List<WorkbookSortField> fields;
 
@@ -30,7 +30,7 @@ public class WorkbookRangeSortApplyBody {
      * The match Case.
      * 
      */
-    @SerializedName("matchCase")
+    @SerializedName(value = "matchCase", alternate = {"MatchCase"})
     @Expose
     public Boolean matchCase;
 
@@ -38,7 +38,7 @@ public class WorkbookRangeSortApplyBody {
      * The has Headers.
      * 
      */
-    @SerializedName("hasHeaders")
+    @SerializedName(value = "hasHeaders", alternate = {"HasHeaders"})
     @Expose
     public Boolean hasHeaders;
 
@@ -46,7 +46,7 @@ public class WorkbookRangeSortApplyBody {
      * The orientation.
      * 
      */
-    @SerializedName("orientation")
+    @SerializedName(value = "orientation", alternate = {"Orientation"})
     @Expose
     public String orientation;
 
@@ -54,7 +54,7 @@ public class WorkbookRangeSortApplyBody {
      * The method.
      * 
      */
-    @SerializedName("method")
+    @SerializedName(value = "method", alternate = {"Method"})
     @Expose
     public String method;
 

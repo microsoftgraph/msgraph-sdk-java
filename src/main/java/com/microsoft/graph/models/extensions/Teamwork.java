@@ -28,7 +28,7 @@ public class Teamwork extends Entity implements IJsonBackedObject {
      * The Workforce Integrations.
      * 
      */
-    @SerializedName("workforceIntegrations")
+    @SerializedName(value = "workforceIntegrations", alternate = {"WorkforceIntegrations"})
     @Expose
     public WorkforceIntegrationCollectionPage workforceIntegrations;
 

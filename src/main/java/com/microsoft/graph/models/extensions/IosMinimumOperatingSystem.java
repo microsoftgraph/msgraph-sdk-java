@@ -35,7 +35,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
      * The V10_0.
      * Version 10.0 or later.
      */
-    @SerializedName("v10_0")
+    @SerializedName(value = "v10_0", alternate = {"V10_0"})
     @Expose
     public Boolean v10_0;
 
@@ -43,7 +43,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
      * The V11_0.
      * Version 11.0 or later.
      */
-    @SerializedName("v11_0")
+    @SerializedName(value = "v11_0", alternate = {"V11_0"})
     @Expose
     public Boolean v11_0;
 
@@ -51,7 +51,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
      * The V12_0.
      * Version 12.0 or later.
      */
-    @SerializedName("v12_0")
+    @SerializedName(value = "v12_0", alternate = {"V12_0"})
     @Expose
     public Boolean v12_0;
 
@@ -59,7 +59,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
      * The V13_0.
      * Version 13.0 or later.
      */
-    @SerializedName("v13_0")
+    @SerializedName(value = "v13_0", alternate = {"V13_0"})
     @Expose
     public Boolean v13_0;
 
@@ -67,7 +67,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
      * The V8_0.
      * Version 8.0 or later.
      */
-    @SerializedName("v8_0")
+    @SerializedName(value = "v8_0", alternate = {"V8_0"})
     @Expose
     public Boolean v8_0;
 
@@ -75,7 +75,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
      * The V9_0.
      * Version 9.0 or later.
      */
-    @SerializedName("v9_0")
+    @SerializedName(value = "v9_0", alternate = {"V9_0"})
     @Expose
     public Boolean v9_0;
 

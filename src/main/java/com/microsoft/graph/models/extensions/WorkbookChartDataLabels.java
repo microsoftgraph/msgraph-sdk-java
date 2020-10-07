@@ -27,7 +27,7 @@ public class WorkbookChartDataLabels extends Entity implements IJsonBackedObject
      * The Position.
      * DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
      */
-    @SerializedName("position")
+    @SerializedName(value = "position", alternate = {"Position"})
     @Expose
     public String position;
 
@@ -35,7 +35,7 @@ public class WorkbookChartDataLabels extends Entity implements IJsonBackedObject
      * The Separator.
      * String representing the separator used for the data labels on a chart.
      */
-    @SerializedName("separator")
+    @SerializedName(value = "separator", alternate = {"Separator"})
     @Expose
     public String separator;
 
@@ -43,7 +43,7 @@ public class WorkbookChartDataLabels extends Entity implements IJsonBackedObject
      * The Show Bubble Size.
      * Boolean value representing if the data label bubble size is visible or not.
      */
-    @SerializedName("showBubbleSize")
+    @SerializedName(value = "showBubbleSize", alternate = {"ShowBubbleSize"})
     @Expose
     public Boolean showBubbleSize;
 
@@ -51,7 +51,7 @@ public class WorkbookChartDataLabels extends Entity implements IJsonBackedObject
      * The Show Category Name.
      * Boolean value representing if the data label category name is visible or not.
      */
-    @SerializedName("showCategoryName")
+    @SerializedName(value = "showCategoryName", alternate = {"ShowCategoryName"})
     @Expose
     public Boolean showCategoryName;
 
@@ -59,7 +59,7 @@ public class WorkbookChartDataLabels extends Entity implements IJsonBackedObject
      * The Show Legend Key.
      * Boolean value representing if the data label legend key is visible or not.
      */
-    @SerializedName("showLegendKey")
+    @SerializedName(value = "showLegendKey", alternate = {"ShowLegendKey"})
     @Expose
     public Boolean showLegendKey;
 
@@ -67,7 +67,7 @@ public class WorkbookChartDataLabels extends Entity implements IJsonBackedObject
      * The Show Percentage.
      * Boolean value representing if the data label percentage is visible or not.
      */
-    @SerializedName("showPercentage")
+    @SerializedName(value = "showPercentage", alternate = {"ShowPercentage"})
     @Expose
     public Boolean showPercentage;
 
@@ -75,7 +75,7 @@ public class WorkbookChartDataLabels extends Entity implements IJsonBackedObject
      * The Show Series Name.
      * Boolean value representing if the data label series name is visible or not.
      */
-    @SerializedName("showSeriesName")
+    @SerializedName(value = "showSeriesName", alternate = {"ShowSeriesName"})
     @Expose
     public Boolean showSeriesName;
 
@@ -83,7 +83,7 @@ public class WorkbookChartDataLabels extends Entity implements IJsonBackedObject
      * The Show Value.
      * Boolean value representing if the data label value is visible or not.
      */
-    @SerializedName("showValue")
+    @SerializedName(value = "showValue", alternate = {"ShowValue"})
     @Expose
     public Boolean showValue;
 
@@ -91,7 +91,7 @@ public class WorkbookChartDataLabels extends Entity implements IJsonBackedObject
      * The Format.
      * Represents the format of chart data labels, which includes fill and font formatting. Read-only.
      */
-    @SerializedName("format")
+    @SerializedName(value = "format", alternate = {"Format"})
     @Expose
     public WorkbookChartDataLabelFormat format;
 

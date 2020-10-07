@@ -22,7 +22,7 @@ public class WorkbookFunctionsT_Dist_2TBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsT_Dist_2TBody {
      * The deg Freedom.
      * 
      */
-    @SerializedName("degFreedom")
+    @SerializedName(value = "degFreedom", alternate = {"DegFreedom"})
     @Expose
     public com.google.gson.JsonElement degFreedom;
 

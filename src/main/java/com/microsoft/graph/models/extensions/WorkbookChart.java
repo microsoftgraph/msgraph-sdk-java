@@ -34,7 +34,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Height.
      * Represents the height, in points, of the chart object.
      */
-    @SerializedName("height")
+    @SerializedName(value = "height", alternate = {"Height"})
     @Expose
     public Double height;
 
@@ -42,7 +42,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Left.
      * The distance, in points, from the left side of the chart to the worksheet origin.
      */
-    @SerializedName("left")
+    @SerializedName(value = "left", alternate = {"Left"})
     @Expose
     public Double left;
 
@@ -50,7 +50,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Name.
      * Represents the name of a chart object.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -58,7 +58,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Top.
      * Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
      */
-    @SerializedName("top")
+    @SerializedName(value = "top", alternate = {"Top"})
     @Expose
     public Double top;
 
@@ -66,7 +66,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Width.
      * Represents the width, in points, of the chart object.
      */
-    @SerializedName("width")
+    @SerializedName(value = "width", alternate = {"Width"})
     @Expose
     public Double width;
 
@@ -74,7 +74,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Axes.
      * Represents chart axes. Read-only.
      */
-    @SerializedName("axes")
+    @SerializedName(value = "axes", alternate = {"Axes"})
     @Expose
     public WorkbookChartAxes axes;
 
@@ -82,7 +82,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Data Labels.
      * Represents the datalabels on the chart. Read-only.
      */
-    @SerializedName("dataLabels")
+    @SerializedName(value = "dataLabels", alternate = {"DataLabels"})
     @Expose
     public WorkbookChartDataLabels dataLabels;
 
@@ -90,7 +90,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Format.
      * Encapsulates the format properties for the chart area. Read-only.
      */
-    @SerializedName("format")
+    @SerializedName(value = "format", alternate = {"Format"})
     @Expose
     public WorkbookChartAreaFormat format;
 
@@ -98,7 +98,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Legend.
      * Represents the legend for the chart. Read-only.
      */
-    @SerializedName("legend")
+    @SerializedName(value = "legend", alternate = {"Legend"})
     @Expose
     public WorkbookChartLegend legend;
 
@@ -106,7 +106,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Series.
      * Represents either a single series or collection of series in the chart. Read-only.
      */
-    @SerializedName("series")
+    @SerializedName(value = "series", alternate = {"Series"})
     @Expose
     public WorkbookChartSeriesCollectionPage series;
 
@@ -114,7 +114,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Title.
      * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public WorkbookChartTitle title;
 
@@ -122,7 +122,7 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Worksheet.
      * The worksheet containing the current chart. Read-only.
      */
-    @SerializedName("worksheet")
+    @SerializedName(value = "worksheet", alternate = {"Worksheet"})
     @Expose
     public WorkbookWorksheet worksheet;
 

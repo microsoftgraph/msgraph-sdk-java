@@ -22,7 +22,7 @@ public class WorkbookFunctionsNotBody {
      * The logical.
      * 
      */
-    @SerializedName("logical")
+    @SerializedName(value = "logical", alternate = {"Logical"})
     @Expose
     public com.google.gson.JsonElement logical;
 

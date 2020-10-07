@@ -22,7 +22,7 @@ public class WorkbookFunctionsErfBody {
      * The lower Limit.
      * 
      */
-    @SerializedName("lowerLimit")
+    @SerializedName(value = "lowerLimit", alternate = {"LowerLimit"})
     @Expose
     public com.google.gson.JsonElement lowerLimit;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsErfBody {
      * The upper Limit.
      * 
      */
-    @SerializedName("upperLimit")
+    @SerializedName(value = "upperLimit", alternate = {"UpperLimit"})
     @Expose
     public com.google.gson.JsonElement upperLimit;
 

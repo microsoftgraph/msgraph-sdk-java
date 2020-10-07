@@ -28,7 +28,7 @@ public class PlannerBucket extends Entity implements IJsonBackedObject {
      * The Name.
      * Name of the bucket.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -36,7 +36,7 @@ public class PlannerBucket extends Entity implements IJsonBackedObject {
      * The Order Hint.
      * Hint used to order items of this type in a list view. The format is defined as outlined here.
      */
-    @SerializedName("orderHint")
+    @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose
     public String orderHint;
 
@@ -44,7 +44,7 @@ public class PlannerBucket extends Entity implements IJsonBackedObject {
      * The Plan Id.
      * Plan ID to which the bucket belongs.
      */
-    @SerializedName("planId")
+    @SerializedName(value = "planId", alternate = {"PlanId"})
     @Expose
     public String planId;
 
@@ -52,7 +52,7 @@ public class PlannerBucket extends Entity implements IJsonBackedObject {
      * The Tasks.
      * Read-only. Nullable. The collection of tasks in the bucket.
      */
-    @SerializedName("tasks")
+    @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
     public PlannerTaskCollectionPage tasks;
 

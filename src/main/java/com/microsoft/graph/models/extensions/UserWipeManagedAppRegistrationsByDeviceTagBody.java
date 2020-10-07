@@ -22,7 +22,7 @@ public class UserWipeManagedAppRegistrationsByDeviceTagBody {
      * The device Tag.
      * 
      */
-    @SerializedName("deviceTag")
+    @SerializedName(value = "deviceTag", alternate = {"DeviceTag"})
     @Expose
     public String deviceTag;
 

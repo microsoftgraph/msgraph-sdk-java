@@ -23,7 +23,7 @@ public class MessageForwardBody {
      * The to Recipients.
      * 
      */
-    @SerializedName("toRecipients")
+    @SerializedName(value = "toRecipients", alternate = {"ToRecipients"})
     @Expose
     public java.util.List<Recipient> toRecipients;
 
@@ -31,7 +31,7 @@ public class MessageForwardBody {
      * The message.
      * 
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public Message message;
 
@@ -39,7 +39,7 @@ public class MessageForwardBody {
      * The comment.
      * 
      */
-    @SerializedName("comment")
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
     public String comment;
 

@@ -30,7 +30,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Addresses.
      * 
      */
-    @SerializedName("addresses")
+    @SerializedName(value = "addresses", alternate = {"Addresses"})
     @Expose
     public java.util.List<PhysicalOfficeAddress> addresses;
 
@@ -38,7 +38,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Company Name.
      * 
      */
-    @SerializedName("companyName")
+    @SerializedName(value = "companyName", alternate = {"CompanyName"})
     @Expose
     public String companyName;
 
@@ -46,7 +46,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Department.
      * 
      */
-    @SerializedName("department")
+    @SerializedName(value = "department", alternate = {"Department"})
     @Expose
     public String department;
 
@@ -54,7 +54,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -62,7 +62,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Given Name.
      * 
      */
-    @SerializedName("givenName")
+    @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
     public String givenName;
 
@@ -70,7 +70,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Job Title.
      * 
      */
-    @SerializedName("jobTitle")
+    @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
     public String jobTitle;
 
@@ -78,7 +78,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Mail.
      * 
      */
-    @SerializedName("mail")
+    @SerializedName(value = "mail", alternate = {"Mail"})
     @Expose
     public String mail;
 
@@ -86,7 +86,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Mail Nickname.
      * 
      */
-    @SerializedName("mailNickname")
+    @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
     public String mailNickname;
 
@@ -94,7 +94,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Last Sync Date Time.
      * 
      */
-    @SerializedName("onPremisesLastSyncDateTime")
+    @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
     public java.util.Calendar onPremisesLastSyncDateTime;
 
@@ -102,7 +102,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Provisioning Errors.
      * 
      */
-    @SerializedName("onPremisesProvisioningErrors")
+    @SerializedName(value = "onPremisesProvisioningErrors", alternate = {"OnPremisesProvisioningErrors"})
     @Expose
     public java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
 
@@ -110,7 +110,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Sync Enabled.
      * 
      */
-    @SerializedName("onPremisesSyncEnabled")
+    @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
     public Boolean onPremisesSyncEnabled;
 
@@ -118,7 +118,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Phones.
      * 
      */
-    @SerializedName("phones")
+    @SerializedName(value = "phones", alternate = {"Phones"})
     @Expose
     public java.util.List<Phone> phones;
 
@@ -126,7 +126,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Proxy Addresses.
      * 
      */
-    @SerializedName("proxyAddresses")
+    @SerializedName(value = "proxyAddresses", alternate = {"ProxyAddresses"})
     @Expose
     public java.util.List<String> proxyAddresses;
 
@@ -134,7 +134,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Surname.
      * 
      */
-    @SerializedName("surname")
+    @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose
     public String surname;
 
@@ -148,7 +148,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
      * The Manager.
      * 
      */
-    @SerializedName("manager")
+    @SerializedName(value = "manager", alternate = {"Manager"})
     @Expose
     public DirectoryObject manager;
 

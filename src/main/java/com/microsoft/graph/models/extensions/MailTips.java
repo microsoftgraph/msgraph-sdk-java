@@ -40,7 +40,7 @@ public class MailTips implements IJsonBackedObject {
      * The Automatic Replies.
      * Mail tips for automatic reply if it has been set up by the recipient.
      */
-    @SerializedName("automaticReplies")
+    @SerializedName(value = "automaticReplies", alternate = {"AutomaticReplies"})
     @Expose
     public AutomaticRepliesMailTips automaticReplies;
 
@@ -48,7 +48,7 @@ public class MailTips implements IJsonBackedObject {
      * The Custom Mail Tip.
      * A custom mail tip that can be set on the recipient's mailbox.
      */
-    @SerializedName("customMailTip")
+    @SerializedName(value = "customMailTip", alternate = {"CustomMailTip"})
     @Expose
     public String customMailTip;
 
@@ -56,7 +56,7 @@ public class MailTips implements IJsonBackedObject {
      * The Delivery Restricted.
      * Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
      */
-    @SerializedName("deliveryRestricted")
+    @SerializedName(value = "deliveryRestricted", alternate = {"DeliveryRestricted"})
     @Expose
     public Boolean deliveryRestricted;
 
@@ -64,7 +64,7 @@ public class MailTips implements IJsonBackedObject {
      * The Email Address.
      * The email address of the recipient to get mailtips for.
      */
-    @SerializedName("emailAddress")
+    @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
     public EmailAddress emailAddress;
 
@@ -72,7 +72,7 @@ public class MailTips implements IJsonBackedObject {
      * The Error.
      * Errors that occur during the getMailTips action.
      */
-    @SerializedName("error")
+    @SerializedName(value = "error", alternate = {"Error"})
     @Expose
     public MailTipsError error;
 
@@ -80,7 +80,7 @@ public class MailTips implements IJsonBackedObject {
      * The External Member Count.
      * The number of external members if the recipient is a distribution list.
      */
-    @SerializedName("externalMemberCount")
+    @SerializedName(value = "externalMemberCount", alternate = {"ExternalMemberCount"})
     @Expose
     public Integer externalMemberCount;
 
@@ -88,7 +88,7 @@ public class MailTips implements IJsonBackedObject {
      * The Is Moderated.
      * Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
      */
-    @SerializedName("isModerated")
+    @SerializedName(value = "isModerated", alternate = {"IsModerated"})
     @Expose
     public Boolean isModerated;
 
@@ -96,7 +96,7 @@ public class MailTips implements IJsonBackedObject {
      * The Mailbox Full.
      * The mailbox full status of the recipient.
      */
-    @SerializedName("mailboxFull")
+    @SerializedName(value = "mailboxFull", alternate = {"MailboxFull"})
     @Expose
     public Boolean mailboxFull;
 
@@ -104,7 +104,7 @@ public class MailTips implements IJsonBackedObject {
      * The Max Message Size.
      * The maximum message size that has been configured for the recipient's organization or mailbox.
      */
-    @SerializedName("maxMessageSize")
+    @SerializedName(value = "maxMessageSize", alternate = {"MaxMessageSize"})
     @Expose
     public Integer maxMessageSize;
 
@@ -112,7 +112,7 @@ public class MailTips implements IJsonBackedObject {
      * The Recipient Scope.
      * The scope of the recipient. Possible values are: none, internal, external, externalPartner, externalNonParther. For example, an administrator can set another organization to be its 'partner'. The scope is useful if an administrator wants certain mailtips to be accessible to certain scopes. It's also useful to senders to inform them that their message may leave the organization, helping them make the correct decisions about wording, tone and content.
      */
-    @SerializedName("recipientScope")
+    @SerializedName(value = "recipientScope", alternate = {"RecipientScope"})
     @Expose
     public EnumSet<RecipientScopeType> recipientScope;
 
@@ -120,7 +120,7 @@ public class MailTips implements IJsonBackedObject {
      * The Recipient Suggestions.
      * Recipients suggested based on previous contexts where they appear in the same message.
      */
-    @SerializedName("recipientSuggestions")
+    @SerializedName(value = "recipientSuggestions", alternate = {"RecipientSuggestions"})
     @Expose
     public java.util.List<Recipient> recipientSuggestions;
 
@@ -128,7 +128,7 @@ public class MailTips implements IJsonBackedObject {
      * The Total Member Count.
      * The number of members if the recipient is a distribution list.
      */
-    @SerializedName("totalMemberCount")
+    @SerializedName(value = "totalMemberCount", alternate = {"TotalMemberCount"})
     @Expose
     public Integer totalMemberCount;
 

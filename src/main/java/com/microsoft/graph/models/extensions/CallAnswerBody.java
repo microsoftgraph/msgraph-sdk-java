@@ -23,7 +23,7 @@ public class CallAnswerBody {
      * The callback Uri.
      * 
      */
-    @SerializedName("callbackUri")
+    @SerializedName(value = "callbackUri", alternate = {"CallbackUri"})
     @Expose
     public String callbackUri;
 
@@ -31,7 +31,7 @@ public class CallAnswerBody {
      * The media Config.
      * 
      */
-    @SerializedName("mediaConfig")
+    @SerializedName(value = "mediaConfig", alternate = {"MediaConfig"})
     @Expose
     public MediaConfig mediaConfig;
 
@@ -39,7 +39,7 @@ public class CallAnswerBody {
      * The accepted Modalities.
      * 
      */
-    @SerializedName("acceptedModalities")
+    @SerializedName(value = "acceptedModalities", alternate = {"AcceptedModalities"})
     @Expose
     public java.util.List<Modality> acceptedModalities;
 

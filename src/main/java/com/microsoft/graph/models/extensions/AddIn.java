@@ -36,7 +36,7 @@ public class AddIn implements IJsonBackedObject {
      * The Id.
      * 
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public java.util.UUID id;
 
@@ -44,7 +44,7 @@ public class AddIn implements IJsonBackedObject {
      * The Properties.
      * 
      */
-    @SerializedName("properties")
+    @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose
     public java.util.List<KeyValue> properties;
 
@@ -52,7 +52,7 @@ public class AddIn implements IJsonBackedObject {
      * The Type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 

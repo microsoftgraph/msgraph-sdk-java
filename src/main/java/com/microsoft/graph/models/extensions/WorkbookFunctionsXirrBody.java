@@ -22,7 +22,7 @@ public class WorkbookFunctionsXirrBody {
      * The values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsXirrBody {
      * The dates.
      * 
      */
-    @SerializedName("dates")
+    @SerializedName(value = "dates", alternate = {"Dates"})
     @Expose
     public com.google.gson.JsonElement dates;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsXirrBody {
      * The guess.
      * 
      */
-    @SerializedName("guess")
+    @SerializedName(value = "guess", alternate = {"Guess"})
     @Expose
     public com.google.gson.JsonElement guess;
 

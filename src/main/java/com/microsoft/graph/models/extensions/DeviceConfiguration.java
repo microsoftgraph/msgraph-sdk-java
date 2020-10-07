@@ -36,7 +36,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * DateTime the object was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -44,7 +44,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Description.
      * Admin provided description of the Device Configuration.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -52,7 +52,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Admin provided name of the device configuration.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -60,7 +60,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -68,7 +68,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Version.
      * Version of the device configuration.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public Integer version;
 
@@ -76,7 +76,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of assignments for the device configuration profile.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public DeviceConfigurationAssignmentCollectionPage assignments;
 
@@ -84,7 +84,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Device Setting State Summaries.
      * Device Configuration Setting State Device Summary
      */
-    @SerializedName("deviceSettingStateSummaries")
+    @SerializedName(value = "deviceSettingStateSummaries", alternate = {"DeviceSettingStateSummaries"})
     @Expose
     public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
 
@@ -92,7 +92,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Device Statuses.
      * Device configuration installation status by device.
      */
-    @SerializedName("deviceStatuses")
+    @SerializedName(value = "deviceStatuses", alternate = {"DeviceStatuses"})
     @Expose
     public DeviceConfigurationDeviceStatusCollectionPage deviceStatuses;
 
@@ -100,7 +100,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Device Status Overview.
      * Device Configuration devices status overview
      */
-    @SerializedName("deviceStatusOverview")
+    @SerializedName(value = "deviceStatusOverview", alternate = {"DeviceStatusOverview"})
     @Expose
     public DeviceConfigurationDeviceOverview deviceStatusOverview;
 
@@ -108,7 +108,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The User Statuses.
      * Device configuration installation status by user.
      */
-    @SerializedName("userStatuses")
+    @SerializedName(value = "userStatuses", alternate = {"UserStatuses"})
     @Expose
     public DeviceConfigurationUserStatusCollectionPage userStatuses;
 
@@ -116,7 +116,7 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The User Status Overview.
      * Device Configuration users status overview
      */
-    @SerializedName("userStatusOverview")
+    @SerializedName(value = "userStatusOverview", alternate = {"UserStatusOverview"})
     @Expose
     public DeviceConfigurationUserOverview userStatusOverview;
 

@@ -22,7 +22,7 @@ public class WorkbookFunctionsCountBlankBody {
      * The range.
      * 
      */
-    @SerializedName("range")
+    @SerializedName(value = "range", alternate = {"Range"})
     @Expose
     public com.google.gson.JsonElement range;
 

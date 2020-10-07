@@ -36,7 +36,7 @@ public class IosHomeScreenFolderPage implements IJsonBackedObject {
      * The Apps.
      * A list of apps to appear on a page within a folder. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("apps")
+    @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
     public java.util.List<IosHomeScreenApp> apps;
 
@@ -44,7 +44,7 @@ public class IosHomeScreenFolderPage implements IJsonBackedObject {
      * The Display Name.
      * Name of the folder page
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 

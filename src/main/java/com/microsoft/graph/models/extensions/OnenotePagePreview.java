@@ -36,7 +36,7 @@ public class OnenotePagePreview implements IJsonBackedObject {
      * The Links.
      * 
      */
-    @SerializedName("links")
+    @SerializedName(value = "links", alternate = {"Links"})
     @Expose
     public OnenotePagePreviewLinks links;
 
@@ -44,7 +44,7 @@ public class OnenotePagePreview implements IJsonBackedObject {
      * The Preview Text.
      * 
      */
-    @SerializedName("previewText")
+    @SerializedName(value = "previewText", alternate = {"PreviewText"})
     @Expose
     public String previewText;
 

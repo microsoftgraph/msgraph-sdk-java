@@ -35,7 +35,7 @@ public class CalculatedColumn implements IJsonBackedObject {
      * The Format.
      * For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
      */
-    @SerializedName("format")
+    @SerializedName(value = "format", alternate = {"Format"})
     @Expose
     public String format;
 
@@ -43,7 +43,7 @@ public class CalculatedColumn implements IJsonBackedObject {
      * The Formula.
      * The formula used to compute the value for this column.
      */
-    @SerializedName("formula")
+    @SerializedName(value = "formula", alternate = {"Formula"})
     @Expose
     public String formula;
 
@@ -51,7 +51,7 @@ public class CalculatedColumn implements IJsonBackedObject {
      * The Output Type.
      * The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
      */
-    @SerializedName("outputType")
+    @SerializedName(value = "outputType", alternate = {"OutputType"})
     @Expose
     public String outputType;
 

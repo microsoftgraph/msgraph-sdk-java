@@ -27,7 +27,7 @@ public class AndroidWorkProfileCustomConfiguration extends DeviceConfiguration i
      * The Oma Settings.
      * OMA settings. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("omaSettings")
+    @SerializedName(value = "omaSettings", alternate = {"OmaSettings"})
     @Expose
     public java.util.List<OmaSetting> omaSettings;
 

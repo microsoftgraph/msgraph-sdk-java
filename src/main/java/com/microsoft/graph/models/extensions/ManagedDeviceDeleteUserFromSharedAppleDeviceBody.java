@@ -22,7 +22,7 @@ public class ManagedDeviceDeleteUserFromSharedAppleDeviceBody {
      * The user Principal Name.
      * 
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

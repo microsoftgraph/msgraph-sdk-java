@@ -35,7 +35,7 @@ public class AppListItem implements IJsonBackedObject {
      * The App Id.
      * The application or bundle identifier of the application
      */
-    @SerializedName("appId")
+    @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
     public String appId;
 
@@ -43,7 +43,7 @@ public class AppListItem implements IJsonBackedObject {
      * The App Store Url.
      * The Store URL of the application
      */
-    @SerializedName("appStoreUrl")
+    @SerializedName(value = "appStoreUrl", alternate = {"AppStoreUrl"})
     @Expose
     public String appStoreUrl;
 
@@ -51,7 +51,7 @@ public class AppListItem implements IJsonBackedObject {
      * The Name.
      * The application name
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -59,7 +59,7 @@ public class AppListItem implements IJsonBackedObject {
      * The Publisher.
      * The publisher of the application
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 

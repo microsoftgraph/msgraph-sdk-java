@@ -35,7 +35,7 @@ public class AssignedLabel implements IJsonBackedObject {
      * The Display Name.
      * The display name of the label. Read-only.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class AssignedLabel implements IJsonBackedObject {
      * The Label Id.
      * The unique identifier of the label.
      */
-    @SerializedName("labelId")
+    @SerializedName(value = "labelId", alternate = {"LabelId"})
     @Expose
     public String labelId;
 

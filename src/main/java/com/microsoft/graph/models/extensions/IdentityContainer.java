@@ -27,7 +27,7 @@ public class IdentityContainer extends Entity implements IJsonBackedObject {
      * The Conditional Access.
      * 
      */
-    @SerializedName("conditionalAccess")
+    @SerializedName(value = "conditionalAccess", alternate = {"ConditionalAccess"})
     @Expose
     public ConditionalAccessRoot conditionalAccess;
 

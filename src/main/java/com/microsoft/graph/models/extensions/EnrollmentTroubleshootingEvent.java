@@ -28,7 +28,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * The Device Id.
      * Azure AD device identifier.
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -36,7 +36,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * The Enrollment Type.
      * Type of the enrollment. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
      */
-    @SerializedName("enrollmentType")
+    @SerializedName(value = "enrollmentType", alternate = {"EnrollmentType"})
     @Expose
     public DeviceEnrollmentType enrollmentType;
 
@@ -44,7 +44,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * The Failure Category.
      * Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation, userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced, clientDisconnected, userAbandonment.
      */
-    @SerializedName("failureCategory")
+    @SerializedName(value = "failureCategory", alternate = {"FailureCategory"})
     @Expose
     public DeviceEnrollmentFailureReason failureCategory;
 
@@ -52,7 +52,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * The Failure Reason.
      * Detailed failure reason.
      */
-    @SerializedName("failureReason")
+    @SerializedName(value = "failureReason", alternate = {"FailureReason"})
     @Expose
     public String failureReason;
 
@@ -60,7 +60,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * The Managed Device Identifier.
      * Device identifier created or collected by Intune.
      */
-    @SerializedName("managedDeviceIdentifier")
+    @SerializedName(value = "managedDeviceIdentifier", alternate = {"ManagedDeviceIdentifier"})
     @Expose
     public String managedDeviceIdentifier;
 
@@ -68,7 +68,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * The Operating System.
      * Operating System.
      */
-    @SerializedName("operatingSystem")
+    @SerializedName(value = "operatingSystem", alternate = {"OperatingSystem"})
     @Expose
     public String operatingSystem;
 
@@ -76,7 +76,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * The Os Version.
      * OS Version.
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 
@@ -84,7 +84,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
      * The User Id.
      * Identifier for the user that tried to enroll the device.
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 

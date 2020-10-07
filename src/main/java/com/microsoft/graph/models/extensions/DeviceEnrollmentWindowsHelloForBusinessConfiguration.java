@@ -28,7 +28,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The Enhanced Biometrics State.
      * Not yet documented. Possible values are: notConfigured, enabled, disabled.
      */
-    @SerializedName("enhancedBiometricsState")
+    @SerializedName(value = "enhancedBiometricsState", alternate = {"EnhancedBiometricsState"})
     @Expose
     public Enablement enhancedBiometricsState;
 
@@ -36,7 +36,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The Pin Expiration In Days.
      * Not yet documented
      */
-    @SerializedName("pinExpirationInDays")
+    @SerializedName(value = "pinExpirationInDays", alternate = {"PinExpirationInDays"})
     @Expose
     public Integer pinExpirationInDays;
 
@@ -44,7 +44,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The Pin Lowercase Characters Usage.
      * Not yet documented. Possible values are: allowed, required, disallowed.
      */
-    @SerializedName("pinLowercaseCharactersUsage")
+    @SerializedName(value = "pinLowercaseCharactersUsage", alternate = {"PinLowercaseCharactersUsage"})
     @Expose
     public WindowsHelloForBusinessPinUsage pinLowercaseCharactersUsage;
 
@@ -52,7 +52,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The Pin Maximum Length.
      * Not yet documented
      */
-    @SerializedName("pinMaximumLength")
+    @SerializedName(value = "pinMaximumLength", alternate = {"PinMaximumLength"})
     @Expose
     public Integer pinMaximumLength;
 
@@ -60,7 +60,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The Pin Minimum Length.
      * Not yet documented
      */
-    @SerializedName("pinMinimumLength")
+    @SerializedName(value = "pinMinimumLength", alternate = {"PinMinimumLength"})
     @Expose
     public Integer pinMinimumLength;
 
@@ -68,7 +68,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The Pin Previous Block Count.
      * Not yet documented
      */
-    @SerializedName("pinPreviousBlockCount")
+    @SerializedName(value = "pinPreviousBlockCount", alternate = {"PinPreviousBlockCount"})
     @Expose
     public Integer pinPreviousBlockCount;
 
@@ -76,7 +76,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The Pin Special Characters Usage.
      * Not yet documented. Possible values are: allowed, required, disallowed.
      */
-    @SerializedName("pinSpecialCharactersUsage")
+    @SerializedName(value = "pinSpecialCharactersUsage", alternate = {"PinSpecialCharactersUsage"})
     @Expose
     public WindowsHelloForBusinessPinUsage pinSpecialCharactersUsage;
 
@@ -84,7 +84,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The Pin Uppercase Characters Usage.
      * Not yet documented. Possible values are: allowed, required, disallowed.
      */
-    @SerializedName("pinUppercaseCharactersUsage")
+    @SerializedName(value = "pinUppercaseCharactersUsage", alternate = {"PinUppercaseCharactersUsage"})
     @Expose
     public WindowsHelloForBusinessPinUsage pinUppercaseCharactersUsage;
 
@@ -92,7 +92,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The Remote Passport Enabled.
      * Not yet documented
      */
-    @SerializedName("remotePassportEnabled")
+    @SerializedName(value = "remotePassportEnabled", alternate = {"RemotePassportEnabled"})
     @Expose
     public Boolean remotePassportEnabled;
 
@@ -100,7 +100,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The Security Device Required.
      * Not yet documented
      */
-    @SerializedName("securityDeviceRequired")
+    @SerializedName(value = "securityDeviceRequired", alternate = {"SecurityDeviceRequired"})
     @Expose
     public Boolean securityDeviceRequired;
 
@@ -108,7 +108,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The State.
      * Not yet documented. Possible values are: notConfigured, enabled, disabled.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public Enablement state;
 
@@ -116,7 +116,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * The Unlock With Biometrics Enabled.
      * Not yet documented
      */
-    @SerializedName("unlockWithBiometricsEnabled")
+    @SerializedName(value = "unlockWithBiometricsEnabled", alternate = {"UnlockWithBiometricsEnabled"})
     @Expose
     public Boolean unlockWithBiometricsEnabled;
 

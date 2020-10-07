@@ -22,7 +22,7 @@ public class WorkbookTableColumnAddBody {
      * The index.
      * 
      */
-    @SerializedName("index")
+    @SerializedName(value = "index", alternate = {"Index"})
     @Expose
     public Integer index;
 
@@ -30,7 +30,7 @@ public class WorkbookTableColumnAddBody {
      * The values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 
@@ -38,7 +38,7 @@ public class WorkbookTableColumnAddBody {
      * The name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

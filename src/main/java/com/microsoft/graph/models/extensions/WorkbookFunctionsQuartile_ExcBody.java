@@ -22,7 +22,7 @@ public class WorkbookFunctionsQuartile_ExcBody {
      * The array.
      * 
      */
-    @SerializedName("array")
+    @SerializedName(value = "array", alternate = {"Array"})
     @Expose
     public com.google.gson.JsonElement array;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsQuartile_ExcBody {
      * The quart.
      * 
      */
-    @SerializedName("quart")
+    @SerializedName(value = "quart", alternate = {"Quart"})
     @Expose
     public com.google.gson.JsonElement quart;
 

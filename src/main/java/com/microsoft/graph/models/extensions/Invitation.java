@@ -28,7 +28,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
      * The Invited User Display Name.
      * The display name of the user being invited.
      */
-    @SerializedName("invitedUserDisplayName")
+    @SerializedName(value = "invitedUserDisplayName", alternate = {"InvitedUserDisplayName"})
     @Expose
     public String invitedUserDisplayName;
 
@@ -36,7 +36,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
      * The Invited User Email Address.
      * The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (&amp;lt; &amp;gt;)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
      */
-    @SerializedName("invitedUserEmailAddress")
+    @SerializedName(value = "invitedUserEmailAddress", alternate = {"InvitedUserEmailAddress"})
     @Expose
     public String invitedUserEmailAddress;
 
@@ -44,7 +44,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
      * The Invited User Message Info.
      * Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
      */
-    @SerializedName("invitedUserMessageInfo")
+    @SerializedName(value = "invitedUserMessageInfo", alternate = {"InvitedUserMessageInfo"})
     @Expose
     public InvitedUserMessageInfo invitedUserMessageInfo;
 
@@ -52,7 +52,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
      * The Invited User Type.
      * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
      */
-    @SerializedName("invitedUserType")
+    @SerializedName(value = "invitedUserType", alternate = {"InvitedUserType"})
     @Expose
     public String invitedUserType;
 
@@ -60,7 +60,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
      * The Invite Redeem Url.
      * The URL the user can use to redeem their invitation. Read-only
      */
-    @SerializedName("inviteRedeemUrl")
+    @SerializedName(value = "inviteRedeemUrl", alternate = {"InviteRedeemUrl"})
     @Expose
     public String inviteRedeemUrl;
 
@@ -68,7 +68,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
      * The Invite Redirect Url.
      * The URL the user should be redirected to once the invitation is redeemed. Required.
      */
-    @SerializedName("inviteRedirectUrl")
+    @SerializedName(value = "inviteRedirectUrl", alternate = {"InviteRedirectUrl"})
     @Expose
     public String inviteRedirectUrl;
 
@@ -76,7 +76,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
      * The Send Invitation Message.
      * Indicates whether an email should be sent to the user being invited or not. The default is false.
      */
-    @SerializedName("sendInvitationMessage")
+    @SerializedName(value = "sendInvitationMessage", alternate = {"SendInvitationMessage"})
     @Expose
     public Boolean sendInvitationMessage;
 
@@ -84,7 +84,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
      * The Status.
      * The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -92,7 +92,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
      * The Invited User.
      * The user created as part of the invitation creation. Read-Only
      */
-    @SerializedName("invitedUser")
+    @SerializedName(value = "invitedUser", alternate = {"InvitedUser"})
     @Expose
     public User invitedUser;
 

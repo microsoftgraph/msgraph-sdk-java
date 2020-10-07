@@ -22,7 +22,7 @@ public class WorkbookFunctionsLeftBody {
      * The text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public com.google.gson.JsonElement text;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsLeftBody {
      * The num Chars.
      * 
      */
-    @SerializedName("numChars")
+    @SerializedName(value = "numChars", alternate = {"NumChars"})
     @Expose
     public com.google.gson.JsonElement numChars;
 

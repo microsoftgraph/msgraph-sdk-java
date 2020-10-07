@@ -22,7 +22,7 @@ public class WorkbookFilterApplyDynamicFilterBody {
      * The criteria.
      * 
      */
-    @SerializedName("criteria")
+    @SerializedName(value = "criteria", alternate = {"Criteria"})
     @Expose
     public String criteria;
 

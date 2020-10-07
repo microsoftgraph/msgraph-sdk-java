@@ -27,7 +27,7 @@ public class LicenseDetails extends Entity implements IJsonBackedObject {
      * The Service Plans.
      * Information about the service plans assigned with the license. Read-only, Not nullable
      */
-    @SerializedName("servicePlans")
+    @SerializedName(value = "servicePlans", alternate = {"ServicePlans"})
     @Expose
     public java.util.List<ServicePlanInfo> servicePlans;
 
@@ -35,7 +35,7 @@ public class LicenseDetails extends Entity implements IJsonBackedObject {
      * The Sku Id.
      * Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
      */
-    @SerializedName("skuId")
+    @SerializedName(value = "skuId", alternate = {"SkuId"})
     @Expose
     public java.util.UUID skuId;
 
@@ -43,7 +43,7 @@ public class LicenseDetails extends Entity implements IJsonBackedObject {
      * The Sku Part Number.
      * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
      */
-    @SerializedName("skuPartNumber")
+    @SerializedName(value = "skuPartNumber", alternate = {"SkuPartNumber"})
     @Expose
     public String skuPartNumber;
 

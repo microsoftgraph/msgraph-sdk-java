@@ -22,7 +22,7 @@ public class WorkbookFunctionsAreasBody {
      * The reference.
      * 
      */
-    @SerializedName("reference")
+    @SerializedName(value = "reference", alternate = {"Reference"})
     @Expose
     public com.google.gson.JsonElement reference;
 
