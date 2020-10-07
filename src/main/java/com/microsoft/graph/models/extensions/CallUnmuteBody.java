@@ -22,7 +22,7 @@ public class CallUnmuteBody {
      * The client Context.
      * 
      */
-    @SerializedName("clientContext")
+    @SerializedName(value = "clientContext", alternate = {"ClientContext"})
     @Expose
     public String clientContext;
 

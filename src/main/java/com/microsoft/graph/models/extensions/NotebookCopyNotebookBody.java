@@ -22,7 +22,7 @@ public class NotebookCopyNotebookBody {
      * The group Id.
      * 
      */
-    @SerializedName("groupId")
+    @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
     public String groupId;
 
@@ -30,7 +30,7 @@ public class NotebookCopyNotebookBody {
      * The rename As.
      * 
      */
-    @SerializedName("renameAs")
+    @SerializedName(value = "renameAs", alternate = {"RenameAs"})
     @Expose
     public String renameAs;
 
@@ -38,7 +38,7 @@ public class NotebookCopyNotebookBody {
      * The notebook Folder.
      * 
      */
-    @SerializedName("notebookFolder")
+    @SerializedName(value = "notebookFolder", alternate = {"NotebookFolder"})
     @Expose
     public String notebookFolder;
 
@@ -46,7 +46,7 @@ public class NotebookCopyNotebookBody {
      * The site Collection Id.
      * 
      */
-    @SerializedName("siteCollectionId")
+    @SerializedName(value = "siteCollectionId", alternate = {"SiteCollectionId"})
     @Expose
     public String siteCollectionId;
 
@@ -54,7 +54,7 @@ public class NotebookCopyNotebookBody {
      * The site Id.
      * 
      */
-    @SerializedName("siteId")
+    @SerializedName(value = "siteId", alternate = {"SiteId"})
     @Expose
     public String siteId;
 

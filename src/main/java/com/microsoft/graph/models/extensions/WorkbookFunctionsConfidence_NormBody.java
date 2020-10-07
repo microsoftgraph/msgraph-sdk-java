@@ -22,7 +22,7 @@ public class WorkbookFunctionsConfidence_NormBody {
      * The alpha.
      * 
      */
-    @SerializedName("alpha")
+    @SerializedName(value = "alpha", alternate = {"Alpha"})
     @Expose
     public com.google.gson.JsonElement alpha;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsConfidence_NormBody {
      * The standard Dev.
      * 
      */
-    @SerializedName("standardDev")
+    @SerializedName(value = "standardDev", alternate = {"StandardDev"})
     @Expose
     public com.google.gson.JsonElement standardDev;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsConfidence_NormBody {
      * The size.
      * 
      */
-    @SerializedName("size")
+    @SerializedName(value = "size", alternate = {"Size"})
     @Expose
     public com.google.gson.JsonElement size;
 

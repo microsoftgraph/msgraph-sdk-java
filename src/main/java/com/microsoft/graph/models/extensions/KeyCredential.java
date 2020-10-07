@@ -35,7 +35,7 @@ public class KeyCredential implements IJsonBackedObject {
      * The Custom Key Identifier.
      * Custom key identifier
      */
-    @SerializedName("customKeyIdentifier")
+    @SerializedName(value = "customKeyIdentifier", alternate = {"CustomKeyIdentifier"})
     @Expose
     public byte[] customKeyIdentifier;
 
@@ -43,7 +43,7 @@ public class KeyCredential implements IJsonBackedObject {
      * The Display Name.
      * Friendly name for the key. Optional.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -51,7 +51,7 @@ public class KeyCredential implements IJsonBackedObject {
      * The End Date Time.
      * The date and time at which the credential expires.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -59,7 +59,7 @@ public class KeyCredential implements IJsonBackedObject {
      * The Key.
      * Value for the key credential. Should be a base 64 encoded value.
      */
-    @SerializedName("key")
+    @SerializedName(value = "key", alternate = {"Key"})
     @Expose
     public byte[] key;
 
@@ -67,7 +67,7 @@ public class KeyCredential implements IJsonBackedObject {
      * The Key Id.
      * The unique identifier (GUID) for the key.
      */
-    @SerializedName("keyId")
+    @SerializedName(value = "keyId", alternate = {"KeyId"})
     @Expose
     public java.util.UUID keyId;
 
@@ -75,7 +75,7 @@ public class KeyCredential implements IJsonBackedObject {
      * The Start Date Time.
      * The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -83,7 +83,7 @@ public class KeyCredential implements IJsonBackedObject {
      * The Type.
      * The type of key credential; for example, 'Symmetric'.
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -91,7 +91,7 @@ public class KeyCredential implements IJsonBackedObject {
      * The Usage.
      * A string that describes the purpose for which the key can be used; for example, 'Verify'.
      */
-    @SerializedName("usage")
+    @SerializedName(value = "usage", alternate = {"Usage"})
     @Expose
     public String usage;
 

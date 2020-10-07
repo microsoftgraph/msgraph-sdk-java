@@ -22,7 +22,7 @@ public class WorkbookFunctionsCountIfBody {
      * The range.
      * 
      */
-    @SerializedName("range")
+    @SerializedName(value = "range", alternate = {"Range"})
     @Expose
     public com.google.gson.JsonElement range;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsCountIfBody {
      * The criteria.
      * 
      */
-    @SerializedName("criteria")
+    @SerializedName(value = "criteria", alternate = {"Criteria"})
     @Expose
     public com.google.gson.JsonElement criteria;
 

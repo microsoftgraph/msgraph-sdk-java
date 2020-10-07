@@ -39,7 +39,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
      * The Application Enforced Restrictions.
      * Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
      */
-    @SerializedName("applicationEnforcedRestrictions")
+    @SerializedName(value = "applicationEnforcedRestrictions", alternate = {"ApplicationEnforcedRestrictions"})
     @Expose
     public ApplicationEnforcedRestrictionsSessionControl applicationEnforcedRestrictions;
 
@@ -47,7 +47,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
      * The Cloud App Security.
      * Session control to apply cloud app security.
      */
-    @SerializedName("cloudAppSecurity")
+    @SerializedName(value = "cloudAppSecurity", alternate = {"CloudAppSecurity"})
     @Expose
     public CloudAppSecuritySessionControl cloudAppSecurity;
 
@@ -55,7 +55,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
      * The Persistent Browser.
      * Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
      */
-    @SerializedName("persistentBrowser")
+    @SerializedName(value = "persistentBrowser", alternate = {"PersistentBrowser"})
     @Expose
     public PersistentBrowserSessionControl persistentBrowser;
 
@@ -63,7 +63,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
      * The Sign In Frequency.
      * Session control to enforce signin frequency.
      */
-    @SerializedName("signInFrequency")
+    @SerializedName(value = "signInFrequency", alternate = {"SignInFrequency"})
     @Expose
     public SignInFrequencySessionControl signInFrequency;
 

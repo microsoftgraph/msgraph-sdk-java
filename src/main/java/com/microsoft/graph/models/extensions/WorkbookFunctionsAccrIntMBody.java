@@ -22,7 +22,7 @@ public class WorkbookFunctionsAccrIntMBody {
      * The issue.
      * 
      */
-    @SerializedName("issue")
+    @SerializedName(value = "issue", alternate = {"Issue"})
     @Expose
     public com.google.gson.JsonElement issue;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsAccrIntMBody {
      * The settlement.
      * 
      */
-    @SerializedName("settlement")
+    @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
     public com.google.gson.JsonElement settlement;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsAccrIntMBody {
      * The rate.
      * 
      */
-    @SerializedName("rate")
+    @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
     public com.google.gson.JsonElement rate;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsAccrIntMBody {
      * The par.
      * 
      */
-    @SerializedName("par")
+    @SerializedName(value = "par", alternate = {"Par"})
     @Expose
     public com.google.gson.JsonElement par;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsAccrIntMBody {
      * The basis.
      * 
      */
-    @SerializedName("basis")
+    @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
     public com.google.gson.JsonElement basis;
 

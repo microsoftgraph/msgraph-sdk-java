@@ -22,7 +22,7 @@ public class MessageReplyBody {
      * The message.
      * 
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public Message message;
 
@@ -30,7 +30,7 @@ public class MessageReplyBody {
      * The comment.
      * 
      */
-    @SerializedName("comment")
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
     public String comment;
 

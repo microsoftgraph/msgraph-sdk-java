@@ -27,7 +27,7 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
      * The Android Device Blocked On Missing Partner Data.
      * For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
      */
-    @SerializedName("androidDeviceBlockedOnMissingPartnerData")
+    @SerializedName(value = "androidDeviceBlockedOnMissingPartnerData", alternate = {"AndroidDeviceBlockedOnMissingPartnerData"})
     @Expose
     public Boolean androidDeviceBlockedOnMissingPartnerData;
 
@@ -35,7 +35,7 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
      * The Android Enabled.
      * For Android, set whether data from the data sync partner should be used during compliance evaluations
      */
-    @SerializedName("androidEnabled")
+    @SerializedName(value = "androidEnabled", alternate = {"AndroidEnabled"})
     @Expose
     public Boolean androidEnabled;
 
@@ -43,7 +43,7 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
      * The Ios Device Blocked On Missing Partner Data.
      * For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant
      */
-    @SerializedName("iosDeviceBlockedOnMissingPartnerData")
+    @SerializedName(value = "iosDeviceBlockedOnMissingPartnerData", alternate = {"IosDeviceBlockedOnMissingPartnerData"})
     @Expose
     public Boolean iosDeviceBlockedOnMissingPartnerData;
 
@@ -51,7 +51,7 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
      * The Ios Enabled.
      * For IOS, get or set whether data from the data sync partner should be used during compliance evaluations
      */
-    @SerializedName("iosEnabled")
+    @SerializedName(value = "iosEnabled", alternate = {"IosEnabled"})
     @Expose
     public Boolean iosEnabled;
 
@@ -59,7 +59,7 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
      * The Last Heartbeat Date Time.
      * DateTime of last Heartbeat recieved from the Data Sync Partner
      */
-    @SerializedName("lastHeartbeatDateTime")
+    @SerializedName(value = "lastHeartbeatDateTime", alternate = {"LastHeartbeatDateTime"})
     @Expose
     public java.util.Calendar lastHeartbeatDateTime;
 
@@ -67,7 +67,7 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
      * The Partner State.
      * Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
      */
-    @SerializedName("partnerState")
+    @SerializedName(value = "partnerState", alternate = {"PartnerState"})
     @Expose
     public MobileThreatPartnerTenantState partnerState;
 
@@ -75,7 +75,7 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
      * The Partner Unresponsiveness Threshold In Days.
      * Get or Set days the per tenant tolerance to unresponsiveness for this partner integration
      */
-    @SerializedName("partnerUnresponsivenessThresholdInDays")
+    @SerializedName(value = "partnerUnresponsivenessThresholdInDays", alternate = {"PartnerUnresponsivenessThresholdInDays"})
     @Expose
     public Integer partnerUnresponsivenessThresholdInDays;
 
@@ -83,7 +83,7 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
      * The Partner Unsupported Os Version Blocked.
      * Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner
      */
-    @SerializedName("partnerUnsupportedOsVersionBlocked")
+    @SerializedName(value = "partnerUnsupportedOsVersionBlocked", alternate = {"PartnerUnsupportedOsVersionBlocked"})
     @Expose
     public Boolean partnerUnsupportedOsVersionBlocked;
 

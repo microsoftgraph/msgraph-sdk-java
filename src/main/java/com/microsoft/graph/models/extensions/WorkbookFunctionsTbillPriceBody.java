@@ -22,7 +22,7 @@ public class WorkbookFunctionsTbillPriceBody {
      * The settlement.
      * 
      */
-    @SerializedName("settlement")
+    @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
     public com.google.gson.JsonElement settlement;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsTbillPriceBody {
      * The maturity.
      * 
      */
-    @SerializedName("maturity")
+    @SerializedName(value = "maturity", alternate = {"Maturity"})
     @Expose
     public com.google.gson.JsonElement maturity;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsTbillPriceBody {
      * The discount.
      * 
      */
-    @SerializedName("discount")
+    @SerializedName(value = "discount", alternate = {"Discount"})
     @Expose
     public com.google.gson.JsonElement discount;
 

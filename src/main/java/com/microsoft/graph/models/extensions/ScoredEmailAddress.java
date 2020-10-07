@@ -36,7 +36,7 @@ public class ScoredEmailAddress implements IJsonBackedObject {
      * The Address.
      * The email address.
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public String address;
 
@@ -44,7 +44,7 @@ public class ScoredEmailAddress implements IJsonBackedObject {
      * The Item Id.
      * 
      */
-    @SerializedName("itemId")
+    @SerializedName(value = "itemId", alternate = {"ItemId"})
     @Expose
     public String itemId;
 
@@ -52,7 +52,7 @@ public class ScoredEmailAddress implements IJsonBackedObject {
      * The Relevance Score.
      * The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
      */
-    @SerializedName("relevanceScore")
+    @SerializedName(value = "relevanceScore", alternate = {"RelevanceScore"})
     @Expose
     public Double relevanceScore;
 
@@ -60,7 +60,7 @@ public class ScoredEmailAddress implements IJsonBackedObject {
      * The Selection Likelihood.
      * 
      */
-    @SerializedName("selectionLikelihood")
+    @SerializedName(value = "selectionLikelihood", alternate = {"SelectionLikelihood"})
     @Expose
     public SelectionLikelihoodInfo selectionLikelihood;
 

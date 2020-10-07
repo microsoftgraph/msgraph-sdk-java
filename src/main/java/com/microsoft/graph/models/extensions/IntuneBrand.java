@@ -37,7 +37,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Contact ITEmail Address.
      * Email address of the person/organization responsible for IT support.
      */
-    @SerializedName("contactITEmailAddress")
+    @SerializedName(value = "contactITEmailAddress", alternate = {"ContactITEmailAddress"})
     @Expose
     public String contactITEmailAddress;
 
@@ -45,7 +45,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Contact ITName.
      * Name of the person/organization responsible for IT support.
      */
-    @SerializedName("contactITName")
+    @SerializedName(value = "contactITName", alternate = {"ContactITName"})
     @Expose
     public String contactITName;
 
@@ -53,7 +53,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Contact ITNotes.
      * Text comments regarding the person/organization responsible for IT support.
      */
-    @SerializedName("contactITNotes")
+    @SerializedName(value = "contactITNotes", alternate = {"ContactITNotes"})
     @Expose
     public String contactITNotes;
 
@@ -61,7 +61,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Contact ITPhone Number.
      * Phone number of the person/organization responsible for IT support.
      */
-    @SerializedName("contactITPhoneNumber")
+    @SerializedName(value = "contactITPhoneNumber", alternate = {"ContactITPhoneNumber"})
     @Expose
     public String contactITPhoneNumber;
 
@@ -69,7 +69,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Dark Background Logo.
      * Logo image displayed in Company Portal apps which have a dark background behind the logo.
      */
-    @SerializedName("darkBackgroundLogo")
+    @SerializedName(value = "darkBackgroundLogo", alternate = {"DarkBackgroundLogo"})
     @Expose
     public MimeContent darkBackgroundLogo;
 
@@ -77,7 +77,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Display Name.
      * Company/organization name that is displayed to end users.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -85,7 +85,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Light Background Logo.
      * Logo image displayed in Company Portal apps which have a light background behind the logo.
      */
-    @SerializedName("lightBackgroundLogo")
+    @SerializedName(value = "lightBackgroundLogo", alternate = {"LightBackgroundLogo"})
     @Expose
     public MimeContent lightBackgroundLogo;
 
@@ -93,7 +93,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Online Support Site Name.
      * Display name of the company/organization’s IT helpdesk site.
      */
-    @SerializedName("onlineSupportSiteName")
+    @SerializedName(value = "onlineSupportSiteName", alternate = {"OnlineSupportSiteName"})
     @Expose
     public String onlineSupportSiteName;
 
@@ -101,7 +101,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Online Support Site Url.
      * URL to the company/organization’s IT helpdesk site.
      */
-    @SerializedName("onlineSupportSiteUrl")
+    @SerializedName(value = "onlineSupportSiteUrl", alternate = {"OnlineSupportSiteUrl"})
     @Expose
     public String onlineSupportSiteUrl;
 
@@ -109,7 +109,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Privacy Url.
      * URL to the company/organization’s privacy policy.
      */
-    @SerializedName("privacyUrl")
+    @SerializedName(value = "privacyUrl", alternate = {"PrivacyUrl"})
     @Expose
     public String privacyUrl;
 
@@ -117,7 +117,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Show Display Name Next To Logo.
      * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      */
-    @SerializedName("showDisplayNameNextToLogo")
+    @SerializedName(value = "showDisplayNameNextToLogo", alternate = {"ShowDisplayNameNextToLogo"})
     @Expose
     public Boolean showDisplayNameNextToLogo;
 
@@ -125,7 +125,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Show Logo.
      * Boolean that represents whether the administrator-supplied logo images are shown or not shown.
      */
-    @SerializedName("showLogo")
+    @SerializedName(value = "showLogo", alternate = {"ShowLogo"})
     @Expose
     public Boolean showLogo;
 
@@ -133,7 +133,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Show Name Next To Logo.
      * Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      */
-    @SerializedName("showNameNextToLogo")
+    @SerializedName(value = "showNameNextToLogo", alternate = {"ShowNameNextToLogo"})
     @Expose
     public Boolean showNameNextToLogo;
 
@@ -141,7 +141,7 @@ public class IntuneBrand implements IJsonBackedObject {
      * The Theme Color.
      * Primary theme color used in the Company Portal applications and web portal.
      */
-    @SerializedName("themeColor")
+    @SerializedName(value = "themeColor", alternate = {"ThemeColor"})
     @Expose
     public RgbColor themeColor;
 

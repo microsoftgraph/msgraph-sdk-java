@@ -22,7 +22,7 @@ public class WorkbookFunctionsCoupNcdBody {
      * The settlement.
      * 
      */
-    @SerializedName("settlement")
+    @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
     public com.google.gson.JsonElement settlement;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsCoupNcdBody {
      * The maturity.
      * 
      */
-    @SerializedName("maturity")
+    @SerializedName(value = "maturity", alternate = {"Maturity"})
     @Expose
     public com.google.gson.JsonElement maturity;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsCoupNcdBody {
      * The frequency.
      * 
      */
-    @SerializedName("frequency")
+    @SerializedName(value = "frequency", alternate = {"Frequency"})
     @Expose
     public com.google.gson.JsonElement frequency;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsCoupNcdBody {
      * The basis.
      * 
      */
-    @SerializedName("basis")
+    @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
     public com.google.gson.JsonElement basis;
 

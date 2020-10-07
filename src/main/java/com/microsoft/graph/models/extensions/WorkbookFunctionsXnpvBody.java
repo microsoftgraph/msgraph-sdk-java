@@ -22,7 +22,7 @@ public class WorkbookFunctionsXnpvBody {
      * The rate.
      * 
      */
-    @SerializedName("rate")
+    @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
     public com.google.gson.JsonElement rate;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsXnpvBody {
      * The values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsXnpvBody {
      * The dates.
      * 
      */
-    @SerializedName("dates")
+    @SerializedName(value = "dates", alternate = {"Dates"})
     @Expose
     public com.google.gson.JsonElement dates;
 

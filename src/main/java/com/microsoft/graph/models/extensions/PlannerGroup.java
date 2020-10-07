@@ -28,7 +28,7 @@ public class PlannerGroup extends Entity implements IJsonBackedObject {
      * The Plans.
      * Read-only. Nullable. Returns the plannerPlans owned by the group.
      */
-    @SerializedName("plans")
+    @SerializedName(value = "plans", alternate = {"Plans"})
     @Expose
     public PlannerPlanCollectionPage plans;
 

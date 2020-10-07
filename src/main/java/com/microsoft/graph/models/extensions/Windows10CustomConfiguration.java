@@ -27,7 +27,7 @@ public class Windows10CustomConfiguration extends DeviceConfiguration implements
      * The Oma Settings.
      * OMA settings. This collection can contain a maximum of 1000 elements.
      */
-    @SerializedName("omaSettings")
+    @SerializedName(value = "omaSettings", alternate = {"OmaSettings"})
     @Expose
     public java.util.List<OmaSetting> omaSettings;
 

@@ -26,7 +26,7 @@ public class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements IJ
      * The Daylight Bias.
      * The time offset from Coordinated Universal Time (UTC) for daylight saving time. This value is in minutes.
      */
-    @SerializedName("daylightBias")
+    @SerializedName(value = "daylightBias", alternate = {"DaylightBias"})
     @Expose
     public Integer daylightBias;
 

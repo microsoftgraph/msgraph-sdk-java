@@ -22,7 +22,7 @@ public class WorkbookFunctionsIfBody {
      * The logical Test.
      * 
      */
-    @SerializedName("logicalTest")
+    @SerializedName(value = "logicalTest", alternate = {"LogicalTest"})
     @Expose
     public com.google.gson.JsonElement logicalTest;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsIfBody {
      * The value If True.
      * 
      */
-    @SerializedName("valueIfTrue")
+    @SerializedName(value = "valueIfTrue", alternate = {"ValueIfTrue"})
     @Expose
     public com.google.gson.JsonElement valueIfTrue;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsIfBody {
      * The value If False.
      * 
      */
-    @SerializedName("valueIfFalse")
+    @SerializedName(value = "valueIfFalse", alternate = {"ValueIfFalse"})
     @Expose
     public com.google.gson.JsonElement valueIfFalse;
 

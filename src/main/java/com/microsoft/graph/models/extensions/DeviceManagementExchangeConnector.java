@@ -28,7 +28,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
      * The Connector Server Name.
      * The name of the server hosting the Exchange Connector.
      */
-    @SerializedName("connectorServerName")
+    @SerializedName(value = "connectorServerName", alternate = {"ConnectorServerName"})
     @Expose
     public String connectorServerName;
 
@@ -36,7 +36,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
      * The Exchange Alias.
      * An alias assigned to the Exchange server
      */
-    @SerializedName("exchangeAlias")
+    @SerializedName(value = "exchangeAlias", alternate = {"ExchangeAlias"})
     @Expose
     public String exchangeAlias;
 
@@ -44,7 +44,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
      * The Exchange Connector Type.
      * The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
      */
-    @SerializedName("exchangeConnectorType")
+    @SerializedName(value = "exchangeConnectorType", alternate = {"ExchangeConnectorType"})
     @Expose
     public DeviceManagementExchangeConnectorType exchangeConnectorType;
 
@@ -52,7 +52,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
      * The Exchange Organization.
      * Exchange Organization to the Exchange server
      */
-    @SerializedName("exchangeOrganization")
+    @SerializedName(value = "exchangeOrganization", alternate = {"ExchangeOrganization"})
     @Expose
     public String exchangeOrganization;
 
@@ -60,7 +60,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
      * The Last Sync Date Time.
      * Last sync time for the Exchange Connector
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -68,7 +68,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
      * The Primary Smtp Address.
      * Email address used to configure the Service To Service Exchange Connector.
      */
-    @SerializedName("primarySmtpAddress")
+    @SerializedName(value = "primarySmtpAddress", alternate = {"PrimarySmtpAddress"})
     @Expose
     public String primarySmtpAddress;
 
@@ -76,7 +76,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
      * The Server Name.
      * The name of the Exchange server.
      */
-    @SerializedName("serverName")
+    @SerializedName(value = "serverName", alternate = {"ServerName"})
     @Expose
     public String serverName;
 
@@ -84,7 +84,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
      * The Status.
      * Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public DeviceManagementExchangeConnectorStatus status;
 
@@ -92,7 +92,7 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
      * The Version.
      * The version of the ExchangeConnectorAgent
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

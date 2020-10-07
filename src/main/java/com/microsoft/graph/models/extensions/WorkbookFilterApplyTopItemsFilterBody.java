@@ -22,7 +22,7 @@ public class WorkbookFilterApplyTopItemsFilterBody {
      * The count.
      * 
      */
-    @SerializedName("count")
+    @SerializedName(value = "count", alternate = {"Count"})
     @Expose
     public Integer count;
 

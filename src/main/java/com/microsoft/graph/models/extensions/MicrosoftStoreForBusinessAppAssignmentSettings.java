@@ -26,7 +26,7 @@ public class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAss
      * The Use Device Context.
      * Whether or not to use device execution context for Microsoft Store for Business mobile app.
      */
-    @SerializedName("useDeviceContext")
+    @SerializedName(value = "useDeviceContext", alternate = {"UseDeviceContext"})
     @Expose
     public Boolean useDeviceContext;
 

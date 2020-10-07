@@ -36,7 +36,7 @@ public class SharingLink implements IJsonBackedObject {
      * The Application.
      * The app the link is associated with.
      */
-    @SerializedName("application")
+    @SerializedName(value = "application", alternate = {"Application"})
     @Expose
     public Identity application;
 
@@ -44,7 +44,7 @@ public class SharingLink implements IJsonBackedObject {
      * The Prevents Download.
      * If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
      */
-    @SerializedName("preventsDownload")
+    @SerializedName(value = "preventsDownload", alternate = {"PreventsDownload"})
     @Expose
     public Boolean preventsDownload;
 
@@ -52,7 +52,7 @@ public class SharingLink implements IJsonBackedObject {
      * The Scope.
      * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public String scope;
 
@@ -60,7 +60,7 @@ public class SharingLink implements IJsonBackedObject {
      * The Type.
      * The type of the link created.
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -68,7 +68,7 @@ public class SharingLink implements IJsonBackedObject {
      * The Web Html.
      * For embed links, this property contains the HTML code for an &amp;lt;iframe&amp;gt; element that will embed the item in a webpage.
      */
-    @SerializedName("webHtml")
+    @SerializedName(value = "webHtml", alternate = {"WebHtml"})
     @Expose
     public String webHtml;
 
@@ -76,7 +76,7 @@ public class SharingLink implements IJsonBackedObject {
      * The Web Url.
      * A URL that opens the item in the browser on the OneDrive website.
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

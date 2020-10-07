@@ -22,7 +22,7 @@ public class WorkbookFunctionsDeltaBody {
      * The number1.
      * 
      */
-    @SerializedName("number1")
+    @SerializedName(value = "number1", alternate = {"Number1"})
     @Expose
     public com.google.gson.JsonElement number1;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsDeltaBody {
      * The number2.
      * 
      */
-    @SerializedName("number2")
+    @SerializedName(value = "number2", alternate = {"Number2"})
     @Expose
     public com.google.gson.JsonElement number2;
 

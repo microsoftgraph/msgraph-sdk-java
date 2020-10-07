@@ -42,7 +42,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Activation Lock Bypass Code.
      * Code that allows the Activation Lock on a device to be bypassed.
      */
-    @SerializedName("activationLockBypassCode")
+    @SerializedName(value = "activationLockBypassCode", alternate = {"ActivationLockBypassCode"})
     @Expose
     public String activationLockBypassCode;
 
@@ -50,7 +50,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Android Security Patch Level.
      * Android security patch level
      */
-    @SerializedName("androidSecurityPatchLevel")
+    @SerializedName(value = "androidSecurityPatchLevel", alternate = {"AndroidSecurityPatchLevel"})
     @Expose
     public String androidSecurityPatchLevel;
 
@@ -58,7 +58,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Azure ADDevice Id.
      * The unique identifier for the Azure Active Directory device. Read only.
      */
-    @SerializedName("azureADDeviceId")
+    @SerializedName(value = "azureADDeviceId", alternate = {"AzureADDeviceId"})
     @Expose
     public String azureADDeviceId;
 
@@ -66,7 +66,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Azure ADRegistered.
      * Whether the device is Azure Active Directory registered.
      */
-    @SerializedName("azureADRegistered")
+    @SerializedName(value = "azureADRegistered", alternate = {"AzureADRegistered"})
     @Expose
     public Boolean azureADRegistered;
 
@@ -74,7 +74,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Compliance Grace Period Expiration Date Time.
      * The DateTime when device compliance grace period expires
      */
-    @SerializedName("complianceGracePeriodExpirationDateTime")
+    @SerializedName(value = "complianceGracePeriodExpirationDateTime", alternate = {"ComplianceGracePeriodExpirationDateTime"})
     @Expose
     public java.util.Calendar complianceGracePeriodExpirationDateTime;
 
@@ -82,7 +82,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Compliance State.
      * Compliance state of the device. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
      */
-    @SerializedName("complianceState")
+    @SerializedName(value = "complianceState", alternate = {"ComplianceState"})
     @Expose
     public ComplianceState complianceState;
 
@@ -90,7 +90,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Configuration Manager Client Enabled Features.
      * ConfigrMgr client enabled features
      */
-    @SerializedName("configurationManagerClientEnabledFeatures")
+    @SerializedName(value = "configurationManagerClientEnabledFeatures", alternate = {"ConfigurationManagerClientEnabledFeatures"})
     @Expose
     public ConfigurationManagerClientEnabledFeatures configurationManagerClientEnabledFeatures;
 
@@ -98,7 +98,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Device Action Results.
      * List of ComplexType deviceActionResult objects.
      */
-    @SerializedName("deviceActionResults")
+    @SerializedName(value = "deviceActionResults", alternate = {"DeviceActionResults"})
     @Expose
     public java.util.List<DeviceActionResult> deviceActionResults;
 
@@ -106,7 +106,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Device Category Display Name.
      * Device category display name
      */
-    @SerializedName("deviceCategoryDisplayName")
+    @SerializedName(value = "deviceCategoryDisplayName", alternate = {"DeviceCategoryDisplayName"})
     @Expose
     public String deviceCategoryDisplayName;
 
@@ -114,7 +114,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Device Enrollment Type.
      * Enrollment type of the device. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
      */
-    @SerializedName("deviceEnrollmentType")
+    @SerializedName(value = "deviceEnrollmentType", alternate = {"DeviceEnrollmentType"})
     @Expose
     public DeviceEnrollmentType deviceEnrollmentType;
 
@@ -122,7 +122,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Device Health Attestation State.
      * The device health attestation state.
      */
-    @SerializedName("deviceHealthAttestationState")
+    @SerializedName(value = "deviceHealthAttestationState", alternate = {"DeviceHealthAttestationState"})
     @Expose
     public DeviceHealthAttestationState deviceHealthAttestationState;
 
@@ -130,7 +130,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Device Name.
      * Name of the device
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -138,7 +138,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Device Registration State.
      * Device registration state. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
      */
-    @SerializedName("deviceRegistrationState")
+    @SerializedName(value = "deviceRegistrationState", alternate = {"DeviceRegistrationState"})
     @Expose
     public DeviceRegistrationState deviceRegistrationState;
 
@@ -146,7 +146,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Eas Activated.
      * Whether the device is Exchange ActiveSync activated.
      */
-    @SerializedName("easActivated")
+    @SerializedName(value = "easActivated", alternate = {"EasActivated"})
     @Expose
     public Boolean easActivated;
 
@@ -154,7 +154,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Eas Activation Date Time.
      * Exchange ActivationSync activation time of the device.
      */
-    @SerializedName("easActivationDateTime")
+    @SerializedName(value = "easActivationDateTime", alternate = {"EasActivationDateTime"})
     @Expose
     public java.util.Calendar easActivationDateTime;
 
@@ -162,7 +162,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Eas Device Id.
      * Exchange ActiveSync Id of the device.
      */
-    @SerializedName("easDeviceId")
+    @SerializedName(value = "easDeviceId", alternate = {"EasDeviceId"})
     @Expose
     public String easDeviceId;
 
@@ -170,7 +170,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Email Address.
      * Email(s) for the user associated with the device
      */
-    @SerializedName("emailAddress")
+    @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
     public String emailAddress;
 
@@ -178,7 +178,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Enrolled Date Time.
      * Enrollment time of the device.
      */
-    @SerializedName("enrolledDateTime")
+    @SerializedName(value = "enrolledDateTime", alternate = {"EnrolledDateTime"})
     @Expose
     public java.util.Calendar enrolledDateTime;
 
@@ -186,7 +186,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Exchange Access State.
      * The Access State of the device in Exchange. Possible values are: none, unknown, allowed, blocked, quarantined.
      */
-    @SerializedName("exchangeAccessState")
+    @SerializedName(value = "exchangeAccessState", alternate = {"ExchangeAccessState"})
     @Expose
     public DeviceManagementExchangeAccessState exchangeAccessState;
 
@@ -194,7 +194,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Exchange Access State Reason.
      * The reason for the device's access state in Exchange. Possible values are: none, unknown, exchangeGlobalRule, exchangeIndividualRule, exchangeDeviceRule, exchangeUpgrade, exchangeMailboxPolicy, other, compliant, notCompliant, notEnrolled, unknownLocation, mfaRequired, azureADBlockDueToAccessPolicy, compromisedPassword, deviceNotKnownWithManagedApp.
      */
-    @SerializedName("exchangeAccessStateReason")
+    @SerializedName(value = "exchangeAccessStateReason", alternate = {"ExchangeAccessStateReason"})
     @Expose
     public DeviceManagementExchangeAccessStateReason exchangeAccessStateReason;
 
@@ -202,7 +202,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Exchange Last Successful Sync Date Time.
      * Last time the device contacted Exchange.
      */
-    @SerializedName("exchangeLastSuccessfulSyncDateTime")
+    @SerializedName(value = "exchangeLastSuccessfulSyncDateTime", alternate = {"ExchangeLastSuccessfulSyncDateTime"})
     @Expose
     public java.util.Calendar exchangeLastSuccessfulSyncDateTime;
 
@@ -210,7 +210,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Free Storage Space In Bytes.
      * Free Storage in Bytes
      */
-    @SerializedName("freeStorageSpaceInBytes")
+    @SerializedName(value = "freeStorageSpaceInBytes", alternate = {"FreeStorageSpaceInBytes"})
     @Expose
     public Long freeStorageSpaceInBytes;
 
@@ -218,7 +218,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Imei.
      * IMEI
      */
-    @SerializedName("imei")
+    @SerializedName(value = "imei", alternate = {"Imei"})
     @Expose
     public String imei;
 
@@ -226,7 +226,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Is Encrypted.
      * Device encryption status
      */
-    @SerializedName("isEncrypted")
+    @SerializedName(value = "isEncrypted", alternate = {"IsEncrypted"})
     @Expose
     public Boolean isEncrypted;
 
@@ -234,7 +234,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Is Supervised.
      * Device supervised status
      */
-    @SerializedName("isSupervised")
+    @SerializedName(value = "isSupervised", alternate = {"IsSupervised"})
     @Expose
     public Boolean isSupervised;
 
@@ -242,7 +242,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Jail Broken.
      * whether the device is jail broken or rooted.
      */
-    @SerializedName("jailBroken")
+    @SerializedName(value = "jailBroken", alternate = {"JailBroken"})
     @Expose
     public String jailBroken;
 
@@ -250,7 +250,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Last Sync Date Time.
      * The date and time that the device last completed a successful sync with Intune.
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
     public java.util.Calendar lastSyncDateTime;
 
@@ -258,7 +258,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Managed Device Name.
      * Automatically generated name to identify a device. Can be overwritten to a user friendly name.
      */
-    @SerializedName("managedDeviceName")
+    @SerializedName(value = "managedDeviceName", alternate = {"ManagedDeviceName"})
     @Expose
     public String managedDeviceName;
 
@@ -266,7 +266,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Managed Device Owner Type.
      * Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
      */
-    @SerializedName("managedDeviceOwnerType")
+    @SerializedName(value = "managedDeviceOwnerType", alternate = {"ManagedDeviceOwnerType"})
     @Expose
     public ManagedDeviceOwnerType managedDeviceOwnerType;
 
@@ -274,7 +274,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Management Agent.
      * Management channel of the device. Intune, EAS, etc. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
      */
-    @SerializedName("managementAgent")
+    @SerializedName(value = "managementAgent", alternate = {"ManagementAgent"})
     @Expose
     public ManagementAgentType managementAgent;
 
@@ -282,7 +282,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Manufacturer.
      * Manufacturer of the device
      */
-    @SerializedName("manufacturer")
+    @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
     public String manufacturer;
 
@@ -290,7 +290,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Meid.
      * MEID
      */
-    @SerializedName("meid")
+    @SerializedName(value = "meid", alternate = {"Meid"})
     @Expose
     public String meid;
 
@@ -298,7 +298,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Model.
      * Model of the device
      */
-    @SerializedName("model")
+    @SerializedName(value = "model", alternate = {"Model"})
     @Expose
     public String model;
 
@@ -306,7 +306,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Operating System.
      * Operating system of the device. Windows, iOS, etc.
      */
-    @SerializedName("operatingSystem")
+    @SerializedName(value = "operatingSystem", alternate = {"OperatingSystem"})
     @Expose
     public String operatingSystem;
 
@@ -314,7 +314,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Os Version.
      * Operating system version of the device.
      */
-    @SerializedName("osVersion")
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
     public String osVersion;
 
@@ -322,7 +322,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Partner Reported Threat State.
      * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
      */
-    @SerializedName("partnerReportedThreatState")
+    @SerializedName(value = "partnerReportedThreatState", alternate = {"PartnerReportedThreatState"})
     @Expose
     public ManagedDevicePartnerReportedHealthState partnerReportedThreatState;
 
@@ -330,7 +330,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Phone Number.
      * Phone number of the device
      */
-    @SerializedName("phoneNumber")
+    @SerializedName(value = "phoneNumber", alternate = {"PhoneNumber"})
     @Expose
     public String phoneNumber;
 
@@ -338,7 +338,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Remote Assistance Session Error Details.
      * An error string that identifies issues when creating Remote Assistance session objects.
      */
-    @SerializedName("remoteAssistanceSessionErrorDetails")
+    @SerializedName(value = "remoteAssistanceSessionErrorDetails", alternate = {"RemoteAssistanceSessionErrorDetails"})
     @Expose
     public String remoteAssistanceSessionErrorDetails;
 
@@ -346,7 +346,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Remote Assistance Session Url.
      * Url that allows a Remote Assistance session to be established with the device.
      */
-    @SerializedName("remoteAssistanceSessionUrl")
+    @SerializedName(value = "remoteAssistanceSessionUrl", alternate = {"RemoteAssistanceSessionUrl"})
     @Expose
     public String remoteAssistanceSessionUrl;
 
@@ -354,7 +354,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Serial Number.
      * SerialNumber
      */
-    @SerializedName("serialNumber")
+    @SerializedName(value = "serialNumber", alternate = {"SerialNumber"})
     @Expose
     public String serialNumber;
 
@@ -362,7 +362,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Subscriber Carrier.
      * Subscriber Carrier
      */
-    @SerializedName("subscriberCarrier")
+    @SerializedName(value = "subscriberCarrier", alternate = {"SubscriberCarrier"})
     @Expose
     public String subscriberCarrier;
 
@@ -370,7 +370,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Total Storage Space In Bytes.
      * Total Storage in Bytes
      */
-    @SerializedName("totalStorageSpaceInBytes")
+    @SerializedName(value = "totalStorageSpaceInBytes", alternate = {"TotalStorageSpaceInBytes"})
     @Expose
     public Long totalStorageSpaceInBytes;
 
@@ -378,7 +378,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The User Display Name.
      * User display name
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -386,7 +386,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The User Id.
      * Unique Identifier for the user associated with the device
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -394,7 +394,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The User Principal Name.
      * Device user principal name
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -402,7 +402,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Wi Fi Mac Address.
      * Wi-Fi MAC
      */
-    @SerializedName("wiFiMacAddress")
+    @SerializedName(value = "wiFiMacAddress", alternate = {"WiFiMacAddress"})
     @Expose
     public String wiFiMacAddress;
 
@@ -410,7 +410,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Device Compliance Policy States.
      * Device compliance policy states for this device.
      */
-    @SerializedName("deviceCompliancePolicyStates")
+    @SerializedName(value = "deviceCompliancePolicyStates", alternate = {"DeviceCompliancePolicyStates"})
     @Expose
     public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
 
@@ -418,7 +418,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Device Configuration States.
      * Device configuration states for this device.
      */
-    @SerializedName("deviceConfigurationStates")
+    @SerializedName(value = "deviceConfigurationStates", alternate = {"DeviceConfigurationStates"})
     @Expose
     public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
 
@@ -426,7 +426,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Device Category.
      * Device category
      */
-    @SerializedName("deviceCategory")
+    @SerializedName(value = "deviceCategory", alternate = {"DeviceCategory"})
     @Expose
     public DeviceCategory deviceCategory;
 

@@ -38,7 +38,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      * The Application.
      * 
      */
-    @SerializedName("application")
+    @SerializedName(value = "application", alternate = {"Application"})
     @Expose
     public WorkbookApplication application;
 
@@ -46,7 +46,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      * The Comments.
      * 
      */
-    @SerializedName("comments")
+    @SerializedName(value = "comments", alternate = {"Comments"})
     @Expose
     public WorkbookCommentCollectionPage comments;
 
@@ -54,7 +54,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      * The Functions.
      * 
      */
-    @SerializedName("functions")
+    @SerializedName(value = "functions", alternate = {"Functions"})
     @Expose
     public WorkbookFunctions functions;
 
@@ -62,7 +62,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      * The Names.
      * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
      */
-    @SerializedName("names")
+    @SerializedName(value = "names", alternate = {"Names"})
     @Expose
     public WorkbookNamedItemCollectionPage names;
 
@@ -70,7 +70,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      * The Operations.
      * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      */
-    @SerializedName("operations")
+    @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
     public WorkbookOperationCollectionPage operations;
 
@@ -78,7 +78,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      * The Tables.
      * Represents a collection of tables associated with the workbook. Read-only.
      */
-    @SerializedName("tables")
+    @SerializedName(value = "tables", alternate = {"Tables"})
     @Expose
     public WorkbookTableCollectionPage tables;
 
@@ -86,7 +86,7 @@ public class Workbook extends Entity implements IJsonBackedObject {
      * The Worksheets.
      * Represents a collection of worksheets associated with the workbook. Read-only.
      */
-    @SerializedName("worksheets")
+    @SerializedName(value = "worksheets", alternate = {"Worksheets"})
     @Expose
     public WorkbookWorksheetCollectionPage worksheets;
 

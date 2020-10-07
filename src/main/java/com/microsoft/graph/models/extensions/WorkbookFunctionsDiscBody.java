@@ -22,7 +22,7 @@ public class WorkbookFunctionsDiscBody {
      * The settlement.
      * 
      */
-    @SerializedName("settlement")
+    @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
     public com.google.gson.JsonElement settlement;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsDiscBody {
      * The maturity.
      * 
      */
-    @SerializedName("maturity")
+    @SerializedName(value = "maturity", alternate = {"Maturity"})
     @Expose
     public com.google.gson.JsonElement maturity;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsDiscBody {
      * The pr.
      * 
      */
-    @SerializedName("pr")
+    @SerializedName(value = "pr", alternate = {"Pr"})
     @Expose
     public com.google.gson.JsonElement pr;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsDiscBody {
      * The redemption.
      * 
      */
-    @SerializedName("redemption")
+    @SerializedName(value = "redemption", alternate = {"Redemption"})
     @Expose
     public com.google.gson.JsonElement redemption;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsDiscBody {
      * The basis.
      * 
      */
-    @SerializedName("basis")
+    @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
     public com.google.gson.JsonElement basis;
 

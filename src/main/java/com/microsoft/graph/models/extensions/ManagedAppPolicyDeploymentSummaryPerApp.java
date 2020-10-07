@@ -36,7 +36,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements IJsonBackedObjec
      * The Configuration Applied User Count.
      * Number of users the policy is applied.
      */
-    @SerializedName("configurationAppliedUserCount")
+    @SerializedName(value = "configurationAppliedUserCount", alternate = {"ConfigurationAppliedUserCount"})
     @Expose
     public Integer configurationAppliedUserCount;
 
@@ -44,7 +44,7 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements IJsonBackedObjec
      * The Mobile App Identifier.
      * Deployment of an app.
      */
-    @SerializedName("mobileAppIdentifier")
+    @SerializedName(value = "mobileAppIdentifier", alternate = {"MobileAppIdentifier"})
     @Expose
     public MobileAppIdentifier mobileAppIdentifier;
 

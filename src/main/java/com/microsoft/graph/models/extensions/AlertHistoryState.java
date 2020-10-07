@@ -37,7 +37,7 @@ public class AlertHistoryState implements IJsonBackedObject {
      * The App Id.
      * 
      */
-    @SerializedName("appId")
+    @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
     public String appId;
 
@@ -45,7 +45,7 @@ public class AlertHistoryState implements IJsonBackedObject {
      * The Assigned To.
      * 
      */
-    @SerializedName("assignedTo")
+    @SerializedName(value = "assignedTo", alternate = {"AssignedTo"})
     @Expose
     public String assignedTo;
 
@@ -53,7 +53,7 @@ public class AlertHistoryState implements IJsonBackedObject {
      * The Comments.
      * 
      */
-    @SerializedName("comments")
+    @SerializedName(value = "comments", alternate = {"Comments"})
     @Expose
     public java.util.List<String> comments;
 
@@ -61,7 +61,7 @@ public class AlertHistoryState implements IJsonBackedObject {
      * The Feedback.
      * 
      */
-    @SerializedName("feedback")
+    @SerializedName(value = "feedback", alternate = {"Feedback"})
     @Expose
     public AlertFeedback feedback;
 
@@ -69,7 +69,7 @@ public class AlertHistoryState implements IJsonBackedObject {
      * The Status.
      * 
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public AlertStatus status;
 
@@ -77,7 +77,7 @@ public class AlertHistoryState implements IJsonBackedObject {
      * The Updated Date Time.
      * 
      */
-    @SerializedName("updatedDateTime")
+    @SerializedName(value = "updatedDateTime", alternate = {"UpdatedDateTime"})
     @Expose
     public java.util.Calendar updatedDateTime;
 
@@ -85,7 +85,7 @@ public class AlertHistoryState implements IJsonBackedObject {
      * The User.
      * 
      */
-    @SerializedName("user")
+    @SerializedName(value = "user", alternate = {"User"})
     @Expose
     public String user;
 

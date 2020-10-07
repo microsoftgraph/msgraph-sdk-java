@@ -26,7 +26,7 @@ public class RemoteLockActionResult extends DeviceActionResult implements IJsonB
      * The Unlock Pin.
      * Pin to unlock the client
      */
-    @SerializedName("unlockPin")
+    @SerializedName(value = "unlockPin", alternate = {"UnlockPin"})
     @Expose
     public String unlockPin;
 

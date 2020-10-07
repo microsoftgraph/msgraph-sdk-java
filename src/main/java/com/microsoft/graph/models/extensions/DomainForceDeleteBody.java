@@ -22,7 +22,7 @@ public class DomainForceDeleteBody {
      * The disable User Accounts.
      * 
      */
-    @SerializedName("disableUserAccounts")
+    @SerializedName(value = "disableUserAccounts", alternate = {"DisableUserAccounts"})
     @Expose
     public Boolean disableUserAccounts;
 

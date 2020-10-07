@@ -36,7 +36,7 @@ public class InvitationParticipantInfo implements IJsonBackedObject {
      * The Identity.
      * The identitySet associated with this invitation.
      */
-    @SerializedName("identity")
+    @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose
     public IdentitySet identity;
 
@@ -44,7 +44,7 @@ public class InvitationParticipantInfo implements IJsonBackedObject {
      * The Replaces Call Id.
      * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
      */
-    @SerializedName("replacesCallId")
+    @SerializedName(value = "replacesCallId", alternate = {"ReplacesCallId"})
     @Expose
     public String replacesCallId;
 

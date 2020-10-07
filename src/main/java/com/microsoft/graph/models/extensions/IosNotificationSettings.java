@@ -36,7 +36,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
      * The Alert Type.
      * Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
      */
-    @SerializedName("alertType")
+    @SerializedName(value = "alertType", alternate = {"AlertType"})
     @Expose
     public IosNotificationAlertType alertType;
 
@@ -44,7 +44,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
      * The App Name.
      * Application name to be associated with the bundleID.
      */
-    @SerializedName("appName")
+    @SerializedName(value = "appName", alternate = {"AppName"})
     @Expose
     public String appName;
 
@@ -52,7 +52,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
      * The Badges Enabled.
      * Indicates whether badges are allowed for this app.
      */
-    @SerializedName("badgesEnabled")
+    @SerializedName(value = "badgesEnabled", alternate = {"BadgesEnabled"})
     @Expose
     public Boolean badgesEnabled;
 
@@ -60,7 +60,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
      * The Bundle ID.
      * Bundle id of app to which to apply these notification settings.
      */
-    @SerializedName("bundleID")
+    @SerializedName(value = "bundleID", alternate = {"BundleID"})
     @Expose
     public String bundleID;
 
@@ -68,7 +68,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
      * The Enabled.
      * Indicates whether notifications are allowed for this app.
      */
-    @SerializedName("enabled")
+    @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Boolean enabled;
 
@@ -76,7 +76,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
      * The Publisher.
      * Publisher to be associated with the bundleID.
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 
@@ -84,7 +84,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
      * The Show In Notification Center.
      * Indicates whether notifications can be shown in notification center.
      */
-    @SerializedName("showInNotificationCenter")
+    @SerializedName(value = "showInNotificationCenter", alternate = {"ShowInNotificationCenter"})
     @Expose
     public Boolean showInNotificationCenter;
 
@@ -92,7 +92,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
      * The Show On Lock Screen.
      * Indicates whether notifications can be shown on the lock screen.
      */
-    @SerializedName("showOnLockScreen")
+    @SerializedName(value = "showOnLockScreen", alternate = {"ShowOnLockScreen"})
     @Expose
     public Boolean showOnLockScreen;
 
@@ -100,7 +100,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
      * The Sounds Enabled.
      * Indicates whether sounds are allowed for this app.
      */
-    @SerializedName("soundsEnabled")
+    @SerializedName(value = "soundsEnabled", alternate = {"SoundsEnabled"})
     @Expose
     public Boolean soundsEnabled;
 

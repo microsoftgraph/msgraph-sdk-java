@@ -22,7 +22,7 @@ public class WorkbookFunctionsError_TypeBody {
      * The error Val.
      * 
      */
-    @SerializedName("errorVal")
+    @SerializedName(value = "errorVal", alternate = {"ErrorVal"})
     @Expose
     public com.google.gson.JsonElement errorVal;
 

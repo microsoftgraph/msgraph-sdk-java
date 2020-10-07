@@ -35,7 +35,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Device Compliance Checkin Threshold Days.
      * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
      */
-    @SerializedName("deviceComplianceCheckinThresholdDays")
+    @SerializedName(value = "deviceComplianceCheckinThresholdDays", alternate = {"DeviceComplianceCheckinThresholdDays"})
     @Expose
     public Integer deviceComplianceCheckinThresholdDays;
 
@@ -43,7 +43,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Is Scheduled Action Enabled.
      * Is feature enabled or not for scheduled action for rule.
      */
-    @SerializedName("isScheduledActionEnabled")
+    @SerializedName(value = "isScheduledActionEnabled", alternate = {"IsScheduledActionEnabled"})
     @Expose
     public Boolean isScheduledActionEnabled;
 
@@ -51,7 +51,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
      * The Secure By Default.
      * Device should be noncompliant when there is no compliance policy targeted when this is true
      */
-    @SerializedName("secureByDefault")
+    @SerializedName(value = "secureByDefault", alternate = {"SecureByDefault"})
     @Expose
     public Boolean secureByDefault;
 

@@ -22,7 +22,7 @@ public class DriveItemCheckinBody {
      * The check In As.
      * 
      */
-    @SerializedName("checkInAs")
+    @SerializedName(value = "checkInAs", alternate = {"CheckInAs"})
     @Expose
     public String checkInAs;
 
@@ -30,7 +30,7 @@ public class DriveItemCheckinBody {
      * The comment.
      * 
      */
-    @SerializedName("comment")
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
     public String comment;
 

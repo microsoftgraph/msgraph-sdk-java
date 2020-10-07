@@ -26,7 +26,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * The Average Inbound Bit Rate.
      * The average inbound stream video bit rate per second.
      */
-    @SerializedName("averageInboundBitRate")
+    @SerializedName(value = "averageInboundBitRate", alternate = {"AverageInboundBitRate"})
     @Expose
     public Double averageInboundBitRate;
 
@@ -34,7 +34,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * The Average Inbound Frame Rate.
      * The average inbound stream video frame rate per second.
      */
-    @SerializedName("averageInboundFrameRate")
+    @SerializedName(value = "averageInboundFrameRate", alternate = {"AverageInboundFrameRate"})
     @Expose
     public Double averageInboundFrameRate;
 
@@ -42,7 +42,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * The Average Outbound Bit Rate.
      * The average outbound stream video bit rate per second.
      */
-    @SerializedName("averageOutboundBitRate")
+    @SerializedName(value = "averageOutboundBitRate", alternate = {"AverageOutboundBitRate"})
     @Expose
     public Double averageOutboundBitRate;
 
@@ -50,7 +50,7 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
      * The Average Outbound Frame Rate.
      * The average outbound stream video frame rate per second.
      */
-    @SerializedName("averageOutboundFrameRate")
+    @SerializedName(value = "averageOutboundFrameRate", alternate = {"AverageOutboundFrameRate"})
     @Expose
     public Double averageOutboundFrameRate;
 

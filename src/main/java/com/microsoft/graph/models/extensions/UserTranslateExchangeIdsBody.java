@@ -23,7 +23,7 @@ public class UserTranslateExchangeIdsBody {
      * The input Ids.
      * 
      */
-    @SerializedName("inputIds")
+    @SerializedName(value = "inputIds", alternate = {"InputIds"})
     @Expose
     public java.util.List<String> inputIds;
 
@@ -31,7 +31,7 @@ public class UserTranslateExchangeIdsBody {
      * The target Id Type.
      * 
      */
-    @SerializedName("targetIdType")
+    @SerializedName(value = "targetIdType", alternate = {"TargetIdType"})
     @Expose
     public ExchangeIdFormat targetIdType;
 
@@ -39,7 +39,7 @@ public class UserTranslateExchangeIdsBody {
      * The source Id Type.
      * 
      */
-    @SerializedName("sourceIdType")
+    @SerializedName(value = "sourceIdType", alternate = {"SourceIdType"})
     @Expose
     public ExchangeIdFormat sourceIdType;
 

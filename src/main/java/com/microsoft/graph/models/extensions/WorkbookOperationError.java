@@ -36,7 +36,7 @@ public class WorkbookOperationError implements IJsonBackedObject {
      * The Code.
      * The error code.
      */
-    @SerializedName("code")
+    @SerializedName(value = "code", alternate = {"Code"})
     @Expose
     public String code;
 
@@ -44,7 +44,7 @@ public class WorkbookOperationError implements IJsonBackedObject {
      * The Inner Error.
      * 
      */
-    @SerializedName("innerError")
+    @SerializedName(value = "innerError", alternate = {"InnerError"})
     @Expose
     public WorkbookOperationError innerError;
 
@@ -52,7 +52,7 @@ public class WorkbookOperationError implements IJsonBackedObject {
      * The Message.
      * The error message.
      */
-    @SerializedName("message")
+    @SerializedName(value = "message", alternate = {"Message"})
     @Expose
     public String message;
 

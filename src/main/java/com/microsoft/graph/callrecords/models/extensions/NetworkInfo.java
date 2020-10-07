@@ -38,7 +38,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Bandwidth Low Event Ratio.
      * Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
      */
-    @SerializedName("bandwidthLowEventRatio")
+    @SerializedName(value = "bandwidthLowEventRatio", alternate = {"BandwidthLowEventRatio"})
     @Expose
     public float bandwidthLowEventRatio;
 
@@ -46,7 +46,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Basic Service Set Identifier.
      * The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
      */
-    @SerializedName("basicServiceSetIdentifier")
+    @SerializedName(value = "basicServiceSetIdentifier", alternate = {"BasicServiceSetIdentifier"})
     @Expose
     public String basicServiceSetIdentifier;
 
@@ -54,7 +54,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Connection Type.
      * Type of network used by the media endpoint. Possible values are: unknown, wired, wifi, mobile, tunnel, unknownFutureValue.
      */
-    @SerializedName("connectionType")
+    @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose
     public NetworkConnectionType connectionType;
 
@@ -62,7 +62,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Delay Event Ratio.
      * Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
      */
-    @SerializedName("delayEventRatio")
+    @SerializedName(value = "delayEventRatio", alternate = {"DelayEventRatio"})
     @Expose
     public float delayEventRatio;
 
@@ -70,7 +70,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Dns Suffix.
      * DNS suffix associated with the network adapter of the media endpoint.
      */
-    @SerializedName("dnsSuffix")
+    @SerializedName(value = "dnsSuffix", alternate = {"DnsSuffix"})
     @Expose
     public String dnsSuffix;
 
@@ -78,7 +78,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Ip Address.
      * IP address of the media endpoint.
      */
-    @SerializedName("ipAddress")
+    @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
     public String ipAddress;
 
@@ -86,7 +86,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Link Speed.
      * Link speed in bits per second reported by the network adapter used by the media endpoint.
      */
-    @SerializedName("linkSpeed")
+    @SerializedName(value = "linkSpeed", alternate = {"LinkSpeed"})
     @Expose
     public Long linkSpeed;
 
@@ -94,7 +94,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Mac Address.
      * The media access control (MAC) address of the media endpoint's network device.
      */
-    @SerializedName("macAddress")
+    @SerializedName(value = "macAddress", alternate = {"MacAddress"})
     @Expose
     public String macAddress;
 
@@ -102,7 +102,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Port.
      * Network port number used by media endpoint.
      */
-    @SerializedName("port")
+    @SerializedName(value = "port", alternate = {"Port"})
     @Expose
     public Integer port;
 
@@ -110,7 +110,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Received Quality Event Ratio.
      * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
      */
-    @SerializedName("receivedQualityEventRatio")
+    @SerializedName(value = "receivedQualityEventRatio", alternate = {"ReceivedQualityEventRatio"})
     @Expose
     public float receivedQualityEventRatio;
 
@@ -118,7 +118,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Reflexive IPAddress.
      * IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
      */
-    @SerializedName("reflexiveIPAddress")
+    @SerializedName(value = "reflexiveIPAddress", alternate = {"ReflexiveIPAddress"})
     @Expose
     public String reflexiveIPAddress;
 
@@ -126,7 +126,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Relay IPAddress.
      * IP address of the media relay server allocated by the media endpoint.
      */
-    @SerializedName("relayIPAddress")
+    @SerializedName(value = "relayIPAddress", alternate = {"RelayIPAddress"})
     @Expose
     public String relayIPAddress;
 
@@ -134,7 +134,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Relay Port.
      * Network port number allocated on the media relay server by the media endpoint.
      */
-    @SerializedName("relayPort")
+    @SerializedName(value = "relayPort", alternate = {"RelayPort"})
     @Expose
     public Integer relayPort;
 
@@ -142,7 +142,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Sent Quality Event Ratio.
      * Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
      */
-    @SerializedName("sentQualityEventRatio")
+    @SerializedName(value = "sentQualityEventRatio", alternate = {"SentQualityEventRatio"})
     @Expose
     public float sentQualityEventRatio;
 
@@ -150,7 +150,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Subnet.
      * Subnet used for media stream by the media endpoint.
      */
-    @SerializedName("subnet")
+    @SerializedName(value = "subnet", alternate = {"Subnet"})
     @Expose
     public String subnet;
 
@@ -158,7 +158,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Wifi Band.
      * WiFi band used by the media endpoint. Possible values are: unknown, frequency24GHz, frequency50GHz, frequency60GHz, unknownFutureValue.
      */
-    @SerializedName("wifiBand")
+    @SerializedName(value = "wifiBand", alternate = {"WifiBand"})
     @Expose
     public WifiBand wifiBand;
 
@@ -166,7 +166,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Wifi Battery Charge.
      * Estimated remaining battery charge in percentage reported by the media endpoint.
      */
-    @SerializedName("wifiBatteryCharge")
+    @SerializedName(value = "wifiBatteryCharge", alternate = {"WifiBatteryCharge"})
     @Expose
     public Integer wifiBatteryCharge;
 
@@ -174,7 +174,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Wifi Channel.
      * WiFi channel used by the media endpoint.
      */
-    @SerializedName("wifiChannel")
+    @SerializedName(value = "wifiChannel", alternate = {"WifiChannel"})
     @Expose
     public Integer wifiChannel;
 
@@ -182,7 +182,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Wifi Microsoft Driver.
      * Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
      */
-    @SerializedName("wifiMicrosoftDriver")
+    @SerializedName(value = "wifiMicrosoftDriver", alternate = {"WifiMicrosoftDriver"})
     @Expose
     public String wifiMicrosoftDriver;
 
@@ -190,7 +190,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Wifi Microsoft Driver Version.
      * Version of the Microsoft WiFi driver used by the media endpoint.
      */
-    @SerializedName("wifiMicrosoftDriverVersion")
+    @SerializedName(value = "wifiMicrosoftDriverVersion", alternate = {"WifiMicrosoftDriverVersion"})
     @Expose
     public String wifiMicrosoftDriverVersion;
 
@@ -198,7 +198,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Wifi Radio Type.
      * Type of WiFi radio used by the media endpoint. Possible values are: unknown, wifi80211a, wifi80211b, wifi80211g, wifi80211n, wifi80211ac, wifi80211ax, unknownFutureValue.
      */
-    @SerializedName("wifiRadioType")
+    @SerializedName(value = "wifiRadioType", alternate = {"WifiRadioType"})
     @Expose
     public WifiRadioType wifiRadioType;
 
@@ -206,7 +206,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Wifi Signal Strength.
      * WiFi signal strength in percentage reported by the media endpoint.
      */
-    @SerializedName("wifiSignalStrength")
+    @SerializedName(value = "wifiSignalStrength", alternate = {"WifiSignalStrength"})
     @Expose
     public Integer wifiSignalStrength;
 
@@ -214,7 +214,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Wifi Vendor Driver.
      * Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
      */
-    @SerializedName("wifiVendorDriver")
+    @SerializedName(value = "wifiVendorDriver", alternate = {"WifiVendorDriver"})
     @Expose
     public String wifiVendorDriver;
 
@@ -222,7 +222,7 @@ public class NetworkInfo implements IJsonBackedObject {
      * The Wifi Vendor Driver Version.
      * Version of the WiFi driver used by the media endpoint.
      */
-    @SerializedName("wifiVendorDriverVersion")
+    @SerializedName(value = "wifiVendorDriverVersion", alternate = {"WifiVendorDriverVersion"})
     @Expose
     public String wifiVendorDriverVersion;
 

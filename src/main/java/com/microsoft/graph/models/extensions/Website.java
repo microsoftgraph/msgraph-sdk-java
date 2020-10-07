@@ -36,7 +36,7 @@ public class Website implements IJsonBackedObject {
      * The Address.
      * The URL of the website.
      */
-    @SerializedName("address")
+    @SerializedName(value = "address", alternate = {"Address"})
     @Expose
     public String address;
 
@@ -44,7 +44,7 @@ public class Website implements IJsonBackedObject {
      * The Display Name.
      * The display name of the web site.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -52,7 +52,7 @@ public class Website implements IJsonBackedObject {
      * The Type.
      * The possible values are: other, home, work, blog, profile.
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public WebsiteType type;
 

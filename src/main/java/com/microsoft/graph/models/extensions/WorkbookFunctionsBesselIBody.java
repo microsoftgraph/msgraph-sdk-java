@@ -22,7 +22,7 @@ public class WorkbookFunctionsBesselIBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsBesselIBody {
      * The n.
      * 
      */
-    @SerializedName("n")
+    @SerializedName(value = "n", alternate = {"N"})
     @Expose
     public com.google.gson.JsonElement n;
 

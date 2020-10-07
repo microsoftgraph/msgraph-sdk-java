@@ -22,7 +22,7 @@ public class DirectoryObjectGetByIdsBody {
      * The ids.
      * 
      */
-    @SerializedName("ids")
+    @SerializedName(value = "ids", alternate = {"Ids"})
     @Expose
     public java.util.List<String> ids;
 
@@ -30,7 +30,7 @@ public class DirectoryObjectGetByIdsBody {
      * The types.
      * 
      */
-    @SerializedName("types")
+    @SerializedName(value = "types", alternate = {"Types"})
     @Expose
     public java.util.List<String> types;
 

@@ -37,7 +37,7 @@ public class MessageRuleActions implements IJsonBackedObject {
      * The Assign Categories.
      * A list of categories to be assigned to a message.
      */
-    @SerializedName("assignCategories")
+    @SerializedName(value = "assignCategories", alternate = {"AssignCategories"})
     @Expose
     public java.util.List<String> assignCategories;
 
@@ -45,7 +45,7 @@ public class MessageRuleActions implements IJsonBackedObject {
      * The Copy To Folder.
      * The ID of a folder that a message is to be copied to.
      */
-    @SerializedName("copyToFolder")
+    @SerializedName(value = "copyToFolder", alternate = {"CopyToFolder"})
     @Expose
     public String copyToFolder;
 
@@ -53,7 +53,7 @@ public class MessageRuleActions implements IJsonBackedObject {
      * The Delete.
      * Indicates whether a message should be moved to the Deleted Items folder.
      */
-    @SerializedName("delete")
+    @SerializedName(value = "delete", alternate = {"Delete"})
     @Expose
     public Boolean delete;
 
@@ -61,7 +61,7 @@ public class MessageRuleActions implements IJsonBackedObject {
      * The Forward As Attachment To.
      * The email addresses of the recipients to which a message should be forwarded as an attachment.
      */
-    @SerializedName("forwardAsAttachmentTo")
+    @SerializedName(value = "forwardAsAttachmentTo", alternate = {"ForwardAsAttachmentTo"})
     @Expose
     public java.util.List<Recipient> forwardAsAttachmentTo;
 
@@ -69,7 +69,7 @@ public class MessageRuleActions implements IJsonBackedObject {
      * The Forward To.
      * The email addresses of the recipients to which a message should be forwarded.
      */
-    @SerializedName("forwardTo")
+    @SerializedName(value = "forwardTo", alternate = {"ForwardTo"})
     @Expose
     public java.util.List<Recipient> forwardTo;
 
@@ -77,7 +77,7 @@ public class MessageRuleActions implements IJsonBackedObject {
      * The Mark As Read.
      * Indicates whether a message should be marked as read.
      */
-    @SerializedName("markAsRead")
+    @SerializedName(value = "markAsRead", alternate = {"MarkAsRead"})
     @Expose
     public Boolean markAsRead;
 
@@ -85,7 +85,7 @@ public class MessageRuleActions implements IJsonBackedObject {
      * The Mark Importance.
      * Sets the importance of the message, which can be: low, normal, high.
      */
-    @SerializedName("markImportance")
+    @SerializedName(value = "markImportance", alternate = {"MarkImportance"})
     @Expose
     public Importance markImportance;
 
@@ -93,7 +93,7 @@ public class MessageRuleActions implements IJsonBackedObject {
      * The Move To Folder.
      * The ID of the folder that a message will be moved to.
      */
-    @SerializedName("moveToFolder")
+    @SerializedName(value = "moveToFolder", alternate = {"MoveToFolder"})
     @Expose
     public String moveToFolder;
 
@@ -101,7 +101,7 @@ public class MessageRuleActions implements IJsonBackedObject {
      * The Permanent Delete.
      * Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
      */
-    @SerializedName("permanentDelete")
+    @SerializedName(value = "permanentDelete", alternate = {"PermanentDelete"})
     @Expose
     public Boolean permanentDelete;
 
@@ -109,7 +109,7 @@ public class MessageRuleActions implements IJsonBackedObject {
      * The Redirect To.
      * The email addresses to which a message should be redirected.
      */
-    @SerializedName("redirectTo")
+    @SerializedName(value = "redirectTo", alternate = {"RedirectTo"})
     @Expose
     public java.util.List<Recipient> redirectTo;
 
@@ -117,7 +117,7 @@ public class MessageRuleActions implements IJsonBackedObject {
      * The Stop Processing Rules.
      * Indicates whether subsequent rules should be evaluated.
      */
-    @SerializedName("stopProcessingRules")
+    @SerializedName(value = "stopProcessingRules", alternate = {"StopProcessingRules"})
     @Expose
     public Boolean stopProcessingRules;
 

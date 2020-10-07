@@ -23,7 +23,7 @@ public class ApplicationAddKeyBody {
      * The key Credential.
      * 
      */
-    @SerializedName("keyCredential")
+    @SerializedName(value = "keyCredential", alternate = {"KeyCredential"})
     @Expose
     public KeyCredential keyCredential;
 
@@ -31,7 +31,7 @@ public class ApplicationAddKeyBody {
      * The password Credential.
      * 
      */
-    @SerializedName("passwordCredential")
+    @SerializedName(value = "passwordCredential", alternate = {"PasswordCredential"})
     @Expose
     public PasswordCredential passwordCredential;
 
@@ -39,7 +39,7 @@ public class ApplicationAddKeyBody {
      * The proof.
      * 
      */
-    @SerializedName("proof")
+    @SerializedName(value = "proof", alternate = {"Proof"})
     @Expose
     public String proof;
 

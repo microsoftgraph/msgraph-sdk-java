@@ -36,7 +36,7 @@ public class Shared implements IJsonBackedObject {
      * The Owner.
      * The identity of the owner of the shared item. Read-only.
      */
-    @SerializedName("owner")
+    @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
     public IdentitySet owner;
 
@@ -44,7 +44,7 @@ public class Shared implements IJsonBackedObject {
      * The Scope.
      * Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
      */
-    @SerializedName("scope")
+    @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
     public String scope;
 
@@ -52,7 +52,7 @@ public class Shared implements IJsonBackedObject {
      * The Shared By.
      * The identity of the user who shared the item. Read-only.
      */
-    @SerializedName("sharedBy")
+    @SerializedName(value = "sharedBy", alternate = {"SharedBy"})
     @Expose
     public IdentitySet sharedBy;
 
@@ -60,7 +60,7 @@ public class Shared implements IJsonBackedObject {
      * The Shared Date Time.
      * The UTC date and time when the item was shared. Read-only.
      */
-    @SerializedName("sharedDateTime")
+    @SerializedName(value = "sharedDateTime", alternate = {"SharedDateTime"})
     @Expose
     public java.util.Calendar sharedDateTime;
 

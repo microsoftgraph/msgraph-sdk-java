@@ -28,7 +28,7 @@ public class OutlookUser extends Entity implements IJsonBackedObject {
      * The Master Categories.
      * A list of categories defined for the user.
      */
-    @SerializedName("masterCategories")
+    @SerializedName(value = "masterCategories", alternate = {"MasterCategories"})
     @Expose
     public OutlookCategoryCollectionPage masterCategories;
 

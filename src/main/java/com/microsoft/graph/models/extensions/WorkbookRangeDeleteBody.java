@@ -22,7 +22,7 @@ public class WorkbookRangeDeleteBody {
      * The shift.
      * 
      */
-    @SerializedName("shift")
+    @SerializedName(value = "shift", alternate = {"Shift"})
     @Expose
     public String shift;
 

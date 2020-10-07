@@ -26,7 +26,7 @@ public class IPv6CidrRange extends IpRange implements IJsonBackedObject {
      * The Cidr Address.
      * IPv6 address in CIDR notation
      */
-    @SerializedName("cidrAddress")
+    @SerializedName(value = "cidrAddress", alternate = {"CidrAddress"})
     @Expose
     public String cidrAddress;
 

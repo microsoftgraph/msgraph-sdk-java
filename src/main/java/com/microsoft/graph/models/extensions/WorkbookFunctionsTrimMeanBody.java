@@ -22,7 +22,7 @@ public class WorkbookFunctionsTrimMeanBody {
      * The array.
      * 
      */
-    @SerializedName("array")
+    @SerializedName(value = "array", alternate = {"Array"})
     @Expose
     public com.google.gson.JsonElement array;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsTrimMeanBody {
      * The percent.
      * 
      */
-    @SerializedName("percent")
+    @SerializedName(value = "percent", alternate = {"Percent"})
     @Expose
     public com.google.gson.JsonElement percent;
 

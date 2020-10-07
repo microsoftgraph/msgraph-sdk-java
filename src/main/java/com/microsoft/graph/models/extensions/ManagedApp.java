@@ -27,7 +27,7 @@ public class ManagedApp extends MobileApp implements IJsonBackedObject {
      * The App Availability.
      * The Application's availability. Possible values are: global, lineOfBusiness.
      */
-    @SerializedName("appAvailability")
+    @SerializedName(value = "appAvailability", alternate = {"AppAvailability"})
     @Expose
     public ManagedAppAvailability appAvailability;
 
@@ -35,7 +35,7 @@ public class ManagedApp extends MobileApp implements IJsonBackedObject {
      * The Version.
      * The Application's version.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

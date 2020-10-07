@@ -26,7 +26,7 @@ public class ManagedAppOperation extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The operation name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class ManagedAppOperation extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The last time the app operation was modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -42,7 +42,7 @@ public class ManagedAppOperation extends Entity implements IJsonBackedObject {
      * The State.
      * The current state of the operation
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public String state;
 
@@ -50,7 +50,7 @@ public class ManagedAppOperation extends Entity implements IJsonBackedObject {
      * The Version.
      * Version of the entity.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

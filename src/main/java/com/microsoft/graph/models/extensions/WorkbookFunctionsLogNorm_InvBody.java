@@ -22,7 +22,7 @@ public class WorkbookFunctionsLogNorm_InvBody {
      * The probability.
      * 
      */
-    @SerializedName("probability")
+    @SerializedName(value = "probability", alternate = {"Probability"})
     @Expose
     public com.google.gson.JsonElement probability;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsLogNorm_InvBody {
      * The mean.
      * 
      */
-    @SerializedName("mean")
+    @SerializedName(value = "mean", alternate = {"Mean"})
     @Expose
     public com.google.gson.JsonElement mean;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsLogNorm_InvBody {
      * The standard Dev.
      * 
      */
-    @SerializedName("standardDev")
+    @SerializedName(value = "standardDev", alternate = {"StandardDev"})
     @Expose
     public com.google.gson.JsonElement standardDev;
 

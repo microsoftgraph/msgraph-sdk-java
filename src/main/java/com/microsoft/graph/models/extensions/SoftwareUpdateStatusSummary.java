@@ -26,7 +26,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Compliant Device Count.
      * Number of compliant devices.
      */
-    @SerializedName("compliantDeviceCount")
+    @SerializedName(value = "compliantDeviceCount", alternate = {"CompliantDeviceCount"})
     @Expose
     public Integer compliantDeviceCount;
 
@@ -34,7 +34,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Compliant User Count.
      * Number of compliant users.
      */
-    @SerializedName("compliantUserCount")
+    @SerializedName(value = "compliantUserCount", alternate = {"CompliantUserCount"})
     @Expose
     public Integer compliantUserCount;
 
@@ -42,7 +42,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Conflict Device Count.
      * Number of conflict devices.
      */
-    @SerializedName("conflictDeviceCount")
+    @SerializedName(value = "conflictDeviceCount", alternate = {"ConflictDeviceCount"})
     @Expose
     public Integer conflictDeviceCount;
 
@@ -50,7 +50,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Conflict User Count.
      * Number of conflict users.
      */
-    @SerializedName("conflictUserCount")
+    @SerializedName(value = "conflictUserCount", alternate = {"ConflictUserCount"})
     @Expose
     public Integer conflictUserCount;
 
@@ -58,7 +58,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Display Name.
      * The name of the policy.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -66,7 +66,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Error Device Count.
      * Number of devices had error.
      */
-    @SerializedName("errorDeviceCount")
+    @SerializedName(value = "errorDeviceCount", alternate = {"ErrorDeviceCount"})
     @Expose
     public Integer errorDeviceCount;
 
@@ -74,7 +74,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Error User Count.
      * Number of users had error.
      */
-    @SerializedName("errorUserCount")
+    @SerializedName(value = "errorUserCount", alternate = {"ErrorUserCount"})
     @Expose
     public Integer errorUserCount;
 
@@ -82,7 +82,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Non Compliant Device Count.
      * Number of non compliant devices.
      */
-    @SerializedName("nonCompliantDeviceCount")
+    @SerializedName(value = "nonCompliantDeviceCount", alternate = {"NonCompliantDeviceCount"})
     @Expose
     public Integer nonCompliantDeviceCount;
 
@@ -90,7 +90,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Non Compliant User Count.
      * Number of non compliant users.
      */
-    @SerializedName("nonCompliantUserCount")
+    @SerializedName(value = "nonCompliantUserCount", alternate = {"NonCompliantUserCount"})
     @Expose
     public Integer nonCompliantUserCount;
 
@@ -98,7 +98,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Not Applicable Device Count.
      * Number of not applicable devices.
      */
-    @SerializedName("notApplicableDeviceCount")
+    @SerializedName(value = "notApplicableDeviceCount", alternate = {"NotApplicableDeviceCount"})
     @Expose
     public Integer notApplicableDeviceCount;
 
@@ -106,7 +106,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Not Applicable User Count.
      * Number of not applicable users.
      */
-    @SerializedName("notApplicableUserCount")
+    @SerializedName(value = "notApplicableUserCount", alternate = {"NotApplicableUserCount"})
     @Expose
     public Integer notApplicableUserCount;
 
@@ -114,7 +114,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Remediated Device Count.
      * Number of remediated devices.
      */
-    @SerializedName("remediatedDeviceCount")
+    @SerializedName(value = "remediatedDeviceCount", alternate = {"RemediatedDeviceCount"})
     @Expose
     public Integer remediatedDeviceCount;
 
@@ -122,7 +122,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Remediated User Count.
      * Number of remediated users.
      */
-    @SerializedName("remediatedUserCount")
+    @SerializedName(value = "remediatedUserCount", alternate = {"RemediatedUserCount"})
     @Expose
     public Integer remediatedUserCount;
 
@@ -130,7 +130,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Unknown Device Count.
      * Number of unknown devices.
      */
-    @SerializedName("unknownDeviceCount")
+    @SerializedName(value = "unknownDeviceCount", alternate = {"UnknownDeviceCount"})
     @Expose
     public Integer unknownDeviceCount;
 
@@ -138,7 +138,7 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
      * The Unknown User Count.
      * Number of unknown users.
      */
-    @SerializedName("unknownUserCount")
+    @SerializedName(value = "unknownUserCount", alternate = {"UnknownUserCount"})
     @Expose
     public Integer unknownUserCount;
 

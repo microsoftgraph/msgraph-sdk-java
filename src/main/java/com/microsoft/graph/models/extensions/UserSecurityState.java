@@ -38,7 +38,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The Aad User Id.
      * AAD User object identifier (GUID) - represents the physical/multi-account user entity.
      */
-    @SerializedName("aadUserId")
+    @SerializedName(value = "aadUserId", alternate = {"AadUserId"})
     @Expose
     public String aadUserId;
 
@@ -46,7 +46,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The Account Name.
      * Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
      */
-    @SerializedName("accountName")
+    @SerializedName(value = "accountName", alternate = {"AccountName"})
     @Expose
     public String accountName;
 
@@ -54,7 +54,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The Domain Name.
      * NetBIOS/Active Directory domain of user account (that is, domain/account format).
      */
-    @SerializedName("domainName")
+    @SerializedName(value = "domainName", alternate = {"DomainName"})
     @Expose
     public String domainName;
 
@@ -62,7 +62,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The Email Role.
      * For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
      */
-    @SerializedName("emailRole")
+    @SerializedName(value = "emailRole", alternate = {"EmailRole"})
     @Expose
     public EmailRole emailRole;
 
@@ -70,7 +70,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The Is Vpn.
      * Indicates whether the user logged on through a VPN.
      */
-    @SerializedName("isVpn")
+    @SerializedName(value = "isVpn", alternate = {"IsVpn"})
     @Expose
     public Boolean isVpn;
 
@@ -78,7 +78,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The Logon Date Time.
      * Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
-    @SerializedName("logonDateTime")
+    @SerializedName(value = "logonDateTime", alternate = {"LogonDateTime"})
     @Expose
     public java.util.Calendar logonDateTime;
 
@@ -86,7 +86,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The Logon Id.
      * User sign-in ID.
      */
-    @SerializedName("logonId")
+    @SerializedName(value = "logonId", alternate = {"LogonId"})
     @Expose
     public String logonId;
 
@@ -94,7 +94,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The Logon Ip.
      * IP Address the sign-in request originated from.
      */
-    @SerializedName("logonIp")
+    @SerializedName(value = "logonIp", alternate = {"LogonIp"})
     @Expose
     public String logonIp;
 
@@ -102,7 +102,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The Logon Location.
      * Location (by IP address mapping) associated with a user sign-in event by this user.
      */
-    @SerializedName("logonLocation")
+    @SerializedName(value = "logonLocation", alternate = {"LogonLocation"})
     @Expose
     public String logonLocation;
 
@@ -110,7 +110,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The Logon Type.
      * Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      */
-    @SerializedName("logonType")
+    @SerializedName(value = "logonType", alternate = {"LogonType"})
     @Expose
     public LogonType logonType;
 
@@ -118,7 +118,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The On Premises Security Identifier.
      * Active Directory (on-premises) Security Identifier (SID) of the user.
      */
-    @SerializedName("onPremisesSecurityIdentifier")
+    @SerializedName(value = "onPremisesSecurityIdentifier", alternate = {"OnPremisesSecurityIdentifier"})
     @Expose
     public String onPremisesSecurityIdentifier;
 
@@ -126,7 +126,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The Risk Score.
      * Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
      */
-    @SerializedName("riskScore")
+    @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose
     public String riskScore;
 
@@ -134,7 +134,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The User Account Type.
      * User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
      */
-    @SerializedName("userAccountType")
+    @SerializedName(value = "userAccountType", alternate = {"UserAccountType"})
     @Expose
     public UserAccountSecurityType userAccountType;
 
@@ -142,7 +142,7 @@ public class UserSecurityState implements IJsonBackedObject {
      * The User Principal Name.
      * User sign-in name - internet format: (user account name)@(user account DNS domain name).
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

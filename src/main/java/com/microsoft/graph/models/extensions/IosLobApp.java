@@ -28,7 +28,7 @@ public class IosLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Applicable Device Type.
      * The iOS architecture for which this app can run on.
      */
-    @SerializedName("applicableDeviceType")
+    @SerializedName(value = "applicableDeviceType", alternate = {"ApplicableDeviceType"})
     @Expose
     public IosDeviceType applicableDeviceType;
 
@@ -36,7 +36,7 @@ public class IosLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Build Number.
      * The build number of iOS Line of Business (LoB) app.
      */
-    @SerializedName("buildNumber")
+    @SerializedName(value = "buildNumber", alternate = {"BuildNumber"})
     @Expose
     public String buildNumber;
 
@@ -44,7 +44,7 @@ public class IosLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Bundle Id.
      * The Identity Name.
      */
-    @SerializedName("bundleId")
+    @SerializedName(value = "bundleId", alternate = {"BundleId"})
     @Expose
     public String bundleId;
 
@@ -52,7 +52,7 @@ public class IosLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Expiration Date Time.
      * The expiration time.
      */
-    @SerializedName("expirationDateTime")
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
     public java.util.Calendar expirationDateTime;
 
@@ -60,7 +60,7 @@ public class IosLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Minimum Supported Operating System.
      * The value for the minimum applicable operating system.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
     public IosMinimumOperatingSystem minimumSupportedOperatingSystem;
 
@@ -68,7 +68,7 @@ public class IosLobApp extends MobileLobApp implements IJsonBackedObject {
      * The Version Number.
      * The version number of iOS Line of Business (LoB) app.
      */
-    @SerializedName("versionNumber")
+    @SerializedName(value = "versionNumber", alternate = {"VersionNumber"})
     @Expose
     public String versionNumber;
 

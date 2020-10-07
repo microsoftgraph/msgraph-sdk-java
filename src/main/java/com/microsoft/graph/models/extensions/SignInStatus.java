@@ -35,7 +35,7 @@ public class SignInStatus implements IJsonBackedObject {
      * The Additional Details.
      * Provides additional details on the sign-in activity
      */
-    @SerializedName("additionalDetails")
+    @SerializedName(value = "additionalDetails", alternate = {"AdditionalDetails"})
     @Expose
     public String additionalDetails;
 
@@ -43,7 +43,7 @@ public class SignInStatus implements IJsonBackedObject {
      * The Error Code.
      * Provides the 5-6digit error code that's generated during a sign-in failure. Check out the list of error codes and messages.
      */
-    @SerializedName("errorCode")
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
     public Integer errorCode;
 
@@ -51,7 +51,7 @@ public class SignInStatus implements IJsonBackedObject {
      * The Failure Reason.
      * Provides the error message or the reason for failure for the corresponding sign-in activity. Check out the list of error codes and messages.
      */
-    @SerializedName("failureReason")
+    @SerializedName(value = "failureReason", alternate = {"FailureReason"})
     @Expose
     public String failureReason;
 

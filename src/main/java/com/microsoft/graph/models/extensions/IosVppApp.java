@@ -29,7 +29,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
      * The Applicable Device Type.
      * The applicable iOS Device Type.
      */
-    @SerializedName("applicableDeviceType")
+    @SerializedName(value = "applicableDeviceType", alternate = {"ApplicableDeviceType"})
     @Expose
     public IosDeviceType applicableDeviceType;
 
@@ -37,7 +37,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
      * The App Store Url.
      * The store URL.
      */
-    @SerializedName("appStoreUrl")
+    @SerializedName(value = "appStoreUrl", alternate = {"AppStoreUrl"})
     @Expose
     public String appStoreUrl;
 
@@ -45,7 +45,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
      * The Bundle Id.
      * The Identity Name.
      */
-    @SerializedName("bundleId")
+    @SerializedName(value = "bundleId", alternate = {"BundleId"})
     @Expose
     public String bundleId;
 
@@ -53,7 +53,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
      * The Licensing Type.
      * The supported License Type.
      */
-    @SerializedName("licensingType")
+    @SerializedName(value = "licensingType", alternate = {"LicensingType"})
     @Expose
     public VppLicensingType licensingType;
 
@@ -61,7 +61,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
      * The Release Date Time.
      * The VPP application release date and time.
      */
-    @SerializedName("releaseDateTime")
+    @SerializedName(value = "releaseDateTime", alternate = {"ReleaseDateTime"})
     @Expose
     public java.util.Calendar releaseDateTime;
 
@@ -69,7 +69,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
      * The Total License Count.
      * The total number of VPP licenses.
      */
-    @SerializedName("totalLicenseCount")
+    @SerializedName(value = "totalLicenseCount", alternate = {"TotalLicenseCount"})
     @Expose
     public Integer totalLicenseCount;
 
@@ -77,7 +77,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
      * The Used License Count.
      * The number of VPP licenses in use.
      */
-    @SerializedName("usedLicenseCount")
+    @SerializedName(value = "usedLicenseCount", alternate = {"UsedLicenseCount"})
     @Expose
     public Integer usedLicenseCount;
 
@@ -85,7 +85,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
      * The Vpp Token Account Type.
      * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
      */
-    @SerializedName("vppTokenAccountType")
+    @SerializedName(value = "vppTokenAccountType", alternate = {"VppTokenAccountType"})
     @Expose
     public VppTokenAccountType vppTokenAccountType;
 
@@ -93,7 +93,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
      * The Vpp Token Apple Id.
      * The Apple Id associated with the given Apple Volume Purchase Program Token.
      */
-    @SerializedName("vppTokenAppleId")
+    @SerializedName(value = "vppTokenAppleId", alternate = {"VppTokenAppleId"})
     @Expose
     public String vppTokenAppleId;
 
@@ -101,7 +101,7 @@ public class IosVppApp extends MobileApp implements IJsonBackedObject {
      * The Vpp Token Organization Name.
      * The organization associated with the Apple Volume Purchase Program Token
      */
-    @SerializedName("vppTokenOrganizationName")
+    @SerializedName(value = "vppTokenOrganizationName", alternate = {"VppTokenOrganizationName"})
     @Expose
     public String vppTokenOrganizationName;
 

@@ -27,7 +27,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
      * The Client Application Ids.
      * 
      */
-    @SerializedName("clientApplicationIds")
+    @SerializedName(value = "clientApplicationIds", alternate = {"ClientApplicationIds"})
     @Expose
     public java.util.List<String> clientApplicationIds;
 
@@ -35,7 +35,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
      * The Client Application Publisher Ids.
      * 
      */
-    @SerializedName("clientApplicationPublisherIds")
+    @SerializedName(value = "clientApplicationPublisherIds", alternate = {"ClientApplicationPublisherIds"})
     @Expose
     public java.util.List<String> clientApplicationPublisherIds;
 
@@ -43,7 +43,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
      * The Client Applications From Verified Publisher Only.
      * 
      */
-    @SerializedName("clientApplicationsFromVerifiedPublisherOnly")
+    @SerializedName(value = "clientApplicationsFromVerifiedPublisherOnly", alternate = {"ClientApplicationsFromVerifiedPublisherOnly"})
     @Expose
     public Boolean clientApplicationsFromVerifiedPublisherOnly;
 
@@ -51,7 +51,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
      * The Client Application Tenant Ids.
      * 
      */
-    @SerializedName("clientApplicationTenantIds")
+    @SerializedName(value = "clientApplicationTenantIds", alternate = {"ClientApplicationTenantIds"})
     @Expose
     public java.util.List<String> clientApplicationTenantIds;
 
@@ -59,7 +59,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
      * The Permission Classification.
      * 
      */
-    @SerializedName("permissionClassification")
+    @SerializedName(value = "permissionClassification", alternate = {"PermissionClassification"})
     @Expose
     public String permissionClassification;
 
@@ -67,7 +67,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
      * The Permissions.
      * 
      */
-    @SerializedName("permissions")
+    @SerializedName(value = "permissions", alternate = {"Permissions"})
     @Expose
     public java.util.List<String> permissions;
 
@@ -75,7 +75,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
      * The Permission Type.
      * 
      */
-    @SerializedName("permissionType")
+    @SerializedName(value = "permissionType", alternate = {"PermissionType"})
     @Expose
     public PermissionType permissionType;
 
@@ -83,7 +83,7 @@ public class PermissionGrantConditionSet extends Entity implements IJsonBackedOb
      * The Resource Application.
      * 
      */
-    @SerializedName("resourceApplication")
+    @SerializedName(value = "resourceApplication", alternate = {"ResourceApplication"})
     @Expose
     public String resourceApplication;
 

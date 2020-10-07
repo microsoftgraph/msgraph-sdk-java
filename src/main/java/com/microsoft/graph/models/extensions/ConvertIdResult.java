@@ -36,7 +36,7 @@ public class ConvertIdResult implements IJsonBackedObject {
      * The Error Details.
      * An error object indicating the reason for the conversion failure. This value is not present if the conversion succeeded.
      */
-    @SerializedName("errorDetails")
+    @SerializedName(value = "errorDetails", alternate = {"ErrorDetails"})
     @Expose
     public GenericError errorDetails;
 
@@ -44,7 +44,7 @@ public class ConvertIdResult implements IJsonBackedObject {
      * The Source Id.
      * The identifier that was converted. This value is the original, un-converted identifier.
      */
-    @SerializedName("sourceId")
+    @SerializedName(value = "sourceId", alternate = {"SourceId"})
     @Expose
     public String sourceId;
 
@@ -52,7 +52,7 @@ public class ConvertIdResult implements IJsonBackedObject {
      * The Target Id.
      * The converted identifier. This value is not present if the conversion failed.
      */
-    @SerializedName("targetId")
+    @SerializedName(value = "targetId", alternate = {"TargetId"})
     @Expose
     public String targetId;
 

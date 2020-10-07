@@ -30,7 +30,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The App Data Encryption Type.
      * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
      */
-    @SerializedName("appDataEncryptionType")
+    @SerializedName(value = "appDataEncryptionType", alternate = {"AppDataEncryptionType"})
     @Expose
     public ManagedAppDataEncryptionType appDataEncryptionType;
 
@@ -38,7 +38,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Custom Browser Protocol.
      * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      */
-    @SerializedName("customBrowserProtocol")
+    @SerializedName(value = "customBrowserProtocol", alternate = {"CustomBrowserProtocol"})
     @Expose
     public String customBrowserProtocol;
 
@@ -46,7 +46,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Deployed App Count.
      * Count of apps to which the current policy is deployed.
      */
-    @SerializedName("deployedAppCount")
+    @SerializedName(value = "deployedAppCount", alternate = {"DeployedAppCount"})
     @Expose
     public Integer deployedAppCount;
 
@@ -54,7 +54,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Face Id Blocked.
      * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
      */
-    @SerializedName("faceIdBlocked")
+    @SerializedName(value = "faceIdBlocked", alternate = {"FaceIdBlocked"})
     @Expose
     public Boolean faceIdBlocked;
 
@@ -62,7 +62,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Minimum Required Sdk Version.
      * Versions less than the specified version will block the managed app from accessing company data.
      */
-    @SerializedName("minimumRequiredSdkVersion")
+    @SerializedName(value = "minimumRequiredSdkVersion", alternate = {"MinimumRequiredSdkVersion"})
     @Expose
     public String minimumRequiredSdkVersion;
 
@@ -70,7 +70,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Apps.
      * List of apps to which the policy is deployed.
      */
-    @SerializedName("apps")
+    @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
     public ManagedMobileAppCollectionPage apps;
 
@@ -78,7 +78,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      * The Deployment Summary.
      * Navigation property to deployment summary of the configuration.
      */
-    @SerializedName("deploymentSummary")
+    @SerializedName(value = "deploymentSummary", alternate = {"DeploymentSummary"})
     @Expose
     public ManagedAppPolicyDeploymentSummary deploymentSummary;
 

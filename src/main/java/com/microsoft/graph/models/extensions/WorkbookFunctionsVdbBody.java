@@ -22,7 +22,7 @@ public class WorkbookFunctionsVdbBody {
      * The cost.
      * 
      */
-    @SerializedName("cost")
+    @SerializedName(value = "cost", alternate = {"Cost"})
     @Expose
     public com.google.gson.JsonElement cost;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsVdbBody {
      * The salvage.
      * 
      */
-    @SerializedName("salvage")
+    @SerializedName(value = "salvage", alternate = {"Salvage"})
     @Expose
     public com.google.gson.JsonElement salvage;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsVdbBody {
      * The life.
      * 
      */
-    @SerializedName("life")
+    @SerializedName(value = "life", alternate = {"Life"})
     @Expose
     public com.google.gson.JsonElement life;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsVdbBody {
      * The start Period.
      * 
      */
-    @SerializedName("startPeriod")
+    @SerializedName(value = "startPeriod", alternate = {"StartPeriod"})
     @Expose
     public com.google.gson.JsonElement startPeriod;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsVdbBody {
      * The end Period.
      * 
      */
-    @SerializedName("endPeriod")
+    @SerializedName(value = "endPeriod", alternate = {"EndPeriod"})
     @Expose
     public com.google.gson.JsonElement endPeriod;
 
@@ -62,7 +62,7 @@ public class WorkbookFunctionsVdbBody {
      * The factor.
      * 
      */
-    @SerializedName("factor")
+    @SerializedName(value = "factor", alternate = {"Factor"})
     @Expose
     public com.google.gson.JsonElement factor;
 
@@ -70,7 +70,7 @@ public class WorkbookFunctionsVdbBody {
      * The no Switch.
      * 
      */
-    @SerializedName("noSwitch")
+    @SerializedName(value = "noSwitch", alternate = {"NoSwitch"})
     @Expose
     public com.google.gson.JsonElement noSwitch;
 

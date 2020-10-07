@@ -27,7 +27,7 @@ public class GroupSetting extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Display name of this group of settings, which comes from the associated template.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -35,7 +35,7 @@ public class GroupSetting extends Entity implements IJsonBackedObject {
      * The Template Id.
      * Unique identifier for the template used to create this group of settings. Read-only.
      */
-    @SerializedName("templateId")
+    @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
     public String templateId;
 
@@ -43,7 +43,7 @@ public class GroupSetting extends Entity implements IJsonBackedObject {
      * The Values.
      * Collection of name value pairs. Must contain and set all the settings defined in the template.
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public java.util.List<SettingValue> values;
 

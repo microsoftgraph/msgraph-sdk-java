@@ -41,7 +41,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      * The Activity Based Timeout Policies.
      * 
      */
-    @SerializedName("activityBasedTimeoutPolicies")
+    @SerializedName(value = "activityBasedTimeoutPolicies", alternate = {"ActivityBasedTimeoutPolicies"})
     @Expose
     public ActivityBasedTimeoutPolicyCollectionPage activityBasedTimeoutPolicies;
 
@@ -49,7 +49,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      * The Claims Mapping Policies.
      * 
      */
-    @SerializedName("claimsMappingPolicies")
+    @SerializedName(value = "claimsMappingPolicies", alternate = {"ClaimsMappingPolicies"})
     @Expose
     public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
 
@@ -57,7 +57,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      * The Home Realm Discovery Policies.
      * 
      */
-    @SerializedName("homeRealmDiscoveryPolicies")
+    @SerializedName(value = "homeRealmDiscoveryPolicies", alternate = {"HomeRealmDiscoveryPolicies"})
     @Expose
     public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
@@ -65,7 +65,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      * The Permission Grant Policies.
      * 
      */
-    @SerializedName("permissionGrantPolicies")
+    @SerializedName(value = "permissionGrantPolicies", alternate = {"PermissionGrantPolicies"})
     @Expose
     public PermissionGrantPolicyCollectionPage permissionGrantPolicies;
 
@@ -73,7 +73,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      * The Token Issuance Policies.
      * 
      */
-    @SerializedName("tokenIssuancePolicies")
+    @SerializedName(value = "tokenIssuancePolicies", alternate = {"TokenIssuancePolicies"})
     @Expose
     public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
@@ -81,7 +81,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      * The Token Lifetime Policies.
      * 
      */
-    @SerializedName("tokenLifetimePolicies")
+    @SerializedName(value = "tokenLifetimePolicies", alternate = {"TokenLifetimePolicies"})
     @Expose
     public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
@@ -89,7 +89,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      * The Conditional Access Policies.
      * 
      */
-    @SerializedName("conditionalAccessPolicies")
+    @SerializedName(value = "conditionalAccessPolicies", alternate = {"ConditionalAccessPolicies"})
     @Expose
     public ConditionalAccessPolicyCollectionPage conditionalAccessPolicies;
 
@@ -97,7 +97,7 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      * The Identity Security Defaults Enforcement Policy.
      * 
      */
-    @SerializedName("identitySecurityDefaultsEnforcementPolicy")
+    @SerializedName(value = "identitySecurityDefaultsEnforcementPolicy", alternate = {"IdentitySecurityDefaultsEnforcementPolicy"})
     @Expose
     public IdentitySecurityDefaultsEnforcementPolicy identitySecurityDefaultsEnforcementPolicy;
 

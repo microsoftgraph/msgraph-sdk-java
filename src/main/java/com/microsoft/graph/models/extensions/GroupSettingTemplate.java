@@ -27,7 +27,7 @@ public class GroupSettingTemplate extends DirectoryObject implements IJsonBacked
      * The Description.
      * Description of the template.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -35,7 +35,7 @@ public class GroupSettingTemplate extends DirectoryObject implements IJsonBacked
      * The Display Name.
      * Display name of the template.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class GroupSettingTemplate extends DirectoryObject implements IJsonBacked
      * The Values.
      * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public java.util.List<SettingTemplateValue> values;
 

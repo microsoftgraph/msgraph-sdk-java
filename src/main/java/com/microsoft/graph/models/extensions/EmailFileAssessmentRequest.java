@@ -27,7 +27,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * The Content Data.
      * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
      */
-    @SerializedName("contentData")
+    @SerializedName(value = "contentData", alternate = {"ContentData"})
     @Expose
     public String contentData;
 
@@ -35,7 +35,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * The Destination Routing Reason.
      * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      */
-    @SerializedName("destinationRoutingReason")
+    @SerializedName(value = "destinationRoutingReason", alternate = {"DestinationRoutingReason"})
     @Expose
     public MailDestinationRoutingReason destinationRoutingReason;
 
@@ -43,7 +43,7 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
      * The Recipient Email.
      * The mail recipient whose policies are used to assess the mail.
      */
-    @SerializedName("recipientEmail")
+    @SerializedName(value = "recipientEmail", alternate = {"RecipientEmail"})
     @Expose
     public String recipientEmail;
 

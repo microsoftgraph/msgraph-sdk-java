@@ -36,7 +36,7 @@ public class CallTranscriptionInfo implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The state modified time in UTC.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -44,7 +44,7 @@ public class CallTranscriptionInfo implements IJsonBackedObject {
      * The State.
      * Possible values are: notStarted, active, inactive.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public CallTranscriptionState state;
 

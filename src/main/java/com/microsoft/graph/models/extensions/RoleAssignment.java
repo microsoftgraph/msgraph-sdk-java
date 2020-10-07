@@ -27,7 +27,7 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
      * The Description.
      * Description of the Role Assignment.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -35,7 +35,7 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The display or friendly name of the role Assignment.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
      * The Resource Scopes.
      * List of ids of role scope member security groups.  These are IDs from Azure Active Directory.
      */
-    @SerializedName("resourceScopes")
+    @SerializedName(value = "resourceScopes", alternate = {"ResourceScopes"})
     @Expose
     public java.util.List<String> resourceScopes;
 
@@ -51,7 +51,7 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
      * The Role Definition.
      * Role definition this assignment is part of.
      */
-    @SerializedName("roleDefinition")
+    @SerializedName(value = "roleDefinition", alternate = {"RoleDefinition"})
     @Expose
     public RoleDefinition roleDefinition;
 

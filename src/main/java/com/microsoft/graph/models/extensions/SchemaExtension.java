@@ -27,7 +27,7 @@ public class SchemaExtension extends Entity implements IJsonBackedObject {
      * The Description.
      * Description for the schema extension.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -35,7 +35,7 @@ public class SchemaExtension extends Entity implements IJsonBackedObject {
      * The Owner.
      * The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. Once set, this property is read-only and cannot be changed.
      */
-    @SerializedName("owner")
+    @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
     public String owner;
 
@@ -43,7 +43,7 @@ public class SchemaExtension extends Entity implements IJsonBackedObject {
      * The Properties.
      * The collection of property names and types that make up the schema extension definition.
      */
-    @SerializedName("properties")
+    @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose
     public java.util.List<ExtensionSchemaProperty> properties;
 
@@ -51,7 +51,7 @@ public class SchemaExtension extends Entity implements IJsonBackedObject {
      * The Status.
      * The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public String status;
 
@@ -59,7 +59,7 @@ public class SchemaExtension extends Entity implements IJsonBackedObject {
      * The Target Types.
      * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user.
      */
-    @SerializedName("targetTypes")
+    @SerializedName(value = "targetTypes", alternate = {"TargetTypes"})
     @Expose
     public java.util.List<String> targetTypes;
 

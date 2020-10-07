@@ -31,7 +31,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Automatic Update Mode.
      * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
      */
-    @SerializedName("automaticUpdateMode")
+    @SerializedName(value = "automaticUpdateMode", alternate = {"AutomaticUpdateMode"})
     @Expose
     public AutomaticUpdateMode automaticUpdateMode;
 
@@ -39,7 +39,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Business Ready Updates Only.
      * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
      */
-    @SerializedName("businessReadyUpdatesOnly")
+    @SerializedName(value = "businessReadyUpdatesOnly", alternate = {"BusinessReadyUpdatesOnly"})
     @Expose
     public WindowsUpdateType businessReadyUpdatesOnly;
 
@@ -47,7 +47,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Delivery Optimization Mode.
      * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
      */
-    @SerializedName("deliveryOptimizationMode")
+    @SerializedName(value = "deliveryOptimizationMode", alternate = {"DeliveryOptimizationMode"})
     @Expose
     public WindowsDeliveryOptimizationMode deliveryOptimizationMode;
 
@@ -55,7 +55,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Drivers Excluded.
      * Exclude Windows update Drivers
      */
-    @SerializedName("driversExcluded")
+    @SerializedName(value = "driversExcluded", alternate = {"DriversExcluded"})
     @Expose
     public Boolean driversExcluded;
 
@@ -63,7 +63,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Feature Updates Deferral Period In Days.
      * Defer Feature Updates by these many days
      */
-    @SerializedName("featureUpdatesDeferralPeriodInDays")
+    @SerializedName(value = "featureUpdatesDeferralPeriodInDays", alternate = {"FeatureUpdatesDeferralPeriodInDays"})
     @Expose
     public Integer featureUpdatesDeferralPeriodInDays;
 
@@ -71,7 +71,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Feature Updates Paused.
      * Pause Feature Updates
      */
-    @SerializedName("featureUpdatesPaused")
+    @SerializedName(value = "featureUpdatesPaused", alternate = {"FeatureUpdatesPaused"})
     @Expose
     public Boolean featureUpdatesPaused;
 
@@ -79,7 +79,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Feature Updates Pause Expiry Date Time.
      * Feature Updates Pause Expiry datetime
      */
-    @SerializedName("featureUpdatesPauseExpiryDateTime")
+    @SerializedName(value = "featureUpdatesPauseExpiryDateTime", alternate = {"FeatureUpdatesPauseExpiryDateTime"})
     @Expose
     public java.util.Calendar featureUpdatesPauseExpiryDateTime;
 
@@ -87,7 +87,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Installation Schedule.
      * Installation schedule
      */
-    @SerializedName("installationSchedule")
+    @SerializedName(value = "installationSchedule", alternate = {"InstallationSchedule"})
     @Expose
     public WindowsUpdateInstallScheduleType installationSchedule;
 
@@ -95,7 +95,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Microsoft Update Service Allowed.
      * Allow Microsoft Update Service
      */
-    @SerializedName("microsoftUpdateServiceAllowed")
+    @SerializedName(value = "microsoftUpdateServiceAllowed", alternate = {"MicrosoftUpdateServiceAllowed"})
     @Expose
     public Boolean microsoftUpdateServiceAllowed;
 
@@ -103,7 +103,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Prerelease Features.
      * The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
      */
-    @SerializedName("prereleaseFeatures")
+    @SerializedName(value = "prereleaseFeatures", alternate = {"PrereleaseFeatures"})
     @Expose
     public PrereleaseFeatures prereleaseFeatures;
 
@@ -111,7 +111,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Quality Updates Deferral Period In Days.
      * Defer Quality Updates by these many days
      */
-    @SerializedName("qualityUpdatesDeferralPeriodInDays")
+    @SerializedName(value = "qualityUpdatesDeferralPeriodInDays", alternate = {"QualityUpdatesDeferralPeriodInDays"})
     @Expose
     public Integer qualityUpdatesDeferralPeriodInDays;
 
@@ -119,7 +119,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Quality Updates Paused.
      * Pause Quality Updates
      */
-    @SerializedName("qualityUpdatesPaused")
+    @SerializedName(value = "qualityUpdatesPaused", alternate = {"QualityUpdatesPaused"})
     @Expose
     public Boolean qualityUpdatesPaused;
 
@@ -127,7 +127,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      * The Quality Updates Pause Expiry Date Time.
      * Quality Updates Pause Expiry datetime
      */
-    @SerializedName("qualityUpdatesPauseExpiryDateTime")
+    @SerializedName(value = "qualityUpdatesPauseExpiryDateTime", alternate = {"QualityUpdatesPauseExpiryDateTime"})
     @Expose
     public java.util.Calendar qualityUpdatesPauseExpiryDateTime;
 

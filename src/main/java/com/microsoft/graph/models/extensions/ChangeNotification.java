@@ -39,7 +39,7 @@ public class ChangeNotification implements IJsonBackedObject {
      * The Change Type.
      * Indicates the type of change that will raise the change notification. The supported values are: created, updated, deleted. Required.
      */
-    @SerializedName("changeType")
+    @SerializedName(value = "changeType", alternate = {"ChangeType"})
     @Expose
     public ChangeType changeType;
 
@@ -47,7 +47,7 @@ public class ChangeNotification implements IJsonBackedObject {
      * The Client State.
      * Value of the clientState property sent in the subscription request (if any). The maximum length is 255 characters. The client can check whether the change notification came from the service by comparing the values of the clientState property. The value of the clientState property sent with the subscription is compared with the value of the clientState property received with each change notification. Optional.
      */
-    @SerializedName("clientState")
+    @SerializedName(value = "clientState", alternate = {"ClientState"})
     @Expose
     public String clientState;
 
@@ -55,7 +55,7 @@ public class ChangeNotification implements IJsonBackedObject {
      * The Encrypted Content.
      * (Preview) Encrypted content attached with the change notification. Only provided if encryptionCertificate and includeResourceData were defined during the subscription request and if the resource supports it. Optional.
      */
-    @SerializedName("encryptedContent")
+    @SerializedName(value = "encryptedContent", alternate = {"EncryptedContent"})
     @Expose
     public ChangeNotificationEncryptedContent encryptedContent;
 
@@ -63,7 +63,7 @@ public class ChangeNotification implements IJsonBackedObject {
      * The Id.
      * Unique ID for the notification. Optional.
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -71,7 +71,7 @@ public class ChangeNotification implements IJsonBackedObject {
      * The Lifecycle Event.
      * 
      */
-    @SerializedName("lifecycleEvent")
+    @SerializedName(value = "lifecycleEvent", alternate = {"LifecycleEvent"})
     @Expose
     public LifecycleEventType lifecycleEvent;
 
@@ -79,7 +79,7 @@ public class ChangeNotification implements IJsonBackedObject {
      * The Resource.
      * The URI of the resource that emitted the change notification relative to https://graph.microsoft.com. Required.
      */
-    @SerializedName("resource")
+    @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
     public String resource;
 
@@ -87,7 +87,7 @@ public class ChangeNotification implements IJsonBackedObject {
      * The Resource Data.
      * The content of this property depends on the type of resource being subscribed to. Required.
      */
-    @SerializedName("resourceData")
+    @SerializedName(value = "resourceData", alternate = {"ResourceData"})
     @Expose
     public ResourceData resourceData;
 
@@ -95,7 +95,7 @@ public class ChangeNotification implements IJsonBackedObject {
      * The Subscription Expiration Date Time.
      * The expiration time for the subscription. Required.
      */
-    @SerializedName("subscriptionExpirationDateTime")
+    @SerializedName(value = "subscriptionExpirationDateTime", alternate = {"SubscriptionExpirationDateTime"})
     @Expose
     public java.util.Calendar subscriptionExpirationDateTime;
 
@@ -103,7 +103,7 @@ public class ChangeNotification implements IJsonBackedObject {
      * The Subscription Id.
      * The unique identifier of the subscription that generated the notification.
      */
-    @SerializedName("subscriptionId")
+    @SerializedName(value = "subscriptionId", alternate = {"SubscriptionId"})
     @Expose
     public java.util.UUID subscriptionId;
 
@@ -111,7 +111,7 @@ public class ChangeNotification implements IJsonBackedObject {
      * The Tenant Id.
      * The unique identifier of the tenant from which the change notification originated.
      */
-    @SerializedName("tenantId")
+    @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
     public java.util.UUID tenantId;
 

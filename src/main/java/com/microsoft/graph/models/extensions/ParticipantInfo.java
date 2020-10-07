@@ -37,7 +37,7 @@ public class ParticipantInfo implements IJsonBackedObject {
      * The Country Code.
      * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
      */
-    @SerializedName("countryCode")
+    @SerializedName(value = "countryCode", alternate = {"CountryCode"})
     @Expose
     public String countryCode;
 
@@ -45,7 +45,7 @@ public class ParticipantInfo implements IJsonBackedObject {
      * The Endpoint Type.
      * The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
      */
-    @SerializedName("endpointType")
+    @SerializedName(value = "endpointType", alternate = {"EndpointType"})
     @Expose
     public EndpointType endpointType;
 
@@ -53,7 +53,7 @@ public class ParticipantInfo implements IJsonBackedObject {
      * The Identity.
      * The identitySet associated with this participant. Read-only.
      */
-    @SerializedName("identity")
+    @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose
     public IdentitySet identity;
 
@@ -61,7 +61,7 @@ public class ParticipantInfo implements IJsonBackedObject {
      * The Language Id.
      * The language culture string. Read-only.
      */
-    @SerializedName("languageId")
+    @SerializedName(value = "languageId", alternate = {"LanguageId"})
     @Expose
     public String languageId;
 
@@ -69,7 +69,7 @@ public class ParticipantInfo implements IJsonBackedObject {
      * The Region.
      * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
      */
-    @SerializedName("region")
+    @SerializedName(value = "region", alternate = {"Region"})
     @Expose
     public String region;
 

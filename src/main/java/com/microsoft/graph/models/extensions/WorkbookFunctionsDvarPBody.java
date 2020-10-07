@@ -22,7 +22,7 @@ public class WorkbookFunctionsDvarPBody {
      * The database.
      * 
      */
-    @SerializedName("database")
+    @SerializedName(value = "database", alternate = {"Database"})
     @Expose
     public com.google.gson.JsonElement database;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsDvarPBody {
      * The field.
      * 
      */
-    @SerializedName("field")
+    @SerializedName(value = "field", alternate = {"Field"})
     @Expose
     public com.google.gson.JsonElement field;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsDvarPBody {
      * The criteria.
      * 
      */
-    @SerializedName("criteria")
+    @SerializedName(value = "criteria", alternate = {"Criteria"})
     @Expose
     public com.google.gson.JsonElement criteria;
 

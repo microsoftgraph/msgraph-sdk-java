@@ -22,7 +22,7 @@ public class WorkbookFunctionsChooseBody {
      * The index Num.
      * 
      */
-    @SerializedName("indexNum")
+    @SerializedName(value = "indexNum", alternate = {"IndexNum"})
     @Expose
     public com.google.gson.JsonElement indexNum;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsChooseBody {
      * The values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 

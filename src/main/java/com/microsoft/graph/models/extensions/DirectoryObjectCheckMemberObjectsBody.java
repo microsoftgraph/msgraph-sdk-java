@@ -22,7 +22,7 @@ public class DirectoryObjectCheckMemberObjectsBody {
      * The ids.
      * 
      */
-    @SerializedName("ids")
+    @SerializedName(value = "ids", alternate = {"Ids"})
     @Expose
     public java.util.List<String> ids;
 

@@ -22,7 +22,7 @@ public class WorkbookFunctionsDaysBody {
      * The end Date.
      * 
      */
-    @SerializedName("endDate")
+    @SerializedName(value = "endDate", alternate = {"EndDate"})
     @Expose
     public com.google.gson.JsonElement endDate;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsDaysBody {
      * The start Date.
      * 
      */
-    @SerializedName("startDate")
+    @SerializedName(value = "startDate", alternate = {"StartDate"})
     @Expose
     public com.google.gson.JsonElement startDate;
 

@@ -28,7 +28,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements IJsonBackedObject 
      * The Applicable Device Type.
      * The iOS architecture for which this app can run on.
      */
-    @SerializedName("applicableDeviceType")
+    @SerializedName(value = "applicableDeviceType", alternate = {"ApplicableDeviceType"})
     @Expose
     public IosDeviceType applicableDeviceType;
 
@@ -36,7 +36,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements IJsonBackedObject 
      * The App Store Url.
      * The Apple AppStoreUrl.
      */
-    @SerializedName("appStoreUrl")
+    @SerializedName(value = "appStoreUrl", alternate = {"AppStoreUrl"})
     @Expose
     public String appStoreUrl;
 
@@ -44,7 +44,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements IJsonBackedObject 
      * The Bundle Id.
      * The app's Bundle ID.
      */
-    @SerializedName("bundleId")
+    @SerializedName(value = "bundleId", alternate = {"BundleId"})
     @Expose
     public String bundleId;
 
@@ -52,7 +52,7 @@ public class ManagedIOSStoreApp extends ManagedApp implements IJsonBackedObject 
      * The Minimum Supported Operating System.
      * The value for the minimum supported operating system.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
     public IosMinimumOperatingSystem minimumSupportedOperatingSystem;
 

@@ -23,7 +23,7 @@ public class ParticipantInviteBody {
      * The participants.
      * 
      */
-    @SerializedName("participants")
+    @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
     public java.util.List<InvitationParticipantInfo> participants;
 
@@ -31,7 +31,7 @@ public class ParticipantInviteBody {
      * The client Context.
      * 
      */
-    @SerializedName("clientContext")
+    @SerializedName(value = "clientContext", alternate = {"ClientContext"})
     @Expose
     public String clientContext;
 

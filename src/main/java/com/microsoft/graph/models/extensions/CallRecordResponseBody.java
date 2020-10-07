@@ -23,7 +23,7 @@ public class CallRecordResponseBody {
      * The prompts.
      * 
      */
-    @SerializedName("prompts")
+    @SerializedName(value = "prompts", alternate = {"Prompts"})
     @Expose
     public java.util.List<Prompt> prompts;
 
@@ -31,7 +31,7 @@ public class CallRecordResponseBody {
      * The barge In Allowed.
      * 
      */
-    @SerializedName("bargeInAllowed")
+    @SerializedName(value = "bargeInAllowed", alternate = {"BargeInAllowed"})
     @Expose
     public Boolean bargeInAllowed;
 
@@ -39,7 +39,7 @@ public class CallRecordResponseBody {
      * The initial Silence Timeout In Seconds.
      * 
      */
-    @SerializedName("initialSilenceTimeoutInSeconds")
+    @SerializedName(value = "initialSilenceTimeoutInSeconds", alternate = {"InitialSilenceTimeoutInSeconds"})
     @Expose
     public Integer initialSilenceTimeoutInSeconds;
 
@@ -47,7 +47,7 @@ public class CallRecordResponseBody {
      * The max Silence Timeout In Seconds.
      * 
      */
-    @SerializedName("maxSilenceTimeoutInSeconds")
+    @SerializedName(value = "maxSilenceTimeoutInSeconds", alternate = {"MaxSilenceTimeoutInSeconds"})
     @Expose
     public Integer maxSilenceTimeoutInSeconds;
 
@@ -55,7 +55,7 @@ public class CallRecordResponseBody {
      * The max Record Duration In Seconds.
      * 
      */
-    @SerializedName("maxRecordDurationInSeconds")
+    @SerializedName(value = "maxRecordDurationInSeconds", alternate = {"MaxRecordDurationInSeconds"})
     @Expose
     public Integer maxRecordDurationInSeconds;
 
@@ -63,7 +63,7 @@ public class CallRecordResponseBody {
      * The play Beep.
      * 
      */
-    @SerializedName("playBeep")
+    @SerializedName(value = "playBeep", alternate = {"PlayBeep"})
     @Expose
     public Boolean playBeep;
 
@@ -71,7 +71,7 @@ public class CallRecordResponseBody {
      * The stop Tones.
      * 
      */
-    @SerializedName("stopTones")
+    @SerializedName(value = "stopTones", alternate = {"StopTones"})
     @Expose
     public java.util.List<String> stopTones;
 
@@ -79,7 +79,7 @@ public class CallRecordResponseBody {
      * The client Context.
      * 
      */
-    @SerializedName("clientContext")
+    @SerializedName(value = "clientContext", alternate = {"ClientContext"})
     @Expose
     public String clientContext;
 

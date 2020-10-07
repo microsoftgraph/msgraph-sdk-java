@@ -26,7 +26,7 @@ public class ConversationMember extends Entity implements IJsonBackedObject {
      * The Display Name.
      * The display name of the user.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -34,7 +34,7 @@ public class ConversationMember extends Entity implements IJsonBackedObject {
      * The Roles.
      * The roles for that user.
      */
-    @SerializedName("roles")
+    @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose
     public java.util.List<String> roles;
 

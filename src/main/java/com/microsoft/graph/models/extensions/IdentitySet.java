@@ -36,7 +36,7 @@ public class IdentitySet implements IJsonBackedObject {
      * The Application.
      * Optional. The application associated with this action.
      */
-    @SerializedName("application")
+    @SerializedName(value = "application", alternate = {"Application"})
     @Expose
     public Identity application;
 
@@ -44,7 +44,7 @@ public class IdentitySet implements IJsonBackedObject {
      * The Device.
      * Optional. The device associated with this action.
      */
-    @SerializedName("device")
+    @SerializedName(value = "device", alternate = {"Device"})
     @Expose
     public Identity device;
 
@@ -52,7 +52,7 @@ public class IdentitySet implements IJsonBackedObject {
      * The User.
      * Optional. The user associated with this action.
      */
-    @SerializedName("user")
+    @SerializedName(value = "user", alternate = {"User"})
     @Expose
     public Identity user;
 

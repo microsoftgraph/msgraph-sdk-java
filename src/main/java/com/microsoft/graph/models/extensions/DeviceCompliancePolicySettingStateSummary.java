@@ -29,7 +29,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The Compliant Device Count.
      * Number of compliant devices
      */
-    @SerializedName("compliantDeviceCount")
+    @SerializedName(value = "compliantDeviceCount", alternate = {"CompliantDeviceCount"})
     @Expose
     public Integer compliantDeviceCount;
 
@@ -37,7 +37,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The Conflict Device Count.
      * Number of conflict devices
      */
-    @SerializedName("conflictDeviceCount")
+    @SerializedName(value = "conflictDeviceCount", alternate = {"ConflictDeviceCount"})
     @Expose
     public Integer conflictDeviceCount;
 
@@ -45,7 +45,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The Error Device Count.
      * Number of error devices
      */
-    @SerializedName("errorDeviceCount")
+    @SerializedName(value = "errorDeviceCount", alternate = {"ErrorDeviceCount"})
     @Expose
     public Integer errorDeviceCount;
 
@@ -53,7 +53,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The Non Compliant Device Count.
      * Number of NonCompliant devices
      */
-    @SerializedName("nonCompliantDeviceCount")
+    @SerializedName(value = "nonCompliantDeviceCount", alternate = {"NonCompliantDeviceCount"})
     @Expose
     public Integer nonCompliantDeviceCount;
 
@@ -61,7 +61,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The Not Applicable Device Count.
      * Number of not applicable devices
      */
-    @SerializedName("notApplicableDeviceCount")
+    @SerializedName(value = "notApplicableDeviceCount", alternate = {"NotApplicableDeviceCount"})
     @Expose
     public Integer notApplicableDeviceCount;
 
@@ -69,7 +69,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The Platform Type.
      * Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all.
      */
-    @SerializedName("platformType")
+    @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose
     public PolicyPlatformType platformType;
 
@@ -77,7 +77,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The Remediated Device Count.
      * Number of remediated devices
      */
-    @SerializedName("remediatedDeviceCount")
+    @SerializedName(value = "remediatedDeviceCount", alternate = {"RemediatedDeviceCount"})
     @Expose
     public Integer remediatedDeviceCount;
 
@@ -85,7 +85,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The Setting.
      * The setting class name and property name.
      */
-    @SerializedName("setting")
+    @SerializedName(value = "setting", alternate = {"Setting"})
     @Expose
     public String setting;
 
@@ -93,7 +93,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The Setting Name.
      * Name of the setting.
      */
-    @SerializedName("settingName")
+    @SerializedName(value = "settingName", alternate = {"SettingName"})
     @Expose
     public String settingName;
 
@@ -101,7 +101,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The Unknown Device Count.
      * Number of unknown devices
      */
-    @SerializedName("unknownDeviceCount")
+    @SerializedName(value = "unknownDeviceCount", alternate = {"UnknownDeviceCount"})
     @Expose
     public Integer unknownDeviceCount;
 
@@ -109,7 +109,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      * The Device Compliance Setting States.
      * Not yet documented
      */
-    @SerializedName("deviceComplianceSettingStates")
+    @SerializedName(value = "deviceComplianceSettingStates", alternate = {"DeviceComplianceSettingStates"})
     @Expose
     public DeviceComplianceSettingStateCollectionPage deviceComplianceSettingStates;
 

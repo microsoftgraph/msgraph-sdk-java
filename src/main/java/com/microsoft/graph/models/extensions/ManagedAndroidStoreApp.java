@@ -27,7 +27,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements IJsonBackedObj
      * The App Store Url.
      * The Android AppStoreUrl.
      */
-    @SerializedName("appStoreUrl")
+    @SerializedName(value = "appStoreUrl", alternate = {"AppStoreUrl"})
     @Expose
     public String appStoreUrl;
 
@@ -35,7 +35,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements IJsonBackedObj
      * The Minimum Supported Operating System.
      * The value for the minimum supported operating system.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
     public AndroidMinimumOperatingSystem minimumSupportedOperatingSystem;
 
@@ -43,7 +43,7 @@ public class ManagedAndroidStoreApp extends ManagedApp implements IJsonBackedObj
      * The Package Id.
      * The app's package ID.
      */
-    @SerializedName("packageId")
+    @SerializedName(value = "packageId", alternate = {"PackageId"})
     @Expose
     public String packageId;
 

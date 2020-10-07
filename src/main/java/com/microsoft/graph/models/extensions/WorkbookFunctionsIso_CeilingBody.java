@@ -22,7 +22,7 @@ public class WorkbookFunctionsIso_CeilingBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsIso_CeilingBody {
      * The significance.
      * 
      */
-    @SerializedName("significance")
+    @SerializedName(value = "significance", alternate = {"Significance"})
     @Expose
     public com.google.gson.JsonElement significance;
 

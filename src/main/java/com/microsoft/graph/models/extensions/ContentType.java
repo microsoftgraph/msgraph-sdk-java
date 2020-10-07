@@ -30,7 +30,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The Description.
      * The descriptive text for the item.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -38,7 +38,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The Group.
      * The name of the group this content type belongs to. Helps organize related content types.
      */
-    @SerializedName("group")
+    @SerializedName(value = "group", alternate = {"Group"})
     @Expose
     public String group;
 
@@ -46,7 +46,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The Hidden.
      * Indicates whether the content type is hidden in the list's 'New' menu.
      */
-    @SerializedName("hidden")
+    @SerializedName(value = "hidden", alternate = {"Hidden"})
     @Expose
     public Boolean hidden;
 
@@ -54,7 +54,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The Inherited From.
      * If this content type is inherited from another scope (like a site), provides a reference to the item where the content type is defined.
      */
-    @SerializedName("inheritedFrom")
+    @SerializedName(value = "inheritedFrom", alternate = {"InheritedFrom"})
     @Expose
     public ItemReference inheritedFrom;
 
@@ -62,7 +62,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The Name.
      * The name of the content type.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -70,7 +70,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The Order.
      * Specifies the order in which the content type appears in the selection UI.
      */
-    @SerializedName("order")
+    @SerializedName(value = "order", alternate = {"Order"})
     @Expose
     public ContentTypeOrder order;
 
@@ -78,7 +78,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The Parent Id.
      * The unique identifier of the content type.
      */
-    @SerializedName("parentId")
+    @SerializedName(value = "parentId", alternate = {"ParentId"})
     @Expose
     public String parentId;
 
@@ -86,7 +86,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The Read Only.
      * If true, the content type cannot be modified unless this value is first set to false.
      */
-    @SerializedName("readOnly")
+    @SerializedName(value = "readOnly", alternate = {"ReadOnly"})
     @Expose
     public Boolean readOnly;
 
@@ -94,7 +94,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The Sealed.
      * If true, the content type cannot be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      */
-    @SerializedName("sealed")
+    @SerializedName(value = "sealed", alternate = {"Sealed"})
     @Expose
     public Boolean sealed;
 
@@ -102,7 +102,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The Column Links.
      * The collection of columns that are required by this content type
      */
-    @SerializedName("columnLinks")
+    @SerializedName(value = "columnLinks", alternate = {"ColumnLinks"})
     @Expose
     public ColumnLinkCollectionPage columnLinks;
 

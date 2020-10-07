@@ -35,7 +35,7 @@ public class ChatMessageAttachment implements IJsonBackedObject {
      * The Content.
      * The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public String content;
 
@@ -43,7 +43,7 @@ public class ChatMessageAttachment implements IJsonBackedObject {
      * The Content Type.
      * The media type of the content attachment. It can have the following values: reference: Attachment is a link to another file. Populate the contentURL with the link to the object.file: Raw file attachment. Populate the contenturl field with the base64 encoding of the file in data: format.image/: Image type with the type of the image specified ex: image/png, image/jpeg, image/gif. Populate the contentUrl field with the base64 encoding of the file in data: format.video/: Video type with the format specified. Ex: video/mp4. Populate the contentUrl field with the base64 encoding of the file in data: format.audio/: Audio type with the format specified. Ex: audio/wmw. Populate the contentUrl field with the base64 encoding of the file in data: format.application/card type: Rich card attachment type with the card type specifying the exact card format to use. Set content with the json format of the card. Supported values for card type include:application/vnd.microsoft.card.adaptive: A rich card that can contain any combination of text, speech, images,,buttons, and input fields. Set the content property to,an AdaptiveCard object.application/vnd.microsoft.card.animation: A rich card that plays animation. Set the content property,to an AnimationCardobject.application/vnd.microsoft.card.audio: A rich card that plays audio files. Set the content property,to an AudioCard object.application/vnd.microsoft.card.video: A rich card that plays videos. Set the content property,to a VideoCard object.application/vnd.microsoft.card.hero: A Hero card. Set the content property to a HeroCard object.application/vnd.microsoft.card.thumbnail: A Thumbnail card. Set the content property to a ThumbnailCard object.application/vnd.microsoft.com.card.receipt: A Receipt card. Set the content property to a ReceiptCard object.application/vnd.microsoft.com.card.signin: A user Sign In card. Set the content property to a SignInCard object.
      */
-    @SerializedName("contentType")
+    @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
     public String contentType;
 
@@ -51,7 +51,7 @@ public class ChatMessageAttachment implements IJsonBackedObject {
      * The Content Url.
      * URL for the content of the attachment. Supported protocols: http, https, file and data.
      */
-    @SerializedName("contentUrl")
+    @SerializedName(value = "contentUrl", alternate = {"ContentUrl"})
     @Expose
     public String contentUrl;
 
@@ -59,7 +59,7 @@ public class ChatMessageAttachment implements IJsonBackedObject {
      * The Id.
      * Read-only. Unique id of the attachment.
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -67,7 +67,7 @@ public class ChatMessageAttachment implements IJsonBackedObject {
      * The Name.
      * Name of the attachment.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -75,7 +75,7 @@ public class ChatMessageAttachment implements IJsonBackedObject {
      * The Thumbnail Url.
      * URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or contentUrl. For example, if you set contentType to application/word and set contentUrl to the location of the Word document, you might include a thumbnail image that represents the document. The channel could display the thumbnail image instead of the document. When the user clicks the image, the channel would open the document.
      */
-    @SerializedName("thumbnailUrl")
+    @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
     @Expose
     public String thumbnailUrl;
 

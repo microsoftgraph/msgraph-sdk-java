@@ -27,7 +27,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements IJ
      * The Destination Routing Reason.
      * The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
      */
-    @SerializedName("destinationRoutingReason")
+    @SerializedName(value = "destinationRoutingReason", alternate = {"DestinationRoutingReason"})
     @Expose
     public MailDestinationRoutingReason destinationRoutingReason;
 
@@ -35,7 +35,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements IJ
      * The Message Uri.
      * The resource URI of the mail message for assessment.
      */
-    @SerializedName("messageUri")
+    @SerializedName(value = "messageUri", alternate = {"MessageUri"})
     @Expose
     public String messageUri;
 
@@ -43,7 +43,7 @@ public class MailAssessmentRequest extends ThreatAssessmentRequest implements IJ
      * The Recipient Email.
      * The mail recipient whose policies are used to assess the mail.
      */
-    @SerializedName("recipientEmail")
+    @SerializedName(value = "recipientEmail", alternate = {"RecipientEmail"})
     @Expose
     public String recipientEmail;
 

@@ -26,7 +26,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements IJson
      * The Payload.
      * Payload. (UTF8 encoded byte array)
      */
-    @SerializedName("payload")
+    @SerializedName(value = "payload", alternate = {"Payload"})
     @Expose
     public byte[] payload;
 
@@ -34,7 +34,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements IJson
      * The Payload File Name.
      * Payload file name (.mobileconfig
      */
-    @SerializedName("payloadFileName")
+    @SerializedName(value = "payloadFileName", alternate = {"PayloadFileName"})
     @Expose
     public String payloadFileName;
 
@@ -42,7 +42,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements IJson
      * The Payload Name.
      * Name that is displayed to the user.
      */
-    @SerializedName("payloadName")
+    @SerializedName(value = "payloadName", alternate = {"PayloadName"})
     @Expose
     public String payloadName;
 

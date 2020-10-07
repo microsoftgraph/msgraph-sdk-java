@@ -37,7 +37,7 @@ public class AttendeeAvailability implements IJsonBackedObject {
      * The Attendee.
      * The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
      */
-    @SerializedName("attendee")
+    @SerializedName(value = "attendee", alternate = {"Attendee"})
     @Expose
     public AttendeeBase attendee;
 
@@ -45,7 +45,7 @@ public class AttendeeAvailability implements IJsonBackedObject {
      * The Availability.
      * The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      */
-    @SerializedName("availability")
+    @SerializedName(value = "availability", alternate = {"Availability"})
     @Expose
     public FreeBusyStatus availability;
 

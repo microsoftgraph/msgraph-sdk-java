@@ -38,7 +38,7 @@ public class RecurrencePattern implements IJsonBackedObject {
      * The Day Of Month.
      * The day of the month on which the event occurs. Required if type is absoluteMonthly or absoluteYearly.
      */
-    @SerializedName("dayOfMonth")
+    @SerializedName(value = "dayOfMonth", alternate = {"DayOfMonth"})
     @Expose
     public Integer dayOfMonth;
 
@@ -46,7 +46,7 @@ public class RecurrencePattern implements IJsonBackedObject {
      * The Days Of Week.
      * A collection of the days of the week on which the event occurs. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. If type is relativeMonthly or relativeYearly, and daysOfWeek specifies more than one day, the event falls on the first day that satisfies the pattern.  Required if type is weekly, relativeMonthly, or relativeYearly.
      */
-    @SerializedName("daysOfWeek")
+    @SerializedName(value = "daysOfWeek", alternate = {"DaysOfWeek"})
     @Expose
     public java.util.List<DayOfWeek> daysOfWeek;
 
@@ -54,7 +54,7 @@ public class RecurrencePattern implements IJsonBackedObject {
      * The First Day Of Week.
      * The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday. Default is sunday. Required if type is weekly.
      */
-    @SerializedName("firstDayOfWeek")
+    @SerializedName(value = "firstDayOfWeek", alternate = {"FirstDayOfWeek"})
     @Expose
     public DayOfWeek firstDayOfWeek;
 
@@ -62,7 +62,7 @@ public class RecurrencePattern implements IJsonBackedObject {
      * The Index.
      * Specifies on which instance of the allowed days specified in daysOfsWeek the event occurs, counted from the first instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used if type is relativeMonthly or relativeYearly.
      */
-    @SerializedName("index")
+    @SerializedName(value = "index", alternate = {"Index"})
     @Expose
     public WeekIndex index;
 
@@ -70,7 +70,7 @@ public class RecurrencePattern implements IJsonBackedObject {
      * The Interval.
      * The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required.
      */
-    @SerializedName("interval")
+    @SerializedName(value = "interval", alternate = {"Interval"})
     @Expose
     public Integer interval;
 
@@ -78,7 +78,7 @@ public class RecurrencePattern implements IJsonBackedObject {
      * The Month.
      * The month in which the event occurs.  This is a number from 1 to 12.
      */
-    @SerializedName("month")
+    @SerializedName(value = "month", alternate = {"Month"})
     @Expose
     public Integer month;
 
@@ -86,7 +86,7 @@ public class RecurrencePattern implements IJsonBackedObject {
      * The Type.
      * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required.
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public RecurrencePatternType type;
 

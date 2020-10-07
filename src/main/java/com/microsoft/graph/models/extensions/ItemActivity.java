@@ -29,7 +29,7 @@ public class ItemActivity extends Entity implements IJsonBackedObject {
      * The Access.
      * An item was accessed.
      */
-    @SerializedName("access")
+    @SerializedName(value = "access", alternate = {"Access"})
     @Expose
     public AccessAction access;
 
@@ -37,7 +37,7 @@ public class ItemActivity extends Entity implements IJsonBackedObject {
      * The Activity Date Time.
      * Details about when the activity took place. Read-only.
      */
-    @SerializedName("activityDateTime")
+    @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
     public java.util.Calendar activityDateTime;
 
@@ -45,7 +45,7 @@ public class ItemActivity extends Entity implements IJsonBackedObject {
      * The Actor.
      * Identity of who performed the action. Read-only.
      */
-    @SerializedName("actor")
+    @SerializedName(value = "actor", alternate = {"Actor"})
     @Expose
     public IdentitySet actor;
 
@@ -53,7 +53,7 @@ public class ItemActivity extends Entity implements IJsonBackedObject {
      * The Drive Item.
      * Exposes the driveItem that was the target of this activity.
      */
-    @SerializedName("driveItem")
+    @SerializedName(value = "driveItem", alternate = {"DriveItem"})
     @Expose
     public DriveItem driveItem;
 

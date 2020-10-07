@@ -28,7 +28,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
      * The Assigned To.
      * 
      */
-    @SerializedName("assignedTo")
+    @SerializedName(value = "assignedTo", alternate = {"AssignedTo"})
     @Expose
     public ScheduleChangeRequestActor assignedTo;
 
@@ -36,7 +36,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
      * The Manager Action Date Time.
      * 
      */
-    @SerializedName("managerActionDateTime")
+    @SerializedName(value = "managerActionDateTime", alternate = {"ManagerActionDateTime"})
     @Expose
     public java.util.Calendar managerActionDateTime;
 
@@ -44,7 +44,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
      * The Manager Action Message.
      * 
      */
-    @SerializedName("managerActionMessage")
+    @SerializedName(value = "managerActionMessage", alternate = {"ManagerActionMessage"})
     @Expose
     public String managerActionMessage;
 
@@ -52,7 +52,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
      * The Manager User Id.
      * 
      */
-    @SerializedName("managerUserId")
+    @SerializedName(value = "managerUserId", alternate = {"ManagerUserId"})
     @Expose
     public String managerUserId;
 
@@ -60,7 +60,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
      * The Sender Date Time.
      * 
      */
-    @SerializedName("senderDateTime")
+    @SerializedName(value = "senderDateTime", alternate = {"SenderDateTime"})
     @Expose
     public java.util.Calendar senderDateTime;
 
@@ -68,7 +68,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
      * The Sender Message.
      * 
      */
-    @SerializedName("senderMessage")
+    @SerializedName(value = "senderMessage", alternate = {"SenderMessage"})
     @Expose
     public String senderMessage;
 
@@ -76,7 +76,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
      * The Sender User Id.
      * 
      */
-    @SerializedName("senderUserId")
+    @SerializedName(value = "senderUserId", alternate = {"SenderUserId"})
     @Expose
     public String senderUserId;
 
@@ -84,7 +84,7 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
      * The State.
      * 
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ScheduleChangeState state;
 

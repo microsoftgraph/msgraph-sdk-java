@@ -35,7 +35,7 @@ public class IosDeviceType implements IJsonBackedObject {
      * The IPad.
      * Whether the app should run on iPads.
      */
-    @SerializedName("iPad")
+    @SerializedName(value = "iPad", alternate = {"IPad"})
     @Expose
     public Boolean iPad;
 
@@ -43,7 +43,7 @@ public class IosDeviceType implements IJsonBackedObject {
      * The IPhone And IPod.
      * Whether the app should run on iPhones and iPods.
      */
-    @SerializedName("iPhoneAndIPod")
+    @SerializedName(value = "iPhoneAndIPod", alternate = {"IPhoneAndIPod"})
     @Expose
     public Boolean iPhoneAndIPod;
 

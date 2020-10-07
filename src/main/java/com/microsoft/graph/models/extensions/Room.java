@@ -27,7 +27,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Audio Device Name.
      * Specifies the name of the audio device in the room.
      */
-    @SerializedName("audioDeviceName")
+    @SerializedName(value = "audioDeviceName", alternate = {"AudioDeviceName"})
     @Expose
     public String audioDeviceName;
 
@@ -35,7 +35,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Booking Type.
      * Type of room. Possible values are standard, and reserved.
      */
-    @SerializedName("bookingType")
+    @SerializedName(value = "bookingType", alternate = {"BookingType"})
     @Expose
     public BookingType bookingType;
 
@@ -43,7 +43,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Building.
      * Specifies the building name or building number that the room is in.
      */
-    @SerializedName("building")
+    @SerializedName(value = "building", alternate = {"Building"})
     @Expose
     public String building;
 
@@ -51,7 +51,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Capacity.
      * Specifies the capacity of the room.
      */
-    @SerializedName("capacity")
+    @SerializedName(value = "capacity", alternate = {"Capacity"})
     @Expose
     public Integer capacity;
 
@@ -59,7 +59,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Display Device Name.
      * Specifies the name of the display device in the room.
      */
-    @SerializedName("displayDeviceName")
+    @SerializedName(value = "displayDeviceName", alternate = {"DisplayDeviceName"})
     @Expose
     public String displayDeviceName;
 
@@ -67,7 +67,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Email Address.
      * Email address of the room.
      */
-    @SerializedName("emailAddress")
+    @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
     public String emailAddress;
 
@@ -75,7 +75,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Floor Label.
      * Specifies a descriptive label for the floor, for example, P.
      */
-    @SerializedName("floorLabel")
+    @SerializedName(value = "floorLabel", alternate = {"FloorLabel"})
     @Expose
     public String floorLabel;
 
@@ -83,7 +83,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Floor Number.
      * Specifies the floor number that the room is on.
      */
-    @SerializedName("floorNumber")
+    @SerializedName(value = "floorNumber", alternate = {"FloorNumber"})
     @Expose
     public Integer floorNumber;
 
@@ -91,7 +91,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Is Wheel Chair Accessible.
      * 
      */
-    @SerializedName("isWheelChairAccessible")
+    @SerializedName(value = "isWheelChairAccessible", alternate = {"IsWheelChairAccessible"})
     @Expose
     public Boolean isWheelChairAccessible;
 
@@ -99,7 +99,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Label.
      * Specifies a descriptive label for the room, for example, a number or name.
      */
-    @SerializedName("label")
+    @SerializedName(value = "label", alternate = {"Label"})
     @Expose
     public String label;
 
@@ -107,7 +107,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Nickname.
      * Specifies a nickname for the room, for example, 'conf room'.
      */
-    @SerializedName("nickname")
+    @SerializedName(value = "nickname", alternate = {"Nickname"})
     @Expose
     public String nickname;
 
@@ -115,7 +115,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Tags.
      * Specifies additional features of the room, for example, details like the type of view or furniture type.
      */
-    @SerializedName("tags")
+    @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
     public java.util.List<String> tags;
 
@@ -123,7 +123,7 @@ public class Room extends Place implements IJsonBackedObject {
      * The Video Device Name.
      * Specifies the name of the video device in the room.
      */
-    @SerializedName("videoDeviceName")
+    @SerializedName(value = "videoDeviceName", alternate = {"VideoDeviceName"})
     @Expose
     public String videoDeviceName;
 

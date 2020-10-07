@@ -23,7 +23,7 @@ public class AttachmentCreateUploadSessionBody {
      * The attachment Item.
      * 
      */
-    @SerializedName("attachmentItem")
+    @SerializedName(value = "attachmentItem", alternate = {"AttachmentItem"})
     @Expose
     public AttachmentItem attachmentItem;
 

@@ -22,7 +22,7 @@ public class DeviceCompliancePolicyScheduleActionsForRulesBody {
      * The device Compliance Scheduled Action For Rules.
      * 
      */
-    @SerializedName("deviceComplianceScheduledActionForRules")
+    @SerializedName(value = "deviceComplianceScheduledActionForRules", alternate = {"DeviceComplianceScheduledActionForRules"})
     @Expose
     public java.util.List<DeviceComplianceScheduledActionForRule> deviceComplianceScheduledActionForRules;
 

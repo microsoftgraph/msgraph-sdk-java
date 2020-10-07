@@ -33,7 +33,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The Drive Type.
      * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
      */
-    @SerializedName("driveType")
+    @SerializedName(value = "driveType", alternate = {"DriveType"})
     @Expose
     public String driveType;
 
@@ -41,7 +41,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The Owner.
      * Optional. The user account that owns the drive. Read-only.
      */
-    @SerializedName("owner")
+    @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
     public IdentitySet owner;
 
@@ -49,7 +49,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The Quota.
      * Optional. Information about the drive's storage space quota. Read-only.
      */
-    @SerializedName("quota")
+    @SerializedName(value = "quota", alternate = {"Quota"})
     @Expose
     public Quota quota;
 
@@ -57,7 +57,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The Share Point Ids.
      * 
      */
-    @SerializedName("sharePointIds")
+    @SerializedName(value = "sharePointIds", alternate = {"SharePointIds"})
     @Expose
     public SharepointIds sharePointIds;
 
@@ -65,7 +65,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The System.
      * If present, indicates that this is a system-managed drive. Read-only.
      */
-    @SerializedName("system")
+    @SerializedName(value = "system", alternate = {"System"})
     @Expose
     public SystemFacet system;
 
@@ -73,7 +73,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The Following.
      * The list of items the user is following. Only in OneDrive for Business.
      */
-    @SerializedName("following")
+    @SerializedName(value = "following", alternate = {"Following"})
     @Expose
     public DriveItemCollectionPage following;
 
@@ -81,7 +81,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The Items.
      * All items contained in the drive. Read-only. Nullable.
      */
-    @SerializedName("items")
+    @SerializedName(value = "items", alternate = {"Items"})
     @Expose
     public DriveItemCollectionPage items;
 
@@ -89,7 +89,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The List.
      * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
      */
-    @SerializedName("list")
+    @SerializedName(value = "list", alternate = {"List"})
     @Expose
     public List list;
 
@@ -97,7 +97,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The Root.
      * The root folder of the drive. Read-only.
      */
-    @SerializedName("root")
+    @SerializedName(value = "root", alternate = {"Root"})
     @Expose
     public DriveItem root;
 
@@ -105,7 +105,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The Special.
      * Collection of common folders available in OneDrive. Read-only. Nullable.
      */
-    @SerializedName("special")
+    @SerializedName(value = "special", alternate = {"Special"})
     @Expose
     public DriveItemCollectionPage special;
 

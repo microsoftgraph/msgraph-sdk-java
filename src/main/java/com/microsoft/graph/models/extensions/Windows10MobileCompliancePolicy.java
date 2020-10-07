@@ -27,7 +27,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Bit Locker Enabled.
      * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
      */
-    @SerializedName("bitLockerEnabled")
+    @SerializedName(value = "bitLockerEnabled", alternate = {"BitLockerEnabled"})
     @Expose
     public Boolean bitLockerEnabled;
 
@@ -35,7 +35,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Code Integrity Enabled.
      * Require devices to be reported as healthy by Windows Device Health Attestation.
      */
-    @SerializedName("codeIntegrityEnabled")
+    @SerializedName(value = "codeIntegrityEnabled", alternate = {"CodeIntegrityEnabled"})
     @Expose
     public Boolean codeIntegrityEnabled;
 
@@ -43,7 +43,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Early Launch Anti Malware Driver Enabled.
      * Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
      */
-    @SerializedName("earlyLaunchAntiMalwareDriverEnabled")
+    @SerializedName(value = "earlyLaunchAntiMalwareDriverEnabled", alternate = {"EarlyLaunchAntiMalwareDriverEnabled"})
     @Expose
     public Boolean earlyLaunchAntiMalwareDriverEnabled;
 
@@ -51,7 +51,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Os Maximum Version.
      * Maximum Windows Phone version.
      */
-    @SerializedName("osMaximumVersion")
+    @SerializedName(value = "osMaximumVersion", alternate = {"OsMaximumVersion"})
     @Expose
     public String osMaximumVersion;
 
@@ -59,7 +59,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Os Minimum Version.
      * Minimum Windows Phone version.
      */
-    @SerializedName("osMinimumVersion")
+    @SerializedName(value = "osMinimumVersion", alternate = {"OsMinimumVersion"})
     @Expose
     public String osMinimumVersion;
 
@@ -67,7 +67,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Password Block Simple.
      * Whether or not to block syncing the calendar.
      */
-    @SerializedName("passwordBlockSimple")
+    @SerializedName(value = "passwordBlockSimple", alternate = {"PasswordBlockSimple"})
     @Expose
     public Boolean passwordBlockSimple;
 
@@ -75,7 +75,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Password Expiration Days.
      * Number of days before password expiration. Valid values 1 to 255
      */
-    @SerializedName("passwordExpirationDays")
+    @SerializedName(value = "passwordExpirationDays", alternate = {"PasswordExpirationDays"})
     @Expose
     public Integer passwordExpirationDays;
 
@@ -83,7 +83,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Password Minimum Character Set Count.
      * The number of character sets required in the password.
      */
-    @SerializedName("passwordMinimumCharacterSetCount")
+    @SerializedName(value = "passwordMinimumCharacterSetCount", alternate = {"PasswordMinimumCharacterSetCount"})
     @Expose
     public Integer passwordMinimumCharacterSetCount;
 
@@ -91,7 +91,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Password Minimum Length.
      * Minimum password length. Valid values 4 to 16
      */
-    @SerializedName("passwordMinimumLength")
+    @SerializedName(value = "passwordMinimumLength", alternate = {"PasswordMinimumLength"})
     @Expose
     public Integer passwordMinimumLength;
 
@@ -99,7 +99,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Password Minutes Of Inactivity Before Lock.
      * Minutes of inactivity before a password is required.
      */
-    @SerializedName("passwordMinutesOfInactivityBeforeLock")
+    @SerializedName(value = "passwordMinutesOfInactivityBeforeLock", alternate = {"PasswordMinutesOfInactivityBeforeLock"})
     @Expose
     public Integer passwordMinutesOfInactivityBeforeLock;
 
@@ -107,7 +107,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Password Previous Password Block Count.
      * The number of previous passwords to prevent re-use of.
      */
-    @SerializedName("passwordPreviousPasswordBlockCount")
+    @SerializedName(value = "passwordPreviousPasswordBlockCount", alternate = {"PasswordPreviousPasswordBlockCount"})
     @Expose
     public Integer passwordPreviousPasswordBlockCount;
 
@@ -115,7 +115,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Password Required.
      * Require a password to unlock Windows Phone device.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName(value = "passwordRequired", alternate = {"PasswordRequired"})
     @Expose
     public Boolean passwordRequired;
 
@@ -123,7 +123,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Password Required Type.
      * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("passwordRequiredType")
+    @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
     public RequiredPasswordType passwordRequiredType;
 
@@ -131,7 +131,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Password Require To Unlock From Idle.
      * Require a password to unlock an idle device.
      */
-    @SerializedName("passwordRequireToUnlockFromIdle")
+    @SerializedName(value = "passwordRequireToUnlockFromIdle", alternate = {"PasswordRequireToUnlockFromIdle"})
     @Expose
     public Boolean passwordRequireToUnlockFromIdle;
 
@@ -139,7 +139,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Secure Boot Enabled.
      * Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
      */
-    @SerializedName("secureBootEnabled")
+    @SerializedName(value = "secureBootEnabled", alternate = {"SecureBootEnabled"})
     @Expose
     public Boolean secureBootEnabled;
 
@@ -147,7 +147,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * The Storage Require Encryption.
      * Require encryption on windows devices.
      */
-    @SerializedName("storageRequireEncryption")
+    @SerializedName(value = "storageRequireEncryption", alternate = {"StorageRequireEncryption"})
     @Expose
     public Boolean storageRequireEncryption;
 

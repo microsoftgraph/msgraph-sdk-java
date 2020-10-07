@@ -26,7 +26,7 @@ public class Windows10EnterpriseModernAppManagementConfiguration extends DeviceC
      * The Uninstall Built In Apps.
      * Indicates whether or not to uninstall a fixed list of built-in Windows apps.
      */
-    @SerializedName("uninstallBuiltInApps")
+    @SerializedName(value = "uninstallBuiltInApps", alternate = {"UninstallBuiltInApps"})
     @Expose
     public Boolean uninstallBuiltInApps;
 

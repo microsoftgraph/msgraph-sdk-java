@@ -22,7 +22,7 @@ public class ServicePrincipalRemovePasswordBody {
      * The key Id.
      * 
      */
-    @SerializedName("keyId")
+    @SerializedName(value = "keyId", alternate = {"KeyId"})
     @Expose
     public java.util.UUID keyId;
 

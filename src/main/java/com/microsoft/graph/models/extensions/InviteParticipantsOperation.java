@@ -27,7 +27,7 @@ public class InviteParticipantsOperation extends CommsOperation implements IJson
      * The Participants.
      * The participants to invite.
      */
-    @SerializedName("participants")
+    @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
     public java.util.List<InvitationParticipantInfo> participants;
 

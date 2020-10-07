@@ -22,7 +22,7 @@ public class WorkbookRangeClearBody {
      * The apply To.
      * 
      */
-    @SerializedName("applyTo")
+    @SerializedName(value = "applyTo", alternate = {"ApplyTo"})
     @Expose
     public String applyTo;
 

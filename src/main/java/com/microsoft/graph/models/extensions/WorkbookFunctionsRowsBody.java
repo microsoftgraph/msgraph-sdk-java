@@ -22,7 +22,7 @@ public class WorkbookFunctionsRowsBody {
      * The array.
      * 
      */
-    @SerializedName("array")
+    @SerializedName(value = "array", alternate = {"Array"})
     @Expose
     public com.google.gson.JsonElement array;
 

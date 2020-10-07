@@ -27,7 +27,7 @@ public class EducationOrganization extends Entity implements IJsonBackedObject {
      * The Description.
      * Organization description.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -35,7 +35,7 @@ public class EducationOrganization extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Organization display name.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class EducationOrganization extends Entity implements IJsonBackedObject {
      * The External Source.
      * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
      */
-    @SerializedName("externalSource")
+    @SerializedName(value = "externalSource", alternate = {"ExternalSource"})
     @Expose
     public EducationExternalSource externalSource;
 

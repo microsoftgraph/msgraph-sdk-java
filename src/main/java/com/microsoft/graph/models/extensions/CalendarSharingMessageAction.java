@@ -38,7 +38,7 @@ public class CalendarSharingMessageAction implements IJsonBackedObject {
      * The Action.
      * 
      */
-    @SerializedName("action")
+    @SerializedName(value = "action", alternate = {"Action"})
     @Expose
     public CalendarSharingAction action;
 
@@ -46,7 +46,7 @@ public class CalendarSharingMessageAction implements IJsonBackedObject {
      * The Action Type.
      * 
      */
-    @SerializedName("actionType")
+    @SerializedName(value = "actionType", alternate = {"ActionType"})
     @Expose
     public CalendarSharingActionType actionType;
 
@@ -54,7 +54,7 @@ public class CalendarSharingMessageAction implements IJsonBackedObject {
      * The Importance.
      * 
      */
-    @SerializedName("importance")
+    @SerializedName(value = "importance", alternate = {"Importance"})
     @Expose
     public CalendarSharingActionImportance importance;
 

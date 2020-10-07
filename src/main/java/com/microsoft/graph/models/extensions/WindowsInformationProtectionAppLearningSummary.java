@@ -27,7 +27,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      * The Application Name.
      * Application Name
      */
-    @SerializedName("applicationName")
+    @SerializedName(value = "applicationName", alternate = {"ApplicationName"})
     @Expose
     public String applicationName;
 
@@ -35,7 +35,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      * The Application Type.
      * Application Type. Possible values are: universal, desktop.
      */
-    @SerializedName("applicationType")
+    @SerializedName(value = "applicationType", alternate = {"ApplicationType"})
     @Expose
     public ApplicationType applicationType;
 
@@ -43,7 +43,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
      * The Device Count.
      * Device Count
      */
-    @SerializedName("deviceCount")
+    @SerializedName(value = "deviceCount", alternate = {"DeviceCount"})
     @Expose
     public Integer deviceCount;
 

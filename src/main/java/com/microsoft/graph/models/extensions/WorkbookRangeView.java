@@ -28,7 +28,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Cell Addresses.
      * Represents the cell addresses
      */
-    @SerializedName("cellAddresses")
+    @SerializedName(value = "cellAddresses", alternate = {"CellAddresses"})
     @Expose
     public com.google.gson.JsonElement cellAddresses;
 
@@ -36,7 +36,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Column Count.
      * Returns the number of visible columns. Read-only.
      */
-    @SerializedName("columnCount")
+    @SerializedName(value = "columnCount", alternate = {"ColumnCount"})
     @Expose
     public Integer columnCount;
 
@@ -44,7 +44,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Formulas.
      * Represents the formula in A1-style notation.
      */
-    @SerializedName("formulas")
+    @SerializedName(value = "formulas", alternate = {"Formulas"})
     @Expose
     public com.google.gson.JsonElement formulas;
 
@@ -52,7 +52,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Formulas Local.
      * Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
      */
-    @SerializedName("formulasLocal")
+    @SerializedName(value = "formulasLocal", alternate = {"FormulasLocal"})
     @Expose
     public com.google.gson.JsonElement formulasLocal;
 
@@ -60,7 +60,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Formulas R1C1.
      * Represents the formula in R1C1-style notation.
      */
-    @SerializedName("formulasR1C1")
+    @SerializedName(value = "formulasR1C1", alternate = {"FormulasR1C1"})
     @Expose
     public com.google.gson.JsonElement formulasR1C1;
 
@@ -68,7 +68,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Index.
      * Index of the range.
      */
-    @SerializedName("index")
+    @SerializedName(value = "index", alternate = {"Index"})
     @Expose
     public Integer index;
 
@@ -76,7 +76,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Number Format.
      * Represents Excel's number format code for the given cell. Read-only.
      */
-    @SerializedName("numberFormat")
+    @SerializedName(value = "numberFormat", alternate = {"NumberFormat"})
     @Expose
     public com.google.gson.JsonElement numberFormat;
 
@@ -84,7 +84,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Row Count.
      * Returns the number of visible rows. Read-only.
      */
-    @SerializedName("rowCount")
+    @SerializedName(value = "rowCount", alternate = {"RowCount"})
     @Expose
     public Integer rowCount;
 
@@ -92,7 +92,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Text.
      * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public com.google.gson.JsonElement text;
 
@@ -100,7 +100,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Values.
      * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 
@@ -108,7 +108,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Value Types.
      * Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
      */
-    @SerializedName("valueTypes")
+    @SerializedName(value = "valueTypes", alternate = {"ValueTypes"})
     @Expose
     public com.google.gson.JsonElement valueTypes;
 
@@ -116,7 +116,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Rows.
      * Represents a collection of range views associated with the range. Read-only. Read-only.
      */
-    @SerializedName("rows")
+    @SerializedName(value = "rows", alternate = {"Rows"})
     @Expose
     public WorkbookRangeViewCollectionPage rows;
 

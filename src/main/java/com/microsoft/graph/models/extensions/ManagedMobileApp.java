@@ -27,7 +27,7 @@ public class ManagedMobileApp extends Entity implements IJsonBackedObject {
      * The Mobile App Identifier.
      * The identifier for an app with it's operating system type.
      */
-    @SerializedName("mobileAppIdentifier")
+    @SerializedName(value = "mobileAppIdentifier", alternate = {"MobileAppIdentifier"})
     @Expose
     public MobileAppIdentifier mobileAppIdentifier;
 
@@ -35,7 +35,7 @@ public class ManagedMobileApp extends Entity implements IJsonBackedObject {
      * The Version.
      * Version of the entity.
      */
-    @SerializedName("version")
+    @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
 

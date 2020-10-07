@@ -22,7 +22,7 @@ public class WorkbookFunctionsEffectBody {
      * The nominal Rate.
      * 
      */
-    @SerializedName("nominalRate")
+    @SerializedName(value = "nominalRate", alternate = {"NominalRate"})
     @Expose
     public com.google.gson.JsonElement nominalRate;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsEffectBody {
      * The npery.
      * 
      */
-    @SerializedName("npery")
+    @SerializedName(value = "npery", alternate = {"Npery"})
     @Expose
     public com.google.gson.JsonElement npery;
 

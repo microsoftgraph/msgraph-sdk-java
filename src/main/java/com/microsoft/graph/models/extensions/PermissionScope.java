@@ -35,7 +35,7 @@ public class PermissionScope implements IJsonBackedObject {
      * The Admin Consent Description.
      * A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf of all users. This text appears in tenant-wide admin consent experiences.
      */
-    @SerializedName("adminConsentDescription")
+    @SerializedName(value = "adminConsentDescription", alternate = {"AdminConsentDescription"})
     @Expose
     public String adminConsentDescription;
 
@@ -43,7 +43,7 @@ public class PermissionScope implements IJsonBackedObject {
      * The Admin Consent Display Name.
      * The permission's title, intended to be read by an administrator granting the permission on behalf of all users.
      */
-    @SerializedName("adminConsentDisplayName")
+    @SerializedName(value = "adminConsentDisplayName", alternate = {"AdminConsentDisplayName"})
     @Expose
     public String adminConsentDisplayName;
 
@@ -51,7 +51,7 @@ public class PermissionScope implements IJsonBackedObject {
      * The Id.
      * Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public java.util.UUID id;
 
@@ -59,7 +59,7 @@ public class PermissionScope implements IJsonBackedObject {
      * The Is Enabled.
      * When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed.
      */
-    @SerializedName("isEnabled")
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
     public Boolean isEnabled;
 
@@ -67,7 +67,7 @@ public class PermissionScope implements IJsonBackedObject {
      * The Origin.
      * 
      */
-    @SerializedName("origin")
+    @SerializedName(value = "origin", alternate = {"Origin"})
     @Expose
     public String origin;
 
@@ -75,7 +75,7 @@ public class PermissionScope implements IJsonBackedObject {
      * The Type.
      * Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator should be required for consent to the permissions. This will be the default behavior, but each customer can choose to customize the behavior in their organization (by allowing, restricting or limiting user consent to this delegated permission.)
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -83,7 +83,7 @@ public class PermissionScope implements IJsonBackedObject {
      * The User Consent Description.
      * A description of the delegated permissions, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
      */
-    @SerializedName("userConsentDescription")
+    @SerializedName(value = "userConsentDescription", alternate = {"UserConsentDescription"})
     @Expose
     public String userConsentDescription;
 
@@ -91,7 +91,7 @@ public class PermissionScope implements IJsonBackedObject {
      * The User Consent Display Name.
      * A title for the permission, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.
      */
-    @SerializedName("userConsentDisplayName")
+    @SerializedName(value = "userConsentDisplayName", alternate = {"UserConsentDisplayName"})
     @Expose
     public String userConsentDisplayName;
 
@@ -99,7 +99,7 @@ public class PermissionScope implements IJsonBackedObject {
      * The Value.
      * Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % &amp; ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

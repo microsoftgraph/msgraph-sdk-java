@@ -35,7 +35,7 @@ public class ConditionalAccessLocations implements IJsonBackedObject {
      * The Exclude Locations.
      * Location IDs excluded from scope of policy.
      */
-    @SerializedName("excludeLocations")
+    @SerializedName(value = "excludeLocations", alternate = {"ExcludeLocations"})
     @Expose
     public java.util.List<String> excludeLocations;
 
@@ -43,7 +43,7 @@ public class ConditionalAccessLocations implements IJsonBackedObject {
      * The Include Locations.
      * Location IDs in scope of policy unless explicitly excluded, All, or AllTrusted.
      */
-    @SerializedName("includeLocations")
+    @SerializedName(value = "includeLocations", alternate = {"IncludeLocations"})
     @Expose
     public java.util.List<String> includeLocations;
 

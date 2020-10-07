@@ -22,7 +22,7 @@ public class WorkbookFunctionsF_Inv_RTBody {
      * The probability.
      * 
      */
-    @SerializedName("probability")
+    @SerializedName(value = "probability", alternate = {"Probability"})
     @Expose
     public com.google.gson.JsonElement probability;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsF_Inv_RTBody {
      * The deg Freedom1.
      * 
      */
-    @SerializedName("degFreedom1")
+    @SerializedName(value = "degFreedom1", alternate = {"DegFreedom1"})
     @Expose
     public com.google.gson.JsonElement degFreedom1;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsF_Inv_RTBody {
      * The deg Freedom2.
      * 
      */
-    @SerializedName("degFreedom2")
+    @SerializedName(value = "degFreedom2", alternate = {"DegFreedom2"})
     @Expose
     public com.google.gson.JsonElement degFreedom2;
 

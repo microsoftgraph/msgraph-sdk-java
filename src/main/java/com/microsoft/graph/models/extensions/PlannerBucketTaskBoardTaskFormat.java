@@ -26,7 +26,7 @@ public class PlannerBucketTaskBoardTaskFormat extends Entity implements IJsonBac
      * The Order Hint.
      * Hint used to order tasks in the Bucket view of the Task Board. The format is defined as outlined here.
      */
-    @SerializedName("orderHint")
+    @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose
     public String orderHint;
 

@@ -34,7 +34,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Created Date Time.
      * The date and time when the eBook file was created.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -42,7 +42,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Description.
      * Description.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -50,7 +50,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Display Name.
      * Name of the eBook.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -58,7 +58,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Information Url.
      * The more information Url.
      */
-    @SerializedName("informationUrl")
+    @SerializedName(value = "informationUrl", alternate = {"InformationUrl"})
     @Expose
     public String informationUrl;
 
@@ -66,7 +66,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Large Cover.
      * Book cover.
      */
-    @SerializedName("largeCover")
+    @SerializedName(value = "largeCover", alternate = {"LargeCover"})
     @Expose
     public MimeContent largeCover;
 
@@ -74,7 +74,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Last Modified Date Time.
      * The date and time when the eBook was last modified.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -82,7 +82,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Privacy Information Url.
      * The privacy statement Url.
      */
-    @SerializedName("privacyInformationUrl")
+    @SerializedName(value = "privacyInformationUrl", alternate = {"PrivacyInformationUrl"})
     @Expose
     public String privacyInformationUrl;
 
@@ -90,7 +90,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Published Date Time.
      * The date and time when the eBook was published.
      */
-    @SerializedName("publishedDateTime")
+    @SerializedName(value = "publishedDateTime", alternate = {"PublishedDateTime"})
     @Expose
     public java.util.Calendar publishedDateTime;
 
@@ -98,7 +98,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Publisher.
      * Publisher.
      */
-    @SerializedName("publisher")
+    @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
     public String publisher;
 
@@ -106,7 +106,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of assignments for this eBook.
      */
-    @SerializedName("assignments")
+    @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
     public ManagedEBookAssignmentCollectionPage assignments;
 
@@ -114,7 +114,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Device States.
      * The list of installation states for this eBook.
      */
-    @SerializedName("deviceStates")
+    @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
     public DeviceInstallStateCollectionPage deviceStates;
 
@@ -122,7 +122,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The Install Summary.
      * Mobile App Install Summary.
      */
-    @SerializedName("installSummary")
+    @SerializedName(value = "installSummary", alternate = {"InstallSummary"})
     @Expose
     public EBookInstallSummary installSummary;
 
@@ -130,7 +130,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The User State Summary.
      * The list of installation states for this eBook.
      */
-    @SerializedName("userStateSummary")
+    @SerializedName(value = "userStateSummary", alternate = {"UserStateSummary"})
     @Expose
     public UserInstallStateSummaryCollectionPage userStateSummary;
 

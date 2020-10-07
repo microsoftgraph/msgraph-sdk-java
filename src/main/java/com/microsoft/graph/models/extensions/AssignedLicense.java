@@ -35,7 +35,7 @@ public class AssignedLicense implements IJsonBackedObject {
      * The Disabled Plans.
      * A collection of the unique identifiers for plans that have been disabled.
      */
-    @SerializedName("disabledPlans")
+    @SerializedName(value = "disabledPlans", alternate = {"DisabledPlans"})
     @Expose
     public java.util.List<java.util.UUID> disabledPlans;
 
@@ -43,7 +43,7 @@ public class AssignedLicense implements IJsonBackedObject {
      * The Sku Id.
      * The unique identifier for the SKU.
      */
-    @SerializedName("skuId")
+    @SerializedName(value = "skuId", alternate = {"SkuId"})
     @Expose
     public java.util.UUID skuId;
 

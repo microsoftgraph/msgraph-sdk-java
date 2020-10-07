@@ -35,7 +35,7 @@ public class ContentTypeOrder implements IJsonBackedObject {
      * The Default.
      * Whether this is the default Content Type
      */
-    @SerializedName("default")
+    @SerializedName(value = "default", alternate = {"Default"})
     @Expose
     public Boolean msgraphDefault;
 
@@ -43,7 +43,7 @@ public class ContentTypeOrder implements IJsonBackedObject {
      * The Position.
      * Specifies the position in which the Content Type appears in the selection UI.
      */
-    @SerializedName("position")
+    @SerializedName(value = "position", alternate = {"Position"})
     @Expose
     public Integer position;
 

@@ -31,7 +31,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The App Data Encryption Type.
      * Type of encryption which should be used for data in a managed app. (iOS Only). Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
      */
-    @SerializedName("appDataEncryptionType")
+    @SerializedName(value = "appDataEncryptionType", alternate = {"AppDataEncryptionType"})
     @Expose
     public ManagedAppDataEncryptionType appDataEncryptionType;
 
@@ -39,7 +39,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Custom Settings.
      * A set of string key and string value pairs to be sent to the affected users, unalterned by this service
      */
-    @SerializedName("customSettings")
+    @SerializedName(value = "customSettings", alternate = {"CustomSettings"})
     @Expose
     public java.util.List<KeyValuePair> customSettings;
 
@@ -47,7 +47,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Deployed App Count.
      * Count of apps to which the current policy is deployed.
      */
-    @SerializedName("deployedAppCount")
+    @SerializedName(value = "deployedAppCount", alternate = {"DeployedAppCount"})
     @Expose
     public Integer deployedAppCount;
 
@@ -55,7 +55,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Disable App Encryption If Device Encryption Is Enabled.
      * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
      */
-    @SerializedName("disableAppEncryptionIfDeviceEncryptionIsEnabled")
+    @SerializedName(value = "disableAppEncryptionIfDeviceEncryptionIsEnabled", alternate = {"DisableAppEncryptionIfDeviceEncryptionIsEnabled"})
     @Expose
     public Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
 
@@ -63,7 +63,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Encrypt App Data.
      * Indicates whether managed-app data should be encrypted. (Android only)
      */
-    @SerializedName("encryptAppData")
+    @SerializedName(value = "encryptAppData", alternate = {"EncryptAppData"})
     @Expose
     public Boolean encryptAppData;
 
@@ -71,7 +71,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Face Id Blocked.
      * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
      */
-    @SerializedName("faceIdBlocked")
+    @SerializedName(value = "faceIdBlocked", alternate = {"FaceIdBlocked"})
     @Expose
     public Boolean faceIdBlocked;
 
@@ -79,7 +79,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Minimum Required Patch Version.
      * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
      */
-    @SerializedName("minimumRequiredPatchVersion")
+    @SerializedName(value = "minimumRequiredPatchVersion", alternate = {"MinimumRequiredPatchVersion"})
     @Expose
     public String minimumRequiredPatchVersion;
 
@@ -87,7 +87,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Minimum Required Sdk Version.
      * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
      */
-    @SerializedName("minimumRequiredSdkVersion")
+    @SerializedName(value = "minimumRequiredSdkVersion", alternate = {"MinimumRequiredSdkVersion"})
     @Expose
     public String minimumRequiredSdkVersion;
 
@@ -95,7 +95,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Minimum Warning Patch Version.
      * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
      */
-    @SerializedName("minimumWarningPatchVersion")
+    @SerializedName(value = "minimumWarningPatchVersion", alternate = {"MinimumWarningPatchVersion"})
     @Expose
     public String minimumWarningPatchVersion;
 
@@ -103,7 +103,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Screen Capture Blocked.
      * Indicates whether screen capture is blocked. (Android only)
      */
-    @SerializedName("screenCaptureBlocked")
+    @SerializedName(value = "screenCaptureBlocked", alternate = {"ScreenCaptureBlocked"})
     @Expose
     public Boolean screenCaptureBlocked;
 
@@ -111,7 +111,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Apps.
      * List of apps to which the policy is deployed.
      */
-    @SerializedName("apps")
+    @SerializedName(value = "apps", alternate = {"Apps"})
     @Expose
     public ManagedMobileAppCollectionPage apps;
 
@@ -119,7 +119,7 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
      * The Deployment Summary.
      * Navigation property to deployment summary of the configuration.
      */
-    @SerializedName("deploymentSummary")
+    @SerializedName(value = "deploymentSummary", alternate = {"DeploymentSummary"})
     @Expose
     public ManagedAppPolicyDeploymentSummary deploymentSummary;
 

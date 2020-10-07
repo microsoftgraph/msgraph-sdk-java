@@ -29,7 +29,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Action Type.
      * Control action type (Config, Review, Behavior).
      */
-    @SerializedName("actionType")
+    @SerializedName(value = "actionType", alternate = {"ActionType"})
     @Expose
     public String actionType;
 
@@ -37,7 +37,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Action Url.
      * URL to where the control can be actioned.
      */
-    @SerializedName("actionUrl")
+    @SerializedName(value = "actionUrl", alternate = {"ActionUrl"})
     @Expose
     public String actionUrl;
 
@@ -45,7 +45,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Azure Tenant Id.
      * GUID string for tenant ID.
      */
-    @SerializedName("azureTenantId")
+    @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
     public String azureTenantId;
 
@@ -53,7 +53,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Compliance Information.
      * 
      */
-    @SerializedName("complianceInformation")
+    @SerializedName(value = "complianceInformation", alternate = {"ComplianceInformation"})
     @Expose
     public java.util.List<ComplianceInformation> complianceInformation;
 
@@ -61,7 +61,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Control Category.
      * Control action category (Identity, Data, Device, Apps, Infrastructure).
      */
-    @SerializedName("controlCategory")
+    @SerializedName(value = "controlCategory", alternate = {"ControlCategory"})
     @Expose
     public String controlCategory;
 
@@ -69,7 +69,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Control State Updates.
      * 
      */
-    @SerializedName("controlStateUpdates")
+    @SerializedName(value = "controlStateUpdates", alternate = {"ControlStateUpdates"})
     @Expose
     public java.util.List<SecureScoreControlStateUpdate> controlStateUpdates;
 
@@ -77,7 +77,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Deprecated.
      * Flag to indicate if a control is depreciated.
      */
-    @SerializedName("deprecated")
+    @SerializedName(value = "deprecated", alternate = {"Deprecated"})
     @Expose
     public Boolean deprecated;
 
@@ -85,7 +85,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Implementation Cost.
      * Resource cost of implemmentating control (low, moderate, high).
      */
-    @SerializedName("implementationCost")
+    @SerializedName(value = "implementationCost", alternate = {"ImplementationCost"})
     @Expose
     public String implementationCost;
 
@@ -93,7 +93,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Last Modified Date Time.
      * Time at which the control profile entity was last modified. The Timestamp type represents date and time
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -101,7 +101,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Max Score.
      * max attainable score for the control.
      */
-    @SerializedName("maxScore")
+    @SerializedName(value = "maxScore", alternate = {"MaxScore"})
     @Expose
     public Double maxScore;
 
@@ -109,7 +109,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Rank.
      * Microsoft's stack ranking of control.
      */
-    @SerializedName("rank")
+    @SerializedName(value = "rank", alternate = {"Rank"})
     @Expose
     public Integer rank;
 
@@ -117,7 +117,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Remediation.
      * Description of what the control will help remediate.
      */
-    @SerializedName("remediation")
+    @SerializedName(value = "remediation", alternate = {"Remediation"})
     @Expose
     public String remediation;
 
@@ -125,7 +125,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Remediation Impact.
      * Description of the impact on users of the remediation.
      */
-    @SerializedName("remediationImpact")
+    @SerializedName(value = "remediationImpact", alternate = {"RemediationImpact"})
     @Expose
     public String remediationImpact;
 
@@ -133,7 +133,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Service.
      * Service that owns the control (Exchange, Sharepoint, Azure AD).
      */
-    @SerializedName("service")
+    @SerializedName(value = "service", alternate = {"Service"})
     @Expose
     public String service;
 
@@ -141,7 +141,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Threats.
      * List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
      */
-    @SerializedName("threats")
+    @SerializedName(value = "threats", alternate = {"Threats"})
     @Expose
     public java.util.List<String> threats;
 
@@ -149,7 +149,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Tier.
      * 
      */
-    @SerializedName("tier")
+    @SerializedName(value = "tier", alternate = {"Tier"})
     @Expose
     public String tier;
 
@@ -157,7 +157,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Title.
      * Title of the control.
      */
-    @SerializedName("title")
+    @SerializedName(value = "title", alternate = {"Title"})
     @Expose
     public String title;
 
@@ -165,7 +165,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The User Impact.
      * 
      */
-    @SerializedName("userImpact")
+    @SerializedName(value = "userImpact", alternate = {"UserImpact"})
     @Expose
     public String userImpact;
 
@@ -173,7 +173,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
      * The Vendor Information.
      * 
      */
-    @SerializedName("vendorInformation")
+    @SerializedName(value = "vendorInformation", alternate = {"VendorInformation"})
     @Expose
     public SecurityVendorInformation vendorInformation;
 

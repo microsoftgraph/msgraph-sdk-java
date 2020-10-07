@@ -27,7 +27,7 @@ public class WorkbookTableColumn extends Entity implements IJsonBackedObject {
      * The Index.
      * Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
      */
-    @SerializedName("index")
+    @SerializedName(value = "index", alternate = {"Index"})
     @Expose
     public Integer index;
 
@@ -35,7 +35,7 @@ public class WorkbookTableColumn extends Entity implements IJsonBackedObject {
      * The Name.
      * Returns the name of the table column.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -43,7 +43,7 @@ public class WorkbookTableColumn extends Entity implements IJsonBackedObject {
      * The Values.
      * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 
@@ -51,7 +51,7 @@ public class WorkbookTableColumn extends Entity implements IJsonBackedObject {
      * The Filter.
      * Retrieve the filter applied to the column. Read-only.
      */
-    @SerializedName("filter")
+    @SerializedName(value = "filter", alternate = {"Filter"})
     @Expose
     public WorkbookFilter filter;
 

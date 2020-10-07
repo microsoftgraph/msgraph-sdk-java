@@ -22,7 +22,7 @@ public class WorkbookFunctionsChiSq_DistBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsChiSq_DistBody {
      * The deg Freedom.
      * 
      */
-    @SerializedName("degFreedom")
+    @SerializedName(value = "degFreedom", alternate = {"DegFreedom"})
     @Expose
     public com.google.gson.JsonElement degFreedom;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsChiSq_DistBody {
      * The cumulative.
      * 
      */
-    @SerializedName("cumulative")
+    @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
     public com.google.gson.JsonElement cumulative;
 

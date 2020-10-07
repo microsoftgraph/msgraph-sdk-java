@@ -31,7 +31,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      * The Description.
      * An optional description for the administrative unit.
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -39,7 +39,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      * The Display Name.
      * Display name for the administrative unit.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -47,7 +47,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      * The Visibility.
      * Controls whether the adminstrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the adminstrative unit.
      */
-    @SerializedName("visibility")
+    @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
     public String visibility;
 
@@ -61,7 +61,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      * The Scoped Role Members.
      * Scoped-role members of this Administrative Unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
      */
-    @SerializedName("scopedRoleMembers")
+    @SerializedName(value = "scopedRoleMembers", alternate = {"ScopedRoleMembers"})
     @Expose
     public ScopedRoleMembershipCollectionPage scopedRoleMembers;
 
@@ -69,7 +69,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
      * The Extensions.
      * 
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public ExtensionCollectionPage extensions;
 

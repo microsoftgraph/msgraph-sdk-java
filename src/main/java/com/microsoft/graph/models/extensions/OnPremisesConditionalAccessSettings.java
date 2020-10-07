@@ -26,7 +26,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements IJson
      * The Enabled.
      * Indicates if on premises conditional access is enabled for this organization
      */
-    @SerializedName("enabled")
+    @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Boolean enabled;
 
@@ -34,7 +34,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements IJson
      * The Excluded Groups.
      * User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
      */
-    @SerializedName("excludedGroups")
+    @SerializedName(value = "excludedGroups", alternate = {"ExcludedGroups"})
     @Expose
     public java.util.List<java.util.UUID> excludedGroups;
 
@@ -42,7 +42,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements IJson
      * The Included Groups.
      * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
      */
-    @SerializedName("includedGroups")
+    @SerializedName(value = "includedGroups", alternate = {"IncludedGroups"})
     @Expose
     public java.util.List<java.util.UUID> includedGroups;
 
@@ -50,7 +50,7 @@ public class OnPremisesConditionalAccessSettings extends Entity implements IJson
      * The Override Default Rule.
      * Override the default access rule when allowing a device to ensure access is granted.
      */
-    @SerializedName("overrideDefaultRule")
+    @SerializedName(value = "overrideDefaultRule", alternate = {"OverrideDefaultRule"})
     @Expose
     public Boolean overrideDefaultRule;
 

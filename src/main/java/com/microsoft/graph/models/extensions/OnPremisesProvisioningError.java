@@ -35,7 +35,7 @@ public class OnPremisesProvisioningError implements IJsonBackedObject {
      * The Category.
      * Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
      */
-    @SerializedName("category")
+    @SerializedName(value = "category", alternate = {"Category"})
     @Expose
     public String category;
 
@@ -43,7 +43,7 @@ public class OnPremisesProvisioningError implements IJsonBackedObject {
      * The Occurred Date Time.
      * The date and time at which the error occurred.
      */
-    @SerializedName("occurredDateTime")
+    @SerializedName(value = "occurredDateTime", alternate = {"OccurredDateTime"})
     @Expose
     public java.util.Calendar occurredDateTime;
 
@@ -51,7 +51,7 @@ public class OnPremisesProvisioningError implements IJsonBackedObject {
      * The Property Causing Error.
      * Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
      */
-    @SerializedName("propertyCausingError")
+    @SerializedName(value = "propertyCausingError", alternate = {"PropertyCausingError"})
     @Expose
     public String propertyCausingError;
 
@@ -59,7 +59,7 @@ public class OnPremisesProvisioningError implements IJsonBackedObject {
      * The Value.
      * Value of the property causing the error.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

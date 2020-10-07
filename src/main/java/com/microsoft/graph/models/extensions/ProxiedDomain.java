@@ -35,7 +35,7 @@ public class ProxiedDomain implements IJsonBackedObject {
      * The Ip Address Or FQDN.
      * The IP address or FQDN
      */
-    @SerializedName("ipAddressOrFQDN")
+    @SerializedName(value = "ipAddressOrFQDN", alternate = {"IpAddressOrFQDN"})
     @Expose
     public String ipAddressOrFQDN;
 
@@ -43,7 +43,7 @@ public class ProxiedDomain implements IJsonBackedObject {
      * The Proxy.
      * Proxy IP or FQDN
      */
-    @SerializedName("proxy")
+    @SerializedName(value = "proxy", alternate = {"Proxy"})
     @Expose
     public String proxy;
 

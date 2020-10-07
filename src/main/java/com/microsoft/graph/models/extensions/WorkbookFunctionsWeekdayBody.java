@@ -22,7 +22,7 @@ public class WorkbookFunctionsWeekdayBody {
      * The serial Number.
      * 
      */
-    @SerializedName("serialNumber")
+    @SerializedName(value = "serialNumber", alternate = {"SerialNumber"})
     @Expose
     public com.google.gson.JsonElement serialNumber;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsWeekdayBody {
      * The return Type.
      * 
      */
-    @SerializedName("returnType")
+    @SerializedName(value = "returnType", alternate = {"ReturnType"})
     @Expose
     public com.google.gson.JsonElement returnType;
 

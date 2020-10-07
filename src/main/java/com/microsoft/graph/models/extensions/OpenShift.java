@@ -27,7 +27,7 @@ public class OpenShift extends ChangeTrackedEntity implements IJsonBackedObject 
      * The Draft Open Shift.
      * An unpublished open shift.
      */
-    @SerializedName("draftOpenShift")
+    @SerializedName(value = "draftOpenShift", alternate = {"DraftOpenShift"})
     @Expose
     public OpenShiftItem draftOpenShift;
 
@@ -35,7 +35,7 @@ public class OpenShift extends ChangeTrackedEntity implements IJsonBackedObject 
      * The Scheduling Group Id.
      * ID for the scheduling group that the open shift belongs to.
      */
-    @SerializedName("schedulingGroupId")
+    @SerializedName(value = "schedulingGroupId", alternate = {"SchedulingGroupId"})
     @Expose
     public String schedulingGroupId;
 
@@ -43,7 +43,7 @@ public class OpenShift extends ChangeTrackedEntity implements IJsonBackedObject 
      * The Shared Open Shift.
      * A published open shift.
      */
-    @SerializedName("sharedOpenShift")
+    @SerializedName(value = "sharedOpenShift", alternate = {"SharedOpenShift"})
     @Expose
     public OpenShiftItem sharedOpenShift;
 

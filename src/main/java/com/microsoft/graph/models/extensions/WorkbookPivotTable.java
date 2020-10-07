@@ -27,7 +27,7 @@ public class WorkbookPivotTable extends Entity implements IJsonBackedObject {
      * The Name.
      * Name of the PivotTable.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -35,7 +35,7 @@ public class WorkbookPivotTable extends Entity implements IJsonBackedObject {
      * The Worksheet.
      * The worksheet containing the current PivotTable. Read-only.
      */
-    @SerializedName("worksheet")
+    @SerializedName(value = "worksheet", alternate = {"Worksheet"})
     @Expose
     public WorkbookWorksheet worksheet;
 

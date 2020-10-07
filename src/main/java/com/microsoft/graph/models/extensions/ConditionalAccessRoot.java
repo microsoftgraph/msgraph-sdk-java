@@ -30,7 +30,7 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
      * The Named Locations.
      * 
      */
-    @SerializedName("namedLocations")
+    @SerializedName(value = "namedLocations", alternate = {"NamedLocations"})
     @Expose
     public NamedLocationCollectionPage namedLocations;
 
@@ -38,7 +38,7 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
      * The Policies.
      * 
      */
-    @SerializedName("policies")
+    @SerializedName(value = "policies", alternate = {"Policies"})
     @Expose
     public ConditionalAccessPolicyCollectionPage policies;
 

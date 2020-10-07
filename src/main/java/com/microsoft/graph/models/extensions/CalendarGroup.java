@@ -28,7 +28,7 @@ public class CalendarGroup extends Entity implements IJsonBackedObject {
      * The Change Key.
      * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      */
-    @SerializedName("changeKey")
+    @SerializedName(value = "changeKey", alternate = {"ChangeKey"})
     @Expose
     public String changeKey;
 
@@ -36,7 +36,7 @@ public class CalendarGroup extends Entity implements IJsonBackedObject {
      * The Class Id.
      * The class identifier. Read-only.
      */
-    @SerializedName("classId")
+    @SerializedName(value = "classId", alternate = {"ClassId"})
     @Expose
     public java.util.UUID classId;
 
@@ -44,7 +44,7 @@ public class CalendarGroup extends Entity implements IJsonBackedObject {
      * The Name.
      * The group name.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -52,7 +52,7 @@ public class CalendarGroup extends Entity implements IJsonBackedObject {
      * The Calendars.
      * The calendars in the calendar group. Navigation property. Read-only. Nullable.
      */
-    @SerializedName("calendars")
+    @SerializedName(value = "calendars", alternate = {"Calendars"})
     @Expose
     public CalendarCollectionPage calendars;
 

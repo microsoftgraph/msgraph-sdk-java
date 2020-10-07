@@ -36,7 +36,7 @@ public class WebApplication implements IJsonBackedObject {
      * The Home Page Url.
      * Home page or landing page of the application.
      */
-    @SerializedName("homePageUrl")
+    @SerializedName(value = "homePageUrl", alternate = {"HomePageUrl"})
     @Expose
     public String homePageUrl;
 
@@ -44,7 +44,7 @@ public class WebApplication implements IJsonBackedObject {
      * The Implicit Grant Settings.
      * Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
      */
-    @SerializedName("implicitGrantSettings")
+    @SerializedName(value = "implicitGrantSettings", alternate = {"ImplicitGrantSettings"})
     @Expose
     public ImplicitGrantSettings implicitGrantSettings;
 
@@ -52,7 +52,7 @@ public class WebApplication implements IJsonBackedObject {
      * The Logout Url.
      * Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel, back-channel or SAML logout protocols.
      */
-    @SerializedName("logoutUrl")
+    @SerializedName(value = "logoutUrl", alternate = {"LogoutUrl"})
     @Expose
     public String logoutUrl;
 
@@ -60,7 +60,7 @@ public class WebApplication implements IJsonBackedObject {
      * The Redirect Uris.
      * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      */
-    @SerializedName("redirectUris")
+    @SerializedName(value = "redirectUris", alternate = {"RedirectUris"})
     @Expose
     public java.util.List<String> redirectUris;
 

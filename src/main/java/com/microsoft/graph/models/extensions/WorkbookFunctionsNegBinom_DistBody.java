@@ -22,7 +22,7 @@ public class WorkbookFunctionsNegBinom_DistBody {
      * The number F.
      * 
      */
-    @SerializedName("numberF")
+    @SerializedName(value = "numberF", alternate = {"NumberF"})
     @Expose
     public com.google.gson.JsonElement numberF;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsNegBinom_DistBody {
      * The number S.
      * 
      */
-    @SerializedName("numberS")
+    @SerializedName(value = "numberS", alternate = {"NumberS"})
     @Expose
     public com.google.gson.JsonElement numberS;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsNegBinom_DistBody {
      * The probability S.
      * 
      */
-    @SerializedName("probabilityS")
+    @SerializedName(value = "probabilityS", alternate = {"ProbabilityS"})
     @Expose
     public com.google.gson.JsonElement probabilityS;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsNegBinom_DistBody {
      * The cumulative.
      * 
      */
-    @SerializedName("cumulative")
+    @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
     public com.google.gson.JsonElement cumulative;
 

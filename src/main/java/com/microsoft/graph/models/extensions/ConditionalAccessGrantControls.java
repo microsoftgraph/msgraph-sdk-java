@@ -36,7 +36,7 @@ public class ConditionalAccessGrantControls implements IJsonBackedObject {
      * The Built In Controls.
      * List of values of built-in controls required by the policy. Possible values: Block, Mfa, CompliantDevice, DomainJoinedDevice, ApprovedApplication, CompliantApplication
      */
-    @SerializedName("builtInControls")
+    @SerializedName(value = "builtInControls", alternate = {"BuiltInControls"})
     @Expose
     public java.util.List<ConditionalAccessGrantControl> builtInControls;
 
@@ -44,7 +44,7 @@ public class ConditionalAccessGrantControls implements IJsonBackedObject {
      * The Custom Authentication Factors.
      * List of custom controls IDs required by the policy. For more information, see Custom controls.
      */
-    @SerializedName("customAuthenticationFactors")
+    @SerializedName(value = "customAuthenticationFactors", alternate = {"CustomAuthenticationFactors"})
     @Expose
     public java.util.List<String> customAuthenticationFactors;
 
@@ -52,7 +52,7 @@ public class ConditionalAccessGrantControls implements IJsonBackedObject {
      * The Operator.
      * Defines the relationship of the grant controls. Possible values: AND, OR.
      */
-    @SerializedName("operator")
+    @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
     public String operator;
 
@@ -60,7 +60,7 @@ public class ConditionalAccessGrantControls implements IJsonBackedObject {
      * The Terms Of Use.
      * List of terms of use IDs required by the policy.
      */
-    @SerializedName("termsOfUse")
+    @SerializedName(value = "termsOfUse", alternate = {"TermsOfUse"})
     @Expose
     public java.util.List<String> termsOfUse;
 

@@ -22,7 +22,7 @@ public class WorkbookFunctionsFvscheduleBody {
      * The principal.
      * 
      */
-    @SerializedName("principal")
+    @SerializedName(value = "principal", alternate = {"Principal"})
     @Expose
     public com.google.gson.JsonElement principal;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsFvscheduleBody {
      * The schedule.
      * 
      */
-    @SerializedName("schedule")
+    @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
     public com.google.gson.JsonElement schedule;
 

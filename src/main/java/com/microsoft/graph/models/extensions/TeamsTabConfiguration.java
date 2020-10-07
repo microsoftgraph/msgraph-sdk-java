@@ -35,7 +35,7 @@ public class TeamsTabConfiguration implements IJsonBackedObject {
      * The Content Url.
      * Url used for rendering tab contents in Teams. Required.
      */
-    @SerializedName("contentUrl")
+    @SerializedName(value = "contentUrl", alternate = {"ContentUrl"})
     @Expose
     public String contentUrl;
 
@@ -43,7 +43,7 @@ public class TeamsTabConfiguration implements IJsonBackedObject {
      * The Entity Id.
      * Identifier for the entity hosted by the tab provider.
      */
-    @SerializedName("entityId")
+    @SerializedName(value = "entityId", alternate = {"EntityId"})
     @Expose
     public String entityId;
 
@@ -51,7 +51,7 @@ public class TeamsTabConfiguration implements IJsonBackedObject {
      * The Remove Url.
      * Url called by Teams client when a Tab is removed using the Teams Client.
      */
-    @SerializedName("removeUrl")
+    @SerializedName(value = "removeUrl", alternate = {"RemoveUrl"})
     @Expose
     public String removeUrl;
 
@@ -59,7 +59,7 @@ public class TeamsTabConfiguration implements IJsonBackedObject {
      * The Website Url.
      * Url for showing tab contents outside of Teams.
      */
-    @SerializedName("websiteUrl")
+    @SerializedName(value = "websiteUrl", alternate = {"WebsiteUrl"})
     @Expose
     public String websiteUrl;
 

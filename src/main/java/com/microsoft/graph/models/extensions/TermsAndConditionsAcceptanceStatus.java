@@ -27,7 +27,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements IJsonB
      * The Accepted Date Time.
      * DateTime when the terms were last accepted by the user.
      */
-    @SerializedName("acceptedDateTime")
+    @SerializedName(value = "acceptedDateTime", alternate = {"AcceptedDateTime"})
     @Expose
     public java.util.Calendar acceptedDateTime;
 
@@ -35,7 +35,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements IJsonB
      * The Accepted Version.
      * Most recent version number of the T&amp;C accepted by the user.
      */
-    @SerializedName("acceptedVersion")
+    @SerializedName(value = "acceptedVersion", alternate = {"AcceptedVersion"})
     @Expose
     public Integer acceptedVersion;
 
@@ -43,7 +43,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements IJsonB
      * The User Display Name.
      * Display name of the user whose acceptance the entity represents.
      */
-    @SerializedName("userDisplayName")
+    @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
     public String userDisplayName;
 
@@ -51,7 +51,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements IJsonB
      * The User Principal Name.
      * The userPrincipalName of the User that accepted the term.
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 
@@ -59,7 +59,7 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements IJsonB
      * The Terms And Conditions.
      * Navigation link to the terms and conditions that are assigned.
      */
-    @SerializedName("termsAndConditions")
+    @SerializedName(value = "termsAndConditions", alternate = {"TermsAndConditions"})
     @Expose
     public TermsAndConditions termsAndConditions;
 

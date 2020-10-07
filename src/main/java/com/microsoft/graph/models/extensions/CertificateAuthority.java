@@ -35,7 +35,7 @@ public class CertificateAuthority implements IJsonBackedObject {
      * The Certificate.
      * Required. The base64 encoded string representing the public certificate.
      */
-    @SerializedName("certificate")
+    @SerializedName(value = "certificate", alternate = {"Certificate"})
     @Expose
     public byte[] certificate;
 
@@ -43,7 +43,7 @@ public class CertificateAuthority implements IJsonBackedObject {
      * The Certificate Revocation List Url.
      * The URL of the certificate revocation list.
      */
-    @SerializedName("certificateRevocationListUrl")
+    @SerializedName(value = "certificateRevocationListUrl", alternate = {"CertificateRevocationListUrl"})
     @Expose
     public String certificateRevocationListUrl;
 
@@ -51,7 +51,7 @@ public class CertificateAuthority implements IJsonBackedObject {
      * The Delta Certificate Revocation List Url.
      * The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created.
      */
-    @SerializedName("deltaCertificateRevocationListUrl")
+    @SerializedName(value = "deltaCertificateRevocationListUrl", alternate = {"DeltaCertificateRevocationListUrl"})
     @Expose
     public String deltaCertificateRevocationListUrl;
 
@@ -59,7 +59,7 @@ public class CertificateAuthority implements IJsonBackedObject {
      * The Is Root Authority.
      * Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
      */
-    @SerializedName("isRootAuthority")
+    @SerializedName(value = "isRootAuthority", alternate = {"IsRootAuthority"})
     @Expose
     public Boolean isRootAuthority;
 
@@ -67,7 +67,7 @@ public class CertificateAuthority implements IJsonBackedObject {
      * The Issuer.
      * The issuer of the certificate, calculated from the certificate value. Read-only.
      */
-    @SerializedName("issuer")
+    @SerializedName(value = "issuer", alternate = {"Issuer"})
     @Expose
     public String issuer;
 
@@ -75,7 +75,7 @@ public class CertificateAuthority implements IJsonBackedObject {
      * The Issuer Ski.
      * The subject key identifier of the certificate, calculated from the certificate value. Read-only.
      */
-    @SerializedName("issuerSki")
+    @SerializedName(value = "issuerSki", alternate = {"IssuerSki"})
     @Expose
     public String issuerSki;
 

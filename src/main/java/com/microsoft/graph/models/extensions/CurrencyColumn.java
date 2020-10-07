@@ -35,7 +35,7 @@ public class CurrencyColumn implements IJsonBackedObject {
      * The Locale.
      * Specifies the locale from which to infer the currency symbol.
      */
-    @SerializedName("locale")
+    @SerializedName(value = "locale", alternate = {"Locale"})
     @Expose
     public String locale;
 

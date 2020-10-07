@@ -27,7 +27,7 @@ public class WorkbookChartGridlinesFormat extends Entity implements IJsonBackedO
      * The Line.
      * Represents chart line formatting. Read-only.
      */
-    @SerializedName("line")
+    @SerializedName(value = "line", alternate = {"Line"})
     @Expose
     public WorkbookChartLineFormat line;
 

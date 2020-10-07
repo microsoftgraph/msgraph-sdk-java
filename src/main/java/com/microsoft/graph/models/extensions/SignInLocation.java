@@ -36,7 +36,7 @@ public class SignInLocation implements IJsonBackedObject {
      * The City.
      * Provides the city where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
      */
-    @SerializedName("city")
+    @SerializedName(value = "city", alternate = {"City"})
     @Expose
     public String city;
 
@@ -44,7 +44,7 @@ public class SignInLocation implements IJsonBackedObject {
      * The Country Or Region.
      * Provides the country code info (2 letter code) where the sign-in originated.  This is calculated using latitude/longitude information from the sign-in activity.
      */
-    @SerializedName("countryOrRegion")
+    @SerializedName(value = "countryOrRegion", alternate = {"CountryOrRegion"})
     @Expose
     public String countryOrRegion;
 
@@ -52,7 +52,7 @@ public class SignInLocation implements IJsonBackedObject {
      * The Geo Coordinates.
      * Provides the latitude, longitude and altitude where the sign-in originated.
      */
-    @SerializedName("geoCoordinates")
+    @SerializedName(value = "geoCoordinates", alternate = {"GeoCoordinates"})
     @Expose
     public GeoCoordinates geoCoordinates;
 
@@ -60,7 +60,7 @@ public class SignInLocation implements IJsonBackedObject {
      * The State.
      * Provides the State where the sign-in originated. This is calculated using latitude/longitude information from the sign-in activity.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public String state;
 

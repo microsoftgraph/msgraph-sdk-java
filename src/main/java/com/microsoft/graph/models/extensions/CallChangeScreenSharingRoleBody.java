@@ -22,7 +22,7 @@ public class CallChangeScreenSharingRoleBody {
      * The role.
      * 
      */
-    @SerializedName("role")
+    @SerializedName(value = "role", alternate = {"Role"})
     @Expose
     public ScreenSharingRole role;
 

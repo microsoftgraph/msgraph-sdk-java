@@ -22,7 +22,7 @@ public class WorkbookFunctionsSubstituteBody {
      * The text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public com.google.gson.JsonElement text;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsSubstituteBody {
      * The old Text.
      * 
      */
-    @SerializedName("oldText")
+    @SerializedName(value = "oldText", alternate = {"OldText"})
     @Expose
     public com.google.gson.JsonElement oldText;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsSubstituteBody {
      * The new Text.
      * 
      */
-    @SerializedName("newText")
+    @SerializedName(value = "newText", alternate = {"NewText"})
     @Expose
     public com.google.gson.JsonElement newText;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsSubstituteBody {
      * The instance Num.
      * 
      */
-    @SerializedName("instanceNum")
+    @SerializedName(value = "instanceNum", alternate = {"InstanceNum"})
     @Expose
     public com.google.gson.JsonElement instanceNum;
 

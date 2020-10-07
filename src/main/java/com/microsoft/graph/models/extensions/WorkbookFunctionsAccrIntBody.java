@@ -22,7 +22,7 @@ public class WorkbookFunctionsAccrIntBody {
      * The issue.
      * 
      */
-    @SerializedName("issue")
+    @SerializedName(value = "issue", alternate = {"Issue"})
     @Expose
     public com.google.gson.JsonElement issue;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsAccrIntBody {
      * The first Interest.
      * 
      */
-    @SerializedName("firstInterest")
+    @SerializedName(value = "firstInterest", alternate = {"FirstInterest"})
     @Expose
     public com.google.gson.JsonElement firstInterest;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsAccrIntBody {
      * The settlement.
      * 
      */
-    @SerializedName("settlement")
+    @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
     public com.google.gson.JsonElement settlement;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsAccrIntBody {
      * The rate.
      * 
      */
-    @SerializedName("rate")
+    @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
     public com.google.gson.JsonElement rate;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsAccrIntBody {
      * The par.
      * 
      */
-    @SerializedName("par")
+    @SerializedName(value = "par", alternate = {"Par"})
     @Expose
     public com.google.gson.JsonElement par;
 
@@ -62,7 +62,7 @@ public class WorkbookFunctionsAccrIntBody {
      * The frequency.
      * 
      */
-    @SerializedName("frequency")
+    @SerializedName(value = "frequency", alternate = {"Frequency"})
     @Expose
     public com.google.gson.JsonElement frequency;
 
@@ -70,7 +70,7 @@ public class WorkbookFunctionsAccrIntBody {
      * The basis.
      * 
      */
-    @SerializedName("basis")
+    @SerializedName(value = "basis", alternate = {"Basis"})
     @Expose
     public com.google.gson.JsonElement basis;
 
@@ -78,7 +78,7 @@ public class WorkbookFunctionsAccrIntBody {
      * The calc Method.
      * 
      */
-    @SerializedName("calcMethod")
+    @SerializedName(value = "calcMethod", alternate = {"CalcMethod"})
     @Expose
     public com.google.gson.JsonElement calcMethod;
 

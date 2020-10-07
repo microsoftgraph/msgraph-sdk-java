@@ -22,7 +22,7 @@ public class WorkbookFunctionsNumberValueBody {
      * The text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public com.google.gson.JsonElement text;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsNumberValueBody {
      * The decimal Separator.
      * 
      */
-    @SerializedName("decimalSeparator")
+    @SerializedName(value = "decimalSeparator", alternate = {"DecimalSeparator"})
     @Expose
     public com.google.gson.JsonElement decimalSeparator;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsNumberValueBody {
      * The group Separator.
      * 
      */
-    @SerializedName("groupSeparator")
+    @SerializedName(value = "groupSeparator", alternate = {"GroupSeparator"})
     @Expose
     public com.google.gson.JsonElement groupSeparator;
 

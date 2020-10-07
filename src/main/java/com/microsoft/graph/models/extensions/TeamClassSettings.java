@@ -35,7 +35,7 @@ public class TeamClassSettings implements IJsonBackedObject {
      * The Notify Guardians About Assignments.
      * If set to true, enables sending of weekly assignments digest emails to parents/guardians, provided the tenant admin has enabled the setting globally.
      */
-    @SerializedName("notifyGuardiansAboutAssignments")
+    @SerializedName(value = "notifyGuardiansAboutAssignments", alternate = {"NotifyGuardiansAboutAssignments"})
     @Expose
     public Boolean notifyGuardiansAboutAssignments;
 

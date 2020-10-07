@@ -35,7 +35,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
      * The Allow Auto Filter.
      * Represents the worksheet protection option of allowing using auto filter feature.
      */
-    @SerializedName("allowAutoFilter")
+    @SerializedName(value = "allowAutoFilter", alternate = {"AllowAutoFilter"})
     @Expose
     public Boolean allowAutoFilter;
 
@@ -43,7 +43,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
      * The Allow Delete Columns.
      * Represents the worksheet protection option of allowing deleting columns.
      */
-    @SerializedName("allowDeleteColumns")
+    @SerializedName(value = "allowDeleteColumns", alternate = {"AllowDeleteColumns"})
     @Expose
     public Boolean allowDeleteColumns;
 
@@ -51,7 +51,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
      * The Allow Delete Rows.
      * Represents the worksheet protection option of allowing deleting rows.
      */
-    @SerializedName("allowDeleteRows")
+    @SerializedName(value = "allowDeleteRows", alternate = {"AllowDeleteRows"})
     @Expose
     public Boolean allowDeleteRows;
 
@@ -59,7 +59,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
      * The Allow Format Cells.
      * Represents the worksheet protection option of allowing formatting cells.
      */
-    @SerializedName("allowFormatCells")
+    @SerializedName(value = "allowFormatCells", alternate = {"AllowFormatCells"})
     @Expose
     public Boolean allowFormatCells;
 
@@ -67,7 +67,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
      * The Allow Format Columns.
      * Represents the worksheet protection option of allowing formatting columns.
      */
-    @SerializedName("allowFormatColumns")
+    @SerializedName(value = "allowFormatColumns", alternate = {"AllowFormatColumns"})
     @Expose
     public Boolean allowFormatColumns;
 
@@ -75,7 +75,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
      * The Allow Format Rows.
      * Represents the worksheet protection option of allowing formatting rows.
      */
-    @SerializedName("allowFormatRows")
+    @SerializedName(value = "allowFormatRows", alternate = {"AllowFormatRows"})
     @Expose
     public Boolean allowFormatRows;
 
@@ -83,7 +83,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
      * The Allow Insert Columns.
      * Represents the worksheet protection option of allowing inserting columns.
      */
-    @SerializedName("allowInsertColumns")
+    @SerializedName(value = "allowInsertColumns", alternate = {"AllowInsertColumns"})
     @Expose
     public Boolean allowInsertColumns;
 
@@ -91,7 +91,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
      * The Allow Insert Hyperlinks.
      * Represents the worksheet protection option of allowing inserting hyperlinks.
      */
-    @SerializedName("allowInsertHyperlinks")
+    @SerializedName(value = "allowInsertHyperlinks", alternate = {"AllowInsertHyperlinks"})
     @Expose
     public Boolean allowInsertHyperlinks;
 
@@ -99,7 +99,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
      * The Allow Insert Rows.
      * Represents the worksheet protection option of allowing inserting rows.
      */
-    @SerializedName("allowInsertRows")
+    @SerializedName(value = "allowInsertRows", alternate = {"AllowInsertRows"})
     @Expose
     public Boolean allowInsertRows;
 
@@ -107,7 +107,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
      * The Allow Pivot Tables.
      * Represents the worksheet protection option of allowing using pivot table feature.
      */
-    @SerializedName("allowPivotTables")
+    @SerializedName(value = "allowPivotTables", alternate = {"AllowPivotTables"})
     @Expose
     public Boolean allowPivotTables;
 
@@ -115,7 +115,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
      * The Allow Sort.
      * Represents the worksheet protection option of allowing using sort feature.
      */
-    @SerializedName("allowSort")
+    @SerializedName(value = "allowSort", alternate = {"AllowSort"})
     @Expose
     public Boolean allowSort;
 

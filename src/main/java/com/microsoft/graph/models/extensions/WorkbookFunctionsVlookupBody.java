@@ -22,7 +22,7 @@ public class WorkbookFunctionsVlookupBody {
      * The lookup Value.
      * 
      */
-    @SerializedName("lookupValue")
+    @SerializedName(value = "lookupValue", alternate = {"LookupValue"})
     @Expose
     public com.google.gson.JsonElement lookupValue;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsVlookupBody {
      * The table Array.
      * 
      */
-    @SerializedName("tableArray")
+    @SerializedName(value = "tableArray", alternate = {"TableArray"})
     @Expose
     public com.google.gson.JsonElement tableArray;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsVlookupBody {
      * The col Index Num.
      * 
      */
-    @SerializedName("colIndexNum")
+    @SerializedName(value = "colIndexNum", alternate = {"ColIndexNum"})
     @Expose
     public com.google.gson.JsonElement colIndexNum;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsVlookupBody {
      * The range Lookup.
      * 
      */
-    @SerializedName("rangeLookup")
+    @SerializedName(value = "rangeLookup", alternate = {"RangeLookup"})
     @Expose
     public com.google.gson.JsonElement rangeLookup;
 

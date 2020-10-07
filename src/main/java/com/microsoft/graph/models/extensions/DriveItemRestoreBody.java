@@ -23,7 +23,7 @@ public class DriveItemRestoreBody {
      * The parent Reference.
      * 
      */
-    @SerializedName("parentReference")
+    @SerializedName(value = "parentReference", alternate = {"ParentReference"})
     @Expose
     public ItemReference parentReference;
 
@@ -31,7 +31,7 @@ public class DriveItemRestoreBody {
      * The name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 

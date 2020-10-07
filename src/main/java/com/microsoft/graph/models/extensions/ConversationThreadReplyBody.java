@@ -22,7 +22,7 @@ public class ConversationThreadReplyBody {
      * The post.
      * 
      */
-    @SerializedName("post")
+    @SerializedName(value = "post", alternate = {"Post"})
     @Expose
     public Post post;
 

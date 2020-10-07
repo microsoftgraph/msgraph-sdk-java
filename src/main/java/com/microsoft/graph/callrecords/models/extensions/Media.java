@@ -38,7 +38,7 @@ public class Media implements IJsonBackedObject {
      * The Callee Device.
      * Device information associated with the callee endpoint of this media.
      */
-    @SerializedName("calleeDevice")
+    @SerializedName(value = "calleeDevice", alternate = {"CalleeDevice"})
     @Expose
     public DeviceInfo calleeDevice;
 
@@ -46,7 +46,7 @@ public class Media implements IJsonBackedObject {
      * The Callee Network.
      * Network information associated with the callee endpoint of this media.
      */
-    @SerializedName("calleeNetwork")
+    @SerializedName(value = "calleeNetwork", alternate = {"CalleeNetwork"})
     @Expose
     public NetworkInfo calleeNetwork;
 
@@ -54,7 +54,7 @@ public class Media implements IJsonBackedObject {
      * The Caller Device.
      * Device information associated with the caller endpoint of this media.
      */
-    @SerializedName("callerDevice")
+    @SerializedName(value = "callerDevice", alternate = {"CallerDevice"})
     @Expose
     public DeviceInfo callerDevice;
 
@@ -62,7 +62,7 @@ public class Media implements IJsonBackedObject {
      * The Caller Network.
      * Network information associated with the caller endpoint of this media.
      */
-    @SerializedName("callerNetwork")
+    @SerializedName(value = "callerNetwork", alternate = {"CallerNetwork"})
     @Expose
     public NetworkInfo callerNetwork;
 
@@ -70,7 +70,7 @@ public class Media implements IJsonBackedObject {
      * The Label.
      * How the media was identified during media negotiation stage.
      */
-    @SerializedName("label")
+    @SerializedName(value = "label", alternate = {"Label"})
     @Expose
     public String label;
 
@@ -78,7 +78,7 @@ public class Media implements IJsonBackedObject {
      * The Streams.
      * Network streams associated with this media.
      */
-    @SerializedName("streams")
+    @SerializedName(value = "streams", alternate = {"Streams"})
     @Expose
     public java.util.List<MediaStream> streams;
 

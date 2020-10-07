@@ -22,7 +22,7 @@ public class WorkbookFilterApplyTopPercentFilterBody {
      * The percent.
      * 
      */
-    @SerializedName("percent")
+    @SerializedName(value = "percent", alternate = {"Percent"})
     @Expose
     public Integer percent;
 

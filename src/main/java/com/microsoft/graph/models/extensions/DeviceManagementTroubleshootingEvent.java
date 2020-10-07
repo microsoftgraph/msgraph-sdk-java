@@ -26,7 +26,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements IJso
      * The Correlation Id.
      * Id used for tracing the failure in the service.
      */
-    @SerializedName("correlationId")
+    @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
     public String correlationId;
 
@@ -34,7 +34,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements IJso
      * The Event Date Time.
      * Time when the event occurred .
      */
-    @SerializedName("eventDateTime")
+    @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
     public java.util.Calendar eventDateTime;
 

@@ -26,7 +26,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
      * The Members.
      * The list of ids of role member security groups. These are IDs from Azure Active Directory.
      */
-    @SerializedName("members")
+    @SerializedName(value = "members", alternate = {"Members"})
     @Expose
     public java.util.List<String> members;
 

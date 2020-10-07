@@ -36,7 +36,7 @@ public class AttachmentItem implements IJsonBackedObject {
      * The Attachment Type.
      * The type of attachment. Possible values are: file, item, reference. Required.
      */
-    @SerializedName("attachmentType")
+    @SerializedName(value = "attachmentType", alternate = {"AttachmentType"})
     @Expose
     public AttachmentType attachmentType;
 
@@ -44,7 +44,7 @@ public class AttachmentItem implements IJsonBackedObject {
      * The Content Type.
      * The nature of the data in the attachment. Optional.
      */
-    @SerializedName("contentType")
+    @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
     public String contentType;
 
@@ -52,7 +52,7 @@ public class AttachmentItem implements IJsonBackedObject {
      * The Is Inline.
      * true if the attachment is an inline attachment; otherwise, false. Optional.
      */
-    @SerializedName("isInline")
+    @SerializedName(value = "isInline", alternate = {"IsInline"})
     @Expose
     public Boolean isInline;
 
@@ -60,7 +60,7 @@ public class AttachmentItem implements IJsonBackedObject {
      * The Name.
      * The display name of the attachment. This can be a descriptive string and does not have to be the actual file name. Required.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -68,7 +68,7 @@ public class AttachmentItem implements IJsonBackedObject {
      * The Size.
      * The length of the attachment in bytes. Required.
      */
-    @SerializedName("size")
+    @SerializedName(value = "size", alternate = {"Size"})
     @Expose
     public Long size;
 

@@ -22,7 +22,7 @@ public class WorkbookFunctionsAverageIfBody {
      * The range.
      * 
      */
-    @SerializedName("range")
+    @SerializedName(value = "range", alternate = {"Range"})
     @Expose
     public com.google.gson.JsonElement range;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsAverageIfBody {
      * The criteria.
      * 
      */
-    @SerializedName("criteria")
+    @SerializedName(value = "criteria", alternate = {"Criteria"})
     @Expose
     public com.google.gson.JsonElement criteria;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsAverageIfBody {
      * The average Range.
      * 
      */
-    @SerializedName("averageRange")
+    @SerializedName(value = "averageRange", alternate = {"AverageRange"})
     @Expose
     public com.google.gson.JsonElement averageRange;
 

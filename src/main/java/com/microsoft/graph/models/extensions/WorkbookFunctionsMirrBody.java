@@ -22,7 +22,7 @@ public class WorkbookFunctionsMirrBody {
      * The values.
      * 
      */
-    @SerializedName("values")
+    @SerializedName(value = "values", alternate = {"Values"})
     @Expose
     public com.google.gson.JsonElement values;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsMirrBody {
      * The finance Rate.
      * 
      */
-    @SerializedName("financeRate")
+    @SerializedName(value = "financeRate", alternate = {"FinanceRate"})
     @Expose
     public com.google.gson.JsonElement financeRate;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsMirrBody {
      * The reinvest Rate.
      * 
      */
-    @SerializedName("reinvestRate")
+    @SerializedName(value = "reinvestRate", alternate = {"ReinvestRate"})
     @Expose
     public com.google.gson.JsonElement reinvestRate;
 

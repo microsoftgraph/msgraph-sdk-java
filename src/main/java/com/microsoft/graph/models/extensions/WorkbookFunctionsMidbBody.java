@@ -22,7 +22,7 @@ public class WorkbookFunctionsMidbBody {
      * The text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public com.google.gson.JsonElement text;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsMidbBody {
      * The start Num.
      * 
      */
-    @SerializedName("startNum")
+    @SerializedName(value = "startNum", alternate = {"StartNum"})
     @Expose
     public com.google.gson.JsonElement startNum;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsMidbBody {
      * The num Bytes.
      * 
      */
-    @SerializedName("numBytes")
+    @SerializedName(value = "numBytes", alternate = {"NumBytes"})
     @Expose
     public com.google.gson.JsonElement numBytes;
 

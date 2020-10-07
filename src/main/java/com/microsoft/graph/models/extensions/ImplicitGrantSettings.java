@@ -35,7 +35,7 @@ public class ImplicitGrantSettings implements IJsonBackedObject {
      * The Enable Access Token Issuance.
      * Specifies whether this web application can request an access token using the OAuth 2.0 implicit flow.
      */
-    @SerializedName("enableAccessTokenIssuance")
+    @SerializedName(value = "enableAccessTokenIssuance", alternate = {"EnableAccessTokenIssuance"})
     @Expose
     public Boolean enableAccessTokenIssuance;
 
@@ -43,7 +43,7 @@ public class ImplicitGrantSettings implements IJsonBackedObject {
      * The Enable Id Token Issuance.
      * Specifies whether this web application can request an ID token using the OAuth 2.0 implicit flow.
      */
-    @SerializedName("enableIdTokenIssuance")
+    @SerializedName(value = "enableIdTokenIssuance", alternate = {"EnableIdTokenIssuance"})
     @Expose
     public Boolean enableIdTokenIssuance;
 

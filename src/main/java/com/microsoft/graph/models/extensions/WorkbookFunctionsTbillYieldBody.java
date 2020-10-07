@@ -22,7 +22,7 @@ public class WorkbookFunctionsTbillYieldBody {
      * The settlement.
      * 
      */
-    @SerializedName("settlement")
+    @SerializedName(value = "settlement", alternate = {"Settlement"})
     @Expose
     public com.google.gson.JsonElement settlement;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsTbillYieldBody {
      * The maturity.
      * 
      */
-    @SerializedName("maturity")
+    @SerializedName(value = "maturity", alternate = {"Maturity"})
     @Expose
     public com.google.gson.JsonElement maturity;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsTbillYieldBody {
      * The pr.
      * 
      */
-    @SerializedName("pr")
+    @SerializedName(value = "pr", alternate = {"Pr"})
     @Expose
     public com.google.gson.JsonElement pr;
 

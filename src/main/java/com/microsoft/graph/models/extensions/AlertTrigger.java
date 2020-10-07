@@ -35,7 +35,7 @@ public class AlertTrigger implements IJsonBackedObject {
      * The Name.
      * Name of the property serving as a detection trigger.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -43,7 +43,7 @@ public class AlertTrigger implements IJsonBackedObject {
      * The Type.
      * Type of the property in the key:value pair for interpretation. For example, String, Boolean, etc.
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public String type;
 
@@ -51,7 +51,7 @@ public class AlertTrigger implements IJsonBackedObject {
      * The Value.
      * Value of the property serving as a detection trigger.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public String value;
 

@@ -36,7 +36,7 @@ public class PendingOperations implements IJsonBackedObject {
      * The Pending Content Update.
      * A property that indicates that an operation that might update the binary content of a file is pending completion.
      */
-    @SerializedName("pendingContentUpdate")
+    @SerializedName(value = "pendingContentUpdate", alternate = {"PendingContentUpdate"})
     @Expose
     public PendingContentUpdate pendingContentUpdate;
 

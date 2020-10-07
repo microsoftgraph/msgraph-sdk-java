@@ -35,7 +35,7 @@ public class SharepointIds implements IJsonBackedObject {
      * The List Id.
      * The unique identifier (guid) for the item's list in SharePoint.
      */
-    @SerializedName("listId")
+    @SerializedName(value = "listId", alternate = {"ListId"})
     @Expose
     public String listId;
 
@@ -43,7 +43,7 @@ public class SharepointIds implements IJsonBackedObject {
      * The List Item Id.
      * An integer identifier for the item within the containing list.
      */
-    @SerializedName("listItemId")
+    @SerializedName(value = "listItemId", alternate = {"ListItemId"})
     @Expose
     public String listItemId;
 
@@ -51,7 +51,7 @@ public class SharepointIds implements IJsonBackedObject {
      * The List Item Unique Id.
      * The unique identifier (guid) for the item within OneDrive for Business or a SharePoint site.
      */
-    @SerializedName("listItemUniqueId")
+    @SerializedName(value = "listItemUniqueId", alternate = {"ListItemUniqueId"})
     @Expose
     public String listItemUniqueId;
 
@@ -59,7 +59,7 @@ public class SharepointIds implements IJsonBackedObject {
      * The Site Id.
      * The unique identifier (guid) for the item's site collection (SPSite).
      */
-    @SerializedName("siteId")
+    @SerializedName(value = "siteId", alternate = {"SiteId"})
     @Expose
     public String siteId;
 
@@ -67,7 +67,7 @@ public class SharepointIds implements IJsonBackedObject {
      * The Site Url.
      * The SharePoint URL for the site that contains the item.
      */
-    @SerializedName("siteUrl")
+    @SerializedName(value = "siteUrl", alternate = {"SiteUrl"})
     @Expose
     public String siteUrl;
 
@@ -75,7 +75,7 @@ public class SharepointIds implements IJsonBackedObject {
      * The Tenant Id.
      * The unique identifier (guid) for the tenancy.
      */
-    @SerializedName("tenantId")
+    @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
     public String tenantId;
 
@@ -83,7 +83,7 @@ public class SharepointIds implements IJsonBackedObject {
      * The Web Id.
      * The unique identifier (guid) for the item's site (SPWeb).
      */
-    @SerializedName("webId")
+    @SerializedName(value = "webId", alternate = {"WebId"})
     @Expose
     public String webId;
 

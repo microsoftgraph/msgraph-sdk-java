@@ -26,7 +26,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements IJsonBacked
      * The End Date Time.
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("endDateTime")
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
     public java.util.Calendar endDateTime;
 
@@ -34,7 +34,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements IJsonBacked
      * The Start Date Time.
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("startDateTime")
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
     public java.util.Calendar startDateTime;
 
@@ -42,7 +42,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements IJsonBacked
      * The Time Off Reason Id.
      * The reason for the time off.
      */
-    @SerializedName("timeOffReasonId")
+    @SerializedName(value = "timeOffReasonId", alternate = {"TimeOffReasonId"})
     @Expose
     public String timeOffReasonId;
 

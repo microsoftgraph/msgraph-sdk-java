@@ -22,7 +22,7 @@ public class DirectoryObjectGetAvailableExtensionPropertiesBody {
      * The is Synced From On Premises.
      * 
      */
-    @SerializedName("isSyncedFromOnPremises")
+    @SerializedName(value = "isSyncedFromOnPremises", alternate = {"IsSyncedFromOnPremises"})
     @Expose
     public Boolean isSyncedFromOnPremises;
 

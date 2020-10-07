@@ -24,7 +24,7 @@ public class TeamCloneBody {
      * The display Name.
      * 
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -32,7 +32,7 @@ public class TeamCloneBody {
      * The description.
      * 
      */
-    @SerializedName("description")
+    @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
 
@@ -40,7 +40,7 @@ public class TeamCloneBody {
      * The mail Nickname.
      * 
      */
-    @SerializedName("mailNickname")
+    @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
     public String mailNickname;
 
@@ -48,7 +48,7 @@ public class TeamCloneBody {
      * The classification.
      * 
      */
-    @SerializedName("classification")
+    @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
     public String classification;
 
@@ -56,7 +56,7 @@ public class TeamCloneBody {
      * The visibility.
      * 
      */
-    @SerializedName("visibility")
+    @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
     public TeamVisibilityType visibility;
 
@@ -64,7 +64,7 @@ public class TeamCloneBody {
      * The parts To Clone.
      * 
      */
-    @SerializedName("partsToClone")
+    @SerializedName(value = "partsToClone", alternate = {"PartsToClone"})
     @Expose
     public EnumSet<ClonableTeamParts> partsToClone;
 

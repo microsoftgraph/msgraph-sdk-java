@@ -22,7 +22,7 @@ public class WorkbookFunctionsErfC_PreciseBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 

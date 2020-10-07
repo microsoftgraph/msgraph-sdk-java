@@ -27,7 +27,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
      * The Compliance Grace Period Expiration Date Time.
      * The DateTime when device compliance grace period expires
      */
-    @SerializedName("complianceGracePeriodExpirationDateTime")
+    @SerializedName(value = "complianceGracePeriodExpirationDateTime", alternate = {"ComplianceGracePeriodExpirationDateTime"})
     @Expose
     public java.util.Calendar complianceGracePeriodExpirationDateTime;
 
@@ -35,7 +35,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
      * The Device Id.
      * The Device Id that is being reported
      */
-    @SerializedName("deviceId")
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
     public String deviceId;
 
@@ -43,7 +43,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
      * The Device Model.
      * The device model that is being reported
      */
-    @SerializedName("deviceModel")
+    @SerializedName(value = "deviceModel", alternate = {"DeviceModel"})
     @Expose
     public String deviceModel;
 
@@ -51,7 +51,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
      * The Device Name.
      * The Device Name that is being reported
      */
-    @SerializedName("deviceName")
+    @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
     public String deviceName;
 
@@ -59,7 +59,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
      * The Setting.
      * The setting class name and property name.
      */
-    @SerializedName("setting")
+    @SerializedName(value = "setting", alternate = {"Setting"})
     @Expose
     public String setting;
 
@@ -67,7 +67,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
      * The Setting Name.
      * The Setting Name that is being reported
      */
-    @SerializedName("settingName")
+    @SerializedName(value = "settingName", alternate = {"SettingName"})
     @Expose
     public String settingName;
 
@@ -75,7 +75,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
      * The State.
      * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public ComplianceStatus state;
 
@@ -83,7 +83,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
      * The User Email.
      * The User email address that is being reported
      */
-    @SerializedName("userEmail")
+    @SerializedName(value = "userEmail", alternate = {"UserEmail"})
     @Expose
     public String userEmail;
 
@@ -91,7 +91,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
      * The User Id.
      * The user Id that is being reported
      */
-    @SerializedName("userId")
+    @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
     public String userId;
 
@@ -99,7 +99,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
      * The User Name.
      * The User Name that is being reported
      */
-    @SerializedName("userName")
+    @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose
     public String userName;
 
@@ -107,7 +107,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
      * The User Principal Name.
      * The User PrincipalName that is being reported
      */
-    @SerializedName("userPrincipalName")
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
 

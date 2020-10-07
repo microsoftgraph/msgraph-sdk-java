@@ -22,7 +22,7 @@ public class EventSnoozeReminderBody {
      * The new Reminder Time.
      * 
      */
-    @SerializedName("newReminderTime")
+    @SerializedName(value = "newReminderTime", alternate = {"NewReminderTime"})
     @Expose
     public DateTimeTimeZone newReminderTime;
 

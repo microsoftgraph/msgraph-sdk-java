@@ -35,7 +35,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Assigned Plans.
      * The collection of service plans associated with the tenant. Not nullable.
      */
-    @SerializedName("assignedPlans")
+    @SerializedName(value = "assignedPlans", alternate = {"AssignedPlans"})
     @Expose
     public java.util.List<AssignedPlan> assignedPlans;
 
@@ -43,7 +43,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Business Phones.
      * Telephone number for the organization. NOTE: Although this is a string collection, only one number can be set for this property.
      */
-    @SerializedName("businessPhones")
+    @SerializedName(value = "businessPhones", alternate = {"BusinessPhones"})
     @Expose
     public java.util.List<String> businessPhones;
 
@@ -51,7 +51,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The City.
      * City name of the address for the organization.
      */
-    @SerializedName("city")
+    @SerializedName(value = "city", alternate = {"City"})
     @Expose
     public String city;
 
@@ -59,7 +59,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Country.
      * Country/region name of the address for the organization.
      */
-    @SerializedName("country")
+    @SerializedName(value = "country", alternate = {"Country"})
     @Expose
     public String country;
 
@@ -67,7 +67,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Country Letter Code.
      * Country/region abbreviation for the organization.
      */
-    @SerializedName("countryLetterCode")
+    @SerializedName(value = "countryLetterCode", alternate = {"CountryLetterCode"})
     @Expose
     public String countryLetterCode;
 
@@ -75,7 +75,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Created Date Time.
      * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -83,7 +83,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Display Name.
      * The display name for the tenant.
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -91,7 +91,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Marketing Notification Emails.
      * Not nullable.
      */
-    @SerializedName("marketingNotificationEmails")
+    @SerializedName(value = "marketingNotificationEmails", alternate = {"MarketingNotificationEmails"})
     @Expose
     public java.util.List<String> marketingNotificationEmails;
 
@@ -99,7 +99,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Last Sync Date Time.
      * The time and date at which the tenant was last synced with the on-premise directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
-    @SerializedName("onPremisesLastSyncDateTime")
+    @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
     public java.util.Calendar onPremisesLastSyncDateTime;
 
@@ -107,7 +107,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The On Premises Sync Enabled.
      * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
      */
-    @SerializedName("onPremisesSyncEnabled")
+    @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
     public Boolean onPremisesSyncEnabled;
 
@@ -115,7 +115,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Postal Code.
      * Postal code of the address for the organization.
      */
-    @SerializedName("postalCode")
+    @SerializedName(value = "postalCode", alternate = {"PostalCode"})
     @Expose
     public String postalCode;
 
@@ -123,7 +123,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Preferred Language.
      * The preferred language for the organization. Should follow ISO 639-1 Code; for example 'en'.
      */
-    @SerializedName("preferredLanguage")
+    @SerializedName(value = "preferredLanguage", alternate = {"PreferredLanguage"})
     @Expose
     public String preferredLanguage;
 
@@ -131,7 +131,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Privacy Profile.
      * The privacy profile of an organization.
      */
-    @SerializedName("privacyProfile")
+    @SerializedName(value = "privacyProfile", alternate = {"PrivacyProfile"})
     @Expose
     public PrivacyProfile privacyProfile;
 
@@ -139,7 +139,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Provisioned Plans.
      * Not nullable.
      */
-    @SerializedName("provisionedPlans")
+    @SerializedName(value = "provisionedPlans", alternate = {"ProvisionedPlans"})
     @Expose
     public java.util.List<ProvisionedPlan> provisionedPlans;
 
@@ -147,7 +147,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Security Compliance Notification Mails.
      * 
      */
-    @SerializedName("securityComplianceNotificationMails")
+    @SerializedName(value = "securityComplianceNotificationMails", alternate = {"SecurityComplianceNotificationMails"})
     @Expose
     public java.util.List<String> securityComplianceNotificationMails;
 
@@ -155,7 +155,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Security Compliance Notification Phones.
      * 
      */
-    @SerializedName("securityComplianceNotificationPhones")
+    @SerializedName(value = "securityComplianceNotificationPhones", alternate = {"SecurityComplianceNotificationPhones"})
     @Expose
     public java.util.List<String> securityComplianceNotificationPhones;
 
@@ -163,7 +163,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The State.
      * State name of the address for the organization.
      */
-    @SerializedName("state")
+    @SerializedName(value = "state", alternate = {"State"})
     @Expose
     public String state;
 
@@ -171,7 +171,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Street.
      * Street name of the address for organization.
      */
-    @SerializedName("street")
+    @SerializedName(value = "street", alternate = {"Street"})
     @Expose
     public String street;
 
@@ -179,7 +179,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Technical Notification Mails.
      * Not nullable.
      */
-    @SerializedName("technicalNotificationMails")
+    @SerializedName(value = "technicalNotificationMails", alternate = {"TechnicalNotificationMails"})
     @Expose
     public java.util.List<String> technicalNotificationMails;
 
@@ -187,7 +187,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Tenant Type.
      * 
      */
-    @SerializedName("tenantType")
+    @SerializedName(value = "tenantType", alternate = {"TenantType"})
     @Expose
     public String tenantType;
 
@@ -195,7 +195,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Verified Domains.
      * The collection of domains associated with this tenant. Not nullable.
      */
-    @SerializedName("verifiedDomains")
+    @SerializedName(value = "verifiedDomains", alternate = {"VerifiedDomains"})
     @Expose
     public java.util.List<VerifiedDomain> verifiedDomains;
 
@@ -203,7 +203,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Mobile Device Management Authority.
      * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
      */
-    @SerializedName("mobileDeviceManagementAuthority")
+    @SerializedName(value = "mobileDeviceManagementAuthority", alternate = {"MobileDeviceManagementAuthority"})
     @Expose
     public MdmAuthority mobileDeviceManagementAuthority;
 
@@ -217,7 +217,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      * The Extensions.
      * The collection of open extensions defined for the organization. Read-only. Nullable.
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public ExtensionCollectionPage extensions;
 

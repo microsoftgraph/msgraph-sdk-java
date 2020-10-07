@@ -35,7 +35,7 @@ public class PersonType implements IJsonBackedObject {
      * The Class.
      * The type of data source, such as Person.
      */
-    @SerializedName("class")
+    @SerializedName(value = "class", alternate = {"Class"})
     @Expose
     public String msgraphClass;
 
@@ -43,7 +43,7 @@ public class PersonType implements IJsonBackedObject {
      * The Subclass.
      * The secondary type of data source, such as OrganizationUser.
      */
-    @SerializedName("subclass")
+    @SerializedName(value = "subclass", alternate = {"Subclass"})
     @Expose
     public String subclass;
 

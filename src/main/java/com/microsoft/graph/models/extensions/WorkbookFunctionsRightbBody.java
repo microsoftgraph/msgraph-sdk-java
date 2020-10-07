@@ -22,7 +22,7 @@ public class WorkbookFunctionsRightbBody {
      * The text.
      * 
      */
-    @SerializedName("text")
+    @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public com.google.gson.JsonElement text;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsRightbBody {
      * The num Bytes.
      * 
      */
-    @SerializedName("numBytes")
+    @SerializedName(value = "numBytes", alternate = {"NumBytes"})
     @Expose
     public com.google.gson.JsonElement numBytes;
 

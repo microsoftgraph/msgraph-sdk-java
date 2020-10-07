@@ -35,7 +35,7 @@ public class WindowsInformationProtectionResourceCollection implements IJsonBack
      * The Display Name.
      * Display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -43,7 +43,7 @@ public class WindowsInformationProtectionResourceCollection implements IJsonBack
      * The Resources.
      * Collection of resources
      */
-    @SerializedName("resources")
+    @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
     public java.util.List<String> resources;
 

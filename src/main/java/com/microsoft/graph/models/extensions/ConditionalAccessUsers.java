@@ -35,7 +35,7 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
      * The Exclude Groups.
      * Group IDs excluded from scope of policy.
      */
-    @SerializedName("excludeGroups")
+    @SerializedName(value = "excludeGroups", alternate = {"ExcludeGroups"})
     @Expose
     public java.util.List<String> excludeGroups;
 
@@ -43,7 +43,7 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
      * The Exclude Roles.
      * Role IDs excluded from scope of policy.
      */
-    @SerializedName("excludeRoles")
+    @SerializedName(value = "excludeRoles", alternate = {"ExcludeRoles"})
     @Expose
     public java.util.List<String> excludeRoles;
 
@@ -51,7 +51,7 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
      * The Exclude Users.
      * User IDs excluded from scope of policy and/or GuestsOrExternalUsers.
      */
-    @SerializedName("excludeUsers")
+    @SerializedName(value = "excludeUsers", alternate = {"ExcludeUsers"})
     @Expose
     public java.util.List<String> excludeUsers;
 
@@ -59,7 +59,7 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
      * The Include Groups.
      * Group IDs in scope of policy unless explicitly excluded, or All.
      */
-    @SerializedName("includeGroups")
+    @SerializedName(value = "includeGroups", alternate = {"IncludeGroups"})
     @Expose
     public java.util.List<String> includeGroups;
 
@@ -67,7 +67,7 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
      * The Include Roles.
      * Role IDs in scope of policy unless explicitly excluded, or All.
      */
-    @SerializedName("includeRoles")
+    @SerializedName(value = "includeRoles", alternate = {"IncludeRoles"})
     @Expose
     public java.util.List<String> includeRoles;
 
@@ -75,7 +75,7 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
      * The Include Users.
      * User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
      */
-    @SerializedName("includeUsers")
+    @SerializedName(value = "includeUsers", alternate = {"IncludeUsers"})
     @Expose
     public java.util.List<String> includeUsers;
 

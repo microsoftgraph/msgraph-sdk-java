@@ -29,7 +29,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
      * The Cc Recipients.
      * The Cc: recipients for the thread.
      */
-    @SerializedName("ccRecipients")
+    @SerializedName(value = "ccRecipients", alternate = {"CcRecipients"})
     @Expose
     public java.util.List<Recipient> ccRecipients;
 
@@ -37,7 +37,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
      * The Has Attachments.
      * Indicates whether any of the posts within this thread has at least one attachment.
      */
-    @SerializedName("hasAttachments")
+    @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
     public Boolean hasAttachments;
 
@@ -45,7 +45,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
      * The Is Locked.
      * Indicates if the thread is locked.
      */
-    @SerializedName("isLocked")
+    @SerializedName(value = "isLocked", alternate = {"IsLocked"})
     @Expose
     public Boolean isLocked;
 
@@ -53,7 +53,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
      * The Last Delivered Date Time.
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("lastDeliveredDateTime")
+    @SerializedName(value = "lastDeliveredDateTime", alternate = {"LastDeliveredDateTime"})
     @Expose
     public java.util.Calendar lastDeliveredDateTime;
 
@@ -61,7 +61,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
      * The Preview.
      * A short summary from the body of the latest post in this conversation.
      */
-    @SerializedName("preview")
+    @SerializedName(value = "preview", alternate = {"Preview"})
     @Expose
     public String preview;
 
@@ -69,7 +69,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
      * The Topic.
      * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
      */
-    @SerializedName("topic")
+    @SerializedName(value = "topic", alternate = {"Topic"})
     @Expose
     public String topic;
 
@@ -77,7 +77,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
      * The To Recipients.
      * The To: recipients for the thread.
      */
-    @SerializedName("toRecipients")
+    @SerializedName(value = "toRecipients", alternate = {"ToRecipients"})
     @Expose
     public java.util.List<Recipient> toRecipients;
 
@@ -85,7 +85,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
      * The Unique Senders.
      * All the users that sent a message to this thread.
      */
-    @SerializedName("uniqueSenders")
+    @SerializedName(value = "uniqueSenders", alternate = {"UniqueSenders"})
     @Expose
     public java.util.List<String> uniqueSenders;
 
@@ -93,7 +93,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
      * The Posts.
      * Read-only. Nullable.
      */
-    @SerializedName("posts")
+    @SerializedName(value = "posts", alternate = {"Posts"})
     @Expose
     public PostCollectionPage posts;
 

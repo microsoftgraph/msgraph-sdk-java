@@ -38,7 +38,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
      * The External Audience.
      * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      */
-    @SerializedName("externalAudience")
+    @SerializedName(value = "externalAudience", alternate = {"ExternalAudience"})
     @Expose
     public ExternalAudienceScope externalAudience;
 
@@ -46,7 +46,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
      * The External Reply Message.
      * The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
      */
-    @SerializedName("externalReplyMessage")
+    @SerializedName(value = "externalReplyMessage", alternate = {"ExternalReplyMessage"})
     @Expose
     public String externalReplyMessage;
 
@@ -54,7 +54,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
      * The Internal Reply Message.
      * The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
      */
-    @SerializedName("internalReplyMessage")
+    @SerializedName(value = "internalReplyMessage", alternate = {"InternalReplyMessage"})
     @Expose
     public String internalReplyMessage;
 
@@ -62,7 +62,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
      * The Scheduled End Date Time.
      * The date and time that automatic replies are set to end, if Status is set to Scheduled.
      */
-    @SerializedName("scheduledEndDateTime")
+    @SerializedName(value = "scheduledEndDateTime", alternate = {"ScheduledEndDateTime"})
     @Expose
     public DateTimeTimeZone scheduledEndDateTime;
 
@@ -70,7 +70,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
      * The Scheduled Start Date Time.
      * The date and time that automatic replies are set to begin, if Status is set to Scheduled.
      */
-    @SerializedName("scheduledStartDateTime")
+    @SerializedName(value = "scheduledStartDateTime", alternate = {"ScheduledStartDateTime"})
     @Expose
     public DateTimeTimeZone scheduledStartDateTime;
 
@@ -78,7 +78,7 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
      * The Status.
      * Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
      */
-    @SerializedName("status")
+    @SerializedName(value = "status", alternate = {"Status"})
     @Expose
     public AutomaticRepliesStatus status;
 

@@ -31,7 +31,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
      * The Section Groups Url.
      * The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
      */
-    @SerializedName("sectionGroupsUrl")
+    @SerializedName(value = "sectionGroupsUrl", alternate = {"SectionGroupsUrl"})
     @Expose
     public String sectionGroupsUrl;
 
@@ -39,7 +39,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
      * The Sections Url.
      * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
      */
-    @SerializedName("sectionsUrl")
+    @SerializedName(value = "sectionsUrl", alternate = {"SectionsUrl"})
     @Expose
     public String sectionsUrl;
 
@@ -47,7 +47,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
      * The Parent Notebook.
      * The notebook that contains the section group. Read-only.
      */
-    @SerializedName("parentNotebook")
+    @SerializedName(value = "parentNotebook", alternate = {"ParentNotebook"})
     @Expose
     public Notebook parentNotebook;
 
@@ -55,7 +55,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
      * The Parent Section Group.
      * The section group that contains the section group. Read-only.
      */
-    @SerializedName("parentSectionGroup")
+    @SerializedName(value = "parentSectionGroup", alternate = {"ParentSectionGroup"})
     @Expose
     public SectionGroup parentSectionGroup;
 
@@ -63,7 +63,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
      * The Section Groups.
      * The section groups in the section. Read-only. Nullable.
      */
-    @SerializedName("sectionGroups")
+    @SerializedName(value = "sectionGroups", alternate = {"SectionGroups"})
     @Expose
     public SectionGroupCollectionPage sectionGroups;
 
@@ -71,7 +71,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
      * The Sections.
      * The sections in the section group. Read-only. Nullable.
      */
-    @SerializedName("sections")
+    @SerializedName(value = "sections", alternate = {"Sections"})
     @Expose
     public OnenoteSectionCollectionPage sections;
 

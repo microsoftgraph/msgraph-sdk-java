@@ -28,7 +28,7 @@ public class EventMessageResponse extends EventMessage implements IJsonBackedObj
      * The Proposed New Time.
      * 
      */
-    @SerializedName("proposedNewTime")
+    @SerializedName(value = "proposedNewTime", alternate = {"ProposedNewTime"})
     @Expose
     public TimeSlot proposedNewTime;
 
@@ -36,7 +36,7 @@ public class EventMessageResponse extends EventMessage implements IJsonBackedObj
      * The Response Type.
      * 
      */
-    @SerializedName("responseType")
+    @SerializedName(value = "responseType", alternate = {"ResponseType"})
     @Expose
     public ResponseType responseType;
 

@@ -22,7 +22,7 @@ public class WorkbookFunctionsHourBody {
      * The serial Number.
      * 
      */
-    @SerializedName("serialNumber")
+    @SerializedName(value = "serialNumber", alternate = {"SerialNumber"})
     @Expose
     public com.google.gson.JsonElement serialNumber;
 

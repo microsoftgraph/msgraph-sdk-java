@@ -22,7 +22,7 @@ public class WorkbookNamedItemAddBody {
      * The name.
      * 
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -30,7 +30,7 @@ public class WorkbookNamedItemAddBody {
      * The reference.
      * 
      */
-    @SerializedName("reference")
+    @SerializedName(value = "reference", alternate = {"Reference"})
     @Expose
     public com.google.gson.JsonElement reference;
 
@@ -38,7 +38,7 @@ public class WorkbookNamedItemAddBody {
      * The comment.
      * 
      */
-    @SerializedName("comment")
+    @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose
     public String comment;
 

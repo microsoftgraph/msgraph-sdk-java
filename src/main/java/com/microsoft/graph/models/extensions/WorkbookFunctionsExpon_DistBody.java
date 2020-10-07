@@ -22,7 +22,7 @@ public class WorkbookFunctionsExpon_DistBody {
      * The x.
      * 
      */
-    @SerializedName("x")
+    @SerializedName(value = "x", alternate = {"X"})
     @Expose
     public com.google.gson.JsonElement x;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsExpon_DistBody {
      * The lambda.
      * 
      */
-    @SerializedName("lambda")
+    @SerializedName(value = "lambda", alternate = {"Lambda"})
     @Expose
     public com.google.gson.JsonElement lambda;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsExpon_DistBody {
      * The cumulative.
      * 
      */
-    @SerializedName("cumulative")
+    @SerializedName(value = "cumulative", alternate = {"Cumulative"})
     @Expose
     public com.google.gson.JsonElement cumulative;
 

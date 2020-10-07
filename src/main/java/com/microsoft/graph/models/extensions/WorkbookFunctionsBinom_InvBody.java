@@ -22,7 +22,7 @@ public class WorkbookFunctionsBinom_InvBody {
      * The trials.
      * 
      */
-    @SerializedName("trials")
+    @SerializedName(value = "trials", alternate = {"Trials"})
     @Expose
     public com.google.gson.JsonElement trials;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsBinom_InvBody {
      * The probability S.
      * 
      */
-    @SerializedName("probabilityS")
+    @SerializedName(value = "probabilityS", alternate = {"ProbabilityS"})
     @Expose
     public com.google.gson.JsonElement probabilityS;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsBinom_InvBody {
      * The alpha.
      * 
      */
-    @SerializedName("alpha")
+    @SerializedName(value = "alpha", alternate = {"Alpha"})
     @Expose
     public com.google.gson.JsonElement alpha;
 

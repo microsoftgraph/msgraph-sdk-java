@@ -22,7 +22,7 @@ public class WorkbookRangeMergeBody {
      * The across.
      * 
      */
-    @SerializedName("across")
+    @SerializedName(value = "across", alternate = {"Across"})
     @Expose
     public Boolean across;
 

@@ -26,7 +26,7 @@ public class OnenoteEntityBaseModel extends Entity implements IJsonBackedObject 
      * The Self.
      * The endpoint where you can get details about the page. Read-only.
      */
-    @SerializedName("self")
+    @SerializedName(value = "self", alternate = {"Self"})
     @Expose
     public String self;
 

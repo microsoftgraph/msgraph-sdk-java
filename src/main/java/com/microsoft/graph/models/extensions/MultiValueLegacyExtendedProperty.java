@@ -26,7 +26,7 @@ public class MultiValueLegacyExtendedProperty extends Entity implements IJsonBac
      * The Value.
      * A collection of property values.
      */
-    @SerializedName("value")
+    @SerializedName(value = "value", alternate = {"Value"})
     @Expose
     public java.util.List<String> value;
 

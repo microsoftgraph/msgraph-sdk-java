@@ -35,7 +35,7 @@ public class StoragePlanInformation implements IJsonBackedObject {
      * The Upgrade Available.
      * Indicates whether there are higher storage quota plans available. Read-only.
      */
-    @SerializedName("upgradeAvailable")
+    @SerializedName(value = "upgradeAvailable", alternate = {"UpgradeAvailable"})
     @Expose
     public Boolean upgradeAvailable;
 

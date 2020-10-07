@@ -22,7 +22,7 @@ public class WorkbookFunctionsCumIPmtBody {
      * The rate.
      * 
      */
-    @SerializedName("rate")
+    @SerializedName(value = "rate", alternate = {"Rate"})
     @Expose
     public com.google.gson.JsonElement rate;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsCumIPmtBody {
      * The nper.
      * 
      */
-    @SerializedName("nper")
+    @SerializedName(value = "nper", alternate = {"Nper"})
     @Expose
     public com.google.gson.JsonElement nper;
 
@@ -38,7 +38,7 @@ public class WorkbookFunctionsCumIPmtBody {
      * The pv.
      * 
      */
-    @SerializedName("pv")
+    @SerializedName(value = "pv", alternate = {"Pv"})
     @Expose
     public com.google.gson.JsonElement pv;
 
@@ -46,7 +46,7 @@ public class WorkbookFunctionsCumIPmtBody {
      * The start Period.
      * 
      */
-    @SerializedName("startPeriod")
+    @SerializedName(value = "startPeriod", alternate = {"StartPeriod"})
     @Expose
     public com.google.gson.JsonElement startPeriod;
 
@@ -54,7 +54,7 @@ public class WorkbookFunctionsCumIPmtBody {
      * The end Period.
      * 
      */
-    @SerializedName("endPeriod")
+    @SerializedName(value = "endPeriod", alternate = {"EndPeriod"})
     @Expose
     public com.google.gson.JsonElement endPeriod;
 
@@ -62,7 +62,7 @@ public class WorkbookFunctionsCumIPmtBody {
      * The type.
      * 
      */
-    @SerializedName("type")
+    @SerializedName(value = "type", alternate = {"Type"})
     @Expose
     public com.google.gson.JsonElement type;
 

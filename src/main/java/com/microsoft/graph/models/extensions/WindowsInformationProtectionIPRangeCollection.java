@@ -36,7 +36,7 @@ public class WindowsInformationProtectionIPRangeCollection implements IJsonBacke
      * The Display Name.
      * Display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class WindowsInformationProtectionIPRangeCollection implements IJsonBacke
      * The Ranges.
      * Collection of Internet protocol address ranges
      */
-    @SerializedName("ranges")
+    @SerializedName(value = "ranges", alternate = {"Ranges"})
     @Expose
     public java.util.List<IpRange> ranges;
 

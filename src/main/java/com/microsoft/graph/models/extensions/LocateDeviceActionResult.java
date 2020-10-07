@@ -27,7 +27,7 @@ public class LocateDeviceActionResult extends DeviceActionResult implements IJso
      * The Device Location.
      * device location
      */
-    @SerializedName("deviceLocation")
+    @SerializedName(value = "deviceLocation", alternate = {"DeviceLocation"})
     @Expose
     public DeviceGeoLocation deviceLocation;
 

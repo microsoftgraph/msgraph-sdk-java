@@ -45,7 +45,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Enabled.
      * Indicates whether the schedule is enabled for the team. Required.
      */
-    @SerializedName("enabled")
+    @SerializedName(value = "enabled", alternate = {"Enabled"})
     @Expose
     public Boolean enabled;
 
@@ -53,7 +53,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Offer Shift Requests Enabled.
      * Indicates whether offer shift requests are enabled for the schedule.
      */
-    @SerializedName("offerShiftRequestsEnabled")
+    @SerializedName(value = "offerShiftRequestsEnabled", alternate = {"OfferShiftRequestsEnabled"})
     @Expose
     public Boolean offerShiftRequestsEnabled;
 
@@ -61,7 +61,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Open Shifts Enabled.
      * Indicates whether open shifts are enabled for the schedule.
      */
-    @SerializedName("openShiftsEnabled")
+    @SerializedName(value = "openShiftsEnabled", alternate = {"OpenShiftsEnabled"})
     @Expose
     public Boolean openShiftsEnabled;
 
@@ -69,7 +69,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Provision Status.
      * The status of the schedule provisioning. The possible values are notStarted, running, completed, failed.
      */
-    @SerializedName("provisionStatus")
+    @SerializedName(value = "provisionStatus", alternate = {"ProvisionStatus"})
     @Expose
     public OperationStatus provisionStatus;
 
@@ -77,7 +77,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Provision Status Code.
      * Additional information about why schedule provisioning failed.
      */
-    @SerializedName("provisionStatusCode")
+    @SerializedName(value = "provisionStatusCode", alternate = {"ProvisionStatusCode"})
     @Expose
     public String provisionStatusCode;
 
@@ -85,7 +85,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Swap Shifts Requests Enabled.
      * Indicates whether swap shifts requests are enabled for the schedule.
      */
-    @SerializedName("swapShiftsRequestsEnabled")
+    @SerializedName(value = "swapShiftsRequestsEnabled", alternate = {"SwapShiftsRequestsEnabled"})
     @Expose
     public Boolean swapShiftsRequestsEnabled;
 
@@ -93,7 +93,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Time Clock Enabled.
      * Indicates whether time clock is enabled for the schedule.
      */
-    @SerializedName("timeClockEnabled")
+    @SerializedName(value = "timeClockEnabled", alternate = {"TimeClockEnabled"})
     @Expose
     public Boolean timeClockEnabled;
 
@@ -101,7 +101,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Time Off Requests Enabled.
      * Indicates whether time off requests are enabled for the schedule.
      */
-    @SerializedName("timeOffRequestsEnabled")
+    @SerializedName(value = "timeOffRequestsEnabled", alternate = {"TimeOffRequestsEnabled"})
     @Expose
     public Boolean timeOffRequestsEnabled;
 
@@ -109,7 +109,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Time Zone.
      * Indicates the time zone of the schedule team using tz database format. Required.
      */
-    @SerializedName("timeZone")
+    @SerializedName(value = "timeZone", alternate = {"TimeZone"})
     @Expose
     public String timeZone;
 
@@ -117,7 +117,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Workforce Integration Ids.
      * 
      */
-    @SerializedName("workforceIntegrationIds")
+    @SerializedName(value = "workforceIntegrationIds", alternate = {"WorkforceIntegrationIds"})
     @Expose
     public java.util.List<String> workforceIntegrationIds;
 
@@ -125,7 +125,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Offer Shift Requests.
      * 
      */
-    @SerializedName("offerShiftRequests")
+    @SerializedName(value = "offerShiftRequests", alternate = {"OfferShiftRequests"})
     @Expose
     public OfferShiftRequestCollectionPage offerShiftRequests;
 
@@ -133,7 +133,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Open Shift Change Requests.
      * 
      */
-    @SerializedName("openShiftChangeRequests")
+    @SerializedName(value = "openShiftChangeRequests", alternate = {"OpenShiftChangeRequests"})
     @Expose
     public OpenShiftChangeRequestCollectionPage openShiftChangeRequests;
 
@@ -141,7 +141,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Open Shifts.
      * 
      */
-    @SerializedName("openShifts")
+    @SerializedName(value = "openShifts", alternate = {"OpenShifts"})
     @Expose
     public OpenShiftCollectionPage openShifts;
 
@@ -149,7 +149,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Scheduling Groups.
      * The logical grouping of users in the schedule (usually by role).
      */
-    @SerializedName("schedulingGroups")
+    @SerializedName(value = "schedulingGroups", alternate = {"SchedulingGroups"})
     @Expose
     public SchedulingGroupCollectionPage schedulingGroups;
 
@@ -157,7 +157,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Shifts.
      * The shifts in the schedule.
      */
-    @SerializedName("shifts")
+    @SerializedName(value = "shifts", alternate = {"Shifts"})
     @Expose
     public ShiftCollectionPage shifts;
 
@@ -165,7 +165,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Swap Shifts Change Requests.
      * 
      */
-    @SerializedName("swapShiftsChangeRequests")
+    @SerializedName(value = "swapShiftsChangeRequests", alternate = {"SwapShiftsChangeRequests"})
     @Expose
     public SwapShiftsChangeRequestCollectionPage swapShiftsChangeRequests;
 
@@ -173,7 +173,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Time Off Reasons.
      * The set of reasons for a time off in the schedule.
      */
-    @SerializedName("timeOffReasons")
+    @SerializedName(value = "timeOffReasons", alternate = {"TimeOffReasons"})
     @Expose
     public TimeOffReasonCollectionPage timeOffReasons;
 
@@ -181,7 +181,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Time Off Requests.
      * 
      */
-    @SerializedName("timeOffRequests")
+    @SerializedName(value = "timeOffRequests", alternate = {"TimeOffRequests"})
     @Expose
     public TimeOffRequestCollectionPage timeOffRequests;
 
@@ -189,7 +189,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Times Off.
      * The instances of times off in the schedule.
      */
-    @SerializedName("timesOff")
+    @SerializedName(value = "timesOff", alternate = {"TimesOff"})
     @Expose
     public TimeOffCollectionPage timesOff;
 

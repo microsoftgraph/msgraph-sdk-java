@@ -36,7 +36,7 @@ public class ItemReference implements IJsonBackedObject {
      * The Drive Id.
      * Unique identifier of the drive instance that contains the item. Read-only.
      */
-    @SerializedName("driveId")
+    @SerializedName(value = "driveId", alternate = {"DriveId"})
     @Expose
     public String driveId;
 
@@ -44,7 +44,7 @@ public class ItemReference implements IJsonBackedObject {
      * The Drive Type.
      * Identifies the type of drive. See [drive][] resource for values.
      */
-    @SerializedName("driveType")
+    @SerializedName(value = "driveType", alternate = {"DriveType"})
     @Expose
     public String driveType;
 
@@ -52,7 +52,7 @@ public class ItemReference implements IJsonBackedObject {
      * The Id.
      * Unique identifier of the item in the drive. Read-only.
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -60,7 +60,7 @@ public class ItemReference implements IJsonBackedObject {
      * The Name.
      * The name of the item being referenced. Read-only.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -68,7 +68,7 @@ public class ItemReference implements IJsonBackedObject {
      * The Path.
      * Path that can be used to navigate to the item. Read-only.
      */
-    @SerializedName("path")
+    @SerializedName(value = "path", alternate = {"Path"})
     @Expose
     public String path;
 
@@ -76,7 +76,7 @@ public class ItemReference implements IJsonBackedObject {
      * The Share Id.
      * A unique identifier for a shared resource that can be accessed via the [Shares][] API.
      */
-    @SerializedName("shareId")
+    @SerializedName(value = "shareId", alternate = {"ShareId"})
     @Expose
     public String shareId;
 
@@ -84,7 +84,7 @@ public class ItemReference implements IJsonBackedObject {
      * The Sharepoint Ids.
      * Returns identifiers useful for SharePoint REST compatibility. Read-only.
      */
-    @SerializedName("sharepointIds")
+    @SerializedName(value = "sharepointIds", alternate = {"SharepointIds"})
     @Expose
     public SharepointIds sharepointIds;
 
@@ -92,7 +92,7 @@ public class ItemReference implements IJsonBackedObject {
      * The Site Id.
      * 
      */
-    @SerializedName("siteId")
+    @SerializedName(value = "siteId", alternate = {"SiteId"})
     @Expose
     public String siteId;
 

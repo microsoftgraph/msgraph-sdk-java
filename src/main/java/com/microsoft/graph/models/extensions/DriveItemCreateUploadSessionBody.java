@@ -23,7 +23,7 @@ public class DriveItemCreateUploadSessionBody {
      * The item.
      * 
      */
-    @SerializedName("item")
+    @SerializedName(value = "item", alternate = {"Item"})
     @Expose
     public DriveItemUploadableProperties item;
 

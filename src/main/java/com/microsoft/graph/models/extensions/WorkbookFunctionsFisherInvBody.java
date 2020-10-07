@@ -22,7 +22,7 @@ public class WorkbookFunctionsFisherInvBody {
      * The y.
      * 
      */
-    @SerializedName("y")
+    @SerializedName(value = "y", alternate = {"Y"})
     @Expose
     public com.google.gson.JsonElement y;
 

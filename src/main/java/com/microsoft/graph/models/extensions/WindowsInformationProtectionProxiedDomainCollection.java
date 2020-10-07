@@ -36,7 +36,7 @@ public class WindowsInformationProtectionProxiedDomainCollection implements IJso
      * The Display Name.
      * Display name
      */
-    @SerializedName("displayName")
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
     public String displayName;
 
@@ -44,7 +44,7 @@ public class WindowsInformationProtectionProxiedDomainCollection implements IJso
      * The Proxied Domains.
      * Collection of proxied domains
      */
-    @SerializedName("proxiedDomains")
+    @SerializedName(value = "proxiedDomains", alternate = {"ProxiedDomains"})
     @Expose
     public java.util.List<ProxiedDomain> proxiedDomains;
 

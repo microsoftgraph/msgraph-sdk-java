@@ -22,7 +22,7 @@ public class WorkbookFunctionsTimevalueBody {
      * The time Text.
      * 
      */
-    @SerializedName("timeText")
+    @SerializedName(value = "timeText", alternate = {"TimeText"})
     @Expose
     public com.google.gson.JsonElement timeText;
 

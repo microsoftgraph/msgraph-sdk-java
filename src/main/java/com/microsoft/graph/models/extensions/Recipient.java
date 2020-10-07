@@ -36,7 +36,7 @@ public class Recipient implements IJsonBackedObject {
      * The Email Address.
      * The recipient's email address.
      */
-    @SerializedName("emailAddress")
+    @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
     public EmailAddress emailAddress;
 

@@ -45,7 +45,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Created By.
      * Identity of the user, device, and application which created the item. Read-only.
      */
-    @SerializedName("createdBy")
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
     public IdentitySet createdBy;
 
@@ -53,7 +53,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Created Date Time.
      * Date and time of item creation. Read-only.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
 
@@ -61,7 +61,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The File.
      * Indicates that the remote item is a file. Read-only.
      */
-    @SerializedName("file")
+    @SerializedName(value = "file", alternate = {"File"})
     @Expose
     public File file;
 
@@ -69,7 +69,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The File System Info.
      * Information about the remote item from the local file system. Read-only.
      */
-    @SerializedName("fileSystemInfo")
+    @SerializedName(value = "fileSystemInfo", alternate = {"FileSystemInfo"})
     @Expose
     public FileSystemInfo fileSystemInfo;
 
@@ -77,7 +77,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Folder.
      * Indicates that the remote item is a folder. Read-only.
      */
-    @SerializedName("folder")
+    @SerializedName(value = "folder", alternate = {"Folder"})
     @Expose
     public Folder folder;
 
@@ -85,7 +85,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Id.
      * Unique identifier for the remote item in its drive. Read-only.
      */
-    @SerializedName("id")
+    @SerializedName(value = "id", alternate = {"Id"})
     @Expose
     public String id;
 
@@ -93,7 +93,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Image.
      * Image metadata, if the item is an image. Read-only.
      */
-    @SerializedName("image")
+    @SerializedName(value = "image", alternate = {"Image"})
     @Expose
     public Image image;
 
@@ -101,7 +101,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Last Modified By.
      * Identity of the user, device, and application which last modified the item. Read-only.
      */
-    @SerializedName("lastModifiedBy")
+    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
     public IdentitySet lastModifiedBy;
 
@@ -109,7 +109,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Last Modified Date Time.
      * Date and time the item was last modified. Read-only.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
     public java.util.Calendar lastModifiedDateTime;
 
@@ -117,7 +117,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Name.
      * Optional. Filename of the remote item. Read-only.
      */
-    @SerializedName("name")
+    @SerializedName(value = "name", alternate = {"Name"})
     @Expose
     public String name;
 
@@ -125,7 +125,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Package.
      * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
      */
-    @SerializedName("package")
+    @SerializedName(value = "package", alternate = {"Package"})
     @Expose
     public com.microsoft.graph.models.extensions.Package msgraphPackage;
 
@@ -133,7 +133,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Parent Reference.
      * Properties of the parent of the remote item. Read-only.
      */
-    @SerializedName("parentReference")
+    @SerializedName(value = "parentReference", alternate = {"ParentReference"})
     @Expose
     public ItemReference parentReference;
 
@@ -141,7 +141,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Shared.
      * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
      */
-    @SerializedName("shared")
+    @SerializedName(value = "shared", alternate = {"Shared"})
     @Expose
     public Shared shared;
 
@@ -149,7 +149,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Sharepoint Ids.
      * Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
      */
-    @SerializedName("sharepointIds")
+    @SerializedName(value = "sharepointIds", alternate = {"SharepointIds"})
     @Expose
     public SharepointIds sharepointIds;
 
@@ -157,7 +157,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Size.
      * Size of the remote item. Read-only.
      */
-    @SerializedName("size")
+    @SerializedName(value = "size", alternate = {"Size"})
     @Expose
     public Long size;
 
@@ -165,7 +165,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Special Folder.
      * If the current item is also available as a special folder, this facet is returned. Read-only.
      */
-    @SerializedName("specialFolder")
+    @SerializedName(value = "specialFolder", alternate = {"SpecialFolder"})
     @Expose
     public SpecialFolder specialFolder;
 
@@ -173,7 +173,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Video.
      * Video metadata, if the item is a video. Read-only.
      */
-    @SerializedName("video")
+    @SerializedName(value = "video", alternate = {"Video"})
     @Expose
     public Video video;
 
@@ -181,7 +181,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Web Dav Url.
      * DAV compatible URL for the item.
      */
-    @SerializedName("webDavUrl")
+    @SerializedName(value = "webDavUrl", alternate = {"WebDavUrl"})
     @Expose
     public String webDavUrl;
 
@@ -189,7 +189,7 @@ public class RemoteItem implements IJsonBackedObject {
      * The Web Url.
      * URL that displays the resource in the browser. Read-only.
      */
-    @SerializedName("webUrl")
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
     public String webUrl;
 

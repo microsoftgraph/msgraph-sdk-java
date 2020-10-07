@@ -26,7 +26,7 @@ public class ManagedAppStatusRaw extends ManagedAppStatus implements IJsonBacked
      * The Content.
      * Status report content.
      */
-    @SerializedName("content")
+    @SerializedName(value = "content", alternate = {"Content"})
     @Expose
     public com.google.gson.JsonElement content;
 

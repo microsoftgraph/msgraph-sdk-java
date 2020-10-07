@@ -22,7 +22,7 @@ public class WorkbookFunctionsImPowerBody {
      * The inumber.
      * 
      */
-    @SerializedName("inumber")
+    @SerializedName(value = "inumber", alternate = {"Inumber"})
     @Expose
     public com.google.gson.JsonElement inumber;
 
@@ -30,7 +30,7 @@ public class WorkbookFunctionsImPowerBody {
      * The number.
      * 
      */
-    @SerializedName("number")
+    @SerializedName(value = "number", alternate = {"Number"})
     @Expose
     public com.google.gson.JsonElement number;
 

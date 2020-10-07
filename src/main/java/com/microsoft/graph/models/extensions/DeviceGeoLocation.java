@@ -35,7 +35,7 @@ public class DeviceGeoLocation implements IJsonBackedObject {
      * The Altitude.
      * Altitude, given in meters above sea level
      */
-    @SerializedName("altitude")
+    @SerializedName(value = "altitude", alternate = {"Altitude"})
     @Expose
     public Double altitude;
 
@@ -43,7 +43,7 @@ public class DeviceGeoLocation implements IJsonBackedObject {
      * The Heading.
      * Heading in degrees from true north
      */
-    @SerializedName("heading")
+    @SerializedName(value = "heading", alternate = {"Heading"})
     @Expose
     public Double heading;
 
@@ -51,7 +51,7 @@ public class DeviceGeoLocation implements IJsonBackedObject {
      * The Horizontal Accuracy.
      * Accuracy of longitude and latitude in meters
      */
-    @SerializedName("horizontalAccuracy")
+    @SerializedName(value = "horizontalAccuracy", alternate = {"HorizontalAccuracy"})
     @Expose
     public Double horizontalAccuracy;
 
@@ -59,7 +59,7 @@ public class DeviceGeoLocation implements IJsonBackedObject {
      * The Last Collected Date Time.
      * Time at which location was recorded, relative to UTC
      */
-    @SerializedName("lastCollectedDateTime")
+    @SerializedName(value = "lastCollectedDateTime", alternate = {"LastCollectedDateTime"})
     @Expose
     public java.util.Calendar lastCollectedDateTime;
 
@@ -67,7 +67,7 @@ public class DeviceGeoLocation implements IJsonBackedObject {
      * The Latitude.
      * Latitude coordinate of the device's location
      */
-    @SerializedName("latitude")
+    @SerializedName(value = "latitude", alternate = {"Latitude"})
     @Expose
     public Double latitude;
 
@@ -75,7 +75,7 @@ public class DeviceGeoLocation implements IJsonBackedObject {
      * The Longitude.
      * Longitude coordinate of the device's location
      */
-    @SerializedName("longitude")
+    @SerializedName(value = "longitude", alternate = {"Longitude"})
     @Expose
     public Double longitude;
 
@@ -83,7 +83,7 @@ public class DeviceGeoLocation implements IJsonBackedObject {
      * The Speed.
      * Speed the device is traveling in meters per second
      */
-    @SerializedName("speed")
+    @SerializedName(value = "speed", alternate = {"Speed"})
     @Expose
     public Double speed;
 
@@ -91,7 +91,7 @@ public class DeviceGeoLocation implements IJsonBackedObject {
      * The Vertical Accuracy.
      * Accuracy of altitude in meters
      */
-    @SerializedName("verticalAccuracy")
+    @SerializedName(value = "verticalAccuracy", alternate = {"VerticalAccuracy"})
     @Expose
     public Double verticalAccuracy;
 

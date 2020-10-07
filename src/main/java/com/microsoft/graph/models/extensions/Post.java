@@ -37,7 +37,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Body.
      * The contents of the post. This is a default property. This property can be null.
      */
-    @SerializedName("body")
+    @SerializedName(value = "body", alternate = {"Body"})
     @Expose
     public ItemBody body;
 
@@ -45,7 +45,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Conversation Id.
      * Unique ID of the conversation. Read-only.
      */
-    @SerializedName("conversationId")
+    @SerializedName(value = "conversationId", alternate = {"ConversationId"})
     @Expose
     public String conversationId;
 
@@ -53,7 +53,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Conversation Thread Id.
      * Unique ID of the conversation thread. Read-only.
      */
-    @SerializedName("conversationThreadId")
+    @SerializedName(value = "conversationThreadId", alternate = {"ConversationThreadId"})
     @Expose
     public String conversationThreadId;
 
@@ -61,7 +61,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The From.
      * Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.
      */
-    @SerializedName("from")
+    @SerializedName(value = "from", alternate = {"From"})
     @Expose
     public Recipient from;
 
@@ -69,7 +69,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Has Attachments.
      * Indicates whether the post has at least one attachment. This is a default property.
      */
-    @SerializedName("hasAttachments")
+    @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
     public Boolean hasAttachments;
 
@@ -77,7 +77,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The New Participants.
      * Conversation participants that were added to the thread as part of this post.
      */
-    @SerializedName("newParticipants")
+    @SerializedName(value = "newParticipants", alternate = {"NewParticipants"})
     @Expose
     public java.util.List<Recipient> newParticipants;
 
@@ -85,7 +85,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Received Date Time.
      * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("receivedDateTime")
+    @SerializedName(value = "receivedDateTime", alternate = {"ReceivedDateTime"})
     @Expose
     public java.util.Calendar receivedDateTime;
 
@@ -93,7 +93,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Sender.
      * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
      */
-    @SerializedName("sender")
+    @SerializedName(value = "sender", alternate = {"Sender"})
     @Expose
     public Recipient sender;
 
@@ -101,7 +101,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Attachments.
      * Read-only. Nullable.
      */
-    @SerializedName("attachments")
+    @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
     public AttachmentCollectionPage attachments;
 
@@ -109,7 +109,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Extensions.
      * The collection of open extensions defined for the post. Read-only. Nullable.
      */
-    @SerializedName("extensions")
+    @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
     public ExtensionCollectionPage extensions;
 
@@ -117,7 +117,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The In Reply To.
      * Read-only.
      */
-    @SerializedName("inReplyTo")
+    @SerializedName(value = "inReplyTo", alternate = {"InReplyTo"})
     @Expose
     public Post inReplyTo;
 
@@ -125,7 +125,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
      */
-    @SerializedName("multiValueExtendedProperties")
+    @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
@@ -133,7 +133,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the post. Read-only. Nullable.
      */
-    @SerializedName("singleValueExtendedProperties")
+    @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 

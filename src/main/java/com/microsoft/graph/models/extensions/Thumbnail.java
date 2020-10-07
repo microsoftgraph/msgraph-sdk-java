@@ -35,7 +35,7 @@ public class Thumbnail implements IJsonBackedObject {
      * The Height.
      * The height of the thumbnail, in pixels.
      */
-    @SerializedName("height")
+    @SerializedName(value = "height", alternate = {"Height"})
     @Expose
     public Integer height;
 
@@ -43,7 +43,7 @@ public class Thumbnail implements IJsonBackedObject {
      * The Source Item Id.
      * The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
      */
-    @SerializedName("sourceItemId")
+    @SerializedName(value = "sourceItemId", alternate = {"SourceItemId"})
     @Expose
     public String sourceItemId;
 
@@ -51,7 +51,7 @@ public class Thumbnail implements IJsonBackedObject {
      * The Url.
      * The URL used to fetch the thumbnail content.
      */
-    @SerializedName("url")
+    @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
 
@@ -59,7 +59,7 @@ public class Thumbnail implements IJsonBackedObject {
      * The Width.
      * The width of the thumbnail, in pixels.
      */
-    @SerializedName("width")
+    @SerializedName(value = "width", alternate = {"Width"})
     @Expose
     public Integer width;
 

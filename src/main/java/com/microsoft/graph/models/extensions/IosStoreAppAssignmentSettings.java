@@ -26,7 +26,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      * The Vpn Configuration Id.
      * The VPN Configuration Id to apply for this app.
      */
-    @SerializedName("vpnConfigurationId")
+    @SerializedName(value = "vpnConfigurationId", alternate = {"VpnConfigurationId"})
     @Expose
     public String vpnConfigurationId;
 
