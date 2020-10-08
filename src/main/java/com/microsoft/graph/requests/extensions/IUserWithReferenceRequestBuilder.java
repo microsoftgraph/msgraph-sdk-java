@@ -74,6 +74,7 @@ import com.microsoft.graph.requests.extensions.IPlannerUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

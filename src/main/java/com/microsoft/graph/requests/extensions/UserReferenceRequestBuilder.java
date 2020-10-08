@@ -127,6 +127,8 @@ import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

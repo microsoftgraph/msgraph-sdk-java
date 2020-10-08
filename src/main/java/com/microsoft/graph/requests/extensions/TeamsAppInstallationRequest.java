@@ -31,6 +31,21 @@ public class TeamsAppInstallationRequest extends BaseRequest implements ITeamsAp
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
+     */
+    public TeamsAppInstallationRequest(final String requestUrl,
+            final IBaseClient client,
+            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            final Class<? extends TeamsAppInstallation> responseClass) {
+        super(requestUrl, client, requestOptions, responseClass);
+    }
+
+    /**
+     * The request for the TeamsAppInstallation
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public TeamsAppInstallationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsAppInstallation.class);

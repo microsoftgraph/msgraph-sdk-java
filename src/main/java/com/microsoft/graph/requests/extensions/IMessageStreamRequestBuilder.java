@@ -62,12 +62,12 @@ public interface IMessageStreamRequestBuilder extends IRequestBuilder {
 
 
 
+    IMessageForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final Message message, final String comment);
     IMessageCopyRequestBuilder copy(final String destinationId);
     IMessageMoveRequestBuilder move(final String destinationId);
     IMessageCreateForwardRequestBuilder createForward(final java.util.List<Recipient> toRecipients, final Message message, final String comment);
     IMessageCreateReplyRequestBuilder createReply(final Message message, final String comment);
     IMessageCreateReplyAllRequestBuilder createReplyAll(final Message message, final String comment);
-    IMessageForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final Message message, final String comment);
     IMessageReplyRequestBuilder reply(final Message message, final String comment);
     IMessageReplyAllRequestBuilder replyAll(final Message message, final String comment);
     IMessageSendRequestBuilder send();
