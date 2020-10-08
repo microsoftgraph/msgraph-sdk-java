@@ -25,9 +25,9 @@ package com.microsoft.graph.concurrency;
 
 import com.microsoft.graph.concurrency.ChunkedUploadResponseHandler;
 import com.microsoft.graph.concurrency.IProgressCallback;
-import com.microsoft.graph.requests.extensions.ChunkedUploadRequest;
-import com.microsoft.graph.requests.extensions.ChunkedUploadResult;
-import com.microsoft.graph.models.extensions.IGraphServiceClient;
+import com.microsoft.graph.concurrency.ChunkedUploadRequest;
+import com.microsoft.graph.concurrency.ChunkedUploadResult;
+import com.microsoft.graph.core.IGraphServiceClient;
 import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.options.Option;
 

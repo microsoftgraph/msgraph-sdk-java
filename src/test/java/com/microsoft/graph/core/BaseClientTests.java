@@ -8,12 +8,12 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.microsoft.graph.authentication.IAuthenticationProvider;
-import com.microsoft.graph.authentication.MockAuthenticationProvider;
+import okhttp3.OkHttpClient;
+
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.http.IHttpProvider;
-import com.microsoft.graph.http.MockHttpProvider;
+import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.MockLogger;
 import com.microsoft.graph.serializer.ISerializer;
@@ -26,7 +26,6 @@ public class BaseClientTests {
 	public static final String DEFAULT_GRAPH_ENDPOINT = "https://graph.microsoft.com/v1.0";
     private String mEndpoint = DEFAULT_GRAPH_ENDPOINT;
     private BaseClient baseClient;
-    private IAuthenticationProvider mAuthenticationProvider;
     private IExecutors mExecutors;
     private IHttpProvider mHttpProvider;
     private ILogger mLogger;
@@ -45,17 +44,18 @@ public class BaseClientTests {
                 mEndpoint = value;
             }
         };
-        mAuthenticationProvider = new MockAuthenticationProvider();
         mExecutors = new MockExecutors();
-        mHttpProvider = new MockHttpProvider();
         mLogger = new MockLogger();
         mSerializer = new MockSerializer(null, "");
+        mHttpProvider = new CoreHttpProvider(mSerializer,
+            mExecutors,
+            mLogger,
+            new OkHttpClient.Builder().build());
 	}
 
 	@Test
 	public void testNotNull() {
         assertNotNull(baseClient);
-        assertNotNull(mAuthenticationProvider);
         assertNotNull(mExecutors);
         assertNotNull(mHttpProvider);
         assertNotNull(mLogger);
@@ -75,7 +75,6 @@ public class BaseClientTests {
 
 	@Test
     public void testValidateSuccess() throws Exception {
-        baseClient.setAuthenticationProvider(mAuthenticationProvider);
         baseClient.setExecutors(mExecutors);
         baseClient.setHttpProvider(mHttpProvider);
         baseClient.setSerializer(mSerializer);
@@ -88,13 +87,6 @@ public class BaseClientTests {
         String expectedServiceRoot = "https://foo.bar";
         baseClient.setServiceRoot(expectedServiceRoot);
         assertEquals(expectedServiceRoot, baseClient.getServiceRoot());
-    }
-
-	@Test
-    public void testAuthenticationProvider() {
-        assertNull(baseClient.getAuthenticationProvider());
-        baseClient.setAuthenticationProvider(mAuthenticationProvider);
-        assertEquals(mAuthenticationProvider, baseClient.getAuthenticationProvider());
     }
 
 	@Test

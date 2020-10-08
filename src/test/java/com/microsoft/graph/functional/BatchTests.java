@@ -9,8 +9,7 @@ import com.microsoft.graph.content.MSBatchRequestContent;
 import com.microsoft.graph.content.MSBatchResponseContent;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.httpcore.HttpClients;
-import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
-import com.microsoft.graph.models.extensions.IGraphServiceClient;
+import com.microsoft.graph.core.IGraphServiceClient;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.UserRequest;
 
@@ -26,15 +25,10 @@ import okhttp3.Response;
 
 @Ignore
 public class BatchTests {
-    IGraphServiceClient graphServiceClient = null;
-
-	@Before
-	public void setUp() {
-		final TestBase testBase = new TestBase();
-		graphServiceClient = testBase.graphClient;
-    }
     @Test
     public void GetsABatchFromRequests() throws IOException{
+        final TestBase testBase = new TestBase();
+		final IGraphServiceClient graphServiceClient = testBase.graphClient;
         final MSBatchRequestContent batchContent = new MSBatchRequestContent();
         final String meGetId = batchContent.addBatchRequestStep(graphServiceClient.me()
                                         .buildRequest()
@@ -63,15 +57,14 @@ public class BatchTests {
                         .post(RequestBody.create(MediaType.parse("application/json"), serializedBatchContent))
                         .build();
         
-        final OkHttpClient client = HttpClients.createDefault((ICoreAuthenticationProvider)graphServiceClient.getAuthenticationProvider());
-        final Response batchResponse = client.newCall(batchRequest).execute();
-        assertEquals(200, batchResponse.code());
+        final OkHttpClient client = HttpClients.createDefault(testBase.getAuthenticationProvider());
+        try (final Response batchResponse = client.newCall(batchRequest).execute()) {
+            assertEquals(200, batchResponse.code());
 
-        final MSBatchResponseContent responseContent = new MSBatchResponseContent(batchResponse);
-        batchResponse.close();
-
-        assertEquals(400, responseContent.getResponseById(userPostId).code()); //400:we're not providing enough properties for the call to go through
-        assertEquals(200, responseContent.getResponseById(meGetId).code());
-        assertEquals(200, responseContent.getResponseById(usersGetId).code());
+            final MSBatchResponseContent responseContent = new MSBatchResponseContent(batchResponse);
+            assertEquals(400, responseContent.getResponseById(userPostId).code()); //400:we're not providing enough properties for the call to go through
+            assertEquals(200, responseContent.getResponseById(meGetId).code());
+            assertEquals(200, responseContent.getResponseById(usersGetId).code());
+        }
     }
 }

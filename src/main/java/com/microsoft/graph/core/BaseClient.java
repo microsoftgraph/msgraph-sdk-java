@@ -22,7 +22,6 @@
 
 package com.microsoft.graph.core;
 
-import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.logger.ILogger;
@@ -32,12 +31,6 @@ import com.microsoft.graph.serializer.ISerializer;
  * A client that communications with an OData service
  */
 public abstract class BaseClient implements IBaseClient {
-
-    /**
-     * The authentication provider instance
-     */
-    private IAuthenticationProvider authenticationProvider;
-
     /**
      * The executors instance
      */
@@ -57,16 +50,6 @@ public abstract class BaseClient implements IBaseClient {
      * The serializer instance
      */
     private ISerializer serializer;
-
-    /**
-     * Gets the authentication provider
-     * 
-     * @return The authentication provider
-     */
-    @Override
-    public IAuthenticationProvider getAuthenticationProvider() {
-        return authenticationProvider;
-    }
 
     /**
      * Gets the executors
@@ -112,10 +95,6 @@ public abstract class BaseClient implements IBaseClient {
      */
     @Override
     public void validate() {
-        if (authenticationProvider == null) {
-            throw new NullPointerException("AuthenticationProvider");
-        }
-
         if (executors == null) {
             throw new NullPointerException("Executors");
         }
@@ -145,15 +124,6 @@ public abstract class BaseClient implements IBaseClient {
      */
     protected void setExecutors(final IExecutors executors) {
         this.executors = executors;
-    }
-
-    /**
-     * Sets the authentication provider
-     * 
-     * @param authenticationProvider The authentication provider
-     */
-    protected void setAuthenticationProvider(final IAuthenticationProvider authenticationProvider) {
-        this.authenticationProvider = authenticationProvider;
     }
 
     /**

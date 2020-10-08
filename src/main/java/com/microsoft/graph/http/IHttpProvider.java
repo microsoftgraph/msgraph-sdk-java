@@ -25,7 +25,6 @@ package com.microsoft.graph.http;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.IConnectionConfig;
 import com.microsoft.graph.serializer.ISerializer;
 
 import okhttp3.Request;
@@ -42,22 +41,6 @@ public interface IHttpProvider {
      */
     ISerializer getSerializer();
     
-    /**
-     * Get connection config for read and connect timeout in requests
-     *
-     * @return Connection configuration to be used for timeout values
-     * 
-     */
-    public IConnectionConfig getConnectionConfig();
-    
-    /**
-     * Set connection config for read and connect timeout in requests
-     *
-     * @param connectionConfig Connection configuration to be used for timeout values
-     * 
-     */
-    public void setConnectionConfig(IConnectionConfig connectionConfig);
-
     /**
      * Sends the HTTP request asynchronously
      *

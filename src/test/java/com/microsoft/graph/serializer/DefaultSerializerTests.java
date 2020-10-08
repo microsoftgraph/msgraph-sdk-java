@@ -4,14 +4,18 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.microsoft.graph.http.MockConnection;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.Attachment;
-import com.microsoft.graph.models.extensions.DateOnly;
+import com.microsoft.graph.core.DateOnly;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.FileAttachment;
 import com.microsoft.graph.models.extensions.RecurrenceRange;
@@ -110,12 +114,20 @@ public class DefaultSerializerTests {
         assertNotNull(jsonOut);
         assertEquals(expected, jsonOut);
     }
-	
+    
+    public static Map<String, List<String>> getResponseHeaders() {
+		Map<String, List<String>> headers = new HashMap<String, List<String>>();
+		ArrayList<String> headerValues = new ArrayList<String>();
+		headerValues.add("value1");
+		headers.put("header1", headerValues);
+		
+		return headers;
+	}
+
 	@Test
 	public void testResponseHeaders() throws Exception {
-		MockConnection connection = new MockConnection(null);
 		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
-		User user = serializer.deserializeObject("{\"id\":\"1\"}", User.class, connection.getResponseHeaders());
+		User user = serializer.deserializeObject("{\"id\":\"1\"}", User.class, getResponseHeaders());
 		
 		JsonElement responseHeaders = user.additionalDataManager().get("graphResponseHeaders");
 		assertNotNull(responseHeaders);
