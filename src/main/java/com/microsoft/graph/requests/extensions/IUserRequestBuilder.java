@@ -74,6 +74,7 @@ import com.microsoft.graph.requests.extensions.IPlannerUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -385,6 +386,13 @@ public interface IUserRequestBuilder extends IRequestBuilder {
     ITeamCollectionRequestBuilder joinedTeams();
 
     ITeamRequestBuilder joinedTeams(final String id);
+
+    /**
+     * Gets the request builder for UserTeamwork
+     *
+     * @return the IUserTeamworkRequestBuilder instance
+     */
+    IUserTeamworkRequestBuilder teamwork();
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword);
     IUserReprocessLicenseAssignmentRequestBuilder reprocessLicenseAssignment();

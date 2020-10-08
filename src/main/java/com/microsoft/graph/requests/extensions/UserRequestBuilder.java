@@ -126,6 +126,8 @@ import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -637,6 +639,15 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
 
     public ITeamRequestBuilder joinedTeams(final String id) {
         return new TeamRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserTeamwork
+     *
+     * @return the IUserTeamworkRequestBuilder instance
+     */
+    public IUserTeamworkRequestBuilder teamwork() {
+        return new UserTeamworkRequestBuilder(getRequestUrlWithAdditionalSegment("teamwork"), getClient(), null);
     }
 
     public IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {

@@ -8,6 +8,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
@@ -73,8 +74,10 @@ public interface IEventRequestBuilder extends IRequestBuilder {
 
     ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
     IEventAcceptRequestBuilder accept(final String comment, final Boolean sendResponse);
+    IEventCancelRequestBuilder cancel(final String comment);
     IEventDeclineRequestBuilder decline(final String comment, final Boolean sendResponse);
     IEventDismissReminderRequestBuilder dismissReminder();
+    IEventForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final String comment);
     IEventSnoozeReminderRequestBuilder snoozeReminder(final DateTimeTimeZone newReminderTime);
     IEventTentativelyAcceptRequestBuilder tentativelyAccept(final String comment, final Boolean sendResponse);
 
