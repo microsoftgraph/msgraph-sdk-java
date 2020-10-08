@@ -52,9 +52,11 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * An HTTP request
+ * An HTTP request.
+ * 
+ * @param <T> the response class
  */
-public abstract class BaseRequest implements IHttpRequest {
+public abstract class BaseRequest<T> implements IHttpRequest {
 
     /**
      * The request stats header name
@@ -99,7 +101,7 @@ public abstract class BaseRequest implements IHttpRequest {
     /**
      * The class for the response
      */
-    private final Class<?> responseClass;
+    private final Class<T> responseClass;
 
     /**
      * Value to pass to setUseCaches in connection
@@ -142,7 +144,7 @@ public abstract class BaseRequest implements IHttpRequest {
     public BaseRequest(final String requestUrl,
                        final IBaseClient client,
                        final List<? extends Option> options,
-                       final Class<?> responseClass) {
+                       final Class<T> responseClass) {
         this.requestUrl = requestUrl;
         this.client = client;
         this.responseClass = responseClass;
@@ -317,15 +319,13 @@ public abstract class BaseRequest implements IHttpRequest {
      * @param method           the HTTP method
      * @param callback         the callback when this request complements
      * @param serializedObject the object to serialize as the body
-     * @param <T1>             the type of the callback result
-     * @param <T2>             the type of the serialized body
+     * @param <T1>             the type of the serialized body
      */
-    @SuppressWarnings("unchecked")
-    protected <T1, T2> void send(final HttpMethod method,
-                                 final ICallback<T1> callback,
-                                 final T2 serializedObject) {
+    protected <T1> void send(final HttpMethod method,
+                                 final ICallback<? super T> callback,
+                                 final T1 serializedObject) {
         this.method = method;
-        client.getHttpProvider().send(this, callback, (Class<T1>) responseClass, serializedObject);
+        client.getHttpProvider().send(this, callback, responseClass, serializedObject);
     }
 
     /**
@@ -333,16 +333,14 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @param method           the HTTP method
      * @param serializedObject the object to serialize as the body
-     * @param <T1>             the type of the callback result
-     * @param <T2>             the type of the serialized body
+     * @param <T1>             the type of the serialized body
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    @SuppressWarnings("unchecked")
-    protected <T1, T2> T1 send(final HttpMethod method,
-                               final T2 serializedObject) throws ClientException {
+    protected <T1> T send(final HttpMethod method,
+                               final T1 serializedObject) throws ClientException {
         this.method = method;
-        return (T1) client.getHttpProvider().send(this, responseClass, serializedObject);
+        return client.getHttpProvider().send(this, responseClass, serializedObject);
     }
 
     /**
@@ -428,7 +426,7 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @return the response type
      */
-	public Class<?> getResponseType() {
+    public Class<T> getResponseType() {
         return responseClass;
     }
 	

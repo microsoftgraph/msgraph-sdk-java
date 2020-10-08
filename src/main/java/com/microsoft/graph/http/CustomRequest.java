@@ -29,7 +29,7 @@ import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 
-public class CustomRequest<T> extends BaseRequest {
+public class CustomRequest<T> extends BaseRequest<T> {
 	
 	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Class<T> responseClass) {
 		super(requestUrl, client, requestOptions, responseClass);
@@ -52,18 +52,20 @@ public class CustomRequest<T> extends BaseRequest {
      * 
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<Void> callback) {{
-        send(HttpMethod.DELETE, callback, null);
-    }}
+    @SuppressWarnings("unchecked")
+    public void delete(final ICallback<Void> callback) {
+        // the callback should called with the null object
+        send(HttpMethod.DELETE, (ICallback<T>) callback, null);
+    }
 
     /**
      * Delete this item from the service
      * 
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {{
+    public void delete() throws ClientException {
         send(HttpMethod.DELETE, null);
-    }}
+    }
 
     /**
      * Patches this item with a source
