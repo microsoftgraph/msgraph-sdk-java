@@ -33,9 +33,9 @@ import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.logger.ILogger;
-import com.microsoft.graph.models.extensions.DateOnly;
+import com.microsoft.graph.core.DateOnly;
 
-import com.microsoft.graph.models.extensions.TimeOfDay;
+import com.microsoft.graph.core.TimeOfDay;
 import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.util.Calendar;

@@ -307,115 +307,13 @@ public class GraphServiceException extends ClientException {
      * @param request      the request that resulted in this failure
      * @param serializable the serialized object that was sent with this request
      * @param serializer   the serializer to re-create the option in its over the wire state
-     * @param connection   the connection that was used to extract the response information from
-     * @param logger       the logger to log exception information to
-     * @param <T>          the type of the serializable object
-     * @return             the new GraphServiceException instance
-     * @throws IOException an exception occurs if there were any problems processing the connection
-     */
-    public static <T> GraphServiceException createFromConnection(final IHttpRequest request,
-                                                                 final T serializable,
-                                                                 final ISerializer serializer,
-                                                                 final IConnection connection,
-                                                                 final ILogger logger)
-            throws IOException {
-        final String method = connection.getRequestMethod();
-        final String url = request.getRequestUrl().toString();
-        final List<String> requestHeaders = new LinkedList<>();
-        for (final HeaderOption option : request.getHeaders()) {
-            requestHeaders.add(option.getName() + " : " + option.getValue());
-        }
-        boolean isVerbose = logger.getLoggingLevel() == LoggerLevel.DEBUG;
-        final String requestBody;
-        if (serializable instanceof byte[]) {
-            final byte[] bytes = (byte[]) serializable;
-            StringBuilder sb = new StringBuilder();
-            sb.append("byte[").append(bytes.length).append("]");
-
-            sb.append(" {");
-            if (isVerbose) {
-            	sb.append(bytes);
-            } else {
-	            for (int i = 0; i < MAX_BYTE_COUNT_BEFORE_TRUNCATION && i < bytes.length; i++) {
-	                sb.append(bytes[i]).append(", ");
-	            }
-	            if (bytes.length > MAX_BYTE_COUNT_BEFORE_TRUNCATION) {
-	                sb.append(TRUNCATION_MARKER).append("}");
-	            }
-            }
-            requestBody = sb.toString();
-        } else if (serializable != null) {
-            requestBody = serializer.serializeObject(serializable);
-        } else {
-            requestBody = null;
-        }
-
-        final int responseCode = connection.getResponseCode();
-        final List<String> responseHeaders = new LinkedList<>();
-        final Map<String, String> headers = connection.getHeaders();
-        for (final String key : headers.keySet()) {
-            final String fieldPrefix;
-            if (key == null) {
-                fieldPrefix = "";
-            } else {
-                fieldPrefix = key + " : ";
-            }
-            responseHeaders.add(fieldPrefix + headers.get(key));
-        }
-
-        final String responseMessage = connection.getResponseMessage();
-        String rawOutput = "{}";
-        if(connection.getInputStream() != null) {
-        	rawOutput = DefaultHttpProvider.streamToString(connection.getInputStream());
-        }
-        GraphErrorResponse error;
-        try {
-            error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, connection.getResponseHeaders());
-        } catch (final Exception ex) {
-            error = new GraphErrorResponse();
-            error.error = new GraphError();
-            error.error.code = "Unable to parse error response message";
-            error.error.message = "Raw error: " + rawOutput;
-            error.error.innererror = new GraphInnerError();
-            error.error.innererror.code = ex.getMessage();
-        }
-
-        if (responseCode >= INTERNAL_SERVER_ERROR) {
-            return new GraphFatalServiceException(method,
-                    url,
-                    requestHeaders,
-                    requestBody,
-                    responseCode,
-                    responseMessage,
-                    responseHeaders,
-                    error,
-                    isVerbose);
-        }
-
-        return new GraphServiceException(method,
-                url,
-                requestHeaders,
-                requestBody,
-                responseCode,
-                responseMessage,
-                responseHeaders,
-                error,
-                isVerbose);
-    }
-    
-    /**
-     * Creates a Graph service exception from a given failed HTTP request
-     *
-     * @param request      the request that resulted in this failure
-     * @param serializable the serialized object that was sent with this request
-     * @param serializer   the serializer to re-create the option in its over the wire state
      * @param response   the response being used to extract information from
      * @param logger       the logger to log exception information to
      * @param <T>          the type of the serializable object
      * @return             the new GraphServiceException instance
      * @throws IOException an exception occurs if there were any problems processing the connection
      */
-    public static <T> GraphServiceException createFromConnection(final IHttpRequest request,
+    public static <T> GraphServiceException createFromResponse(final IHttpRequest request,
                                                                  final T serializable,
                                                                  final ISerializer serializer,
                                                                  final Response response,
@@ -470,7 +368,7 @@ public class GraphServiceException extends ClientException {
 
         InputStream is = response.body().byteStream();
         try {
-            rawOutput = DefaultHttpProvider.streamToString(is);
+            rawOutput = CoreHttpProvider.streamToString(is);
         } finally {
             closeQuietly(is);
         }

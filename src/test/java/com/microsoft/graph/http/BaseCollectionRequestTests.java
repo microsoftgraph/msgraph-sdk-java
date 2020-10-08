@@ -3,6 +3,10 @@ package com.microsoft.graph.http;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import static org.mockito.Mockito.doAnswer;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -10,9 +14,18 @@ import java.util.Map;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
+
+import okhttp3.Call;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Protocol;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 import com.google.gson.JsonObject;
-import com.microsoft.graph.authentication.MockAuthenticationProvider;
+import com.google.gson.JsonPrimitive;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.MockBaseClient;
 import com.microsoft.graph.logger.MockLogger;
@@ -26,52 +39,43 @@ import com.microsoft.graph.serializer.MockSerializer;
  */
 public class BaseCollectionRequestTests {
 
-    private MockAuthenticationProvider mAuthenticationProvider;
     private MockBaseClient mBaseClient;
-    private BaseCollectionRequest<JsonObject, String> request;
+    private BaseCollectionRequest<JsonObject, String> mRequest;
 
     @Before
     public void setUp() throws Exception {
-        mAuthenticationProvider = new MockAuthenticationProvider();
         mBaseClient = new MockBaseClient();
-        final ITestConnectionData data = new ITestConnectionData() {
-            @Override
-            public int getRequestCode() {
-                return 200;
-            }
-
-            @Override
-            public String getJsonResponse() {
-                return "{ \"id\": \"zzz\" }";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                final HashMap<String, String> map = new HashMap<>();
-                map.put("Content-Type", "application/json");
-                return map;
-            }
-        };
-
-        MockHttpProvider mProvider = new MockHttpProvider(new MockSerializer(null, ""),
-                mAuthenticationProvider,
+        final Response response = new Response.Builder()
+                .request(new Request.Builder().url("https://a.b.c").build())
+                .protocol(Protocol.HTTP_1_1)
+                .code(200).message("OK").body(
+                   ResponseBody.create(
+                        MediaType.parse("application/json"),
+                        "{ \"id\": \"zzz\" }"
+                ))
+                .addHeader("Content-Type", "application/json")
+                .build();
+        final OkHttpClient mockClient = BaseStreamRequestTests.getMockClient(response);
+        final JsonObject result = new JsonObject();
+        result.add("id", new JsonPrimitive("zzz"));
+        CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(result, ""),
                 new MockExecutors(),
-                new MockLogger());
-        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
+                new MockLogger(),
+                mockClient);
         mBaseClient.setHttpProvider(mProvider);
-        request = new BaseCollectionRequest<JsonObject,String>("https://a.b.c/", mBaseClient, null, JsonObject.class,null){};
+        mRequest = new BaseCollectionRequest<JsonObject,String>("https://a.b.c/", mBaseClient, null, JsonObject.class,null){};
     }
 
     @Test
     public void testSend() {
-        JsonObject result = (JsonObject)request.send();
+        JsonObject result = (JsonObject)mRequest.send();
         assertNotNull(result);
         assertEquals("zzz", result.get("id").getAsString());
     }
 
     @Test
     public void testPost() {
-        JsonObject result = (JsonObject)request.post(null);
+        JsonObject result = (JsonObject)mRequest.post(null);
         assertNotNull(result);
         assertEquals("zzz", result.get("id").getAsString());
     }
@@ -110,12 +114,16 @@ public class BaseCollectionRequestTests {
     }
 
     @Test
-    public void testHttpMethod() {
-        assertNull(request.getHttpMethod());
-        request.send();
-        assertEquals(HttpMethod.GET, request.getHttpMethod());
-        request.post(null);
-        assertEquals(HttpMethod.POST, request.getHttpMethod());
+    public void testGetMethod() {
+        assertNull(mRequest.getHttpMethod());
+        mRequest.send();
+        assertEquals(HttpMethod.GET, mRequest.getHttpMethod());
+    }
+    @Test
+    public void testPostMethod() {
+        assertNull(mRequest.getHttpMethod());
+        mRequest.post(null);
+        assertEquals(HttpMethod.POST, mRequest.getHttpMethod());
     }
 
     @Test

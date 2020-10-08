@@ -22,7 +22,6 @@
 
 package com.microsoft.graph.core;
 
-import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.logger.ILogger;
@@ -32,14 +31,6 @@ import com.microsoft.graph.serializer.ISerializer;
  * A client that communications with an OData service
  */
 public interface IBaseClient {
-
-    /**
-     * Gets the authentication provider
-     * 
-     * @return the authentication provider
-     */
-    IAuthenticationProvider getAuthenticationProvider();
-
     /**
      * Gets the service root
      * 

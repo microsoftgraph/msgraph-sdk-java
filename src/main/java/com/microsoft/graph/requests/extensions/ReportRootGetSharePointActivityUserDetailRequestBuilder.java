@@ -26,7 +26,7 @@ public class ReportRootGetSharePointActivityUserDetailRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @param date the date
      */
-    public ReportRootGetSharePointActivityUserDetailRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.microsoft.graph.models.extensions.DateOnly date) {
+    public ReportRootGetSharePointActivityUserDetailRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final com.microsoft.graph.core.DateOnly date) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new com.microsoft.graph.options.FunctionOption("date", date));
     }
